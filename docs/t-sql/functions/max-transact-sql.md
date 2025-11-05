@@ -21,7 +21,8 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # MAX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-  Returns the maximum value in the expression.  
+  Returns the maximum of all values of the specified expression in a group. May be followed by the [OVER clause]../../t-sql/queries/select-over-clause-transact-sql?view=sql-server-ver17.
+  If you want the maximum of all values of multiple expressions inline then look at [GREATEST](logical-functions-greatest-transact-sql.md)
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +50,7 @@ MAX ([ ALL ] expression) OVER ( <partition_by_clause> [ <order_by_clause> ] )
   
  OVER **(** _partition\_by\_clause_ [  _order\_by\_clause_ ] **)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. *_partition\_by\_clause_* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
-  
+
 ## Return Types  
  Returns a value same as *expression*.  
   
@@ -61,6 +62,8 @@ MAX ([ ALL ] expression) OVER ( <partition_by_clause> [ <order_by_clause> ] )
  For character columns, MAX finds the highest value in the collating sequence.  
   
  MAX is a deterministic function when used without the OVER and ORDER BY clauses. It is nondeterministic when specified with the OVER and ORDER BY clauses. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+
+ Operates of a set of rows, to obtain the MAX value of a set of values inline, then look at ```[GREATEST](logical-functions-greatest-transact-sql.md)
   
 ## Examples  
   

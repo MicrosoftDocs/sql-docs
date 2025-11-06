@@ -114,8 +114,8 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
 
    # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature
    Write-Host 'Credential T-SQL'
-   $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri, $sas.Substring(1)
-   $tSql | clip
+   $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='SHARED ACCESS SIGNATURE', SECRET='{1}'" -f $cbc.Uri, $sas
+   Set-Clipboard -Value $tSql
    Write-Host $tSql
 
    # Once you're done with the tutorial, remove the resource group to clean up the resources.

@@ -698,6 +698,10 @@ The user's EntraID authentication is default. No credential needs to be specifie
   - *IDENTITY: A constant with a value of 'Storage Account Key'*
 - *SECRET: Storage account key*
 
+> [!NOTE]
+> When using a storage account without public network access, the use of a Shared Access Signature or Storage Account Key is not supported.
+> EntraID authentication is the only supported mechanism for these accounts.
+
 #### *ERRORFILE = Directory Location*
 
 *ERRORFILE* only applies to CSV. Specifies the directory where the rejected rows and the corresponding error file should be written. The full path from the storage account can be specified or the path relative to the container can be specified. If the specified path doesn't exist, one is created on your behalf. A child directory is created with the name `_rejectedrows`. The `_` character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter.

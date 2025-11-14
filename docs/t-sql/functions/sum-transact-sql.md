@@ -38,7 +38,7 @@ Returns the sum of all the values, or only the DISTINCT values, in the expressio
 SUM ( [ ALL | DISTINCT ] expression )
 
 -- Analytic Function Syntax
-SUM ( [ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
+SUM ( [ ALL ] expression) OVER ( [ partition_by_clause ] [order_by_clause])
 ```
 
 ## Arguments
@@ -57,7 +57,7 @@ A constant, column, or function, and any combination of arithmetic, bitwise, and
 
 #### OVER ( [ _partition\_by\_clause_ ] *_order\_by\_clause_)*
 
-*partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. _order\_by\_clause_ determines the logical order in which the operation is performed. _order\_by\_clause_ is required. For more information, see [OVER Clause (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).
+*partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. _order\_by\_clause_ determines the logical order in which the operation is performed. For more information, see [OVER Clause (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).
 
 ## Return Types
 

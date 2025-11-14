@@ -53,9 +53,10 @@ This catalog view is not supported in serverless SQL pools in Azure Synapse Anal
  This query returns the name, service, and performance tier information of the current database context.
   
 ```sql  
-SELECT  DB_NAME(), slo.edition, slo.service_objective
+SELECT  d.name, slo.edition, slo.service_objective, slo.elastic_pool_name
 FROM sys.database_service_objectives AS slo
-WHERE slo.database_id = DB_ID();
+JOIN sys.databases d ON slo.database_id = d.database_id
+WHERE d.name = DB_NAME();
 ```  
 
 ## Next step

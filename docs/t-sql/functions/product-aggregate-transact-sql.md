@@ -46,7 +46,7 @@ PRODUCT ( [ ALL | DISTINCT ] expression )
 Analytic function syntax.
 
 ```syntaxsql
-PRODUCT ( [ ALL ] expression) OVER ( [ PARTITION BY clause ] ORDER BY clause)
+PRODUCT ( [ ALL ] expression) OVER ( [ PARTITION BY clause ] [ORDER BY clause])
 ```
 
 ## Arguments
@@ -69,7 +69,7 @@ Determines the partitioning and ordering of a rowset before the function is appl
 
 `PARTITION BY` clause divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group.
 
-`ORDER BY` clause determines the logical order in which the operation is performed. Required. For more information, see [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md).
+`ORDER BY` clause determines the logical order in which the operation is performed. For more information, see [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md).
 
 ## Return types
 

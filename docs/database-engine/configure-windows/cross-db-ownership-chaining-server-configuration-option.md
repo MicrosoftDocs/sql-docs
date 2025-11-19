@@ -50,6 +50,9 @@ Before turning cross-database ownership chaining on or off:
 
 - If you have databases that require cross-database ownership chaining, the recommended practice is to turn off the `cross db ownership chaining` option for the instance using `sp_configure`; then, turn on cross-database ownership chaining for individual databases that require it with the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement.
 
+## Security Risk
+Enabling cross-database ownership chaining in SQL Server introduces a potential security vulnerability. When this feature is active, a local database user with elevated privileges can exploit ownership chaining to escalate permissions and potentially gain sysadmin access. Users should avoid enabling cross-database ownership chaining at the instance level and restrict its use to trusted, related databases only.
+
 ## Related content
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

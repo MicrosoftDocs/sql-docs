@@ -157,7 +157,7 @@ FROM { <table_source> [ , ...n ] }
 }
 
 <join_type> ::=
-    [ INNER ] [ <join hint> ] JOIN
+    [ INNER ] [ <join_hint> ] JOIN
     | LEFT  [ OUTER ] JOIN
     | RIGHT [ OUTER ] JOIN
     | FULL  [ OUTER ] JOIN
@@ -189,7 +189,7 @@ FROM { <table_source> [ , ...n ] }
 }
 
 <join_type> ::=
-    [ INNER ] [ <join hint> ] JOIN
+    [ INNER ] [ <join_hint> ] JOIN
     | LEFT  [ OUTER ] JOIN
     | RIGHT [ OUTER ] JOIN
     | FULL  [ OUTER ] JOIN

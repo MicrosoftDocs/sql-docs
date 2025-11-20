@@ -90,7 +90,7 @@ This example alters the `EXTERNAL MODEL` named `dbo.myAImodel`, and changes the 
 
 ```sql
 -- Alter an external model
-ALTER EXTERNAL MODEL dbo.myAImodel
+ALTER EXTERNAL MODEL myAImodel
 SET
 (
   MODEL = 'text-embedding-3-large'

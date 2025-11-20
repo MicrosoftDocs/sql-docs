@@ -248,7 +248,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 | --- | ---: | ---: | ---: | ---: | ---: |
 | SQL Management Objects (SMO) | Yes | Yes | Yes | Yes | Yes |
 | SQL Configuration Manager | Yes | Yes | Yes | Yes | Yes |
-| SQL CMD (Command Prompt tool) | Yes | Yes | Yes | Yes | Yes |
+| sqlcmd utility (command line tool) | Yes | Yes | Yes | Yes | Yes |
 | Distributed Replay - Admin Tool | Yes | Yes | Yes | Yes | No |
 | Distribute Replay - Client | Yes | Yes | Yes | No | No |
 | Distributed Replay - Controller | Up to 16 clients | 1&nbsp;client | 1&nbsp;client | No | No |
@@ -282,7 +282,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 | Direct query of indexed views (using `NOEXPAND` hint) | Yes | Yes | Yes | Yes | Yes |
 | Automatic indexed views maintenance | Yes | Yes | Yes | No | No |
 | Distributed partitioned views | Yes | No | No | No | No |
-| Parallel index operations | Yes | No | No | No | No |
+| Parallel index maintenance operations | Yes | No | No | No | No |
 | Automatic use of indexed view by query optimizer | Yes | No | No | No | No |
 | Parallel consistency check | Yes | No | No | No | No |
 | SQL Server Utility Control Point | Yes | No | No | No | No |
@@ -329,7 +329,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 | Internationalization support | Yes | Yes | Yes | Yes | Yes |
 | Full-text and semantic search | Yes | Yes | Yes | Yes | No |
 | Specification of language in query | Yes | Yes | Yes | Yes | No |
-| Service Broker (messaging) | Yes | Yes | No <sup>3</sup> | No <sup>3</sup> | No <sup>3</sup> |
+| Service Broker (messaging and queuing) | Yes | Yes | No <sup>3</sup> | No <sup>3</sup> | No <sup>3</sup> |
 | Transact-SQL endpoints | Yes | Yes | Yes | No | No |
 
 <sup>1</sup> Scale out with multiple compute nodes requires a head node.

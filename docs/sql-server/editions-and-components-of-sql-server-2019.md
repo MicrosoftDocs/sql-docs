@@ -203,12 +203,12 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 | Read-ahead | Yes | No | No | No | No |
 | Advanced scanning | Yes | No | No | No | No |
 | Delayed durability | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: automatic tuning | Yes | No | No | No | No |
-| Intelligent Database: batch mode for row store <sup>1</sup> | Yes | No | No | No | No |
-| Intelligent Database: row mode memory grant feedback | Yes | No | No | No | No |
-| Intelligent Database: approximate count distinct | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: table variable deferred compilation | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: scalar UDF inlining | Yes | Yes | Yes | Yes | Yes |
+| Automatic tuning | Yes | No | No | No | No |
+| Batch mode for row store <sup>1</sup> | Yes | No | No | No | No |
+| Row mode memory grant feedback | Yes | No | No | No | No |
+| Approximate count distinct | Yes | Yes | Yes | Yes | Yes |
+| Table variable deferred compilation | Yes | Yes | Yes | Yes | Yes |
+| Scalar UDF inlining | Yes | Yes | Yes | Yes | Yes |
 | Batch mode adaptive joins | Yes | No | No | No | No |
 | Batch mode memory grant feedback | Yes | No | No | No | No |
 | Interleaved execution for multi-statement table valued functions | Yes | Yes | Yes | Yes | Yes |
@@ -267,7 +267,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 | SQL Assessment API | Yes | Yes | Yes | Yes | Yes |
 | SQL Vulnerability Assessment | Yes | Yes | Yes | Yes | Yes |
 | SQL Configuration Manager | Yes | Yes | Yes | Yes | Yes |
-| SQL CMD (Command Prompt tool) | Yes | Yes | Yes | Yes | Yes |
+| sqlcmd utility (command line tool) | Yes | Yes | Yes | Yes | Yes |
 | Distributed Replay - Admin Tool | Yes | Yes | Yes | Yes | No |
 | Distribute Replay - Client | Yes | Yes | Yes | No | No |
 | Distributed Replay - Controller | Yes <sup>1</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> | No | No |
@@ -306,7 +306,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 | Direct query SQL Server Analysis Services | Yes | Yes | No | No | Yes |
 | Automatic indexed views maintenance | Yes | Yes | Yes | No | No |
 | Distributed partitioned views | Yes | No | No | No | No |
-| Parallel index operations | Yes | No | No | No | No |
+| Parallel index maintenance operations | Yes | No | No | No | No |
 | Automatic use of indexed view by query optimizer | Yes | No | No | No | No |
 | Parallel consistency check | Yes | No | No | No | No |
 | [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Utility Control Point | Yes | No | No | No | No |
@@ -358,7 +358,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 | Internationalization support | Yes | Yes | Yes | Yes | Yes |
 | Full-text and semantic search | Yes | Yes | Yes | Yes | No |
 | Specification of language in query | Yes | Yes | Yes | Yes | No |
-| Service Broker (messaging) | Yes | Yes | No <sup>5</sup> | No <sup>5</sup> | No <sup>5</sup> |
+| Service Broker (messaging and queuing) | Yes | Yes | No <sup>5</sup> | No <sup>5</sup> | No <sup>5</sup> |
 | Transact-SQL endpoints | Yes | Yes | Yes | No | No |
 | Graph | Yes | Yes | Yes | Yes | Yes |
 | UTF-8 support | Yes | Yes | Yes | Yes | Yes |

@@ -202,21 +202,21 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Read-ahead | Yes | No | No | No | No |
 | Advanced scanning | Yes | No | No | No | No |
 | Delayed durability | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: approximate count distinct | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: approximate percentile | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: automatic tuning | Yes | No | No | No | No |
-| Intelligent Database: batch mode for row store <sup>1</sup> | Yes | No | No | No | No |
-| Intelligent Database: cardinality estimate feedback | Yes | No | No | No | No |
-| Intelligent Database: degree of parallelism feedback | Yes | No | No | No | No |
-| Intelligent Database: memory grant feedback persistence and percentile | Yes | No | No | No | No |
-| Intelligent Database: optimized plan forcing | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: parameter sensitive plan optimization | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: row mode memory grant feedback | Yes | No | No | No | No |
-| Intelligent Database: table variable deferred compilation | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: scalar UDF inlining | Yes | Yes | Yes | Yes | Yes |
-| Intelligent Database: Batch mode adaptive joins | Yes | No | No | No | No |
-| Intelligent Database: Batch mode memory grant feedback | Yes | No | No | No | No |
-| Intelligent Database: Interleaved execution for multi-statement table valued functions | Yes | Yes | Yes | Yes | Yes |
+| Approximate count distinct | Yes | Yes | Yes | Yes | Yes |
+| Approximate percentile | Yes | Yes | Yes | Yes | Yes |
+| Automatic tuning | Yes | No | No | No | No |
+| Batch mode for row store <sup>1</sup> | Yes | No | No | No | No |
+| Cardinality estimate feedback | Yes | No | No | No | No |
+| Degree of parallelism feedback | Yes | No | No | No | No |
+| Memory grant feedback persistence and percentile | Yes | No | No | No | No |
+| Optimized plan forcing | Yes | Yes | Yes | Yes | Yes |
+| Parameter sensitive plan optimization | Yes | Yes | Yes | Yes | Yes |
+| Row mode memory grant feedback | Yes | No | No | No | No |
+| Table variable deferred compilation | Yes | Yes | Yes | Yes | Yes |
+| Scalar UDF inlining | Yes | Yes | Yes | Yes | Yes |
+| Batch mode adaptive joins | Yes | No | No | No | No |
+| Batch mode memory grant feedback | Yes | No | No | No | No |
+| Interleaved execution for multi-statement table valued functions | Yes | Yes | Yes | Yes | Yes |
 | Bulk insert improvements | Yes | Yes | Yes | Yes | Yes |
 | Support for Advanced Vector Extension (AVX) 512 <sup>5</sup> | Yes | No | No | No | No |
 | Integrated acceleration and offloading (hardware) | Yes | No | No | No | No |
@@ -286,7 +286,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | SQL Assessment API | Yes | Yes | Yes | Yes | Yes |
 | SQL Vulnerability Assessment | Yes | Yes | Yes | Yes | Yes |
 | SQL Configuration Manager | Yes | Yes | Yes | Yes | Yes |
-| SQLCMD (Command Prompt tool) | Yes | Yes | Yes | Yes | Yes |
+| sqlcmd utility (command line tool) | Yes | Yes | Yes | Yes | Yes |
 | SQL Profiler | Yes | Yes | No <sup>1</sup> | No <sup>1</sup> | No <sup>1</sup> |
 | [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Agent | Yes | Yes | Yes | No | No |
 | Microsoft System Center Operations Manager Management Pack | Yes | Yes | Yes | No | No |
@@ -319,7 +319,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Direct query SQL Server Analysis Services | Yes | Yes | No | No | Yes |
 | Automatic indexed views maintenance | Yes | Yes | Yes | No | No |
 | Distributed partitioned views | Yes | No | No | No | No |
-| Parallel index operations | Yes | No | No | No | No |
+| Parallel index maintenance operations | Yes | No | No | No | No |
 | Automatic use of indexed view by query optimizer | Yes | No | No | No | No |
 | Parallel consistency check | Yes | No | No | No | No |
 | [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Utility Control Point | Yes | No | No | No | No |
@@ -353,9 +353,9 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Data Virtualization with PolyBase | Yes | Yes | Yes | Yes | Yes |
 | JSON | Yes | Yes | Yes | Yes | Yes |
 | Query Store | Yes | Yes | Yes | Yes | Yes |
-| Query Store: on by default for new databases | Yes | Yes | Yes | Yes | Yes |
-| Query Store: hint support | Yes | Yes | Yes | Yes | Yes |
-| Query Store: read-replica support | Yes | No | No | No | No |
+| Query Store on by default for new databases | Yes | Yes | Yes | Yes | Yes |
+| Query Store hints | Yes | Yes | Yes | Yes | Yes |
+| Query Store on secondary replicas | Yes | No | No | No | No |
 | Temporal | Yes | Yes | Yes | Yes | Yes |
 | Common Language Runtime (CLR) Integration | Yes | Yes | Yes | Yes | Yes |
 | Java Language Runtime Integration | Yes | Yes | Yes | Yes | Yes |
@@ -370,7 +370,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Internationalization support | Yes | Yes | Yes | Yes | Yes |
 | Full-text and semantic search | Yes | Yes | Yes | Yes | No |
 | Specification of language in query | Yes | Yes | Yes | Yes | No |
-| Service Broker (messaging) | Yes | Yes | No <sup>3</sup> | No <sup>3</sup> | No <sup>3</sup> |
+| Service Broker (messaging and queuing) | Yes | Yes | No <sup>3</sup> | No <sup>3</sup> | No <sup>3</sup> |
 | Transact-SQL endpoints | Yes | Yes | Yes | No | No |
 | Graph | Yes | Yes | Yes | Yes | Yes |
 | UTF-8 support | Yes | Yes | Yes | Yes | Yes |

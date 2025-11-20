@@ -79,6 +79,14 @@ FROM Employees
 WHERE REGEXP_LIKE (FIRST_NAME, '^A.*Y$');
 ```
 
+Select all records from the `Employees` table where the first name starts with `A` and ends with `Y` using case-insensitive mode
+
+```sql
+SELECT *
+FROM Employees
+WHERE REGEXP_LIKE (FIRST_NAME, '^A.*Y$', 'i');
+```
+
 Select all records from the `Orders` table where the order date is in February 2020:
 
 ```sql

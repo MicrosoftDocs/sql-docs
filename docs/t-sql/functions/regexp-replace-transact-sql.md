@@ -82,7 +82,7 @@ The numbering is 1-based, meaning the first character in the expression is `1` a
 
 #### *occurrence*
 
-An expression (positive integer) that specifies which occurrence of the pattern expression within the source string to be searched or replaced. Default is `1`. Searches at the first character of the *string_expression*. For a positive integer `n`, it searches for the `nth` occurrence beginning with the first character following the first occurrence of the *pattern_expression*, and so forth.
+An expression (positive integer) that specifies which occurrence of the pattern expression within the source string to be searched or replaced. Default is `1`. Searches at the first character of the *string_expression*. For a positive integer `n`, it searches for the `nth` occurrence beginning with the first character following the first occurrence of the *pattern_expression*, and so forth. If the value is `0`, all occurrences of the *pattern_expression* are replaced.
 
 #### *flags*
 

@@ -107,14 +107,14 @@ DECLARE @j AS JSON = '{
 The path `$.credit_cards` points to a JSON array where each element is a valid JSON object. Now, the `JSON_QUERY` function can be used with array wildcard support to return all or specific values of the `type` property like:
 
 ```sql
-SELECT JSON_QUERY(@j, '$.creditcards[*].type' WITH ARRAY WRAPPER);
+SELECT JSON_QUERY(@j, '$.credit_cards[*].type' WITH ARRAY WRAPPER);
 ```
 
 The following table shows various examples of SQL/JSON path expression with wildcard and the return value using `JSON_QUERY WITH ARRAY WRAPPER`.
 
 | Path | Return value |
 | --- | --- |
-| `$.creditcards[0].type` | `["jcb"]` |
+| `$.credit_cards[0].type` | `["jcb"]` |
 | `$.credit_cards[*].type` | `["jcb","diners-club-carte-blanche","jcb","maestro","instapayment"]` |
 | `$.credit_cards[0, 2].type` | `["jcb","jcb"]` |
 | `$.credit_cards[1 to 3].type` | `["diners-club-carte-blanche","jcb","maestro"]` |

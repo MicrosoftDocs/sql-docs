@@ -62,6 +62,21 @@ Those files should be excluded from the database model build by setting the `Bui
 </Project>
 ```
 
+In SDK-style SQL projects, adding a `Build Remove="path\file.sql"` entry removes the file from the project entirely, which causes it to no longer appear in the Visual Studio Code project view. To keep the file visible while still excluding it from model compilation, add it again as a `None` item:
+
+```xml
+...
+  <ItemGroup>
+    <Build Remove="scripts\script1.sql" />
+    <None Include="scripts\script1.sql" />
+    <Build Remove="scripts\script2.sql" />
+    <None Include="scripts\script2.sql" />
+  </ItemGroup>
+</Project>
+```
+
+This prevents the file from being compiled as part of the database model while keeping it visible in the project.
+
 > [!TIP]
 > You can validate the pre-deployment and post-deployment scripts after project build, by changing the `.dacpac` file extension to `.zip` and unarchiving the `.zip` to a folder. A single `.sql` file is present for pre-deployment and post-deployment scripts, and should contain the entire Transact-SQL contents of all referenced files in the originating SQL project.
 

@@ -156,8 +156,6 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<pass
 
 ::: moniker-end
 
-[!INCLUDE [editions-sql-server-developer](includes/editions-sql-server-developer.md)]
-
 > [!CAUTION]  
 > [!INCLUDE [password-complexity](includes/password-complexity.md)]
 

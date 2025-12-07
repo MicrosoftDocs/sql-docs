@@ -65,7 +65,7 @@ A table value is returned. The following grid describes the column contents of t
 
 ## Permissions
 
-User must be a member of the **public** role. Requires READ ACCESS permission on the server and the object.
+User must be a member of the **sysadmin** fixed server role.
 
 ## Remarks
 

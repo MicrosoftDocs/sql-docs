@@ -59,7 +59,7 @@ The values that you specify for `<computername>` and `<domainname>` identify the
 
 1. Open the `RsReportServer.config` file and locate the `<AuthenticationTypes>` section.
 
-1. Add `<RSWindowsNegotiate/>` as the first entry in this section to enable Kerberos.
+1. Add `<RSWindowsNegotiate />` as the first entry in this section to enable Kerberos.
 
 ## Related content
 

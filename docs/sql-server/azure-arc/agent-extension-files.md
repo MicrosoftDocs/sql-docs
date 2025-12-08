@@ -74,6 +74,33 @@ These tables store background job definition and execution history. Background j
 
 Additionally, the table `dbo.SQLServerAzureArcProperties` contains the resource identity for the SQL Server instance in Azure Resource Manager.  This table can be used to detect if the SQL Server instance is Arc-enabled, and if so, what the identity of the resource is in Azure.
 
+### FAQs
+
+1. Where are these background jobs?
+   
+   The background jobs are used to perform long-running tasks that can persist state in case of computer restarts. The logic of the jobs are in the extension, while state state is stored in `msdb`. For example, a Migration Assessment Job can take a long time to execute, the state is stored in `msdb`.
+   
+2. What security context do they use to execute?
+
+   They are run in the Service `C:\Program Files\Sql Server Extension\SqlServerExtension.Service.exe`. The service connects to SQL Server `msdb` as the low privelge `NT Service\SQLServerExtension` user. 
+   
+   This service has the minimum amount of permissions required to operate on `msdb`.
+
+3. How long are the rows on this table retained for? What is the purge policy?
+
+   The maximum job lifetime is 15 days, it is currently not user configurable via the ARM API. After 15 days, the engine automatically purges old jobs that have finished executing.
+
+   A given Job has a maximum lifetime of 1 day, before it is failed. This limits the lifetime a job can remain on the system.
+
+3. How large are these tables expected to grow?
+
+   Very minimal, as the retention is finite, and there are a handful of jobs.
+
+4. Any indexes needed on these tables?
+
+   No, indexes will not help performance, as the tables are expected to be trivially sized as they are tied to the number of features/jobs running at a given point in time.
+
+
 ## Related content
 
 - [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)

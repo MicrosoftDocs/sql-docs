@@ -145,7 +145,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
 #### Install Python runtime
 
-1. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/). Install it by using the following options:
+1. Download the most recent version of [Python 3.10 for Windows](https://aka.ms/Python3_10). Install it by using the following options:
 
     1. Open the Python Setup application and select **Customize installation**.
     1. Verify that the **Install launcher for all users (recommended)** checkbox is selected.
@@ -154,12 +154,19 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
        We recommend using a Python installation path that all users can access (such as `C:\Program Files\Python310`), and not one that's specific to a single user.
 
-1. Download and install the latest version of the `revoscalepy` package and its dependencies from a new elevated command prompt:
+2.  Create a text file with the below contents, and save it as C:\Program Files\Python310\constraints.txt:
+    ```
+    dill==0.3.4
+    numpy==1.22.0
+    pandas==1.3.5
+    patsy==0.5.2
+    python-dateutil==2.8.2
+    ```
+3.  Download and install the latest version of the `revoscalepy` package and its dependencies from a new elevated command prompt, while passing the constraints.txt file created in the above step:
 
     ```cmd
     cd "C:\Program Files\Python310\"
-    python -m pip install -t "C:\Program Files\Python310\Lib\site-packages" dill numpy==1.22.0 pandas patsy python-dateutil packaging
-    python -m pip install -t "C:\Program Files\Python310\Lib\site-packages" https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
+    python -m pip install -t "C:\Program Files\Python310\Lib\site-packages" -c "C:\Program Files\Python310\constraints.txt" dill numpy pandas patsy python-dateutil packaging https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
 
     Run the following **icacls** commands to grant **READ** and **EXECUTE** access to the installed libraries to **SQL Server Launchpad Service** and SID **S-1-15-2-1 (ALL_APPLICATION_PACKAGES)**. You need to grant permissions to the service account associated with the Launchpad service, check in [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).

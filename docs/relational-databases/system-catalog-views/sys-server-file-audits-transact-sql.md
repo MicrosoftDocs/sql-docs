@@ -42,7 +42,8 @@ dev_langs:
 |max_files|**int**|Maximum number of files to use without the rollover option.|  
 |reserved_disk_space|**int**|Amount of disk space to reserve per file.|  
 |log_file_path|**nvarchar(260)**|Path to where audit is located. File path for file audit, application log path for application log audit.|  
-|log_file_name|**nvarchar(260)**|Base name for the log file supplied in the CREATE AUDIT DDL. An incremental number is added to the base_log_name file as a suffix to create the log file name.|  
+|log_file_name|**nvarchar(260)**|Base name for the log file supplied in the CREATE AUDIT DDL. An incremental number is added to the base_log_name file as a suffix to create the log file name.|
+|retention_days|**int**|Lifetime in days of the audit log file. Applies to Azure SQL Database and Azure SQL Managed Instance <br /><br /> 0 = Unlimited. |  
   
 ## Permissions  
  Principals with the **ALTER ANY SERVER AUDIT** or **VIEW ANY DEFINITION** permission have access to this catalog view. In addition, the principal must not be denied **VIEW ANY DEFINITION** permission.  

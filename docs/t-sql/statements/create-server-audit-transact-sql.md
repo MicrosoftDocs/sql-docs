@@ -55,6 +55,7 @@ CREATE SERVER AUDIT audit_name
     [ , ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION } ]
     [ , AUDIT_GUID = uniqueidentifier ]
     [ , OPERATOR_AUDIT = { ON | OFF } ]
+    [ , RETENTION_DAYS = integer ]
 }
 
 <predicate_expression> ::=
@@ -140,6 +141,12 @@ To support scenarios such as database mirroring or databases participating in an
 **Applies to:** [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] only.
 
 Indicates whether auditing captures Microsoft support engineer operations when they need to access your server during a support request.
+
+#### RETENTION_DAYS 
+
+**Applies to:** Azure SQL Managed Instance and Azure SQL Database only.
+
+Indicates the number of days of the audit log file storage period.
 
 #### predicate_expression
 

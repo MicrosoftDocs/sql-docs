@@ -165,6 +165,9 @@ Create a scheduled task to run the PowerShell script at startup. To do this, fol
 1. Review the summary on the **Finish** tab and select **Finish** to create the task:
 
    :::image type="content" source="media/tempdb-ephemeral-storage/create-sql-start-task.png" alt-text="Screenshot of the Task Scheduler, Create a Basic Task window, showing where to enter the script path.":::
+---- Whenever you finish the creation of the task, be sure to manaully start to test run. If you are using normal user to create the task schedule, be sure to configure Security options as below. 
+<img width="1224" height="925" alt="image" src="https://github.com/user-attachments/assets/d7f6d37d-5177-4a82-a35d-de5ac76b04f5" />
+
 
 ### Test the script
 

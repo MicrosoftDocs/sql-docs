@@ -33,7 +33,7 @@ SqlPackage /Action:Import {parameters} {properties}
 
 The Import action requires a `SourceFile` parameter to specify the name and location of the .bacpac file containing the database objects and data.
 
-The Export action requires a target connection where a new database will be created by SqlPackage or where a blank database is present. This is specified either through a combination of:
+The Import action requires a target connection where a new database will be created by SqlPackage or where a blank database is present. This is specified either through a combination of:
 - `TargetServerName` and `TargetDatabaseName` parameters, or
 - `TargetConnectionString` parameter.
 

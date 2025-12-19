@@ -100,7 +100,6 @@ Source    Target    ActualDistance LimitedDistance
 Chocolate Sweets    8              2
 ```
 
-
 For additional examples, see [Example *EDIT_DISTANCE()*](../../relational-databases/fuzzy-string-match/overview.md#example-edit_distance).
 
 ## Related content

@@ -82,7 +82,7 @@ Colour Color  1
 
 ### Example 2
 
-The following example compares two words and returns the `EDIT_DISTANCE()` limited to a maximum value
+The following example compares two words and returns the `EDIT_DISTANCE()` limited to a maximum value.
 
 ```sql
 SELECT Source, Target,

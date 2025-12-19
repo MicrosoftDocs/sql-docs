@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb ||
 
 [!INCLUDE [preview](../../includes/preview.md)]
 
-Calculates the number of insertions, deletions, substitutions, and transpositions needed to transform one string to another.
+Calculates the distance that is the number of insertions, deletions, substitutions, and transpositions needed to transform one string to another.
 
 > [!NOTE]  
 >
@@ -47,17 +47,22 @@ An alphanumeric expression of character data. *character_expression* can be a co
 
 #### *maximum_distance*
 
-The maximum distance that should be computed. *maximum_distance* is an integer. If greater than or equal to zero, then the function returns the actual distance value or a distance value that is greater than *maxiumum_distance* value. If the actual distance is greater than *maximum_distance*, then the function might return a value greater than or equal to *maximum_distance*. If the parameter isn't specified or if *maximum_distance* is negative, then the function returns the actual number of transformations needed. If the value is NULL, then the function returns NULL.
+The maximum distance that should be computed. *maximum_distance* is an integer. If greater than or equal to zero, then the function stops calculating the distance when the *maximum_distance* is reached.
 
 ## Return value
 
 **int**
 
+Returns the distance between the two *character_expressions* using Damerau-Levenshtein algorithm, or *maximum_distance* value if that is smaller.
+If any of the inputs is `NULL` then the function returns a `NULL` value.
+
 ## Remarks
 
-This function implements the Damerau-Levenshtein algorithm. If any of the inputs is `NULL` then the function returns a `NULL` value. Otherwise, the function returns an integer value from 0 to the number of transformations or *maximum_distance* value.
+If the actual distance is greater than *maximum_distance*, then the function might return a value greater than or equal to *maximum_distance*.
 
 ## Examples
+
+### Example 1
 
 The following example compares two words and returns the `EDIT_DISTANCE()` value as a column, named `Distance`.
 
@@ -74,6 +79,27 @@ WordUK WordUS Distance
 ------ ------ -----------
 Colour Color  1
 ```
+
+### Example 2
+
+The following example compares two words and returns the `EDIT_DISTANCE()` limited to a maximum value
+
+```sql
+SELECT Source, Target,
+	   EDIT_DISTANCE(Source, Target) AS ActualDistance,
+       EDIT_DISTANCE(Source, Target,2) AS LimitedDistance
+FROM (VALUES('Chocolate', 'Sweets')) compare(Source, Target) ;
+
+```
+
+Returns:
+
+```output
+Source    Target    ActualDistance LimitedDistance
+--------- --------- -------------- ---------------
+Chocolate Sweets    8              2
+```
+
 
 For additional examples, see [Example *EDIT_DISTANCE()*](../../relational-databases/fuzzy-string-match/overview.md#example-edit_distance).
 

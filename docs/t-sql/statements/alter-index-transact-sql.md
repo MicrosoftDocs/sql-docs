@@ -63,11 +63,11 @@ Syntax for SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 ```syntaxsql
 ALTER INDEX { index_name | ALL } ON <object>
 {
-      REBUILD {
+      REBUILD [
             [ WITH ( <rebuild_index_option> [ , ...n ] ) ]
           | [ PARTITION = ALL [ WITH ( <rebuild_index_option> [ , ...n ] ) ] ]
           | [ PARTITION = partition_number [ WITH ( <single_partition_rebuild_index_option> [ , ...n ] ) ] ]
-      }
+      ]
     | DISABLE
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]
     | SET ( <set_index_option> [ , ...n ] )
@@ -148,11 +148,11 @@ Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
 ALTER INDEX { index_name | ALL }
     ON [ schema_name. ] table_name
 {
-      REBUILD {
+      REBUILD [
             [ WITH ( <rebuild_index_option> [ , ...n ] ) ]
           | [ PARTITION = ALL [ WITH ( <rebuild_index_option> ) ] ]
           | [ PARTITION = partition_number [ WITH ( <single_partition_rebuild_index_option> ) ] ]
-      }
+      ]
     | DISABLE
     | REORGANIZE [ PARTITION = partition_number ]
 }

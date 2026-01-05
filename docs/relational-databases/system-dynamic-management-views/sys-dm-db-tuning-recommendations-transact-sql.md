@@ -156,9 +156,9 @@ AS (
         error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES', 'NO')
     FROM sys.dm_db_tuning_recommendations
     CROSS APPLY OPENJSON(Details, '$.planForceDetails') WITH (
-            [query_id] INT '$.queryId',
-            regressedPlanId INT '$.regressedPlanId',
-            recommendedPlanId INT '$.recommendedPlanId',
+            [query_id] BIGINT '$.queryId',
+            regressedPlanId BIGINT '$.regressedPlanId',
+            recommendedPlanId BIGINT '$.recommendedPlanId',
             regressedPlanErrorCount INT,
             recommendedPlanErrorCount INT,
             regressedPlanExecutionCount INT,

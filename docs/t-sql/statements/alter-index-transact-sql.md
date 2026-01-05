@@ -64,7 +64,8 @@ Syntax for SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 ALTER INDEX { index_name | ALL } ON <object>
 {
       REBUILD {
-            [ PARTITION = ALL [ WITH ( <rebuild_index_option> [ , ...n ] ) ] ]
+            [ WITH ( <rebuild_index_option> [ , ...n ] ) ]
+          | [ PARTITION = ALL [ WITH ( <rebuild_index_option> [ , ...n ] ) ] ]
           | [ PARTITION = partition_number [ WITH ( <single_partition_rebuild_index_option> [ , ...n ] ) ] ]
       }
     | DISABLE
@@ -148,7 +149,8 @@ ALTER INDEX { index_name | ALL }
     ON [ schema_name. ] table_name
 {
       REBUILD {
-            [ PARTITION = ALL [ WITH ( <rebuild_index_option> ) ] ]
+            [ WITH ( <rebuild_index_option> [ , ...n ] ) ]
+          | [ PARTITION = ALL [ WITH ( <rebuild_index_option> ) ] ]
           | [ PARTITION = partition_number [ WITH ( <single_partition_rebuild_index_option> ) ] ]
       }
     | DISABLE

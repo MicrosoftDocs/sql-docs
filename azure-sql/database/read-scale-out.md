@@ -39,7 +39,7 @@ If your SQL connection string is configured with `ApplicationIntent=ReadOnly`, t
 For Azure SQL Database only, if you wish to ensure that the application connects to the primary replica regardless of the `ApplicationIntent` setting in the SQL connection string, you must explicitly disable read scale-out when creating the database or when altering its configuration. For example, if you upgrade your database from Standard or General Purpose tier to Premium or Business Critical and want to make sure all your connections continue to go to the primary replica, disable read scale-out. For details on how to disable it, see [Enable and disable read scale-out](#enable-and-disable-read-scale-out-for-sql-database).
 
 > [!NOTE]  
-> Query Store and SQL Profiler features are not supported on read-only replicas.
+> SQL Profiler feature is not supported on read-only replicas.
 
 ## Data consistency
 

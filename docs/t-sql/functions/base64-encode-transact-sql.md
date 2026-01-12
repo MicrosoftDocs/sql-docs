@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current || =fabric || =fabric-sqldb"
 
 # BASE64_ENCODE (Transact-SQL)
 
-[!INCLUDE [asdb-Fabric-SE-fabricDW-fabricsqldb](../../includes/applies-to-version/asdb-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
 `BASE64_ENCODE` converts the value of a **varbinary** expression into a base64-encoded **varchar** expression.
 

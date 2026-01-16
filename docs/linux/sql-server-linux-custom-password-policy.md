@@ -99,6 +99,10 @@ Use [adutil](sql-server-linux-ad-auth-adutil-introduction.md) to fetch the passw
    ```bash
    sudo systemctl restart mssql-server
    ```
+  
+  Starting with SQL Server 2025 CU1, you can apply password policy changes to the SQL Server without restarting the service. Simply connect to the SQL Server instance and run `sp_reload_mssqlconf` to apply the updates.
+  
+    Exec sp_reload_mssqlconf
 
 <a id="manual"></a>
 
@@ -134,15 +138,21 @@ Run the following **mssql-conf** commands to set each policy configuration prope
    sudo /opt/mssql/bin/mssql-conf set passwordpolicy.passwordmaximumage 45
    ```
 
-1. Restart SQL Server service.
+1. Restart SQL Server service. 
 
    ```bash
    sudo systemctl restart mssql-server
    ```
-
+  
+  Or
+  Run
+  
+    Exec sp_reload_mssqlconf
+    
+    
 ## Limitations
 
-Currently, the `minimumpasswordlength` can't be set to more than 14 characters.
+On SQL Server 2025 and SQL Server 2022(CU23), the `minimumpasswordlength` setting cannot exceed 14 characters. However, this restriction is removed starting with SQL Server 2025 CU1. 
 
 After updating the group password policy in Active Directory, you must manually run the `adutil updatepasswordpolicy` command to update `mssql.conf`. This command doesn't run automatically. Ensure the Linux machine running SQL Server is part of the domain, or manually set it using **mssql-conf**.
 

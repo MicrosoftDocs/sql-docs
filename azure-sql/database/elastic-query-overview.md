@@ -156,7 +156,7 @@ Elastic query is included in the cost of Azure SQL Database. Topologies where yo
 
 - Private links are currently not supported with elastic query for those databases that are targets of external data sources.
   
-- Elastic queries only support SQL logins. This presents a security problem as SQL logins are not recommneded to be used as they require passwords to be stored and securly maintained in other resources. Until elastic queries support managed identity they are not recommended from a security perspective.
+- Elastic queries only support SQL logins. This presents a security problem as SQL logins are not recommended to be used as they require passwords to be stored and securely maintained in other resources. Until elastic queries support managed identity they are not recommended from a security perspective.
 
 ## Related content
 

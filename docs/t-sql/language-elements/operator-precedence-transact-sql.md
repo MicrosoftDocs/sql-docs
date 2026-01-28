@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 |-----------|---------------|  
 |1|~ (Bitwise NOT)|  
 |2|* (Multiplication), / (Division), % (Modulus)|  
-|3|+ (Positive), - (Negative), + (Addition), + (Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
+|3|+ (Positive), - (Negative), + (Addition), + (Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|, LEFT_SHIFT or \<\< (Bitwise Left Shift), RIGHT_SHIFT or >> (Bitwise Right Shift)  
 |4|=, >, \<, >=, <=, <>, !=, !>, !< (Comparison operators)|  
 |5|NOT|  
 |6|AND|  

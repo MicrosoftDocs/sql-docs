@@ -57,7 +57,7 @@ The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can b
 |active_vlf_count |**bigint** | Total number of active [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) in the transaction log.|  
 |active_log_size_mb |**float** | Total active transaction log size in MB.|  
 |log_truncation_holdup_reason |**nvarchar(60)** | Log truncation holdup reason. The value is same as  `log_reuse_wait_desc` column of `sys.databases`.  (For more detailed explanations of these values, see [The Transaction Log](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Possible values include: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />OTHER TRANSIENT |  
-|log_backup_time |**datetime** | Last transaction log backup time.|   
+|log_backup_time |**datetime** | Last transaction log backup start time.|   
 |log_backup_lsn |**nvarchar(24)** | Last transaction log backup [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|   
 |log_since_last_log_backup_mb |**float** | Log size in MB since last transaction log backup [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
 |log_checkpoint_lsn |**nvarchar(24)** | Last checkpoint [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
@@ -90,10 +90,10 @@ WHERE total_vlf_count  > 100;
 ```   
 
 ### B. Determining databases in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with transaction log backups older than 4 hours   
-The following query determines the last log backup times for the databases in the instance.
+The following query determines the last log backup start times for the databases in the instance.
 
 ```sql  
-SELECT name AS 'Database Name', log_backup_time AS 'last log backup time' 
+SELECT name AS 'Database Name', log_backup_time AS 'last log backup start time' 
 FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id); 
 ```

@@ -66,7 +66,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 
 You must have an Ubuntu 18.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu 18.04 on your own machine, go to <https://releases.ubuntu.com/18.04/>. You can also create Ubuntu virtual machines in Azure. See [Tutorial: Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu 18.04 on your own machine, go to <https://releases.ubuntu.com/18.04/>. You can also create Ubuntu or Ubuntu Pro virtual machines in Azure. See [Tutorial: Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 If you previously installed a preview version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you must first remove the old repository before following these steps. For more information, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
 
@@ -76,7 +76,7 @@ If you previously installed a preview version of [!INCLUDE [ssnoversion-md](../i
 
 You must have an Ubuntu 20.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu 20.04 on your own machine, go to <https://releases.ubuntu.com/20.04/>. You can also create Ubuntu virtual machines in Azure. See [Tutorial: Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu 20.04 on your own machine, go to <https://releases.ubuntu.com/20.04/>. You can also create Ubuntu or Ubuntu Pro virtual machines in Azure. See [Tutorial: Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 If you previously installed a preview version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you must first remove the old repository before following these steps. For more information, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
 
@@ -86,7 +86,7 @@ If you previously installed a preview version of [!INCLUDE [ssnoversion-md](../i
 
 You must have an Ubuntu 20.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu 20.04 on your own machine, go to <https://releases.ubuntu.com/20.04/>. You can also create Ubuntu virtual machines in Azure. See [Tutorial: Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu 20.04 on your own machine, go to <https://releases.ubuntu.com/20.04/>. You can also create Ubuntu or Ubuntu Pro virtual machines in Azure. See [Tutorial: Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 If you previously installed a preview version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you must first remove the old repository before following these steps. For more information, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
 
@@ -96,7 +96,7 @@ If you previously installed a preview version of [!INCLUDE [ssnoversion-md](../i
 
 You must have an Ubuntu 22.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu 22.04 on your own machine, go to <https://releases.ubuntu.com/22.04/>. You can also create Ubuntu virtual machines in Azure. See [Tutorial: Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu 22.04 on your own machine, go to <https://releases.ubuntu.com/22.04/>. You can also create Ubuntu or Ubuntu Pro virtual machines in Azure. See [Tutorial: Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 If you previously installed a preview version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you must first remove the old repository before following these steps. For more information, see [Configure repositories for installing and upgrading SQL Server 2025 on Linux](sql-server-linux-change-repo-2025.md).
 
@@ -106,6 +106,12 @@ If you previously installed a preview version of [!INCLUDE [ssnoversion-md](../i
 > [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows Subsystem for Linux (WSL) is supported for development purposes only. For instructions on installing SQL Server on WSL, see [Quickstart: Install SQL Server and create a database on Windows Subsystem for Linux (WSL 2)](quickstart-install-connect-wsl-2.md).
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+
+> [!TIP]
+> **Production and Compliance**
+> For production environments that require **FIPS compliance** or expanded security maintenance (ESM) for the full open source stack (Universe repository), we recommend using **Ubuntu Pro**.
+>
+> You can enable Ubuntu Pro on your existing instance or select a pre-configured Ubuntu Pro image when provisioning in Azure.
 
 <a id="install"></a>
 

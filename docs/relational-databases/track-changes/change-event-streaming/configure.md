@@ -229,7 +229,7 @@ Use Microsoft Entra [managed identities](/entra/identity/managed-identities-azur
 To [allow Azure SQL Database managed identity write access](/azure/event-hubs/authenticate-managed-identity) to the Events Hub, follow these steps:
 
 1. Configure a [managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) for your Azure SQL Database [logical server](/azure/azure-sql/database/logical-servers), if you haven't already.
-1. Add the `Azure Event Hubs Data Sender` role assignment to the managed identity of your logical server for your Azure Event Hub instance. You can do this programmatically with any programming or scripting language, or on the **Access Control (IAM)** page for your Azure Event Hub instance in the Azure portal.
+1. Add the `EventGrid Data Sender` role assignment to the managed identity of your logical server for your Azure Event Hub instance. You can do this programmatically with any programming or scripting language, or on the **Access Control (IAM)** page for your Azure Event Hub instance in the Azure portal.
 
 To follow the principle of least privilege, grant access to the specific Event Hubs instance that receives the change events. Granting write access to the entire Event Hubs namespace is technically allowed, but not recommended since it applies to any event Event Hubs instance within the namespace.
 

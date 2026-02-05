@@ -887,7 +887,7 @@ Resumable index create operations have the following limitations:
 - The DDL command with `RESUMABLE = ON` can't be executed inside an explicit transaction.
 - You cannot create a resumable index that contains:
   - Computed or `timestamp` (`rowversion`) column(s) as key columns.
-  - LOB column as an included column.
+  - Computed or LOB column as an included column.
 - Resumable index operations aren't supported for:
   - The `ALTER INDEX REBUILD ALL` command
   - The `ALTER TABLE REBUILD` command

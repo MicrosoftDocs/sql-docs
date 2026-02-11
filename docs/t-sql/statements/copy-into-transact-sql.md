@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: procha, mikeray, fresantos, jovanpop
-ms.date: 11/19/2025
+ms.date: 02/11/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -634,11 +634,12 @@ When a column list isn't specified, `COPY` maps columns based on the source and 
 
 #### *External location*
 
-Specifies where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2, Azure Blob Storage, and OneLake (Preview) are supported:
+Specifies where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2, Azure Blob Storage, and OneLake are supported:
 
 - *External location* for Blob Storage: `https://<account\>.blob.core.windows.net/<container\>/<path\>`
 - *External location* for ADLS Gen2: `https://<account\>.dfs.core.windows.net/<container\>/<path\>`
-- *External location* for OneLake (Preview): `https://onelake.dfs.fabric.microsoft.com/<workspaceId>/<lakehouseId>/Files/`
+- *External location* for OneLake: `https://onelake.dfs.fabric.microsoft.com/<workspaceId>/<artifactId>/<subPath>`
+
 
 Azure Data Lake Storage (ADLS) Gen2 offers better performance than Azure Blob Storage (legacy). Consider using an ADLS Gen2 account whenever possible.
 
@@ -809,17 +810,20 @@ Parser version 1.0 is available for backward compatibility only, and should be u
 
 ## Use COPY INTO with OneLake
 
-You can use `COPY INTO` to load data directly from files stored in the Fabric OneLake, specifically from the **Files folder** of a Fabric Lakehouse. This eliminates the need for external staging accounts (such as ADLS Gen2 or Blob Storage) and enables workspace-governed, SaaS-native ingestion using Fabric permissions. This functionality supports:
+You can use `COPY INTO` to load data directly from files stored in Fabric OneLake using any OneLake-governed path in the form `/<workspaceId>/<artifactId>/<subPath>`. This eliminates the need for external staging accounts (such as ADLS Gen2 or Blob Storage) and enables workspace-governed ingestion using Fabric permissions.
 
-- Reading from `Files` folders in Lakehouses
-- Workspace-to-warehouse loads within the same tenant
+This functionality supports:
+- Loading from OneLake-governed folders across supported artifact types (for example: Lakehouse, KQL DB, and other OneLake-backed items)
+- Cross-workspace ingestion within the same tenant (subject to permissions and network boundaries)
 - Native identity enforcement using Microsoft Entra ID
 
-Example:
+> [!NOTE]
+> `COPY INTO` does not support reading from **Warehouse-owned OneLake storage paths**, including system-reserved folders (for example `/Files` or `/Tables`) or DW-owned storage locations.
 
+Example:
 ```sql
 COPY INTO t1
-FROM 'https://onelake.dfs.fabric.microsoft.com/<workspaceId>/<lakehouseId>/Files/*.csv'
+FROM 'https://onelake.dfs.fabric.microsoft.com/<workspaceId>/<artifactId>/<subPath>/*.csv'
 WITH (
     FILE_TYPE = 'CSV',
     FIRSTROW = 2
@@ -864,17 +868,19 @@ To ensure reliable execution, the source files and folders must remain unchanged
 
 If the source data has greater precision than the destination column definition, the value is truncated, not rounded, for numeric, date, and time types.
 
-<a id="limitations-for-onelake-as-source-public-preview"></a>
+<a id="limitations-for-onelake-as-source"></a>
 
 ## Limitations for OneLake as source
 
-Fabric OneLake storage as a source for both `COPY INTO` and `OPENROWSET(BULK)` is a [preview feature](/fabric/fundamentals/preview).
+Fabric OneLake storage as a source for both `COPY INTO` and `OPENROWSET(BULK)`.
 
 - **Only Microsoft Entra ID authentication is supported.** Other authentication methods, such as SAS tokens, shared keys, or connection strings, are not permitted.
 
-- **Only the `Files` folder of a Lakehouse is supported as a source.** Access to subfolders, shortcuts, or other OneLake locations is not currently available.
+- **Any OneLake-governed path is supported using the format `/<workspaceId>/<artifactId>/<subPath>`, across supported artifact types.** Friendly names for workspaces or items are not supported.
 
-- **OneLake paths must use workspace and warehouse IDs.** Friendly names for workspaces or Lakehouses are not supported at this time.
+- **Warehouse-owned OneLake storage locations are not supported as a source.** Attempts to reference Warehouse system paths (for example `/Files` or `/Tables`) or DW-owned storage locations will fail.
+
+- **Cross-tenant COPY INTO is not supported.** The source and target must be within the same tenant boundary.
 
 - **Contributor permissions are required on both workspaces.** The executing user must have at least Contributor role on the source Lakehouse workspace and the target Warehouse workspace.
 

@@ -164,7 +164,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Specifies whether collation compatibility is verified.| 
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifies whether checks should be performed before publishing that will stop the publish action if issues are present that might block successful publishing. For example, your publish action might stop if you have foreign keys on the target database that do not exist in the database project, and that causes errors when you publish. |
 
-### DeployReport Examples
+### DeployReport examples
 ```bash
 # example deploy report using a source .dacpac file and a target connection string (Azure SQL)
 SqlPackage /Action:DeployReport /SourceFile:"C:\AdventureWorksLT.dacpac" \
@@ -196,7 +196,7 @@ SqlPackage /Action:DeployReport /SourceFile:"C:\AdventureWorksLT.dacpac" \
 |**/TenantId:**|**/tid:**|{string}|Represents the Microsoft Entra tenant ID or domain name. This option is required to support guest or imported Microsoft Entra users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Microsoft Entra ID will be used, assuming that the authenticated user is a native user for this tenant. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Microsoft Entra ID are not supported and the operation will fail. <br/> For more information, see [Universal authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if universal authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Microsoft Entra authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Microsoft Entra authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Microsoft Entra authentication must be specified in SourceConnectionString (/scs). <br/> For more information, see [Universal authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
 
-### Drift Report Examples
+### DriftReport examples
 ```bash
 # example drift report using a target connection string (Azure SQL)
 SqlPackage /Action:DriftReport \
@@ -204,6 +204,6 @@ SqlPackage /Action:DriftReport \
     /OutputPath:"C:\AdventureWorksLT.DriftReport.xml"
 ```
 
-## Next Steps
+## Next steps
 
 - Learn more about [SqlPackage](sqlpackage.md)

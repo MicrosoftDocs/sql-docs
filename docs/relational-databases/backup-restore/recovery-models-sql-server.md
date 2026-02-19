@@ -47,7 +47,7 @@ The following table summarizes the three recovery models.
 | **Bulk-logged** | Requires log backups.<br /><br />An adjunct of the full recovery model that permits high-performance bulk copy operations.<br /><br />Reduces log space usage by using minimal logging for most bulk operations. For information about operations that can be minimally logged, see [The transaction log](../logs/the-transaction-log-sql-server.md).<br /><br />Log backups might be large because the minimally logged operations are captured in the log backup. For information about database backups under the bulk-logged recovery model, see [Full database backups (SQL Server)](full-database-backups-sql-server.md) and [Complete database restores (full recovery model)](complete-database-restores-full-recovery-model.md). | If the log is damaged or if bulk-logged operations occurred since the most recent log backup, changes since that last backup must be redone. Otherwise, no work is lost. | Can recover to the end of any backup. Point-in-time recovery isn't supported. |
 
 ## Default Recovery Model
-Upon installation, the default recovery model of SQL Server 2025 depends on the edition installed. You can change the recovery model used by new databases by [Setting the database recovery model](./view-or-change-the-recovery-model-of-a-database-sql-server?view=sql-server-ver17) for the `model` database.
+Upon installation, the default recovery model of SQL Server 2025 depends on the edition installed. You can change the recovery model used by new databases by [Setting the database recovery model](./view-or-change-the-recovery-model-of-a-database-sql-server.md) for the `model` database.
 | Edition | Default Recovery Model |
 | --- | --- |
 | Enterprise | Full |

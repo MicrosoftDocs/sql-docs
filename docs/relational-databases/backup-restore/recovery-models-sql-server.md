@@ -46,6 +46,14 @@ The following table summarizes the three recovery models.
 | **Full** | Requires log backups.<br /><br />No work is lost due to a lost or damaged data file. Can recover to an arbitrary point in time (for example, before an application or user error). For information about database backups under the full recovery model, see [Full database backups (SQL Server)](full-database-backups-sql-server.md) and [Complete database restores (full recovery model)](complete-database-restores-full-recovery-model.md). | Normally none.<br /><br />If the tail of the log is damaged, changes since the most recent log backup must be redone. | Can recover to a specific point in time, assuming that your backups are complete up to that point in time. For information about using log backups to restore to the point of failure, see [Restore a SQL Server database to a point in time (full recovery model)](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).<br /><br />**Note:** If you have two or more full-recovery-model databases that must be logically consistent, you might have to implement special procedures to ensure the recoverability of these databases. For more information, see [Recovery of related databases that contain marked transaction](recovery-of-related-databases-that-contain-marked-transaction.md). |
 | **Bulk-logged** | Requires log backups.<br /><br />An adjunct of the full recovery model that permits high-performance bulk copy operations.<br /><br />Reduces log space usage by using minimal logging for most bulk operations. For information about operations that can be minimally logged, see [The transaction log](../logs/the-transaction-log-sql-server.md).<br /><br />Log backups might be large because the minimally logged operations are captured in the log backup. For information about database backups under the bulk-logged recovery model, see [Full database backups (SQL Server)](full-database-backups-sql-server.md) and [Complete database restores (full recovery model)](complete-database-restores-full-recovery-model.md). | If the log is damaged or if bulk-logged operations occurred since the most recent log backup, changes since that last backup must be redone. Otherwise, no work is lost. | Can recover to the end of any backup. Point-in-time recovery isn't supported. |
 
+## Default Recovery Model
+Upon installation, the default recovery model of SQL Server 2025 depends on the edition installed. You can change the recovery model used by new databases by [Setting the database recovery model](./view-or-change-the-recovery-model-of-a-database-sql-server?view=sql-server-ver17) for the `model` database.
+| Edition | Default Recovery Model |
+| --- | --- |
+| Enterprise | Full |
+| Standard | Full |
+| Express | Simple |
+
 ## Related tasks
 
 - [View or change the recovery model of a database (SQL Server)](view-or-change-the-recovery-model-of-a-database-sql-server.md)

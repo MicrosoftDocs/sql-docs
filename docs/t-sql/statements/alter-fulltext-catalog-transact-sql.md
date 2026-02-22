@@ -82,6 +82,36 @@ SELECT FULLTEXTCATALOGPROPERTY('ftCatalog', 'accentsensitivity');
 GO  
 --Returned 0, which means the catalog is not accent sensitive.  
 ```  
+
+## Comments
+ The full-text catalog REBUILD operation is paused when a session starts executing one or more open DML commands in a transaction involving the index tables present in the catalog to be reconstructed. Until the concurrent transaction finishes executing, the full catalog population will not proceed. It is recommended that the administrator monitor this behavior using the DMVs sys.dm_exec_requests and sys.dm_exec_sessions. Locks may be observed between the concurrent session and the background sessions performing the catalog reconstruction, with the wait type LCK_M_IS.
+ 
+ A similar scenario occurs with the REORGANIZE operation; however, you will see the wait type "FT_MASTER_MERGE" in the session where the command is being executed. It is recommended to monitor whether there are one or more sessions running DML commands with long-running open transactions involving the index tables present in the catalog to be reorganized. If this is happening, when using DMVs, you may see one or more background sessions logging an LCK_M_IX wait and the "FT MASTER MERGE" command. The REORGANIZE will not finish until the lock is released.
+
+```sql
+--View blocked background sessions
+SELECT
+    r1.session_id, 
+    r1.blocking_session_id,
+    r1.wait_type,
+    r1.wait_resource,
+    r1.last_wait_type,
+    r1.command AS BlockedSessionCommand,
+    r2.command AS BlockingSessionCommand,
+    s1.login_name AS BlockedSessionLogin,
+    s2.login_name AS BlockingSessionLogin,
+    s1.host_name AS BlockedSessionHost,
+    s2.host_name AS BlockingSessionHost,
+    r1.status AS BlockedSessionStats,
+    r2.status AS BlockingSessionStats
+FROM sys.dm_exec_requests r1
+INNER JOIN sys.dm_exec_sessions s1 ON r1.session_id = s1.session_id
+INNER JOIN sys.dm_exec_sessions s2 ON  r1.blocking_session_id = s2.session_id
+LEFT JOIN sys.dm_exec_requests r2 ON s2.session_id = r2.session_id
+WHERE r1.blocking_session_id <> 0
+AND r1.status = 'background'
+ORDER BY r1.wait_time DESC;
+```
   
 ## See Also  
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   

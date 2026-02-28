@@ -102,8 +102,8 @@ SELECT
     s2.login_name AS BlockingSessionLogin,
     s1.host_name AS BlockedSessionHost,
     s2.host_name AS BlockingSessionHost,
-    r1.status AS BlockedSessionStats,
-    r2.status AS BlockingSessionStats
+    r1.status AS BlockedSessionStatus,
+    r2.status AS BlockingSessionStatus
 FROM sys.dm_exec_requests r1
 INNER JOIN sys.dm_exec_sessions s1 ON r1.session_id = s1.session_id
 INNER JOIN sys.dm_exec_sessions s2 ON  r1.blocking_session_id = s2.session_id

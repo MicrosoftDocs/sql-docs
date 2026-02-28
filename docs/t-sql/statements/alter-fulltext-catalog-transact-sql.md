@@ -86,7 +86,7 @@ GO
 ## Comments
  The full-text catalog REBUILD operation is paused when a session starts executing one or more open DML commands in a transaction involving the index tables present in the catalog to be reconstructed. Until the concurrent transaction finishes executing, the full catalog population will not proceed. It is recommended that the administrator monitor this behavior using the DMVs sys.dm_exec_requests and sys.dm_exec_sessions. Locks may be observed between the concurrent session and the background sessions performing the catalog reconstruction, with the wait type LCK_M_IS.
  
- A similar scenario occurs with the REORGANIZE operation; however, you will see the wait type "FT_MASTER_MERGE" in the session where the command is being executed. It is recommended to monitor whether there are one or more sessions running DML commands with long-running open transactions involving the index tables present in the catalog to be reorganized. If this is happening, when using DMVs, you may see one or more background sessions logging an LCK_M_IX wait and the "FT MASTER MERGE" command. The REORGANIZE will not finish until the lock is released.
+ A similar scenario occurs with the REORGANIZE operation; however, you will see the wait type "FT_MASTER_MERGE" in the session where the command is being executed. It is recommended to monitor whether there are one or more sessions running DML commands with long-running open transactions involving the index tables present in the catalog to be reorganized. If this is happening, when using DMVs, you may see one or more background sessions with an LCK_M_IX wait type and the "FT MASTER MERGE" command. The REORGANIZE will not finish until the lock is released.
 
 ```sql
 --View blocked background sessions

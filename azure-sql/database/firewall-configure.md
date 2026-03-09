@@ -5,7 +5,7 @@ description: Configure server-level IP firewall rules for a database in Azure SQ
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 06/30/2025
+ms.date: 03/03/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -57,7 +57,7 @@ Database-level IP firewall rules enable clients to access certain (secure) datab
 
 ### Recommendations for how to set firewall rules
 
-We recommend that you use database-level IP firewall rules whenever possible. This practice enhances security and makes your database more portable. Use server-level IP firewall rules for administrators. Also use them when you have many databases that have the same access requirements, and you don't want to configure each database individually.
+Use database-level IP firewall rules whenever possible. This practice enhances security and makes your database more portable. Use server-level IP firewall rules for administrators. Also use them when you have many databases that have the same access requirements, and you don't want to configure each database individually.
 
 > [!NOTE]  
 > For information about portable databases in the context of business continuity, see [Configure and manage Azure SQL Database security for geo-restore or failover](active-geo-replication-security-configure.md).
@@ -101,16 +101,27 @@ When a computer tries to connect to your server from the internet, the firewall 
 
 ### Connections from inside Azure
 
-To allow applications hosted inside Azure to connect to your SQL server, Azure connections must be enabled. To enable Azure connections, there must be a firewall rule with starting and ending IP addresses set to 0.0.0.0. This recommended rule is only applicable to Azure SQL Database.
+To allow applications hosted inside Azure to connect to your SQL server, you need to enable Azure connections. To do this, create a firewall rule with starting and ending IP addresses set to 0.0.0.0. This rule applies only to Azure SQL Database.
 
 When an application from Azure tries to connect to the server, the firewall checks that Azure connections are allowed by verifying this firewall rule exists. This can be turned on directly from the Azure portal pane by switching the **Allow Azure Services and resources to access this server** to **ON** in the **Firewalls and virtual networks** settings. Switching the setting to ON creates an inbound firewall rule for IP 0.0.0.0 - 0.0.0.0 named **AllowAllWindowsAzureIps**. The rule can be viewed in your `master` database [sys.firewall_rules](/sql/relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database) view. Use PowerShell or the Azure CLI to create a firewall rule with start and end IP addresses set to 0.0.0.0 if you're not using the portal.
 
-> [!IMPORTANT]  
-> This option configures the firewall to allow all connections from Azure, including connections from the subscriptions of other customers. If you select this option, make sure that your login and user permissions limit access to authorized users only.
+> [!WARNING]
+> Enabling this option allows connections from **all** Azure services, **including services running in other customers' subscriptions**. This rule doesn't restrict access to your subscription or resource group — any Azure resource with outbound connectivity to Azure SQL Database can connect. When you enable this setting, make sure your login and user permissions limit access to authorized users only.
+
+The following Azure services commonly use this rule to connect to Azure SQL Database:
+
+- Azure App Service and Azure Functions
+- Azure Data Factory
+- Azure Stream Analytics
+- Azure Logic Apps
+- Azure Power BI
+- Azure AI services
+
+For enhanced security, consider using [virtual network service endpoints](vnet-service-endpoint-rule-overview.md) or [private endpoints](private-endpoint-overview.md) instead of the **AllowAllWindowsAzureIps** rule. These alternatives limit connectivity to specific subnets or private networks instead of allowing all Azure IP addresses.
 
 ## Permissions
 
-To be able to create and manage IP firewall rules for the Azure SQL Server, you'll need to either be:
+To create and manage IP firewall rules for the Azure SQL Server, you need to have one of the following roles:
 
 - in the [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) role
 - in the [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) role
@@ -275,7 +286,7 @@ The following table describes the latency of security settings changes based on 
 
 ## Manually refreshing firewall rules
 
-If you need to see firewall rules updated more quickly than the 5 minute latency, you can manually refresh the firewall rules. Log into the database instance that needs its rules updated, and run DBCC FLUSHAUTHCACHE.  This will cause the database instance to flush its local cache and refresh firewall rules.
+If you need to see firewall rules updated more quickly than the 5 minute latency, you can manually refresh the firewall rules. Log in to the database instance that needs its rules updated, and run DBCC FLUSHAUTHCACHE.  This will cause the database instance to flush its local cache and refresh firewall rules.
 ```syntaxsql
 DBCC FLUSHAUTHCACHE[;]
 ```

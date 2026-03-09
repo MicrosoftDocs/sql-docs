@@ -1,16 +1,17 @@
 ---
 title: Web Configuration Page
-description: "Web Configuration Page (Master Data Services Configuration Manager)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/20/2017"
+description: Web Configuration Page (Master Data Services Configuration Manager)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
-f1_keywords:
-  - "sql13.mds.configmanager.webconfigpg.f1"
 ms.custom:
   - build-2025
+f1_keywords:
+  - "sql13.mds.configmanager.webconfigpg.f1"
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
 
@@ -45,6 +46,4 @@ ms.custom:
 ## See Also  
 [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md) 
  [Web Application Requirements &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
- [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
-  
-  
+ [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)

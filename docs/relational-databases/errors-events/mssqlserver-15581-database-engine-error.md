@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_15581
 description: "MSSQLSERVER_15581"
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: jopilov, mathoma, VenCher
 ms.date: 09/03/2020
 ms.service: sql

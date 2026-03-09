@@ -1,15 +1,16 @@
 ---
 title: Deprecated Features of Master Data Services
-description: "Deprecated Features of Master Data Services"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+description: Deprecated Features of Master Data Services
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
-monikerRange: ">=sql-server-ver16"
 ms.custom:
   - build-2025
+monikerRange: ">=sql-server-ver16"
 ---
 # Deprecated Features of Master Data Services
 
@@ -51,6 +52,4 @@ Entity transaction log type "Attribute" is deprecated, migrate to the "Member" e
  Blog post, [Deprecated: Explicit Hierarchies and Collections](https://techcommunity.microsoft.com/t5/sql-server-integration-services/deprecated-explicit-hierarchies-and-collections/ba-p/388221), on msdn.com.  
   
 ## See Also  
- [Discontinued Features of Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
-  
-  
+ [Discontinued Features of Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

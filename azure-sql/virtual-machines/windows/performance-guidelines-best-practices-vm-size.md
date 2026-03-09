@@ -130,7 +130,7 @@ Consider the following points:
 The memory-optimized [M-series](/azure/virtual-machines/sizes/memory-optimized/m-family) offers vCore counts and memory for some of the largest SQL Server workloads.
 
 The following list describes the capabilities of M-series VMs:
-- Support [premium storage](/azure/virtual-machines/premium-storage-performance), [premium storage caching](/azure/virtual-machines/premium-storage-performance#disk-caching), [ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd), [write acceleration](/azure/virtual-machines/how-to-enable-write-accelerator), and accelerated networking.
+- Support [premium storage](/azure/virtual-machines/premium-storage-performance), [premium storage caching](/azure/virtual-machines/premium-storage-performance#disk-caching), [Ultra Disks](/azure/virtual-machines/disks-enable-ultra-ssd), [write acceleration](/azure/virtual-machines/how-to-enable-write-accelerator), and accelerated networking.
 - Are suitable for SQL Server workloads that require high computing capabilities with large memory footprints and less emphasis on storage performance. 
 
 

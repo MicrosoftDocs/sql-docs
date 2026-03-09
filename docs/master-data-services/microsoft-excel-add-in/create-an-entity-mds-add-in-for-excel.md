@@ -1,9 +1,10 @@
 ---
 title: Create an Entity
-description: "Create an Entity (MDS Add-in for Excel)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Create an Entity (MDS Add-in for Excel)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -75,6 +76,4 @@ ms.custom:
 -   Confirm that the attributes were created as the data type you expected.  
   
 ## See Also  
- [Create a Domain-based Attribute &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
-  
-  
+ [Create a Domain-based Attribute &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)

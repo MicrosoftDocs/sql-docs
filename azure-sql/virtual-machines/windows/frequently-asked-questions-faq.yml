@@ -344,7 +344,7 @@ sections:
       - question: |
           Can I use Premium SSD v2 with my SQL Server on Azure VMs?
         answer: |
-          Yes, for specific virtual machines in supported regions. Review [Premium SSDv2 with SQL Server on Azure VMs](storage-configuration-premium-ssd-v2.md) to learn more. If you would like to use Premium SSD v2 with a virtual machine type or region that isn't in the list, you might be able to do so by first deploying the VM, and then adding the Premium SSD v2 drives after the VM is created.
+          Yes, for specific virtual machines in supported regions. Review [Premium SSD v2 with SQL Server on Azure VMs](storage-configuration-premium-ssd-v2.md) to learn more. If you would like to use Premium SSD v2 with a virtual machine type or region that isn't in the list, you might be able to do so by first deploying the VM, and then adding the Premium SSD v2 drives after the VM is created.
 
       - question: |
           Why do I see "Not extendable" when I try to make changes to my storage in the SQL virtual machines resource? 

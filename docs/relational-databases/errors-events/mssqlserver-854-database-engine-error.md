@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_854
 description: "MSSQLSERVER_854"
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: jopilov, mathoma
 ms.date: 08/20/2020
 ms.service: sql

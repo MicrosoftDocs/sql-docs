@@ -1,9 +1,10 @@
 ---
 title: Change the Entity Transaction Log Type
-description: "Change the Entity Transaction Log Type (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+description: Change the Entity Transaction Log Type (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -43,6 +44,4 @@ ms.custom:
   
 4.  Choose the transaction log type in the drop-down list.  
   
-5.  Click **Save**.  
-  
-  
+5.  Click **Save**.

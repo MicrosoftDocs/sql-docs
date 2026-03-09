@@ -1,5 +1,5 @@
 ---
-title: Deploy for Free
+title: Try Azure SQL Database for Free
 description: Guidance on how to deploy the Azure SQL Database offer for up to 10 free databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -22,10 +22,6 @@ To get started and quickly create a new free Azure SQL Database, select the **Tr
 
    :::image type="content" source="media/free-offer/show-options-create-sql-database.png" alt-text="Screenshot from the Azure portal showing the Azure SQL hub and the Try for free link in the Azure SQL Database pane." lightbox="media/free-offer/show-options-create-sql-database.png":::
 
-You know the offer has been applied when the **Cost summary** card on the right side of the page shows **Estimated Cost/Month** zero cost.
-
-:::image type="content" source="media/free-offer/cost-summary-card.png" alt-text="Screenshot from the Azure portal of the Free Offer Cost summary card.":::
-
 ## Prerequisites
 
 To create a free Azure SQL Database, you need:
@@ -37,9 +33,7 @@ To create a free Azure SQL Database, you need:
 
 ## Create a database
 
-Use the Azure portal to create the new free Azure SQL Database.
-
-To create a free offer database, follow these steps:
+Use the Azure portal to create the new free Azure SQL Database. To create a free offer database, follow these steps:
 
 1. Select the **Try for free** link on the [Azure SQL hub at aka.ms/azuresqlhub](https://aka.ms/azuresqlhub).
    - You can also find the **Apply offer** banner on the [provisioning page for Azure SQL Database](https://portal.azure.com/#create/Microsoft.SQLDatabase), and proceed with the steps to [Create a single database in the serverless compute tier](single-database-create-quickstart.md?view=azuresql-db&preserve-view=true&tabs=azure-portal#create-a-single-database).
@@ -56,7 +50,11 @@ To create a free offer database, follow these steps:
         - Use the automatically-created unique **Database name**, or provide a new name.
         - An existing logical **Server** is already selected. You can change this or create a new logical server.
     
-    That's all that's needed! The new database will be created with defaults, including the option to pause the database when the free limits are reached. This and other options can be changed in the future.
+   That's all that's needed! The new database will be created with defaults, including the option to pause the database when the free limits are reached. This and other options can be changed in the future.
+
+   You know the offer has been applied when the **Cost summary** card on the right side of the page shows **Estimated Cost/Month** zero cost.
+
+   :::image type="content" source="media/free-offer/cost-summary-card.png" alt-text="Screenshot from the Azure portal of the Free Offer Cost summary card.":::
 
 1. Select **Review + create**.
 1. Review and select **Create**.

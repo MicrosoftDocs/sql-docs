@@ -5,7 +5,7 @@ description: Learn about the currently known issues with Azure SQL Managed Insta
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/13/2026
+ms.date: 03/03/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: troubleshooting-known-issue
@@ -25,7 +25,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [Misleading error message when connecting to a read replica using invalid credentials](#misleading-error-message-when-connecting-to-a-read-replica-using-invalid-credentials) | February 2026 |
 | [Modifying backup retention period for the free offer](#modifying-backup-retention-period-for-the-free-offer) | June 2025 | Has workaround | |
 | [Login to read-secondary failed due to long wait on "HADR_DATABASE_WAIT_FOR_TRANSITION_TO_VERSIONING"](#login-to-read-secondary-failed-due-to-long-wait-on-hadr_database_wait_for_transition_to_versioning) | April 2025 | Has workaround | |
-| [Interim guidance on 2024 time zone updates for Paraguay](#interim-guidance-on-2024-time-zone-updates-for-paraguay) | March 2025 |  | February 2026 |
+| [Interim guidance on 2024 time zone updates for Paraguay](#interim-guidance-on-2024-time-zone-updates-for-paraguay) | March 2025 | Resolved | February 2026 |
 | [Error 8992 when running DBCC CHECKDB on a SQL Server database that originated from SQL Managed Instance](#error-8992-when-running-dbcc-checkdb-on-a-sql-server-database-that-originated-from-sql-managed-instance) | March 2025 | Has workaround | |
 | [Differential backups aren't taken when an instance is linked to SQL Server](#differential-backups-arent-taken-when-an-instance-is-linked-to-sql-server) | Sept 2024 | By design | |
 | [List of long-term backups in Azure portal shows backup files for active and deleted databases with the same name](#list-of-long-term-backups-in-azure-portal-shows-backup-files-for-active-and-deleted-databases-with-the-same-name) | Mar 2024 | Has workaround | |
@@ -46,7 +46,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [Wrong error returned while trying to remove a file that isn't empty](#wrong-error-returned-while-trying-to-remove-a-file-that-isnt-empty) | Oct 2019 | Resolved | August 2020 |
 | [Change service tier and create instance operations are blocked by ongoing database restore](#change-service-tier-and-create-instance-operations-are-blocked-by-ongoing-database-restore) | Sep 2019 | Has workaround | |
 | [Resource Governor on a readable secondary replica needs reconfiguration after failover](#resource-governor-on-a-readable-secondary-replica-needs-reconfiguration-after-failover) | Sep 2019 | Has workaround | |
-| [Cross-database Service Broker dialogs need reinitialization after service tier upgrade](#cross-database-service-broker-dialogs-need-reinitialization-after-service-tier-upgrade) | Aug 2019 | Has workaround | |
+| [Cross-database Service Broker dialogs need reinitialization after service tier upgrade](#cross-database-service-broker-dialogs-need-reinitialization-after-service-tier-upgrade) | Aug 2019 | Resolved | January 2020 |
 | [Impersonation of Microsoft Entra login types isn't supported](#impersonation-of-azure-ad-login-types-isnt-supported) | Jul 2019 | No Workaround | |
 | [Transactional replication must be reconfigured after geo-failover](#transactional-replication-must-be-reconfigured-after-geo-failover) | Mar 2019 | No Workaround | |
 | [Exceeding storage space with small database files](#exceeding-storage-space-with-small-database-files) | | Has workaround | |
@@ -187,12 +187,6 @@ The [Resource governor](/sql/relational-databases/resource-governor/resource-gov
 **Workaround**: Run `ALTER RESOURCE GOVERNOR RECONFIGURE` periodically or as part of a SQL Agent job that executes the SQL task when the readable secondary replica starts if you're using [Resource governor](/sql/relational-databases/resource-governor/resource-governor).
 
 <a id="cross-database-service-broker-dialogs-must-be-reinitialized-after-service-tier-upgrade"></a>
-
-### Cross-database Service Broker dialogs need reinitialization after service tier upgrade
-
-Cross-database Service Broker dialogs stop delivering the messages to the services in other databases after change service tier operation. The messages *aren't lost*, and they can be found in the sender queue. Any change of vCores or instance storage size in SQL Managed Instance causes a `service_broke_guid` value in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) view to change for all databases. Any `DIALOG` created using a [BEGIN DIALOG](/sql/t-sql/statements/begin-dialog-conversation-transact-sql) statement that references Service Brokers in other databases stops delivering messages to the target service.
-
-**Workaround**: Stop any activity that uses cross-database Service Broker dialog conversations before updating a service tier, and reinitialize them afterward. If undelivered messages remain after a service tier change, read the messages from the source queue and resend them to the target queue.
 
 ### Exceeding storage space with small database files
 
@@ -345,6 +339,12 @@ Originally, this issue occurred in SQL Server Management Studio (SSMS), or when 
 In May 2025, this issue was resolved for reading session data from SSMS. The issue isn't resolved when reading event data by using the `sys.fn_xe_file_target_read_file` function.
 
 This change in behavior is an unintended consequence of a required security fix. You can work around this issue by creating your own equivalent of the `system_health` session with an `event_file` target in Azure Blob Storage. For more information, including a T-SQL script to create the `system_health` session that can be modified to create your own equivalent of `system_health`, see [Use the system_health session](/sql/relational-databases/extended-events/use-the-system-health-session).
+
+### Cross-database Service Broker dialogs need reinitialization after service tier upgrade
+
+**(Resolved in January 2020)** Cross-database Service Broker dialogs stop delivering the messages to the services in other databases after change service tier operation. The messages *aren't lost*, and they can be found in the sender queue. Any change of vCores or instance storage size in SQL Managed Instance causes a `service_broke_guid` value in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) view to change for all databases. Any `DIALOG` created using a [BEGIN DIALOG](/sql/t-sql/statements/begin-dialog-conversation-transact-sql) statement that references Service Brokers in other databases stops delivering messages to the target service.
+
+**Workaround**: Stop any activity that uses cross-database Service Broker dialog conversations before updating a service tier, and reinitialize them afterward. If undelivered messages remain after a service tier change, read the messages from the source queue and resend them to the target queue.
 
 ## Contribute to content
 

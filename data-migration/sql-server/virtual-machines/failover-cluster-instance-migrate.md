@@ -42,7 +42,7 @@ Prepare Azure for migration with Server Migration.
 | Task | Details |
 | --- | --- |
 | **Create an Azure Migrate project** | Your Azure account needs Contributor or Owner permissions to [create a new project](/azure/migrate/create-manage-projects). |
-| **Verify permissions for your Azure account** | Your Azure account needs Contributor or Owner permissions on the Azure subscription, permissions to register apps in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), and User Access Administrator permissions on the Azure subscription to create a Key Vault, to create a VM, and to write to an Azure managed disk. |
+| **Verify permissions for your Azure account** | Your Azure account needs Contributor or Owner permissions on the Azure subscription, permissions to register apps in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), and User Access Administrator permissions on the Azure subscription to create a Key Vault, to create a VM, and to write to an Azure Managed Disk. |
 | **Set up an Azure virtual network** | [Setup](/azure/virtual-network/manage-virtual-network#create-a-virtual-network) an Azure virtual network (VNet). When you replicate to Azure, Azure VMs are created and joined to the Azure VNet that you specify when you set up migration. |
 
 To check you have proper permissions, follow these steps:
@@ -255,7 +255,7 @@ Now, select machines for migration. You can replicate up to 10 machines together
 
    :::image type="content" source="media/availability-group-migrate/compute-settings.png" alt-text="Screenshot of the Compute settings option." lightbox="media/availability-group-migrate/compute-settings.png":::
 
-1. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (standard SSD/HDD or premium managed disks) in Azure. Then select **Next**.
+1. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (Standard SSD/HDD or premium managed disks) in Azure. Then select **Next**.
 
    - Use the list that you had made earlier to select the disks to be replicated with each server. Exclude other disks from replication.
 

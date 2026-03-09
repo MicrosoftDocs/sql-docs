@@ -1,9 +1,10 @@
 ---
 title: Changesets
-description: "Changesets (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Changesets (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -51,6 +52,4 @@ ms.custom:
  [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [Commit or Submit a Changeset &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
  [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
- [Manage Changesets &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md)  
-  
-  
+ [Manage Changesets &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md)

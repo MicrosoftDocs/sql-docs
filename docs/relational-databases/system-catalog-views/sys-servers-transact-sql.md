@@ -1,9 +1,9 @@
 ---
 title: "sys.servers (Transact-SQL)"
-description: sys.servers (Transact-SQL)
+description: sys.servers contains a row per linked or remote server registered, and a row for the local server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/16/2020"
+ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -19,15 +19,16 @@ dev_langs:
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sys.servers (Transact-SQL)
+
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Contains a row per linked or remote server registered, and a row for the local server that has **server_id** = 0.  
+Returns a row per linked or remote server registered, and a row for the local server that has `server_id` = 0.
 
-|Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
-|**server_id**|**int**|Local ID of linked server.|  
-|**name**|**sysname**|When **server_id** = 0, the returned value is the server name.<br /><br /> When **server_id** > 0, the returned value is the local name of linked server.|  
-|**product**|**sysname**|Product name of the linked server. A value of "SQL Server" indicates another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+| Column name | Data type | Description |  
+| --- | --- | --- |
+| `server_id` | **int** | Local ID of linked server. |
+| `name` | **sysname** | When `server_id` = 0, the returned value is the server name.<br /><br />When `server_id` > 0, the returned value is the local name of linked server. |
+| `product` | **sysname** | Product name of the linked server. A value of "SQL Server" indicates another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |  
 |**provider**|**sysname**|OLE DB provider name for connecting to linked server.<br /><br />Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the value "SQLNCLI" maps to the [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) by default. In earlier versions, the value "SQLNCLI" maps to the [SQL Server Native Client OLE DB provider (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|OLE DB data source connection property.|  
 |**location**|**nvarchar(4000)**|OLE DB location connection property. NULL if none.|  
@@ -42,7 +43,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
 |**is_collation_compatible**|**bit**|Collation of remote data is assumed to be compatible with local data if no collation information is available.|  
 |**uses_remote_collation**|**bit**|If 1, use the collation reported by the remote server; otherwise, use the collation specified by the next column.|  
 |**collation_name**|**sysname**|Name of collation to use, or NULL if just use local.|  
-|**lazy_schema_validation**|**bit**|If 1, schema validation is not checked at query startup.|  
+|**lazy_schema_validation**|**bit**|If 1, schema validation isn't checked at query startup.|  
 |**is_system**|**bit**|This server can be accessed only by the internal system.|  
 |**is_publisher**|**bit**|Server is a replication Publisher.|  
 |**is_subscriber**|**bit**|Server is a replication Subscriber.|  
@@ -56,21 +57,27 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
 
 [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
 
-## Permissions  
- The value in **provider_string** is always NULL unless the caller has the ALTER ANY LINKED SERVER permission.  
-  
- Permissions are not required to view the local server (**server_id** = 0).  
-  
- When you create a linked or remote server, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates a default login mapping to the **public** server role. Default login mapping means that all logins can view all linked and remote servers. To restrict visibility to these servers, remove the default login mapping by executing [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) and specifying NULL for the *locallogin* parameter.  
-  
- If the default login mapping is deleted, only users that have been explicitly added as a linked login or remote login can view the linked or remote servers for which they have a login.  The following permissions are required to view all linked and remote servers after the default login mapping:  
-  
-- `ALTER ANY LINKED SERVER` or `ALTER ANY LOGIN ON SERVER`  
-- Membership in the **setupadmin** or **sysadmin** fixed server roles  
-  
-## See Also  
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Linked Servers Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+## Permissions
+
+The value in **provider_string** is always NULL unless the caller has the ALTER ANY LINKED SERVER permission.
+
+Permissions aren't required to view the local server (**server_id** = 0).
+
+When you create a linked or remote server, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] creates a default login mapping to the **public** server role. Default login mapping means that all logins can view all linked and remote servers. To restrict visibility to these servers, remove the default login mapping by executing [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) and specifying NULL for the *locallogin* parameter.
+
+If the default login mapping is deleted, only users that have been explicitly added as a linked login or remote login can view the linked or remote servers for which they have a login. The following permissions are required to view all linked and remote servers after the default login mapping:
+
+- `ALTER ANY LINKED SERVER` or `ALTER ANY LOGIN ON SERVER`
+- Membership in the **setupadmin** or **sysadmin** fixed server roles
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER SECURITY STATE permission on the server.
+
+## Related content
+
+- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [Linked Servers Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)
+- [sp_addlinkedsrvlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
+- [sp_addremotelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   

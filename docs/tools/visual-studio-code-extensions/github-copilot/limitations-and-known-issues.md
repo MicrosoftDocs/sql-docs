@@ -76,12 +76,12 @@ These limitations apply to GitHub Copilot more broadly and might affect your exp
 For more information, see:
 
 - [Best practices for using GitHub Copilot](https://docs.github.com/copilot/get-started/best-practices)
-- [Tips and tricks for Copilot in VS Code](https://code.visualstudio.com/docs/copilot/copilot-tips-and-tricks)
-- [Security considerations for GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/security)
+- [Tips and tricks for Copilot in Visual Studio Code](https://code.visualstudio.com/docs/copilot/copilot-tips-and-tricks)
+- [Security considerations for GitHub Copilot in Visual Studio Code](https://code.visualstudio.com/docs/copilot/security)
 
 ## Share your experience
 
-[!INCLUDE [feedback](../includes/feedback.md)]
+[!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
 
 ## Related content
 

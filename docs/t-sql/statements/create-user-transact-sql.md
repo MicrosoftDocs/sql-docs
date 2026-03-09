@@ -4,7 +4,7 @@ description: CREATE USER (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, jaszymas
-ms.date: 04/30/2025
+ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -50,7 +50,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
     > [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) are currently in public preview for Azure SQL Database.
 
     > [!NOTE]
-    > Logins, and therefore users based on logins, are not supported in SQL database in Microsoft Fabric.
+    > Logins, and therefore users based on logins, aren't supported in SQL database in Microsoft Fabric.
 
 **Users that authenticate at the database** - Recommended to help make your database more portable.  
  Always allowed in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Only allowed in a contained database in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
@@ -69,7 +69,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
   
 **Users that cannot authenticate** - These users can't log into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
--   User without a login. Cannot log in but can be granted permissions. `CREATE USER CustomApp WITHOUT LOGIN;`    
+-   User without a login. Can't log in but can be granted permissions. `CREATE USER CustomApp WITHOUT LOGIN;`    
 -   User based on a certificate. Can't log in but can be granted permissions and can sign modules. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   User based on an asymmetric key. Can't log in but can be granted permissions and can sign modules. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
@@ -212,10 +212,10 @@ CREATE USER user_name
 #### LOGIN *login_name*  
  Specifies the login for which the database user is being created. *login_name* must be a valid login in the server. Can be a login based on a Windows principal (user or group), a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, or a login using a Microsoft Entra principal (user, group, or application). When this SQL Server login enters the database, it acquires the name and ID of the database user that is being created. When creating a login mapped from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary).  
   
- If the CREATE USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the CREATE USER statement is not the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause isn't supported.  
+ If the CREATE USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the CREATE USER statement isn't the only statement in a SQL batch or runs in dynamic SQL, the WITH LOGIN clause isn't supported.  
   
  #### WITH DEFAULT_SCHEMA = *schema_name*  
- Specifies the first schema that will be searched by the server when it resolves the names of objects for this database user.  
+ Specifies the first schema searched by the server when it resolves the names of objects for this database user.  
   
  #### '*windows_principal*'  
  Specifies the Windows principal for which the database user is being created. The *windows_principal* can be a Windows user, or a Windows group. The user will be created even if the *windows_principal* doesn't have a login. When connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the *windows_principal* doesn't have a login, the Windows principal must authenticate at the [!INCLUDE[ssDE](../../includes/ssde-md.md)] through membership in a Windows group that has a login, or the connection string must specify the contained database as the initial catalog. When creating a user from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary). Users based on Active Directory users, are limited to names of fewer than 21 characters.
@@ -266,7 +266,7 @@ For more information about Microsoft Entra authentication in SQL Server, see [Tu
 #### DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)]
   
- Specifies the default language for the new user. If a default language is specified for the user and the default language of the database is later changed, the users default language remains as specified. If no default language is specified, the default language for the user will be the default language of the database. If the default language for the user isn't specified and the default language of the database is later changed, the default language of the user will change to the new default language for the database.  
+ Specifies the default language for the new user. If a default language is specified for the user and the default language of the database is later changed, the users default language remains as specified. If no default language is specified, the default language for the user is the default language of the database. If the default language for the user isn't specified and the default language of the database is later changed, the default language of the user changes to the new default language for the database.  
   
 > [!IMPORTANT]  
 >  *DEFAULT_LANGUAGE* is used only for a contained database user.  
@@ -300,7 +300,7 @@ If the principal issuing the `CREATE USER` statement is a Microsoft Entra user p
 
 In [!INCLUDE[sssds](../../includes/sssds-md.md)] and Azure SQL Managed Instance, if the principal issuing the `CREATE USER` statement is a service principal, the identity of the database server or the managed instance must be in the  [Directory Readers role](/entra/identity/role-based-access-control/permissions-reference#directory-readers) in Microsoft Entra.
 
-In [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], `FROM EXTERNAL PROVIDER` is not allowed if a principal issuing `CREATE USER` is a service principal in Microsoft Entra. Service principals must use `TYPE` and `SID` arguments to create users for Microsoft Entra principals.
+In [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], `FROM EXTERNAL PROVIDER` isn't allowed if a principal issuing `CREATE USER` is a service principal in Microsoft Entra. Service principals must use `TYPE` and `SID` arguments to create users for Microsoft Entra principals.
 
 #### WITH OBJECT_ID = *'objectid'*
  **Applies to**: [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)], Azure SQL Managed Instance, [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]
@@ -310,14 +310,14 @@ Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the us
 > [!NOTE]
 > Starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], the `WITH OBJECT_ID` option is supported for Microsoft Entra logins and users with unique display names.
 >
-> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal is not recommended. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal.
+> If the service principal display name isn't a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal isn't recommended. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix runs successfully, but it isn't obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal.
 
 ## Remarks  
- If `FOR LOGIN` is omitted, the new database user will be mapped to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with the same name.  
+ If `FOR LOGIN` is omitted, the new database user maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with the same name.  
   
- The default schema will be the first schema that will be searched by the server when it resolves the names of objects for this database user. Unless otherwise specified, the default schema will be the owner of objects created by this database user.  
+ The default schema is the first schema searched by the server when it resolves the names of objects for this database user. Unless otherwise specified, the default schema is the owner of objects created by this database user.  
   
- If the user has a default schema, that default schema will be used. If the user doesn't have a default schema, but the user is a member of a group that has a default schema, the default schema of the group will be used. If the user doesn't have a default schema, and is a member of more than one group, the default schema for the user will be that of the Windows group with the lowest principal_id and an explicitly set default schema. (It isn't possible to explicitly select one of the available default schemas as the preferred schema.) If no default schema can be determined for a user, the **dbo** schema will be used.  
+ If the user has a default schema, that default schema is used. If the user doesn't have a default schema, but the user is a member of a group that has a default schema, the default schema of the group is used. If the user doesn't have a default schema, and is a member of more than one group, the default schema for the user is that of the Windows group with the lowest principal_id and an explicitly set default schema. (It isn't possible to explicitly select one of the available default schemas as the preferred schema.) If no default schema can be determined for a user, the **dbo** schema is used.  
   
  DEFAULT_SCHEMA can be set before the schema that it points to is created.  
   
@@ -619,21 +619,20 @@ EXEC (@cmd);
 The following example creates a database user for the Microsoft Entra group, named `HR`. Replace `<unique identifier sid>` with the SID of the new user to the object ID of the group.
 
 ```sql
-DECLARE @group_name SYSNAME = 'HR';
+DECLARE @principal_name SYSNAME = 'HR';
 DECLARE @objectId UNIQUEIDENTIFIER = '<unique identifier sid>'; -- principal's object ID in Microsoft Entra
 
 -- Convert the guid to the right type
 DECLARE @castObjectId NVARCHAR(MAX) = CONVERT(VARCHAR(MAX), CONVERT (VARBINARY(16), @objectId), 1);
 
--- Construct command: CREATE USER [@groupName] WITH SID = @castObjectId, TYPE = X;
+-- Construct command: CREATE USER [@principal_name] WITH SID = @castObjectId, TYPE = X;
 DECLARE @cmd NVARCHAR(MAX) = N'CREATE USER [' + @principal_name + '] WITH SID = ' + @castObjectId + ', TYPE = X;'
 EXEC (@cmd);
 ```
 
 ## Next steps
 
-Once the user is created, consider adding the user to a database role using the [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) statement.  
-You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-object-permissions-transact-sql.md) to the role so they can access tables. For general information about the SQL Server security model, see [Permissions](../../relational-databases/security/permissions-database-engine.md).
+After you create a user, consider adding the user to a database role by using the [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) statement. You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-object-permissions-transact-sql.md) to the role so they can access tables. For general information about the SQL Server security model, see [Permissions](../../relational-databases/security/permissions-database-engine.md).
   
 ## Related content
 

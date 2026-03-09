@@ -196,7 +196,7 @@ Scaffold a Django backend with Django REST Framework for the `SalesLT.Customer` 
 
 ## Share your experience
 
-[!INCLUDE [feedback](../includes/feedback.md)]
+[!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
 
 ## Related content
 

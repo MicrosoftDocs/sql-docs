@@ -4,7 +4,7 @@ description: "Steps to upgrade a SQL Server Always On failover cluster instance 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 12/16/2024
+ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
@@ -69,7 +69,9 @@ For more information about upgrading a Windows Server cluster, see [Cluster OS R
 
 1. From the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] installation media for the edition that matches the edition you're upgrading, double-click setup.exe in the root folder. You might be asked to install the prerequisites, if they aren't previously installed.
 
-1. After prerequisites are installed, the Installation Wizard starts the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. To upgrade an existing instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], select your instance.
+1. After prerequisites are installed, the Installation Wizard starts the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. 
+
+1. On the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center, select **Installation** and then select the **Upgrade from a previous version of SQL Server** option to start the upgrade process.
 
 1. If [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] setup support files are required, [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs them. If you're instructed to restart your computer, restart before you continue.
 
@@ -79,7 +81,7 @@ For more information about upgrading a Windows Server cluster, see [Cluster OS R
 
 1. On the License Terms page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE [msCoName](../../../includes/msconame-md.md)]. **Click Next to continue**. To end Setup, select **Cancel**.
 
-1. On the Select Instance page, specify the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance to upgrade. **Click Next to continue**.
+1. On the Select Instance page, specify the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance to upgrade. Select **Next** to continue.
 
 1. On the Feature Selection page, the features to upgrade are preselected. A description for each component group appears in the right pane after you select the feature name. You can't change the features to be upgraded, and you can't add features during the upgrade operation. To add features to an upgraded instance of [!INCLUDE [ssSQL14](../../../includes/sssql14-md.md)] after the upgrade operation is complete, see [Add Features to an Instance of SQL Server (Setup)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).
 
@@ -117,7 +119,7 @@ For more information about upgrading a Windows Server cluster, see [Cluster OS R
 
 Follow these steps to upgrade your Always On failover cluster instance in a multi-subnet environment.
 
-### Upgrade to a SQL Server multi-subnet failover cluster instance (existing SQL Server cluster is a non multi-subnet cluster)
+### Upgrade to a SQL Server multi-subnet failover cluster instance (existing SQL Server cluster is a non-multi-subnet cluster)
 
 1. Follow the previous steps to upgrade your failover cluster instance.
 

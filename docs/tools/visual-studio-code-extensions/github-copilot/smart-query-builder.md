@@ -141,7 +141,7 @@ Using SQLAlchemy and Pandas, create a report that identifies customers with decl
 
 ## Share your experience
 
-[!INCLUDE [feedback](../includes/feedback.md)]
+[!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
 
 ## Related content
 

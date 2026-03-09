@@ -191,4 +191,4 @@ SET BUFFER POOL EXTENSION ON
 - [Pricing guidance for SQL Server on Azure VMs](pricing-guidance.md)
 - [What's new with SQL Server on Azure Virtual Machines?](doc-changes-updates-release-notes-whats-new.md)
 - [Checklist: Best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-checklist.md)
-- [Introduction to Azure managed disks](/azure/virtual-machines/managed-disks-overview)
+- [Introduction to Azure Managed Disks](/azure/virtual-machines/managed-disks-overview)

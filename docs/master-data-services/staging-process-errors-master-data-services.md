@@ -1,16 +1,17 @@
 ---
 title: Staging Process Errors
 description: This article explains error codes added to all processed records during the staging process in Master Data Services.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: error-reference
-helpviewer_keywords:
-  - "staging process [Master Data Services], error messages"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "staging process [Master Data Services], error messages"
 ---
 # Staging Process Errors (Master Data Services)
 
@@ -42,6 +43,4 @@ ms.custom:
   
 ## See Also  
  [View Errors that Occur During Staging &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
-  
-  
+ [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)

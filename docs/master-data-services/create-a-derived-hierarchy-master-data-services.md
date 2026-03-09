@@ -1,17 +1,18 @@
 ---
 title: Create a Derived Hierarchy
-description: "Create a Derived Hierarchy (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Create a Derived Hierarchy (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "derived hierarchies, creating"
   - "creating derived hierarchies [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Create a Derived Hierarchy (Master Data Services)
 
@@ -57,6 +58,4 @@ ms.custom:
 ## See Also  
  [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
  [Derived Hierarchies with Explicit Caps &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
-  
-  
+ [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)

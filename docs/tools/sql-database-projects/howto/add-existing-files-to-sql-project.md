@@ -66,6 +66,10 @@ There are known issues where the script processing might result in duplicate con
 
 The Import from Script process doesn't incorporate Pre/Post-Deployment scripts, SQLCMD variables, or RefactorLog files. These and any other unsupported constructs that are detected on import are placed in a ScriptsIgnoredOnImport.sql file in a Scripts folder in your project.
 
+## XSD files
+
+SQL projects also support importing XSD files to generate XML schema collections in the database. For more information on how to configure XSD files in a SQL project, see [XML schema collections in SQL projects](../concepts/xml-schema-collection.md).
+
 ## Related content
 
 - [Tutorial: start from an existing database](../tutorials/start-from-existing-database.md)

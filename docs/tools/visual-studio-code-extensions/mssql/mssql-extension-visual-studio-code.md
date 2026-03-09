@@ -1,10 +1,10 @@
 ---
 title: Overview of the MSSQL Extension for Visual Studio Code
 description: Enhancing your developer experience with the MSSQL extension for Visual Studio Code
-author: croblesm
-ms.author: roblescarlos
-ms.reviewer: randolphwest
-ms.date: 01/19/2026
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: roblescarlos
+ms.date: 02/21/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -49,9 +49,6 @@ This experience delivers the following integrated features, which are enabled by
 - **Query Results Pane**
 - **Query Plan Visualizer**
 
-> [!NOTE]  
-> To use preview features, including **View & Edit Data (Preview)**, enable the `mssql.enableExperimentalFeatures` setting in Visual Studio Code. Under **Settings** > **MSSQL configuration**, select the **Enable Experimental Features** checkbox. Restart Visual Studio Code for the setting to take effect.
-
 ### Connection dialog
 
 The Connection dialog provides a simple and intuitive interface for connecting to databases hosted in Azure SQL (including Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure VMs), SQL database in Fabric, or SQL Server. It offers multiple input options to cater to different scenarios:
@@ -67,6 +64,15 @@ The Connection dialog provides a simple and intuitive interface for connecting t
 The connection dialog includes **Saved Connections** and **Recent Connections** panels to simplify reconnecting to previously used servers. The layout supports editing and saving connection details and makes it easy to switch between servers or databases.
 
 :::image type="content" source="media/mssql-extension-visual-studio-code/mssql-connection-dialog-parameters.png" alt-text="Screenshot of the connection dialog feature." lightbox="media/mssql-extension-visual-studio-code/mssql-connection-dialog-parameters.png":::
+
+### Database operations
+
+The MSSQL extension provides built-in tools for common [database operations](mssql-database-operations.md), including:
+
+- **Database management**: Create, rename, and drop databases directly from the **Object Explorer**.
+- **Database object search**: Find tables, views, functions, and stored procedures with type-aware search and contextual actions.
+- **Backup and restore**: Back up databases to disk or Azure Blob Storage, and restore from existing backups, backup files, or Azure Blob Storage.
+- **Import flat file**: Import `.csv` and `.txt` files into new SQL Server tables with a guided wizard.
 
 ### Object Explorer (filtering)
 
@@ -194,11 +200,14 @@ The extension can download and install a required `SqlToolsService` package duri
 
 ## Feedback and support
 
-If you have ideas, feedback, or want to engage with the community, join the discussion at [aka.ms/vscode-mssql-discussions](https://aka.ms/vscode-mssql-discussions). To report a bug, visit <https://aka.ms/vscode-mssql-bug>. To request a new feature, go to <https://aka.ms/vscode-mssql-feature-request>.
+[!INCLUDE [feedback](../includes/feedback.md)]
 
 ## Related content
 
 - [Quickstart: Connect to and query a database with the MSSQL extension for Visual Studio Code](connect-database-visual-studio-code.md)
-- [Learn more about Visual Studio Code](https://code.visualstudio.com/docs)
-- [Learn more about contributing to the mssql extension](https://github.com/Microsoft/vscode-mssql/wiki)
-- [What is the local development experience for Azure SQL Database?](/azure/azure-sql/database/local-dev-experience-overview)
+- [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)
+- [Database operations (Preview)](mssql-database-operations.md)
+- [Schema Designer](mssql-schema-designer.md)
+- [Schema Compare](mssql-schema-compare.md)
+- [Visual Studio Code documentation](https://code.visualstudio.com/docs)
+- [MSSQL extension for Visual Studio Code repository on GitHub](https://github.com/Microsoft/vscode-mssql)

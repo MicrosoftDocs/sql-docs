@@ -1,12 +1,13 @@
 ---
 title: Business Rules Extension
 description: You can apply user-defined SQL scripts as an extension of pre-defined business rule conditions and actions in Master Data Services.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - build-2025
 ---
@@ -110,6 +111,4 @@ CREATE PROCEDURE [usr].[YourAction]
 ## See Also  
  [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Business Rule Conditions &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Business Rule Actions &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
-  
-  
+ [Business Rule Actions &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)

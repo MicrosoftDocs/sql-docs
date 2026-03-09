@@ -5,7 +5,8 @@ description: Learn about system assigned and user assigned managed identities in
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/02/2025
+ms.date: 03/05/2026
+ai-usage: ai-assisted
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
@@ -22,9 +23,9 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/entra/identity/managed-identities-azure-resources/overview#managed-identity-types).
 
-An SMI is automatically assigned to Azure SQL Managed Instance when it's created. When you're using Microsoft Entra authentication with Azure SQL Database, you must assign an SMI when Azure service principals are used to create Microsoft Entra users in SQL Database.
+An SMI is automatically assigned to Azure SQL Managed Instance when it's created. When you use Microsoft Entra authentication with Azure SQL Database, you must assign an SMI when Azure service principals create Microsoft Entra users in SQL Database.
 
-Previously, only an SMI could be assigned to the Azure SQL Managed Instance or SQL Database server identity. Now, a UMI can be assigned to SQL Managed Instance or SQL Database as the instance or server identity.
+Previously, you could only assign an SMI to the Azure SQL Managed Instance or SQL Database server identity. Now, you can assign a UMI to SQL Managed Instance or SQL Database as the instance or server identity.
 
 In addition to using a UMI and an SMI as the instance or server identity, you can use them to access the database by using the SQL connection string option `Authentication=Active Directory Managed Identity`. You need to create a SQL user from the managed identity in the target database by using the [CREATE USER](/sql/t-sql/statements/create-user-transact-sql) statement. For more information, see [Using Microsoft Entra authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
 
@@ -32,17 +33,17 @@ To retrieve the current UMIs or SMI for Azure SQL Managed instance or Azure SQL 
 
 ## Benefits of using user-assigned managed identities
 
-There are several benefits of using a UMI as a server identity:
+Using a UMI as a server identity provides several benefits:
 
-- Users have the flexibility to create and maintain their own UMIs for a tenant. You can use UMIs as server identities for Azure SQL. A UMI is managed by the user, whereas an SMI is uniquely defined per server and assigned by the system.
+- Users have the flexibility to create and keep their own UMIs for a tenant. You can use UMIs as server identities for Azure SQL. You manage a UMI yourself, whereas the system uniquely defines and assigns an SMI per server.
 - In the past, you needed the Microsoft Entra ID [Directory Readers](authentication-aad-directory-readers-role.md) role when using an SMI as the server or instance identity. With the introduction of accessing Microsoft Entra ID through [Microsoft Graph](/graph/auth/auth-concepts), users who are concerned with giving high-level permissions such as the Directory Readers role to the SMI or UMI can alternatively give lower-level permissions so that the server or instance identity can access Microsoft Graph. 
 
   For more information on providing Directory Readers permissions and its function, see [Directory Readers role in Microsoft Entra ID for Azure SQL](authentication-aad-directory-readers-role.md).
 - Users can choose a specific UMI to be the server or instance identity for all databases or managed instances in the tenant. Or they can have multiple UMIs assigned to different servers or instances.
 
-  UMIs can be used in different servers to represent different features. For example, a UMI can serve transparent data encryption (TDE) in one server, and a UMI can serve Microsoft Entra authentication in another server.
+  You can use UMIs in different servers to represent different features. For example, a UMI can serve transparent data encryption (TDE) in one server, and a UMI can serve Microsoft Entra authentication in another server.
 - You need a UMI to create a [logical server in Azure](logical-servers.md) configured with TDE with customer-managed keys (CMKs). For more information, see [Customer-managed transparent data encryption using user-assigned managed identity](transparent-data-encryption-byok-identity.md).
-- UMIs are independent from logical servers or managed instances. When a logical server or instance is deleted, the SMI is also deleted. UMIs aren't deleted with the server.
+- UMIs are independent from logical servers or managed instances. When you delete a logical server or instance, the system also deletes the SMI. UMIs aren't deleted with the server.
 
 > [!NOTE]  
 > You must enable the instance identity (SMI or UMI) to allow support for Microsoft Entra authentication in SQL Managed Instance. For SQL Database, enabling the server identity is optional and required only if a Microsoft Entra service principal (Microsoft Entra application) oversees creating and managing Microsoft Entra users, groups, or applications in the server. For more information, see [Microsoft Entra service principals with Azure SQL](authentication-aad-service-principal.md).
@@ -55,20 +56,20 @@ For information on how to create a UMI, see [Manage user-assigned managed identi
 
 ## Permissions
 
-After the UMI is created, some permissions are needed to allow the UMI to read from [Microsoft Graph](/graph/auth/auth-concepts) as the server identity. Grant the following permissions, or give the UMI the [Directory Readers](authentication-aad-directory-readers-role-tutorial.md) role. 
+After you create the UMI, you must grant some permissions to allow the UMI to read from [Microsoft Graph](/graph/auth/auth-concepts) as the server identity. Grant the following permissions, or give the UMI the [Directory Readers](authentication-aad-directory-readers-role-tutorial.md) role.
 
-These permissions should be granted before you provision a logical server or managed instance. After you grant the permissions to the UMI, they're enabled for all servers or instances that are created with the UMI assigned as a server identity.
+You should grant these permissions before you provision a logical server or managed instance. After you grant the permissions to the UMI, they apply to all servers or instances created with the UMI assigned as a server identity.
 
 > [!IMPORTANT]  
 > Only a [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator) or higher role can grant these permissions.
 
-- [User.Read.All](/graph/permissions-reference#user-permissions): Allows access to Microsoft Entra user information.
-- [GroupMember.Read.All](/graph/permissions-reference#group-permissions): Allows access to Microsoft Entra group information.
-- [Application.Read.ALL](/graph/permissions-reference#application-resource-permissions): Allows access to Microsoft Entra service principal (application) information.
+- [User.Read.All](/graph/permissions-reference#userreadall): Allows access to Microsoft Entra user information.
+- [GroupMember.Read.All](/graph/permissions-reference#groupmemberreadall): Allows access to Microsoft Entra group information.
+- [Application.Read.All](/graph/permissions-reference#applicationreadall): Allows access to Microsoft Entra service principal (application) information.
 
 ### Permissions for SMI
 
-The same Microsoft Graph applications permissions are needed with the SMI.
+The SMI requires the same Microsoft Graph application permissions.
 
 Applies only to **Azure SQL Database**: Using an SMI gives an opportunity to not explicitly provision the Microsoft Graph permissions. The Microsoft Entra users can still be created without the needed Microsoft Graph permission by using the `CREATE USER` T-SQL syntax. This would require the `SID` and `TYPE` syntax, as described in the article, [CREATE USER](/sql/t-sql/statements/create-user-transact-sql#syntax).
 
@@ -89,7 +90,7 @@ CREATE USER
     | TYPE = { X | E }
 ```
 
-The above syntax allows creation of Microsoft Entra users *without validation.* For this to work, the `Object Id` of the Microsoft Entra principal would have to be supplied and used as an `SID` in the T-SQL statement, as explained in [Create a contained database user from a Microsoft Entra principal without validation](/sql/t-sql/statements/create-user-transact-sql#k-create-a-contained-database-user-from-a-microsoft-entra-principal-without-validation).
+The above syntax allows creation of Microsoft Entra users *without validation.* For this to work, you must supply the `Object Id` of the Microsoft Entra principal and use it as an `SID` in the T-SQL statement, as explained in [Create a contained database user from a Microsoft Entra principal without validation](/sql/t-sql/statements/create-user-transact-sql#k-create-a-contained-database-user-from-a-microsoft-entra-principal-without-validation).
 
 The validity check of the **Object Id** is the responsibility of the user running the T-SQL statement.
 
@@ -161,7 +162,7 @@ foreach($AppRole in $MSGraphAppRoles)
 
 ### Check permissions for user-assigned managed identity
 
-To check permissions for a UMI, go to the [Azure portal](https://portal.azure.com). In the **Microsoft Entra ID** resource, go to **Enterprise applications**. Select **All Applications** for **Application type**, and search for the UMI that was created.
+To check permissions for a UMI, go to the [Azure portal](https://portal.azure.com). In the **Microsoft Entra ID** resource, go to **Enterprise applications**. Select **All Applications** for **Application type**, and search for the UMI that you created.
 
 :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/azure-ad-search-enterprise-applications.png" alt-text="Screenshot of enterprise application settings in the Azure portal." lightbox="media/authentication-azure-ad-user-assigned-managed-identity/azure-ad-search-enterprise-applications.png":::
 
@@ -317,7 +318,7 @@ To update the UMI settings for the server, you can also use the Azure Resource M
 ## Limitations and known issues
 
 - After you create a managed instance, the **Microsoft Entra admin** page for your managed instance in the Azure portal shows a warning: `Managed Instance needs permissions to access Microsoft Entra ID. Click here to grant "Read" permissions to your Managed Instance.` If you gave the UMI the appropriate permissions [discussed earlier in this article](#permissions), you can ignore this warning.
-- If you use an SMI or a UMI as the server or instance identity, deleting the identity will make the server or instance unable to access Microsoft Graph. Microsoft Entra authentication and other functions will fail. To restore Microsoft Entra functionality, assign a new SMI or UMI to the server with appropriate permissions.
+- If you use an SMI or a UMI as the server or instance identity, deleting the identity makes the server or instance unable to access Microsoft Graph. Microsoft Entra authentication and other functions fail. To restore Microsoft Entra functionality, assign a new SMI or UMI to the server with appropriate permissions.
 - To grant permissions to access Microsoft Graph through an SMI or a UMI, you need to use PowerShell. You can't grant these permissions by using the Azure portal.
 
 ## Related content

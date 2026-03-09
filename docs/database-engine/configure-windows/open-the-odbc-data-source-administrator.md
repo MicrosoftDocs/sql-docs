@@ -4,7 +4,7 @@ description: Find out how to open the ODBC Data Source Administrator on various 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
-ms.date: 08/26/2025
+ms.date: 02/26/2026
 ms.service: sql
 ms.subservice: configuration
 ms.topic: how-to
@@ -35,6 +35,23 @@ Your computer might contain a variety of ODBC drivers, from [!INCLUDE [msCoName]
 - In the **ODBC Data Source Administrator**, select the **Drivers** tab.
 
   Information for the Microsoft [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] entry is displayed in the **Version** column.
+
+### Understand ODBC driver version numbers
+
+The **Version** column in the ODBC Data Source Administrator displays the internal file version number, which differs from the marketing version name used in product downloads and documentation.
+
+The following table maps common marketing version names to their corresponding internal file version patterns:
+
+| Marketing version | Internal file version pattern |
+|---|---|
+| ODBC Driver 18 for SQL Server | 2022.*x*.*x* |
+| ODBC Driver 17 for SQL Server | 2017.*x*.*x* |
+| ODBC Driver 13.1 for SQL Server | 2015.*x*.*x* |
+| ODBC Driver 13 for SQL Server | 2014.*x*.*x* |
+
+For example, if the **Version** column shows `2017.177.02.01`, the installed driver corresponds to **ODBC Driver 17 for SQL Server**.
+
+For detailed release history, see [Release notes for the Microsoft ODBC Driver for SQL Server on Windows](../../connect/odbc/windows/release-notes-odbc-sql-server-windows.md).
 
 ## Related content
 

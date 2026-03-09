@@ -5,7 +5,7 @@ description: Learn about using SQL Server transactional replication with Azure S
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/30/2025
+ms.date: 02/20/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: concept-article
@@ -147,9 +147,9 @@ A value of `3` enforces TLS 1.3 connections to SQL managed instances, but has no
 
 ### Login `replAgentUser`
 
-For purposes of transactional replication, a SQL managed instance has a pre-created login(s) with the name `replAgentUser`. This login is a member of the `sysadmin` server role and is used by replication agents that need to connect to a SQL managed instance participating in transactional replication setup.
+Instances configured with a Distribution or Snapshot agent have the `replAgentUser` login created automatically. The Distribution and Snapshot agent use the `replAgentUser` login to connect to their respective database. For a push subscription, the login is created on the Distributor. For a pull or anonymous subscription, the login is created on the Subscriber. The login is a member of the fixed `db_owner` database role on the distribution or subscription database.
 
-If transactional replication is not used, the login `replAgentUser` can be disabled. It can be re-enabled later if you decide to start using transactional replication.
+The `replAgentUser` login is automatically created when the replication agent is started for the first time. The login is automatically dropped from Distributor when the [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) stored procedure is executed. The login is automatically dropped from Subscriber when the last pull or anonymous subscription is deleted. 
 
 ## Limitations
 

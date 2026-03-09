@@ -2,8 +2,8 @@
 title: Request a quota increase
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This page describes how to create a support request to increase the quotas for Azure SQL Database and Azure SQL Managed Instance.
-author: sachinpMSFT
-ms.author: sachinp
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 08/26/2024
 ms.service: azure-sql

@@ -1,9 +1,10 @@
 ---
 title: Upgrade Database Wizard
-description: "Upgrade Database Wizard (Master Data Services Configuration Manager)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/20/2017"
+description: Upgrade Database Wizard (Master Data Services Configuration Manager)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: upgrade-and-migration-article
@@ -35,6 +36,4 @@ ms.custom:
 ## See Also  
  [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md)  
- [Upgrade Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
-  
-  
+ [Upgrade Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)

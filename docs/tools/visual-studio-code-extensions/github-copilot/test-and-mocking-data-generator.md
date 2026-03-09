@@ -114,7 +114,7 @@ With Prisma, generate test logic that tries to insert a `Product` with a `Standa
 
 ## Share your experience
 
-[!INCLUDE [feedback](../includes/feedback.md)]
+[!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
 
 ## Related content
 

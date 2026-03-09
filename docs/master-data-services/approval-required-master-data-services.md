@@ -1,9 +1,10 @@
 ---
 title: Approval Required
-description: "Approval Required (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Approval Required (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -45,6 +46,4 @@ ms.custom:
 4.  Click **Edit**, select **Approval Required**, and then click **Save**.  
   
 ## See Also  
- [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  
-  
-  
+ [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)

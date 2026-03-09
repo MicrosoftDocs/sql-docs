@@ -1,8 +1,8 @@
 ---
 title: "Run Packages in SQL Server Integration Services (SSIS) Scale Out"
 description: "Learn how to run SQL Server Integration Services (SSIS) packages in Scale Out using a variety of methods."
-author: HaoQian-MS
-ms.author: haoqian
+author: chugugrace
+ms.author: chugu
 ms.reviewer: 
 ms.date: "12/13/2017"
 ms.service: sql

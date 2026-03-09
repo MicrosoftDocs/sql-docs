@@ -1,16 +1,17 @@
 ---
-title: Change a User's Email Address
+title: "Change a User's Email Address"
 description: "Change a User's Email Address (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
-helpviewer_keywords:
-  - "users [Master Data Services], changing e-mail address"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "users [Master Data Services], changing e-mail address"
 ---
 # Change a User's Email Address (Master Data Services)
 
@@ -44,6 +45,4 @@ ms.custom:
 -   [Assign Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## See Also  
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
-  
-  
+ [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)

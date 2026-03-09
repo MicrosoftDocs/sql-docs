@@ -4,7 +4,7 @@ description: Learn about the Transact-SQL PIVOT and UNPIVOT relational operators
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, randolphwest
-ms.date: 10/01/2024
+ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -92,15 +92,26 @@ FOR <output column for names of the pivot columns>
 
 ## Remarks
 
-The column identifiers in the `UNPIVOT` clause follow the catalog collation.
+- The column identifiers in the `UNPIVOT` clause follow the catalog collation.
 
-- For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the collation is always `SQL_Latin1_General_CP1_CI_AS`.
+   - For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the collation is always `SQL_Latin1_General_CP1_CI_AS`.
 
-- For [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] partially contained databases, the collation is always `Latin1_General_100_CI_AS_KS_WS_SC`.
+   - For [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] partially contained databases, the collation is always `Latin1_General_100_CI_AS_KS_WS_SC`.
 
-If the column is combined with other columns, then a collate clause (`COLLATE DATABASE_DEFAULT`) is required to avoid conflicts.
+- If the column is combined with other columns, then a collate clause (`COLLATE DATABASE_DEFAULT`) is required to avoid conflicts.
 
-In [!INCLUDE [fabric](../../includes/fabric.md)] and [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] pools, queries with `PIVOT` operator fail if there's a `GROUP BY` on the nonpivot column output by `PIVOT`. As a workaround, remove the nonpivot column from the `GROUP BY`. Query results are the same, as this `GROUP BY` clause is a duplicate.
+- In [!INCLUDE [fabric](../../includes/fabric.md)] and [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] pools, queries with `PIVOT` operator fail if there's a `GROUP BY` on the nonpivot column output by `PIVOT`. As a workaround, remove the nonpivot column from the `GROUP BY`. Query results are the same, as this `GROUP BY` clause is a duplicate.
+
+- Column names are of type **sysname** or **nvarchar(128)**. Because `UNPIVOT` projects column names as values, the data type for an `UNPIVOT` column will also be **nvarchar(128)**, which is not a supported data type in Fabric Data Warehouse. If you want to save the results of `UNPIVOT` to a table in a warehouse in Fabric, cast it to a [supported data type in Fabric Data Warehouse](/fabric/data-warehouse/data-types). For example:
+
+   ```sql
+   CREATE TABLE myTable AS
+   SELECT value,
+         CAST(columnNames as VARCHAR(128) ) columnNames
+   FROM myTableToUnpivot
+   UNPIVOT( value
+          FOR columnNames IN( col1, col2 )) unpvt;
+   ```
 
 ## Basic PIVOT example
 

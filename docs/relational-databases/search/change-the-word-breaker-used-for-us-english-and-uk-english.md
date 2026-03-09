@@ -5,7 +5,7 @@ description: Change the word breaker used for US English and UK English in SQL S
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.date: 01/12/2026
+ms.date: 03/06/2026
 ms.service: sql
 ms.subservice: search
 ms.topic: how-to
@@ -30,7 +30,7 @@ The default database scoped configuration for full-text indexes is version 2. Yo
    ALTER DATABASE SCOPED CONFIGURATION SET FULLTEXT_INDEX_VERSION = 1;
    ```
 
-Legacy version 1 word breakers and filters are removed from [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. You must copy these binaries from a previous instance's `C:\Program Files\Microsoft SQL Server\MSSQL<nn>.<instance-name>\MSSQL\Binn` directory, where `<nn>` is the [product version](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-sql-server). For more information, see [List of version 1 filters and word breakers](full-text-index-version-1-binaries.md).
+Legacy version 1 word breakers and filters are removed from [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. You must copy these binaries from a previous instance's `C:\Program Files\Microsoft SQL Server\MSSQL<nn>.<instance-name>\MSSQL\Binn` directory, where `<nn>` is the [product version](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-sql-server). For more information, see [Filters and word breakers - SQL Server Full-Text Search](full-text-index-binaries.md).
 
 For existing indexes, verify the version using the [sys.fulltext_indexes](../system-catalog-views/sys-fulltext-indexes-transact-sql.md) catalog view. If the index is already version 1, you don't need to rebuild it. For a version 2 index, rebuild the catalog to switch back to version 1.
 

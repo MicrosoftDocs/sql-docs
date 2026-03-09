@@ -1,9 +1,9 @@
 ---
 title: "sys.availability_group_listeners (Transact-SQL)"
-description: sys.availability_group_listeners (Transact-SQL)
+description: sys.availability_group_listeners returns a row for each availability group listener configuration in the WSFC cluster.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/27/2023
+ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -26,7 +26,7 @@ dev_langs:
 For each Always On availability group, returns either zero rows indicating that no network name is associated with the availability group, or returns a row for each availability-group listener configuration in the Windows Server Failover Clustering (WSFC) cluster. This view displays the real-time configuration gathered from cluster.
 
 > [!NOTE]  
-> This catalog view does not describe details of an IP configuration, that was defined in the WSFC cluster.
+> This catalog view doesn't describe details of an IP configuration that was defined in the WSFC cluster.
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -44,7 +44,11 @@ For each Always On availability group, returns either zero rows indicating that 
 
 [!INCLUDE [ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
 
-## See also
+#### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## Related content
 
 - [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)
 - [Always On Availability Groups Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)

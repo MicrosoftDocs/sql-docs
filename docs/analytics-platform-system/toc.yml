@@ -129,7 +129,6 @@
   - name: Configure domain trusts
     href: ./configure-domain-trusts.md
 - name: Appliance management tasks
-  href: ./appliance-management-tasks.md
   items:
   - name: Appliance installation and configuration overview
     href: ./appliance-installation-and-configuration-overview.md

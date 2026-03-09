@@ -4,7 +4,7 @@ description: sys.database_query_store_options returns the Query Store options fo
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf, randolphwest
-ms.date: 05/23/2024
+ms.date: 02/25/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -55,7 +55,9 @@ Returns the Query Store options for this database.
 
 ## Permissions
 
-Requires the `VIEW DATABASE STATE` permission.
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission, or a greater permission such as `VIEW DATABASE STATE`.
+
+In [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] through [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], requires the `VIEW DATABASE STATE` permission. In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database, or a greater permission such as `VIEW DATABASE STATE`.
 
 ## Remarks
 

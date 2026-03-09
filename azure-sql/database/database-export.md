@@ -5,7 +5,7 @@ description: Export a database to a BACPAC file using the Azure portal, PowerShe
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei, randolphwest
-ms.date: 01/26/2026
+ms.date: 03/02/2026
 ms.service: azure-sql
 ms.subservice: data-movement
 ms.topic: how-to
@@ -64,6 +64,22 @@ If the export operation exceeds 20 hours, it might be canceled. To increase perf
 1. Select **OK**.
 
 1. To monitor the progress of the export operation, open the page for the server containing the database being exported. Under **Data management**, select **Import/Export history**.
+
+## Export with managed identity authentication (preview)
+
+You can export a database in Azure SQL Database to a BACPAC file using [managed identity](/entra/identity/managed-identities-azure-resources/overview) authentication to eliminate the need to provide SQL administrator passwords or storage access keys. 
+
+For a detailed tutorial, see [Use managed identity with import and export (preview)](database-import-export-managed-identity.md).
+
+To export a BACPAC file using managed identity authentication, the following configuration is required:
+
+- A **user-assigned managed identity (UAMI)** assigned to the [logical server](logical-servers.md) for Azure SQL Database.
+- The server has the managed identity configured as the **Microsoft Entra administrator**.
+- A managed identity is assigned to the **Storage Blob Data Contributor** role on the target Azure Storage account. This managed identity can be the same as the one assigned to the server or a different one.
+- The logical server, managed identity, and storage account are in the **same Microsoft Entra tenant**.
+
+> [!NOTE]
+> Export with managed identity authentication is currently in [**preview**](doc-changes-updates-release-notes-whats-new.md#preview) and only available for Azure SQL Database.
 
 ## SQLPackage utility
 

@@ -4,7 +4,7 @@ description: This article explains the appliance software and the non-appliance 
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 02/09/2026
+ms.date: 02/26/2026
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: concept-article
@@ -198,7 +198,7 @@ The Remote Table Copy feature allows you to copy tables from SQL Server PDW data
 
 ## Monitor
 
-Analytics Platform System has several ways to monitor appliance activity  
+Analytics Platform System has several ways to monitor appliance activity. For more information on monitoring, see [Appliance Monitoring](appliance-monitoring.md).
 
 ### Admin Console
 
@@ -208,7 +208,7 @@ For more information, see [Monitor the appliance with the Admin Console - Analyt
 
 ### System Views
 
-The Admin Console is based on system view queries. You can query the system views individually to get the specific piece of information you need.  
+The Admin Console is based on system view queries. You can query the system views individually to get the specific piece of information you need.
 
 For more information, see [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md) 
 
@@ -217,6 +217,18 @@ For more information, see [Monitor the appliance with system views - Analytics P
 There are System Center Operations Manager Management Packs for SQL Server PDW. 
 
 To configure the appliance for System Center Operations Manager, see [Monitor with System Center Operations Manager - Analytics Platform System](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+
+#### Management tasks
+
+Review documentation and recommendations for common management tasks:
+
+- [Appliance Installation and Configuration Overview (Analytics Platform System)](appliance-installation-and-configuration-overview.md)
+- [Connect to Appliance Nodes (Analytics Platform System)](connect-to-appliance-nodes.md)
+- [Antivirus Software (Analytics Platform System)](antivirus-software.md)
+- [Appliance Configuration (Analytics Platform System)](appliance-configuration.md)
+- [Software Servicing (Analytics Platform System)](software-servicing.md)
+- [PDW Services Status (Analytics Platform System)](pdw-services-status.md)
+- [Power the APS Appliance On or Off (Analytics Platform System)](power-the-aps-appliance-on-or-off.md)
 
 ## T-SQL support
 

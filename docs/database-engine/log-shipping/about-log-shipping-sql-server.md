@@ -4,7 +4,7 @@ description: Learn about SQL Server log shipping, which sends transaction log ba
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 11/18/2025
+ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: log-shipping
 ms.topic: concept-article
@@ -146,7 +146,7 @@ Log shipping can be used with the following features or components of [!INCLUDE 
 
 ## Related tasks
 
-- [Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)
+- [Upgrade SQL Server with log shipping (Transact-SQL)](upgrade-sql-server-log-shipping-transact-sql.md)
 - [Configure Log Shipping (SQL Server)](configure-log-shipping-sql-server.md)
 - [Add a Secondary Database to a Log Shipping Configuration (SQL Server)](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)
 - [Remove a Secondary Database from a Log Shipping Configuration (SQL Server)](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)

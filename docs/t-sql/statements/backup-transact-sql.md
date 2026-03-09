@@ -4,7 +4,7 @@ description: BACKUP (Transact-SQL) backs up a SQL database.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: dinethi, wiassaf, randolphwest
-ms.date: 08/15/2025
+ms.date: 03/02/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -376,7 +376,7 @@ Specifies options to be used with a backup operation.
 
 **Applies to:** [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
-Used only when creating a backup to Azure Blob Storage.
+Used only when creating a backup to Azure Blob Storage or S3-compatible object storage.
 
 #### FILE_SNAPSHOT
 
@@ -489,11 +489,11 @@ The ZSTD compression algorithm is available starting with [!INCLUDE [sssql25-md]
 
   | Backup statement | Outcome |
   | --- | --- |
-  | **BACKUP DATABASE *database_name* TO {DISK &#124; TAPE &#124; URL} WITH NO_COMPRESSION** | Backup without any compression |
-  | **BACKUP DATABASE *database_name* TO {DISK &#124; TAPE &#124; URL} WITH COMPRESSION** | Backup with compression using the algorithm specified by the server option `backup compression algorithm` (default `MS_XPRESS`) |
-  | **BACKUP DATABASE *database_name* TO {DISK &#124; TAPE &#124; URL} WITH COMPRESSION (ALGORITHM = MS_XPRESS)** | Backup with compression using `MS_XPRESS` algorithm |
-  | **BACKUP DATABASE *database_name* TO {DISK &#124; TAPE &#124; URL} WITH COMPRESSION (ALGORITHM = ZSTD)** | Backup with compression using ZSTD algorithm. |
-  | **BACKUP DATABASE *database_name* TO {DISK &#124; TAPE &#124; URL} WITH COMPRESSION (ALGORITHM = ZSTD, LEVEL = HIGH)** | Backup with compression using ZSTD algorithm with compression level `HIGH`. |
+  | `BACKUP DATABASE *database_name* TO {DISK | TAPE | URL} WITH NO_COMPRESSION` | Backup without any compression |
+  | `BACKUP DATABASE *database_name* TO {DISK | TAPE | URL} WITH COMPRESSION` | Backup with compression using the algorithm specified by the server option `backup compression algorithm` (default `MS_XPRESS`) |
+  | `BACKUP DATABASE *database_name* TO {DISK | TAPE | URL} WITH COMPRESSION (ALGORITHM = MS_XPRESS)` | Backup with compression using `MS_XPRESS` algorithm |
+  | `BACKUP DATABASE *database_name* TO {DISK | TAPE | URL} WITH COMPRESSION (ALGORITHM = ZSTD)` | Backup with compression using ZSTD algorithm. |
+  | `BACKUP DATABASE *database_name* TO {DISK | TAPE | URL} WITH COMPRESSION (ALGORITHM = ZSTD, LEVEL = HIGH)` | Backup with compression using ZSTD algorithm with compression level `HIGH`. |
 
 #### DESCRIPTION = { '*text*' | *@text_variable* }
 
@@ -639,6 +639,13 @@ Specifies the largest unit of transfer in bytes to be used between [!INCLUDE [ss
 
 When creating backups by using the SQL Writer Service, if the database has configured [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md), or includes [memory optimized filegroups](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), then the `MAXTRANSFERSIZE` at the time of a restore should be greater than or equal to the `MAXTRANSFERSIZE` that was used when the backup was created.
 
+| Command | SQL Server 2022 and later versions |
+|:--|:--|:--|:--|
+| BACKUP TO URL - Azure | Default 1 MB, Max 20 MB | 
+| BACKUP TO URL - S3 | Default 10 MB, Max 20 MB | 
+| BACKUP TO DISK | Default is 1 MB, Max 4 MB |
+| BACKUP TO TAPE/VDI | Default 64 KB, Max 4 MB |
+
 For [Transparent data encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases, the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to `DISK`, and 65536 (64 KB) when using VDI or `TAPE`. For more information about using backup compression with TDE encrypted databases, see the [Remarks](#remarks) section.
 
 ### Error management options
@@ -755,7 +762,7 @@ Specifies that the transaction log shouldn't be not truncated and causes the [!I
 
 The `NO_TRUNCATE` option of `BACKUP LOG` is equivalent to specifying both `COPY_ONLY` and `CONTINUE_AFTER_ERROR`.
 
-Without the `NO_TRUNCATE` option, the database must be in the `ONLINE` state. If the database is in the SUSPENDED state, you might be able to create a backup by specifying `NO_TRUNCATE`. But if the database is in the `OFFLINE` or `EMERGENCY` state, `BACKUP` isn't allowed even with `NO_TRUNCATE`. For information about database states, see [Database States](../../relational-databases/databases/database-states.md).
+Without the `NO_TRUNCATE` option, the database must be in the `ONLINE` state. If the database is in the SUSPENDED state, you might be able to create a backup by specifying `NO_TRUNCATE`. But if the database is in the `OFFLINE` or `EMERGENCY` state, `BACKUP` isn't allowed even with `NO_TRUNCATE`. For information about database states, see [Database states](../../relational-databases/databases/database-states.md).
 
 ## About working with SQL Server backups
 
@@ -1365,7 +1372,11 @@ The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFER
 
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4,194,304 bytes (4 MB).
 
-For [Transparent data encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to `DISK`, and 65536 (64 KB) when using VDI or `TAPE`.
+| Command | Azure SQL Managed Instance<BR><BR>SQL Server 2022 or SQL Server 2025 update policy | Azure SQL Managed Instance<BR><BR>Always-up-to-date policy | 
+|:--|:--|:--|:--|
+| BACKUP TO URL - Azure | Dynamic, chosen by the service for automatic backups.<br><br>For COPY_ONLY backups: Default 1 MB, Max 100 MB | Dynamic, chosen by the service for automatic backups.<br><br>For COPY_ONLY backups: Default 1 MB, Max 100 MB|
+
+For databases with [Transparent data encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to `DISK`, and 65536 (64 KB) when using VDI or `TAPE`.
 
 > [!NOTE]  
 > `MAXTRANSFERSIZE` specifies the largest unit of transfer, and doesn't guarantee that every write operation transfers the specified largest size.
@@ -1456,7 +1467,7 @@ WITH COPY_ONLY;
 
 ## Related content
 
-- [RESTORE DATABASE](restore-statements-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](restore-statements-transact-sql.md)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016"
@@ -1566,12 +1577,12 @@ For more information about managing credentials in [!INCLUDE [ssPDW](../../inclu
 - The database doesn't exist.
 - The target directory already exists on the network share.
 - The target network share isn't available.
-- The target network share doesn't have enough space for the backup. The `BACKUP DATABASE` command doesn't confirm that sufficient disk space exists prior to initiating the backup, making it possible to generate an out-of-disk-space error while running `BACKUP DATABASE`. When insufficient disk space occurs, [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] rolls back the `BACKUP DATABASE` command. To decrease the size of your database, run [DBCC SHRINKLOG](../database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
+- The target network share doesn't have enough space for the backup. The `BACKUP DATABASE` command doesn't confirm that sufficient disk space exists prior to initiating the backup, making it possible to generate an out-of-disk-space error while running `BACKUP DATABASE`. When insufficient disk space occurs, [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] rolls back the `BACKUP DATABASE` command. To decrease the size of your database, run [DBCC SHRINKLOG - Analytics Platform System (PDW)](../database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - Attempt to start a backup within a transaction.
 
 ## Remarks
 
-Before you perform a database backup, use [DBCC SHRINKLOG](../database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database.
+Before you perform a database backup, use [DBCC SHRINKLOG - Analytics Platform System (PDW)](../database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database.
 
 A [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] backup is stored as a set of multiple files within the same directory.
 
@@ -1705,6 +1716,6 @@ WITH (
 
 ## Related content
 
-- [RESTORE DATABASE](restore-statements-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](restore-statements-transact-sql.md)
 
 ::: moniker-end

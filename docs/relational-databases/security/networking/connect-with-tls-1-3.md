@@ -1,8 +1,8 @@
 ---
 title: Configure TLS 1.3 on SQL Server 2022 and later
 description: Explains and demonstrates how to configure and validate TLS 1.3 is configured for an instance of SQL Server.
-author: x509cert
-ms.author: mikehow
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: mikeray
 ms.date: 03/11/2024
 ms.service: sql

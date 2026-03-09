@@ -37,10 +37,6 @@ The Named Pipes protocol isn't supported for [!INCLUDE [ssnoversion-md](../inclu
 
 SQL Server Management Studio (SSMS) is a Windows application that provides a graphical user interface for managing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Although it currently runs only on Windows, you can use it to remotely connect to your Linux [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances. For more information on using SSMS to manage [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [Use SQL Server Management Studio on Windows to manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
-## mssql-cli (preview)
-
-Microsoft has released a new cross-platform scripting tool for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], [mssql-cli](https://www.microsoft.com/sql-server/blog/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server). This tool is currently in preview.
-
 ## PowerShell
 
 PowerShell provides a rich command-line environment to manage [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. For more information, see [Use PowerShell on Windows to manage SQL Server on Linux](sql-server-linux-manage-powershell.md).

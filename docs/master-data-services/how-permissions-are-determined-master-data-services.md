@@ -1,16 +1,17 @@
 ---
 title: How Permissions Are Determined
-description: "How Permissions Are Determined (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: How Permissions Are Determined (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
-helpviewer_keywords:
-  - "permissions [Master Data Services], determining permissions"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "permissions [Master Data Services], determining permissions"
 ---
 # How Permissions Are Determined (Master Data Services)
 
@@ -75,6 +76,4 @@ ms.custom:
   
 ## See Also  
  [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [Overlapping Model and Member Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
-  
-  
+ [Overlapping Model and Member Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)

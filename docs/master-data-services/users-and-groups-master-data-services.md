@@ -1,19 +1,20 @@
 ---
 title: Users and Groups
 description: Find out how to grant access to the Master Data Manager web application. A user must have a suitable account.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: best-practice
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "users [Master Data Services]"
   - "groups [Master Data Services]"
   - "users [Master Data Services], about users"
   - "groups [Master Data Services], about groups"
-ms.custom:
-  - build-2025
 ---
 # Users and Groups (Master Data Services)
 
@@ -43,6 +44,4 @@ ms.custom:
  [Add a User &#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)   
  [Add a Group &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)   
  [Delete Users or Groups &#40;Master Data Services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
- [Test a User's Permissions &#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
-  
-  
+ [Test a User's Permissions &#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)

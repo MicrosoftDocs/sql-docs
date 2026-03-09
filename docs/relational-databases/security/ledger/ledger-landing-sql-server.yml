@@ -82,8 +82,6 @@ landingContent:
             url: ledger-limits.md
           - text: Ledger whitepaper
             url: https://aka.ms/sql-ledger-whitepaper
-          - text: Microsoft Customer Story - Qode Health Solutions secures COVID-19 vaccination records with the ledger feature in Azure SQL Database
-            url: https://customers.microsoft.com/en-us/story/1595119379301789552-qode-professional-services-azure-sql-database
 
 
   # Card

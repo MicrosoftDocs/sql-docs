@@ -1,9 +1,10 @@
 ---
 title: Connections
 description: To download data to the Master Data Services Add-in for Excel, first create a connection. Each time you start Excel, you must connect to a repository.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -47,6 +48,4 @@ ms.custom:
   
 -   [Shortcut Query Files &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Master Data Services Add-in for Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
-  
-  
+-   [Master Data Services Add-in for Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)

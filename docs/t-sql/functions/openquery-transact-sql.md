@@ -57,7 +57,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ## Examples  
   
 ### A. Executing an UPDATE pass-through query  
- The following example uses a pass-through `UPDATE` query against the linked server created in example A.  
+ The following example uses a pass-through `UPDATE` query against the linked server named `OracleSvr`.  
   
 ```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
@@ -65,7 +65,7 @@ SET name = 'ADifferentName';
 ```  
   
 ### B. Executing an INSERT pass-through query  
- The following example uses a pass-through `INSERT` query against the linked server created in example A.  
+ The following example uses a pass-through `INSERT` query against the linked server named `OracleSvr`.  
   
 ```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  

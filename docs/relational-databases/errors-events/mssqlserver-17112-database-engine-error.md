@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_17112
 description: "MSSQLSERVER_17112"
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: jopilov, mathoma, randolphwest
 ms.date: 07/26/2024
 ms.service: sql

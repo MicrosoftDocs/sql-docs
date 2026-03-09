@@ -1,17 +1,18 @@
 ---
 title: Delete a Subscription View
-description: "Delete a Subscription View (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Delete a Subscription View (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "deleting subscription views [Master Data Services]"
   - "subscription views [Master Data Services], deleting"
-ms.custom:
-  - build-2025
 ---
 # Delete a Subscription View (Master Data Services)
 
@@ -42,6 +43,4 @@ ms.custom:
   
 ## See Also  
  [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)   
- [Overview: Exporting Data &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
-  
-  
+ [Overview: Exporting Data &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)

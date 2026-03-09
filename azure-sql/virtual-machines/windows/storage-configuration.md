@@ -27,7 +27,7 @@ To use the automated storage configuration settings, your virtual machine requir
 
 - Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#sql-vm-images-and-licensing).
 - Uses the [Resource Manager deployment model](/azure/azure-resource-manager/management/deployment-models).
-- Uses [premium SSDs](/azure/virtual-machines/disks-types#premium-ssds).
+- Uses [Premium SSDs](/azure/virtual-machines/disks-types#premium-ssds).
 
 > [!NOTE]  
 > This article is only applicable to SQL Server on Azure VMs using Premium Storage, not [Premium SSD v2 storage](storage-configuration-premium-ssd-v2.md).
@@ -49,7 +49,7 @@ Choose the drive location for your data files and log files, specifying the disk
 
 :::image type="content" source="./media/storage-configuration/sql-vm-storage-configuration.png" alt-text="Screenshot from the Azure portal of the SQL Server VM Storage Configuration page during provisioning.":::
 
-The disk configuration is fully customizable so that you can configure the storage topology, disk type, and IOPS you need for your SQL Server VM workload. You also have the ability to use Ultradisk as an option for the **Disk type** if your SQL Server VM is in one of the supported regions and you enabled [ultra disks for your subscription](/azure/virtual-machines/disks-enable-ultra-ssd).
+The disk configuration is fully customizable so that you can configure the storage topology, disk type, and IOPS you need for your SQL Server VM workload. You also have the ability to use Ultra Disk as an option for the **Disk type** if your SQL Server VM is in one of the supported regions and you enabled [Ultra Disks for your subscription](/azure/virtual-machines/disks-enable-ultra-ssd).
 
 Configure your `tempdb` database settings under **TempDb storage**, such as the location of the database files, the number of files, the initial size, and the autogrowth size in MB.
 
@@ -91,7 +91,7 @@ If you use the following Resource Manager templates, two premium data disks are 
 You can use the following quickstart template to deploy a SQL Server VM using storage optimization.
 
 - [Create VM with storage optimization](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage/)
-- [Create VM using Ultradisk](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage-ultrassd)
+- [Create VM using Ultra Disk](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage-ultrassd)
 
 > [!NOTE]  
 > Some VM sizes might not have [temporary or local storage](/azure/virtual-machines/azure-vms-no-temp-disk). If you deploy a SQL Server on Azure VM without temporary storage, `tempdb` data and log files are placed in the data folder.
@@ -118,7 +118,7 @@ Selecting **Configure** opens the **Extend Data drive** page, allowing you to ch
 
 If you've already reached the maximum disks supported for a particular VM size, you might need to [Resize the VM](/azure/virtual-machines/sizes/resize-vm).
 
-When extending a storage pool for a SQL Server virtual machine by using the Azure portal, the SQL IaaS Agent extension enforces a minimum disk addition requirement based on the number of columns configured in the original storage pool. This column count corresponds to the number of data disks provisioned during initial deployment. For example, if the storage pool was created with four premium SSD disks, any subsequent expansion must include at least four additional disks to maintain the integrity and performance characteristics of the striped storage configuration.
+When extending a storage pool for a SQL Server virtual machine by using the Azure portal, the SQL IaaS Agent extension enforces a minimum disk addition requirement based on the number of columns configured in the original storage pool. This column count corresponds to the number of data disks provisioned during initial deployment. For example, if the storage pool was created with four Premium SSDs, any subsequent expansion must include at least four additional disks to maintain the integrity and performance characteristics of the striped storage configuration.
 
 <a id="modifying-tempdb"></a>
 
@@ -143,7 +143,7 @@ To increase the temporary disk size, resize the VM to a SKU that supports a high
 This section provides a reference for the storage configuration changes that Azure automatically performs during SQL Server VM provisioning or configuration in the Azure portal.
 
 - Azure configures a storage pool from storage selected from your VM. The next section of this article provides details about storage pool configuration.
-- Automatic storage configuration always uses [premium SSDs](/azure/virtual-machines/disks-types) P30 data disks. So, there's a 1:1 mapping between your selected number of Terabytes and the number of data disks attached to your VM.
+- Automatic storage configuration always uses [Premium SSDs](/azure/virtual-machines/disks-types) P30 data disks. So, there's a 1:1 mapping between your selected number of Terabytes and the number of data disks attached to your VM.
 
 For pricing information, see the [Storage pricing](https://azure.microsoft.com/pricing/details/storage) page on the **Disk Storage** tab.
 
@@ -292,7 +292,7 @@ Review [Troubleshoot a full transaction log](/sql/relational-databases/logs/trou
 The Storage configuration pane for the SQL virtual machines resource in the Azure portal might be unavailable, grayed out, or selecting **Extend disks** does nothing, in the following scenarios:
 
 - Virtual machines with self-installed SQL Server instances. Currently, only SQL Server VM images from Azure Marketplace are supported.
-- SQL Server VMs using Premium SSDv2. Currently, only SQL Server VMs with Premium SSD are supported.
+- SQL Server VMs using Premium SSD v2. Currently, only SQL Server VMs with Premium SSD are supported.
 - TCP/IP is disabled in SQL Server Configuration Manager.
 
 ## Related content

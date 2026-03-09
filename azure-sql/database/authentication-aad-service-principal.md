@@ -5,7 +5,7 @@ description: Use Microsoft Entra service principals and managed identities in Az
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/11/2025
+ms.date: 03/03/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
@@ -114,6 +114,25 @@ This error indicates that the server identity hasn't been created or hasn't been
 - Service principals can't authenticate across tenants' boundaries. Trying to access SQL Database or SQL Managed Instance using a Microsoft Entra application created in a different tenant fails.
 
 - [Az.Sql 2.9.0](https://www.powershellgallery.com/packages/Az.Sql/2.9.0) module or higher is required to set a Microsoft Entra application as the Microsoft Entra admin for Azure SQL. Ensure you're upgraded to the latest module.
+
+## Connect to Azure SQL with a service principal
+
+To connect an application to Azure SQL Database using a service principal, you need:
+
+1. **An app registration** in Microsoft Entra ID with an Application (client) ID and either a client secret or certificate. For production workloads, use a [managed identity](/entra/identity/managed-identities-azure-resources/overview) instead — managed identities eliminate the need for developer-managed credentials.
+
+1. **A contained database user** mapped to the service principal. Connect as the Microsoft Entra admin and run:
+
+   ```sql
+   CREATE USER [my-sql-app] FROM EXTERNAL PROVIDER;
+   ALTER ROLE db_datareader ADD MEMBER [my-sql-app];
+   ```
+
+   Replace `my-sql-app` with the display name of your app registration. Assign appropriate database roles based on the application's access needs.
+
+1. **A connection string** that specifies `Active Directory Service Principal` authentication. Use the **Application (client) ID** as the username and the **client secret** as the password.
+
+For a complete walkthrough including app registration and permission setup, see [Tutorial: Create Microsoft Entra users using Microsoft Entra applications](authentication-aad-service-principal-tutorial.md). For driver-specific connection examples, see [Connect to Azure SQL with Microsoft Entra authentication and SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
 
 ## Related content
 

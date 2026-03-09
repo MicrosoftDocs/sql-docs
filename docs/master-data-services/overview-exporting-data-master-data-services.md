@@ -1,18 +1,19 @@
 ---
 title: Exporting Data
 description: "Overview: Exporting Data (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "exporting data [Master Data Services]"
   - "subscription views [Master Data Services]"
   - "subscription views [Master Data Services], about subscription views"
-ms.custom:
-  - build-2025
 ---
 # Overview: Exporting Data (Master Data Services)
 
@@ -55,6 +56,4 @@ ms.custom:
   
 -   [Subscription View Formats &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)  
   
--   [Views](../relational-databases/views/views.md)  
-  
-  
+-   [Views](../relational-databases/views/views.md)

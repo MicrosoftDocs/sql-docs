@@ -1,15 +1,16 @@
 ---
 title: Discontinued Features of Master Data Services
-description: "Discontinued Features of Master Data Services"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+description: Discontinued Features of Master Data Services
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
-monikerRange: ">=sql-server-ver16"
 ms.custom:
   - build-2025
+monikerRange: ">=sql-server-ver16"
 ---
 # Discontinued Features of Master Data Services
 
@@ -25,6 +26,4 @@ ms.custom:
  The Metadata model is no longer available. You can also no longer view metadata in the Explorer functional area.  
   
 ## See Also  
- [Deprecated Features of Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
-  
-  
+ [Deprecated Features of Master Data Services](../master-data-services/deprecated-master-data-services-features.md)

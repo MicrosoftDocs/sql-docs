@@ -123,7 +123,7 @@ Consider the following:
   - Azure Disk Encryption (ADE) leverages the industry-standard BitLocker feature of Windows and the DM-Crypt feature of Linux toprovide OS and data disk encryption.
 - Managed Disk Encryption
   - [Managed Disks are encrypted](/azure/virtual-machines/disk-encryption) at rest by default using Azure Storage Service Encryption where the encryption keys are Microsoft managed keys stored in Azure.
-  - Data in Azure managed disks is encrypted transparently using 256-bit AES encryption, one of the strongest block ciphers available, and is FIPS 140-2 compliant.
+  - Data in Azure Managed Disks is encrypted transparently using 256-bit AES encryption, one of the strongest block ciphers available, and is FIPS 140-2 compliant.
 - For a comparison of the managed disk encryption options, review the [managed disk encryption comparison chart](/azure/virtual-machines/disk-encryption-overview#comparison).
 
 ### Azure confidential VMs
@@ -147,7 +147,7 @@ With trusted launch, you can:
 The following features are currently unsupported when you enable trusted launch for your SQL Server on Azure VMs:
 
 - Azure Site Recovery
-- Ultra disks
+- Ultra Disks
 - Managed images
 - Nested virtualization
 

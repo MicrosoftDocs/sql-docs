@@ -1,12 +1,15 @@
 ---
 title: Members
 description: In Master Data Services, members are the physical master data, such as a Road-150 bike in a Product entity or a specific customer in a Customer entity.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/17/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "leaf members [Master Data Services]"
   - "consolidated members [Master Data Services]"
@@ -14,8 +17,6 @@ helpviewer_keywords:
   - "members [Master Data Services], about members"
   - "leaf members [Master Data Services], about leaf members"
   - "members [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Members (Master Data Services)
 
@@ -81,6 +82,4 @@ ms.custom:
 -   [Leaf Permissions &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
   
  
--   [Filter Operators &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  
-  
-  
+-   [Filter Operators &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)

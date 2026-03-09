@@ -206,7 +206,7 @@ To get started, review [Configure Microsoft Entra multifactor authentication](au
 
 ## Microsoft Entra B2B support
 
-Microsoft Entra authentication in all SQL products also supports [Microsoft Entra B2B collaboration](/entra/external-id/what-is-b2b), which enables businesses to invite guest users to collaborate with their organization. Guest users can connect to databases either as individual users or members of a Microsoft Entra group. For more information, see [Create guest user](authentication-aad-guest-users.md#create-guest-user-in-sql-database-and-azure-synapse).
+Microsoft Entra authentication in all SQL products also supports [Microsoft Entra B2B collaboration](/entra/external-id/what-is-b2b), which enables businesses to invite guest users to collaborate with their organization. Guest users can connect to databases either as individual users or members of a Microsoft Entra group. For more information, see [Create database user for Microsoft Entra guest user](authentication-aad-guest-users.md#create-database-user-for-microsoft-entra-guest-user).
 
 ## Trust architecture for Microsoft Entra federation to Active Directory
 

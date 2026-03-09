@@ -1,16 +1,17 @@
 ---
 title: Server Configuration
-description: "Server Configuration (MDS Configuration Manager)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "01/26/2017"
+description: Server Configuration (MDS Configuration Manager)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
-f1_keywords:
-  - "sql13.mds.configmanager.srvinfopg.f1"
 ms.custom:
   - build-2025
+f1_keywords:
+  - "sql13.mds.configmanager.srvinfopg.f1"
 ---
 # Server Configuration (MDS Configuration Manager)
 
@@ -25,6 +26,4 @@ ms.custom:
 |Control Name|Description|  
 |------------------|-----------------|  
 |**Internet Information Services**|Displays the version of Internet Information Services (IIS) that is installed on the local computer. IIS version 7.0 or later is required to use Master Data Services Configuration Manager.|  
-|**MDS Product Version**|Displays the product version of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
-  
-  
+|**MDS Product Version**|Displays the product version of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|

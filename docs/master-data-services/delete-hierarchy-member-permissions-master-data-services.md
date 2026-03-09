@@ -1,18 +1,19 @@
 ---
 title: Delete Hierarchy Member Permissions
-description: "Delete Hierarchy Member Permissions (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Delete Hierarchy Member Permissions (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "deleting member permissions [Master Data Services]"
   - "members [Master Data Services], deleting permissions"
   - "permissions [Master Data Services], deleting member permissions"
-ms.custom:
-  - build-2025
 ---
 # Delete Hierarchy Member Permissions (Master Data Services)
 
@@ -56,6 +57,4 @@ ms.custom:
   
 ## See Also  
  [Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
-  
-  
+ [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)

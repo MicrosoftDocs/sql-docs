@@ -1,6 +1,6 @@
 ---
-author: nikolapeja6
-ms.author: nipejic
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 11/05/2020
 ms.service: sql
 ms.topic: include

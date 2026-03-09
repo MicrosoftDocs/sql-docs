@@ -1,17 +1,18 @@
 ---
 title: Create an Explicit Hierarchy
-description: "Create an Explicit Hierarchy (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "04/01/2016"
+description: Create an Explicit Hierarchy (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "creating explicit hierarchies [Master Data Services]"
   - "explicit hierarchies, creating"
-ms.custom:
-  - build-2025
 ---
 # Create an Explicit Hierarchy (Master Data Services)
 
@@ -72,7 +73,4 @@ ms.custom:
 ## See Also  
  [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Derived Hierarchies with Explicit Caps &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Change an Explicit Hierarchy Name &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
-  
-  
-
+ [Change an Explicit Hierarchy Name &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)

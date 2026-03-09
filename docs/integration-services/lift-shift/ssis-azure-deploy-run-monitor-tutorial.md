@@ -4,7 +4,8 @@ description: Learn how to deploy a SQL Server Integration Services (SSIS) projec
 author: chugugrace
 ms.author: chugu
 ms.reviewer: 
-ms.date: 05/22/2018
+ms.date: 02/23/2026
+ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: tutorial
@@ -16,7 +17,6 @@ ms.custom:
 # Tutorial: Deploy and run a SQL Server Integration Services (SSIS) package in Azure
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
 This tutorial shows you how to deploy a SQL Server Integration Services (SSIS) project to the SSIS Catalog in Azure SQL Database, run a package in the Azure-SSIS Integration Runtime, and monitor the running package.
 
@@ -30,7 +30,7 @@ Also make sure that you have set up the SSISDB database in Azure and provisioned
 
 To run the package on Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
 
-1. Log in to the [Azure portal](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 2. Select **SQL Databases** from the left-hand menu, and then select the SSISDB database on the **SQL databases** page. 
 3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
@@ -39,12 +39,12 @@ To run the package on Azure SQL Database, get the connection information you nee
 
 Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQL Database server. For more info and screenshots, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
 
-Here are the two most important things to remember. These steps are described in the following procedure.
--   Enter the fully qualified name of the Azure SQL Database server in the format **mysqldbserver.database.windows.net**.
--   Select `SSISDB` as the database for the connection.
+Keep the following important points in mind, which are described in the following procedure:
+- Enter the fully qualified name of the Azure SQL Database server in the format **mysqldbserver.database.windows.net**.
+- Select `SSISDB` as the database for the connection.
 
 > [!IMPORTANT]
-> An Azure SQL Database server listens on port 1433. If you are attempting to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
+> An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
 
 1. Open SQL Server Management Studio.
 
@@ -74,9 +74,9 @@ To learn more about deploying packages and about the Deployment Wizard, see [Dep
 ### Start the Integration Services Deployment Wizard
 1. In Object Explorer in SSMS, with the **Integration Services Catalogs** node and the **SSISDB** node expanded, expand a project folder.
 
-2.  Select the **Projects** node.
+2. Select the **Projects** node.
 
-3.  Right-click on the **Projects** node and select **Deploy project**. The Integration Services Deployment Wizard opens. You can deploy a project from an SSIS Catalog database or from the file system.
+3. Right-click on the **Projects** node and select **Deploy project**. The Integration Services Deployment Wizard opens. You can deploy a project from an SSIS Catalog database or from the file system.
 
     ![Deploy a project from SSMS](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
 
@@ -90,20 +90,20 @@ To learn more about deploying packages and about the Deployment Wizard, see [Dep
     -   To deploy a project that resides in an SSIS catalog, select **Integration Services catalog**, and then enter the server name and the path to the project in the catalog. Only projects that reside in SSISDB hosted by SQL Server can be redeployed in this step.
     -   Select **Next** to see the **Select Destination** page.
   
-3.  On the **Select Destination** page, select the destination for the project.
+3. On the **Select Destination** page, select the destination for the project.
     -   Enter the fully qualified server name in the format `<server_name>.database.windows.net`.
     -   Provide authentication information, and then select **Connect**.
     -   Then select **Browse** to select the target folder in SSISDB.
     -   Then select **Next** to open the **Review** page. (The **Next** button is enabled only after you select **Connect**.)
   
-4.  On the **Review** page, review the settings you selected.
+4. On the **Review** page, review the settings you selected.
     -   You can change your selections by selecting **Previous**, or by selecting any of the steps in the left pane.
     -   Select **Deploy** to start the deployment process.
 
     > [!NOTE]
     > If you get the error message **There is no active worker agent. (.Net SqlClient Data Provider)**, make sure the Azure-SSIS Integration Runtime is running. This error occurs if you try to deploy while the Azure-SSIS IR is in a stopped state.
 
-5.  After the deployment process is complete, the **Results** page opens. This page displays the success or failure of each action.
+5. After the deployment process is complete, the **Results** page opens. This page displays the success or failure of each action.
     -   If the action failed, select **Failed** in the **Result** column to display an explanation of the error.
     -   Optionally, select **Save Report...** to save the results to an XML file.
     -   Select **Close** to exit the wizard.
@@ -178,13 +178,13 @@ Write-Host "All done."
 
 2. Right-click and select **Execute** to open the **Execute Package** dialog box.
 
-3.  In the **Execute Package** dialog box, configure the package execution by using the settings on the **Parameters**, **Connection Managers**, and **Advanced** tabs.
+3. In the **Execute Package** dialog box, configure the package execution by using the settings on the **Parameters**, **Connection Managers**, and **Advanced** tabs.
 
-4.  Select **OK** to run the package.
+4. Select **OK** to run the package.
 
 ## Monitor the running package in SSMS
 
-To view the status of currently running Integration Services operations on the Integration Services server, such as deployment, validation, and package execution, use the **Active Operations** dialog box in SSMS. To open the **Active Operations** dialog box, right-click **SSISDB**, and then select **Active Operations**.
+To view the status of currently running Integration Services operations, such as deployment, validation, and package execution, use the **Active Operations** dialog box in SSMS. To open the **Active Operations** dialog box, right-click **SSISDB**, and then select **Active Operations**.
 
 You can also select a package in Object Explorer, right-click and select **Reports**, then **Standard Reports**, then **All Executions**.
 
@@ -214,5 +214,5 @@ Get-AzDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $A
 Get-AzDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
-## Next steps
+## Related content
 - Learn how to schedule package execution. For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedule-packages.md)

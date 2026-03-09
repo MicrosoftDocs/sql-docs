@@ -1,17 +1,18 @@
 ---
 title: Reserved Words
-description: "Reserved Words (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Reserved Words (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "reserved words [Master Data Services]"
   - "Master Data Services, reserved words"
-ms.custom:
-  - build-2025
 ---
 # Reserved Words (Master Data Services)
 
@@ -79,4 +80,4 @@ ms.custom:
  For members, you cannot use **MDMMemberStatus**, **MDMUnused**, or **ROOT** for the **Code** attribute value.  
   
 ## See also  
- [Master Data Services Overview &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+ [Master Data Services Overview &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)

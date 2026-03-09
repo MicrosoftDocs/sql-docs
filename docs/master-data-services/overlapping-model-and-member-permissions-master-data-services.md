@@ -1,18 +1,19 @@
 ---
 title: Overlapping Model and Member Permissions
-description: "Overlapping Model and Member Permissions (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Overlapping Model and Member Permissions (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "models [Master Data Services], effective permissions"
   - "permissions [Master Data Services], model and member overlaps"
   - "members [Master Data Services], effective permissions"
-ms.custom:
-  - build-2025
 ---
 # Overlapping Model and Member Permissions (Master Data Services)
 
@@ -71,6 +72,4 @@ ms.custom:
   
 ## See Also  
  [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
-  
-  
+ [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)

@@ -1,9 +1,10 @@
 ---
 title: Version Management Functional Area
-description: "Version Management Functional Area (Master Data Manager)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Version Management Functional Area (Master Data Manager)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -46,6 +47,4 @@ ms.custom:
  [Reverse a Transaction &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
 ## See Also  
- [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)  
-  
-  
+ [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)

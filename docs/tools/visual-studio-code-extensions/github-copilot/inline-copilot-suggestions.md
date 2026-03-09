@@ -131,7 +131,7 @@ You can also invoke GitHub Copilot using a shortcut (**Cmd**+**I** for macOS, or
 
 ## Share your experience
 
-[!INCLUDE [feedback](../includes/feedback.md)]
+[!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
 
 ## Related content
 

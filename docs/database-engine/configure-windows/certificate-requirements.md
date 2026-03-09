@@ -4,7 +4,8 @@ description: This article describes the requirements for SQL Server encryption a
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 08/26/2025
+ms.date: 02/27/2026
+ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: configuration
 ms.topic: concept-article
@@ -18,7 +19,7 @@ This article describes certificate requirements for [!INCLUDE [ssnoversion-md](.
 
 For using Transport Layer Security (TLS) for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] encryption, you need to provision a certificate (one of the three digital types) that meets the following conditions:
 
-- The certificate must be in either the local computer certificate store or the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service account certificate store. We recommend local computer certificate store as it avoids reconfiguring certificates with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] startup account changes.
+- The certificate must be in either the local computer certificate store or the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service account certificate store. Use the local computer certificate store to avoid reconfiguring certificates when the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] startup account changes.
 
 - The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service account must have the necessary permission to access the TLS certificate. For more information, see [Encrypt connections to SQL Server by importing a certificate](configure-sql-server-encryption.md).
 
@@ -100,6 +101,65 @@ For more information on SQL clusters, see [Before Installing Failover Clustering
 ## Check if a certificate meets the requirements
 
 In [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager automatically validates all certificate requirements during the configuration phase itself. If [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] successfully starts after you configure a certificate, it's a good indication that [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can use that certificate. But some client applications might still have other requirements for certificates that can be used for encryption, and you might experience different errors depending on the application being used. In that scenario, you need to check the client application's support documentation for more information on the subject.
+
+### Verify KeySpec and Key Usage
+
+The `KeySpec` requirement (`AT_KEYEXCHANGE`) is a common cause of certificate configuration failures. Use the following methods to verify that your certificate meets this requirement.
+
+#### Use certutil
+
+Run `certutil` with the `-v` option to display detailed certificate properties, including `KeySpec` and `Key Usage`:
+
+```cmd
+certutil -v -store My "<certificate_thumbprint>"
+```
+
+In the output, look for the following values:
+
+```output
+KeySpec = 1 -- AT_KEYEXCHANGE
+Key Usage = Key Encipherment, Digital Signature (a0)
+Enhanced Key Usage:
+    Server Authentication (1.3.6.1.5.5.7.3.1)
+```
+
+If `KeySpec = 2` (`AT_SIGNATURE`), the certificate can't be used for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] encryption.
+
+#### Use PowerShell
+
+Run the following PowerShell commands to check `KeySpec` for certificates in the local computer store:
+
+```powershell
+Get-ChildItem Cert:\LocalMachine\My | ForEach-Object {
+    $cert = $_
+    $key = $cert.PrivateKey
+    [PSCustomObject]@{
+        Subject   = $cert.Subject
+        Thumbprint = $cert.Thumbprint
+        KeySpec   = if ($key) { $key.CspKeyContainerInfo.KeyNumber } else { 'No private key' }
+        NotAfter  = $cert.NotAfter
+    }
+} | Format-Table -AutoSize
+```
+
+Verify that `KeySpec` shows `Exchange` (corresponding to `AT_KEYEXCHANGE`). If it shows `Signature`, request a new certificate with the correct `KeySpec` setting.
+
+### Create a certificate using AD CS
+
+If your organization uses Active Directory Certificate Services (AD CS) as an internal certificate authority (CA), create a certificate that meets [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requirements by following these steps:
+
+1. Open the **Certificates** MMC snap-in for the local computer (`certlm.msc`).
+1. Expand **Personal**, right-click **Certificates**, and select **All Tasks** > **Request New Certificate**.
+1. Select **Active Directory Enrollment Policy** and select **Next**.
+1. Choose a certificate template that supports server authentication. A **Web Server** or custom template configured for server authentication typically meets the requirements. Verify with your CA administrator that the template uses a legacy Cryptographic Service Provider (CSP) with `KeySpec = AT_KEYEXCHANGE`, not a Key Storage Provider (KSP).
+1. On the **Certificate Properties** page:
+   - Set the **Common Name (CN)** to the hostname or FQDN of your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
+   - On the **Subject Alternative Name** tab, add DNS entries for all hostnames that clients use to connect (hostname, FQDN, and any aliases).
+1. Complete the enrollment wizard and verify the new certificate appears in **Personal** > **Certificates**.
+1. Verify the `KeySpec` by using certutil or PowerShell as described in [Verify KeySpec and Key Usage](#verify-keyspec-and-key-usage).
+
+> [!IMPORTANT]
+> Certificates created with a Key Storage Provider (KSP), such as the **Microsoft Software Key Storage Provider**, use `KeySpec = 0` and aren't compatible with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. When creating your certificate template in AD CS, select a legacy CSP like **Microsoft RSA SChannel Cryptographic Provider** to ensure `KeySpec = AT_KEYEXCHANGE`.
 
 You can use one of the following methods to check the validity of the certificate for use with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
 

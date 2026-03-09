@@ -106,6 +106,8 @@ Use the **Backups** page of the SQL virtual machines resource to choose between 
 
 Regardless of which backup solution you choose, you can use the **Backups** page to configure your backup settings, such as the retention period, backup storage location, encryption, whether or not to back up system databases, and a backup schedule.
 
+To use Azure backup, you must first make sure Automated backup is disabled.
+
 ## Modernization Advisor (preview)
 
 The [Modernization Advisor (Preview)](../modernization-advisor.md) assesses your SQL Server workload to identify cost-saving or performance optimizations you might gain by migrating to Azure SQL Managed Instance. This feature is currently in preview.

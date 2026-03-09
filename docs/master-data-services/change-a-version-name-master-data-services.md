@@ -1,16 +1,17 @@
 ---
 title: Change a Version Name
-description: "Change a Version Name (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Change a Version Name (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
-helpviewer_keywords:
-  - "versions [Master Data Services], changing name"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "versions [Master Data Services], changing name"
 ---
 # Change a Version Name (Master Data Services)
 
@@ -43,6 +44,4 @@ ms.custom:
  [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Lock a Version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
  [Commit a Version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
-  
-  
+ [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)

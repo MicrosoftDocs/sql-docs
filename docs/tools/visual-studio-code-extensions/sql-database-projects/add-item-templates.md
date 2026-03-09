@@ -8,6 +8,8 @@ ms.date: 02/10/2026
 ms.service: sql
 ms.subservice: sql-database-projects
 ms.topic: how-to
+ms.collection:
+  - data-tools
 ---
 
 # Add database objects using item templates
@@ -48,8 +50,6 @@ Add database objects to your project using item templates from the Database Proj
 1. Select the type of object you want to create.
 
 1. Enter a name for the new object.
-
-::: image type="content" source="media/add-item-templates/add-item-menu.png" alt-text="Screenshot of context menu showing Add Item option." lightbox="media/add-item-templates/add-item-menu.png":::
 
 The extension creates a T-SQL file in your project with template code for the selected object type.
 

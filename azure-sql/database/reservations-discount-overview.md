@@ -2,10 +2,10 @@
 title: Save on compute costs with Azure Reservations
 titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Learn how to buy Azure SQL Database and SQL Managed Instance reservations to save on your compute costs.
-author: rajeshsetlem
-ms.author: rsetlem
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/01/2025
+ms.date: 02/23/2026
 ms.service: azure-sql
 ms.subservice: service-overview
 ms.topic: how-to
@@ -92,6 +92,9 @@ Carefully evaluate your compute needs and reservation strategy to optimize costs
 1. Fill in the required fields. Existing databases in SQL Database and SQL Managed Instance that match the attributes you select qualify to get the reservation discount. The actual number of databases or managed instances that get the discount depends on the scope and quantity selected.
 
     :::image type="content" source="./media/reserved-capacity-overview/sql-reserved-vcores-purchase.png" alt-text="Screenshot before submitting the reservation purchase.":::
+
+    > [!NOTE]
+    > The **Elastic pool** in the SQL Database name is the name of the Azure SQL resource, and does not imply that reservations are available for elastic pools.
 
     The following table describes the required fields.
     

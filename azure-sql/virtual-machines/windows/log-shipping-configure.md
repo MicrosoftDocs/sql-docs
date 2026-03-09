@@ -4,7 +4,7 @@ description: This article teaches you to configure Log Shipping for your SQL Ser
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: mathoma, randolphwest
-ms.date: 02/26/2024
+ms.date: 02/23/2026
 ms.service: azure-vm-sql-server
 ms.subservice: hadr
 ms.topic: how-to
@@ -14,7 +14,7 @@ ms.topic: how-to
 
 [!INCLUDE [appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This article teaches you to configure [log shipping](/sql/database-engine/log-shipping/about-log-shipping-sql-server) between two [SQL Server on Azure Virtual Machines (VMs)](sql-server-on-azure-vm-iaas-what-is-overview.md). 
+This article teaches you to configure [log shipping](/sql/database-engine/log-shipping/about-log-shipping-sql-server) between two [SQL Server on Azure Virtual Machines (VMs)](sql-server-on-azure-vm-iaas-what-is-overview.md).
 
 ## Overview
 
@@ -189,14 +189,14 @@ To configure log shipping, follow these steps:
 
    1. Under **History retention**, choose the length of time you want to retain a record of your log shipping history.
 
-   1. Select **OK** to save  your settings.
+   1. Select **OK** to save your settings.
 
 1. On the **Database Properties** dialog box, use **OK** to begin the configuration process.
 
 ## Related content
 
-- [Monitor log shipping](/sql/database-engine/log-shipping/monitor-log-shipping-transact-sql)
-- [Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)](/sql/database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql)
+- [Monitor Log Shipping (Transact-SQL)](/sql/database-engine/log-shipping/monitor-log-shipping-transact-sql)
+- [Upgrade SQL Server with log shipping (Transact-SQL)](/sql/database-engine/log-shipping/upgrade-sql-server-log-shipping-transact-sql)
 - [Add a Secondary Database to a Log Shipping Configuration (SQL Server)](/sql/database-engine/log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server)
 - [Remove a Secondary Database from a Log Shipping Configuration (SQL Server)](/sql/database-engine/log-shipping/remove-a-secondary-database-from-a-log-shipping-configuration-sql-server)
 - [Remove Log Shipping (SQL Server)](/sql/database-engine/log-shipping/remove-log-shipping-sql-server)

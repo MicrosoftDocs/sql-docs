@@ -3,7 +3,7 @@ title: "Increase or Disable Blocked Process Threshold"
 description: "Increase or Disable Blocked Process Threshold."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/15/2023
+ms.date: 01/28/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -14,11 +14,11 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This rules checks that the blocked process threshold option is set to 0 (disabled) or set to a value higher than or equal to 5 (seconds). Setting the blocked process threshold option to a value from 1 to 4 can cause the deadlock monitor to run constantly. Values 1 to 4 should only be used for troubleshooting, and never long term or in a production environment without the assistance of [!INCLUDE [msCoName](../../includes/msconame-md.md)] Customer Service and Support.
+This rule checks that the blocked process threshold option is set to 0 (disabled) or to a value of 5 seconds or higher. When you set the blocked process threshold to a value from 1 to 4, the deadlock monitor doesn't run because it only wakes every 5 seconds. If you configure the threshold to a value from 1 to 4, the system doesn't generate blocked process reports. Don't use values 1 to 4 in a production environment because they have no effect.
 
 ## Best practices recommendations
 
-To resolve this problem, set the blocked process threshold option to a value of 5 (seconds) or higher, or disable blocked process threshold by setting the value to 0. To set the blocked process threshold to a value of `5` seconds, execute the following statement:
+To resolve this issue, set the blocked process threshold option to a value of 5 seconds or higher, or disable it by setting the value to 0. To set the blocked process threshold to `5` seconds, execute the following statement:
 
 ```
 sp_configure 'show advanced options', 1 ;

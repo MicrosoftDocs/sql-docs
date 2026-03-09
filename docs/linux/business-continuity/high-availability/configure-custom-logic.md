@@ -8,6 +8,8 @@ ms.date: 02/04/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: design-pattern
+ms.custom:
+  - linux-related-content
 ---
 # Configure SQL Server availability group with custom high availability logic on Linux
 

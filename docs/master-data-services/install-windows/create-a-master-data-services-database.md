@@ -1,9 +1,10 @@
 ---
 title: Create a Master Data Services Database
 description: Create a Master Data Services database when you need a new database to support the Master Data Manager web application and Master Data Services web service.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -41,6 +42,4 @@ ms.custom:
 -   Configure a maintenance plan to back up the database and transaction logs. For more information, see [Database Requirements &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
 ## See Also  
- [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
-  
-  
+ [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)

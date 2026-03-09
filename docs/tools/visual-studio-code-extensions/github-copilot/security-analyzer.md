@@ -121,7 +121,7 @@ What SQL Server options should I enable or verify (for example, Always Encrypted
 
 ## Share your experience
 
-[!INCLUDE [feedback](../includes/feedback.md)]
+[!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
 
 ## Related content
 

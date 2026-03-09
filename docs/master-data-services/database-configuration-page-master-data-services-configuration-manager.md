@@ -1,16 +1,17 @@
 ---
 title: Database Configuration Page
-description: "Database Configuration Page (Master Data Services Configuration Manager)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/20/2017"
+description: Database Configuration Page (Master Data Services Configuration Manager)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
-f1_keywords:
-  - "sql13.mds.configmanager.dbpg.f1"
 ms.custom:
   - build-2025
+f1_keywords:
+  - "sql13.mds.configmanager.dbpg.f1"
 ---
 # Database Configuration Page (Master Data Services Configuration Manager)
 
@@ -40,6 +41,4 @@ ms.custom:
   
 ## See Also  
 [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md)
- [Database Requirements &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
-  
-  
+ [Database Requirements &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)

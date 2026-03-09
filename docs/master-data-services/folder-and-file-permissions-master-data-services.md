@@ -1,18 +1,19 @@
 ---
 title: Folder and File Permissions
-description: "Folder and File Permissions (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+description: Folder and File Permissions (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "security [Master Data Services], file and folder"
   - "folders [Master Data Services]"
   - "files [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Folder and File Permissions (Master Data Services)
 
@@ -60,6 +61,4 @@ ms.custom:
  For more information about the contents of the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config file, see [Web Configuration Reference &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md).  
   
 ## See Also  
- [Install Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
-  
-  
+ [Install Master Data Services](../master-data-services/install-windows/install-master-data-services.md)

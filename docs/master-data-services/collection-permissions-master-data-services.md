@@ -1,17 +1,18 @@
 ---
 title: Collection Permissions
-description: "Collection Permissions (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Collection Permissions (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "collections [Master Data Services], permissions"
   - "permissions [Master Data Services], collections"
-ms.custom:
-  - build-2025
 ---
 # Collection Permissions (Master Data Services)
 
@@ -37,6 +38,4 @@ ms.custom:
 ## See Also  
  [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
- [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
-  
-  
+ [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)

@@ -1,19 +1,20 @@
 ---
 title: Notifications
-description: "Notifications (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+description: Notifications (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "notifications [Master Data Services]"
   - "notifications [Master Data Services], about notifications"
   - "e-mail [Master Data Services]"
   - "e-mail [Master Data Services], about e-mail notifications"
-ms.custom:
-  - build-2025
 ---
 # Notifications (Master Data Services)
 

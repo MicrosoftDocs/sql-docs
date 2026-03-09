@@ -33,6 +33,15 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 | ConcatNullYieldsNull property | Added support for ConcatNullYieldsNull property as both a connection string property and a registry key option. |
 | New distribution supported | Added x86 support on Windows ARM64. |
 
+### Known issues in 18.6.1.1
+
+#### Terminator issue in bcp_bind
+
+When you use a terminator as the separator in `bcp_bind` for strings, two consecutive terminators in data can mean either a `NULL` value or an empty string. The ODBC driver can't distinguish between empty strings and null strings.
+
+- Before the 18.6.1.1 release, the ODBC driver interpreted consecutive terminators (zero-length data) as empty strings.
+- In the 18.6.1.1 release, the ODBC driver interprets zero-length data as a NULL value instead of an empty string.
+
 ## Previous Releases
 
 ## 18.5.2

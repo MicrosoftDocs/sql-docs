@@ -1,12 +1,13 @@
 ---
 title: Developer Documentation
-description: "Master Data Services Developer Documentation"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/17/2017"
+description: Master Data Services Developer Documentation
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
-ms.topic: "reference"
+ms.topic: reference
 ms.custom:
   - build-2025
 ---
@@ -52,6 +53,4 @@ ms.custom:
 |<xref:Microsoft.MasterDataServices.Services>|Contains a class that receives and processes web service operations made to the web server computer through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application.|  
 |<xref:Microsoft.MasterDataServices.Services.DataContracts>|Contains classes that define how data is passed from the client computer through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to the web server computer.|  
 |<xref:Microsoft.MasterDataServices.Services.MessageContracts>|Contains classes that define how requests and responses are passed from the client computer through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to the web server computer.|  
-|<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|Contains the interface that defines the operations that can be called through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web service.|  
-  
-  
+|<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|Contains the interface that defines the operations that can be called through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web service.|

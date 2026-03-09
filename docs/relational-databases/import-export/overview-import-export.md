@@ -3,7 +3,7 @@ title: "Import and Export Data from SQL Server and Azure SQL Database"
 description: You can use Transact-SQL, command-line tools, and wizards to import and export data in SQL Server and Azure SQL Database in various data formats.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/15/2025
+ms.date: 03/02/2026
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: concept-article
@@ -26,6 +26,36 @@ You can import data with the `BULK INSERT` or the `OPENROWSET(BULK...)` commands
 ### Use BCP from the command prompt
 
 You can import and export data with the BCP command-line utility. For more information, see [Import and export bulk data using bcp (SQL Server)](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).
+
+### Azure portal import and export
+
+The Azure portal provides **Import** and **Export** actions for Azure SQL Database. You can use these actions to import or export a database as a BACPAC file through the **Azure SQL Import/Export service**.
+
+- **Export**: From an Azure SQL Database page, select **Export** to create a BACPAC file in Azure Blob Storage.
+- **Import**: From a [logical server for Azure SQL Database](https://portal.azure.com/#servicemenu/SqlAzureExtension/AzureSqlHub/DatabaseServer) page, select **Import database** to create a new database from a BACPAC file stored in Azure Blob Storage.
+
+Portal-based import and export operations:
+
+- Use the same import or export service and APIs as PowerShell, Azure CLI, and REST.
+- Support BACPAC files stored in Azure Blob Storage.
+- Surface operation status and history through **Import/Export history** on the logical server.
+
+Authentication options available in the Azure portal align with those supported by the import and export service. Support for **Managed Identity authentication** is in **Preview**.
+
+For a detailed tutorial, see [Use managed identity with import and export (preview)](/azure/azure-sql/database/database-import-export-managed-identity).
+
+In this model:
+
+- A **user‑assigned managed identity (UAMI)** is assigned to the logical server for Azure SQL Database.
+- The managed identity is configured as a **Microsoft Entra administrator** on the server.
+- The same or a different managed identity is granted **Azure RBAC data-plane access** to the target Azure Storage account.
+
+> [!NOTE]
+> - Import and export with managed identity authentication is currently in [**preview**](/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new#preview) and only available for Azure SQL Database.
+> - Only **server-level user-assigned managed identities** are supported in the current preview.
+
+For more information, see [Import a BACPAC file to a database in Azure SQL Database](/azure/azure-sql/database/database-import#import-with-managed-identity-authentication-preview) and [Export a database to a BACPAC file](/azure/azure-sql/database/database-export##export-with-managed-identity-authentication-preview).
+
 
 ### Use the Import Flat File Wizard
 

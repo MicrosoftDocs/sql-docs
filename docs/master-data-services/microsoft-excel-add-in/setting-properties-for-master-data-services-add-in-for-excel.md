@@ -1,9 +1,10 @@
 ---
 title: Setting Properties
-description: "Setting Properties for Master Data Services Add-in for Excel"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Setting Properties for Master Data Services Add-in for Excel
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -37,6 +38,4 @@ ms.custom:
 |Data: Filters|Maximum columns|Select the threshold for the number of columns being loaded, beyond which a filter warning will be posted.|  
 |Data: Cell Format|Change the color when: Attribute values change|Click to specify that the color of a cell will be changed if the attribute value in that cell changes when you refresh the Excel Add-in table with new data from the MDS repository.|  
 |Data: Cell Format|Change the color when: Members are added|Click to specify that the color of a row's cells will be changed if a new member is added to the row when you refresh the Excel Add-in table with new data from the MDS repository.|  
-|Data: Cell Format|Display format|Select the preferred format for displaying values of domain-based attributes. The options are Code {Name}, Code, and Name {Code}.|  
-  
-  
+|Data: Cell Format|Display format|Select the preferred format for displaying values of domain-based attributes. The options are Code {Name}, Code, and Name {Code}.|

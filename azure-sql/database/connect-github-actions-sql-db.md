@@ -1,8 +1,8 @@
 ---
 title: "Quickstart: Connect to database with GitHub Actions"
 description: Use Azure SQL Database from a GitHub Actions workflow
-author: juliakm
-ms.author: jukullam
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/05/2025
 ms.service: azure-sql-database

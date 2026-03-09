@@ -1,18 +1,19 @@
 ---
 title: Derived Hierarchies
 description: Learn how to create a derived hierarchy to highlight any of the existing domain-based attribute relationships in a Master Data Services model.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "derived hierarchies"
   - "hierarchies [Master Data Services], derived hierarchies"
   - "derived hierarchies, about derived hierarchies"
-ms.custom:
-  - build-2025
 ---
 # Derived Hierarchies (Master Data Services)
 
@@ -87,6 +88,4 @@ ms.custom:
   
 -   [Show Many-to-Many Relationships in Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
   
--   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
-  
-  
+-   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)

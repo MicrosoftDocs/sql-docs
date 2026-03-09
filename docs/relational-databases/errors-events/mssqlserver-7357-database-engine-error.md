@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_7357"
 description: "MSSQLSERVER_7357"
-author: PiJoCoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: jopilov, aartigoyle, v-sidong
 ms.date: 08/08/2023
 ms.service: sql

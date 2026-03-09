@@ -4,7 +4,7 @@ description: This article explains how to manage SQL Server licensing options. I
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest, maghan, mathoma
-ms.date: 02/02/2026
+ms.date: 03/04/2026
 ai-usage: ai-assisted
 ms.topic: how-to
 ms.custom:
@@ -347,7 +347,7 @@ For more information, see [SQL Server Licensing Resources and Documents](https:/
 
 The following table shows the meter product tiers (also called *SKUs*) that are used for metering and billing for SQL Server software installed on a single OSE:
 
-| Installed edition | Projected edition | License type | Failover replica | Use p-core license | Meter SKU |
+| Installed edition | Projected edition | Host license type | Failover replica | Use p-core license | Meter SKU |
 | --- | --- | --- | --- | --- | --- |
 | Enterprise Core | Enterprise | `PAYG` | No | No | `Ent edition - PAYG` |
 | Enterprise Core | Enterprise | `PAYG` | No | Yes | `Ent edition - Virtual license` <sup>2</sup> |
@@ -369,14 +369,17 @@ The following table shows the meter product tiers (also called *SKUs*) that are 
 | Standard | Standard | `PAYG` or `Paid` | Yes | Yes or no | `Std edition - DR replica` |
 | Evaluation | Evaluation | Any | Yes or no | Not applicable | `Eval edition` |
 | Developer | Developer | Any | Yes or no | Not applicable | `Dev edition` |
-| Web <sup>3</sup> | Web | Any | Not applicable | Not applicable | `Web edition` |
+| Web <sup>3</sup> | Web | `PAYG` or `Paid` | Not applicable | Not applicable | `Web edition - PAYG` |
+| Web <sup>4</sup> | Web | `LicenseOnly` | Not applicable | Not applicable | `Web edition - License only` |
 | Express | Express | Any | Not applicable | Not applicable | `Express edition` |
 
 <sup>1</sup> Installation of the Enterprise edition indicates use of the Server+CAL licensing model.
 
 <sup>2</sup> This meter reflects the software usage covered by the p-core license and the unlimited virtualization benefit. For the SQL Server instance to be covered, it must be installed on a virtual machine.
 
-<sup>3</sup> Web edition isn't available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions.
+<sup>3</sup> Web edition isn't available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions. It's only available through hosting provider programs, and only up to SQL Server 2022.
+
+<sup>4</sup> This configuration applies when Web edition is licensed through a hosting provider, but the SQL Server instance is connected to Azure Arc and uses a limited set of Azure features. See [Feature availability by license type](overview.md#feature-availability-depending-on-license-type).
 
 The following table shows the meter SKUs that are used for metering and billing for SQL Server software covered by a physical core license with unlimited virtualization:
 

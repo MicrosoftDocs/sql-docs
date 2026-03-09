@@ -1,9 +1,10 @@
 ---
 title: Change the Attribute Type
-description: "Change the Attribute Type (MDS Add-in for Excel)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/15/2017"
+description: Change the Attribute Type (MDS Add-in for Excel)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -56,6 +57,4 @@ ms.custom:
   
 ## See Also  
  [Attributes &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   
- [Building a Model &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
-  
-  
+ [Building a Model &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)

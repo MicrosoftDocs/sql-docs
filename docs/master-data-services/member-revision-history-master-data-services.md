@@ -1,9 +1,10 @@
 ---
 title: Member Revision History
-description: "Member Revision History (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Member Revision History (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -67,6 +68,4 @@ ms.custom:
   
 ## See Also  
  [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
- [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
-  
-  
+ [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)

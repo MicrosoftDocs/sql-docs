@@ -1,6 +1,6 @@
 ---
-author: cynthn
-ms.author: cynthn
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 09/23/2025
 ms.service: virtual-machines

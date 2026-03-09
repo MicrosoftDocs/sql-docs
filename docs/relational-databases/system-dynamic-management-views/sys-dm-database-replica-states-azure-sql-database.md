@@ -76,7 +76,12 @@ Returns state information for each database that participates in primary and sec
 
 Requires `VIEW DATABASE STATE` permission on the database.
 
+## Remarks
+
+For more information on troubleshooting geo-replication redo lag in Azure SQL Database, see [Troubleshoot geo-replication redo lag](/azure/azure-sql/database/troubleshoot-geo-replication-redo?view=azuresql-db&preserve-view=true).
+
 ## Related content
 
 - [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)
+- [sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)](sys-dm-geo-replication-link-status-azure-sql-database.md)

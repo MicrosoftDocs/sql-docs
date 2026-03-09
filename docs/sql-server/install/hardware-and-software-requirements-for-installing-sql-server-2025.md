@@ -1,10 +1,10 @@
 ---
-title: "SQL Server 2025: Hardware & Software Requirements"
+title: "SQL Server 2025: Hardware and Software Requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2025.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest, jopilov, rdorr
-ms.date: 11/18/2025
+ms.date: 02/26/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: checklist
@@ -19,6 +19,7 @@ helpviewer_keywords:
   - "operating systems [SQL Server], cross-language support"
   - "network connections [SQL Server], requirements"
   - "disk space [SQL Server], SQL Server installations"
+  - "drive space [SQL Server], SQL Server installations"
   - "WOW [SQL Server]"
   - "Setup [SQL Server], hardware"
   - "dependencies [SQL Server], SQL Server installations"
@@ -44,6 +45,7 @@ helpviewer_keywords:
   - "locales [SQL Server], SQL Server installations"
   - "cross-language support"
   - "disk space [SQL Server]"
+  - "drive space [SQL Server]"
   - "localized SQL Server versions"
 ---
 
@@ -51,14 +53,14 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-The article lists the minimum hardware and software requirements to install and run [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] on the Windows operating system.
+This article lists the minimum hardware and software requirements to install and run [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] on the Windows operating system.
 
 For hardware and software requirements for other versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2022](hardware-and-software-requirements-for-installing-sql-server-2022.md)
 - [SQL Server 2019](hardware-and-software-requirements-for-installing-sql-server-2019.md)
 - [SQL Server 2016 and 2017](hardware-and-software-requirements-for-installing-sql-server.md)
-- [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system)
+- [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system-requirements)
 
 <a id="pmosr"></a>
 
@@ -68,7 +70,7 @@ The following memory and processor requirements apply to all editions of [!INCLU
 
 | Component | Requirement |
 | --- | --- |
-| **Storage** | [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard drive space.<br /><br />Disk space requirements vary with the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] components you install. For more information, see [Disk space requirements](#disk-space-requirements) later in this article. For information on supported storage types for data files, see [Storage types for data files](#storage-types-for-data-files). |
+| **Storage** | [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard drive space.<br /><br />Drive space requirements vary with the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] components you install. For more information, see [Drive space requirements](#drive-space-requirements) later in this article. For information on supported storage types for data files, see [Storage types for data files](#storage-types-for-data-files). |
 | **Monitor** | [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires Super-VGA (800x600) or higher resolution monitor. |
 | **Internet** | Internet functionality requires Internet access (fees can apply). |
 | **Memory** | |
@@ -101,7 +103,7 @@ The following requirements apply to all installations:
 - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files
 
 > [!IMPORTANT]  
-> There are additional hardware and software requirements for the PolyBase feature. For more information, see [Data virtualization with PolyBase in SQL Server](../../relational-databases/polybase/polybase-guide.md).
+> The PolyBase feature has additional hardware and software requirements. For more information, see [Data virtualization with PolyBase in SQL Server](../../relational-databases/polybase/polybase-guide.md).
 
 ## Operating system support
 
@@ -138,13 +140,13 @@ The following table shows which editions of [!INCLUDE [sssql25-md](../../include
 
 ### Server Core support
 
-Installing [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] on Server Core mode is supported by the following editions of Windows Server:
+The following editions of Windows Server Core support installing [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]:
 
 - Windows Server 2025 Core
 - Windows Server 2022 Core
 - Windows Server 2019 Core
 
-For more information on installing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).
+For more information about installing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).
 
 <a id="CrossLanguageSupport"></a>
 
@@ -154,17 +156,17 @@ For more information about cross-language support and considerations for install
 
 <a id="HardDiskSpace"></a>
 
-## Disk space requirements
+## Drive space requirements
 
-During installation of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], Windows Installer creates temporary files on the system drive. Before you run Setup to install or upgrade [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], verify that you have at least 6.0 GB of available disk space on the system drive for these files. This requirement applies even if you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] components to a non-default drive.
+During installation of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], Windows Installer creates temporary files on the system drive. Before you run Setup to install or upgrade [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], verify that you have at least 6 GB of available drive space on the system drive for these files. This requirement applies even if you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] components to a non-default drive.
 
-Actual hard disk space requirements depend on your system configuration and the features that you decide to install. The following table provides disk space requirements for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] components.
+Actual hard drive space requirements depend on your system configuration and the features that you decide to install. The following table provides drive space requirements for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] components.
 
-| Feature | Disk space requirement |
+| Feature | Drive space requirement |
 | --- | ---: |
 | [!INCLUDE [ssDE](../../includes/ssde-md.md)] and data files, Replication, Full-Text Search | 1,480 MB |
-| [!INCLUDE [ssDE](../../includes/ssde-md.md)] (as above) with R Services (In-Database) | 2,744 MB |
-| [!INCLUDE [ssDE](../../includes/ssde-md.md)] (as above) with PolyBase Query Service for External Data | 4,194 MB |
+| [!INCLUDE [ssDE](../../includes/ssde-md.md)] (as preceding row) with R Services (In-Database) | 2,744 MB |
+| [!INCLUDE [ssDE](../../includes/ssde-md.md)] (as preceding row) with PolyBase Query Service for External Data | 4,194 MB |
 | [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] and data files | 698 MB |
 | [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] | 967 MB |
 | [!INCLUDE [rsql_platform](../../includes/rsql-platform-md.md)] (Standalone) | 280 MB |
@@ -177,7 +179,7 @@ Actual hard disk space requirements depend on your system configuration and the 
 | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Books Online Components to view and manage help content <sup>1</sup> | 27 MB |
 | All features | 8,030 MB |
 
-<sup>1</sup> The disk space requirement for downloaded Books Online content is 200 MB.
+<sup>1</sup> The drive space requirement for downloaded Books Online content is 200 MB.
 
 <a id="StorageTypes"></a>
 
@@ -191,7 +193,7 @@ The supported storage types for data files are:
 
     If you use advanced format disks that are physically formatted with 4,096 bytes, but expose a logical sector size of 512 bytes, you can read more about the behavior and recommendations in the Tech Community article [SQL Server - New drives use 4K sector size](https://techcommunity.microsoft.com/blog/sqlserversupport/sql-server---new-drives-use-4k-sector-size/316277).
 
-    Hard disks with sector sizes larger than 4 KB can cause errors when attempting to store SQL Server data files on them. See [Troubleshoot errors related to system disk sector size greater than 4 KB](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size) for more information on hard disk sector-size support in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server on some newer storage devices with system disk sector size greater than 4 KB.
+    Hard drives with sector sizes larger than 4 KB might cause errors when you attempt to store [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data files on them. For more information on hard drive sector-size support in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Troubleshoot SQL Server errors related to system disk sector size greater than 4 KB](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size). Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server on some newer storage devices with system disk sector size greater than 4 KB.
 
   - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the `tempdb` files. Ensure that the path specified for the `tempdb` data and log files is valid on all the cluster nodes. During failover, if the `tempdb` directories aren't available on the failover target node, the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] resource fails to come online.
 
@@ -203,29 +205,34 @@ The supported storage types for data files are:
 
   - SMB storage isn't supported for [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] data files for either standalone or clustered installations. Use direct attached storage, a storage area network, or S2D instead.
 
-  - SMB storage can be hosted by a Windows File Server or a third-party SMB storage device. If Windows File Server is used, the Windows File Server version should be 2008 or later. For more information about installing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] using SMB file share as a storage option, see [Install SQL Server with SMB fileshare storage](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).
+  - SMB storage can be hosted by a Windows File Server or a third-party SMB storage device. If you use Windows File Server, the version should be 2008 or later. For more information about installing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] using SMB file share as a storage option, see [Install SQL Server with SMB fileshare storage](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).
 
 <a id="DC_support"></a>
 
 ## Install SQL Server on a domain controller
 
-For security reasons, we recommend that you don't install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on a domain controller. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup won't block installation on a computer that is a domain controller, but the following limitations apply:
+For security reasons, don't install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on a domain controller. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup doesn't block installation on a computer that is a domain controller, but the following limitations apply:
 
 - You can't run [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] services on a domain controller under a local service account.
-- After [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you can't change the computer from a domain member to a domain controller. You must uninstall [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain controller.
-- After [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you can't change the computer from a domain controller to a domain member. You must uninstall [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain member.
+
+- After you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on a computer, you can't change the computer from a domain member to a domain controller. You must uninstall [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain controller.
+
+- After you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on a computer, you can't change the computer from a domain controller to a domain member. You must uninstall [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain member.
+
 - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instances aren't supported where cluster nodes are domain controllers.
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] isn't supported on a read-only domain controller. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup can't create security groups or provision [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on a read-only domain controller. In this scenario, Setup fails.
+
+- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] isn't supported on a read-only domain controller. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup can't create security groups or [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on a read-only domain controller. In this scenario, Setup fails.
+
 - A [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance isn't supported in an environment where only a read-only domain controller is accessible.
 
 ## Installation media
 
-You can get relevant installation media from the following locations:
+Get relevant installation media from the following locations:
 
-- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2025)
+- [SQL Server 2025 evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2025)
 - [Most recent cumulative updates](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
-Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart) though [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on a virtual machine can be slower than running natively because of the overhead of virtualization.
+Alternatively, you can deploy [SQL Server on an Azure virtual machine in the Azure portal](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart). Because of the overhead of virtualization, virtual machines can be slower than running natively.
 
 ## Related content
 

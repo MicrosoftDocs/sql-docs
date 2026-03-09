@@ -1,15 +1,16 @@
 ---
 title: Entity Dependencies Explorer
-description: "Entity Dependencies Explorer"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "04/06/2016"
+description: Entity Dependencies Explorer
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
-keywords: master data services
 ms.custom:
   - build-2025
+keywords: master data services
 ---
 # Entity Dependencies Explorer
 
@@ -36,7 +37,4 @@ An entity may be directly consumed by more than one entity. In the above example
   
 These container tree nodes have a grid-like icon to the left of the entity name, and the text is colored by hierarchy level depth. The above example shows that the "CDSR {Canada}" SubRegion has a DBA reference to the "CDR {Canada}" Region, which references the "CDA {Canada}" Area, which references the "NAm {N. America}" BigArea.  
   
-The view is fully editable, just like in the Hierarchy Explorer page. Parent-child relationships may be modified in the tree by cut-paste or drag-dropping child members from one parent to another. Other member attribute values may be modified in the details panel to the right of the tree.   
-  
-  
-  
+The view is fully editable, just like in the Hierarchy Explorer page. Parent-child relationships may be modified in the tree by cut-paste or drag-dropping child members from one parent to another. Other member attribute values may be modified in the details panel to the right of the tree.

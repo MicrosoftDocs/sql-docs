@@ -1,7 +1,8 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
-ms.date: 04/21/2025
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: include

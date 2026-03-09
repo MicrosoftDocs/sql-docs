@@ -1,16 +1,17 @@
 ---
-title: View Errors that Occur During Staging
-description: "View Errors that Occur During Staging (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+title: View Errors That Occur During Staging
+description: View Errors that Occur During Staging (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
-helpviewer_keywords:
-  - "staging process [Master Data Services], viewing errors"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "staging process [Master Data Services], viewing errors"
 ---
 # View Errors that Occur During Staging (Master Data Services)
 

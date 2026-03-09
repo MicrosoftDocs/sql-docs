@@ -1,9 +1,10 @@
 ---
 title: Manage Changesets
-description: "Manage Changesets (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Manage Changesets (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -40,6 +41,4 @@ ms.custom:
   
 5.  Click **Add** to add a changeset.  
   
-6.  Click **Edit** to edit a changeset.  
-  
-  
+6.  Click **Edit** to edit a changeset.

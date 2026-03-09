@@ -3,8 +3,8 @@ title: SQL Server Help and Feedback
 description: A resource for finding ways to get help with your issue or submit feedback for either the SQL Server product, or the SQL Server technical documentation.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: sureshka, randolphwest
-ms.date: 02/28/2025
+ms.reviewer: randolphwest
+ms.date: 02/26/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: concept-article
@@ -27,28 +27,28 @@ You can also use the [Global Customer Service phone numbers](https://support.mic
 
 ## Troubleshooting documentation
 
-You can find all the latest troubleshooting guidance and resolution to common issues in the [SQL Server Troubleshooting documentation](/troubleshoot/sql/).
+Find the latest troubleshooting guidance and resolution to common issues in the [SQL Server Troubleshooting documentation](/troubleshoot/sql/).
 
 ## Review known issues
 
-You can check the following resources to understand if you encounter any known issues.
+Check the following resources to understand if you encounter any known issues.
 
-We publish our bug fix list in the [SQL Server builds spreadsheet](https://aka.ms/sqlserverbuilds). This spreadsheet contains tabs with detailed fix list for our mainstream supported versions [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [!INCLUDE [sssql19-md](../includes/sssql19-md.md)], and [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]. You can sort this list by component and feature, and understand when a specific issue was fixed. Each fix item is also linked to its own article reference, which provides more details about the problem and any applicable workaround.
+The [SQL Server builds spreadsheet](https://aka.ms/sqlserverbuilds) lists bugs that the product team fixes. This spreadsheet contains tabs with a detailed fix list for each mainstream supported version of SQL Server. You can sort this list by component and feature, and see when a specific problem was fixed. Each fix item links to its own article, which provides more details about the problem and any applicable workaround.
 
-When we publish a Cumulative Update, we publish a Knowledge Base article that corresponds to that update. For example, [KB5023127 - Cumulative Update 2 for SQL Server 2022](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate2). You can see the table in that article that shows the "Improvements and fixes included in this update".
+When the product team releases a cumulative update, they also release a Knowledge Base article that corresponds to that update. For example, [KB5075211 - Cumulative Update 2 for SQL Server 2025](/troubleshoot/sql/releases/sqlserver-2025/cumulativeupdate2). View the table in that article under the "Improvements and fixes included in this update" section.
 
-If we detect that an update introduced a problem or regression, then we immediately add it as a "Known issues in this update" section of the same article. For example in [KB5023049 - Cumulative Update 19 for SQL Server 2019](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate19), you notice two issues highlighted that were introduced in that update.
+If the product team detects that an update introduced a problem or regression, it's immediately added to the "Known problems in this update" section of the same article. For example, in [KB5023049 - Cumulative Update 19 for SQL Server 2019](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate19), two problems are highlighted that the update introduced.
 
-Every major release of the product is accompanied by the release notes for that version. The release notes of that version document known issues associated with the release.
+Each major release of the product is accompanied by release notes for that version. The release notes document known issues associated with the release.
 
 For example:
 
+- [SQL Server 2025 release notes](sql-server-2025-release-notes.md)
 - [SQL Server 2022 release notes](sql-server-2022-release-notes.md)
-- [SQL Server 2019 release notes](sql-server-2019-release-notes.md)
 
 ## Ask the community for help
 
-If you're interested in engaging the vibrant SQL Server community for assistance, there are multiple options available.
+If you're interested in engaging the vibrant SQL Server community for assistance, multiple options are available.
 
 ### Microsoft Q & A
 
@@ -56,7 +56,7 @@ You can also get help by searching and posting questions on [Microsoft Q & A](/a
 
 ### Communities
 
-There are a few communities that can help you with your SQL Server issues.
+A few communities can help you with your SQL Server issues.
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
@@ -72,7 +72,7 @@ You can submit suggestions for improvement and other feedback, including bugs.
 
 ### SQL Server documentation
 
-The best way to reach the Data Docs content team is through article feedback. You'll find an option to submit feedback at the bottom of most of our pages:
+The best way to reach the Data Docs content team is through article feedback. You can find an option to submit feedback at the bottom or the right of most articles:
 
 :::image type="content" source="media/sql-server-get-help/feedback.png" alt-text="Screenshot of article feedback.":::
 
@@ -86,6 +86,6 @@ The following SQL Server blogs provide the latest information about SQL Server:
 
 ## SQL Server license information
 
-If you would like to download and review the license information for SQL Server, it can be found at [Microsoft SQL Server Additional Software License Terms](https://www.microsoft.com/download/details.aspx?id=39299).
+If you want to download and review the license information for SQL Server, you can find it at [Microsoft SQL Server Additional Software License Terms](https://www.microsoft.com/download/details.aspx?id=39299).
 
 [!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

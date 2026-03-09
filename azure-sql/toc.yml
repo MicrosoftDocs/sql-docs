@@ -4,6 +4,8 @@
   items:
   - name: What is Azure SQL?
     href: azure-sql-iaas-vs-paas-what-is-overview.md
+  - name: Azure SQL decision tree
+    href: azure-sql-decision-tree.md
   - name: Migrate to Azure SQL
     href: migration-guides/index.yml
   - name: Migrating SQL Server Workloads FAQ
@@ -20,8 +22,6 @@
     items:
     - name: Feature comparison
       href: database/features-comparison.md
-    - name: Azure SQL decision tree
-      href: azure-sql-decision-tree.md
     - name: Multi-model features
       href: multi-model-features.md
     - name: Temporal tables
@@ -353,6 +353,8 @@
       items:
       - name: Migrate using DMS
         href: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/azure-sql/toc.json
+      - name: Import or export database with managed identity authentication
+        href: database/database-import-export-managed-identity.md
     - name: Scale out
       items:
       - name: Configure Hyperscale named replicas
@@ -1655,7 +1657,7 @@
         items:
         - name: VM to a new region
           href: virtual-machines/windows/move-sql-vm-different-region.md
-        - name: Migrate storage to Ultradisk
+        - name: Migrate storage to Ultra Disk
           href: virtual-machines/windows/storage-migrate-to-ultradisk.md
       - name: Business continuity
         items:
@@ -2034,7 +2036,9 @@
       href: database/troubleshoot-common-connectivity-issues.md
     - name: Troubleshoot out of memory errors
       href: database/troubleshoot-memory-errors-issues.md
-    - name: Import/Export service hangs
+    - name: Troubleshoot geo-replication redo lag
+      href: database/troubleshoot-geo-replication-redo.md
+    - name: Troubleshoot Import/Export service
       href: database/database-import-export-hang.md
     - name: Transaction log errors in Azure SQL Database
       href: database/troubleshoot-transaction-log-errors-issues.md

@@ -1,9 +1,10 @@
 ---
 title: Installation Tasks
 description: This article provides an overview of installation of Master Data Services, including installation and pre-installation and post-installation tasks.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/24/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: install-set-up-deploy
@@ -57,4 +58,4 @@ ms.custom:
  If you no longer need [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a computer, you can uninstall [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] and determine whether to remove items that are not affected by the uninstall process. For more information, see [Uninstall and Remove Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md).  
   
 ## See Also  
- [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
+ [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)

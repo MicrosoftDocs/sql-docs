@@ -1,17 +1,18 @@
 ---
 title: Navigational Access
-description: "Navigational Access (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Navigational Access (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "navigational access [Master Data Services]"
   - "security [Master Data Services], navigational access"
-ms.custom:
-  - build-2025
 ---
 # Navigational Access (Master Data Services)
 
@@ -40,6 +41,4 @@ ms.custom:
  When you assign permissions to collections, you can read or update the name, code, description and owner ID. You can also read the model name.  
   
 ## See Also  
- [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
-  
-  
+ [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)

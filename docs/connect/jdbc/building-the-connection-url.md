@@ -4,7 +4,7 @@ description: Learn about formatting the connection string used by the Microsoft 
 author: David-Engel
 ms.author: davidengel
 ms.reviewer: vanto
-ms.date: 09/12/2024
+ms.date: 02/26/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -23,12 +23,12 @@ Where:
 
 - **serverName** (Optional) - Is the address of the server to connect to. This address can be a DNS or IP address, or it can be `localhost` or `127.0.0.1` for the local computer. If not specified in the connection URL, the server name must be specified in the properties collection.
 
-- **instanceName** (Optional) - Is the instance to connect to on `serverName`. If not specified, a connection to the default instance is made.
+- **instanceName** (Optional) - Is the instance to connect to on `serverName`. If not specified, the driver connects to the default instance.
 
 - **portNumber** (Optional) - Is the port to connect to on `serverName`. The default is `1433`. If you're using the default port, you don't have to specify the port, nor the preceding `:` in the URL.
 
     > [!NOTE]  
-    > For optimal connection performance, you should set the `portNumber` when you connect to a named instance. This will avoid a round trip to the server to determine the port number. If both a `portNumber` and `instanceName` are used, the `portNumber` will take precedence and the `instanceName` will be ignored.
+    > For optimal connection performance, set the `portNumber` when you connect to a named instance. This avoids a round trip to the server to determine the port number. If you use both a `portNumber` and `instanceName`, the `portNumber` takes precedence and the `instanceName` is ignored.
 
 - **property** (Optional) - Is one or more option connection properties. For more information, see [Setting the connection properties](setting-the-connection-properties.md). Any property from the list can be specified. Properties can only be delimited by using the semicolon (`;`), and they can't be duplicated.
 
@@ -72,7 +72,7 @@ jdbc:sqlserver://;servername=server_name;encrypt=true;integratedSecurity=true;au
 
 ## Named and multiple SQL Server instances
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] allows for the installation of multiple database instances per server. Each instance is identifiable by a specific name. To connect to a named instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], you can either specify the port number of the named instance (preferred). You can also specify the instance name as a JDBC URL property or a **datasource** property. If no instance name or port number property is specified, a connection to the default instance is created. See the following examples:
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] allows for the installation of multiple database instances per server. Each instance has a specific name. To connect to a named instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], you can either specify the port number of the named instance (preferred). You can also specify the instance name as a JDBC URL property or a **datasource** property. If you don't specify an instance name or port number property, the driver creates a connection to the default instance. See the following examples:
 
 - To specify a port number, use the following format:
 
@@ -97,7 +97,10 @@ In version 8.4 and above, escaped values can contain special characters, includi
 
 ## <a name="Connectingintegrated"></a> Connecting with integrated authentication On Windows
 
-The JDBC driver supports the use of Type 2 integrated authentication on Windows operating systems by using the `integratedSecurity` connection string property. To use integrated authentication, copy the `mssql-jdbc_auth-<version>-<arch>.dll` file to a directory on the Windows system path on the computer where the JDBC driver is installed.
+The JDBC driver supports the use of Type 2 integrated authentication on Windows operating systems by using the `integratedSecurity` connection string property. To use integrated authentication, copy the `mssql-jdbc_auth-<version>-<arch>.dll` file to any directory that is included in the Windows system `PATH` environment variable.
+
+> [!NOTE]
+> The DLL doesn't need to be in the same directory as the JDBC driver JAR file. It only needs to be in a directory listed in the system `PATH`, for example `C:\Windows\System32` or a custom directory that you add to `PATH`.
 
 The `mssql-jdbc_auth-<version>-<arch>.dll` files are installed in the following location:
 
@@ -106,9 +109,9 @@ The `mssql-jdbc_auth-<version>-<arch>.dll` files are installed in the following 
 For any operating system supported by the [!INCLUDE [jdbcNoVersion](../../includes/jdbcnoversion_md.md)], see [Using Kerberos integrated authentication to connect to SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md) for a description of a feature added in [!INCLUDE [jdbc-40](../../includes/jdbc-40-md.md)] that allows an application to connect to a database using integrated authentication with Type 4 Kerberos.
 
 > [!NOTE]  
-> If you are running a 32-bit Java Virtual Machine (JVM), use the `mssql-jdbc_auth-<version>-<arch>.dll` file in the x86 folder, even if the operating system is the x64 version. If you are running a 64-bit JVM on a x64 processor, use the `mssql-jdbc_auth-<version>-<arch>.dll` file in the x64 folder.
+> If you're running a 32-bit Java Virtual Machine (JVM), use the `mssql-jdbc_auth-<version>-<arch>.dll` file in the x86 folder, even if the operating system is the x64 version. If you're running a 64-bit JVM on a x64 processor, use the `mssql-jdbc_auth-<version>-<arch>.dll` file in the x64 folder.
 
-Alternatively you can set the java.library.path system property to specify the directory of the `mssql-jdbc_auth-<version>-<arch>.dll`. For example, if the JDBC driver is installed in the default directory, you can specify the location of the DLL by using the following virtual machine (VM) argument when the Java application is started:
+Alternatively, you can set the java.library.path system property to specify the directory of the `mssql-jdbc_auth-<version>-<arch>.dll`. For example, if you installed the JDBC driver in the default directory, you can specify the location of the DLL by using the following virtual machine (VM) argument when the Java application starts:
 
 `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`
 

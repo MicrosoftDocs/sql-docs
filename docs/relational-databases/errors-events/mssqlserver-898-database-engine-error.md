@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_898
 description: "MSSQLSERVER_898"
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: wiassaf
 ms.date: 02/15/2022
 ms.service: sql

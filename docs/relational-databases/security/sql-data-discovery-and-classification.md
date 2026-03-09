@@ -4,7 +4,7 @@ description: SQL Data Discovery & Classification
 author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: vanto
-ms.date: 03/09/2022
+ms.date: 02/27/2026
 ms.service: sql
 ms.topic: how-to
 ms.custom:
@@ -20,7 +20,7 @@ Discovering and classifying your most sensitive data (business, financial, healt
 * Monitoring access to databases/columns containing highly sensitive data.
 
 > [!NOTE]
-> Data Discovery & Classification is **supported for SQL Server 2012 and later, and can be used with [SSMS 17.5](/ssms/sql-server-management-studio-ssms) or later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](/azure/sql-database/sql-database-data-discovery-and-classification/).
+> Data Discovery & Classification is **supported for SQL Server 2012 and later, and can be used with [SSMS 17.5](/ssms/sql-server-management-studio-ssms) or later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](/azure/azure-sql/database/data-discovery-and-classification-overview).
 
 ## <a id="Overview"></a>Overview
 Data Discovery & Classification forms a new information-protection paradigm for SQL Database, SQL Managed Instance, and Azure Synapse, aimed at protecting the data and not just the database. Currently it supports the following capabilities:
@@ -138,7 +138,7 @@ To reset the Information Protection Policy to default or SQL Information Protect
 To enable Information Protection Policy from a custom JSON file, go to the SSMS **Object Explorer**, right-click on the database and choose **Tasks** > **Data Discovery and Classification** > **Set Information Protection Policy File**.
 
 > [!NOTE]
-> A warning icon indicates that the column was previously classified using a different Information Protection Policy than the currently selected policy mode. For example, if you are currently in the Microsoft Information Protection mode, and one of the columns was previously classified using SQL Information Protection Policy or Information Protection Policy from a custom policy file, you will see a warning icon against that column. You can decide whether you want to change the classification of the column to any of the sensitivity labels available in current policy mode or leave it as it is.
+> A warning icon indicates that the column was previously classified using a different Information Protection Policy than the currently selected policy mode. For example, if you're currently in the Microsoft Information Protection mode, and one of the columns was previously classified using SQL Information Protection Policy or Information Protection Policy from a custom policy file, you'll see a warning icon against that column. You can decide whether you want to change the classification of the column to any of the sensitivity labels available in current policy mode or leave it as it is.
 > :::image type="content" source="media/sql-data-discovery-and-classification/data-classification-warning-icon.png" alt-text="Screenshot of Data Classification warning of mismatched policies":::
 
 
@@ -161,8 +161,8 @@ You can manage the Information Protection Policy using the latest version of [SQ
 * **Reset Information Protection Policy**: resets the Information Protection Policy to the default SQL Information Protection Policy.
 
 > [!IMPORTANT]
-> Information protection policy file is not stored in the SQL Server.
-> SSMS uses a default Information Protection Policy. If an Information Protection Policy customized fails, SSMS cannot use the default policy. Data classification fails. To resolve, click **Reset Information Protection Policy** to use the default policy and re-enable data classification.
+> Information protection policy file isn't stored in the SQL Server.
+> SSMS uses a default Information Protection Policy. If an Information Protection Policy customized fails, SSMS can't use the default policy. Data classification fails. To resolve, click **Reset Information Protection Policy** to use the default policy and re-enable data classification.
 
 ## <a id="sAccessing-the-classification-metadata"></a>Accessing the classification metadata
 

@@ -66,7 +66,7 @@ sections:
 
              1. **How do I verify the installed version and edition of SQL Server on Linux?**
 
-                Connect to the SQL Server instance with a client tool such as **sqlcmd**, **mssql-cli**, or Visual Studio Code. Then run the following Transact-SQL query to verify the version and edition of SQL Server that you are running: 
+                Connect to the SQL Server instance with a client tool such as the [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md), or Visual Studio Code. Then run the following Transact-SQL query to verify the version and edition of SQL Server that you are running: 
 
                 ```sql
                 SELECT @@VERSION
@@ -107,7 +107,7 @@ sections:
 
              1. **Are commands like sqlcmd and bcp available on Linux?**
 
-                Yes, [sqlcmd and bcp](sql-server-linux-setup-tools.md) are natively available on Linux, macOS, and Windows. In addition, use the new [mssql-scripter](https://github.com/Microsoft/mssql-scripter) command-line tool on Linux, macOS, or Windows to generate T-SQL scripts for your SQL database running anywhere. Also, see the preview release for [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/).
+                Yes, [sqlcmd and bcp](sql-server-linux-setup-tools.md) are natively available on Linux, macOS, and Windows. In addition, use the new [mssql-scripter](https://github.com/Microsoft/mssql-scripter) command-line tool on Linux, macOS, or Windows to generate T-SQL scripts for your SQL database running anywhere.
 
              1. **Is it possible to view Activity Monitor when connected through SSMS on Windows for an instance running on Linux?**
 

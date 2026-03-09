@@ -4,7 +4,7 @@ description: Learn about the Azure Data Studio retirement, and the recommended r
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: tsiddique, roblescarlos
-ms.date: 02/19/2026
+ms.date: 02/21/2026
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: concept-article
@@ -24,21 +24,29 @@ This article provides recommendations and resources to help you transition from 
 
 The following replacement options are available for Azure Data Studio.
 
-### [SQL developer](#tab/dev)
+### [App / SQL developer](#tab/dev)
 
-Use Visual Studio Code with the [MSSQL extension for Visual Studio Code](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) for daily work. Queries, scripts, and SQL database projects work without requiring conversion. Visual Studio Code includes schema design tools, IntelliSense, built-in Git integration, and CI/CD workflows.
+Use Visual Studio Code with the [MSSQL extension for Visual Studio Code](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) for daily work. Queries, scripts, and SQL database projects work without requiring conversion.
+
+- Visual Studio Code includes schema design tools, IntelliSense, built-in Git integration, and CI/CD workflows.
 
 - Continue storing SQL database projects in source control. Open them directly in Visual Studio Code with the MSSQL extension, or in Visual Studio with SSDT.
 
-- Schema Compare is available in the MSSQL extension for Visual Studio Code. For more information, see [Schema Compare](visual-studio-code-extensions/mssql/mssql-schema-compare.md).
+- [Schema Compare](visual-studio-code-extensions/mssql/mssql-schema-compare.md) and [Schema Designer](visual-studio-code-extensions/mssql/mssql-schema-designer.md) are available in the MSSQL extension for Visual Studio Code.
 
 ### [Database administrator (DBA)](#tab/dba)
 
-Keep job scheduling, profiling, and classic administration tasks in [SQL Server Management Studio (SSMS)](/ssms), which remains the supported home for SQL Server Agent, Extended Events (the successor to SQL Server Profiler), and general administration.
+The MSSQL extension for Visual Studio Code includes:
+
+- [Database Operations (Preview)](visual-studio-code-extensions/mssql/mssql-database-operations.md): Create, back up, restore, rename, and drop databases. Search database objects, and [import flat files](visual-studio-code-extensions/mssql/mssql-database-operations.md#import-flat-file).
+
+- [Query Profiler (Preview)](visual-studio-code-extensions/mssql/mssql-query-profiler.md): Capture real-time database activity using Extended Events.
+
+Keep job scheduling and classic administration tasks in [SQL Server Management Studio (SSMS)](/ssms), which remains the supported home for SQL Server Agent and general administration.
 
 For import, export, and assessment work:
 
-- Use [SqlPackage](sqlpackage/sqlpackage.md) and the [Data-tier Application (Preview)](visual-studio-code-extensions/mssql/mssql-data-tier-application.md) for DACPAC tasks, or use bulk insert and PowerShell for flat-file import.
+- Use [SqlPackage](sqlpackage/sqlpackage.md) and the [Data-tier Application (Preview)](visual-studio-code-extensions/mssql/mssql-data-tier-application.md) for DACPAC tasks.
 - Run the [migration assessment](../sql-server/azure-arc/migration-assessment.md) for SQL Server enabled by Azure Arc.
 
 ### [Cross-database developer](#tab/xplat)
@@ -117,15 +125,15 @@ Azure Data Studio users have diverse needs, from connecting to Azure SQL databas
 
 | Azure Data Studio extension | Description | Replacement |
 | --- | --- | --- |
-| SQL Server Agent | Manage and automate SQL Server Agent jobs. | [SQL Server Management Studio (SSMS)](/sql/ssms/). |
-| SQL Server Profiler | Trace and monitor SQL Server activity. | [Extended Events](../relational-databases/extended-events/extended-events.md) in SSMS. |
-| Database administration | Tools for managing databases on Windows. | [SQL Server Management Studio (SSMS)](/sql/ssms/) |
-| Schema | Compare and synchronize database schemas. | SQL Server Data Tools (SSDT). In development for MSSQL extension for Visual Studio Code. |
-| Flat-file import | Import `.txt` and `.csv` files into databases. | Bulk insert / PowerShell. In development for MSSQL extension for Visual Studio Code. |
-| DACPAC import/export | Deploy and extract DACPAC files. | [Data-tier Application (Preview)](visual-studio-code-extensions/mssql/mssql-data-tier-application.md) and SqlPackage CLI |
+| SQL Server Agent | Manage and automate SQL Server Agent jobs. | [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms). |
+| SQL Server Profiler | Trace and monitor SQL Server activity. | [Query Profiler (Preview)](visual-studio-code-extensions/mssql/mssql-query-profiler.md) in the MSSQL extension for Visual Studio Code, and [XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md) in SSMS. |
+| Database administration | Tools for managing databases on Windows. | [Database Operations (Preview)](visual-studio-code-extensions/mssql/mssql-database-operations.md) in the MSSQL extension for Visual Studio Code (create, back up, restore, rename, drop, search, and scripting). [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms) for full administration. |
+| Schema management | Compare and synchronize database schemas. | [Schema Compare (Preview)](visual-studio-code-extensions/mssql/mssql-schema-compare.md) and [Schema Designer](visual-studio-code-extensions/mssql/mssql-schema-designer.md) in the MSSQL extension for Visual Studio Code. Also available in [SQL Database Projects](visual-studio-code-extensions/sql-database-projects/sql-database-projects-extension.md) and SQL Server Data Tools (SSDT). |
+| Flat-file import | Import `.txt` and `.csv` files into databases. | [Import flat file (Preview)](visual-studio-code-extensions/mssql/mssql-database-operations.md#import-flat-file) in the MSSQL extension for Visual Studio Code. Bulk insert and PowerShell are also available. |
+| DACPAC import/export | Deploy and extract DACPAC files. | [Data-tier Application (Preview)](visual-studio-code-extensions/mssql/mssql-data-tier-application.md) in the MSSQL extension for Visual Studio Code, and SqlPackage CLI from the command line. |
 | SQL Server assessment | Assess an existing SQL Server data estate to prepare for migration. | [Assess migration readiness with SQL Server enabled by Azure Arc](../sql-server/azure-arc/migration-assessment.md). |
 | Azure SQL migration | Migrate SQL Server to Azure SQL. | Alternative migration tools for [Azure SQL Managed Instance](/data-migration/sql-server/managed-instance/overview#migration-tools), [SQL Server on Azure VMs](/data-migration/sql-server/virtual-machines/overview#migrate), and [Azure SQL Database](/data-migration/sql-server/database/overview#migration-tools). |
-| SQL Database Projects | Create, manage, and deploy SQL database projects. | Fully supported in the MSSQL extension for Visual Studio Code and Visual Studio. |
+| SQL database projects | Create, manage, and deploy SQL database projects. | Fully supported in the [MSSQL extension for Visual Studio Code](visual-studio-code-extensions/sql-database-projects/sql-database-projects-extension.md) and Visual Studio. |
 
 ### Alternative Azure Data Studio capabilities
 
@@ -179,7 +187,7 @@ Refer to the Migration Plan for alternatives.
 
 ### Are there plans for missing features like SQL Server Agent?
 
-Features under development include DACPAC support. For other features, use the [MSSQL extension for Visual Studio Code](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) or [SQL Server Management Studio (SSMS)](/sql/ssms/).
+Features under development include DACPAC support. For other features, use the [MSSQL extension for Visual Studio Code](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) or [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms).
 
 ### How do I install the MSSQL extension for Visual Studio Code?
 

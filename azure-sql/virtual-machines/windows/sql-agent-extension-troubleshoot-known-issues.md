@@ -151,7 +151,7 @@ Extending your disks from the **Storage Configuration** page of the [SQL VM reso
 - If you uninstall and reinstall the SQL IaaS Agent extension.
 - If you uninstall and reinstall your instance of SQL Server.
 - If you used custom naming conventions for the disk/storage pool name when deploying your SQL Server image from the Azure Marketplace.
-- If you deployed your SQL Server VM with Premium SSDv2.
+- If you deployed your SQL Server VM with Premium SSD v2.
 - If TCP/IP is disabled in SQL Server Configuration Manager, or at the virtual machine level.
 
 ## Disk configuration grayed out during deployment

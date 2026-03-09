@@ -2,10 +2,10 @@
 title: Overview of the Data-Tier Application Experience (Preview)
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the Data-tier Application experience in the MSSQL extension for Visual Studio Code to work with DACPAC and BACPAC files.
-author: tauseefsiddique10
-ms.author: tsiddique
-ms.reviewer: roblescarlos, randolphwest
-ms.date: 01/19/2026
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: tsiddique, roblescarlos
+ms.date: 02/21/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -51,12 +51,17 @@ To launch the experience in the MSSQL extension for Visual Studio Code, right-cl
 
 :::image type="content" source="media/mssql-data-tier-application/launch-data-tier-application.png" alt-text="Screenshot of launching the Data-tier Application experience in the MSSQL extension for Visual Studio Code.":::
 
+## Feedback and support
+
+[!INCLUDE [feedback](../includes/feedback.md)]
+
 ## Related content
 
 - [Data-tier applications (DAC) overview](../../sql-database-projects/concepts/data-tier-applications/overview.md)
 - [Quickstart: Connect to and query a database with the MSSQL extension for Visual Studio Code](connect-database-visual-studio-code.md)
 - [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)
+- [Database operations (Preview)](mssql-database-operations.md)
 - [Schema Compare](mssql-schema-compare.md)
 - [Schema Designer](mssql-schema-designer.md)
-- [Learn more about Visual Studio Code](https://code.visualstudio.com/docs)
-- [Learn more about contributing to the MSSQL extension](https://github.com/Microsoft/vscode-mssql/wiki)
+- [Visual Studio Code documentation](https://code.visualstudio.com/docs)
+- [MSSQL extension for Visual Studio Code repository on GitHub](https://github.com/Microsoft/vscode-mssql)

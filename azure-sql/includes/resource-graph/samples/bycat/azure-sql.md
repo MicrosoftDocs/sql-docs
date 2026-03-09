@@ -1,9 +1,9 @@
 ---
-author: davidsmatlak
+author: WilliamDAssafMSFT
 ms.service: resource-graph
 ms.topic: include
 ms.date: 07/07/2022
-ms.author: davidsmatlak
+ms.author: wiassaf
 ms.custom: generated
 ---
 

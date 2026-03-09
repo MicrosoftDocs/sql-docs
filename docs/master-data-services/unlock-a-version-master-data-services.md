@@ -1,17 +1,18 @@
 ---
 title: Unlock a Version
-description: "Unlock a Version (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Unlock a Version (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "unlocking versions [Master Data Services]"
   - "versions [Master Data Services], unlocking"
-ms.custom:
-  - build-2025
 ---
 # Unlock a Version (Master Data Services)
 
@@ -47,6 +48,4 @@ ms.custom:
 -   [Lock a Version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
 ## See Also  
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
-  
-  
+ [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)

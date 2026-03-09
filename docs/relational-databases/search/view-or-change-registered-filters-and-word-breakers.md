@@ -82,7 +82,7 @@ EXECUTE sp_fulltext_service 'update_languages';
             "en": [{
                "version": 2,
                "handler": "MSWB7.dll",
-               "wbClsid": "9faed859-0b30-4434-ae65-412e14a16fb8"
+               "wbClsid": "9faed859-0b30-4434-ae65-412e14a16fb8",
                "stemmerClsid": "e1e5ef84-c4a6-4e50-8188-99aef3de2659"
             }],
             "<BCP 47 locale name>": [{ ... }],

@@ -5,7 +5,7 @@ description: Use the update policy setting in Azure SQL Managed Instance to cont
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
-ms.date: 11/18/2025
+ms.date: 2/27/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -32,7 +32,7 @@ Azure SQL Managed Instance offers the following three update policies:
 ## SQL Server 2025 update policy
 
 > [!NOTE]
-> The **SQL Server 2025** update policy is currently in preview. Changing the update policy from **SQL Server 2025** to **Always-up-to-date** is currently and temporarily disabled.
+> Changing the update policy from **SQL Server 2025** to **Always-up-to-date** is currently and temporarily disabled.
 
 The **SQL Server 2025** update policy aligns your database format with [!INCLUDE [sssql25-md](../../docs/includes/sssql25-md.md)].
 

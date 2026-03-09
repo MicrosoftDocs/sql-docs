@@ -1,12 +1,13 @@
 ---
 title: Create a Custom Workflow
-description: "Create a Custom Workflow (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+description: Create a Custom Workflow (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
-ms.topic: "reference"
+ms.topic: reference
 ms.custom:
   - build-2025
   - sfi-ropc-nochange
@@ -149,6 +150,4 @@ ms.custom:
   
 ## See Also  
  [Custom Workflow Example &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
- [Custom Workflow XML Description &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
-  
-  
+ [Custom Workflow XML Description &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)

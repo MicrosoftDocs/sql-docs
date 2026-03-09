@@ -1,9 +1,10 @@
 ---
 title: Features and Tasks
-description: "Master Data Services Features and Tasks"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "04/01/2016"
+description: Master Data Services Features and Tasks
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -66,6 +67,4 @@ ms.custom:
   
 ## Develop a Custom Application  
   
--   [Master Data Services Developer Documentation](../master-data-services/develop/master-data-services-developer-documentation.md)  
-  
-  
+-   [Master Data Services Developer Documentation](../master-data-services/develop/master-data-services-developer-documentation.md)

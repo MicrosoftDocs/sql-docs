@@ -56,9 +56,16 @@ The control plane consists of components that govern the configuration and behav
 
 ### Internal data plane
 
-Internal data plane components orchestrate the operations on user data to ensure durability, high availability, and business continuity of your data assets. In contrast to the control plane, which doesn't carry user data, internal data plane does transfer data stored in your databases.
+Internal data plane components orchestrate the operations on user data to ensure durability, high availability, and business continuity of your data assets. In contrast to the control plane, which doesn't carry user data, internal data plane does transfer data stored in your databases. Similar to the control plane, endpoints and services within the internal data plane are managed and secured by Microsoft.
 
-Internal data plane facilitates regular backups, replication traffic between availability replicas, data seeding, geo-replication in failover groups, and other data flows that involve actual user data.
+The internal data plane facilitates regular backups, replication traffic between availability replicas, data seeding, geo-replication in failover groups, and other data flows that involve actual user data. Examples of internal data plane traffic include:
+
+- Traffic from the SQL managed instance to storage accounts where automated backups are kept.
+- Traffic to telemetry endpoints.
+-	Authentication and secret exchange with Microsoft Entra ID and Azure Key Vault.
+- Traffic to virtual machine image download endpoints and the Windows Update service.
+- Data transfer operations initiated and governed by the service, such as data backups, and some data replication between replicas.
+- Fabric mirroring traffic.
 
 ### How is service-managed traffic secured?
 

@@ -1,17 +1,18 @@
 ---
 title: Master Data Services Database
 description: The Master Data Services database contains all of the information for the Master Data Services system and is central to a Master Data Services deployment.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "database [Master Data Services], about the database"
   - "database [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Master Data Services Database
 
@@ -44,6 +45,4 @@ ms.custom:
 ## See Also  
  [Create a Master Data Services Database](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Database Object Security &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)   
- [Database Logins, Users, and Roles &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
-  
-  
+ [Database Logins, Users, and Roles &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)

@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_19421"
 description: "MSSQLSERVER_19421"
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 02/04/2026
 ms.service: sql

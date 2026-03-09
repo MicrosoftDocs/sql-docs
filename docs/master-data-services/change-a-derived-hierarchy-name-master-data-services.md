@@ -1,16 +1,17 @@
 ---
 title: Change a Derived Hierarchy Name
-description: "Change a Derived Hierarchy Name (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Change a Derived Hierarchy Name (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
-helpviewer_keywords:
-  - "derived hierarchies, changing name"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "derived hierarchies, changing name"
 ---
 # Change a Derived Hierarchy Name (Master Data Services)
 
@@ -48,6 +49,4 @@ ms.custom:
 ## See Also  
  [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
  [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Delete a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
-  
-  
+ [Delete a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)

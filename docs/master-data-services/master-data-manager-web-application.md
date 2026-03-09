@@ -1,9 +1,10 @@
 ---
 title: Master Data Manager Web Application
 description: Learn how to use the Master Data Manager web application to perform administrative tasks for Master Data Services.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "12/20/2016"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -35,6 +36,4 @@ ms.custom:
   
  [System Administration Functional Area &#40;Master Data Manager&#41;](../master-data-services/system-administration-functional-area-master-data-manager.md)  
   
- [User and Group Permissions Functional Area &#40;Master Data Manager&#41;](../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
-  
-  
+ [User and Group Permissions Functional Area &#40;Master Data Manager&#41;](../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)

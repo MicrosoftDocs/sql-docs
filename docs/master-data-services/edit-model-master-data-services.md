@@ -1,16 +1,17 @@
 ---
 title: Edit Model
-description: "Edit Model (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Edit Model (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
-helpviewer_keywords:
-  - "models [Master Data Services], changing name"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "models [Master Data Services], changing name"
 ---
 # Edit Model (Master Data Services)
 
@@ -54,6 +55,4 @@ ms.custom:
 ## See Also  
  [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [Delete a Model &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Models &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
-  
-  
+ [Models &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)

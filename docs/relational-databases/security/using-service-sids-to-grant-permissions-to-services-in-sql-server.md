@@ -1,48 +1,49 @@
 ---
 title: Using Service SIDs to grant permissions to services
 description: "Using Service SIDs to grant permissions to services in SQL Server"
-author: randomnote1
-ms.author: dareist
-ms.date: "05/02/2019"
+author: VanMSFT
+ms.author: vanto
+ms.date: 02/27/2026
 ms.service: sql
+ms.subservice: security
 ms.topic: concept-article
 ---
 
 # Using Service SIDs to grant permissions to services in SQL Server
 
-SQL Server uses per-service Security Identifiers (SID), also referred to as *service security principals*, to allow permissions to be granted directly to a specific service. This method is used by SQL Server to grant permissions to the engine and agent services (NT SERVICE\MSSQL$\<InstanceName\> and NT SERVICE\SQLAGENT$\<InstanceName\> respectively). Using this method, those services can access the database engine only when the services are running. For more information, see [KB2620201 (archive link)](https://mskb.pkisolutions.com/kb/2620201).
+SQL Server uses per-service Security Identifiers (SID), also referred to as *service security principals*, to grant permissions directly to a specific service. SQL Server uses this method to grant permissions to the engine and agent services (NT SERVICE\MSSQL$\<InstanceName\> and NT SERVICE\SQLAGENT$\<InstanceName\> respectively). Using this method, those services can access the database engine only when the services are running. For more information, see [KB2620201 (archive link)](https://mskb.pkisolutions.com/kb/2620201).
 
-This same method can be used when granting permissions to other services. Using a Service SID eliminates the overhead of managing and maintaining service accounts and provide tighter, more granular control over permissions granted to system resources.
+You can also use this method when granting permissions to other services. Using a Service SID eliminates the overhead of managing and maintaining service accounts and provides tighter, more granular control over permissions granted to system resources.
 
 Examples of services where a Service SID can be used are:
 
 - System Center Operations Manager Health Service (NT SERVICE\HealthService)
 - Windows Server Failover Clustering (WSFC) service (NT SERVICE\ClusSvc)
 
-Some services don't have a Service SID by default. The service SID must be created using [SC.exe](/windows/desktop/services/configuring-a-service-using-sc). [This method](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) has been adopted by Microsoft System Center Operations Manager administrators to grant permission to the HealthService within [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
+Some services don't have a Service SID by default. You must create the service SID using [SC.exe](/windows/desktop/services/configuring-a-service-using-sc). [This method](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) has been adopted by Microsoft System Center Operations Manager administrators to grant permission to the HealthService within [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
-Once the service SID has been created and confirmed, it must be granted permission within SQL Server. Granting permissions is accomplished by creating a Windows login using either [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms) or a Transact-SQL query. Once the login is created, it can be granted permissions, added to roles, and mapped to databases just like any other login.
+Once you create and confirm the service SID, you must grant it permission within SQL Server. Grant permissions by creating a Windows login using either [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms) or a Transact-SQL query. Once you create the login, you can grant it permissions, add it to roles, and map it to databases just like any other login.
 
 > [!TIP]
-> If the error `Login failed for user 'NT AUTHORITY\SYSTEM'` is received, verify the Service SID exists for the desired service, the Service SID login was created in SQL Server, and the appropriate permissions were granted to the Service SID in SQL Server.
+> If you receive the error `Login failed for user 'NT AUTHORITY\SYSTEM'`, verify the Service SID exists for the desired service, verify that the Service SID login was created in SQL Server, and verify the appropriate permissions were granted to the Service SID in SQL Server.
 
 ## Security
 
 ### Eliminate service accounts
 
-Traditionally service accounts have been used to allow services to log into SQL Server. Service accounts add an additional layer of management complexity because of having to maintain and periodically update the service account password. Additionally, the service account credentials could be used by an individual attempting to mask their activities when performing actions in the instance.
+Traditionally, service accounts were used to allow services to sign in to SQL Server. Service accounts add an extra layer of management complexity because of having to maintain and periodically update the service account password. Additionally, an individual attempting to mask their activities could use the service account credentials when performing actions in the instance.
 
 ### Granular permissions to system accounts
 
-System accounts have historically been granted permissions by creating a login for the [LocalSystem](/windows/win32/services/localsystem-account) ([NT AUTHORITY\SYSTEM in en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) or [NetworkService](/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE in en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) accounts and granting those logins permissions. This method grants any process or service permissions into SQL, which is running as a system account.
+System accounts have historically been granted permissions by creating a login for the [LocalSystem](/windows/win32/services/localsystem-account) ([NT AUTHORITY\SYSTEM in en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) or [NetworkService](/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE in en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) accounts and granting those logins permissions. This method grants any process or service permissions into SQL that runs as a system account.
 
-Using a Service SID allows permissions to be granted to a specific service. The service only has access to the resources it was granted permissions to when it is running. For example, if the `HealthService` is running as `LocalSystem` and is granted `View Server State`, the `LocalSystem` account will only have permission to `View Server State` when it is running in the context of the `HealthService`. If any other process attempts to access the server state of SQL as `LocalSystem`, they will be denied access.
+Using a Service SID, you can grant permissions to a specific service. The service only has access to the resources you granted permissions to when it's running. For example, if the `HealthService` runs as `LocalSystem` and you grant it `View Server State`, the `LocalSystem` account only has permission to `View Server State` when running in the context of the `HealthService`. If any other process attempts to access the server state of SQL as `LocalSystem`, access is denied.
 
 ## Examples
 
 ### A. Create a Service SID
 
-The following PowerShell command will create a service SID on the System Center Operations Manager health service.
+The following PowerShell command creates a service SID on the System Center Operations Manager health service.
 
 ```PowerShell
 sc.exe --% sidtype "HealthService" unrestricted

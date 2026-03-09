@@ -1,9 +1,10 @@
 ---
 title: Import Statuses
-description: "Import Statuses (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "04/01/2016"
+description: Import Statuses (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -27,6 +28,4 @@ ms.custom:
 |Cleared|The batch has been cleared.|5|  
   
 ## See Also  
- [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
-  
-  
+ [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)

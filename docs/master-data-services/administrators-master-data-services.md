@@ -1,18 +1,19 @@
 ---
 title: Administrators
 description: "Learn about the types of administrators in Master Data Services: model administrators, entity administrators, and super user."
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "administrators [Master Data Services], about administrators"
   - "administrators [Master Data Services]"
   - "models [Master Data Services], administrators"
-ms.custom:
-  - build-2025
 ---
 # Administrators (Master Data Services)
 
@@ -71,5 +72,4 @@ ms.custom:
 ## See Also  
  [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Create a Master Data Services Database](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
-  
+ [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)

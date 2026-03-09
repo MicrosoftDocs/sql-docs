@@ -3,7 +3,7 @@ title: Using the JDBC driver
 description: This section provides quick start instructions to make a simple connection to a SQL Server database using the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: davidengel
-ms.date: 03/17/2025
+ms.date: 02/26/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart
@@ -462,7 +462,7 @@ The following snippet is an example of the CLASSPATH statement that's used for a
 Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar.  
   
 > [!NOTE]  
-> On Windows systems, directory names longer than the 8.3 filename convention or folder names with spaces may cause problems with classpaths. If you suspect these types of issues, you should temporarily move the sqljdbc.jar file, sqljdbc4.jar file, or the sqljdbc41.jar file into a simple directory name such as `C:\Temp`, change the classpath, and determine whether that addresses the problem.  
+> On Windows systems, directory names longer than the 8.3 filename convention or folder names with spaces may cause problems with classpaths. If you suspect these types of problems, temporarily move the sqljdbc.jar file, sqljdbc4.jar file, or the sqljdbc41.jar file into a simple directory name such as `C:\Temp`, change the classpath, and determine whether that addresses the problem.  
   
 ### Applications that are run directly at the command prompt
 
@@ -494,17 +494,23 @@ Connection con = DriverManager.getConnection(connectionUrl);
 ```
 
 > [!WARNING]  
-> The above connection string uses `encrypt=false`, which is not recommended for production use. For more information about encrypting your database connection with JDBC, see [Connecting with encryption](connecting-with-ssl-encryption.md).
+> The above connection string uses `encrypt=false`, which isn't recommended for production use. For more information about encrypting your database connection with JDBC, see [Connecting with encryption](connecting-with-ssl-encryption.md).
 
 Starting from JDBC API 4.0, the `DriverManager.getConnection()` method is enhanced to load JDBC drivers automatically. Therefore, applications don't need to call the `Class.forName` method to register or load the driver when using driver jar libraries.  
   
-When the getConnection method of the DriverManager class is called, an appropriate driver is located from the set of registered JDBC drivers. sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar file includes "META-INF/services/java.sql.Driver" file, which contains the **com.microsoft.sqlserver.jdbc.SQLServerDriver** as a registered driver. The existing applications, which currently load the drivers by using the Class.forName method, will continue to work without modification.  
+When you call the getConnection method of the DriverManager class, it locates an appropriate driver from the set of registered JDBC drivers. sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar file includes "META-INF/services/java.sql.Driver" file, which contains the **com.microsoft.sqlserver.jdbc.SQLServerDriver** as a registered driver. The existing applications, which currently load the drivers by using the Class.forName method, continue to work without modification.  
   
 > [!NOTE]  
-> sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar class library cannot be used with older versions of the Java Runtime Environment (JRE). See [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) for the list of JRE versions supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+> sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar class library can't be used with older versions of the Java Runtime Environment (JRE). See [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) for the list of JRE versions supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
 
 For more information about how to connect with data sources and use a connection URL, see [Building the connection URL](../../connect/jdbc/building-the-connection-url.md) and [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md).  
-  
-## See also  
 
-[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+> [!TIP]
+> The previous example uses `DriverManager` for simplicity. For production applications, consider using the `SQLServerDataSource` class instead, which provides connection pooling and additional configurability. For more information and examples, see [Connecting and retrieving data](connecting-and-retrieving-data.md) and [Data source sample](data-source-sample.md).
+
+## Related content
+
+- [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+- [Building the connection URL](../../connect/jdbc/building-the-connection-url.md)
+- [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md)
+- [Connecting and retrieving data](connecting-and-retrieving-data.md)

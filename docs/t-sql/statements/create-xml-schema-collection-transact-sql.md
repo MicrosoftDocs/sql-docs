@@ -290,4 +290,4 @@ GO
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [Compare typed XML to untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
 - [Requirements and limitations for XML schema collections on the server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)
-
+- [XML schema collections in SQL projects](../../tools/sql-database-projects/concepts/xml-schema-collection.md)

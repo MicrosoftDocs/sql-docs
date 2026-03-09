@@ -5,7 +5,7 @@ description: Change point-in-time restore and backup redundancy options for auto
 author: dinethi
 ms.author: dinethi
 ms.reviewer: wiassaf, mathoma, strrodic, mlandzic
-ms.date: 07/08/2025
+ms.date: 02/23/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -127,15 +127,16 @@ For more information, see the [Backup retention PowerShell command](/powershell/
 #### Sample request
 
 ```http
-PUT https://management.azure.com/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup/providers/Microsoft.Sql/managedInstances/testManagedInstance/databases/testDatabase/backupShortTermRetentionPolicies/default?api-version=2017-10-01-preview
+PATCH https://management.azure.com/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup/providers/Microsoft.Sql/managedInstances/testSQLMI/databases/testdb/backupShortTermRetentionPolicies/default?api-version=2023-08-01
+
 ```
 
 #### Request body
 
 ```json
 {
-  "properties":{
-    "retentionDays":28
+  "properties": {
+    "retentionDays": 14
   }
 }
 ```
@@ -146,14 +147,21 @@ Status code: 200
 
 ```json
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Sql/resourceGroups/resourceGroup/managedInstances/testserver/databases/testDatabase/backupShortTermRetentionPolicies/default",
+  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup/providers/Microsoft.Sql/managedInstances/testSQLMI/databases/testdb/backupShortTermRetentionPolicies/default",
   "name": "default",
-  "type": "Microsoft.Sql/resourceGroups/managedInstances/databases/backupShortTermRetentionPolicies",
+  "type": "Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies",
   "properties": {
-    "retentionDays": 28
+    "retentionDays": 14
   }
 }
 ```
+
+Status code: 202
+
+```http
+Location: https://management.azure.com/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Sql/locations/westus/managedShortTermRetentionPolicyOperationResults/00000000-1111-2222-3333-444444444444?api-version=2017-03-01-preview
+```
+
 
 For more information, see the [Backup retention REST API](/rest/api/sql/managed-backup-short-term-retention-policies).
 

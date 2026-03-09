@@ -3,7 +3,8 @@ title: "Creating a Source with the Script Component"
 description: "Creating a Source with the Script Component"
 author: chugugrace
 ms.author: chugu
-ms.date: "03/17/2017"
+ms.date: "02/23/2026"
+ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: "reference"
@@ -18,12 +19,11 @@ dev_langs:
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
   You use a source component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to load data from a data source to pass on to downstream transformations and destinations. Ordinarily you connect to the data source through an existing connection manager.  
   
  For an overview of the Script component, see [Extending the Data Flow with the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
- The Script component and the infrastructure code that it generates for you simplify significantly the process of developing a custom data flow component. However, to understand how the Script component works, you may find it useful to read through the steps that are involved in developing a custom data flow component. See the section [Developing a Custom Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), especially the topic [Developing a Custom Source Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
+ The Script component and the infrastructure code that it generates for you simplify significantly the process of developing a custom data flow component. However, to understand how the Script component works, you might find it useful to read through the steps that are involved in developing a custom data flow component. See the section [Developing a Custom Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), especially the topic [Developing a Custom Source Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
 ## Getting Started with a Source Component  
  When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box opens and prompts you to select a Source, Destination, or Transformation script. In this dialog box, select **Source**.  
@@ -48,18 +48,18 @@ dev_langs:
  For more information about the **Connection Managers** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Connection Managers Page&#41;](../data-flow/transformations/script-component.md).  
   
 ### Configuring Outputs and Output Columns  
- A source component has no inputs and supports one or more outputs. On the **Inputs and Outputs** page of the **Script Transformation Editor**, a single output has been created by default, but no output columns have been created. On this page of the editor, you may need or want to configure the following items.  
+ A source component has no inputs and supports one or more outputs. On the **Inputs and Outputs** page of the **Script Transformation Editor**, a single output has been created by default, but no output columns have been created. On this page of the editor, you might need or want to configure the following items.  
   
--   You must add and configure output columns manually for each output. Select the Output Columns folder for each output, and then use the **Add Column** and **Remove Column** buttons to manage the output columns for each output of the source component. Later, you will refer to the output columns in your script by the names that you assign here, by using the typed accessor properties created for you in the auto-generated code.  
+- You must add and configure output columns manually for each output. Select the Output Columns folder for each output, and then use the **Add Column** and **Remove Column** buttons to manage the output columns for each output of the source component. Later, you refer to the output columns in your script by the names that you assign here, by using the typed accessor properties created for you in the auto-generated code.  
   
--   You may want to create one or more additional outputs, such as a simulated error output for rows that contain unexpected values. Use the **Add Output** and **Remove Output** buttons to manage the outputs of the source component. All input rows are directed to all available outputs unless you also specify an identical non-zero value for the **ExclusionGroup** property of those outputs where you intend to direct each row to only one of the outputs that share the same **ExclusionGroup** value. The particular integer value selected to identify the **ExclusionGroup** is not significant.  
+- You might want to create one or more additional outputs, such as a simulated error output for rows that contain unexpected values. Use the **Add Output** and **Remove Output** buttons to manage the outputs of the source component. All input rows are directed to all available outputs unless you also specify an identical non-zero value for the **ExclusionGroup** property of those outputs where you intend to direct each row to only one of the outputs that share the same **ExclusionGroup** value. The particular integer value selected to identify the **ExclusionGroup** isn't significant.  
   
     > [!NOTE]  
-    >  You can also use a non-zero **ExclusionGroup** property value with a single output when you do not want to output all rows. In this case, however, you must explicitly call the **DirectRowTo\<outputbuffer>** method for each row that you want to send to the output.  
+    >  You can also use a non-zero **ExclusionGroup** property value with a single output when you don't want to output all rows. In this case, however, you must explicitly call the **DirectRowTo\<outputbuffer>** method for each row that you want to send to the output.  
   
--   You may want to assign a friendly name to the outputs. Later, you will refer to the outputs by their names in your script, by using the typed accessor properties created for you in the auto-generated code.  
+- You might want to assign a friendly name to the outputs. Later, you refer to the outputs by their names in your script, by using the typed accessor properties created for you in the auto-generated code.  
   
--   Ordinarily multiple outputs in the same **ExclusionGroup** have the same output columns. However, if you are creating a simulated error output, you may want to add more columns to store error information. For information about how the data flow engine processes error rows, see [Using Error Outputs in a Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). In the Script component, however, you must write your own code to fill the additional columns with appropriate error information. For more information, see [Simulating an Error Output for the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
+- Ordinarily multiple outputs in the same **ExclusionGroup** have the same output columns. However, if you're creating a simulated error output, you might want to add more columns to store error information. For information about how the data flow engine processes error rows, see [Using Error Outputs in a Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). In the Script component, however, you must write your own code to fill the additional columns with appropriate error information. For more information, see [Simulating an Error Output for the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
   
  For more information about the **Inputs and Outputs** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../data-flow/transformations/script-component.md).  
   
@@ -86,24 +86,24 @@ dev_langs:
   
  At run time, the data flow engine invokes the **PrimeOutput** method in the **UserComponent** class, which overrides the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A> method of the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> parent class. The **PrimeOutput** method in turn calls the following methods:  
   
-1.  The **CreateNewOutputRows** method, which you override in **ScriptMain** to add rows from the data source to the output buffers, which are empty at first.  
+1. The **CreateNewOutputRows** method, which you override in **ScriptMain** to add rows from the data source to the output buffers, which are empty at first.  
   
-2.  The **FinishOutputs** method, which is empty by default. Override this method in **ScriptMain** to perform any processing that is required to complete the output.  
+2. The **FinishOutputs** method, which is empty by default. Override this method in **ScriptMain** to perform any processing that is required to complete the output.  
   
-3.  The private **MarkOutputsAsFinished** method, which calls the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> method of the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> parent class to indicate to the data flow engine that the output is finished. You do not have to call **SetEndOfRowset** explicitly in your own code.  
+3. The private **MarkOutputsAsFinished** method, which calls the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> method of the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> parent class to indicate to the data flow engine that the output is finished. You don't have to call **SetEndOfRowset** explicitly in your own code.  
   
 ### Writing Your Custom Code  
- To finish creating a custom source component, you may want to write script in the following methods available in the **ScriptMain** class.  
+ To finish creating a custom source component, you might want to write script in the following methods available in the **ScriptMain** class.  
   
-1.  Override the **AcquireConnections** method to connect to the external data source. Extract the connection object, or the required connection information, from the connection manager.  
+1. Override the **AcquireConnections** method to connect to the external data source. Extract the connection object, or the required connection information, from the connection manager.  
   
-2.  Override the **PreExecute** method to load data, if you can load all the source data at the same time. For example, you can execute a **SqlCommand** against an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and load all the source data at the same time into a **SqlDataReader**. If you must load the source data one row at a time (for example, when reading a text file), you can load the data as you loop through rows in **CreateNewOutputRows**.  
+2. Override the **PreExecute** method to load data, if you can load all the source data at the same time. For example, you can execute a **SqlCommand** against an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and load all the source data at the same time into a **SqlDataReader**. If you must load the source data one row at a time (for example, when reading a text file), you can load the data as you loop through rows in **CreateNewOutputRows**.  
   
-3.  Use the overridden **CreateNewOutputRows** method to add new rows to the empty output buffers and to fill in the values of each column in the new output rows. Use the **AddRow** method of each output buffer to add an empty new row, and then set the values of each column. Typically you copy values from the columns loaded from the external source.  
+3. Use the overridden **CreateNewOutputRows** method to add new rows to the empty output buffers and to fill in the values of each column in the new output rows. Use the **AddRow** method of each output buffer to add an empty new row, and then set the values of each column. Typically you copy values from the columns loaded from the external source.  
   
-4.  Override the **PostExecute** method to finish processing the data. For example, you can close the **SqlDataReader** that you used to load data.  
+4. Override the **PostExecute** method to finish processing the data. For example, you can close the **SqlDataReader** that you used to load data.  
   
-5.  Override the **ReleaseConnections** method to disconnect from the external data source, if required.  
+5. Override the **ReleaseConnections** method to disconnect from the external data source, if required.  
   
 ## Examples  
  The following examples demonstrate the custom code that is required in the **ScriptMain** class to create a source component.  
@@ -116,30 +116,30 @@ dev_langs:
   
  If you want to run this sample code, you must configure the package and the component as follows:  
   
-1.  Create an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager that uses the **SqlClient** provider to connect to the **AdventureWorks** database.  
+1. Create an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager that uses the **SqlClient** provider to connect to the **AdventureWorks** database.  
   
-2.  Add a new Script component to the Data Flow designer surface and configure it as a source.  
+2. Add a new Script component to the Data Flow designer surface and configure it as a source.  
   
-3.  Open the **Script Transformation Editor**. On the **Inputs and Outputs** page, rename the default output with a more descriptive name such as **MyAddressOutput**, and add and configure the two output columns, **AddressID** and **City**.  
+3. Open the **Script Transformation Editor**. On the **Inputs and Outputs** page, rename the default output with a more descriptive name such as **MyAddressOutput**, and add and configure the two output columns, **AddressID** and **City**.  
   
     > [!NOTE]  
     >  Be sure to change the data type of the **City** output column to DT_WSTR.  
   
-4.  On the **Connection Managers** page, add or create the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager and give it a name such as **MyADONETConnection**.  
+4. On the **Connection Managers** page, add or create the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager and give it a name such as **MyADONETConnection**.  
   
-5.  On the **Script** page, click **Edit Script** and enter the script that follows. Then close the script development environment and the **Script Transformation Editor**.  
+5. On the **Script** page, click **Edit Script** and enter the script that follows. Then close the script development environment and the **Script Transformation Editor**.  
   
-6.  Create and configure a destination component, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), that expects the **AddressID** and **City** columns. Then connect the source component to the destination. (You can connect a source directly to a destination without any transformations.) You can create a destination table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command in the **AdventureWorks** database:  
+6. Create and configure a destination component, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), that expects the **AddressID** and **City** columns. Then connect the source component to the destination. (You can connect a source directly to a destination without any transformations.) You can create a destination table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command in the **AdventureWorks** database:  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
   
-7.  Run the sample.  
+7. Run the sample.  
   
     ```vb  
-    Imports System.Data.SqlClient  
+    Imports Microsoft.Data.SqlClient  
     ...  
     Public Class ScriptMain  
         Inherits UserComponent  
@@ -190,7 +190,7 @@ dev_langs:
     ```  
   
     ```csharp  
-    using System.Data.SqlClient;  
+    using Microsoft.Data.SqlClient;  
     public class ScriptMain:  
         UserComponent  
   
@@ -250,26 +250,26 @@ dev_langs:
   
  If you want to run this sample code, you must configure the package and the component as follows:  
   
-1.  Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard to export the **Person.Address** table from the **AdventureWorks** sample database to a comma-delimited flat file. This sample uses the file name ExportedAddresses.txt.  
+1. Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard to export the **Person.Address** table from the **AdventureWorks** sample database to a comma-delimited flat file. This sample uses the file name ExportedAddresses.txt.  
   
-2.  Create a Flat File connection manager that connects to the exported data file.  
+2. Create a Flat File connection manager that connects to the exported data file.  
   
-3.  Add a new Script component to the Data Flow designer surface and configure it as a source.  
+3. Add a new Script component to the Data Flow designer surface and configure it as a source.  
   
-4.  Open the **Script Transformation Editor**. On the **Inputs and Outputs** page, rename the default output with a more descriptive name such as **MyAddressOutput**. Add and configure the two output columns, **AddressID** and **City**.  
+4. Open the **Script Transformation Editor**. On the **Inputs and Outputs** page, rename the default output with a more descriptive name such as **MyAddressOutput**. Add and configure the two output columns, **AddressID** and **City**.  
   
-5.  On the **Connection Managers** page, add or create the Flat File connection manager, using a descriptive name such as **MyFlatFileSrcConnectionManager**.  
+5. On the **Connection Managers** page, add or create the Flat File connection manager, using a descriptive name such as **MyFlatFileSrcConnectionManager**.  
   
-6.  On the **Script** page, click **Edit Script** and enter the script that follows. Then close the script development environment and the **Script Transformation Editor**.  
+6. On the **Script** page, click **Edit Script** and enter the script that follows. Then close the script development environment and the **Script Transformation Editor**.  
   
-7.  Create and configure a destination component, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect the source component to the destination. (You can connect a source directly to a destination without any transformations.) You can create a destination table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command in the **AdventureWorks** database:  
+7. Create and configure a destination component, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect the source component to the destination. (You can connect a source directly to a destination without any transformations.) You can create a destination table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command in the **AdventureWorks** database:  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
   
-8.  Run the sample.  
+8. Run the sample.  
   
     ```vb  
     Imports System.IO  
@@ -381,7 +381,6 @@ dev_langs:
     }  
     ```  
   
-## See Also  
+## Related content  
  [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [Developing a Custom Source Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
-  

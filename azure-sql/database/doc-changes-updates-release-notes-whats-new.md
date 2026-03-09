@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 01/29/2026
+ms.date: 03/02/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -48,6 +48,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | **Elastic transactions** | [Elastic transactions](elastic-transactions-overview.md) allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
 | **Fixed server roles** | To simplify permission management, Azure SQL Database provides a set of [fixed server-level roles](security-server-roles.md) to help you manage the permissions on a logical server. | 
 | **Immutable LTR backups** | You can [configure long-term retention backups of Azure SQL Database as immutable](backup-immutability.md) with legal hold immutability (preview feature). Time-based backup immutability is generally available.| 
+| **Import and export using managed identity** | You can [import or export an Azure SQL Database BACPAC file with managed identity authentication](database-import-export-managed-identity.md). Use managed identity authentication for enhanced security when importing or exporting databases. |
 | **Import and export using Private Link** | You can [import or export an Azure SQL Database using private link](database-import-export-private-link.md). Leave *Allow Access to Azure Services* off when you import or export a database using a service-managed endpoint. |
 | **Microsoft Entra server principals** | The ability to [create server principals (logins) for Microsoft Entra identities](authentication-azure-ad-logins.md) in Azure SQL Database is in preview. |
 | **Multiple geo-replicas for Hyperscale** | The ability to create up to four geo-replicas for Azure SQL Hyperscale is in preview.  Learn more about [multiple geo-replicas for Hyperscale](https://aka.ms/sqlhs-multi-geo-announcement). |
@@ -78,23 +79,17 @@ The following table lists features of Azure SQL Database that have been made gen
 | **JSON aggregate functions** | May 2025 | Two [**json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG`](/sql/relational-databases/json/json-data-sql-server?view=azuresqldb-current&preserve-view=true#json-data-from-aggregates) enable construction of JSON objects or arrays based on an aggregate from SQL data. |
 | **Copilot in Microsoft Azure with SQL Database** | April 2025 | [Copilot in Azure with Azure SQL Database](../copilot/copilot-azure-sql-overview.md) is a [capability](/azure/copilot/capabilities#perform-tasks) of the [Microsoft Copilot in Azure](/azure/copilot/overview) experience that enhances the management and operation of Azure services, providing robust capabilities for SQL-dependent applications. |
 | **Manually initiate cutover for conversion to Hyperscale** | April 2025 | When converting an Azure SQL Database to the Hyperscale service tier, you have a new [option to manually initiate the cutover](https://aka.ms/hs-conversion-v2-ga). For more information, see [Convert an existing database to Hyperscale](convert-to-hyperscale.md). |
-| **Availability metric**| February 2025 | Availability is presented as a metric in the Azure Monitor metrics. Driven by a variety of user connection failures, you can [monitor and configure alerts on Azure SQL Database Availability](monitoring-metrics-alerts.md#availability-metric). For more information, see [Blog: Availability metric is now generally available](https://techcommunity.microsoft.com/blog/azuresqlblog/availability-metric-for-azure-sql-db-is-now-generally-available/4379174).|
-| **sys.dm_database_backups** | February 2025 | The [sys.dm_database_backups](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-backups-azure-sql-database?view=azuresqldb-current&preserve-view=true) DMV returns information about the [automated backups of a database](automated-backups-overview.md). |
-| **Free Azure SQL Database** | January 2025 | Use [Azure SQL Database for free](free-offer.md), for the life of your subscription. This free offer provides up to ten free General Purpose databases, each with 100,000 vCore seconds of compute, every month. For more information, see [Blog: General availability of Azure SQL Database free offer](https://aka.ms/azuresqlfreedb).|
-| **Hyperscale support for database and file shrink**  | January 2025 | [Database and file shrink commands](file-space-manage.md) are now generally available for Azure SQL Database Hyperscale. For more information, see the [Shrink in Hyperscale Generally Available blog post](https://aka.ms/hs-shrink-ga).|
-| **Fabric mirrored databases** | November 2024 | With [Fabric Mirroring](/fabric/database/mirrored-database/overview), you can [mirror databases in Azure SQL Database to Microsoft Fabric](/fabric/database/mirrored-database/overview). You can continuously replicate your existing data estate directly into Fabric's OneLake, including data from Azure SQL Database.|
-| **Microsoft Entra nonunique name support** | November 2024 | The [CREATE USER](/sql/t-sql/statements/create-user-transact-sql?view=azuresqldb-current&preserve-view=true) Transact-SQL (T-SQL) syntax has been extended to include `WITH OBJECT_ID` to [support creating Microsoft Entra logins and users in Azure SQL Database](authentication-microsoft-entra-create-users-with-nonunique-names.md) that have nonunique names. |
-| **Lower auto-pause delay for serverless** |October 2024| Reduce costs by lowering the [auto-pause delay for serverless compute in Azure SQL Database](https://aka.ms/AAs7lpz). Learn more about the [auto-pause delay for serverless](serverless-tier-overview.md).|
-| **Hyperscale elastic pools** | September 2024 | Manage and scale multiple Hyperscale databases in Azure SQL Database by using [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md). Hyperscale elastic pools also support Premium-series hardware and zone redundancy. For more information, see [Hyperscale Elastic Pools are now generally available](https://aka.ms/hsep-ga). |
-| **Hyperscale elastic pool maintenance window support** | September 2024 |You can configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
-| **CURRENT_DATE** | August 2024 |  The [CURRENT_DATE Transact-SQL (T-SQL) function](/sql/t-sql/functions/current-date-transact-sql?view=azuresqldb-current&preserve-view=true) returns the current database system date as a date value, without the database time and time zone offset. |
-| **Maintenance window support for named replicas** |August 2024|[Maintenance window](maintenance-window.md) support for named replicas is now generally available. For more information, see [General Availability: Maintenance window support for Azure SQL Database Hyperscale named replica](https://aka.ms/MWsupportforNR).|
-| **Maintenance window support for Hyperscale** | August 2024| [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
-| **Automatic backups on secondary replicas** | August 2024 | Mitigate the performance impact on your workload by taking [automated backups from the non-readable secondary replica](automated-backups-overview.md#automatic-backups-on-secondary-replicas) in the Business Critical service tier. |
+
 
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### March 2026
+
+| Changes | Details |
+| --- | --- |
+| **Import and export using managed identity preview** | You can [import or export an Azure SQL Database BACPAC file with managed identity authentication](database-import-export-managed-identity.md). Use managed identity authentication for enhanced security when importing or exporting databases. This capability is currently in preview for Azure SQL Database. |
 
 ### January 2026
 
@@ -102,92 +97,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | --- | --- |
 | **Multiple secondaries for failover groups** | You can [configure multiple secondary servers for failover groups](failover-group-sql-db.md#multiple-secondaries) in Azure SQL Database. |
 
-### November 2025
 
-| Changes | Details |
-| --- | --- |
-| **Regular expression functions preview** | Regular expression (REGEX) functions return text based on values in a search pattern.  Regular expression (REGEX) functions are now generally available for Azure SQL Database. For more information, see [Regular expressions](/sql/relational-databases/regular-expressions/overview) or [General Availability Announcement: Regex Support in SQL Server 2025 & Azure SQL](https://devblogs.microsoft.com/azure-sql/general-availability-announcement-regex-support-in-sql-server-2025-azure-sql/). |
-| **Change event streaming preview** | Capture and publish incremental DML changes of data (such as updates, inserts, and deletes) in near real-time. Change event streaming sends details of data changes such as the schema, previous values, and new values to Azure Event Hubs in a simple CloudEvent, serialized as either native JSON or Avro Binary. This feature is now in preview. To learn more, review [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview). |
-
-### October 2025
-
-| Changes | Details |
-| --- | --- |
-| **Convert to Hyperscale with geo-replicas** | The ability to [convert a geo-replicated database non-Hyperscale database to Hyperscale](convert-to-hyperscale.md) using T-SQL, REST API, PowerShell, or Azure CLI is now generally available. For more information, see [Blog: Hyperscale conversion support for geo-replicas](https://aka.ms/hs-conversion-geodr-ga). |
-| **Restart database in the Azure portal (preview)** | You can [restart your SQL database or elastic pool](restart-database.md) from the Azure portal. |
-| **Multiple geo-replicas for Hyperscale** | The ability to create up to four geo-replicas for Azure SQL Hyperscale is in preview.  Learn more about [multiple geo-replicas for Hyperscale](https://aka.ms/sqlhs-multi-geo-announcement). |
-
-### September 2025
-
-| Changes | Details |
-| --- | --- |
-| **Immutable LTR backups** | You can [configure long-term retention backups of Azure SQL Database as immutable](backup-immutability.md), a feature currently in preview.|
-| **New Azure SQL hub** | Choosing the right Azure SQL service can be challenging. To make this easier, we built the [Azure SQL hub at aka.ms/azuresqlhub](https://aka.ms/azuresqlhub), a new home for everything related to Azure SQL in the Azure portal. For more information, read the blog post [Introducing the Azure SQL hub: A simpler, guided entry into Azure SQL](https://aka.ms/azuresqlhubblog). | 
-
-### August 2025
-
-| Changes | Details |
-| --- | --- |
-| **sys.dm_hs_database_replicas** | You can query the details of Azure SQL Database Hyperscale replicas with the new dynamic management view (DMV) [sys.dm_hs_database_replicas](/sql/relational-databases/system-functions/sys-dm-hs-database-replicas).|
-
-
-### July 2025
-
-| Changes | Details |
-| --- | --- |
-| **UNISTR** | Azure SQL Database now supports the `UNISTR`. This syntax is now generally available. For more information, see [UNISTR (Transact-SQL)](/sql/t-sql/functions/unistr-transact-sql). |
-| **\| \| and \| \| = string concatenation support** | Azure SQL Database now supports \| \| and \| \| = compound assignment T-SQL syntax. This syntax is now generally available. For more information, see [&#124;&#124; (String concatenation)](/sql/t-sql/language-elements/string-concatenation-pipes-transact-sql) and [&#124;&#124;= (Compound assignment)](/sql/t-sql/language-elements/compound-assignment-pipes-transact-sql). |
-| **Degrees of Parallelism (DOP) feedback** | [DOP Feedback](/sql/relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback?view=azuresqldb-current&preserve-view=true) is now generally available for Azure SQL Database. For more information, see [Smarter Parallelism: Degree of parallelism feedback in SQL Server 2025](https://techcommunity.microsoft.com/blog/sqlserver/smarter-parallelism-degree-of-parallelism-feedback-in-sql-server-2025/4431318). |
-| **Convert to Hyperscale with geo-replicas (preview)** |The ability to [convert a geo-replicated database non-Hyperscale database to Hyperscale](convert-to-hyperscale.md) using T-SQL, REST API, PowerShell, or Azure CLI is currently a preview feature. For more information, see [Blog: Hyperscale conversion support for geo-replicas](https://aka.ms/hs-conversion-geodr-preview). |
-| **Audit re-architecture GA** | Enhancements to performance, availability, and reliability in server auditing for Azure SQL Database. For more information, see [Auditing](auditing-overview.md#enhancements-to-performance-availability-and-reliability-in-server-auditing-for-azure-sql-database-july-2025-ga). |
-| **TLS 1.0 and 1.1 retirement FAQ** | Azure has announced that support for older TLS versions (TLS 1.0, and 1.1) ends August 31, 2025. For more information, see [TLS 1.0 and 1.1 deprecation frequently asked questions](connectivity-settings.md#upcoming-tls-10-and-11-retirement-changes-faq). Starting August 2025, versions below TLS 1.2 won't be available. |
-
-### June 2025
-
-| Changes | Details |
-| --- | --- |
-| **Data Virtualization for Azure SQL Database (preview)** |Data virtualization, now in preview in Azure SQL Database, enables you to leverage all the power of Transact-SQL (T-SQL) and seamlessly query external data from Azure Data Lake Storage Gen2 or Azure Blob Storage. For more information, see [Data virtualization with Azure SQL Database (Preview)](data-virtualization-overview.md).|
-
-### May 2025
-
-| Changes | Details |
-| --- | --- |
-| **Hyperscale increased log generation rate** | The transaction log generation rate in Azure SQL Database Hyperscale single databases has been increased from 100 MiB/s to 150 MiB/s for premium-series and premium-series memory optimized hardware. For more information, read [Blog: Enhancements to Azure SQL Database Hyperscale](https://aka.ms/HSenhancements).|
-| **Hyperscale continuous priming** | [Continuous priming](service-tier-hyperscale.md#continuous-priming) optimizes Hyperscale performance during failovers by priming high availability secondary compute replicas. Continuous priming is now generally available. For more information, read [Blog: Enhancements to Azure SQL Database Hyperscale](https://aka.ms/HSenhancements).|
-| **JSON native data type GA** | The [**json** data type and JSON aggregate functions](/sql/t-sql/data-types/json-data-type?view=azuresqldb-current&preserve-view=true) provide new capabilities for handling semistructured data in Azure SQL Database. This data type is now generally available. |
-| **JSON aggregate functions GA** | Two [**json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG`](/sql/relational-databases/json/json-data-sql-server?view=azuresqldb-current&preserve-view=true#json-data-from-aggregates) enable construction of JSON objects or arrays based on an aggregate from SQL data. These JSON functions are now generally available. |
-
-### April 2025
-
-| Changes | Details |
-| --- | --- |
-| **Manually initiate cutover for conversion to Hyperscale** | When converting an Azure SQL Database to the Hyperscale service tier, [you have a new option to manually initiate the cutover](https://aka.ms/hs-conversion-v2-ga). For more information, see [Convert an existing database to Hyperscale](convert-to-hyperscale.md). This feature is currently in preview.|
-
-### March 2025
-
-| Changes | Details |
-| --- | --- |
-| **ABORT_QUERY_EXECUTION** | The new `ABORT_QUERY_EXECUTION` [query hint](/sql/t-sql/queries/hints-transact-sql-query?view=azuresqldb-current&preserve-view=true#use_hint_abort_query_execution), currently in preview, can block future execution of known problematic queries, for example nonessential queries causing high resource consumption and impacting critical application workloads. For more information, see [Query Store hints: Block future execution of problematic queries](/sql/relational-databases/performance/query-store-hints-best-practices?view=azuresqldb-current&preserve-view=true#block-future-execution-of-problematic-queries).|
-
-### February 2025
-
-| Changes | Details |
-| --- | --- |
-| **Approximate or fuzzy string matching (preview)**| Check if two strings are similar, and calculate the difference between two strings. Use this capability to identify strings that might be different because of character corruption. [What is fuzzy string matching?](/sql/relational-databases/fuzzy-string-match/overview)|
-| **DATEADD number allows bigint (preview)** | For `DATEADD (datepart, number, date)`, number can be expressed as a **bigint**. For more information, see [DATEADD (Transact-SQL)](/sql/t-sql/functions/dateadd-transact-sql).|
-| **Regular expression functions (preview)** | Regular expression (REGEX) functions return text based on values in a search pattern. For more information, see [Regular expressions](/sql/relational-databases/regular-expressions/overview). |
-| **Availability metric**| Availability is presented as a metric in the Azure Monitor metrics. Driven by a variety of user connection failures, you can [monitor and configure alerts on Azure SQL Database Availability](monitoring-metrics-alerts.md#availability-metric). For more information, see [Blog: Availability metric is now generally available](https://techcommunity.microsoft.com/blog/azuresqlblog/availability-metric-for-azure-sql-db-is-now-generally-available/4379174).|
-| **sys.dm_database_backups** | The [sys.dm_database_backups](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-backups-azure-sql-database?view=azuresqldb-current&preserve-view=true) dynamic management view returns information about the [automated backups of a database](automated-backups-overview.md). This DMV is now generally available. | 
-| **Manually initiate cutover for conversion to Hyperscale** | When converting an Azure SQL Database to the Hyperscale service tier, [you have a new option to manually initiate the cutover](https://aka.ms/hs-conversion-v2-preview). For more information, see [Convert an existing database to Hyperscale](convert-to-hyperscale.md). This feature is currently in preview.|
-| **Import bacpac file size increase** | The limit for an imported bacpac file size has been increased from 4 GB to 150 GB. For more information on importing a bacpac file generated from SqlPackage, see [Quickstart: Import a bacpac file to a database in Azure SQL Database](database-import.md).|
-
-### January 2025
-
-| Changes | Details |
-| --- | --- |
-| **Free Azure SQL Database** | Use [Azure SQL Database for free](free-offer.md), for the life of your subscription. This free offer provides up to 10 free General Purpose databases, each with 100,000 vCore seconds of compute, every month. For more information, see [Blog: General availability of Azure SQL Database free offer](https://aka.ms/azuresqlfreedb).|
-| **Hyperscale support for database and file shrink** | [Database and file shrink commands](file-space-manage.md)  are now generally available for Azure SQL Database Hyperscale. For more information, see the [Shrink in Hyperscale Generally Available blog post](https://aka.ms/hs-shrink-ga).|
-| **SQL Insights retired** | [SQL Insights has been retired](https://azure.microsoft.com/updates/?id=sql-insights-retirement) and is no longer available. Use [database watcher](../database-watcher-overview.md) or another monitoring solution to monitor Azure SQL Database. |
 
 ## Archive
 

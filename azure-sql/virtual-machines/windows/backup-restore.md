@@ -70,6 +70,24 @@ For more information on how to configure Automated Backup for SQL VMs, see one o
 
 This Azure Backup solution for SQL VMs is generally available. For more information, see [Back up SQL Server database to Azure](/azure/backup/backup-azure-sql-database).
 
+To use Azure backup, you must first make sure Automated backup is disabled.
+
+### Disable Azure Backup
+
+To disable Azure Backups, you have to delete the associated vault. To delete the vault, follow these steps: 
+
+1. Go to [Recovery Services vaults in the Azure portal](https://portal.azure.com/#browse/Microsoft.RecoveryServices%2Fvaults) and select the vault that contains your SQL Server Azure Backups. 
+1. Under **Protected items** select **Backup items**.
+1. On the **Backup items** page, select the **SQL Database in Azure VM** backup management type. 
+1. Select the ellipses (...) next to each database, and then select **Stop backup** to go to the **Stop backup** page.
+1. On the **Stop backup** page, select **Delete backup data** and then select **OK** to disable Azure Backup and delete the backup data for that database.
+1. Go back to the vault, and under **Manage**, select **Backup Infrastructure**.
+1. On the **Overview** blade of the **Backup Infrastructure** page, select **Workload in Azure VM**.
+1. On the **Protected Servers (Workload in Azure VM)** page, select the ellipses (...) next to the SQL Server VM, and then select **Unregister** to remove the SQL Server VM from Azure Backup protection.
+1. Go back to the vault, and then use **Delete** to delete the vault. 
+1. After the vault is deleted, Azure Backup is disabled for your [SQL virtual machine resource](manage-sql-vm-portal.md#backups)
+
+
 <a id="manual"></a>
 
 ## Manual backup

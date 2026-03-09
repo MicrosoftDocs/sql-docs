@@ -213,9 +213,9 @@ You can query XML schemas that you have loaded into XML schema collections in th
 
 - Create a table that contains an **xml** data type column to store your XML schemas and also load them into the XML type system. You can query the XML column by using the **xml** data type methods. Also, you can build an XML index on this column. However, with this approach, the application must maintain consistency between the XML schemas stored in the XML column and the XML type system. For example, if you drop the XML schema namespace from the XML type system, you also have to drop it from the table in order to preserve consistency.
 
-## See also
+## Related content
 
 - [View a Stored XML Schema Collection](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)
 - [Preprocess a Schema to Merge Included Schemas](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)
 - [Requirements and Limitations for XML Schema Collections on the Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)
-
+- [XML schema collections in SQL projects](../../tools/sql-database-projects/concepts/xml-schema-collection.md)

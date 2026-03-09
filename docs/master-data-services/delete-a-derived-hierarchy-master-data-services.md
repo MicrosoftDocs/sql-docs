@@ -1,17 +1,18 @@
 ---
 title: Delete a Derived Hierarchy
-description: "Delete a Derived Hierarchy (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Delete a Derived Hierarchy (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "deleting derived hierarchies [Master Data Services]"
   - "derived hierarchies, deleting"
-ms.custom:
-  - build-2025
 ---
 # Delete a Derived Hierarchy (Master Data Services)
 
@@ -47,6 +48,4 @@ ms.custom:
   
 ## See Also  
  [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
-  
-  
+ [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)

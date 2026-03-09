@@ -1,6 +1,6 @@
 ---
-author: mumian
-ms.author: jgao
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 02/26/2020
 ms.service: azure-resource-manager
 ms.topic: include

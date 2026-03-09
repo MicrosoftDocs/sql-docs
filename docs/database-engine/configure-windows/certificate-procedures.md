@@ -1,8 +1,8 @@
 ---
 title: Certificate Procedures
 description: Learn to export SQL Server certificate and add a private certification authority to the trusted Root Certification Authorities certificate store.
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 08/26/2025
 ms.service: sql

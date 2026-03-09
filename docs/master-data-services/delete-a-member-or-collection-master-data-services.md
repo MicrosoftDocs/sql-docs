@@ -1,20 +1,21 @@
 ---
 title: Delete a Member or Collection
-description: "Delete a Member or Collection (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Delete a Member or Collection (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "collections [Master Data Services], deleting"
   - "leaf members [Master Data Services], deleting"
   - "deleting members [Master Data Services]"
   - "members [Master Data Services], deleting"
   - "consolidated members [Master Data Services], deleting"
-ms.custom:
-  - build-2025
 ---
 # Delete a Member or Collection (Master Data Services)
 
@@ -63,6 +64,4 @@ ms.custom:
 ## See Also  
  [Reactivate a Member or Collection &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
-  
-  
+ [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)

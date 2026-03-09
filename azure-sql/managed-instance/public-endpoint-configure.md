@@ -169,7 +169,7 @@ Use the Azure portal to allow public traffic within the network security group. 
    |**Destination port ranges**     |3342         |Scope destination port to 3342, which is the SQL managed instance public TDS endpoint |
    |**Protocol**     |TCP         |SQL Managed Instance uses TCP protocol for TDS |
    |**Action**     |Allow         |Allow inbound traffic to SQL managed instance through the public endpoint |
-   |**Priority**     |1300         |Make sure this rule is higher priority than the **deny_all_inbound** rule |
+   |**Priority**     |1300         |Make sure this rule has a lower priority number than the **deny_all_inbound** rule (lower numbers = higher priority, for example, 1300 is higher priority than 2000) |
 
    :::image type="content" source="./media/public-endpoint-configure/mi-nsg-rules.png" alt-text="Screenshot shows the Inbound security rules with your new public_endpoint_inbound rule above the deny_all_inbound rule.":::
 

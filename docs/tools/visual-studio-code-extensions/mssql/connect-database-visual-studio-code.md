@@ -1,10 +1,10 @@
 ---
 title: "Quickstart: Connect to and Query a Database with the MSSQL Extension for Visual Studio Code"
 description: Learn how to connect to a database using the MSSQL extension for Visual Studio Code, and execute Transact-SQL (T-SQL) statements to interact with your database.
-author: croblesm
-ms.author: roblescarlos
-ms.reviewer: maghan, randolphwest
-ms.date: 01/19/2026
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: roblescarlos
+ms.date: 02/21/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: quickstart
@@ -120,10 +120,10 @@ Next, insert data into the `Authors` table.
    ```sql
    INSERT INTO dbo.Authors (first_name, middle_name, last_name)
    VALUES ('Isaac', 'Yudovick', 'Asimov'),
-       ('Arthur', 'Charles', 'Clarke'),
-       ('Herbert', 'George', 'Wells'),
-       ('Jules', 'Gabriel', 'Verne'),
-       ('Philip', 'Kindred', 'Dick');
+          ('Arthur', 'Charles', 'Clarke'),
+          ('Herbert', 'George', 'Wells'),
+          ('Jules', 'Gabriel', 'Verne'),
+          ('Philip', 'Kindred', 'Dick');
    ```
 
 The sample data is added to the `Authors` table.
@@ -142,6 +142,7 @@ This query returns all records in the `Authors` table, showing the data you inse
 ## Related content
 
 - [What is the MSSQL extension for Visual Studio Code?](mssql-extension-visual-studio-code.md)
+- [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)
 - [Tutorial: Write Transact-SQL statements](../../../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Learn more about contributing to the mssql extension](https://github.com/Microsoft/vscode-mssql/wiki)
-- [What is the local development experience for Azure SQL Database?](/azure/azure-sql/database/local-dev-experience-overview)
+- [Visual Studio Code documentation](https://code.visualstudio.com/docs)
+- [MSSQL extension for Visual Studio Code repository on GitHub](https://github.com/Microsoft/vscode-mssql)

@@ -1,16 +1,17 @@
 ---
 title: Change an Explicit Hierarchy Name
-description: "Change an Explicit Hierarchy Name (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Change an Explicit Hierarchy Name (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
-helpviewer_keywords:
-  - "explicit hierarchies, changing name"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "explicit hierarchies, changing name"
 ---
 # Change an Explicit Hierarchy Name (Master Data Services)
 
@@ -46,6 +47,4 @@ ms.custom:
 ## See Also  
  [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Create an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Delete an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
-  
-  
+ [Delete an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)

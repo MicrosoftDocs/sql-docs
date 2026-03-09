@@ -190,6 +190,7 @@ If out of memory errors persist in Azure SQL Database, file an Azure support req
 - [Performance Center for SQL Server Database Engine and Azure SQL Database](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)
 - [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-common-errors-issues.md)
 - [Troubleshoot transient connection errors in SQL Database and SQL Managed Instance](troubleshoot-common-connectivity-issues.md)
+- [Troubleshoot transaction log errors](troubleshoot-transaction-log-errors-issues.md)
 - [Demonstrating Intelligent Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)
 - [Resource management in Azure SQL Database](resource-limits-logical-server.md#memory)
 - [Blog: A new way to troubleshoot out-of-memory errors in the database engine](https://techcommunity.microsoft.com/t5/azure-sql-blog/a-new-way-to-troubleshoot-out-of-memory-errors-in-the-database/ba-p/3271926)

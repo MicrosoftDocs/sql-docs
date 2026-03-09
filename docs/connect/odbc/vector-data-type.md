@@ -289,8 +289,8 @@ Use `SQLBindParameter` to send vector values to SQL Server.
 ```
 
 - `ParameterValuePtr`: points to a populated `SQL_SS_VECTOR_STRUCT`
-- `ColumnSize`: ignored for vector data
-- `DecimalDigits`: ignored for vector data
+- `ColumnSize`: ignored for input parameters. For output parameters and data-at-execution scenarios, specify the total vector size: `sizeof(SQL_SS_VECTOR_STRUCT)` + (**float** array size)
+- `DecimalDigits`: ignored for input parameters. For output parameters and data-at-execution scenarios, specify the vector base type
 - `BufferLength`: ≥ `sizeof(SQL_SS_VECTOR_STRUCT)` + (dimension * `sizeof(float)`)
 - `*StrLen_or_IndPtr`: must contain the same total size
 

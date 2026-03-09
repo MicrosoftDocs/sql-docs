@@ -1,10 +1,10 @@
 ---
 title: Schema Designer in Visual Studio Code with MSSQL
 description: Learn how to use the schema designer in Visual Studio Code with MSSQL to visualize existing schemas, and design and manage databases directly, without needing to write Transact-SQL statements.
-author: yoleichen
-ms.author: yoleichen
-ms.reviewer: roblescarlos, randolphwest
-ms.date: 01/19/2026
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: yoleichen, roblescarlos
+ms.date: 02/21/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -34,7 +34,7 @@ Schema designer offers these features:
 
 Right-click on the database in the object explorer and select **Design Schema** from the menu. This action opens the schema designer view, which then allows you to see the visual database diagram.
 
-:::image type="content" source="media/mssql-schema-designer/schema-designer-entry-point.png" alt-text="Screenshot of the entry point to open the schema designer in Visual Studio Code MSSQL extension." lightbox="media/mssql-schema-designer/schema-designer-entry-point.png":::
+:::image type="content" source="media/mssql-schema-designer/schema-designer-entry-point.png" alt-text="Screenshot of the entry point to open the schema designer in Visual Studio Code MSSQL extension.":::
 
 Once inside the schema designer, you find a canvas with various navigation capabilities. Here's how to get around:
 
@@ -108,10 +108,15 @@ When you finish editing tables or relationships, select **Publish Changes** in t
 
 Review the report carefully. Check the confirmation box to acknowledge and accept any potential risks associated with applying the changes. This process is managed by DacFX (Data-tier Application Framework), which ensures your schema updates are deployed smoothly, reliably, and with minimal disruption to your database.
 
+## Feedback and support
+
+[!INCLUDE [feedback](../includes/feedback.md)]
+
 ## Related content
 
 - [Quickstart: Connect to and query a database with the MSSQL extension for Visual Studio Code](connect-database-visual-studio-code.md)
 - [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)
 - [Schema Compare](mssql-schema-compare.md)
-- [Learn more about Visual Studio Code](https://code.visualstudio.com/docs)
-- [Learn more about contributing to the MSSQL extension](https://github.com/Microsoft/vscode-mssql/wiki)
+- [Data-tier Application (Preview)](mssql-data-tier-application.md)
+- [Visual Studio Code documentation](https://code.visualstudio.com/docs)
+- [MSSQL extension for Visual Studio Code repository on GitHub](https://github.com/Microsoft/vscode-mssql)

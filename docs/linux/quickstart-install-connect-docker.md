@@ -1534,7 +1534,6 @@ Other common tools to connect to [!INCLUDE [ssnoversion-md](../includes/ssnovers
 
 - [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)
 - [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-- [mssql-cli (Preview)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 - [PowerShell](sql-server-linux-manage-powershell-core.md)
 
 ## Remove your container

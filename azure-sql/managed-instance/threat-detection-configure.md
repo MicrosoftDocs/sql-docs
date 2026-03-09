@@ -2,8 +2,8 @@
 title: Configure Advanced Threat Protection
 titleSuffix: Azure SQL Managed Instance
 description: Advanced Threat Protection detects anomalous database activities indicating potential security threats to the database in Azure SQL Managed Instance.
-author: rmatchoro
-ms.author: ronmat
+author: MashaMSFT
+ms.author: mathoma
 ms.reviewer: vanto, mathoma
 ms.date: 12/01/2020
 ms.service: azure-sql-managed-instance

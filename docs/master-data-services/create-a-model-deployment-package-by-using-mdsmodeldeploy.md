@@ -1,9 +1,10 @@
 ---
 title: Create a Model Deployment Package (MDSModelDeploy)
 description: Use MDSModelDeploy to create a deployment package in Master Data Services. A package can contain either model objects only or model objects and data.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -95,6 +96,4 @@ ms.custom:
   
 ## See Also  
  [Model Deployment Options &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
- [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
-  
-  
+ [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)

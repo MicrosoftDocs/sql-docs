@@ -1,12 +1,13 @@
 ---
 title: Create Master Data Manager Web Service Proxy Classes
-description: "Create Master Data Manager Web Service Proxy Classes"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/17/2017"
+description: Create Master Data Manager Web Service Proxy Classes
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
-ms.topic: "reference"
+ms.topic: reference
 ms.custom:
   - build-2025
 ---
@@ -57,5 +58,4 @@ svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc
 -   *proxy_name* is the name for the generated proxy file.  
   
 ## See Also  
- [Categorized Web Service Operations &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
-  
+ [Categorized Web Service Operations &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)

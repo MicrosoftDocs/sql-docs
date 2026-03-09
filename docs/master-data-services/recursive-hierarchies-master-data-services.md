@@ -1,17 +1,18 @@
 ---
 title: Recursive Hierarchies
 description: In Master Data Services, a recursive hierarchy includes a recursive relationship, which exists when an entity has a domain-based attribute based on the entity.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "recursive hierarchies [Master Data Services]"
   - "hierarchies [Master Data Services], recursive hierarchies"
-ms.custom:
-  - build-2025
 ---
 # Recursive Hierarchies (Master Data Services)
 
@@ -60,6 +61,4 @@ ms.custom:
   
 -   [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
-  
-  
+-   [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)

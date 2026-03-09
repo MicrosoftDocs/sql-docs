@@ -1,17 +1,18 @@
 ---
 title: Business Rules
 description: Learn about business rules in Master Data Services, which can update data, send email, or start a business process or workflow.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/18/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "business rules [Master Data Services], about business rules"
   - "business rules [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Business Rules (Master Data Services)
 
@@ -90,6 +91,4 @@ ms.custom:
   
 -   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Change Tracking &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
-  
-  
+-   [Change Tracking &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)

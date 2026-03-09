@@ -1,16 +1,17 @@
 ---
 title: Change Tracking
-description: "Change Tracking (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/15/2017"
+description: Change Tracking (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
-helpviewer_keywords:
-  - "change tracking [SQL Server]"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "change tracking [SQL Server]"
 ---
 # Change Tracking (Master Data Services)
 
@@ -39,6 +40,4 @@ ms.custom:
   
 -   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
-  
-  
+-   [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)

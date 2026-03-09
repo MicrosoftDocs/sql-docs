@@ -4,7 +4,7 @@ description: This page discusses what was changed in each version of the Microso
 author: David-Engel
 ms.author: davidengel
 ms.reviewer: v-davidengel
-ms.date: 01/31/2024
+ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -16,27 +16,46 @@ helpviewer_keywords:
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
+## 5.13.0
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2353424)**  
+[GitHub Release Tag v5.13.0 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.13.0)
+
+- Release number: 5.13.0
+- Released: February 27, 2026
+
+### What's new in 5.13.0
+
+| New item | Details |
+| :------- | :------ |
+| Added support for PHP 8.4 and 8.5. | &nbsp; |
+| Added support for new OS versions. | Windows Server 2025, Ubuntu 24.04, Debian 11, Debian 12, Debian 13, Red Hat 9, Red Hat 10, Alpine Linux 3.20, Alpine Linux 3.21, Alpine Linux 3.22, Alpine Linux 3.23, macOS 15, and macOS 26 |
+| Removed support for PHP 8.1 and 8.2. | &nbsp; |
+| Removed support for end-of-life OS versions. | Windows Server 2012, Windows Server 2012, Windows 10, Ubuntu 20.04, Debian 10, Red Hat 7, SUSE Linux 12, Alpine Linux 3.16, Alpine Linux 3.17, Alpine Linux 3.18, Alpine Linux 3.19, macOS 11, macOS 12, and macOS 13. |
+| Fixed static code analysis and memory safety issues. | &nbsp; |
+
+## Previous releases
+
 ## 5.12.0
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2258816)**   
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2258816)**  
 [GitHub Release Tag v5.12.0 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.12.0)
 
 - Release number: 5.12.0
 - Released: January 31, 2024
 
 ### What's new in 5.12.0
+
 | New item | Details |
-| :------- | :------ | 
+| :------- | :------ |
 | Added support for PHP 8.3. | &nbsp; |
 | Removed support for PHP 8.0. | &nbsp; |
 | Removed support for Ubuntu 18.04. | &nbsp; |
 | Fixed invalid precision error for varchar. | &nbsp; |
 
-## Previous releases
-
 ## 5.11.1
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2246325)**   
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2246325)**  
 [GitHub Release Tag v5.11.1 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.1)
 
 - Release number: 5.11.1
@@ -45,12 +64,11 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
 ### What's new in 5.11.1
 
 | New item | Details |
-| :------- | :------ | 
+| :------- | :------ |
 | Reset type after bind param. | &nbsp; |
 | Fixed error when using PDO::ATTR_STRINGIFY_FETCHES. | &nbsp; |
 | Change connection options to case insensitive. | &nbsp; |
 | Bugfix for 1465 Adding a NULL check. | &nbsp; |
-
 
 ## 5.11.0
 
@@ -90,11 +108,11 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
 | Allowed setting PDO::ATTR_EMULATE_PREPARES at the connection level. | &nbsp; |
 | Adjusted connection keyword and value validation for more flexibility. | &nbsp; |
 
-<sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
+<sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute occurs. This warning can be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
 
 ### Known issues
 
-- If string parameters are bound as short string and later reused to bind longer strings, a string truncation error will occur.
+- If string parameters are bound as short string and later reused to bind longer strings, a string truncation error occurs.
 
 ## 5.9
 
@@ -123,15 +141,13 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
 | Improved performance when fetching numbers using client buffers. | &nbsp; |
 | Set query timeout without using LOCK TIMEOUT, which saves an extra trip to the server. | &nbsp; |
 
-<sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
+<sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute occurs. This warning can be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
 
 ## 5.8.1
 
 This release only applies to Linux and macOS.
 
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.1)
-
-### Version information
 
 - Release number: 5.8.1
 - Released: April 15, 2020
@@ -149,8 +165,6 @@ This release only applies to Linux and macOS.
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120362)**  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
 
-### Version information
-
 - Release number: 5.8.0
 - Released: January 31, 2020
 
@@ -163,12 +177,12 @@ This release only applies to Linux and macOS.
 | Added support for Microsoft ODBC Driver 17.5 on all platforms. | &nbsp; |
 | Added support for Debian 10 and Red Hat 8. | Both require ODBC Driver 17.4 or above. |
 | Added support for macOS Catalina, Alpine Linux 3.11<sup>1</sup> and Ubuntu 19.10. | All require ODBC Driver 17.5 or above. |
-| Dropped support for SQL Server 2008 R2, macOS Sierra, Ubuntu 18.10 and Ubuntu 19.04. | &nbsp; |
+| Dropped support for SQL Server 2008 R2, macOS Sierra, Ubuntu 18.10, and Ubuntu 19.04. | &nbsp; |
 | Support for Language option when connecting to SQL Server. | &nbsp; |
 | Support for PHP extended string types introduced in PHP 7.2. | &nbsp; |
 | Support for Data Classification sensitivity metadata retrieval. | Requires SQL Server 2019 and ODBC Driver 17.4.2 or above. |
 | Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.4 or above. |
-| Support configurable options for locale settings in Linux and macOS. |
+| Support configurable options for locale settings in Linux and macOS. | &nbsp; |
 | Improved performance by caching metadata on fetches and omitting redundant calls. | &nbsp; |
 
 <sup>1</sup> Alpine Linux support is experimental for version 5.8.
@@ -178,8 +192,6 @@ This release only applies to Linux and macOS.
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120446)**  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.1)
 
-### Version information
-
 - Release number: 5.6.1
 - Released: March 19, 2019
 
@@ -187,7 +199,7 @@ This release only applies to Linux and macOS.
 
 | New item | Details |
 | :------- | :------ |
-| Bug fix | Fixed assumptions made when calculating field or column metadata which may have resulted in application termination. |
+| Bug fix | Fixed assumptions made when calculating field or column metadata, which can result in application termination. |
 | Bug fix | Modified sqlsrv config file such that it can be compiled independently of pdo_sqlsrv. |
 | Bug fix | Fixed PDOStatement::getColumnMeta() to return false when something goes wrong. |
 
@@ -195,8 +207,6 @@ This release only applies to Linux and macOS.
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120450)**  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
-
-### Version information
 
 - Release number: 5.6.0
 - Released: February 21, 2019
@@ -222,8 +232,6 @@ This release only applies to Linux and macOS.
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120447)**  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 
-### Version information
-
 - Release number: 5.3.0
 - Released: July 20, 2018
 
@@ -231,7 +239,7 @@ This release only applies to Linux and macOS.
 
 - Support for Microsoft ODBC Driver 17.2 on all platforms
 - Support for macOS High Sierra (requires ODBC Driver 17 and above)
-- Support for Azure Key Vault for Always Encrypted for basic CRUD functionalities such that Always Encrypted feature is available to all supported Windows, Linux or macOS platforms [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
+- Support for Azure Key Vault for Always Encrypted for basic CRUD functionalities such that Always Encrypted feature is available to all supported Windows, Linux, or macOS platforms [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
 - Support Ubuntu 18.04 LTS (requires ODBC Driver 17.2)
 - Support for Connection Resiliency in Linux or macOS as well (requires ODBC Driver 17.2)
 
@@ -239,8 +247,6 @@ This release only applies to Linux and macOS.
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120451)**  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
-
-### Version information
 
 - Release number: 5.2.0
 - Released: March 23, 2018
@@ -265,8 +271,6 @@ This release only applies to Linux and macOS.
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120616)**  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
 
-### Version information
-
 - Release number: 4.3.0
 - Released: July 6, 2017
 
@@ -287,8 +291,6 @@ This release only applies to Linux and macOS.
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120448)**  
 [GitHub Release Tag](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
 
-### Version information
-
 - Release number: 4.0
 - Released: July 1, 2016
 
@@ -302,8 +304,6 @@ This release only applies to Linux and macOS.
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120449)**  
 [GitHub Release Tag](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
-
-### Version information
 
 - Release number: 3.2
 - Released: March 9, 2015
@@ -319,8 +319,6 @@ This release only applies to Linux and macOS.
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2143027)**  
 [GitHub Release Tag](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
 
-### Version information
-
 - Release number: 3.1
 - Released: December 12, 2014
 
@@ -335,13 +333,13 @@ This release only applies to Linux and macOS.
 
 ### What's new in 3.0  
 
-- Support for PHP 5.4.  PHP 5.2 is not supported in version 3 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+- Support for PHP 5.4. PHP 5.2 isn't supported in version 3 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - AttachDBFileName connection option is added. For more information, see [Connection Options](connection-options.md).  
 - Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For more information, see [Support for LocalDB](php-driver-for-sql-server-support-for-localdb.md).
 - AttachDBFileName connection option is added. For more information, see [Connection Options](connection-options.md).  
 - Support for the high-availability, disaster recovery features. For more information, see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
 - Support for client-side cursors (caching a result set in-memory). For more information, see [Cursor Types &#40;SQLSRV Driver&#41;](cursor-types-sqlsrv-driver.md) and [Cursor Types &#40;PDO_SQLSRV Driver&#41;](cursor-types-pdo-sqlsrv-driver.md).
-- The PDO::ATTR_EMULATE_PREPARES attribute has been added. For more information, see [PDO::prepare](pdo-prepare.md).  
+- The PDO::ATTR_EMULATE_PREPARES attribute is added. For more information, see [PDO::prepare](pdo-prepare.md).  
 
 ## 2.0
 

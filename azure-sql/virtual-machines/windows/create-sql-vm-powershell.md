@@ -46,7 +46,7 @@ Modify as you want and then run these cmdlets to initialize these variables.
 
 Define the storage account and the type of storage to be used by the virtual machine.
 
-Modify as you want, and then run the following cmdlet to initialize these variables. We recommend using [premium SSDs](/azure/virtual-machines/disks-types#premium-ssds) for production workloads.
+Modify as you want, and then run the following cmdlet to initialize these variables. We recommend using [Premium SSDs](/azure/virtual-machines/disks-types#premium-ssds) for production workloads.
 
 :::code language="powershell" source="~/../azure_powershell_scripts/azure-sql/virtual-machine/create-sql-server-vm.ps1" id="StorageVariables":::
 

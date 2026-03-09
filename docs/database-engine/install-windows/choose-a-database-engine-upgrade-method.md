@@ -3,12 +3,13 @@ title: Choose a Database Engine Upgrade Method
 description: This article describes upgrade paths for the Database Engine in SQL Server, including upgrade in-place, migrate to a new installation, and a rolling upgrade.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/03/2025
+ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: install
 ms.topic: upgrade-and-migration-article
+ms.custom:
+  - sfi-image-nochange
 monikerRange: ">=sql-server-2016"
-ms.custom: sfi-image-nochange
 ---
 # Choose a Database Engine upgrade method
 
@@ -105,6 +106,6 @@ A rolling upgrade is required in [!INCLUDE [ssnoversion-md](../../includes/ssnov
 - Availability Groups: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade availability group replicas](../availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)
 - Failover cluster instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade a failover cluster instance](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)
 - Mirrored instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrading Mirrored Instances](../database-mirroring/upgrading-mirrored-instances.md)
-- Log shipping instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)](../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)
+- Log shipping instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade SQL Server with log shipping (Transact-SQL)](../log-shipping/upgrade-sql-server-log-shipping-transact-sql.md)
 - A replication environment: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade or patch replicated databases](upgrade-replicated-databases.md)
 - A [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] [!INCLUDE [ssrsnoversion-md](../../includes/ssrsnoversion-md.md)] scale-out environment: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade and migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)

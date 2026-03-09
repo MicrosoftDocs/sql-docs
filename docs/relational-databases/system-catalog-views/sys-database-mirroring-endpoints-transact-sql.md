@@ -1,9 +1,9 @@
 ---
 title: "sys.database_mirroring_endpoints (Transact-SQL)"
-description: sys.database_mirroring_endpoints (Transact-SQL)
+description: sys.database_mirroring_endpoints contains one row for the database mirroring endpoint of an instance of SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/14/2017"
+ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -21,18 +21,19 @@ dev_langs:
   - "TSQL"
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contains one row for the database mirroring endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-> [!NOTE]  
->  The database mirroring endpoint supports both sessions between database mirroring partners and with witnesses and sessions between the primary replica of an Always On availability group and its secondary replicas.  
-  
-|Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
-|**\<inherited columns>**|-|Inherits columns from **sys.endpoints** (for more information, see [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**role**|**tinyint**|Mirroring role, one of:<br /><br /> **0** = None<br /><br /> **1** = Partner<br /><br /> **2** = Witness<br /><br /> **3** = All<br /><br /> Note: This value is relevant only for database mirroring.|  
-|**role_desc**|**nvarchar(60)**|Description of mirroring role, one of:<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **WITNESS**<br /><br /> **ALL**<br /><br /> Note: This value is relevant only for database mirroring.|  
+Returns one row for the database mirroring endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+> [!NOTE]
+> The database mirroring endpoint supports both sessions between database mirroring partners and with witnesses and sessions between the primary replica of an Always On availability group and its secondary replicas.
+
+| Column name | Data type | Description |  
+| --- | --- | --- |
+| **\<inherited columns>** | - | Inherits columns from `sys.endpoints` (for more information, see [sys.endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)). |
+| `role` | **tinyint** | Mirroring role, one of:<br /><br />**0** = None<br /><br />**1** = Partner<br /><br />**2** = Witness<br /><br />**3** = All<br /><br />Note: This value is relevant only for database mirroring. |
+| `role_desc` | **nvarchar(60)** | Description of mirroring role, one of:<br /><br />**NONE**<br /><br />**PARTNER**<br /><br />**WITNESS**<br /><br />**ALL**<br /><br />Note: This value is relevant only for database mirroring. |  
 |**is_encryption_enabled**|**bit**|**1** means that encryption is enabled.<br /><br /> **0** means that encryption is disabled.|  
 |**connection_auth**|**tinyint**|The type of connection authentication required for connections to this endpoint, one of:<br /><br /> **1** - NTLM<br /><br /> **2** - KERBEROS<br /><br /> **3** - NEGOTIATE<br /><br /> **4** - CERTIFICATE<br /><br /> **5** - NTLM, CERTIFICATE<br /><br /> **6** - KERBEROS, CERTIFICATE<br /><br /> **7** - NEGOTIATE, CERTIFICATE<br /><br /> **8** - CERTIFICATE, NTLM<br /><br /> **9** - CERTIFICATE, KERBEROS<br /><br /> **10** - CERTIFICATE, NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|Description of the type of authentication required for connections to this endpoint, one of:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
@@ -45,15 +46,19 @@ dev_langs:
 > [!NOTE]  
 >  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and higher, material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
   
-## Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
-  
-## See Also  
- [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
- [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
+## Permissions
+
+[!INCLUDE [ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require VIEW SERVER SECURITY STATE permission on the server.
+
+## Related content
+
+- [Specify the Endpoint URL When Adding or Modifying an Availability Replica (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)
+- [sys.availability_replicas (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)
+- [sys.database_mirroring (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)
+- [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [The Database Mirroring Endpoint (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
+- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
   
   

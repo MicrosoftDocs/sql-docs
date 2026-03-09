@@ -5,7 +5,7 @@ description: Create a new database in Azure SQL Database or Azure SQL Managed In
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, mathoma, drskwier, randolphwest
-ms.date: 01/26/2026
+ms.date: 03/02/2026
 ms.service: azure-sql
 ms.subservice: backup-restore
 ms.topic: quickstart
@@ -58,6 +58,29 @@ Watch this video to see how to import from a BACPAC file in the Azure portal or 
    :::image type="content" source="media/database-import/sql-server-import-database-history.png" alt-text="Screenshot of the Azure portal, server overview page, showing the database import status." lightbox="media/database-import/sql-server-import-database-history.png":::
 
 1. To verify the database is live on the server, select **SQL databases** and verify the new database is **Online**.
+
+## Import with managed identity authentication (preview)
+
+Azure SQL Database supports importing a BACPAC file using [managed identity](/entra/identity/managed-identities-azure-resources/overview) authentication. This option enables fully credential-free import operations and is recommended for environments that disable SQL authentication or enforce Microsoft Entra-only authentication.
+
+You can import a database to a *new database*, or to an *existing empty database*.
+
+For a detailed tutorial, see [Use managed identity with import and export (preview)](database-import-export-managed-identity.md).
+
+To import a BACPAC file using managed identity authentication, the following configuration is required:
+
+- A **user-assigned managed identity (UAMI)** assigned to the [logical server](logical-servers.md) for Azure SQL Database.
+- The server has the managed identity configured as the **Microsoft Entra administrator**.
+- A managed identity is assigned to the **Storage Blob Data Reader** role on the source Azure Storage account. This managed identity can be the same as the one assigned to the server or a different one.
+- The logical server, managed identity, and storage account are in the **same Microsoft Entra tenant**.
+
+The following scenarios are unsupported: 
+
+- Cross-tenant import operations.
+- Managed identity assigned only at the database level.
+
+> [!NOTE]
+> Import with managed identity authentication is currently in [**preview**](doc-changes-updates-release-notes-whats-new.md#preview) and only available for Azure SQL Database.
 
 ## Use SqlPackage
 
@@ -172,7 +195,7 @@ To cancel the import operation, you need to be a member of one of the following 
 
 ## Limitations
 
-- Importing to a database in elastic pool isn't supported through the Azure Portal, Azure PowerShell, or Azure CLI. Instead, create a database in the elastic pool and then use [SQLPackage Import](/sql/tools/sqlpackage/sqlpackage-import), or import data using any method into a single database and then move the database to an elastic pool.
+- Importing to a database in elastic pool isn't supported through the Azure portal, Azure PowerShell, or Azure CLI. Instead, create a database in the elastic pool and then use [SQLPackage Import](/sql/tools/sqlpackage/sqlpackage-import), or import data using any method into a single database and then move the database to an elastic pool.
 - Import Export Service doesn't work when Allow access to Azure services is set to OFF. However, you can work around the problem by manually running SqlPackage from an Azure VM, or performing the export directly in your code by using the DacFx API.
 - Import doesn't support specifying a backup storage redundancy while creating a new database and creates with the default geo-redundant backup storage redundancy. To work around, first create an empty database with desired backup storage redundancy using Azure portal or PowerShell and then import the BACPAC into this empty database.
 - Storage behind a firewall is currently not supported.

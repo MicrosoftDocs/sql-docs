@@ -1,9 +1,10 @@
 ---
-title: Test a User's Permissions
+title: "Test a User's Permissions"
 description: "Test a User's Permissions (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -29,6 +30,4 @@ ms.custom:
 4.  The next time you open the browser window, you will be prompted for a user name and password.  
   
 ## See Also  
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
-  
-  
+ [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)

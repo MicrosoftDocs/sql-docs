@@ -1,9 +1,10 @@
 ---
 title: Filter Operators
-description: "Filter Operators (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/06/2017"
+description: Filter Operators (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -38,5 +39,4 @@ ms.custom:
 |**Contains pattern**|Uses .NET Framework regular expressions to filter results on a specified pattern. For more information about regular expressions, see [Regular Expression Language Elements](/dotnet/standard/base-types/regular-expression-language-quick-reference) in the MSDN Library.|  
 |**Does not contain pattern**|Uses the .NET Framework regular expressions to filter results that do not match a specified pattern. For more information about regular expressions, see [Regular Expression Language Elements](/dotnet/standard/base-types/regular-expression-language-quick-reference) in the MSDN Library.|  
 |**Is NULL**|Returns attribute values that are null. The **Criteria** field disables when you select the **Is NULL** operator.|  
-|**Is not NULL**|Returns attribute values that are not null. The **Criteria** field disables when you select the **Is not NULL** operator.|  
-  
+|**Is not NULL**|Returns attribute values that are not null. The **Criteria** field disables when you select the **Is not NULL** operator.|

@@ -1,17 +1,18 @@
 ---
 title: Hierarchy Member Permissions
-description: "Hierarchy Member Permissions (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Hierarchy Member Permissions (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "members [Master Data Services], permissions"
   - "permissions [Master Data Services], members"
-ms.custom:
-  - build-2025
 ---
 # Hierarchy Member Permissions (Master Data Services)
 
@@ -65,5 +66,4 @@ ms.custom:
  [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
- [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
-  
+ [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)

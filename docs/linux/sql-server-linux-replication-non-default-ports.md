@@ -6,12 +6,12 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 01/21/2025
-ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: linux
 ms.topic: how-to
 ms.custom:
   - linux-related-content
+ai-usage: ai-assisted
 monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
 ---
 # Configure replication with nondefault ports (SQL Server Linux)

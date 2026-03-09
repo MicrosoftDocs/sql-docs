@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_17066"
 description: "MSSQLSERVER_17066"
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mathoma
 ms.date: 02/01/2023
 ms.service: sql

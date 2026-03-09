@@ -1002,8 +1002,8 @@ items:
         href: database-engine/log-shipping/log-shipping-and-replication-sql-server.md
       - name: Tables & Stored Procedures
         href: database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md
-      - name: Upgrading Log Shipping to SQL Server 2016
-        href: database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+      - name: Upgrade SQL Server log shipping
+        href: database-engine/log-shipping/upgrade-sql-server-log-shipping-transact-sql.md
     - name: Reference
       items:
       - name: Transaction Log Backup Settings
@@ -7218,8 +7218,8 @@ items:
         href: relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md
       - name: Thesaurus files
         href: relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md
-      - name: Version 1 filters and word breakers
-        href: relational-databases/search/full-text-index-version-1-binaries.md
+      - name: Filters and word breakers
+        href: relational-databases/search/full-text-index-binaries.md
     - name: Manage & Monitor
       href: relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md
       items:
@@ -8172,8 +8172,6 @@ items:
   - name: Command prompt utilities
     href: tools/command-prompt-utility-reference-database-engine.md
     items:
-    - name: mssql-cli
-      href: tools/mssql-cli.md
     - name: osql
       href: tools/osql-utility.md
     - name: Profiler utility
@@ -8725,6 +8723,8 @@ items:
         href: tools/sql-database-projects/concepts/system-objects.md
       - name: Target platform
         href: tools/sql-database-projects/concepts/target-platform.md
+      - name: XML schema collections
+        href: tools/sql-database-projects/concepts/xml-schema-collection.md
       - name: Data tier applications
         href: tools/sql-database-projects/concepts/data-tier-applications/overview.md
         items:
@@ -8964,25 +8964,21 @@ items:
             - name: Use smart query builder
               href: tools/visual-studio-code-extensions/github-copilot/smart-query-builder.md
         - name: Fabric integration
-          items:
-          - name: Overview
-            href: tools/visual-studio-code-extensions/mssql/mssql-fabric-integration.md
+          href: tools/visual-studio-code-extensions/mssql/mssql-fabric-integration.md
         - name: Local SQL Server container
-          items:
-          - name: Overview
-            href: tools/visual-studio-code-extensions/mssql/mssql-local-container.md
+          href: tools/visual-studio-code-extensions/mssql/mssql-local-container.md
+        - name: Transition from Azure Data Studio
+          href: tools/visual-studio-code-extensions/mssql/mssql-azure-data-studio-transition.md
+        - name: Database operations
+          href: tools/visual-studio-code-extensions/mssql/mssql-database-operations.md
+        - name: Query profiler
+          href: tools/visual-studio-code-extensions/mssql/mssql-query-profiler.md
         - name: Schema compare
-          items:
-          - name: Overview
-            href: tools/visual-studio-code-extensions/mssql/mssql-schema-compare.md
+          href: tools/visual-studio-code-extensions/mssql/mssql-schema-compare.md
         - name: Schema designer
-          items:
-          - name: Overview
-            href: tools/visual-studio-code-extensions/mssql/mssql-schema-designer.md
-        - name: Data-tier Application
-          items:
-          - name: Overview
-            href: tools/visual-studio-code-extensions/mssql/mssql-data-tier-application.md
+          href: tools/visual-studio-code-extensions/mssql/mssql-schema-designer.md
+        - name: Data-tier application
+          href: tools/visual-studio-code-extensions/mssql/mssql-data-tier-application.md
     - name: SQL bindings for Azure Functions
       items:
       - name: Overview

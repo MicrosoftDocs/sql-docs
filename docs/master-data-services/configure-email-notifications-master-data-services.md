@@ -1,17 +1,18 @@
 ---
 title: Configure Email Notifications
-description: "Configure Email Notifications (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/07/2017"
+description: Configure Email Notifications (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "e-mail [Master Data Services], configuring"
   - "notifications [Master Data Services], configuring notifications"
-ms.custom:
-  - build-2025
 ---
 # Configure Email Notifications (Master Data Services)
 

@@ -4,7 +4,7 @@ description: Learn about server audits for the SQL Server Database Engine or an 
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: vanto, randolphwest
-ms.date: 06/11/2025
+ms.date: 02/25/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: concept-article
@@ -51,7 +51,7 @@ The server audit specification collects many server-level action groups raised b
 Server-level audit action groups are described in the article [SQL Server Audit action groups and actions](sql-server-audit-action-groups-and-actions.md).
 
 > [!NOTE]  
-> Due to performance constraints, we don't audit the `tempdb` and temporary tables. While the batch completed action group captures statements against temporary tables, it might not correctly populate the object names. However, the source table is always audited, ensuring that all inserts from the source table to temporary tables are recorded.
+> Due to performance constraints, `tempdb` and temporary tables aren't audited. While the batch completed action group captures statements against temporary tables, it might not correctly populate the object names. However, the source table is always audited, ensuring that all inserts from the source table to temporary tables are recorded.
 
 ### Database Audit Specification
 
@@ -80,7 +80,7 @@ When you're saving audit information to a file, to help prevent tampering, you c
 
 Even when the [!INCLUDE [ssDE](../../../includes/ssde-md.md)] is writing to a file, other Windows users can read the audit file if they have permission. The [!INCLUDE [ssDE](../../../includes/ssde-md.md)] doesn't take an exclusive lock that prevents read operations.
 
-Because the [!INCLUDE [ssDE](../../../includes/ssde-md.md)] can access the file, [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] logins that have `CONTROL SERVER` permission can use the [!INCLUDE [ssDE](../../../includes/ssde-md.md)] to access the audit files. To record any user that is reading the audit file, define an audit on `master.sys.fn_get_audit_file`. This records the logins with `CONTROL SERVER` permission that have accessed the audit file through [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)].
+Because the [!INCLUDE [ssDE](../../../includes/ssde-md.md)] can access the file, [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] logins that have `CONTROL SERVER` permission can use the [!INCLUDE [ssDE](../../../includes/ssde-md.md)] to access the audit files. In [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, the `VIEW SERVER SECURITY AUDIT` permission is sufficient to read audit files using `fn_get_audit_file`. To record any user that is reading the audit file, define an audit on `master.sys.fn_get_audit_file`. This records the logins with `CONTROL SERVER` permission that have accessed the audit file through [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information about `fn_get_audit_file` permissions, see [sys.fn_get_audit_file](../../system-functions/sys-fn-get-audit-file-transact-sql.md).
 
 If an Audit Administrator copies the file to a different location (for archive purposes, and so on), the access control lists (ACLs) on the new location should be reduced to the following permissions:
 
@@ -192,6 +192,8 @@ Each feature and command for [!INCLUDE [ssNoVersion](../../../includes/ssnoversi
 To create, alter, or drop a Server Audit or Server Audit Specification, server principals require the `ALTER ANY SERVER AUDIT` or the `CONTROL SERVER` permission. To create, alter, or drop a Database Audit Specification, database principals require the `ALTER ANY DATABASE AUDIT` permission or the `ALTER` or `CONTROL` permission on the database. In addition, principals must have permission to connect to the database, or `ALTER ANY SERVER AUDIT` or `CONTROL SERVER` permissions.
 
 The `VIEW ANY DEFINITION` permission provides access to view the server level audit views and `VIEW DEFINITION` provides access to view the database level audit views. Denial of these permissions overrides the ability to view the catalog views, even if the principal has the `ALTER ANY SERVER AUDIT` or `ALTER ANY DATABASE AUDIT` permissions.
+
+To read audit data using `fn_get_audit_file`, [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and earlier versions require `CONTROL SERVER` permission on the server, while [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions require `VIEW SERVER SECURITY AUDIT` permission. For more information, see [sys.fn_get_audit_file](../../system-functions/sys-fn-get-audit-file-transact-sql.md).
 
 For more information about how to grant rights and permissions, see [GRANT](../../../t-sql/statements/grant-transact-sql.md).
 

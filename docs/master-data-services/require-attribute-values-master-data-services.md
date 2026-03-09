@@ -1,17 +1,18 @@
 ---
 title: Require Attribute Values
-description: "Require Attribute Values (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Require Attribute Values (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "business rules [Master Data Services], requiring attribute values"
   - "attributes [Master Data Services], requiring values"
-ms.custom:
-  - build-2025
 ---
 # Require Attribute Values (Master Data Services)
 
@@ -73,6 +74,4 @@ ms.custom:
   
 ## See Also  
  [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
-  
-  
+ [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)

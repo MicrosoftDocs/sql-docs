@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_18483
 description: "MSSQLSERVER_18483"
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: jopilov, mathoma
 ms.date: 12/25/2020
 ms.service: sql

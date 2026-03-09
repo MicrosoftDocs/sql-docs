@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_7391"
 description: "MSSQLSERVER_7391"
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 08/04/2023
 ms.service: sql

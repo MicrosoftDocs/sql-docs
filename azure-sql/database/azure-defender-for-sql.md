@@ -2,8 +2,8 @@
 title: Microsoft Defender for SQL
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Learn about functionality for managing your database vulnerabilities and detecting anomalous activities that could indicate a threat to your database in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
-author: cesanu
-ms.author: cesanu
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: maghan, mathoma
 ms.date: 06/13/2025
 ms.service: azure-sql

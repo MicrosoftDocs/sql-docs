@@ -4,7 +4,7 @@ titleSuffix: SQL Server Profiler
 description: Explore the features of SQL Server Profiler. Get help troubleshooting problems by using this tool to create traces and analyze and replay trace results.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/28/2026
+ms.date: 02/21/2026
 ms.service: sql
 ms.subservice: profiler
 ms.topic: concept-article
@@ -18,15 +18,26 @@ ms.collection:
 
 [!INCLUDE [ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is an interface to create and manage traces and analyze and replay trace results. Events are saved in a trace file that you can later analyze or use to replay a specific series of steps when diagnosing a problem.
 
-[!INCLUDE [xevents-sql-server-profiler](../Includes/sql-server-profiler/xevents-sql-server-profiler.md)]
-
 When you try to connect to an Azure SQL Database from the SQL Server Profiler, it incorrectly throws a misleading error message as follows:
 
 ```output
-To run a trace against SQL Server, you must be a **sysadmin** fixed server role member or have the ALTER TRACE permission.
+To run a trace against SQL Server, you must be a sysadmin fixed server role member or have the ALTER TRACE permission.
 ```
 
-The message should have explained that Azure SQL Database isn't supported by SQL Server profiler.
+The message should state that Azure SQL Database isn't supported by SQL Server Profiler.
+
+## Deprecation notice
+
+> [!IMPORTANT]  
+> SQL Trace and SQL Server Profiler are deprecated. Use [Extended Events](../../relational-databases/extended-events/extended-events.md) instead. [!INCLUDE [ssnotedepfutureavoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+
+The `Microsoft.SqlServer.Management.Trace` namespace that contains the SQL Server Trace and Replay objects is also deprecated. However, Analysis Services workloads are supported.
+
+For more information on [Extended Events](../../relational-databases/extended-events/extended-events.md), see the following articles:
+
+- [Quickstart: Extended Events](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+- For SQL Server Management Studio, use [XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)
+- For the [MSSQL extension for Visual Studio Code](../visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md), use [Query Profiler (Preview)](../visual-studio-code-extensions/mssql/mssql-query-profiler.md).
 
 ## Where's the Profiler?
 
@@ -34,7 +45,7 @@ You can start the Profiler within [Run SQL Server Profiler](start-sql-server-pro
 
 ## Capture and replay trace data
 
-The following table shows the features we recommend using in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] to capture and replay your trace data.
+The following table shows the features you can use in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] to capture and replay your trace data.
 
 | Feature / target workload | Relational Engine | Analysis Services |
 | --- | --- | --- |

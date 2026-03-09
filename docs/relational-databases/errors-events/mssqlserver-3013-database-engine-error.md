@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_3013
 description: "MSSQLSERVER_3013"
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: sureshka, mathoma
 ms.date: 03/23/2023
 ms.service: sql

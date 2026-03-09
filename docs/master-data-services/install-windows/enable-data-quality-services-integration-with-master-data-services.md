@@ -1,9 +1,10 @@
 ---
 title: Enable Data Quality Services Integration
 description: In the Master Data Services add-in for Excel, matching functionality is provided by Data Quality Services (DQS).
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "12/13/2019"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -39,6 +40,4 @@ ms.custom:
 ## See Also  
  [Data Quality Matching in the MDS Add-in for Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [Master Data Services Add-in for Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
- [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
-  
-  
+ [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)

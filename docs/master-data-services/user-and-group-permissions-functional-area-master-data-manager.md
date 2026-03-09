@@ -1,9 +1,10 @@
 ---
 title: User and Group Permissions Functional Area
-description: "User and Group Permissions Functional Area (Master Data Manager)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: User and Group Permissions Functional Area (Master Data Manager)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article

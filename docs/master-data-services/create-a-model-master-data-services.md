@@ -1,17 +1,18 @@
 ---
 title: Create a Model
 description: Learn how to create a model in Master Data Services to contain model objects. You must have permissions for the System Administration area.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "models [Master Data Services], creating models"
   - "creating models [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Create a Model (Master Data Services)
 
@@ -75,6 +76,4 @@ ms.custom:
  [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Delete a Model &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
  [Edit Model &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
- [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
-  
-  
+ [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)

@@ -4,7 +4,7 @@ description: This article discusses the Transact-SQL (T-SQL) differences between
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, bonova, danil, randolphwest
-ms.date: 04/23/2025
+ms.date: 02/23/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -362,7 +362,7 @@ Some Windows-specific targets for Extended Events (XEvents) aren't supported:
 
 ### External libraries
 
-In-database R and Python external libraries are supported in limited public preview. See [Machine Learning Services in Azure SQL Managed Instance](machine-learning-services-overview.md).
+In-database R and Python external libraries are the only external libraries supported. See [Machine Learning Services in Azure SQL Managed Instance](machine-learning-services-overview.md).
 
 ### FILESTREAM and FileTable
 

@@ -1,17 +1,18 @@
 ---
 title: Web Configuration Reference
-description: "Web Configuration Reference (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Web Configuration Reference (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
-helpviewer_keywords:
-  - "web configuration file [Master Data Services]"
 ms.custom:
   - build-2025
   - sfi-ropc-nochange
+helpviewer_keywords:
+  - "web configuration file [Master Data Services]"
 ---
 # Web Configuration Reference (Master Data Services)
 
@@ -66,5 +67,4 @@ ms.custom:
 <masterDataServices>  
    <instance virtualPath="/MDS" siteName="Contoso" connectionName="MDSDB" serviceName="MDS1" />  
 </masterDataServices>  
-```  
-  
+```

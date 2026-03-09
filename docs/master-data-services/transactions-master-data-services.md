@@ -1,17 +1,18 @@
 ---
 title: Transactions
-description: "Transactions (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "01/10/2017"
+description: Transactions (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "transactions [Master Data Services], about transactions"
   - "transactions [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Transactions (Master Data Services)
 
@@ -94,6 +95,4 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 -   [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [Annotations &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
-  
-  
+-   [Annotations &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)

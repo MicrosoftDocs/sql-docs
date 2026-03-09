@@ -4,7 +4,7 @@ description: Limitations and considerations for the ledger feature
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
-ms.date: 11/28/2023
+ms.date: 02/25/2026
 ms.service: sql
 ms.subservice: security
 ms.custom:
@@ -25,9 +25,9 @@ There are some considerations and limitations to be aware of when working with l
 Consider the following when working with ledger.
 
 - A [ledger database](ledger-database-ledger.md), a database with the ledger property set to on, can't be converted to a regular database, with the ledger property set to off.
-- Automatic generation and storage of database digests is currently available in Azure SQL Database, but not supported on SQL Server.
+- Automatic generation and storage of database digests is available in Azure SQL Database and SQL Server 2022. In SQL Server, you can configure automatic digest storage using `ALTER DATABASE SCOPED CONFIGURATION`. For more information, see [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md).
 - Automated digest management with ledger tables by using [Azure Storage immutable blobs](/azure/storage/blobs/immutable-storage-overview) doesn't offer the ability for users to use [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage) accounts.
-- When a ledger database is created, all new tables created by default (without specifying the `APPEND_ONLY = ON` clause) in the database will be [updatable ledger tables](ledger-updatable-ledger-tables.md). To create [append-only ledger tables](ledger-append-only-ledger-tables.md), use the `APPEND_ONLY = ON` clause in the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md) statements.
+- When a ledger database is created, all new tables created by default (without specifying the `APPEND_ONLY = ON` clause) in the database are [updatable ledger tables](ledger-updatable-ledger-tables.md). To create [append-only ledger tables](ledger-append-only-ledger-tables.md), use the `APPEND_ONLY = ON` clause in the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md) statements.
 - A transaction can update up to 200 ledger tables.
 
 ## Ledger table considerations and limitations
@@ -42,7 +42,7 @@ Consider the following when working with ledger.
 - SWITCH IN/OUT partition isn't supported.
 - DBCC CLONEDATABASE isn't supported.
 - Ledger tables can't have full-text indexes.
-- Ledger tables can't be graph table.
+- Ledger tables can't be a graph table.
 - Ledger tables can't be FileTables.
 - Ledger tables can't have a rowstore non-clustered index when they have a clustered columnstore index.
 - Change tracking isn't allowed on the history table but is allowed on ledger tables.
@@ -64,7 +64,7 @@ Consider the following when working with ledger.
 
 ### Temporal table limitations
 
-Updatable ledger tables are based on the technology of [temporal tables](../../tables/temporal-tables.md) and inherit most of the [limitations](../../tables/temporal-table-considerations-and-limitations.md) but not all of them. Below is a list of limitations that is inherited from temporal tables.
+Updatable ledger tables are based on the technology of [temporal tables](../../tables/temporal-tables.md) and inherit most of the [limitations](../../tables/temporal-table-considerations-and-limitations.md) but not all of them. The following list describes limitations inherited from temporal tables.
 
 - If the name of a history table is specified during history table creation, you must specify the schema and table name and also the name of the ledger view.
 - By default, the history table is PAGE compressed.
@@ -75,7 +75,7 @@ Updatable ledger tables are based on the technology of [temporal tables](../../t
 - The history table must be created in the same database as the current table. Temporal querying over Linked Server isn't supported.
 - The history table can't have constraints (Primary Key, Foreign Key, table, or column constraints).
 - Online option (`WITH (ONLINE = ON`) has no effect on `ALTER TABLE ALTER COLUMN` in case of system-versioned temporal table. `ALTER COLUMN` isn't performed as online regardless of which value was specified for the `ONLINE` option.
-- `INSERT` and `UPDATE` statements can't reference the [GENERATED ALWAYS](../../../t-sql/statements/create-table-transact-sql.md#generate-always-columns) columns. Attempts to insert values directly into these columns will be blocked.
+- `INSERT` and `UPDATE` statements can't reference the [GENERATED ALWAYS](../../../t-sql/statements/create-table-transact-sql.md#generate-always-columns) columns. Attempts to insert values directly into these columns are blocked.
 - `UPDATETEXT` and `WRITETEXT` aren't supported.
 - Triggers on the history table aren't allowed.
 - Usage of replication technologies is limited:
@@ -97,7 +97,7 @@ Updatable ledger tables are based on the technology of [temporal tables](../../t
 
 ### Adding columns
 
-Adding nullable columns is supported. Adding non-nullable columns is not supported. Ledger is designed to ignore NULL values when computing the hash of a row version. Based on that, when a nullable column is added, ledger will modify the schema of the ledger and history tables to include the new column, however, this doesn't impact the hashes of existing rows. Adding columns in ledger tables is captured in [sys.ledger_column_history](../../system-catalog-views/sys-ledger-column-history-transact-sql.md).
+Adding nullable columns is supported. Adding non-nullable columns isn't supported. Ledger is designed to ignore NULL values when computing the hash of a row version. Based on that, when a nullable column is added, ledger modifies the schema of the ledger and history tables to include the new column, however, this doesn't impact the hashes of existing rows. Adding columns in ledger tables is captured in [sys.ledger_column_history](../../system-catalog-views/sys-ledger-column-history-transact-sql.md).
 
 ### Dropping columns and tables
 
@@ -110,7 +110,7 @@ Normally, dropping a column or table completely erases the underlying data from 
 > [!NOTE]  
 > The name of dropped ledger tables, history tables and ledger views might be truncated if the length of the renamed table or view exceeds 128 characters. 
 
-### Altering Columns
+### Altering columns
 
 Any changes that don't impact the underlying data of a ledger table are supported without any special handling as they don't impact the hashes being captured in the ledger. These changes include:
 

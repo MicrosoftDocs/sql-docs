@@ -1,8 +1,8 @@
 ---
 title: "sp_readerrorlog (Transact-SQL)"
 description: sp_readerrorlog allows you to read the contents of the SQL Server or SQL Server Agent error log file and filter on keywords.
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 06/23/2025
 ms.service: sql

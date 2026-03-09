@@ -1,16 +1,17 @@
 ---
 title: Annotate a Transaction
-description: "Annotate a Transaction (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Annotate a Transaction (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
-helpviewer_keywords:
-  - "annotations [Master Data Services], for transactions"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "annotations [Master Data Services], for transactions"
 ---
 # Annotate a Transaction (Master Data Services)
 
@@ -63,6 +64,4 @@ ms.custom:
   
 ## See Also  
  [Annotations &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
- [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
-  
-  
+ [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)

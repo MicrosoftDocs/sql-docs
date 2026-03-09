@@ -1,19 +1,20 @@
 ---
 title: Delete Users or Groups
-description: "Delete Users or Groups (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Delete Users or Groups (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "deleting groups [Master Data Services]"
   - "groups [Master Data Services], deleting"
   - "users [Master Data Services], deleting"
   - "deleting users [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Delete Users or Groups (Master Data Services)
 
@@ -49,6 +50,4 @@ ms.custom:
 5.  On the confirmation dialog box, click **OK**.  
   
 ## See Also  
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
-  
-  
+ [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)

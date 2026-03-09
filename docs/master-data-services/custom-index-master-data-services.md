@@ -1,9 +1,10 @@
 ---
 title: Custom Index
-description: "Custom Index (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Custom Index (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -56,6 +57,4 @@ ms.custom:
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Create an Index|[Create an Index &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)|  
-|Edit and Delete an Index|[Edit and Delete an Index &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)|  
-  
-  
+|Edit and Delete an Index|[Edit and Delete an Index &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)|

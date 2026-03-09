@@ -35,7 +35,7 @@ Save on costs by bringing your own license with the [Azure Hybrid Benefit licens
 
 ## Choose appropriate target
 
-Azure Virtual Machines run in many different regions of Azure and also offer various [machine sizes](/azure/virtual-machines/sizes) and [Azure managed disk types](/azure/virtual-machines/disks-types).
+Azure Virtual Machines run in many different regions of Azure and also offer various [machine sizes](/azure/virtual-machines/sizes) and [Azure Managed Disk types](/azure/virtual-machines/disks-types).
 
 When determining the correct size of VM and Storage for your SQL Server workload, refer to the [Performance Guidelines for SQL Server on Azure Virtual Machines.](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#vm-size).
 
@@ -172,7 +172,7 @@ For more assistance, see the following resources that were developed for real wo
 | [Data workload assessment model and tool](https://www.microsoft.com/download/details.aspx?id=103130) | This tool provides suggested "best fit" target platforms, cloud readiness, and application/database remediation level for a given workload. It offers simple, one-select calculation and report generation that helps to accelerate large estate assessments by providing and automated and uniform target platform decision process. |
 | [Perfmon data collection automation using Logman](https://www.microsoft.com/download/details.aspx?id=103114) | A tool that collects Perform data to understand baseline performance that helps the migration target recommendation. This tool that uses logman.exe to create the command that creates, starts, stops, and deletes performance counters set on a remote SQL Server. |
 | [Multiple-SQL-VM-VNet-ILB](https://www.microsoft.com/download/details.aspx?id=103104) | This whitepaper outlines the steps to set up multiple Azure virtual machines in a SQL Server Always On Availability Group configuration. |
-| [Azure virtual machines supporting Ultra SSD per Region](https://www.microsoft.com/download/details.aspx?id=103105) | These PowerShell scripts provide a programmatic option to retrieve the list of regions that support Azure virtual machines supporting Ultra SSDs. |
+| [Azure virtual machines supporting Ultra Disk per Region](https://www.microsoft.com/download/details.aspx?id=103105) | These PowerShell scripts provide a programmatic option to retrieve the list of regions that support Azure virtual machines supporting Ultra Disks. |
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
 

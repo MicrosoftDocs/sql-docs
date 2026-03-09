@@ -1,9 +1,10 @@
 ---
-title: Create master data manager web application
+title: Create Master Data Manager Web Application
 description: The Master Data Manager web application provides an interface for users to work with master data and for administrators to configure and administer MDS.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "12/13/2019"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -76,6 +77,4 @@ ms.custom:
 -   Optionally, configure the website that hosts the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to use an HTTPS binding if you want to encrypt content by using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). You must use an Internet Information Services (IIS) tool, such as IIS Manager, to configure the server certificate for the web server, and to configure an HTTPS binding and the TLS settings for the site. For more information, see [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
 ## See Also  
- [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
-  
-  
+ [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)

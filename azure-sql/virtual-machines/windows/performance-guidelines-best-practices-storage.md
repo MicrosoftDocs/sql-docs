@@ -45,7 +45,7 @@ You have a choice in the performance level for your disks. The types of managed 
 
 For Standard HDDs, Standard SSDs, and Premium SSDs, the performance of the disk increases with the size of the disk, grouped by [premium disk labels](/azure/virtual-machines/disks-types#premium-ssds) such as the P1 with 4 GiB of space and 120 IOPS to the P80 with 32 TiB of storage and 20,000 IOPS. Premium storage supports a storage cache that helps improve read and write performance for some workloads. For more information, see [Managed disks overview](/azure/virtual-machines/managed-disks-overview).
 
-The performance of Premium SSD v2 and Ultra Disks can be changed independently of the size of the disk, for details see [Ultra disk performance](/azure/virtual-machines/disks-types#ultra-disk-performance) and [Premium SSD v2 performance](/azure/virtual-machines/disks-types#premium-ssd-v2-performance). If your workload requires more than 160,000 IOPS, then consider using Premium SSD v2 or Ultra Disks. 
+The performance of Premium SSD v2 and Ultra Disks can be changed independently of the size of the disk, for details see [Ultra Disk performance](/azure/virtual-machines/disks-types#ultra-disk-performance) and [Premium SSD v2 performance](/azure/virtual-machines/disks-types#premium-ssd-v2-performance). If your workload requires more than 160,000 IOPS, then consider using Premium SSD v2 or Ultra Disks. 
 
 There are also three main [disk roles](/azure/virtual-machines/managed-disks-overview#disk-roles) to consider for your SQL Server on Azure VM -  an OS disk, a temporary disk, and your data disks. Carefully choose what is stored on the operating system drive `(C:\)` and the ephemeral temporary drive `(D:\)`.
 
@@ -74,7 +74,7 @@ Place data and log files on data disks provisioned to best suit performance requ
 Format your data disk to use 64-KB allocation unit size for all data files placed on a drive other than the temporary `D:\` drive (which has a default of 4 KB). SQL Server VMs deployed through Azure Marketplace come with data disks formatted with allocation unit size and interleave for the storage pool set to 64 KB.
 
 > [!NOTE]  
-> It's also possible to host your SQL Server database files directly on [Azure Blob storage](/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) or on [SMB storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option) such as [Azure premium file share](/azure/storage/files/storage-how-to-create-file-share), but we recommend using [Azure managed disks](/azure/virtual-machines/managed-disks-overview) for the best performance, reliability, and feature availability.
+> It's also possible to host your SQL Server database files directly on [Azure Blob storage](/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) or on [SMB storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option) such as [Azure premium file share](/azure/storage/files/storage-how-to-create-file-share), but we recommend using [Azure Managed Disks](/azure/virtual-machines/managed-disks-overview) for the best performance, reliability, and feature availability.
 
 ## Premium SSD v2
 
@@ -102,7 +102,7 @@ For production workloads, use the P30 and/or P40 disks for SQL Server data files
 
 For OLTP workloads, match the target IOPS per disk (or storage pool) with your performance requirements using workloads at peak times and the `Disk Reads/sec` + `Disk Writes/sec` performance counters. For data warehouse and reporting workloads, match the target throughput using workloads at peak times and the `Disk Read Bytes/sec` + `Disk Write Bytes/sec`.
 
-Use Storage Spaces to achieve optimal performance, configure two pools, one for the log file(s) and the other for the data files. If you aren't using disk striping, use two premium SSD disks mapped to separate drives, where one drive contains the log file and the other contains the data.
+Use Storage Spaces to achieve optimal performance, configure two pools, one for the log file(s) and the other for the data files. If you aren't using disk striping, use two Premium SSDs mapped to separate drives, where one drive contains the log file and the other contains the data.
 
 The [provisioned IOPS and throughput](/azure/virtual-machines/disks-types#premium-ssds) per disk that is used as part of your storage pool. The combined IOPS and throughput capabilities of the disks is the maximum capability up to the throughput limits of the VM.
 
@@ -120,13 +120,13 @@ This cost-effective and temporary expansion of performance is a strong use case 
 
 For more information, see [Performance tiers for managed disks](/azure/virtual-machines/disks-change-performance).
 
-## Azure ultra disk
+## Azure Ultra Disk
 
-If there's a need for submillisecond response times with reduced latency consider using [Azure ultra disk](/azure/virtual-machines/disks-types#ultra-disks) for the SQL Server log drive, or even the data drive for applications that are extremely sensitive to I/O latency.
+If there's a need for submillisecond response times with reduced latency consider using [Azure Ultra Disk](/azure/virtual-machines/disks-types#ultra-disks) for the SQL Server log drive, or even the data drive for applications that are extremely sensitive to I/O latency.
 
-Ultra disk can be configured where capacity and IOPS can scale independently. With ultra disk administrators can provision a disk with the capacity, IOPS, and throughput requirements based on application needs.
+Ultra Disk can be configured where capacity and IOPS can scale independently. With Ultra Disk administrators can provision a disk with the capacity, IOPS, and throughput requirements based on application needs.
 
-Ultra disk isn't supported on all VM series and has other limitations such as region availability, redundancy, and support for Azure Backup. To learn more, see [Using Azure ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd) for a full list of limitations.
+Ultra Disk isn't supported on all VM series and has other limitations such as region availability, redundancy, and support for Azure Backup. To learn more, see [Using Azure Ultra Disks](/azure/virtual-machines/disks-enable-ultra-ssd) for a full list of limitations.
 
 ## Standard HDDs and SSDs
 
@@ -244,11 +244,11 @@ The following table outlines the number of data disks and IOPS supported per VM:
 
 There are several restrictions to using Write Acceleration. To learn more, see [Restrictions when using Write Accelerator](/azure/virtual-machines/how-to-enable-write-accelerator#restrictions-when-using-write-accelerator).
 
-### Compare to Azure ultra disk
+### Compare to Azure Ultra Disk
 
-The biggest difference between Write Acceleration and Azure ultra disks is that Write Acceleration is a VM feature only available for the M-Series and Azure ultra disks is a storage option. Write Acceleration is a write-optimized cache with its own limitations based on the VM size. Azure ultra disks are a low latency disk storage option for Azure VMs.
+The biggest difference between Write Acceleration and Azure Ultra Disks is that Write Acceleration is a VM feature only available for the M-Series and Azure Ultra Disks is a storage option. Write Acceleration is a write-optimized cache with its own limitations based on the VM size. Azure Ultra Disks are a low latency disk storage option for Azure VMs.
 
-If possible, use Write Acceleration over ultra disks for the transaction log disk. For VMs that don't support Write Acceleration but require low latency to the transaction log, use Azure ultra disks.
+If possible, use Write Acceleration over Ultra Disks for the transaction log disk. For VMs that don't support Write Acceleration but require low latency to the transaction log, use Azure Ultra Disks.
 
 ## Resize storage pools appropriately 
 

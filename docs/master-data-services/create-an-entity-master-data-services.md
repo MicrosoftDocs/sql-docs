@@ -1,17 +1,18 @@
 ---
 title: Create an Entity
 description: Learn how to create an entity in Master Data Services to contain members and their attributes. You must have permissions for the System Administration area.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "entities [Master Data Services], creating"
   - "creating entities [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Create an Entity (Master Data Services)
 
@@ -92,6 +93,4 @@ ms.custom:
  [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Edit an Entity &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
- [Delete an Entity &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
-  
-  
+ [Delete an Entity &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)

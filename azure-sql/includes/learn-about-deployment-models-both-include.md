@@ -1,6 +1,6 @@
 ---
-author: cynthn
-ms.author: cynthn
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 11/25/2018
 ms.service: virtual-machines
 ms.topic: include

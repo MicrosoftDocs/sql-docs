@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_17207
 description: "MSSQLSERVER_17207"
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 07/25/2020
 ms.service: sql
 ms.subservice: supportability

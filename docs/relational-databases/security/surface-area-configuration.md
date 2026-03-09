@@ -4,7 +4,7 @@ description: Learn how to change feature defaults for SQL Server installation an
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/26/2023
+ms.date: 02/27/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
@@ -20,7 +20,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-In the default configuration of new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], many features are not enabled. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and starts only key services and features, to minimize the number of features that can be attacked by a malicious user. A system administrator can change these defaults at installation time and also selectively enable or disable features of a running instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Additionally, some components may not be available when connecting from other computers until protocols are configured.
+In the default configuration of new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], many features aren't enabled. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and starts only key services and features, to minimize the number of features that can be attacked by a malicious user. A system administrator can change these defaults at installation time and also selectively enable or disable features of a running instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Additionally, some components might not be available when connecting from other computers until protocols are configured.
 
 > [!NOTE]  
 > Unlike new installations, no existing services or features are turned off during an upgrade, but additional surface area configuration options can be applied after the upgrade is completed.

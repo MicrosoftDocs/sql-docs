@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_8632
 description: "MSSQLSERVER_8632"
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vencher, tejasaks, docast
 ms.date: 10/27/2020
 ms.service: sql

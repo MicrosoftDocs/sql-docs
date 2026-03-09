@@ -10,7 +10,7 @@ ms.custom:
 ---
 ## Connect locally
 
-The following steps use **sqlcmd** to locally connect to your new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
+The following steps use the [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md) to locally connect to your new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. [Download and install the sqlcmd utility](../../tools/sqlcmd/sqlcmd-download-install.md) for Windows, Linux and macOS.
 
 > [!CAUTION]  
 > [!INCLUDE [password-complexity](password-complexity.md)]
@@ -22,7 +22,7 @@ The following steps use **sqlcmd** to locally connect to your new [!INCLUDE [ssn
    ```
 
    > [!NOTE]  
-   > Newer versions of **sqlcmd** are secure by default. For more information about connection encryption, see [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md) for Windows, and [Connecting with sqlcmd](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) for Linux and macOS. If the connection doesn't succeed, you can add the `-No` option to **sqlcmd** to specify that encryption is optional, not mandatory.
+   > Newer versions of **sqlcmd** are secure by default. For more information about connection encryption, see [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md) for Windows, Linux and macOS. If the connection doesn't succeed, you can add the `-No` option to **sqlcmd** to specify that encryption is optional, not mandatory.
 
    You can omit the password on the command line to be prompted to enter it.
 
@@ -137,7 +137,6 @@ In addition to **sqlcmd**, you can use the following cross-platform tools to man
 | --- | --- |
 | [Visual Studio Code](../../tools/visual-studio-code-extensions/mssql/connect-database-visual-studio-code.md) | A cross-platform GUI code editor that runs Transact-SQL statements with the [MSSQL extension](../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md). |
 | [PowerShell](../sql-server-linux-manage-powershell-core.md) | A cross-platform automation and configuration tool based on cmdlets. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | A cross-platform command-line interface for running Transact-SQL commands. |
 
 ## Connect from Windows
 

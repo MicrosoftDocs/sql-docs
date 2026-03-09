@@ -1,15 +1,16 @@
 ---
 title: Backward Compatibility
-description: "Backward Compatibility (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Backward Compatibility (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
-monikerRange: ">=sql-server-ver16"
 ms.custom:
   - build-2025
+monikerRange: ">=sql-server-ver16"
 ---
 # Backward Compatibility (Master Data Services)
 
@@ -23,6 +24,4 @@ ms.custom:
   
 -   [Deprecated Features of Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
   
--   [Discontinued Features of Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
-  
-  
+-   [Discontinued Features of Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

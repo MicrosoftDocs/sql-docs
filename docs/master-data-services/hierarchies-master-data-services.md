@@ -1,17 +1,18 @@
 ---
 title: Hierarchies
 description: A hierarchy is a tree structure that you can use to group similar members and consolidate/summarize members for reporting and analysis in Master Data Services.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "04/01/2016"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "hierarchies [Master Data Services]"
   - "hierarchies [Master Data Services], about hierarchies"
-ms.custom:
-  - build-2025
 ---
 # Hierarchies (Master Data Services)
 
@@ -68,6 +69,4 @@ ms.custom:
   
 -   [Derived Hierarchies with Explicit Caps &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
-  
-  
+-   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)

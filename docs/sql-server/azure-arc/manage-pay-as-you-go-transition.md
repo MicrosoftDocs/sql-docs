@@ -111,7 +111,7 @@ An explicit consent is required to select the pay-as-you-go billing for SQL Serv
 
 Consent is recorded by adding a `ConsentToRecurringPAYG` property to the Azure extension for SQL Server resource. It consists of the two values:
 
-- `Consented`: Indicates that you agree to recurring billing.
+- `Consented`: You agree to recurring billing.
 - `ConsentTimestamp`: The UTC timestamp marking when the consent was granted. This timestamp is used by the Hybrid Data Service to determine when recurring billing goes into effect. After that time any disconnection longer than 30 days activates the recurring pay-as-you-go billing.  
 
 > [!IMPORTANT]
@@ -137,6 +137,68 @@ SQL Server enabled by Azure Arc automatically installs Azure extension for SQL S
 ## Manage extension health
 
 With a pay-as-you-go subscription, the health of the extensions becomes a critical factor of your compliance as it collects the usage data and ensures the correct billing. The intermittent disconnections up to 30 days are allowed as the extension maintains a usage log on the machine, but it is your responsibility to ensure the extensions stay healthy. The Azure portal includes a [Health Dashboard](https://ms.portal.azure.com/#view/Microsoft_Azure_ArcCenterUX/ArcCenterMenuBlade/~/sqlServerHealthDashboard) providing the high level view of the extensions' state. For details of troubleshooting of the unhealthy extensions, see [Troubleshoot Azure extension for SQL Server](troubleshoot-extension.md).
+
+## Analyze costs
+
+After you transition to pay-as-you-go billing, you can view current and forecasted charges through [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview). Upcoming charges for Azure Arc-enabled SQL Server pay-as-you-go aren't shown on SQL Server or Arc resource pages. All cost analysis and forecasting happens at the subscription level or higher.
+
+### View forecasted charges
+
+To view forecasted pay-as-you-go charges:
+
+1. In the Azure portal, open **Cost Management** > **Cost analysis**.
+1. Select the appropriate scope (subscription, management group, or resource group).
+1. Confirm the chart shows both actual and forecasted costs.
+   - Solid bars or lines represent actual costs
+   - Shaded extensions represent forecasted costs based on historical usage trends
+1. Set the date range to the current month to see projected month-end costs.
+
+:::image type="content" source="media/manage-pay-as-you-go-transition/cost-analysis-forecasted-charges.png" alt-text="Screenshot of Microsoft Cost Management showing actual and forecasted charges." lightbox="media/manage-pay-as-you-go-transition/cost-analysis-forecasted-charges.png":::
+
+### Filter for Arc SQL Server usage
+
+To isolate Azure Arc-enabled SQL Server pay-as-you-go charges, apply these filters:
+
+| Filter | Value |
+|--------|-------|
+| **Service name** | Azure Arc-enabled SQL Server |
+| **Charge type** | Usage |
+| **Publisher type** | Microsoft |
+
+> [!TIP]
+> If **Azure Arc-enabled SQL Server** doesn't appear in the filter list, remove other filters first, then reapply **Service name**.
+
+### Identify resource-level costs
+
+To see which SQL Server instances are driving costs:
+
+1. In Cost analysis, select **Group by** > **Resource**.
+1. Optionally, select **Group by** > **Resource group** if you organize Arc machines by resource group.
+
+This breakdown helps you identify:
+
+- Core count changes
+- Edition differences (Standard vs Enterprise)
+- Instances that were unintentionally left running
+
+### Identify charge categories
+
+To see which SQL Server related charge categories are driving costs, in **Cost analysis**, select **Group by** > **Meter**. This breakdown helps you identify:
+
+- Usage category breakdown (for example, ESU costs, pay-as-you-go costs)
+- Edition differences (meter names indicate the editions)
+- Unexpected charges
+
+### Set up budget alerts
+
+To proactively manage costs:
+
+1. In Cost Management, select **Budgets** > **Add**.
+1. Create a monthly budget for your expected Arc SQL spend.
+1. Configure alerts at 50%, 75%, and 90% of budget.
+1. Save the budget.
+
+Budget alerts use forecasted costs, not just actual spend, to help you avoid unexpected charges. For more information, see [Create and manage budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets).
 
 ## Monitor billing events
 

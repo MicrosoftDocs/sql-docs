@@ -1,9 +1,10 @@
 ---
 title: Technical Reference
-description: "Technical Reference (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Technical Reference (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: reference
@@ -21,6 +22,4 @@ ms.custom:
  
 -   [Master Data Services Database](../master-data-services/master-data-services-database.md)  
   
--   [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)  
-  
-  
+-   [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)

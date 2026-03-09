@@ -5,7 +5,7 @@ description: Learn how to connect to Azure SQL Database, Azure SQL Managed Insta
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma, maghan
-ms.date: 11/18/2025
+ms.date: 03/03/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
@@ -325,13 +325,26 @@ SQL Managed Instance needs permissions to read Microsoft Entra ID for scenarios 
 
 For some operations, Azure SQL Database and Azure Synapse Analytics also require permissions to query Microsoft Graph, explained in [Microsoft Graph permissions](./authentication-aad-overview.md#microsoft-graph-permissions). Azure SQL Database and Azure Synapse Analytics support fine-grained Graph permissions for these scenarios, whereas SQL Managed Instance requires the **Directory Readers** role. Fine-grained permissions and their assignment are described in detail in [enable service principals to create Microsoft Entra users](authentication-aad-service-principal.md#enable-service-principals-to-create-azure-ad-users).
 
+> [!IMPORTANT]
+> **Azure SQL Database** and **SQL Managed Instance** use different permission models for Microsoft Graph access:
+>
+> - **Azure SQL Database and Azure Synapse Analytics**: Support fine-grained Microsoft Graph API permissions (such as `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All`) assigned directly to the server identity. This approach follows the principle of least privilege and is recommended. For step-by-step instructions, see [Enable service principals to create Microsoft Entra users](authentication-aad-service-principal.md#enable-service-principals-to-create-azure-ad-users). The Directory Readers role can also be used as a broader alternative.
+> - **SQL Managed Instance**: Requires the **Directory Readers** role or equivalent [fine-grained Microsoft Graph permissions](authentication-aad-directory-readers-role.md) assigned to the instance identity. The Azure portal provides a convenient banner on the **Microsoft Entra ID** page that prompts you to grant the Directory Readers role. Follow the steps in the [Directory Readers role](#directory-readers-role) section.
+>
+> If you're configuring **Azure SQL Database**, you don't need to assign the Directory Readers role for basic Microsoft Entra admin setup. Instead, assign the fine-grained Microsoft Graph permissions to the server identity as described in [Managed identities in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
+
 ### Directory Readers role
+
+The **Directory Readers** role and the portal banner described in this section apply primarily to **SQL Managed Instance**. For Azure SQL Database, you can assign [fine-grained Microsoft Graph permissions](authentication-aad-service-principal.md#enable-service-principals-to-create-azure-ad-users) instead, or optionally use Directory Readers as a broader alternative.
 
 #### [Azure portal](#tab/azure-portal)
 
 The **Microsoft Entra ID** page for SQL Managed Instance in the Azure portal displays a convenient banner when the instance isn't assigned the Directory Reader permissions.
 
-1. Select the banner on top of the **Microsoft Entra ID** page and grant permission to the system-assigned or user-assigned managed identity that represents your instance. Only a Privileged Role Administrator or higher role in your tenant can perform this operation.
+1. Select the banner on top of the **Microsoft Entra ID** page and grant permission to the system-assigned or user-assigned managed identity that represents your instance. Only a **Privileged Role Administrator** or higher role in your tenant can perform this operation.
+
+   > [!NOTE]
+   > If you don't see the banner, the instance might already have the Directory Readers role assigned, or you might not have the required **Privileged Role Administrator** role. If you don't have this role, ask your tenant administrator to grant the permission, or use the PowerShell method on the **PowerShell** tab.
 
    :::image type="content" source="media/authentication-aad-configure/grant-permissions.png" alt-text="Screenshot of the dialog for granting permissions to a SQL managed instance for accessing Microsoft Entra ID with the Grant permissions button selected.":::
 
@@ -508,6 +521,8 @@ For guidance on troubleshooting issues, see [Blog: Troubleshooting problems rela
 ## Related content
 
 - [Authorize database access to SQL Database, SQL Managed Instance, and Azure Synapse Analytics](logins-create-manage.md)
+- [Managed identities in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
+- [Microsoft Entra service principals with Azure SQL](authentication-aad-service-principal.md)
 - [Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)
 - [Database roles](/sql/relational-databases/security/authentication-access/database-level-roles)
 - [Azure SQL Database and Azure Synapse IP firewall rules](firewall-configure.md)

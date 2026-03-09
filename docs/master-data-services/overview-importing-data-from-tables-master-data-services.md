@@ -1,18 +1,19 @@
 ---
 title: Importing Data from Tables
 description: Import data from tables and make changes to data after you create a model for your data in Master Data Services.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "staging process [Master Data Services], about staging process"
   - "importing data [Master Data Services]"
   - "staging process [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Overview: Importing Data from Tables (Master Data Services)
 
@@ -105,6 +106,4 @@ ms.custom:
   
 -   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
-  
-  
+-   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)

@@ -1,18 +1,19 @@
 ---
 title: Add Attributes to Change Tracking Group
-description: "Add Attributes to a Change Tracking Group (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Add Attributes to a Change Tracking Group (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "change tracking groups [Master Data Services]"
   - "attributes [Master Data Services], change tracking groups"
   - "change tracking groups [Master Data Services], adding attributes"
-ms.custom:
-  - build-2025
 ---
 # Add Attributes to a Change Tracking Group (Master Data Services)
 
@@ -70,6 +71,4 @@ ms.custom:
   
 ## See Also  
  [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
-  
-  
+ [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)

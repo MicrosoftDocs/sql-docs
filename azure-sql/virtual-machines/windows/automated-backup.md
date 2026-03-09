@@ -4,7 +4,7 @@ description: This article explains the Automated Backup feature for SQL Server 2
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 09/22/2025
+ms.date: 02/23/2026
 ms.service: azure-vm-sql-server
 ms.subservice: backup
 ms.topic: how-to
@@ -134,9 +134,11 @@ The following Azure portal screenshot shows the **Automated Backup** settings wh
 
 For existing SQL Server virtual machines, go to the [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and then select **Backups** to configure your Automated Backups.
 
-Select **Enable** to configure your Automated Backup settings.
+Select **Enable** on the **Automated Backup** tile to configure your Automated Backup settings: 
 
-You can configure the retention period (up to 90 days), the container for the storage account where you want to store your backups, the encryption, and the backup schedule. By default, the schedule is automated.
+:::image type="content" source="media/automated-backup/select-automated-backup.png" alt-text="Screenshot of how to select automated backup on the backup blade for your SQL VM in the Azure portal." lightbox="media/automated-backup/select-automated-backup.png":::
+
+On the **Backups** page, select **Enable** to turn on Automated Backup. You can configure the retention period (up to 90 days), the container for the storage account where you want to store your backups, the encryption, and the backup schedule. By default, the schedule is automated. Configure the settings as needed: 
 
 :::image type="content" source="./media/automated-backup/sql-server-configuration.png" alt-text="Screenshot of Automated Backup for existing VMs in the portal.":::
 
@@ -148,18 +150,18 @@ When finished, select the **Apply** button on the bottom of the **Backups** sett
 
 If you're enabling Automated Backup for the first time, Azure configures the SQL Server IaaS Agent in the background. During this time, the Azure portal might not show that Automated Backup is configured. Wait several minutes for the agent to be installed, configured. After that, the Azure portal will reflect the new settings.
 
+If you only see [Azure Backup](backup-restore.md#azbackup) as the backup type, then [Disable Azure Backup by deleting the associated Azure Vault](backup-restore.md#disable-azure-backup), and then choose **Automated Backup** to use Automated Backup instead.
+
 ## Configure with PowerShell
 
 You can use PowerShell to configure Automated Backup. Before you begin, you must:
 
-- [Download and install the latest Azure PowerShell](https://aka.ms/webpi-azps).
+- [Download and install the latest Azure PowerShell](/powershell/azure/install-azure-powershell).
 - Open Windows PowerShell and associate it with your account with the **Connect-AzAccount** command.
-
-[!INCLUDE [updated-for-az.md](../../includes/updated-for-az.md)]
 
 ### Install the SQL Server IaaS Extension
 
-If you provisioned a SQL Server virtual machine from the Azure portal, the SQL Server IaaS Extension should already be installed. You can determine whether it's installed for your VM by calling **Get-AzVM** command and examining the **Extensions** property.
+If you provisioned a SQL Server virtual machine from the Azure portal, the SQL Server IaaS Agent extension should already be installed. You can determine whether it's installed for your VM by calling **Get-AzVM** command and examining the **Extensions** property.
 
 ```powershell
 $vmname = "yourvmname"
@@ -170,7 +172,7 @@ $resourcegroupname = "yourresourcegroupname"
 
 If the SQL Server IaaS Agent extension is installed, you should see it listed as `SqlIaaSAgent` or `SQLIaaSExtension.` **ProvisioningState** for the extension should also show "Succeeded."
 
-If it isn't installed or it has failed to be provisioned, you can install it with the following command. In addition to the VM name and resource group, you must also specify the region (**$region**) that your VM is located in.
+If it isn't installed or provisioning failed, you can install it with the [Set-AzVMSqlServerExtension](/powershell/module/az.compute/set-azvmsqlserverextension) command. In addition to the VM name and resource group, you must also specify the region (**$region**) that your VM is located in.
 
 ```powershell
 $region = "EASTUS2"
@@ -425,6 +427,7 @@ The following table lists the possible solutions if you're having issues enablin
 | **Backup Multiple SQL instances using Automated Backup**   | Automated Backup currently only supports one SQL Server instance. If you have multiple named instances, and the default instance, Automated Backup works with the default instance. If you have multiple named instances and no default instance, turning on Automated Backup will fail. |
 | **Automated Backup can't be enabled due to account and permissions** | Check the following:  <br /> - The SQL Server Agent is running. <br /> - The  **NT Service\SqlIaaSExtensionQuery**  account has proper [permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) for the Automated Backup feature both within SQL Server, and also for the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal. <br /> - The **SA** account hasn't been renamed, though disabling the account is acceptable. |
 | **Automated Backup fails for SQL 2016 +**| **Allow Blob Public Access** is enabled on the storage Account. This solution provides a temporary workaround to a known issue. |
+|**The account being accessed does not have sufficient permissions to execute this operation** | This error occurs when the user lacks sufficient permissions to the storage account or container, or you select the default `$logs` container for backup storage. To resolve this issue, create a new container in your storage account and use that container for your backups instead of the default `$logs` container. |
 
 ### Common issues with Automated or Managed Backups
 

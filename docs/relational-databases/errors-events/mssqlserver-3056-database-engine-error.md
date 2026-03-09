@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_3056"
 description: "MSSQLSERVER_3056"
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/24/2022"
 ms.service: sql
 ms.subservice: supportability

@@ -4,7 +4,8 @@ description: "MSSQLSERVER_601"
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 12/16/2024
+ms.date: 02/20/2026
+ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"
@@ -36,7 +37,7 @@ Typically, access to data that is being changed by another transaction is denied
 
 ## User action
 
-This error cancels the query. Either resubmit the query or remove the `NOLOCK` locking hint.
+This error cancels the query. Either resubmit the query or [remove the `NOLOCK` locking hint](../../t-sql/queries/hints-transact-sql-table.md#with-table-hint). Alternatively, use an appropriate [isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) such as `READ COMMITTED` (the default) or `SNAPSHOT` to avoid dirty reads while preventing this error.
 
 ## Related content
 

@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, dpless
-ms.date: 01/26/2026
+ms.date: 03/02/2026
 ms.service: azure-vm-sql-server
 ms.topic: whats-new
 ms.custom:
@@ -52,8 +52,6 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 | [Azure Elastic SAN](storage-configuration-azure-elastic-san.md) | March 2025 | Place your SQL Server workloads on an Azure Elastic SAN for improved performance, throughput, and cost. |
 | [FCI with Azure Elastic SAN](failover-cluster-instance-azure-elastic-san-manually-configure.md) | March 2025 | Deploy your SQL Server failover cluster instance (FCI) by using an Azure Elastic SAN. |
 | [Managed identity support for SQL Server 2022 on Azure VM](managed-identity-extensible-key-management.md) | January 2025 | Starting with SQL Server 2022 Cumulative Update 17 (CU17), managed identities are supported for SQL Server on Azure VMs (Windows only). Managed identities can be used with [SQL Server credentials](/sql/t-sql/statements/create-credential-transact-sql) to [back up to and restore SQL Server on Azure VM databases from Azure Blob storage](backup-restore-to-url-using-managed-identities.md). Support for managed identities also enables functionalities like [Extensible Key Management (EKM) with Azure Key Vault (AKV) and Managed Hardware Security Modules (HSM)](managed-identity-extensible-key-management.md) to be used with SQL Server on Azure VMs. |
-| [Mbv3 VM series](performance-guidelines-best-practices-vm-size.md#mbdsv3-series) | November 2024 | A powerful new VM series that currently delivers a high level of IOPs and GB throughput, with strong memory capabilities up to the 176 vCore count for a consistent 8:1 memory-to-vCore ratio in this series. Both VMs in the series offer a consistent 64 maximum data disks per VM size, allowing you to maximize storage performance and still allow fully scalability across the table. The Mbdsv3 VMs in the series have the highest IOPS and GB throughput VMs available in Azure and can scale up to 4 TiBs at the 176 vCore level.|
-| [Azure Update Manager](../azure-update-manager-sql-vm.md) | April 2024 | Automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates. |
 
 ## Documentation changes 
 

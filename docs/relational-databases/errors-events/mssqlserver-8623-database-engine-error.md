@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_8623"
 description: "MSSQLSERVER_8623"
-author: shaunbeasley
-ms.author: shaunbe
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: jopilov
 ms.date: "08/04/2022"
 ms.service: sql

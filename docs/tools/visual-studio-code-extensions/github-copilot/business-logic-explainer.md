@@ -210,7 +210,7 @@ const customerRevenue = await SalesOrderHeader.findAll({
 
 ## Share your experience
 
-[!INCLUDE [feedback](../includes/feedback.md)]
+[!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
 
 ## Related content
 

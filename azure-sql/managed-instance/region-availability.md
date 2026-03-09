@@ -65,6 +65,7 @@ Supports for the memory-optimized premium-series hardware and the premium-series
 - China North 3
 - India Central
 - Japan East
+- Japan West
 
 <sup>1</sup> The creation of new instances and modification of existing instances may be temporarily disabled due to limited hardware capacity in this region. To proceed with these actions, please select a different hardware generation. 
 

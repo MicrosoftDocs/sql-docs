@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_17182"
 description: "MSSQLSERVER_17182"
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mathoma
 ms.date: 02/02/2023
 ms.service: sql

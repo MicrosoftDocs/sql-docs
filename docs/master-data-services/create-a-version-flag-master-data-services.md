@@ -1,18 +1,19 @@
 ---
 title: Create a Version Flag
-description: "Create a Version Flag (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Create a Version Flag (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "creating version flags [Master Data Services]"
   - "version flags [Master Data Services], creating"
   - "versions [Master Data Services], creating flags"
-ms.custom:
-  - build-2025
 ---
 # Create a Version Flag (Master Data Services)
 
@@ -55,6 +56,4 @@ ms.custom:
   
 ## See Also  
  [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [Change a Version Flag Name &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
-  
-  
+ [Change a Version Flag Name &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)

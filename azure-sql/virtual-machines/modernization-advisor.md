@@ -38,7 +38,7 @@ Modernization Advisor evaluates the following SQL Server VM resources to match w
 - The number of vCores
 - Memory used per vCore
 - Storage size
-- Storage type (Standard, Premium SSD, Premium SSDv2)
+- Storage type (Standard, Premium SSD, Premium SSD v2)
 
 ## Potential migration benefits 
 

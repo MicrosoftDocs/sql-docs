@@ -46,16 +46,16 @@ The failover cluster feature requires virtual machines to be placed in an [avail
 
 Carefully select the VM availability option that matches your intended cluster configuration:
 
-- **Azure shared disks**: the availability option varies if you're using Premium SSD or UltraDisk:
+- **Azure shared disks**: the availability option varies if you're using Premium SSD or Ultra Disk:
 
   - **Premium SSD Zone Redundant Storage (ZRS)**:
-    [Availability Zone](/azure/reliability/availability-zones-overview) in different zones. [Premium SSD ZRS](/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks) replicates your Azure managed disk synchronously across three Azure availability zones in the selected region. VMs part of failover cluster can be placed in different availability zones, helping you achieve a zone-redundant SQL Server FCI that provides a VM availability SLA of 99.99%. Disk latency for ZRS is higher due to the cross-zonal copy of data.
+    [Availability Zone](/azure/reliability/availability-zones-overview) in different zones. [Premium SSD ZRS](/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks) replicates your Azure Managed Disk synchronously across three Azure availability zones in the selected region. VMs part of failover cluster can be placed in different availability zones, helping you achieve a zone-redundant SQL Server FCI that provides a VM availability SLA of 99.99%. Disk latency for ZRS is higher due to the cross-zonal copy of data.
 
   - **Premium SSD Locally Redundant Storage (LRS)**:
     [Availability Set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set) in different fault/update domains for [Premium SSD LRS](/azure/virtual-machines/disks-redundancy#locally-redundant-storage-for-managed-disks). You can also choose to place the VMs inside a [proximity placement group](/azure/virtual-machines/windows/proximity-placement-groups-portal) to locate them closer to each other. Combining availability set and proximity placement group provides the lowest latency for shared disks as data is replicated locally within one data center and provides VM availability SLA of 99.95%.
 
   - **Ultra Disk Locally Redundant Storage (LRS)**:
-    [Availability zones](/azure/virtual-machines/windows/create-portal-availability-zone#confirm-zone-for-managed-disk-and-ip-address) but the VMs must be placed in the same availability zone. [Ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd) offers lowest disk latency and is best for IO intensive workloads. Since all VMs that are part of the FCI have to be in the same availability zone, the VM availability is only 99.9%.
+    [Availability zones](/azure/virtual-machines/windows/create-portal-availability-zone#confirm-zone-for-managed-disk-and-ip-address) but the VMs must be placed in the same availability zone. [Ultra Disks](/azure/virtual-machines/disks-enable-ultra-ssd) offers lowest disk latency and is best for IO intensive workloads. Since all VMs that are part of the FCI have to be in the same availability zone, the VM availability is only 99.9%.
 
 - **Premium file shares**: [Availability set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set) or [availability zones](/azure/virtual-machines/windows/create-portal-availability-zone#confirm-zone-for-managed-disk-and-ip-address).
 - **Storage Spaces Direct**: [Availability Set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set).

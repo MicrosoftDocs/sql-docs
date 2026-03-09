@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_3859
 description: "MSSQLSERVER_3859"
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: jopilov, mathoma
 ms.date: 08/20/2020
 ms.service: sql

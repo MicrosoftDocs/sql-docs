@@ -61,6 +61,10 @@ The following table describes the possible failure condition levels for the `fai
 
 Requires `VIEW ANY DEFINITION` permission on the server instance.
 
+### Permissions for SQL Server 2022 and later
+
+Requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
+
 ## Related content
 
 - [sys.availability_replicas (Transact-SQL)](sys-availability-replicas-transact-sql.md)

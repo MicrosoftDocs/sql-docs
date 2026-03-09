@@ -1,15 +1,16 @@
 ---
-title: What's New
+title: "What's New"
 description: Learn about the changes, improvements, and updates in the SQL Server 2019 release of Master Data Services.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "07/08/2016"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: whats-new
-monikerRange: ">=sql-server-ver16"
 ms.custom:
   - build-2025
+monikerRange: ">=sql-server-ver16"
 ---
 # What's New in Master Data Services (MDS)
 

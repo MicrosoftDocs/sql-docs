@@ -1,17 +1,18 @@
 ---
-title: Model Deployment Package examples
+title: Model Deployment Package Examples
 description: "SQL Server Examples: Model Deployment Packages (MDS)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "07/28/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: sample
-keywords:
-  - "master data services"
-  - "sample"
 ms.custom:
   - build-2025
+keywords:
+  - master data services
+  - sample
 ---
 # SQL Server Examples: Model Deployment Packages (MDS)
 
@@ -50,6 +51,4 @@ ms.custom:
  In Master Data Services, a package is an XML file that contains a deployable model structure, and optionally, data from the model. Use model packages to move copies of models from one MDS environment to another, or to create new models in your existing [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] environment.  
   
 ## See Also  
- [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
-  
-  
+ [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)

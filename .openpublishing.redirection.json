@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "docs/relational-databases/search/full-text-index-version-1-binaries.md",
+      "redirect_url": "/sql/relational-databases/search/full-text-index-binaries",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/odbc/reference/introduction-to-odbc.md",
       "redirect_url": "/sql/odbc/reference/odbc-overview",
       "redirect_document_id": true
@@ -20283,6 +20288,11 @@
     {
       "source_path": "docs/2014/database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md",
       "redirect_url": "/previous-versions/sql/2014/database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md",
+      "redirect_url": "/sql/database-engine/log-shipping/upgrade-sql-server-log-shipping-transact-sql",
       "redirect_document_id": false
     },
     {
@@ -47776,6 +47786,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/tools/mssql-cli.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-utility",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/tools/profiler-utility.md",
       "redirect_url": "/previous-versions/sql/2014/tools/profiler-utility",
       "redirect_document_id": false
@@ -67855,6 +67870,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/analytics-platform-system/appliance-management-tasks.md",
+      "redirect_url": "/sql/analytics-platform-system/parallel-data-warehouse-overview?view=aps-pdw-2016-au7&preserve-view=true#management-tasks",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "docs/t-sql/functions/string-functions-transact-sql.md",
       "redirect_url": "/sql/t-sql/functions/functions#string-functions",
       "redirect_document_id": false
@@ -67867,6 +67887,131 @@
     {
       "source_path": "docs/connect/jdbc/programming-guide-for-jdbc-sql-driver.md",
       "redirect_url": "/sql/connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md",
+      "redirect_url": "/sql/integration-services/change-data-capture/the-oracle-cdc-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/change-data-capture/connection-to-sql-server.md",
+      "redirect_url": "/sql/integration-services/change-data-capture/the-oracle-cdc-service#connection-to-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/change-data-capture/connection-to-sql-server-for-delete.md",
+      "redirect_url": "/sql/integration-services/change-data-capture/the-oracle-cdc-service#connection-to-sql-server-for-delete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md",
+      "redirect_url": "/sql/integration-services/change-data-capture/the-oracle-cdc-service#create-and-edit-an-oracle-cdc-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/change-data-capture/manage-an-oracle-cdc-service.md",
+      "redirect_url": "/sql/integration-services/change-data-capture/the-oracle-cdc-service#manage-an-oracle-cdc-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/change-data-capture/prepare-sql-server-for-cdc.md",
+      "redirect_url": "/sql/integration-services/change-data-capture/the-oracle-cdc-service#prepare-sql-server-for-cdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md",
+      "redirect_url": "/sql/integration-services/change-data-capture/the-oracle-cdc-service#prepare-sql-server-for-oracle-cdc-view-script",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/change-data-capture/work-with-cdc-services.md",
+      "redirect_url": "/sql/integration-services/change-data-capture/the-oracle-cdc-service#work-with-cdc-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/report-server-in-management-studio-f1-help.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/cancel-report-server-jobs-management-studio.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#cancel-report-server-jobs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/delete-catalog-items-management-studio.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#delete-catalog-items",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/job-properties-management-studio.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#job-properties",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/new-shared-schedule-management-studio.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#new-shared-schedule",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/new-system-role-management-studio.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#new-system-role",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/new-user-role-management-studio.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#new-user-role",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/schedule-properties-general-page.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#schedule-properties-general-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/schedule-properties-reports-page.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#schedule-properties-reports-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/report-server-properties-general-page.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#server-properties-general-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/server-properties-execution-page.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#server-properties-execution-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/server-properties-history-page.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#server-properties-history-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/server-properties-logging-page.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#server-properties-logging-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/server-properties-security-page-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#server-properties-security-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/server-properties-advanced-page-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#server-properties-advanced-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/system-role-properties-management-studio.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#system-role-properties",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tools/user-role-properties-management-studio.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs#user-role-properties",
       "redirect_document_id": false
     }
   ]

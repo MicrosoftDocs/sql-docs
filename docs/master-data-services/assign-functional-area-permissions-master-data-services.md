@@ -1,17 +1,18 @@
 ---
 title: Assign Functional Area Permissions
-description: "Assign Functional Area Permissions (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Assign Functional Area Permissions (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "permissions [Master Data Services], assigning functional area permissions"
   - "functional area permissions [Master Data Services], assigning"
-ms.custom:
-  - build-2025
 ---
 # Assign Functional Area Permissions (Master Data Services)
 
@@ -48,6 +49,4 @@ ms.custom:
   
 ## See Also  
  [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
-  
-  
+ [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)

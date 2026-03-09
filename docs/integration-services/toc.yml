@@ -1731,23 +1731,6 @@
         href: ../integration-services/change-data-capture/user-roles.md
       - name: Working with the Oracle CDC Service
         href: ../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md
-    - name: Change Data Capture Service for Oracle by Attunity F1 Help
-      href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md
-      items:
-      - name: Connection to SQL Server
-        href: ../integration-services/change-data-capture/connection-to-sql-server.md
-      - name: Connection to SQL Server for Delete
-        href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
-      - name: Create and Edit an Oracle CDC Service
-        href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
-      - name: Manage an Oracle CDC Service
-        href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
-      - name: Prepare SQL Server for CDC
-        href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
-      - name: Prepare SQL Server for Oracle CDC-View Script
-        href: ../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md
-      - name: Work with CDC Services
-        href: ../integration-services/change-data-capture/work-with-cdc-services.md
     - name: Change Data Capture Service for Oracle by Attunity How to Guide
       href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
       items:

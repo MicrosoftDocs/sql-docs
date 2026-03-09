@@ -1,10 +1,10 @@
 ---
 title: Local SQL Server Container in Visual Studio Code with MSSQL
 description: Learn how to use the MSSQL extension for Visual Studio Code to create, manage, and connect to SQL Server containers for local development, with no Docker CLI required.
-author: croblesm
-ms.author: roblescarlos
-ms.reviewer: randolphwest
-ms.date: 01/19/2026
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: roblescarlos
+ms.date: 02/21/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -144,11 +144,16 @@ This feature makes a local SQL Server container ideal for:
   - SQL Server needs at least 2 GB of memory to start a Linux-based container.
   - By default, SQL Server on Linux uses approximately 80% of the memory available to the container.
 
+## Feedback and support
+
+[!INCLUDE [feedback](../includes/feedback.md)]
+
 ## Related content
 
 - [Quickstart: Connect to and query a database with the MSSQL extension for Visual Studio Code](connect-database-visual-studio-code.md)
 - [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)
+- [Database operations (Preview)](mssql-database-operations.md)
 - [Schema Designer](mssql-schema-designer.md)
 - [Schema Compare](mssql-schema-compare.md)
-- [Learn more about Visual Studio Code](https://code.visualstudio.com/docs)
-- [MSSQL Extension GitHub repo](https://github.com/Microsoft/vscode-mssql)
+- [Visual Studio Code documentation](https://code.visualstudio.com/docs)
+- [MSSQL extension for Visual Studio Code repository on GitHub](https://github.com/Microsoft/vscode-mssql)

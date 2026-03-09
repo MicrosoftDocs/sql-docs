@@ -1,17 +1,18 @@
 ---
 title: Delete an Entity
-description: "Delete an Entity (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Delete an Entity (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "entities [Master Data Services], deleting"
   - "deleting entities [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Delete an Entity (Master Data Services)
 
@@ -47,6 +48,4 @@ ms.custom:
   
 ## See Also  
  [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
-  
-  
+ [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)

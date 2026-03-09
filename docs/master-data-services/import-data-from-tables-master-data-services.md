@@ -1,9 +1,10 @@
 ---
 title: Import Data from Tables
 description: Import data from tables and make data changes to a model, in bulk. Use this procedure to add, update, and delete data in the Master Data Services database.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/14/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
@@ -70,5 +71,4 @@ ms.custom:
   
      In Master Data Manager, navigate to the **Explorer** functional area for your model, and then apply business rules to validate the data. For more information , see [Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md). You can also use a stored procedure to validate the data. For more information, see [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-     When you load data by from the staging tables, the data is not automatically validated against business rules. For more information on what validation is and when it occurs, see [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).  
-  
+     When you load data by from the staging tables, the data is not automatically validated against business rules. For more information on what validation is and when it occurs, see [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).

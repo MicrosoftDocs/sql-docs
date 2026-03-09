@@ -1,17 +1,18 @@
 ---
 title: Database Object Security
-description: "Database Object Security (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/04/2017"
+description: Database Object Security (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "database [Master Data Services], object security"
   - "security [Master Data Services], database objects"
-ms.custom:
-  - build-2025
 ---
 # Database Object Security (Master Data Services)
 
@@ -81,6 +82,4 @@ ms.custom:
  There are system settings that you can configure to control behavior in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. You can adjust these settings in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] or if you have UPDATE access, you can adjust these settings directly in the mdm.tblSystemSetting database table. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## See Also  
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
-  
-  
+ [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)

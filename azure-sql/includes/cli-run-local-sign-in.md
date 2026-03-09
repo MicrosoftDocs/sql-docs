@@ -1,6 +1,6 @@
 ---
-author: dbradish-microsoft
-ms.author: dbradish
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 01/13/2026
 ms.topic: include
 ---

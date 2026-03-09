@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_912"
 description: The database script level could not be upgraded to the latest required by the server.
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/01/2022"
 ms.service: sql
 ms.subservice: supportability

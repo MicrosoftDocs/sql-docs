@@ -147,7 +147,7 @@ Some of the options aren't available in all database engine versions. The follow
 | `DATA_COMPRESSION` | [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] |
 | `ONLINE` | [!INCLUDE [ssSQLv15_md](../../includes/sssql19-md.md)] | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] |
 | `WHERE` clause | N/A | [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] |
-| `ORDER` clause | [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE [sql-server-2025](../../includes/sssql25-md.md)] |
+| `ORDER` clause | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | [!INCLUDE [sql-server-2025](../../includes/sssql25-md.md)] |
 
 All options are available in Azure SQL Database and [!INCLUDE [ssazure-sqlmi-autd](../../includes/applies-to-version/ssazure-sqlmi-autd.md)].
 

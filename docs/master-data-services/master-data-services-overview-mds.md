@@ -1,12 +1,15 @@
 ---
 title: Overview
 description: Learn about the key data organization and management features of Master Data Services. Master Data Services enables you to manage a master set of your data.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "02/14/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 f1_keywords:
   - "sql13.mds.configmanager.srvconnect.f1"
   - "sql13.mds.configmanager.dbmailprofileacct.f1"
@@ -16,8 +19,6 @@ helpviewer_keywords:
   - "Master Data Services, overview"
   - "Master Data Services"
 keywords: what is master data
-ms.custom:
-  - build-2025
 ---
 # Master Data Services Overview (MDS)
 
@@ -73,7 +74,4 @@ This topic describes the key data organization and management features of [!INCL
 |Create subscription views|For your subscribing systems to consume your master data, create subscription views, which create standard views in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.|[Overview: Exporting Data &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)<br /><br /> [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Configure user and group permissions|You cannot copy user and group permissions from a test to a production environment. However, you can use your test environment to determine the security you want to use eventually in production.|[Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)<br /><br /> [Add a Group &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)<br /><br /> [Add a User &#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)|  
   
- When ready, you can deploy your model, with or without its data, to your production environment. For more information, see [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  
-  
-  
-
+ When ready, you can deploy your model, with or without its data, to your production environment. For more information, see [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).

@@ -1,18 +1,19 @@
 ---
 title: Domain-Based Attributes
 description: Learn about domain-based attributes in Master Data Services, which have values populated from another entity. Users must pick a value from a list.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/15/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "domain-based attributes [Master Data Services], about domain-based attributes"
   - "domain-based attributes [Master Data Services]"
   - "attributes [Master Data Services], domain-based attributes"
-ms.custom:
-  - build-2025
 ---
 # Domain-Based Attributes (Master Data Services)
 
@@ -48,6 +49,4 @@ ms.custom:
   
 -   [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
-  
-  
+-   [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)

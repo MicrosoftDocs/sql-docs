@@ -46,7 +46,7 @@ Follow these best practices when you set up the server environment:
 
 ### Enhance physical security
 
-Physical and logical isolation make up the foundation of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] security. To enhance the physical security of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installation, do the following tasks:
+Physical and logical isolation form the foundation of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] security. To enhance the physical security of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installation, complete the following tasks:
 
 - Place the server in a room accessible only to authorized persons.
 
@@ -60,15 +60,15 @@ Physical and logical isolation make up the foundation of [!INCLUDE [ssNoVersion]
 
 ### Use firewalls
 
-Firewalls are important to help secure the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installation. Firewalls are most effective if you follow these guidelines:
+Firewalls are important for securing the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installation. Firewalls are most effective if you follow these guidelines:
 
 - Put a firewall between the server and the Internet. Enable your firewall. If your firewall is turned off, turn it on. If your firewall is turned on, don't turn it off.
 
 - Divide the network into security zones separated by firewalls. Block all traffic, and then selectively admit only what is required.
 
-- In a multi-tier environment, use multiple firewalls to create screened subnets.
+- In a multitier environment, use multiple firewalls to create screened subnets.
 
-- When you're installing the server inside a Windows domain, configure interior firewalls to allow Windows Authentication.
+- When you install the server inside a Windows domain, configure interior firewalls to allow Windows Authentication.
 
 - If your application uses distributed transactions, you might have to configure the firewall to allow [!INCLUDE [msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) traffic to flow between separate MS DTC instances. You must also configure the firewall to allow traffic to flow between the MS DTC and resource managers such as [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -86,21 +86,21 @@ Isolating services reduces the risk that one compromised service could be used t
 
 ### Configure a secure file system
 
-Using the correct file system increases security. For [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installations, you should do the following tasks:
+Using the correct file system increases security. For [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installations, complete the following tasks:
 
-Use the NT file system (NTFS) or Resilient File System (ReFS). NTFS and ReFS are the recommended file system for installations of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] because it's more stable and recoverable than FAT32 file systems. NTFS or ReFS also enable security options like file and directory access control lists (ACLs). NTFS also supports Encrypting File System (EFS) - file encryption. During installation, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sets appropriate ACLs on registry keys and files if it detects NTFS. These permissions shouldn't be changed. Future releases of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] might not support installation on computers with FAT file systems.
+Use the NT file system (NTFS) or Resilient File System (ReFS). NTFS and ReFS are the recommended file systems for installations of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] because they're more stable and recoverable than FAT32 file systems. NTFS or ReFS also enable security options like file and directory access control lists (ACLs). NTFS also supports Encrypting File System (EFS) - file encryption. During installation, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sets appropriate ACLs on registry keys and files if it detects NTFS. Don't change these permissions. Future releases of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] might not support installation on computers with FAT file systems.
 
 > [!NOTE]  
-> If you use EFS, database files are encrypted under the identity of the account running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Only this account is able to decrypt the files. If you must change the account that runs [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], you must first decrypt the files under the old account and then re-encrypt them under the new service account.
+> If you use EFS, database files are encrypted under the identity of the account running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Only this account can decrypt the files. If you must change the account that runs [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], first decrypt the files under the old account and then re-encrypt them under the new service account.
 
 > [!WARNING]  
-> Using file encryption via EFS might lead to slower I/O performance because encryption causes asynchronous I/O to become synchronous. See [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption). Instead, you can consider using SQL Server encryption technologies like [Transparent data encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md), and column-level encryption [Cryptographic functions](../../t-sql/functions/cryptographic-functions-transact-sql.md).
+> Using file encryption through EFS might lead to slower I/O performance because encryption causes asynchronous I/O to become synchronous. See [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption). Instead, consider using SQL Server encryption technologies like [Transparent data encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md), and column-level encryption [Cryptographic functions](../../t-sql/functions/cryptographic-functions-transact-sql.md).
 
 <a id="disabled_protocols"></a>
 
 ### Disable NetBIOS and Server Message Block
 
-Servers in the perimeter network should have all unnecessary protocols disabled, including NetBIOS and server message block (SMB).
+Disable all unnecessary protocols on servers in the perimeter network, including NetBIOS and server message block (SMB).
 
 NetBIOS uses the following ports:
 
@@ -119,17 +119,17 @@ Web servers and Domain Name System (DNS) servers don't require NetBIOS or SMB. O
 
 ### Install SQL Server on a domain controller
 
-For security reasons, we recommend that you don't install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on a domain controller. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup doesn't block installation on a computer that is a domain controller, but the following limitations apply:
+For security reasons, don't install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on a domain controller. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup doesn't block installation on a computer that is a domain controller, but the following limitations apply:
 
 - You can't run [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] services on a domain controller under a local service account.
 
-- After [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you can't change the computer from a domain member to a domain controller. You must uninstall [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain controller.
+- After you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on a computer, you can't change the computer from a domain member to a domain controller. You must uninstall [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain controller.
 
-- After [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you can't change the computer from a domain controller to a domain member. You must uninstall [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain member.
+- After you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on a computer, you can't change the computer from a domain controller to a domain member. You must uninstall [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain member.
 
 - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instances aren't supported where cluster nodes are domain controllers.
 
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup can't create security groups or provision [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on a read-only domain controller. In this scenario, Setup fails.
+- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup can't create security groups or [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on a read-only domain controller. In this scenario, Setup fails.
 
 ### Ensure required user rights are assigned for successful installation
 
@@ -139,7 +139,7 @@ Setup requires that the following user rights are granted to the account under w
 - Debug programs
 - Manage auditing and security log
 
-These user privileges are usually granted by default to the local administrator group (`BUILTIN\Administrators`). In most cases, no action is required to assign them. However, if a security policy revokes these privileges, you must make sure they are correctly assigned, or [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup fails with the following error:
+These user privileges are usually granted by default to the local administrator group (`BUILTIN\Administrators`). In most cases, you don't need to take any action to assign them. However, if a security policy revokes these privileges, make sure they're correctly assigned, or [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup fails with the following error:
 
 ```output
 The account that is running SQL Server Setup doesn't have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
@@ -147,13 +147,13 @@ The account that is running SQL Server Setup doesn't have one or all of the foll
 
 ## During or after installation of SQL Server
 
-After installation, you can enhance the security of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installation by following these best practices regarding accounts and authentication modes:
+After installation, enhance the security of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installation by following these best practices regarding accounts and authentication modes:
 
 ### Service accounts
 
 - Run [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] services by using the lowest possible permissions.
 
-- Associate [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] services with low privileged Windows local user accounts, or domain user accounts.
+- Associate [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] services with low privileged Windows local user accounts or domain user accounts.
 
 - For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
@@ -170,7 +170,7 @@ After installation, you can enhance the security of the [!INCLUDE [ssNoVersion](
 - Always use strong passwords for all [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] logins.
 
 > [!IMPORTANT]  
-> During setup of [!INCLUDE [ssExpress](../../includes/ssexpress-md.md)] a login is added for the `BUILTIN\Users` group. This allows all authenticated users of the computer to access the instance of [!INCLUDE [ssExpress](../../includes/ssexpress-md.md)] as a member of the public role. The `BUILTIN\Users` login can be safely removed to restrict [!INCLUDE [ssDE](../../includes/ssde-md.md)] access to computer users who have individual logins or are members of other Windows groups with logins.
+> During setup of [!INCLUDE [ssExpress](../../includes/ssexpress-md.md)] a login is added for the `BUILTIN\Users` group. This group grants all users of the computer access to the instance of [!INCLUDE [ssExpress](../../includes/ssexpress-md.md)] as a member of the public role. You can safely remove the `BUILTIN\Users` group to restrict [!INCLUDE [ssDE](../../includes/ssde-md.md)] access to computer users who have individual logins or are members of other Windows groups with logins.
 
 ## Related content
 

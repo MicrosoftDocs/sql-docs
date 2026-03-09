@@ -5,7 +5,7 @@ description: Contains a row for each replication link between primary and second
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 06/13/2025
+ms.date: 02/26/2026
 ms.service: azure-sql-database
 ms.topic: reference
 f1_keywords:
@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current"
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This includes both primary and secondary databases. If more than one continuous replication link exists for a given primary database, this table contains a row for each of the relationships. The view is created in all databases, including the `master` database. However, querying this view in the `master` database returns an empty set.
+Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This includes both primary and secondary databases. If more than one continuous replication link exists for a given primary database, this table contains a row for each of the relationships. 
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -41,12 +41,17 @@ Contains a row for each replication link between primary and secondary databases
 | `secondary_allow_connections_desc` |**nvarchar(256)**|No<br /><br /> All|  
 | `last_commit` |**datetimeoffset**|The time of last transaction committed to the database. If retrieved on the primary database, it indicates the last commit time on the primary database. If retrieved on the secondary database, it indicates the last commit time on the secondary database. If retrieved on the secondary database when the primary of the replication link is down, it indicates until what point the secondary has caught up.|
 
-> [!NOTE]  
->  If the replication relationship is terminated by removing the secondary database, the row for that database in the `sys.dm_geo_replication_link_status` view disappears.  
-
 ## Permissions
 
 Requires the `VIEW DATABASE STATE` permission in the database.  
+
+## Remarks
+
+If the replication relationship is terminated by removing the secondary database, the row for that database in the `sys.dm_geo_replication_link_status` view disappears.
+
+The view is created in all databases, including the `master` database. However, querying this view in the `master` database returns an empty set.
+
+For more information on troubleshooting geo-replication redo lag in Azure SQL Database, see [Troubleshoot geo-replication redo lag](/azure/azure-sql/database/troubleshoot-geo-replication-redo?view=azuresql-db&preserve-view=true).
 
 ## Examples
 
@@ -63,7 +68,7 @@ FROM sys.dm_geo_replication_link_status;
 
 ## Related content
 
-- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [sys.dm_database_replica_states (Azure SQL Database)](sys-dm-database-replica-states-azure-sql-database.md)
 - [sys.geo_replication_links (Azure SQL Database)](sys-geo-replication-links-azure-sql-database.md)
 - [sys.dm_operation_status (Azure SQL Database)](sys-dm-operation-status-azure-sql-database.md)
 - [sp_wait_for_database_copy_sync](../system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql.md)

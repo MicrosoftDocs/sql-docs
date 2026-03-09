@@ -1,16 +1,17 @@
 ---
 title: Add Conditions to a Business Rule
-description: "Add Multiple Conditions to a Business Rule (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Add Multiple Conditions to a Business Rule (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
-helpviewer_keywords:
-  - "business rules [Master Data Services], multiple conditions"
 ms.custom:
   - build-2025
+helpviewer_keywords:
+  - "business rules [Master Data Services], multiple conditions"
 ---
 # Add Multiple Conditions to a Business Rule (Master Data Services)
 
@@ -71,6 +72,4 @@ ms.custom:
 ## See Also  
  [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Change a Business Rule Name &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
-  
-  
+ [Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)

@@ -50,7 +50,6 @@ Ledger provides a solution for these networks. Participants can verify the integ
 #### Customer success
 
 - Learn how [Lenovo is reinforcing customer trust using ledger in Azure SQL Database](https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi).
-- [Qode Health Solutions secures COVID-19 vaccination records with the ledger feature in Azure SQL Database](https://customers.microsoft.com/story/1595119379301789552-qode-professional-services-azure-sql-database) 
 
 ### Trusted off-chain storage for blockchain
 

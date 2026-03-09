@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_3988
 description: "MSSQLSERVER_3988"
-author: suresh-kandoth
-ms.author: sureshka
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vencher, tejasaks, docast
 ms.date: 12/25/2020
 ms.service: sql

@@ -60,6 +60,10 @@ A common DNS suffix is necessary for a domain independent availability group's w
 1. On the System Properties dialog, select **Change** on the Computer Name tab.
 1. On the Computer Name/Domain Changes dialog, select **More**.
 1. On the DNS Suffix and NetBIOS Computer Name dialog, enter the common DNS suffix as the **Primary DNS** suffix.
+
+   > [!NOTE]
+   > Specify only the DNS suffix (for example, `CONTOSO.LAB`), not the full computer name. Do not include the hostname in the DNS suffix field.
+
 1. Select **OK** to close the DNS Suffix and NetBIOS Computer Name dialog.
 1. Select **OK** to close the Computer Name/Domain Changes dialog.
 1. You're prompted to restart the server for the changes to take effect. Select **OK** to close the Computer Name/Domain Changes dialog.

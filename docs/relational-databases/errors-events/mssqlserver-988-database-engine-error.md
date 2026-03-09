@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_988"
 description: "MSSQLSERVER_988"
-author: prmadhes-msft
-ms.author: prmadhes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 07/17/2025
 ms.service: sql

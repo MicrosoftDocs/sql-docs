@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_3201"
 description: "MSSQLSERVER_3201"
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/15/2022"
 ms.service: sql
 ms.subservice: supportability

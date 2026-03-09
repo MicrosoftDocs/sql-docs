@@ -3,7 +3,8 @@ title: "Loading and Running a Remote Package Programmatically"
 description: "Loading and Running a Remote Package Programmatically"
 author: chugugrace
 ms.author: chugu
-ms.date: "03/17/2017"
+ms.date: "02/23/2026"
+ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: "reference"
@@ -16,28 +17,27 @@ helpviewer_keywords:
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-  To run remote packages from a local computer that does not have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, start the packages so that they run on the remote computer on which [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is installed. You do this by having the local computer use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, a Web service, or a remote component to start the packages on the remote computer. If you try to start the remote packages directly from the local computer, the packages will load onto and try to run from the local computer. If the local computer does not have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, the packages will not run.  
+  To run remote packages from a local computer that doesn't have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, start the packages so that they run on the remote computer where [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is installed. To accomplish this goal, have the local computer use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, a Web service, or a remote component to start the packages on the remote computer. If you try to start the remote packages directly from the local computer, the packages load onto and try to run from the local computer. If the local computer doesn't have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, the packages don't run.  
   
 > [!NOTE]  
->  You cannot run packages outside [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] on a client computer that does not have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, and the terms of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] licensing might not let you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on additional computers. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is a server component and is not redistributable to client computers.  
+>  You can't run packages outside [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] on a client computer unless [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is installed. The terms of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] licensing might not let you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on other computers. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is a server component and isn't redistributable to client computers.  
   
- Alternately, you can run a remote package from a local computer that has [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed. For more information, see [Loading and Running a Local Package Programmatically](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
+ Alternatively, you can run a remote package from a local computer that has [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed. For more information, see [Loading and Running a Local Package Programmatically](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
   
 ##  <a name="top"></a> Running a Remote Package on the Remote Computer  
- As mentioned above, there are multiple ways in which you can run a remote package on a remote server:  
+ There are multiple ways to run a remote package on a remote server:  
   
--   [Use SQL Server Agent to run the remote package programmatically](#agent)  
+- [Use SQL Server Agent to run the remote package programmatically](#agent)  
   
--   [Use a Web service or remote component to run the remote package programmatically](#service)  
+- [Use a Web service or remote component to run the remote package programmatically](#service)  
   
- Almost all the methods that are used in this topic to load and save packages require a reference to the **Microsoft.SqlServer.ManagedDTS** assembly. The exception is the ADO.NET approach demonstrated in this topic for executing the **sp_start_job** stored procedure, which requires only a reference to **System.Data**. After you add the reference to the **Microsoft.SqlServer.ManagedDTS** assembly in a new project, import the <xref:Microsoft.SqlServer.Dts.Runtime> namespace with a **using** or **Imports** statement.  
+ Almost all the methods that are used in this topic to load and save packages require a reference to the **Microsoft.SqlServer.ManagedDTS** assembly. The exception is the ADO.NET approach demonstrated in this topic for executing the **sp_start_job** stored procedure, which requires only references to **System.Data** and **Microsoft.Data.SqlClient**. After you add the reference to the **Microsoft.SqlServer.ManagedDTS** assembly in a new project, import the <xref:Microsoft.SqlServer.Dts.Runtime> namespace with a **using** or **Imports** statement.  
   
 ###  <a name="agent"></a> Using SQL Server Agent to Run a Remote Package Programmatically on the Server  
  The following code sample demonstrates how to programmatically use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run a remote package on the server. The code sample calls the system stored procedure, **sp_start_job**, which launches a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. The job that the procedure launches is named `RunSSISPackage`, and this job is on the remote computer. The `RunSSISPackage` job then runs the package on the remote computer.  
   
 > [!NOTE]  
->  The return value of the **sp_start_job** stored procedure indicates whether the stored procedure was able to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job successfully. The return value does not indicate whether the package succeeded or failed.  
+>  The return value of the **sp_start_job** stored procedure indicates whether the stored procedure was able to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job successfully. The return value doesn't indicate whether the package succeeded or failed.  
   
  For information on troubleshooting packages that are run from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, see the Microsoft article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760).  
   
@@ -45,8 +45,7 @@ helpviewer_keywords:
   
 ```vb  
 Imports System.Data  
-Imports System.Data.SqlClient  
-  
+Imports Microsoft.Data.SqlClient
 Module Module1  
   
   Sub Main()  
@@ -91,8 +90,7 @@ End Module
 ```csharp  
 using System;  
 using System.Data;  
-using System.Data.SqlClient;  
-  
+using Microsoft.Data.SqlClient;
 namespace LaunchSSISPackageAgent_CS  
 {  
   class Program  
@@ -139,29 +137,29 @@ namespace LaunchSSISPackageAgent_CS
 ```  
   
 ###  <a name="service"></a> Using a Web Service or Remote Component to Run a Remote Package Programmatically  
- The previous solution for running packages programmatically on the server does not require any custom code on the server. However, you may prefer a solution that does not rely on SQL Server Agent to execute packages. The following example demonstrates a Web service that can be created on the server to start [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages locally, and a test application that can be used to call the Web service from a client computer. If you prefer to create a remote component instead of a Web service, you can use the same code logic with very few changes in a remote component. However a remote component may require more extensive configuration than a Web service.  
+ The previous solution for running packages programmatically on the server doesn't require any custom code on the server. However, you might prefer a solution that doesn't rely on SQL Server Agent to execute packages. The following example shows how to create a Web service on the server to start [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages locally, and a test application to call the Web service from a client computer. If you prefer to create a remote component instead of a Web service, you can use the same code logic with few changes in a remote component. However a remote component might require more extensive configuration than a Web service.  
   
 > [!IMPORTANT]  
->  With its default settings for authentication and authorization, a Web service generally does not have sufficient permissions to access SQL Server or the file system to load and execute packages. You may have to assign appropriate permissions to the Web service by configuring its authentication and authorization settings in the **web.config** file and assigning database and file system permissions as appropriate. A complete discussion of Web, database, and file system permissions is beyond the scope of this topic.  
+>  With its default settings for authentication and authorization, a Web service generally doesn't have sufficient permissions to access SQL Server or the file system to load and execute packages. You might have to assign appropriate permissions to the Web service by configuring its authentication and authorization settings in the **web.config** file and assigning database and file system permissions as appropriate. A complete discussion of Web, database, and file system permissions is beyond the scope of this topic.  
   
 > [!IMPORTANT]  
->  The methods of the <xref:Microsoft.SqlServer.Dts.Runtime.Application> class for working with the SSIS Package Store support only ".", localhost, or the server name for the local server. You cannot use "(local)".  
+>  The methods of the <xref:Microsoft.SqlServer.Dts.Runtime.Application> class for working with the SSIS Package Store support only ".", localhost, or the server name for the local server. You can't use "(local)".  
   
 ### Sample Code  
  The following code samples show how to create and test the Web service.  
   
 #### Creating the Web Service  
- An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package can be loaded directly from a file, directly from SQL Server, or from the SSIS Package Store, which manages package storage in both SQL Server and special file system folders. This sample supports all the available options by using a **Select Case** or **switch** construct to select the appropriate syntax for starting the package and to concatenate the input arguments appropriately. The LaunchPackage Web service method returns the result of package execution as an integer instead of a <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> value so that client computers do not require a reference to any [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies.  
+ You can load an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package directly from a file, from SQL Server, or from the SSIS Package Store. The SSIS Package Store manages package storage in both SQL Server and special file system folders. This sample supports all the available options by using a **Select Case** or **switch** construct to select the appropriate syntax for starting the package and to concatenate the input arguments appropriately. The LaunchPackage Web service method returns the result of package execution as an integer instead of a <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> value so that client computers don't require a reference to any [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies.  
   
 ###### To create a Web service to run packages on the server programmatically  
   
-1.  Open Visual Studio and create a Web service project in your preferred programming language. The sample code uses the name LaunchSSISPackageService for the project.  
+1. Open Visual Studio and create a Web service project in your preferred programming language. The sample code uses the name LaunchSSISPackageService for the project.  
   
-2.  Add a reference to **Microsoft.SqlServer.ManagedDTS** and add an **Imports** or **using** statement to the code file for the **Microsoft.SqlServer.Dts.Runtime** namespace.  
+2. Add a reference to **Microsoft.SqlServer.ManagedDTS** and add an **Imports** or **using** statement to the code file for the **Microsoft.SqlServer.Dts.Runtime** namespace.  
   
-3.  Paste the sample code for the LaunchPackage Web service method into the class. (The sample shows the whole contents of the code window.)  
+3. Paste the sample code for the LaunchPackage Web service method into the class. (The sample shows the whole contents of the code window.)  
   
-4.  Build and test the Web service by providing a set of valid values for the input arguments of the LaunchPackage method that point to an existing package. For example, if package1.dtsx is stored on the server in C:\My Packages, pass "file" as the value of the sourceType, "C:\My Packages" as the value of sourceLocation, and "package1" (without the extension) as the value of packageName.  
+4. Build and test the Web service by providing a set of valid values for the input arguments of the LaunchPackage method that point to an existing package. For example, if package1.dtsx is stored on the server in C:\My Packages, pass "file" as the value of the sourceType, "C:\My Packages" as the value of sourceLocation, and "package1" (without the extension) as the value of packageName.  
   
 ```vb  
 Imports System.Web  
@@ -324,19 +322,19 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### Testing the Web Service  
- The following sample console application uses the Web service to run a package. The LaunchPackage method of the Web service returns the result of package execution as an integer instead of a <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> value so that client computers do not require a reference to any [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies. The sample creates a private enumeration whose values mirror the <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> values to report the results of execution.  
+ The following sample console application uses the Web service to run a package. The LaunchPackage method of the Web service returns the result of package execution as an integer instead of a <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> value so that client computers don't require a reference to any [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies. The sample creates a private enumeration whose values mirror the <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> values to report the results of execution.  
   
 ###### To create a console application to test the Web service  
   
-1.  In Visual Studio, add a new console application, using your preferred programming language, to the same solution that contains the Web service project. The sample code uses the name LaunchSSISPackageTest for the project.  
+1. In Visual Studio, add a new console application, using your preferred programming language, to the same solution that contains the Web service project. The sample code uses the name LaunchSSISPackageTest for the project.  
   
-2.  Set the new console application as the startup project in the solution.  
+2. Set the new console application as the startup project in the solution.  
   
-3.  Add a Web reference for the Web service project. If necessary, adjust the variable declaration in the sample code for the name that you assign to the Web service proxy object.  
+3. Add a Web reference for the Web service project. If necessary, adjust the variable declaration in the sample code for the name that you assign to the Web service proxy object.  
   
-4.  Paste the sample code for the Main routine and the private enumeration into the code. (The sample shows the whole contents of the code window.)  
+4. Paste the sample code for the Main routine and the private enumeration into the code. (The sample shows the whole contents of the code window.)  
   
-5.  Edit the line of code that calls the LaunchPackage method to provide a set of valid values for the input arguments that point to an existing package. For example, if package1.dtsx is stored on the server in C:\My Packages, pass "file" as the value of `sourceType`, "C:\My Packages" as the value of `sourceLocation`, and "package1" (without the extension) as the value of `packageName`.  
+5. Edit the line of code that calls the LaunchPackage method to provide a set of valid values for the input arguments that point to an existing package. For example, if package1.dtsx is stored on the server in C:\My Packages, pass "file" as the value of `sourceType`, "C:\My Packages" as the value of `sourceLocation`, and "package1" (without the extension) as the value of `packageName`.  
   
 ```vb  
 Module LaunchSSISPackageTest  
@@ -411,10 +409,9 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## External Resources  
   
--   Video, [How to: Automate SSIS Package Execution by Using the SQL Server Agent (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com  
+- Video, [How to: Automate SSIS Package Execution by Using the SQL Server Agent (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com  
   
-## See Also  
+## Related content  
  [Understanding the Differences between Local and Remote Execution](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Loading and Running a Local Package Programmatically](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Loading the Output of a Local Package](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
-  

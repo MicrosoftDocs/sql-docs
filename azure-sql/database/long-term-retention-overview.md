@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database & Azure SQL Managed Instance support s
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dinethi, mathoma, randolphwest, strrodic
-ms.date: 09/25/2025
+ms.date: 03/06/2026
 ms.service: azure-sql
 ms.subservice: backup-restore
 ms.topic: concept-article
@@ -38,7 +38,7 @@ To enable LTR, you can define a policy using a combination of four parameters: w
 Changes to the LTR policy apply only to future backups. For example, if you modify the weekly backup retention (W), monthly backup retention (M), or yearly backup retention (Y), the new retention setting only applies to new backups. The retention of existing backups isn't modified. The LTR policy can be configured for each database in Azure SQL Database and Azure SQL Managed Instance. If you intend to delete old LTR backups before their retention period expires, you can [manually delete the backups](./long-term-backup-retention-configure.md#delete-ltr-backups).
 
 > [!NOTE]
-> In both Azure SQL Database and Azure SQL Managed Instance, when you enable an LTR policy for the first time for a database, and the policy specifies a yearly retention, the most recent full backup from point-in-time-restore (PITR) is copied to long term storage.
+> In both Azure SQL Database and Azure SQL Managed Instance, when you enable an LTR policy for the first time for a database, the most recent full backup from point-in-time-restore (PITR) is copied to long term storage.
 
 
 Examples of the LTR policy:

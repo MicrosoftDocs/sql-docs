@@ -4,7 +4,7 @@ description: Known issues, causes, and workarounds for SQL Server 2025 (17.x), c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 02/18/2026
+ms.date: 03/04/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: troubleshooting-known-issue
@@ -34,7 +34,7 @@ The following issues are currently identified:
 - [Vector index](#vector-index)
 - [SQL Server audit events don't write to the Security log](#sql-server-audit-events-dont-write-to-the-security-log)
 - [Upgrade fails if Data Quality Services is installed](#upgrade-fails-if-data-quality-services-is-installed)
-- [Full-Text Search fails to index plaintext documents larger than 25 MB](#full-text-search-fails-to-index-plaintext-documents-larger-than-25-mb)
+- [Full-Text Search](#full-text-search)
 - [Incorrect license agreement for LocalDB installer](#incorrect-license-agreement-for-localdb-installer)
 - [SQL Server might become slow or unresponsive after creating or bringing online a large number of databases](#sql-server-might-become-slow-or-unresponsive-after-creating-or-bringing-online-a-large-number-of-databases)
 
@@ -179,8 +179,9 @@ If Data Quality Services is installed and you upgrade your [!INCLUDE [ssnoversio
 
 You can also run a full unattended upgrade from the command line, as long as you include the `/IACCEPTDQUNINSTALL` parameter.
 
-## Full-Text Search fails to index plaintext documents larger than 25 MB
+## Full-Text Search
 
+**Issue**: Full-Text Search fails to index plaintext documents larger than 25 MB
 If you try to index a plaintext document larger than 25 MB, you see the symbolic error `FILTER_E_PARTIALLY_FILTERED` in the crawl log:
 
 ```output
@@ -202,6 +203,17 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ContentIndex" /v Ma
 ```
 
 After updating the registry value, reissue the Full-Text crawl.
+
+**Issue**: Full-Text Queries using inflectional forms fail for certain languages when Index Version2 is enabled
+
+Full-Text uses stemmers for Freetext, Freetexttable or `FORMSOF(INFLECTIONAL)` argument in Contains and Containstable. For languages where a stemmer isn't registered or available, queries that reference inflectional forms can fail with following error.
+
+```output
+Msg 30010, Level 16, State 2, Line 119
+An error has occurred during the full-text query. Common causes include: word-breaking errors or timeout, FDHOST permissions/ACL issues, service account missing privileges, malfunctioning IFilters, communication channel issues with FDHost and sqlservr.exe, etc. If recently performed in-place upgrade to SQL2025, For help please see https://aka.ms/sqlfulltext.
+```
+
+**Workaround**: Avoid using inflectional-form queries for languages that don't have registered stemmers. For more information, see [Version 2 word breakers](../relational-databases/search/full-text-index-binaries.md#word-breakers). If the application has a strong dependency on inflectional or linguistic search behavior for such languages, configure the database to use Full-Text Index Version 1 instead.
 
 ## Incorrect license agreement for LocalDB installer
 

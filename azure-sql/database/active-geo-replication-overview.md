@@ -106,6 +106,9 @@ Both the primary and geo-secondary are required to have the same service tier. I
 
 Another consequence of an imbalanced geo-secondary configuration is that after failover, application performance can suffer due to insufficient compute capacity of the new primary. In that case, it's necessary to scale up the database to have sufficient resources, which might take significant time, and requires a [high availability](high-availability-sla-local-zone-redundancy.md) failover at the end of the scale up process, which can interrupt application workloads.
 
+> [!TIP]
+> For detailed troubleshooting guidance on lag with geo-replication, see [Troubleshoot geo-replication redo lag](troubleshoot-geo-replication-redo.md).
+
 If you decide to create the geo-secondary with a different configuration, you should monitor log I/O rate on the primary over time. This lets you estimate the minimal compute size of the geo-secondary required to sustain the replication load. For example, if your primary database is P6 (1000 DTU) and its log I/O is sustained at 50%, the geo-secondary needs to be at least P4 (500 DTU). To retrieve historical log I/O data, use the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) view. To retrieve recent log I/O data with higher granularity that better reflects short-term spikes, use the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) view.
 
 > [!TIP]  
@@ -242,6 +245,10 @@ Active geo-replication can also be managed programmatically using T-SQL, Azure P
 | [Delete Replication Link](/rest/api/sql/replication-links/delete) | Deletes a database replication link. Can't be done during failover. |
 
 ---
+
+## Troubleshooting
+
+For more information on troubleshooting geo-replica lag, see [Troubleshoot geo-replication lag](troubleshoot-geo-replication-redo.md).
 
 ## Related content
 

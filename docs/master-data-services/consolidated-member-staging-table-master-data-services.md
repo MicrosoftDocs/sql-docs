@@ -1,17 +1,18 @@
 ---
 title: Consolidated Member Staging Table
-description: "Consolidated Member Staging Table (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "04/01/2016"
+description: Consolidated Member Staging Table (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "database [Master Data Services], attributes staging table"
   - "attributes staging table [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Consolidated Member Staging Table (Master Data Services)
 
@@ -41,6 +42,4 @@ ms.custom:
 ## See Also  
  [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [View Errors that Occur During Staging &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Staging Process Errors &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
-  
-  
+ [Staging Process Errors &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)

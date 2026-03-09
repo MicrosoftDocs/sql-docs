@@ -1,9 +1,10 @@
 ---
 title: Data Quality Matching Columns
-description: "Data Quality Matching Columns (MDS Add-in for Excel)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Data Quality Matching Columns (MDS Add-in for Excel)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -31,6 +32,4 @@ ms.custom:
 ## See Also  
  [Data Quality Matching in the MDS Add-in for Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [Match Similar Data &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)   
- [Data Matching](../../data-quality-services/data-matching.md)  
-  
-  
+ [Data Matching](../../data-quality-services/data-matching.md)

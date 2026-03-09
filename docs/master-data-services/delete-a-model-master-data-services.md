@@ -1,17 +1,18 @@
 ---
 title: Delete a Model
-description: "Delete a Model (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/01/2017"
+description: Delete a Model (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "deleting models [Master Data Services]"
   - "models [Master Data Services], deleting models"
-ms.custom:
-  - build-2025
 ---
 # Delete a Model (Master Data Services)
 
@@ -49,6 +50,4 @@ ms.custom:
   
 ## See Also  
  [Models &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
-  
-  
+ [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)

@@ -151,4 +151,6 @@ To resolve this issue, try the following methods:
 - [Understand and resolve Azure SQL Database blocking problems](understand-resolve-blocking.md?view=azuresql-db&preserve-view=true#gather-blocking-information)
 - [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-common-errors-issues.md?view=azuresql-db&preserve-view=true)
 - [Troubleshoot transient connection errors in Azure SQL Database and SQL Managed Instance](troubleshoot-common-connectivity-issues.md?view=azuresql-db&preserve-view=true)
+- [Troubleshoot geo-replication redo lag](troubleshoot-geo-replication-redo.md?view=azuresql-db&preserve-view=true)
+- [Troubleshoot out of memory errors](troubleshoot-memory-errors-issues.md?view=azuresql-db&preserve-view=true)
 - [Video: Data Loading Best Practices on Azure SQL Database](/shows/data-exposed/data-loading-best-practices-on-azure-sql-database?WT.mc_id=dataexposed-c9-niner)

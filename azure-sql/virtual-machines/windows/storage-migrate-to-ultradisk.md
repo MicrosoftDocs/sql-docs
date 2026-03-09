@@ -1,6 +1,6 @@
 ---
-title: Migrate log disk to Ultra disk
-description: Learn how to migrate your SQL Server on Azure Virtual Machine (VM) log disk to an Azure Ultradisk to take advantage of high performance and low latency.
+title: Migrate log disk to Ultra Disk
+description: Learn how to migrate your SQL Server on Azure Virtual Machine (VM) log disk to an Azure Ultra Disk to take advantage of high performance and low latency.
 author: dplessMSFT
 ms.author: dpless
 ms.reviewer: mathoma
@@ -10,12 +10,12 @@ ms.subservice: management
 ms.topic: how-to
 tags: azure-service-management
 ---
-# Migrate log disk to Ultra disk
+# Migrate log disk to Ultra Disk
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-Azure ultra disks deliver high throughput, high IOPS, and consistently low latency disk storage for SQL Server on Azure Virtual Machine (VM). 
+Azure Ultra Disks deliver high throughput, high IOPS, and consistently low latency disk storage for SQL Server on Azure Virtual Machine (VM). 
 
-This article teaches you to migrate your log disk to an ultra SSD to take advantage of the performance benefits offered by ultra disks. 
+This article teaches you to migrate your log disk to an Ultra Disk to take advantage of the performance benefits offered by Ultra Disks. 
 
 ## Back up database
 
@@ -23,9 +23,9 @@ Complete a [full backup](backup-restore.md) up of your database.
 
 ## Attach disk
 
-Attach the Ultra SSD to your virtual machine once you have enabled ultradisk compatibility on the VM. 
+Attach the Ultra Disk to your virtual machine once you have enabled Ultra Disk compatibility on the VM. 
 
-Ultra disk is supported on a subset of VM sizes and regions. Before proceeding, validate that your VM is in a region, zone, and size that supports ultra disk. You can [determine and validate VM size and region](/azure/virtual-machines/disks-enable-ultra-ssd#determine-vm-size-and-region-availability) using the Azure CLI or PowerShell. 
+Ultra Disk is supported on a subset of VM sizes and regions. Before proceeding, validate that your VM is in a region, zone, and size that supports Ultra Disk. You can [determine and validate VM size and region](/azure/virtual-machines/disks-enable-ultra-ssd#determine-vm-size-and-region-availability) using the Azure CLI or PowerShell. 
 
 ### Enable compatibility
 
@@ -37,7 +37,7 @@ To enable compatibility, follow these steps:
 
    :::image type="content" source="media/storage-migrate-to-ultradisk/additional-disks-settings-azure-portal.png" alt-text="Select additional settings for Disks under Settings in the Azure portal":::
 
-1. Select **Yes** to **Enable Ultra disk compatibility**. 
+1. Select **Yes** to **Enable Ultra Disk compatibility**. 
 
    :::image type="content" source="media/storage-migrate-to-ultradisk/enable-ultra-disks-existing-vm.png" alt-text="Screenshot that shows the Yes option.":::
 
@@ -47,7 +47,7 @@ To enable compatibility, follow these steps:
 
 ### Attach disk
 
-Use the Azure portal to attach an ultra disk to your virtual machine. For details, see [Attach an ultra disk](/azure/virtual-machines/disks-enable-ultra-ssd#attach-an-ultra-disk).
+Use the Azure portal to attach an Ultra Disk to your virtual machine. For details, see [Attach an Ultra Disk](/azure/virtual-machines/disks-enable-ultra-ssd#attach-an-ultra-disk).
 
 Once the disk is attached, start your VM once more using the Azure portal. 
 
@@ -55,12 +55,12 @@ Once the disk is attached, start your VM once more using the Azure portal.
 
 ## Format disk
 
-Connect to your virtual machine and format your ultra disk.  
+Connect to your virtual machine and format your Ultra Disk.  
 
-To format your ultra disk, follow these steps:
+To format your Ultra Disk, follow these steps:
 
 1. Connect to your VM by using [Bastion](/azure/bastion/bastion-connect-vm-rdp-windows).
-1. Use [Disk Management](/windows-server/storage/disk-management/overview-of-disk-management) to format and partition your newly attached ultra disk. 
+1. Use [Disk Management](/windows-server/storage/disk-management/overview-of-disk-management) to format and partition your newly attached Ultra Disk. 
 
 
 ## Use disk for log
@@ -111,7 +111,7 @@ Use T-SQL to move the existing files to a new location:
    GO
    ```
 
-1. Use file explorer to move the log file to the new location on the ultra disk. 
+1. Use file explorer to move the log file to the new location on the Ultra Disk. 
 
 1. Attach the database, specifying the new file locations: 
 

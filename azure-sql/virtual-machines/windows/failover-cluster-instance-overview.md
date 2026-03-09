@@ -48,7 +48,7 @@ SQL Server on Azure VMs offers various options as a shared storage solution for 
 | --- | --- | --- | --- | --- |
 | **Minimum OS version** | All | Windows Server 2012 | Windows Server 2016 | Windows Server 2022 |
 | **Minimum SQL Server version** | All | SQL Server 2012 | SQL Server 2016 |SQL Server 2022 |
-| **Supported VM availability** | [Premium SSD LRS](/azure/virtual-machines/disks-redundancy#locally-redundant-storage-for-managed-disks): Availability Sets with or without [proximity placement group](/azure/virtual-machines/windows/proximity-placement-groups-portal)<br />[Premium SSD ZRS](/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks): Availability zones<br />[Ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd): Same availability zone | Availability sets and availability zones | Availability sets | Availability zones |
+| **Supported VM availability** | [Premium SSD LRS](/azure/virtual-machines/disks-redundancy#locally-redundant-storage-for-managed-disks): Availability Sets with or without [proximity placement group](/azure/virtual-machines/windows/proximity-placement-groups-portal)<br />[Premium SSD ZRS](/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks): Availability zones<br />[Ultra Disks](/azure/virtual-machines/disks-enable-ultra-ssd): Same availability zone | Availability sets and availability zones | Availability sets | Availability zones |
 | **Supports FileStream** | Yes | No | Yes | No |
 | **Supports MSDTC** | Yes | No | No | No |
 
@@ -56,7 +56,7 @@ The rest of this section lists the benefits and limitations of each storage opti
 
 ### Azure shared disks
 
-[Azure shared disks](/azure/virtual-machines/disks-shared) are a feature of [Azure managed disks](/azure/virtual-machines/managed-disks-overview). Windows Server Failover Clustering supports using Azure shared disks with a failover cluster instance.
+[Azure shared disks](/azure/virtual-machines/disks-shared) are a feature of [Azure Managed Disks](/azure/virtual-machines/managed-disks-overview). Windows Server Failover Clustering supports using Azure shared disks with a failover cluster instance.
 
 **Supported OS**: All   
 **Supported SQL version**: All
@@ -65,7 +65,7 @@ The rest of this section lists the benefits and limitations of each storage opti
 
 - Useful for applications looking to migrate to Azure while keeping their high-availability and disaster recovery (HADR) architecture as is.
 - Can migrate clustered applications to Azure as is because of SCSI Persistent Reservations (SCSI PR) support.
-- Supports shared Azure Premium SSD, Premium SSDv2, and Azure Ultra Disk storage.
+- Supports shared Azure Premium SSD, Premium SSD v2, and Azure Ultra Disk storage.
 - Can use a single shared disk or stripe multiple shared disks to create a shared storage pool.
 - Supports FILESTREAM.
 - Premium SSDs support availability sets.
@@ -77,8 +77,8 @@ The rest of this section lists the benefits and limitations of each storage opti
 
 **Limitations**:
 
-- Premium SSD disk caching isn't supported.
-- Ultra disks don't support availability sets or Zone Redundant Storage (ZRS).
+- Premium SSD caching isn't supported.
+- Ultra Disks don't support availability sets or Zone Redundant Storage (ZRS).
 - Availability zones are supported for Ultra Disks, but the VMs must be in the same availability zone, which reduces the availability of the virtual machine to 99.9%.
 
 To get started, see [Configure failover cluster instance with Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md).

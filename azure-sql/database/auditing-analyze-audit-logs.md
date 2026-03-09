@@ -5,7 +5,7 @@ description: Use Auditing to analyze logs in Log Analytics, Event Hubs, or throu
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, vanto
-ms.date: 07/09/2025
+ms.date: 03/03/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -24,18 +24,32 @@ This article provides an overview of analyzing audit logs using Auditing for [Az
 
 If you chose to write audit logs to Log Analytics:
 
-1. Use the [Azure portal](https://portal.azure.com).
-1. Go to the relevant database resource.
-1. At the top of the database's **Auditing** page, select **View audit logs** to display a sample of audit logs with a limited set of fields that cover activity from up to 2 hours prior to the selected **End Time** (which defaults to 'now'):
+1. In the [Azure portal](https://portal.azure.com), search for **SQL databases** and select your database, or search for **SQL servers** and select your server.
+1. On the resource menu under **Security**, select **Auditing**.
+1. At the top of the **Auditing** page, select **View audit logs**.
 
    :::image type="content" source="media/auditing-analyze-audit-logs/view-audit-logs.png" alt-text="Screenshot of the Auditing menu in the Azure portal where you can select the View audit logs option." lightbox="media/auditing-analyze-audit-logs/view-audit-logs.png":::
 
-You have two ways to view the logs:
+> [!NOTE]
+> The **View audit logs** button appears on both server-level and database-level **Auditing** pages. When you select it from the **database** resource, you see audit records specific to that database. When you select it from the **server** resource, you see audit records for all databases on that server. Make sure you navigate to the correct resource level based on the scope of audit logs you need to review.
 
-- Select **Log Analytics** at the top of the **Audit records** page to open the logs view in the Log Analytics workspace, where you can customize the time range and the search query.
-- Select **View dashboard** at the top of the **Audit records** page to open a dashboard displaying audit logs information, where you can drill down into **Security Insights** or **Access to Sensitive Data**. This dashboard is designed to help you gain security insights for your data. You can also customize the time range and search query.
+You have two ways to view the logs from the **Audit records** page:
 
-- Alternatively, you can also access the audit logs from the **Log Analytics** menu. Open your **Log Analytics** workspace and under the **General** section, and select **Logs**. You can start with a simple query, such as: *search "SQLSecurityAuditEvents"* to view the audit logs. From here, you can also use [Azure Monitor logs](/azure/azure-monitor/logs/log-query-overview) to run advanced searches on your audit log data. Azure Monitor logs gives you real-time operational insights using integrated search and custom dashboards to readily analyze millions of records across all your workloads and servers. For extra useful information about Azure Monitor logs search language and commands, see [Azure Monitor logs search reference](/azure/azure-monitor/logs/log-query-overview).
+- Select **Log Analytics** at the top of the page to open the logs view in the Log Analytics workspace, where you can customize the time range and the search query.
+- Select **View dashboard** at the top of the page to open a dashboard displaying audit logs information, where you can drill down into **Security Insights** or **Access to Sensitive Data**. This dashboard helps you gain security insights for your data. You can also customize the time range and search query.
+
+> [!TIP]
+> The **View dashboard** option is available only when you access audit records from a **database-level** Auditing page that has database-level auditing enabled. If you configured server-level auditing only, you can still query the audit data directly in your Log Analytics workspace using the steps in the following section.
+
+### Query audit logs directly in Log Analytics
+
+You can also access audit logs directly from your Log Analytics workspace without navigating through the Auditing page. This approach is useful when you have server-level auditing only, or when you want to run custom queries across multiple databases.
+
+1. In the Azure portal, open your **Log Analytics** workspace.
+1. Under the **General** section, select **Logs**.
+1. Start with a simple query, such as `search "SQLSecurityAuditEvents"` to view the audit logs.
+
+From here, you can use [Azure Monitor logs](/azure/azure-monitor/logs/log-query-overview) to run advanced searches on your audit log data. Azure Monitor logs give you real-time operational insights using integrated search and custom dashboards to readily analyze millions of records across all your workloads and servers. For more information about Azure Monitor logs search language and commands, see [Azure Monitor logs search reference](/azure/azure-monitor/logs/log-query-overview).
 
 ## Analyze logs using Event Hubs
 
@@ -50,9 +64,9 @@ If you chose to write audit logs to an Azure storage account, there are several 
 
 - Audit logs are aggregated in the account you chose during setup. You can explore audit logs by using a tool such as [Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer). In Azure storage, auditing logs are saved as a collection of blob files within a container named **sqldbauditlogs**. For more information about the hierarchy of the storage folders, naming conventions, and log format, see the [SQL Database audit log format](audit-log-format.md).
 
-  1. Use the [Azure portal](https://portal.azure.com).
-  1. Open the relevant database resource.
-  1. At the top of the database's **Auditing** page, select **View audit logs**. The **Audit records** page opens, and you're able to view the logs.
+  1. In the [Azure portal](https://portal.azure.com), search for **SQL databases** and select your database, or search for **SQL servers** and select your server.
+  1. On the resource menu under **Security**, select **Auditing**.
+  1. At the top of the **Auditing** page, select **View audit logs**. The **Audit records** page opens, and you can view the logs.
   1. You can view specific dates by selecting **Filter** at the top of the **Audit records** page.
   1. You can switch between audit records that were created by the *server audit policy* and the *database audit policy* by toggling **Audit Source**.
 - Use the system function `sys.fn_get_audit_file` (T-SQL) to return the audit log data in tabular format. For more information on using this function, see [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql).
@@ -82,6 +96,5 @@ If you chose to write audit logs to an Azure storage account, there are several 
 ## Related content
 
 - [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md)
-- [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
 - [Get started with Azure SQL Managed Instance auditing](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)

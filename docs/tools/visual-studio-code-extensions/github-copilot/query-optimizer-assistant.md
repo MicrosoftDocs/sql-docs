@@ -199,7 +199,7 @@ In Sequelize, how do you restructure a query that fetches order history with pro
 
 ## Share your experience
 
-[!INCLUDE [feedback](../includes/feedback.md)]
+[!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
 
 ## Related content
 

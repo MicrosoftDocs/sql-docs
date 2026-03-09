@@ -4,7 +4,7 @@ description: "A description of the prerequisites necessary to convert log shippi
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: maghan
-ms.date: 02/01/2024 
+ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: checklist
@@ -62,7 +62,7 @@ After you have created all the secondary databases for the availability group, i
 
 **Log shipping**
 
-- [Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)](../../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)
+- [Upgrade SQL Server with log shipping (Transact-SQL)](../../log-shipping/upgrade-sql-server-log-shipping-transact-sql.md)
 
 - [Remove Log Shipping (SQL Server)](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)
 
@@ -87,6 +87,6 @@ After you have created all the secondary databases for the availability group, i
 - [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)
 - [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)
 - [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))
-- [About Log Shipping (SQL Server)](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)
-- [Overview of Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-- [Monitoring of Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)
+- [About log shipping (SQL Server)](../../log-shipping/about-log-shipping-sql-server.md)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Tools to monitor Always On availability groups](monitoring-of-availability-groups-sql-server.md)

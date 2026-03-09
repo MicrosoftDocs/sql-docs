@@ -1,17 +1,18 @@
 ---
 title: Delete an Attribute
-description: "Delete an Attribute (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/15/2017"
+description: Delete an Attribute (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: how-to
+ms.custom:
+  - build-2025
 helpviewer_keywords:
   - "attributes [Master Data Services], deleting"
   - "deleting attributes [Master Data Services]"
-ms.custom:
-  - build-2025
 ---
 # Delete an Attribute (Master Data Services)
 
@@ -59,6 +60,4 @@ ms.custom:
  [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
  [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
-  
-  
+ [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)

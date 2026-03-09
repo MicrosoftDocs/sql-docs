@@ -80,7 +80,7 @@ Consider the following the key points about VM throttling:
 
 ### Disk level I/O throttling issue  
 
-For SQL virtual machine customers, storage is the most critical aspect to configure appropriately for optimized performance since modifying storage is more challenging than resizing a virtual machine. For example, making any changes to increase IOPS or throughput for Premium SSD disks requires creating a new storage pool.  As such, it's crucial to optimize storage configuration for both price and performance during the planning phase to avoid performance issues after deployment.  
+For SQL virtual machine customers, storage is the most critical aspect to configure appropriately for optimized performance since modifying storage is more challenging than resizing a virtual machine. For example, making any changes to increase IOPS or throughput for Premium SSDs requires creating a new storage pool.  As such, it's crucial to optimize storage configuration for both price and performance during the planning phase to avoid performance issues after deployment.  
 
 The following Azure metrics are used to determine the workload is throttled from exceeding limits imposed by the disk:
 

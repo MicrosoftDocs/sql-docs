@@ -239,7 +239,7 @@ This intelligent connection detection gives you a seamless experience, whether y
 
 ## Share your experience
 
-[!INCLUDE [feedback](../includes/feedback.md)]
+[!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
 
 ## Related content
 

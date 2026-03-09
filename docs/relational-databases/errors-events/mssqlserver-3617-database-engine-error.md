@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_3617"
 description: MSSQLSERVER_3617 is raised when a query that is in the middle of execution gets canceled by the application or by a user, or the connection is broken.
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 09/26/2025
 ms.service: sql

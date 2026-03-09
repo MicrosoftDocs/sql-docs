@@ -1,10 +1,10 @@
 ---
 title: Fabric Integration in Visual Studio Code with MSSQL
 description: Learn how to use the MSSQL extension for Visual Studio Code to connect to Fabric workspaces and provision SQL databases directly from your editor, with no connection strings or portal switching required.
-author: croblesm
-ms.author: roblescarlos
-ms.reviewer: randolphwest, tsiddique
-ms.date: 01/19/2026
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: roblescarlos, tsiddique
+ms.date: 02/21/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -171,11 +171,14 @@ The following animation shows the SQL database in Fabric provisioning workflow i
 
 ## Feedback and support
 
-If you have ideas, feedback, or want to engage with the community, join the discussion at <https://aka.ms/vscode-mssql-discussions>. To report a bug, visit [aka.ms/vscode-mssql-bug](https://aka.ms/vscode-mssql-bug). To request a new feature, go to <https://aka.ms/vscode-mssql-feature-request>.
+[!INCLUDE [feedback](../includes/feedback.md)]
 
 ## Related content
 
 - [Quickstart: Connect to and query a database with the MSSQL extension for Visual Studio Code](connect-database-visual-studio-code.md)
+- [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)
 - [Local SQL Server container](mssql-local-container.md)
 - [Schema Designer](mssql-schema-designer.md)
 - [Schema Compare](mssql-schema-compare.md)
+- [Visual Studio Code documentation](https://code.visualstudio.com/docs)
+- [MSSQL extension for Visual Studio Code repository on GitHub](https://github.com/Microsoft/vscode-mssql)

@@ -1,17 +1,17 @@
 ---
 title: Web Application Requirements
 description: Find out about the requirements to install and run the Master Data Services web application hosted by Internet Information Services.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.reviewer: randolphwest
-ms.date: 02/06/2026
-ai-usage: ai-assisted
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: randolphwest, mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: checklist
 ms.custom:
   - build-2025
 keywords: master data services
+ai-usage: ai-assisted
 ---
 # Web application requirements (Master Data Services)
 

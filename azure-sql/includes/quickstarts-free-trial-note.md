@@ -1,6 +1,6 @@
 ---
-author: SyntaxC4
-ms.author: cfowler
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 01/18/2022
 ms.service: cloud-services
 ms.topic: include

@@ -112,6 +112,8 @@ WITH  ( <table_hint> [ [ , ] ...n ] )
 
 ## Arguments
 
+<a id="with-table-hint"></a>
+
 #### WITH ( *<table_hint>* ) [ [ , ] ...*n* ]
 
 With some exceptions, table hints are supported in the `FROM` clause only when the hints are specified with the `WITH` keyword. Table hints also must be specified with parentheses.
@@ -294,7 +296,7 @@ Specifies that the [!INCLUDE [ssDE](../../includes/ssde-md.md)] not read rows th
 
 `READPAST` can be specified for any table referenced in an `UPDATE` or `DELETE` statement, and any table referenced in a `FROM` clause. When specified in an `UPDATE` statement, `READPAST` is applied only when reading data to identify which records to update, regardless of where in the statement it's specified. `READPAST` can't be specified for tables in the `INTO` clause of an `INSERT` statement. Update or delete operations that use `READPAST` might block when reading foreign keys or indexed views, or when modifying secondary indexes.
 
-`READPAST` can only be specified in transactions operating at the `READ COMMITTED` or `REPEATABLE READ` isolation levels. When specified in transactions operating at the `SNAPSHOT` isolation level, `READPAST` must be combined with other table hints that require locks, such as `UPDLOCK` and `HOLDLOCK`.
+`READPAST` can only be specified in transactions operating at the `READ COMMITTED` or `REPEATABLE READ` isolation levels.
 
 The `READPAST` table hint can't be specified when the `READ_COMMITTED_SNAPSHOT` database option is set to `ON` and either of the following conditions is true:
 

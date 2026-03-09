@@ -1,9 +1,10 @@
 ---
 title: Business Rule Examples
 description: Review these examples of business rules for Master Data Services. These examples are in sample models included with your installation of Master Data Services.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "01/05/2017"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: sample
@@ -156,11 +157,4 @@ Else
 For instructions on setting up the Web site, see [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Click the sample model that contains the business rule, as listed in the tables above, and then click **Entities**.  
 3. Click the entity to which the rule applies, as listed in the tables above, and then click **Business Rules**.  
-4. Click the name of the business rule that you want to view. The UI expands to show the **If**, **Then** and **Else** statements.  
-  
- 
-  
-  
-  
-  
-
+4. Click the name of the business rule that you want to view. The UI expands to show the **If**, **Then** and **Else** statements.

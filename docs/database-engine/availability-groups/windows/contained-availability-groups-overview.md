@@ -4,7 +4,7 @@ description: An overview of the contained availability group feature of Always O
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 01/27/2026
+ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: high-availability
 ms.topic: overview
@@ -194,12 +194,18 @@ To use change data capture with a contained AG, connect to the AG listener when 
 
 ### Log shipping
 
-You can configure log shipping if the source database is in the contained AG. However, a log shipping target isn't supported within a contained AG. Additionally, you need to modify the log shipping job after you configure CDC.
+You can configure log shipping if the source database is in the contained AG. However, a log shipping target isn't supported within a contained AG. Additionally, you need to modify the log shipping job after you configure log shipping.
 
 To configure log shipping with a contained AG, follow these steps:
 
 1. Connect to the contained AG listener.
-1. Configure [log shipping](../../log-shipping/configure-log-shipping-sql-server.md) as you normally would.
+
+1. Configure [log shipping](../../log-shipping/configure-log-shipping-sql-server.md)
+
+    - Use `@primary_server_with_port_override` in [sp_add_log_shipping_primary_database](../../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md#primary-server-with-port-override).
+
+    - If you use a local monitor in your log shipping topology, leave the `@monitor_server` value in [sp_add_log_shipping_primary_database](../../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md#monitor-server) blank or *null*.
+
 1. After you configure the log shipping job, alter the job to connect to the contained AG listener before taking a backup.
 
 ### Transparent data encryption (TDE)

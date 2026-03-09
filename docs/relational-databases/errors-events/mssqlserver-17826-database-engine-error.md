@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_17826"
 description: "MSSQLSERVER_17826"
-author: pijocoder
-ms.author: jopilov
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mathoma
 ms.date: 02/02/2023
 ms.service: sql

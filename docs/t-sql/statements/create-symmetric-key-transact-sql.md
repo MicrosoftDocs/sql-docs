@@ -4,8 +4,7 @@ description: Generates a symmetric key and specifies its properties in SQL Serve
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 01/22/2026
-ai-usage: ai-assisted
+ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -114,7 +113,7 @@ Creates or maps a symmetric key to an Extensible Key Management device.
 
 #### *certificate_name*
 
-Specifies the name of the certificate that is used to encrypt the symmetric key. The certificate must already exist in the database.
+Specifies the name of the certificate used to encrypt the symmetric key. The certificate must already exist in the database.
 
 #### '*password*'
 
@@ -147,7 +146,7 @@ When a symmetric key is created, the symmetric key must be encrypted by using at
 
 The key can have more than one encryption of each type. In other words, a single symmetric key can be encrypted by using multiple certificates, passwords, symmetric keys, and asymmetric keys at the same time.
 
-To protect the key material of the symmetric key, SQL Server and Azure SQL store the key material in encrypted form. Historically, this encryption utilized PKCS#1 v1.5 padding mode; starting with database compatibility level 170, the encryption uses OAEP-256 padding mode for encryption by certificate or asymmetric key. In `dm_database_encryption_keys`, the `encryptor_type` will be displayed as `CERTIFICATE_OAEP_256` instead of `CERTIFICATE`.
+To protect the key material of the symmetric key, SQL Server and Azure SQL store the key material in encrypted form. Historically, this encryption used PKCS#1 v1.5 padding mode; starting with database compatibility level 170, the encryption uses OAEP-256 padding mode for encryption by certificate or asymmetric key. In `dm_database_encryption_keys`, the `encryptor_type` displays as `CERTIFICATE_OAEP_256` instead of `CERTIFICATE`.
 
 > [!CAUTION]  
 > When a symmetric key is encrypted with a password instead of a certificate (or another key), the TRIPLE DES encryption algorithm is used to encrypt the password. Because of this, keys that are created with a strong encryption algorithm, such as AES, are themselves secured by a weaker algorithm.
@@ -199,7 +198,7 @@ GO
 
 ### B. Create a temporary symmetric key
 
-The following example creates a temporary symmetric key called `#MarketingXXV` from the passphrase: `The square of the hypotenuse is equal to the sum of the squares of the sides`. The key is provisioned with a GUID that is generated from the string `Pythagoras` and encrypted with certificate `Marketing25`.
+The following example creates a temporary symmetric key called `#MarketingXXV` from the passphrase: `The square of the hypotenuse is equal to the sum of the squares of the sides`. The key receives a GUID generated from the string `Pythagoras` and is encrypted with certificate `Marketing25`.
 
 ```sql
 CREATE SYMMETRIC KEY #MarketingXXV
@@ -224,6 +223,53 @@ PROVIDER_KEY_NAME='KeyForSensitiveData',
 CREATION_DISPOSITION=OPEN_EXISTING;
 GO
 ```
+
+### D. Create identical symmetric keys across databases
+
+When you need to encrypt data in one database and decrypt it in another, you can create identical symmetric keys in both databases. Use the same `KEY_SOURCE` and `IDENTITY_VALUE` values to generate the same key material in each database.
+
+> [!IMPORTANT]
+> Store the `KEY_SOURCE` and `IDENTITY_VALUE` passphrases securely. Anyone with these values can re-create the key and decrypt your data.
+
+The following example creates the same symmetric key in two databases:
+
+```sql
+-- Create the key in the first database
+USE Database1;
+GO
+
+CREATE SYMMETRIC KEY SharedKey
+WITH ALGORITHM = AES_256,
+KEY_SOURCE = 'My secret key source passphrase',
+IDENTITY_VALUE = 'My secret identity value'
+ENCRYPTION BY PASSWORD = '<password>';
+GO
+
+-- Create the identical key in the second database
+USE Database2;
+GO
+
+CREATE SYMMETRIC KEY SharedKey
+WITH ALGORITHM = AES_256,
+KEY_SOURCE = 'My secret key source passphrase',
+IDENTITY_VALUE = 'My secret identity value'
+ENCRYPTION BY PASSWORD = '<password>';
+GO
+```
+
+To verify the keys are identical, compare the `key_guid` values in both databases. Matching GUID values confirm that the keys use the same key material:
+
+```sql
+SELECT name, key_guid
+FROM Database1.sys.symmetric_keys
+WHERE name = 'SharedKey';
+
+SELECT name, key_guid
+FROM Database2.sys.symmetric_keys
+WHERE name = 'SharedKey';
+```
+
+The `ALGORITHM` and `KEY_SOURCE` values must match in both `CREATE SYMMETRIC KEY` statements to produce identical keys. The `IDENTITY_VALUE` must also match so that both keys generate the same `key_guid`. You can use different encryption methods (password, certificate, or another key) in each database because the encryption method protects the key but doesn't affect the key material itself.
 
 ## Related content
 

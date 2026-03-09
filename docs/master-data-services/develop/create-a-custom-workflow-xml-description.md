@@ -1,12 +1,13 @@
 ---
 title: Custom Workflow XML Description
-description: "Create a Custom Workflow - XML Description"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/04/2017"
+description: Create a Custom Workflow - XML Description
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
-ms.topic: "reference"
+ms.topic: reference
 ms.custom:
   - build-2025
 ---
@@ -74,6 +75,4 @@ ms.custom:
   
 ## See Also  
  [Create a Custom Workflow &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
- [Custom Workflow Example &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)  
-  
-  
+ [Custom Workflow Example &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)

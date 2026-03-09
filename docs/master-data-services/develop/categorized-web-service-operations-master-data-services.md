@@ -1,12 +1,13 @@
 ---
 title: Categorized Web Service Operations
-description: "Categorized Web Service Operations (Master Data Services)"
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "03/15/2017"
+description: Categorized Web Service Operations (Master Data Services)
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
-ms.topic: "reference"
+ms.topic: reference
 ms.custom:
   - build-2025
 ---
@@ -146,5 +147,3 @@ ms.custom:
 - <xref:Microsoft.MasterDataServices.ServiceClient.UserPreferencesDelete%2A>
 - <xref:Microsoft.MasterDataServices.ServiceClient.UserPreferencesGet%2A>
 - <xref:Microsoft.MasterDataServices.ServiceClient.UserPreferencesUpdate%2A>
-  
-  

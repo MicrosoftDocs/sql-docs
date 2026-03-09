@@ -3,7 +3,8 @@ title: Install SQL Server Machine Learning Services on Windows
 description: Learn how to install SQL Server Machine Learning Services on Windows to run Python and R scripts in-database.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/17/2025
+ms.date: 02/27/2026
+ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
@@ -17,8 +18,25 @@ monikerRange: "=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
 
 This article shows you how to install [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to run Python and R scripts in-database.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > These instructions apply to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], refer to [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
+
+## Python and R version reference
+
+The following table shows the Python and R runtime versions included with each SQL Server release. Use this table to determine which language versions are available for your SQL Server instance.
+
+| SQL Server version | Python version | R version |
+|---|---|---|
+| [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] | N/A (R only) | 3.2.2 |
+| [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] RTM - CU21 | 3.5.2 | 3.3.3 |
+| [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CU22 and later | 3.5.2 and 3.7.2 | 3.3.3 and 3.5.2 |
+| [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] | 3.7.1 | 3.5.2 |
+| [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | 3.10.2 | 4.2.0 |
+
+> [!NOTE]
+> Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java are no longer installed with SQL Server Setup. Instead, install your desired custom runtimes and packages. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
+
+For more information about all supported versions, see [What is SQL Server Machine Learning Services?](../sql-server-machine-learning-services.md#python-and-r-versions)
 
 <a id="bkmk_prereqs"></a>
 
@@ -107,7 +125,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
    - **Python**
 
-     Select this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
+     Select this option to add the Microsoft Python packages, the Python executable, and select libraries from the Anaconda distribution. For the specific Python version included with your SQL Server release, see [Python and R version reference](#python-and-r-version-reference).
 
    ::: moniker range="=sql-server-ver15"
    For information on installing and using Java, see [Install SQL Server Java Language Extension on Windows](../../language-extensions/install/windows-java.md).
@@ -387,6 +405,8 @@ To install and manage additional packages, you can set up user groups to share p
 
 ## Related content
 
+- [What is SQL Server Machine Learning Services?](../sql-server-machine-learning-services.md)
+- [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
 - [Python Tutorial: Deploy a linear regression model with SQL machine learning](../tutorials/python-ski-rental-linear-regression-deploy-model.md)
 - [Python tutorial: Categorizing customers using k-means clustering with SQL machine learning](../tutorials/python-clustering-model.md)
 - [Quickstart: Run simple R scripts with SQL machine learning](../tutorials/quickstart-r-create-script.md)

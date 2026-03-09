@@ -46,7 +46,7 @@ Prepare Azure for migration with the [Server Migration tool](/azure/migrate/migr
 | Task | Details |
 | --- | --- |
 | **Create an Azure Migrate project** | Your Azure account needs Contributor or Owner permissions to [create a new project](/azure/migrate/create-manage-projects). |
-| **Verify permissions for your Azure account** | Your Azure account needs the following permissions to create a Key Vault, create a VM, and to write to an Azure managed disk: Contributor or Owner permissions on the Azure subscription, permissions to register apps in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), and User Access Administrator permissions on the Azure subscription.|
+| **Verify permissions for your Azure account** | Your Azure account needs the following permissions to create a Key Vault, create a VM, and to write to an Azure Managed Disk: Contributor or Owner permissions on the Azure subscription, permissions to register apps in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), and User Access Administrator permissions on the Azure subscription.|
 | **Set up an Azure virtual network** | [Setup](/azure/virtual-network/virtual-networks-overview) an Azure virtual network. When you replicate to Azure, Azure VMs are created and joined to the Azure virtual network that you specify when you set up migration. |
 
 To check you have proper permissions, follow these steps:
@@ -253,7 +253,7 @@ To replicate machines, follow these steps:
 
    :::image type="content" source="media/availability-group-migrate/compute-settings.png" alt-text="Screenshot of the compute settings." lightbox="media/availability-group-migrate/compute-settings.png":::
 
-1. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (standard SSD/HDD or premium managed disks) in Azure. Then select **Next**.
+1. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (Standard SSD/HDD or premium managed disks) in Azure. Then select **Next**.
 
    :::image type="content" source="media/availability-group-migrate/disks.png" alt-text="Screenshot of the disk settings." lightbox="media/availability-group-migrate/disks.png":::
 

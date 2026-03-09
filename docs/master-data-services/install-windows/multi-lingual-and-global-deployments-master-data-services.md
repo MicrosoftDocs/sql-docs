@@ -1,9 +1,10 @@
 ---
-title: Multi-lingual and global deployments
+title: Multi-Lingual and Global Deployments
 description: Master Data Services supports deployment of components and tools in all languages supported by SQL Server.
-author: CordeliaGrey
-ms.author: jiwang6
-ms.date: "12/13/2019"
+author: meetdeepak
+ms.author: dkhare
+ms.reviewer: mikeray
+ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: concept-article
@@ -29,6 +30,4 @@ ms.custom:
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database|Information in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database is not specific to any locale. This enables [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] to determine how to display information, such as dates and numbers, in the format determined by the language preferences of the client web browser.|  
   
 ## See Also  
- [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
-  
-  
+ [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)

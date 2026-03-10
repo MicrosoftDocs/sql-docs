@@ -30,15 +30,16 @@ If you want to develop, test, or build a proof of concept, then use the freely l
 > [!NOTE]  
 > SQL Server 2025 introduces separate Enterprise Developer and Standard Developer editions of SQL Server.
 
-If you want to run a lightweight workload in production (<4 cores, <1-GB memory, <10 GB/database), use the freely licensed **SQL Server Express edition**. A SQL Server Express edition VM also only incurs charges for the cost of the VM.
+If you want to run a lightweight workload in production (<=4 cores, <1-GB memory, <=50 GB/database), use the freely licensed **SQL Server Express edition**. A SQL Server Express edition VM only incurs charges for the cost of the VM. However, many [features](/sql/sql-server/editions-and-components-of-sql-server-2025) necessary for production, such as Enterprise-level disaster recovery features, aren't available in the Express edition, so be sure that it meets your business needs before deployment. 
 
 For these development/test and lightweight production workloads, you can also save money by choosing a smaller VM size that matches these workloads. The [D2as_v5](/azure/virtual-machines/dasv5-dadsv5-series) might be a good choice in some scenarios.
 
-To create an Azure VM running SQL Server 2022 with one of these images, see the following links:
+To create an Azure VM running SQL Server 2025 with one of these images, see the following links:
 
 | Platform | Freely licensed images |
 |---|---|
-| Windows Server 2022 | [SQL Server 2022 Developer Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022sqldev-gen2) |
+| Windows Server 2025 | [SQL Server 2025 Standard Developer Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2025-ws2025stddev-gen2) |
+| Windows Server 2025 | [SQL Server 2025 Enterprise Developer Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2025-ws2025entdev-gen2) |
 | Ubuntu Pro 20.04 LTS | [SQL Server 2022 Developer Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ubuntupro2004sqldev_upro-ARM) |
 
 ## Paid SQL Server editions

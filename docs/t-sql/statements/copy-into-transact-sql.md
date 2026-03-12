@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: procha, mikeray, fresantos, jovanpop
-ms.date: 11/19/2025
+ms.date: 03/12/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -638,7 +638,7 @@ Specifies where the files containing the data is staged. Currently Azure Data La
 
 - *External location* for Blob Storage: `https://<account\>.blob.core.windows.net/<container\>/<path\>`
 - *External location* for ADLS Gen2: `https://<account\>.dfs.core.windows.net/<container\>/<path\>`
-- *External location* for OneLake (Preview): `https://onelake.dfs.fabric.microsoft.com/<workspaceId>/<lakehouseId>/Files/`
+- *External location* for OneLake: `https://onelake.dfs.fabric.microsoft.com/<workspaceId>/<lakehouseId>/Files/`
 
 Azure Data Lake Storage (ADLS) Gen2 offers better performance than Azure Blob Storage (legacy). Consider using an ADLS Gen2 account whenever possible.
 
@@ -809,9 +809,9 @@ Parser version 1.0 is available for backward compatibility only, and should be u
 
 ## Use COPY INTO with OneLake
 
-You can use `COPY INTO` to load data directly from files stored in the Fabric OneLake, specifically from the **Files folder** of a Fabric Lakehouse. This eliminates the need for external staging accounts (such as ADLS Gen2 or Blob Storage) and enables workspace-governed, SaaS-native ingestion using Fabric permissions. This functionality supports:
+You can use `COPY INTO` to load data directly from files stored in the Fabric OneLake, under existing items.  This eliminates the need for external staging accounts (such as ADLS Gen2 or Blob Storage) and enables workspace-governed, SaaS-native ingestion using Fabric permissions. This functionality supports:
 
-- Reading from `Files` folders in Lakehouses
+- Reading from any location withing a Workspace and an Item
 - Workspace-to-warehouse loads within the same tenant
 - Native identity enforcement using Microsoft Entra ID
 
@@ -864,15 +864,13 @@ To ensure reliable execution, the source files and folders must remain unchanged
 
 If the source data has greater precision than the destination column definition, the value is truncated, not rounded, for numeric, date, and time types.
 
-<a id="limitations-for-onelake-as-source-public-preview"></a>
+<a id="limitations-for-onelake-as-source"></a>
 
 ## Limitations for OneLake as source
 
-Fabric OneLake storage as a source for both `COPY INTO` and `OPENROWSET(BULK)` is a [preview feature](/fabric/fundamentals/preview).
-
 - **Only Microsoft Entra ID authentication is supported.** Other authentication methods, such as SAS tokens, shared keys, or connection strings, are not permitted.
 
-- **Only the `Files` folder of a Lakehouse is supported as a source.** Access to subfolders, shortcuts, or other OneLake locations is not currently available.
+- **Warehouse items** are not supported as source locations. Files must originate from other Fabric items that expose files through OneLake storage.
 
 - **OneLake paths must use workspace and warehouse IDs.** Friendly names for workspaces or Lakehouses are not supported at this time.
 

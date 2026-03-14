@@ -70,7 +70,7 @@ For example, a table can be created with two columns: one **varchar(7000)** and 
 
 When a table or an index has **varchar**, **nvarchar**, **varbinary**, **sql_variant**, or CLR user-defined type columns that can exceed 8,060 bytes per row, consider the following:
 
-- Moving large rows to another page occurs dynamically as rows are lengthened based on update operations. Update operations that shorten rows can cause them to be moved back to the original page in a `IN_ROW_DATA` allocation unit.
+- Moving large colums to another page occurs dynamically as rows are lengthened based on update operations. Update operations that shorten rows can cause them to be moved back to the original page in a `IN_ROW_DATA` allocation unit.
 
   This data movement results in extra disk I/O. Query processing operations such as sorts or joins on large records that contain row-overflow data might be slower.
 

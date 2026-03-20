@@ -177,11 +177,11 @@ CREATE PROCEDURE dbo.usp_SalesOrdersOffloadToCold @splitdate datetime2
       INSERT INTO dbo.SalesOrders_cold_staging WITH (TABLOCKX)
       SELECT so_id , cust_id , so_date , so_total
          FROM dbo.SalesOrders_hot WITH (serializable)
-         WHERE so_date <= @splitdate;
+         WHERE so_date < @splitdate;
 
       -- Delete the moved data from the hot table.
       DELETE FROM dbo.SalesOrders_hot WITH (SERIALIZABLE)
-         WHERE so_date <= @splitdate;
+         WHERE so_date < @splitdate;
 
       -- Update the partition function, and switch in the new partition.
       ALTER PARTITION SCHEME [ByDateRange] NEXT USED [PRIMARY];
@@ -197,6 +197,8 @@ CREATE PROCEDURE dbo.usp_SalesOrdersOffloadToCold @splitdate datetime2
         N'@i int',
         @i = @p;
 
+      -- NOTE: This command is expected to raise raise Msg 7721: Duplicate range boundary values are not allowed in partition function boundary values list. The boundary value being added is already present at ordinal XXX of the boundary value list. [...]
+      -- This is expected is so far as there cannot be a timewise delta of zero between a split.
       ALTER PARTITION FUNCTION [ByDatePF]()
       SPLIT RANGE( @splitdate);
 
@@ -206,7 +208,7 @@ CREATE PROCEDURE dbo.usp_SalesOrdersOffloadToCold @splitdate datetime2
 
       DECLARE @s nvarchar( 100) = CONVERT( nvarchar( 100) , @splitdate , 121);
       DECLARE @sql nvarchar( 1000) = N'alter table dbo.SalesOrders_cold_staging 
-         add constraint CHK_SalesOrders_cold_staging check (so_date > ''' + @s + ''')';
+         add constraint CHK_SalesOrders_cold_staging check (so_date >= ''' + @s + ''')';
       PRINT @sql;
       EXEC sp_executesql @sql;
 

@@ -53,7 +53,7 @@ For a complete list of supported trace events, see [SQL Server Event Class Refer
 
 [!INCLUDE [ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require VIEW SERVER PERFORMANCE STATE permission on the server.
+Requires ALTER TRACE permission on the server.
 
 ## Related content
 

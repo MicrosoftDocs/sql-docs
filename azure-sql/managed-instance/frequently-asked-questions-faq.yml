@@ -135,10 +135,6 @@ sections:
 
   - name: Free SQL Managed Instance offer
     questions:
-      - question: What if I don't see the banner and "Apply Offer" button?
-        answer: |
-          It's possible your subscription isn't eligible for the [free SQL Managed Instance](free-offer.md#supportability). Otherwise, there's a limit of one free instance per subscription. You need to remove an existing free instance to create another one. If you recently deleted your free instance, it can take up to one hour for the free offer banner to reappear.
-
       - question: Help! I'm no longer able to connect to my instance!
         answer: |
           It's likely you ran out of credits for the month. Go to your SQL managed instance in the Azure portal and check the state. See if your instance is in a stopped state due to insufficient credits.
@@ -149,7 +145,7 @@ sections:
 
       - question: Can I restore a database to the free instance?
         answer: |
-          Yes, you can restore an [automated backup](recovery-using-backups.md) from Azure storage, or you can [Restore a database backup by using SQL Server Management Studio (SSMS)](restore-sample-database-quickstart.md).
+          Yes, you can restore [automated backups](recovery-using-backups.md) from other SQL Managed Instances, or you can [Restore an on-premises database backup by using SQL Server Management Studio (SSMS)](restore-sample-database-quickstart.md) or by running a `RESTORE DATABASE` command and targeting `.bak` files from Azure storage or S3 buckets.
 
       - question: Does the free Azure SQL Managed Instance offer provide a production-quality instance?
         answer: |
@@ -157,15 +153,11 @@ sections:
 
       - question: Can I upgrade to a larger or more powerful instance?
         answer: |
-          The free SQL Managed Instance offers 4 and 8 vCore options. If your business requires an instance with more resources, create a fully fledged paid SQL Managed Instance.
+          The free SQL Managed Instance offers only 4 and 8 vCore options. If your business requires an instance with more resources, consider upgrading it to a fully fledged paid SQL Managed Instance.
 
       - question: Can I change the backup option to geo-redundant storage?
         answer: |
-          Backup options can't be changed for the free SQL Managed Instance.
-
-      - question: Can I use my Student subscription with the free Azure SQL Managed Instance?
-        answer: |
-          Currently, the Student subscription is ineligible. For eligible subscriptions, review the [free SQL Managed Instance offer supportability](free-offer.md#supportability).
+          Free SQL Managed Instance only supports PITR up to 7 days. Other backup options can't be modified for the free SQL Managed Instance.
 
   - name: Naming conventions
     questions:

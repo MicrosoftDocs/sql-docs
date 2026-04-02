@@ -56,6 +56,22 @@ Azure SQL Managed Instance allows you to scale as well:
 > 
 > In addition to supporting dynamic scaling, the [Serverless compute tier](serverless-tier-overview.md) in Azure SQL Database supports autoscaling. Databases in the Serverless tier scale resources automatically within a customer-specified range, based on workload demand. No customer action is required to scale the database.
 
+## Scaling Operations for Managed Instances with Geo-Replicas
+
+You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier or to a different service tier. Following are the recommendations when scaling the service tier and vcores, as well as storage on the instances within the same service tier:
+
+When upgrading, we recommend that you upgrade the secondary instance first, and then upgrade the primary.
+When downgrading, reverse the order: downgrade the primary first, and then downgrade the secondary.
+When you upgrade or downgrade the database to a different service tier, this recommendation is enforced. The sequence of operations is enforced when scaling the service tier and vcores, as well as storage.
+
+When trying to scale edition, vcore and storage at the same time (for example, scaling up vcore/edition while scaling down storage), follow below order of events for scaling the instances:
+
+Option1: Scale the service tier (keep storage and vcore the exact same) in the order of scaling mentioned above, then scale the storage and vcore at a later date.
+Option2: Scale the storage (keep service tier and vcore the exact same) in the order of scaling mentioned above, then scale the service tier and vcore at a later date.
+This sequence is recommended specifically to avoid the problem where the secondary at a lower SKU gets overloaded and must be re-seeded during an upgrade or downgrade process.
+
+We do not recommend downgrading the secondary instance to a tier lower than primary. This is to help ensure that the data tier has sufficient capacity to process the regular workload after failover is activated.
+
 ## Impact of scale up or scale down operations
 
 Initiating a scale up, or scale down action, in any of the flavors mentioned above, restarts the database engine process, and moves it to a different virtual machine if needed. Moving the database engine process to a new virtual machine is an **online process** during which you can continue using your existing Azure SQL Database service. Once the target database engine is ready to process queries, open connections to the current database engine will be [terminated](single-database-scale.md#impact), and uncommitted transactions will be rolled back. New connections will be made to the target database engine.

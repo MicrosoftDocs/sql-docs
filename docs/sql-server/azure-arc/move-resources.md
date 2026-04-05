@@ -63,7 +63,7 @@ Verify that the Azure Arc-enabled SQL Server instances and associated databases 
 > [!IMPORTANT]
 > 
 > If the SQL instances or databases associated with the moved virtual machines don't appear in the portal within three hours,
-> ensure that the Azure Connected Machine Agent is still running and connected to Azure Arc.
+> ensure that the Azure Connected Machine agent is still running and connected to Azure Arc.
 > 
 > Upgrading the `WindowsAgent.SqlServer` extension on the virtual machine will also trigger a refresh of the
 > SQL instance and database inventory.

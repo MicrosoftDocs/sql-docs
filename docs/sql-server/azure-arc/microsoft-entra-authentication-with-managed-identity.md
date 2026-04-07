@@ -183,6 +183,9 @@ The system-assigned managed identity, which uses the Arc-enabled machine name, m
 
 You can use PowerShell to grant required permissions to the managed identity. Alternatively, you can [create a role-assignable group](/entra/identity/role-based-access-control/groups-create-eligible). After the group is created, assign the **Directory Readers** role or the `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All` permissions to the group, and add all system-assigned managed identities for your Azure Arc-enabled machines to the group. We don't recommend using the **Directory Readers** role in your production environment.
 
+> [!Note]
+> Even when the System-Assigned Managed Identity is a member of a group, the above three required Microsoft Graph application permissions must still be explicitly assigned to the managed identity itself.
+
 The following PowerShell script grants the required permissions to the managed identity. Make sure this script is run on PowerShell 7.5 or a later version, and has the `Microsoft.Graph` module 2.28 or later installed.
 
 ```powershell

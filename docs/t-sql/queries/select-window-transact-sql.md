@@ -327,7 +327,7 @@ WHERE SalesOrderID IN (43659, 43664)
       AND ProductID LIKE '71%'
 WINDOW win1 AS (win3),
        win2 AS (ORDER BY SalesOrderID, ProductID),
-       win3 AS (win2PARTITION BY SalesOrderID);
+       win3 AS (win2 PARTITION BY SalesOrderID);
 ```
 
 The following query is the equivalent of the previous query without using the `WINDOW` clause.

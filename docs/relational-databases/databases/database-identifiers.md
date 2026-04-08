@@ -138,6 +138,10 @@ When you use identifiers in [!INCLUDE [tsql](../../includes/tsql-md.md)] stateme
 
 Some rules for the format of regular identifiers depend on the database compatibility level. 
 
+## Rules for delimited identifiers
+
+[to be written]
+
 ## Catalog collation in Azure SQL Database
 
 You can't change or set the logical server collation on Azure SQL Database. However, you can configure each database's collations separately for data in the database and for catalog. The catalog collation determines the collation for system metadata, such as object identifiers. You can specify both collations independently when you [create the database in the Azure portal](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&preserve-view=true&tabs=azure-portal#create-a-single-database), in T-SQL with [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true#collation_name), or in PowerShell with [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase).

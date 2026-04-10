@@ -996,7 +996,7 @@ This section contains the following examples:
 - G. [Back up to an existing mirrored media set](#existing_mirrored_media_set)
 - H. [Create a compressed backup in a new media set](#creating_compressed_backup_new_media_set)
 - I. [Back up to Azure Blob Storage](#url)
-- J. [Back up to S3-compatible object storage]((#j-backing-up-to-s3-compatible-object-storage)
+- J. [Back up to S3-compatible object storage](#j-backing-up-to-s3-compatible-object-storage)
 - K. [Track the progress of backup statement](#backup_progress)
 
 > [!NOTE]  

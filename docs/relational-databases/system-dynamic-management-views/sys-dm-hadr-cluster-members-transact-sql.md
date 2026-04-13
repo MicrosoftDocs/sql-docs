@@ -46,7 +46,8 @@ Use this dynamic management view to answer the following questions:
 | `member_type_desc` | **nvarchar(50)** | Description of `member_type`, one of:<br /><br />CLUSTER_NODE<br />DISK_WITNESS<br />FILE_SHARE_WITNESS<br />CLOUD_WITNESS |
 | `member_state` | **tinyint** | The member state, one of:<br /><br />0 = Offline<br />1 = Online |
 | `member_state_desc` | **nvarchar(60)** | Description of `member_state`, one of:<br /><br />UP<br />DOWN |
-| `number_of_quorum_votes` | **tinyint** | Number of quorum votes possessed by this quorum member. For No Majority: Disk Only quorums, this value defaults to 0. For other quorum types, this value defaults to 1. |
+| `number_of_quorum_votes` | **tinyint** | Number of quorum votes possibly assigned to this quorum member. For No Majority: Disk Only quorums, this value defaults to 0. For other quorum types, this value defaults to 1. Nullable. |
+| `number_of_current_votes` | **tinyint** | Number of quorum votes currently assigned to this quorum member. This value is dynamic and reflects the actual quorum value assigned by dynamic quorum and dynamic witness. Nullable. |
 
 ## Remarks
 

@@ -16,6 +16,8 @@ This article lists the permissions the Azure extension for SQL Server grants to 
 
 > [!NOTE]  
 > `NT Authority\System` must have access to modify permissions on listed directories and registry keys. This access is necessary so that `NT Authority\System` can grant required access to the `NT Service\SqlServerExtension` account for least privilege mode.
+>
+> Additionally, `NT Authority\System` must have an active SQL Server login with CONNECT SQL permission on each SQL Server instance. The Deployer connects to SQL Server as `NT Authority\System` to configure all SQL‑level permissions described in this article. If this login has been disabled, removed, or has CONNECT SQL denied, the Deployer cannot configure SQL permissions in either standard or least‑privilege mode. See Prerequisites for verification steps.
 
 ## Overview
 

@@ -69,6 +69,11 @@ If you want to manage this process with more control, such that the SQL Server s
 
 Repeat this procedure anytime features are enabled or disabled or SQL Server instances are added to allow `Deployer.exe` to grant the least privileges required.
 
+> [!IMPORTANT]
+> The Azure extension for SQL Server **Deployer** requires **NT AUTHORITY\SYSTEM** to be able to connect to SQL Server (with **CONNECT SQL** permission) in both **standard** and **least‑privilege** modes. This is because the Deployer always runs under the **LocalSystem** account, regardless of which service account is used by the extension after provisioning.
+>
+> If **NT AUTHORITY\SYSTEM** cannot connect to SQL Server, the Deployer cannot create the **NT SERVICE\SQLServerExtension** login or grant the required permissions. Before enabling least‑privilege mode, verify that **NT AUTHORITY\SYSTEM** has an active SQL Server login with **CONNECT SQL** permission. See **Prerequisites** for verification steps.
+
 ### Tools
 
 To complete the steps in this article, you need the following tools:

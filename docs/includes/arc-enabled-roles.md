@@ -18,7 +18,7 @@ When you install Azure extension for SQL Server, the installation:
 
 In addition, Azure extension for SQL Server revokes permissions for these roles when they're no longer needed for specific features.
 
- [!NOTE]
+> [!NOTE]
 > The actions described above require the Deployer to connect to SQL Server as NT AUTHORITY\SYSTEM. If the NT AUTHORITY\SYSTEM login has been removed, disabled, or denied CONNECT SQL permission, the Deployer cannot perform any of these actions, and the Azure extension for SQL Server will fail to provision. See Prerequisites for steps to verify and restore this login.
 
 `SqlServerExtensionPermissionProvider` is a Windows task. It grants or revokes privileges in SQL Server when it detects:

@@ -4,6 +4,7 @@ ms.author: mikeray
 ms.date: 04/25/2024
 ms.service: sql
 ms.topic: include
+ai-usage: ai-assisted
 ---
 
 When you install Azure extension for SQL Server, the installation:

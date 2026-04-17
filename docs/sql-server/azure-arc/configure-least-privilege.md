@@ -6,6 +6,7 @@ ms.author: mikeray
 ms.reviewer: nikitatakru
 ms.topic: how-to
 ms.date: 07/11/2024
+ai-usage: ai-assisted
 
 # customer intent: As a system engineer, compliance mandates that I configure services to run with least privilege. 
 

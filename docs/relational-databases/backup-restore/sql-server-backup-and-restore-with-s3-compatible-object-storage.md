@@ -52,7 +52,7 @@ The following table provides a nonexhaustive summary of object storage providers
 | [MinIO](https://min.io) | Multicloud Object Storage |
 | [NetApp](https://www.netapp.com/data-storage/storagegrid/) | StorageGRID, ONTAP |
 | [Nutanix](https://www.nutanix.com/products/objects) | Nutanix Object Storage |
-| [Everpure](https://www.everpuredata.com/content/dam/pdf/en/datasheets/ds-pure-storage-flashblade-s.pdf) | Everpre FlashBlade |
+| [Everpure](https://www.everpuredata.com/content/dam/pdf/en/datasheets/ds-pure-storage-flashblade-s.pdf) | Everpure FlashBlade |
 | [Red Hat](https://www.redhat.com/technologies/cloud-computing/openshift) | OpenShift Container Storage |
 | [Scality](https://www.artesca.scality.com/) | Scality Artesca |
 | [Weka](https://www.weka.io) | Weka S3 |

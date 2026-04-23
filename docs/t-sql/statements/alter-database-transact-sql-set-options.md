@@ -804,7 +804,7 @@ Controls whether the database can be accessed by external resources, such as obj
 > [!IMPORTANT]  
 > The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recognizes this setting when the cross db ownership chaining server option is 0 (OFF). When cross db ownership chaining is 1 (ON), all user databases can participate in cross-database ownership chains, regardless of the value of this option. This option is set by using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
 
-To set this option, requires `CONTROL SERVER` permission on the database.
+To set this option, requires the server-level `ALTER ANY DATABASE` permission.
 
 The DB_CHAINING option can't be set on the `master`, `model`, and `tempdb` system databases.
 

@@ -74,63 +74,15 @@ You or your cloud solutions provider must explicitly provide consent before you 
 
 ## Linux-specific considerations
 
-When transitioning SQL Server on Linux to pay-as-you-go, be aware of the following limitations compared to Windows:
+For Linux-specific limitations that apply to PAYG subscription, see [PAYG on Linux](pay-as-you-go-subscription.md#payg-on-linux).
 
-- **Passive instance detection**: Automatic detection of passive replicas in availability groups or failover cluster instances isn't available on Linux. All instances are billed as active.
-- **Core detection**: Core count is reported based on the operating system environment. Database Engine-level core verification isn't available.
-- **Connected user detection**: Verification of active user connections on readable secondary replicas isn't available.
-- **Agent health monitoring**: Ensure the Azure Connected Machine agent stays healthy and connected. The 30-day reconnection window and recurring billing behavior work the same as on Windows.
+### Connectivity and disconnection billing
 
-These limitations don't block the transition to PAYG on Linux. However, plan for the billing differences described in [Manage licensing and billing](manage-license-billing.md).
-
-### Reconnection within 30 days
-
-If the machine reconnects within 30 days of being disconnected, pay-as-you-go billing is based on the actual usage logs maintained locally by the extension.
-
-### Disconnection beyond 30 days
-
-If the machine remains disconnected for more than 30 days, the SQL Arc service switches to recurring billing based on the last known configuration. For example: edition, number of cores, high availability setup. Charges include:
-
-- Backfill charges for the previous 30 days.
-- Ongoing hourly charges until the machine reconnects.
-
-These charges use separate recurring pay-as-you-go (`PAYG`) meters to track usage during the disconnected state.
-
-### Intermittent use of SQL Server
-
-If you have an application that's infrequently used and can be offline longer than 30 days, it will trigger recurring billing because the SQL Arc service cannot tell if the disconnection is intentional or not. To prevent billing, disconnect the SQL Server instance from Azure Arc. When the VM is up and running, you will need to onboard it to Arc again using any of the supported methods. For details, review [Disconnect SQL Server instances from Azure Arc](delete-from-azure-arc.md).
-
-### Solution overview
-
-Because the current Windows Server implementation enforces a fixed 30-day disconnection limit, the system automatically handles the re-onboarding of underlying servers without resetting SQL Server billing. This feature ensures that services like Extended Security Updates (ESU) aren't reset and that no new back-billing is triggered unnecessarily.
-
-The following timeline illustrates the billing behavior for both SQL Server and Windows Server, comparing scenarios where the machine reconnects within 30 days versus after 30 days.
-
-| Timeline | Event | Service's actions |
-|----------|-------|-------------------|
-| Day 1 | Sets up Arc + Arc SQL using pay-as-you-go on a Windows Server. | - Billing starts based on current configuration and actual usage.<br>- Usage is uploaded and processed every 12 hours. |
-| Day 2 | Azure detects disconnection due to agent failure or blocked connectivity. | Connected machine state changes to **Disconnected**.<br>- Azure extension for SQL Server continues collecting and storing usage data locally.<br>- Warnings appear in the Arc machine Activity Log, SQL Server Configuration page, and SQL Server Overview blade.<br>- No hourly meters are emitted. |
-| Day 3+ | Continued disconnection | Daily reminders are emitted, warning that recurring billing will begin after 30 days. |
-| Day 30 | Still no usage records or heartbeat. | Connected machine agent's certificate expires.<br>- Connected machine state changes to Expired.<br>- SQL switches to recurring billing based on the last known configuration (edition, cores, HA setup, etc.).<br>- Charges are backfilled for the past 30 days.<br>- Hourly billing resumes using recurring meters. |
-| Day 31+ | Continued disconnection. | Hourly billing continues indefinitely using the last known configuration. |
-| Day 40 | Connectivity is restored | Hourly billing switches to regular pay-as-you-go meters and continues. |
-
-If connectivity is restored within 30 days, pay-as-you-go billing resumes based on actual usage data collected by the Azure extension for SQL Server and reported through standard pay-as-you-go meters. If connectivity is restored after 30 days, billing continues based on the last known configuration of the SQL instance using recurring pay-as-you-go meters until the connection is re-established.
+For details about how billing works during disconnections, including reconnection within 30 days, disconnection beyond 30 days, intermittent use scenarios, and a timeline of billing events, see [Connectivity requirements](pay-as-you-go-subscription.md#connectivity-requirements).
 
 ## Recurring billing consent
 
-An explicit consent is required to select the pay-as-you-go billing for SQL Server in the CSP-managed Azure subscriptions.
-
-Consent is recorded by adding a `ConsentToRecurringPAYG` property to the Azure extension for SQL Server resource. It consists of the two values:
-
-- `Consented`: You agree to recurring billing.
-- `ConsentTimestamp`: The UTC timestamp marking when the consent was granted. This timestamp is used by the Hybrid Data Service to determine when recurring billing goes into effect. After that time any disconnection longer than 30 days activates the recurring pay-as-you-go billing.  
-
-> [!IMPORTANT]
->
-> New pay-as-you-go subscriptions aren't allowed without the consent.
->
-> Once registered, the consent property can't be changed without reinstalling the extension.
+For details about recurring billing consent, see [Recurring billing consent](pay-as-you-go-subscription.md#recurring-billing-consent).
 
 ## Enable recurring pay-as-you-go at scale using Azure Automation
 
@@ -148,73 +100,16 @@ SQL Server enabled by Azure Arc automatically installs Azure extension for SQL S
 
 ## Manage extension health
 
-With a pay-as-you-go subscription, the health of the extensions becomes a critical factor of your compliance as it collects the usage data and ensures the correct billing. The intermittent disconnections up to 30 days are allowed as the extension maintains a usage log on the machine, but it is your responsibility to ensure the extensions stay healthy. The Azure portal includes a [Health Dashboard](https://ms.portal.azure.com/#view/Microsoft_Azure_ArcCenterUX/ArcCenterMenuBlade/~/sqlServerHealthDashboard) providing the high level view of the extensions' state. For details of troubleshooting of the unhealthy extensions, see [Troubleshoot Azure extension for SQL Server](troubleshoot-extension.md).
+For details about managing extension health for billing compliance, see [Manage extension health](pay-as-you-go-subscription.md#manage-extension-health).
 
 ## Analyze costs
 
-After you transition to pay-as-you-go billing, you can view current and forecasted charges through [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview). Upcoming charges for Azure Arc-enabled SQL Server pay-as-you-go aren't shown on SQL Server or Arc resource pages. All cost analysis and forecasting happens at the subscription level or higher.
-
-### View forecasted charges
-
-To view forecasted pay-as-you-go charges:
-
-1. In the Azure portal, open **Cost Management** > **Cost analysis**.
-1. Select the appropriate scope (subscription, management group, or resource group).
-1. Confirm the chart shows both actual and forecasted costs.
-   - Solid bars or lines represent actual costs
-   - Shaded extensions represent forecasted costs based on historical usage trends
-1. Set the date range to the current month to see projected month-end costs.
-
-:::image type="content" source="media/manage-pay-as-you-go-transition/cost-analysis-forecasted-charges.png" alt-text="Screenshot of Microsoft Cost Management showing actual and forecasted charges." lightbox="media/manage-pay-as-you-go-transition/cost-analysis-forecasted-charges.png":::
-
-### Filter for Arc SQL Server usage
-
-To isolate Azure Arc-enabled SQL Server pay-as-you-go charges, apply these filters:
-
-| Filter | Value |
-|--------|-------|
-| **Service name** | Azure Arc-enabled SQL Server |
-| **Charge type** | Usage |
-| **Publisher type** | Microsoft |
-
-> [!TIP]
-> If **Azure Arc-enabled SQL Server** doesn't appear in the filter list, remove other filters first, then reapply **Service name**.
-
-### Identify resource-level costs
-
-To see which SQL Server instances are driving costs:
-
-1. In Cost analysis, select **Group by** > **Resource**.
-1. Optionally, select **Group by** > **Resource group** if you organize Arc machines by resource group.
-
-This breakdown helps you identify:
-
-- Core count changes
-- Edition differences (Standard vs Enterprise)
-- Instances that were unintentionally left running
-
-### Identify charge categories
-
-To see which SQL Server related charge categories are driving costs, in **Cost analysis**, select **Group by** > **Meter**. This breakdown helps you identify:
-
-- Usage category breakdown (for example, ESU costs, pay-as-you-go costs)
-- Edition differences (meter names indicate the editions)
-- Unexpected charges
-
-### Set up budget alerts
-
-To proactively manage costs:
-
-1. In Cost Management, select **Budgets** > **Add**.
-1. Create a monthly budget for your expected Arc SQL spend.
-1. Configure alerts at 50%, 75%, and 90% of budget.
-1. Save the budget.
-
-Budget alerts use forecasted costs, not just actual spend, to help you avoid unexpected charges. For more information, see [Create and manage budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets).
+For details about analyzing PAYG subscription costs, including viewing forecasted charges, filtering for Arc SQL Server usage, identifying resource-level costs, and setting up budget alerts, see [Analyze costs](pay-as-you-go-subscription.md#analyze-costs).
 
 ## Monitor billing events
 
-To monitor, review [Use activity logs with SQL Server enabled by Azure Arc](activity-logs.md).
+For details about monitoring billing events, see [Monitor billing events](pay-as-you-go-subscription.md#monitor-billing-events).
+
 
 ## Related content
 

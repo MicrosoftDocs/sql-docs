@@ -9472,6 +9472,8 @@ items:
         href: sql-server/azure-arc/manage-configuration.md
       - name: Licensing & billing
         href: sql-server/azure-arc/manage-license-billing.md
+      - name: Pay-as-you-go subscription
+        href: sql-server/azure-arc/pay-as-you-go-subscription.md
       - name: Manage pay-as-you-go transition
         href: sql-server/azure-arc/manage-pay-as-you-go-transition.md
       - name: Extended Security Updates

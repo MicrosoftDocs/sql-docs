@@ -995,7 +995,7 @@ Additionally, the following query clauses aren't parameterized. In these cases, 
 Parameterization occurs at the level of individual [!INCLUDE [tsql](../includes/tsql-md.md)] statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the `sys.syscacheobjects` dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (\@1 tinyint).
 
 > [!NOTE]  
-> Parameter names are arbitrary. Users or applications should not rely on a particular naming order. Also, the following can change between versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and Cumulative Update upgrades: Parameter names, the choice of literals that are parameterized, and the spacing in the parameterized text.
+> Parameter names are arbitrary. Users or applications should not rely on a particular naming order. Also, the following can change between versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and cumulative update (CU) upgrades: Parameter names, the choice of literals that are parameterized, and the spacing in the parameterized text.
 
 #### Data types of parameters
 

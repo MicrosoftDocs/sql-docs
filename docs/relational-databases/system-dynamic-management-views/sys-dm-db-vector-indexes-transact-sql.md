@@ -26,7 +26,7 @@ monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-curre
 
 # sys.dm_db_vector_indexes (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-fabricsqldb.md)]
+[!INCLUDE [asdb-mi-fabric-sqldb](../../includes/applies-to-version/asdb-mi-fabric-sqldb.md)]
 
 Returns real-time insights into vector index health and performance. Use this view for monitoring vector index maintenance operations and identifying indexes that need attention.
 

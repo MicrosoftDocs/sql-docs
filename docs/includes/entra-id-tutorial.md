@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 12/18/2025
+ms.date: 05/05/2026
 ms.service: sql
 ms.topic: include
 ---
@@ -408,6 +408,8 @@ On Linux, Microsoft Entra ID parameters are stored in `mssql-conf`. For more inf
     - Select **Save**.
     - Select **Set Admin** and reconfigure Microsoft Entra authentication with the new certificate.
     - Select **Save**.
+
+- **IPv6 connectivity with Microsoft Entra authentication**: If your server or container is enabled for IPv6, ensure that IPv6 addresses are reachable and routable. If IPv6 isn't fully configured, authentication requests to Microsoft Entra ID might fail due to unreachable IPv6 endpoints.
 
 ## Related content
 

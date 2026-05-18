@@ -44,6 +44,7 @@ The conversion process is divided into two stages - the conversion of database, 
 
 - You have the ability to choose when the cutover occurs - as soon as the database is ready, or manually at a time of your choosing. By default, the process to convert to Hyperscale will cut over automatically.
   - If you choose to manually cutover at a time of your choosing, you have 24 hours to initiate a manual cutover after the point when the database ready for cutover. You can initiate a manual cutover via the Azure portal, Azure CLI, PowerShell, or T-SQL.
+  - While the database is in a ready‑for‑cutover state and you choose manual cutover, the system continues to copy and replay the changes made in the source databaes but switches from asynchronous to synchronous copy. This synchronous copy may increase write latency under heavy workloads until manual cutover occurs.
 - During the final cutover to Hyperscale, your applications only experience a short period of downtime, usually less than a minute.
 
 There are multiple phases in the conversion process that can be monitored in the Azure portal (on the progress reporting page), via Azure CLI ([az sql db op list](/cli/azure/sql/db/op#az-sql-db-op-list)), PowerShell ([Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity)), or using T-SQL ([sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database)).

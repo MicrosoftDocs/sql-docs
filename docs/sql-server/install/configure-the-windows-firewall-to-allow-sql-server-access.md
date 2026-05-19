@@ -157,7 +157,7 @@ The following table lists the ports that are frequently used by [!INCLUDE [ssASn
 | [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTP<br /><br />(The PivotTable&reg; Service uses HTTP or HTTPS) | TCP port 80 | Used for an HTTP connection through a URL. |
 | [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTPS<br /><br />(The PivotTable&reg; Service uses HTTP or HTTPS) | TCP port 443 | Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses TLS. |
 
-If users access [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] through IIS and the Internet, you must open the port on which IIS is listening. Next, specify port in the client connection string. In this case, no ports have to be open for direct access to [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)]. The default port 2389, and port 2382, should be restricted together with all other ports that aren't required.
+If users access [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] through IIS and the Internet, you must open the port on which IIS is listening. Next, specify port in the client connection string. In this case, no ports have to be open for direct access to [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)]. The default port 2383, and port 2382, should be restricted together with all other ports that aren't required.
 
 For step-by-step instructions to configure the Windows Firewall for [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)], see [Configure the Windows Firewall to Allow Analysis Services Access](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access).
 

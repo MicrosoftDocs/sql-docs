@@ -3,7 +3,7 @@ title: "CREATE LOGIN (Transact-SQL)"
 description: CREATE LOGIN (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/30/2025
+ms.date: 05/20/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -583,7 +583,7 @@ Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the lo
 #### PASSWORD = '*password*'
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
-Passwords are case-sensitive. Passwords should always be at least 10 characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
+Passwords are case-sensitive. Passwords should always be at least 14 characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
 
 #### SID = *sid*
 Used to recreate a login. Applies to SQL Server authentication logins only. Specifies the SID of the new SQL Server authentication login. If this option isn't used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
@@ -812,7 +812,7 @@ Specifies the name of the login that is created. SQL Analytics in Azure Synapse 
 #### PASSWORD ='password'
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
-Passwords are case-sensitive. Passwords should always be at least eight characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
+Passwords are case-sensitive. Passwords should always be at least 14 characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
 
 #### SID = *sid*
 Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option isn't used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Analytics, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.

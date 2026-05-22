@@ -26,8 +26,8 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
 > Scalar UDFs are a preview feature in Fabric Data Warehouse.
 
 > [!IMPORTANT]
-> In Fabric Data Warehouse, to use a scalar udf in a query both the function and its use must follow the [rules to allow inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udf-requirements) otherwise you will get an error `Scalar UDF execution is currently unavailable in this context.`.
-Scalar UDFs that cannot be inlineable can be used outside of a query. You can check [whether a UDF can be inlined](#check-whether-a-scalar-udf-can-be-inlined).
+> In Fabric Data Warehouse, a scalar UDF used in a query must follow the [rules to allow inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udf-requirements). Otherwise, you will get the error `Scalar UDF execution is currently unavailable in this context.`.
+Scalar UDFs that cannot be inlined can be used outside of a query. You can check [whether a UDF can be inlined](#check-whether-a-scalar-udf-can-be-inlined).
 
 A user-defined function is a [!INCLUDE [tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. Scalar functions return a scalar value, such as a number or string. User-defined table-valued functions (TVFs) return a table.
 

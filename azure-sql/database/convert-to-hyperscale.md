@@ -25,7 +25,7 @@ You can convert an existing database in Azure SQL Database to Hyperscale by usin
 
 - Direct conversion from the Basic service tier to Hyperscale isn't supported. To perform this conversion, first change the database to any service tier other than Basic (for example, General Purpose), and then proceed with the conversion to Hyperscale.
 
-- Direct conversion from a zone redundant elastic pool to a non-zone redundant Hyperscale pool is not supported. To perform this conversion, first convert the pool to standalone by choosing an offering such as Business Critical. Then remove zone redundancy and change the service tier to Hyperscale. At that point, the database can be added to an existing, non-zone redundant Hyperscale pool or one could be created and the database added.
+- Direct movement of a database from a zone-redundant elastic pool to a non–zone-redundant Hyperscale pool is not supported. To complete this transition, first remove the database from the elastic pool and convert it to a standalone database. Next, disable zone redundancy for the database. Once these steps are complete, the database can be added to a new or existing non–zone-redundant Hyperscale pool.
 
 - You can monitor the progress of the conversion with T-SQL. To run T-SQL commands on your Azure SQL Database, use [SQL Server Management Studio (SSMS)](https://aka.ms/ssms), the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code), [sqlcmd](/sql/tools/sqlcmd/sqlcmd-utility), or your favorite T-SQL querying tool.
 

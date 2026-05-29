@@ -4,7 +4,7 @@ description: "sp_procoption sets or clears a stored procedure for automatic exec
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/23/2025
+ms.date: 05/29/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -46,7 +46,14 @@ The name of the option to set. *@OptionName* is **varchar(35)**, and the only va
 
 #### [ @OptionValue = ] '*OptionValue*'
 
-Whether to set the option on (`true` or `on` or `1` or `yes`) or off (`false` or `off` or `0` or `no`). *@OptionValue* is **varchar(12)**, with no default.
+Specifies whether to enable or disable the option. *@OptionValue* is **varchar(12)**, with no default, and can be one of the following values:
+
+| Enabled | Disabled |
+| --- | --- |
+| `true` | `false` |
+| `on` | `off` |
+| `yes` | `no` |
+| `1` | `0` |
 
 ## Return code values
 

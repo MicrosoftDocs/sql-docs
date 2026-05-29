@@ -46,7 +46,7 @@ The name of the option to set. *@OptionName* is **varchar(35)**, and the only va
 
 #### [ @OptionValue = ] '*OptionValue*'
 
-Whether to set the option on (`true` or `on`) or off (`false` or `off`). *@OptionValue* is **varchar(12)**, with no default.
+Whether to set the option on (`true` or `on` or `1` or `yes`) or off (`false` or `off` or `0` or `no`). *@OptionValue* is **varchar(12)**, with no default.
 
 ## Return code values
 

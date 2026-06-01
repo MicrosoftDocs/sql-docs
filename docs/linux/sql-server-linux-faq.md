@@ -149,7 +149,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **What permissions are required for SQL Server files?**
 
-   All files in the `/var/opt/mssql` file folder should be owned by the **mssql** user and belong to the **mssql** group. Both the **mssql** user and group should have read-write permissions of all files and directories. Note the following special scenarios involving file and directory permissions:
+   All files in the `/var/opt/mssql` file folder should be owned by the **mssql** user and belong to the **mssql** group. The default directory permissions vary: the root directory (`/var/opt/mssql`) is set to `770`, while subdirectories such as `data` and `log` are set to `755`. Database files (`.mdf`, `.ndf`, `.ldf`) are created with `660` permissions, ensuring only the **mssql** user and group can read or write them. Note the following special scenarios involving file and directory permissions:
 
    * Permissions for mssql owner and group are required for mounted network shares that are used to store SQL Server files.
    * If you locate database files or backups in a non-default directory, you must also set permissions for that directory.

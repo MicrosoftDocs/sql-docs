@@ -45,6 +45,7 @@ Valid values for the target platform in the `DSP` tag include:
 - `Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider` (SQL Server 2017)
 - `Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider` (SQL Server 2019)
 - `Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider` (SQL Server 2022)
+- `Microsoft.Data.Tools.Schema.Sql.Sql170DatabaseSchemaProvider` (SQL Server 2025)
 - `Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider` (Azure SQL Database)
 - `Microsoft.Data.Tools.Schema.Sql.SqlDbFabricDatabaseSchemaProvider` (SQL database in Fabric or Fabric Mirrored SQL Database, preview)
 - `Microsoft.Data.Tools.Schema.Sql.SqlDwDatabaseSchemaProvider` (Azure Synapse SQL Pool)

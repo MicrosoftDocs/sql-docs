@@ -61,7 +61,7 @@ Observe the following guidelines when performing server upgrades or updates in o
 
 - During a version upgrade, readable secondaries can't be read after an upgrade of the readable secondary and before either the primary replica is failed over to an upgraded secondary, or the primary replica is upgraded.
 
-- To prevent the AG from unintended failovers during the upgrade process, remove availability failover from all synchronous-commit replicas before you begin.
+- To prevent the AG from unintended failovers during the upgrade process, remove automatic failover from all synchronous-commit replicas before you begin.
 
 - Don't upgrade the primary replica instance before failing over the AG to an upgraded instance with a secondary replica first. Otherwise, client applications might suffer extended downtime during the upgrade on the primary replica instance.
 

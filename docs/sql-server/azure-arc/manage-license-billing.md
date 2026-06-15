@@ -260,9 +260,9 @@ The following table shows which Always On roles can qualify for passive disaster
 
 | Always On role | Description | Passive DR license eligible? |
 |---------------|-------------|------------------------|
-| AvailabilityGroupReplica | Instance is part of an availability group | Depends on replica role and connections |
-| FailoverClusterInstance | Active FCI instance | No |
-| FailoverClusterNode | Passive FCI node | Yes (if service isn't running) |
+| Availability Group Replica | Instance is part of an availability group | Depends on replica role and connections |
+| Failover Cluster Instance | Active FCI instance | No |
+| Failover Cluster Node | Passive FCI node | Yes (if service isn't running) |
 | None | Standalone instance | No |
 
 **Replica role requirements**
@@ -275,7 +275,7 @@ For an availability group replica to qualify for passive disaster recovery licen
 | Secondary | Yes (readable) | No connections | Yes |
 | Secondary | Yes (readable) | Has connections | No |
 | Primary (standalone AG) | N/A | N/A | No |
-| Primary (in DAG, primary AG) | N/A | N/A | No |
+| Global Primary (in DAG, primary AG) | N/A | N/A | No |
 | Forwarder (primary in secondary AG of DAG) | No (not in use) | N/A | Yes |
 | Forwarder | Yes (readable) | Has connections | No |
 
@@ -287,7 +287,7 @@ For an availability group replica to qualify for passive disaster recovery licen
 - Primary replicas never qualify for passive disaster recovery licensing because they actively serve the workload.
 - No active or sleeping user sessions connected to user databases (`sys.dm_exec_sessions WHERE is_user_process = 1`).
 
-### Qualify as passive node of failover clustered instance (FCI)
+### Qualify as passive node of failover cluster instance
 
 - No instances of the SQL Server service — whether as standalone or as an active node of an FCI — can be in a running state on the node, unless those instances qualify as free passive replicas of availability groups (AGs).
 

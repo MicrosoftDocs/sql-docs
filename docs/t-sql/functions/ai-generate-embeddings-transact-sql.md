@@ -27,7 +27,7 @@ monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-curre
 `AI_GENERATE_EMBEDDINGS` is a built-in function that creates embeddings (vector arrays) using a precreated AI model definition stored in the database.
 
 > [!NOTE]  
-> `AI_GENERATE_EMBEDDINGS` is available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with the **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
+> `AI_GENERATE_EMBEDDINGS` is available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with SQL Server 2025 and the **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 ## Syntax
 

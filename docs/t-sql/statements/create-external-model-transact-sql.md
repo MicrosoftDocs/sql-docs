@@ -32,7 +32,7 @@ monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-curre
 Creates an external model object that contains the location, authentication method, and purpose of an AI model inference endpoint.
 
 > [!NOTE]  
-> `CREATE EXTERNAL MODEL` is available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with the **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
+> `CREATE EXTERNAL MODEL` is available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with SQL Server 2025 and the **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 ## Syntax
 

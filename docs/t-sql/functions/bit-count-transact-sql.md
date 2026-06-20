@@ -49,7 +49,7 @@ Any integer or binary expression that isn't a large object ([LOB](#remarks)).
 
 For example, `SELECT BIT_COUNT (CAST (-1 AS SMALLINT))` and `SELECT BIT_COUNT (CAST (-1 AS INT))` return `16` and `32` respectively. This is intended, as the binary representation of `-1` can have a different number of bits set to `1` depending on the data type.
 
-If a NULL value is passed into `BIT_COUNT` as the expression value, then a NULL is returned
+If *expression_value* is `NULL`, `BIT_COUNT` returns `NULL`.
 
 ## Remarks
 

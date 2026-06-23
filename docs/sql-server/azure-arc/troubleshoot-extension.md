@@ -17,7 +17,7 @@ This article describes ways to identify unhealthy extensions that aren't install
 
 ### Use the built-in extension health dashboard in the Azure portal
 
-You can use the [built-in extension health dashboard](https://ms.portal.azure.com/#view/Microsoft_Azure_ArcCenterUX/ArcCenterMenuBlade/~/sqlServerHealthDashboard) in the Azure portal to show the health for all deployed Azure extensions for SQL Server.
+Use the [built-in extension health dashboard](https://portal.azure.com/#view/Microsoft_Azure_ArcCenterUX/ArcCenterMenuBlade/~/sqlServerHealthDashboard) in the Azure portal to see the health status for all deployed Azure extensions for SQL Server.
 
 > [!TIP]  
 > Create your own custom dashboard with this file from the sql-server-samples GitHub repository: [Arc-enabled SQL Server Health.json](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/azure-arc/dashboard/Arc-enabled%20SQL%20Server%20Health.json).

@@ -89,9 +89,9 @@ sections:
         answer: |
           On Linux, core count is reported based on the operating system environment (virtual or physical cores visible to the OS). Database Engine-level core verification isn't available. Billing is based on the OS-reported core count, subject to the four-core minimum per OSE.
 
-      - question: Is physical core (p-core) pay-as-you-go billing available for SQL Server enabled by Azure Arc in the US Government Virginia cloud?
+      - question: Is physical core pay-as-you-go billing available for SQL Server enabled by Azure Arc in the US Government Virginia cloud?
         answer: |
-          Yes, physical core (p-core) pay-as-you-go billing is available for SQL Server enabled by Azure Arc in the US Government Virginia cloud.
+          Yes, physical core pay-as-you-go billing is available for SQL Server enabled by Azure Arc in the US Government Virginia cloud.
 
   - name: Security
     questions:

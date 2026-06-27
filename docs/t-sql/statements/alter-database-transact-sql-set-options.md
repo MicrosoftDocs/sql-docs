@@ -39,6 +39,8 @@ Sets database options in the SQL [!INCLUDE [ssde-md](../../includes/ssde-md.md)]
 > [!NOTE]  
 > Setting some options with `ALTER DATABASE` might require exclusive database access. If the `ALTER DATABASE` statement doesn't complete in a timely manner, check to see if other sessions within the database are blocking the ALTER DATABASE session.
 
+[!INCLUDE [alter-db](../../includes/alter-db.md)]
+
 For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Select a product

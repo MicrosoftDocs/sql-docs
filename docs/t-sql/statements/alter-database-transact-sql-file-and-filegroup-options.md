@@ -49,6 +49,8 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
+[!INCLUDE [alter-db](../../includes/alter-db.md)]
+
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::

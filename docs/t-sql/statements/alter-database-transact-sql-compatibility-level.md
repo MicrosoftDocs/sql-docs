@@ -34,6 +34,8 @@ Sets [!INCLUDE [tsql](../../includes/tsql-md.md)] and query processing behaviors
 
 For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
+[!INCLUDE [alter-db](../../includes/alter-db.md)]
+
 ## Syntax
 
 ```syntaxsql

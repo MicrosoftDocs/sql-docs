@@ -44,6 +44,8 @@ This section describes optimal configuration defaults in Azure SQL Database that
 
 If you want to stay with your custom settings, use [ALTER DATABASE with Query Store options](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) to revert configuration to the previous state. Check out [Best Practices with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) in order to learn how to choose optimal configuration parameters.
 
+[!INCLUDE [alter-db](../../includes/alter-db.md)]
+
 ## Set the optimal Query Store Capture Mode
 
 Keep the most relevant data in Query Store. The following table describes typical scenarios for each Query Store Capture Mode:

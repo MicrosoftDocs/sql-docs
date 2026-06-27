@@ -34,6 +34,8 @@ ai-usage: ai-assisted
 
 Use this command to enable several database configuration settings at the **individual database** level.
 
+[!INCLUDE [alter-db](../../includes/alter-db.md)]
+
 > [!IMPORTANT]
 > Different `DATABASE SCOPED CONFIGURATION` options are supported in different versions and platforms of the SQL Database Engine. This article describes **all** `DATABASE SCOPED CONFIGURATION` options. Versions where applicable are noted. Make sure that you use the syntax that's available in the version of service that you're using.
 

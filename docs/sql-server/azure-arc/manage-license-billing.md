@@ -65,6 +65,8 @@ Your choice of payment option might affect your outsourcing options. For more in
 
 For information about licensing your non-production or test SQL Server instances through Azure Arc, see [Manage SQL Server licensed for non-production use](manage-license-billing.md#non-production-licensing).
 
+
+
 <a id="license-vcores"></a>
 
 ## License SQL Server instances by virtual cores
@@ -89,6 +91,9 @@ The following license types are supported when you're licensing v-cores:
 | Pay-as-you-go | Subscribe to the Standard or Enterprise edition of the service and be billed on an hourly meter. See [SQL Server pricing and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing). | `PAYG` |
 | License with Software Assurance | Bring your own Standard or Enterprise license with Software Assurance or a SQL Server subscription. Your software usage is reported through a free hourly meter according to the metering rules. See [Metering software usage](#usage-metering) later in this article. | `Paid` |
 | License only | You use a perpetual license for Standard or Enterprise edition, or you use the free Developer, Evaluation, or Express editions. Your software usage is reported according to the metering rules. See [Metering software usage](#usage-metering) later in this article. | `LicenseOnly` |
+
+> [!NOTE]
+> If the pay-as-you-go model is greyed out follow the [documentation here](https://www.microsoft.com/en-us/sql-server/blog/2024/11/06/save-money-on-microsoft-sql-server-licensing-with-microsoft-azure-arc/).
 
 #### Important considerations
 

@@ -21,9 +21,9 @@ helpviewer_keywords:
   
 ### Limitations and restrictions  
   
-- The master key must be open and, therefore, decrypted before it's backed up. If it's encrypted with the service master key, the master key doesn't have to be explicitly opened. But if the master key is encrypted only with a password, it must be explicitly opened.  
+- The database master key must be open and, therefore, decrypted before it's backed up. If it's encrypted with the service master key, the database master key doesn't have to be explicitly opened. But if the database master key is encrypted only with a password, it must be explicitly opened.  
   
-- We recommend that you back up the master key as soon as it's created, and store the backup in a secure, off-site location.  
+- We recommend that you back up the database master key as soon as it's created, and store the backup in a secure, off-site location.  
   
 ## Security  
   
@@ -60,7 +60,9 @@ Requires CONTROL permission on the database.
     ```  
   
     > [!NOTE]  
-    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.  
+    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.
+    > [!NOTE]  
+    > TThe password is required for a backup. Please be sure this password is stored safely and securely.
   
 8. Copy the file to the backup medium and verify the copy.  
   

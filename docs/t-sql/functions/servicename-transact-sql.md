@@ -38,7 +38,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-li
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs as a service named MSSQLServer.  
   
 ## Examples  
- The following example shows using `@@SERVICENAME`.  
+The following example shows using `@@SERVICENAME` for a default instance.  
   
 ```sql  
 SELECT @@SERVICENAME AS 'Service Name';  
@@ -51,7 +51,21 @@ Service Name
 ------------------------------  
 MSSQLSERVER                     
 ```  
+
+The following example shows using `@@SERVICENAME` for an named instance, named Localhost\SQL2022.  
+
+```sql  
+SELECT @@SERVICENAME AS 'Service Name';  
+```  
   
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+Service Name                    
+------------------------------  
+SQL2022                     
+```  
+
 ## See Also  
 
  [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)  

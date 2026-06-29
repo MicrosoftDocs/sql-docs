@@ -286,7 +286,7 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 1968-10-23 12:45:37.003  1968-10-23 12:45:37.0017 +10:0
 ```
 
-When the conversion is from **datetime2(*n*)**, the date and time are copied. When the fractional precision of the **datetime2(*n*)** value is greater than three digits, the value is **rounded** to the nearest **datetime** increment (`.000`, `.003`, or `.007` seconds). Because it rounds, the value can round up and carry into the next second, minute, hour, or day.. The following example shows the results of converting a `DATETIME2(4)` value to a `DATETIME` value.
+When the conversion is from **datetime2(*n*)**, the date and time are copied. When the fractional precision of the **datetime2(*n*)** value is greater than three digits, the value is **rounded** to the nearest **datetime** increment (`.000`, `.003`, or `.007` seconds). Because it rounds, the value can round up and carry into the next second, minute, hour, or day. The following example shows the results of converting a `DATETIME2(4)` value to a `DATETIME` value.
 
 ```sql
 DECLARE @datetime2 DATETIME2(4) = '1968-10-23 12:45:37.0017';

@@ -235,10 +235,10 @@ DECLARE @datetime DATETIME = @date;
 SELECT @datetime AS '@datetime', @date AS '@date';
 ```
 
-When the conversion is from **time(*n*)**, the time component is copied, and the date component is set to `1900-01-01`. When the fractional precision of the **time(*n*)** value is greater than three digits, the value is truncated to fit. The following example shows the results of converting a `TIME(4)` value to a `DATETIME` value.
+When the conversion is from **time(*n*)**, the time component is copied, and the date component is set to `1900-01-01`. When the fractional precision of the **time(*n*)** value is greater than three digits, the value is **rounded** to the nearest **datetime** increment (`.000`, `.003`, or `.007` seconds). The following example shows the results of converting a `TIME(4)` value to a `DATETIME` value.
 
 ```sql
-DECLARE @time TIME(4) = '12:10:05.1237';
+DECLARE @time TIME(4) = '12:10:05.0017';
 DECLARE @datetime DATETIME = @time;
 
 SELECT @datetime AS '@datetime', @time AS '@time';
@@ -249,7 +249,7 @@ SELECT @datetime AS '@datetime', @time AS '@time';
 ```output
 @datetime                @time
 ------------------------ --------------
-1900-01-01 12:10:05.123  12:10:05.1237
+1900-01-01 12:10:05.003  12:10:05.0017
 ```
 
 When the conversion is from **smalldatetime**, the hours and minutes are copied. The seconds and fractional seconds are set to `0`. The following code shows the results of converting a `SMALLDATETIME` value to a `DATETIME` value.
@@ -269,10 +269,10 @@ SELECT @datetime AS '@datetime', @smalldatetime AS '@smalldatetime';
 2016-12-01 12:32:00.000  2016-12-01 12:32:00
 ```
 
-When the conversion is from **datetimeoffset(*n*)**, the date and time components are copied. The time zone is truncated. When the fractional precision of the **datetimeoffset(*n*)** value is greater than three digits, the value is truncated. The following example shows the results of converting a `DATETIMEOFFSET(4)` value to a `DATETIME` value.
+When the conversion is from **datetimeoffset(*n*)**, the date and time components are copied. The time zone is truncated. When the fractional precision of the **datetimeoffset(*n*)** value is greater than three digits, the value is **rounded** to the nearest **datetime** increment (`.000`, `.003`, or `.007` seconds). The following example shows the results of converting a `DATETIMEOFFSET(4)` value to a `DATETIME` value.
 
 ```sql
-DECLARE @datetimeoffset DATETIMEOFFSET(4) = '1968-10-23 12:45:37.1234 +10:0';
+DECLARE @datetimeoffset DATETIMEOFFSET(4) = '1968-10-23 12:45:37.0017 +10:0';
 DECLARE @datetime DATETIME = @datetimeoffset;
 
 SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
@@ -283,13 +283,13 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 ```output
 @datetime                @datetimeoffset
 ------------------------ -------------------------------
-1968-10-23 12:45:37.123  1968-10-23 12:45:37.1237 +10:0
+1968-10-23 12:45:37.003  1968-10-23 12:45:37.0017 +10:0
 ```
 
-When the conversion is from **datetime2(*n*)**, the date and time are copied. When the fractional precision of the **datetime2(*n*)** value is greater than three digits, the value is truncated. The following example shows the results of converting a `DATETIME2(4)` value to a `DATETIME` value.
+When the conversion is from **datetime2(*n*)**, the date and time are copied. When the fractional precision of the **datetime2(*n*)** value is greater than three digits, the value is **rounded** to the nearest **datetime** increment (`.000`, `.003`, or `.007` seconds). Because it rounds, the value can round up and carry into the next second, minute, hour, or day.. The following example shows the results of converting a `DATETIME2(4)` value to a `DATETIME` value.
 
 ```sql
-DECLARE @datetime2 DATETIME2(4) = '1968-10-23 12:45:37.1237';
+DECLARE @datetime2 DATETIME2(4) = '1968-10-23 12:45:37.0017';
 DECLARE @datetime DATETIME = @datetime2;
 
 SELECT @datetime AS '@datetime', @datetime2 AS '@datetime2';
@@ -300,7 +300,7 @@ SELECT @datetime AS '@datetime', @datetime2 AS '@datetime2';
 ```output
 @datetime                @datetime2
 ------------------------ -------------------------
-1968-10-23 12:45:37.123  1968-10-23 12:45:37.1237
+1968-10-23 12:45:37.003  1968-10-23 12:45:37.0017
 ```
 
 ## Examples

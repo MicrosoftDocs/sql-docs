@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "docs/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/set-up-transparent-data-encryption-with-azure-key-vault-for-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/search/full-text-index-version-1-binaries.md",
       "redirect_url": "/sql/relational-databases/search/full-text-index-binaries",
       "redirect_document_id": true

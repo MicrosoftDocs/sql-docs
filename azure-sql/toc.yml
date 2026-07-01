@@ -1662,8 +1662,6 @@
         items:
         - name: Microsoft Entra authentication
           href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
-        - name: EKM with AKV using managed identities
-          href: virtual-machines/windows/managed-identity-extensible-key-management.md
         - name: Azure Key Vault Integration
           href: virtual-machines/windows/azure-key-vault-integration-configure.md
       - name: Migrate

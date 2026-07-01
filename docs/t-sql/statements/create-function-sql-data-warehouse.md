@@ -235,7 +235,7 @@ An inline table-valued function accepts only a single `SELECT` statement.
  - A scalar UDF can't be used in all query shapes, such as CTEs and `GROUP BY` when:
     - The scalar UDF body contains reference to tables/views/iTVFs/other scalar UDFs.
     - The scalar UDF contains any of these data types as an input parameter, local variable, or return data type: **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **binary(max)**.
-    - The scalar UDF body contains calls to [AI Functions](https://github.com/MicrosoftDocs/fabric-docs-pr/blob/main/docs/data-warehouse/ai-functions.md)
+    - The scalar UDF body contains calls to [AI functions](/fabric/data-warehouse/ai-functions).
     - In above scenarios, general scalar udf inlining requirements applly, see [Scalar UDF inlining requirements](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=fabric&preserve-view=true#inlineable-scalar-udf-requirements).
 
 - If a scalar UDF contains any of the following, a user query can fail if more than 10 UDF calls are made in a single query. In some edge cases, the complexity of the user query and UDF body prevents inlining, in which case the scalar UDF is not inlined, and the user query fails. 
@@ -270,6 +270,8 @@ An inline table-valued function accepts only a single `SELECT` statement.
 ## Permissions
 
 Members of the Fabric workspace Administrator, Member, and Contributor roles can create functions.
+
+<a id="scalar-udf-inlining"></a>
 
 ## Inlining of Scalar UDF
 

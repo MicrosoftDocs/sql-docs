@@ -4,7 +4,7 @@ description: The sys.query_store_replicas system view contains information about
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
-ms.date: 10/02/2025
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: reference
@@ -43,6 +43,10 @@ This catalog view returns the same row data on all replicas. The catalog view co
 ## Permissions
 
 Requires the `VIEW DATABASE STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Related content
 

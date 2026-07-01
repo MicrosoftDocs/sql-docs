@@ -3,7 +3,7 @@ title: "sys.syslockinfo (Transact-SQL)"
 description: "sys.syslockinfo (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "09/06/2024"
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -54,8 +54,12 @@ Contains information about all granted, converting, and waiting lock requests.
   
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
-  
-## See Also  
+
+### Permissions for SQL Server 2022 and later
+
+Requires `VIEW SERVER PERFORMANCE STATE` permission on the server, or `VIEW DATABASE PERFORMANCE STATE` permission on the database.
+
+## Related content
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

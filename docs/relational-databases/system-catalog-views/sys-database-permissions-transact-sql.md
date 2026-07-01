@@ -3,7 +3,7 @@ title: "sys.database_permissions (Transact-SQL)"
 description: sys.database_permissions returns a row for every permission or column-exception permission in the database.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/02/2026
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -144,6 +144,10 @@ These permissions will show up in sys.database_permissions as one GRANT (on the 
  Any user can see their own permissions. To see permissions for other users, requires VIEW DEFINITION, ALTER ANY USER, or any permission on a user. To see user-defined roles, requires ALTER ANY ROLE, or membership in the role (such as public).  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW SECURITY DEFINITION` permission on the database.
   
 ## Examples
 
@@ -220,7 +224,7 @@ principal_id    name    type_desc    authentication_type_desc    state_desc    p
 5    test    SQL_USER    INSTANCE    GRANT    SELECT    dbo.vAssocSeqOrders
 ```
 
-## See also
+## Related content
 
 - [Securables](../../relational-databases/security/securables.md)
 - [Permissions Hierarchy (Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)

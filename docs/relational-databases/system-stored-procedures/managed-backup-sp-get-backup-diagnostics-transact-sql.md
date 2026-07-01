@@ -69,6 +69,10 @@ This stored procedure returns a table with the following information:
 
 Requires EXECUTE permissions on the stored procedure. It also requires VIEW SERVER STATE permissions since it internally calls other system objects that require this permission.
 
+### Permissions for SQL Server 2022 and later
+
+Requires EXECUTE permission on the stored procedure, and `VIEW SERVER PERFORMANCE STATE` permission on the server (or `VIEW DATABASE PERFORMANCE STATE` permission on the database for Azure SQL Database contexts).
+
 ## Examples
 
 The following example returns all the events logged for the past 30 minutes.

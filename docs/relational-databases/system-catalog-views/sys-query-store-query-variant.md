@@ -3,7 +3,8 @@ title: "sys.query_store_query_variant (Transact-SQL)"
 description: The sys.query_store_query_variant system catalog view returns Query Store variant information.
 author: thesqlsith
 ms.author: derekw
-ms.date: 11/11/2022
+ms.date: 05/26/2026
+ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: reference
@@ -25,21 +26,25 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-ver
 
  [!INCLUDE [sqlserver2022-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricsqldb.md)]
 
-  Contains information about the parent-child relationships between the original parameterized queries (also known as parent queries), dispatcher plans, and their child query variants.  This catalog view offers the ability to view all query variants associated with a dispatcher as well as the original parameterized queries. Query variants will have the same query_hash value as viewed from within the sys.query_store_query catalog view, which when joined with the sys.query_store_query_variant and sys.query_store_runtime_stats catalog views, aggregate resource usage statistics can be obtained for queries that differ only by their input values.  
+Contains information about the parent-child relationships between the original parameterized queries (also known as parent queries), dispatcher plans, and their child query variants. This catalog view shows all query variants associated with a dispatcher and the original parameterized queries. Query variants share the same `query_hash` value as viewed from `sys.query_store_query`. When you join `sys.query_store_query_variant` with `sys.query_store_query` and `sys.query_store_runtime_stats`, you can obtain aggregate resource usage statistics for queries that differ only by their input values.  
   
-|Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
-|**query_variant_query_id**|**bigint**|Primary key. ID of the parameterized sensitive query variant.|  
-|**parent_query_id**|**bigint**|ID of the original parameterized query.|  
-|**dispatcher_plan_id**|**bigint**|ID of the parameter sensitive plan optimization dispatcher plan.|  
+|Column name|Data type|Description|
+|-----------------|---------------|-----------------|
+|`query_variant_query_id`|`bigint`|Primary key. ID of the parameterized sensitive query variant.|
+|`parent_query_id`|`bigint`|ID of the original parameterized query.|
+|`dispatcher_plan_id`|`bigint`|ID of the parameter sensitive plan optimization dispatcher plan.|
 
 ## Remarks
 
-Since more than one query variant can be associated with one dispatcher plan, there will be multiple plans that belong to query variants which will eventually add to the overall resource usage statistics of the parent query. The dispatcher plan for query variants does not produce any runtime statistics in the Query Store, which will cause existing Query Store queries to no longer be sufficient when gathering overall statistics unless an additional join to the **query_store_query_variant** view is included.
+Because more than one query variant can associate with a single dispatcher plan, multiple plans belong to query variants and contribute to the overall resource usage statistics of the parent query. The dispatcher plan for query variants doesn't produce runtime statistics in the Query Store. As a result, existing Query Store queries aren't sufficient for gathering overall statistics unless you include an extra join to the `sys.query_store_query_variant` view.
   
-## Permissions  
+## Permissions
 
- Requires the **VIEW DATABASE STATE** permission.  
+Requires the `VIEW DATABASE STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Examples
 
@@ -105,14 +110,14 @@ ORDER BY qspl.query_id, qsrs.last_execution_time;
 GO
 ```
 
-## See Also  
+## Related content
 
-- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
-- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
-- [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)
-- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
-- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
+- [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+- [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)
+- [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
+- [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+- [Monitoring performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Catalog views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [Query Store stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
 

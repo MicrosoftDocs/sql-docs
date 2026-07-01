@@ -3,7 +3,7 @@ title: "sys.server_permissions (Transact-SQL)"
 description: sys.server_permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "09/20/2019"
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -83,6 +83,10 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
  Any user can see their own permissions. To see permissions for other logins, requires VIEW DEFINITION, ALTER ANY LOGIN, or any permission on a login. To see user-defined server roles, requires ALTER ANY SERVER ROLE, or membership in the role.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW ANY SECURITY DEFINITION` permission on the server.
   
 ## Examples  
  The following query lists the permissions explicitly granted or denied to server principals.  

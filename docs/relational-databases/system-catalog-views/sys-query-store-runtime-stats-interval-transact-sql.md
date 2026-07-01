@@ -3,7 +3,7 @@ title: "sys.query_store_runtime_stats_interval (Transact-SQL)"
 description: sys.query_store_runtime_stats_interval (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "01/23/2019"
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -35,8 +35,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || =azure-sqldw-latest |
   
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  
-  
-## See Also  
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   

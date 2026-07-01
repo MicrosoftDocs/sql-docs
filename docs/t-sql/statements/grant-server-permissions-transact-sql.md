@@ -3,7 +3,7 @@ title: "GRANT Server Permissions (Transact-SQL)"
 description: GRANT Server Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "08/10/2017"
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -119,6 +119,10 @@ GRANT permission [ ,...n ]
 |UNSAFE ASSEMBLY|CONTROL SERVER|  
 |VIEW ANY DATABASE|VIEW ANY DEFINITION|  
 |VIEW ANY DEFINITION|CONTROL SERVER|  
+|VIEW ANY PERFORMANCE DEFINITION<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW ANY DEFINITION|  
+|VIEW ANY SECURITY DEFINITION<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW ANY DEFINITION|  
+|VIEW SERVER PERFORMANCE STATE<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW SERVER STATE|  
+|VIEW SERVER SECURITY STATE<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW SERVER STATE|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
  The following three server permissions were added in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

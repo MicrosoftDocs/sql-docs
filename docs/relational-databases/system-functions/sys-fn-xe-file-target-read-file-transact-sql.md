@@ -4,7 +4,7 @@ description: "The sys.fn_xe_file_target_read_file system function reads files cr
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: dfurman
-ms.date: 04/28/2026
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -112,7 +112,7 @@ A valid URL beginning with 'https://' is required as value for any filepath spec
 
 In [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and previous versions, requires `VIEW SERVER STATE` permission on the server.
 
-In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires `VIEW SERVER PERFORMANCE STATE` permission on the server, or `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Examples
 

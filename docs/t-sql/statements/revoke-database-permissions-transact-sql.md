@@ -3,7 +3,7 @@ title: "REVOKE Database Permissions (Transact-SQL)"
 description: REVOKE Database Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "08/10/2017"
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -187,8 +187,12 @@ permission | ALL [ PRIVILEGES ]
 |UPDATE|CONTROL|CONTROL SERVER|  
 |VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |VIEW ANY COLUMN MASTER KEY DEFINITION|CONTROL|VIEW ANY DEFINITION|  
+|VIEW DATABASE PERFORMANCE STATE<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DATABASE STATE|VIEW SERVER PERFORMANCE STATE|  
+|VIEW DATABASE SECURITY STATE<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DATABASE STATE|VIEW SERVER SECURITY STATE|  
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
+|VIEW PERFORMANCE DEFINITION<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DEFINITION|VIEW ANY PERFORMANCE DEFINITION|  
+|VIEW SECURITY DEFINITION<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DEFINITION|VIEW ANY SECURITY DEFINITION|  
   
 ## Permissions  
  The principal that executes this statement (or the principal specified with the AS option) must have CONTROL permission on the database or a higher permission that implies CONTROL permission on the database.  

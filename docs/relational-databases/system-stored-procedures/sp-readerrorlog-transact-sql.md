@@ -69,7 +69,7 @@ Every time [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is started
 
 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions require VIEW SERVER STATE permission on the server.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require VIEW ANY ERROR LOG permission on the server.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require either `VIEW ANY ERROR LOG` or `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
 ## Examples
 

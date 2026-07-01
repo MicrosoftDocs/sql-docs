@@ -3,7 +3,7 @@ title: "sys.query_context_settings (Transact-SQL)"
 description: sys.query_context_settings contains information about the semantics affecting context settings associated with a query.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/29/2025
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -44,6 +44,10 @@ Contains information about the semantics affecting context settings associated w
 ## Permissions
 
 Requires the `VIEW DATABASE STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Related content
 

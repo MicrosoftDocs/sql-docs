@@ -3,7 +3,7 @@ title: "sys.fn_servershareddrives (Transact-SQL)"
 description: "sys.fn_servershareddrives (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/14/2017"
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -47,8 +47,12 @@ fn_servershareddrives()
   
 ## Permissions  
  The user must have VIEW SERVER STATE permission for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
-  
-## Examples  
+
+### Permissions for SQL Server 2022 and later
+
+Requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
+
+## Examples
  The following example uses `fn_servershareddrives` to query on a clustered server instance:  
   
 ```  

@@ -3,7 +3,7 @@ title: "sys.query_store_runtime_stats (Transact-SQL)"
 description: sys.query_store_runtime_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/19/2022
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -106,6 +106,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || =azure-sqldw-latest |
 ## Permissions
 
 Requires the `VIEW DATABASE STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Remarks
 

@@ -4,7 +4,7 @@ description: sp_server_diagnostics captures diagnostic data and health informati
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/23/2025
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -100,6 +100,10 @@ The `x` in each row represents valid health states for the component. For exampl
 ## Permissions
 
 Requires `VIEW SERVER STATE` permission on the server.
+
+### Permissions for SQL Server 2022 and later
+
+Requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
 ## Examples
 

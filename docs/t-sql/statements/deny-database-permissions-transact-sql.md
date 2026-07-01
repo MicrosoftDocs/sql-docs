@@ -3,7 +3,7 @@ title: "DENY Database Permissions (Transact-SQL)"
 description: DENY Database Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "02/21/2019"
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -171,8 +171,12 @@ A database is a securable contained by the server that is its parent in the perm
 |UPDATE|CONTROL|CONTROL SERVER|
 |VIEW ANY COLUMN ENCRYPTION KEY|CONTROL|VIEW ANY DEFINITION|
 |VIEW ANY MASTER KEY DEFINITION|CONTROL|VIEW ANY DEFINITION|
-|VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|
-|VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|
+|VIEW DATABASE PERFORMANCE STATE<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DATABASE STATE|VIEW SERVER PERFORMANCE STATE|  
+|VIEW DATABASE SECURITY STATE<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DATABASE STATE|VIEW SERVER SECURITY STATE|  
+|VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
+|VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
+|VIEW PERFORMANCE DEFINITION<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DEFINITION|VIEW ANY PERFORMANCE DEFINITION|  
+|VIEW SECURITY DEFINITION<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DEFINITION|VIEW ANY SECURITY DEFINITION|
 
 ## Permissions
 
@@ -214,7 +218,7 @@ DENY VIEW DEFINITION TO CarmineEs CASCADE;
 GO
 ```
 
-## See Also
+## Related content
 
 - [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

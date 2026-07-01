@@ -3,7 +3,7 @@ title: "GRANT Database Permissions (Transact-SQL)"
 description: GRANT Database Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/19/2022
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -189,8 +189,12 @@ A database is a securable contained by the server that is its parent in the perm
 |UPDATE|CONTROL|CONTROL SERVER|
 |VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|CONTROL|VIEW ANY DEFINITION|
 |VIEW ANY COLUMN MASTER KEY DEFINITION|CONTROL|VIEW ANY DEFINITION|
-|VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|
-|VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|
+|VIEW DATABASE PERFORMANCE STATE<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DATABASE STATE|VIEW SERVER PERFORMANCE STATE|  
+|VIEW DATABASE SECURITY STATE<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DATABASE STATE|VIEW SERVER SECURITY STATE|  
+|VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
+|VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
+|VIEW PERFORMANCE DEFINITION<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DEFINITION|VIEW ANY PERFORMANCE DEFINITION|  
+|VIEW SECURITY DEFINITION<br /><br />**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later versions.|VIEW DEFINITION|VIEW ANY SECURITY DEFINITION|
 
 ## Permissions
 
@@ -257,7 +261,7 @@ GRANT CONTROL ON DATABASE::AdventureWorks2022 TO Sarah;
 GO
 ```
 
-## See Also
+## Related content
 
 - [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

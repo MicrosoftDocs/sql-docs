@@ -4,7 +4,7 @@ description: The sys.query_store_plan view contains information about each execu
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 02/12/2024
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -94,6 +94,10 @@ Finally, problems with the plan itself:
 ## Permissions
 
 Requires the `VIEW DATABASE STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Examples
 

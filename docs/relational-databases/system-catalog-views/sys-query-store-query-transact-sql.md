@@ -3,7 +3,7 @@ title: "sys.query_store_query (Transact-SQL)"
 description: Contains information about the query and its associated overall aggregated runtime execution statistics.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/14/2025
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -77,6 +77,10 @@ Because the query optimizer expands non-indexed views before it produces a plan,
 ## Permissions
 
 Requires the `VIEW DATABASE STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Related content
 

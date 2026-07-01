@@ -3,7 +3,7 @@ title: "ALTER SERVER CONFIGURATION (Transact-SQL)"
 description: ALTER SERVER CONFIGURATION (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: 03/11/2026
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -350,6 +350,10 @@ Requires:
 - `ALTER SETTINGS` and `VIEW SERVER STATE` permissions for the diagnostic log and failover cluster property options.
 - `CONTROL SERVER` permission for the HADR cluster context option.  
 - `ALTER SERVER STATE` permission for the buffer pool extension option.  
+
+### Permissions for SQL Server 2022 and later
+
+For the diagnostic log and failover cluster property options, `ALTER SETTINGS` and `VIEW SERVER PERFORMANCE STATE` permissions are also accepted in place of `VIEW SERVER STATE`.
   
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. As such, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
   

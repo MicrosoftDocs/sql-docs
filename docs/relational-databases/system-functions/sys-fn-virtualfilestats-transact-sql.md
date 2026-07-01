@@ -3,7 +3,7 @@ title: "sys.fn_virtualfilestats (Transact-SQL)"
 description: "sys.fn_virtualfilestats (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/16/2016"
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -64,8 +64,12 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
-  
-## Examples  
+
+### Permissions for SQL Server 2022 and later
+
+Requires `VIEW SERVER PERFORMANCE STATE` permission on the server, or `VIEW DATABASE PERFORMANCE STATE` permission on the database.
+
+## Examples
   
 ### A. Displaying statistical information for a database  
  The following example displays statistical information for file ID 1 in the database with an ID of `1`.  

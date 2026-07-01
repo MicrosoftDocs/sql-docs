@@ -3,7 +3,7 @@ title: "sys.dm_os_job_object (Azure SQL Database)"
 description: sys.dm_os_job_object (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/03/2020"
+ms.date: 05/26/2026
 ms.service: azure-sql-database
 ms.topic: "reference"
 ms.custom:
@@ -48,6 +48,10 @@ A job object is a Windows construct that implements CPU, memory, and IO resource
 ## Permissions  
 On SQL Managed Instance, requires `VIEW SERVER STATE` permission. 
 On SQL Database, requires the `VIEW DATABASE STATE` permission in the database.  
+
+### Permissions for SQL Server 2022 and later
+
+On SQL Server 2022 and later, and SQL Managed Instance, requires `VIEW SERVER PERFORMANCE STATE` permission on the server. On Azure SQL Database, requires `VIEW DATABASE PERFORMANCE STATE` permission on the database.
  
 ## See Also  
 

@@ -7939,8 +7939,10 @@ items:
           href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
         - name: SQL Server connector with encryption
           href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
-        - name: EKM using Azure Key Vault
-          href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+        - name: Set up TDE with Azure Key Vault
+          href: relational-databases/security/encryption/set-up-transparent-data-encryption-with-azure-key-vault-for-sql-server.md
+        - name: Rotate TDE asymmetric keys
+          href: relational-databases/security/encryption/rotate-transparent-data-encryption-asymmetric-keys-azure-key-vault-sql-server.md
         - name: SQL Server Connector troubleshooting
           href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
         - name: SQL Server Connector logging

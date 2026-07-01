@@ -4,7 +4,7 @@ description: "The sys.query_store_plan_feedback system view contains information
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: derekw
-ms.date: 10/23/2025
+ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -48,6 +48,10 @@ This catalog view will return the same row data on all replicas, if [Query Store
 ## Permissions
 
 Requires the `VIEW DATABASE STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Related content
 

@@ -79,6 +79,10 @@ All distributed transactions not associated with a session are orphaned transact
 
 Requires `VIEW SERVER STATE` permission.
 
+### Permissions for SQL Server 2022 and later
+
+Requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
+
 ## Examples
 
 ### A. List all locks

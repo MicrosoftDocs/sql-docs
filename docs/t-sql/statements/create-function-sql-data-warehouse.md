@@ -4,7 +4,7 @@ description: User-defined functions accept parameters, perform an action, such a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop, srdjanmatin
-ms.date: 07/01/2026
+ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -238,10 +238,10 @@ An inline table-valued function accepts only a single `SELECT` statement.
     - The scalar UDF body contains calls to [AI functions](/fabric/data-warehouse/ai-functions).
     - In above scenarios, general scalar udf inlining requirements applly, see [Scalar UDF inlining requirements](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=fabric&preserve-view=true#inlineable-scalar-udf-requirements).
 
-- If a scalar UDF contains any of the following, a user query can fail if more than 10 UDF calls are made in a single query. In some edge cases, the complexity of the user query and UDF body prevents inlining, in which case the scalar UDF is not inlined, and the user query fails. 
+- If a scalar UDF contains any of the following, a user query can fail if more than 10 UDF calls are made in a single query: 
     - The scalar UDF body contains reference to tables/views/iTVFs/other scalar UDFs.
     - The scalar UDF contains any of these data types as an input parameter, local variable, or return data type: **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **binary(max)**.
-    - The scalar UDF body contains calls to [AI Functions](https://github.com/MicrosoftDocs/fabric-docs-pr/blob/main/docs/data-warehouse/ai-functions.md)
+    - The scalar UDF body contains calls to [AI Functions](/fabric/data-warehouse/ai-functions).
 
 - When a scalar UDF is used in any unsupported scenario, you see an error message "`Scalar UDF execution is currently unavailable in this context.`" at query execution time.
 

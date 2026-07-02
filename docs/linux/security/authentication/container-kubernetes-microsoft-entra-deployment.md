@@ -3,7 +3,7 @@ title: "Tutorial: Configure Microsoft Entra ID authentication manually for SQL S
 description: Learn how to enable Microsoft Entra authentication for SQL Server on Linux containers without using Azure Arc.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/12/2025
+ms.date: 05/05/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
@@ -330,6 +330,9 @@ In this step, you create a load balancer service to connect to [!INCLUDE [ssnove
 Continue to the step to [create the Microsoft Entra](#create-microsoft-entra-logins) logins.
 
 ## Create Microsoft Entra logins
+
+> [!IMPORTANT]  
+> If IPv6 is enabled on your server or container, make sure IPv6 endpoints are reachable and routable, or authentication to Microsoft Entra ID might fail. For more information, see [IPv6 connectivity with Microsoft Entra authentication](../../sql-server-linux-known-issues.md#ipv6-connectivity-with-microsoft-entra-authentication).
 
 1. Connect to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container using SQL Server Management Studio (SSMS), with the `sa` account and password you configured previously.
 

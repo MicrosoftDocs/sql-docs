@@ -3,8 +3,8 @@ title: Known Issues for SQL Server on Linux
 description: This article contains the known issues for SQL Server running on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
-ms.date: 01/27/2026
+ms.reviewer: amitkh, vanto
+ms.date: 05/05/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: troubleshooting-known-issue
@@ -103,6 +103,12 @@ If you use Network File System (NFS) remote shares in production, note the follo
 - Locate only the `/var/opt/mssql` directories on the NFS mount. Other files, such as the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] system binaries, aren't supported.
 
 - Ensure that NFS clients use the `nolock` option when mounting the remote share.
+
+### IPv6 connectivity with Microsoft Entra authentication
+
+If your server or container is enabled for IPv6, ensure that IPv6 addresses are reachable and routable. If IPv6 isn't fully configured, authentication requests to Microsoft Entra ID might fail due to unreachable IPv6 endpoints.
+
+To control IPv6 DNS resolution behavior on SQL Server 2022 CU 19 and later versions, set the `network.ipv6dnsrecordslimit` option in `mssql-conf`. For more information, see [network.ipv6dnsrecordslimit](configure/mssql-conf.md#ipv6dnsrecordslimit).
 
 ## Localization
 

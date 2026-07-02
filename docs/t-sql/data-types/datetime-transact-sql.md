@@ -277,7 +277,7 @@ SELECT @datetime AS '@datetime',
 When the conversion is from **datetimeoffset(*n*)**, the date and time components are copied. The time zone is truncated. When the fractional precision of the **datetimeoffset(*n*)** value is greater than three digits, the value is [rounded](#rounding-of-datetime-fractional-second-precision) to the nearest **datetime** increment (`.000`, `.003`, or `.007` seconds). The following example shows the results of converting a `DATETIMEOFFSET(4)` value to a `DATETIME` value.
 
 ```sql
-DECLARE @datetimeoffset AS DATETIMEOFFSET (4) = '1968-10-23 12:45:37.0017 +10:0';
+DECLARE @datetimeoffset AS DATETIMEOFFSET (4) = '1968-10-23 12:45:37.0017 +10:00';
 DECLARE @datetime AS DATETIME = @datetimeoffset;
 
 SELECT @datetime AS '@datetime',
@@ -289,7 +289,7 @@ SELECT @datetime AS '@datetime',
 ```output
 @datetime                @datetimeoffset
 ------------------------ -------------------------------
-1968-10-23 12:45:37.003  1968-10-23 12:45:37.0017 +10:0
+1968-10-23 12:45:37.003  1968-10-23 12:45:37.0017 +10:00
 ```
 
 When the conversion is from **datetime2(*n*)**, the date and time are copied. When the fractional precision of the **datetime2(*n*)** value is greater than three digits, the value is [rounded](#rounding-of-datetime-fractional-second-precision) to the nearest **datetime** increment (`.000`, `.003`, or `.007` seconds). The following example shows the results of converting a `DATETIME2(4)` value to a `DATETIME` value.

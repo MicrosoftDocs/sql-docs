@@ -108,7 +108,7 @@ If you use Network File System (NFS) remote shares in production, note the follo
 
 If your server or container is enabled for IPv6, ensure that IPv6 addresses are reachable and routable. If IPv6 isn't fully configured, authentication requests to Microsoft Entra ID might fail due to unreachable IPv6 endpoints.
 
-Control IPv6 DNS resolution behavior using the `network.ipv6dnsrecordslimit` setting in `mssql-conf`. For more information, see [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
+To control IPv6 DNS resolution behavior on SQL Server 2022 CU 19 and later versions, set the `network.ipv6dnsrecordslimit` option in `mssql-conf`. For more information, see [network.ipv6dnsrecordslimit](configure/mssql-conf.md#ipv6dnsrecordslimit).
 
 ## Localization
 

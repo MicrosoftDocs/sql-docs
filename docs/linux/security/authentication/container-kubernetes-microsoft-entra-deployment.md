@@ -332,7 +332,7 @@ Continue to the step to [create the Microsoft Entra](#create-microsoft-entra-log
 ## Create Microsoft Entra logins
 
 > [!IMPORTANT]  
-> If IPv6 is enabled on your server or container, make sure IPv6 endpoints are reachable and routable, or authentication to Microsoft Entra ID can fail. For more information, see [IPv6 connectivity with Microsoft Entra authentication](../sql-server-linux-known-issues.md#ipv6-connectivity-with-microsoft-entra-authentication).
+> If IPv6 is enabled on your server or container, make sure IPv6 endpoints are reachable and routable, or authentication to Microsoft Entra ID might fail. For more information, see [IPv6 connectivity with Microsoft Entra authentication](../../sql-server-linux-known-issues.md#ipv6-connectivity-with-microsoft-entra-authentication).
 
 1. Connect to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container using SQL Server Management Studio (SSMS), with the `sa` account and password you configured previously.
 

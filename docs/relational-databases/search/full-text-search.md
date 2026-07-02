@@ -3,7 +3,7 @@ title: Full-Text Search
 description: Full-Text Search lets users and applications run full-text queries against character-based data in Database Engine tables.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/18/2025
+ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: search
 ms.topic: concept-article
@@ -19,8 +19,14 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 Full-Text Search in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] lets users and applications run full-text queries against character-based data in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] tables.
 
-> [!IMPORTANT]  
-> There are breaking changes to Full-Text Search in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions. For more information, see [Breaking changes to Database Engine features in SQL Server 2025](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2025.md#full-text-queries-and-populations-fail-after-upgrade).
+## Breaking changes in SQL Server 2025
+
+[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] introduces breaking changes to Full-Text Search.
+
+For more information, see:
+
+- [Breaking changes to Database Engine features in SQL Server 2025](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2025.md#full-text-queries-and-populations-fail-after-upgrade)
+- [Full-text index version upgrade](full-text-index-version-upgrade.md)
 
 ## Basic tasks
 
@@ -32,7 +38,7 @@ This article provides an overview of Full-Text Search and describes its componen
 - [Populate Full-Text Indexes](populate-full-text-indexes.md)
 - [Query with Full-Text Search](query-with-full-text-search.md)
 
-Full-Text Search is an optional component of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine. If you didn't select Full-Text Search when you installed SQL Server, run SQL Server Setup again to add it.
+Full-Text Search is an optional component of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine. If you don't select Full-Text Search when you install SQL Server, add it later by running SQL Server Setup again.
 
 ## Overview
 
@@ -42,7 +48,7 @@ Full-text queries perform linguistic searches against text data in full-text ind
 
 <a id="queries"></a>
 
-## Full-Text Search queries
+## Full-text search queries
 
 After columns are added to a full-text index, users and applications can run full-text queries on the text in the columns. These queries can search for any of the following conditions:
 
@@ -57,7 +63,7 @@ Full-text queries aren't case-sensitive. For example, searching for `Aluminum` o
 
 Full-text queries use a small set of [!INCLUDE [tsql](../../includes/tsql-md.md)] predicates (`CONTAINS` and `FREETEXT`) and functions (`CONTAINSTABLE` and `FREETEXTTABLE`). However, the search goals of a given business scenario influence the structure of the full-text queries. For example:
 
-- Searching for a product on an E-commerce website:
+- To search for a product on an e-commerce website:
 
   ```sql
   SELECT product_id
@@ -66,7 +72,7 @@ Full-text queries use a small set of [!INCLUDE [tsql](../../includes/tsql-md.md)
         AND product_cost < 200;
   ```
 
-- Recruitment scenario-searching for job candidates that have experience working with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]:
+- To find job candidates who have experience working with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]:
 
   ```sql
   SELECT candidate_name,
@@ -96,7 +102,7 @@ Full-text search architecture consists of the following processes:
 
   For security reasons, filters are loaded by separate processes called the filter daemon hosts. The `fdhost.exe` processes are created by an FDHOST launcher service (`MSSQLFDLauncher`), and they run under the security credentials of the FDHOST launcher service account. Therefore, the FDHOST launcher service must be running for full-text indexing and full-text querying to work. For information about setting the service account for this service, see [Set the Service Account for the Full-text Filter Daemon Launcher](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).
 
-These two processes contain the components of the full-text search architecture. These components and their relationships are summarized in the following illustration. The components are described after the illustration.
+These two processes contain the components of the full-text search architecture. The following illustration summarizes these components and their relationships. The components are described after the illustration.
 
 :::image type="content" source="media/full-text-search/architecture.png" alt-text="Diagram of full-text search architecture.":::
 
@@ -119,7 +125,7 @@ The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] process uses the 
 
 <a id="fdhostprocess"></a>
 
-### Filter Daemon Host process
+### Filter daemon host process
 
 The filter daemon host is a process that is started by the Full-Text Engine. It runs the following full-text search components, which are responsible for accessing, filtering, and word breaking data from tables, as well as for word breaking and stemming the query input.
 
@@ -131,17 +137,17 @@ The components of the filter daemon host are as follows:
 | **Filters** | Some data types require filtering before the data in a document can be full-text indexed, including data in **varbinary**, **varbinary(max)**, **image**, or **xml** columns. The filter used for a given document depends on its document type. For example, different filters are used for Microsoft Word (`.doc`) documents, Microsoft Excel (`.xls`) documents, and XML (`.xml`) documents. Then the filter extracts chunks of text from the document, removing embedded formatting and retaining the text and, potentially, information about the position of the text. The result is a stream of textual information. For more information, see [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md). |
 | **Word breakers and stemmers** | A word breaker is a language-specific component that finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a language-specific stemmer component that conjugates verbs and performs inflectional expansions. At indexing time, the filter daemon host uses a word breaker and stemmer to perform linguistic analysis on the textual data from a given table column. The language that is associated with a table column in the full-text index determines which word breaker and stemmer are used for indexing the column. For more information, see [Configure and manage word breakers and stemmers for search (SQL Server)](configure-and-manage-word-breakers-and-stemmers-for-search.md). |
 
-[!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] installs a new version of the word breakers and stemmers for US English (LCID 1033) and UK English (LCID 2057). However you can switch to the previous version of these components if you want to retain the previous behavior. For more information, see [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md).
+[!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] installs a new version of the word breakers and stemmers for US English (LCID 1033) and UK English (LCID 2057). However, you can switch to the previous version of these components if you want to retain the previous behavior. For more information, see [Change the word breaker and filter in SQL Server 2025](change-the-word-breaker-used-for-us-english-and-uk-english.md).
 
 <a id="processing"></a>
 
-## Full-Text Search processing
+## Full-text search processing
 
 Full-text search is powered by the Full-Text Engine. The Full-Text Engine has two roles: [indexing support](#indexing) and [querying support](#querying).
 
 <a id="indexing"></a>
 
-### Full-Text indexing process
+### Full-text indexing process
 
 When a full-text population (also known as a crawl) is initiated, the Full-Text Engine pushes large batches of data into memory and notifies the filter daemon host. The host filters and word-breaks the data and converts the converted data into inverted word lists. The full-text search then pulls the converted data from the word lists, processes the data to remove stopwords, and persists the word lists for a batch into one or more inverted indexes.
 
@@ -151,11 +157,11 @@ As part of processing, the gathered text data is passed through a word breaker t
 
 Extra processing might be performed to remove stopwords, and to normalize tokens before they're stored in the full-text index or an index fragment.
 
-When a population is complete, a final merge process is triggered that merges the index fragments together into one master full-text index. This results in improved query performance since only the master index needs to be queried rather than several index fragments, and better scoring statistics might be used for relevance ranking.
+When a population is complete, a final merge process is triggered that merges the index fragments together into one *master* full-text index. This process results in improved query performance since only the master index needs to be queried rather than several index fragments, and better scoring statistics might be used for relevance ranking.
 
 <a id="querying"></a>
 
-### Full-Text querying process
+### Full-text querying process
 
 The query processor passes the full-text portions of a query to the Full-Text Engine for processing. The Full-Text Engine performs word breaking and, optionally, thesaurus expansions, stemming, and stopword (noise-word) processing. Then the full-text portions of the query are represented in the form of SQL operators, primarily as streaming table-valued functions (STVFs). During query execution, these STVFs access the inverted index to retrieve the correct results. The results are either returned to the client at this point, or they're further processed before being returned to the client.
 
@@ -185,7 +191,7 @@ For example, the following table, which shows Fragment 1, depicts the contents o
 
 The data is inverted from the original documents. Inversion occurs because the keywords are mapped to the document IDs. For this reason, a full-text index is often referred to as an inverted index.
 
-Also notice that the keyword `and` is removed from the full-text index. This is done because `and` is a stopword, and removing stopwords from a full-text index can lead to substantial savings in disk space, which improves query performance. For more information about stopwords, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
+Also notice that the keyword `and` is removed from the full-text index, because `and` is a stopword. Removing stopwords from a full-text index can lead to substantial savings in disk space, which improves query performance. For more information about stopwords, see [Configure and manage stopwords and stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
 **Fragment 1**
 
@@ -262,7 +268,7 @@ After being reorganized, the example index would contain the following rows:
 
 <a id="components"></a>
 
-## Full-Text search linguistic components and language support
+## Full-text search linguistic components and language support
 
 Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bangla, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages](../system-catalog-views/sys-fulltext-languages-transact-sql.md). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.
 

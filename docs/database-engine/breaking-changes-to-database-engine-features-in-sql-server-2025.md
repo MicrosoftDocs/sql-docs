@@ -4,8 +4,8 @@ titleSuffix: SQL Server 2025
 description: Breaking changes to database engine features in SQL Server 2025.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest, mathoma
-ms.date: 01/12/2026
+ms.reviewer: mathoma
+ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: troubleshooting-general
@@ -117,7 +117,7 @@ For information about how to connect securely to [!INCLUDE [sssql25-md](../inclu
 
 ## Full-Text queries and populations fail after upgrade
 
-[!INCLUDE [sssql25-md](../includes/sssql25-md.md)] removes all legacy word breaker and filter binaries used by [Full-Text Search](../relational-databases/search/full-text-search.md). These components are rebuilt with a modern toolset and offer expanded support for more languages and document types. For more information, see [Behavior changes in Full-Text Search](../relational-databases/search/behavior-changes-full-text-search.md). Existing indexes after upgrade are designated with `index_version = 1` as per [sys.fulltext_indexes](../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md). Newly created indexes are version 2 and use the new components, unless you specify otherwise by using the [FULLTEXT_INDEX_VERSION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#fulltext_index_version) database scoped configuration.
+[!INCLUDE [sssql25-md](../includes/sssql25-md.md)] removes all legacy word breaker and filter binaries used by [Full-Text Search](../relational-databases/search/full-text-search.md). These components are rebuilt with a modern toolset and offer expanded support for more languages and document types. For more information, see [Full-text index version upgrade](../relational-databases/search/full-text-index-version-upgrade.md). Existing indexes after upgrade are designated with `index_version = 1` as per [sys.fulltext_indexes](../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md). Newly created indexes are version 2 and use the new components, unless you specify otherwise by using the [FULLTEXT_INDEX_VERSION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#fulltext_index_version) database scoped configuration.
 
 Any Full-Text query on a version 1 index fails to find the word breaker binaries on disk immediately after upgrade:
 
@@ -132,35 +132,9 @@ Similarly, any Full-Text population on a version 1 index fails to find the filte
 Warning: No appropriate filter was found during full-text index population for table or indexed view '[db].[dbo].[table_name]' (table or indexed view ID '901578250', database ID '5'), full-text key value '1'. Some columns of the row were not indexed.
 ```
 
-### Rebuild existing indexes with new version
+### Migration options
 
-Rebuild your indexes to use version 2 components.
-
-```sql
--- Verify value = 2
-SELECT *
-FROM sys.database_scoped_configurations
-WHERE [name] = 'FULLTEXT_INDEX_VERSION';
-
--- Per catalog upgrade
-ALTER FULLTEXT CATALOG [FtCatalog] REBUILD;
-```
-
-To upgrade individual indexes without rebuilding the entire catalog, drop and recreate the indexes.
-
-### Keep using version 1
-
-> [!IMPORTANT]  
-> Version 1 is deprecated for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. In [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] and later versions, the `mssql-server-fts` package doesn't include version 1 binaries. Attempting to install mismatched versions of the `mssql-server-fts` and `mssql-server` packages is unsupported, and results in full-text failures.
-
-If you need to use version 1 for application compatibility, first set `FULLTEXT_INDEX_VERSION = 1` to avoid an unintended upgrade on rebuild.
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION
-    SET FULLTEXT_INDEX_VERSION = 1;
-```
-
-Next, copy the legacy word breaker and filter binaries from an older instance to the target instance's `Binn` folder.
+Rebuild or recreate full-text indexes to use version 2 components. For detailed migration steps, including how to rebuild catalogs, upgrade individual indexes, or temporarily keep using version 1 components where supported, see [Upgrade and migration options](../relational-databases/search/full-text-index-version-upgrade.md#upgrade-and-migration-options).
 
 ## Related content
 

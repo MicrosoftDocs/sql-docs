@@ -4,7 +4,7 @@ titleSuffix: SQL Server Full-Text Search
 description: Change the word breaker used for US English and UK English in SQL Server 2025.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/06/2026
+ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: search
 ms.topic: how-to
@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 [!INCLUDE [sssql25-md](../../includes/applies-to-version/sqlserver2025.md)]
 
-[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] installs new word breakers and filters, replacing all the previous versions of these components. For more information, see [Behavior changes in Full-Text Search](behavior-changes-full-text-search.md).
+[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] installs new word breakers and filters, replacing all the previous versions of these components. For more information, see [Full-text index version upgrade](full-text-index-version-upgrade.md).
 
 Binaries installed with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] are called **version 2**, and binaries installed with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions are called **version 1**. This article describes how to switch between version 2 and version 1 components.
 
@@ -29,7 +29,7 @@ The default database scoped configuration for full-text indexes is version 2. Yo
    ALTER DATABASE SCOPED CONFIGURATION SET FULLTEXT_INDEX_VERSION = 1;
    ```
 
-Legacy version 1 word breakers and filters are removed from [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. You must copy these binaries from a previous instance's `C:\Program Files\Microsoft SQL Server\MSSQL<nn>.<instance-name>\MSSQL\Binn` directory, where `<nn>` is the [product version](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-sql-server). For more information, see [Filters and word breakers - SQL Server Full-Text Search](full-text-index-binaries.md).
+[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] removes legacy version 1 word breakers and filters. You must copy these binaries from a previous instance's `C:\Program Files\Microsoft SQL Server\MSSQL<nn>.<instance-name>\MSSQL\Binn` directory, where `<nn>` is the [product version](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-sql-server). For more information, see [Filters and word breakers in SQL Server Full-Text Search](full-text-index-binaries.md).
 
 For existing indexes, verify the version using the [sys.fulltext_indexes](../system-catalog-views/sys-fulltext-indexes-transact-sql.md) catalog view. If the index is already version 1, you don't need to rebuild it. For a version 2 index, rebuild the catalog to switch back to version 1.
 

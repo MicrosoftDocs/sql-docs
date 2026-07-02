@@ -3,10 +3,11 @@ name: Check for preview branch to prevent accidental merge
 permissions:
   pull-requests: write
   statuses: write
-  checks: write
+  # Comment out for testing manual approval requirement
+  # checks: write
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened]
     # Monitor all target branches since preview branches cannot merge to ANY branch
 

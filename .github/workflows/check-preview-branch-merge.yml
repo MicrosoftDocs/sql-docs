@@ -3,7 +3,8 @@ name: Check for preview branch to prevent accidental merge
 permissions:
   pull-requests: write
   statuses: write
-  checks: write
+  # Comment out for testing manual approval requirement
+  # checks: write
 
 on:
   pull_request:

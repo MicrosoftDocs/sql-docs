@@ -7167,8 +7167,8 @@ items:
         href: relational-databases/search/get-started-with-full-text-search.md
       - name: Deprecated Features in SQL Server 2016
         href: relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md
-      - name: Behavior changes to full-text search
-        href: relational-databases/search/behavior-changes-full-text-search.md
+      - name: Full-text index version upgrade
+        href: relational-databases/search/full-text-index-version-upgrade.md
     - name: Query
       href: relational-databases/search/query-with-full-text-search.md
       items:

@@ -11,6 +11,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/relational-databases/search/behavior-changes-full-text-search.md",
+      "redirect_url": "/sql/relational-databases/search/full-text-index-version-upgrade",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/odbc/reference/introduction-to-odbc.md",
       "redirect_url": "/sql/odbc/reference/odbc-overview",
       "redirect_document_id": true

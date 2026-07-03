@@ -89,7 +89,7 @@ To use database compatibility level 120 or higher for a database overall, but op
 
 The default compatibility level is 170 for newly created databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
 
-The default compatibility level is 150 for newly created databases with the [SQL Server 2022 update policy](/azure/azure-sql/managed-instance/update-policy#sql-server-2022-update-policy) of the [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] offering.
+The default compatibility level is 160 for newly created databases with the [SQL Server 2022 update policy](/azure/azure-sql/managed-instance/update-policy#sql-server-2022-update-policy) of the [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] offering.
 
 The default compatibility level is 170 for newly created databases with the [Always-up-to-date](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy) or [SQL Server 2025](/azure/azure-sql/managed-instance/update-policy#sql-server-2025-update-policy) update policy of the [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] offering.
 

@@ -1,9 +1,10 @@
 ---
 title: "@@SERVICENAME (Transact-SQL)"
-description: "@@SERVICENAME (Transact-SQL)"
+description: "@@SERVICENAME returns the name of the registry key under which the SQL Server Database Engine is running."
 author: VanMSFT
 ms.author: vanto
-ms.date: "09/18/2017"
+ms.reviewer: randolphwest
+ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,45 +16,63 @@ helpviewer_keywords:
   - "names [SQL Server], registry keys"
   - "registry keys [SQL Server]"
 dev_langs:
-  - "TSQL"
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+  - TSQL
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017"
 ---
-# &#x40;&#x40;SERVICENAME (Transact-SQL)
+# @@SERVICENAME (Transact-SQL)
+
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Returns the name of the registry key under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. @@SERVICENAME returns 'MSSQLSERVER' if the current instance is the default instance; this function returns the instance name if the current instance is a named instance.  
+Returns the name of the registry key under which [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running.
 
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
+If the current instance is the default instance, `@@SERVICENAME` returns `MSSQLSERVER`. If the current instance is a named instance, `@@SERVICENAME` returns the instance name.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
 ```syntaxsql
-@@SERVICENAME  
-```  
-  
-## Return Types
- **nvarchar**  
-  
-## Remarks  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs as a service named MSSQLServer.  
-  
-## Examples  
- The following example shows using `@@SERVICENAME`.  
-  
-```sql  
-SELECT @@SERVICENAME AS 'Service Name';  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Service Name                    
-------------------------------  
-MSSQLSERVER                     
-```  
-  
-## See Also  
+@@SERVICENAME
+```
 
- [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
-  
-  
+## Return types
+
+**nvarchar**
+
+## Remarks
+
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] runs as a service named `MSSQLServer`.
+
+## Examples
+
+The following example shows using `@@SERVICENAME` for a default instance.
+
+```sql
+SELECT @@SERVICENAME AS 'Service Name';
+```
+
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
+
+```output
+Service Name
+------------------------------
+MSSQLSERVER
+```
+
+The following example shows using `@@SERVICENAME` for the named instance `localhost\SQL2025`.
+
+```sql
+SELECT @@SERVICENAME AS 'Service Name';
+```
+
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
+
+```output
+Service Name
+------------------------------
+SQL2025
+```
+
+## Related content
+
+- [Manage the Database Engine services](../../database-engine/configure-windows/manage-the-database-engine-services.md)

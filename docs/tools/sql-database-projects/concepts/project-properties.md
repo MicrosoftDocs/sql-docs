@@ -1,10 +1,10 @@
 ---
 title: SQL Projects Properties
-description: "Learn about the properties that you can set for SQL database projects."
+description: Learn about the properties that you can set for SQL database projects.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: drskwier
-ms.date: 06/04/2026
+ms.date: 07/06/2026
 ms.service: sql
 ms.subservice: sql-database-projects
 ms.topic: concept-article
@@ -35,7 +35,7 @@ During SQL project publish, the process scripts changes to the database options 
 
 The [target platform](target-platform.md) property specifies the version of SQL Server that the project targets. Use the `DSP` property to set the target platform for the SQL project. For more information, see the [target platform](target-platform.md) article.
 
-Code analysis can dramatically improve the continuous integration and deployment process by catching potential problems early in the development lifecycle. For more information about enabling code analysis and including custom rules, see the [SQL code analysis](sql-code-analysis/sql-code-analysis.md) article.
+Code analysis can dramatically improve the continuous integration and deployment process by catching potential problems early in the development lifecycle. For more information about enabling code analysis and including custom rules, see [SQL code analysis to improve code quality](sql-code-analysis/sql-code-analysis.md).
 
 ### Data-tier application properties
 
@@ -87,9 +87,10 @@ The following example shows how to set the `CompatibilityMode`, `IsChangeTrackin
 Some project properties are associated with database options that apply to only SQL Server databases or specific versions of SQL Server. Before including a project property in your project, review the associated documentation for the database option to understand the behavior of the property and database requirements.
 
 | Property | `DATABASE SET` option | UI label | SQL project default value | Allowed values |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | AcceleratedDatabaseRecovery | `ACCELERATED_DATABASE_RECOVERY` | Database settings, Operational, Accelerated database recovery | False | {True&#124;False}<sup>5</sup> |
 | AllowSnapshotIsolation | `ALLOW_SNAPSHOT_ISOLATION` | Database settings, Operational, Allow snapshot isolation | False | {True&#124;False} |
+| AnsiNullDefault | `ANSI_NULL_DEFAULT` | Database settings, SET ANSI_NULL_DEFAULT | True | {True&#124;False} |
 | AnsiNulls| `ANSI_NULLS` | Database settings, SET ANSI_NULLS | True | {True&#124;False} |
 | AnsiPadding | `ANSI_PADDING` | Database settings, SET ANSI_PADDING | True | {True&#124;False} |
 | AnsiWarnings | `ANSI_WARNINGS` | Database settings, SET ANSI_WARNINGS | True | {True&#124;False} |
@@ -101,6 +102,7 @@ Some project properties are associated with database options that apply to only 
 | AutoShrink | `AUTO_SHRINK` | Database settings, Operational, Auto shrink | False | {True&#124;False} |
 | AutoUpdateStatistics | `AUTO_UPDATE_STATISTICS` | Database settings, Operational, Auto update statistics | True | {True&#124;False} |
 | AutoUpdateStatisticsAsynchronously | `AUTO_UPDATE_STATISTICS_ASYNC` | Database settings, Operational, Auto update statistics asynchronously | False | {True&#124;False} |
+| CatalogCollation | `CATALOG_COLLATION`<sup>4</sup> | Database settings, Catalog collation | | {Database_Default&#124;Latin1_General_100_CI_AS_KS_WS_SC&#124;SQL_Latin1_General_CP1_CI_AS} |
 | ChangeTrackingRetentionPeriod | `CHANGE_RETENTION` | Database settings, Operational, Change tracking retention period | 2 | {integer} |
 | ChangeTrackingRetentionUnit | `CHANGE_RETENTION` | Database settings, Operational, Change tracking retention period | MINUTES | {DAYS&#124;HOURS&#124;MINUTES} |
 | CloseCursorOnCommitEnabled | `CURSOR_CLOSE_ON_COMMIT` | Database settings, Operational, Close cursor on commit enabled | False | {True&#124;False} |
@@ -115,6 +117,7 @@ Some project properties are associated with database options that apply to only 
 | DatabaseDefaultFulltextLanguage | `DEFAULT_FULLTEXT_LANGUAGE` | Database settings, Default fulltext language | 1033 |  {integer [language id](../../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)} |
 | DatabaseDefaultLanguage | `DEFAULT_LANGUAGE` | Database settings, Default language | 1033 | {integer [language id](../../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)} |
 | DatabaseState | `db_state_option` | Database settings, Database state | ONLINE | {ONLINE&#124;OFFLINE} |
+| DateCorrelationOptimizationOn | `DATE_CORRELATION_OPTIMIZATION` | Database settings, Operational, Date correlation optimization | False | {True&#124;False} |
 | DbScopedConfigLegacyCardinalityEstimation | `LEGACY_CARDINALITY_ESTIMATION`<sup>2</sup> | Database scoped configuration, Legacy cardinality estimation | Off | {Off&#124;On} |
 | DbScopedConfigLegacyCardinalitySecondaryEstimation | `LEGACY_CARDINALITY_SECONDARY_ESTIMATION`<sup>2</sup> | Database scoped configuration, Legacy cardinality estimation for secondary | Primary | {Primary&#124;Off&#124;On} |
 | DbScopedConfigParameterSniffing | `PARAMETER_SNIFFING`<sup>2</sup> | Database scoped configuration, Parameter sniffing | On | {On&#124;Off} |
@@ -161,9 +164,11 @@ Some project properties are associated with database options that apply to only 
 | RecursiveTriggersEnabled | `RECURSIVE_TRIGGERS` | Database settings, Recursive triggers enabled | False | {True&#124;False} |
 | ServiceBrokerOption | `SERVICE_BROKER` | Database settings, Service broker options | DisableBroker | {DisableBroker&#124;EnableBroker&#124;NewBroker&#124;ErrorBrokerConversations} |
 | SkipCheckForNewSDKVersion | | Build settings, Skip check for new SDK version | False | {True&#124;False} |
+| SupplementalLoggingOn | `SUPPLEMENTAL_LOGGING` | Database settings, Operational, Supplemental logging | False | {True&#124;False} |
 | SuppressTSqlWarnings | | Build settings, Suppress T-SQL warnings (comma-separated list of T-SQL warning codes) | | {string} |
 | TargetRecoveryTimePeriod | Database settings, Operational, target recovery time (seconds) | Specifies the frequency of indirect checkpoints on a per-database basis. | 60 | {integer} |
 | TargetRecoveryTimeUnit | | Database settings, Operational, target recovery time | SECONDS | {MINUTES&#124;SECONDS} |
+| TemporalHistoryRetentionEnabled | `TEMPORAL_HISTORY_RETENTION` | Database settings, Operational, Temporal history retention | True | {True&#124;False} |
 | TreatTSqlWarningsAsErrors | | Build settings, Treat T-SQL warnings as errors | False | {True&#124;False} |
 | Trustworthy | `TRUSTWORTHY` | Database settings, Trustworthy | False | {True&#124;False} |
 | TwoDigitYearCutoff | `TWO_DIGIT_YEAR_CUTOFF` | Database settings, Two digit year cutoff | 2049 | {integer} |
@@ -172,7 +177,7 @@ Some project properties are associated with database options that apply to only 
 
 1. The default value differs based on engine edition and server settings.
 1. [Database scoped configuration](../../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) options.
-1. AUTO is set with the 0 value.
+1. `AUTO` is set with the 0 value.
 1. Applies as a `CREATE DATABASE` [option](../../../t-sql/statements/create-database-transact-sql.md) only.
 1. Not applicable to Azure SQL Database, where the option is always enabled.
 

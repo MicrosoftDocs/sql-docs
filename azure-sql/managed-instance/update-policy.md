@@ -82,7 +82,7 @@ The following table lists all the features that are only available to instances 
 The following features are affected by the configured update policy: 
 
 - [Automated backups](automated-backups-overview.md) and [copy-only backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server): 
-   - You can restore database backups taken from instances configured with the **SQL Server 2022** update policy to instances configured with either the **SQL Server 2022** or **Always-up-to-date** update policy. 
+   - You can restore database backups taken from instances configured with the **SQL Server 2022** update policy to instances configured with either the **SQL Server 2022**, **SQL Server 2025** or **Always-up-to-date** update policy. 
    - You can restore database backups taken from instances configured with the **SQL Server 2025** update policy to instances configured with either the **SQL Server 2025** or **Always-up-to-date** update policy.
    - You can only restore database backups taken from instances configured with the **Always-up-to-date** update policy to instances also configured with the **Always-up-to-date** update policy. 
 - [Managed Instance link](managed-instance-link-feature-overview.md#limitations): 

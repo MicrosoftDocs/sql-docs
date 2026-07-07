@@ -33,7 +33,7 @@ Use `ALTER TABLE` to specify the properties of a `PRIMARY KEY`, `UNIQUE`, `FOREI
     { PRIMARY KEY | UNIQUE }   
         [ CLUSTERED | NONCLUSTERED ]   
         (column [ ASC | DESC ] [ ,...n ] )  
-        [ WITH FILLFACTOR = fillfactor   
+        [ WITH FILLFACTOR = fillfactor ]
         [ WITH ( <index_option>[ , ...n ] ) ]  
         [ ON { partition_scheme_name ( partition_column_name ... )  
           | filegroup | "default" } ]   

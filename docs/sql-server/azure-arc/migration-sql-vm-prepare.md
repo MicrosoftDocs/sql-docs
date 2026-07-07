@@ -9,7 +9,7 @@ ms.date: 06/25/2026
 ms.topic: how-to
 ---
 
-# Prepare environment for a SQL VM migration (preview) - SQL Server migration in Azure Arc
+# Prepare environment for a SQL VM migration - SQL Server migration in Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

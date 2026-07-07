@@ -27,6 +27,9 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 - Verify [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites). The Arc agent must run in the typical 'full' mode.
 - Verify [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements).
 - Open firewall to [Azure Arc data processing service](#connect-to-azure-arc-data-processing-service).
+- Confirm connectivity access to the following two domains:
+   - `aka.ms`
+   - `*.web.core.windows.net`
 - Register resource providers. Specifically:
   - `Microsoft.AzureArcData`
   - `Microsoft.HybridCompute`

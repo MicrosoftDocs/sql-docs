@@ -158,7 +158,10 @@ This parameter is ignored for non-[!INCLUDE [ssNoVersion](../../../includes/ssno
 > [!WARNING]  
 > Primary key errors might occur if the `MaxCmdsInTran` parameter is added and removed while replicating a large transaction. To resolve primary key errors on large transactions, add the `MaxCmdsInTran` parameter back until the transaction is replicated to the distribution database.
 > 
-> Using the `MaxCmdsInTran` parameter on a database that has both Change Data Capture (CDC) and replication enabled isn't supported and can lead to data loss in the CDC change tables. 
+> Using the `MaxCmdsInTran` parameter on a database that has both Change Data Capture (CDC) and replication enabled isn't supported and can lead to data loss in the CDC change tables.
+> 
+> The `MaxCmdsInTran` parameter isn't supported when a database in a publication has Peer-to-Peer (P2P) replication enabled. If a P2P publication exists and the Log Reader Agent is started with the `MaxCmdsInTran` parameter, the Agent fails to start and returns the error code 20240:   
+> ```The parameter '-MaxCmdsInTran' cannot be specified because at least one publication already exists in this publication database that is enabled for peer-to-peer replication. Remove this parameter from the command line and restart the Log Reader Agent.```
 
 #### -MessageInterval *message_interval*
 

@@ -315,7 +315,7 @@ When you troubleshoot long running queries with lightweight query execution stat
 
 **Applies to**: [!INCLUDE [sql-server-2025](../../includes/sssql25-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Sets the full-text index version to use when creating or rebuilding indexes. This configuration only takes effect when you issue either a `CREATE FULLTEXT INDEX` statement for new indexes or an `ALTER FULLTEXT CATALOG ... REBUILD` statement to rebuild all indexes in a catalog.
+Sets the [full-text index version](../../relational-databases/search/full-text-index-version-upgrade.md) to use when creating or rebuilding indexes. This configuration only takes effect when you issue either a `CREATE FULLTEXT INDEX` statement for new indexes or an `ALTER FULLTEXT CATALOG ... REBUILD` statement to rebuild all indexes in a catalog.
 
 As of [!INCLUDE [sql-server-2025](../../includes/sssql25-md.md)], the available versions are:
 

@@ -7,13 +7,18 @@
     },
     {
       "source_path": "docs/relational-databases/search/full-text-index-version-1-binaries.md",
-      "redirect_url": "/sql/relational-databases/search/full-text-index-binaries",
-      "redirect_document_id": true
+      "redirect_url": "/sql/relational-databases/search/full-text-index-version-upgrade",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/search/behavior-changes-full-text-search.md",
       "redirect_url": "/sql/relational-databases/search/full-text-index-version-upgrade",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/relational-databases/search/full-text-index-binaries.md",
+      "redirect_url": "/sql/relational-databases/search/full-text-index-version-upgrade",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/odbc/reference/introduction-to-odbc.md",

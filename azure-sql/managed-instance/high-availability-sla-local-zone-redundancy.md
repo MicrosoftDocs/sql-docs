@@ -128,8 +128,7 @@ Availability is a fundamental part of the SQL Managed Instance platform that wor
 
 During a true failover, connections to the instance fail while the SQL service becomes primary on a different node. To simulate a failover, invoke the command that restarts the SQL process to simulate starting the service as if there was a failover. However, connections might fail for a longer period during a true failover compared to a simulated failover, since during a true failover, the SQL process becomes the primary on another virtual machine within the cluster (either locally, or in another zone if zone-redundancy is enabled) and during a simulated failover, the SQL process is restarted on the existing virtual machine.
 
-The manual failover command in this section typically behaves the same way in both locally redundant, and zone-redundant configurations - it only restarts the SQL process locally, and doesn't initiate a failover to another node, though [a few exceptions apply](user-initiated-failover.md#when-to-use-manual-failover). This local failover is different to a failover that occurs for a failover group.
-
+The manual failover command introduced in this section typically behaves the same way in both locally redundant and zone-redundant configurations. The command typically only restarts the SQL process locally and doesn't initiate a failover to another node, though [a few exceptions apply](user-initiated-failover.md#when-to-use-manual-failover). This local failover is different from a failover that occurs for a failover group. However, there's no constraint that guarantees the new process starts on the same node, and it might start on a different node in the same, or in a different, availability zone.
 A local failover can be initiated by using PowerShell, REST API, or Azure CLI:
 
 | PowerShell | REST API | Azure CLI |

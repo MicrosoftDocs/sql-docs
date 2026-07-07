@@ -1,73 +1,58 @@
 ---
-title: "View or Change Registered Filters and Word Breakers"
+title: "Customize filters and word breakers"
 titleSuffix: SQL Server Full-Text Search
-description: View the currently registered word breaker or filters, and register newly installed word breakers and filters.
+description: View registered Full-Text Search filters and word breakers, and customize component registration for version 2 or version 1 full-text indexes.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: search
 ms.topic: how-to
+ai-usage: ai-assisted
 helpviewer_keywords:
   - "full-text search [SQL Server], word breakers"
   - "full-text search [SQL Server], filters"
   - "filters [full-text search]"
   - "word breakers [full-text search]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017"
 ---
-# View or change registered filters and word breakers (SQL Server Search)
+# Customize filters and word breakers
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-After you install or uninstall word breakers or filters on a system, the changes don't automatically take effect on server instances. This article describes how to view the currently registered word breakers or filters and how to register newly installed word breakers and filters on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+This article describes how to view and customize Full-Text Search filters, word breakers, and stemmers on a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 > [!NOTE]  
-> [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] supports viewing registered filters and word breakers, but changing them isn't supported. You can only use preinstalled ones. Third party filters and word breakers aren't supported on [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
+> Customization is disallowed for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)], as access to the Windows registry or host filesystem is restricted.
 
-## View a list of languages whose word breakers are currently registered
+The customization process differs based on the full-text index version.
 
-Use the [sys.fulltext_languages](../system-catalog-views/sys-fulltext-languages-transact-sql.md) catalog view, as follows:
+- **Full-text index version 1** uses Windows registry-based component registration. Instance-specific component registration is stored under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch`, which is divided into `Filters`, `Language`, and `CLSID` subkeys. When you set `load_os_resources` to `1` via [sp_fulltext_service](../system-stored-procedures/sp-fulltext-service-transact-sql.md), full-text falls back to searching `HKEY_CLASSES_ROOT` for extensions and LCIDs missing from the instance registration. For details, see [Customize version 1 filters and word breakers](#customize-version-1-filters-and-word-breakers).
 
-```sql
-SELECT *
-FROM sys.fulltext_languages;
-```
+- **Full-text index version 2** simplifies the customization process. Instead of reading the Windows registry, you can provide an optional `version_overrides.json` file per instance. For details, see [Customize version 2 filters and word breakers](#customize-version-2-filters-and-word-breakers).
 
-## View a list of the filters that are currently registered
+To check the version used by a full-text index, query the `index_version` column in [sys.fulltext_indexes](../system-catalog-views/sys-fulltext-indexes-transact-sql.md). To control the version used when creating or rebuilding indexes, use the [FULLTEXT_INDEX_VERSION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#fulltext_index_version) database scoped configuration.
 
-Use the [sp_help_fulltext_system_components](../system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) system stored procedure, as follows:
+## View registered components
 
-```sql
-EXECUTE sp_help_fulltext_system_components 'filter';
-```
+For a conceptual overview, see [Configure and manage filters](configure-and-manage-filters-for-search.md) and [Configure and manage word breakers and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md).
 
-## Register newly installed word breakers and filters
-
-Use the [sp_fulltext_service](../system-stored-procedures/sp-fulltext-service-transact-sql.md) system stored procedure to update the list of languages, as follows:
+To view all linguistic components, run [sp_help_fulltext_system_components](../system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) with the `all` argument:
 
 ```sql
-EXECUTE sp_fulltext_service 'update_languages';
+EXECUTE sp_help_fulltext_system_components 'all';
 ```
 
-## Unregister uninstalled word breakers and filters
+> [!NOTE]  
+> `sp_help_fulltext_system_components` reports registered components for the full-text index version specified via the `FULLTEXT_INDEX_VERSION` database scoped configuration.
 
-1. Use the `sp_fulltext_service` to update the list of languages, as follows:
-
-   ```sql
-   EXECUTE sp_fulltext_service 'update_languages';
-   ```
-
-1. Use the `sp_fulltext_service` to restart the filter daemon host processes (fdhost.exe), as follows:
-
-   ```sql
-   EXECUTE sp_fulltext_service 'restart_all_fdhosts';
-   ```
-
-## Add or replace word breakers and filters
+## Customize version 2 filters and word breakers
 
 **Applies to**: [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions.
 
-1. The default full-text index version in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions is **version 2**. The default DLL files for version 2 are located in the `C:\Program Files\Microsoft SQL Server\MSSQL17.<instance-name>\MSSQL\Binn\Ftcomponents\[Filters|wordbreakers]` directory.
+Version 2 full-text indexes don't read the Windows registry. Follow the steps in this section to customize version 2 word breakers, stemmers, and filters.
+
+1. The default full-text index version in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions is **version 2**. The default DLL files for version 2 are located in the `C:\Program Files\Microsoft SQL Server\MSSQL17.<instance-name>\MSSQL\Binn\ftcomponents\[filters|wordbreakers]` directory.
 
 1. To override default or add new component, create a `version_overrides.json` file inside the `C:\Program Files\Microsoft SQL Server\MSSQL17.<instance-name>\MSSQL\FTData` directory.
 
@@ -106,30 +91,128 @@ EXECUTE sp_fulltext_service 'update_languages';
 
    - When duplicate entries exist for same language and version, or extension and version, the most recent entry takes precedence.
 
-   - Handler DLL can be a relative path to the file in relation to the `C:\Program Files\Microsoft SQL Server\MSSQL17.<instance-name>\MSSQL\Binn\Ftcomponents\[Filters|wordbreakers]` directory where default binaries are located. It can also be an absolute path. For example, to override filter with a system binary, handler can be specified as follows:
+   - Handler DLL can be a relative path to the file in relation to the `C:\Program Files\Microsoft SQL Server\MSSQL17.<instance-name>\MSSQL\Binn\ftcomponents\[filters|wordbreakers]` directory where default binaries are located. It can also be an absolute path. For example, the following JSON file enables support for indexing PDFs via the built-in Windows PDF filter:
 
-     ```output
-     "handler": "%SystemRoot%\\system32\\windows.data.pdf.dll"
-     ```
+   ```json
+   {
+      "doctypes": {
+         ".pdf": [
+            {
+               "version": 2,
+               "handler": "%SystemRoot%\\system32\\windows.data.pdf.dll",
+               "clsid": "6C337B26-3E38-4F98-813B-FBA18BAB64F5"
+            }
+         ]
+      }
+   }
+   ```
 
      > [!IMPORTANT]  
      > You should load only signed and verified components. Configure the correct access control lists (ACLs) on DLL files and folders containing them. Also, you should run the FDHOST Launcher (MSSQLFDLauncher) Service with the least possible privileges.
 
-1. Use `sp_fulltext_service` to update the list of languages, as follows:
+1. Use `sp_fulltext_service` to update the internal list of languages and document types for accurate DMV reporting:
 
    ```sql
    EXECUTE sp_fulltext_service 'update_languages';
    ```
 
-1. Restart the filter daemon host processes (`fdhost.exe`), using `sp_fulltext_service` as follows:
+1. Restart the filter daemon host processes (`fdhost.exe`) for the overrides to take effect for future queries and populations:
 
    ```sql
    EXECUTE sp_fulltext_service 'restart_all_fdhosts';
+   ```  
+  
+
+### Example: Support a custom document extension
+
+Scenario: you want to add support for indexing files with your own custom extension, such as `.myextension`.
+
+1. Find the existing installed filter handler for the associated document class via `sys.fulltext_document_types` or `sp_help_fulltext_system_components 'filter'`. For plaintext, for example:
+
+   ```sql
+   ALTER DATABASE SCOPED CONFIGURATION
+      SET FULLTEXT_INDEX_VERSION = 1;
+   GO
+
+   SELECT *
+   FROM sys.fulltext_document_types
+   WHERE document_type = '.txt';
    ```
 
-## Replace existing word breakers or filters when installing new ones
+1. Create or update `version_overrides.json` in the `FTData` directory with the preceding `class_id` and `path`. In this case:
 
-**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions.
+   ```json
+   {
+      "doctypes": {
+         ".myextension": [
+            {
+               "version": 2,
+               "handler": "%SystemRoot%\\system32\\query.dll",
+               "clsid": "C1243CA0-BF96-11CD-B579-08002B30BFEB"
+            }
+         ]
+      }
+   }
+   ```
+
+1. Refresh the registered component list and restart the filter daemon host processes:
+
+   ```sql
+   EXECUTE sp_fulltext_service 'update_languages';
+   EXECUTE sp_fulltext_service 'restart_all_fdhosts';
+   ```  
+  
+
+### Example: Install a third-party filter (Foxit PDF IFilter)
+
+1. Follow the third-party installation documentation. For Foxit PDF IFilter, see [How to Download the IFilter Addon for Foxit PDF Editor](https://kb.foxit.com/s/articles/How-to-Download-the-IFilter-Addon-for-Foxit-PDF-Editor).
+
+   Installers usually write registration information into `HKCR` and place binaries under `Program Files`.
+
+1. Create or update `version_overrides.json` in the `FTData` directory:
+
+   ```json
+   {
+      "doctypes": {
+         ".pdf": [
+            {
+               "version": 2,
+               "handler": "C:\\Program Files\\Foxit Software\\Foxit PDF IFilter\\PDFFilt.dll",
+               "clsid": "987f8d1a-26e6-4554-b007-6b20e2680632"
+            }
+         ]
+      }
+   }
+   ```
+
+1. Refresh the registered component list and restart the filter daemon host processes:
+
+   ```sql
+   EXECUTE sp_fulltext_service 'update_languages';
+   EXECUTE sp_fulltext_service 'restart_all_fdhosts';
+   ```  
+  
+
+#### Find the CLSID
+
+The easiest way to find the CLSID, if it isn't publicly documented, is to query the DMVs or `sp_help_fulltext_system_components` with `FULLTEXT_INDEX_VERSION` = `1`, or from an older SQL Server instance.
+
+You can also check affected registry keys. A PDF filter install, for example, updates `HKCR\.pdf\PersistentHandler`. You can then take that PH CLSID and find the component CLSID as `HKEY_CLASSES_ROOT\CLSID\{PH CLSID}\PersistentAddinsRegistered\{Component CLSID}`.
+
+## Customize version 1 filters and word breakers
+
+**Applies to**: [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and prior versions.
+
+Version 1 full-text indexes use the Windows registry to resolve filters, word breakers, and stemmers. This applies to [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] indexes that still use `index_version = 1`, and to full-text indexes in earlier [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] versions.
+
+Version 1 component lookup uses this order:
+
+1. Instance-specific registration under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Filters` for matching extensions and `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Languages` for matching LCIDs.
+1. System registration under `HKEY_CLASSES_ROOT` (`HKCR`), if operating-system resource loading is enabled via `sp_fulltext_service 'load_os_resources'`.
+
+Instance-specific registration has priority. Modify it when you want a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance to use a component that differs from the operating-system registration or other installed instances.
+
+### Install and load version 1 components
 
 1. Before you install a DLL file that contains new word breakers or filters, make sure that it has a different filename from any of the existing DLL files installed on your server instance.
 
@@ -139,9 +222,7 @@ EXECUTE sp_fulltext_service 'update_languages';
    C:\Program Files\Microsoft SQL Server\MSSQL.<instance_name>\MSSQL\Binn
    ```
 
-1. Install the new word breaker or filters.
-
-   **To install and load Microsoft Filter Pack IFilters**
+1. Install the new word breaker or filters following their documentation.
 
 1. Use `sp_fulltext_service` to load newly installed word breakers and filters in the server instance, as follows:
 
@@ -161,10 +242,74 @@ EXECUTE sp_fulltext_service 'update_languages';
 
    ```sql
    EXECUTE sp_fulltext_service 'restart_all_fdhosts';
+   ```  
+  
+
+### Example: Support a custom document extension
+
+Scenario: you want to add support for indexing files with your own custom extension, such as `.myextension`, by using an existing installed filter.
+
+1. Find the CLSID for the filter you want to reuse. For example, to reuse the plaintext filter, inspect the `.txt` registration with version 1 component reporting:
+
+   ```sql
+   ALTER DATABASE SCOPED CONFIGURATION
+      SET FULLTEXT_INDEX_VERSION = 1;
+   GO
+
+   SELECT *
+   FROM sys.fulltext_document_types
+   WHERE document_type = '.txt';
    ```
+
+1. Add instance-specific registry entries for the new extension. The extension entry maps `.myextension` to the filter CLSID, and the `CLSID` entry maps that CLSID to the filter DLL.
+
+   The following example uses the legacy plaintext filter CLSID and `msfte.dll`:
+
+   ```console
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Filters\.myextension" /ve /t REG_SZ /d "{C7310720-AC80-11D1-8DF3-00C04FB6EF4F}" /f
+   ```
+
+   Replace `<InstanceRoot>` with the SQL Server instance root, such as `MSSQL16.MSSQLSERVER`.
+
+1. Refresh the registered component list and restart the filter daemon host processes:
+
+   ```sql
+   EXECUTE sp_fulltext_service 'update_languages';
+   EXECUTE sp_fulltext_service 'restart_all_fdhosts';
+   ```  
+  
+
+### Example: Install a third-party filter (Foxit PDF IFilter)
+
+Scenario: You want version 1 full-text indexes to use a third-party PDF IFilter that registers itself with Windows.
+
+1. Follow the third-party installation documentation. For Foxit PDF IFilter, see [How to Download the IFilter Addon for Foxit PDF Editor](https://kb.foxit.com/s/articles/How-to-Download-the-IFilter-Addon-for-Foxit-PDF-Editor).
+
+1. Enable operating-system resource loading so version 1 component lookup can fall back to `HKCR` when the SQL Server instance doesn't have an instance-specific registration for `.pdf`:
+
+   ```sql
+   EXECUTE sp_fulltext_service
+      @action = 'load_os_resources',
+      @value = 1;
+   ```
+
+1. Refresh the registered component list and restart the filter daemon host processes:
+
+   ```sql
+   EXECUTE sp_fulltext_service 'update_languages';
+   EXECUTE sp_fulltext_service 'restart_all_fdhosts';
+   ```
+
+If you don't want to rely on the `HKCR` fallback, add instance-specific `MSSearch\Filters` and `MSSearch\CLSID` entries for `.pdf` instead. The instance-specific entries take priority over system registration.
 
 ## Related content
 
 - [Set the Service Account for the Full-text Filter Daemon Launcher](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)
-- [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md)
-- [Configure and manage word breakers and stemmers for search (SQL Server)](configure-and-manage-word-breakers-and-stemmers-for-search.md)
+- [Configure and manage filters](configure-and-manage-filters-for-search.md)
+- [Configure and manage word breakers and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md)
+- [Full-text filter binaries](full-text-filter-binaries.md)
+- [Full-text word breaker and stemmer binaries](full-text-word-breaker-and-stemmer-binaries.md)
+- [Full-text index version upgrade](full-text-index-version-upgrade.md)
+- [sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
+- [sys.fulltext_indexes (Transact-SQL)](../system-catalog-views/sys-fulltext-indexes-transact-sql.md)
+- [ALTER DATABASE SCOPED CONFIGURATION - FULLTEXT_INDEX_VERSION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#fulltext_index_version)

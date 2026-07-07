@@ -27,15 +27,15 @@ The diagrams in the list use normalized cores (NCs) to illustrate the cost impli
 
 - [License by virtual cores](#license-vcores)
 
-  Use an Enterprise or Standard license for the vCPUs (v-cores) of the virtual machine (VM) that runs one or multiple instances of SQL Server. Each virtual machine is billed individually for the v-cores allocated to it.
+  Use an Enterprise or Standard license for the vCPUs (virtual cores) of the virtual machine (VM) that runs one or multiple instances of SQL Server. Each virtual machine is billed individually for the virtual cores allocated to it.
 
   The following diagram illustrates this licensing method and the cost implications.
 
   :::image type="content" source="media/manage-license-billing/virtual-core-licensing.svg" alt-text="Diagram that illustrates the virtual core licensing option.":::
 
-- [License by physical cores (p-cores) without virtual machines](#license-pcores-without-vms)
+- [License by physical cores without virtual machines](#license-pcores-without-vms)
 
-  Use an Enterprise or Standard license for the p-cores of the host that runs one or multiple instances of SQL Server installed directly on the host without using VMs. Each instance has access to all p-cores supported by the installed edition limits, up to all p-cores of the host. Regardless of the instance limits, the host is billed for all the p-cores based on the highest SQL Server edition installed on it. For details, review [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
+  Use an Enterprise or Standard license for the physical cores of the host that runs one or multiple instances of SQL Server installed directly on the host without using VMs. Each instance has access to all physical cores supported by the installed edition limits, up to all physical cores of the host. Regardless of the instance limits, the host is billed for all the physical cores based on the highest SQL Server edition installed on it. For details, review [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
 
   The following diagram illustrates the cost implications of deploying two Standard instances on a physical host without using VMs.
 
@@ -43,7 +43,7 @@ The diagrams in the list use normalized cores (NCs) to illustrate the cost impli
 
 - [License by physical cores with unlimited virtualization](#unlimited-virtualization)
 
-  Use an Enterprise license for the physical cores of the host that runs any number of virtual machines with any number of SQL Server instances. A single p-core license is a separate Azure resource that represents all licensed p-cores and is billed independently.
+  Use an Enterprise license for the physical cores of the host that runs any number of virtual machines with any number of SQL Server instances. A single physical core license is a separate Azure resource that represents all licensed physical cores and is billed independently.
 
   The following diagram illustrates the cost implications of licensing a physical host and using unlimited virtualization.
 
@@ -51,7 +51,7 @@ The diagrams in the list use normalized cores (NCs) to illustrate the cost impli
 
 For each of these options, you have to decide how you want to pay for the license. The following table shows your payment options:
 
-| Payment option | V-core licensing | P-core licensing without VMs | P-core licensing with unlimited virtualization |
+| Payment option | Virtual core licensing | Physical core licensing without VMs | Physical core licensing with unlimited virtualization |
 | --- | --- | --- | --- |
 | Subscribe to the service through Microsoft Azure by using a pay-as-you-go method | Yes | Yes | Yes |
 | Bring your own license with Software Assurance or a SQL Server subscription <sup>1</sup> | Yes | Yes | Yes |
@@ -69,20 +69,20 @@ For information about licensing your non-production or test SQL Server instances
 
 ## License SQL Server instances by virtual cores
 
-Licensing SQL Server by v-cores allows you to limit the scope of the license to a specific virtual machine and one or more SQL Server instances installed on the operating system environment (OSE) of that machine. It's optimized for the following scenarios:
+When you license SQL Server by virtual cores, you can limit the scope of the license to a specific virtual machine and one or more SQL Server instances that you install on the operating system environment (OSE) of that machine. This licensing model is optimized for the following scenarios:
 
 - Your SQL Server VMs are mixed with the VMs running other software on the same physical servers.
 - You deploy your VMs to a hosting partner or a non-Microsoft cloud where you don't control your physical infrastructure.
 
-You can choose v-core licensing to license both SQL Server software and SQL Server Extended Security Updates. You manage a v-core license independently for each VM by using the [SQL Server configuration](manage-configuration.md) areas of the Azure portal. The **Overview** pane for each Azure Arc-enabled SQL Server resource shows the configured license under **Host License Type**.
+Choose virtual core licensing to license both SQL Server software and SQL Server Extended Security Updates. Use the [SQL Server configuration](manage-configuration.md) areas of the Azure portal to manage a virtual core license independently for each VM. The **Overview** pane for each Azure Arc-enabled SQL Server resource shows the configured license under **Host License Type**.
 
-The Standard edition is limited to a maximum of 24 v-cores, even if the OSE is configured with more v-cores. For more information about limits, see [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
+The Standard edition is limited to a maximum of 24 virtual cores, even if the OSE is configured with more virtual cores. For more information about limits, see [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
 
 For more information about licensing SQL Server by virtual cores, see the section "Licensing individual virtual machines" in the [SQL Server licensing guide (download link)](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
 ### License types
 
-The following license types are supported when you're licensing v-cores:
+The following license types are supported when you license virtual cores:
 
 | License type | Description | Value |
 | --- | --- | --- |
@@ -134,7 +134,7 @@ The option of licensing SQL Server by physical cores without using VMs is optimi
 
 In this option, the licensing requirements are identical to [licensing SQL Server by virtual cores](#license-vcores), but the SQL Server software usage is reported based on the physical cores available to the OSE of that server. For details, see [Metering software usage](#usage-metering) later in this article.
 
-The Standard edition is limited to a maximum of 24 p-cores, even if the OSE is installed on a larger machine. For more information about limits, see [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
+The Standard edition is limited to a maximum of 24 physical cores, even if the OSE is installed on a larger machine. For more information about limits, see [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
 
 > [!IMPORTANT]  
 > If a physical machine without VMs is connected to Azure Arc in the scope that a SQL Server physical core license covers, the unlimited virtualization benefit doesn't apply to that machine. It's licensed and billed separately.
@@ -149,12 +149,12 @@ The option of licensing SQL Server by physical cores with unlimited virtualizati
 
 - You control your physical environment and install the SQL Server instances on different VMs for security isolation and better resource management.
 - Your infrastructure and the selected payment method support the unlimited virtualization benefit.
-- Licensing your SQL Server instances by v-cores is more expensive than licensing the p-cores of the host.
+- Find that licensing your SQL Server instances by virtual cores is more expensive than licensing the physical cores of the host.
 
-To use the unlimited virtualization benefit, you need to create a *SQLServerLicense* resource that represents one or more physical hosts. The covered SQL Server instances must be connected to Azure Arc and configured to use the p-core license. For details about creating *SQLServerLicense* resources, see [Create a SQL Server license](manage-configuration.md#create-a-sql-server-license).
+To use the unlimited virtualization benefit, create a *SQLServerLicense* resource that represents one or more physical hosts. Connect the covered SQL Server instances to Azure Arc and configure them to use the physical core license. For details about creating *SQLServerLicense* resources, see [Create a SQL Server license](manage-configuration.md#create-a-sql-server-license).
 
 > [!CAUTION]  
-> The unlimited virtualization benefit isn't available to VMs running on infrastructure from any of the [listed providers](https://aka.ms/listedproviders). These VMs can be licensed only by v-cores. If you create a *SQLServerLicense* resource with the intent of licensing these VMs by using unlimited virtualization, you'll be charged for the consumption of v-cores based on the SQL Server configuration of the host. Any existing p-core licenses don't apply to offset such charges.
+> The unlimited virtualization benefit isn't available to VMs running on infrastructure from any of the [listed providers](https://aka.ms/listedproviders). You can license these VMs only by virtual cores. If you create a *SQLServerLicense* resource with the intent of licensing these VMs by using unlimited virtualization, you pay for the consumption of virtual cores based on the SQL Server configuration of the host. Any existing physical core licenses don't apply to offset such charges.
 
 For more information about licensing by physical cores with unlimited virtualization, see the section "Licensing for maximum virtualization" in the [SQL Server licensing guide (download link)](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
@@ -176,7 +176,7 @@ To qualify, each *Machine - Azure Arc* resource must be configured to use a phys
 
 ### Size
 
-The `Size` property of the license resource represents the sum of physical cores of the servers to which the license will be applied. The minimum size of the license is 16 p-cores.
+The `Size` property of the license resource represents the sum of physical cores of the servers to which the license applies. The minimum size of the license is 16 physical cores.
 
 ### Subscription
 
@@ -198,10 +198,10 @@ The `billingPlan` property provides a choice between paying for the license on a
 | Pay-as-you-go | By selecting this option, you subscribe to unlimited virtualization service that's billed on an hourly meter for the Enterprise edition. See [SQL Server prices and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing). | `PAYG` |
 | Bring your own license | By selecting this option, you attest that you have an active Enterprise license with Software Assurance or a SQL Server subscription for the same or a greater number of cores. You also attest that you want to use that license to cover the usage of the SQL Server software on each VM in its scope by using the unlimited virtualization benefit. | `Paid` |
 
-To ensure the correct application of the p-core license, make sure that each VM in the scope that you want to be licensed:
+To ensure the correct application of the physical core license, make sure that each VM in the scope that you want to license:
 
 - Has the `UsePhysicalCoreLicense` property set to `True`.
-- Has the `LicenseType` property set to match the selected `billingPlan` property of the p-core license.
+- Has the `LicenseType` property set to match the selected `billingPlan` property of the physical core license.
 
 For more information, see [Use a physical core license](manage-configuration.md#use-physical-core-license).
 
@@ -335,13 +335,13 @@ The SQL Server associated services are represented and managed for licensing pur
 >
 > When the SQL Server associated service is a standalone instance (without SQL Server database engine) and the machine is configured using a pay-as-you-go subscription, the corresponding pay-as-you-go meters are activated for the instance.
 >
-> If a p-core license is activated as a pay-as-you-go subscription in the corresponding scope, and the machine is configured to use it, the SQL Server associated service isn't individually billed for the pay-as-you-go subscription when it's a standalone instance (without SQL Server engine). For details, see [Use a physical core license](manage-configuration.md#use-physical-core-license).
+> If you activate a physical core license as a pay-as-you-go subscription in the corresponding scope, and you configure the machine to use it, the SQL Server associated service isn't individually billed for the pay-as-you-go subscription when it's a standalone instance (without SQL Server engine). For details, see [Use a physical core license](manage-configuration.md#use-physical-core-license).
 
 <a id="usage-metering"></a>
 
 ## Metering and reporting software usage
 
-The usage of the SQL Server software is reported once an hour. The specific meter is automatically selected based on the SQL Server edition and the number v-cores or p-cores visible to the OSE. The following rules apply:
+The system reports the usage of the SQL Server software once an hour. It automatically selects the specific meter based on the SQL Server edition and the number of virtual cores or physical cores visible to the OSE. The following rules apply:
 
 - If you install one or several instances of SQL Server or SQL Server associated services on a virtual machine and don't specify the use of a physical core license, SQL Server software usage is metered based on the total number of virtual cores available to the OSE. The minimum is four cores per OSE.
 
@@ -359,7 +359,7 @@ For more information, see [SQL Server Licensing Resources and Documents](https:/
 
 The following table shows the meter product tiers (also called *SKUs*) that are used for metering and billing for SQL Server software installed on a single OSE:
 
-| Installed edition | Projected edition | Host license type | Failover replica | Use p-core license | Meter SKU |
+| Installed edition | Projected edition | Host license type | Failover replica | Use physical core license | Meter SKU |
 | --- | --- | --- | --- | --- | --- |
 | Enterprise Core | Enterprise | `PAYG` | No | No | `Ent edition - PAYG` |
 | Enterprise Core | Enterprise | `PAYG` | No | Yes | `Ent edition - Virtual license` <sup>2</sup> |
@@ -387,7 +387,7 @@ The following table shows the meter product tiers (also called *SKUs*) that are 
 
 <sup>1</sup> Installation of the Enterprise edition indicates use of the Server+CAL licensing model.
 
-<sup>2</sup> This meter reflects the software usage covered by the p-core license and the unlimited virtualization benefit. For the SQL Server instance to be covered, it must be installed on a virtual machine.
+<sup>2</sup> This meter reflects the software usage covered by the physical core license and the unlimited virtualization benefit. For the SQL Server instance to be covered, it must be installed on a virtual machine.
 
 <sup>3</sup> Web edition isn't available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions. It's only available through hosting provider programs, and only up to SQL Server 2022.
 
@@ -397,8 +397,8 @@ The following table shows the meter SKUs that are used for metering and billing 
 
 | License category | Projected edition | Billing plan | Meter SKU |
 | --- | --- | --- | --- |
-| P-core license | Enterprise | `PAYG` | `Ent edition - Host - PAYG` |
-| P-core license | Enterprise | `Paid` | `Ent edition - AHB` |
+| Physical core license | Enterprise | `PAYG` | `Ent edition - Host - PAYG` |
+| Physical core license | Enterprise | `Paid` | `Ent edition - AHB` |
 
 ## Related content
 

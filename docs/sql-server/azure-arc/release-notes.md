@@ -146,8 +146,8 @@ The following features are now generally available (GA):
 
 The following capabilities are now supported in [US Government Virginia](us-government-region.md):
 
-- [License physical cores (p-cores) with unlimited virtualization](manage-license-billing.md#unlimited-virtualization)
-- [License physical cores (p-cores) without virtual machines](manage-license-billing.md#license-pcores-without-vms)
+- [License physical cores with unlimited virtualization](manage-license-billing.md#unlimited-virtualization)
+- [License physical cores without virtual machines](manage-license-billing.md#license-pcores-without-vms)
 
 ### August 2025
 
@@ -280,7 +280,7 @@ Inventory additional service resources in portal (preview):
 
 ### ESU update to bill-back calculation
 
-ESU sets the bill-back date to the beginning of the current ESU year based on the timestamp when ESU was enabled, or p-core ESU license was activated. For details, review [SQL Server Extended Security Updates enabled by Azure Arc](extended-security-updates.md).
+ESU sets the bill-back date to the beginning of the current ESU year based on the timestamp when ESU was enabled, or physical core ESU license was activated. For details, review [SQL Server Extended Security Updates enabled by Azure Arc](extended-security-updates.md).
 
 ### Security improvements
 

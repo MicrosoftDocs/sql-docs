@@ -50,8 +50,8 @@ Only the following features are available in the US Government Virginia region:
   - View databases Azure resources.
   - View the properties for each server. For example, you can view the version, edition, and database for each instance.
 - [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md): 
-  - [License physical cores (p-cores) with unlimited virtualization](manage-license-billing.md#unlimited-virtualization)
-  - [License physical cores (p-cores) without virtual machines](manage-license-billing.md#license-pcores-without-vms)
+  - [License physical cores with unlimited virtualization](manage-license-billing.md#unlimited-virtualization)
+  - [License physical cores without virtual machines](manage-license-billing.md#license-pcores-without-vms)
   - License virtual cores.
 - [Failover cluster instances support](support-for-fci.md) - onboard and manage SQL Server failover cluster instances. 
 - [Licenses for ESUs](extended-security-updates.md#licenses-for-esus).

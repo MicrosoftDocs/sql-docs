@@ -95,10 +95,10 @@ Choose one of the license types. For descriptions, see [License types](manage-li
 
 #### Use a physical core license
 
-Select the **Use physical core license** checkbox if you're configuring a virtual machine (VM) and you're using the unlimited virtualization benefit for licensing the SQL Server software or for your SQL subscription. It sets the host configuration property `UsePhysicalCoreLicense` to `True`. If this checkbox is selected, the physical core (p-core) license takes precedence, and the SQL Server software costs are nullified.
+Select the **Use physical core license** checkbox if you're configuring a virtual machine (VM) and you're using the unlimited virtualization benefit for licensing the SQL Server software or for your SQL subscription. It sets the host configuration property `UsePhysicalCoreLicense` to `True`. If you select this checkbox, the physical core license takes precedence, and the SQL Server software costs are nullified.
 
 > [!IMPORTANT]  
-> If the p-core license is configured with a pay-as-you-go billing plan, the selected **License type** value should be **Pay-as-you-go**. This selection doesn't trigger additional charges at the VM level, but it does ensure uninterrupted licensing and billing if the p-core license is deactivated or deleted.
+> If you configure the physical core license with a pay-as-you-go billing plan, set the **License type** value to **Pay-as-you-go**. This selection doesn't trigger extra charges at the VM level, but it does ensure uninterrupted licensing and billing if the physical core license is deactivated or deleted.
 
 
 
@@ -108,14 +108,14 @@ Select the **Use physical core license** checkbox if you're configuring a virtua
 
 [!INCLUDE [2016-esu](../../includes/2016-esu.md)]
 
-You can subscribe to Extended Security Updates (ESUs) for the individual host. To qualify for an ESU subscription, the host must have **License type** set to **Pay-as-you-go** or **License with Software Assurance**. This option allows you to subscribe by using vCPUs (v-cores) when the host is a virtual machine, or by using physical cores when the host is a physical server that runs without using virtual machines.
+You can subscribe to Extended Security Updates (ESUs) for the individual host. To qualify for an ESU subscription, set **License type** to **Pay-as-you-go** or **License with Software Assurance**. This option allows you to subscribe by using vCPUs (virtual cores) when the host is a virtual machine, or by using physical cores when the host is a physical server that runs without using virtual machines.
 
 Select **Subscribe to Extended Security Updates**. It sets the host configuration property `EnableExtendedSecurityUpdates` to `True`. The subscription is activated after you select **Save**.
 
 For more information about ESU licensing options, see [Licenses for ESUs](extended-security-updates.md#licenses-for-esus).
 
 > [!NOTE]  
-> Unlike the p-core ESU license, when you're subscribing to ESUs for a host, you don't need to define the number of billable cores for each machine. Azure Extension for SQL Server detects the size of the host, the type of the host (virtual or physical), and the SQL Server edition. The extension bills according to these parameters.
+> Unlike the physical core ESU license, when you subscribe to ESUs for a host, you don't need to define the number of billable cores for each machine. Azure Extension for SQL Server detects the size of the host, the type of the host (virtual or physical), and the SQL Server edition. The extension bills according to these parameters.
 >
 > After you enable ESUs, you can't change the **License Type** value of the host to **License only** until the ESU subscription is canceled.
 
@@ -125,7 +125,7 @@ For more information about ESU licensing options, see [Licenses for ESUs](extend
 
 Select the **Use physical core ESU license** checkbox if you're configuring a virtual machine and you're using the unlimited virtualization benefit when enabling the ESU subscription. It sets `UseEsuPhysicalCoreLicense` to `true`.
 
-If you select the checkbox, the p-core license takes precedence, and the SQL Server ESU charges at the VM level are nullified.
+If you select the checkbox, the physical core license takes precedence, and the SQL Server ESU charges at the VM level are nullified.
 
 To use the physical core ESU license, you need to create a SQL Server ESU license resource in the Azure portal. For more information, see [SQL Server ESU license resource](extended-security-updates.md#esu-license-resource).
 
@@ -190,7 +190,7 @@ If you already have an older version of the Azure extension installed, be sure t
 ---
 
 > [!IMPORTANT]  
-> The unlimited virtualization benefit for SQL Server software or a SQL Server ESU subscription isn't supported on infrastructure from the [listed providers](https://aka.ms/listedproviders). If you're running SQL Server on a listed provider's VM and you select this option, your intent will be ignored and you'll be charged for the v-cores of the VM.
+> The unlimited virtualization benefit for SQL Server software or a SQL Server ESU subscription isn't supported on infrastructure from the [listed providers](https://aka.ms/listedproviders). If you're running SQL Server on a listed provider's VM and you select this option, your intent is ignored and you're charged for the virtual cores of the VM.
 
 <a id="subscribe-esu-via-policy"></a>
 
@@ -347,7 +347,7 @@ on $left.machineId == $right.machineIdHasSQLServerExtensionInstalled
 
 #### List Azure Arc-enabled servers that host a billable SQL Server instance
 
-This query identifies the connected machines (virtual or physical) that host SQL Server instances and that are billable or require a license for SQL Server software. It provides the details of the SQL Server configuration, including the license type, ESU setting, size in v-cores or p-cores, and other relevant parameters.
+This query identifies the connected machines (virtual or physical) that host SQL Server instances and that are billable or require a license for SQL Server software. It provides the details of the SQL Server configuration, including the license type, ESU setting, size in virtual cores or physical cores, and other relevant parameters.
 
 ```kusto
 resources
@@ -528,7 +528,7 @@ Here's the content of `activate.json` to activate the license:
 
 <a id="manage-license-resources"></a>
 
-### Manage resources in the scope of a p-core license
+### Manage resources in the scope of a physical core license
 
 You can manage the resources in the scope of a specific SQL Server physical core license by using the following steps:
 
@@ -689,7 +689,7 @@ Here's the content of `terminate.json` to activate the license:
 
 <a id="manage-esu-license-resources"></a>
 
-### Manage resources in the scope of an ESU p-core license
+### Manage resources in the scope of an ESU physical core license
 
 You can manage the resources in the scope of a specific SQL Server ESU license by using the following steps:
 
@@ -700,7 +700,7 @@ You can manage the resources in the scope of a specific SQL Server ESU license b
 1. Select the license.
 1. Under **Management**, select **Resources in scope**.
 
-This view shows only the connected machines in the scope that host an out-of-service SQL Server instance with the version that matches the version of the p-core ESU license you're managing. If the specific resources aren't configured to use this license (the **Physical core license applied** column displays **NO**), you can change that:
+This view shows only the connected machines in the scope that host an out-of-service SQL Server instance with the version that matches the version of the physical core ESU license you're managing. If the specific resources aren't configured to use this license (the **Physical core license applied** column displays **NO**), you can change that configuration:
 
 1. Select the specific resources in the list.
 1. Select **Subscribe to ESUs** to subscribe, or select **Unsubscribe from ESUs** to unsubscribe.

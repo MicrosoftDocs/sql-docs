@@ -1,5 +1,5 @@
 ---
-title: Full-Text Index Version Upgrade
+title: Full-text index version upgrade
 titleSuffix: SQL Server Full-Text Search
 description: Learn about SQL Server 2025 full-text index versions, behavior changes, migration steps, and component binaries.
 author: rwestMSFT
@@ -64,7 +64,7 @@ New components in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] might re
 
 ### Customization model
 
-Version 2 full-text indexes no longer read component handlers from the Windows registry. You control customization through an instance-specific JSON file. For more information, see [View or change registered filters and word breakers](view-or-change-registered-filters-and-word-breakers.md).
+Version 2 full-text indexes no longer read component handlers from the Windows registry. You control customization through an instance-specific JSON file. For more information, see [Customize filters and word breakers](view-or-change-registered-filters-and-word-breakers.md).
 
 ## Upgrade and migration options
 
@@ -119,7 +119,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     SET FULLTEXT_INDEX_VERSION = 1;
 ```
 
-Next, copy the legacy word breaker, stemmer, and filter binaries from an older instance's `Binn` folder to the target instance's `Binn` folder. See [Filters and word breakers in SQL Server Full-Text Search](full-text-index-binaries.md) for a reference of which DLL and dependent libraries need to be copied per language or document type.
+Next, copy the legacy word breaker, stemmer, and filter binaries from an older instance's `Binn` folder to the target instance's `Binn` folder. For a reference of which DLL and dependent libraries you need to copy per language or document type, see [Full-text filter binaries](full-text-filter-binaries.md) and [Full-text word breaker and stemmer binaries](full-text-word-breaker-and-stemmer-binaries.md).
 
 To bulk copy the complete set of version 1 binaries, copy the following script to a file named `Copy-FulltextV1Components.ps1`.
 
@@ -323,9 +323,10 @@ A fatal error occurred during a full-text population and caused the population t
 
 ## Related content
 
-- [View or change registered filters and word breakers (SQL Server Search)](view-or-change-registered-filters-and-word-breakers.md)
-- [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md)
-- [Configure and manage word breakers and stemmers for search (SQL Server)](configure-and-manage-word-breakers-and-stemmers-for-search.md)
+- [Customize filters and word breakers](view-or-change-registered-filters-and-word-breakers.md)
+- [Configure and manage filters](configure-and-manage-filters-for-search.md)
+- [Configure and manage word breakers and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md)
 - [sys.fulltext_indexes](../system-catalog-views/sys-fulltext-indexes-transact-sql.md)
 - [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#fulltext_index_version)
-- [Filters and word breakers in SQL Server Full-Text Search](full-text-index-binaries.md)
+- [Full-text filter binaries](full-text-filter-binaries.md)
+- [Full-text word breaker and stemmer binaries](full-text-word-breaker-and-stemmer-binaries.md)

@@ -60,7 +60,7 @@ The value of the specified property. *@value* is **sql_variant**, with a default
 > [!NOTE]  
 > The following actions will be removed in a future release of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]: `clean_up`, `connect_timeout`, `data_timeout`, `resource_usage`, and `load_os_resources`. Avoid using these actions in new development work, and plan to modify applications that currently use any of them.
 >
-> To register operating system word breakers and filters in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], see [Add or replace registered filters and word breakers](../search/view-or-change-registered-filters-and-word-breakers.md#add-or-replace-word-breakers-and-filters).
+> To customize word breakers and filters in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], see [Customize filters and word breakers](../search/view-or-change-registered-filters-and-word-breakers.md).
 
 | Action | Data type | Description |
 | --- | --- | --- |

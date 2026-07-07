@@ -1,21 +1,22 @@
 ---
-title: Revert Word Breakers Used by Full-Text Search to Previous Version
+title: Revert word breakers used by Full-Text Search to previous version
 titleSuffix: SQL Server Full-Text Search
-description: Revert word breakers used by Full-Text Search to previous version.
+description: Revert legacy Full-Text Search word breakers to previous versions.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: search
 ms.topic: how-to
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016"
 ---
 # Revert word breakers used by Full-Text Search to previous version
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-> [!NOTE]  
-> In [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], the process for reverting word breakers to previous versions has changed. For more information, see [Change the Full-Text Search word breaker and filter in SQL Server 2025](change-the-word-breaker-used-for-us-english-and-uk-english.md#switch-from-version-2-to-version-1-components).
+This article describes the legacy procedure for switching word breakers between the updated components introduced in [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and the previous components.
+
+For information about the full-text index version change in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], see [Full-text index version upgrade](full-text-index-version-upgrade.md).
 
 [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search, except for Korean. This article describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.
 
@@ -23,12 +24,12 @@ This article doesn't discuss the following languages:
 
 | Language | Description |
 | --- | --- |
-| **English** | To revert or restore the English components, see [Change the Full-Text Search word breaker and filter in SQL Server 2025](change-the-word-breaker-used-for-us-english-and-uk-english.md). |
+| **English** | To revert or restore the English components, see [Change the word breaker used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md). |
 | **Danish, Polish, and Turkish** | The third-party word breakers for Danish, Polish, and Turkish that were included with previous releases of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] are replaced with [!INCLUDE [msCoName](../../includes/msconame-md.md)] components. |
 | **Czech and Greek** | There are new word breakers for Czech and Greek. Previous releases of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search didn't include support for these two languages. |
 | **Korean** | The word breaker and stemmer for the Korean language aren't upgraded in this release. |
 
-For general information about word breakers and stemmers, see [Configure and manage word breakers and stemmers for search (SQL Server)](configure-and-manage-word-breakers-and-stemmers-for-search.md).
+For general information about word breakers and stemmers, see [Configure and manage word breakers and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md).
 
 <a id="overview"></a>
 
@@ -414,5 +415,5 @@ The following list is sorted alphabetically on the abbreviation used for each la
 
 ## Related content
 
-- [Change the Full-Text Search word breaker and filter in SQL Server 2025](change-the-word-breaker-used-for-us-english-and-uk-english.md)
+- [Change the word breaker used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)
 - [Full-Text Search](full-text-search.md)

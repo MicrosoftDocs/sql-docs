@@ -1,6 +1,7 @@
 ---
-title: "Configure and Manage Word Breakers and Stemmers for Search"
-description: "Configure and manage word breakers and stemmers for search (SQL Server)"
+title: "Configure and manage word breakers and stemmers"
+titleSuffix: SQL Server Full-Text Search
+description: "Configure and manage word breakers and stemmers for Full-Text Search."
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 05/27/2025
@@ -19,9 +20,9 @@ helpviewer_keywords:
   - "word breakers [full-text search]"
 monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
-# Configure and manage word breakers and stemmers for search (SQL Server)
+# Configure and manage word breakers and stemmers
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Word breakers and stemmers perform linguistic analysis on all full-text indexed data. Linguistic analysis does the following two things:
 
@@ -63,7 +64,7 @@ For more information, see [sp_help_fulltext_system_components](../system-stored-
 
 ## If you add or remove a word breaker
 
-If you add, remove, or alter a word breaker, you need to refresh the list of Microsoft Windows locale identifiers (LCIDs) that are supported for full-text indexing and querying. For more information, see [View or change registered filters and word breakers](view-or-change-registered-filters-and-word-breakers.md).
+If you add, remove, or alter a word breaker, you need to refresh the list of Microsoft Windows locale identifiers (LCIDs) that are supported for full-text indexing and querying. For more information, see [Customize filters and word breakers](view-or-change-registered-filters-and-word-breakers.md).
 
 ## Set the default full-text language option
 
@@ -126,7 +127,7 @@ Select the user action that is appropriate to the probable cause of the timeout,
 
 | Probable cause | User action |
 | --- | --- |
-| The word breaker for the query language is configured incorrectly. | If you're using a third-party word breaker, it might be incorrectly registered with the operating system. In this case, re-register the word breaker. For more information, see [Revert word breakers used by Search to previous version (SQL Server Search)](revert-the-word-breakers-used-by-search-to-the-previous-version.md). |
+| The word breaker for the query language is configured incorrectly. | If you're using a third-party word breaker, it might be incorrectly registered with the operating system. In this case, re-register the word breaker. For more information, see [Revert word breakers used by Full-Text Search to previous version](revert-the-word-breakers-used-by-search-to-the-previous-version.md). |
 | The word breaker malfunctions for a specific query string. | If the word breaker is supported by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support. |
 | The word breaker returns too much data for a specific query string. | If the word breaker is supported by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support. |
 | The filter daemon process configuration is incorrect. | Ensure that you're using the current password and that a domain policy isn't preventing the filter daemon account from logging on. |
@@ -142,4 +143,6 @@ This is significant if a full-text catalog was imported when a database was upgr
 
 - [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)
 - [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)
+- [Full-text word breaker and stemmer binaries](full-text-word-breaker-and-stemmer-binaries.md)
+- [Customize filters and word breakers](view-or-change-registered-filters-and-word-breakers.md)
 - [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)

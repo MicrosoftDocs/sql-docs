@@ -7158,92 +7158,96 @@ items:
       href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
     - name: Compare remote query methods
       href: relational-databases/linked-servers/linked-servers-openquery-openrowset-exec-at.md
-  - name: Full-text search
+  - name: Full-Text Search
     href: relational-databases/search/full-text-search.md
     items:
-    - name: Overview
-      items:
-      - name: Get started
-        href: relational-databases/search/get-started-with-full-text-search.md
-      - name: Deprecated Features in SQL Server 2016
-        href: relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md
-      - name: Full-text index version upgrade
-        href: relational-databases/search/full-text-index-version-upgrade.md
+    - name: Get started
+      href: relational-databases/search/get-started-with-full-text-search.md
     - name: Query
       href: relational-databases/search/query-with-full-text-search.md
       items:
-      - name: Search for Words Close to Another Word with NEAR
+      - name: Proximity search with NEAR
         href: relational-databases/search/search-for-words-close-to-another-word-with-near.md
-      - name: Limit Search Results with RANK
+      - name: Limit search results with RANK
         href: relational-databases/search/limit-search-results-with-rank.md
-      - name: Improve performance of queries
+      - name: Improve query performance
         href: relational-databases/search/improve-the-performance-of-full-text-queries.md
-      - name: Search Document Properties with Search Property Lists
+      - name: Search document properties with search property lists
         href: relational-databases/search/search-document-properties-with-search-property-lists.md
-      - name: Find Property Set GUIDs & Property Integer IDs for Search Properties
+      - name: Find property set GUIDs and property integer IDs for search properties
         href: relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md
-    - name: Catalogs & Indexes
+    - name: Catalogs and indexes
       items:
-      - name: Create indexes
-        href: relational-databases/search/create-and-manage-full-text-indexes.md
       - name: Create catalogs
         href: relational-databases/search/create-and-manage-full-text-catalogs.md
-      - name: Choose a Language When Creating a Full-Text Index
+      - name: Create indexes
+        href: relational-databases/search/create-and-manage-full-text-indexes.md
+      - name: Choose a language when creating a full-text index
         href: relational-databases/search/choose-a-language-when-creating-a-full-text-index.md
-      - name: Populate Full-Text Indexes
+      - name: Populate full-text indexes
         href: relational-databases/search/populate-full-text-indexes.md
-      - name: Improve the Performance of Full-Text Indexes
+      - name: Improve full-text index performance
         href: relational-databases/search/improve-the-performance-of-full-text-indexes.md
-      - name: Troubleshoot Full-Text Indexing
+      - name: Troubleshoot full-text indexing
         href: relational-databases/search/troubleshoot-full-text-indexing.md
-      - name: Back Up & Restore Catalogs & Indexes
+      - name: Back up and restore catalogs and indexes
         href: relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md
-    - name: Search
+    - name: Linguistic components
       items:
-      - name: Filters for search
+      - name: Filters
         href: relational-databases/search/configure-and-manage-filters-for-search.md
-      - name: Word breakers and stemmers for search
+        items:
+        - name: Filter binaries
+          href: relational-databases/search/full-text-filter-binaries.md
+      - name: Word breakers and stemmers
         href: relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md
-      - name: Registered filters and word breakers
+        items:
+        - name: Word breaker and stemmer binaries
+          href: relational-databases/search/full-text-word-breaker-and-stemmer-binaries.md
+      - name: Customize filters and word breakers
         href: relational-databases/search/view-or-change-registered-filters-and-word-breakers.md
-      - name: Change the word breaker
-        href: relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md
-      - name: Revert word breakers to the previous version
-        href: relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md
-      - name: Word breakers with a custom dictionary
+      - name: Dictionary files
         href: relational-databases/search/customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md
       - name: Stopwords and stoplists
         href: relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md
       - name: Thesaurus files
         href: relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md
-      - name: Filters and word breakers
-        href: relational-databases/search/full-text-index-binaries.md
-    - name: Manage & Monitor
+    - name: Manage and monitor
       href: relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md
       items:
-      - name: Set the Service Account for the Daemon Launcher
+      - name: Set the service account for the daemon launcher
         href: relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md
       - name: Upgrade Full-Text Search
         href: relational-databases/search/upgrade-full-text-search.md
-      - name: DDL, Functions, Stored Procedures, & Views
-        href: relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md
-      - name: Use the Indexing Wizard
+      - name: Use the full-text indexing wizard
         href: relational-databases/search/use-the-full-text-indexing-wizard.md
+      - name: DDL, functions, stored procedures, and views
+        href: relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md
     - name: Semantic Search
       href: relational-databases/search/semantic-search-sql-server.md
       items:
-      - name: Install & Configure
+      - name: Install and configure
         href: relational-databases/search/install-and-configure-semantic-search.md
-      - name: Enable on Tables & Columns
+      - name: Enable on tables and columns
         href: relational-databases/search/enable-semantic-search-on-tables-and-columns.md
-      - name: Find Key Phrases in Documents
+      - name: Find key phrases in documents
         href: relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md
-      - name: Find Similar & Related Documents
+      - name: Find similar and related documents
         href: relational-databases/search/find-similar-and-related-documents-with-semantic-search.md
-      - name: Manage & Monitor Semantic Search
+      - name: Manage and monitor Semantic Search
         href: relational-databases/search/manage-and-monitor-semantic-search.md
-      - name: DDL, Functions, Stored Procedures, & Views
+      - name: DDL, functions, stored procedures, and views
         href: relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md
+    - name: Breaking changes and deprecations
+      items:
+      - name: Full-text index version upgrade (SQL Server 2025)
+        href: relational-databases/search/full-text-index-version-upgrade.md
+      - name: Deprecated features in SQL Server 2016
+        href: relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md
+      - name: Change the US English and UK English word breaker (SQL Server 2012)
+        href: relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md
+      - name: Revert legacy word breakers (SQL Server 2012)
+        href: relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md
   - name: Synonyms
     href: relational-databases/synonyms/synonyms-database-engine.md
     items:

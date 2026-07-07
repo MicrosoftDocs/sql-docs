@@ -1,52 +1,24 @@
 ---
-title: Change the Word Breaker and Filter in SQL Server 2025
+title: Change the word breaker used for US English and UK English
 titleSuffix: SQL Server Full-Text Search
-description: Change the word breaker used for US English and UK English in SQL Server 2025.
+description: Change the word breaker used for US English and UK English in earlier full-text search versions.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: search
 ms.topic: how-to
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016"
 ---
-# Change the word breaker and filter in SQL Server 2025 (SQL Server Search)
+# Change the word breaker used for US English and UK English
 
-[!INCLUDE [sssql25-md](../../includes/applies-to-version/sqlserver2025.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] installs new word breakers and filters, replacing all the previous versions of these components. For more information, see [Full-text index version upgrade](full-text-index-version-upgrade.md).
+This article describes the legacy procedure for switching US English and UK English word breakers between the updated components introduced in [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and the previous English components.
 
-Binaries installed with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] are called **version 2**, and binaries installed with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions are called **version 1**. This article describes how to switch between version 2 and version 1 components.
+For information about the full-text index version change in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], see [Full-text index version upgrade](full-text-index-version-upgrade.md).
 
-## Switch from version 2 to version 1 components
-
-> [!NOTE]  
-> You should use the default version 2 word breakers and filters installed with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. They're enhanced, more secure, and compliant with security scans.
-
-The default database scoped configuration for full-text indexes is version 2. You can change it to version 1 with the following Transact-SQL statement.
-
-   ```sql
-   ALTER DATABASE SCOPED CONFIGURATION SET FULLTEXT_INDEX_VERSION = 1;
-   ```
-
-[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] removes legacy version 1 word breakers and filters. You must copy these binaries from a previous instance's `C:\Program Files\Microsoft SQL Server\MSSQL<nn>.<instance-name>\MSSQL\Binn` directory, where `<nn>` is the [product version](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-sql-server). For more information, see [Filters and word breakers in SQL Server Full-Text Search](full-text-index-binaries.md).
-
-For existing indexes, verify the version using the [sys.fulltext_indexes](../system-catalog-views/sys-fulltext-indexes-transact-sql.md) catalog view. If the index is already version 1, you don't need to rebuild it. For a version 2 index, rebuild the catalog to switch back to version 1.
-
-## Switch from version 1 to version 2 components
-
-For instances upgraded from [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] to [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], you must rebuild full-text indexes with version 1 components using version 2 components.
-
-```sql
-ALTER FULLTEXT CATALOG [FtCatalog] REBUILD;
-```
-
-> [!NOTE]  
-> A catalog rebuild operation rebuilds all full-text indexes. If you want to control the order of the index build, or reduce resource requirements, [drop and recreate](../../t-sql/statements/drop-fulltext-index-transact-sql.md) the full-text indexes individually.
-
-## Change the word breaker used for US English and UK English
-
-**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions.
 
 [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] installs an updated version of the word breaker and stemmer for the English language, replacing the previous version of these components. For information about the changed behavior of the updated components, see [Behavior changes in Full-Text Search](/previous-versions/sql/2014/database-engine/behavior-changes-to-full-text-search#behavior-changes-in-full-text-search-in--1).
 
@@ -61,7 +33,7 @@ Some previous versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.
 
 The components described in this article are DLL files that are installed in the `MSSQL\Binn` folder for the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. The full path is typically `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`.
 
-For more information about word breakers and stemmers, see [Configure and manage word breakers and stemmers for search (SQL Server)](configure-and-manage-word-breakers-and-stemmers-for-search.md).
+For more information about word breakers and stemmers, see [Configure and manage word breakers and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md).
 
 ## Switch from the current English word breaker to the previous English word breakers
 

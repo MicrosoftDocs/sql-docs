@@ -11,6 +11,7 @@ ms.subservice: backup-restore
 ms.topic: quickstart
 ms.custom:
   - mode-other
+ai-usage: ai-assisted
 ---
 # Monitor backup activity for Azure SQL Managed Instance
 
@@ -26,7 +27,9 @@ Enterprise Audits might require proof of successful backups, time of backup, and
 
 ## Query msdb database
 
-To view backup activity, run the following query from user-defined database:
+To query backup history from `msdb`, you need access to the `msdb` database on the SQL managed instance. For example, you can gain access by being a member of a role that grants `SELECT` on `msdb.dbo.backupset` and `msdb.dbo.backupmediafamily`.
+
+To view backup activity, run the following query from a user-defined database:
 
 ```sql
 SELECT TOP (100)
@@ -60,9 +63,18 @@ OPTION (RECOMPILE); -- Optimize for ad hoc execution
 
 ## Configure XEvent session
 
-Use the extended event `backup_restore_progress_trace` to record the progress of your SQL Managed Instance back up. Modify the XEvent sessions as needed to track the information you're interested in for your business. These T-SQL snippets store the XEvent sessions in the ring buffer, but it's also possible to write to [Azure Blob Storage](../database/xevent-code-event-file.md). XEvent sessions storing data in the ring buffer have a limit of about 1,000 messages so should only be used to track recent activity. Additionally, ring buffer data is lost upon failover. As such, for a historical record of backups, write to an event file instead.
+Use the extended event `backup_restore_progress_trace` to record the progress of your SQL Managed Instance backup. Modify the XEvent sessions as needed to track the information you're interested in for your business. These T-SQL snippets store the XEvent sessions in the ring buffer, but you can also write to [Azure Blob Storage](../database/xevent-code-event-file.md). XEvent sessions that store data in the ring buffer have a limit of about 1,000 messages, so use them only to track recent activity. Additionally, ring buffer data is lost upon failover. For a historical record of backups, write to an event file instead.
 
-### Basic tracking
+To create and start an XEvent session, you need the `ALTER ANY EVENT SESSION` permission on the managed instance.
+
+The following table summarizes the two sessions described in this article:
+
+| Session | Events captured | Target | Use case |
+| --- | --- | --- | --- |
+| Basic backup trace | Completion (100 percent) of full backups | Ring buffer | Track recent completed full backups. |
+| Verbose backup trace | Start and finish of full, differential, and log backups | Ring buffer | Track detailed activity across all backup types. |
+
+### Configure basic tracking
 
 Configure a basic XEvent session to capture events about complete full backups. This script collects the name of the database, the total number of bytes processed, and the time the backup completed.
 
@@ -82,7 +94,9 @@ ALTER EVENT SESSION [Basic backup trace] ON SERVER
 STATE = start;
 ```
 
-### Verbose tracking
+To confirm the session is running, query `sys.dm_xe_sessions` for `Basic backup trace`.
+
+### Configure verbose tracking
 
 Configure a verbose XEvent session to track greater details about your backup activity. This script captures start and finish of both full, differential and log backups. Since this script is more verbose, it fills up the ring buffer faster, so entries might recycle faster than with the basic script.
 
@@ -105,13 +119,15 @@ ALTER EVENT SESSION [Verbose backup trace] ON SERVER
 STATE = start;
 ```
 
+To confirm the session is running, query `sys.dm_xe_sessions` for `Verbose backup trace`.
+
 ## Monitor backup progress
 
 After the XEvent session is created, you can use T-SQL to query ring buffer results and monitor the progress of the backup. Once the XEvent starts, it collects all backup events so entries are added to the session roughly every 5-10 minutes.
 
-### Basic tracking
+### Query the basic tracking session
 
-The following T-SQL code queries the basic XEvent session and returns the name of the database, the total number of bytes processed, and the time the backup completed:
+The following T-SQL code queries the `Basic backup trace` session and returns the name of the database, the total number of bytes processed, and the time the backup completed:
 
 ```sql
 WITH
@@ -119,7 +135,7 @@ a AS (SELECT CAST (xet.target_data AS XML) AS xed
     FROM sys.dm_xe_session_targets AS xet
          INNER JOIN sys.dm_xe_sessions AS xe
              ON (xe.address = xet.event_session_address)
-    WHERE xe.name = 'Backup trace'),
+    WHERE xe.name = 'Basic backup trace'),
 b AS (SELECT d.n.value('(@timestamp)[1]', 'datetime2') AS [timestamp],
            ISNULL(db.name, d.n.value('(data[@name="database_name"]/value)[1]', 'varchar(200)')) AS database_name,
            d.n.value('(data[@name="trace_message"]/value)[1]', 'varchar(4000)') AS trace_message
@@ -130,15 +146,15 @@ CROSS APPLY xed.nodes('/RingBufferTarget/event') AS d(n)
 SELECT * FROM b;
 ```
 
-The following screenshot shows an example of the output of the previous query:
+The following screenshot shows an example of the output of the `Basic backup trace` query:
 
 :::image type="content" source="media/backup-activity-monitor/present-xevents-output.png" alt-text="Screenshot of the XEvent output." lightbox="media/backup-activity-monitor/present-xevents-output.png":::
 
 In this example, five databases were automatically backed up over the course of 2 hours and 30 minutes, and there are 130 entries in the XEvent session.
 
-### Verbose tracking
+### Query the verbose tracking session
 
-The following T-SQL code queries the verbose XEvent session and returns the name of the database, as well as the start and finish of both full, differential and log backups.
+The following T-SQL code queries the `Verbose backup trace` session and returns the name of the database, as well as the start and finish of full, differential, and log backups.
 
 ```sql
 WITH

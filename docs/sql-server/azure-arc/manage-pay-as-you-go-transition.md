@@ -32,11 +32,11 @@ To manage the transition follow these steps.
 - Make sure you have an active Azure account with at least one subscription.
 - Make sure that all on-premises SQL Server instances covered by the license with Software assurance or by SQL subscription are connected to Azure Arc.
 - If you license virtual cores or physical cores without using VMs, make sure that the Azure extensions for SQL Server are configured with `licenseType` set to `Paid`. See [License SQL Server instances by virtual cores](manage-license-billing.md#license-vcores) and [License SQL Server instances by physical cores without VMs](manage-license-billing.md#license-pcores-without-vms) for details.
-- If you use the unlimited virtualization licensing method, make sure the p-core license or licenses are created with `billingPlan` set to `Paid`, activated and all SQL Servers instances covered by the licenses are properly configured with `licenseType` set to `Paid`. See [License SQL Server instances by physical cores with unlimited virtualization](manage-license-billing.md#unlimited-virtualization) for details.
+- If you use the unlimited virtualization licensing method, make sure the physical core license or licenses are created with `billingPlan` set to `Paid`, activated and all SQL Servers instances covered by the licenses are properly configured with `licenseType` set to `Paid`. See [License SQL Server instances by physical cores with unlimited virtualization](manage-license-billing.md#unlimited-virtualization) for details.
 
 > [!IMPORTANT]
 >
-> When using the placement policy on Azure VMware Service to enable unlimited virtualization, ensure that the p-core license with `billingPlan` set to `Paid` is created in coordination with the Microsoft account team.
+> When using the placement policy on Azure VMware Service to enable unlimited virtualization, ensure that the physical core license with `billingPlan` set to `Paid` is created in coordination with the Microsoft account team.
 
 ### On the license agreement expiration date
 
@@ -162,7 +162,7 @@ SQL Server enabled by Azure Arc automatically installs Azure extension for SQL S
 
 ## Manage extension health
 
-With a pay-as-you-go subscription, the health of the extensions becomes a critical factor of your compliance as it collects the usage data and ensures the correct billing. The intermittent disconnections up to 30 days are allowed as the extension maintains a usage log on the machine, but it is your responsibility to ensure the extensions stay healthy. The Azure portal includes a [Health Dashboard](https://ms.portal.azure.com/#view/Microsoft_Azure_ArcCenterUX/ArcCenterMenuBlade/~/sqlServerHealthDashboard) providing the high level view of the extensions' state. For details of troubleshooting of the unhealthy extensions, see [Troubleshoot Azure extension for SQL Server](troubleshoot-extension.md).
+With a pay-as-you-go subscription, the health of the extensions becomes a critical factor of your compliance as it collects the usage data and ensures the correct billing. The intermittent disconnections up to 30 days are allowed as the extension maintains a usage log on the machine, but it's your responsibility to ensure the extensions stay healthy. The Azure portal includes a [Health Dashboard](https://portal.azure.com/#view/Microsoft_Azure_ArcCenterUX/ArcCenterMenuBlade/~/sqlServerHealthDashboard) providing the high level view of the extensions' state. For details of troubleshooting of the unhealthy extensions, see [Troubleshoot Azure extension for SQL Server](troubleshoot-extension.md).
 
 ## Analyze costs
 

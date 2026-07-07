@@ -59,30 +59,6 @@ Before spending too much time troubleshooting, it is important to use the latest
 - Change Data Capture for Oracle by Attunity stops working when Oracle tables have column with Long data type.
     - Fixed in _Cumulative Update 5 for SQL Server 2014 SP1_ and _Cumulative Update 12 for SQL 2014 RTM_ as described in KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d).
 
-### SQL Server 2012
-
-**Version 1.1.0.102** contains these fixes: 
- 
-- Properties added in the Advanced options of the Attunity CDC instance are removed when a table is added or removed from CDC. Attunity CDC stops working after applying SQL fix that adds __$command_id column
-- CDC for Oracle instance stops responding when you start it, and does not capture changes. Oracle server memory may increase until it runs out of memory or crash.
-- [2672759](https://support.microsoft.com/kb/2672759): Error message when you use the Microsoft Change Data Capture Service for Oracle by Attunity: "ORA-00600: internal error code". Add the SOURCE level tracing and confirm if you get the same ORA-00600 error. Fixed by an Oracle patch download.
-- Multiple Partitions
-    - When you use more than 10 partitions on an Oracle table, the CDC instance cannot capture all the changes for the table. When the Oracle table is defined with more than 10 partitions, the changes are only captured from the last 10 partitions. Fixed in the _Service Pack 1 release for SQL Server 2012_. See [SP1 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=35575). 
-- Changes are lost
-    - The capturing of events can go into an infinite loop and stop capturing new data changes (related to Oracle bug 5623813). When on Oracle RAC environment is performing a stop or resume  of the CDC instance, changes can be skipped/lost. This means the SQL Server change data capture will be missing important rows, and thus there is data loss in the data warehouse or subscribing system. Fixed in the _Service Pack 1 release for SQL Server 2012_. See [SP1 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=35575)
-- Double widths on columns in SQL
-- DDL Data is truncated
-    - When you run a Data Definition Language (DDL) statement that is more than 4,000 bytes against an Oracle database that contains non-Latin characters, CDC for Oracle by Attunity fails. Additionally, you see the error message `ORA-01406: fetched column value was truncated.`. Fixed in _Cumulative Update 4 for SQL Server 2012 SP1_. 
-- Changes are lost in last two columns
-    - Fixed in _Cumulative update 6 for SQL Server 2012 SP1_ as described in KB [2874879](https://support.microsoft.com/kb/2874879). 
-- SQL Transaction log grows when you use CDC for Oracle
-     - When Change Data Capture for Oracle instances are configured, the SQL database that receives the changed data will have mirrored tables, with   transactions marked for replication. This behavior occurs because CDC for Oracle relies on underlying system stored procedures that resemble those that are used in CDC for SQL Server. However, because there is no SQL CDC replication involved when CDC for Oracle is used alone, there is no log reader to clear the transactions that are marked for replication. Because the transaction does not have to be replicated in SQL Server, it's safe to manually mark the transaction as distributed by using the workaround that's described later in this article. More information can be found in KB [2871474](https://support.microsoft.com/kb/2871474). 
-- Error `ORACDC000T: Error encountered at position to change event - SCN not found - EOF simulated`. Fixed in _Cumulative Update 7 for SQL Server 2012 SP1_ as described in KB [2883524](https://support.microsoft.com/kb/2883524). 
-- The metadata validation for Oracle table cdc.table_name failed. Column column_name index is out of range. Fixed in _Cumulative Update 7 for SQL Server 2012 SP1_ as described in KB [2883524](https://support.microsoft.com/kb/2883524).
-- Oracle CDC service shows aborted status when you use CDC for Oracle by Attunity in SQL Server 2012. Fixed in _Cumulative Update 8 for SQL Server 2012 SP1_.  
-- Some changes are missed and are not replicated to the SQL Server databases. This issue occurs when a table contains more than one character large binary object (CLOB) and one of the CLOBs has a large value. Fixed in _Cumulative Update 8 for SQL Server 2012 SP1_.   
-- Change Data Capture for Oracle by Attunity stops working when Oracle tables have column with Long data type. Fixed in _Cumulative Update 2 for SQL Server 2012 SP3_ and _Cumulative Update 11 for SQL 2012 SP2_  as described in KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d). 
-
 ## Collect detailed logs 
 
 This section explains how to collect errors and events from the CDC instance. 

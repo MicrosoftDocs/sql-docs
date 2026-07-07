@@ -1,57 +1,3 @@
----
-title: Filters and Word Breakers
-titleSuffix: SQL Server Full-Text Search
-description: View list of SQL Server Full-Text Search filters and word breakers.
-author: rwestMSFT
-ms.author: randolphwest
-ms.date: 03/06/2026
-ms.service: sql
-ms.subservice: search
-ms.topic: concept-article
-helpviewer_keywords:
-  - "full-text search [SQL Server], word breakers"
-  - "full-text search [SQL Server], filters"
-  - "filters [full-text search]"
-  - "word breakers [full-text search]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
----
-# Filters and word breakers - SQL Server Full-Text Search
-
-[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] installs new word breakers and filters, replacing all previous versions of these components.
-
-- **Version 2** - Binaries installed with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
-- **Version 1** - Binaries installed with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions.
-
-To keep using version 1 binaries after an in-place upgrade to [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]:
-
-- Copy the filter, word breaker, and other dependent binaries from the previous [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance's `C:\Program Files\Microsoft SQL Server\MSSQL16.<instance-name>\MSSQL\Binn` directory to the corresponding `C:\Program Files\Microsoft SQL Server\MSSQL17.<instance-name>\MSSQL\Binn` folder.
-- The upgrade preserves the associated registry settings and doesn't remove them in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
-
-## Filters
-
-### [Version 1](#tab/version1)
-
-| Filter | Extension | CLSID |
-| --- | --- | --- |
-| `msfte.dll` | `.asm`, `.bat`, `.c`, `.cmd`, `.cpp`, `.cxx`, `.def`, `.dic`, `.h`, `.hpp`, `.hxx`, `.ibq`, `.idl`, `.inc`, `.inf`, `.ini`, `.inx`, `.js`, `.log`, `.m3u`, `.pl`, `.rc`, `.reg`, `.rtf`, `.txt`, `.url`, `.vbs`, `.wtx` | `C7310720-AC80-11D1-8DF3-00C04FB6EF4F` |
-| `nlhtml.dll` | `.ascx`, `.asp`, `.aspx`, `.hhc`, `.htm`, `.html`, `.htw`, `.htx`, `.odc`, `.stm` | `E0CA5340-4534-11CF-B952-00AA0051FE20` |
-| `xmltfilt.dll` | `.xml` | `41B9BE05-B3AF-460C-BF0B-2CDD44A093B1` |
-
-### [Version 2](#tab/version2)
-
-| Filter | Extension | CLSID |
-| --- | --- | --- |
-| `nlhtml02.dll` | `.ascx`, `.asp`, `.aspx`, `.css`, `.hhc`, `.hta`, `.htm`, `.html`, `.htt`, `.htw`, `.htx`, `.odc`, `.shtm`, `.shtml`, `.sor`, `.srf`, `.stm` | `56BD18AD-CF9C-4110-AAAA-B2F96887D123` |
-| `offfilt02.dll` | `.doc`, `.dot`, `.obd`, `.obt`, `.pot`, `.pps`, `.ppt`, `.xlb`, `.xlc`, `.xls`, `.xlt` | `64F1276A-7A68-4190-882C-5F14B7852019` |
-| `offfiltx02.dll` | `.docm`, `.docx`, `.dotx`<br /><br />`.pptm`, `.pptx`<br /><br />`.xlsm`, `.xlsx`<br /><br />`.xlsb`<br /><br />`.zip` | `5A98B233-3C59-4B31-944C-0E560D85E6C3`<br /><br />`DDFE337F-4987-4EC8-BDE3-133FA63D5D85`<br /><br />`F90DFE0C-CBDF-41FF-8598-EDD8F222A2C8`<br /><br />`312AB530-ECC9-496E-AE0E-C9E6C5392499`<br /><br />`20E823C2-62F3-4638-96BD-90F4F6784EBC` |
-| `odffilt02.dll` | `.odt`<br /><br />`.odp`<br /><br />`.ods` | `9FBC2D8F-6F52-4CFA-A86F-096F3E9EB4B2`<br /><br />`4693FF15-B962-420A-9E5D-176F7D4B8321`<br /><br />`E2F5480E-ED5A-4DDE-B8A8-F9F297479F62` |
-| `onfilter02.dll` | `.one` | `B8D12492-CE0F-40AD-83EA-099A03D493F1` |
-| `msgfilt02.dll` | `.msg` | `4039B326-9F27-4B4A-B460-47A0C6A39D5C` |
-
----
-
-## Word breakers
-
 ### [Version 1](#tab/version1)
 
 | Language | LCID | Word breaker | Other dependent files | CLSID |
@@ -173,9 +119,3 @@ To keep using version 1 binaries after an in-place upgrade to [!INCLUDE [sssql25
 | Chinese (Macao SAR) | 5124 | `MsWb70404.dll` | `Nl7Lexicons0404.dll`<br />`Nl7Data0404.dll`<br />`Nl7Models0404.dll` | `E9B1DF65-08F1-438B-8277-EF462B23A792` | N/A |
 
 ---
-
-## Related content
-
-- [View or change registered filters and word breakers (SQL Server Search)](view-or-change-registered-filters-and-word-breakers.md)
-- [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md)
-- [Configure and manage word breakers and stemmers for search (SQL Server)](configure-and-manage-word-breakers-and-stemmers-for-search.md)

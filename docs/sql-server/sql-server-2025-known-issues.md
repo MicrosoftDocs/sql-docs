@@ -214,7 +214,7 @@ Msg 30010, Level 16, State 2, Line 119
 An error has occurred during the full-text query. Common causes include: word-breaking errors or timeout, FDHOST permissions/ACL issues, service account missing privileges, malfunctioning IFilters, communication channel issues with FDHost and sqlservr.exe, etc. If recently performed in-place upgrade to SQL2025, For help please see https://aka.ms/sqlfulltext.
 ```
 
-**Workaround**: Avoid using inflectional-form queries for languages that don't have registered stemmers. For more information, see [Version 2 word breakers](../relational-databases/search/full-text-index-binaries.md#word-breakers). If the application has a strong dependency on inflectional or linguistic search behavior for such languages, configure the database to use Full-Text Index Version 1 instead.
+**Workaround**: Avoid using inflectional-form queries for languages that don't have registered stemmers. For more information, see [Full-text word breaker and stemmer binaries](../relational-databases/search/full-text-word-breaker-and-stemmer-binaries.md). If the application has a strong dependency on inflectional or linguistic search behavior for such languages, configure the database to use Full-Text Index Version 1 instead.
 
 ## Incorrect license agreement for LocalDB installer
 

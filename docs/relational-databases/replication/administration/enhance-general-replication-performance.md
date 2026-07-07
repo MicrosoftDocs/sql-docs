@@ -3,7 +3,7 @@ title: "Enhance General Replication Performance"
 description: "Enhance General Replication Performance"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: 09/25/2024
+ms.date: 06/05/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
@@ -107,6 +107,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
      The Distribution Agent and Merge Agent run at the Distributor for push subscriptions, and at Subscribers for pull subscriptions. Using pull subscriptions can improve performance by moving agent processing from the Distributor to Subscribers. For more information, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md).  
   
+- For distant Subscribers with higher network latency, consider using pull subscriptions.
+
+  - In a *push subscription*, the Distribution Agent runs on the Distributor and uses two buffers to read and write data. Once both buffers are full, the Agent must wait for a network round-trip acknowledgment before sending more, which creates idle time that can increase with latency.
+
+  - With a *pull subscription*, the Distribution Agent runs on the Subscriber, so writes are applied locally and buffers are freed quickly. This process allows for continuous reads from the Distribution database, with significantly better throughput when latency is high.
+
 -   Consider reinitialization of the subscription if Subscribers are too far behind.  
   
      When large amounts of changes need to be sent to Subscribers, reinitializing them with a new snapshot might be faster than using replication to move the individual changes. For more information, see [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md).  

@@ -8705,6 +8705,8 @@ items:
         href: tools/sql-database-projects/tutorials/create-deploy-sql-project.md
       - name: Start from an existing database
         href: tools/sql-database-projects/tutorials/start-from-existing-database.md
+      - name: Store the database schema in Git
+        href: tools/sql-database-projects/tutorials/store-database-schema-git.md
     - name: How-to guides
       items:
       - name: Analyze project code

@@ -248,15 +248,13 @@ Virtual host example: `s3://<bucket>.<domain>/<backup_file_name>`
 
 ### Create credential
 
-- The name of the credential should provide the storage path, and there are multiple standards for this depending on the storage platform.
 - The IDENTITY should always be `'S3 Access Key'` when using the S3 connector.
 - The Access Key ID and Secret Key ID must not contain a colon. Access Key ID and Secret Key ID is the user and password created on the S3-compatible object storage.
 - Only alphanumeric values are allowed.
 - The Access Key ID must have proper permissions on the S3-compatible object storage.
 
 <!-- docs\t-sql\statements\create-credential-transact-sql.md -->
-
-Use [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md) to create a server level credential for authentication with the S3-compatible object storage endpoint.
+Use [CREATE CREDENTIAL](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md#create-a-server-level-credential-before-running-backuprestore) to create a server-level credential for authentication with the S3-compatible object storage endpoint.
 
 ```sql
 USE [master];

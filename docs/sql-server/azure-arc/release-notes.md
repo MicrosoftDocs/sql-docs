@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: randolphwest, mathoma
-ms.date: 07/02/2026
+ms.date: 07/10/2026
 ms.topic: release-notes
 ms.custom:
   - ignite-2025
@@ -43,7 +43,6 @@ The following table lists the features of SQL Server enabled by Azure Arc that a
 | [Automated backups](backup-local.md) | Automatically perform backups to local storage or network shares. |
 | [Azure Extension for SQL Server on Linux](connect.md?tabs=linux) | Connect SQL Server on Linux to Azure Arc. |
 | [Microsoft Purview: data owner policies](/purview/legacy/how-to-policies-data-owner-authoring-generic) | Manage access to user data in sources that have been registered for Data Policy Enforcement in Microsoft Purview for your SQL Server instances and databases. |
-| [Database migration (SQL VM)](/sql/sql-server/azure-arc/migrate-to-sql-server-on-azure-vms) | Migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal. |
 | [Monitoring](sql-monitoring.md) | Monitor SQL Server performance and activity with built-in dashboards in the Azure portal. |
 | [Restore to a point in time](point-in-time-restore.md) | Restore a database to a specific point in time. |
 
@@ -53,13 +52,12 @@ The following table lists features of SQL Server enabled by Azure Arc that have 
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
+| [Database migration (SQL VM)](/sql/sql-server/azure-arc/migrate-to-sql-server-on-azure-vms) | June 2026 | Migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal. |
 | [Backup to URL with a managed identity](backup-to-url.md)| November 2025 | Use a managed identity to authenticate to Azure Blob Storage for backups to URL. |
 | [Managed identity](managed-identity.md) | November 2025 | Use a managed identity to authenticate to your SQL Server instance starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. |
 | [Database migration (SQL MI)](migrate-to-azure-sql-managed-instance.md) | October 2025 | Migrate your SQL Server databases to Azure SQL Managed Instance directly from the Azure portal. |
 | [Client connection summary](sql-connection-summary.md)| October 2025 | View a summary of all client connections to your SQL Server instances. |
 | [US Government Virginia region availability](us-government-region.md) | August 2025 | Connect SQL Server instances in US Government Virginia to Azure Arc. |
-| [Migration assessment](migration-assessment.md) | June 2025 | Assess your SQL Server instances for migration readiness to Azure SQL. |
-| [Move resources](move-resources.md) | October 2024 | Move SQL Server enabled by Azure Arc resources to a new resource group or subscription. |
 
 ## Release notes by date
 
@@ -94,6 +92,7 @@ This section lists the release notes by date, starting with the most recent rele
 
 **Extension version**: `1.1.3464.439`
 
+- The ability to migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal is now generally available. To learn more, see [Migration from the Azure portal](migrate-to-sql-server-on-azure-vms.md).
 - Improved HADR detection for billing.
 - Bug fixes and quality improvements.
 

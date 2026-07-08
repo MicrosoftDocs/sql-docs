@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current"
 
 Returns information about ongoing database copy operations for a database in Azure SQL Database.
   
-To return information about geo-replication links, use the [sys.geo_replication_links](sys-geo-replication-links-azure-sql-database.md) or [sys.dm_geo_replication_link_status](sys-dm-geo-replication-link-status-azure-sql-database.md) views.
+To return information about geo-replication links, use the [sys.geo_replication_links](../system-views/sys-geo-replication-links-azure-sql-database.md) system view, or the [sys.dm_geo_replication_link_status](sys-dm-geo-replication-link-status-azure-sql-database.md) dynamic management view.
 
 
 |Column Name|Data Type|Description|  

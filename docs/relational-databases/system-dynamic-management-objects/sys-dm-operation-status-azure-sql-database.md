@@ -91,5 +91,5 @@ ORDER BY start_time DESC;
 
 - [Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
 - [sys.dm_geo_replication_link_status (Azure SQL Database)](sys-dm-geo-replication-link-status-azure-sql-database.md)
-- [sys.geo_replication_links (Azure SQL Database)](sys-geo-replication-links-azure-sql-database.md)
+- [sys.geo_replication_links (Azure SQL Database)](../system-views/sys-geo-replication-links-azure-sql-database.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

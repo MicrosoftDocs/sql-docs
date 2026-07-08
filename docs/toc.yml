@@ -11523,6 +11523,10 @@ items:
         href: relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md
       - name: sys.registered_search_property_lists
         href: relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md
+    - name: Geo-Replication (Azure SQL)
+      items:
+      - name: sys.geo_replication_links (Azure SQL Database)
+        href: relational-databases/system-views/sys-geo-replication-links-azure-sql-database.md
     - name: Linked Servers
       href: relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md
       items:
@@ -12409,8 +12413,6 @@ items:
     - name: Geo-Replication (Azure SQL)
       href: relational-databases/system-dynamic-management-objects/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md
       items:
-      - name: sys.geo_replication_links (Azure SQL Database)
-        href: relational-databases/system-dynamic-management-objects/sys-geo-replication-links-azure-sql-database.md
       - name: sys.dm_geo_replication_link_status (Azure SQL)
         href: relational-databases/system-dynamic-management-objects/sys-dm-geo-replication-link-status-azure-sql-database.md
       - name: sys.dm_continuous_copy_status (Azure SQL)

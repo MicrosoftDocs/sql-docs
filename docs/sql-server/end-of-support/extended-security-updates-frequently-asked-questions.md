@@ -39,7 +39,7 @@ Enterprise and Standard editions of [!INCLUDE [sssql14-md](../../includes/sssql1
 
 ## Can customers subscribe to ESUs for SQL Server Express, Web, or Developer edition?
 
-No. Customers can't subscribe to ESUs for SQL Server Express, Web, or Developer edition. However, customers who have ESUs for SQL Server production workloads can apply updates to their servers running SQL Server Developer edition solely for development and test purposes.
+No. Customers can't subscribe to ESUs for SQL Server Express, Web, or Developer edition. However, customers who have ESUs for SQL Server production workloads can apply updates to their servers running SQL Server Developer edition [solely for development and test purposes](../azure-arc/extended-security-updates.md#manage-sql-server-esu-subscriptions-for-nonproduction-use).
 
 ## What happens when the edition changes?
 

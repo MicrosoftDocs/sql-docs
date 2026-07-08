@@ -69,7 +69,7 @@ FROM sys.dm_geo_replication_link_status;
 ## Related content
 
 - [sys.dm_database_replica_states (Azure SQL Database)](sys-dm-database-replica-states-azure-sql-database.md)
-- [sys.geo_replication_links (Azure SQL Database)](sys-geo-replication-links-azure-sql-database.md)
+- [sys.geo_replication_links (Azure SQL Database)](../system-views/sys-geo-replication-links-azure-sql-database.md)
 - [sys.dm_operation_status (Azure SQL Database)](sys-dm-operation-status-azure-sql-database.md)
 - [sp_wait_for_database_copy_sync](../system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql.md)
 - [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)

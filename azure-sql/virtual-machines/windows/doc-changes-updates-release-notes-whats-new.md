@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, dpless
-ms.date: 05/27/2026
+ms.date: 07/10/2026
 ms.service: azure-vm-sql-server
 ms.topic: whats-new
 ms.custom:
@@ -37,7 +37,6 @@ The following table lists the features of SQL Server on Azure VMs that are curre
 | Feature | Details |
 | --- | --- |
 | [Modernization Advisor](../modernization-advisor.md) | Use the Modernization Advisor in the Azure portal to help you determine if migrating to Azure SQL Managed Instance saves you money or optimizes performance. |
-| [Migration from the Azure portal](/sql/sql-server/azure-arc/migrate-to-sql-server-on-azure-vms) | Migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal. |
 | [Premium SSD v2 in the Azure portal](storage-configuration-premium-ssd-v2.md) | Deploy your SQL Server on Azure VM with Premium SSD v2 disks in the Azure portal for improved throughput and performance. |  
 | [Unified inventory](unified-inventory-sql-vm.md) | View your SQL Server on Azure VM and SQL Server enabled by Azure Arc resources in a single pane in the Azure portal. With unified inventory, you can view your *SQL Server instance* resources, making it easier to monitor and maintain your SQL Server workloads in Azure. |
 
@@ -47,12 +46,19 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 
 | Changes | Month | Details |
 | --- | --- |--- |
+| [Migration from the Azure portal](/sql/sql-server/azure-arc/migrate-to-sql-server-on-azure-vms) | June 2026 | Migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal. |
 | [VM vCore customization](vm-vcore-customization-for-sql.md) | May 2026 | Customize the number of vCPUs presented to the guest OS for SQL Server workloads with configurable constrained cores (CCC), and disable Simultaneous Multithreading (SMT). This capability allows you to appropriately size the vCPU count to match your SQL Server licensing needs while preserving the VM's memory and I/O capabilities. |
 
 
-## Documentation changes 
+## Documentation changes
 
 Learn about significant changes to the SQL Server on Azure VMs documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### June 2026
+
+| Changes | Details |
+| --- | --- |
+| **Migration through the Azure portal GA** | Migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal. This feature is now generally available (GA). To learn more, see [Migration from the Azure portal](/sql/sql-server/azure-arc/migrate-to-sql-server-on-azure-vms). |
 
 ### May 2026
 

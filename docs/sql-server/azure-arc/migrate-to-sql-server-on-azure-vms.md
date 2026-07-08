@@ -5,21 +5,20 @@ description: SQL Server migration in Azure Arc to SQL Server on Azure VMs in the
 author: danimir
 ms.author: danil
 ms.reviewer: randolphwest, mathoma
-ms.date: 06/25/2026
+ms.date: 07/10/2026
 ms.topic: how-to
 ms.collection: ce-skilling-ai-copilot
 
 ---
 
-# Migration to SQL Server on Azure VMs (preview) - SQL Server migration in Azure Arc
+# Migration to SQL Server on Azure VMs - SQL Server migration in Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This article shows you how to perform a SQL Server migration in Azure Arc to [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) in the Azure portal for your [SQL Server instance enabled by Azure Arc](overview.md).
 
 > [!NOTE]  
-> - Migrating to SQL Server on Azure VMs through the Azure portal is currently in [preview](release-notes.md#preview).
-> - You can provide feedback about your migration experience [directly to the product group](https://aka.ms/arc-migrations-feedback).
+> You can provide feedback about your migration experience [directly to the product group](https://aka.ms/arc-migrations-feedback).
 
 ## Overview
 
@@ -122,14 +121,14 @@ After you assess your SQL Server instance, select a SQL Server VM target.
 
 After your target is ready, start the migration process.
 
-Selections on the **New data migration** page aren't available, or will error out, after you choose **Migrate using backup and restore (preview)** unless the Azure Blob Storage account has at least one single full backup, and permissions are correctly set.
+Selections on the **New data migration** page aren't available, or will error out, after you choose **Migrate using backup and restore** unless the Azure Blob Storage account has at least one single full backup, and permissions are correctly set.
 
 SQL Server VM migration relies on backups that you upload to an intermediary Azure Blob Storage account. If you have multiple backups, or want to have a continuous migration, you need to continue [uploading backups](migration-sql-vm-prepare.md#upload-backups-to-your-blob-storage-account) to the same blob storage account until you're ready to cut over.
 
 Follow these steps to migrate your SQL Server databases to a SQL Server VM by using backup and restore:
 
 1. On the **Database migration** pane, select **Migrate data**.
-1. On the **New data migration** pane, choose **Migrate using backup and restore (preview)**, and then use **Select** to proceed to the next page:
+1. On the **New data migration** pane, choose **Migrate using backup and restore**, and then use **Select** to proceed to the next page:
 
    :::image type="content" source="media/migrate-to-sql-server-on-azure-vms/migrate-data.png" alt-text="Screenshot of the Migrate Data page in the Azure portal.":::
 

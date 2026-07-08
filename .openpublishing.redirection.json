@@ -69852,7 +69852,12 @@
     },
     {
       "source_path": "docs/relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md",
-      "redirect_url": "/sql/relational-databases/system-dynamic-management-objects/sys-geo-replication-links-azure-sql-database",
+      "redirect_url": "/sql/relational-databases/system-views/sys-geo-replication-links-azure-sql-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-geo-replication-links-azure-sql-database.md",
+      "redirect_url": "/sql/relational-databases/system-views/sys-geo-replication-links-azure-sql-database",
       "redirect_document_id": false
     },
     {

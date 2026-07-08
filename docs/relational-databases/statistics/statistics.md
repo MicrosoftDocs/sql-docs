@@ -69,7 +69,7 @@ In more detail, SQL Server creates the **histogram** from the sorted set of colu
 
 The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.
 
-:::image type="content" source="../system-dynamic-management-views/media/histogram-2.svg" alt-text="Diagram of how a histogram is calculated from sampled column values.":::
+:::image type="content" source="media/statistics/sample-histogram.svg" alt-text="Diagram of how a histogram is calculated from sampled column values.":::
 
 For each histogram step in the previous example:
 

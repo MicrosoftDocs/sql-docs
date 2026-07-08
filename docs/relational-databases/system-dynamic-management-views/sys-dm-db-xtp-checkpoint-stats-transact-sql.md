@@ -31,12 +31,6 @@ USE [In_Memory_db_name]
 SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ```
 
-[!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] is substantially different from more recent versions, and is discussed separately.
-
-## [SQL Server 2016 and later versions](#tab/sql2016)
-
-The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions.
-
 | Column name | Type | Description |
 | --- | --- | --- |
 | `last_lsn_processed` | **bigint** | Last LSN seen by the controller. |
@@ -76,30 +70,6 @@ The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, f
 | `internal_error_code` | **bigint** | Error seen by any of the controller, serializer, close, and merge threads. |
 | `bytes_of_large_data_serialized` | **bigint** | Specifies the amount of data that was serialized. |
 | `db_in_checkpoint_only_mode` | **bit** | True if database is in in-memory OLTP checkpoint-only mode.<br /><br />**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions. |
-
-## [SQL Server 2014](#tab/sql2014)
-
-The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, for [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)].
-
-| Column name | Type | Description |
-| --- | --- | --- |
-| `log_to_process_in_bytes` | **bigint** | The number of log bytes between the thread's current log sequence number (LSN) and the end-of-log. |
-| `total_log_blocks_processed` | **bigint** | Total number of log blocks processed since server startup. |
-| `total_log_records_processed` | **bigint** | Total number of log records processed since server startup. |
-| `xtp_log_records_processed` | **bigint** | Total number of [!INCLUDE [inmemory](../../includes/inmemory-md.md)] log records processed since server startup. |
-| `total_wait_time_in_ms` | **bigint** | Cumulative wait time in ms. |
-| `waits_for_io` | **bigint** | Number of waits for log IO. |
-| `io_wait_time_in_ms` | **bigint** | Cumulative time spent waiting on log IO. |
-| `waits_for_new_log` | **bigint** | Number of waits for new log to be generated. |
-| `new_log_wait_time_in_ms` | **bigint** | Cumulative time spent waiting on new log. |
-| `log_generated_since_last_checkpoint_in_bytes` | **bigint** | Amount of log generated since the last [!INCLUDE [inmemory](../../includes/inmemory-md.md)] checkpoint. |
-| `ms_since_last_checkpoint` | **bigint** | Amount of time in milliseconds since the last [!INCLUDE [inmemory](../../includes/inmemory-md.md)] checkpoint. |
-| `checkpoint_lsn` | **numeric (38)** | The recovery log sequence number (LSN) associated with the last completed [!INCLUDE [inmemory](../../includes/inmemory-md.md)] checkpoint. |
-| `current_lsn` | **numeric (38)** | The LSN of the log record that is currently processing. |
-| `end_of_log_lsn` | **numeric (38)** | The LSN of the end of the log. |
-| `task_address` | **varbinary(8)** | The address of the SOS_Task. Join to `sys.dm_os_tasks` to find additional information. |
-
----
 
 ## Permissions
 

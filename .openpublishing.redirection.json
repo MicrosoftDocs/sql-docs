@@ -54961,6 +54961,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-merge-requests-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/replication/replication-to-sql-database.md",
       "redirect_url": "/azure/sql-database/replication-to-sql-database",
       "redirect_document_id": false

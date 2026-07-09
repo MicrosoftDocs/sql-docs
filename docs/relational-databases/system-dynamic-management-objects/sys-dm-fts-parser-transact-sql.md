@@ -1,13 +1,12 @@
 ---
-title: "sys.dm_fts_parser (Transact-SQL)"
+title: sys.dm_fts_parser (Transact-SQL)
 description: Returns the final tokenization result after applying a given word breaker.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 03/09/2023
+ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords:
   - "sys.dm_fts_parser_TSQL"
   - "dm_fts_parser"
@@ -17,11 +16,12 @@ helpviewer_keywords:
   - "sys.dm_fts_parser dynamic management function"
   - "troubleshooting [SQL Server], full-text search"
 dev_langs:
-  - "TSQL"
+  - TSQL
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 Returns the final tokenization result after applying a given [word breaker](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [thesaurus](../search/configure-and-manage-thesaurus-files-for-full-text-search.md), and [stoplist](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) combination to a query string input. The tokenization result is equivalent to the output of the Full-Text Engine for the specified query string.
 
@@ -30,7 +30,12 @@ Returns the final tokenization result after applying a given [word breaker](../s
 ## Syntax
 
 ```syntaxsql
-sys.dm_fts_parser ( 'query_string' , lcid , stoplist_id , accent_sensitivity )
+sys.dm_fts_parser (
+    'query_string'
+    , lcid
+    , stoplist_id
+    , accent_sensitivity
+)
 ```
 
 ## Arguments
@@ -45,7 +50,7 @@ Locale identifier (LCID) of the word breaker to be used for parsing *query_strin
 
 #### *stoplist_id*
 
-ID of the stoplist, if any, to be used by the word breaker identified by *lcid*. *stoplist_id* is **int**. If you specify 'NULL', no stoplist is used. If you specify 0, the system STOPLIST is used.
+ID of the stoplist, if any, to be used by the word breaker identified by *lcid*. *stoplist_id* is **int**. If you specify '`NULL`', no stoplist is used. If you specify 0, the system `STOPLIST` is used.
 
 A stoplist ID is unique within a database. To obtain the stoplist ID for a full-text index on a given table, use the [sys.fulltext_indexes](../system-catalog-views/sys-fulltext-indexes-transact-sql.md) catalog view.
 
@@ -59,20 +64,22 @@ Boolean value that controls whether full-text search is sensitive or insensitive
 | 1 | Sensitive<br /><br />Words such as "café" and "cafe" are treated differently. |
 
 > [!NOTE]  
-> To view the current setting of this value for a full-text catalog, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement: `SELECT fulltextcatalogproperty('<catalog_name>', 'AccentSensitivity');`.
+> To view the current setting of this value for a full-text catalog, run the following [!INCLUDE [tsql](../../includes/tsql-md.md)] statement: `SELECT fulltextcatalogproperty('<catalog_name>', 'AccentSensitivity');`.
 
 ## Table returned
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| keyword | **varbinary(128)** | The hexadecimal representation of a given keyword returned by a word breaker. This representation is used to store the keyword in the full-text index. This value isn't human-readable, but it is useful for relating a given keyword to output returned by other dynamic management views that return the content of a full-text index, such as [sys.dm_fts_index_keywords](sys-dm-fts-index-keywords-transact-sql.md) and [sys.dm_fts_index_keywords_by_document](sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br />**Note:** `0xFF` represents the special character that indicates the end of a file or dataset. |
-| group_id | **int** | Contain an integer value that is useful for differentiating the logical group from which a given term was generated. For example, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produces the following group_id values in English:<br /><br />1: Server<br />2: DB<br />3: DB |
-| phrase_id | **int** | Contains an integer value that is useful for differentiating the cases in which alternative forms of compound words, such as full-text, are issued by the word breaker. Sometimes, with presence of compound words ('multi-million'), alternative forms are issued by the word breaker. These alternative forms (phrases) need to be differentiated sometimes.<br /><br />For example, '`multi-million`' produces the following phrase_id values in English:<br /><br />1 for `multi`<br />1 for `million`<br />2 for `multimillion` |
-| occurrence | **int** | Indicates the order of each term in the parsing result. For example, for the phrase "`SQL Server query processor`" occurrence would contain the following occurrence values for the terms in the phrase, in English:<br /><br />1 for `SQL`<br />2 for `Server`<br />3 for `query`<br />4 for `processor` |
-| special_term | **nvarchar(4000)** | Contains information about the characteristics of the term that is being issued by the word breaker, one of:<br /><br />- Exact match<br />- Noise word<br />- End of Sentence<br />- End of paragraph<br />- End of Chapter |
-| display_term | **nvarchar(4000)** | Contains the human-readable form of the keyword. As with the functions designed to access the content of the full-text index, this displayed term might not be identical to the original term due to the denormalization limitation. However, it should be precise enough to help you identify it from the original input. |
-| expansion_type | **int** | Contains information about the nature of the expansion of a given term, one of:<br /><br />0 = Single word case<br />2 = Inflectional expansion<br />4 = Thesaurus expansion/replacement<br /><br />For example, consider a case in which the thesaurus defines run as an expansion of `jog`:<br /><br />`<expansion>`<br />`<sub>run</sub>`<br />`<sub>jog</sub>`<br />`</expansion>`<br /><br />The term `FORMSOF (FREETEXT, run)` generates the following output:<br /><br />`run` with expansion_type = 0<br />`runs` with expansion_type = 2<br />`running` with expansion_type = 2<br />`ran` with expansion_type = 2<br />`jog` with expansion_type = 4 |
-| source_term | **nvarchar(4000)** | The term or phrase from which a given term was generated or parsed. For example, a query on the `'"word breakers" AND stemmers'` produces the following *source_term* values in English:<br /><br />`word breakers` for the *display_term* `word`<br />`word breakers` for the *display_term* `breakers`<br />`stemmers` for the *display_term* `stemmers` |
+| `keyword` <sup>1</sup> | **varbinary(128)** | The hexadecimal representation of a given keyword returned by a word breaker. This representation is used to store the keyword in the full-text index. This value isn't human-readable, but it's useful for relating a given keyword to output returned by other dynamic management views that return the content of a full-text index, such as [sys.dm_fts_index_keywords](sys-dm-fts-index-keywords-transact-sql.md) and [sys.dm_fts_index_keywords_by_document](sys-dm-fts-index-keywords-by-document-transact-sql.md). |
+| `group_id` | **int** | Contain an integer value that is useful for differentiating the logical group from which a given term was generated. For example, `Server AND DB OR FORMSOF(THESAURUS, DB)` produces the following `group_id` values in English:<br /><br />`1`: Server<br />`2`: DB<br />`3`: DB |
+| `phrase_id` | **int** | Contains an integer value that is useful for differentiating the cases in which alternative forms of compound words, such as full-text, are issued by the word breaker. Sometimes, with presence of compound words ('multi-million'), alternative forms are issued by the word breaker. These alternative forms (phrases) need to be differentiated sometimes.<br /><br />For example, `multi-million` produces the following `phrase_id` values in English:<br /><br />`1` for `multi`<br />`1` for `million`<br />`2` for `multimillion` |
+| `occurrence` | **int** | Indicates the order of each term in the parsing result. For example, for the phrase `SQL Server query processor` occurrence would contain the following occurrence values for the terms in the phrase, in English:<br /><br />1 for `SQL`<br />2 for `Server`<br />3 for `query`<br />4 for `processor` |
+| `special_term` | **nvarchar(4000)** | Contains information about the characteristics of the term that is being issued by the word breaker, one of:<br /><br />- Exact match<br />- Noise word<br />- End of sentence<br />- End of paragraph<br />- End of chapter |
+| `display_term` | **nvarchar(4000)** | Contains the human-readable form of the keyword. As with the functions designed to access the content of the full-text index, this displayed term might not be identical to the original term due to the denormalization limitation. However, it should be precise enough to help you identify it from the original input. |
+| `expansion_type` | **int** | Contains information about the nature of the expansion of a given term, one of:<br /><br />0 = Single word case<br />2 = Inflectional expansion<br />4 = Thesaurus expansion/replacement<br /><br />For example, consider a case in which the thesaurus defines run as an expansion of `jog`:<br /><br />`<expansion>`<br />`<sub>run</sub>`<br />`<sub>jog</sub>`<br />`</expansion>`<br /><br />The term `FORMSOF (FREETEXT, run)` generates the following output:<br /><br />`run` with expansion_type = 0<br />`runs` with `expansion_type` = 2<br />`running` with `expansion_type` = 2<br />`ran` with `expansion_type` = 2<br />`jog` with `expansion_type` = 4 |
+| `source_term` | **nvarchar(4000)** | The term or phrase from which a given term was generated or parsed. For example, a query on the `'"word breakers" AND stemmers'` produces the following *source_term* values in English:<br /><br />`word breakers` for the *display_term* `word`<br />`word breakers` for the *display_term* `breakers`<br />`stemmers` for the *display_term* `stemmers` |
+
+<sup>1</sup> `0xFF` represents the special character that indicates the end of a file or dataset.
 
 ## Remarks
 
@@ -80,9 +87,9 @@ Boolean value that controls whether full-text search is sensitive or insensitive
 
 ## Use Unicode for parsing special characters
 
-When you parse a query string, `sys.dm_fts_parser` uses the collation of the database to which you are connected, unless you specify the query string as Unicode. Therefore, for a non-Unicode string that contains special characters, such as ü or ç, the output might be unexpected, depending on the collation of the database. To process a query string independently of the database collation, prefix the string with `N`, that is, `N'`*query_string*`'`.
+When you parse a query string, `sys.dm_fts_parser` uses the collation of the database to which you're connected, unless you specify the query string as Unicode. Therefore, for a non-Unicode string that contains special characters, such as ü or ç, the output might be unexpected, depending on the collation of the database. To process a query string independently of the database collation, prefix the string with `N`, that is, `N'<query_string>'`.
 
- For more information, see [C. Display the output of a string that contains special characters](#c-display-the-output-of-a-string-that-contains-special-characters) later in this article.
+For more information, see [C. Display the output of a string that contains special characters](#c-display-the-output-of-a-string-that-contains-special-characters) later in this article.
 
 ## When to use sys.dm_fts_parser
 
@@ -90,16 +97,16 @@ When you parse a query string, `sys.dm_fts_parser` uses the collation of the dat
 
 - To understand how a given word breaker treats a given input
 
-  When a query returns unexpected results, a likely cause is the way that the word breaker is parsing and breaking the data. By using `sys.dm_fts_parser`, you discover the result that a word breaker passes to the full-text index. In addition, you can see which terms are stopwords, which aren't searched in the full-text index. Whether a term is a stopword for a given language depends on whether it is in the stoplist specified by the *stoplist_id* value that is declared in the function.
+  When a query returns unexpected results, a likely cause is the way that the word breaker is parsing and breaking the data. By using `sys.dm_fts_parser`, you discover the result that a word breaker passes to the full-text index. In addition, you can see which terms are stopwords, which aren't searched in the full-text index. Whether a term is a stopword for a given language depends on whether it's in the stoplist specified by the *stoplist_id* value that is declared in the function.
 
   The accent sensitivity flag lets you see how the word breaker parses the input, having in mind its accent sensitivity information.
 
 - To understand how the stemmer works on a given input
 
-  You can find out how the word breaker and the stemmer parse a query term and its stemming forms, by specifying a CONTAINS or CONTAINSTABLE query containing the following FORMSOF clause:
+  You can find out how the word breaker and the stemmer parse a query term and its stemming forms, by specifying a `CONTAINS` or `CONTAINSTABLE` query containing the following `FORMSOF` clause:
 
-  ```sql
-  FORMSOF( INFLECTIONAL, query_term )
+  ```syntaxsql
+  FORMSOF ( INFLECTIONAL, <query_term> )
   ```
 
   The results tell you what terms are being passed to the full-text index.
@@ -108,16 +115,16 @@ When you parse a query string, `sys.dm_fts_parser` uses the collation of the dat
 
   You can also specify:
 
-  ```sql
-  FORMSOF( THESAURUS, query_term )
+  ```syntaxsql
+  FORMSOF ( THESAURUS, <query_term> )
   ```
 
   The results of this query show how the word breaker and thesaurus interact for the query term. you can see the expansion or replacements from the thesaurus and identify the resulting query that is actually being issued against the full-text index.
 
   If the user issues:
 
-  ```sql
-  FORMSOF( FREETEXT, query_term )
+  ```syntaxsql
+  FORMSOF ( FREETEXT, <query_term> )
   ```
 
   The inflectional and Thesaurus capabilities take place automatically.
@@ -126,7 +133,7 @@ In addition to the preceding usage scenarios, `sys.dm_fts_parser` can help signi
 
 ## Permissions
 
-Requires CREATE FULLTEXT CATALOG permission, and access rights to the specified stoplist.
+Requires `CREATE FULLTEXT CATALOG` permission, and access rights to the specified stoplist.
 
 ## Examples
 
@@ -139,7 +146,8 @@ The following example returns the output from using the English word breaker, wh
 Accent sensitivity is disabled.
 
 ```sql
-SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);
+SELECT *
+FROM sys.dm_fts_parser(' "The Microsoft business analysis" ', 1033, 0, 0);
 ```
 
 ### B. Display the output of a given word breaker in the context of stoplist filtering
@@ -151,7 +159,8 @@ The following example returns the output from using the English word breaker, wh
 Accent sensitivity is disabled.
 
 ```sql
-SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);
+SELECT *
+FROM sys.dm_fts_parser(' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);
 ```
 
 ### C. Display the output of a string that contains special characters
@@ -163,18 +172,16 @@ The following example uses Unicode to parse the following French string:
 The example specifies the LCID for the French language, `1036`, and the ID of a user-defined stoplist, `5`. Accent sensitivity is enabled.
 
 ```sql
-SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
+SELECT *
+FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
 ```
 
-## See also
+## Related content
 
-- [Full-Text Search and Semantic Search Dynamic Management Views and Functions (Transact-SQL)](full-text-and-semantic-search-dynamic-management-views-functions.md)
+- [Full-text and semantic search dynamic management views and functions](full-text-and-semantic-search-dynamic-management-views-functions.md)
 - [Full-Text Search](../search/full-text-search.md)
 - [Securables](../security/securables.md)
-
-## Next steps
-
-- [Configure and Manage Word Breakers and Stemmers for Search](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
+- [Configure and manage word breakers and stemmers](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
 - [Configure and Manage Thesaurus Files for Full-Text Search](../search/configure-and-manage-thesaurus-files-for-full-text-search.md)
 - [Configure and Manage Stopwords and Stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
 - [Query with Full-Text Search](../search/query-with-full-text-search.md)

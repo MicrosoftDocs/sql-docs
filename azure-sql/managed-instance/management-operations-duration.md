@@ -5,7 +5,7 @@ description: Learn about the duration of Azure SQL Managed Instance management o
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma, randolphwest
-ms.date: 06/18/2025
+ms.date: 07/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: overview
@@ -124,6 +124,7 @@ The following table details the duration of management operations in the **Gener
 | Changing hardware or maintenance window | [Creating or resizing VM group](management-operations-overview.md#vm-group-operations) | 95% of operations finish in 60 minutes  |
 | Enabling zone redundancy | [Creating new VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 4 hours + [time to seed databases](#seeding-duration)   |
 | Disabling zone redundancy | [Creating new VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 30 minutes + [time to seed databases](#seeding-duration)   |
+| Changing update policy | [Resizing the VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 60 minutes + [time to seed databases](#seeding-duration)  |
 | Moving an instance to an instance pool | None | 95% of operations finish in 10 minutes |
 | Moving an instance out of an instance pool | [Creating or resizing VM group](management-operations-overview.md#vm-group-operations) | 95% of operations finish in 60 minutes |
 | <center> ***Delete operations*** </center> |
@@ -151,6 +152,7 @@ The following table details the duration of management operations in the [Next-g
 | Changing to **Business Critical** service tier | [Resizing the VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 60 minutes + [time to seed databases](#seeding-duration)  | 
 | Changing to **General Purpose** service tier | [Creating or resizing VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 60 minutes + [time to seed databases](#seeding-duration) |
 | Changing hardware or maintenance window | [Creating or resizing VM group](management-operations-overview.md#vm-group-operations) | 95% of operations finish in 60 minutes  |
+| Changing update policy | [Resizing the VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 60 minutes + [time to seed databases](#seeding-duration)  | 
 | <center> ***Delete operations*** </center> |
 |Deleting non-last instance<sup>2</sup> |Log tail backup for all databases | 95% of operations finish in 1 minute.  |
 |Deleting last instance<sup>3</sup> |Log tail backup for all databases <br /> [Deleting virtual cluster](management-operations-overview.md#vm-group-operations) | 95% of operations finish in 90 minutes |
@@ -177,6 +179,7 @@ The following table details the duration of management operations in the **Busin
 | Changing hardware or maintenance window | [Resizing VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 60 minutes + [time to seed databases](#seeding-duration)  |
 | Enabling zone redundancy | [Creating new VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 4 hours + [time to seed databases](#seeding-duration)   |
 | Disabling zone redundancy | [Creating new VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 30 + [time to seed databases](#seeding-duration)    |
+| Changing update policy | [Resizing the VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 60 minutes + [time to seed databases](#seeding-duration)  |
 | <center> ***Delete operations*** </center> |
 |Deleting non-last instance<sup>1</sup> |Log tail backup for all databases | 95% of operations finish in 1 minute.  |
 |Deleting last instance<sup>2</sup> |Log tail backup for all databases <br /> [Deleting virtual cluster](management-operations-overview.md#vm-group-operations) | 95% of operations finish in 90 minutes |

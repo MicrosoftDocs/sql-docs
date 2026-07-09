@@ -3,8 +3,7 @@ title: SQL Server 2025 Known Issues
 description: Known issues, causes, and workarounds for SQL Server 2025 (17.x), covering upgrades, replication, PolyBase, session behavior, platform compatibility (Windows and Linux), backup compression, and other platform-specific limitations.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 05/01/2026
+ms.date: 07/08/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: troubleshooting-known-issue
@@ -45,6 +44,9 @@ The following issues are currently identified:
 
 **Workaround**: Enable TLS 1.2 on the machine before attempting to install [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
 
+> [!WARNING]  
+> [!INCLUDE [ssnoteregistry-md](../includes/ssnoteregistry-md.md)]
+
 To enable TLS 1.2, set the following registry entry for TLS 1.2 to `true`:
 
 ```text
@@ -59,7 +61,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\P
 
 ## In-place upgrade fails due to Microsoft Visual C++ Redistributable
 
-An upgrade from the following versions might fail:
+**Issue**: An upgrade from the following versions might fail:
 
 - [!INCLUDE [sssql16-md](../includes/sssql16-md.md)]
 - [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
@@ -75,7 +77,7 @@ Please install the Redistributable, then run this installer again.
 For more information, see: https://go.microsoft.com/fwlink/?linkid=2219560.
 ```
 
-To complete the upgrade, add or repair the redistributable component, and run the installation again.
+**Workaround**: To complete the upgrade, add or repair the redistributable component, and run the installation again.
 
 To get the redistributable file, review [Microsoft Visual C++ Redistributable latest supported downloads](/cpp/windows/latest-supported-vc-redist).
 
@@ -83,31 +85,31 @@ To get the redistributable file, review [Microsoft Visual C++ Redistributable la
 
 **Issue**: SQL Server instances on Windows might fail to start after the installation if the machine has more than 64 logical cores per NUMA node.
 
-For more information, see [Limit number of logical cores per NUMA node to 64](compute-capacity-limits-by-edition-of-sql-server.md#limit-number-of-logical-cores-per-numa-node-to-64).
+**Workaround**: For more information, see [Limit number of logical cores per NUMA node to 64](compute-capacity-limits-by-edition-of-sql-server.md#limit-number-of-logical-cores-per-numa-node-to-64).
 
 ## Database mail on Linux
 
 **Issue**: Database mail on Linux doesn't work when SQL Server is configured to enforce strict encryption.
 
-Currently, the only workaround is to not enforce strict encryption.
+**Workaround**: Do not enforce strict encryption.
 
 ## SQLPS
 
 **Issue**: SQLPS.exe, the SQL Agent PowerShell subsystem, and the SQLPS PowerShell module don't work when SQL is configured to enforce strict encryption.
 
-Currently, the only workaround is to not enforce strict encryption.
+**Workaround**: Do not enforce strict encryption.
 
 The SQL Server Agent job `syspolicy_purge_history` reports a failure on step 3. This job runs daily by default. An instance that doesn't enforce strict encryption doesn't reproduce this problem; another option is to disable the job.
 
 ## Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-Queries that use the built-in `SESSION_CONTEXT` function might return incorrect results or trigger access violation (AV) dumps when executed in parallel query plans. This issue stems from the way the function interacts with parallel execution threads, particularly when the session is reset for reuse.
+**Issue**: Queries that use the built-in `SESSION_CONTEXT` function might return incorrect results or trigger access violation (AV) dumps when executed in parallel query plans. This issue stems from the way the function interacts with parallel execution threads, particularly when the session is reset for reuse.
 
-For more information, see the [Known issues](../t-sql/functions/session-context-transact-sql.md#known-issues) section in `SESSION_CONTEXT`.
+**Workaround**: Don't run `SESSION_CONTEXT` in parallel. For more information, see the [Known issues](../t-sql/functions/session-context-transact-sql.md#known-issues) section in `SESSION_CONTEXT`.
 
 ## Issue when setting the backup compression algorithm to ZSTD
 
-There's a known issue when attempting to set the [backup compression algorithm](../database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md) to ZSTD.
+**Issue**: An error occurs when you attempt to set the [backup compression algorithm](../database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md) to ZSTD.
 
 When specifying the ZSTD algorithm (`backup compression algorithm = 3`), the following error message returns:
 
@@ -116,7 +118,7 @@ Msg 15129, Level 16, State 1
 Procedure sp_configure '3' is not a valid value for configuration option 'backup compression algorithm'.
 ```
 
-Use the new compression algorithm directly in the [BACKUP](../t-sql/statements/backup-transact-sql.md#compression) Transact-SQL command instead of setting the server configuration option.
+**Workaround**: Use the new compression algorithm directly in the [BACKUP](../t-sql/statements/backup-transact-sql.md#compression) Transact-SQL command instead of setting the server configuration option.
 
 ## Local ONNX models not supported on Linux operating systems
 
@@ -129,6 +131,8 @@ In [!INCLUDE [sssql25-md](../includes/sssql25-md.md)], password-based authentica
 For more information, see [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) and [Support for Iterated and Salted Hash Password Verifiers in SQL Server 2022 CU12](https://techcommunity.microsoft.com/blog/azuresqlblog/support-for-iterated-and-salted-hash-password-verifiers-in-sql-server-2022-cu12/4087155).
 
 ## SQL Server audit events don't write to the Security log
+
+**Issue**: Server audits, except the first server audit, don't write to the Security log.
 
 Assume that you configured multiple [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] audit events to write to the [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] Security log. In this scenario, you notice that all server audits, except the first server audit, don't write. Additionally, when you add the second server audit, you might receive an error that resembles the following message in the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log:
 
@@ -145,6 +149,9 @@ We have identified a fix for a future release of [!INCLUDE [sssql25-md](../inclu
 
 - To let multiple server audits write to the Security log, change this registry subkey value from `0` to `1`:
 
+  > [!WARNING]  
+  > [!INCLUDE [ssnoteregistry-md](../includes/ssnoteregistry-md.md)]
+
   ```text
   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security\MSSQL$<InstanceName>$Audit\EventSourceFlags
   ```
@@ -160,19 +167,21 @@ We have identified a fix for a future release of [!INCLUDE [sssql25-md](../inclu
 
 ## Vector index
 
-When you build a vector index using the `CREATE VECTOR INDEX` statement, or using the vector index via `VECTOR_SEARCH`, you get the following warning message:
+- **Issue**: When you build a vector index by using the `CREATE VECTOR INDEX` statement, or when you use the vector index through `VECTOR_SEARCH`, you see the following warning message:
 
-```output
-Warning: The join order has been enforced because a local join hint is used.
-```
+  ```output
+  Warning: The join order has been enforced because a local join hint is used.
+  ```
 
-The warning can be safely ignored, as it doesn't affect the correctness of the results.
+  **Workaround**: You can safely ignore the warning, as it doesn't affect the correctness of the results.
 
-When you use `MAXDOP` with `CREATE VECTOR INDEX` or `VECTOR_SEARCH`, the value set for `MAXDOP` is ignored. To set the desired value for `MAXDOP`, set the server-level `max degree of parallelism` configuration option instead. For more information, see [Server configuration: max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) or the database-level `MAXDOP` option in [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+- **Issue**: When you use `MAXDOP` with `CREATE VECTOR INDEX` or `VECTOR_SEARCH`, the value set for `MAXDOP` is ignored.
+
+  **Workaround**: To set the desired value for `MAXDOP`, set the server-level `max degree of parallelism` configuration option instead. For more information, see [Server configuration: max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) or the database-level `MAXDOP` option in [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 ## Upgrade fails if Data Quality Services is installed
 
-If Data Quality Services is installed and you upgrade your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance to [!INCLUDE [sssql25-md](../includes/sssql25-md.md)], the upgrade fails during the Feature Rules step of the SQL Server Upgrade wizard.
+**Issue**: If Data Quality Services is installed and you upgrade your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance to [!INCLUDE [sssql25-md](../includes/sssql25-md.md)], the upgrade fails during the Feature Rules step of the SQL Server Upgrade wizard.
 
 :::image type="content" source="media/sql-server-2025-known-issues/upgrade-error-data-quality-services.png" alt-text="Screenshot of SQL Server Upgrade Feature Rules screen, with the Data Quality Services highlighted in red.":::
 
@@ -182,45 +191,47 @@ You can also run a full unattended upgrade from the command line, as long as you
 
 ## Full-Text Search
 
-**Issue**: Full-Text Search fails to index plaintext documents larger than 25 MB
-If you try to index a plaintext document larger than 25 MB, you see the symbolic error `FILTER_E_PARTIALLY_FILTERED` in the crawl log:
+- **Issue**: Full-Text Search can't index plaintext documents larger than 25 MB.
 
-```output
-Error '0x8004173e: The document was too large to filter in its entirety. Portions of the document were not emitted.' occurred during full-text index population for table or indexed view ...
-```
+  If you try to index a plaintext document larger than 25 MB, you see the symbolic error `FILTER_E_PARTIALLY_FILTERED` in the crawl log:
 
-> [!NOTE]  
-> Plaintext documents include documents with a `class_id` of `{C1243CA0-BF96-11CD-B579-08002B30BFEB}`, as reported by [sys.fulltext_document_types](../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).
+  ```output
+  Error '0x8004173e: The document was too large to filter in its entirety. Portions of the document were not emitted.' occurred during full-text index population for table or indexed view ...
+  ```
 
-**Workaround**: Configure the maximum file size in the Windows registry:
+  Plaintext documents include documents with a `class_id` of `{C1243CA0-BF96-11CD-B579-08002B30BFEB}`, as reported by [sys.fulltext_document_types](../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).
 
-> [!WARNING]  
-> [!INCLUDE [ssnoteregistry-md](../includes/ssnoteregistry-md.md)]
+  **Workaround**: Configure the maximum file size in the Windows registry.
 
-Edit the DWORD value `MaxTextFilterBytes`, which is located in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ContentIndex`. For example, to remove the size limit entirely from the command line with [`reg add`](/windows-server/administration/windows-commands/reg-add), run the following command:
+  > [!WARNING]  
+  > [!INCLUDE [ssnoteregistry-md](../includes/ssnoteregistry-md.md)]
 
-```console
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ContentIndex" /v MaxTextFilterBytes /t REG_DWORD /d ffffffff
-```
+  Edit the DWORD value `MaxTextFilterBytes`, which is located in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ContentIndex`. For example, to remove the size limit entirely from the command line with [`reg add`](/windows-server/administration/windows-commands/reg-add), run the following command:
 
-After updating the registry value, reissue the Full-Text crawl.
+  ```console
+  reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ContentIndex" /v MaxTextFilterBytes /t REG_DWORD /d ffffffff
+  ```
 
-**Issue**: Full-Text Queries using inflectional forms fail for certain languages when Index Version2 is enabled
+  After updating the registry value, reissue the Full-Text crawl.
 
-Full-Text uses stemmers for Freetext, Freetexttable or `FORMSOF(INFLECTIONAL)` argument in Contains and Containstable. For languages where a stemmer isn't registered or available, queries that reference inflectional forms can fail with following error.
+- **Issue**: Full-Text Queries using inflectional forms fail for index version 2 languages without a registered stemmer. This issue is resolved in [Cumulative Update (CU) 4](https://support.microsoft.com/help/5081495).
 
-```output
-Msg 30010, Level 16, State 2, Line 119
-An error has occurred during the full-text query. Common causes include: word-breaking errors or timeout, FDHOST permissions/ACL issues, service account missing privileges, malfunctioning IFilters, communication channel issues with FDHost and sqlservr.exe, etc. If recently performed in-place upgrade to SQL2025, For help please see https://aka.ms/sqlfulltext.
-```
+  Full-Text uses stemmers to generate word forms for inflectional queries. Inflectional queries include those that use `FREETEXT`, `FREETEXTTABLE`, or `FORMSOF(INFLECTIONAL)` via `CONTAINS` or `CONTAINSTABLE`. For version 2 languages without a stemmer, inflectional queries fail with the following error:
 
-**Workaround**: Avoid using inflectional-form queries for languages that don't have registered stemmers. For more information, see [Full-text word breaker and stemmer binaries](../relational-databases/search/full-text-word-breaker-and-stemmer-binaries.md). If the application has a strong dependency on inflectional or linguistic search behavior for such languages, configure the database to use Full-Text Index Version 1 instead.
+  ```output
+  Msg 30010, Level 16, State 2, Line 119
+  An error has occurred during the full-text query. Common causes include: word-breaking errors or timeout, FDHOST permissions/ACL issues, service account missing privileges, malfunctioning IFilters, communication channel issues with FDHost and sqlservr.exe, etc. If recently performed in-place upgrade to SQL2025, For help please see https://aka.ms/sqlfulltext.
+  ```
+
+  **Workaround**: Avoid using inflectional-form queries for languages that don't have registered stemmers. For more information, see [Full-text word breaker and stemmer binaries](../relational-databases/search/full-text-word-breaker-and-stemmer-binaries.md). If the application has a strong dependency on inflectional or linguistic search behavior for such languages, configure the database to use Full-Text Index Version 1 instead.
+
+  This issue is resolved in [Cumulative Update (CU) 4](https://support.microsoft.com/help/5081495).
 
 ## Incorrect license agreement for LocalDB installer
 
 **Issue**: The LocalDB installer points to a preview version of the end-user license agreement (EULA).
 
-To work around this issue, you must download the Express edition installer instead, and choose the **LocalDB** option from the package selection screen.
+**Workaround**: Download the Express edition installer instead, and choose the **LocalDB** option from the package selection screen.
 
 We have identified a fix for a future release of [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
 

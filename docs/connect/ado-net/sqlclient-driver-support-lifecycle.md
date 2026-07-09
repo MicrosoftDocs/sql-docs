@@ -29,8 +29,8 @@ New stable (GA) releases are published every six months on a regular cadence beg
 
 | Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
 | --- | --- | --- | --- | --- | --- |
-| 7.0 | March 17, 2026 | [7.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.0) | March 17, 2026 | STS | |
-| 6.1 | August 14, 2025 | [6.1.4](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.4) | January 15, 2025 | LTS | August 14, 2028 |
+| 7.0 | March 17, 2026 | [7.0.2](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.2) | June 25, 2026 | STS | |
+| 6.1 | August 14, 2025 | [6.1.6](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.6) | June 25, 2025 | LTS | August 14, 2028 |
 
 ### Out of support releases
 

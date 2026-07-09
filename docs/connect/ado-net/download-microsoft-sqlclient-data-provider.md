@@ -25,5 +25,5 @@ For more information about version compatibility and support, see [SQL version c
 
 ## Download supported versions of Microsoft SqlClient Data Provider for SQL Server
 
-- [7.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.0)
-- [6.1.4](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.4)
+- [7.0.2](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.2)
+- [6.1.6](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.6)

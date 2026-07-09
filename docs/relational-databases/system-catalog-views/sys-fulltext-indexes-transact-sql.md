@@ -1,27 +1,27 @@
 ---
-title: "sys.fulltext_indexes (Transact-SQL)"
+title: sys.fulltext_indexes (Transact-SQL)
 description: sys.fulltext_indexes contains a row per full-text index of a tabular object.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/01/2025
+ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords:
-  - "fulltext_indexes"
-  - "fulltext_indexes_TSQL"
   - "sys.fulltext_indexes_TSQL"
   - "sys.fulltext_indexes"
+  - "fulltext_indexes_TSQL"
+  - "fulltext_indexes"
 helpviewer_keywords:
   - "sys.fulltext_indexes catalog view"
   - "full-text indexes [SQL Server], properties"
 dev_langs:
-  - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+  - TSQL
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.fulltext_indexes (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 Contains a row per full-text index of a tabular object.
 
@@ -41,8 +41,8 @@ Contains a row per full-text index of a tabular object.
 | `crawl_end_date` | **datetime** | End of the current or last crawl.<br /><br />`NULL` = None. |
 | `incremental_timestamp` | **binary(8)** | Timestamp value to use for the next incremental crawl.<br /><br />`NULL` = None. |
 | `stoplist_id` | **int** | ID of the [stoplist](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) that is associated with this full-text index. |
-| `data_space_id` | **int** | Filegroup where this full-text index resides. |
 | `property_list_id` | **int** | ID of the search property list that is associated with this full-text index. `NULL` indicates that no search property list is associated with the full-text index. To obtain more information about this search property list, use the [sys.registered_search_property_lists](sys-registered-search-property-lists-transact-sql.md) catalog view. |
+| `data_space_id` | **int** | Filegroup where this full-text index resides. |
 
 ## Permissions
 

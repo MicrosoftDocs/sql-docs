@@ -1,10 +1,9 @@
 ---
-title: "Full-Text Search and Semantic Search Functions (Transact-SQL)"
+title: Full-Text Search and Semantic Search Functions (Transact-SQL)
 description: Full-text search and semantic search functions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 10/20/2025
+ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: reference
@@ -13,13 +12,13 @@ helpviewer_keywords:
 dev_langs:
   - TSQL
 ---
-# Full-text search and semantic search functions (Transact-SQL)
+# Full-Text Search and semantic search functions (Transact-SQL)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This section describes the system functions related to full-text search and semantic search.
 
-## Full-text search functions
+## Full-Text Search functions
 
 | Article | Description |
 | --- | --- |

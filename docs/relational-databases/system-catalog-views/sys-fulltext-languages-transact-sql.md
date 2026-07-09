@@ -1,33 +1,33 @@
 ---
-title: "sys.fulltext_languages (Transact-SQL)"
+title: sys.fulltext_languages (Transact-SQL)
 description: sys.fulltext_languages (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/08/2025
+ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords:
-  - "sys.fulltext_languages"
   - "sys.fulltext_languages_TSQL"
-  - "fulltext_languages"
+  - "sys.fulltext_languages"
   - "fulltext_languages_TSQL"
+  - "fulltext_languages"
 helpviewer_keywords:
-  - "languages [full-text search]"
   - "sys.fulltext_languages catalog view"
+  - "languages [full-text search]"
 dev_langs:
-  - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+  - TSQL
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.fulltext_languages (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 This catalog view contains one row per language whose word breakers are registered with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Each row displays the LCID and name of the language.
 
 When word breakers are registered for a language, its other linguistic resources (such as stemmers, noise words or *stopwords*, and thesaurus files) become available to full-text indexing/querying operations. The value of `name` or `lcid` can be specified in the full-text queries and full-text index [!INCLUDE [tsql](../../includes/tsql-md.md)] statements.
 
-| Column | Data type | Description |
+| Column name | Data type | Description |
 | --- | --- | --- |
 | `lcid` | **int** | Windows locale identifier (LCID) for the language. |
 | `name` | **sysname** | Is either the value of the alias in [sys.syslanguages](../system-compatibility-views/sys-syslanguages-transact-sql.md) corresponding to the value of `lcid` or the string representation of the numeric LCID. |
@@ -112,7 +112,7 @@ To update the list of languages registered with full-text search, use [sp_fullte
 
 - [sp_fulltext_load_thesaurus_file (Transact-SQL)](../system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)
 - [sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
-- [Configure and manage word breakers and stemmers for search (SQL Server)](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
+- [Configure and manage word breakers and stemmers](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
 - [Configure and Manage Thesaurus Files for Full-Text Search](../search/configure-and-manage-thesaurus-files-for-full-text-search.md)
 - [Configure and Manage Stopwords and Stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
-- [Upgrade Full-Text Search](../search/upgrade-full-text-search.md)
+- [Upgrade Full-Text Search (SQL Server Search)](../search/upgrade-full-text-search.md)

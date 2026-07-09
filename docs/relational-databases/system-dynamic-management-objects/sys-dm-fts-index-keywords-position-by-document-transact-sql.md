@@ -1,12 +1,12 @@
 ---
-title: "sys.dm_fts_index_keywords_position_by_document (Transact-SQL)"
-description: sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
+title: sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
+description: sys.dm_fts_index_keywords_position_by_document returns keyword positional information in the indexed documents.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords:
   - "sys.dm_fts_index_keywords_position_by_document_TSQL"
   - "dm_fts_index_keywords_position_by_document_TSQL"
@@ -15,77 +15,87 @@ f1_keywords:
 helpviewer_keywords:
   - "sys.dm_fts_index_keywords_position_by_document dynamic management view"
 dev_langs:
-  - "TSQL"
+  - TSQL
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns keyword positional information in the indexed documents.  
-  
-## Syntax  
-  
-```  
-sys.dm_fts_index_keywords_position_by_document  
-(   
-    DB_ID('database_name'),   
-OBJECT_ID('table_name')   
-)  
-```  
-  
-## Arguments  
- db_id('*database_name*')  
- A call to the [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) function. This function accepts a database name and returns the database ID, which sys.dm_fts_index_keywords_position_by_document uses to find the specified database.  
-  
- object_id('*table_name*')  
- A call to the [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) function. This function accepts a table name and returns the table ID of the table containing the full-text index to inspect.  
-  
-## Table Returned  
-  
-|Column|Data type|Description|  
-|------------|---------------|-----------------|  
-|keyword|**varbinary(128)**|Binary string representing the keyword.|  
-|display_term|**nvarchar(4000)**|The human-readable format of the keyword. This format is derived from the internal format that is stored in the full-text index.|  
-|column_id|**int**|ID of the column from which the current keyword was full-text indexed.|  
-|document_id|**bigint**|ID of the document or row from which the current term was full-text indexed. This ID corresponds to the full-text key value of that document or row.|  
-|position|**int**|The position of the keyword in the document.|  
-  
-## Remarks  
- Use the DMV to identify the location of indexed words in indexed documents. This DMV can be used to troubleshoot issues when **sys.dm_fts_index_keywords_by_document** indicates the words are in the full-text index, but when you run a query using those words, the document is not returned.  
-  
-## Permissions  
- Requires SELECT permission on the columns covered by the full-text index and CREATE FULLTEXT CATALOG permissions.  
-  
-## Examples  
- The following example returns keywords from the full-text index of the `Production.Document` table of the `AdventureWorks` sample database.  
-  
-```  
-USE AdventureWorks2022;  
-GO   
-  
-SELECT * FROM sys.dm_fts_index_keywords_position_by_document  
-(   
-    DB_ID('AdventureWorks2022'),  
-    OBJECT_ID('AdventureWorks2022.Production.Document')   
-);   
-GO  
-```  
-  
- You can add a predicate on the other columns_id as in the following example query, to further isolate the locations.  
-  
-```  
-SELECT * FROM sys.dm_fts_index_keywords_position_by_document  
-(   
-    DB_ID('AdventureWorks2022'),  
-    OBJECT_ID('AdventureWorks2022.Production.Document')   
-)  
-WHERE document_id = 7 AND display_term = 'performance';  
-```  
-  
-## See Also  
- [Full-Text Search](../search/full-text-search.md)   
- [Improve the Performance of Full-Text Indexes](../search/improve-the-performance-of-full-text-indexes.md)   
- [Full-Text Search and Semantic Search Functions &#40;Transact-SQL&#41;](../system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
- [Full-Text Search and Semantic Search Dynamic Management Views and Functions &#40;Transact-SQL&#41;](full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Full-Text Search and Semantic Search Stored Procedures &#40;Transact-SQL&#41;](../system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [Search Document Properties with Search Property Lists](../search/search-document-properties-with-search-property-lists.md)   
- [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](sys-dm-fts-index-keywords-by-document-transact-sql.md)
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
+
+Returns keyword positional information in the indexed documents.
+
+## Syntax
+
+```syntaxsql
+sys.dm_fts_index_keywords_position_by_document
+(
+    DB_ID('database_name')
+    , OBJECT_ID('table_name')
+)
+```
+
+## Arguments
+
+#### DB_ID('*database_name*')
+
+A call to the [DB_ID](../../t-sql/functions/db-id-transact-sql.md) function. `DB_ID` is **int**. This function accepts a database name and returns the database ID, which `sys.dm_fts_index_keywords_position_by_document` uses to find the specified database.
+
+#### OBJECT_ID('*table_name*')
+
+A call to the [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) function. `OBJECT_ID` is **int**. This function accepts a table name and returns the table ID of the table containing the full-text index to inspect.
+
+## Table returned
+
+| Column name | Data type | Nullable | Description |
+| --- | --- | --- | --- |
+| `keyword` | **varbinary(128)** | No | Binary string representing the keyword. |
+| `display_term` | **nvarchar(4000)** | No | The human-readable format of the keyword. This format is derived from the internal format that is stored in the full-text index. |
+| `column_id` | **int** | No | ID of the column from which the current keyword was full-text indexed. |
+| `document_id` | **bigint** | Yes | ID of the document or row from which the current term was full-text indexed. This ID corresponds to the full-text key value of that document or row. |
+| `position` | **int** | Yes | The position of the keyword in the document. |
+
+## Remarks
+
+Use the DMV to identify the location of indexed words in indexed documents. This DMV can be used to troubleshoot issues when `sys.dm_fts_index_keywords_by_document` indicates the words are in the full-text index, but when you run a query using those words, the document isn't returned.
+
+## Permissions
+
+Requires `SELECT` permission on the columns covered by the full-text index and `CREATE FULLTEXT CATALOG` permissions.
+
+## Examples
+
+The following example returns keywords from the full-text index of the `Production.Document` table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.
+
+```sql
+USE AdventureWorks2025;
+GO
+
+SELECT *
+FROM sys.dm_fts_index_keywords_position_by_document(
+    DB_ID('AdventureWorks2025'),
+    OBJECT_ID('AdventureWorks2025.Production.Document')
+);
+GO
+```
+
+You can add a predicate on the other columns_id as in the following example query, to further isolate the locations.
+
+```sql
+SELECT *
+FROM sys.dm_fts_index_keywords_position_by_document(
+    DB_ID('AdventureWorks2025'),
+    OBJECT_ID('AdventureWorks2025.Production.Document')
+)
+WHERE document_id = 7
+      AND display_term = 'performance';
+```
+
+## Related content
+
+- [Full-Text Search](../search/full-text-search.md)
+- [Improve the Performance of Full-Text Indexes](../search/improve-the-performance-of-full-text-indexes.md)
+- [Full-Text Search and semantic search functions (Transact-SQL)](../system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)
+- [Full-text and semantic search dynamic management views and functions](full-text-and-semantic-search-dynamic-management-views-functions.md)
+- [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](../system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)
+- [Search Document Properties with Search Property Lists](../search/search-document-properties-with-search-property-lists.md)
+- [sys.dm_fts_index_keywords_by_document (Transact-SQL)](sys-dm-fts-index-keywords-by-document-transact-sql.md)

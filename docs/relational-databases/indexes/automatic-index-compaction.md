@@ -3,8 +3,8 @@ title: Automatic Index Compaction
 description: Describes the automatic index compaction feature in the SQL Server database engine.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: dfurman, randolphwest
-ms.date: 04/16/2026
+ms.reviewer: dfurman
+ms.date: 07/08/2026
 ms.service: sql
 ms.topic: concept-article
 monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
@@ -121,7 +121,7 @@ For more information about index reorganization and rebuild, see [Optimize index
 
 ## Page density and index fragmentation
 
-[Page density](reorganize-and-rebuild-indexes.md#concepts-index-fragmentation-and-page-density) and [index fragmentation](reorganize-and-rebuild-indexes.md#concepts-index-fragmentation-and-page-density) are the two metrics that reflect space consumption by the index and can affect query performance. The [sys.dm_db_index_physical_stats](../system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management function (DMF) reports these metrics in the `avg_page_space_used_in_percent` and `avg_fragmentation_in_percent` columns respectively.
+[Page density](reorganize-and-rebuild-indexes.md#concepts-index-fragmentation-and-page-density) and [index fragmentation](reorganize-and-rebuild-indexes.md#concepts-index-fragmentation-and-page-density) are the two metrics that reflect space consumption by the index and can affect query performance. The [sys.dm_db_index_physical_stats](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management function (DMF) reports these metrics in the `avg_page_space_used_in_percent` and `avg_fragmentation_in_percent` columns respectively.
 
 Compaction increases page density by storing more rows on the same page, which improves performance and reduces resource consumption.
 
@@ -138,6 +138,8 @@ You might observe that index fragmentation is higher when you enable automatic i
 ## Monitor automatic index compaction
 
 To see the effectiveness of automatic index compaction, you can monitor key index metrics such as the number of pages, the average page density, and the average index fragmentation over time. For more information, see the [Determine key index metrics](#determine-key-index-metrics) example.
+
+You can monitor cumulative compaction statistics for each partition of an index by using the [sys.dm_db_index_operational_stats](../system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md) dynamic management function. These statistics include completed and skipped compaction attempts, moved rows, and deallocated pages. For more information, see the [View compaction statistics for each index partition](#view-compaction-statistics-for-each-index-partition) example.
 
 You can also monitor detailed compaction statistics using [Extended Events](../extended-events/extended-events.md). For more information, see the [Use an extended event to monitor compaction statistics](#use-an-extended-event-to-monitor-compaction-statistics) example.
 
@@ -180,7 +182,7 @@ For most workloads, the overhead isn't noticeable. For write-intensive workloads
 
 Blocking due to automatic compaction is unlikely. If any blocking occurs, it's short-term and transient (milliseconds).
 
-If a query is blocked, check the command of the head blocker in [sys.dm_exec_requests](../system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Auto compaction might be blocking queries if the command is `VERSION_CLEANER_MAIN` or `VERSION_CLEANER_WORKER`.
+If a query is blocked, check the command of the head blocker in [sys.dm_exec_requests](../system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md). Auto compaction might be blocking queries if the command is `VERSION_CLEANER_MAIN` or `VERSION_CLEANER_WORKER`.
 
 ### Does it honor the fill factor?
 
@@ -238,7 +240,34 @@ HAVING ips.object_id IS NULL
 ORDER BY IIF (ips.object_id IS NULL, 0, 1), page_count DESC;
 ```
 
-The query returns approximate results by sampling a subset of pages. Change `SAMPLED` to `DETAILED` to get more precise results. Using `DETAILED` for large databases can take much longer because all eligible indexes in database are fully scanned. For more information, see [sys.dm_db_index_physical_stats](../system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
+The query returns approximate results by sampling a subset of pages. Change `SAMPLED` to `DETAILED` to get more precise results. Using `DETAILED` for large databases can take much longer because all eligible indexes in database are fully scanned. For more information, see [sys.dm_db_index_physical_stats](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md).
+
+### View compaction statistics for each index partition
+
+You can see automatic compaction statistics for each partition of an index in the current database by using the following query:
+
+```sql
+SELECT OBJECT_SCHEMA_NAME(ios.object_id) AS schema_name,
+       OBJECT_NAME(ios.object_id) AS object_name,
+       i.name AS index_name,
+       i.type_desc AS index_type,
+       ios.partition_number AS partition_number,
+       ios.compaction_attempt_count,
+       ios.compaction_complete_count,
+       ios.compaction_skip_count,
+       ios.compaction_ineligible_count,
+       ios.compaction_failure_count,
+       ios.compaction_row_move_count,
+       ios.compaction_page_deallocation_count
+FROM sys.dm_db_index_operational_stats(DB_ID(), DEFAULT, DEFAULT, DEFAULT) AS ios
+     INNER JOIN sys.indexes AS i
+         ON ios.object_id = i.object_id
+        AND ios.index_id = i.index_id
+WHERE i.type_desc IN ('CLUSTERED', 'NONCLUSTERED', 'XML', 'SPATIAL')
+      AND OBJECT_SCHEMA_NAME(ios.object_id) <> 'sys';
+```
+
+For more information, see [sys.dm_db_index_operational_stats](../system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md).
 
 ### Use an extended event to monitor compaction statistics
 
@@ -254,13 +283,13 @@ into a ring_buffer target
 IF NOT EXISTS (SELECT 1
                FROM sys.dm_xe_database_sessions
                WHERE name = N'automatic_index_compaction')
-BEGIN
-    CREATE EVENT SESSION automatic_index_compaction ON DATABASE
-    ADD EVENT sqlserver.auto_index_compaction_stats
-    ADD TARGET package0.ring_buffer (SET MAX_MEMORY = 1024);
+  BEGIN
+      CREATE EVENT SESSION automatic_index_compaction ON DATABASE
+      ADD EVENT sqlserver.auto_index_compaction_stats
+      ADD TARGET package0.ring_buffer (SET MAX_MEMORY = 1024);
 
-    ALTER EVENT SESSION automatic_index_compaction ON DATABASE STATE = START;
-END;
+      ALTER EVENT SESSION automatic_index_compaction ON DATABASE STATE = START;
+  END
 
 /* Get event data from the ring_buffer target */
 DECLARE @EventData AS XML = (SELECT CAST (xst.target_data AS XML) AS TargetData

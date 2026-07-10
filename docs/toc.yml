@@ -9552,8 +9552,10 @@ items:
         href: /azure/defender-for-cloud/defender-for-sql-usage?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
       - name: Managed identity for Extensible Key Management
         href: sql-server/azure-arc/managed-identity-extensible-key-management.md
-      - name: Set up Microsoft Entra authentication | Azure Arc
+      - name: Set up Microsoft Entra authentication
         href: sql-server/azure-arc/entra-authentication-setup-tutorial.md
+      - name: Disable SQL authentication
+        href: sql-server/azure-arc/disable-sql-authentication.md
       - name: Managed identity overview
         href: sql-server/azure-arc/managed-identity.md
       - name: Configure managed identity for linked servers

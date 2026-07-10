@@ -37,7 +37,7 @@ The present article devotes separate sections to these two kinds of connection d
 | --- | --- |
 | C# | [ADO.NET](https://dotnet.microsoft.com/download)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br />[.NET for: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) |
 | C++ | [ODBC](odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](oledb/download-oledb-driver-for-sql-server.md) |
-| Go | [Go MSSQL driver, install instructions](https://github.com/microsoft/go-mssqldb#readme)<br />[Go download page](https://go.dev/dl/) |
+| Go | [go-mssqldb driver](golang/microsoft-go-mssqldb-driver.md)<br />[Installation and system requirements](golang/installation.md)<br />[Go download page](https://go.dev/dl/) |
 | Java | [JDBC](jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js driver, install instructions](node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](php/download-drivers-php-sql-server.md) |

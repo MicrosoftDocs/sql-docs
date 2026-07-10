@@ -39,7 +39,7 @@ Use fuzzy, or approximate, string matching to check if two strings are similar, 
 >
 >**Non-binary `SQL_*` collations aren't supported.** If you're using a non-binary `SQL_*` collation, consider using a corresponding Windows collation instead.
 >
->If changing the database or column collation isn't feasible, you can apply a supported Windows collation to the arguments passed to a fuzzy string matching function by using the `COLLATE` clause. This allows the function to evaluate input values using a supported collation without requiring broader collation changes to the database.
+>If changing the database or column collation isn't feasible, you can apply a supported Windows collation to the arguments passed to a fuzzy string matching function by using the `COLLATE` clause. This approach allows the function to evaluate input values using a supported collation without requiring broader collation changes to the database.
 
 ## Examples
 

@@ -300,8 +300,86 @@
         href: ../connect/ado-net/sql/data-classification.md
 - name: Go
   items:
-  - name: Microsoft Golang driver for SQL Server
+  - name: Microsoft go-mssqldb driver for SQL Server
     href: ../connect/golang/microsoft-go-mssqldb-driver.md
+  - name: Get started
+    items:
+    - name: Installation and system requirements
+      href: ../connect/golang/installation.md
+    - name: "Quickstart: Connect and query"
+      href: ../connect/golang/quickstart.md
+    - name: Migrate from other drivers
+      href: ../connect/golang/migration-guide.md
+    - name: What's new
+      href: ../connect/golang/whats-new.md
+    - name: Support and lifecycle
+      href: ../connect/golang/support-lifecycle.md
+  - name: Configure connections
+    items:
+    - name: Connection strings
+      href: ../connect/golang/connection-strings.md
+    - name: Connection options
+      href: ../connect/golang/connection-options.md
+    - name: Encryption and certificates
+      href: ../connect/golang/encryption-certificates.md
+    - name: SQL Server and Windows authentication
+      href: ../connect/golang/authentication.md
+    - name: Microsoft Entra ID authentication
+      href: ../connect/golang/entra-authentication.md
+    - name: Security best practices
+      href: ../connect/golang/security-best-practices.md
+  - name: Reference
+    items:
+    - name: Limitations
+      href: ../connect/golang/known-limitations.md
+    - name: FAQ
+      href: ../connect/golang/faq.yml
+  - name: Work with data
+    items:
+    - name: Data type mappings
+      href: ../connect/golang/data-type-mappings.md
+    - name: Queries and statements
+      href: ../connect/golang/queries-statements.md
+    - name: Transactions
+      href: ../connect/golang/transactions.md
+    - name: Error handling and retry patterns
+      href: ../connect/golang/error-handling.md
+    - name: Stored procedures
+      href: ../connect/golang/stored-procedures.md
+    - name: Bulk operations
+      href: ../connect/golang/bulk-operations.md
+    - name: Table-valued parameters
+      href: ../connect/golang/table-valued-parameters.md
+    - name: JSON and XML data
+      href: ../connect/golang/json-xml-data.md
+    - name: Always Encrypted
+      href: ../connect/golang/always-encrypted.md
+    - name: Use GORM with SQL Server
+      href: ../connect/golang/use-go-orm-library-with-go-mssqldb.md
+    - name: Use sqlx with SQL Server
+      href: ../connect/golang/use-go-sql-extensions-library-with-go-mssqldb.md
+  - name: Deploy and operate
+    items:
+    - name: Connection pooling
+      href: ../connect/golang/connection-pooling.md
+    - name: Concurrent programming
+      href: ../connect/golang/concurrent-programming.md
+    - name: Performance tuning
+      href: ../connect/golang/performance-tuning.md
+    - name: Azure SQL Database
+      href: ../connect/golang/azure-sql.md
+    - name: Troubleshooting
+      href: ../connect/golang/troubleshooting.md
+    - name: Test patterns
+      href: ../connect/golang/testing.md
+  - name: Platform and protocol guides
+    items:
+    - name: Linux and macOS
+      href: ../connect/golang/linux-macos.md
+    - name: Protocols
+      href: ../connect/golang/protocols.md
+    - name: Logging and diagnostics
+      href: ../connect/golang/logging-diagnostics.md
 - name: JDBC
   items:
   - name: Microsoft JDBC Driver for SQL Server

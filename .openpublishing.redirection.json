@@ -10677,12 +10677,7 @@
     },
     {
       "source_path": "docs/sql-server/artificial-intelligence-intelligent-applications-faq.md",
-      "redirect_url": "/sql/sql-server/ai/artificial-intelligence-intelligent-applications-frequently-asked-questions",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/sql-server/ai/artificial-intelligence-intelligent-applications-faq.md",
-      "redirect_url": "/sql/sql-server/ai/artificial-intelligence-intelligent-applications-frequently-asked-questions",
+      "redirect_url": "/sql/sql-server/ai/artificial-intelligence-intelligent-applications-faq",
       "redirect_document_id": false
     },
     {
@@ -10692,12 +10687,7 @@
     },
     {
       "source_path": "docs/relational-databases/vectors/vectors-faq.md",
-      "redirect_url": "/sql/sql-server/ai/vectors-frequently-asked-questions",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/sql-server/ai/vectors-faq.md",
-      "redirect_url": "/sql/sql-server/ai/vectors-frequently-asked-questions",
+      "redirect_url": "/sql/sql-server/ai/vectors-faq",
       "redirect_document_id": false
     },
     {
@@ -54772,12 +54762,7 @@
     },
     {
       "source_path": "docs/whitepapers/sql-server-in-memory-oltp-internals-for-sql-server-2016.md",
-      "redirect_url": "/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-download",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md",
-      "redirect_url": "/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-download",
+      "redirect_url": "/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016",
       "redirect_document_id": false
     },
     {
@@ -67431,11 +67416,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md",
-      "redirect_url": "/sql/relational-databases/system-catalog-views/sys-external-tables-transact-sql",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/kb-support/end-support-sql-server-2008.md",
       "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
       "redirect_document_id": false
@@ -67568,11 +67548,6 @@
     {
       "source_path": "docs/database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md",
       "redirect_url": "/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2019",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/database-engine/install-windows/supported-version-and-edition-upgrades.md",
-      "redirect_url": "/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017?view=sql-server-2016",
       "redirect_document_id": false
     },
     {
@@ -67906,11 +67881,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md",
-      "redirect_url": "/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql?view=azure-sqldw-latest&preserve-view=true",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/ssdt/release-notes-integration-services-2022.md",
       "redirect_url": "/sql/ssdt/ssis-vs2022-troubleshooting-guide",
       "redirect_document_id": false
@@ -68167,8 +68137,7 @@
     },
     {
       "source_path": "docs/database-engine/availability-groups/windows/availability-replica-is-disconnected.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/availability-replica-is-disconnected",
-      "redirect_document_id": false
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/availability-replica-is-disconnected"
     },
     {
       "source_path": "docs/relational-databases/data-tier-applications/data-tier-applications.md",
@@ -70314,6 +70283,36 @@
       "source_path": "docs/sql-server/tutorials-for-sql-server-2016.md",
       "redirect_url": "/sql/sql-server/tutorials-for-sql-server",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/sql-server/ai/artificial-intelligence-intelligent-applications-faq.md",
+      "redirect_url": "/sql/sql-server/ai/artificial-intelligence-intelligent-applications-frequently-asked-questions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/ai/vectors-faq.md",
+      "redirect_url": "/sql/sql-server/ai/vectors-frequently-asked-questions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md",
+      "redirect_url": "/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-download",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-catalog-views/sys-external-tables-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/install-windows/supported-version-and-edition-upgrades.md",
+      "redirect_url": "/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017?view=sql-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md",
+      "redirect_url": "/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql?view=azure-sqldw-latest&preserve-view=true",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/tools/visual-studio-code-extensions/github-copilot/inline-copilot-suggestions.md",

@@ -8,12 +8,11 @@ ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 01/14/2025
 ms.service: azure-sql
 ms.subservice: connect
-ms.topic: concept-article 
+ms.topic: concept-article
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
-ms.custom:
-  - sqldbrb=1
-  - sfi-image-nochange
+ms.custom: [sqldbrb=1, sfi-image-nochange]
 ---
+
 # Azure SQL Database and Azure SQL Managed Instance connect and query articles
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -88,14 +87,14 @@ The following table lists connectivity libraries or *drivers* that client applic
 
 | Language | Platform | Additional resources | Download | Get started |
 | :--- | :--- | :--- | :--- | :--- |
-| **C#** | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server and Azure SQL Database](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Download](https://dotnet.microsoft.com/download) |
-| **C++** | Windows, Linux, macOS | [Microsoft ODBC driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) | [Download](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) |
-| **Go** | Windows, Linux, macOS | [Microsoft Go driver for SQL Server](https://github.com/microsoft/go-mssqldb#readme) | [Install](https://github.com/microsoft/go-mssqldb#install) | [Get started](connect-query-go.md) |
-| **Java** | Windows, Linux, macOS | [Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server/) | [Download](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server) |
-| **Node.js** | Windows, Linux, macOS | [Node.js driver for SQL Server](/sql/connect/node-js/node-js-driver-for-sql-server/) | [Install](/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development/) |
-| **PHP** | Windows, Linux, macOS | [Microsoft Drivers for PHP for SQL Server](/sql/connect/php/microsoft-php-driver-for-sql-server) | [Download](/sql/connect/php/download-drivers-php-sql-server) |
-| **Python** | Windows, Linux, macOS | [mssql-python](/sql/connect/python/mssql-python/python-sql-driver-mssql-python) | [Install](/sql/connect/python/mssql-python/python-sql-driver-mssql-python-quickstart#install-the-mssql-python-package) |
-| **Ruby** | Windows, Linux, macOS | [Ruby driver for SQL Server](/sql/connect/ruby/ruby-driver-for-sql-server/) | [Install](/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development/) |
+| **C#** | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server and Azure SQL Database](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Download](https://dotnet.microsoft.com/download) | |
+| **C++** | Windows, Linux, macOS | [Microsoft ODBC driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) | [Download](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) | |
+| **Go** | Windows, Linux, macOS | [Microsoft Go driver for SQL Server](/sql/connect/golang/microsoft-go-mssqldb-driver) | [Install](/sql/connect/golang/microsoft-go-mssqldb-driver) | [Get started](connect-query-go.md) |
+| **Java** | Windows, Linux, macOS | [Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server/) | [Download](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server) | |
+| **Node.js** | Windows, Linux, macOS | [Node.js driver for SQL Server](/sql/connect/node-js/node-js-driver-for-sql-server/) | [Install](/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development/) | |
+| **PHP** | Windows, Linux, macOS | [Microsoft Drivers for PHP for SQL Server](/sql/connect/php/microsoft-php-driver-for-sql-server) | [Download](/sql/connect/php/download-drivers-php-sql-server) | |
+| **Python** | Windows, Linux, macOS | [mssql-python](/sql/connect/python/mssql-python/python-sql-driver-mssql-python) | [Install](/sql/connect/python/mssql-python/python-sql-driver-mssql-python-quickstart#install-the-mssql-python-package) | |
+| **Ruby** | Windows, Linux, macOS | [Ruby driver for SQL Server](/sql/connect/ruby/ruby-driver-for-sql-server/) | [Install](/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development/) | |
 
 ### Data-access frameworks
 
@@ -103,11 +102,11 @@ The following table lists examples of object-relational mapping (ORM) frameworks
 
 | Language | Platform | ORM |
 | :--- | :--- | :--- |
-| **C#** | Windows, Linux, macOS | [Entity Framework](/ef)<br />[Entity Framework Core](/ef/core/index) |
+| **C#** | Windows, Linux, macOS | [Entity Framework](/ef); [Entity Framework Core](/ef/core/index) |
 | **Go** | Windows, Linux, macOS | [GORM](https://gorm.io/) |
 | **Java** | Windows, Linux, macOS | [Hibernate ORM](https://hibernate.org/orm) |
 | **Node.js** | Windows, Linux, macOS | [Sequelize ORM](https://sequelize.org/) |
-| **PHP** | Windows, Linux, macOS | [Laravel (Eloquent)](https://laravel.com/docs/eloquent)<br />[Doctrine](https://www.doctrine-project.org/projects/orm.html) |
+| **PHP** | Windows, Linux, macOS | [Laravel (Eloquent)](https://laravel.com/docs/eloquent); [Doctrine](https://www.doctrine-project.org/projects/orm.html) |
 | **Python** | Windows, Linux, macOS | [Django](https://www.djangoproject.com/) |
 | **Ruby** | Windows, Linux, macOS | [Ruby on Rails](https://rubyonrails.org/) |
 

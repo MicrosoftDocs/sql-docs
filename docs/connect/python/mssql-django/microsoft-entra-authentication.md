@@ -65,7 +65,7 @@ The **db_ddladmin** fixed database role is required only if the application runs
 > CREATE USER [<identity-name>] WITH SID = 0x<sid-hex>, TYPE = E;
 > ```
 >
-> For a managed identity or service principal, derive the SID from the identity's **application (client) ID**, not its object ID. Azure SQL uses the application ID for service principals and managed identities, and the object ID only for regular Entra users. Convert the GUID by reversing the first three dash-separated groups byte-by-byte and keeping the last two as-is. For example, application ID `619a4449-b4aa-4383-a2a9-7c365106c5e7` becomes SID `0x49449A61AAB48343A2A97C365106C5E7`. In PowerShell:
+> For a managed identity or service principal, derive the SID from the identity's **application (client) ID**, not its object ID. Azure SQL uses the application ID for service principals and managed identities, and the object ID only for regular Entra users. Convert the GUID by reversing the first three dash-separated groups byte-by-byte and keeping the last two as-is. For example, application ID `00001111-aaaa-2222-bbbb-3333cccc4444` becomes SID `0x11110000AAAA2222BBBB3333CCCC4444`. In PowerShell:
 >
 > ```powershell
 > $b = ([Guid]"<app-id>").ToByteArray()

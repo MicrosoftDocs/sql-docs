@@ -9,12 +9,11 @@ ms.date: 06/13/2025
 ms.service: azure-sql
 ms.subservice: connect
 ms.topic: quickstart
-ms.custom:
-  - sqldbrb=2
-  - mode-api
+ms.custom: [sqldbrb=2, mode-api]
 ms.devlang: golang
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
+
 # Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -28,16 +27,16 @@ To complete this quickstart, you need:
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - An Azure SQL database or a database in [!INCLUDE [ssazuremi-md](../../docs/includes/ssazuremi-md.md)]. You can use one of these quickstarts to create a database:
 
-  | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
-  | :--- | :--- | :--- |
-  | **Create** | | |
-  | [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
-  | [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
-  | [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md) |
-  | **Configure** | | |
-  | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md) | [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md) |
-  | | [Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
-  | **Load data** | | |
+    | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
+    | :--- | :--- | :--- |
+    | **Create** | | |
+    | [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
+    | [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) | |
+    | [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md) |
+    | **Configure** | | |
+    | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md) | [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md) | |
+    | | [Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
+    | **Load data** | | |
   | `AdventureWorks2022` loaded per quickstart | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) |
   | | Restore or import `AdventureWorks2022` from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) | Restore or import `AdventureWorks2022` from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) |
 
@@ -333,6 +332,9 @@ Get the connection information you need to connect to the database. You'll need 
 
 ## Related content
 
+- [Microsoft go-mssqldb driver for SQL Server](/sql/connect/golang/microsoft-go-mssqldb-driver)
+- [Azure SQL Database with go-mssqldb](/sql/connect/golang/microsoft-go-mssqldb-driver)
+- [Microsoft Entra ID authentication with go-mssqldb](/sql/connect/golang/microsoft-go-mssqldb-driver)
 - [Tutorial: Design a relational database in Azure SQL Database](design-first-database-tutorial.md)
-- [Golang driver for SQL Server](https://github.com/microsoft/go-mssqldb)
+- [go-mssqldb on GitHub](https://github.com/microsoft/go-mssqldb)
 - [Report issues or ask questions](https://github.com/microsoft/go-mssqldb/issues)

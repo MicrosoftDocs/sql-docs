@@ -1,0 +1,176 @@
+### YamlMime:FAQ
+metadata:
+  title: "go-mssqldb FAQ"
+  description: "Frequently asked questions about the go-mssqldb driver for SQL Server."
+  author: dlevy-msft
+  ms.author: dlevy
+  ms.date: 03/28/2026
+  ms.service: sql
+  ms.subservice: connectivity
+  ms.topic: faq
+  ai-usage: ai-assisted
+title: go-mssqldb frequently asked questions
+summary: |
+  This article answers frequently asked questions about the `go-mssqldb` driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+sections:
+  - name: General
+    questions:
+      - question: What is go-mssqldb?
+        answer: |
+          The `go-mssqldb` driver is the official Microsoft Go driver for SQL Server. It's a pure Go implementation of the TDS protocol that uses the standard `database/sql` interface. No ODBC or other C libraries are required. For more information, see [Microsoft go-mssqldb driver for SQL Server](microsoft-go-mssqldb-driver.md).
+      - question: What Go versions are supported?
+        answer: |
+          The driver requires Go 1.25 or later for the current release (v1.10.x). For the latest compatibility information, see [Support and lifecycle](support-lifecycle.md).
+      - question: What SQL Server versions are supported?
+        answer: |
+          The driver works with all supported versions of SQL Server, Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, Fabric Data Warehouse, and Azure Synapse Analytics. For version-specific considerations, see [Support and lifecycle](support-lifecycle.md).
+      - question: Is an ODBC driver required?
+        answer: |
+          No. The `go-mssqldb` driver is a pure Go implementation and doesn't depend on ODBC, FreeTDS, or any C libraries.
+  - name: Connection
+    questions:
+      - question: What connection string formats are supported?
+        answer: |
+          The driver supports three formats: URL (`sqlserver://`), ADO (`key=value`), and ODBC (`odbc:key=value`). For details, see [Connection strings](connection-strings.md).
+      - question: How do I connect to a named instance?
+        answer: |
+          In URL format, add the instance name as a path segment: `sqlserver://<server>/myinstance?database=AdventureWorks2025`. In ADO format, include it in the server parameter: `server=<server>\myinstance`. The SQL Server Browser service must be running on the target machine.
+      - question: How do I use Windows authentication on Linux?
+        answer: |
+          Windows integrated authentication (SSPI) isn't available on Linux. Use NTLM with a domain-qualified user name (`DOMAIN\user`) or Kerberos with a keytab or credential cache. For details, see [Linux and macOS](linux-macos.md).
+  - name: Authentication
+    questions:
+      - question: How do I authenticate with Microsoft Entra ID?
+        answer: |
+          Import the `azuread` package and use the `azuresql` driver name with the `fedauth` connection parameter. For Azure SQL, also set `encrypt=true` and `TrustServerCertificate=false`. The recommended type for most scenarios is `ActiveDirectoryDefault`. For all options, see [Microsoft Entra ID authentication](entra-authentication.md).
+      - question: How do I use managed identity?
+        answer: |
+          Set `fedauth=ActiveDirectoryManagedIdentity` in the connection string. For Azure SQL, also set `encrypt=true` and `TrustServerCertificate=false`. For a user-assigned identity, also set `user id` to the client ID. Use the `azuresql` driver name. For details, see [Microsoft Entra ID authentication](entra-authentication.md).
+  - name: Data access
+    questions:
+      - question: Why don't question mark (?) placeholders work?
+        answer: |
+          The `sqlserver` driver name requires `@p1`, `@p2`, ... positional parameters or `sql.Named()` named parameters. The `?` placeholder syntax used by some other drivers (such as MySQL's `go-sql-driver`) doesn't work:
+
+          ```go
+          // WRONG - causes "Incorrect syntax near '?'"
+          db.QueryContext(ctx, "SELECT * FROM Person.Person WHERE BusinessEntityID = ?", 1)
+
+          // CORRECT - positional
+          db.QueryContext(ctx, "SELECT * FROM Person.Person WHERE BusinessEntityID = @p1", 1)
+
+          // CORRECT - named
+          db.QueryContext(ctx, "SELECT * FROM Person.Person WHERE BusinessEntityID = @id", sql.Named("id", 1))
+          ```
+
+          Named parameters are a go-mssqldb advantage over drivers that only support positional placeholders. For migration patterns from other drivers, see [Migrate to go-mssqldb](migration-guide.md).
+      - question: Why does LastInsertId return an error?
+        answer: |
+          The `go-mssqldb` driver doesn't support `LastInsertId()`. Use an `OUTPUT` clause in the INSERT statement or query `SCOPE_IDENTITY()` separately. For more information, see [Known limitations](known-limitations.md).
+      - question: How do I use table-valued parameters?
+        answer: |
+          Create a user-defined table type in SQL Server, define a matching Go struct, and pass an `mssql.TVP` value as a parameter. For details, see [Table-valued parameters](table-valued-parameters.md).
+      - question: How do I call a stored procedure with output parameters?
+        answer: |
+          Use `sql.Named` with `sql.Out` for output parameters and `mssql.ReturnStatus` for the return value. For details, see [Stored procedures](stored-procedures.md).
+      - question: Can I use GORM with go-mssqldb?
+        answer: |
+          Yes. Use the `gorm.io/driver/sqlserver` GORM dialect, which uses `go-mssqldb` internally:
+
+          ```go
+          import (
+              "gorm.io/driver/sqlserver"
+              "gorm.io/gorm"
+          )
+
+          dsn := "sqlserver://<user>:<password>@<server>:1433?database=AdventureWorks2025"
+          db, err := gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
+          ```
+
+          Common issues to be aware of:
+
+          - **Table naming**: GORM uses lowercase plural table names by default (for example, `users`). SQL Server schemas often use singular names with a `dbo` schema prefix. Use `TableName()` on your models or set `NamingStrategy` to match your database conventions.
+          - **Batch insert**: GORM's default batch insert uses multi-row `VALUES` syntax, which works with SQL Server. For large batches, set `CreateBatchSize` to stay within SQL Server's 2,100-parameter limit per query (a server-side constraint on `sp_executesql`).
+          - **UUID primary keys**: If you use `uuid.UUID` as a primary key, configure the column type explicitly with `gorm:"type:uniqueidentifier"`.
+
+          The GORM dialect handles most SQL Server syntax differences automatically. For driver-specific issues, see [Troubleshooting](troubleshooting.md).
+  - name: Security
+    questions:
+      - question: How do I use Always Encrypted?
+        answer: |
+          Set `columnencryption=true` in the connection string and import at least one key provider package (`localcert` for PFX or Windows Certificate Store, `akv` for Azure Key Vault). For details, see [Always Encrypted](always-encrypted.md).
+      - question: How do I enable TDS 8.0 strict encryption?
+        answer: |
+          Set `encrypt=strict` in the connection string. TDS 8.0 requires SQL Server 2022 or Azure SQL. For details, see [Encryption and certificates](encryption-certificates.md).
+  - name: Connection pooling
+    questions:
+      - question: How do I check if my connection pool is exhausted?
+        answer: |
+          Call `db.Stats()` and check the `WaitCount` and `InUse` fields. If `InUse` equals your `MaxOpenConns` and `WaitCount` is growing, the pool is exhausted. For monitoring patterns, see [Connection pooling](connection-pooling.md).
+      - question: What happens when MaxOpenConns is reached?
+        answer: |
+          New callers to `QueryContext`, `ExecContext`, or `BeginTx` block until a connection is returned to the pool or the context deadline is exceeded. Always set context timeouts to avoid indefinite blocking.
+      - question: How do I keep connections alive behind a load balancer?
+        answer: |
+          Set `ConnMaxLifetime` to a value shorter than the load balancer's idle timeout (typically 5 minutes). This forces connections to be recycled and redistributed. For details, see [Connection pooling](connection-pooling.md).
+  - name: Error handling
+    questions:
+      - question: How do I detect transient errors?
+        answer: |
+          Use `errors.As` to extract the `mssql.Error` and check the error number. Transient errors include deadlocks (1205), throttling (10928, 10929, 40501), and failover (40613). Retry these errors with exponential backoff. For a complete list and retry patterns, see [Error handling and retry patterns](error-handling.md).
+      - question: Should I retry deadlocks?
+        answer: |
+          Retrying occasional deadlocks (error 1205) is fine and expected in concurrent systems. Wrap your transaction logic in a retry loop that catches error 1205 and retries the entire transaction. However, if the same query deadlocks repeatedly, retrying masks a design problem. Investigate the root cause with the deadlock graph (Extended Events or the system health session) and fix the access pattern. See [Transactions](transactions.md#deadlock-handling) for a retry wrapper and the [Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide) for diagnosis and prevention.
+      - question: How do I get the SQL Server error number from a Go error?
+        answer: |
+          Use `errors.As` to extract the `mssql.Error` struct, then read the `Number` field:
+
+          ```go
+          var mssqlErr mssql.Error
+          if errors.As(err, &mssqlErr) {
+              fmt.Println("Error number:", mssqlErr.Number)
+          }
+          ```
+
+          For details, see [Error handling and retry patterns](error-handling.md).
+  - name: Performance
+    questions:
+      - question: How do I benchmark database operations in Go?
+        answer: |
+          Use Go's `testing.B` benchmark framework. Create functions named `BenchmarkXxx(b *testing.B)` and run them with `go test -bench=. -benchmem`. For examples, see [Performance tuning](performance-tuning.md).
+      - question: What packet size should I use?
+        answer: |
+          The default is 4096 bytes. For workloads that transfer large result sets or use bulk copy, increase to 8192 or 16384 with the `packet size` connection parameter. Valid range is 512-32767. For more details, see [Performance tuning](performance-tuning.md).
+      - question: How do I route read-only queries to a secondary replica?
+        answer: |
+          Add `ApplicationIntent=ReadOnly` to the connection string and connect to your availability group listener. Create separate `*sql.DB` instances for read and write workloads. See [Performance tuning](performance-tuning.md).
+  - name: Testing
+    questions:
+      - question: How do I test without a real SQL Server database?
+        answer: |
+          Prefer testing against a real SQL Server instance in a container. Use `testcontainers-go` with the MSSQL module to spin up a container per test suite, or use Docker Compose or LocalDB on Windows. This is the same approach the `go-mssqldb` driver uses for its own test suite. If container startup time is too slow for fast inner-loop unit tests, use `go-sqlmock` (`github.com/DATA-DOG/go-sqlmock`) to create a mock `*sql.DB` that returns predefined results. See [Testing](testing.md) for examples of both approaches.
+      - question: How do I set up SQL Server in CI?
+        answer: |
+          Use the `mcr.microsoft.com/mssql/server:2025-latest` Docker image as a service in your CI pipeline. In GitHub Actions, define it in the `services` section of your workflow. For a complete workflow example, see [Testing](testing.md).
+      - question: How do I spin up a SQL Server container per test suite?
+        answer: |
+          Use `testcontainers-go` with the MSSQL module. It starts a container before your tests and cleans it up after. See [Testing](testing.md) for a complete example.
+  - name: Azure SQL
+    questions:
+      - question: How do I connect to Azure SQL with managed identity?
+        answer: |
+          Import the `azuread` package, use the `azuresql` driver name, and set `fedauth=ActiveDirectoryManagedIdentity&encrypt=true&TrustServerCertificate=false`. For a user-assigned identity, also set `user id` to the client ID. For details, see [Azure SQL Database](azure-sql.md).
+      - question: What are the connection limits for my Azure SQL tier?
+        answer: |
+          Connection limits vary by tier and compute size. For example, a Basic DTU tier allows 30 concurrent sessions, while a Premium P4 allows 7,500. Set your pool's `MaxOpenConns` below your tier's limit. For a full table of limits, see [Azure SQL Database](azure-sql.md).
+      - question: How do I handle Azure SQL failover in my application?
+        answer: |
+          Set `ConnMaxLifetime` to 5 minutes or less so connections are recycled after a failover. Implement retry logic for transient errors 40613 (database unavailable) and 40197 (service error). For patterns, see [Azure SQL Database](azure-sql.md) and [Error handling and retry patterns](error-handling.md).
+  - name: Concurrency
+    questions:
+      - question: Is sql.DB safe for concurrent use by multiple goroutines?
+        answer: |
+          Yes. `*sql.DB` is safe for concurrent use and manages its own connection pool. Create a single `*sql.DB` instance at application startup and share it across all goroutines. Don't create a new `*sql.DB` per request. For patterns, see [Concurrent programming](concurrent-programming.md).
+      - question: How many goroutines can share a connection pool?
+        answer: |
+          Any number of goroutines can share a single `*sql.DB`. The pool manages concurrency internally. Set `MaxOpenConns` to match your workload concurrency (not the number of goroutines). Goroutines that can't get a connection block until one is available. See [Connection pooling](connection-pooling.md).

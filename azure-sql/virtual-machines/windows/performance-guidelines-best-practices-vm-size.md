@@ -368,7 +368,7 @@ These machines are ideal for side-by-side SQL and app deployments that require f
 
 For this reason, use the Standard_D8ds_v5 as the minimum recommended VM size in this series. The largest VM size is the Standard_D96ds_v5, which has 96 vCores.
 
-## DCadsv6 series (Confidential Computing)
+### DCadsv6 series (Confidential Computing)
 
 | Parameter | Value |
 |-----------|-------|

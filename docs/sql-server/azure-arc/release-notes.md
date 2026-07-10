@@ -48,7 +48,7 @@ The following table lists the features of SQL Server enabled by Azure Arc that a
 
 ## General availability (GA)
 
-The following table lists features of SQL Server enabled by Azure Arc that have reached generally availability (GA) within the last 12 months:
+The following table lists features of SQL Server enabled by Azure Arc that reached general availability (GA) within the last 12 months:
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
@@ -194,7 +194,7 @@ This release enables the following features:
   - Released for general availability
   - Improved user interface
   - Includes retail pricing information to simplify decisions
-  - Recommends a single migration target type among the Azure SQL offerings based your migration strategy selection:
+  - Recommends a single migration target type among the Azure SQL offerings based on your migration strategy selection:
     - Minimize cost
     - Modernize to Platform as a service (PaaS)
   - Introduces assessment settings experience to set pricing options and migration strategy to suit your requirements

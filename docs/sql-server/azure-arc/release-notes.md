@@ -53,6 +53,7 @@ The following table lists features of SQL Server enabled by Azure Arc that have 
 | Feature | GA Month | Details |
 | --- | --- | --- |
 | [Database migration (SQL VM)](/sql/sql-server/azure-arc/migrate-to-sql-server-on-azure-vms) | June 2026 | Migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal. |
+| [Disable SQL authentication](disable-sql-authentication.md) | April 2026 | Disable SQL authentication for your SQL Server instances connected to Azure Arc directly from the Azure portal. |
 | [Backup to URL with a managed identity](backup-to-url.md)| November 2025 | Use a managed identity to authenticate to Azure Blob Storage for backups to URL. |
 | [Managed identity](managed-identity.md) | November 2025 | Use a managed identity to authenticate to your SQL Server instance starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. |
 | [Database migration (SQL MI)](migrate-to-azure-sql-managed-instance.md) | October 2025 | Migrate your SQL Server databases to Azure SQL Managed Instance directly from the Azure portal. |
@@ -103,6 +104,8 @@ This section lists the release notes by date, starting with the most recent rele
 ### April 2026
 
 **Extension version**: `1.1.3394.392`
+
+- You can now disable [SQL authentication](disable-sql-authentication.md) for your SQL Server instances enabled by Azure Arc directly from the Azure portal. This feature is now generally available (GA).
 
 ### February 2026
 

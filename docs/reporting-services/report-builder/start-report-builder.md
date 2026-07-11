@@ -20,7 +20,7 @@ helpviewer_keywords:
 
 Learn how to start Microsoft Report Builder from the Reporting Services web portal. Microsoft [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone report authoring environment. With it, you can create paginated reports and publish them to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server.
 
-::: moniker range=">=sql-server-2016 <=sql-server-2016"
+::: moniker range="=sql-server-2016"
 > [!NOTE]  
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 ::: moniker-end
@@ -51,7 +51,7 @@ When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from t
 
      After the first time, [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens, and you can create a paginated report or open a report from the report server.
 
-::: moniker range=">=sql-server-2016 <=sql-server-2016"
+::: moniker range="=sql-server-2016"
 
 ## Start Report Builder in SharePoint integrated mode
 

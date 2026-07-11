@@ -46,7 +46,7 @@ Whether you're setting up the software for your own use or deploying it across m
 
 ## Install Report Builder from the web portal
 
-::: moniker range=">=sql-server-2016 <=sql-server-2016"
+::: moniker range="=sql-server-2016"
 > [!NOTE]
 > You can install Report Builder from a SharePoint library integrated with Reporting Services through SQL Server 2016.
 ::: moniker-end

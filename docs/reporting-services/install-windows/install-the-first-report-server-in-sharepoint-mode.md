@@ -1,6 +1,6 @@
 ---
-title: "Install the first Report Server in SharePoint mode"
-description: "Install the first Report Server in SharePoint mode"
+title: Install the First Report Server in SharePoint Mode
+description: Install the first Report Server in SharePoint mode
 ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
@@ -8,7 +8,7 @@ ms.topic: install-set-up-deploy
 ms.custom:
   - intro-installation
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Install the first Report Server in SharePoint mode
 

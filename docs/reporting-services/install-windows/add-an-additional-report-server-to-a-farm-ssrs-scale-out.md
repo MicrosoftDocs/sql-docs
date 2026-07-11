@@ -1,13 +1,13 @@
 ---
-title: "Add another report server to a farm (SSRS scale-out)"
-description: "Add an Additional Report Server to a Farm (SSRS Scale-out)"
+title: Add Another Report Server to a Farm (SSRS Scale-Out)
+description: Add an Additional Report Server to a Farm (SSRS Scale-out)
 ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
 ms.custom:
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 
 # Add another report server to a farm (SSRS scale-out)

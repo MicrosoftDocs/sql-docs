@@ -7,7 +7,7 @@ ms.subservice: report-server-sharepoint
 ms.topic: concept-article
 ms.custom:
   - updatefrequency5
-monikerRange: "= sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Native to SharePoint Migration (SSRS)
 

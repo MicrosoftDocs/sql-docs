@@ -1,5 +1,5 @@
 ---
-title: "Data alert messages"
+title: Data Alert Messages
 description: "Learn how SQL Server Reporting Services data alerts deliver two types of data alert messages by email: messages with data alert results and messages with error descriptions."
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -7,7 +7,7 @@ ms.subservice: reporting-services
 ms.topic: concept-article
 ms.custom:
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Data alert messages
 

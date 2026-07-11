@@ -1,5 +1,5 @@
 ---
-title: "Grant permissions to users and alerting administrators"
+title: Grant Permissions to Users and Alerting Administrators
 description: Learn how to grant permissions to users and alerting administrators in SQL Server Reporting Services (SSRS).
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -7,7 +7,7 @@ ms.subservice: reporting-services
 ms.topic: how-to
 ms.custom:
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Grant permissions to users and alerting administrators
 

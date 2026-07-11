@@ -1,5 +1,5 @@
 ---
-title: "Data Alert Designer"
+title: Data Alert Designer
 description: Learn about data alert definitions and how to create and edit data alert definitions in Data Alert Designer.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "updating, alerts"
   - "creating, data alerts"
   - "creating, alerts"
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 
 # Data Alert Designer

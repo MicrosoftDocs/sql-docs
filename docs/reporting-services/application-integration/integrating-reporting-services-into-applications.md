@@ -1,5 +1,5 @@
 ---
-title: "Integrating into applications"
+title: Integrating into Applications
 description: Reporting Services is an open and extensible reporting platform designed to provide developers with a comprehensive set of APIs for developing solutions.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -7,7 +7,7 @@ ms.subservice: application-integration
 ms.topic: reference
 ms.custom:
   - updatefrequency5
-monikerRange: "= sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Integrating Reporting Services into applications
 

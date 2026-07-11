@@ -5,10 +5,10 @@ ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: how-to
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ms.custom:
   - updatefrequency5
   - sfi-image-nochange
+monikerRange: "=sql-server-2016"
 ---
 # Manage a Reporting Services SharePoint service application
 

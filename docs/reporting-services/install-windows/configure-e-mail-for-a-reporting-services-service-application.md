@@ -1,13 +1,13 @@
 ---
-title: "Configure e-mail for a Reporting Services service application"
-description: "Configure e-mail for a Reporting Services service application"
+title: Configure E-Mail for a Reporting Services Service Application
+description: Configure e-mail for a Reporting Services service application
 ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
 ms.custom:
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Configure e-mail for a Reporting Services service application
 

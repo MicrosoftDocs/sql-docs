@@ -1,5 +1,5 @@
 ---
-title: "Create a data alert in Data Alert Designer"
+title: Create a Data Alert in Data Alert Designer
 description: Learn how to create data alert definitions in Data Alert Designer. Also, learn about editing the alerts and saving the edits when you're finished.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -7,7 +7,7 @@ ms.subservice: reporting-services
 ms.topic: how-to
 ms.custom:
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 
 # Create a data alert in Data Alert Designer

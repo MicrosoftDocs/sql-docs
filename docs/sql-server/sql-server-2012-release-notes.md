@@ -9,8 +9,8 @@ ms.service: sql
 ms.subservice: release-landing
 ms.topic: release-notes
 helpviewer_keywords:
-  - "Release Notes, SQL Server"
-monikerRange: "<=sql-server-2016"
+  - "Release Notes, SQL Server 2012"
+monikerRange: "<=sql-server-2017"
 ---
 # SQL Server 2012 release notes
 

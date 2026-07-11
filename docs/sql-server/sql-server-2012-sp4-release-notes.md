@@ -8,7 +8,9 @@ ms.date: 09/08/2025
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: release-notes
-monikerRange: "<=sql-server-2016"
+helpviewer_keywords:
+  - "Release Notes, SQL Server 2012 SP4"
+monikerRange: "<=sql-server-2017"
 ---
 # SQL Server 2012 Service Pack release notes
 

@@ -11,6 +11,7 @@ ms.custom: intro-whats-new
 helpviewer_keywords:
   - "Integration Services, what's new"
   - "what's new [Integration Services]"
+monikerRange: "=sql-server-2016"
 ---
 # What's New in Integration Services in SQL Server 2016
 

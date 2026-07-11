@@ -8,6 +8,7 @@ ms.service: sql
 ms.subservice: backup-restore
 ms.topic: upgrade-and-migration-article
 ms.custom: intro-migration
+monikerRange: "=sql-server-2016"
 ---
 # Migrate managed backup settings
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

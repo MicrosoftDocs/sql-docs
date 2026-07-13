@@ -101,7 +101,11 @@ After you create the link, your source database gets a read-only copy on your ta
     :::image type="content" source="./media/managed-instance-link-configure-how-to-ssms/new-link.png" alt-text="Screenshot that shows a database's context menu option to create a new link.":::
 
 1. On the **Introduction** page of the wizard, select **Next**.
-1. On the **Specify Link Options** page, provide a name for your link. If you select multiple databases, the wizard automatically appends the database name to the end of the name you provide so you don't have to include it yourself. Check the boxes if you want to enable connectivity troubleshooting and, for SQL Server 2022 or SQL Server 2025, if you plan to use the link for two-way disaster recovery. Select **Next**.  
+1. On the **Specify Link Options** page, provide a name for your link. If you select multiple databases, the wizard automatically appends the database name to the end of the name you provide so you don't have to include it yourself. Check the boxes if you want to enable connectivity troubleshooting and, for SQL Server 2022 or SQL Server 2025, if you plan to use the link for two-way disaster recovery. Select **Next**.
+
+   > [!NOTE]
+   > Starting with SSMS v22.7.0, you can preview adding multiple databases when creating a link in SSMS. This feature is temporarily disabled unless you request access. For more information, see the [access request form](https://aka.ms/milink-multidb-prpr).
+
 1. On the **Requirements** page, the wizard validates requirements to establish a link to your secondary. Select **Next** after all the requirements are validated, or resolve any requirements that aren't met and then select **Re-run Validation**. 
 1. On the **Select Databases** page, choose the database you want to replicate to your secondary replica via the link. Selecting multiple databases creates multiple distributed availability groups, one for each link. Select **Next**. 
 1. On the **Specify Secondary Replica** page, select **Add secondary replica** to add your secondary replica. If your initial primary is SQL Server, this action opens the **Sign In** to Azure window. If your initial primary is SQL Managed Instance, this action opens the **Connect to server** dialog box.   

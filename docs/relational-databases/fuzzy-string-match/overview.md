@@ -3,8 +3,8 @@ title: Fuzzy String Match
 description: Look up data with fuzzy or approximate values.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: randolphwest
-ms.date: 11/18/2025
+ms.reviewer: abhtiwar, randolphwest, wiassaf
+ms.date: 07/13/2026
 ms.service: sql
 ms.topic: overview
 ms.custom:
@@ -33,7 +33,13 @@ Use fuzzy, or approximate, string matching to check if two strings are similar, 
 | [JARO_WINKLER_SIMILARITY](../../t-sql/functions/jaro-winkler-similarity-transact-sql.md) | Calculates a similarity value ranging from 0 (indicating no match) to 100 (indicating full match). |
 
 > [!NOTE]  
-> Currently, the functions don't adhere to the comparison semantics defined by collation settings, such as case insensitivity and other collation-specific rules. Once support for collation rules is implemented, the functions' output will reflect these semantics and might change accordingly.
+> The following features currently are supported only on Azure SQL Database, SQL database in Microsoft Fabric, and Azure SQL Managed Instance configured with the *Always-up-to-date* update policy:
+>
+>  - Fuzzy string matching functions support **Windows collations** and **binary collations (`BIN` and `BIN2`)**. Comparison behavior, including case sensitivity, accent sensitivity, and linguistic rules, is determined by the collation of the input expressions.
+>
+>     - Non-binary `SQL_*` collations aren't supported. If you're using a non-binary `SQL_*` collation, consider using a corresponding Windows collation instead.
+>
+>     - If changing the database or column collation isn't feasible, you can apply a supported Windows collation to the arguments passed to a fuzzy string matching function by using the `COLLATE` clause. This approach allows the function to evaluate input values using a supported collation without requiring broader collation changes to the database.
 
 ## Examples
 

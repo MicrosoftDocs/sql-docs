@@ -36,6 +36,8 @@ Before moving your instance to another subnet, consider familiarizing yourself w
 
 - Use [management operations](management-operations-overview.md) to automatically deploy new managed instances, update instance properties, or delete instances. You can [monitor](management-operations-monitor.md) these management operations.
 
+Before initiating the subnet move, verify that connectivity is allowed between the source and destination subnets on ports 5022 and 11000-11999. This verification includes validating the entire network path and ensuring that any user-defined routes, network virtual appliances (NVAs), firewalls, or other network devices aren't blocking traffic on these ports.
+
 ### Subnet readiness
 
 Before you move your SQL managed instance, confirm the subnet is marked as **Ready for Managed Instance**.
@@ -86,9 +88,9 @@ Consider the following limitations when choosing a destination subnet for an exi
 
 If you want to migrate a SQL Managed Instance with a [failover group](failover-group-sql-mi.md), the following prerequisites apply:
 
-- The target subnet needs to have the same security rules needed for failover group replication as the source subnet:
+- The target subnet must allow the same replication traffic required for the failover group as the source subnet:
 
-  Open both inbound and outbound ports 5022 and the range 11000-11999 in the Network Security Group (NSG) for connections from the other SQL managed instance subnet (the one that holds the failover group replica) to allow replication traffic between the two instances.
+  Open both inbound and outbound ports 5022 and the range 11000-11999 in the Network Security Group (NSG) for connections from the other SQL managed instance subnet (the one that holds the failover group replica) to allow replication traffic between the two instances. Make sure the full network path also allows this traffic. A user-defined route, Network Virtual Appliance, firewall, or other intermediate device can still block the ports even when the NSG rules are correct.
 
 - The target subnet can't have an overlapping address range with the subnet that holds the secondary instance replica of the failover group.
 

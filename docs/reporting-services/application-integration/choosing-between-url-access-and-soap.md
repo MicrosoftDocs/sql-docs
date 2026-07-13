@@ -1,5 +1,5 @@
 ---
-title: "Choose between URL access and SOAP"
+title: Choose Between URL Access and SOAP
 description: "There are two ways to integrate Reporting Services into custom applications: URL access and the Reporting Services SOAP API. Find out how to choose."
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -7,7 +7,7 @@ ms.subservice: application-integration
 ms.topic: reference
 ms.custom:
   - updatefrequency5
-monikerRange: "= sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Choose between URL access and SOAP in Reporting Services
 

@@ -1,5 +1,5 @@
 ---
-title: "Performance counters MSRS 2016 Native Mode, performance objects"
+title: Performance Counters MSRS 2016 Native Mode, Performance Objects
 description: Learn about performance counters for the MSRS 2016 Web Service and MSRS 2016 Windows Service performance objects.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "RS Web Service performance object"
   - "counters [Reporting Services]"
   - "performance [Reporting Services]"
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Performance counters MSRS 2016 Native Mode, performance objects
   This article describes performance counters for the **MSRS 2016 Web Service** and **MSRS 2016 Windows Service** performance objects. These objects are part of a SQL Server 2016 Reporting Services Native Mode deployment.  

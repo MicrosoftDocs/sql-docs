@@ -7242,8 +7242,8 @@ items:
       items:
       - name: Full-text index version upgrade (SQL Server 2025)
         href: relational-databases/search/full-text-index-version-upgrade.md
-      - name: Deprecated features in SQL Server 2016
-        href: relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md
+      - name: Deprecated features in SQL Server
+        href: relational-databases/search/deprecated-full-text-search-features-in-sql-server.md
       - name: Change the US English and UK English word breaker (SQL Server 2012)
         href: relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md
       - name: Revert legacy word breakers (SQL Server 2012)

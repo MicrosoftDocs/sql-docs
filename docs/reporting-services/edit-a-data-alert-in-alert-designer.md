@@ -1,5 +1,5 @@
 ---
-title: "Edit a data alert in Alert Designer"
+title: Edit a Data Alert in Alert Designer
 description: Learn how to edit a data alert. You can edit data alerts by accessing them from the Data Alert Manager.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "updating, data alerts"
   - "editing, alerts"
   - "updating, alerts"
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Edit a data alert in Alert Designer
 

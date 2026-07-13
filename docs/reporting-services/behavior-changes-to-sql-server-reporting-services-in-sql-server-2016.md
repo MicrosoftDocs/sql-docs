@@ -1,5 +1,5 @@
 ---
-title: "Behavior changes to SQL Server Reporting Services in SQL Server 2016"
+title: Behavior Changes to SQL Server Reporting Services in SQL Server 2016
 description: Learn about behavior changes in Reporting Services and how the features work or interact in SQL Server 2016 as compared to previous versions of SQL Server.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -20,6 +20,7 @@ helpviewer_keywords:
   - "blank characters [SQL Server]"
   - "initializing installations [Reporting Services]"
   - "behavior changes [Reporting Services]"
+monikerRange: "=sql-server-2016"
 ---
 
 # Behavior changes to SQL Server Reporting Services in SQL Server 2016

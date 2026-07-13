@@ -1,13 +1,13 @@
 ---
-title: "Add another Reporting Services web front-end to a farm"
-description: "Add another Reporting Services web front-end to a Farm"
+title: Add Another Reporting Services Web Front-End to a Farm
+description: Add another Reporting Services web front-end to a Farm
 ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: install-set-up-deploy
 ms.custom:
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Add another Reporting Services web front-end to a farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode includes components needed for application servers and web front-end (WFE) servers. This article focuses on installing the required [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components for a WFE server. These components include the application pages used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features such as subscriptions, data alerts, and Power View. The primary [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation needed for a WFE is to install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint 2016 products.  

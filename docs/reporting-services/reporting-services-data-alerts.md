@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services data alerts"
+title: Reporting Services Data Alerts
 description: Learn how SQL Server Reporting Services data alerts help inform you about report data that is interesting or important to you.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -7,7 +7,7 @@ ms.subservice: reporting-services
 ms.topic: concept-article
 ms.custom:
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Reporting Services data alerts
 

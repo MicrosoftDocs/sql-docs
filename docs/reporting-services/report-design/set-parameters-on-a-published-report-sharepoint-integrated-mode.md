@@ -1,5 +1,5 @@
 ---
-title: "Set parameters on a published paginated report - SharePoint Integrated Mode"
+title: Set Parameters on a Published Paginated Report - SharePoint Integrated Mode
 description: Learn how to set parameters and run a parameterized paginated report, in the report definition or after the report is published, in Report Builder.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -10,7 +10,7 @@ ms.custom:
 helpviewer_keywords:
   - "SharePoint integration [Reporting Services], content management"
   - "report parameters [Reporting Services]"
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Set parameters on a published paginated report - SharePoint Integrated Mode (Report Builder)
 

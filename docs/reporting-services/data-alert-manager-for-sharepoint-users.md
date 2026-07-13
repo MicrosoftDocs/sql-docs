@@ -1,5 +1,5 @@
 ---
-title: "Data Alert Manager for SharePoint users"
+title: Data Alert Manager for SharePoint Users
 description: Learn how Reporting Services provides Data Alert Manager for SharePoint information workers to manage the data alerts.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -10,7 +10,7 @@ ms.custom:
 helpviewer_keywords:
   - "managing, alerts"
   - "managing, data alerts"
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 
 # Data Alert Manager for SharePoint users

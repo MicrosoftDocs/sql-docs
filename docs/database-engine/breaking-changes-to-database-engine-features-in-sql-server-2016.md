@@ -12,6 +12,7 @@ ms.topic: release-notes
 helpviewer_keywords:
   - "Database Engine [SQL Server], what's new"
   - "breaking changes [SQL Server]"
+monikerRange: "=sql-server-2016"
 ---
 # Breaking changes to Database Engine features in SQL Server 2016
 

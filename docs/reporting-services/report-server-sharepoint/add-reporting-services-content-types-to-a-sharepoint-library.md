@@ -1,5 +1,5 @@
 ---
-title: "Add Reporting Services content types to a SharePoint library"
+title: Add Reporting Services Content Types to a SharePoint Library
 description: Add a Report Builder Report, Report Model, and Report Data Source content type to a library to enable the New command to create new documents of that type.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -7,7 +7,7 @@ ms.subservice: report-server-sharepoint
 ms.topic: how-to
 ms.custom:
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 
 # Add Reporting Services content types to a SharePoint library

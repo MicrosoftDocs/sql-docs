@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services SharePoint service and service applications"
+title: Reporting Services SharePoint Service and Service Applications
 description: Creating a service application in SQL Server Reporting Services SharePoint mode makes the service available and generates the service application database.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -7,7 +7,7 @@ ms.subservice: report-server-sharepoint
 ms.topic: concept-article
 ms.custom:
   - updatefrequency5
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Reporting Services SharePoint service and service applications
 

@@ -8,7 +8,7 @@ ms.topic: upgrade-and-migration-article
 ms.custom:
   - intro-migration
   - updatefrequency5
-monikerRange: "= sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)

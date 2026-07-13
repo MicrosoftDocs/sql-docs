@@ -70,7 +70,7 @@ PolyBase has the following limitations:
 - Databases that get installed with PolyBase (DWConfiguration, DWDiagnostics, DWQueue) must be in read-write mode in order for PolyBase to function and for Cumulative Update installations to succeed. Therefore, it is not supported to have these databases in an availability group.
 
 <!--SQL Server 2016-->
-::: moniker range="= sql-server-2016 "
+::: moniker range="=sql-server-2016"
 
 - [PolyBase doesn't install when you add a node to a [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] failover cluster](https://support.microsoft.com/help/3173087).
 

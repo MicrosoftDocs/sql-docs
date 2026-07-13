@@ -1,5 +1,5 @@
 ---
-title: "Performance counters - ReportServer service, performance objects"
+title: Performance Counters - ReportServer Service, Performance Objects
 description: "Learn about performance counters for the ReportServer:Service and ReportServerSharePoint:Service performance objects, part of a SQL Server 2012 deployment."
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -9,7 +9,7 @@ ms.custom:
   - updatefrequency5
 helpviewer_keywords:
   - "Report Server service, performance counters"
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Performance counters - ReportServer service, performance objects
   This article describes performance counters for the **ReportServer:Service** and **ReportServerSharePoint:Service** performance objects that are part of a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] deployment.  

@@ -37606,6 +37606,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md",
+      "redirect_url": "/sql/relational-databases/search/deprecated-full-text-search-features-in-sql-server.md",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/relational-databases/search/enable-semantic-search-on-tables-and-columns.md",
       "redirect_url": "/previous-versions/sql/2014/relational-databases/search/enable-semantic-search-on-tables-and-columns",
       "redirect_document_id": false

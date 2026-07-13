@@ -1,6 +1,6 @@
 ---
-title: "Where to find the SSRS add-in for SharePoint"
-description: "The SQL Server Reporting Services add-in for SharePoint Products and Technologies (rssharepoint.msi) is a Web download that provides features to integrate a report server with a deployment of SharePoint."
+title: Where to Find the SSRS Add-In for SharePoint
+description: The SQL Server Reporting Services add-in for SharePoint Products and Technologies (rssharepoint.msi) is a Web download that provides features to integrate a report server with a deployment of SharePoint.
 ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
@@ -9,7 +9,7 @@ ms.custom:
   - updatefrequency5
 helpviewer_keywords:
   - "rsSharePoint"
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 
 # Where to find the Reporting Services add-in for SharePoint Products

@@ -5,13 +5,13 @@ ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: install-set-up-deploy
-helpviewer_keywords:
-  - "command line"
-monikerRange: "= sql-server-2016"
 ms.custom:
   - intro-installation
   - updatefrequency5
   - sfi-ropc-blocked
+helpviewer_keywords:
+  - "command line"
+monikerRange: "=sql-server-2016"
 ---
 # Install Reporting Services 2016 at the Command Prompt
 

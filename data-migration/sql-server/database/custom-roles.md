@@ -5,7 +5,7 @@ description: Learn how to use custom roles for SQL Server to Azure SQL Database 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: abhishekum
-ms.date: 02/19/2026
+ms.date: 07/09/2026
 ms.service: azure-database-migration-service
 ms.topic: how-to
 ms.collection:
@@ -15,6 +15,10 @@ ms.collection:
 # Custom roles for SQL Server to Azure SQL Database migrations
 
 This article explains how to set up a custom role in Azure for SQL Server database migrations. The custom role is configured with only the permissions required to initiate and execute migrations using an instance of Azure Database Migration Service, targeting Azure SQL Database. To provision a new instance of Azure Database Migration Service, the user must be assigned either the **Owner** or **Contributor** role at the subscription level.
+
+[!INCLUDE [custom-roles-intro](../../includes/custom-roles-intro.md)]
+
+For **Custom** role:
 
 Use the `AssignableScopes` section of the role definition JSON string to control where the permissions appear in the **Add role assignment** UI in the Azure portal. To avoid cluttering the UI with extra roles, you might want to define the role at the level of the resource group, or even the level of the resource. The resource that the custom role applies to doesn't perform the actual role assignment.
 
@@ -53,7 +57,8 @@ Use the `AssignableScopes` section of the role definition JSON string to control
                     "Microsoft.DataMigration/sqlMigrationServices/MonitoringData/read",
                     "Microsoft.DataMigration/SqlMigrationServices/tasks/read",
                     "Microsoft.DataMigration/SqlMigrationServices/tasks/write",
-                    "Microsoft.DataMigration/SqlMigrationServices/tasks/delete"
+                    "Microsoft.DataMigration/SqlMigrationServices/tasks/delete",
+                    "Microsoft.DataMigration/sqlMigrationServices/validateIR/action"
                 ],
                 "notActions": [],
                 "dataActions": [],
@@ -96,20 +101,9 @@ For more information, see [Create or update Azure custom roles using the Azure p
 | `Microsoft.DataMigration/SqlMigrationServices/tasks/read` | Get Migration Service Task details |
 | `Microsoft.DataMigration/SqlMigrationServices/tasks/write` | Create or Update Migration Service Task |
 | `Microsoft.DataMigration/SqlMigrationServices/tasks/delete` | Delete Migration Service Task |
+| `Microsoft.DataMigration/sqlMigrationServices/validateIR/action` | Validate Integration Runtime. |
 
-You can get a sample script to create a login and provision it with the necessary permissions, for [VMware](/azure/migrate/migrate-support-matrix-vmware?pivots=sql-server-instance-database-discovery-requirements#sql-server-instance-and-database-discovery-requirements), [Hyper-V](/azure/migrate/migrate-support-matrix-hyper-v#sql-server-instance-and-database-discovery-requirements), or [physical servers](/azure/migrate/migrate-support-matrix-physical#sql-server-instance-and-database-discovery-requirements), using Windows authentication or SQL Server authentication.
-
-## Role assignment
-
-To assign a role to a user or an app ID:
-
-1. In the Azure portal, go to the resource.
-
-1. In the left menu, select **Access control (IAM)**, and then scroll to find the custom roles you created.
-
-1. Select the roles to assign, select the user or app ID, and then save the changes.
-
-   The user or app ID now appears on the **Role assignments** tab.
+[!INCLUDE [custom-roles-shared](../../includes/custom-roles-shared.md)]
 
 ## Related content
 

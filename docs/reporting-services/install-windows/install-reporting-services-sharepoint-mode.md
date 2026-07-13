@@ -1,6 +1,6 @@
 ---
-title: "Install Reporting Services 2016 in SharePoint mode"
-description: "Install Reporting Services 2016 in SharePoint mode"
+title: Install Reporting Services 2016 in SharePoint Mode
+description: Install Reporting Services 2016 in SharePoint mode
 ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "default configuration [Reporting Services]"
   - "installing Reporting Services, SharePoint integrated mode"
   - "installation options [Reporting Services]"
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Install Reporting Services 2016 in SharePoint mode
 

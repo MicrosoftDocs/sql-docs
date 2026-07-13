@@ -1,5 +1,5 @@
 ---
-title: "Print a report (Reporting Services in SharePoint mode)"
+title: Print a Report (Reporting Services in SharePoint Mode)
 description: If a report server runs in SharePoint mode, you can print a report from a SharePoint Web application from a SharePoint site, a browser, or a target application.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -10,7 +10,7 @@ ms.custom:
 helpviewer_keywords:
   - "printing reports, SharePoint Web application"
   - "printing reports"
-monikerRange: ">=sql-server-2016 <=sql-server-2016"
+monikerRange: "=sql-server-2016"
 ---
 # Print a report (Reporting Services in SharePoint mode)
 

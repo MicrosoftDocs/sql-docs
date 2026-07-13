@@ -1,5 +1,5 @@
 ---
-title: "Breaking changes in SQL Server Reporting Services in SQL Server 2016"
+title: Breaking Changes in SQL Server Reporting Services in SQL Server 2016
 description: Learn about changes in Reporting Services that might break applications, scripts, or functionalities based on earlier versions of SQL Server.
 ms.date: 09/25/2024
 ms.service: reporting-services
@@ -11,6 +11,7 @@ helpviewer_keywords:
   - "Me.Value references"
   - "Reporting Services, backward compatibility"
   - "breaking changes [Reporting Services]"
+monikerRange: "=sql-server-2016"
 ---
 # Breaking changes in SQL Server Reporting Services in SQL Server 2016
 

@@ -44,7 +44,7 @@ The following features are installed when you select **SQL Server Database Engin
 - [Machine Learning Services (In-Database)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R and Python) - is an optional component
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016 <=sql-server-2016"
+::: moniker range="=sql-server-2016"
 
 - [R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md) - is an optional component
 ::: moniker-end

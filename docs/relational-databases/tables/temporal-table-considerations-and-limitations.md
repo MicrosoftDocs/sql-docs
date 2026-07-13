@@ -49,7 +49,7 @@ There are some considerations and limitations to be aware of when working with t
 
 - Direct modification of the data in a history table isn't permitted.
 
-::: moniker range=" =sql-server-2016"
+::: moniker range="=sql-server-2016"
 
 - `ON DELETE CASCADE` and `ON UPDATE CASCADE` aren't permitted on the current table. In other words, when temporal table is referencing table in the foreign key relationship (corresponding to `parent_object_id` in `sys.foreign_key`) `CASCADE` options aren't allowed. To work around this limitation, use application logic or after triggers to maintain consistency on delete in primary key table (corresponding to `referenced_object_id` in `sys.foreign_key`). If primary key table is temporal and referencing table is non-temporal, there's no such limitation.
 

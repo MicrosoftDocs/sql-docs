@@ -55,13 +55,13 @@ The following table describes the functional capabilities of a standby secondary
 |Unplanned failover | During an unplanned failover, after the secondary switches to the primary role, it can serve read and write queries. After the outage is mitigated and the original primary reconnects, it becomes the new secondary standby replica and shouldn't be used for read workloads.   |
 |Backup and restore| The backup and restore behavior in a standby replica and a readable secondary SQL managed instance are the same.         |
 |Monitoring     | All monitoring operations that are supported by a readable secondary replica are supported by the standby replica.         |
-|RPO and RTO | The standby replica provides the same Recovery Point Object (RPO) and Recovery Time Objective (RTO) as a readable secondary replica.          |
+|RPO and RTO | The standby replica provides the same Recovery Point Objective (RPO) and Recovery Time Objective (RTO) as a readable secondary replica.          |
 |Removing a failover group  | If the failover group is removed via a method like using the [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup) cmdlet, the standby replica becomes a read/write standalone instance. The licensing model returns to what it was before it was designated as standby (either Azure Hybrid Benefit or pay-as-you-go).  |
 
 The standby instance must *only* be used for disaster recovery. No production applications can be connected to the replica. The following lists the only activities that are permitted on the standby replica:
 
 - Run backups
-- Perform maintenance operations, such as checkDB
+- Perform maintenance operations, such as `DBCC CHECKDB`
 - Connect monitoring applications
 - Run disaster recovery drills
 

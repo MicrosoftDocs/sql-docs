@@ -5,7 +5,7 @@ description: "Automation options to run Transact-SQL (T-SQL) scripts in Azure SQ
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 09/11/2025
+ms.date: 07/07/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: concept-article
@@ -31,7 +31,7 @@ There are several scenarios when you could use SQL Agent jobs:
 - Automate management tasks and schedule them to run every weekday, after hours, etc.
   - Deploy schema changes, credentials management, performance data collection, or tenant (customer) telemetry collection.
   - Update reference data (information common across all databases) and load data from Azure Blob storage. See [BULK_INSERT](/sql/t-sql/statements/bulk-insert-transact-sql#f-import-data-from-a-file-in-azure-blob-storage) for the arguments used to authenticate to Azure Blob storage.
-  - Common maintenance tasks including `DBCC CHECKDB` to ensure data integrity or index maintenance to improve query performance. Configure jobs to execute across a collection of databases on a recurring basis, such as during off-peak hours.
+  - Perform common maintenance tasks including `DBCC CHECKDB` to ensure [data integrity](data-integrity.md) or index maintenance to improve query performance. Configure jobs to execute across a collection of databases on a recurring basis, such as during off-peak hours.
   - Collect query results from a set of databases into a central table on an ongoing basis. Performance queries can be continually executed and configured to trigger more tasks to be executed.
 - Collect data for reporting
   - Aggregate data from a collection of databases into a single destination table.
@@ -210,7 +210,7 @@ Some SQL Agent features that are available in SQL Server aren't supported in SQL
 - Queue Reader isn't supported.
 - Analysis Services isn't supported.
 - Running a script stored as a file on disk isn't supported.
-- Importing external modules, such as dbatools and dbachecks, aren't supported.
+- Importing external modules, such as dbatools and dbachecks, isn't supported.
 - PowerShell Core isn't supported.
 
 ## Related content

@@ -57,7 +57,7 @@ The following table describes the functional capabilities of a standby secondary
 
 The standby database replica must _only_ be used for disaster recovery. The following lists the only activities that are permitted on the standby database:
 
-- Perform maintenance operations, such as checkDB
+- Perform maintenance operations, such as `DBCC CHECKDB`
 - Connect monitoring applications
 - Run disaster recovery drills
 
@@ -80,7 +80,7 @@ Using a standby database has the following limitations:
 - The DTU purchasing model isn't supported. You can enable a standby replica for databases using the vCore purchasing model only.
 - The Hyperscale service tier isn't supported. Only databases in the General Purpose and Business Critical service tiers can be designated for standby.
 - When using a failover group, standby rights are assigned at the database level, not the failover group level, and must be assigned separately for each database within the failover group.
-- Designating a secondary replica for standby isn't supported when the replica is a secondary replica of a secondary replica (a process known is chaining).
+- Designating a secondary replica for standby isn't supported when the replica is a secondary replica of a secondary replica (a process known as chaining).
 
 ## Prerequisites
 
@@ -225,7 +225,7 @@ To remove a standby replica with the REST API, use the [Replication Links - Dele
 
 -  What are the approximate savings with a standby replica?
 
-   Without included licensing costs, a standby replica can save between 35 to 40 percent compared to a regular fully readable secondary replica, though savings vary by region. For accurate pricing, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) and choose **Standby replica** in the **Disaster Recovery dropdown list.
+   Without included licensing costs, a standby replica can save between 35 to 40 percent compared to a regular fully readable secondary replica, though savings vary by region. For accurate pricing, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) and choose **Standby replica** in the **Disaster Recovery** dropdown list.
 
 - How many vCores will be license-free for the standby replica?
 
@@ -237,7 +237,7 @@ To remove a standby replica with the REST API, use the [Replication Links - Dele
 
 -  How can I use the standby replica?
 
-   Standby replicas are intended for disaster recovery (DR) purposes only, and can't have any active read workloads on it. The only acceptable workloads are for monitoring, maintenance such as running Dynamic Management Views (DMVs), and CheckDB.
+   Use standby replicas for disaster recovery (DR) purposes only. They can't have any active read workloads. The only acceptable workloads are for monitoring, maintenance such as running Dynamic Management Views (DMVs), and `DBCC CHECKDB`.
 
 -  Can I update my existing readable secondary replica to a standby replica to save on costs?
 
@@ -249,7 +249,7 @@ To remove a standby replica with the REST API, use the [Replication Links - Dele
 
 -  What happens to the standby replica status during failover?
 
-   During planned or unplanned failover, the standby replica becomes the new primary incurring regular licensing costs while the original primary becomes the new standby secondary, and stops incurring vCore licensings costs. However, since the instance is billed for the entire hour, you might still be charged licensing costs for the new secondary for the entire hour if the state change happens in the middle of the hour. If the original primary (which becomes the standby after failover) was using the Azure Hybrid Benefit, the standby licensing discount overrides the Azure Hybrid Benefit used by the database.
+   During planned or unplanned failover, the standby replica becomes the new primary incurring regular licensing costs while the original primary becomes the new standby secondary, and stops incurring vCore licensing costs. However, since the instance is billed for the entire hour, you might still be charged licensing costs for the new secondary for the entire hour if the state change happens in the middle of the hour. If the original primary (which becomes the standby after failover) was using the Azure Hybrid Benefit, the standby licensing discount overrides the Azure Hybrid Benefit used by the database.
 
 -  What if I scale up the primary or secondary to a higher vCore size?
 

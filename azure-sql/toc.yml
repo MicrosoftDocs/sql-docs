@@ -550,6 +550,8 @@
         items:
         - name: Active geo-replication
           href: database/active-geo-replication-overview.md
+        - name: Data integrity
+          href: database/data-integrity.md
         - name: Failover groups
           href: database/failover-group-sql-db.md
         - name: Outage recovery guidance
@@ -1178,6 +1180,8 @@
         href: managed-instance/automated-backups-overview.md
       - name: Backup transparency
         href: managed-instance/backup-transparency.md
+      - name: Data integrity
+        href: managed-instance/data-integrity.md
       - name: Failover groups
         href: managed-instance/failover-group-sql-mi.md
     - name: Scheduled maintenance

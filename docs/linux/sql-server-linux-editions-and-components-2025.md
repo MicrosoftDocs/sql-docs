@@ -141,7 +141,7 @@ The Developer editions continue to support only one client for [SQL Server Distr
 | Persistent main memory | Yes | Yes | Yes |
 | Table and index partitioning | Yes | Yes | Yes |
 | Data compression | Yes | Yes | Yes |
-| Resource governor | Yes | No | No |
+| Resource governor | Yes | Yes | No |
 | Partitioned table parallelism | Yes | No | No |
 | NUMA aware large page memory and buffer array allocation | Yes | No | No |
 | I/O resource governance | Yes | No | No |

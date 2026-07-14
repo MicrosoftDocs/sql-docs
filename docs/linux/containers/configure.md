@@ -4,7 +4,7 @@ description: Understand the different ways to customize SQL Server Docker Contai
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 05/07/2026
+ms.date: 07/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: troubleshooting
@@ -431,7 +431,7 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 
 ## Configure the time zone
 
-To run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a Linux container with a specific time zone, configure the `TZ` environment variable (see [Configure the time zone for SQL Server 2022 and later versions on Linux](../configure/time-zone.md) for more information). To find the right time zone value, run the `tzselect` command from a Linux bash prompt:
+To run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a Linux container with a specific time zone, configure the `TZ` environment variable. For more information, see [Configure the time zone for SQL Server 2022 and later versions on Linux](../configure/time-zone.md). To find the right time zone value, run the `tzselect` command from a Linux `bash` prompt:
 
 ```bash
 tzselect

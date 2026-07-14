@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman, srinia
-ms.date: 03/09/2026
+ms.date: 07/10/2026
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: concept-article
@@ -36,7 +36,7 @@ The vCore purchasing model used by Azure SQL Database provides several benefits 
 - Higher compute, memory, I/O, and storage limits.
 - Choice of hardware configuration to better match compute and memory requirements of the workload.
 - Pricing discounts with the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md).
-- Greater transparency in the hardware details that power the compute, that facilitates planning for migrations from on-premises deployments.
+- Greater transparency in the hardware details, which facilitates planning for migrations from on-premises deployments.
 - [Reserved instance pricing](reservations-discount-overview.md) is only available for vCore purchasing model. 
 - Higher scaling granularity with multiple compute sizes available.
 
@@ -149,10 +149,9 @@ The Business Critical service tier is designed for applications that require low
 
 The key reasons why you should choose Business Critical service tier instead of General Purpose tier are:
 
-- **Low I/O latency requirements** – workloads that need a consistently fast response from the storage layer (1-2 milliseconds in average) should use Business Critical tier. 
+- **Low I/O latency requirements** – workloads that need a consistently fast response from the storage layer (1-2 milliseconds on average) should use Business Critical tier. 
 - **Workload with reporting and analytic queries** where a single free-of-charge secondary read-only replica is sufficient.
 - **Higher resiliency and faster recovery from failures**. In case there's system failure, the database on primary instance is disabled and one of the secondary replicas immediately becomes the new read-write primary database, ready to process queries.
-- **Advanced data corruption protection**. Since the Business Critical tier uses databases replicas behind the scenes, the service uses automatic page repair available with [mirroring and availability groups](/sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring) to help mitigate data corruption. If a replica can't read a page due to a data integrity issue, a fresh copy of the page is retrieved from another replica, replacing the unreadable page without data loss or customer downtime. This functionality is available in  the General Purpose tier if the database has geo-secondary replica.
 - **Higher availability** - The Business Critical tier in a multi-availability zone configuration provides resiliency to zonal failures and a higher availability SLA.
 - **Fast geo-recovery** - When [active geo-replication](active-geo-replication-overview.md) is configured, the Business Critical tier has a guaranteed Recovery Point Objective (RPO) of 5 seconds and Recovery Time Objective (RTO) of 30 seconds for 100% of deployed hours.
 

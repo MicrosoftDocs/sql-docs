@@ -1,9 +1,9 @@
 ---
-title: "DBCC CHECKFILEGROUP (Transact-SQL)"
+title: DBCC CHECKFILEGROUP (Transact-SQL)
 description: DBCC CHECKFILEGROUP checks the allocation and structural integrity of all tables and indexed views in the specified filegroup of the current database.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/05/2022
+ms.date: 07/10/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "table integrity checks [SQL Server]"
   - "checking database objects"
 dev_langs:
-  - "TSQL"
+  - TSQL
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
 
@@ -84,7 +84,7 @@ Displays the estimated amount of `tempdb` space required to run `DBCC CHECKFILEG
 
 #### PHYSICAL_ONLY
 
-Limits the checking to the integrity of the physical structure of the page, record headers and the physical structure of B-trees. Designed to provide a small overhead check of the physical consistency of the filegroup, this check can also detect torn pages, and common hardware failures that can compromise data. A full run of `DBCC CHECKFILEGROUP` may take considerably longer than in earlier versions. This behavior occurs because of the following reasons:
+Limits the checking to the integrity of the physical structure of the page, record headers and the physical structure of B-trees. Designed to provide a small overhead check of the physical consistency of the filegroup, this check can also detect torn pages, and common hardware failures that can compromise data. A full run of `DBCC CHECKFILEGROUP` might take considerably longer than in earlier versions. This behavior occurs because of the following reasons:
 
 - The logical checks are more comprehensive.
 - Some of the underlying structures to be checked are more complex.
@@ -92,7 +92,7 @@ Limits the checking to the integrity of the physical structure of the page, reco
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
-Therefore, using the `PHYSICAL_ONLY` option may cause a much shorter run-time for `DBCC CHECKFILEGROUP` on large filegroups and is therefore recommended for frequent use on production systems. We still recommend that a full run of `DBCC CHECKFILEGROUP` is performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments. `PHYSICAL_ONLY` always implies `NO_INFOMSGS` and isn't allowed with any one of the repair options.
+Therefore, using the `PHYSICAL_ONLY` option might cause a much shorter run-time for `DBCC CHECKFILEGROUP` on large filegroups and is therefore recommended for frequent use on production systems. We still recommend that a full run of `DBCC CHECKFILEGROUP` is performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments. `PHYSICAL_ONLY` always implies `NO_INFOMSGS` and isn't allowed with any one of the repair options.
 
 > [!NOTE]  
 > Specifying `PHYSICAL_ONLY` causes `DBCC CHECKFILEGROUP` to skip all checks of FILESTREAM data.
@@ -112,14 +112,16 @@ Overrides the **max degree of parallelism** configuration option of `sp_configur
 
 `DBCC CHECKFILEGROUP` performs the following commands:
 
-- [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) of the filegroup.
-- [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) of every table and indexed view in the filegroup.
+- [DBCC CHECKALLOC](dbcc-checkalloc-transact-sql.md) of the filegroup.
+- [DBCC CHECKTABLE](dbcc-checktable-transact-sql.md) of every table and indexed view in the filegroup.
 
 Running `DBCC CHECKALLOC` or `DBCC CHECKTABLE` separately from `DBCC CHECKFILEGROUP` isn't required.
 
+`DBCC CHECKDB` and `DBCC CHECKFILEGROUP` aren't supported in Azure SQL Database Hyperscale. Instead, use `DBCC CHECKTABLE ('TableName') WITH TABLOCK`. For more information, see [Data Integrity in Azure SQL Database](/azure/azure-sql/database/data-integrity?view=azuresql-db&preserve-view=true) and [DBCC CHECKTABLE (Transact-SQL)](dbcc-checktable-transact-sql.md?view=azuresqldb-current&preserve-view=true).
+
 ## Internal database snapshot
 
-`DBCC CHECKFILEGROUP` uses an internal database snapshot to provide the transactional consistency that it must have to perform these checks. For more information, see [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) and the [DBCC internal database snapshot usage](../../t-sql/database-console-commands/dbcc-transact-sql.md#dbcc-internal-database-snapshot-usage) section in [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+`DBCC CHECKFILEGROUP` uses an internal database snapshot to provide the transactional consistency that it must have to perform these checks. For more information, see [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) and the [DBCC internal database snapshot usage](dbcc-transact-sql.md#dbcc-internal-database-snapshot-usage) section in [DBCC (Transact-SQL)](dbcc-transact-sql.md).
 
 If a snapshot can't be created, or the `TABLOCK` option is specified, `DBCC CHECKFILEGROUP` acquires locks to obtain the required consistency. In this case, an exclusive database lock is required to perform the allocation checks, and shared table locks are required to perform the table checks. `TABLOCK` causes `DBCC CHECKFILEGROUP` to run faster on a database under heavy load, but decreases the concurrency available on the database while `DBCC CHECKFILEGROUP` is running.
 
@@ -130,7 +132,7 @@ If a snapshot can't be created, or the `TABLOCK` option is specified, `DBCC CHEC
 
 By default, `DBCC CHECKFILEGROUP` performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured just like parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
-Parallel checking can be disabled by using trace flag 2528. For more information, see [Set trace flags with DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Parallel checking can be disabled by using trace flag 2528. For more information, see [Set trace flags with DBCC TRACEON](dbcc-traceon-trace-flags-transact-sql.md).
 
 ## Nonclustered indexes on separate filegroups
 
@@ -153,12 +155,12 @@ After the `DBCC CHECKFILEGROUP` command finishes, a message is written to the [!
 
 | State | Description |
 | --- | --- |
-| 0 | Error number 8930 was raised. This indicates a metadata corruption that caused the DBCC command to terminate. |
-| 1 | Error number 8967 was raised. There was an internal DBCC error. |
-| 2 | A failure occurred during emergency mode database repair. |
-| 3 | This indicates a metadata corruption that caused the DBCC command to terminate. |
-| 4 | An assert or access violation was detected. |
-| 5 | An unknown error occurred that terminated the DBCC command. |
+| `0` | Error number 8930 was raised. This indicates a metadata corruption that caused the DBCC command to terminate. |
+| `1` | Error number 8967 was raised. There was an internal DBCC error. |
+| `2` | A failure occurred during emergency mode database repair. |
+| `3` | This indicates a metadata corruption that caused the DBCC command to terminate. |
+| `4` | An assert or access violation was detected. |
+| `5` | An unknown error occurred that terminated the DBCC command. |
 
 ## Error reporting
 
@@ -170,11 +172,13 @@ The dump file contains the results of the `DBCC CHECKFILEGROUP` command and addi
 
 If any errors are reported by `DBCC CHECKFILEGROUP`, we recommend restoring the database from the database backup. Repair options can't be specified to `DBCC CHECKFILEGROUP`.
 
-If no backup exists, running `DBCC CHECKDB` with a repair option specified corrects the errors reported. The repair option to use is specified at the end of the list if reported errors. Correcting the errors by using the REPAIR_ALLOW_DATA_LOSS option might require that some pages, and therefore data, be deleted.
+If no backup exists, running `DBCC CHECKDB` with a repair option specified corrects the errors reported. The repair option to use is specified at the end of the list if reported errors. Correcting the errors by using the `REPAIR_ALLOW_DATA_LOSS` option might require that some pages, and therefore data, be deleted.
 
-## Result sets
+<a id="result-sets"></a>
 
-`DBCC CHECKFILEGROUP` returns the following result set (values may vary):
+## Result set
+
+`DBCC CHECKFILEGROUP` returns the following result set (values might vary):
 
 - Except when `ESTIMATEONLY` or `NO_INFOMSGS` is specified.
 - For the current database, if no database is specified, whether or not any options (except `NOINDEX`) are specified.
@@ -201,7 +205,7 @@ If `NO_INFOMSGS` is specified, `DBCC CHECKFILEGROUP` returns:
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
 
- If `ESTIMATEONLY` is specified, `DBCC CHECKFILEGROUP` returns (values may vary):
+ If `ESTIMATEONLY` is specified, `DBCC CHECKFILEGROUP` returns (values might vary):
 
 ```output
 Estimated TEMPDB space needed for CHECKALLOC (KB)
@@ -256,13 +260,13 @@ DBCC CHECKFILEGROUP (1)
 WITH ESTIMATEONLY;
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [FILEGROUP_ID (Transact-SQL)](../../t-sql/functions/filegroup-id-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [FILEGROUP_ID (Transact-SQL)](../functions/filegroup-id-transact-sql.md)
 - [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)
 - [sp_helpfilegroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)
 - [sys.sysfilegroups (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)
-- [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
-- [DBCC CHECKALLOC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)
-- [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
+- [DBCC CHECKDB (Transact-SQL)](dbcc-checkdb-transact-sql.md)
+- [DBCC CHECKALLOC (Transact-SQL)](dbcc-checkalloc-transact-sql.md)
+- [DBCC CHECKTABLE (Transact-SQL)](dbcc-checktable-transact-sql.md)

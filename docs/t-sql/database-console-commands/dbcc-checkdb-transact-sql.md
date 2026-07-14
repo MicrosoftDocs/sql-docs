@@ -1,9 +1,9 @@
 ---
-title: "DBCC CHECKDB (Transact-SQL)"
+title: DBCC CHECKDB (Transact-SQL)
 description: DBCC CHECKDB checks the logical and physical integrity of all the objects in the specified database.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/18/2024
+ms.date: 07/10/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -30,7 +30,7 @@ helpviewer_keywords:
   - "checking database objects"
   - "page count accuracy [SQL Server]"
 dev_langs:
-  - "TSQL"
+  - TSQL
 ---
 # DBCC CHECKDB (Transact-SQL)
 
@@ -51,10 +51,6 @@ Checks the logical and physical integrity of all the objects in the specified da
 - Validates the [!INCLUDE [ssSB](../../includes/sssb-md.md)] data in the database.
 
 This means that the `DBCC CHECKALLOC`, `DBCC CHECKTABLE`, or `DBCC CHECKCATALOG` commands don't have to be run separately from `DBCC CHECKDB`. For more detailed information about the checks that these commands perform, see the descriptions of these commands.
-
-`DBCC CHECKDB` is supported on databases that contain memory-optimized tables but validation only occurs on disk-based tables. However, as part of database backup and recovery, a `CHECKSUM` validation is done for files in memory-optimized filegroups.
-
-Since DBCC repair options aren't available for memory-optimized tables, you must back up your databases regularly and test the backups. If data integrity issues occur in a memory-optimized table, you must restore from the last known good backup.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -187,6 +183,12 @@ Overrides the `max degree of parallelism` configuration option of `sp_configure`
 > If `MAXDOP` is set to zero then [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] chooses the `max degree of parallelism` to use.
 
 ## Remarks
+
+`DBCC CHECKDB` is supported on databases that contain memory-optimized tables but validation only occurs on disk-based tables. However, as part of database backup and recovery, a `CHECKSUM` validation is done for files in memory-optimized filegroups.
+
+Since DBCC repair options aren't available for memory-optimized tables, you must back up your databases regularly and test the backups. If data integrity issues occur in a memory-optimized table, you must restore from the last known good backup.
+
+`DBCC CHECKDB` and `DBCC CHECKFILEGROUP` aren't supported in Azure SQL Database Hyperscale. Instead, use `DBCC CHECKTABLE ('TableName') WITH TABLOCK`. For more information, see [Data Integrity in Azure SQL Database](/azure/azure-sql/database/data-integrity?view=azuresql-db&preserve-view=true).
 
 `DBCC CHECKDB` doesn't examine disabled indexes. For more information about disabled indexes, see [Disable indexes and constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md).
 

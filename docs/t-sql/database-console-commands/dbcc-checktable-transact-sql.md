@@ -1,9 +1,9 @@
 ---
-title: "DBCC CHECKTABLE (Transact-SQL)"
+title: DBCC CHECKTABLE (Transact-SQL)
 description: DBCC CHECKTABLE checks the integrity of all the pages and structures that make up the table or indexed view.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/05/2022
+ms.date: 07/10/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "low overhead checks"
   - "table integrity checks [SQL Server]"
 dev_langs:
-  - "TSQL"
+  - TSQL
 ---
 # DBCC CHECKTABLE (Transact-SQL)
 
@@ -72,22 +72,22 @@ The index identification (ID) number for which to run integrity checks. If *inde
 
 Specifies that `DBCC CHECKTABLE` repair the found errors. To use a repair option, the database must be in single-user mode.
 
-- REPAIR_ALLOW_DATA_LOSS
+- `REPAIR_ALLOW_DATA_LOSS`
 
   Tries to repair all reported errors. These repairs can cause some data loss.
 
-- REPAIR_FAST
+- `REPAIR_FAST`
 
   Syntax is maintained for backward compatibility only. No repair actions are performed.
 
-- REPAIR_REBUILD
+- `REPAIR_REBUILD`
 
   Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in nonclustered indexes, and more time-consuming repairs, such as rebuilding an index.  
 
   This argument doesn't repair errors involving FILESTREAM data.
 
 > [!IMPORTANT]
-> Use the REPAIR options only as a last resort. To repair errors, we recommend restoring from a backup. Repair operations don't consider any of the constraints that may exist on or between tables. If the specified table is involved in one or more constraints, we recommend running `DBCC CHECKCONSTRAINTS` after a repair operation. If you must use REPAIR, run `DBCC CHECKTABLE` without a repair option to find the repair level to use. If you use the `REPAIR_ALLOW_DATA_LOSS` level, we recommend that you back up the database before you run `DBCC CHECKTABLE` with this option.
+> Use the `REPAIR` options only as a last resort. To repair errors, we recommend restoring from a backup. Repair operations don't consider any of the constraints that might exist on or between tables. If the specified table is involved in one or more constraints, we recommend running `DBCC CHECKCONSTRAINTS` after a repair operation. If you must use REPAIR, run `DBCC CHECKTABLE` without a repair option to find the repair level to use. If you use the `REPAIR_ALLOW_DATA_LOSS` level, we recommend that you back up the database before you run `DBCC CHECKTABLE` with this option.
 
 #### ALL_ERRORMSGS
 
@@ -113,7 +113,7 @@ Displays the estimated amount of `tempdb` space needed to run `DBCC CHECKTABLE` 
 
 #### PHYSICAL_ONLY
 
-Limits the checking to the integrity of the physical structure of the page, record headers and the physical structure of B-trees. Designed to provide a small overhead check of the physical consistency of the table, this check can also detect torn pages, and common hardware failures that can compromise data. A full run of `DBCC CHECKTABLE` may take considerably longer than in earlier versions. This behavior occurs because of the following reasons:
+Limits the checking to the integrity of the physical structure of the page, record headers and the physical structure of B-trees. Designed to provide a small overhead check of the physical consistency of the table, this check can also detect torn pages, and common hardware failures that can compromise data. A full run of `DBCC CHECKTABLE` might take considerably longer than in earlier versions. This behavior occurs because of the following reasons:
 
 - The logical checks are more comprehensive.
 - Some of the underlying structures to be checked are more complex.
@@ -121,7 +121,7 @@ Limits the checking to the integrity of the physical structure of the page, reco
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
-Therefore, using the `PHYSICAL_ONLY` option may cause a much shorter run-time for `DBCC CHECKTABLE` on large tables and is therefore recommended for frequent use on production systems. We still recommend that a full run of `DBCC CHECKTABLE` is performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments. `PHYSICAL_ONLY` always implies NO_INFOMSGS and isn't allowed with any one of the repair options.
+Therefore, using the `PHYSICAL_ONLY` option might cause a much shorter run-time for `DBCC CHECKTABLE` on large tables and is therefore recommended for frequent use on production systems. We still recommend that a full run of `DBCC CHECKTABLE` is performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments. `PHYSICAL_ONLY` always implies NO_INFOMSGS and isn't allowed with any one of the repair options.
 
 > [!NOTE]  
 > Specifying `PHYSICAL_ONLY` causes `DBCC CHECKTABLE` to skip all checks of FILESTREAM data.
@@ -147,8 +147,7 @@ Overrides the **max degree of parallelism** configuration option of `sp_configur
 
 ## Remarks
 
-> [!NOTE]  
-> To perform `DBCC CHECKTABLE` on every table in the database, use [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
+[DBCC CHECKDB](dbcc-checkdb-transact-sql.md) includes, among other operations, `DBCC CHECKTABLE` on every table in the database.
 
 For the specified table, `DBCC CHECKTABLE` checks for the following:
 
@@ -178,13 +177,15 @@ Logical consistency checking on indexes varies according to the compatibility le
 - Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], additional checks on persisted computed columns, UDT columns, and filtered indexes won't run by default to avoid the expensive expression evaluations. This change greatly reduces the duration of `CHECKTABLE` against databases containing these objects. However, the physical consistency checks of  these objects are always completed. Only when `EXTENDED_LOGICAL_CHECKS` option is specified are the expression evaluations performed, in addition to already present logical checks (indexed view, XML indexes, and spatial indexes) as part of the `EXTENDED_LOGICAL_CHECKS` option.
 - If the compatibility level is 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) or less, unless `NOINDEX` is specified, `DBCC CHECKTABLE` performs both physical and logical consistency checks on a single table or indexed view and on all its nonclustered and XML indexes. Spatial indexes aren't supported.
 
-#### To learn the compatibility level of a database
+<a id="to-learn-the-compatibility-level-of-a-database"></a>
+
+#### Learn the compatibility level of a database
 
 - [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)
 
 ## Internal database snapshot
 
-`DBCC CHECKTABLE` uses an internal database snapshot to provide the transactional consistency that it must have to perform these checks. For more information, see [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) and the [DBCC internal database snapshot usage](../../t-sql/database-console-commands/dbcc-transact-sql.md#dbcc-internal-database-snapshot-usage) section in [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+`DBCC CHECKTABLE` uses an internal database snapshot to provide the transactional consistency that it must have to perform these checks. For more information, see [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) and the [DBCC internal database snapshot usage](dbcc-transact-sql.md#dbcc-internal-database-snapshot-usage) section in [DBCC (Transact-SQL)](dbcc-transact-sql.md).
 
 If a snapshot can't be created, or `TABLOCK` is specified, `DBCC CHECKTABLE` acquires a shared table lock to obtain the required consistency.
 
@@ -201,7 +202,7 @@ For example, if a table contains a **varbinary(max)** column that uses the FILES
 
 By default, `DBCC CHECKTABLE` performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured in the same manner as that of parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
-Parallel checking can be disabled by using trace flag 2528. For more information, see [Set trace flags with DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Parallel checking can be disabled by using Trace Flag 2528. For more information, see [Set trace flags with DBCC TRACEON](dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!NOTE]  
 > During a `DBCC CHECKTABLE` operation, the bytes that are stored in a byte-ordered user-defined type column must be equal to the computed serialization of the user-defined type value. If this is not true, the `DBCC CHECKTABLE` routine will report a consistency error.
@@ -215,18 +216,18 @@ After the `DBCC CHECKTABLE` command finishes, a message is written to the [!INCL
 
 | State | Description |
 | --- | --- |
-| 0 | Error number 8930 was raised. This indicates a metadata corruption that caused the DBCC command to terminate. |
-| 1 | Error number 8967 was raised. There was an internal DBCC error. |
-| 2 | A failure occurred during emergency mode database repair. |
-| 3 | This indicates a metadata corruption that caused the DBCC command to terminate. |
-| 4 | An assert or access violation was detected. |
-| 5 | An unknown error occurred that terminated the DBCC command. |
+| `0` | Error number 8930 was raised. This indicates a metadata corruption that caused the DBCC command to terminate. |
+| `1` | Error number 8967 was raised. There was an internal DBCC error. |
+| `2` | A failure occurred during emergency mode database repair. |
+| `3` | This indicates a metadata corruption that caused the DBCC command to terminate. |
+| `4` | An assert or access violation was detected. |
+| `5` | An unknown error occurred that terminated the DBCC command. |
 
 ## Error reporting
 
 A mini-dump file (`SQLDUMP<nnnn>.txt`) is created in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `LOG` directory whenever `DBCC CHECKTABLE` detects a corruption error. When the *Feature Usage* data collection and *Error Reporting* features are enabled for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality.
 
-The dump file contains the results of the `DBCC CHECKTABLE` command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and members of the sysadmin role. By default, the sysadmin role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command doesn't fail if the data collection process fails.
+The dump file contains the results of the `DBCC CHECKTABLE` command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and members of the sysadmin role. In SQL Server, by default, the sysadmin role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command doesn't fail if the data collection process fails.
 
 ## Resolve errors
 
@@ -234,7 +235,9 @@ If `DBCC CHECKTABLE` reports any errors, we recommend restoring the database fro
 
 The repair can be performed under a user transaction to allow the user to roll back the changes that have been made. If repairs are rolled back, the database will still contain errors, and must be restored from a backup. After you have completed all repairs, back up the database.
 
-## Result sets
+<a id="result-sets"></a>
+
+## Result set
 
 `DBCC CHECKTABLE` returns the following result set. The same result set is returned if you specify only the table name or any of the options.
 
@@ -291,7 +294,7 @@ SET @indid = (SELECT index_id
 DBCC CHECKTABLE ('Production.Product',@indid);
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [DBCC CHECKDB (Transact-SQL)](dbcc-checkdb-transact-sql.md)

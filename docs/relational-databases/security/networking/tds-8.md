@@ -4,7 +4,7 @@ description: This article discusses TDS 8.0, the application layer protocol used
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest, jaferebe, jopilov
-ms.date: 01/29/2026
+ms.date: 07/14/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: concept-article
@@ -65,7 +65,7 @@ TLS 1.3 support is dependent on the operating system version. The following tabl
 | Mandatory | TLS 1.2 only (or earlier) | Windows 11<br /><br />Windows Server 2022 and later | Success | TLS 1.2 negotiated; TDS 8.0 not triggered (Encrypt=Mandatory) |
 | Mandatory | TLS 1.2 only (or earlier) | Windows 10<br /><br />Windows Server 2019 / 2016 | Success | TLS 1.2 negotiated; TDS 8.0 not supported on this OS (uses TDS 7.x) |
 | Optional | TLS 1.3 only (or later) | Windows 11<br /><br />Windows Server 2022 and later | Failure | Encrypt=Optional (false) is TDS 7.x, which is incompatible with TLS 1.3. |
-| Optional | TLS 1.2 and TLS 1.3 | Windows 11<br /><br />Windows Server 2022 and later | Success | TLS 1.3 negotiated; TDS 8.0 not triggered (Encrypt=Optional) |
+| Optional | TLS 1.2 and TLS 1.3 | Windows 11<br /><br />Windows Server 2022 and later | Success | TLS 1.2 negotiated; TDS 8.0 not triggered (Encrypt=Optional) |
 | Optional | TLS 1.2 only (or earlier) | Windows 11<br /><br />Windows Server 2022 and later | Success | TLS 1.2 negotiated; TDS 8.0 not triggered (Encrypt=Optional) |
 | Optional | TLS 1.2 only (or earlier) | Windows 10<br /><br />Windows Server 2019 / 2016 | Success | TLS 1.2 negotiated; encryption optional; connection can <br />succeed without encryption |
 | Any | TLS 1.3 only (or later) | Windows 10<br /><br />Windows Server 2019 / 2016 | Failure | TLS 1.3 not supported on this OS |

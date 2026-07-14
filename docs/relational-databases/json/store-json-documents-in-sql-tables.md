@@ -22,10 +22,8 @@ The SQL Database Engine provides native JSON functions that enable you to parse 
 The first storage design decision is how to store JSON documents in the tables. There are two available options:
 - **LOB storage** - JSON documents can be stored as-is in columns with the data type **json** or **nvarchar**. This is the best way for quick data load and ingestion because the loading speed matches the loading speed of string columns. This approach might introduce an additional performance penalty on query/analysis time if indexing on JSON values is not performed, because the raw JSON documents must be parsed while the queries are running. 
 - **Relational storage** - JSON documents can be parsed while they are inserted in the table using `OPENJSON`, `JSON_VALUE` or `JSON_QUERY` functions. Fragments from the input JSON documents can be stored in the columns containing JSON sub-elements with data types **json** or **nvarchar**. This approach increases the load time because JSON parsing is done during load; however, queries match the performance of classic queries on the relational data.
-- Currently in SQL Server, JSON is not a built-in data type.
 
 [!INCLUDE [json-data-supportability](../../includes/json-data-supportability.md)]
-
 
 ## Classic tables
 

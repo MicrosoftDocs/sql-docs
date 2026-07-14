@@ -4,7 +4,7 @@ description: Task hub for connecting Java applications to SQL Server, Azure SQL,
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, vanto, davidengel, machavan, sunilbs
-ms.date: 06/02/2026
+ms.date: 07/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The Microsoft Java Database Connectivity (JDBC) Driver for SQL Server is a Type 4 JDBC driver (pure Java, talks the SQL Server TDS protocol directly, no native libraries required) that lets any Java application or application server connect to SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. It implements the standard JDBC APIs and works with major Java application servers, including IBM WebSphere and SAP NetWeaver.
+The Microsoft Java Database Connectivity (JDBC) Driver for SQL Server is a Type 4 JDBC driver (pure Java, talks the SQL Server TDS protocol directly, no native libraries required) that lets any Java application or application server connect to the [Microsoft SQL Database Engine](../../database-engine/sql-database-engine.md) in Azure SQL Database, SQL database in Fabric, Azure SQL Managed Instance, and in [all supported versions and editions](microsoft-jdbc-driver-for-sql-server-support-matrix.md#sql-version-compatibility) of SQL Server (including Express Editions). It implements the standard JDBC APIs and works with major Java application servers, including IBM WebSphere and SAP NetWeaver.
 
 ## Choose your starting point
 

@@ -191,7 +191,7 @@ Backups that are no longer needed to provide PITR functionality are automaticall
 For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, all full and differential backups are compressed, to reduce backup storage compression and costs. Average backup compression ratio is 3 to 4 times. However, it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
 
 > [!IMPORTANT]  
-> For TDE-encrypted databases, log backups files aren't compressed for performance reasons. Log backups for non-TDE-encrypted databases are compressed.
+> For TDE-encrypted databases, log backup files aren't compressed for performance reasons. Log backups for non-TDE-encrypted databases are compressed.
 
 Azure SQL Managed Instance computes your total used backup storage as a cumulative value. Every hour, this value is reported to the Azure billing pipeline. The pipeline is responsible for aggregating this hourly usage to calculate your consumption at the end of each month. After the database is deleted, consumption decreases as backups age out and are deleted. After all backups are deleted and PITR is no longer possible, billing stops.
 
@@ -313,9 +313,11 @@ To ensure reliable backups, it's important to monitor system resources, validate
 
 ## Backup integrity
 
-All database backups are taken with the CHECKSUM option to provide additional backup integrity. Automatic testing of automated database backups by the Azure SQL engineering team isn't currently available for Azure SQL Managed Instance. Schedule test backup restoration and DBCC CHECKDB on your databases in SQL Managed Instance around your workload.
+All database backups use the `CHECKSUM` option to provide extra backup integrity. As an extra layer of protection, you might choose to test backup restoration and run integrity checks. For more information, see [Data integrity in Azure SQL Database](data-integrity.md).
 
 Although the system doesn't verify the integrity of the backups, there's still built-in protection of your backups that alerts Microsoft if there's an issue with the backup service. Additionally, Microsoft supports you if an issue occurs with a backup, such as if a full backup isn't taken, the backup service is stuck, a log backup is out of SLA, or if the backup hardware or software is corrupted.
+
+For more information, see [Data integrity in Azure SQL Managed Instance](data-integrity.md).
 
 ## Use Azure Policy to enforce backup storage redundancy
 

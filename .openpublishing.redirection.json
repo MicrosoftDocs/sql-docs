@@ -1,6 +1,14 @@
 {
   "redirections": [
     {
+      "source_path": "docs/relational-databases/in-memory-oltp/migrating-computed-columns.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/in-memory-oltp/migrating-computed-columns",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
       "source_path": "docs/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md",
       "redirect_url": "/sql/relational-databases/security/encryption/set-up-transparent-data-encryption-with-azure-key-vault-for-sql-server",
       "redirect_document_id": false

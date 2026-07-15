@@ -1,10 +1,11 @@
 ---
-title: Schema Designer in Visual Studio Code with MSSQL
+title: Schema Designer
+titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the Schema Designer in the MSSQL extension for Visual Studio Code to visualize, design, and manage database schemas.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: yoleichen, roblescarlos
-ms.date: 05/25/2026
+ms.date: 07/10/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -32,7 +33,7 @@ Schema designer offers these features:
 
 ## Open schema designer
 
-Right-click on the database in the **Object Explorer** and select **Design Schema** from the menu. This action opens the schema designer view, where you can see the visual database diagram.
+Right-click the database in **Object Explorer** and select **Visualize and Design Schema** from the menu. This action opens the schema designer view, where you can see the visual database diagram.
 
 :::image type="content" source="media/mssql-schema-designer/schema-designer-entry-point.png" alt-text="Screenshot of the entry point to open the schema designer in Visual Studio Code MSSQL extension.":::
 

@@ -1,5 +1,6 @@
 ---
 title: GitHub Copilot Integration in Schema Designer
+titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use GitHub Copilot within the Schema Designer in the MSSQL extension for Visual Studio Code, to design and evolve database schemas using natural language.
 author: rwestMSFT
 ms.author: randolphwest

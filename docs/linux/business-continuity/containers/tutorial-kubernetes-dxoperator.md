@@ -131,9 +131,9 @@ To install DxOperator, download the DxOperator YAML file by using the following 
            mssqlPID: Developer
            # Set a non-default SQL Server port. DxOperator will auto-detect
            # the port from other sources too, such as mssqlConfigMap
-           #mssqlTcpPort: 51433
+           mssqlTcpPort: 51444
            # The MSSQL configMap (mssql.conf file)
-           #mssqlConfigMap: mssql-config
+           mssqlConfigMap: mssql-config
            # Configuration options for the required persistent volume claim for SQL Server
            #volumeClaimConfiguration:
            #  resources:
@@ -179,7 +179,7 @@ To install DxOperator, download the DxOperator YAML file by using the following 
    spec:
      type: LoadBalancer
      selector:
-       dh2i.com/entity: contoso-sql
+       dh2i.com/entity-name: contoso-sql
        # This label points to whichever pod is the active Vhost member
        dh2i.com/active-vhost-vhost1: "true"
      ports:

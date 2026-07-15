@@ -6929,8 +6929,6 @@ items:
             href: relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
           - name: SQL_VARIANT column
             href: relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
-          - name: Computed column in SQL 2016
-            href: relational-databases/in-memory-oltp/migrating-computed-columns.md
           - name: Transactions
             href: relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
         - name: Administration, including Out of Memory
@@ -8075,7 +8073,7 @@ items:
         - name: TDS 8.0
           href: relational-databases/security/networking/tds-8.md
         - name: TLS 1.3
-          href: relational-databases/security/networking/tls-1-3.md 
+          href: relational-databases/security/networking/tls-1-3.md
       - name: Always Encrypted
         href: relational-databases/security/encryption/always-encrypted-database-engine.md
         items:
@@ -8127,12 +8125,6 @@ items:
         href: relational-databases/security/ledger/ledger-how-to-recover-after-tampering.md?view=sql-server-ver16&preserve-view=true
       - name: Ledger limitations
         href: relational-databases/security/ledger/ledger-limits.md?view=sql-server-ver16&preserve-view=true
-
-
-
-
-
-
   - name: Tutorials
     items:
     - name: Always Encrypted
@@ -9583,18 +9575,18 @@ items:
       - name: Discover & assess
         href: sql-server/azure-arc/migration-assessment.md
       - name: Migrate to Azure SQL Managed Instance
-        items: 
-        - name: Prepare MI link migration 
+        items:
+        - name: Prepare MI link migration
           href: sql-server/azure-arc/migration-sql-mi-prepare-link.md
-        - name: Prepare LRS migration 
+        - name: Prepare LRS migration
           href: sql-server/azure-arc/migration-sql-mi-prepare-log-replay-service.md
         - name: Migrate to SQL managed instance
           href: sql-server/azure-arc/migrate-to-azure-sql-managed-instance.md
-        - name: Troubleshoot common issues 
+        - name: Troubleshoot common issues
           href: sql-server/azure-arc/migrate-to-azure-sql-managed-instance-troubleshoot.md
       - name: Migrate to SQL Server on Azure VMs
-        items: 
-        - name: Prepare for migration 
+        items:
+        - name: Prepare for migration
           href: sql-server/azure-arc/migration-sql-vm-prepare.md
         - name: Migrate to SQL Server VM
           href: sql-server/azure-arc/migrate-to-sql-server-on-azure-vms.md
@@ -16550,7 +16542,7 @@ items:
             href: t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md
           - name: << (Bitwise left shift)
             href: t-sql/functions/left-shift-transact-sql.md
-          - name: \>\> (Bitwise right shift)
+          - name: '\>\> (Bitwise right shift)'
             href: t-sql/functions/right-shift-transact-sql.md
           - name: ~ (Bitwise NOT)
             href: t-sql/language-elements/bitwise-not-transact-sql.md
@@ -17822,31 +17814,31 @@ items:
         href: xquery/handling-namespaces-in-xquery.md
 - name: Microsoft Learn
   items:
-    - name: Azure SQL bootcamp
-      href: /collections/8oq1i8p0z2qygw
-    - name: SQL Server Learning Paths
-      href: /training/browse/?filter-products=sql&products=sql-server&resource_type=learning%20path
-    - name: Migrate SQL Server workloads to Azure SQL Learning Path
-      href: /training/paths/migrate-sql-workloads-azure/
-    - name: Educational SQL resources
-      href: /sql/sql-server/educational-sql-resources
-    - name: Microsoft Q & A
-      items:
-      - name: Microsoft SQL Server
-        href: /answers/tags/780/sql-server
-      - name: SQL Server on Azure VMs
-        href: /answers/tags/19/azure-sql-virtual-machines
-    - name: Video learning
-      items:
-      - name: SQL Server on Shows
-        href: /shows/browse?products=azure-sql-database%2Cazure-sql-managed-instance%2Csql-server
-      - name: "SQL Server on YouTube"
-        href: https://aka.ms/azuresqlyt
-    - name: Stack Overflow >>
-      href: https://stackoverflow.com/questions/tagged/sql-server
-    - name: DBA Stack Exchange >>
-      href: https://dba.stackexchange.com/questions/tagged/sql-server
-    - name: Public data sets
-      href: /azure/azure-sql/public-data-sets
-    - name: Reddit >>
-      href: https://www.reddit.com/r/SQLServer
+  - name: Azure SQL bootcamp
+    href: /collections/8oq1i8p0z2qygw
+  - name: SQL Server Learning Paths
+    href: /training/browse/?filter-products=sql&products=sql-server&resource_type=learning%20path
+  - name: Migrate SQL Server workloads to Azure SQL Learning Path
+    href: /training/paths/migrate-sql-workloads-azure/
+  - name: Educational SQL resources
+    href: /sql/sql-server/educational-sql-resources
+  - name: Microsoft Q & A
+    items:
+    - name: Microsoft SQL Server
+      href: /answers/tags/780/sql-server
+    - name: SQL Server on Azure VMs
+      href: /answers/tags/19/azure-sql-virtual-machines
+  - name: Video learning
+    items:
+    - name: SQL Server on Shows
+      href: /shows/browse?products=azure-sql-database%2Cazure-sql-managed-instance%2Csql-server
+    - name: SQL Server on YouTube
+      href: https://aka.ms/azuresqlyt
+  - name: Stack Overflow >>
+    href: https://stackoverflow.com/questions/tagged/sql-server
+  - name: DBA Stack Exchange >>
+    href: https://dba.stackexchange.com/questions/tagged/sql-server
+  - name: Public data sets
+    href: /azure/azure-sql/public-data-sets
+  - name: Reddit >>
+    href: https://www.reddit.com/r/SQLServer

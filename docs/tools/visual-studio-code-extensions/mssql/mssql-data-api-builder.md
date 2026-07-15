@@ -1,5 +1,6 @@
 ---
-title: Data API Builder in Visual Studio Code with MSSQL
+title: Data API Builder
+titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the Data API builder integration in the MSSQL extension for Visual Studio Code to create REST, GraphQL, and MCP endpoints for your SQL databases.
 author: rwestMSFT
 ms.author: randolphwest

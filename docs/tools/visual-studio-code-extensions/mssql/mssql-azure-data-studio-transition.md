@@ -1,5 +1,6 @@
 ---
-title: Transition from Azure Data Studio to the MSSQL Extension for Visual Studio Code
+title: Transition from Azure Data Studio
+titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to transition from Azure Data Studio to the MSSQL extension for Visual Studio Code by importing connections, connection groups, settings, and key bindings.
 author: rwestMSFT
 ms.author: randolphwest

@@ -8737,6 +8737,8 @@ items:
         href: tools/sql-database-projects/concepts/sqlcmd-variables.md
       - name: Publish profiles
         href: tools/sql-database-projects/concepts/publish-profiles.md
+      - name: Object refactoring
+        href: tools/sql-database-projects/concepts/refactor-overview.md
       - name: System objects
         href: tools/sql-database-projects/concepts/system-objects.md
       - name: Target platform
@@ -9001,6 +9003,8 @@ items:
               href: tools/visual-studio-code-extensions/github-copilot/test-and-mocking-data-generator.md
           - name: Object-relational mapping integrations
             href: tools/visual-studio-code-extensions/github-copilot/orm-integrations.md
+        - name: Custom keyboard shortcuts
+          href: tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts.md
         - name: Schema designer
           href: tools/visual-studio-code-extensions/mssql/mssql-schema-designer.md
         - name: Schema designer with GitHub Copilot

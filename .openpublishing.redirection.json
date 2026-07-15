@@ -1,6 +1,22 @@
 {
   "redirections": [
     {
+      "source_path": "docs/machine-learning/install/sql-r-services-windows-install.md",
+      "redirect_url": "/previous-versions/sql/machine-learning/install/sql-r-services-windows-install",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/machine-learning/r/sql-server-r-services.md",
+      "redirect_url": "/previous-versions/sql/machine-learning/r/sql-server-r-services",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
       "source_path": "docs/relational-databases/in-memory-oltp/migrating-computed-columns.md",
       "redirect_url": "/previous-versions/sql/relational-databases/in-memory-oltp/migrating-computed-columns",
       "redirect_document_id": false,

@@ -738,6 +738,12 @@
         ],
         "relational-databases/in-memory-oltp/migrating-computed-columns.md": [
           "sql-server-2016"
+        ],
+        "machine-learning/install/sql-r-services-windows-install.md": [
+          "sql-server-2016"
+        ],
+        "machine-learning/r/sql-server-r-services.md": [
+          "sql-server-2016"
         ]
       }
     },

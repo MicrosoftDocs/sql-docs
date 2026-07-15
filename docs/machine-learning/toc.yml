@@ -1,21 +1,17 @@
 items:
 - name: SQL machine learning documentation
   href: ../machine-learning/index.yml
-
 - name: Microsoft SQL documentation >
   href: ../index.yml
-
 - name: Overview
-  expanded: true
   items:
   - name: What is Machine Learning Services (Python and R)?
     href: ../machine-learning/sql-server-machine-learning-services.md
-  - name: What is R Services?
-    href: ../machine-learning/r/sql-server-r-services.md
   - name: Standalone server
     href: ../machine-learning/r/r-server-standalone.md
   - name: What's new?
     href: ../machine-learning/what-s-new-in-sql-server-machine-learning-services.md
+  expanded: true
 - name: Install
   items:
   - name: Install SQL Server 2022 ML Services on Windows
@@ -30,8 +26,6 @@ items:
     href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/machine-learning/toc.json
   - name: Isolation changes in SQL Server 2019
     href: ../machine-learning/install/sql-server-machine-learning-services-2019.md
-  - name: Install R Services
-    href: ../machine-learning/install/sql-r-services-windows-install.md
   - name: Offline install (no internet)
     items:
     - name: Install without internet access
@@ -51,7 +45,7 @@ items:
     - name: Install ML runtimes and packages on Windows
       href: ../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md#install-runtimes-and-packages
     - name: Install ML runtimes and packages on Linux
-      href: ../linux/sql-server-linux-setup-machine-learning-sql-2022.md?toc=/sql/machine-learning/toc.json#install-runtimes-and-packages      
+      href: ../linux/sql-server-linux-setup-machine-learning-sql-2022.md?toc=/sql/machine-learning/toc.json#install-runtimes-and-packages
     - name: Install Java custom runtime
       href: ../language-extensions/install/windows-java.md
   - name: Change default Python and R runtime
@@ -292,12 +286,12 @@ items:
       href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
   - name: Performance
     items:
-      - name: R code performance
-        items:
-        - name: Data optimization in R
-          href: ../machine-learning/r/r-and-data-optimization-r-services.md
-        - name: Use R code profiling functions
-          href: ../machine-learning/r/using-r-code-profiling-functions.md
+    - name: R code performance
+      items:
+      - name: Data optimization in R
+        href: ../machine-learning/r/r-and-data-optimization-r-services.md
+      - name: Use R code profiling functions
+        href: ../machine-learning/r/using-r-code-profiling-functions.md
 - name: Reference
   items:
   - name: Python packages
@@ -408,7 +402,6 @@ items:
         href: ../machine-learning/python/reference/microsoftml/sse-math.md
     - name: revoscalepy
       href: ../machine-learning/python/ref-py-revoscalepy.md
-
   - name: R packages
     items:
     - name: RevoScaleR

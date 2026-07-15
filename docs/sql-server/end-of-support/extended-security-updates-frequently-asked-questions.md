@@ -89,9 +89,9 @@ Yes, you can deploy a new [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] 
 
 ## Can I get technical support on-premises for SQL Server after the End of Support date, without subscribing to ESUs?
 
-No. If you have [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], you can't log a support ticket even if you have a support plan. 
+No. If you have [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], you can't log a support ticket even if you have a support plan.
 
-If you migrate SQL Server 2014 to Azure or subscribe to ESUs for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], you can get support using your existing support plan.
+If you subscribe to ESUs, you can log a support ticket for issues related to the extended security updates for your SQL Server instance, or issues introduced as a result of installing the ESUs.
 
 ## If I want to bring my own SQL Server license (BYOL), am I required to have Software Assurance coverage?
 

@@ -38,16 +38,16 @@
     "externalReference": [],
     "globalMetadata": {
       "no-loc": [
-        "ADD SENSITIVITY CLASSIFICATIO", 
-        "BULK INSERT", 
-        "DELETE", 
-        "DISABLE TRIGGER", 
-        "ENABLE TRIGGER", 
-        "INSERT", 
-        "INSERT", 
-        "UPDATE", 
-        "MERGE", 
-        "TRUNCATE TABLE", 
+        "ADD SENSITIVITY CLASSIFICATIO",
+        "BULK INSERT",
+        "DELETE",
+        "DISABLE TRIGGER",
+        "ENABLE TRIGGER",
+        "INSERT",
+        "INSERT",
+        "UPDATE",
+        "MERGE",
+        "TRUNCATE TABLE",
         "UPDATE STATISTICS",
         "APPLICATION ROLE",
         "ALTER APPLICATION ROLE",
@@ -434,7 +434,8 @@
         "TRANSACTION ISOLATION LEVEL",
         "SET TRANSACTION ISOLATION LEVEL",
         "XACT_ABORT",
-        "SET XACT_ABORT" ],
+        "SET XACT_ABORT"
+      ],
       "uhfHeaderId": "MSDocsHeader-DocsSQL",
       "contributors_to_exclude": [
         "hexiaokai",
@@ -734,6 +735,15 @@
         ],
         "ado/**/*.md": [
           "sql-server-ver15"
+        ],
+        "relational-databases/in-memory-oltp/migrating-computed-columns.md": [
+          "sql-server-2016"
+        ],
+        "machine-learning/install/sql-r-services-windows-install.md": [
+          "sql-server-2016"
+        ],
+        "machine-learning/r/sql-server-r-services.md": [
+          "sql-server-2016"
         ]
       }
     },

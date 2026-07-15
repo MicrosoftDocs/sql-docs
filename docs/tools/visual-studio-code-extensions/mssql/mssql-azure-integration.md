@@ -1,5 +1,6 @@
 ---
 title: Create an Azure SQL Database (Free Tier) in Visual Studio Code
+titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the MSSQL extension for Visual Studio Code to connect to Azure and provision Azure SQL databases directly from your editor.
 author: rwestMSFT
 ms.author: randolphwest

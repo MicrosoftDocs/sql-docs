@@ -1,5 +1,6 @@
 ---
-title: Query Profiler in MSSQL Extension for Visual Studio Code
+title: Query Profiler
+titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use Query Profiler in the MSSQL extension for Visual Studio Code to capture and monitor database activity using Extended Events.
 author: rwestMSFT
 ms.author: randolphwest

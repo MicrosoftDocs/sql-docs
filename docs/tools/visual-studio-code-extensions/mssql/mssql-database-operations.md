@@ -1,5 +1,6 @@
 ---
-title: Database Operations in the MSSQL Extension for Visual Studio Code
+title: Database Operations
+titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to manage databases, search objects, back up and restore databases, and import flat files using the MSSQL extension for Visual Studio Code.
 author: rwestMSFT
 ms.author: randolphwest

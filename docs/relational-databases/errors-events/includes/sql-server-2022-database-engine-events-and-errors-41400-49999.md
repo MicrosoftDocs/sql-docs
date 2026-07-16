@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 05/14/2026
+ms.date: 07/16/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -1314,6 +1314,7 @@ ms.topic: include
 | 47520 | 16 | No | Database cannot be removed from availability group which participates in distributed availability group in which secondary participant is Azure SQL Managed Instance. |
 | [47521](../mssqlserver-47521-database-engine-error.md) | 16 | No | Secondary replica could not be built as the replica request was not received from the primary, or not processed correctly. Check the state of the primary server and ensure that Availability Group on this server is not empty, and that it contains healthy databases. |
 | 47522 | 16 | No | Database '%.\*ls' has been removed from availability group which participates in Azure SQL Managed Instance link. |
+| 47525 | 16 | No | Cannot create the distributed availability group '%.\*ls' for the link because the database(s) '%.\*ls' in the availability group '%.\*ls' use a custom PVS filegroup for ADR. Change the PVS filegroup to PRIMARY or remove the affected databases from the availability group, and try again. |
 | 47600 | 10 | No | Reason: Windows Authentication for Azure AD Principals is not enabled on this instance. |
 | 47601 | 10 | No | Reason: There was an internal error while attempting Windows Authentication for Azure AD Principals. |
 | 47602 | 16 | No | When auto-rotation of TDE Protector is enabled, both primary and secondary servers must be connected to the same key vault. Add key '%ls' from the key vault connected to primary server to the secondary server '%ls'. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323439](https://go.microsoft.com/fwlink/?linkid=2323439). |

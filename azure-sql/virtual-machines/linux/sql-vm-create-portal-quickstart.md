@@ -36,7 +36,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 <a id="create"></a>
 
-## Create a Linux VM with SQL Server installed
+## Create a Linux VM
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -123,30 +123,13 @@ For more information about connecting to Linux VMs, see [Create a Linux VM on Az
 
 <a id="password"></a>
 
-## Change the SA password
+## Install SQL Server
 
-The new virtual machine installs SQL Server with a random SA password. Reset this password before you connect to SQL Server with the SA login.
-
-1. After connecting to your Linux VM, open a new command terminal.
-
-1. Change the SA password with the following commands:
-
-   ```bash
-   sudo systemctl stop mssql-server
-   sudo /opt/mssql/bin/mssql-conf set-sa-password
-   ```
-
-   Enter a new SA password and password confirmation when prompted.
-
-1. Restart the SQL Server service.
-
-   ```bash
-   sudo systemctl start mssql-server
-   ```
+After your Linux VM is created, you can install SQL Server 2017 or later on the VM. For instructions, see [Install SQL Server on Linux](/sql/linux/install-upgrade/setup).
 
 ## Add the tools to your path (optional)
 
-Several SQL Server [packages](sql-server-on-linux-vm-what-is-iaas-overview.md#packages) are installed by default, including the SQL Server command-line Tools package. The tools package contains the **sqlcmd** and **bcp** tools. For convenience, you can optionally add the tools path, `/opt/mssql-tools/bin/`, to your `PATH` environment variable.
+Several SQL Server [packages](/sql/linux/install-upgrade/setup) are installed by default, including the SQL Server command-line tools package. The tools package contains the **sqlcmd** and **bcp** tools. For convenience, you can optionally add the tools path, `/opt/mssql-tools/bin/`, to your `PATH` environment variable.
 
 Run the following commands to modify the `PATH` for both login sessions and interactive/non-login sessions:
 
@@ -155,6 +138,11 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 ```
+
+## Register with the SQL IaaS Agent extension
+
+After installing SQL Server, register your Linux VM with the SQL IaaS Agent extension. This extension enables management features for SQL Server on Azure VMs. For instructions, see [Register with the SQL IaaS Agent extension for SQL Server on Azure Virtual Machines](sql-iaas-agent-extension-register-vm-linux.md).
+
 
 <a id="remote"></a>
 

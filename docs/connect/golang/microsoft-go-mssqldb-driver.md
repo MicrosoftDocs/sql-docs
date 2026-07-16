@@ -1,9 +1,9 @@
 ---
 title: "Microsoft go-mssqldb Driver for SQL Server"
-description: "The go-mssqldb driver is a pure Go database/sql driver for Microsoft SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics."
+description: "The go-mssqldb driver is a pure Go database/sql driver for Microsoft SQL Server, Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, Fabric Data Warehouse, and Azure Synapse Analytics."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 07/08/2026
+ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 ---
 # Microsoft go-mssqldb driver for SQL Server
 
-The `go-mssqldb` driver is the official Microsoft Go driver for SQL Server. It's a pure Go implementation of the TDS (Tabular Data Stream) protocol that uses the standard `database/sql` interface. It doesn't require ODBC or other C libraries.
+The `go-mssqldb` driver is the official Microsoft Go driver for Microsoft SQL. It's a pure Go implementation of the TDS (Tabular Data Stream) protocol that uses the standard `database/sql` interface. It doesn't require ODBC or other C libraries.
 
 The driver connects Go applications to all supported versions of SQL Server, Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, Fabric Data Warehouse, and Azure Synapse Analytics on Windows, Linux, and macOS.
 

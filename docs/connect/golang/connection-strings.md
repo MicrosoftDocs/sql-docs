@@ -3,7 +3,7 @@ title: "go-mssqldb Connection Strings"
 description: "Connection string formats for the go-mssqldb driver, including URL, ADO, and ODBC styles."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 06/24/2026
+ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -165,7 +165,7 @@ connString := u.String()
 
 ### NewConnectorConfig
 
-Use `NewConnectorConfig` with `msdsn.Config` for structured configuration, especially when you need to set a custom dialer or `SessionInitSQL`:
+Use `NewConnectorConfig` with `msdsn.Config` for structured configuration, especially when you need to set a custom dialer, `SessionInitSQL`, or explicit TLS settings such as `TrustServerCertificate`:
 
 ```go
 import (
@@ -175,14 +175,17 @@ import (
 )
 
 config := msdsn.Config{
-    Host:     "<server>",
-    Port:     1433,
-    Database: "AdventureWorks2025",
+    Host:                   "<server>",
+    Port:                   1433,
+    Database:               "AdventureWorks2025",
+    TrustServerCertificate: false,
 }
 
 connector := mssql.NewConnectorConfig(config)
 db := sql.OpenDB(connector)
 ```
+
+If you still depend on the deprecated `mssql` driver name behavior that rewrites `?` placeholders, use `NewConnectorWithProcessQueryText` instead of `NewConnectorConfig` when you build the connector.
 
 ## Related content
 

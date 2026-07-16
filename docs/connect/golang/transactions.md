@@ -3,7 +3,7 @@ title: "go-mssqldb Transactions"
 description: "Use transactions with the go-mssqldb driver, including isolation levels, deadlock handling, savepoints, and production patterns."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 04/25/2026
+ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -130,6 +130,8 @@ func createCategory(ctx context.Context, db *sql.DB, category Category) error {
     return nil
 }
 ```
+
+If the batch or stored procedure runs with `SET XACT_ABORT ON`, treat any statement error as terminal for the transaction. Roll back immediately and don't attempt more statements or `Commit()`. Current driver releases detect server-aborted transactions and return an error instead of allowing a silent partial commit.
 
 ## Savepoints
 

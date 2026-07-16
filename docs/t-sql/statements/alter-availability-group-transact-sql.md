@@ -554,7 +554,7 @@ Initiates a manual failover of the availability group without data loss to the s
 
 Failover is only supported to a synchronous-commit secondary replica that's currently synchronized with the primary replica. For a secondary replica to be synchronized, the primary replica must also be running in synchronous-commit mode.
 
-For two SQL Server instances in an availability group, you can issue the failover command on either the primary or secondary replica. For instances replicated through the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview), you must issue the failover command on the primary replica.
+For instances replicated through the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview), you must issue the failover command on the primary replica.
 
 > [!NOTE]  
 >

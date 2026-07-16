@@ -27,37 +27,16 @@ Azure virtual machines run in many different [geographic regions](https://azure.
 If you're new to Azure SQL, check out the *SQL Server on Azure VM Overview* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
 > [!VIDEO https://learn.microsoft.com/shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61/player]
 
-<a id="create"></a>
+## Get started with SQL Server on Azure Linux VMs
 
-## Get started with SQL Server VMs
+To get started with SQL Server on Azure Linux VMs, follow these steps:
 
-To get started, choose a SQL Server virtual machine image with your required version, edition, and operating system. The following sections provide direct links to the Azure portal for the SQL Server virtual machine gallery images.
-
-> [!TIP]  
-> For more information about how to understand pricing for SQL Server images, see [the pricing page for Linux VMs running SQL Server](https://azure.microsoft.com/pricing/details/virtual-machines/linux/).
-
-| Version | Operating system | Edition |
-| --- | --- | --- |
-| **SQL Server 2022** | Ubuntu 20.04 LTS | [All available editions](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ubuntupro2004) |
-| **SQL Server 2019** | Red Hat Enterprise Linux (RHEL) 8 | [Enterprise](https://portal.azure.com/#create/microsoftsqlserver.sql2019-rhel8enterprise-ARM), [Standard](https://portal.azure.com/#create/microsoftsqlserver.sql2019-rhel8standard-ARM), [Web](https://portal.azure.com/#create/microsoftsqlserver.sql2019-rhel8web-ARM), [Developer](https://portal.azure.com/#create/microsoftsqlserver.sql2019-rhel8sqldev-ARM)|
-| **SQL Server 2019** | SUSE Linux Enterprise Server (SLES) v12 SP5 | [Enterprise](https://portal.azure.com/#create/microsoftsqlserver.sql2019-sles12sp5enterprise-ARM), [Standard](https://portal.azure.com/#create/microsoftsqlserver.sql2019-sles12sp5standard-ARM), [Web](https://portal.azure.com/#create/microsoftsqlserver.sql2019-sles12sp5web-ARM), [Developer](https://portal.azure.com/#create/microsoftsqlserver.sql2019-sles12sp5sqldev-ARM)|
-> [!NOTE]  
-> To see the available SQL Server virtual machine images for Windows, see [Overview of SQL Server on Azure Virtual Machines (Windows)](../windows/sql-server-on-azure-vm-iaas-what-is-overview.md).
-
-<a id="packages"></a>
-
-## Installed packages
-
-When you configure SQL Server on Linux, you install the Database Engine package and then several optional packages depending on your requirements. The Linux virtual machine images for SQL Server automatically install most packages for you. The following table shows which packages are installed for each distribution.
-
-| Distribution | [Database Engine](/sql/linux/sql-server-linux-setup) | [Tools](/sql/linux/sql-server-linux-setup-tools) | [SQL Server agent](/sql/linux/sql-server-linux-setup-sql-agent) | [Full-text search](/sql/linux/sql-server-linux-setup-full-text-search) | [SSIS](/sql/linux/sql-server-linux-setup-ssis) | [HA add-on](/sql/linux/sql-server-linux-business-continuity-dr) |
-|---|---|---|---|---|---|---|
-| RHEL | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and database engine." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and tools." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and SQL Server agent." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and full-text search." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and SSIS." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and HA add-on." border="false"::: |
-| SLES | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and database engine." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and tools." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and SQL Server agent." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and full-text search." border="false"::: | :::image type="content" source="../../media/applies-to/no-icon.svg" alt-text="SLES and SSIS (not supported)." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and HA add-on." border="false"::: |
-| Ubuntu | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and database engine." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and tools." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and SQL Server agent." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and full-text search." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and SSIS." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and HA add-on." border="false"::: |
+1. [Provision a Linux VM on Azure](/azure/virtual-machines/linux/create-upload-generic)
+1. [Install SQL Server 2017 or later on Linux](/sql/linux/install-upgrade/setup).
+1. Register with the [SQL IaaS Agent extension for SQL Server on Azure Linux Virtual Machines](sql-iaas-agent-extension-register-vm-linux.md) to enable management features.
 
 > [!NOTE]  
-> SQL IaaS Agent extension for SQL Server on Azure Linux Virtual Machines is only available for Ubuntu Linux distribution.
+> SQL Server on Azure Linux VMs is transitioning to a script-based model that offers greater flexibility, automation, and control. To learn more, review the [Upcoming changes to SQL Server on Linux VMs blog](https://techcommunity.microsoft.com/blog/sqlserver/announcement-upcoming-changes-to-sql-server-on-linux-virtual-machine-vm-provisio/4457324).
 
 ## Related products and services
 

@@ -48,8 +48,8 @@ To get started with managed identities, review [Configure managed identities usi
 
 To enable Microsoft Entra authentication on your SQL Server, you need the following prerequisites:
 
-- Use SQL Server 2022.
-- Register SQL Server VM with the [SQL Server Iaas Agent extension](sql-agent-extension-manually-register-single-vm.md) in any cloud.
+- Use SQL Server 2022 or later.
+- Register SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) in any cloud.
 - Have an existing **system-assigned** or **user-assigned** managed identity in the same Microsoft Entra tenant as your SQL Server VM. [Configure managed identities using the Azure portal](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm) to learn more.
 - [Azure CLI 2.48.0 or later](/cli/azure/install-azure-cli) if you intend to use the Azure CLI to configure Microsoft Entra authentication for your SQL Server VM.
 
@@ -226,7 +226,7 @@ Assuming your SQL Server VM name is `sqlvm` and your resource group is `myResour
    az sql vm enable-azure-ad-auth -n sqlvm -g myresourcegroup
    ```
 
-- Enable Microsoft Entra authentication with a **system assigned managed identity**, but skip client side validation and rely on the server-side validation that always happens:
+- Enable Microsoft Entra authentication with a **system-assigned managed identity**, but skip client-side validation and rely on the server-side validation that always happens:
 
    ```azurecli
    az sql vm enable-azure-ad-auth -n sqlvm -g myresourcegroup 
@@ -245,7 +245,7 @@ Assuming your SQL Server VM name is `sqlvm` and your resource group is `myResour
    ```azurecli
    az sql vm enable-azure-ad-auth -n sqlvm -g myresourcegroup 
    --msi-client-id 00001111-aaaa-2222-bbbb-3333cccc4444 --skip-client-validation 
-   ````
+   ```
 
 <a name='check-status-of-azure-ad-authentication-'></a>
 
@@ -295,7 +295,7 @@ You can enable Microsoft Entra authentication for specific unregistered instance
 > [!NOTE]
 > To use Microsoft Entra authentication with unregistered instances on SQL Server on Azure VMs, you must have at least one instance registered with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
 
-When using the `Set-AzVMExtension -ExtensionName "SqlIaasExtension"` command to enable Microsoft Entra authentication for a SQL Server instance, consider the following:
+When you use the [Set-AzVMExtension](/powershell/module/az.compute/set-azvmextension) `-ExtensionName "SqlIaasExtension"` command to enable Microsoft Entra authentication for a SQL Server instance, consider the following points:
 
 - Permissions of the managed identity are only checked when the `CheckPermissions` parameter is set to `true`.
 - Specify the client ID of the identity `ClientID` parameter to use a **user-assigned managed identity**. When the `ClientID` parameter is empty, a **system-assigned managed identity** is used.
@@ -325,7 +325,7 @@ Follow the instructions in the [Microsoft Entra tutorial](/sql/sql-server/azure-
 
 Consider the following limitations:
 
-- Microsoft Entra authentication is only supported with SQL Server 2022 running on Windows VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), deployed to any cloud.
+- SQL Server 2022 or later running on Windows VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) supports Microsoft Entra authentication. You can deploy these VMs to any cloud.
 - Managing Microsoft Entra authentication in the Azure portal is only available to instances supported by the SQL IaaS Agent extension, such as a default instance, or a single named instance. Use the Azure CLI or PowerShell to manage Microsoft Entra authentication additional instances on the SQL Server VM that aren't registered with the SQL IaaS Agent extension.
 - Using Microsoft Entra authentication with failover cluster instances isn't supported.
 - The identity you choose to authenticate to SQL Server has to have either the **Directory Readers** role in Microsoft Entra ID or the following three Microsoft Graph application permissions (app roles): `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All`.

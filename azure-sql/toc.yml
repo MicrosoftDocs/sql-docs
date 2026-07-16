@@ -528,30 +528,30 @@
         href: database/security-server-roles.md
     - name: Business continuity
       items:
-      - name: Business Continuity
+      - name: High availability and disaster recovery overview
         href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-      - name: High availability
-        href: database/high-availability-sla-local-zone-redundancy.md
-      - name: Reliability
-        href: /azure/reliability/reliability-sql-database?toc=/azure/azure-sql/toc.json
-      - name: HA/DR checklist
-        href: database/high-availability-disaster-recovery-checklist.md
       - name: Automated backups
         href: database/automated-backups-overview.md
+      - name: Availability through redundancy
+        href: database/high-availability-sla-local-zone-redundancy.md
+      - name: Data integrity
+        href: database/data-integrity.md
+      - name: HA/DR checklist
+        href: database/high-availability-disaster-recovery-checklist.md
+      - name: Reliability in Azure SQL Database
+        href: /azure/reliability/reliability-sql-database?toc=/azure/azure-sql/toc.json
       - name: Backup immutability
         items:
         - name: Backup immutability for LTR backups
           href: database/backup-immutability.md
-        - name: Configure time-based backup immutability
-          href: database/backup-immutability-time-based.md
         - name: Configure legal hold backup immutability
           href: database/backup-immutability-legal-hold.md
+        - name: Configure time-based backup immutability
+          href: database/backup-immutability-time-based.md
       - name: Disaster recovery
         items:
         - name: Active geo-replication
           href: database/active-geo-replication-overview.md
-        - name: Data integrity
-          href: database/data-integrity.md
         - name: Failover groups
           href: database/failover-group-sql-db.md
         - name: Outage recovery guidance
@@ -605,7 +605,6 @@
         href: database/elastic-scale-faq.yml
       - name: Glossary
         href: database/elastic-scale-glossary.md
-
   - name: Migration guides
     items:
     - name: From Access

@@ -131,10 +131,7 @@ For current supported features and limitations, review [SQL Server enabled by Az
 
 For [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], Azure Arc isn't currently supported in Azure Government regions. So if [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] is in an Azure Government region, contact your account team to purchase ESUs through volume licensing, and then follow the steps to [register your disconnected instance](extended-security-updates-disconnected-instances.md). 
 
-For both [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] ESUs, Federal Government 
-customers can get ESUs by migrating their workloads to SQL Server on Azure VMs in supported Azure Government regions. ESUs are free for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and purchasable for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].
-
-Alternatively, you can migrate your workload to a SQL Server on Azure VM in the public cloud, and register with the SQL IaaS Agent extension to receive ESUs. SQL Server 2014 customers get free ESUs when they migrate their workloads to SQL Server on Azure VMs. SQL Server 2016 customers can subscribe to ESUs when they register with the SQL IaaS Agent extension, but they aren't eligible for free ESUs.  
+For both [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] ESUs, Federal Government customers can get ESUs by migrating their workloads to SQL Server on Azure VMs in supported Azure Government regions. ESUs are free for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and purchasable for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].
 
 ## What are the benefits of subscribing to ESUs?
 

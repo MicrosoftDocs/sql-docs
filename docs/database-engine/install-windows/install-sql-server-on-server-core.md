@@ -49,15 +49,15 @@ Use the following table to find which features are supported in [!INCLUDE [ssnov
 | [!INCLUDE [ssDE](../../includes/ssde-md.md)] Services | Yes |
 | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Replication | Yes |
 | Full Text Search | Yes |
-| [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] | Yes | |
-| [!INCLUDE [rsql_productname_md](../../includes/rsql-productname-md.md)] | Yes | |
-| [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] | No | |
-| [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT) | No | |
-| Client Tools Connectivity | Yes | |
-| Integration Services Server | Yes | |
-| Client Tools Backward Compatibility | No | |
-| Client Tools SDK | No | |
-| [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Books Online | No | |
+| [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] | Yes |
+| [!INCLUDE [rsql_productname_md](../../includes/rsql-productname-md.md)] | Yes |
+| [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] | No |
+| [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT) | No |
+| Client Tools Connectivity | Yes |
+| Integration Services Server | Yes |
+| Client Tools Backward Compatibility | No |
+| Client Tools SDK | No |
+| [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Books Online | No |
 | Management Tools - Basic | Remote Only <sup>1</sup> |
 | Management Tools - Complete | Remote Only <sup>1</sup> |
 | Distributed Replay Controller | No |

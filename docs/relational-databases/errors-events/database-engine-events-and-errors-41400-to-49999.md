@@ -4,7 +4,7 @@ description: "Consult this SQL Server error code list (between 41400 and 49999) 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 11/18/2025
+ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference
@@ -35,22 +35,12 @@ ORDER BY message_id;
 
 ## SQL Server version
 
-::: moniker range="=sql-server-2016"
-This article shows events and errors (between the range 41,400 and 49,999) for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
-
-- [SQL Server 2025](?view=sql-server-ver17&preserve-view=true)
-- [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
-- [SQL Server 2019](?view=sql-server-ver15&preserve-view=true)
-- [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
-:::moniker-end
-
 ::: moniker range="=sql-server-2017 || =sql-server-linux-2017"
 This article shows events and errors (between the range 41,400 and 49,999) for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2025](?view=sql-server-ver17&preserve-view=true)
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
 - [SQL Server 2019](?view=sql-server-ver15&preserve-view=true)
-- [SQL Server 2016](?view=sql-server-2016&preserve-view=true)
 :::moniker-end
 
 ::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
@@ -59,7 +49,6 @@ This article shows events and errors (between the range 41,400 and 49,999) for [
 - [SQL Server 2025](?view=sql-server-ver17&preserve-view=true)
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
-- [SQL Server 2016](?view=sql-server-2016&preserve-view=true)
 :::moniker-end
 
 ::: moniker range="=sql-server-ver16 || =sql-server-linux-ver16"
@@ -68,7 +57,6 @@ This article shows events and errors (between the range 41,400 and 49,999) for [
 - [SQL Server 2025](?view=sql-server-ver17&preserve-view=true)
 - [SQL Server 2019](?view=sql-server-ver15&preserve-view=true)
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
-- [SQL Server 2016](?view=sql-server-2016&preserve-view=true)
 :::moniker-end
 
 ::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || >=aps-pdw-2016-au7 || =fabric-sqldb"
@@ -77,14 +65,9 @@ This article shows events and errors (between the range 41,400 and 49,999) for [
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
 - [SQL Server 2019](?view=sql-server-ver15&preserve-view=true)
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
-- [SQL Server 2016](?view=sql-server-2016&preserve-view=true)
 :::moniker-end
 
 ## Errors and events (41400 to 49999)
-
-::: moniker range="=sql-server-2016"
-[!INCLUDE [sql-server-2016-database-engine-events-and-errors-41400-49999](includes/sql-server-2016-database-engine-events-and-errors-41400-49999.md)]
-:::moniker-end
 
 ::: moniker range="=sql-server-2017 || =sql-server-linux-2017"
 [!INCLUDE [sql-server-2017-database-engine-events-and-errors-41400-49999](includes/sql-server-2017-database-engine-events-and-errors-41400-49999.md)]

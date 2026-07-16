@@ -3,7 +3,7 @@ title: "go-mssqldb Limitations"
 description: "Known limitations, unsupported features, and constraints of the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 06/23/2026
+ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -70,6 +70,8 @@ db, err := sql.Open("sqlserver", connString)
 ```
 
 The `mssql` driver name performs parameter token replacement, converting `?` placeholders to `@p1`, `@p2`, and similar ordinal names. The `sqlserver` driver name requires explicit named parameters and provides more predictable behavior.
+
+If you need connector-based `sql.OpenDB` usage and must preserve the legacy query-text rewriting behavior temporarily, use `NewConnectorWithProcessQueryText`. For new code, prefer the `sqlserver` driver name and explicit parameters.
 
 ## uniqueidentifier columns
 

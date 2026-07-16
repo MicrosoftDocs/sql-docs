@@ -1,9 +1,9 @@
 ---
 title: "Azure CLI Example: Scale an Elastic Pool"
 description: Use an Azure CLI example script to scale an elastic pool in Azure SQL Database.
-author: arvindshmicrosoft
-ms.author: arvindsh
-ms.reviewer: wiassaf, mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 06/10/2025
 ms.service: azure-sql-database
 ms.subservice: elastic-pools

@@ -1,6 +1,6 @@
 ---
 title: "What's new in go-mssqldb"
-description: "Version history and release highlights for the go-mssqldb driver for SQL Server."
+description: "Version history and release highlights for the go-mssqldb driver across the Microsoft SQL platform."
 author: dlevy-msft
 ms.author: dlevy
 ms.date: 06/23/2026

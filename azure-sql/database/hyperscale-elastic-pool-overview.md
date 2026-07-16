@@ -1,9 +1,9 @@
 ---
 title: Hyperscale elastic pools overview
 description: Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. For one price, you can distribute resources where they're needed.
-author: arvindshmicrosoft
-ms.author: arvindsh
-ms.reviewer: wiassaf, mathoma, randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma, randolphwest
 ms.date: 01/09/2025
 ms.service: azure-sql-database
 ms.subservice: elastic-pools

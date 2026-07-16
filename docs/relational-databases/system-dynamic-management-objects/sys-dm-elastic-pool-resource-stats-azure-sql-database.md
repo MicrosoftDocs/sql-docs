@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: "sys.dm_elastic_pool_resource_stats returns resource usage statistics for the current database in an elastic pool in Azure SQL Database."
 author: WilliaMDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dfurman, arvindsh
+ms.reviewer: dfurman
 ms.date: 08/11/2022
 ms.service: azure-sql-database
 ms.topic: "reference"

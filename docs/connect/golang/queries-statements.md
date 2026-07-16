@@ -3,7 +3,7 @@ title: "go-mssqldb Queries and Statements"
 description: "Run queries, execute statements, handle multiple result sets, and use transactions with the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 03/28/2026
+ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -40,7 +40,36 @@ if err = rows.Err(); err != nil {
 ```
 
 > [!IMPORTANT]
-> Always call `rows.Close()` (typically with `defer`) and check `rows.Err()` after the loop. Failing to close rows can leak connections from the pool.
+> Always call `rows.Close()` (typically with `defer`) and check `rows.Err()` after the loop. Failing to close rows can leak connections from the pool. `rows.Close()` can also return a server-side error while the driver drains remaining tokens, so don't ignore it when the result set isn't fully consumed.
+
+If you stop reading early, close the rows explicitly and handle the close error:
+
+```go
+rows, err := db.QueryContext(ctx,
+    "SELECT TOP (100) ProductID, Name FROM Production.Product ORDER BY ProductID")
+if err != nil {
+    log.Fatal(err)
+}
+
+for rows.Next() {
+    var id int
+    var name string
+    if err := rows.Scan(&id, &name); err != nil {
+        _ = rows.Close()
+        log.Fatal(err)
+    }
+
+    fmt.Printf("%d %s\n", id, name)
+    break // Stop early for demonstration.
+}
+
+if err := rows.Close(); err != nil {
+    log.Fatal(err)
+}
+if err := rows.Err(); err != nil {
+    log.Fatal(err)
+}
+```
 
 Examples in this article run against the [AdventureWorks2025](../../samples/adventureworks-install-configure.md) sample database. Read-oriented examples query built-in objects such as `Sales.vSalesPerson`, `Production.Product`, and `Sales.SalesOrderHeader`. Write-oriented examples target `HumanResources.Department` and `Production.ProductInventory`.
 

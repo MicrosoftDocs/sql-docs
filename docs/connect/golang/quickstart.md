@@ -3,7 +3,7 @@ title: "Quickstart: Connect and Query with go-mssqldb"
 description: "Connect to SQL Server from a Go application and run a query using the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 06/23/2026
+ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart
@@ -17,7 +17,7 @@ In this quickstart, you connect to a SQL Server database from Go and run a query
 
 For the main sample in this article, you need:
 
-- [Go 1.23 or later](https://go.dev/dl/)
+- [Go 1.25 or later](https://go.dev/dl/)
 - Access to a SQL Server-compatible endpoint. The main sample assumes a local SQL Server instance on Windows.
 - The `AdventureWorks2025` sample database. For download and restore instructions, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 

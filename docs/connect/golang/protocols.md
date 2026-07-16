@@ -3,7 +3,7 @@ title: "go-mssqldb Protocols"
 description: "TCP, named pipes, shared memory, and Dedicated Administrator Connection (DAC) protocols in the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 03/28/2026
+ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -66,6 +66,8 @@ server=np:<server>\myinstance;user id=<user>;password=<password>;database=Advent
 ```
 
 The default pipe name is `\sql\query` for the default instance.
+
+Current driver releases support named pipe connections on Windows for Arm64 in addition to Windows and Linux for x86-64 environments that expose the pipe over SMB.
 
 ### Named instance pipe names
 

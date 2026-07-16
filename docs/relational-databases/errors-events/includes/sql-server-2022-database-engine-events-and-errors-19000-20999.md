@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 01/15/2026
+ms.date: 07/16/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -264,6 +264,8 @@ ms.topic: include
 | 19529 | 16 | No | Failed to create a database backup on secondary replica for database "%ls". The checkpoint LSN from primary replica could not be redone. Check the health of the database in the SQL Server error log on both primary and secondary replica. If the database is healthy, try the operation again. |
 | 19530 | 16 | No | The %ls operation is not allowed by the current availability group configuration. The required_synchronized_secondaries_to_commit needs to be 0 when changing availability mode to ASYNCHRONOUS_COMMIT. Change required_synchronized_secondaries_to_commit to 0 and retry the operation. |
 | 19533 | 16 | No | Cannot create distributed availability group '%.\*ls' as it requires two Availaiblity Group Replicas, however %d were specified. |
+| 19534 | 16 | No | The attempt to remove IP address from the listener failed. If this is a WSFC availability group, the WSFC service may not be running or may be inaccessible in its current state, or the values provided for the network name and IP address may be incorrect. |
+| 19535 | 16 | No | The attempt to remove IP resource '%.\*ls' from the listener failed since cluster resource is not offline. Cluster resource state is %d. |
 | 19536 | 10 | No | The default startup routine of database '%.\*ls' that belongs to an availability group (Group ID: %d) cannot be skipped because SQL Server did not initialize the Availability Replica Manager. This is an informational message only. No user action is required. |
 | 19544 | 16 | No | Attempting to create an availability group with cluster_type set to NONE or EXTERNAL, with a name that is longer than 64 characters, is not supported. Please change the name of availability group '%.\*ls' to be 64 characters or less and try again. |
 | 19601 | 16 | No | System error. |

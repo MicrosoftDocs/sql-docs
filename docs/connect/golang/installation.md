@@ -1,9 +1,9 @@
 ---
 title: "Install the go-mssqldb Driver"
-description: "Install the go-mssqldb driver for Go and verify your development environment for SQL Server connectivity."
+description: "Install the go-mssqldb driver for Go and verify your development environment for Microsoft SQL platform connectivity."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 06/23/2026
+ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,8 +17,8 @@ The `go-mssqldb` driver is a Go module that you install by using `go get`. This 
 
 | Component | Requirement |
 | --- | --- |
-| Go | 1.23 or later. Download from [go.dev/dl](https://go.dev/dl/). |
-| SQL Server | All supported versions of SQL Server, Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, Fabric Data Warehouse, or Azure Synapse Analytics. |
+| Go | 1.25 or later. Download from [go.dev/dl](https://go.dev/dl/). |
+| Microsoft SQL platform | All supported versions of SQL Server, Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, Fabric Data Warehouse, or Azure Synapse Analytics. |
 | Module support | Your project must use [Go modules](https://go.dev/ref/mod) (a `go.mod` file in the project root). |
 
 ## Install the driver module

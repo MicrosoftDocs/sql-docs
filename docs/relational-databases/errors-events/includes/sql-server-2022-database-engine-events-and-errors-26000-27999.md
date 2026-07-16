@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 05/14/2026
+ms.date: 07/16/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -75,6 +75,8 @@ ms.topic: include
 | 26085 | 10 | Yes | Stopped listening on listener network name '%ls' (VNN or DISTRIBUTED_NETWORK_NAME). No user action is required. |
 | 26086 | 16 | Yes | A dead session is detected and closed, the connect id is '%ls'. No user action is required. |
 | 26087 | 16 | Yes | A Attn token is received, the session id is '%d', No user action is required. |
+| 26088 | 10 | Yes | SSL/TLS certificate info - state: %d. |
+| 26089 | 16 | Yes | %ls operation failed for \[%ls\] with status 0x%x. |
 | 27001 | 16 | No | Reserved error message. Should never be issued. |
 | 27002 | 16 | No | A null or invalid SqlCommand object was supplied to Fuzzy Lookup Table Maintenance by SQLCLR. Reset the connection. |
 | 27003 | 16 | No | Bad token encountered during tokenization. |

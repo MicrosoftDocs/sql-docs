@@ -71,7 +71,7 @@ conceptualContent:
           url: /azure/azure-sql/database/connect-query-go
           itemType: get-started
         - text: "Code samples"
-          url: /samples/azure-samples/azuresqlgettingstartedsamples/developing-applications-with-go-and-azure-sql
+          url: https://github.com/microsoft/go-mssqldb
           itemType: reference
     - title: "PHP"
       links:

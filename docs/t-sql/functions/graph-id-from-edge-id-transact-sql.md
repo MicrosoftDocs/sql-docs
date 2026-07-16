@@ -1,8 +1,8 @@
 ---
 title: "GRAPH_ID_FROM_EDGE_ID (Transact-SQL)"
 description: "GRAPH_ID_FROM_EDGE_ID (Transact-SQL)"
-author: "arvindshmicrosoft"
-ms.author: "arvindsh"
+author: "WilliamDAssafMSFT"
+ms.author: "wiassaf"
 ms.date: 08/16/2022
 ms.service: sql
 ms.subservice: t-sql

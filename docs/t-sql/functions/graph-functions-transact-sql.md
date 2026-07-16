@@ -1,8 +1,8 @@
 ---
 title: "Graph Functions (Transact-SQL)"
 description: "Graph Functions in this section are used to extract values from, and transform values to, the pseudo-columns used in SQL Graph."
-author: "arvindshmicrosoft"
-ms.author: "arvindsh"
+author: "WilliamDAssafMSFT"
+ms.author: "wiassaf"
 ms.date: 06/28/2023
 ms.service: sql
 ms.subservice: t-sql

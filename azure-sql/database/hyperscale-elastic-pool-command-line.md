@@ -1,9 +1,9 @@
 ---
 title: Working with Hyperscale elastic pools using command-line tools
 description: Working with Hyperscale elastic pools using command-line tools such as the Azure CLI and PowerShell.
-author: arvindshmicrosoft
-ms.author: arvindsh
-ms.reviewer: wiassaf, mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 09/12/2024
 ms.service: azure-sql-database
 ms.subservice: elastic-pools

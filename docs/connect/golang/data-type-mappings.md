@@ -3,7 +3,7 @@ title: "go-mssqldb Data Type Mappings"
 description: "Data type conversion between Go types and SQL Server types in the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 03/28/2026
+ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -45,8 +45,13 @@ Use these types from the `mssql` package when you need explicit control over the
 | `mssql.NChar` | **nchar** | Fixed-length Unicode string. Wrap a `string` value. |
 | `mssql.DateTime1` | **datetime** | Legacy datetime without offset. |
 | `mssql.DateTimeOffset` | **datetimeoffset** | Explicit offset control. |
+| `mssql.NullDate` | **date** | Nullable date-only value. |
+| `mssql.NullTime` | **time** | Nullable time-only value. |
+| `mssql.NullDateTime` | **datetime2** | Nullable date-and-time value without time zone conversion. |
 | `mssql.UniqueIdentifier` | **uniqueidentifier** | GUID value. |
 | `mssql.TVP` | User-defined table type | Table-valued parameter struct. |
+
+Use the nullable date and time helper types when you need SQL Server date-only or time-only semantics and the parameter or scan destination might be NULL.
 
 ### Example: varchar vs. nvarchar
 
@@ -91,6 +96,7 @@ When you scan query results, the driver converts SQL Server types to Go types:
 | **datetimeoffset** | `time.Time` | Time zone offset is preserved. |
 | **time** | `time.Time` | Date component is `0001-01-01`. |
 | **uniqueidentifier** | `[]byte` or `mssql.UniqueIdentifier` | Scans to raw bytes by default. Use `mssql.UniqueIdentifier` for formatted GUID output. |
+| **sql_variant** | `interface{}` | The concrete Go type depends on the stored SQL Server value. |
 | **xml** | `string` | |
 
 ## Named parameters
@@ -113,7 +119,7 @@ SQL Server columns that allow NULL require special handling in Go. The standard 
 
 ### sql.Null types
 
-Use `sql.NullString`, `sql.NullInt64`, `sql.NullFloat64`, `sql.NullBool`, and `sql.NullTime` to handle columns that can be NULL:
+Use `sql.NullString`, `sql.NullInt64`, `sql.NullFloat64`, `sql.NullBool`, and `sql.NullTime` to handle columns that can be NULL. For SQL Server **date**, **time**, and **datetime2** values that you want to keep separate from Go's `time.Time` defaults, use `mssql.NullDate`, `mssql.NullTime`, and `mssql.NullDateTime`:
 
 ```go
 var name sql.NullString

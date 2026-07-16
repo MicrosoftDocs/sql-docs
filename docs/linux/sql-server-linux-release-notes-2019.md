@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 07/14/2026
+ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: release-notes
@@ -142,12 +142,12 @@ The following table lists the release history for [!INCLUDE [ssSQL19](../include
 | [CU 8 GDR (Jan 2021)](/troubleshoot/sql/releases/linux/release-history-2019#15-0-4083) | 15.0.4083.2 | 2021-01-12 |
 | [GDR (Jan 2021)](/troubleshoot/sql/releases/linux/release-history-2019#15-0-2080) | 15.0.2080.9 | 2021-01-12 |
 | [CU 8](/troubleshoot/sql/releases/linux/release-history-2019#15-0-4073) | 15.0.4073.23 | 2020-10-07 |
-| [CU 7 (Removed)](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate7) | 15.0.4063.15 | 2020-09-02 |
+| [CU 7 (Removed)](https://support.microsoft.com/help/4570012) | 15.0.4063.15 | 2020-09-02 |
 | [CU 6](/troubleshoot/sql/releases/linux/release-history-2019#15-0-4053) | 15.0.4053.23 | 2020-08-04 |
 | [CU 5](/troubleshoot/sql/releases/linux/release-history-2019#15-0-4043) | 15.0.4043.16 | 2020-06-22 |
 | [CU 4](/troubleshoot/sql/releases/linux/release-history-2019#15-0-4033) | 15.0.4033.1 | 2020-03-31 |
 | [CU 3](/troubleshoot/sql/releases/linux/release-history-2019#15-0-4023) | 15.0.4023.6 | 2020-03-12 |
-| [CU 2 (Removed)](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate2) | 15.0.4013.40 | 2020-02-13 |
+| [CU 2 (Removed)](https://support.microsoft.com/help/4536075) | 15.0.4013.40 | 2020-02-13 |
 | [CU 1](/troubleshoot/sql/releases/linux/release-history-2019#15-0-4003) | 15.0.4003.23 | 2020-01-07 |
 | [GA](/troubleshoot/sql/releases/linux/release-history-2019#15-0-2000) | 15.0.2000.5 | 2019-11-04 |
 | [GDR (Nov 2019)](/troubleshoot/sql/releases/linux/release-history-2019#15-0-2070) | 15.0.2070.41 | 2019-11-04 |

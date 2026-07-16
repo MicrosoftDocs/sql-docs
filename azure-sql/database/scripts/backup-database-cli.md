@@ -1,8 +1,8 @@
 ---
 title: "Azure CLI Example: Back up a Database in Azure SQL Database"
 description: Use this Azure CLI example script to back up an Azure SQL single database to an Azure storage container
-author: SudhirRaparla
-ms.author: nvraparl
+author: dinethi
+ms.author: dinethi
 ms.reviewer: mathoma
 ms.date: 06/11/2025
 ms.service: azure-sql-database

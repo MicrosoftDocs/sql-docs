@@ -1,8 +1,8 @@
 ---
 title: "EDGE_ID_FROM_PARTS (Transact-SQL)"
 description: "EDGE_ID_FROM_PARTS (Transact-SQL)"
-author: "arvindshmicrosoft"
-ms.author: "arvindsh"
+author: "WilliamDAssafMSFT"
+ms.author: "wiassaf"
 ms.date: 08/16/2022
 ms.service: sql
 ms.subservice: t-sql

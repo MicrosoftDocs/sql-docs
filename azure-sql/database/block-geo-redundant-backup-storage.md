@@ -1,9 +1,9 @@
 ---
 title: Block Geo-Replication of Azure SQL Database Backups
 description: This article details a feature that allows Azure administrators to block geo-replication of Azure SQL Databases.
-author: SudhirRaparla
-ms.author: nvraparl
-ms.reviewer: nvraparl, wiassaf, mathoma
+author: dinethi
+ms.author: dinethi
+ms.reviewer: wiassaf, mathoma
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: backup-restore

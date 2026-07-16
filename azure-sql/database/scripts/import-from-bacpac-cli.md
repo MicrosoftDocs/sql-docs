@@ -1,8 +1,8 @@
 ---
 title: "Azure CLI Example: Import BACPAC File to Database in Azure SQL Database"
 description: Use this Azure CLI example script to import a BACPAC file into a database in Azure SQL Database
-author: SudhirRaparla
-ms.author: nvraparl
+author: dinethi
+ms.author: dinethi
 ms.reviewer: mathoma
 ms.date: 06/10/2025
 ms.service: azure-sql-database

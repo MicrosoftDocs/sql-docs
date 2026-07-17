@@ -4,7 +4,7 @@ description: Compare SQL project tools available in Visual Studio Code, SSMS, Vi
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: drskwier
-ms.date: 06/09/2026
+ms.date: 07/14/2026
 ms.service: sql
 ms.subservice: sql-database-projects
 ms.topic: overview
@@ -66,8 +66,8 @@ These tools provide a graphical interface for SQL projects, a Transact-SQL (T-SQ
 | Project properties - build output settings | No | No | Yes | Yes |
 | Project properties - database settings GUI | No | No | Yes | No |
 | Project run [code analysis](concepts/sql-code-analysis/sql-code-analysis.md) | Yes | Yes | Yes | No |
-| Object renaming and refactoring | No | No | Yes | No |
-| Intellisense provided in database files from project model | No | No | Yes | No |
+| Object renaming and refactoring | Yes | No | Yes | No |
+| Intellisense provided in database files from project model | Yes | No | Yes | No |
 
 <sup>1</sup> Local development instance is a SQL Server container.  
 <sup>2</sup> Any pre-installed Microsoft SQL database can be used as a local development instance.  

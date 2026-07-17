@@ -64,7 +64,7 @@ This walkthrough is intended for users who are already familiar with the SQL Ser
 
 - A version of Visual Studio Code installed, which includes the SQL Database Projects extension.
 - A SQL database project that contains SQL objects.
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - Recommended: [C# Dev Kit extension](https://code.visualstudio.com/docs/csharp/get-started) for VS Code
 
 This walkthrough is intended for users who are already familiar with the SQL Database Projects extension in Visual Studio Code. You should be familiar with development concepts, such as how to create a class library, add packages, and how to use the code editor to edit code.
@@ -81,7 +81,7 @@ This walkthrough requires an application code editor, such as Visual Studio Code
 
 - A text editor, such as the file editor in Visual Studio Code.
 - A SQL database project that contains SQL objects.
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 
 This walkthrough is intended for users who are already familiar with SQL projects. You should be familiar with development concepts, such as how to create a class library, add packages, and how to use the code editor to edit code.
 

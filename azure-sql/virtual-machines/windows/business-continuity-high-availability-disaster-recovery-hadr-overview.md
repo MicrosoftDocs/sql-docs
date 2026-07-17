@@ -80,7 +80,7 @@ SQL Server on Azure VMs support [**failover cluster instances (FCI)**](failover-
 
 - Using a [Premium file share](failover-cluster-instance-premium-file-share-manually-configure.md) for Windows Server 2012 and later. Premium file shares are SSD backed, have consistently low latency, and are fully supported for use with FCI.
 
-- Using storage supported by a partner solution for clustering. For a specific example that uses SIOS DataKeeper, see the blog entry [Failover clustering and SIOS DataKeeper](https://azure.microsoft.com/blog/high-availability-for-a-file-share-using-wsfc-ilb-and-3rd-party-software-sios-datakeeper/).
+- Using storage supported by a partner solution for clustering. For a specific example that uses SIOS DataKeeper, see [SIOS DataKeeper](https://us.sios.com/products/sios-datakeeper/).
 
 - Using shared block storage for a remote iSCSI target via Azure ExpressRoute. For example, NetApp Private Storage (NPS) exposes an iSCSI target via ExpressRoute with Equinix to Azure VMs.
 

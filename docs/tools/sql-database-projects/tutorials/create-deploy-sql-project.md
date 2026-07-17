@@ -40,7 +40,7 @@ If you've already completed the steps to [get started with SQL database projects
 
 ::: zone pivot="sq1-visual-studio"
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Visual Studio 2022 Community, Professional, or Enterprise](https://visualstudio.microsoft.com/downloads/)
 - [Install SQL Server Data Tools (SSDT) for Visual Studio](../../../ssdt/download-sql-server-data-tools-ssdt.md)
 
@@ -56,7 +56,7 @@ If you've already completed the steps to [get started with SQL database projects
 
 ::: zone pivot="sq1-visual-studio-code"
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Visual Studio Code](https://code.visualstudio.com/Download)
 - [SQL Database Projects extension](../../visual-studio-code-extensions/sql-database-projects/sql-database-projects-extension.md)
 
@@ -72,7 +72,7 @@ If you've already completed the steps to [get started with SQL database projects
 
 ::: zone pivot="sq1-command-line"
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [SqlPackage CLI](../../sqlpackage/sqlpackage-download.md)
 - [Microsoft.Build.Sql.Templates .NET templates](https://www.nuget.org/packages/Microsoft.Build.Sql.Templates/)
 

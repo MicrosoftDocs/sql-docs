@@ -157,7 +157,7 @@ There are partner clustering solutions with supported storage.
 **Supported OS**: All   
 **Supported SQL version**: All
 
-One example uses SIOS DataKeeper as the storage. For more information, see the blog entry [Failover clustering and SIOS DataKeeper](https://azure.microsoft.com/blog/high-availability-for-a-file-share-using-wsfc-ilb-and-3rd-party-software-sios-datakeeper/).
+One example uses SIOS DataKeeper as the storage. For more information, see [SIOS DataKeeper](https://us.sios.com/products/sios-datakeeper/).
 
 ### iSCSI and ExpressRoute
 

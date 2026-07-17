@@ -232,8 +232,6 @@ The FILESTREAM feature, which allows you to store unstructured data such as text
 **Recommendation**  
 Upload the unstructured files to Azure Blob storage and store metadata related to these files (name, type, URL location, storage key, etc.) in Azure SQL Managed Instance. You might have to re-engineer your application to enable streaming blobs to and from Azure SQL Managed Instance. Alternatively, migrate to SQL Server on Azure VMs.
 
-More information: [Streaming Blobs To and From SQL Azure blog](https://azure.microsoft.com/blog/streaming-blobs-to-and-from-sql-azure/)
-
 ## <a id="MIHeterogeneousMSDTCTransactSQL"></a> Heterogeneous MS DTC
 
 **Title: BEGIN DISTRIBUTED TRANSACTION with non-SQL Server remote server is not supported in Azure SQL Managed Instance.**  

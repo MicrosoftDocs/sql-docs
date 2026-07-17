@@ -34,14 +34,6 @@ When you install machine learning with SQL Server, a single package library is c
 All script that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any R script running in the server compute context can only use packages installed in the instance library.
 To protect server assets, the default instance library can be modified only by a computer administrator.
 
-::: moniker range="=sql-server-2016"
-The default path of the binaries for R is:
-
-`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
-
-This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
-::: moniker-end
-
 ::: moniker range="=sql-server-2017"
 The default path of the binaries for R is:
 
@@ -67,19 +59,6 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
-
-::: moniker range="=sql-server-2016"
-
-## Default Microsoft R packages
-
-The following Microsoft R packages are installed with SQL Server R Services.
-
-|Packages | Version | Description |
-|---------|---------|-------------|
-| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](../r/ref-r-sqlrutils.md) | 1.0.0 | Used for including R script in stored procedures. |
-
-::: moniker-end
 
 ::: moniker range="=sql-server-2017"
 
@@ -114,10 +93,6 @@ The following Microsoft R packages are installed with SQL Server Machine Learnin
 ### Component upgrades
 
 By default, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are possible only through product upgrades.
-
-::: moniker range="=sql-server-2016"
-In addition, you can add MicrosoftML and olapR packages to a SQL Server instance through a component upgrade.
-::: moniker-end
 
 ::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15 ||=azuresqldb-mi-current"
 ## Default open-source R packages

@@ -21,9 +21,6 @@ In this quickstart, you'll create and train a predictive model using T. You'll s
 ::: moniker range="=sql-server-2017"
 In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2016"
-In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server R Services](../r/sql-server-r-services.md).
-::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
@@ -49,9 +46,6 @@ You need the following prerequisites to run this quickstart.
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
 - SQL Server Machine Learning Services. To install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
-::: moniker-end
-::: moniker range="=sql-server-2016"
-- SQL Server 2016 R Services. To install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md).
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 - Azure SQL Managed Instance Machine Learning Services. For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).

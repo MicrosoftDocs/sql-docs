@@ -34,13 +34,6 @@ Restore the backup copy of the encryption key when you:
 - Migrate a report server installation or configure a report server to use a different report server database.  
 - Recover a report server installation due to hardware failure.
 
-::: moniker range="=sql-server-2016"
-  
-###  <a name="bkmk_backup_sharepoint"></a> Back up SharePoint mode report servers  
- For SharePoint mode report servers, you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the "Key Management" section of [Manage a Reporting Services SharePoint service application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md). 
-
-::: moniker-end  
-  
 ## Prerequisites
 
 - SQL Server 2016 (13.x) or later.

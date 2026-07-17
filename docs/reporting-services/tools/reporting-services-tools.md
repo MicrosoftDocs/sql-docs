@@ -213,34 +213,6 @@ For more information, see [Access the WMI provider programmatically](../../repor
 
 You can use a Visual Basic script to access the WMI classes.
 
-::: moniker range="=sql-server-2016"
-
-### SharePoint integrated mode
-
-In SharePoint mode, SSRS is a service application in the SharePoint architecture, and you perform administrative tasks directly through SharePoint. The following sections discuss tools for a report server that's configured for SharePoint mode.
-
-#### SharePoint Central Administration
-
-You can use SharePoint Central Administration to create, query, and manage the shared service applications for [!INCLUDE[SSRS](../../includes/ssrs.md)].
-
-For more information, see [Configuration and administration of a SQL Server Reporting Services (SSRS) report server](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).
-
-##### SharePoint Central Administration access
-
-You can access this tool in a browser by going to the SharePoint Central Administration site.
-
-#### PowerShell cmdlets
-
-You can use PowerShell cmdlets to create, query, and manage the shared service applications for [!INCLUDE[SSRS](../../includes/ssrs.md)].
-
-For more information, see [PowerShell cmdlets for Reporting Services SharePoint mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).
-
-##### PowerShell cmdlet access
-
-To use the cmdlets, you open SharePoint Management Shell and run the commands in the shell.
-
-::: moniker-end
-
 ## Tools for report content management
 
 Graphical and scripting tools are available for managing content in [!INCLUDE[SSRS](../../includes/ssrs.md)]. The tools that you use depend on the deployment mode of your report server.

@@ -19,12 +19,6 @@ The report server database provides storage for one or more report server instan
   
  **Native Mode:** In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode, the report server database actually comprises two databases that have default names of ReportServer and ReportServerTempDB.  
 
-::: moniker range="=sql-server-2016"
-  
- **SharePoint mode:** In SQL Server 2016 Reporting Services SharePoint mode, the report server database is actually a collection of databases that is created for each instance of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
-
-::: moniker-end
-
 ## Ways to Upgrade a Native Mode Report Server Database
 
  The following list identifies the conditions under which a report server database is upgraded:  

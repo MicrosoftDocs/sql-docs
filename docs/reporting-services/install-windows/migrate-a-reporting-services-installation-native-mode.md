@@ -27,19 +27,6 @@ This article provides step-by-step instructions for how to migrate one of the fo
 - [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
-- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
-  
-- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
-- [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
-  
-- [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
-
-For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
-
-::: moniker-end
-  
 Migration is defined as moving application data files to a new SQL Server instance. The following are common reasons you must migrate your installation:  
   
 - You have a large-scale deployment or uptime requirements.  
@@ -173,16 +160,6 @@ To move the report server database, follow these steps:
     - [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
     ::: moniker-end
 
-    ::: moniker range="=sql-server-2016"
-    - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
-
-    - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-
-    - [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
-
-    - [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
-    ::: moniker-end
-  
 1. Start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 1. Create the **RSExecRole** in the system databases if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] has never hosted a report server database. For more information, see [Create the RSExecRole](../../reporting-services/security/create-the-rsexecrole.md).  

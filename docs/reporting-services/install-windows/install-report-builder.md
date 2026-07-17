@@ -46,20 +46,7 @@ Whether you're setting up the software for your own use or deploying it across m
 
 ## Install Report Builder from the web portal
 
-::: moniker range="=sql-server-2016"
-> [!NOTE]
-> You can install Report Builder from a SharePoint library integrated with Reporting Services through SQL Server 2016.
-::: moniker-end
-
  You can start Microsoft Report Builder from a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For information, see [Start Microsoft Report Builder](../../reporting-services/report-builder/start-report-builder.md).  
-
-::: moniker range="=sql-server-2016"
-  
-### SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
-  
- On a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], if the **New Document** menu doesn't list **Report Builder Report**, **Report Builder Model**, and **Report Data Source**, their content types need to be added to the SharePoint library. For more information, see [Add Reporting Services content types to a SharePoint library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
-
-::: moniker-end
 
 ## <a name="download"></a> Install Report Builder from the download site  
   

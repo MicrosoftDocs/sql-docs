@@ -44,12 +44,6 @@ helpviewer_keywords:
   
 -   Database administrator permissions for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the database.  
 
-::: moniker range="=sql-server-2016"
-
--   If you're installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on a domain controller, you must be a domain administrator.  
-
-::: moniker-end
-
 ##  <a name="bkmk_managecontent"></a> Managing content  
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], content management refers to the management of reports, models, folders, resources, and shared data sources. All these items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs.  
   

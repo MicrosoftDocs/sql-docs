@@ -47,12 +47,6 @@ Download and install the latest cumulative update for your version of SQL Server
 [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) includes both language versions of the machine learning library, so this prerequisite is met with no further action on your part. Because the libraries are present, you can use the PowerShell script described in this article to add the pretrained models to these libraries.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
-[MicrosoftML R package](../r/ref-r-microsoftml.md) contain the pretrained models.
-
-[SQL Server R Services](sql-r-services-windows-install.md), which is R only, does not include [MicrosoftML package](../r/ref-r-microsoftml.md) out of the box. To add MicrosoftML, you must do a [component upgrade](upgrade-r-and-python.md). One advantage of the component upgrade is that you can simultaneously add the pretrained models, which makes running the PowerShell script unnecessary. However, if you already upgraded but missed adding the pretrained models the first time around, you can run the PowerShell script as described in this article. It works for both versions of SQL Server. Before you do, confirm that the MicrosoftML library exists at `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
-::: moniker-end
-
 <a name="file-location"></a>
 
 ## Check whether pretrained models are installed

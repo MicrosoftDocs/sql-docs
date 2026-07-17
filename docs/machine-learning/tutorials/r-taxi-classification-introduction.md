@@ -22,10 +22,6 @@ In this five-part tutorial series for SQL programmers, you'll learn about R inte
 In this five-part tutorial series for SQL programmers, you'll learn about R integration in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
-In this five-part tutorial series for SQL programmers, you'll learn about R integration in [SQL Server 2016 R Services](../sql-server-machine-learning-services.md).
-::: moniker-end
-
 ::: moniker range=">=azuresqldb-mi-current"
 In this five-part tutorial series for SQL programmers, you'll learn about R integration in [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
@@ -54,10 +50,6 @@ In [part five](r-taxi-classification-deploy-model.md), you'll learn how to opera
 > This tutorial is available in both R and Python. For the Python version, see [Python tutorial: Predict NYC taxi fares with binary classification](r-taxi-classification-introduction.md).
 
 ## Prerequisites
-
-::: moniker range="=sql-server-2016"
-+ Install [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)
-::: moniker-end
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + Install [SQL Server Machine Learning Services with R enabled](../install/sql-machine-learning-services-windows-install.md#verify-installation)

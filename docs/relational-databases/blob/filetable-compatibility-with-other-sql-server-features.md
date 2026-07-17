@@ -32,7 +32,7 @@ When the database that contains FILESTREAM or FileTable data belongs to an Alway
 
 ## <a id="OtherPartitioning"></a> Partition and FileTables
 
-Partitioning isn't supported on FileTables. With the support for multiple FILESTREAM file groups, pure scale-up issues can be handled without having to resort to partitioning  in most scenarios (unlike SQL 2008 FILESTREAMs).
+Partitioning isn't supported on FileTables. With the support for multiple FILESTREAM file groups, pure scale-up issues can be handled without having to resort to partitioning  in most scenarios (unlike SQL Server 2008 FILESTREAM).
 
 ## <a id="OtherRepl"></a> Replication and FileTables
 

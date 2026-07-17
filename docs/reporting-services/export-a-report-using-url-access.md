@@ -34,16 +34,6 @@ To get a PDF copy of a report directly from a native mode report server, use the
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
 
-::: moniker range="=sql-server-2016"
-  
-And, from a SharePoint integrated mode report server, use the following URL command in your browser:  
-  
-```  
-https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
-```  
- 
-::: moniker-end
-
 ## Export a PPTX report
  
 To export a PPTX report from a named instance of the report server, use the following URL command in your browser:  

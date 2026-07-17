@@ -20,10 +20,6 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 
-::: moniker range="=sql-server-2016"
-For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
-::: moniker-end
-
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], the external pool governs `rterm.exe`, `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
@@ -46,7 +42,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sql-server-2017"
+::: moniker range="=sql-server-2017"
  ```syntaxsql
 
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
@@ -86,7 +82,7 @@ MAX_PROCESSES =*value*
 Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool, which is thereafter bound only by computer resources.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017"
+::: moniker range="=sql-server-2017"
 MAX_CPU_PERCENT =*value*  
 Specifies the maximum average CPU bandwidth that all requests in the external resource pool can receive when there is CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
@@ -128,7 +124,7 @@ GO
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017"
+::: moniker range="=sql-server-2017"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (

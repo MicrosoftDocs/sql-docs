@@ -19,12 +19,6 @@ These archives include the documentation for at least the following older versio
 
 [SQL Server 2014 documentation](/previous-versions/sql/2014/index?view=sql-server-2014&preserve-view=true) is still available on our main Docs address.
 
-<!--
-FYI: In the following link syntax to SQL 2014 content, the two 'view' related parameters are entirely optional in this case. The reason is that 'sql/2014/' will never be a node for say SQL 2012 or SQL 2016 content URLs on Docs. Thus no distinction from 'view' values will ever be necessary.
-
-[SQL Server 2014 documentation](/previous-versions/sql/2014/index?view=sql-server-2014&preserve-view=true) is still available on our main Docs address.
--->
-
-[SQL Server 2022 documentation](../../sql-server/index.yml?view=sql-server-ver16&preserve-view=true) is available on our main Docs address. Then, you can use the versioning dropdown list near the top of the page, to select another version of interest.
+[SQL Server 2025 documentation](../../sql-server/index.yml?view=sql-server-ver17&preserve-view=true) is available on our main Docs address. Then, you can use the versioning dropdown list near the top of the page, to select another version of interest.
 
 For more information about the documentation for previous versions of SQL Server, see [Previous versions of SQL Server documentation](/previous-versions/sql/).

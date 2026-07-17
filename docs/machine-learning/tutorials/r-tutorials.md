@@ -21,9 +21,6 @@ This article describes the R tutorials and quickstarts for [Machine Learning Ser
 ::: moniker range="=sql-server-2017"
 This article describes the R tutorials and quickstarts for [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2016"
-This article describes the R tutorials and quickstarts for [SQL Server 2016 R Services](../r/sql-server-r-services.md).
-::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 This article describes the Python tutorials and quickstarts for [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end

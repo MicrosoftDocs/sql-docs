@@ -45,12 +45,6 @@ This article is an overview of report definition support by [!INCLUDE[ssRSnovers
   
 -   **Web Portal:** Upload a report to a native mode report server from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
-::: moniker range="=sql-server-2016"
-  
--   **SharePoint:** Upload a report to a SharePoint site that is configured with a SharePoint mode report server.  
-
-::: moniker-end
-  
 -   **Programmatically:** Programmatically publish a report by using the SOAP API interfaces to a report server. For more information, see [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  The following table lists the supported rdl schema version by version of the report server.  
@@ -65,12 +59,6 @@ This article is an overview of report definition support by [!INCLUDE[ssRSnovers
   
  You can extract from the report server a read-only copy of the report definition file (.rdl). On a native mode report server, browse to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the report and choose **Download**. 
 
-::: moniker range="=sql-server-2016"
-
-In a SharePoint mode deployment, browse to the document library, select the report and choose **Download a Copy**.  
-
-::: moniker-end
-  
  To upgrade the report definition, you must open the report in a report authoring environment, such as SQL Server Data Tools or Report Builder, and then save it.  
   
  For more information about report upgrades and the schema versions that are supported, see [Upgrade reports (SSRS)](../reporting-services/install-windows/upgrade-reports.md).  

@@ -40,20 +40,6 @@ The **/FEATURES** argument is required, as are licensing term agreements.
 
 When installing through the command prompt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports full quiet mode by using the **/Q** parameter, or Quiet Simple mode by using the **/QS** parameter. The **/QS** switch only shows progress, does not accept any input, and displays no error messages if encountered. The **/QS** parameter is only supported when **/Action=install** is specified.
 
-::: moniker range="=sql-server-2016"
-
-### Command line arguments for SQL Server 2016
-
-| Arguments | Description |
-|-----------|-------------|
-| /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server R Services (In-Database).  |
-| /FEATURES = SQL_SHARED_MR | Installs the R feature for the standalone version: SQL Server R Server (Standalone). A standalone server is a "shared feature" not bound to a database engine instance.|
-| /IACCEPTROPENLICENSETERMS  | Indicates you have accepted the license terms for using the open source R components. |
-| /IACCEPTPYTHONLICENSETERMS | Indicates you have accepted the license terms for using the Python components. |
-| /IACCEPTSQLSERVERLICENSETERMS | Indicates you have accepted the license terms for using SQL Server.|
-| /MRCACHEDIRECTORY | For offline setup, sets the folder containing the R component CAB files. |
-::: moniker-end
-
 ::: moniker range="=sql-server-2017"
 
 ### Command line arguments for SQL Server 2017
@@ -153,18 +139,6 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
-### SQL Server R Services: database engine and advanced analytics with R
-
-For a concurrent installation of the database engine instance, provide the instance name and an administrator (Windows) login. Include features for installing core and language components, as well as acceptance of all licensing terms.
-
-```cmd  
-Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
-/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
-/IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS 
-```
-::: moniker-end
-
 ## <a name="post-install"></a> Post-installation configuration (required)
 
 Applies to in-database installations only.
@@ -181,13 +155,7 @@ Two more tasks are required to complete the installation:
 1. SQL Server Machine Learning Services: Enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) as your next step. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
-1. Restart the database engine service.
-
-1. SQL Server R Services: Enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server R Services (In-Database)](sql-r-services-windows-install.md) as your next step. 
-::: moniker-end
-
-::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017||=sql-server-ver15"
 ## <a name="add-existing"></a> Add advanced analytics to an existing database engine instance
 
 When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2017 or later database engine and Python, you could use this command to add R.
@@ -219,7 +187,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS
 /IACCEPTSQLSERVERLICENSETERMS 
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 
 ## <a name="silent"></a> Silent install
 
@@ -248,15 +216,6 @@ SQL Server Machine Learning Server supports Python and R on a standalone server:
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
-```
-::: moniker-end
-
-::: moniker range="=sql-server-2016"
-SQL Server R Server is R-only:
-
-```cmd
-Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
-/IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 ::: moniker-end
 

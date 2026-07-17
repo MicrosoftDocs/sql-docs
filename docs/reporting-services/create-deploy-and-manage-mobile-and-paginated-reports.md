@@ -94,16 +94,6 @@ Store and manage your content securely the traditional folder hierarchy. Tag you
 
 To learn more, see [The web portal of a report server - SSRS Native mode](../reporting-services/web-portal-ssrs-native-mode.md).
 
-::: moniker range="=sql-server-2016"
-
-## Reporting Services in SharePoint integrated mode
-
-You can publish your reports with Reporting Services in SharePoint integrated mode. Schedule report processing, access reports on demand, subscribe to published reports, and export them to applications like Microsoft Excel. You can also create data alerts on reports published to a SharePoint site and receive email notifications when report data changes.
-
-To learn more, see [Reporting Services report server in SharePoint integrated mode](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
-
-::: moniker-end
-
 ## [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] programming features
 
 Extend and customize your reporting functionality with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] programming features. Use the SSRS APIs to integrate or extend data and report processing in your custom applications.

@@ -11,56 +11,6 @@ ms.custom:
 # Create, delete, or modify a folder - Reporting Services
   You can create folders to organize and manage the items you publish to a report server. Creating folders can help users find reports of interest to them. For content managers, folders provide a framework for applying permissions. You can create role assignments on specific folders to restrict access to reports that are in development or that shouldn't be widely distributed.  
 
-::: moniker range="=sql-server-2016"
-
-## Create a folder  
-  
-1.  Start [Report Manager &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md).  
-  
-1.  In Report Manager, select the Home folder and choose **New Folder**. Or, to create a folder under an existing folder, navigate to that folder in the **Contents** page and select the folder to open it. Then, choose **New Folder**.  
-  
-     The **New Folder** page opens.  
-  
-1.  Enter a folder name. A folder name can include spaces, but can't include reserved characters that are used for URL encoding: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. You can't type a series of folder names to create several folders at once.  
-  
-1.  Optionally, enter a description.  
-  
-1.  Select **Hide in list view** if you don't want to display the folder in the default view of the **Contents** page. The folder is visible to users only when they select **Show Details** on the **Contents** page.  
-  
-1.  Select **OK**.  
-  
-## Delete a folder  
-  
-1.  In Report Manager, navigate to the **Contents** page, and locate the item that you want to modify.  
-  
-1.  Hover over the item, and select the dropdown arrow.  
-  
-1.  In the menu, choose **Delete**.  
-  
-1.  Select **OK**.
-  
-## Modify or delete a folder  
-  
-1.  In Report Manager, navigate to the **Contents** page, and locate the item that you want to modify.  
-  
-1.  Hover over the item, and select the dropdown arrow.  
-  
-1.  In the menu, choose **Manage**. The **General Properties** page opens.  
-  
-1.  To change the folder location, select **Move**. Enter the location of the destination folder, or choose the destination folder from the tree, and then select **OK**.  
-  
-1.  Or, modify folder properties in the following ways:  
-  
-    -   To modify display text about the folder, enter a name or description.  
-  
-    -   To display the folder in the default view on the **Contents** page, clear **Hide in list view**.  
-  
-1.  Or, to remove the folder and its contents, select **Delete**.  
-  
-1.  Select **Apply** to save changes.  
-
-::: moniker-end
-
 ::: moniker range=">=sql-server-2017"
  
 ## Create a folder  

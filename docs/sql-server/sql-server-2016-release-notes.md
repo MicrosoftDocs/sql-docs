@@ -239,7 +239,7 @@ The following table summarizes key improvements provided in [!INCLUDE [sssql16-m
 
 In addition, note the following fixes:
 
-- Based on feedback from DBAs and SQL community, starting SQL 2016 SP1, the Hekaton logging messages are reduced to minimal.
+- Based on feedback from DBAs and SQL community, starting SQL Server 2016 SP1, the Hekaton logging messages are reduced to minimal.
 - Review new [trace flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 - The full versions of the WideWorldImporters sample databases now work with Standard Edition and Express Edition, starting [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] SP1 and are available on [GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). No changes are needed in the sample. The database backups created at RTM for Enterprise edition work with Standard and Express in SP1.
 

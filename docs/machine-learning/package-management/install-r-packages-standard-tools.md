@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
 ms.custom: intro-installation
-monikerRange: "=sql-server-2016||=sql-server-2017"
+monikerRange: "=sql-server-2017"
 ---
 
 # Install packages with R tools
@@ -37,10 +37,6 @@ This includes R libraries installed with other Microsoft products.
   + [Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server](install-r-packages-with-tsql.md)
   ::: moniker-end
 
-  ::: moniker range="=sql-server-2016"
-  Non-administrators can install packages using RevoScaleR 9.0.1 and later. The **dbo_owner** user can install R packages to the current database. For more information, see, [Use RevoScaleR to install R packages](install-r-packages-with-revoscaler.md).
-  ::: moniker-end
-
 + On a hardened SQL Server environment, you might want to avoid the following:
   + Packages that require network access
   + Packages that require elevated file system access
@@ -51,12 +47,6 @@ This includes R libraries installed with other Microsoft products.
 If the SQL Server has access to the Internet, then you can use standard package installation tools to install R packages.
 
 1. Determine the location of the instance library (see [Get R package information](../package-management/r-package-information.md)) and navigate to the folder where the R tools are installed.
-
-   ::: moniker range="=sql-server-2016"
-   For example the default path for a SQL Server default instance is:
-
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
-   ::: moniker-end
 
    ::: moniker range="=sql-server-2017"
    For example the default path for a SQL Server default instance is:
@@ -82,12 +72,6 @@ For more information, see [Create a local R package repository using miniCRAN](c
 Once the zip file is on the SQL Server instance, you can install it using standard R tools on the server.
 
 1. Determine the location of the instance library (see [Get R package information](../package-management/r-package-information.md)) and navigate to the folder where the R tools are installed. 
-
-   ::: moniker range="=sql-server-2016"
-   For example the default path for a SQL Server default instance is:
-
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
-   ::: moniker-end
 
    ::: moniker range="=sql-server-2017"
    For example the default path for a SQL Server default instance is:

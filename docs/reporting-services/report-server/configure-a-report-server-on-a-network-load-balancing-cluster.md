@@ -37,10 +37,6 @@ ms.custom:
   
 ## <a name="ViewState"></a> Configure view state validation
 
-::: moniker range="=sql-server-2016"
-To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.  You must configure view state validation for the Report Server Web Service.
-::: moniker-end
-
 ::: moniker range=">=sql-server-2017"
 To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.
 ::: moniker-end

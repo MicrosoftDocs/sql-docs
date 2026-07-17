@@ -118,10 +118,6 @@ After you have a local repository with the packages you need, move the package r
 
 1. Open an R tool associated with the instance (for example, you could use Rgui.exe). Right-click and select **Run as administrator** to allow the tool to make updates to your system.
 
-   ::: moniker range="=sql-server-2016"
-   - For example, the default file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
-   ::: moniker-end
-
    ::: moniker range="=sql-server-2017"
    - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
@@ -131,15 +127,6 @@ After you have a local repository with the packages you need, move the package r
    ::: moniker-end
 
 1. Get the path for the instance library, and add it to the list of library paths.
-
-   ::: moniker range="=sql-server-2016"
-   For example,
-
-   ```R
-   outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library"
-   ```
-
-   ::: moniker-end
 
    ::: moniker range="=sql-server-2017"
    For example,

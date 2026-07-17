@@ -38,14 +38,6 @@ For Machine Learning Services, [Python](../../machine-learning/concepts/extensio
 To execute `sp_execute_external_script`, you must first install Machine Learning Services. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
-The `sp_execute_external_script` stored procedure executes a script provided as an input argument to the procedure, and is used with [R Services](../../machine-learning/r/sql-server-r-services.md) on [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].
-
-For R Services, [R](../../machine-learning/concepts/extension-r.md) is the supported language.
-
-To execute `sp_execute_external_script`, you must first install R Services. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-r-services-windows-install.md).
-::: moniker-end
-
 ::: moniker range="=azuresqldb-mi-current"
 The `sp_execute_external_script` stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
@@ -77,7 +69,7 @@ sp_execute_external_script
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
+::: moniker range="<=sql-server-2017"
 
 ## Syntax for SQL Server 2017 and previous versions
 
@@ -106,9 +98,6 @@ Indicates the script language. *language* is **sysname**. Valid values are **R**
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
 Indicates the script language. *language* is **sysname**. In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], valid values are **R** and **Python**.
-::: moniker-end
-::: moniker range="=sql-server-2016"
-Indicates the script language. *language* is **sysname**. In [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], the only valid value is **R**.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 Indicates the script language. *language* is **sysname**. In Azure SQL Managed Instance, valid values are **R** and **Python**.
@@ -168,9 +157,6 @@ Use `sp_execute_external_script` to execute scripts written in a supported langu
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
 Use `sp_execute_external_script` to execute scripts written in a supported language. Supported languages are **Python** and **R** in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] Machine Learning Services.
-::: moniker-end
-::: moniker range="=sql-server-2016"
-Use `sp_execute_external_script` to execute scripts written in a supported language. The only supported language is **R** in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] R Services.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 Use `sp_execute_external_script` to execute scripts written in a supported language. Supported languages are **Python** and **R** in Azure SQL Managed Instance Machine Learning Services.

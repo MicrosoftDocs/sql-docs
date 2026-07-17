@@ -7,7 +7,7 @@ ms.date: 11/20/2019
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-monikerRange: "=sql-server-2016||=sql-server-2017"
+monikerRange: "=sql-server-2017"
 ms.custom:
   - intro-installation
   - sfi-ropc-blocked

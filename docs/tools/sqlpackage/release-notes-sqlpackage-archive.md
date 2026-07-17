@@ -971,7 +971,7 @@ This release includes cross-platform preview builds of SqlPackage that target .N
 
 | Fix | Details | Applies to |
 | --- | --- | --- |
-| Deployment | Fixed a reverse engineering issue for XML column sets with SQL 2017 and later. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed a reverse engineering issue for XML column sets with SQL Server 2017 and later. | SqlPackage CLI; DacFx API / Schema compare |
 | Deployment | Fixed an issue where scripting the database compatibility level 140 was ignored for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. | SqlPackage CLI; DacFx API / Schema compare |
 
 ## 17.4.1 SqlPackage
@@ -1005,7 +1005,7 @@ This release includes cross-platform preview builds of SqlPackage that target .N
 
 | Feature | Details | Applies to |
 | --- | --- | --- |
-| Deployment | Added support for *temporal retention policy* on SQL 2017+ and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Added support for *temporal retention policy* on SQL Server 2017+ and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. | SqlPackage CLI; DacFx API / Schema compare |
 | Diagnostics | Added /DiagnosticsFile:"C:\Temp\SqlPackage.log" command-line parameter to specify a file path to save diagnostic information. | SqlPackage CLI |
 | Diagnostics | Added /Diagnostics command-line parameter to log diagnostic information to the console. | SqlPackage CLI |
 

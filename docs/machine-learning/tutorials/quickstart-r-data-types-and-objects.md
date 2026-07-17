@@ -21,9 +21,6 @@ In this quickstart, you'll learn how to use data structures and data types when 
 ::: moniker range="=sql-server-2017"
 In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
 ::: moniker-end
-::: moniker range="=sql-server-2016"
-In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server R Services](../r/sql-server-r-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
-::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 In this quickstart, you'll learn how to use data structures and data types when using R in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). You'll learn about moving data between R and SQL Managed Instance, and the common issues that might occur.
 ::: moniker-end
@@ -44,9 +41,6 @@ You need the following prerequisites to run this quickstart.
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
 - SQL Server Machine Learning Services. To install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
-::: moniker-end
-::: moniker range="=sql-server-2016"
-- SQL Server 2016 R Services. To install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 - Azure SQL Managed Instance Machine Learning Services. For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).

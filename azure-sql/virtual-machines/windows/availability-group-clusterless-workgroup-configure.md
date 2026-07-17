@@ -22,7 +22,7 @@ This article explains the steps necessary to create an Active Directory domain-i
 
 To configure a workgroup availability group, you need the following prerequisites:
 
-- At least two Windows Server 2016 (or higher) virtual machines running SQL Server 2016 (or higher), deployed to the same availability set, or different availability zones, using static IP addresses.
+- At least two Windows Server 2019 (or higher) virtual machines running SQL Server 2017 (or higher), deployed to the same availability set, or different availability zones, using static IP addresses.
 - A local network with a minimum of four free IP addresses on the subnet.
 - An account on each machine in the administrator group that also has sysadmin rights within SQL Server.
 - Open ports: TCP 1433, TCP 5022, TCP 59999.

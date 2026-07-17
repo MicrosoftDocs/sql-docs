@@ -67,7 +67,7 @@ Therefore, all external scripts that are initiated from a remote client must spe
 
 <a name="launchpad"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 ## Services used in external processing (launchpad)
 
@@ -113,7 +113,7 @@ For more information, see [Extensibility architecture in SQL Server Machine Lear
 
 <a name="sqlrusergroup"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 ## Identities used in processing (SQLRUserGroup)
 
@@ -184,7 +184,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 <a name="implied-authentication"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 ## Implied authentication (loopback requests)
 

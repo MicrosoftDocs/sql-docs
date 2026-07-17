@@ -24,39 +24,16 @@ helpviewer_keywords:
   
  - **Native** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
 
-::: moniker range="=sql-server-2016"
-
- - **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
-  
-> [!TIP]  
->  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.  
-
-::: moniker-end
-  
 ## Access a resource  
  To access a resource, use the *rs:Command*=*GetResourceContents* parameter. If the resource is compatible with the browser, such as an image, it is opened in the browser. Otherwise, you are prompted to open or save the file or resource to disk.  
   
  **Native** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
 
-::: moniker range="=sql-server-2016"
-  
- **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
-
-::: moniker-end
-  
 ## Access a data source  
  To access a data source, use the *rs:Command*=*GetDataSourceContents* parameter. If your browser supports XML, the data source definition is displayed if you are an authenticated user with **Read Contents** permission on the data source. For example:  
   
  **Native** `https://myrshost/reportserver?/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents`  
 
-::: moniker range="=sql-server-2016"
-  
- **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents`  
-  
- The XML structure might look similar to the following example:  
-
-::: moniker-end
-  
 ```  
 <DataSourceDefinition>  
    <Extension>SQL</Extension>  
@@ -76,12 +53,6 @@ helpviewer_keywords:
   
  **Native** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
 
-::: moniker range="=sql-server-2016"
-  
- **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren`  
-
-::: moniker-end
-  
  The user interface you see is similar to the directory browsing mode used by [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). The version number, including the build number, of the report server is also displayed below the folder listing.  
   
 ## Related content

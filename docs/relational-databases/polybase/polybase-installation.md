@@ -154,7 +154,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## Enable PolyBase
 
-After installation, PolyBase must be enabled to access its features. Use the following Transact-SQL command. SQL 2019 instances deployed during Big Data Cluster installation have this setting enabled by default. The `polybase enabled` configuration option was introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
+After installation, PolyBase must be enabled to access its features. Use the following Transact-SQL command. SQL Server 2019 instances deployed during Big Data Cluster installation have this setting enabled by default. The `polybase enabled` configuration option was introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;

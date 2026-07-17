@@ -55,7 +55,7 @@ Returns a row for each [!INCLUDE [ssSB](../../includes/sssb-md.md)] network conn
 | `peer_arbitration_id` | **uniqueidentifier** | Yes | Internal identifier for the endpoint. |
 | `address` | **nvarchar(512)** | Yes | Peer address in the form of `TCP://peer_host:peer_port`. |
 | `encryption_key_bit_length` | **int** | Yes | Length of the session encryption keys, in bits. Possible values are 128 or 256. |
-| `encryption_protocol_version` | **nvarchar(32)** | Yes | When `encryption_algorithm_desc` is either "RC4" (deprecated) or "AES", the value is the negotiated UCS encryption protocol version number, from 1 to 4:<br /><br />`1` = SQL 2005/2008<br />`2` = SQL 2012<br />`3` = SQL 2012 with UCS Redirection Support<br />`4` = SQL 2016<br /><br />When `encryption_algorithm_desc` is "TLS" - the version of TLS (e.g. "1.2" or "1.3") |
+| `encryption_protocol_version` | **nvarchar(32)** | Yes | When `encryption_algorithm_desc` is either "RC4" (deprecated) or "AES", the value is the negotiated UCS encryption protocol version number, from 1 to 4:<br /><br />`1` = SQL Server 2005/2008<br />`2` = SQL Server 2012<br />`3` = SQL Server 2012 with UCS Redirection Support<br />`4` = SQL Server 2016<br /><br />When `encryption_algorithm_desc` is "TLS" - the version of TLS (e.g. "1.2" or "1.3") |
 
 [!INCLUDE [login-state-values](../../includes/login-state-values.md)]
 

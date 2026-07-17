@@ -275,7 +275,7 @@ For the most current instructions, refer to the official documentation provided 
 
 Use the following steps to join a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] host to an Active Directory domain:
 
-1. Use [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) to join your host machine to your Active Directory Domain. You must first install both the **realmd** and Kerberos client packages on the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:
+1. Use **realmd** to join your host machine to your Active Directory Domain. You must first install both the **realmd** and Kerberos client packages on the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:
 
    ### [RHEL](#tab/rhel)
 

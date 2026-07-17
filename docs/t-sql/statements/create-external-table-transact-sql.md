@@ -125,7 +125,7 @@ The column definitions, including the data types and number of columns, must mat
 Specifies the folder or the file path and file name for the actual data in Hadoop or Azure Blob Storage. Additionally, S3-compatible object storage is supported starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]). The location starts from the root folder. The root folder is the data location specified in the external data source.
 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sql-server-linux-2017||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
+::: moniker range="=sql-server-linux-2017||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 <!-- content only applies to SQL Server 2016-2019, no other platforms/versions -->
 In SQL Server, the `CREATE EXTERNAL TABLE` statement creates the path and folder if it doesn't already exist. You can then use `INSERT INTO` to export data from a local SQL Server table to the external data source. For more information, see [PolyBase query scenarios](../../relational-databases/polybase/polybase-queries.md).
 

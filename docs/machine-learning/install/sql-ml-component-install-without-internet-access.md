@@ -114,7 +114,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017||=sql-server-ver15"
 
 ## Transfer files
 
@@ -167,7 +167,7 @@ Cumulative updates are installed through the Setup program.
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017||=sql-server-ver15"
 3. Select the latest cumulative update to download the executable.
 
 1. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).

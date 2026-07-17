@@ -50,7 +50,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 ```  
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017"
+::: moniker range="=sql-server-2017"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -89,7 +89,7 @@ MAX_PROCESSES =*value*
 The maximum number of processes allowed for the external resource pool. 0 = unlimited threshold for the pool, which is thereafter bound only by computer resources.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017"
+::: moniker range="=sql-server-2017"
 MAX_CPU_PERCENT =*value*  
 The maximum average CPU bandwidth for all requests that the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
@@ -136,7 +136,7 @@ GO
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017"
+::: moniker range="=sql-server-2017"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  

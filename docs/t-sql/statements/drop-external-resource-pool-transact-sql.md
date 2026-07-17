@@ -20,10 +20,6 @@ dev_langs:
 
 Deletes a Resource Governor external resource pool used to define resources for external processes. 
 
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15"
-For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
-::: moniker-end
-
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], the external pool governs `rterm.exe`, `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end

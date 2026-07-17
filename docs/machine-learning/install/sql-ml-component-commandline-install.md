@@ -155,7 +155,7 @@ Two more tasks are required to complete the installation:
 1. SQL Server Machine Learning Services: Enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) as your next step. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017||=sql-server-ver15"
 ## <a name="add-existing"></a> Add advanced analytics to an existing database engine instance
 
 When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2017 or later database engine and Python, you could use this command to add R.
@@ -187,7 +187,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS
 /IACCEPTSQLSERVERLICENSETERMS 
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 
 ## <a name="silent"></a> Silent install
 

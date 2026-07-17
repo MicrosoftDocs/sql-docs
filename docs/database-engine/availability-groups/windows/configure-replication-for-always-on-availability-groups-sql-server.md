@@ -26,7 +26,7 @@ Configuring [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] replic
 
 ### Configure the distributor
 
-The distribution database can't be placed in an availability group with SQL Server 2012 and SQL Server 2014. Placing the distribution database into an availability group is supported with SQL 2016 and greater, except for distribution databases used in merge, bidirectional, or peer-to-peer replication topologies. For more information, see [Set up replication distribution database in Always On availability group](../../../relational-databases/replication/configure-distribution-availability-group.md).
+The distribution database can't be placed in an availability group with SQL Server 2012 and SQL Server 2014. Placing the distribution database into an availability group is supported with SQL Server 2016 and greater, except for distribution databases used in merge, bidirectional, or peer-to-peer replication topologies. For more information, see [Set up replication distribution database in Always On availability group](../../../relational-databases/replication/configure-distribution-availability-group.md).
 
 1. Configure distribution at the distributor. If stored procedures are being used for configuration, run `sp_adddistributor` Use the *@password* parameter to identify the password that will be used when a remote publisher connects to the distributor. The password will also be needed at each remote publisher when the remote distributor is set up.
 

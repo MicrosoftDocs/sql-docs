@@ -19,34 +19,6 @@ helpviewer_keywords:
   
  Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. Deferred rendering makes a snapshot portable. The report can be rendered in the correct format for the requesting device or Web browser.  
 
-::: moniker range="=sql-server-2016"
-  
-## To configure report processing options  
-  
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md).  
-  
-2.  Navigate to and open the report for which you want to set processing options.  
-  
- Hover over the report, and click the drop-down arrow.  
-  
-1.  In the drop-down menu, click **Manage** and then select the **Processing Options** tab.  
-  
-2.  Click **Render this report from an execution snapshot, and then select one of the following options:**  
-  
-    -   If you want to create a snapshot, select **Use the following schedule to create report execution snapshots**, and then either define a report-specific schedule or select from the **Shared schedule** list.  
-  
-    -   If you want to create a snapshot immediately, select **Create a report snapshot when you click the Apply button on this page**.  
-  
-3.  Click **Apply**.  
-  
-## See Also  
--  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
--  [Contents Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
--  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
--  [Processing Options Properties Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms178821(v=sql.130))  
-  
-::: moniker-end
-
 ::: moniker range=">=sql-server-2017"
   
 ## To configure report execution properties  

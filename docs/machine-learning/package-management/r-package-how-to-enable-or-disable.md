@@ -7,7 +7,7 @@ ms.date: 06/13/2019
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-monikerRange: "=sql-server-2016||=sql-server-2017"
+monikerRange: "=sql-server-2017"
 ---
 # Enable or disable remote package management for SQL Server
 [!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]

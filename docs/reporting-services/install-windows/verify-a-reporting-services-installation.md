@@ -21,58 +21,6 @@ helpviewer_keywords:
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 
-::: moniker range="=sql-server-2016"
-  
-##  <a name="bkmk_sharepointmode"></a> Verify SharePoint Mode Installation  
-  
-### To verify the Reporting Services Service  
-  
-1.  From SharePoint central administration, click **Manage services on server** in the **System Settings** group.  
-  
-2.  Verify the **SQL Server Reporting Services Service** is installed and in the **Running** state.  
-  
-     If you do not see the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service in the list, verify the service is installed. For more information, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).  
-  
-### To verify the Service Application  
-  
-1.  To verify from Central Administration you have at least one [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, click **Manage Service Applications** in the **Application Management** group.  
-  
-2.  Verify there is a service application of type **SQL Server Reporting Services Service Application** and a corresponding application proxy.  
-  
-3.  Click **near** the name of the service application and then click **Properties** in the SharePoint toolbar.  If you click the name of the service application it will open the Management pages of the service application, not the properties page.  
-  
-4.  Verify the **Web Application Association** is configured to point to the desired web application.  
-  
-### To verify the Site collection Feature  
-  
-1.  In site settings, click **Site collection Features** in the **Site Collection Administration** group.  
-  
-2.  Verify the **Report Server Integration Feature** is active.  
-  
-### To Verify Reporting Server content types  
-  
-1.  To verify or add [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server content types, see [Add Reporting Services Content Types to a SharePoint Library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
-  
-### To verify you can launch Report Builder  
-  
-1.  From a document library, click **Documents** in the SharePoint ribbon.  
-  
-2.  Click **New Document** and click **Report Builder Report**. If you do not see this option, review the previous procedure on adding the report server content types to a library.  
-  
-### Create a basic report  
-  
-1.  In a SharePoint document library, create a basic [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder and a basic report will preview.  
-  
-2.  Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder](../report-builder/start-report-builder.md).  
-  
-### Reporting Services samples  
-  
-1.  Complete one of the Reporting Services tutorials. For more information, see [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
-  
-2.  Download the Adventure works sample database and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports from GitHub. For more information, see [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
-
-::: moniker-end
-  
 ##  <a name="bkmk_nativemode"></a> Verify a Native Mode Installation  
  When you install a Native mode report server using the default configuration, Setup installs and deploys the server. You can verify whether Setup deployed the report server by performing a few simple tests. You must be a local administrator to perform these steps. To enable other users to perform testing, you must configure report server access for those users.  
   

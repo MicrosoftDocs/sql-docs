@@ -17,57 +17,6 @@ Report snapshots aren't saved in a particular rendering format. Instead, report 
   
 ## Manually add snapshots to report history
   
-::: moniker range="=sql-server-2016"
-
-1. In Report Manager, navigate to the **Contents** page. Hover over the item that you want to view history for, and select the arrow.
-  
-1. In the menu, choose **View Report History**.  
-  
-1. Select **New Snapshot**. A new snapshot is created in the **When Run** column.  
-    > [!NOTE]
-    > To enable creating snapshots, the administrator must configure the report history to **Allow history to be created manually**. For more information, see [Limit Report History &#40;Report Manager&#41;](../reports/limit-report-history-report-manager.md).
-
-1. Select **Apply**.
-  
-## Automatically add all snapshots to report history  
-  
-1. For a report that is already configured to run as a report execution snapshot, you can set other properties to save a copy of the snapshot to report history each time you refresh the snapshot.  
-  
-1. In Report Manager, navigate to the **Contents** page. Hover over the item that you want to view history for, and select the arrow.  
-  
-1. In the menu, choose **Manage**.  
-  
-1. Select **Snapshot Options**.  
-  
-1. Select the **Store all report execution snapshots in history** checkbox.  
-  
-1. Select **Apply**.  
-  
-## Automatically add snapshots to report history based on a schedule  
-  
-1. In Report Manager, navigate to the **Contents** page. Hover over the item that you want to view history for, and select the arrow.  
-  
-1. In the menu, choose **Manage**.  
-  
-1. Select **Snapshot Options**.  
-  
-1. Select the **Use the following schedule to add snapshots to report history** checkbox. Perform one of the following actions:  
-  
-    - Select **Report-specific schedule**. Fill in the schedule details, select the start and end dates for the schedule, and then choose **OK**.  
-
-    - Select **Shared schedule**. From the list, choose the schedule you prefer.  
-
-1. Select **Apply**.  
-  
-## Related content
-
-- [Configure execution properties for a report  &#40;report manager&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
-- [Limit report history &#40;report manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
-- [Schedules](../../reporting-services/subscriptions/schedules.md)   
-- [Report manager  &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md)
-
-::: moniker-end
-
 ::: moniker range=">=sql-server-2017"
 
 1. In the web portal, navigate to the item that you want to view history for and right-click it.  

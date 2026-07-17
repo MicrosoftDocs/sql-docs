@@ -1,6 +1,366 @@
 {
   "redirections": [
     {
+      "source_path": "docs/reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/create-a-data-alert-in-data-alert-designer.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/create-a-data-alert-in-data-alert-designer",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/data-alert-designer.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/data-alert-designer",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/data-alert-manager-for-alerting-administrators.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/data-alert-manager-for-alerting-administrators",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/data-alert-manager-for-sharepoint-users.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/data-alert-manager-for-sharepoint-users",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/data-alert-messages.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/data-alert-messages",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/edit-a-data-alert-in-alert-designer.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/edit-a-data-alert-in-alert-designer",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/grant-permissions-to-users-and-alerting-administrators.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/grant-permissions-to-users-and-alerting-administrators",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/manage-my-data-alerts-in-data-alert-manager.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/manage-my-data-alerts-in-data-alert-manager",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/reporting-services-data-alerts.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/reporting-services-data-alerts",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/application-integration/choosing-between-url-access-and-soap.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/application-integration/choosing-between-url-access-and-soap",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/application-integration/integrating-reporting-services-into-applications.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/application-integration/integrating-reporting-services-into-applications",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/install-reporting-services-at-the-command-prompt",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/install-reporting-services-sharepoint-mode.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/install-reporting-services-sharepoint-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/native-to-sharepoint-migration-ssrs",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server/performance-counters-reportserver-service-performance-objects",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/site-collection-features-reporting-services",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md",
+      "redirect_url": "/previous-versions/sql/reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
       "source_path": "docs/machine-learning/install/sql-r-services-windows-install.md",
       "redirect_url": "/previous-versions/sql/machine-learning/install/sql-r-services-windows-install",
       "redirect_document_id": false,

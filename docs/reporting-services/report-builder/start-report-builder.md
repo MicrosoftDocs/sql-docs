@@ -20,11 +20,6 @@ helpviewer_keywords:
 
 Learn how to start Microsoft Report Builder from the Reporting Services web portal. Microsoft [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone report authoring environment. With it, you can create paginated reports and publish them to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server.
 
-::: moniker range="=sql-server-2016"
-> [!NOTE]  
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
-::: moniker-end
-
 The first time you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, you can [download Report Builder](https://www.microsoft.com/download/details.aspx?id=53613) from the Microsoft Download Center by selecting **Get Report Builder**.
 
 :::image type="content" source="media/start-report-builder/report-builder-get-report-builder.png" alt-text="Screenshot of the We're opening Report Builder message.":::
@@ -50,27 +45,6 @@ When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from t
      The first time you start Report Builder with the **Paginated Report** option, you receive the prompt to [install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
      After the first time, [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens, and you can create a paginated report or open a report from the report server.
-
-::: moniker range="=sql-server-2016"
-
-## Start Report Builder in SharePoint integrated mode
-
-1. Navigate to the SharePoint site that contains the library you want.
-
-1. Open the library.
-
-1. Select **Documents**.
-
-1. On the **New Document** menu, select **Report Builder Report**.
-
-     The first time, this action launches the SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Wizard. For more information, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
-
-     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens, and you can create a paginated report or open a report on the report server.
-
-     > [!NOTE]  
-     > If the **New Document** menu doesn't list **Report Builder Report**, **Report Builder Model**, or **Report Data Source**, their content types need to be added to the SharePoint library. For more information, see [Add Reporting Services content types to a SharePoint library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).
-
-::: moniker-end
 
 ## Related content
 

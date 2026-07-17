@@ -28,7 +28,7 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 | --- | --- | --- |
 | Automatic Soft NUMA partitioning | You can automatically configure Soft NUMA on systems reporting 8 or more CPUs per NUMA node. | [Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md) |
 | Buffer Pool Extension | Enables SQL Server Buffer Pool to scale beyond 8 TB. | [Buffer pool extension](../database-engine/configure-windows/buffer-pool-extension.md) |
-| Dynamic Memory Object Scaling | Dynamically partition memory object based on number of nodes and cores. This enhancement eliminates the need of trace flag 8048 post SQL 2014 SP2. | [Dynamic Memory Object Scaling](/archive/blogs/sql_server_team/dynamic-memory-object-scaling) |
+| Dynamic Memory Object Scaling | Dynamically partition memory object based on number of nodes and cores. This enhancement eliminates the need of trace flag 8048 post SQL Server 2014 SP2. | [Dynamic Memory Object Scaling](/archive/blogs/sql_server_team/dynamic-memory-object-scaling) |
 | `MAXDOP` hint for `DBCC CHECK*` commands | This improvement is useful to run DBCC CHECKDB with a `MAXDOP` setting other than the `sp_configure` value. | [Query hints](../t-sql/queries/hints-transact-sql-query.md) |
 | SOS_RWLock spinlock improvement | Removes the need for spinlock for SOS_RWLock and instead uses lock-free techniques similar to in-memory OLTP. | [SOS_RWLock Redesign](/archive/blogs/psssql/sql-2016-it-just-runs-faster-sos_rwlock-redesign) |
 | Spatial Native Implementation | Significant improvement in spatial query performance. | |

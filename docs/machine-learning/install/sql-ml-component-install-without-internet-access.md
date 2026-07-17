@@ -114,31 +114,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
-
-On an isolated server, machine learning and R language-specific features are added through CAB files.
-
-## SQL Server 2016 offline install
-
-SQL Server 2016 in-database analytics is R-only, with just two CAB files for product packages and Microsoft's distribution of open-source R, respectively. Start by installing any one of these releases: RTM, SP 1, SP 2. Once a base installation is in place, cumulative updates can be applied as a next step.
-
-On a computer having an internet connection, download the CAB files used by setup to install in-database analytics on SQL Server 2016.
-
-### 1 - Download 2016 CABs
-
-Release  | Microsoft R Open | Microsoft R Server |
----------|-----------------|---------------------|
-**SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
-**SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) |
-**SQL Server 2016 SP 2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
-
-### 2 - SQL Server 2016 installation media
-
-You can install SQL Server 2016 RTM, SP 1, or SP 2 as your first installation on the target computer. Any of these versions can accept a cumulative update. Locate the SQL Server 2016 Setup application in your installation media.
-
-::: moniker-end
-
-::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017||=sql-server-ver15"
 
 ## Transfer files
 
@@ -191,16 +167,7 @@ Cumulative updates are installed through the Setup program.
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
-
-Cumulative updates are installed through the Setup program.
-
-1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2.
-
-1. On an internet connected device, go to the cumulative update list for your version of SQL Server. [See Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
-   ::: moniker-end
-
-::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017||=sql-server-ver15"
 3. Select the latest cumulative update to download the executable.
 
 1. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
@@ -238,17 +205,6 @@ An initial offline installation of SQL Server Machine Learning Services requires
 
 - [Verify installation](sql-machine-learning-services-windows-install.md#verify-installation)
 - [Additional configuration as needed](sql-machine-learning-services-windows-install.md#additional-configuration)
-  ::: moniker-end
-
-::: moniker range="=sql-server-2016"
-After installation is finished, restart the service and then configure the server to enable script execution:
-
-- [Enable external script execution](sql-r-services-windows-install.md#bkmk_enableFeature)
-
-An initial offline installation of SQL Server R Services requires the same configuration as an online installation:
-
-- [Verify installation](sql-r-services-windows-install.md#verify-installation)
-- [Additional configuration as needed](sql-r-services-windows-install.md#bkmk_FollowUp)
   ::: moniker-end
 
 ## Related content

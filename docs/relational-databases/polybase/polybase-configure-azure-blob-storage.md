@@ -37,7 +37,7 @@ In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], configure your externa
 
 First, configure SQL Server PolyBase to use Azure Blob Storage.
 
-::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 
 1. Run [sp_configure](../system-stored-procedures/sp-configure-transact-sql.md) with `'hadoop connectivity'` set to an Azure Blob Storage provider. To find the value for providers, see [PolyBase connectivity configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). By Default, the Hadoop connectivity is set to `7`.
 
@@ -76,7 +76,7 @@ First, configure SQL Server PolyBase to use Azure Blob Storage.
 
 To query the data in your Hadoop data source, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
 
-::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 
 1. Create a database master key (DMK) on the database. The DMK is required to encrypt the credential secret.
 

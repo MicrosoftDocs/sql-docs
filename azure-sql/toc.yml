@@ -1681,7 +1681,7 @@
           href: virtual-machines/windows/log-shipping-configure.md
         - name: Backup and restore
           items:
-          - name: Automated backup (SQL 2016+)
+          - name: Automated backup (SQL Server 2016+)
             href: virtual-machines/windows/automated-backup.md
           - name: Automated backup (SQL 2014)
             href: virtual-machines/windows/automated-backup-sql-2014.md

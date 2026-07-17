@@ -7,7 +7,7 @@ ms.date: 09/30/2020
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-monikerRange: "=sql-server-2016||=sql-server-2017"
+monikerRange: "=sql-server-2017"
 ---
 # Upgrade Python and R runtime with binding in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -36,36 +36,11 @@ The rest of this article explains the binding mechanism and how it works for eac
 > [!NOTE]
 > Binding applies to in-database instances only that are bound to SQL Server instances. In this case binding is not necessary for a Standalone installation.
 
-::: moniker range="=sql-server-2016"
-**SQL Server 2016 binding considerations**
-
-For SQL Server 2016 R Services customers, binding provides:
-
-- Updated R packages.
-- New packages not part of the original installation ([MicrosoftML](../r/ref-r-microsoftml.md))
-- Pre-trained machine learning [models](/machine-learning-server/install/microsoftml-install-pretrained-models) for sentiment analysis and image detection.
-
-All of the binding can further be refreshed at each new major and minor release of [Microsoft Machine Learning Server](/machine-learning-server/index).
-::: moniker-end
-
 ## Version map
 
 The following tables are version maps. Each map shows package versions across releases. You can review upgrade paths when you bind to Microsoft Machine Learning Server (previously known as R Server, before the addition of Python support starting in Machine Learning Server 9.2.1).
 
 The binding doesn't guarantee the latest version of R or Anaconda. When you bind to Microsoft Machine Learning Server, you get the R or Python version installed through Setup, which may not be the latest version available on the web.
-
-::: moniker range="=sql-server-2016"
-[**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
-
-Component |Initial Release | [R Server 9.0.1](/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](/machine-learning-server/install/machine-learning-server-windows-install) | [Machine Learning Server 9.3](/machine-learning-server/install/machine-learning-server-windows-install) |  [Machine Learning Server 9.4.7](/machine-learning-server/install/machine-learning-server-windows-install)
-----------|----------------|----------------|--------------|---------|-------|-------|
-Microsoft R Open (MRO) over R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 | R 3.5.2
-[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |  9.4.7 |
-[MicrosoftML](../r/ref-r-microsoftml.md)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
-[pretrained models](/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
-[sqlrutils](../r/ref-r-sqlrutils.md)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
-[olapR](../r/ref-r-olapr.md) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
-::: moniker-end
 
 ::: moniker range="=sql-server-2017"
 [**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)

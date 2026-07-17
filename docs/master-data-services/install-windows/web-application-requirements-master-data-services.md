@@ -37,7 +37,7 @@ Before you install [!INCLUDE [ssMDSshort](../../includes/ssmdsshort-md.md)], rev
 - [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Hardware and software requirements for SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
 
-::: moniker range="=sql-server-2016 || =sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 ### Microsoft Silverlight
 

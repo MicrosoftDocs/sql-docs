@@ -1,9 +1,7 @@
 - name: What is SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-
 - name: Welcome to SQL Server >
   href: ../sql-server/index.yml
-
 - name: Overview
   items:
   - name: What's new in Reporting Services
@@ -23,10 +21,6 @@
       href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
     - name: Discontinued functionality
       href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-    - name: Breaking changes in 2016
-      href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
-    - name: Behavior changes in 2016
-      href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Tutorials
   items:
   - name: Report Designer tutorials
@@ -36,82 +30,82 @@
     - name: Create a Basic Table Report (SSRS Tutorial)
       href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
       items:
-      - name: "1. Create a Report Server Project"
+      - name: 1. Create a Report Server Project
         href: ../reporting-services/tutorial-step-01-create-report-server-project-reporting-services.md
-      - name: "2. Specify Connection Information"
+      - name: 2. Specify Connection Information
         href: ../reporting-services/tutorial-step-02-specify-connection-information-reporting-services.md
-      - name: "3. Define a Dataset for the Table Report"
+      - name: 3. Define a Dataset for the Table Report
         href: ../reporting-services/tutorial-step-03-define-dataset-table-report-reporting-services.md
-      - name: "4. Add a Table to the Report"
+      - name: 4. Add a Table to the Report
         href: ../reporting-services/tutorial-step-04-add-table-report-reporting-services.md
-      - name: "5. Format a Report"
+      - name: 5. Format a Report
         href: ../reporting-services/tutorial-step-05-format-report-reporting-services.md
-      - name: "6. Add Grouping and Totals"
+      - name: 6. Add Grouping and Totals
         href: ../reporting-services/tutorial-step-06-add-grouping-totals-reporting-services.md
     - name: Create a Data-Driven Subscription (SSRS Tutorial)
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
       items:
-      - name: "Lesson 1: Creating a Sample Subscriber Database"
+      - name: 'Lesson 1: Creating a Sample Subscriber Database'
         href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-      - name: "Lesson 2: Modifying the Report Data Source Properties"
+      - name: 'Lesson 2: Modifying the Report Data Source Properties'
         href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-      - name: "Lesson 3: Defining a Data-Driven Subscription"
+      - name: 'Lesson 3: Defining a Data-Driven Subscription'
         href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
     - name: Create a Drillthrough (RDLC) Report with Parameters using ReportViewer (SSRS Tutorial)
       href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
       items:
-      - name: "Lesson 1: Create a New Web Site"
+      - name: 'Lesson 1: Create a New Web Site'
         href: ../reporting-services/lesson-1-create-a-new-web-site.md
-      - name: "Lesson 2: Define a Data Connection and Data Table for Parent Report"
+      - name: 'Lesson 2: Define a Data Connection and Data Table for Parent Report'
         href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-      - name: "Lesson 3: Design the Parent Report using the Report Wizard"
+      - name: 'Lesson 3: Design the Parent Report using the Report Wizard'
         href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-      - name: "Lesson 4: Define a Data Connection and Data Table for Child Report"
+      - name: 'Lesson 4: Define a Data Connection and Data Table for Child Report'
         href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-      - name: "Lesson 5: Design the Child Report using the Report Wizard"
+      - name: 'Lesson 5: Design the Child Report using the Report Wizard'
         href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-      - name: "Lesson 6: Add a ReportViewer Control to the Application"
+      - name: 'Lesson 6: Add a ReportViewer Control to the Application'
         href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
-      - name: "Lesson 7: Add Drillthrough Action on Parent Report"
+      - name: 'Lesson 7: Add Drillthrough Action on Parent Report'
         href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
-      - name: "Lesson 8: Create a Data Filter"
+      - name: 'Lesson 8: Create a Data Filter'
         href: ../reporting-services/lesson-8-create-a-data-filter.md
-      - name: "Lesson 9: Build and Run the Application"
+      - name: 'Lesson 9: Build and Run the Application'
         href: ../reporting-services/lesson-9-build-and-run-the-application.md
   - name: Report Builder Tutorials
     href: ../reporting-services/report-builder-tutorials.md
     items:
-    - name: "Tutorial: Create a Quick Chart Report Offline"
+    - name: 'Tutorial: Create a Quick Chart Report Offline'
       href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
     - name: Prerequisites for Tutorials
       href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
     - name: Alternative Ways to Get a Data Connection (Report Builder)
       href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-    - name: "Tutorial: Creating a Basic Table Report"
+    - name: 'Tutorial: Creating a Basic Table Report'
       href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-    - name: "Tutorial: Creating a Matrix Report"
+    - name: 'Tutorial: Creating a Matrix Report'
       href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-    - name: "Tutorial: Creating a Free Form Report"
+    - name: 'Tutorial: Creating a Free Form Report'
       href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-    - name: "Tutorial: Format Text (Report Builder)"
+    - name: 'Tutorial: Format Text (Report Builder)'
       href: ../reporting-services/tutorial-format-text-report-builder.md
-    - name: "Tutorial: Add a Column Chart to Your Report (Report Builder)"
+    - name: 'Tutorial: Add a Column Chart to Your Report (Report Builder)'
       href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-    - name: "Tutorial: Add a Pie Chart to Your Report (Report Builder)"
+    - name: 'Tutorial: Add a Pie Chart to Your Report (Report Builder)'
       href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-    - name: "Tutorial: Add a Bar Chart to Your Report (Report Builder)"
+    - name: 'Tutorial: Add a Bar Chart to Your Report (Report Builder)'
       href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-    - name: "Tutorial: Add a Sparkline to Your Report (Report Builder)"
+    - name: 'Tutorial: Add a Sparkline to Your Report (Report Builder)'
       href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-    - name: "Tutorial: Adding a KPI to Your Report"
+    - name: 'Tutorial: Adding a KPI to Your Report'
       href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-    - name: "Tutorial: Map Report"
+    - name: 'Tutorial: Map Report'
       href: ../reporting-services/tutorial-map-report-report-builder.md
-    - name: "Tutorial: Add a Parameter to Your Report (Report Builder)"
+    - name: 'Tutorial: Add a Parameter to Your Report (Report Builder)'
       href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-    - name: "Tutorial: Creating Drillthrough and Main Reports"
+    - name: 'Tutorial: Creating Drillthrough and Main Reports'
       href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-    - name: "Tutorial: Introducing Expressions"
+    - name: 'Tutorial: Introducing Expressions'
       href: ../reporting-services/tutorial-introducing-expressions.md
 - name: Planning
   items:
@@ -150,18 +144,18 @@
     items:
     - name: Configure the Report Server Service Account
       href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-    - name: Configure Report Server URLs 
+    - name: Configure Report Server URLs
       href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
       items:
-      - name: About URL Reservations and Registration 
+      - name: About URL Reservations and Registration
         href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-      - name: Configure a URL 
+      - name: Configure a URL
         href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-      - name: URL Reservation Syntax 
+      - name: URL Reservation Syntax
         href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-      - name: URLs in Configuration Files 
+      - name: URLs in Configuration Files
         href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-      - name: URL Reservations for Multi-Instance Report Server Deployments 
+      - name: URL Reservations for Multi-Instance Report Server Deployments
         href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
     - name: Create a Database
       href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
@@ -193,30 +187,11 @@
     - name: Power BI Integration
       href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
   - name: Install Reporting Services 2016 in SharePoint Mode
-    href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
     items:
-    - name: Supported Combinations of SharePoint and Reporting Services Server and Add-in (SQL Server 2016)
-      href: ../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
-    - name: Where to find the SSRS add-in for SharePoint
-      href: ../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
-    - name: Install The First Report Server in SharePoint Mode
-      href: ../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md
-    - name: Install or Uninstall the Reporting Services Add-in for SharePoint
-      href: ../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
     - name: Update Credentials in Report Data Sources from a SharePoint site
       href: ../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md
-    - name: Add an Additional Report Server to a Farm (SSRS Scale-out)
-      href: ../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
-    - name: Add an Additional Reporting Services Web Front-end to a Farm
-      href: ../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
-    - name: Configure E-mail for a Reporting Services Service Application
-      href: ../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
-    - name: Provision Subscriptions and Alerts for SSRS Service Applications
-      href: ../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
     - name: Claims to Windows Token Service (c2WTS) and SSRS
       href: ../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md
-  - name: Install Reporting Services at the Command Prompt
-    href: ../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
   - name: Install Report Builder
     href: ../reporting-services/install-windows/install-report-builder.md
   - name: Uninstall Report Builder
@@ -230,10 +205,6 @@
     items:
     - name: Migrate a Reporting Services Installation (Native Mode)
       href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
-    - name: Migrate a Reporting Services Installation (SharePoint Mode)
-      href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
-    - name: Native to SharePoint Migration (SSRS)
-      href: ../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
     - name: Upgrade a Report Server Database
       href: ../reporting-services/install-windows/upgrade-a-report-server-database.md
     - name: Upgrade Reports
@@ -350,13 +321,6 @@
     items:
     - name: Monitoring Report Server Performance
       href: ../reporting-services/report-server/monitoring-report-server-performance.md
-      items:
-      - name: Performance Counters, MSRS 2016 Web Service & MSRS 2016 Windows Service Performance Objects (Native Mode)
-        href: ../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md
-      - name: Performance Counters, MSRS 2016 Web Service SharePoint Mode & MSRS 2016 Windows Service SharePoint Mode Performance Objects
-        href: ../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
-      - name: "Performance Counters, ReportServer:Service & ReportServerSharePoint:Service Performance Objects"
-        href: ../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md
     - name: Set Report Processing Properties
       href: ../reporting-services/report-server/set-report-processing-properties.md
     - name: Configure Available Memory for Report Server Applications
@@ -385,36 +349,8 @@
       href: ../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md
 - name: Report Server SharePoint mode
   items:
-  - name: Report Server SharePoint overview
-    href: ../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md
   - name: SharePoint Service and service applications
-    href: ../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md
-    items:
-    - name: Manage a Reporting Services SharePoint service application
-      href: ../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md
-    - name: Back up and restore Reporting Services SharePoint service applications
-      href: ../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md
-  - name: PowerShell cmdlets for Reporting Services SharePoint mode
-    href: ../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md
   - name: Configuration and administration (SharePoint mode)
-    href: ../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md
-    items:
-    - name: Site collection features - Reporting Services
-      href: ../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md
-    - name: Site collection features - Report Server
-      href: ../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md
-    - name: Site settings and features - Reporting Services
-      href: ../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md
-    - name: Site settings and features - Server File Sync in SharePoint
-      href: ../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md
-    - name: Add Reporting Services content types to a SharePoint library
-      href: ../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md
-    - name: Local mode vs. connected mode reports in the Report Viewer
-      href: ../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md
-    - name: Upload documents to a SharePoint library
-      href: ../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
-    - name: Set processing options
-      href: ../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
   - name: High availability
     href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
   - name: Enable and disable RDL sandboxing
@@ -716,7 +652,7 @@
       href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
     - name: Add Custom Locations to a Map
       href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
-    - name: "Troubleshoot Reports: Map Reports"
+    - name: 'Troubleshoot Reports: Map Reports'
       href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
   - name: Images, Text Boxes, Rectangles, and Lines
     href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
@@ -787,8 +723,6 @@
       href: ../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
     - name: Add a multi-value parameter to a Report
       href: ../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md
-    - name: Set Parameters on a Published Report
-      href: ../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md
     - name: Customize the Parameters Pane in a Report
       href: ../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md
   - name: Filter, Group, and Sort Data
@@ -1028,8 +962,6 @@
     href: ../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md
   - name: Print a Report
     href: ../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md
-  - name: Print a Report (Reporting Services in SharePoint Mode)
-    href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
 - name: Report data in SSRS
   items:
   - name: Intro to Report Data
@@ -1169,7 +1101,7 @@
   items:
   - name: Create mobile reports with SQL Server Mobile Report Publisher
     href: ../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md
-  - name: "SQL Server mobile reports End-to-end walk-through"
+  - name: SQL Server mobile reports End-to-end walk-through
     href: ../reporting-services/mobile-reports/sql-server-mobile-reports-end-to-end-walk-through.md
   - name: Create a Reporting Services mobile report
     href: ../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md
@@ -1218,7 +1150,7 @@
     - name: Add a custom map to a Reporting Services mobile report
       href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
 - name: Reporting Services Security and Protection
-  items: 
+  items:
   - name: Security
     href: ../reporting-services/report-builder/security-report-builder.md
   - name: Reporting Services Security and Protection Overview
@@ -1446,26 +1378,6 @@
     - name: RS.exe Utility (SSRS)
       href: ../reporting-services/tools/rs-exe-utility-ssrs.md
 - name: Data Alerts (SharePoint)
-  href: ../reporting-services/reporting-services-data-alerts.md
-  items:
-  - name: Data Alert Designer
-    href: ../reporting-services/data-alert-designer.md
-  - name: Data Alert Manager for SharePoint Users
-    href: ../reporting-services/data-alert-manager-for-sharepoint-users.md
-  - name: Data Alert Manager for Alerting Administrators
-    href: ../reporting-services/data-alert-manager-for-alerting-administrators.md
-  - name: Data Alert Messages
-    href: ../reporting-services/data-alert-messages.md
-  - name: Create a Data Alert in Data Alert Designer
-    href: ../reporting-services/create-a-data-alert-in-data-alert-designer.md
-  - name: Edit a Data Alert in Alert Designer
-    href: ../reporting-services/edit-a-data-alert-in-alert-designer.md
-  - name: Manage All Data Alerts on a SharePoint Site in Data Alert Manager
-    href: ../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
-  - name: Manage My Data Alerts in Data Alert Manager
-    href: ../reporting-services/manage-my-data-alerts-in-data-alert-manager.md
-  - name: Grant Permissions to Users and Alerting Administrators
-    href: ../reporting-services/grant-permissions-to-users-and-alerting-administrators.md
 - name: Extensions
   href: ../reporting-services/extensions-ssrs.md
   items:
@@ -1714,8 +1626,6 @@
     href: ../reporting-services/developer/rest-api.md
   - name: REST API samples >>
     href: https://github.com/Microsoft/Reporting-Services
-  - name: Integrating Reporting Services into Applications
-    href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
   - name: Integrating using the Report Viewer controls
     items:
     - name: Getting Started
@@ -1734,8 +1644,6 @@
       href: ../reporting-services/application-integration/release-notes-ssrs-application-integration.md
   - name: Integrating Reporting Services directly
     items:
-    - name: Choosing Between URL Access and SOAP
-      href: ../reporting-services/application-integration/choosing-between-url-access-and-soap.md
     - name: Integrating Reporting Services using SOAP
       href: ../reporting-services/application-integration/integrating-reporting-services-using-soap.md
     - name: Integrating Reporting Services using SOAP - Web Application
@@ -1930,7 +1838,7 @@
     href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
   - name: Custom Report Items
     href: ../reporting-services/custom-report-items/custom-report-items.md
-  - name: "How to: Deploy a Custom Report Item"
+  - name: 'How to: Deploy a Custom Report Item'
     href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
   - name: Accessing Custom Assemblies Through Expressions
     href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1938,7 +1846,7 @@
     href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
   - name: Deploying a Custom Assembly
     href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-  - name: "How to: Debug Custom Assemblies"
+  - name: 'How to: Debug Custom Assemblies'
     href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
   - name: Initializing Custom Assembly Objects
     href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

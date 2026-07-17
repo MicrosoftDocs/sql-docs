@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
 ms.custom: intro-installation
-monikerRange: "=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
+monikerRange: "=sql-server-2017 || =sql-server-ver15"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup
 [!INCLUDE [SQL Server 2016 2017 2019](../../includes/applies-to-version/sqlserver2016-2019-only.md)]
@@ -20,9 +20,6 @@ monikerRange: "=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
 
 ::: moniker range="=sql-server-2017||=sql-server-ver15"
 SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. It's called **Machine Learning Server (Standalone)** and includes Python and R. 
-::: moniker-end
-::: moniker range="=sql-server-2016"
-SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. In SQL Server 2016, this feature is called **R Server (Standalone)**.  
 ::: moniker-end
 
 A standalone server as installed by SQL Server Setup supports use cases and scenarios such as the following:
@@ -45,14 +42,6 @@ If you installed a previous version, such as SQL Server 2016 R Server (Standalon
 As a general rule, we recommend that you treat standalone server and database engine instance-aware installations as mutually exclusive to avoid resource contention, but if you have sufficient resources, there is no prohibition against installing them both on the same physical computer.
 
 You can only have one standalone server on the computer: either SQL Server Machine Learning Server (Standalone) or SQL Server R Server (Standalone). Be sure to uninstall one version before adding a new one.
-
-::: moniker range="=sql-server-2016"
-<a name="bkmk_ga_instalpatch"></a> 
-
- ###  Install patch requirement 
-
-For SQL Server 2016 only: Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server. If this update to the VC runtime binaries is not installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server follow the instructions at [SQL Server Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries.  
-::: moniker-end
 
 ## Get the installation media
 
@@ -101,39 +90,6 @@ For local installations, you must run Setup as an administrator. If you install 
    > Also, whereas R or Python scripts running in SQL Server are managed by SQL Server so as not to conflict with memory used by other database engine services, the standalone machine learning server has no such constraints, and can interfere with other database operations. Finally, remote access via RDP session, which is often used for operationalization, is typically blocked by database administrators.
    > 
    > For these reasons, we generally recommend that you install Machine Learning Server (Standalone) on a separate computer from SQL Server Machine Learning Services.
-
-5. Accept the license terms for downloading and installing base language distributions. When the **Accept** button becomes unavailable, you can click **Next**. 
-
-6. On the **Ready to Install** page, verify your selections, and click **Install**.
-::: moniker-end
-
-::: moniker range="=sql-server-2016"
-## Run Setup
-
-For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
-
-1. Start the installation wizard.
-
-2. On the **Installation** tab, click **New R Server (Standalone) installation**.
-    
-   ![Start setup of R Server Standalone](media/2016-setup-installation-rsvr.png "Start setup of R Server Standalone")
-
-3. After the rules check is complete, accept SQL Server licensing terms, and select a new installation.
-
-4. On the **Feature Selection** page, the following option should be already selected:
-    
-   - **R Server (Standalone)**  
-    
-   ![Feature selections for R Server Standalone](media/2016setup-rserver-features.png "Feature selections for R Server Standalone")
-    
-   All other options can be ignored. 
-    
-   > [!NOTE]
-   > Avoid installing the **Shared Features** if you are running setup on a computer where R Services has already been installed for SQL Server in-database analytics. This creates duplicate libraries.
-   > 
-   > Whereas R scripts running in SQL Server are managed by SQL Server so as not to conflict with memory used by other database engine services, the standalone R Server has no such constraints, and can interfere with other database operations.
-   > 
-   > We generally recommend that you install R Server (Standalone) on a separate computer from SQL Server R Services (In-Database).
 
 5. Accept the license terms for downloading and installing base language distributions. When the **Accept** button becomes unavailable, you can click **Next**. 
 

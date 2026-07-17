@@ -32,7 +32,7 @@ Opting out of SQL Server usage and diagnostic data collection is supported, but 
 
 The following are prerequisites to enable local audit on each SQL Server instance: 
 
-1. The instance is patched to SQL Server 2016 RTM CU2 or later. For Integration Services, the instance is patched to SQL 2016 RTM CU4, SQL 2016 SP1, or later.
+1. The instance is patched to SQL Server 2016 RTM CU2 or later. For Integration Services, the instance is patched to SQL Server 2016 RTM CU4, SQL Server 2016 SP1, or later.
 
 1. User must be a System Administrator or a role with access to add and modify Registry Key, create folders, manage folder security and stop/start a Windows Service.  
 
@@ -145,9 +145,9 @@ SQL Server CEIP should recognize the local audit setting immediately if the serv
     - For Database Engine, use **SQL Server CEIP service (*Your-Instance-Name*)**.     
     - For Analysis Services, use **SQL Server Analysis Services CEIP (*Your-Instance-Name*)**.
     - For Integration Services, 
-        - For SQL 2016, use *SQL Server Integration Services CEIP service 13.0*.
-        - For SQL 2017, use *SQL Server Integration Services CEIP service 14.0*.
-	- For SQL 2019, use *SQL Server Integration Services CEIP service 15.0*.
+        - For SQL Server 2016, use *SQL Server Integration Services CEIP service 13.0*.
+        - For SQL Server 2017, use *SQL Server Integration Services CEIP service 14.0*.
+    - For SQL Server 2019, use *SQL Server Integration Services CEIP service 15.0*.
 
 1. Right-click on the service and choose Restart. 
 

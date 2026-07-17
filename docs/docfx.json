@@ -530,13 +530,13 @@
         "big-data-cluster/**/*.yml": "=sql-server-ver15 || =sql-server-linux-ver15",
         "connect/**/*.md": ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || =fabric",
         "database-engine/**/*.md": ">=sql-server-2016 || >=sql-server-linux-2017",
-        "data-quality-services/**/*.md": "=sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15 || =sql-server-ver16 || =sql-server-linux-ver16",
+        "data-quality-services/**/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15 || =sql-server-ver16 || =sql-server-linux-ver16",
         "dmx/**/*.md": ">=sql-server-2016",
         "integration-services/**/*.md": ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current",
         "language-extensions/**/*.md": ">=sql-server-ver15 || >=sql-server-linux-ver15",
         "linux/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017",
         "machine-learning/**/*.md": ">=sql-server-2017",
-        "master-data-services/**/*.md": "=sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15 || =sql-server-ver16 || =sql-server-linux-ver16",
+        "master-data-services/**/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15 || =sql-server-ver16 || =sql-server-linux-ver16",
         "mdx/**/*.md": ">=sql-server-2016",
         "odbc/**/*.md": ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || =fabric",
         "powershell/**/*.md": ">=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric",
@@ -580,7 +580,7 @@
         "ssma/**/*.md": ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016",
         "toc/**/*.md": "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric",
         "tools/**/*.md": ">=aps-pdw-2016 || >=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresql || =azuresql-db || =azuresqldb-mi-current || =azuresqldb-current || =fabric",
-        "tools/distributed-replay/*.md": "=sql-server-2016 || =sql-server-2017 || =sql-server-ver15 || =sql-server-linux-2017 || =sql-server-linux-ver15",
+        "tools/distributed-replay/*.md": "=sql-server-2017 || =sql-server-ver15 || =sql-server-linux-2017 || =sql-server-linux-ver15",
         "t-sql/**/*.md": "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqledge-current",
         "t-sql/spatial-geography/*.md": "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric",
         "t-sql/spatial-geometry/*.md": "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric",
@@ -743,6 +743,141 @@
           "sql-server-2016"
         ],
         "machine-learning/r/sql-server-r-services.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/create-a-data-alert-in-data-alert-designer.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/data-alert-designer.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/data-alert-manager-for-alerting-administrators.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/data-alert-manager-for-sharepoint-users.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/data-alert-messages.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/edit-a-data-alert-in-alert-designer.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/grant-permissions-to-users-and-alerting-administrators.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/manage-my-data-alerts-in-data-alert-manager.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/reporting-services-data-alerts.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/application-integration/choosing-between-url-access-and-soap.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/application-integration/integrating-reporting-services-into-applications.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/install-reporting-services-sharepoint-mode.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md": [
+          "sql-server-2016"
+        ],
+        "reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md": [
           "sql-server-2016"
         ]
       }

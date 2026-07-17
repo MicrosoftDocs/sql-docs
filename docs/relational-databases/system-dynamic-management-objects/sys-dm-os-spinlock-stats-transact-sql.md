@@ -121,7 +121,7 @@ The following table contains brief descriptions of some of the most common spinl
 | DBSEEDING_OPERATION | Internal use only. |
 | DBT_HASH | Internal use only. |
 | DBT_IO_LIST | Internal use only. |
-| DBTABLE | Controls access to an in-memory data structure for every database in a [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] that contains the properties of that database. For more information, see [Improving Concurrency and Scalability of SQL Server workload by optimizing database containment check in SQL 2014 and SQL 2016](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
+| DBTABLE | Controls access to an in-memory data structure for every database in a [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] that contains the properties of that database. For more information, see [Improving Concurrency and Scalability of SQL Server workload by optimizing database containment check in SQL Server 2014 and SQL Server 2016](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
 | DEFERRED_WF_EXT_DROP | Internal use only. |
 | DEK_INSTANCE | Internal use only. |
 | DELAYED_PARTITIONED_STACK | Internal use only. |

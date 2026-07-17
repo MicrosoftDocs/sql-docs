@@ -92,12 +92,6 @@ Latest publicly released version of:
 
 - Apple Safari
 
-::: moniker range="=sql-server-2016"
-
-If you use a SharePoint product that is integrated with [!INCLUDE [ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Plan browser support in SharePoint 2016](/sharepoint/install/browser-support-planning-2016-2019).
-
-::: moniker-end
-
 ### Authentication requirements
 
 Browsers support specific authentication schemes that the report server must handle for the client request to succeed. The following table identifies the default authentication types supported by each browser running on a Windows operating system.
@@ -149,12 +143,6 @@ Latest publicly released versions of:
 Latest publicly released version of:
 
 - Apple Safari
-
-::: moniker range="=sql-server-2016"
-
-For more information on the SharePoint 2016 browser support, see [Plan browser support in SharePoint 2016](/sharepoint/install/browser-support-planning-2016-2019).
-
-::: moniker-end
 
 ## Related content
 

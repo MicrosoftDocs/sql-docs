@@ -92,7 +92,7 @@ GDR releases of SQL Server will require the same component .cab file versions as
 
 |Release  |Component | Download link  |
 |---------|----------|----------------|
-|**SQL 2019 GDR**| | | 
+|**SQL Server 2019 GDR**| | | 
 | | Microsoft R Open       | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686)  |  
 | | R Server               | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792)|   
 | | Microsoft Python Open  | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |  
@@ -184,7 +184,7 @@ GDR releases of SQL Server will require the same component .cab file versions as
 
 |Release  |Component | Download link  |
 |---------|----------|----------------|
-|**SQL 2017 GDR**| | | 
+|**SQL Server 2017 GDR**| | | 
 | | Microsoft R Open | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033) | 
 | | R Server | [SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033) |  
 | | Microsoft Python Open  | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) |  

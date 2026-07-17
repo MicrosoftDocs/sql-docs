@@ -151,7 +151,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|Specifies whether differences in the role membership of logins should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Specifies whether differences in the amount of time that SQL Server retains the route in the routing table should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Specifies whether differences in the semi-colons between T-SQL statements will be ignored or updated when you publish to a database.|
-|**/p:**|IgnoreSensitivityClassifications=(BOOLEAN 'False')|Specifies whether data sensitivity classifications on columns should be ignored when comparing schema models. This only works for classifications added with the ADD SENSITIVITY CLASSIFICATION syntax introduced in SQL 2019.|
+|**/p:**|IgnoreSensitivityClassifications=(BOOLEAN 'False')|Specifies whether data sensitivity classifications on columns should be ignored when comparing schema models. This only works for classifications added with the ADD SENSITIVITY CLASSIFICATION syntax introduced in SQL Server 2019.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Specifies whether differences in the table options will be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Specifies whether differences in the table partition options will be ignored or updated when you publish to a database.  This option applies only to Azure Synapse Analytics data warehouse databases.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Specifies whether differences in the user settings objects will be ignored or updated when you publish to a database.|

@@ -24,7 +24,7 @@ dev_langs:
 Returns a list of columns in external data source table.
 
 > [!NOTE]  
-> This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-cumulative-updates-history.md#cu5).
+> This procedure is introduced in [SQL Server 2019 CU5](../../big-data-cluster/release-notes-cumulative-updates-history.md#cu5).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

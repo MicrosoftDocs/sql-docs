@@ -123,11 +123,11 @@ For more information, see:
 - The [blog for installing ostress.exe](https://techcommunity.microsoft.com/t5/sql-server-support/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql/ba-p/317910).
 
 <!--
-dn511655.aspx is for SQL 2014,
+dn511655.aspx is for SQL Server 2014,
 [Extensions to AdventureWorks to Demonstrate in-memory OLTP]
 (https://msdn.microsoft.com/library/dn511655&#x28;v=sql.120&#x29;.aspx)
 
-whereas for SQL 2016+
+whereas for SQL Server 2016+
 [Sample Database for in-memory OLTP]
 (https://msdn.microsoft.com/library/mt465764.aspx)
 -->

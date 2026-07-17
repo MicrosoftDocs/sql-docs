@@ -327,7 +327,7 @@ Full release notes, including dependencies, are available in the GitHub Reposito
 - Dropped support for .NET Standard. [#2386](https://github.com/dotnet/SqlClient/pull/2386)
 - Dropped support for .NET 6 [#2927](https://github.com/dotnet/SqlClient/pull/2927)
 - Dropped UWP (UAP) references. [#2483](https://github.com/dotnet/SqlClient/pull/2483)
-- Dropped SQL 2000 client-side debugging support for .NET Framework [#2981](https://github.com/dotnet/SqlClient/pull/2981), [#2940](https://github.com/dotnet/SqlClient/pull/2940)
+- Dropped SQL Server 2000 client-side debugging support for .NET Framework [#2981](https://github.com/dotnet/SqlClient/pull/2981), [#2940](https://github.com/dotnet/SqlClient/pull/2940)
 
 ### New features in 6.0
 

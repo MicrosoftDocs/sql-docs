@@ -1,5 +1,5 @@
 ---
-title: "Update from SQL 2005"
+title: "Update from SQL Server 2005"
 description: "Updating an Application from SQL Server 2005 Native Client"
 author: markingmyname
 ms.author: maghan

@@ -35,7 +35,7 @@ helpviewer_keywords:
 -   Indicate whether the connection is retained at run time.  
 
 > [!Note]
-> Only ODBC 3.0 and above are supported for SSIS IR in Azure Data Factory, SQL 2019 and above.
+> Only ODBC 3.0 and above are supported for SSIS IR in Azure Data Factory, SQL Server 2019 and above.
   
 ## Configuration of the ODBC Connection Manager  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  

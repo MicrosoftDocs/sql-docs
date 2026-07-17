@@ -48,7 +48,7 @@ Graphical schema comparison isn't yet available in the SDK-style SQL projects pr
 
 ::: zone pivot="sq1-visual-studio-code"
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [SQL Database Projects extension](../../visual-studio-code-extensions/sql-database-projects/sql-database-projects-extension.md)
 
 ::: zone-end
@@ -77,7 +77,7 @@ For more information, see [Schema comparison overview](../concepts/schema-compar
 
 Deploy reports require the SqlPackage CLI.
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [SqlPackage CLI](../../sqlpackage/sqlpackage-download.md)
 
 ```bash
@@ -139,7 +139,7 @@ As mentioned in the [schema compare section](#schema-compare-visualize-differenc
 
 With a focus on automation, we utilize the SqlPackage CLI to extract object definitions from a database into a SQL project file set. The Microsoft.Build.Sql.Templates .NET templates are used to create a SQL project file, an optional step.
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [SqlPackage CLI](../../sqlpackage/sqlpackage-download.md)
 - [Microsoft.Build.Sql.Templates .NET templates](https://www.nuget.org/packages/Microsoft.Build.Sql.Templates/)
 
@@ -181,7 +181,7 @@ As mentioned in the [schema compare section](#schema-compare-visualize-differenc
 
 ### Prerequisites
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [SqlPackage CLI](../../sqlpackage/sqlpackage-download.md)
 
 ```bash

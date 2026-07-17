@@ -4,7 +4,7 @@ description: Create an SDK-style SQL project from an existing project.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: drskwier
-ms.date: 03/11/2026
+ms.date: 07/17/2026
 ms.service: sql
 ms.subservice: sql-database-projects
 ms.topic: how-to
@@ -19,15 +19,15 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
-Creating a new SDK-style SQL project is a [quick task](../get-started.md#step-1-create-a-new-project). However, if you have existing SQL projects you can convert them to SDK-style SQL projects in place to take advantage of the new features.
+Creating a new SDK-style SQL project is a [quick task](../get-started.md#step-1-create-a-new-project). However, if you have existing SQL projects, you can convert them to SDK-style SQL projects in place to take advantage of the new features.
 
-Once you convert the project, you can use the new features of the SDK-style project, such as:
+After you convert the project, you can use the new features of the SDK-style project, such as:
 
-- cross-platform build support
-- simplified project file format
-- package references
+- Cross-platform build support
+- Simplified project file format
+- Package references
 
-To complete the conversion carefully, we will:
+To complete the conversion carefully, follow these steps:
 
 1. Create a backup of the original project file.
 1. Build a `.dacpac` file from the original project for comparison.
@@ -35,11 +35,12 @@ To complete the conversion carefully, we will:
 1. Build a `.dacpac` file from the modified project for comparison.
 1. Verify that the `.dacpac` files are the same.
 
-SDK-style projects aren't supported in SQL Server Data Tools (SSDT) in Visual Studio. Once converted, you must use one of the following to build or edit the project:
+SQL Server Data Tools (SSDT) in Visual Studio doesn't support SDK-style projects. After you convert the project, use one of the following tools to build or edit the project:
 
-- the command line
-- the SQL Database Projects extension in Visual Studio Code
-- the SQL Server Data Tools, SDK-style (preview) in Visual Studio 2022
+- The SQL Database Projects extension in Visual Studio Code
+- Database DevOps in SQL Server Management Studio (SSMS)
+- The command line
+- The SQL Server Data Tools, SDK-style (preview) in Visual Studio 2022
 
 > [!NOTE]  
 > You might find that your SQL project contains customization that extends the changes required beyond these steps. In addition to this article, the [DacFx GitHub repository](https://github.com/microsoft/dacfx) can be used to understand the changes necessary to upgrade from an original SQL project to SDK-style SQL projects.
@@ -48,7 +49,7 @@ SDK-style projects aren't supported in SQL Server Data Tools (SSDT) in Visual St
 
 ::: zone pivot="sq1-visual-studio"
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Visual Studio Community, Professional, or Enterprise](https://visualstudio.microsoft.com/downloads/)
 - [Install SQL Server Data Tools (SSDT) for Visual Studio](../../../ssdt/download-sql-server-data-tools-ssdt.md)
 
@@ -64,7 +65,7 @@ SDK-style projects aren't supported in SQL Server Data Tools (SSDT) in Visual St
 
 ::: zone pivot="sq1-visual-studio-code"
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Visual Studio Code](https://code.visualstudio.com/Download)
 - [SQL Database Projects extension](../../visual-studio-code-extensions/sql-database-projects/sql-database-projects-extension.md)
 
@@ -80,7 +81,7 @@ SDK-style projects aren't supported in SQL Server Data Tools (SSDT) in Visual St
 
 ::: zone pivot="sq1-command-line"
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 
 ::: zone-end
 
@@ -88,7 +89,7 @@ SDK-style projects aren't supported in SQL Server Data Tools (SSDT) in Visual St
 
 Before you convert the project, create a backup of the original project file. This way, you can revert to the original project if needed.
 
-In file explorer, create a copy of the `.sqlproj` file for the project you want to convert with `.original` appended on the end of the file extension. For example, `MyProject.sqlproj` becomes `MyProject.sqlproj.original`.
+In File Explorer, create a copy of the `.sqlproj` file for the project you want to convert with `.original` appended to the file extension. For example, `MyProject.sqlproj` becomes `MyProject.sqlproj.original`.
 
 ## Step 2: Build a `.dacpac` file from the original project for comparison
 
@@ -124,7 +125,7 @@ Build the project in Visual Studio by right-clicking on the database node in **S
 
 ::: zone pivot="sq1-command-line"
 
-SQL database projects can be built from the command line using the `dotnet build` command.
+You can build SQL database projects from the command line using the `dotnet build` command.
 
 ```bash
 dotnet build
@@ -135,7 +136,7 @@ dotnet build MyDatabaseProject.sqlproj
 
 ::: zone-end
 
-The build process creates a `.dacpac` file in the `bin\Debug` folder of the project by default. Using file explorer, locate the `.dacpac` created by the build process and copy it into a new folder outside of the project directory as `original_project.dacpac`. We use this `.dacpac` file for comparison to validate our conversion later.
+The build process creates a `.dacpac` file in the `bin\Debug` folder of the project by default. Using File Explorer, locate the `.dacpac` created by the build process and copy it into a new folder outside of the project directory as `original_project.dacpac`. Use this `.dacpac` file for comparison to validate your conversion later.
 
 ## Step 3: Modify the project file to an SDK-style project
 
@@ -168,7 +169,7 @@ Examples to remove if present in your `.sqlproj`:
 
 ### Required: Remove Properties folder
 
-Original SQL projects have an entry for a `Properties` folder that represented access to the project properties in solution explorer. This item needs to be removed from the project file.
+Original SQL projects have an entry for a `Properties` folder that represented access to the project properties in solution explorer. Remove this item from the project file.
 
 Example to remove if present in your `.sqlproj`:
 
@@ -180,9 +181,9 @@ Example to remove if present in your `.sqlproj`:
 
 ### Required: Remove Build items included by default
 
-Original SQL projects list all `.sql` files representing database objects explicitly in the project file as `<Build Include="..." />` items. In SDK-style SQL projects, any `.sql` files in the project folder tree (`**/*.sql`) are included by default, so removing the `<Build Include="...." />` items for those files is necessary to avoid build performance issues.
+Original SQL projects list all `.sql` files representing database objects explicitly in the project file as `<Build Include="..." />` items. In SDK-style SQL projects, any `.sql` files in the project folder tree (`**/*.sql`) are included by default. Remove the `.sql` files specified in `<Build Include="...." />` items for those files to avoid build performance problems.
 
-Lines that should be removed from the project file, for example:
+Remove lines like the following from the project file:
 
 ```xml
   <Build Include="SalesLT/Products.sql" />
@@ -191,7 +192,11 @@ Lines that should be removed from the project file, for example:
   <Build Include="SalesLT/CategoriesProductCount.sql" />
 ```
 
-You shouldn't remove `<PreDeploy Include="..." />` or `<PostDeploy Include="..." />` items, because these nodes dictate [specific behavior](../concepts/pre-post-deployment-scripts.md) for those files. You also shouldn't remove `<Build Include="..." />` items for files that aren't in the SQL project folder tree.
+Don't remove:
+
+- `<Build Include="..." />` items for `.sql` files that aren't in the SQL project folder tree
+- `<PreDeploy Include="..." />` or `<PostDeploy Include="..." />` items,  because these nodes dictate [specific behavior](../concepts/pre-post-deployment-scripts.md) for those files
+- Items that aren't `.sql` files, such as `.publish.xml` files in `<None Include="..." />` items, `.refactorlog.xml` files in `<RefactorLog Include="..." />` items, or `.xsd` files in `<Build Include="..." />` items
 
 ### Optional: Remove SSDT references
 
@@ -208,7 +213,7 @@ The original SQL Server Data Tools (SSDT) required extra content in the project 
 
 ### Optional: Remove default build settings
 
-Original SQL projects include two large blocks for Release and Debug build settings, while in SDK-style SQL projects the defaults for these options are known by the SDK. If you don't have customizations to the build settings, consider removing these blocks:
+Original SQL projects include two large blocks for Release and Debug build settings, while in SDK-style SQL projects the SDK knows the defaults for these options. If you don't have customizations to the build settings, consider removing these blocks:
 
 ```xml
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -240,11 +245,11 @@ The [project properties](../concepts/project-properties.md) reference lists the 
 
 ## Step 4: Solution files
 
-Your project file might be referenced in a solution file (`.sln`). If you have a solution file, you should update it to reference the new SDK-style project file. If you don't have a solution file, you can skip this section and proceed to Step 5.
+Your project file might be referenced in a solution file (`.sln`). If you have a solution file, update it to reference the new SDK-style project file. If you don't have a solution file, you can skip this section and proceed to Step 5.
 
 ### Option 1: Create a new solution file
 
-For a solution file that only contains the SQL project, it's more straightforward to remove the solution file and create a new solution file with the SDK-style project.
+If the solution file contains only the SQL project, it's easier to remove the solution file and create a new solution file with the SDK-style project.
 
 ```bash
 dotnet new sln --name MySolution
@@ -253,24 +258,24 @@ dotnet sln MySolution.sln add MyDatabaseProject\MyDatabaseProject.sqlproj
 
 ### Option 2: Edit the solution file
 
-When a solution file contains multiple projects, you should update the solution file to reference the new SDK-style project file. You can edit the solution file in a text editor and change the project reference to the new SDK-style project file. The project reference in the solution file should look like this:
+If the solution file contains multiple projects, update the solution file to reference the new SDK-style project file. You can edit the solution file in a text editor and change the project reference to the new SDK-style project file. The project reference in the solution file should look like this:
 
 ```xml
 Project("{PROJECT_TYPE_GUID}") = "MyDatabaseProject", "MyDatabaseProject\MyDatabaseProject.sqlproj", "{PROJECT_GUID}"
 EndProject
 ```
 
-The `PROJECT_TYPE_GUID` value for a Microsoft.Build.Sql project is `42EA0DBD-9CF1-443E-919E-BE9C484E4577`, and the `PROJECT_GUID` is a unique identifier for the project found in the project file `<ProjectGuid>` element. If you have a solution file with your project, the `PROJECT_GUID` value isn't required to be changed and can remain the same as in the original project file. The `PROJECT_TYPE_GUID` value is required to be changed to the Microsoft.Build.Sql project type GUID.
+The `PROJECT_TYPE_GUID` value for a Microsoft.Build.Sql project is `42EA0DBD-9CF1-443E-919E-BE9C484E4577`. The `PROJECT_GUID` is a unique identifier for the project found in the project file `<ProjectGuid>` element. If you have a solution file with your project, you don't need to change the `PROJECT_GUID` value. Change the `PROJECT_TYPE_GUID` value to the Microsoft.Build.Sql project type GUID.
 
 ## Step 5: Build a `.dacpac` file from the modified project for comparison
 
 ::: zone pivot="sq1-visual-studio"
 
-The SQL project is no longer compatible with Visual Studio 2022. To build or edit the project, you must use one of:
+The SQL project is no longer compatible with Visual Studio 2022. To build or edit the project, use one of the following options:
 
-- the command line
-- the SQL Database Projects extension in Visual Studio Code
-- the SQL Server Data Tools, SDK-style (preview) in Visual Studio 2022
+- The command line
+- The SQL Database Projects extension in Visual Studio Code
+- The SQL Server Data Tools, SDK-style (preview) in Visual Studio 2022
 - SQL Server Management Studio (SSMS) with the Database DevOps workload (preview)
 
 ::: zone-end
@@ -295,7 +300,7 @@ Open the project file in SQL Server Management Studio (SSMS) with the Database D
 
 ::: zone pivot="sq1-command-line"
 
-SQL database projects can be built from the command line using the `dotnet build` command.
+You can build SQL database projects from the command line using the `dotnet build` command.
 
 ```bash
 dotnet build
@@ -306,13 +311,13 @@ dotnet build MyDatabaseProject.sqlproj
 
 ::: zone-end
 
-The build process creates a `.dacpac` file in the `bin\Debug` folder of the project by default. Using file explorer, locate the `.dacpac` created by the build process and copy it into a new folder outside of the project directory. We use this `.dacpac` file for comparison to validate our conversion later.
+The build process creates a `.dacpac` file in the `bin\Debug` folder of the project by default. Using File Explorer, locate the `.dacpac` created by the build process and copy it into a new folder outside of the project directory. Use this `.dacpac` file for comparison to validate your conversion later.
 
 ## Step 6: Verify that the `.dacpac` files are the same
 
-To verify that the conversion was successful, compare the `.dacpac` files created from the original and modified projects. The [schema comparison](../concepts/schema-comparison.md) capabilities of SQL projects allow us to visualize the difference in database models between the two `.dacpac` files. Alternatively, the DacpacVerify command-line utility can be used to compare the two `.dacpac` files, including their pre/post-deployment scripts and project settings.
+To verify that the conversion was successful, compare the `.dacpac` files created from the original and modified projects. Use the [schema comparison](../concepts/schema-comparison.md) capabilities of SQL projects to visualize the difference in database models between the two `.dacpac` files. Alternatively, use the DacpacVerify command-line utility to compare the two `.dacpac` files, including their pre/post-deployment scripts and project settings.
 
-DacpacVerify is available for install as a [dotnet tool](https://www.nuget.org/packages/Microsoft.dacpacverify). To install the tool, run the following command:
+You can install DacpacVerify as a [dotnet tool](https://www.nuget.org/packages/Microsoft.dacpacverify). To install the tool, run the following command:
 
 ```bash
 dotnet tool install --global Microsoft.DacpacVerify --prerelease
@@ -358,7 +363,7 @@ Graphical schema comparison is available in Visual Studio and Visual Studio Code
 
 ::: zone-end
 
-When schema comparison is run, no results should be displayed. The lack of differences indicates that the original and modified projects are equivalent, producing the same database model in the `.dacpac` file.
+When you run schema comparison, no results should be displayed. The lack of differences indicates that the original and modified projects are equivalent, producing the same database model in the `.dacpac` file.
 
 > [!NOTE]  
 > The comparison of `.dacpac` files through schema comparison doesn't validate pre/post-deployment scripts, refactorlog, or other project settings. It only validates the database model. Using the DacpacVerify command-line utility is the recommended way to validate that the two `.dacpac` files are equivalent.

@@ -213,8 +213,6 @@ The FILESTREAM feature, which allows you to store unstructured data such as text
 **Recommendation**  
 Upload the unstructured files to Azure Blob storage and store metadata related to these files (name, type, URL location, storage key etc.) in Azure SQL Database. You might have to re-engineer your application to enable streaming blobs to and from Azure SQL Database. Alternatively, migrate to SQL Server on Azure VMs.
 
-For more information, see [Streaming blobs to and from Azure SQL blog](https://azure.microsoft.com/blog/streaming-blobs-to-and-from-sql-azure/).
-
 ## <a id="LinkedServer"></a> Linked server
 
 **Title: Linked server functionality isn't supported in Azure SQL Database**  

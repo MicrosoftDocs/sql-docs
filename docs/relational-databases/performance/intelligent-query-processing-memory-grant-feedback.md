@@ -8,7 +8,7 @@ ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: configuration
 ms.topic: concept-article
-f1_keywords:
+f1_keywords:mana
   - "memory grant feedback"
 helpviewer_keywords:
   - "memory grant feedback"
@@ -188,11 +188,9 @@ This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)
 
 - Percentile memory grant feedback is enabled by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], but has no effect if Query Store isn't enabled or when Query Store isn't in a "read write" state.
 
-- Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], but has no effect when Query Store isn't enabled or when Query Store isn't in a "read write" state.
+- Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and  [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], but has no effect when Query Store isn't enabled or when Query Store isn't in a "read write" state.
 
 - Percentile and persistence for memory grant feedback is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and enabled by default on all databases, both existing and new.
-
-- Percentile and persistence for memory grant feedback isn't currently available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 It's recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you're getting the intended benefit from the feature.
 

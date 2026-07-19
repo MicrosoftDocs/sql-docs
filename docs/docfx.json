@@ -879,6 +879,15 @@
         ],
         "reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md": [
           "sql-server-2016"
+        ],
+        "database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md": [
+          "sql-server-2016"
+        ],
+        "database-engine/deprecated-database-engine-features-in-sql-server-2016.md": [
+          "sql-server-2016"
+        ],
+        "relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md": [
+          "sql-server-2016"
         ]
       }
     },

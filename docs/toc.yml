@@ -114,8 +114,6 @@ items:
             href: relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
           - name: Disable
             href: relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
-          - name: Migrate settings from SQL Server 2014
-            href: relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
       - name: Backup to S3-compatible object storage
         items:
         - name: Backup/Restore with S3-compatible object storage
@@ -4341,16 +4339,12 @@ items:
       href: database-engine/deprecated-database-engine-features-in-sql-server-2019.md
     - name: Deprecated in SQL Server 2017
       href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
-    - name: Deprecated in SQL Server 2016
-      href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
     - name: Breaking changes in SQL Server 2025
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2025.md
     - name: Breaking changes in SQL Server 2019
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2019.md
     - name: Breaking changes in SQL Server 2017
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
-    - name: Breaking changes in SQL Server 2016
-      href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md
   - name: Planning
     href: sql-server/install/planning-a-sql-server-installation.md
     items:

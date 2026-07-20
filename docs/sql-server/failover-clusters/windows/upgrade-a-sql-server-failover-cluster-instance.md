@@ -51,7 +51,7 @@ Before you begin, review the following important information:
 
 - [Plan and test the Database Engine upgrade plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the pre-upgrade checklist, and develop and test the upgrade plan.
 
-- [SQL Server 2016 and 2017: Hardware and software requirements](../../install/hardware-and-software-requirements-for-installing-sql-server.md): Review the software requirements for installing [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)]. If extra software is required, install it on each node before you begin the upgrade process to minimize any downtime.
+- [SQL Server 2017: Hardware and software requirements](../../install/hardware-and-software-requirements-for-installing-sql-server-2017.md): Review the software requirements for installing [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)]. If extra software is required, install it on each node before you begin the upgrade process to minimize any downtime.
 
 ## Perform a rolling upgrade or update
 

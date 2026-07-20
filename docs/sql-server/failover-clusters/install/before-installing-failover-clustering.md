@@ -85,7 +85,7 @@ Verify that the disk where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-
 
 SAN configurations are also supported on Windows Server, starting with [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] and [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Advanced Server and Datacenter Server editions. The Windows Catalog and Hardware Compatibility List category "Cluster/Multi-cluster Device" list the set of SAN-capable storage devices that have been tested and are supported as SAN storage units with multiple WSFC clusters attached. Run cluster validation after finding the certified components.
 
-SMB File Share is also supported for installing data files. For more information, see [Storage Types for Data Files](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).
+SMB File Share is also supported for installing data files. For more information, see [Storage types for data files](../../install/hardware-and-software-requirements-for-installing-sql-server-2025.md#storage-types-for-data-files).
 
 > [!WARNING]  
 >  If you are using Windows File Server as a SMB File Share storage, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup account must have SeSecurityPrivilege on the file server. To do this, using the Local Security Policy console on the file server, add the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup account to **Manage auditing and security log** rights.  
@@ -125,7 +125,7 @@ SMB File Share is also supported for installing data files. For more information
 
   - If you use the root (host) volume exclusively for mount points, the size of the host volume must be at least 5 megabytes (MB). This reduces the probability that the volume will be used for anything other than the mount points.
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the `tempdb` files. Ensure that the path specified for the `tempdb` data and log files is valid on all the cluster nodes. During failover, if the `tempdb` directories aren't available on the failover target node, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource will fail to come online. For more information, see [Storage Types for Data Files](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) and [Database Engine Configuration - Data Directories](../../../database-engine/install-windows/install-sql-server.md).
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the `tempdb` files. Ensure that the path specified for the `tempdb` data and log files is valid on all the cluster nodes. During failover, if the `tempdb` directories aren't available on the failover target node, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource will fail to come online. For more information, see [Storage types for data files](../../install/hardware-and-software-requirements-for-installing-sql-server-2025.md#storage-types-for-data-files) and [SQL Server installation guide](../../../database-engine/install-windows/install-sql-server.md#sql-server-configuration).
 
 - If you deploy a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster on iSCSI technology components, we recommend that you use appropriate caution. For more information, see [Support for SQL Server on iSCSI technology components](/troubleshoot/sql/admin/support-iscsi-technology-components).
 
@@ -288,7 +288,7 @@ After you install the operating system and configure your cluster, you must conf
 
 ## See also
 
-- [Hardware and software requirements for SQL Server 2016 and later versions](../../install/hardware-and-software-requirements-for-installing-sql-server.md)
+- [Hardware and software requirements for SQL Server 2025](../../install/hardware-and-software-requirements-for-installing-sql-server-2025.md)
 - [Check Parameters for the System Configuration Checker](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 - [Failover Cluster Instance Administration and Maintenance](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)
 

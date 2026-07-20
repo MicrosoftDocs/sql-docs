@@ -106,7 +106,7 @@ See [What's new in SQL Server Reporting Services (SSRS)](../reporting-services/w
 - [SQL Server 2016 release notes](sql-server-2016-release-notes.md)
 - [SQL Server Licensing Resources and Documents](https://www.microsoft.com/licensing/docs/view/SQL-Server)
 - [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
-- [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](install/hardware-and-software-requirements-for-installing-sql-server.md)
+- [Hardware and software requirements for SQL Server 2016](install/hardware-and-software-requirements-for-installing-sql-server-2016.md)
 - [Install SQL Server from the Installation Wizard (Setup)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
 - [Install SQL Server servicing updates](../database-engine/install-windows/install-sql-server-servicing-updates.md)
 - [New SQL PowerShell module](https://www.microsoft.com/sql-server/blog/2016/06/30/sql-powershell-july-2016-update)

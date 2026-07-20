@@ -54,7 +54,7 @@ The [!INCLUDE [ssMDSshort](../../includes/ssmdsshort-md.md)] database can be hos
 
 ### Operating System
 
-For information about the supported Windows operating systems and other requirements for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../../includes/ssde-md.md)], see [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+For information about the supported Windows operating systems and other requirements for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../../includes/ssde-md.md)], see [Hardware and software requirements for SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).
 
 ### Accounts and Permissions
 

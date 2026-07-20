@@ -123,7 +123,7 @@ The examples in this article use the `docker` command. However, most of these co
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
 
-- For more information on hardware requirements and processor support, see [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+- For more information on hardware requirements and processor support, see [Hardware and software requirements for SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2017.md).
 
 ::: moniker-end
 

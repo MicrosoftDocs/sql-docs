@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "transactional replication, upgrading databases"
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Upgrade or patch replicated databases
 

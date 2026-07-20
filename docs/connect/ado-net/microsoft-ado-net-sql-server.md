@@ -19,7 +19,7 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 
 
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 ## Getting started (SQL Server)
 

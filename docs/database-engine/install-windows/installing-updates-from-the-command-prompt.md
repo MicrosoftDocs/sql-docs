@@ -9,7 +9,7 @@ ms.subservice: install
 ms.topic: install-set-up-deploy
 ms.custom:
   - intro-installation
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Installing updates from the command line
 

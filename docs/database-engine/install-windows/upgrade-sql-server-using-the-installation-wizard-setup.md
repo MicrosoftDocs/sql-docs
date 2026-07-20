@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "upgrading Database Engine"
   - "Database Engine [SQL Server], upgrading"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)
 

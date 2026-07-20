@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "installing SQL Server, steps"
   - "Setup [SQL Server], steps"
   - "SQL Server, installing"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
 
@@ -25,7 +25,7 @@ This article explains how to install [!INCLUDE [ssNoVersion](../../includes/ssno
 
 The installation experience depends on the version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Select your version.
 
-::: moniker range=">=sql-server-2016 <=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 :::row:::
     :::column:::
@@ -121,7 +121,7 @@ Before you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], r
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-::: moniker range=">=sql-server-2016 <=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 <a id="bkmk_ga_instalpatch"></a>
 

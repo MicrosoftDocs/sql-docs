@@ -9,7 +9,7 @@ ms.subservice: configuration
 ms.topic: how-to
 helpviewer_keywords:
   - "cost threshold for parallelism option"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Server configuration: cost threshold for parallelism
 

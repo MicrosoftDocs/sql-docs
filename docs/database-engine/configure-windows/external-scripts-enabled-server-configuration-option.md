@@ -13,7 +13,7 @@ f1_keywords:
   - "external_scripts_enabled_TSQL"
 helpviewer_keywords:
   - "external scripts enabled option"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 ---
 # Server configuration: external scripts enabled
 

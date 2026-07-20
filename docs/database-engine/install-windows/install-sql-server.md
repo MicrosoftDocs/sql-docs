@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "AdventureWorks sample database"
   - "installing SQL Server, preparing to install"
   - "installation [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # SQL Server installation guide
 

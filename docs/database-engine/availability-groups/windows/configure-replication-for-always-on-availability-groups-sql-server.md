@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
   - "replication [SQL Server], Always On Availability Groups"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Configure replication with Always On availability groups
 

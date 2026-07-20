@@ -11,7 +11,7 @@ f1_keywords:
   - "sql13.swb.agdashboard.agp1WSFCquorum.issues.f1"
 helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # WSFC cluster service is offline
 

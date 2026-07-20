@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "installing SQL Server, logs"
   - "errors [SQL Server], Setup"
   - "logs [SQL Server], Setup"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # View and read SQL Server Setup log files
 

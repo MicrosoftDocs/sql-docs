@@ -7,7 +7,7 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 ---
 # Modify R/Python code to run in SQL Server (In-Database) instances
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -115,7 +115,7 @@ How much you change your code depends on whether you intend to submit the code f
 
 ### Improve performance and security
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-ver15"
 + Avoid writing predictions or intermediate results to a file. Write predictions to a table instead to avoid data movement.
 ::: moniker-end
 
@@ -129,7 +129,7 @@ How much you change your code depends on whether you intend to submit the code f
 
 + Look for ways to use T-SQL rather than R/Python code for set-based computations.
 
-  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
+  ::: moniker range=">=sql-server-2017 || >=sql-server-linux-ver15"
   For example, this R solution shows how user-defined T-SQL functions and R can perform the same feature engineering task: [Data Science End-to-End Walkthrough](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
   ::: moniker-end
 
@@ -177,7 +177,7 @@ To view examples of how R and Python solutions can be deployed in SQL Server, se
 
 + [Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-ver15"
 + [SQL development for R data scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 ::: moniker-end
 

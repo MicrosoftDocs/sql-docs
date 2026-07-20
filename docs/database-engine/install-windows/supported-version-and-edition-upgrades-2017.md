@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Supported version and edition upgrades (SQL Server 2017)
 

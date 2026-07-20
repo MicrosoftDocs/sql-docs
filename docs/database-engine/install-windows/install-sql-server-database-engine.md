@@ -11,7 +11,7 @@ ms.custom:
   - intro-installation
 helpviewer_keywords:
   - "Database Engine [SQL Server], installing"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Install SQL Server Database Engine
 

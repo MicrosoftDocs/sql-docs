@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "upgrading Analysis Services"
   - "installing Analysis Services, upgrading"
   - "SSAS, upgrading"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Upgrade Analysis Services
 

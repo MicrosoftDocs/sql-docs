@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "parameters [SQL Server], system configuration checker"
   - "configuration checkers [SQL Server]"
   - "Setup [SQL Server], system configuration checker"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Check parameters for the System Configuration Checker
 

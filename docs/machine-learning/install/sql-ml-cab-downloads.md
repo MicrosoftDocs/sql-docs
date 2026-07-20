@@ -7,7 +7,7 @@ ms.date: 09/21/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services
 

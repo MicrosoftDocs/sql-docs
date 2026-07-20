@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "compatibility [SQL Server], databases"
   - "compatibility levels [SQL Server], after upgrade"
   - "Database Engine [SQL Server], upgrading"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Upgrade the Database Engine
 

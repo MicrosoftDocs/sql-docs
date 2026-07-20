@@ -1,13 +1,9 @@
 - name: SQL Server Integration Services (SSIS)
   href: ../integration-services/sql-server-integration-services.md
-
 - name: Welcome to SQL Server >
   href: ../sql-server/index.yml
-
 - name: Overview
   items:
-  - name: What's New in Integration Services in SQL Server 2016
-    href: ../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md
   - name: What's New in Integration Services in SQL Server 2017
     href: ../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md
   - name: What's New in Integration Services in SQL Server 2025
@@ -67,7 +63,7 @@
     href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
   - name: Schedule packages in Azure with SSMS
     href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
-  - name: Migrate to Azure process and tools 
+  - name: Migrate to Azure process and tools
     href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Integrating with Microsoft Fabric
   items:
@@ -97,8 +93,8 @@
 - name: SSIS DevOps
   href: ../integration-services/devops/ssis-devops-overview.md
   items:
-    - name: Standalone SSIS DevOps Tools
-      href: ../integration-services/devops/ssis-devops-standalone.md
+  - name: Standalone SSIS DevOps Tools
+    href: ../integration-services/devops/ssis-devops-standalone.md
 - name: User interface
   href: ../integration-services/integration-services-user-interface.md
   items:
@@ -143,9 +139,6 @@
     href: ../integration-services/ssis-package-upgrade-wizard-f1-help.md
   - name: Package and Project Parameters
     href: ../integration-services/integration-services-ssis-package-and-project-parameters.md
-
-
-
 - name: Connection Managers
   items:
   - name: Overview
@@ -204,9 +197,6 @@
     href: ../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md
   - name: WMI Connection Manager
     href: ../integration-services/connection-manager/wmi-connection-manager.md
-
-
-
 - name: Control Flow
   items:
   - name: Overview
@@ -386,9 +376,6 @@
         href: ../integration-services/control-flow/validate-xml-with-the-xml-task.md
   - name: Precedence Constraints
     href: ../integration-services/control-flow/precedence-constraints.md
-
-
-
 - name: Data Flow
   items:
   - name: Overview
@@ -422,9 +409,6 @@
     href: ../integration-services/data-flow/source-assistant.md
   - name: Destination Assistant
     href: ../integration-services/data-flow/destination-assistant.md
-
-
-
   - name: Sources and Destinations
     items:
     - name: ADO NET Source
@@ -469,7 +453,7 @@
     - name: Data Streaming Destination
       href: ../integration-services/data-flow/data-streaming-destination.md
       items:
-      - name: "Walkthrough: Publish an SSIS Package as a SQL View"
+      - name: 'Walkthrough: Publish an SSIS Package as a SQL View'
         href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
     - name: DataReader Destination
       href: ../integration-services/data-flow/datareader-destination.md
@@ -500,7 +484,7 @@
     - name: OData Source
       href: ../integration-services/data-flow/odata-source.md
       items:
-      - name: "Tutorial: Using the OData Source"
+      - name: 'Tutorial: Using the OData Source'
         href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
       - name: Provide an OData Source Query at Runtime
         href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
@@ -615,9 +599,6 @@
         href: ../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md
       - name: SQL Server Destination Custom Properties
         href: ../integration-services/data-flow/sql-server-destination-custom-properties.md
-
-
-
 - name: Transformations
   items:
   - name: Overview
@@ -752,14 +733,6 @@
     href: ../integration-services/data-flow/transformations/transform-data-with-transformations.md
   - name: Transformation Custom Properties
     href: ../integration-services/data-flow/transformations/transformation-custom-properties.md
-
-
-
-
-
-
-
-
 - name: XML Source
   href: ../integration-services/data-flow/xml-source.md
   items:
@@ -774,9 +747,6 @@
     href: ../integration-services/variables-window.md
   - name: System Variables
     href: ../integration-services/system-variables.md
-
-
-
 - name: Expressions
   items:
   - name: Overview
@@ -816,49 +786,49 @@
       href: ../integration-services/expressions/operator-precedence-and-associativity.md
     - name: Cast (SSIS Expression)
       href: ../integration-services/expressions/cast-ssis-expression.md
-    - name: "() (Parentheses) (SSIS Expression)"
+    - name: () (Parentheses) (SSIS Expression)
       href: ../integration-services/expressions/parentheses-ssis-expression.md
-    - name: "+ (Add) (SSIS)"
+    - name: + (Add) (SSIS)
       href: ../integration-services/expressions/add-ssis.md
-    - name: "+ (Concatenate) (SSIS Expression)"
+    - name: + (Concatenate) (SSIS Expression)
       href: ../integration-services/expressions/concatenate-ssis-expression.md
-    - name: "- (Subtract) (SSIS Expression)"
+    - name: '- (Subtract) (SSIS Expression)'
       href: ../integration-services/expressions/subtract-ssis-expression.md
-    - name: "- (Negate) (SSIS Expression)"
+    - name: '- (Negate) (SSIS Expression)'
       href: ../integration-services/expressions/negate-ssis-expression.md
-    - name: "* (Multiply) (SSIS Expression)"
+    - name: '* (Multiply) (SSIS Expression)'
       href: ../integration-services/expressions/multiply-ssis-expression.md
     - name: Divide (SSIS Expression)
       href: ../integration-services/expressions/divide-ssis-expression.md
     - name: (Modulo) (SSIS Expression)
       href: ../integration-services/expressions/modulo-ssis-expression.md
-    - name: "|| (Logical OR) (SSIS Expression)"
+    - name: '|| (Logical OR) (SSIS Expression)'
       href: ../integration-services/expressions/logical-or-ssis-expression.md
-    - name: "&& (Logical AND) (SSIS Expression)"
+    - name: '&& (Logical AND) (SSIS Expression)'
       href: ../integration-services/expressions/logical-and-ssis-expression.md
-    - name: "! (Logical Not) (SSIS Expression)"
+    - name: '! (Logical Not) (SSIS Expression)'
       href: ../integration-services/expressions/logical-not-ssis-expression.md
-    - name: "| (Bitwise Inclusive OR) (SSIS Expression)"
+    - name: '| (Bitwise Inclusive OR) (SSIS Expression)'
       href: ../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md
-    - name: "^ (Bitwise Exclusive OR) (SSIS Expression)"
+    - name: ^ (Bitwise Exclusive OR) (SSIS Expression)
       href: ../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md
-    - name: "& (Bitwise AND) (SSIS Expression)"
+    - name: '& (Bitwise AND) (SSIS Expression)'
       href: ../integration-services/expressions/bitwise-and-ssis-expression.md
-    - name: "~ (Bitwise Not) (SSIS Expression)"
+    - name: ~ (Bitwise Not) (SSIS Expression)
       href: ../integration-services/expressions/bitwise-not-ssis-expression.md
-    - name: "== (Equal) (SSIS Expression)"
+    - name: == (Equal) (SSIS Expression)
       href: ../integration-services/expressions/equal-ssis-expression.md
-    - name: "!= (Unequal) (SSIS Expression)"
+    - name: '!= (Unequal) (SSIS Expression)'
       href: ../integration-services/expressions/unequal-ssis-expression.md
-    - name: "> (Greater Than) (SSIS Expression)"
+    - name: '> (Greater Than) (SSIS Expression)'
       href: ../integration-services/expressions/greater-than-ssis-expression.md
-    - name: "< (Less Than) (SSIS Expression)"
+    - name: < (Less Than) (SSIS Expression)
       href: ../integration-services/expressions/less-than-ssis-expression.md
-    - name: ">= (Greater Than or Equal To) (SSIS Expression)"
+    - name: '>= (Greater Than or Equal To) (SSIS Expression)'
       href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
-    - name: "<= (Less Than or Equal To) (SSIS Expression)"
+    - name: <= (Less Than or Equal To) (SSIS Expression)
       href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-    - name: "? : (Conditional) (SSIS Expression)"
+    - name: '? : (Conditional) (SSIS Expression)'
       href: ../integration-services/expressions/conditional-ssis-expression.md
   - name: Functions (SSIS Expression)
     href: ../integration-services/expressions/functions-ssis-expression.md
@@ -941,10 +911,6 @@
       href: ../integration-services/expressions/upper-ssis-expression.md
     - name: YEAR (SSIS Expression)
       href: ../integration-services/expressions/year-ssis-expression.md
-
-
-
-
 - name: Event Handlers
   href: ../integration-services/integration-services-ssis-event-handlers.md
 - name: Queries
@@ -968,16 +934,13 @@
     href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
   - name: Load-Balancing Packages on Remote Servers by Using SQL Server Agent
     href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-
-
-
 - name: Scale Out
   items:
   - name: Overview
     href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
   - name: Get started with SSIS Scale Out on a single computer
     href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-  - name: "Walkthrough: Set up Integration Services Scale Out"
+  - name: 'Walkthrough: Set up Integration Services Scale Out'
     href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
   - name: Run packages in Scale Out
     href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -999,11 +962,6 @@
     href: ../integration-services/scale-out/scale-out-failover-cluster-instance.md
   - name: Troubleshoot Scale Out
     href: ../integration-services/scale-out/troubleshooting-scale-out.md
-
-
-
-
-
 - name: Catalog and Server
   href: ../integration-services/catalog/integration-services-ssis-server-and-catalog.md
 - name: SSIS Catalog
@@ -1020,9 +978,6 @@
   href: ../integration-services/service/events-logged-by-the-integration-services-service.md
 - name: Integration Services (SSIS) in a Cluster
   href: ../integration-services/service/integration-services-ssis-in-a-cluster.md
-
-
-
 - name: Packages
   items:
   - name: Overview
@@ -1041,9 +996,6 @@
     href: ../integration-services/performance/integration-services-ssis-logging.md
   - name: Performance Counters
     href: ../integration-services/performance/performance-counters.md
-
-
-
 - name: Troubleshoot
   items:
   - name: Overview
@@ -1066,9 +1018,6 @@
     href: ../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md
   - name: Generating Dump Files for Package Execution
     href: ../integration-services/troubleshooting/generating-dump-files-for-package-execution.md
-
-
-
 - name: catalog reference
   items:
   - name: Overview
@@ -1127,9 +1076,6 @@
     href: ../integration-services/system-views/catalog-master-properties-ssisdb-database.md
   - name: catalog.worker_agents
     href: ../integration-services/system-views/catalog-worker-agents-ssisdb-database.md
-
-
-
 - name: Stored Procedures
   items:
   - name: Overview
@@ -1270,9 +1216,6 @@
       href: ../integration-services/system-stored-procedures/catalog-cleanup-server-log.md
   - name: System function - dm_execution_performance_counters
     href: ../integration-services/functions-dm-execution-performance-counters.md
-
-
-
 - name: Errors and Events Reference
   href: ../integration-services/errors-and-events-reference-integration-services.md
   items:
@@ -1610,8 +1553,6 @@
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 - name: Load data from or into Oracle database
   href: ../integration-services/load-data-to-from-oracle-generic.md
-
-
 - name: Change Data Capture
   items:
   - name: Overview
@@ -1748,13 +1689,6 @@
         href: ../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md
       - name: How to Work with CDC Services
         href: ../integration-services/change-data-capture/how-to-work-with-cdc-services.md
-
-
-
-
-
-
-
 - name: Microsoft Connector for SAP BW
   href: ../integration-services/microsoft-connector-for-sap-bw.md
   items:
@@ -1772,7 +1706,7 @@
   - name: Create a Package
     href: ../integration-services/ssis-how-to-create-an-etl-package.md
     items:
-    - name: "Lesson 1: Create a Project and Basic Package"
+    - name: 'Lesson 1: Create a Project and Basic Package'
       href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
       items:
       - name: Lesson 1-1 - Creating a New Integration Services Project
@@ -1793,7 +1727,7 @@
         href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
       - name: Lesson 1-9 - Testing the Lesson 1 Tutorial Package
         href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
-    - name: "Lesson 2: Add Looping"
+    - name: 'Lesson 2: Add Looping'
       href: ../integration-services/lesson-2-adding-looping-with-ssis.md
       items:
       - name: Lesson 2-1 - Copying the Lesson 1 Package
@@ -1804,7 +1738,7 @@
         href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
       - name: Lesson 2-4 - Testing the Lesson 2 Tutorial Package
         href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-    - name: "Lesson 3: Add Logging"
+    - name: 'Lesson 3: Add Logging'
       href: ../integration-services/lesson-3-add-logging-with-ssis.md
       items:
       - name: Lesson 3-1 - Copying the Lesson 2 Package
@@ -1813,7 +1747,7 @@
         href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
       - name: Lesson 3-3 - Testing the Lesson 3 Tutorial Package
         href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
-    - name: "Lesson 4: Add Error Flow Redirection"
+    - name: 'Lesson 4: Add Error Flow Redirection'
       href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
       items:
       - name: Lesson 4-1 - Copying the Lesson 3 Package
@@ -1826,7 +1760,7 @@
         href: ../integration-services/lesson-4-4-adding-a-flat-file-destination.md
       - name: Lesson 4-5 - Testing the Lesson 4 Tutorial Package
         href: ../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md
-    - name: "Lesson 5: Add Package Configurations for the Package Deployment Model"
+    - name: 'Lesson 5: Add Package Configurations for the Package Deployment Model'
       href: ../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
       items:
       - name: Lesson 5-1 - Copying the Lesson 4 Package
@@ -1837,7 +1771,7 @@
         href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
       - name: Lesson 5-4 - Testing the Lesson 5 Tutorial Package
         href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
-    - name: "Lesson 6: Using Parameters with the Project Deployment Model"
+    - name: 'Lesson 6: Using Parameters with the Project Deployment Model'
       href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
       - name: Lesson 6-1 - Copying the Lesson 5 Package
@@ -1851,7 +1785,7 @@
   - name: Deploy Packages
     href: ../integration-services/deploy-packages-with-ssis.md
     items:
-    - name: "Lesson 1: Preparing to Create the Deployment Bundle"
+    - name: 'Lesson 1: Preparing to Create the Deployment Bundle'
       href: ../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md
       items:
       - name: Lesson 1-1 - Creating Working Folders and Environment Variables
@@ -1864,14 +1798,14 @@
         href: ../integration-services/lesson-1-4-adding-package-configurations.md
       - name: Lesson 1-5 - Testing the Updated Packages
         href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
-    - name: "Lesson 2: Create the Deployment Bundle"
+    - name: 'Lesson 2: Create the Deployment Bundle'
       href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
       items:
       - name: Lesson 2-1 - Building the Deployment Utility
         href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
       - name: Lesson 2-2 - Verifying the Deployment Bundle
         href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-    - name: "Lesson 3: Install Packages"
+    - name: 'Lesson 3: Install Packages'
       href: ../integration-services/lesson-3-install-ssis-packages.md
       items:
       - name: Lesson 3-1 - Copying the Deployment Bundle

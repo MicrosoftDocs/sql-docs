@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML]"
   - "XSD schemas [SQLXML], annotations"
   - "schemas [SQLXML]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Annotated XSD Schemas in SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

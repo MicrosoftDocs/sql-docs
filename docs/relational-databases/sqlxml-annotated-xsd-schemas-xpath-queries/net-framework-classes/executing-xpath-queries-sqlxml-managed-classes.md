@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Managed Classes [SQLXML], executing XPath queries"
   - "mapping schema [SQLXML], XPath queries"
   - "SQLXML Managed Classes, executing XPath queries"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Executing XPath Queries (SQLXML Managed Classes)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

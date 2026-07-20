@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "execution plans [SQL Server], how-to topics"
   - "SQL Server Management Studio [SQL Server], execution plans"
   - "tuning queries [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Display and save execution plans
 

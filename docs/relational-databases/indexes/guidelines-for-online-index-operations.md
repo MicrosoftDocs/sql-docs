@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "disk space [SQL Server], indexes"
   - "nonclustered indexes [SQL Server], online operations"
   - "transaction logs [SQL Server], indexes"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Guidelines for online index operations

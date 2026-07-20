@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQL Server I/O architecture"
   - "SQL Server I/O guide"
   - "SQL Server I/O guidance"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # SQL Server I/O fundamentals
 

@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: samples
 ms.topic: how-to
 ms.custom: intro-installation
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || >=aps-pdw-2016 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || >=aps-pdw-2016 || =azuresqldb-mi-current"
 ---
 # Install and configure WideWorldImportersDW sample database
 

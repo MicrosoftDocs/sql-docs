@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "geography data type [SQL Server], spatial data"
   - "planar spatial data [SQL Server], geometry data type"
   - "spatial data types [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Spatial Data Types Overview
 

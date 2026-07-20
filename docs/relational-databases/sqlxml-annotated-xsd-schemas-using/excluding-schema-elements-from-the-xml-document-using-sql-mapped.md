@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "annotated XSD schemas, excluding schema elements"
   - "mapped annotation"
   - "table mapping [SQLXML], excluding schema elements"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Excluding Schema Elements from the XML Document Using sql:mapped
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

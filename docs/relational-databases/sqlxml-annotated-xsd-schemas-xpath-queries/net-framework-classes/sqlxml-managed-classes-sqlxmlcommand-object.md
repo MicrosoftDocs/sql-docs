@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "SqlXmlParameter CreateParameter() method"
   - "ClientSideXML property"
   - "CommandStream property"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # SQLXML Managed Classes - SqlXmlCommand Object
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

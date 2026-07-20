@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "failover [SQL Server], managing metadata"
   - "database mirroring [SQL Server], metadata"
   - "users [SQL Server], orphaned"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017"
 ---
 # Troubleshoot orphaned users (SQL Server)
 

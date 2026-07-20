@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "server-side XML formatting"
   - "AUTO mode"
   - "client-side XPath"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Client-side vs. Server-side XML Formatting (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]

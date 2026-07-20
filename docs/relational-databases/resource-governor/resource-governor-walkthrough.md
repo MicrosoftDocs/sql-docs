@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "classifier function [SQL Server], test"
   - "classifier function [SQL Server], create"
   - "Resource Governor, classifier function test"
-monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Tutorial: Resource governor configuration examples and best practices

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "passwords [SQL Server], symbols"
   - "characters [SQL Server], password policies"
   - "strong passwords [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # SQL Server security best practices

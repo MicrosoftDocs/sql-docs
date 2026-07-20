@@ -11,7 +11,7 @@ ms.custom:
   - ignite-2025
 helpviewer_keywords:
   - "triggers [SQL Server], security"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Manage trigger security
 
@@ -44,7 +44,7 @@ What this trigger means is that as soon as a user that has permission to execute
 
 You can take the following measures to prevent trigger code from executing under escalated privileges:
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 
 - Be aware of the DML and DDL triggers that exist in the database and on the server instance by querying the [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) and [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) catalog views. The following query returns all DML and database-level DDL triggers in the current database, and all server-level DDL triggers on the server instance:
 

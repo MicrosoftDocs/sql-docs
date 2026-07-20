@@ -10,7 +10,7 @@ ms.subservice: samples
 ms.topic: sample
 ms.custom:
   - ignite-2025
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # SQL samples
 

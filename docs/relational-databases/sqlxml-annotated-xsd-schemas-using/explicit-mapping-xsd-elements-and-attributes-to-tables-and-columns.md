@@ -10,7 +10,7 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "explicit schema mapping [SQLXML]"
   - "XPath queries [SQLXML], annotated XSD schemas in queries"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Custom XSD mappings to tables/columns (SQLXML)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

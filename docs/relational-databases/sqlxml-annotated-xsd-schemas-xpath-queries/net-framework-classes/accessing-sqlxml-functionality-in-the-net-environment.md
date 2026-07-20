@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, accessing SQLXML functionality"
   - "DiffGrams [SQLXML], accessing SQLXML functionality"
   - ".NET Framework [SQLXML], accessing SQLXML functionality"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Accessing SQLXML Functionality in the .NET Environment
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

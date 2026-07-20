@@ -9,7 +9,7 @@ ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "security [SQLXML], about security"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Core SQLXML Security Considerations
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

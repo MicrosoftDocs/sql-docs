@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "sql server index architecture"
   - "sql server index design guide"
   - "sql server index design guidance"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Index architecture and design guide

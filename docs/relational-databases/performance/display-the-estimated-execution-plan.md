@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "customizing execution plan display [SQL Server]"
   - "modifying execution plan display"
   - "custom zoom [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric-sqldb"
 ---
 # Display the Estimated Execution Plan
 

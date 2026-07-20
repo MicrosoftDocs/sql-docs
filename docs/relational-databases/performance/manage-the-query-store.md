@@ -9,7 +9,7 @@ ms.subservice: performance
 ms.topic: best-practice
 helpviewer_keywords:
   - "Query Store, best practices"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Best practices for managing the Query Store

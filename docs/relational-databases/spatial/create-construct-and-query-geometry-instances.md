@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "planar spatial data [SQL Server], getting started"
   - "geometry data type [SQL Server], getting started"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Create, construct, and query geometry instances
 

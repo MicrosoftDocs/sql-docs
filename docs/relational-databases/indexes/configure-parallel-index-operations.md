@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "max degree of parallelism option"
   - "MAXDOP index option, parallel index operations"
   - "parallel index operations [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Configure parallel index operations
 

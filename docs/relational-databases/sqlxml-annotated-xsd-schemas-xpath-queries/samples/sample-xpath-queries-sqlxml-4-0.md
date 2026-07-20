@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "sample XPath queries [SQLXML]"
   - "mapping schema [SQLXML], queries"
   - "XPath queries [SQLXML], samples"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Sample XPath Queries (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

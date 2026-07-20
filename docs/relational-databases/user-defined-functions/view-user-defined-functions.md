@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "viewing user-defined functions"
   - "user-defined functions [SQL Server], viewing"
   - "status information [SQL Server], user-defined functions"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # View user-defined functions
 

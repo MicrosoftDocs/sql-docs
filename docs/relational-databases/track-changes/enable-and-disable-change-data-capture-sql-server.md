@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "change data capture, enabling databases"
   - "change data capture, disabling databases"
   - "change data capture, disabling tables"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Enable and disable change data capture

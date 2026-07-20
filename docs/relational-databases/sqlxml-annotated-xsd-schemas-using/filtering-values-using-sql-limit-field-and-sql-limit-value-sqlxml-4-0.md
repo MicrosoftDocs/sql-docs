@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "limiting values [SQLXML]"
   - "limit-value annotation"
   - "limit-field annotation"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

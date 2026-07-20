@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "deadlocks [SQL Server], opening files"
   - "opening deadlock files"
   - "printing deadlock files"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Open, view, and print a deadlock file in SQL Server Management Studio (SSMS)
 

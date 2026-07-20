@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], included columns"
   - "designing indexes [SQL Server], included columns"
   - "nonkey columns"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Create indexes with included columns
 

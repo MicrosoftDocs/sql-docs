@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Managed Classes [SQLXML], client-side XML formatting"
   - "SQLXML Managed Classes, client-side XML formatting"
   - "ClientSideXml property"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

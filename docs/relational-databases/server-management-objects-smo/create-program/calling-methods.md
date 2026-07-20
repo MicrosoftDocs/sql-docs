@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "calling methods"
   - "SQL Server Management Objects, method calling"
   - "SMO [SQL Server], method calling"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Calling Methods
 

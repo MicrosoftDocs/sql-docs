@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "renaming triggers"
   - "modifying triggers"
   - "DML triggers, modifying"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Modify or Rename DML Triggers
 

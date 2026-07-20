@@ -9,7 +9,7 @@ ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "element does not map [SQLXML]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Creating Constant Elements Using sql:is-constant (SQLXML 4.0)
 

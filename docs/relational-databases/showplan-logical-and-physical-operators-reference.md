@@ -135,7 +135,7 @@ helpviewer_keywords:
   - "physical operators [SQL Server]"
   - "ActualRebinds attribute"
   - "execution plans [SQL Server], reading output"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Logical and physical showplan operator reference
 

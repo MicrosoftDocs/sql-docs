@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "statistical information [SQL Server], indexes"
   - "index disabling [SQL Server]"
   - "indexed views [SQL Server], disabled indexes"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Disable indexes and constraints
 

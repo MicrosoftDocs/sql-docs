@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "deleted tables"
   - "INSERT statement [SQL Server], DML triggers"
   - "DML triggers, deleted or inserted tables"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Use the inserted and deleted tables

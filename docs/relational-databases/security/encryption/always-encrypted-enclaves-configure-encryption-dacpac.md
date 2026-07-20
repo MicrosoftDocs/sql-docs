@@ -10,7 +10,7 @@ ms.subservice: security
 ms.topic: concept-article
 helpviewer_keywords:
   - "Always Encrypted, configure with DACPAC"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Configure column encryption in-place with DAC package 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

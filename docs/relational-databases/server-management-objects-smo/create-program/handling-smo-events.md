@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQL Server Management Objects, events"
   - "SMO [SQL Server], events"
   - "events [SMO], about events"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Handle SMO events
 

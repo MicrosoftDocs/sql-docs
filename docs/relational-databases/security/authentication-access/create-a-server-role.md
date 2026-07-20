@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.swb.serverrole.members.f1"
 helpviewer_keywords:
   - "SERVER ROLE, creating"
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Create a Server Role
 

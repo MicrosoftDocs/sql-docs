@@ -14,7 +14,7 @@ f1_keywords:
   - "sql13.swb.approle.general.f1"
 helpviewer_keywords:
   - "application roles [SQL Server], creating"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Create an application role
 

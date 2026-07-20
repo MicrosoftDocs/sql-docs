@@ -10,7 +10,7 @@ ms.topic: concept-article
 ms.custom:
   - build-2025
 # customer intent: As a database engineer or administrator, I want understand how the security cache works so that I can understand performance impacts.
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Security cache concepts

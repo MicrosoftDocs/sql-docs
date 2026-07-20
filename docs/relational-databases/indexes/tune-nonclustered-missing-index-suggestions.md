@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.custom:
   - template-how-to
   - ignite-2025
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Tune nonclustered indexes with missing index suggestions

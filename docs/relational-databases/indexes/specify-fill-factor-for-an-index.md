@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "fill factor [SQL Server]"
   - "page splits [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Specify fill factor for an index

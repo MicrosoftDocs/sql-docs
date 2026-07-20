@@ -13,7 +13,7 @@ f1_keywords:
 helpviewer_keywords:
   - "workload groups [SQL Server], move"
   - "Resource Governor, workload group move"
-monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Move a workload group

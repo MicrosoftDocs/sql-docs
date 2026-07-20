@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "actual execution plans"
   - "viewing execution plans"
   - "execution plans [SQL Server], displaying"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Display an actual execution plan
 

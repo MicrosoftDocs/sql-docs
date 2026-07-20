@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "security [SQL Server]"
   - "database security [SQL Server]"
   - "databases [SQL Server], security"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Security for SQL Server Database Engine and Azure SQL Database

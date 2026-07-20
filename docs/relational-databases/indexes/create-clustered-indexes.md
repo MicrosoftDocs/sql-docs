@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "clustered indexes, PRIMARY KEY constraint"
   - "clustered indexes, UNIQUE constraint"
   - "indexes [SQL Server], clustered"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Create a clustered index
 

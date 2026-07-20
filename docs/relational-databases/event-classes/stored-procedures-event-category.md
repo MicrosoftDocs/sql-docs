@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Stored Procedures event category [SQL Server]"
   - "SQL Server event classes, Stored Procedures event category"
   - "event classes [SQL Server], Stored Procedures event category"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Stored Procedures Event Category
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]

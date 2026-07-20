@@ -39,7 +39,7 @@ helpviewer_keywords:
   - "MDS"
   - "Master Data Services"
   - "Synapse Link"
-monikerRange: ">=sql-server-linux-2017 || >=sql-server-2016"
+monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017"
 ---
 # Discontinued Database Engine functionality in SQL Server
 

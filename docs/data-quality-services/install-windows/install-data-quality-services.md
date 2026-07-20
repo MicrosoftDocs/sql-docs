@@ -59,7 +59,7 @@ ms.custom:
 >  
 > Although Microsoft Excel is not a prerequisite for installing Data Quality Client, Microsoft Excel 2003 or later must be installed on the Data Quality Client computer to perform various operations in the client application such as importing domain values from an excel file or mapping to the source data in an Excel file for knowledge discovery, cleansing, or matching activities.  
   
- For detailed information about the minimum system requirements for installing [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ For detailed information about the minimum system requirements for installing [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], see [Hardware and software requirements for SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).  
   
 ##  <a name="DQSInstallation"></a> Data Quality Services installation tasks
 

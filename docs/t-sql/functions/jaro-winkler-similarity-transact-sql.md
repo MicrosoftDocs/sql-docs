@@ -12,7 +12,7 @@ ms.custom:
   - ignite-2025
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb || >=sql-server-2016 || =fabric"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb || >=sql-server-2017 || =fabric"
 ---
 
 # JARO_WINKLER_SIMILARITY (Transact-SQL) preview

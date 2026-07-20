@@ -10,7 +10,7 @@ ms.topic: concept-article
 f1_keywords:
   - "sql13.swb.nativecompilationwizard.f1"
   - "swb.nativecompilationwizard.f1"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Native Compilation Advisor
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

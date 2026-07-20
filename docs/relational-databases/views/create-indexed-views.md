@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "large_value_types_out_of_row option"
   - "indexed views [SQL Server]"
   - "views [SQL Server], indexed views"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Create indexed views
 

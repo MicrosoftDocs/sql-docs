@@ -10,7 +10,7 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "SQLXML, security"
   - "security [SQLXML]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # SQLXML 4.0 Security Considerations
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

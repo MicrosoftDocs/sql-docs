@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "bidirectional replication"
   - "transactional replication, bidirectional replication"
   - "bidirectional transactional replication"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Bidirectional Transactional Replication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

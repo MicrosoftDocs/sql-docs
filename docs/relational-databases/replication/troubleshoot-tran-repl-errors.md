@@ -10,7 +10,7 @@ ms.subservice: replication
 ms.topic: how-to
 helpviewer_keywords:
   - "replication [SQL Server], tutorials"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ms.custom:
   - updatefrequency5
   - sfi-image-nochange

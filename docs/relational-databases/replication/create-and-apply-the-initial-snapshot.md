@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "snapshots [SQL Server replication], creating"
   - "snapshot replication [SQL Server], initial snapshots"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Create and Apply the Initial Snapshot
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

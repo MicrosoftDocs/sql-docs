@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.monitor.addpublisher.f1"
 helpviewer_keywords:
   - "Add Publisher dialog box"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Add Publisher
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

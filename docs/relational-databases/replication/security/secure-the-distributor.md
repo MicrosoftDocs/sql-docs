@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "security [SQL Server replication], Distributors"
   - "Distributors [SQL Server replication], security"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Secure the Distributor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

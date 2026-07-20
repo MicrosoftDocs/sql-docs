@@ -12,7 +12,7 @@ ms.custom:
   - ignite-2025
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # sys.internal_partitions (Transact-SQL)

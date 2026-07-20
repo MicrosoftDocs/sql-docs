@@ -10,7 +10,7 @@ ms.subservice: polybase
 ms.topic: reference
 helpviewer_keywords:
   - "PolyBase"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # PolyBase connectivity configuration (Transact-SQL)
 

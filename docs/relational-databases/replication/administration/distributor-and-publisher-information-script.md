@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "Publishers [SQL Server replication], information scripts"
   - "Distributors [SQL Server replication], information scripts"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Distributor and Publisher Information Script
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

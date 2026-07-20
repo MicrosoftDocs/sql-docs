@@ -10,7 +10,7 @@ ms.subservice: performance
 ms.topic: how-to
 helpviewer_keywords:
   - "Resource Governor, enabling"
-monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Enable resource governor

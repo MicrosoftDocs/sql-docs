@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "UNIQUE constraints [SQL Server], creating"
   - "constraints [SQL Server], creating"
   - "constraints [SQL Server], unique"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Create unique constraints
 

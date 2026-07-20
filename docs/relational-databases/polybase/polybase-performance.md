@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: polybase
 ms.custom: linux-related-content
 ms.topic: concept-article
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 
 # Performance considerations in PolyBase for SQL Server

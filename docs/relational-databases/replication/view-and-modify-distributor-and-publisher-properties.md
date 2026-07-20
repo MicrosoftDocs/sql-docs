@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Distributors [SQL Server replication], modifying"
   - "modifying replication properties, Distributors"
   - "Distributors [SQL Server replication], properties"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # View and Modify Distributor and Publisher Properties
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], about user-defined functions"
   - "UDF"
   - "TVF"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # User-defined functions
 

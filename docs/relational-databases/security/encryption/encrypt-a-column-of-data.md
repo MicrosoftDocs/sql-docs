@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "cryptography [SQL Server], columns"
   - "column level encryption"
   - "cell level encryption"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric-sqldb"
 ---
 
 # Encrypt a Column of Data

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "WITH RECOMPILE clause"
   - "recompiling stored procedures"
   - "stored procedures [SQL Server], recompiling"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Recompile a Stored Procedure
 [!INCLUDE [SQL Server Azure SQL Database PDW-fabric](../../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]

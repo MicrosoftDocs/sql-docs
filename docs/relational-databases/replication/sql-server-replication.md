@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "replication [SQL Server], about"
   - "replication [SQL Server]"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # SQL Server Replication
 

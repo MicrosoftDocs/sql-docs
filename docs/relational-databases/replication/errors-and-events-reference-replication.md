@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "replication [SQL Server], troubleshooting"
   - "errors [SQL Server replication]"
   - "errors and events reference [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Errors and Events Reference (Replication)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

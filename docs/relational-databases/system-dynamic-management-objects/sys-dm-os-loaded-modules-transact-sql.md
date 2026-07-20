@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sys.dm_os_loaded_modules dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016"
 ---
 # sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]

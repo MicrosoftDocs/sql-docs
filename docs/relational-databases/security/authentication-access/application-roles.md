@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "users [SQL Server], application roles"
   - "authentication [SQL Server], roles"
   - "groups [SQL Server], roles"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Application Roles
 

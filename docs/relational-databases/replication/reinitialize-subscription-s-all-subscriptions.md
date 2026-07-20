@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.reinit.all.f1"
 helpviewer_keywords:
   - "Reinitialize Subscription(s) dialog box"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Reinitialize Subscription(s) - All Subscriptions
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

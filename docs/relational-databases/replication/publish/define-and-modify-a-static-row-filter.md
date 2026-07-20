@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "modifying filters, static row"
   - "static row filters"
   - "filters [SQL Server replication], static row"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Define and Modify a Static Row Filter
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

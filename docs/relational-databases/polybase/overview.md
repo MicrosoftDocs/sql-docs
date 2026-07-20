@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-ver15 || >=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || >=aps-pdw-2016 || =azure-sqldw-latest"
 ---
 
 # PolyBase overview

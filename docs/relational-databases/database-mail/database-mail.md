@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
 ai-usage: ai-assisted
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Database Mail
 

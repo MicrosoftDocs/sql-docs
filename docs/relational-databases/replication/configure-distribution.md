@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication], about distribution databases"
   - "distribution databases [SQL Server replication]"
   - "merge replication [SQL Server replication], configuring distribution"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Configure Distribution
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

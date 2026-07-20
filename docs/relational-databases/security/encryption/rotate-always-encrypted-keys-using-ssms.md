@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
 helpviewer_keywords:
   - "Always Encrypted, configure with SSMS"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Rotate Always Encrypted keys using SQL Server Management Studio
 

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "constraints [SQL Server], deleting"
   - "deleting constraints"
   - "constraints [SQL Server], unique"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Delete Unique Constraints

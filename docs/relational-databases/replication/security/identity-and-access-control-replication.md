@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "security [SQL Server replication], identity and access control"
   - "authentication [SQL Server replication]"
   - "identity [Replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Identity and Access Control (Replication)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

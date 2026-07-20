@@ -11,7 +11,7 @@ ms.custom:
   - updatefrequency5
 f1_keywords:
   - "sql13.rep.replconflictviewer.cvqueued.f1"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Replication Conflict Viewer (Transactional Replication)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

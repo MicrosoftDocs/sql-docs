@@ -42,7 +42,7 @@ To recover a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database
 
   Under the full recovery model or bulk-logged recovery model, you can restore individual pages. Page restores can be performed on any database, regardless of the number of filegroups.
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore work across all supported operating systems. For information about the supported operating systems, see [Hardware and software requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). For information about support for backups from earlier versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see the [Compatibility Support](../../t-sql/statements/restore-statements-transact-sql.md#compatibility-support) section of [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore work across all supported operating systems. For information about the supported operating systems, see [Hardware and software requirements for SQL Server 2025](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025.md). For information about support for backups from earlier versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see the [Compatibility Support](../../t-sql/statements/restore-statements-transact-sql.md#compatibility-support) section of [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).
 
 ## <a id="RestoreScenariosOv"></a> Restore scenarios
 

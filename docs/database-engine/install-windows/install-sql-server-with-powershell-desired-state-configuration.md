@@ -11,7 +11,7 @@ ms.topic: install-set-up-deploy
 ms.custom:
   - intro-installation
 ms.devlang: powershell
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # Install SQL Server with PowerShell Desired State Configuration

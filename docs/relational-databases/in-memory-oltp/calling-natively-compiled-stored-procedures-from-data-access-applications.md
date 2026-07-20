@@ -7,7 +7,7 @@ ms.date: 11/10/2022
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: concept-article
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Calling Natively Compiled Stored Procedures from Data Access Applications
 

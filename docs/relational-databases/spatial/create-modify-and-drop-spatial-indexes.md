@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "indexes [SQL Server], dropping"
   - "indexes [SQL Server], modifying"
   - "spatial indexes [SQL Server], modifying"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Create, Modify, and Drop Spatial Indexes
 

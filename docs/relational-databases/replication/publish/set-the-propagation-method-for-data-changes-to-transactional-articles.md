@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "transactional replication, propagation methods"
   - "propagating data changes [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 
 # Set the propagation method for data changes to transactional articles

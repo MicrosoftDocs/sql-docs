@@ -8,7 +8,7 @@ ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: reference
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Always On availability group system object reference
 

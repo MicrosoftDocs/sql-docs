@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "sample applications [SQLXML]"
   - "SQLXMLOLEDB Provider, samples"
   - "ClientSideXML property"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Using the SQLXMLOLEDB Provider (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

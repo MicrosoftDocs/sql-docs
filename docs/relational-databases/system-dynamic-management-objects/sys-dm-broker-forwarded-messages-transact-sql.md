@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sys.dm_broker_forwarded_messages dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || =azuresqldb-mi-current"
 ---
 # sys.dm_broker_forwarded_messages (Transact-SQL)
 

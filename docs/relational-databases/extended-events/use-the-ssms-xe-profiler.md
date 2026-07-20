@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "extended events [SQL Server], system_health session"
   - "system_health session [SQL Server extended events]"
   - "system health session [SQL Server extended events]"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # Use the SSMS XEvent Profiler
 

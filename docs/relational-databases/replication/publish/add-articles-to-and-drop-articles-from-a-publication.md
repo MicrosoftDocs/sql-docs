@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "dropping articles"
   - "adding articles"
   - "articles [SQL Server replication], adding"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Add Articles to and Drop Articles from a Publication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

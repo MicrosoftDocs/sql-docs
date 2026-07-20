@@ -888,6 +888,9 @@
         ],
         "relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md": [
           "sql-server-2016"
+        ],
+        "integration-services/what-s-new-in-integration-services-in-sql-server-2016.md": [
+          "sql-server-2016"
         ]
       }
     },

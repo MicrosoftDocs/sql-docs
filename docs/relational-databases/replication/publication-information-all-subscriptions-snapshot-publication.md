@@ -11,7 +11,7 @@ ms.custom:
   - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Publication Information, All Subscriptions (Snapshot Publication)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

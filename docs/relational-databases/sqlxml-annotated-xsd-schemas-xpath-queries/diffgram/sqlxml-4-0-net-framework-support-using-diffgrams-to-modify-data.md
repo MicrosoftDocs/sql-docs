@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "deleting data"
   - "record updates [SQLXML]"
   - "record deletions [SQLXML]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Using DiffGrams to Modify Data
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

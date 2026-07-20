@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "modifying filters, column"
   - "modifying filters"
   - "column filters [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Define and Modify a Column Filter
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

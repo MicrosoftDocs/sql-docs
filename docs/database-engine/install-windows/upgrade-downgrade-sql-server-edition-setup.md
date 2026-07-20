@@ -8,7 +8,7 @@ ms.reviewer: jopilov
 ms.service: sql
 ms.subservice: install
 ms.topic: install-set-up-deploy
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # In-place change of a SQL Server edition (Setup)

@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "Merge Agent"
   - "Snapshot Agent, about Snapshot Agent"
   - "Snapshot Agent"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication Agents Overview
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

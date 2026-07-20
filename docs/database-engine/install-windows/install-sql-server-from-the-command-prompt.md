@@ -87,7 +87,7 @@ helpviewer_keywords:
   - "INSTALLSQLDIR parameter"
   - "nodes [Faillover Clustering], command prompt"
   - "INSTALLSQLSHAREDDIR parameter"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # Install, configure, or uninstall SQL Server on Windows from the command prompt

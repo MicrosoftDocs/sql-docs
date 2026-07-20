@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "latency [SQL Server replication]"
   - "transactional replication, tracer tokens"
   - "monitoring performance [SQL Server replication], tracer tokens"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Measure Latency and Validate Connections for Transactional Replication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

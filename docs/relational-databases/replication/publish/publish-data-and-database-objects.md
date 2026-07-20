@@ -40,7 +40,7 @@ helpviewer_keywords:
   - "articles [SQL Server replication], adding"
   - "publications [SQL Server replication], modifying"
   - "user-defined functions [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Publish Data and Database Objects
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

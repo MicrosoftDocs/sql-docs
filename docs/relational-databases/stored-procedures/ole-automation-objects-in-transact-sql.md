@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "batches [SQL Server], OLE Automation"
   - "OLE Automation [SQL Server]"
   - "OLE Automation [SQL Server], about OLE Automation"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # OLE Automation Objects in Transact-SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

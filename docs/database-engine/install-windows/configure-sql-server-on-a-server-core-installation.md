@@ -10,7 +10,7 @@ ms.topic: install-set-up-deploy
 helpviewer_keywords:
   - "IsHadrEnabled server property"
   - "Server Core Installation [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ms.custom: sfi-ropc-blocked
 ---
 # Configure SQL Server on a Server Core installation

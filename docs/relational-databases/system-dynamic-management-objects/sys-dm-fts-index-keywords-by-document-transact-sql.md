@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "full-text search [SQL Server], viewing keywords"
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.dm_fts_index_keywords_by_document (Transact-SQL)
 

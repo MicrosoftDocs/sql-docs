@@ -10,7 +10,7 @@ ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords:
   - "Broker:Conversation event class"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Broker:Conversation event class
 

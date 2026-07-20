@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "user IDs [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # SUSER_ID (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

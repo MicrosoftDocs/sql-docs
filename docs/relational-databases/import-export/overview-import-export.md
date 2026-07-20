@@ -7,7 +7,7 @@ ms.date: 03/02/2026
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: concept-article
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Import and export data from SQL Server and Azure SQL Database
 

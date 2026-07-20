@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "custom procedures [SQL Server replication]"
   - "transactional replication, replicating schema changes"
   - "schemas [SQL Server replication], replicating changes"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Transactional articles - Regenerate custom procedures to reflect schema changes
 

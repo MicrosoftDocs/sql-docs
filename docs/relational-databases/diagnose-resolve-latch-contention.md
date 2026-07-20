@@ -8,7 +8,7 @@ ms.date: 07/17/2025
 ms.service: sql
 ms.subservice: performance
 ms.topic: troubleshooting
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ms.custom:
   - ignite-2024
   - sfi-image-nochange

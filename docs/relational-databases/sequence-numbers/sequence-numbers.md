@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "autonumbers, sequences"
   - "sequence numbers [SQL Server]"
   - "sequence number object"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Sequence numbers
 

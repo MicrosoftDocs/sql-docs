@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "analytic functions,PERCENTILE_DISC"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqledge-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqledge-current || =fabric || =fabric-sqldb"
 ---
 
 # APPROX_PERCENTILE_DISC (Transact-SQL)

@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "alerts [SQL Server replication]"
   - "predefined replication alerts [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Configure Predefined Replication Alerts (SQL Server Management Studio)
 [!INCLUDE[applies-to-version/_ssnoversion.md](../../../includes/applies-to-version/sqlserver.md)]

@@ -22,7 +22,7 @@ f1_keywords:
 helpviewer_keywords:
   - "data compression wizard"
   - "compression [SQL Server], enable"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =fabric-sqldb"
 ---
 # Enable compression on a table or index
 

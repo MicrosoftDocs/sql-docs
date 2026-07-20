@@ -15,7 +15,7 @@ f1_keywords:
   - "sql13.rep.monitor.Distributor.SubscriptionSummary.merge.f1"
   - "sql13.rep.monitor.Distributor.SubscriptionSummary.snapshot.f1"
   - "sql13.rep.monitor.Distributor.SubscriptionSummary.tran.f1"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Distributor Information, Publications
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

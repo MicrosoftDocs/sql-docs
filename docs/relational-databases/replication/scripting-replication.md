@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], scripting"
   - "scripts [SQL Server replication]"
   - "transactional replication, scripting"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Scripting Replication
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

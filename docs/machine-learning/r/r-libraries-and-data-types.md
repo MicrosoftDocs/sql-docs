@@ -7,7 +7,7 @@ ms.date: 09/16/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 ms.custom: sfi-ropc-nochange
 ---
 # Data type mappings between R and SQL Server

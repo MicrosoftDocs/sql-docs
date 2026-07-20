@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "myTeam sample table [SQL Server]"
   - "bulk importing [SQL Server], examples"
   - "bulk exporting [SQL Server], examples"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # HumanResources.myTeam Sample Table (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

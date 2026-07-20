@@ -7,7 +7,7 @@ ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: upgrade-and-migration-article
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Upgrade Master Data Services
 

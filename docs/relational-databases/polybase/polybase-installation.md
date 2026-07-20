@@ -13,7 +13,7 @@ ms.custom:
   - sfi-ropc-blocked
 helpviewer_keywords:
   - "PolyBase, installation"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Install PolyBase on Windows
 
@@ -98,8 +98,8 @@ After installation of PolyBase to either standalone or in a scale-out group, you
 
 Use the values in this table to create installation scripts. The SQL Server PolyBase Engine and SQL Server PolyBase Data Movement service must run under the same account. In a PolyBase scale-out group, PolyBase services on all nodes must run under the same domain account.
 
-<!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017"
+<!--SQL Server 2017-->
+::: moniker range="=sql-server-2017"
 
 | SQL Server component | Parameter and values | Description |
 | --- | --- | --- |

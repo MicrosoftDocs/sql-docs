@@ -11,7 +11,7 @@ ms.custom:
   - updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.subscribertypes.f1"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Subscriber Types
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

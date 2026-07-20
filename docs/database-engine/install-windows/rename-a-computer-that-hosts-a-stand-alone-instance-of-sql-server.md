@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "removing remote logins"
   - "deleting remote logins"
   - "dropping remote logins"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Rename a computer that hosts a stand-alone instance of SQL Server
 

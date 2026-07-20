@@ -12,7 +12,7 @@ ms.custom:
   - ignite-2025
 helpviewer_keywords:
   - "data compression [SQL Server], disabling"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =fabric-sqldb"
 ---
 # Disable compression on a table or index
 

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "server-side XML formatting"
   - "SQL Server Native Client, XML"
   - "SQLXMLOLEDB Provider, XML formatting architecture"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

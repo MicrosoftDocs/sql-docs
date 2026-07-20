@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Databases [SQL Server], upgrading"
   - "compatibility [SQL Server], certification"
   - "compatibility level [SQL Server], upgrades"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # Compatibility certification

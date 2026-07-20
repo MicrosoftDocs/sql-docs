@@ -7,7 +7,7 @@ ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: install
 ms.topic: concept-article
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # SQL Server end of support options
 
@@ -98,7 +98,7 @@ The following table provides links to resources for upgrading from [!INCLUDE [ss
 | SQL Server 2025 | [What's new](../what-s-new-in-sql-server-2025.md) | [Requirements](../install/hardware-and-software-requirements-for-installing-sql-server-2025.md) | [Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2025.md) |
 | SQL Server 2022 | [What's new](../what-s-new-in-sql-server-2022.md) | [Requirements](../install/hardware-and-software-requirements-for-installing-sql-server-2022.md) | [Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2022.md) |
 | SQL Server 2019 | [What's new](../what-s-new-in-sql-server-2019.md) | [Requirements](../install/hardware-and-software-requirements-for-installing-sql-server-2019.md) | [Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md) |
-| SQL Server 2017 | [What's new](../what-s-new-in-sql-server-2017.md) | [Requirements](../install/hardware-and-software-requirements-for-installing-sql-server.md) | [Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md) |
+| SQL Server 2017 | [What's new](../what-s-new-in-sql-server-2017.md) | [Requirements](../install/hardware-and-software-requirements-for-installing-sql-server-2017.md) | [Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md) |
 
 Tools:
 

@@ -7,7 +7,7 @@ ms.date: 07/14/2020
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: concept-article
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ms.custom: sfi-image-nochange
 ---
 # Security architecture for the extensibility framework in SQL Server Machine Learning Services

@@ -12,12 +12,12 @@ helpviewer_keywords:
   - "execution-related dynamic management objects [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-linux-2017||>=sql-server-2016||>=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || >=aps-pdw-2016 || =azure-sqldw-latest"
 ---
 # Execution Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-::: moniker range=">= sql-server-linux-2017 || >= sql-server-2016"
+::: moniker range=">=sql-server-linux-2017 || >=sql-server-2017"
 
   This section contains the following dynamic management objects:  
   

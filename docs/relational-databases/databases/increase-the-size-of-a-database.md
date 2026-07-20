@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "increasing database size"
   - "database size [SQL Server], increasing"
   - "size [SQL Server], databases"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # Increase the size of a database
 

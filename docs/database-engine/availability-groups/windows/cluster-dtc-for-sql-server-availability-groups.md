@@ -7,7 +7,7 @@ ms.date: "08/30/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # How to cluster the DTC service for an Always On availability group
 

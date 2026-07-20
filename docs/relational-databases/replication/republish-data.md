@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "republishing data"
   - "publishing [SQL Server replication], Subscribers"
   - "Subscribers [SQL Server replication], republishing data"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Republish Data
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

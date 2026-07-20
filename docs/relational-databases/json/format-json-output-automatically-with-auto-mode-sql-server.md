@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "FOR JSON AUTO"
 ai-usage: ai-assisted
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Format JSON output automatically with AUTO mode
 

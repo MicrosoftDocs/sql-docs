@@ -8,7 +8,7 @@ ms.date: 05/28/2026
 ms.service: sql
 ms.subservice: xevents
 ms.topic: concept-article
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 
 # Extended Events targets

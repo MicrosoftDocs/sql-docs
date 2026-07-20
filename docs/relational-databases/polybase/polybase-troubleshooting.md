@@ -16,7 +16,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
   - "XML"
-monikerRange: ">=sql-server-linux-ver15||>=sql-server-2016"
+monikerRange: ">=sql-server-linux-ver15 || >=sql-server-2017"
 ---
 # Monitor and troubleshoot PolyBase
 

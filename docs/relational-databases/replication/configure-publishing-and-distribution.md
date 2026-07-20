@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"
   - "publishing [SQL Server replication], configuring"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ms.custom:
   - updatefrequency5
   - sfi-ropc-nochange

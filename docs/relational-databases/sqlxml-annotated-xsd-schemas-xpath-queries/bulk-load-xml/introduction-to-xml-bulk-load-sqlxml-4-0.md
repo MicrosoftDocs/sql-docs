@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "bulk load [SQLXML], about bulk load"
   - "transacted XML Bulk Load operations"
   - "streaming XML data"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ms.custom: sfi-ropc-nochange
 ---
 # Introduction to XML Bulk Load (SQLXML 4.0)

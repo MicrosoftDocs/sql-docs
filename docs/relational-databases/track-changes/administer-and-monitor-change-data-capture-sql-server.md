@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "change data capture, monitoring"
   - "change data capture, administering"
   - "change data capture, jobs"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Administer and monitor change data capture 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

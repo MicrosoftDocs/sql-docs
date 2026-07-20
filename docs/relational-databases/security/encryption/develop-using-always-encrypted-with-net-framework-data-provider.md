@@ -8,7 +8,7 @@ ms.date: "02/15/2023"
 ms.service: sql
 ms.subservice: security
 ms.topic: concept-article
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ms.custom: sfi-ropc-nochange
 ---
 # Using Always Encrypted with the .NET Framework Data Provider for SQL Server

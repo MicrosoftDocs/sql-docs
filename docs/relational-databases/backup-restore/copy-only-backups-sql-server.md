@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "copy-only backups [SQL Server]"
   - "COPY_ONLY option [BACKUP statement]"
   - "backups [SQL Server], copy-only backups"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # Copy-only backups
 

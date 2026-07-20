@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "ASP applications [SQLXML]"
   - "Active Server Pages"
   - "updategrams [SQLXML], ASP applications"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Using an Updategram in a Sample ASP Application (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

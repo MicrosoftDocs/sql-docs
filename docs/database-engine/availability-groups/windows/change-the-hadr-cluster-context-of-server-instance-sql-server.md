@@ -10,7 +10,7 @@ ms.topic: how-to
 helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "Availability replicas [SQL Server], change WSFC cluster context"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Change which cluster manages the metadata for replicas in an Always On availability group
 

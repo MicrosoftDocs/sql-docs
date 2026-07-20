@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "remote data access [SQL Server], bulk importing"
   - "bulk importing [SQL Server], BULK INSERT statement"
   - "Transact-SQL bulk export/import operations"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server

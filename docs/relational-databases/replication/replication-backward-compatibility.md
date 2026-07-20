@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "backward compatibility [SQL Server], replication"
   - "snapshot replication [SQL Server], backward compatibility"
   - "compatibility [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication backward compatibility
 

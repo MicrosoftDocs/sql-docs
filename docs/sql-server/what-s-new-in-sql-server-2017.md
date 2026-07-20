@@ -11,7 +11,7 @@ ms.topic: whats-new
 ms.custom:
   - intro-whats-new
   - linux-related-content
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # What's new in SQL Server 2017
 

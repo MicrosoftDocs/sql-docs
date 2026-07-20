@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "tempdb database [SQL Server], indexes"
   - "indexes [SQL Server], tempdb database"
   - "index creation [SQL Server], tempdb database"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # SORT_IN_TEMPDB Option For Indexes
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)] 

@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "pull subscriptions [SQL Server replication], about pull subscriptions"
   - "snapshot replication [SQL Server], subscribing"
   - "transactional replication, subscribing"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Subscribe to Publications
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

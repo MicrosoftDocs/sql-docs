@@ -35,7 +35,7 @@ If you want to use features like [!INCLUDE[Power BI](../../includes/sspowerbi-md
 
 ## Prerequisites
 
-- The hardware and software that are required for SQL Server 2016. For more information, see [SQL Server 2016 and 2017: Hardware and software requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+- The hardware and software that are required for SQL Server 2016. For more information, see [Hardware and software requirements for SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).
 
 - The ability to install SSRS and the [!INCLUDE[SQL Server no version](../../includes/ssnoversion-md.md)] database engine together in the same instance. The database engine instance hosts the report server databases that the installation process creates and configures.
 

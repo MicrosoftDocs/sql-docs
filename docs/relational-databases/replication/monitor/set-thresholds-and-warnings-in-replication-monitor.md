@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "thresholds [SQL Server replication]"
   - "Replication Monitor, thresholds and warnings"
   - "monitoring performance [SQL Server replication], thresholds and warnings"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Set Thresholds and Warnings in Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

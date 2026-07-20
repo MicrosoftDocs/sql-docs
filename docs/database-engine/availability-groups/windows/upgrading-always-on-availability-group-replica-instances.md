@@ -33,7 +33,7 @@ Before you begin, review the following important information:
 
 - [Plan and test the database engine upgrade plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the preupgrade checklist, and develop and test the upgrade plan.
 
-- [Hardware and software requirements for installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): Review the software requirements for installing [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.
+- [Hardware and software requirements for SQL Server 2025](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025.md): Review the software requirements for installing [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.
 
 - [Check if change data capture or replication is used for any AG databases](#special-steps-for-change-data-capture-or-replication): If any databases in the AG are enabled for change data capture (CDC), complete these [instructions](#special-steps-for-change-data-capture-or-replication).
 

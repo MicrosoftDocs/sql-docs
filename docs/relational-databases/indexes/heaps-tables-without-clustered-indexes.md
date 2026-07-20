@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "forwarded record"
   - "forwarding pointer"
   - "RID"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Heaps (tables without clustered indexes)
 

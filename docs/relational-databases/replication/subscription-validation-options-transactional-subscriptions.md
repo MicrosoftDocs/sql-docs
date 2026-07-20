@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.validate.options.f1"
 helpviewer_keywords:
   - "Subscription Validation Options dialog box"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Subscription Validation Options (Transactional Subscriptions)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

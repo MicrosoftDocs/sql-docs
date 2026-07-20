@@ -118,6 +118,6 @@ Maximum values of various objects defined in [!INCLUDE [ssNoVersion](../includes
 
 ## Related content
 
-- [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](install/hardware-and-software-requirements-for-installing-sql-server.md)
+- [Hardware and software requirements for SQL Server 2025](install/hardware-and-software-requirements-for-installing-sql-server-2025.md)
 - [Check parameters for the System Configuration Checker](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 - [Download SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)

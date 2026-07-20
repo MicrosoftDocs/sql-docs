@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "disabled indexes [SQL Server], how to enable"
   - "constraints [SQL Server], enabling"
   - "clustered indexes, enabling disabled indexes"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Enable indexes and constraints
 

@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "security [SQL Server replication], Internet"
   - "Internet [SQL Server replication], security"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Securing Replication Over the Internet
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

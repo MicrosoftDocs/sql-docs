@@ -9,7 +9,7 @@ ms.subservice: replication
 ms.topic: tutorial
 helpviewer_keywords:
   - "replication [SQL Server], tutorials"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ms.custom:
   - updatefrequency5
   - sfi-image-nochange

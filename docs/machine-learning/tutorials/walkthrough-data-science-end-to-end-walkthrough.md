@@ -7,7 +7,7 @@ ms.date: 08/24/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 # Tutorial: SQL development for R data scientists
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]

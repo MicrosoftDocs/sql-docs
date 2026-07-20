@@ -13,7 +13,7 @@ ms.custom:
 helpviewer_keywords:
   - "storing programs as stored procedures"
   - "stored procedures [SQL Server], about stored procedures"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Stored procedures (Database Engine)
 

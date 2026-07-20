@@ -8,7 +8,7 @@ ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: how-to
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 ---
 # Tips for using R packages
 
@@ -30,7 +30,7 @@ If you need to install multiple packages, or want to ensure that everyone in you
 
 There are multiple sources for R packages, such as [CRAN](https://cran.r-project.org/) and [Bioconductor](https://www.bioconductor.org/). The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Many packages are published to GitHub, where developers can obtain the source code. 
 
-::: moniker range=">=sql-server-2016"
+::: moniker range=">=sql-server-2017"
 R packages run on multiple computing platforms. Be sure that the versions you install are Windows binaries.
 ::: moniker-end
 

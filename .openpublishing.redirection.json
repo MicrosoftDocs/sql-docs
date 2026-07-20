@@ -1,6 +1,14 @@
 {
   "redirections": [
     {
+      "source_path": "docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016.md",
+      "redirect_url": "/previous-versions/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2016",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
       "source_path": "docs/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md",
       "redirect_url": "/previous-versions/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016",
       "redirect_document_id": false,
@@ -67951,6 +67959,11 @@
     {
       "source_path": "docs/tools/synapse-pathway/data-type-mappings-teradata-vantage.md",
       "redirect_url": "/tools/synapse-pathway/azure-synapse-pathway-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md",
+      "redirect_url": "/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2017.md",
       "redirect_document_id": false
     },
     {

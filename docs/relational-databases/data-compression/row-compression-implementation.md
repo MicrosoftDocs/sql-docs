@@ -13,7 +13,7 @@ ms.custom:
 helpviewer_keywords:
   - "compression [SQL Server], row"
   - "row compression [Database Engine]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Row compression implementation
 

@@ -9,7 +9,7 @@ ms.subservice: install
 ms.topic: faq
 ms.custom:
   - references_regions
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Extended Security Updates: Frequently asked questions
 

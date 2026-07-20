@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "replication agent profiles [SQL Server]"
   - "agents [SQL Server replication], profiles"
   - "profiles [SQL Server], replication agents"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Work with Replication Agent Profiles
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

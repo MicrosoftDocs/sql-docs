@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sys.dm_os_latch_stats dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-current || >=aps-pdw-2016 || =azure-sqldw-latest || =fabric-sqldb"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || >=aps-pdw-2016 || =azure-sqldw-latest || =fabric-sqldb"
 ---
 # sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-asdbmi-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]

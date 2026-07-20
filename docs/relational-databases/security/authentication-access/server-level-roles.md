@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "sysadmin fixed server role"
   - "server-level roles [SQL Server]"
   - "authentication [SQL Server], roles"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Server-level roles
 

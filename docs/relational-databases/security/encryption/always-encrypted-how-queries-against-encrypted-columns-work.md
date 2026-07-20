@@ -10,7 +10,7 @@ ms.subservice: security
 ms.topic: concept-article
 helpviewer_keywords:
   - "Always Encrypted, cryptography system"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Always Encrypted - How queries against encrypted columns work
 

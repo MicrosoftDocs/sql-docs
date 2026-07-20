@@ -9,7 +9,7 @@ ms.subservice: performance
 ms.topic: concept-article
 helpviewer_keywords:
   - "Query Store, in-memory"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Use the Query Store with In-Memory OLTP

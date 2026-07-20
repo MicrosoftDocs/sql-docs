@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "upgrading Database Engine"
   - "Database Engine [SQL Server], upgrading"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)
 
@@ -46,7 +46,7 @@ If you're upgrading the [!INCLUDE [ssDE](../../includes/ssde-md.md)], review [Pl
 
 - Run the appropriate Database Console Commands (DBCC) on databases to be upgraded to ensure that they are in a consistent state.
 
-- Estimate the disk space that is required to upgrade SQL Server components, in addition to user databases. For disk space that is required by SQL Server components, see [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+- Estimate the disk space that is required to upgrade SQL Server components, in addition to user databases. For disk space that is required by SQL Server components, see [Hardware and software requirements for SQL Server 2025](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025.md).
 
 - Ensure that existing SQL Server system databases - master, model, `msdb`, and `tempdb` - are configured to autogrow, and ensure that they have sufficient hard disk space.
 

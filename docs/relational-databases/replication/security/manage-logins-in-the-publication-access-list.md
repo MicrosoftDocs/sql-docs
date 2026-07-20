@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "publication access list (PAL)"
   - "PAL (publication access list)"
   - "logins [SQL Server replication], managing"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Manage Logins in the Publication Access List
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

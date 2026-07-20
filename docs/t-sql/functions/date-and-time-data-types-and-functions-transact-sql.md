@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest || =azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: "=azure-sqldw-latest || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 ---
 # Date and time data types and functions (Transact-SQL)
 

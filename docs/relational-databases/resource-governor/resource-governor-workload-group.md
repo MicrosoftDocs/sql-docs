@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Resource Governor, workload group"
   - "workload groups [SQL Server]"
   - "workload groups [SQL Server], overview"
-monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Resource governor workload group

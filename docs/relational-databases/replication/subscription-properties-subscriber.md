@@ -12,7 +12,7 @@ ms.custom:
 f1_keywords:
   - "sql13.rep.newsubwizard.subproperties.publisher.f1"
   - "sql13.rep.newsubwizard.subproperties.subscriber.f1"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # SQL Server Replication Subscription Properties dialog box 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

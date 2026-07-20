@@ -8,7 +8,7 @@ ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: concept-article
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # PolyBase features and limitations
 

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "mail [SQL Server], status information"
   - "Database Mail [SQL Server], message status"
   - "status information [Database Mail]"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Check the Status of E-Mail Messages Sent With Database Mail
 

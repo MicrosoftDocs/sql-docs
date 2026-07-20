@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "extended events [SQL Server], using"
   - "extended events [SQL Server], options for using"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Extended Events Tools
 

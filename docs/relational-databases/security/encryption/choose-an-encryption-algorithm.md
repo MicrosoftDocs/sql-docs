@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "encryption [SQL Server], algorithms"
   - "security [SQL Server], encryption"
   - "algorithms [SQL Server encryption]"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Choose an encryption algorithm
 

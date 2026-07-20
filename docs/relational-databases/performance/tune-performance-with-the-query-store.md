@@ -13,7 +13,7 @@ ms.custom:
 helpviewer_keywords:
   - "Query Store performance tuning"
   - "Query Store, performance tuning"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric-sqldb"
 ---
 # Tune performance with the Query Store
 

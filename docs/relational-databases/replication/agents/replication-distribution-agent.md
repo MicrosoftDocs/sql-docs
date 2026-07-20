@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "agents [SQL Server replication], Distribution Agent"
   - "Distribution Agent, parameter reference"
   - "command prompt [SQL Server replication]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Replication Distribution Agent
 

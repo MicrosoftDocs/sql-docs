@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "synchronization [SQL Server replication], push subscriptions"
   - "subscriptions [SQL Server replication], push"
   - "push subscriptions [SQL Server replication], synchronizing"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Synchronize a Push Subscription
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.generatesqlscript.f1"
 helpviewer_keywords:
   - "Generate SQL Script dialog box"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Generate SQL Script (Replication Objects)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

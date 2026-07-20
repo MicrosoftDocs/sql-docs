@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.validate.allsubscriptions.f1"
 helpviewer_keywords:
   - "Validate All Subscriptions dialog box"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Validate All Subscriptions
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

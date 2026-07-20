@@ -172,7 +172,7 @@ The following table lists the supported versions of trace data, and for each, th
 
 ### Operating system requirements
 
-Supported operating systems for running the administration tool and the controller and client services is the same as your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information about which operating systems are supported for your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance, see [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+Supported operating systems for running the administration tool and the controller and client services is the same as your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information about which operating systems are supported for your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance, see [Hardware and software requirements for SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md).
 
 Distributed Replay features are supported on both x86-based and x64-based operating systems. For x64-based operating systems, only Windows on Windows (WOW) mode is supported.
 

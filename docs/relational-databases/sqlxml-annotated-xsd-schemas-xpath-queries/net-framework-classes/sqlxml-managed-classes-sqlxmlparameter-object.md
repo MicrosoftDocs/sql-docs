@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Managed Classes [SQLXML], SqlXmlParameter object"
   - "SqlXmlParameter object"
   - "Name property"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # SQLXML Managed Classes - SqlXmlParameter Object
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

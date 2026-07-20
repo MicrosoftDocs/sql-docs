@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "targetNamespace attribute"
   - "XSD schemas [SQLXML], target namespaces"
   - "annotated XSD schemas, target namespaces"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Specify a target namespace using the targetNamespace attribute (SQLXML 4.0)
 

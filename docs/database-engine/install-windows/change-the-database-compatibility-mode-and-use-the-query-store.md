@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "query plans [SQL Server], migrating"
   - "upgrading SQL Server, migrating query plans"
   - "plan guides [SQL Server], migrating query plans"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Change the database compatibility level and use the Query Store
 

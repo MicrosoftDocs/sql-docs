@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "element mapping [SQLXML], XML Bulk Load"
   - "attribute mapping [SQLXML], XML Bulk Load"
   - "overflow data [SQLXML]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ms.custom: sfi-ropc-nochange
 ---
 # Annotation Interpretation - sql:mapped

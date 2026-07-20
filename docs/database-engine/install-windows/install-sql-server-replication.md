@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "installing replication"
   - "replication [SQL Server], installing"
   - "command prompt [SQL Server replication]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Install SQL Server replication
 

@@ -8,7 +8,7 @@ ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: "tutorial"
-monikerRange: ">= sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Configure PolyBase scale-out groups on Windows
 

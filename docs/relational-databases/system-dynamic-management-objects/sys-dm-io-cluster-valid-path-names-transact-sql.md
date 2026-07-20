@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "cluster shared volume names"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # sys.dm_io_cluster_valid_path_names (Transact-SQL)
 

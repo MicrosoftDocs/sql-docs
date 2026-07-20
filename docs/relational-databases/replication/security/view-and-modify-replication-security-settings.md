@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "security [SQL Server replication], viewing settings"
   - "viewing replication security settings"
   - "security [SQL Server replication], modifying settings"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # View and Modify Replication Security Settings
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "replication [SQL Server], removing"
   - "disabling replication"
   - "disabling distribution"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Disable Publishing and Distribution
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

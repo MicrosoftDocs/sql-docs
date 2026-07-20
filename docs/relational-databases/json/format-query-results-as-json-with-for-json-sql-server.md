@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "FOR JSON"
   - "JSON, exporting"
   - "exporting JSON"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Format query results as JSON with FOR JSON
 

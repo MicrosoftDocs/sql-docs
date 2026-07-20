@@ -12,7 +12,7 @@ ms.custom:
   - ignite-2025
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || =azuresqldb-current || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || =azuresqldb-current || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
 ---
 # OPENROWSET BULK (Transact-SQL)
 
@@ -39,7 +39,7 @@ Details and links to similar examples on other platforms:
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=fabric-sqldb"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 
 ## Syntax 
 
@@ -160,7 +160,7 @@ The URI can reference Azure Data Lake storage or Azure Blob storage. The URI of 
 
 The supported path formats are:
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 - `<drive letter>:\<file path>` to access files on local disk
 - `\\<network-share\<file path>` to access files on network shares
@@ -257,7 +257,7 @@ Specifies the code page of the data in the data file. `CODEPAGE` is relevant onl
 | `RAW` | No conversion occurs from one code page to another. This is the fastest option. |
 | `code_page` | Indicates the source code page on which the character data in the data file is encoded; for example, 850. |
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 > [!IMPORTANT]  
 >  Versions before [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] don't support code page 65001 (UTF-8 encoding).
@@ -325,7 +325,7 @@ FROM OPENROWSET(
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 #### FORMATFILE
 
@@ -582,7 +582,7 @@ FROM OPENROWSET(
 );
 ```
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 #### ORDER ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] )
 
@@ -696,7 +696,7 @@ If the target storage account is private, the principal must also have the **Sto
 - A `SELECT...FROM OPENROWSET(BULK...)` statement queries the data in a file directly, without importing the data into a table. 
 - A `SELECT...FROM OPENROWSET(BULK...)` statement can list bulk-column aliases by using a format file to specify column names, and also data types.
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 - Using `OPENROWSET(BULK...)` as a source table in an `INSERT` or `MERGE` statement bulk imports data from a data file into a table. For more information, see [Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 - When the `OPENROWSET BULK` option is used with an `INSERT` statement, the `BULK` clause supports table hints. In addition to the regular table hints, such as `TABLOCK`, the `BULK` clause can accept the following specialized table hints: `IGNORE_CONSTRAINTS` (ignores only the `CHECK` and `FOREIGN KEY` constraints), `IGNORE_TRIGGERS`, `KEEPDEFAULTS`, and `KEEPIDENTITY`. For more information, see [Table Hints (Transact-SQL)](../queries/hints-transact-sql-table.md).
@@ -722,7 +722,7 @@ In Microsoft Fabric Data Warehouse, supported features are summarized in the tab
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 ### Bulk importing SQLCHAR, SQLNCHAR, or SQLBINARY data
 
@@ -856,7 +856,7 @@ ORDER BY
 
 This section provides general examples to demonstrate how to use `OPENROWSET BULK` syntax. 
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 ### A. Use OPENROWSET to BULK INSERT file data into a varbinary(max) column
 
@@ -1280,7 +1280,7 @@ FROM OPENROWSET
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 ### More examples
 
 For more examples that show using `OPENROWSET(BULK...)`, see the following articles:

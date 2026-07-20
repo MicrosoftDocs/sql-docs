@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "STRING_ESCAPE function"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 ---
 # STRING_ESCAPE (Transact-SQL)
 

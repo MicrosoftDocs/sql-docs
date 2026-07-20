@@ -8,7 +8,7 @@ ms.date: 12/03/2025
 ms.service: sql
 ms.subservice: polybase
 ms.topic: how-to
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Configure PolyBase to access external data in Azure Blob Storage
 

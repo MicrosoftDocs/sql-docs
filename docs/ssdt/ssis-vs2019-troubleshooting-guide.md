@@ -8,7 +8,7 @@ ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: troubleshooting-general
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =azuresqldb-mi-current"
 ---
 # SSIS Projects extension for Visual Studio 2019 troubleshooting guide
 

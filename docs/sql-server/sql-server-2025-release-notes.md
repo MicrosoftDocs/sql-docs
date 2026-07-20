@@ -10,7 +10,7 @@ ms.subservice: release-landing
 ms.topic: release-notes
 ms.custom:
   - ignite-2025
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # SQL Server 2025 release notes

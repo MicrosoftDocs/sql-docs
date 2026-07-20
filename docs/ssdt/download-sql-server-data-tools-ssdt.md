@@ -14,7 +14,7 @@ keywords:
   - install ssdt
   - download ssdt
   - latest ssdt
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Install SQL Server Data Tools (SSDT) for Visual Studio

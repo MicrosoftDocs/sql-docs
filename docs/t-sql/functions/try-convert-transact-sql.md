@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "TRY_CONVERT function"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =fabric || =fabric-sqldb"
 ---
 # TRY_CONVERT (Transact-SQL)
 

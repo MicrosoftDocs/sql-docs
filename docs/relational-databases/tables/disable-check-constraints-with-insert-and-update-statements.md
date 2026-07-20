@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "constraints [SQL Server], disabling"
   - "disabling constraints"
   - "constraints [SQL Server], check"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Disable Check Constraints with INSERT and UPDATE Statements
 

@@ -15,7 +15,7 @@ f1_keywords:
 helpviewer_keywords:
   - "foreign keys [SQL Server], modifying"
   - "modifying foreign keys"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Modify Foreign Key Relationships
 

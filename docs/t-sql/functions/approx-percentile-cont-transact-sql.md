@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "PERCENTILE_CONT function"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqledge-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqledge-current || =fabric || =fabric-sqldb"
 ---
 
 # APPROX_PERCENTILE_CONT (Transact-SQL)

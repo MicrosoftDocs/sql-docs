@@ -7,7 +7,7 @@ ms.date: 09/07/2025
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: concept-article
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # System-versioned temporal tables with memory-optimized tables
 

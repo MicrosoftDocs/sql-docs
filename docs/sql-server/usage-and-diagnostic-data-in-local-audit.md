@@ -9,7 +9,7 @@ ms.subservice: security
 ms.topic: ui-reference
 helpviewer_keywords:
   - "Local Audit"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Local audit for SQL Server usage and diagnostic data collection (CEIP)
 

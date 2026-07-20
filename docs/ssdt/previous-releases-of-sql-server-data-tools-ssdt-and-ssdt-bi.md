@@ -11,7 +11,7 @@ ms.topic: release-notes
 ms.custom:
   - UpdateFrequency5
   - sfi-ropc-nochange
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =azuresqldb-mi-current"
 ---
 
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)

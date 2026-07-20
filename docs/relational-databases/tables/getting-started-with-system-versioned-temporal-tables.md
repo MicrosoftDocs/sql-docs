@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.custom:
   - intro-get-started
   - ignite-2025
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Get started with system-versioned temporal tables
 

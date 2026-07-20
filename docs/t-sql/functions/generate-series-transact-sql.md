@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "analytic functions, GENERATE_SERIES"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # GENERATE_SERIES (Transact-SQL)
 
@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 Generates a series of numbers within a given interval. The interval and the step between series values are defined by the user.
 
-::: moniker range="=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range="=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 #### Compatibility level 160
 
 `GENERATE_SERIES` requires the compatibility level to be at least 160. When the compatibility level is less than 160, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] is unable to find the `GENERATE_SERIES` function.

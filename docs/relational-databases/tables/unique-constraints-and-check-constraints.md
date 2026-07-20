@@ -13,7 +13,7 @@ ms.custom:
 helpviewer_keywords:
   - "constraints [SQL Server], Visual Database Tools"
   - "Visual Database Tools [SQL Server], constraints"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Unique constraints and check constraints
 

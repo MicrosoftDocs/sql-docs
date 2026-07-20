@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "functions [SQL Server], system"
 dev_langs:
   - "TSQL"
-monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # System Functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdbmi-fabricse-fabricdw.md)]

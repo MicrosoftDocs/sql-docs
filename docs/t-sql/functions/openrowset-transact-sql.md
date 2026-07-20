@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "ad hoc connection information"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # OPENROWSET (Transact-SQL)
 

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "characters [SQL Server], wildcard"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Percent character (wildcard - character(s) to match) (Transact-SQL)
 

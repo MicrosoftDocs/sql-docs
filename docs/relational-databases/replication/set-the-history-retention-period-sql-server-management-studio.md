@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "history retention periods [SQL Server replication]"
   - "retention periods [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Set the History Retention Period (SQL Server Management Studio)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], functions that call"
   - "deterministic functions"
   - "user-defined functions [SQL Server], deterministic"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Deterministic and nondeterministic functions
 

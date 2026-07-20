@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "AdventureWorks sample database"
   - "installing SQL Server, preparing to install"
   - "installation [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # SQL Server installation guide
 
@@ -23,8 +23,8 @@ This article is an index of content that provides guidance for installing [!INCL
 
 For other deployment scenarios, see:
 
-- [Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md)
-- [Deploy and connect to SQL Server Linux containers](../../linux/sql-server-linux-docker-container-deployment.md)
+- [Installation guidance for SQL Server on Linux](../../linux/install-upgrade/setup.md)
+- [Deploy and connect to SQL Server Linux containers](../../linux/containers/deploy.md)
 
 Beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] and how to install it.
 
@@ -46,8 +46,8 @@ Beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE 
   - [SQL Server 2025](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025.md)
   - [SQL Server 2022](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022.md)
   - [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
-  - [SQL Server 2016 and 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
-  - [SQL Server on Linux](../../linux/sql-server-linux-setup.md)
+  - [SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2017.md)
+  - [SQL Server on Linux](../../linux/install-upgrade/setup.md)
 
   You must also review system configuration checks, and security considerations in [Plan a SQL Server installation](../../sql-server/install/planning-a-sql-server-installation.md).
 

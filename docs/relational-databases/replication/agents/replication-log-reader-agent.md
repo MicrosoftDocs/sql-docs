@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Log Reader Agent, parameter reference"
   - "agents [SQL Server replication], Log Reader Agent"
   - "command prompt [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication Log Reader Agent
 

@@ -42,7 +42,14 @@ To utilize the SQL IaaS Agent extension, you must first [register your subscript
 To register your SQL Server VM with the extension, you'll need the following:
 
 - An [Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
-- A supported [Windows Server virtual machine](/azure/virtual-machines/windows/quick-create-portal) with a supported [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) version deployed to the public or Azure Government cloud. For supported versions, see [Windows Server lifecycle](/lifecycle/products/?terms=windows%20server) and [SQL Server lifecycle](/lifecycle/products/?terms=sql%20server).
+- A supported [Windows Server virtual machine](/azure/virtual-machines/windows/quick-create-portal) with a supported [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) version deployed to the public or Azure Government cloud. For supported versions, see [Windows Server lifecycle](/lifecycle/products/?terms=windows%20server) and [SQL Server lifecycle](/lifecycle/products/?terms=sql%20server). A limited set of Azure regions are supported. You can use the Azure REST API to list the supported regions:
+
+  ```powershell-interactive
+  $subId = (Get-AzContext).Subscription.Id
+  $response = Invoke-AzRestMethod -Method GET -Path "/subscriptions/$subId/providers/Microsoft.SqlVirtualMachine?api-version=2025-04-01"
+  ($response.Content | ConvertFrom-Json).resourceTypes | Where-Object { $_.resourceType -eq "SqlVirtualMachines" } | Select-Object -ExpandProperty locations
+  ```
+
 - Ensure the Azure VM is running.
 - The client credentials used to register the virtual machine exist in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**.
 - The latest version of [Azure CLI](/cli/azure/install-azure-cli) or [Azure PowerShell (5.0 minimum)](/powershell/azure/install-az-ps).

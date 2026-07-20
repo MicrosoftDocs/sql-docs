@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Supported version and edition upgrades (SQL Server 2017)
 
@@ -26,7 +26,7 @@ Before upgrading from one edition of [!INCLUDE [sssql17-md](../../includes/sssql
 
 Before upgrading [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the default configuration: that the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** group.
 
-To upgrade to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], you must be running a supported operating system. For more information, see [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+To upgrade to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], you must be running a supported operating system. For more information, see [Hardware and software requirements for SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2017.md).
 
 Upgrade is blocked if there's a pending restart.
 
@@ -172,5 +172,5 @@ Additionally you can also perform an edition upgrade between [!INCLUDE [sssql17-
 ## Related content
 
 - [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
-- [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+- [Hardware and software requirements for SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2017.md)
 - [Upgrade SQL Server](upgrade-sql-server.md)

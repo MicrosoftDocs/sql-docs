@@ -12,7 +12,7 @@ ms.custom:
   - ignite-2025
 helpviewer_keywords:
   - "database permissions"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Lesson 2: Configure permissions on database objects
 

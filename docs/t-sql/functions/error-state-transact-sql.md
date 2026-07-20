@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "states [SQL Server], error numbers"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current ||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 
 # ERROR_STATE (Transact-SQL)

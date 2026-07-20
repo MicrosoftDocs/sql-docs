@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "log shipping [SQL Server]"
   - "backup jobs [SQL Server]"
   - "primary servers [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # About log shipping (SQL Server)
 

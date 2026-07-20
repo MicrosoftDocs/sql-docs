@@ -12,7 +12,7 @@ ms.custom:
 f1_keywords:
   - "sql13.rep.replconflictviewer.interactiveresolver.f1"
 describes: Describes the Interactive Conflict Resolver that can be used for merge subscriptions that are synchronized using the Windows Synchronization Manager.
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Microsoft Replication Interactive Conflict Resolver
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

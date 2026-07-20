@@ -9,7 +9,7 @@ ms.subservice: replication
 ms.topic: how-to
 ms.custom:
   - updatefrequency5
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication to Memory-Optimized Table Subscribers
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

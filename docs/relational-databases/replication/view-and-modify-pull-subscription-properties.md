@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], pull"
   - "pull subscriptions [SQL Server replication], properties"
   - "modifying subscriptions, SQL Server Management Studio"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # View and Modify Pull Subscription Properties
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

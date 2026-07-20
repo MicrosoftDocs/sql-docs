@@ -13,7 +13,7 @@ ms.custom:
 helpviewer_keywords:
   - "Unicode data compression"
   - "compression [SQL Server], Unicode data"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Unicode compression implementation
 

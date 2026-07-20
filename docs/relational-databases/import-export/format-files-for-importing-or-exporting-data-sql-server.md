@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "bulk exporting [SQL Server], format files"
   - "bulk importing [SQL Server], format files"
   - "format files [SQL Server]"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Format files to import or export data (SQL Server)
 

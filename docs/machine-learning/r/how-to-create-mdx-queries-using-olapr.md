@@ -10,7 +10,7 @@ ms.subservice: machine-learning-services
 ms.topic: how-to
 ms.custom:
   - sfi-ropc-nochange
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 # How to create MDX queries in R using olapR
 

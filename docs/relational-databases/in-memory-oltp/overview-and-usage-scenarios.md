@@ -10,7 +10,7 @@ ms.subservice: in-memory-oltp
 ms.topic: concept-article
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # In-Memory OLTP overview and usage scenarios
 

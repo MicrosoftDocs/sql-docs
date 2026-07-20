@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "replication [SQL Server], how-to topics"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

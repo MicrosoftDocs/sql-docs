@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "transactional replication, about transactional replication"
   - "transactional replication"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Transactional Replication
 

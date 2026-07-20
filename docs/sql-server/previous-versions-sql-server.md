@@ -8,7 +8,7 @@ ms.date: 03/11/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: concept-article
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 
 # Previous versions of SQL Server documentation

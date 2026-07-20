@@ -11,7 +11,7 @@ ms.custom:
   - updatefrequency5
 helpviewer_keywords:
   - "deprecated features [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Deprecated Features in SQL Server Replication
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

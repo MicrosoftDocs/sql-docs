@@ -7,7 +7,7 @@ ms.date: 10/22/2018
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 #  Airline flight arrival demo data for SQL Server Python and R tutorials
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

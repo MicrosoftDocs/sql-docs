@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "Replication Monitor"
   - "Replication Monitor, about Replication Monitor"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Overview of the Replication Monitor Interface
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

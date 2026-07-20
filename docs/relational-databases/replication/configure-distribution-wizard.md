@@ -11,7 +11,7 @@ ms.custom:
   - updatefrequency5
 helpviewer_keywords:
   - "Configure Distribution Wizard"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Configure Distribution Wizard
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

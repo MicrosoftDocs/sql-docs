@@ -18,7 +18,7 @@ helpviewer_keywords:
 dev_langs:
   - TSQL
 ai-usage: "ai-assisted"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =fabric || =fabric-sqldb"
 ---
 
 # FORMAT (Transact-SQL)

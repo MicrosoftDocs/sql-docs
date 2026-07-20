@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "Change data capture"
   - "Known issues"
   - "Limitations"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Known limitations, issues, and errors with CDC

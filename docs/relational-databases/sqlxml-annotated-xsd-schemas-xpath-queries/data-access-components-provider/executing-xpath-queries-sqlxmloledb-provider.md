@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Base Path property"
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "Mapping Schema property"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

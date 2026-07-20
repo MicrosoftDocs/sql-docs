@@ -9,7 +9,7 @@ ms.subservice: install
 ms.topic: upgrade-and-migration-article
 helpviewer_keywords:
   - "management tools, upgrading"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Upgrade SQL Server Management Tools
 

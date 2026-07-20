@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "data modifications [SQL Server], views"
   - "views [SQL Server], modifying data through"
   - "modifying data [SQL Server], views"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Modify data through a view
 

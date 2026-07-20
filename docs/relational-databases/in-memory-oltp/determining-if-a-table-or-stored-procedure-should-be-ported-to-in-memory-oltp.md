@@ -11,7 +11,7 @@ ms.topic: how-to
 helpviewer_keywords:
   - "Analyze, Migrate, Report"
   - "AMR"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Determine if a table or stored procedure should be ported to In-Memory OLTP
 

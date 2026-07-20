@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "VB"
   - "CSharp"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication Management Objects Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

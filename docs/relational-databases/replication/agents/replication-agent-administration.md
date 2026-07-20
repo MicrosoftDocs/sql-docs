@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "administering replication, agents"
   - "replication [SQL Server], administering"
   - "independent agents [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication Agent Administration
 

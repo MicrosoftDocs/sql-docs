@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "CDATA sections"
   - "escaping blocks of text [SQLXML]"
   - "annotated XSD schemas, CDATA sections"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0)
 

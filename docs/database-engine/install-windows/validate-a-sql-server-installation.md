@@ -9,7 +9,7 @@ ms.subservice: install
 ms.topic: install-set-up-deploy
 helpviewer_keywords:
   - "validating installations [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Validate a SQL Server installation
 

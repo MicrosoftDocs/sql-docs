@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "installing SQL Server, steps"
   - "Setup [SQL Server], steps"
   - "SQL Server, installing"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
 
@@ -25,11 +25,11 @@ This article explains how to install [!INCLUDE [ssNoVersion](../../includes/ssno
 
 The installation experience depends on the version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Select your version.
 
-::: moniker range=">=sql-server-2016 <=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 :::row:::
     :::column:::
-        ***\* SQL Server 2016 & SQL Server 2017 \**** &nbsp;
+        ***\* SQL Server 2017 \**** &nbsp;
     :::column-end:::
     :::column:::
         [SQL Server 2019](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver15&preserve-view=true) &nbsp;
@@ -48,7 +48,7 @@ The installation experience depends on the version of [!INCLUDE [ssNoVersion](..
 
 :::row:::
     :::column:::
-        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true) &nbsp;
+        [SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true) &nbsp;
     :::column-end:::
     :::column:::
         ***\* SQL Server 2019 \**** &nbsp;
@@ -67,7 +67,7 @@ The installation experience depends on the version of [!INCLUDE [ssNoVersion](..
 
 :::row:::
     :::column:::
-        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true) &nbsp;
+        [SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true) &nbsp;
     :::column-end:::
     :::column:::
         [SQL Server 2019](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver15&preserve-view=true) &nbsp;
@@ -86,7 +86,7 @@ The installation experience depends on the version of [!INCLUDE [ssNoVersion](..
 
 :::row:::
     :::column:::
-        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true) &nbsp;
+        [SQL Server Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true) &nbsp;
     :::column-end:::
     :::column:::
         [SQL Server 2019](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver15&preserve-view=true) &nbsp;
@@ -121,17 +121,17 @@ Before you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], r
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-::: moniker range=">=sql-server-2016 <=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 <a id="bkmk_ga_instalpatch"></a>
 
 ### Install patch requirement
 
-Microsoft identified a problem with the Microsoft Visual C++ 2013 runtime binaries that are installed as a prerequisite by [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. An update is available to fix this problem. If this update to the Visual C++ runtime binaries isn't installed, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] could experience stability issues in certain scenarios. Before you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], follow the instructions in the [SQL Server release notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the Visual C++ runtime binaries.
+Microsoft identified a problem with the Microsoft Visual C++ 2013 runtime binaries that are installed as a prerequisite by [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. An update is available to fix this problem. If this update to the Visual C++ runtime binaries isn't installed, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] could experience stability issues in certain scenarios. Before you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], follow the instructions in the [SQL Server 2016 release notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the Visual C++ runtime binaries.
 
 This problem isn't applicable to [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and later versions.
 
-## Install SQL Server 2016 and SQL Server 2017
+## Install SQL Server 2017
 
 <a id="installation-media-2016-2017"></a>
 

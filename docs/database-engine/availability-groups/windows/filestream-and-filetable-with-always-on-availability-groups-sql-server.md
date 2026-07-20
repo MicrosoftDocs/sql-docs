@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "FileTables [SQL Server], Availability Groups"
   - "FILESTREAM [SQL Server], Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Use FILESTREAM and FileTable with Always On availability groups
 

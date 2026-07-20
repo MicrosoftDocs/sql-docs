@@ -8,7 +8,7 @@ ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=aps-pdw-2016-au7 || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=aps-pdw-2016-au7 || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 ---
 # Database Engine events and errors (41400 to 49999)
 

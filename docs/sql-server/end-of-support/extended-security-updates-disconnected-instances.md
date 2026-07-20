@@ -9,7 +9,7 @@ ms.subservice: install
 ms.topic: concept-article
 ms.custom:
   - references_regions
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Register SQL Server instances for ESUs
 [!INCLUDE [sql-migration-end-of-support](../../includes/applies-to-version/sql-migration-end-of-support.md)]

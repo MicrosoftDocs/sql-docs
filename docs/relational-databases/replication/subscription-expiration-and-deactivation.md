@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "distribution retention period"
   - "subscriptions [SQL Server replication], deactivation"
   - "deactivating subscriptions"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Subscription Expiration and Deactivation
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

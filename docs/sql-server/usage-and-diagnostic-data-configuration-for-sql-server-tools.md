@@ -7,7 +7,7 @@ ms.date: "10/21/2016"
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: how-to
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017"
 ---
 # Configure usage and diagnostic data collection for SQL Server tools (CEIP)
 

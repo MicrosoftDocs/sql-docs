@@ -11,7 +11,7 @@ ms.custom:
   - updatefrequency5
 helpviewer_keywords:
   - "Replication Monitor, adding and removing Publishers"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Add and Remove Publishers from Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

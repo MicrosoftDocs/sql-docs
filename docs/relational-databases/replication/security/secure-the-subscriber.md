@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], security"
   - "Subscribers [SQL Server replication], security"
   - "security [SQL Server replication], Subscribers"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Secure the Subscriber
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]

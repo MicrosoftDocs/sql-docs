@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "encryption [SQL Server], replicating data"
   - "encryption [SQL Server replication]"
   - "publishing [SQL Server replication], encrypted columns"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replicate Data in Encrypted Columns (SQL Server Management Studio)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

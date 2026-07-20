@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.monitor.snapshotagent.f1"
 helpviewer_keywords:
   - "Snapshot Agent dialog box"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Snapshot Agent
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

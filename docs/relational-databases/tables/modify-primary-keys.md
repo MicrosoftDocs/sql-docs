@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "modifying primary keys"
   - "primary keys [SQL Server], modifying"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Modify Primary Keys
 

@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "administering replication, best practices"
   - "replication [SQL Server], administering"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Best Practices for Replication Administration
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

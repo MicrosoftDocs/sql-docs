@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "endpoints [SQL Server], Always On Availability Groups"
   - "endpoints [SQL Server], database mirroring"
   - "Availability Groups [SQL Server], endpoint"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # The database mirroring endpoint (SQL Server)
 

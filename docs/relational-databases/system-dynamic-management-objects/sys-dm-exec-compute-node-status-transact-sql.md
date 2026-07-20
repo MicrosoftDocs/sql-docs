@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sys.dm_exec_compute_node_status management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]

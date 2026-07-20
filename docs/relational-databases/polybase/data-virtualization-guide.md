@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: polybase
 ms.topic: concept-article
 ai-usage: ai-assisted
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-ver15 || =azuresqldb-current || =azure-sqldw-latest"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-current || =azure-sqldw-latest"
 ---
 
 # Connect, query, and export data with PolyBase

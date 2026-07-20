@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "dm_exec_distributed_sql_requests management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

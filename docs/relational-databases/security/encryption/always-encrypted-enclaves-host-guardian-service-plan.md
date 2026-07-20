@@ -118,7 +118,7 @@ Don't join the HGS computer(s) to a domain before you start.
 
 ### [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer prerequisites
 
-The computer(s) running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] must meet both the [Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) and the [Hyper-V hardware requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
+The computers running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] must meet both the [requirements for installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025.md) and the [Hyper-V hardware requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 
 These requirements include:
 

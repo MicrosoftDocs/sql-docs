@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], namespaces"
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "namespaces [SQLXML], XPath queries"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

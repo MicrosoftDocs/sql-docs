@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "transactional replication, validating data"
   - "validating data"
   - "merge replication data validation [SQL Server replication], SQL Server Management Studio"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Validate Replicated Data
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

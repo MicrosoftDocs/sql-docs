@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "replication [SQL Server], partitioned tables"
   - "publishing [SQL Server replication], partitioned tables"
   - "transactional replication, partitioned tables"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replicate Partitioned Tables and Indexes
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

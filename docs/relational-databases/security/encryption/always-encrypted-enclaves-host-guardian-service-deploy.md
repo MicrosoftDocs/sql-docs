@@ -10,7 +10,7 @@ ms.subservice: security
 ms.topic: install-set-up-deploy
 ms.custom:
   - intro-deployment
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Deploy the Host Guardian Service for SQL Server

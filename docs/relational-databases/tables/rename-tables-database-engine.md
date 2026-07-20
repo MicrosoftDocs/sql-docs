@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "table names [SQL Server]"
   - "tables [SQL Server], Visual Database Tools"
   - "renaming tables"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Rename tables (Database Engine)

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "replication [SQL Server], agents and profiles"
   - "agents [SQL Server replication], executables"
   - "command prompt [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication Agent Executables Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

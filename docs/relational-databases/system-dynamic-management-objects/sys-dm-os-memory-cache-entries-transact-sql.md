@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sys.dm_os_memory_cache_entries dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.dm_os_memory_cache_entries (Transact-SQL)
 

@@ -36,7 +36,7 @@ f1_keywords:
   - "sql13.swb.dbmail.newsqlimailaccount.f1"
   - "sql13.swb.dbmail.manageexistingprofile.f1"
   - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Configure database mail
 

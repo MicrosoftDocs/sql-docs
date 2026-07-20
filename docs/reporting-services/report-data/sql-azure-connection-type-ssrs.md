@@ -7,7 +7,7 @@ ms.subservice: report-data
 ms.topic: how-to
 ms.custom:
   - updatefrequency5
-monikerRange: ">= sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # Azure SQL Connection Type (SSRS)

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "developer's guide [SQL Server replication]"
   - "programming [SQL Server replication]"
   - "replication [SQL Server], development"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication developer documentation
 

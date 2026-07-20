@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.newsubwizard.subscribers.f1"
 helpviewer_keywords:
   - "Subscribers [SQL Server replication]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Subscribers
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

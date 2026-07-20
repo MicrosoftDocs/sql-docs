@@ -9,7 +9,7 @@ ms.subservice: replication
 ms.topic: reference
 ms.custom:
   - updatefrequency5
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication Language Reference
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

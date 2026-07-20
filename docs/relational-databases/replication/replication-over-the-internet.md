@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Web publishing [SQL Server replication]"
   - "Internet [SQL Server replication]"
   - "Internet [SQL Server replication], publishing"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication over the Internet
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

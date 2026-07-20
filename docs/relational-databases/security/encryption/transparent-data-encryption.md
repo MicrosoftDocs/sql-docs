@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "TDE, about"
   - "Transparent data encryption, about"
   - "encryption [SQL Server], Transparent data encryption"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Transparent data encryption (TDE)
 

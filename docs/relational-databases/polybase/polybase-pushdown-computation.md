@@ -10,7 +10,7 @@ ms.service: sql
 ms.subservice: polybase
 ms.topic: concept-article
 ai-usage: ai-assisted
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 
 # Pushdown computations in PolyBase

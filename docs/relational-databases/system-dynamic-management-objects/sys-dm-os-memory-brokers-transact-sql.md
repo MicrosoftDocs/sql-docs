@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sys.dm_os_memory_brokers dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest"
 ---
 # sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]

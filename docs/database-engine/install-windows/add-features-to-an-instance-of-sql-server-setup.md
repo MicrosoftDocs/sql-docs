@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "feature adding [SQL Server]"
   - " SQL Server, features"
   - "adding features to  SQL Server"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # Add Features to an Instance of SQL Server (Setup)

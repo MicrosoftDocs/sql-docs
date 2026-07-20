@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.security.SSA.f1"
 helpviewer_keywords:
   - "Snapshot Agent Security dialog box"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Snapshot Agent Security
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

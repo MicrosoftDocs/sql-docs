@@ -7,7 +7,7 @@ ms.date: 11/26/2018
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ms.custom: sfi-ropc-nochange
 ---
 # Build an R model and save to SQL Server (walkthrough)

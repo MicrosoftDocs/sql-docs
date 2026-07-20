@@ -11,7 +11,7 @@ ms.custom:
   - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], types"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Types of Replication
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

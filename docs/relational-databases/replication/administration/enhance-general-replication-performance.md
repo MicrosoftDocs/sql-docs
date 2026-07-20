@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "agents [SQL Server replication], performance"
   - "performance [SQL Server replication], general considerations"
   - "transactional replication, performance"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Enhance General Replication Performance
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

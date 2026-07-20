@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "scheduling synchronization [SQL Server replication]"
   - "synchronization [SQL Server replication], schedules"
   - "replication [SQL Server], synchronization"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Specify Synchronization Schedules
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

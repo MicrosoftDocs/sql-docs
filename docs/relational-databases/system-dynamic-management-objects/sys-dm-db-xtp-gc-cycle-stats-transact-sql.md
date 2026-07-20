@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_gc_cycle_stats dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

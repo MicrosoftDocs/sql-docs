@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "native data format [SQL Server]"
   - "file storage types [SQL Server]"
   - "data formats [SQL Server], file storage types"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Specify file storage type using bcp (SQL Server)
 

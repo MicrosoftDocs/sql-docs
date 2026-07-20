@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.configdistwizard.subscribers.f1"
 helpviewer_keywords:
   - "Subscriber Properties dialog box"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Subscriber Properties
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

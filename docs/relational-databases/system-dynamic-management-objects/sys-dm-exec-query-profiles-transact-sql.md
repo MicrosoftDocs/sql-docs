@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sys.dm_exec_query_profiles dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]

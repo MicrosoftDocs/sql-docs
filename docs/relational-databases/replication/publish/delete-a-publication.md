@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "publications [SQL Server replication], deleting"
   - "articles [SQL Server replication], deleting"
   - "deleting publications"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Delete a Publication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

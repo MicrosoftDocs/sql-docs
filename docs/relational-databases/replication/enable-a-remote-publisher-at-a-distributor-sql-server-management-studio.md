@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "remote Distributors [SQL Server replication]"
   - "Publishers [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Enable a Remote Publisher at a Distributor (SQL Server Management Studio)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

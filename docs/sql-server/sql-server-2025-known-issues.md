@@ -9,7 +9,7 @@ ms.subservice: release-landing
 ms.topic: troubleshooting-known-issue
 ms.custom:
   - ignite-2025
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # SQL Server 2025 known issues

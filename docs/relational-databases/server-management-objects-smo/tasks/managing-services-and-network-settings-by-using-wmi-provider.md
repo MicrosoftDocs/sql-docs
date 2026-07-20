@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "services [SQL Server], SMO"
   - "network settings [SMO]"
   - "monitoring [SMO]"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Manage services and network settings with the WMI provider
 

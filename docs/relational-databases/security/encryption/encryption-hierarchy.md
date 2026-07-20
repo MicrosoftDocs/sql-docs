@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "encryption keys [SQL Server]"
   - "security [SQL Server], encryption"
   - "hierarchies [SQL Server], encryption"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Encryption hierarchy
 

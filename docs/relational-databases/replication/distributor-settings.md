@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.monitor.DistributorSettings.f1"
 helpviewer_keywords:
   - "Distributor Settings dialog box"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Distributor Settings
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

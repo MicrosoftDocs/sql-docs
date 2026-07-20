@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "recovery [SQL Server replication], snapshot replication"
   - "sync with backup [SQL Server replication]"
   - "backups [SQL Server replication], transactional replication"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]

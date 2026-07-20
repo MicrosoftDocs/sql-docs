@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], public profiles"
   - "profiles [SQL Server], Database Mail"
   - "public profiles [Database Mail]"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # Create a Database Mail Profile
 

@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "collations [SQL Server], database"
   - "database collations [SQL Server]"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Set or change the database collation
 

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "PowerShell [SQL Server], xevent"
   - "extended events [SQL Server], PowerShell"
   - "PowerShell [SQL Server], extended events"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Use the PowerShell Provider for Extended Events
 

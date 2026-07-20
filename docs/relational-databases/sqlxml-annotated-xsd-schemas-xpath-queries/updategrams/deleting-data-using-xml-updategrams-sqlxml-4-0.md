@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "<before> block"
   - "mapping-schema attribute"
   - "record deletions [SQLXML]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

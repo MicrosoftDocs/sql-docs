@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Snapshot Agent, monitoring"
   - "Distribution Agent, monitoring"
   - "monitoring performance [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Monitor Performance with Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

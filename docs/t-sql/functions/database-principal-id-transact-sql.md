@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "IDs [SQL Server], principals"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqledge-current || =azure-sqldw-latest || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqledge-current || =azure-sqldw-latest || =fabric-sqldb"
 ---
 # DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]

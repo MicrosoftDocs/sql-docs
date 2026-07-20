@@ -72,7 +72,7 @@ For more information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 
  Before upgrading to SQL Server Reporting Services:
 
-- Review requirements to determine whether your hardware and software can support [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. For more information, see [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+- Review requirements to determine whether your hardware and software can support [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. For more information, see [Hardware and software requirements for SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).
 
 - Use System Configuration Checker (SCC) to scan the report server computer for any conditions that might prevent a successful installation of SQL Server Reporting Services. For more information, see [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).
 
@@ -97,11 +97,11 @@ If you're upgrading from a supported version of [!INCLUDE[ssRSnoversion](../../i
 
 However, **migrating** a report server installation manually is required if you encounter any of the following conditions:
 
-- You want to change the type of report server used in your deployment. For example, you can't upgrade or convert a native mode report server to SharePoint mode. For more information, see [Native to SharePoint Migration &#40;SSRS&#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).
+- You want to change the type of report server used in your deployment. For example, you can't upgrade or convert a native mode report server to SharePoint mode. For more information, see [Native to SharePoint Migration &#40;SSRS&#41;](/previous-versions/sql/reporting-services/install-windows/native-to-sharepoint-migration-ssrs).
 
 - You want to minimize the amount of time the report server is taken offline during the upgrade process. Your current installation remains online while you copy content data to a new report server instance and test the installation without changing the state of your existing report server installation.
 
-- You want to migrate a SharePoint 2010 deployment of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to SharePoint 2013/2016. SharePoint 2013/2016 doesn't support in-place upgrade from SharePoint 2010. For more information, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).
+- You want to migrate a SharePoint 2010 deployment of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to SharePoint 2013/2016. SharePoint 2013/2016 doesn't support in-place upgrade from SharePoint 2010. For more information, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](/previous-versions/sql/reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode).
 
 ## <a name="bkmk_native_scenarios"></a> Native mode upgrade and migration scenarios
 
@@ -183,9 +183,9 @@ The following sections describe the issues and basic steps needed to upgrade or 
    > [!TIP]
    > Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint cmdlet `Get-SPRSServiceApplicationServers` to determine servers in the SharePoint farm that are currently running the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Shared Service and therefore require an upgrade.
 
-- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).
+- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint](/previous-versions/sql/reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint).
 
-For detailed steps on Migrating a SharePoint mode installation, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).
+For detailed steps on Migrating a SharePoint mode installation, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](/previous-versions/sql/reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode).
 
 > [!IMPORTANT]
 > Some of the following scenarios require down time of the SharePoint environment due to the different technologies that need to be upgraded. If your situation does not allow for down time, you will need to complete a migration instead of an in-place upgrade.
@@ -240,7 +240,7 @@ Moving a report server installation to another computer invalidates the hash tha
 
 To re-establish reversible encryption on the new report server computer, you must restore the key that you previously backed up. The complete key set that is stored in the report server database consists of a symmetric key value, plus service identity information used to restrict access to the key so only the report server instance that stored it can use it. During key restoration, the report server replaces existing copies of the key with new versions. The new version includes machine and service identity values as defined on the current computer. For more information, see:
 
-- SharePoint mode: See the "Key Management" section of [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)
+- SharePoint mode: See the "Key Management" section of [Manage a Reporting Services SharePoint Service Application](/previous-versions/sql/reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application)
 
 - Native Mode: See [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
 

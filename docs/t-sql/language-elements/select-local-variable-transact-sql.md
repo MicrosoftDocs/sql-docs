@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "local variables [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || =azure-sqldw-latest || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || =azure-sqldw-latest || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
 ---
 
 # SELECT @local_variable (Transact-SQL)

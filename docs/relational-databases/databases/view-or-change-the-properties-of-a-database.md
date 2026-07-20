@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "database viewing [SQL Server]"
   - "databases [SQL Server], viewing"
   - "viewing databases"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # View or Change the Properties of a Database
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

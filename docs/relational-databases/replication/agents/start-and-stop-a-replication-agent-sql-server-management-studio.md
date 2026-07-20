@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "agents [SQL Server replication], stopping"
   - "agents [SQL Server replication], starting"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Start and Stop a Replication Agent (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

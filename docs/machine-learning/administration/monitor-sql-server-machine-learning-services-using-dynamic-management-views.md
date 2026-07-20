@@ -7,7 +7,7 @@ ms.date: 10/14/2019
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 ---
 # Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]

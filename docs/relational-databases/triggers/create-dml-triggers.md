@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "DML triggers, programming"
   - "testing column changes"
   - "results [SQL Server], DML triggers"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Create DML triggers
 

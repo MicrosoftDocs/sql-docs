@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "geometry subtypes [SQL Server]"
   - "Polygon geometry subtype [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Polygon
 

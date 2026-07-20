@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "upgrading replicated databases"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Upgrade Replication Scripts (Replication Transact-SQL Programming)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

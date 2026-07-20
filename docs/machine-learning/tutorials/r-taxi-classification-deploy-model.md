@@ -8,7 +8,7 @@ ms.date: 10/15/2020
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: tutorial
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || >=azuresqldb-mi-current"
 ---
 
 # R tutorial: Run predictions in SQL stored procedures

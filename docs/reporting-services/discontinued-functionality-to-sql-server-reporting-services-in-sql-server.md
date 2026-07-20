@@ -52,7 +52,7 @@ These features that are no longer available in SQL Server 2019 Reporting Service
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016"
+::: moniker range=">=sql-server-2017"
 
 ## Discontinued functionality in SQL Server 2016 Reporting Services
 

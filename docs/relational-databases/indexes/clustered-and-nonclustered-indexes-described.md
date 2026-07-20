@@ -13,7 +13,7 @@ ms.custom:
 helpviewer_keywords:
   - "query optimizer [SQL Server], index usage"
   - "index concepts [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Clustered and nonclustered indexes
 

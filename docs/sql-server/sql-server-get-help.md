@@ -8,7 +8,7 @@ ms.date: 02/26/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: concept-article
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 
 # SQL Server help and feedback

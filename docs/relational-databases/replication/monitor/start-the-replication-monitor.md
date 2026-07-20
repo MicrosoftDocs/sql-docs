@@ -11,7 +11,7 @@ ms.custom:
   - updatefrequency5
 helpviewer_keywords:
   - "Replication Monitor, starting"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Start the Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

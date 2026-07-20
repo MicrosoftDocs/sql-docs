@@ -11,7 +11,7 @@ f1_keywords:
   - "sql13.swb.alwaysencryptedwizard.encryption.f1"
   - "sql13.swb.alwaysencryptedwizard.masterkey.f1"
 ms.topic: concept-article
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Overview of key management for Always Encrypted

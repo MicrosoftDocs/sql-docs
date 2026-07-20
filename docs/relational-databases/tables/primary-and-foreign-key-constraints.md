@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "FOREIGN KEY constraints"
   - "foreign keys [SQL Server]"
   - "foreign keys [SQL Server], about foreign key constraints"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Primary and foreign key constraints
 

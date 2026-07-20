@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sys.time_zone_info system table"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # sys.time_zone_info (Transact-SQL)
 

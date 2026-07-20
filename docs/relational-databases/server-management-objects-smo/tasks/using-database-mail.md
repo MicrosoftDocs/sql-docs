@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "e-mail [SMO]"
   - "Database Mail [SMO]"
   - "mail [SMO]"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Using Database Mail
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Synapse Analytics FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]

@@ -8,7 +8,7 @@ ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: how-to
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 ---
 # Create a local R package repository using miniCRAN
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], initializing"
   - "initializing subscriptions [SQL Server replication], about initializing subscriptions"
   - "merge replication [SQL Server replication], initializing subscriptions"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Initialize a Subscription
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

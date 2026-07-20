@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "change tracking [SQL Server], about change tracking"
   - "change tracking [SQL Server]"
   - "data [SQL Server], changing"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # About Change Tracking (SQL Server)
 

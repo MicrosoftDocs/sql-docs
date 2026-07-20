@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Managed Classes [SQLXML], applying XSL transformations"
   - "SQLXML Managed Classes, applying XSL transformations"
   - "XSL Transformations [SQLXML]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Applying an XSL Transformation (SQLXML Managed Classes)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

@@ -7,7 +7,7 @@ ms.date: 09/02/2025
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: release-notes
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # SQL Server 2019 release notes

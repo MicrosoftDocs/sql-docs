@@ -7,7 +7,7 @@ ms.date: 12/17/2025
 ms.service: sql
 ms.subservice: install
 ms.topic: install-set-up-deploy
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Repair a failed SQL Server installation
 

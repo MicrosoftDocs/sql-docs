@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "redistributing SQLXML"
   - "SQL Server Native Client, SQLXML"
   - "side-by-side installations [SQLXML]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # What's New in SQLXML 4.0 SP1
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

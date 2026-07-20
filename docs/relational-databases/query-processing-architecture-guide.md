@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "execution plan caching"
   - "plan cache"
 ai-usage: ai-assisted
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Query processing architecture guide

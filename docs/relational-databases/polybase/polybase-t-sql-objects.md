@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "PolyBase, fundamentals"
   - "PolyBase, SQL statements"
   - "PolyBase, SQL objects"
-monikerRange: ">=sql-server-linux-ver15 || >=sql-server-2016"
+monikerRange: ">=sql-server-linux-ver15 || >=sql-server-2017"
 ---
 # PolyBase Transact-SQL reference
 

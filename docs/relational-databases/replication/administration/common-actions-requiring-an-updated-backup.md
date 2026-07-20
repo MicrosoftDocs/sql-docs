@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "recovery [SQL Server replication], actions requiring a backup"
   - "restoring [SQL Server replication], actions requiring a backup"
   - "backups [SQL Server replication], actions requiring a backup"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Common Actions Requiring an Updated Backup
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

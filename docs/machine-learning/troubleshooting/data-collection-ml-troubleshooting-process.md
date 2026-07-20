@@ -7,7 +7,7 @@ ms.date: 03/31/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: troubleshooting
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 # Collect data to troubleshoot Python and R scripts with SQL Server Machine Learning Services
 

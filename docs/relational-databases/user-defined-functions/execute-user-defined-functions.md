@@ -11,7 +11,7 @@ ms.custom:
 helpviewer_keywords:
   - "invoking user-defined functions"
   - "user-defined functions [SQL Server], executing"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Execute user-defined functions
 

@@ -9,7 +9,7 @@ ms.subservice: stored-procedures
 ms.topic: sample
 helpviewer_keywords:
   - "OLE Automation [SQL Server], examples"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # OLE Automation Sample Script
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

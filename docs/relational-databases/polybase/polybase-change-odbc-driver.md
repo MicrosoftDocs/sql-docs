@@ -8,7 +8,7 @@ ms.date: 06/11/2025
 ms.service: sql
 ms.subservice: polybase
 ms.topic: how-to
-monikerRange: ">=sql-server-2016 || >=sql-server-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || =azuresqldb-mi-current"
 ---
 
 # Change the SQL Server driver version for PolyBase

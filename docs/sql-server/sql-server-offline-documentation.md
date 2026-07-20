@@ -10,7 +10,7 @@ ms.subservice: install
 ms.topic: install-set-up-deploy
 ms.custom:
   - intro-installation
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 
 # Install SQL Server documentation to view offline in SSMS

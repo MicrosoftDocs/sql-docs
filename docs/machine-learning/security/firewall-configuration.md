@@ -7,7 +7,7 @@ ms.date: 10/17/2018
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 # Firewall configuration for SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

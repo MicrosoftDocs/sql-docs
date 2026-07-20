@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], monitoring"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Programmatically Monitor Replication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

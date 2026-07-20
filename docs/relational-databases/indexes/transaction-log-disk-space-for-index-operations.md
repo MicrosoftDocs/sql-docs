@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "transaction logs [SQL Server], disk space"
   - "disk space [SQL Server], transaction logs"
   - "space [SQL Server], transaction logs"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Transaction log disk space for index operations
 

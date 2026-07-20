@@ -11,7 +11,7 @@ ms.topic: concept-article
 helpviewer_keywords:
   - "SQL Server Audit"
   - "audits [SQL Server], SQL Server Audit"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # SQL Server Audit (Database Engine)
 

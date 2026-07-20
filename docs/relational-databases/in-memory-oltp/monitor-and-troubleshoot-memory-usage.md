@@ -7,7 +7,7 @@ ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: tutorial
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # Monitor and troubleshoot memory usage with in-memory OLTP
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

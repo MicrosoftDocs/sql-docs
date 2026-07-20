@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "synchronization [SQL Server replication], Windows Synchronization Manager"
   - "Windows Synchronization Manager"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Synchronize a Subscription Using Windows Synchronization Manager
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

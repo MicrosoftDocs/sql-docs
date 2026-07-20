@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
   - "failover [SQL Server], Always On Availability Groups"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Configure a flexible automatic failover policy for an Always On availability group
 

@@ -9,7 +9,7 @@ ms.subservice: machine-learning-services
 ms.topic: how-to
 ms.custom:
   - intro-overview
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # What are standalone Machine Learning Server or R Server in SQL Server?

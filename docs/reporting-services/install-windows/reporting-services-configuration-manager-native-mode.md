@@ -50,7 +50,7 @@ The Report Server configuration manager is version-specific. You can't use the R
 
 ## Get started
 
-1. Ensure that your system and permissions are set up correctly. For more information, see [Hardware and software requirements for SQL Server 2016 and SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+1. Ensure that your system and permissions are set up correctly. For more information, see [Hardware and software requirements for SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).
 
 1. To start the Report Server configuration manager, go to the Windows **Start** menu and enter **Report Server**. Select **Report Server Configuration Manager** from the search results.
 

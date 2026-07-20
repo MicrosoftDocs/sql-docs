@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQL Server event classes, Locks event category"
   - "event classes [SQL Server], Locks event category"
   - "lock escalation [SQL Server], locks event category"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Locks Event Category
 

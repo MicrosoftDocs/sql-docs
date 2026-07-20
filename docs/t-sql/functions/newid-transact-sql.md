@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "NEWID function"
 dev_langs:
   - "TSQL"
-monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || azure-sqldw-latest||=fabric"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric"
 ---
 
 # NEWID (Transact-SQL)

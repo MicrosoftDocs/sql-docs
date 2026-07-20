@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "XML Bulk Load [SQLXML], .NET environment"
   - ".NET Framework [SQLXML], XML Bulk Load"
   - "bulk load [SQLXML], .NET environment"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ms.custom: sfi-ropc-nochange
 ---
 # SQLXML 4.0 .NET Framework Support - Using Bulk Load

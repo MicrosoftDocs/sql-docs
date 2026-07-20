@@ -8,7 +8,7 @@ ms.date: 09/08/2025
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: concept-article
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || >=sql-server-linux-2017 || >=sql-server-2016"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || >=sql-server-linux-2017 || >=sql-server-2017"
 ---
 
 # Versioning system for SQL documentation

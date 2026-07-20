@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "initializing subscriptions [SQL Server replication], reinitializing"
   - "subscriptions [SQL Server replication], reinitializing"
   - "reinitializing subscriptions"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Reinitialize a Subscription
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

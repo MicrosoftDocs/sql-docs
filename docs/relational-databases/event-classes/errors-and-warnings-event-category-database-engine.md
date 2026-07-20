@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Errors and Warnings event category [SQL Server]"
   - "SQL Server event classes, Errors and Warnings event category"
   - "event classes [SQL Server], Errors and Warnings event category"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Errors and Warnings Event Category (Database Engine)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]

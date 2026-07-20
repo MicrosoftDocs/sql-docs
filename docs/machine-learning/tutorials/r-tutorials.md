@@ -9,7 +9,7 @@ ms.date: 05/07/2021
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: tutorial
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 ---
 
 # R tutorials for SQL machine learning
@@ -29,7 +29,7 @@ This article describes the Python tutorials and quickstarts for [Azure SQL Manag
 
 ## R tutorials
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-ver15"
 | Tutorial | Description |
 |------|-------------|
 | [In-database R analytics for data scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | For R developers new to SQL machine learning, this tutorial explains how to perform common data science tasks in SQL. Load and visualize data, train and save a model in a database, and use the model for predictive analytics. |

@@ -8,7 +8,7 @@ ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Insert data using XML updategrams (SQLXML 4.0)
 

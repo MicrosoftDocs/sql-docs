@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "index online operations [SQL Server]"
   - "online index operations"
   - "ONLINE option"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Perform index operations online

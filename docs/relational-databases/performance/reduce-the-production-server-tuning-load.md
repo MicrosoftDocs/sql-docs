@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "test servers [Database Engine Tuning Advisor]"
   - "production servers [SQL Server]"
   - "offload tuning overhead [SQL Server]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Reduce the Production Server Tuning Load
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -10,7 +10,7 @@ ms.subservice: xevents
 ms.topic: reference
 ms.custom:
   - ignite-2025
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # System objects that support Extended Events
 

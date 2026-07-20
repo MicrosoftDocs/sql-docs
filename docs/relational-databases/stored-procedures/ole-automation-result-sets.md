@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "result sets [SQL Server], OLE Automation"
   - "OLE Automation [SQL Server], result sets"
   - "arrays [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # OLE Automation Result Sets
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

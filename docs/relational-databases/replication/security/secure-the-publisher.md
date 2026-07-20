@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "PAL (publication access list)"
   - "Publishers [SQL Server replication], security"
   - "publications [SQL Server replication], security"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Secure the Publisher
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

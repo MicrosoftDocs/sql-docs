@@ -7,7 +7,7 @@ ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install
 ms.topic: upgrade-and-migration-article
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Complete the Database Engine upgrade
 

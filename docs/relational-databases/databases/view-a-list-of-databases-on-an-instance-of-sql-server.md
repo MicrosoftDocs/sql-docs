@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "databases [SQL Server], viewing"
   - "servers [SQL Server], databases listed on"
   - "listing databases"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # View list of databases on SQL Server

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "expiration [SQL Server replication]"
   - "retention periods [SQL Server replication]"
   - "deactivating subscriptions"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Set the Expiration Period for Subscriptions
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "monitoring [SQL Server], server performance"
   - "database monitoring [SQL Server]"
   - "monitoring server performance [SQL Server], about monitoring server performance"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Monitor and Tune for Performance
 

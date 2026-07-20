@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "maintaining publications [SQL Server replication]"
   - "publications [SQL Server replication], maintaining"
   - "administering replication, publications"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Maintain Publications
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

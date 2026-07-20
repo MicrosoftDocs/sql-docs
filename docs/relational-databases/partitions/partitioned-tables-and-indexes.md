@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], architecture"
   - "partitioned indexes [SQL Server], about partitioned indexes"
   - "index partitions"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Partitioned tables and indexes

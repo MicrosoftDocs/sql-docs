@@ -3,8 +3,8 @@ title: "SQL Server 2025: Hardware and Software Requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2025.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest, jopilov, rdorr
-ms.date: 02/26/2026
+ms.reviewer: jopilov, rdorr
+ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: checklist
@@ -59,8 +59,8 @@ For hardware and software requirements for other versions of [!INCLUDE [ssNoVers
 
 - [SQL Server 2022](hardware-and-software-requirements-for-installing-sql-server-2022.md)
 - [SQL Server 2019](hardware-and-software-requirements-for-installing-sql-server-2019.md)
-- [SQL Server 2016 and 2017](hardware-and-software-requirements-for-installing-sql-server.md)
-- [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system-requirements)
+- [SQL Server 2017](hardware-and-software-requirements-for-installing-sql-server-2017.md)
+- [SQL Server on Linux](../../linux/install-upgrade/setup.md#system-requirements)
 
 <a id="pmosr"></a>
 
@@ -103,7 +103,7 @@ The following requirements apply to all installations:
 - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files
 
 > [!IMPORTANT]  
-> The PolyBase feature has additional hardware and software requirements. For more information, see [Data virtualization with PolyBase in SQL Server](../../relational-databases/polybase/overview.md).
+> The PolyBase feature has additional hardware and software requirements. For more information, see [PolyBase overview](../../relational-databases/polybase/overview.md).
 
 ## Operating system support
 
@@ -191,9 +191,9 @@ The supported storage types for data files are:
 
   - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB. For more information about support for larger sector sizes and manufacturer implementations, see the section "4-KB disk sector sizes" in the white paper *SQLIOBasicsCh2.doc*. You can download the whitepaper from the [Download](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)#download) section of the [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)) article.
 
-    If you use advanced format disks that are physically formatted with 4,096 bytes, but expose a logical sector size of 512 bytes, you can read more about the behavior and recommendations in the Tech Community article [SQL Server - New drives use 4K sector size](https://techcommunity.microsoft.com/blog/sqlserversupport/sql-server---new-drives-use-4k-sector-size/316277).
+    If you use advanced format disks that are physically formatted with 4,096 bytes, but expose a logical sector size of 512 bytes, see [SQL Server - New drives use 4K sector size](https://techcommunity.microsoft.com/blog/sqlserversupport/sql-server---new-drives-use-4k-sector-size/316277).
 
-    Hard drives with sector sizes larger than 4 KB might cause errors when you attempt to store [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data files on them. For more information on hard drive sector-size support in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Troubleshoot SQL Server errors related to system disk sector size greater than 4 KB](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size). Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server on some newer storage devices with system disk sector size greater than 4 KB.
+    Hard drives with sector sizes larger than 4 KB might cause errors when you attempt to store [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data files on them. For more information about hard drive sector-size support in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Troubleshoot SQL Server errors related to system disk sector size greater than 4 KB](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size). Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server on some newer storage devices with system disk sector size greater than 4 KB.
 
   - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the `tempdb` files. Ensure that the path specified for the `tempdb` data and log files is valid on all the cluster nodes. During failover, if the `tempdb` directories aren't available on the failover target node, the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] resource fails to come online.
 

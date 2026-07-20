@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sys.dm_xtp_gc_stats dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 ---
 
 # sys.dm_xtp_gc_queue_stats (Transact-SQL)

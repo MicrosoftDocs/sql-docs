@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "tutorials [SQL Server replication]"
   - "walkthroughs [SQL Server replication]"
   - "replication [SQL Server], tutorials"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication tutorials
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

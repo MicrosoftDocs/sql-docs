@@ -11,7 +11,7 @@ ms.topic: how-to
 ms.custom:
   - ignite-2024
 keywords: ssdt dacfx
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || =azuresqldb-mi-current || =fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =azuresqldb-mi-current || =fabric"
 ---
 
 # Alter DacFx used by SQL Server Data Tools (SSDT)

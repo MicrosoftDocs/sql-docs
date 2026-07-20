@@ -1,10 +1,9 @@
 ---
-title: "SQL Server 2016 and 2017: Hardware and Software Requirements"
-description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2016 and SQL Server 2017.
+title: "SQL Server 2017: Hardware and Software Requirements"
+description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2017.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 02/26/2026
+ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: checklist
@@ -47,7 +46,7 @@ helpviewer_keywords:
   - "localized SQL Server versions"
 ---
 
-# Hardware and software requirements for SQL Server 2016 and SQL Server 2017
+# Hardware and software requirements for SQL Server 2017
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
@@ -58,7 +57,7 @@ For hardware and software requirements for other versions of [!INCLUDE [ssNoVers
 - [SQL Server 2025](hardware-and-software-requirements-for-installing-sql-server-2025.md)
 - [SQL Server 2022](hardware-and-software-requirements-for-installing-sql-server-2022.md)
 - [SQL Server 2019](hardware-and-software-requirements-for-installing-sql-server-2019.md)
-- [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system-requirements)
+- [SQL Server on Linux](../../linux/install-upgrade/setup.md#system-requirements)
 
 <a id="pmosr"></a>
 
@@ -89,7 +88,7 @@ The following memory and processor requirements apply to all editions of [!INCLU
 
 ## Software requirements
 
-The table in this section lists the minimum software requirements for running SQL Server. There are also recommended configuration options for [optimal performance](/troubleshoot/sql/database-engine/performance/recommended-updates-configuration-workloads).
+The following table lists the minimum software requirements for running SQL Server. It also lists recommended configuration options for [optimal performance](/troubleshoot/sql/database-engine/performance/recommended-updates-configuration-workloads).
 
 The following requirements apply to all installations:
 
@@ -99,7 +98,7 @@ The following requirements apply to all installations:
 | .NET Framework | [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or Replication. SQL Server setup automatically installs [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)]. See [.NET Framework installation](#net-framework-installation). |
 | Network software | Supported operating systems for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA<sup>1</sup>. |
 
-<sup>1</sup> VIA protocol isn't supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection isn't cluster-aware and fails after an instance failover. It's therefore not recommended and should only be used in specific scenarios.
+<sup>1</sup> VIA protocol isn't supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance can use Shared Memory protocol to connect to SQL Server by using its local pipe address. However, this type of connection isn't cluster-aware and fails after an instance failover. It's therefore not recommended and should only be used in specific scenarios.
 
 > [!IMPORTANT]  
 > The VIA protocol is deprecated. [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] For more information about network protocols and libraries, see [Network protocols and network libraries](network-protocols-and-network-libraries.md).
@@ -110,13 +109,13 @@ The following requirements apply to all installations:
 - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files
 
 > [!IMPORTANT]  
-> The PolyBase feature has additional hardware and software requirements. For more information, see [Data virtualization with PolyBase in SQL Server](../../relational-databases/polybase/overview.md).
+> The PolyBase feature has additional hardware and software requirements. For more information, see [PolyBase overview](../../relational-databases/polybase/overview.md).
 
 ### .NET Framework installation
 
 You can manually install [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/help/3045560).
 
-For more information, recommendations, and guidance about [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](/dotnet/framework/deployment/deployment-guide-for-developers).
+For more information, recommendations, and guidance about [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, see [.NET Framework Deployment Guide for Developers](/dotnet/framework/deployment/deployment-guide-for-developers).
 
 [!INCLUDE [win81](../../includes/win81-md.md)] and [!INCLUDE [winserver2012r2](../../includes/winserver2012r2-md.md)] require [KB2919355](https://support.microsoft.com/help/2919355) before installing [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.
 
@@ -192,71 +191,13 @@ For more information about installing [!INCLUDE [ssNoVersion](../../includes/ssn
 > [!NOTE]  
 > You can't install SQL Server on a Windows OS when case sensitivity is enabled. For more information, see [SQL Server isn't supported on a Windows operating system on which case sensitivity is enabled](/troubleshoot/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled).
 
-## Operating system support for SQL Server 2016
-
-The following table shows which editions of [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] are compatible with which versions of Windows. You can also use the support lifecycle information to see if your version of Windows is supported.
-
-| [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition: | Enterprise | Developer | Standard | Web | Express |
-| --- | --- | --- | --- | --- | --- |
-| **Windows Server 2019** ([Support lifecycle](/lifecycle/products/windows-server-2019)) | | | | | |
-| Windows Server 2019 Datacenter | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2019 Standard | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2019 Essentials | Yes | Yes | Yes | Yes | Yes |
-| **Windows Server 2016** ([Support lifecycle](/lifecycle/products/windows-server-2016)) | | | | | |
-| Windows Server 2016 Datacenter | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2016 Standard | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2016 Essentials | Yes | Yes | Yes | Yes | Yes |
-| **Windows Server 2012 R2** ([Support lifecycle](/lifecycle/products/windows-server-2012-r2)) | | | | | |
-| Windows Server 2012 R2 Datacenter | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2012 R2 Standard | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2012 R2 Essentials | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2012 R2 Foundation | Yes | Yes | Yes | Yes | Yes |
-| **Windows Server 2012** ([Support lifecycle](/lifecycle/products/windows-server-2012)) | | | | | |
-| Windows Server 2012 Datacenter | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2012 Standard | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2012 Essentials | Yes | Yes | Yes | Yes | Yes |
-| Windows Server 2012 Foundation | Yes | Yes | Yes | Yes | Yes |
-| Windows 11 IoT Enterprise | No | No | No | No | No |
-| Windows 11 Enterprise | No | No | No | No | No |
-| Windows 11 Professional | No | No | No | No | No |
-| Windows 11 Home | No | No | No | No | No |
-| Windows 10 IoT Enterprise | No | Yes | Yes | No | Yes |
-| Windows 10 Enterprise | No | Yes | Yes | No | Yes |
-| Windows 10 Professional | No | Yes | Yes | No | Yes |
-| Windows 10 Home | No | Yes | Yes | No | Yes |
-| Windows 8.1 Enterprise | No | Yes | Yes | No | Yes |
-| Windows 8.1 Pro | No | Yes | Yes | No | Yes |
-| Windows 8.1 Enterprise | No | Yes | Yes | No | Yes |
-| Windows 8 Pro | No | Yes | Yes | No | Yes |
-| Windows 8 | No | Yes | Yes | No | Yes |
-
-For minimum version requirements to install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on [!INCLUDE [winserver2012](../../includes/winserver2012-md.md)] or [!INCLUDE [win8](../../includes/win8-md.md)], see [Version requirements for SQL Server in Windows operating system](/troubleshoot/sql/database-engine/install/windows/use-sql-server-in-windows).
-
-### Server Core support for SQL Server 2016
-
-The following editions of Windows Server Core support installing [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]:
-
-- Windows Server 2019 Datacenter
-- Windows Server 2019 Standard
-- Windows Server 2016 Datacenter
-- Windows Server 2016 Standard
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 Datacenter
-- Windows Server 2012 Standard
-
-For more information about installing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).
-
-> [!NOTE]  
-> You can't install SQL Server on a Windows OS when case sensitivity is enabled. For more information, see [SQL Server isn't supported on a Windows operating system on which case sensitivity is enabled](/troubleshoot/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled).
-
 ### WOW64 support
 
 WOW64 (Windows 32-bit on Windows 64-bit) is a feature of 64-bit editions of Windows that enables 32-bit applications to run natively in 32-bit mode. Applications function in 32-bit mode, even though the underlying operating system is a 64-bit operating system. WOW64 isn't supported for [!INCLUDE [ssCurrent](../../includes/ssnoversion-md.md)] installations. However, Management Tools are supported in WOW64.
 
-### Features supported on 32-bit client Operating Systems
+### Features supported on 32-bit client operating systems
 
-Windows client operating systems, for example Windows 10 and Windows 8.1 are available as 32-bit or 64-bit architectures.   All SQL Server features are supported on 64-bit client operating systems. On supported 32-bit client operating systems Microsoft supports the following features:
+Windows client operating systems, for example Windows 10 and Windows 8.1, are available as 32-bit or 64-bit architectures. All SQL Server features are supported on 64-bit client operating systems. On supported 32-bit client operating systems Microsoft supports the following features:
 
 - Data Quality Client
 - Client Tools Connectivity
@@ -315,9 +256,9 @@ The supported storage types for data files are:
 
   - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB. For more information about support for larger sector sizes and manufacturer implementations, see the section "4-KB disk sector sizes" in the white paper *SQLIOBasicsCh2.doc*. You can download the whitepaper from the [Download](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)#download) section of the [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)) article.
 
-    If you use advanced format disks that are physically formatted with 4,096 bytes, but expose a logical sector size of 512 bytes, you can read more about the behavior and recommendations in the Tech Community article [SQL Server - New drives use 4K sector size](https://techcommunity.microsoft.com/blog/sqlserversupport/sql-server---new-drives-use-4k-sector-size/316277).
+    If you use advanced format disks that are physically formatted with 4,096 bytes, but expose a logical sector size of 512 bytes, see [SQL Server - New drives use 4K sector size](https://techcommunity.microsoft.com/blog/sqlserversupport/sql-server---new-drives-use-4k-sector-size/316277).
 
-    Hard drives with sector sizes larger than 4 KB might cause errors when you attempt to store [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data files on them. For more information on hard drive sector-size support in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Troubleshoot SQL Server errors related to system disk sector size greater than 4 KB](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size). Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server on some newer storage devices with system disk sector size greater than 4 KB.
+    Hard drives with sector sizes larger than 4 KB might cause errors when you attempt to store [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data files on them. For more information about hard drive sector-size support in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Troubleshoot SQL Server errors related to system disk sector size greater than 4 KB](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size). Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server on some newer storage devices with system disk sector size greater than 4 KB.
 
   - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the `tempdb` files. Ensure that the path specified for the `tempdb` data and log files is valid on all the cluster nodes. During failover, if the `tempdb` directories aren't available on the failover target node, the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] resource fails to come online.
 

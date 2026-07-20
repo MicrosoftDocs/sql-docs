@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "monitoring performance [SQL Server replication], subscription status"
   - "subscriptions [SQL Server replication], viewing status"
   - "Replication Monitor, publication and subscription status"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # View Publication and Subscription Status in Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

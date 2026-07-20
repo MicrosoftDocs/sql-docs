@@ -11,7 +11,7 @@ ms.topic: concept-article
 ms.custom:
   - devx-track-azurepowershell
   - ignite-2025
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # SQL Server backup to URL for Azure Blob Storage
 

@@ -16,7 +16,7 @@ f1_keywords:
   - "sql13.swb.tableproperties.changetracking.f1"
   - "sql13.swb.tableproperties.general.f1"
   - "sql13.swb.tableproperties.filetable.f1"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Table Properties - SSMS

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "viewing replicated commands"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # View Replicated Commands and Information in Distribution Database
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

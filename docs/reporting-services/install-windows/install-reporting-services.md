@@ -12,7 +12,7 @@ ms.custom:
   - intro-installation
   - updatefrequency5
 # customer intent: As a SQL Server user, I want to install and configure SQL Server Reporting Services so that I can better leverage data and generate robust reports.
-monikerRange: ">= sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Install and configure SQL Server Reporting Services
 

@@ -18,7 +18,7 @@ f1_keywords:
   - "sql13.rep.newpubwizard.pubproperties.snapshotformat.f1"
 helpviewer_keywords:
   - "Publication Properties dialog box"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # SQL Server Replication 'Publication Properties'  dialog box
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

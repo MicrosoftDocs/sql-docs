@@ -12,7 +12,7 @@ ms.custom:
 f1_keywords:
   - "sql13.rep.monitor.subscription.synchhistory.f1"
   - "sql13.rep.monitor.subscription.downlevelsynchhistory.f1"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Subscription, Synchronization History
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "deleting subscriptions"
   - "pull subscriptions [SQL Server replication], deleting"
   - "subscriptions [SQL Server replication], pull"
-monikerRange: "=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017"
 ---
 # Delete a Pull Subscription
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

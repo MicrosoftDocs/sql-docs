@@ -16,7 +16,7 @@ f1_keywords:
   - "sql11.ssms.XeNewEventSession.Events.f1"
   - "sql11.ssms.XeNewEventSession.Targets.f1"
   - "sql11.ssms.XeNewEventSession.Advanced.f1"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Quickstart: Extended Events

@@ -14,7 +14,7 @@ ms.custom:
 helpviewer_keywords:
   - "sqlps utility"
   - "PowerShell [SQL Server], sqlps utility"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 ---
 # sqlps utility
 

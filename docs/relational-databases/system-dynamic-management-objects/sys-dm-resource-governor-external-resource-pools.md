@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_external_resource_pools"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)

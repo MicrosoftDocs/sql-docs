@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "sys.memory_optimized_tables_internal_attributes catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 

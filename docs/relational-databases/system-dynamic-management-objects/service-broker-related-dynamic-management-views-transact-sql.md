@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "dynamic management views [SQL Server], Service Broker"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || =azuresqldb-mi-current"
 ---
 # Service Broker related dynamic management views (Transact-SQL)
 

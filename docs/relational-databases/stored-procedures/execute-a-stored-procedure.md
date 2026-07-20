@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], executing"
   - "stored procedures [SQL Server], executing"
   - "user-defined stored procedures [SQL Server]"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Execute a stored procedure
 

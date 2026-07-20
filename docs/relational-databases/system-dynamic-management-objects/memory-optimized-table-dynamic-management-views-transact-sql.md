@@ -9,7 +9,7 @@ ms.subservice: in-memory-oltp
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ms.custom:
   - build-2025
 ---

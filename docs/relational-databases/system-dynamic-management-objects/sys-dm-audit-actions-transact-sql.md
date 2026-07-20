@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sys.dm_audit_actions dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || =azuresqldb-mi-current"
 ---
 # sys.dm_audit_actions (Transact-SQL)
 

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "geo-replication [Azure SQL Database]"
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Geo-replication dynamic management views and functions
 

@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "sys.dm_exec_query_optimizer_memory_gateways dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 

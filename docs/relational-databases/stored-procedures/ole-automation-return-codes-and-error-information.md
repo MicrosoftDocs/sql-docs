@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "return codes [SQL Server]"
   - "OLE Automation [SQL Server], return codes"
   - "OLE Automation [SQL Server], errors"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # OLE automation return codes and error information
 

@@ -30,7 +30,7 @@ helpviewer_keywords:
   - "less precise (fuzzy) searches [full-text search]"
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # CONTAINSTABLE (Transact-SQL)
 

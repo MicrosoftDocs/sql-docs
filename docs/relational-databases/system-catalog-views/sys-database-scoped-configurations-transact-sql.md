@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sys.database_scoped_configurations catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric || =fabric-sqldb"
 ---
 # sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabric](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]

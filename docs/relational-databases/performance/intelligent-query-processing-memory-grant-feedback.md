@@ -8,7 +8,7 @@ ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: configuration
 ms.topic: concept-article
-f1_keywords:mana
+f1_keywords:
   - "memory grant feedback"
 helpviewer_keywords:
   - "memory grant feedback"

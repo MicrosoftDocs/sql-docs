@@ -63,11 +63,11 @@ The engineering team conducts detailed postmortems on problems that lead to wron
 
 ## Customer-initiated integrity checks 
 
-The Microsoft-managed data integrity protection provides early detection of new data integrity issues and repairs them when possible. Customer-initiated integrity checks using `DBCC CHECKDB` provide an extra layer of protection because `DBCC CHECKDB` is a comprehensive corruption detection mechanism for the entire database. `DBCC CHECKDB` is complementary to the Microsoft-managed data integrity protection features.
+The Microsoft-managed data integrity protection provides early detection of new data integrity issues and repairs them when possible. Customer-initiated integrity checks using `DBCC CHECKDB` provide an extra layer of protection because `DBCC CHECKDB` is a comprehensive corruption detection mechanism for the entire database. `DBCC CHECKDB` complements the Microsoft-managed data integrity protection features.
 
 This breadth and depth of detection require significant time and extra compute and I/O resources during `DBCC CHECKDB` execution. As a result, `DBCC CHECKDB` might affect your workloads due to resource contention.
 
-In addition to the monitoring and protection provided by the service, you can run `DBCC CHECKDB` at a frequency and time of your choice, balancing the extra data integrity protection against the extra resource consumption.
+In addition to the monitoring and protection that the service provides, you can run `DBCC CHECKDB` at a frequency and time of your choice, balancing the extra data integrity protection against the extra resource consumption.
 
 ## Customer feedback and evolving methodologies
 

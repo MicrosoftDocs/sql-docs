@@ -188,7 +188,7 @@ This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)
 
 - Percentile memory grant feedback is enabled by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], but has no effect if Query Store isn't enabled or when Query Store isn't in a "read write" state.
 
-- Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and  [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], but has no effect when Query Store isn't enabled or when Query Store isn't in a "read write" state.
+- Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], but has no effect when Query Store isn't enabled or when Query Store isn't in a "read write" state.
 
 - Percentile and persistence for memory grant feedback is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and enabled by default on all databases, both existing and new.
 

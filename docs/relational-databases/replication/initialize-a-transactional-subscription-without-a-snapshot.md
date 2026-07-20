@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "transactional replication, initializing"
   - "replication [SQL Server], initializing"
   - "initializing subscriptions [SQL Server replication], without snapshots"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Initialize a Transactional Subscription Without a Snapshot
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

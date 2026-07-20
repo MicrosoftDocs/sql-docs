@@ -11,7 +11,7 @@ ms.topic: tutorial
 ms.custom:
   - sfi-image-nochange
   - ignite-2025
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # View event data in SQL Server Management Studio
 

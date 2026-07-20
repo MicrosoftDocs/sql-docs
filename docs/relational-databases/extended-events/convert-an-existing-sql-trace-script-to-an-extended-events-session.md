@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "SQL Trace, convert script to extended events"
   - "extended events [SQL Server], convert SQL Trace script"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Convert an Existing SQL Trace Script to an Extended Events Session
 

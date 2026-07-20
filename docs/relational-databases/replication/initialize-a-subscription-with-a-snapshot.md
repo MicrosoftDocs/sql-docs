@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "snapshots [SQL Server replication], initializing subscriptions"
   - "initializing subscriptions [SQL Server replication], snapshots"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Initialize a Subscription with a Snapshot for a New Publication
 

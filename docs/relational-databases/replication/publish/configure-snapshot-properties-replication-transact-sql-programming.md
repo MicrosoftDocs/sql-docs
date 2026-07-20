@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "snapshots [SQL Server replication], properties"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Configure Snapshot Properties (Replication Transact-SQL Programming)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

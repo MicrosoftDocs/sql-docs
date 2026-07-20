@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "publishing [SQL Server replication], stored procedure execution"
   - "articles [SQL Server replication], stored procedures and"
   - "transactional replication, publishing stored procedure execution"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Publishing Stored Procedure Execution in Transactional Replication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

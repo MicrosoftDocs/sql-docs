@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], push"
   - "snapshot replication [SQL Server], subscribing"
   - "transactional replication, subscribing"
-monikerRange: "=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017"
 ---
 # Create a push subscription
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

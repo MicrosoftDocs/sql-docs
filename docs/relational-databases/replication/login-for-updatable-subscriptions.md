@@ -12,7 +12,7 @@ ms.custom:
   - updatefrequency5
 f1_keywords:
   - "sql13.rep.newsubwizard.updatablesubscriptionslogin.f1"
-monikerRange: "=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017"
 ---
 # Login for Updatable Subscriptions
  [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

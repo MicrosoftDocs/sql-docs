@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "articles [SQL Server replication], defining"
   - "adding articles"
   - "articles [SQL Server replication], adding"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Create a publication
 

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Replication Monitor, caching"
   - "refreshing data"
   - "Replication Monitor, refreshing"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Caching, Refresh, and Replication Monitor Performance
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

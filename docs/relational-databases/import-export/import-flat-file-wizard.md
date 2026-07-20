@@ -10,7 +10,7 @@ ms.subservice: data-movement
 ms.topic: how-to
 f1_keywords:
   - "sql13.swb.importflatfile.f1"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Import Flat File to SQL Wizard
 

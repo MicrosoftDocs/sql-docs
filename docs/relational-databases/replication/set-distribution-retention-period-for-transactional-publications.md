@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "transaction retention periods [SQL Server replication]"
   - "retention periods [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Set Distribution Retention Period for Transactional Publications
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

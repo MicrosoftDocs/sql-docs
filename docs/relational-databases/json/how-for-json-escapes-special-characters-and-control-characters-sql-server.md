@@ -11,7 +11,7 @@ ms.custom:
   - ignite-2025
 helpviewer_keywords:
   - "FOR JSON, special characters"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # How FOR JSON escapes special characters and control characters
 

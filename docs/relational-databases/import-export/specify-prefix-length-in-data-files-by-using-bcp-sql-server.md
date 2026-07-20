@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "prefix length [SQL Server]"
   - "lengths [SQL Server], prefix characters"
   - "data formats [SQL Server], prefix length"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Specify prefix length in data files using bcp (SQL Server)
 

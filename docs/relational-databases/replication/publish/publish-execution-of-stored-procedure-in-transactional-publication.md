@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "publishing [SQL Server replication], stored procedure execution"
   - "stored procedures [SQL Server replication], publishing"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Publish Execution of Stored Procedure in Transactional Publication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

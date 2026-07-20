@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.rep.validate.validateandresynch.f1"
 helpviewer_keywords:
   - "Validate Subscription dialog box"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Validate Subscription
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

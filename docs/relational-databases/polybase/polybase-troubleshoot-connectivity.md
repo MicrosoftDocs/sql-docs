@@ -8,7 +8,7 @@ ms.date: 01/28/2026
 ms.service: sql
 ms.subservice: polybase
 ms.topic: troubleshooting
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # Troubleshoot PolyBase Kerberos connectivity

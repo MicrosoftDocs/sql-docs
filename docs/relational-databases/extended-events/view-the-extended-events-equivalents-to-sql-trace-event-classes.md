@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQL Trace, extended events equivalents"
   - "extended events [SQL Server], SQL Trace equivalents"
   - "extended events [SQL Server], user configurable events"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # View the Extended Events Equivalents to SQL Trace Event Classes
 

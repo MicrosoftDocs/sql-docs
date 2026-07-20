@@ -10,7 +10,7 @@ ms.topic: ui-reference
 ms.custom:
   - updatefrequency5
 ai-usage: ai-assisted
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # SQL Server Management Studio replication dialog boxes
 

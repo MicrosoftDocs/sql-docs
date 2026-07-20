@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "Minimum Recovery LSN"
   - "flushing pages"
   - "active logs"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Database checkpoints (SQL Server)
 

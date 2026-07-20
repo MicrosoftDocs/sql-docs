@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "push subscriptions [SQL Server replication], modifying"
   - "modifying replication properties, push subscriptions"
   - "modifying subscriptions, SQL Server Management Studio"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # View and Modify Push Subscription Properties
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

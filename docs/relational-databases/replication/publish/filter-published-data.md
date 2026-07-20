@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "filtering published data [SQL Server replication]"
   - "snapshot replication [SQL Server], filtering published data"
   - "column filters [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Filter Published Data
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

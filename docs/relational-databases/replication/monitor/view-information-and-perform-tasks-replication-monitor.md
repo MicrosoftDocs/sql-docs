@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "viewing publication information"
   - "publications [SQL Server replication], viewing information"
   - "publications [SQL Server replication], Replication Monitor tasks"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # View information and perform tasks using Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

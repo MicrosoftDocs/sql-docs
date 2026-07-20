@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication], backing up"
   - "restoring [SQL Server replication]"
   - "administering replication, backing up"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Back Up and Restore Replicated Databases
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

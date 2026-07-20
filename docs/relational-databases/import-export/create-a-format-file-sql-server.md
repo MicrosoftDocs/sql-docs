@@ -9,7 +9,7 @@ ms.subservice: data-movement
 ms.topic: how-to
 helpviewer_keywords:
   - "format files [SQL Server], creating"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Create a format file with bcp (SQL Server)
 

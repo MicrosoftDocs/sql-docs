@@ -10,7 +10,7 @@ ms.topic: concept-article
 helpviewer_keywords:
   - "native data format [SQL Server]"
   - "data formats [SQL Server], native"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Use native format to import or export data (SQL Server)
 

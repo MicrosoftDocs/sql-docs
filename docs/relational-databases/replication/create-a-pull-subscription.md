@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], pull"
   - "snapshot replication [SQL Server], subscribing"
   - "transactional replication, subscribing"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Create a Pull Subscription
 

@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "on demand script execution"
   - "replication [SQL Server], synchronization"
   - "scripts [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Synchronize Data
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

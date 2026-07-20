@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "back up transaction logs [SQL Server], full logs"
   - "transaction logs [SQL Server], full log"
   - "full transaction logs [SQL Server]"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # Troubleshoot a full transaction log (SQL Server Error 9002)
 

@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], creating"
   - "partition functions [SQL Server]"
   - "partition schemes [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Create partitioned tables and indexes
 

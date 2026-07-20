@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "default values"
   - "OPENROWSET function, bulk importing"
   - "data formats [SQL Server], default values"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Keep nulls or default values during bulk import (SQL Server)
 

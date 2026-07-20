@@ -11,7 +11,7 @@ ms.topic: how-to
 helpviewer_keywords:
   - "delayed durability"
   - "Lazy Commit"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Control Transaction Durability
 

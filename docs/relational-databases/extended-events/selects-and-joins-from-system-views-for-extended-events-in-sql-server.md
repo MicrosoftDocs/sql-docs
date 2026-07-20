@@ -10,7 +10,7 @@ ms.subservice: xevents
 ms.topic: tutorial
 ms.custom:
   - ignite-2025
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # SELECTs and JOINs From System Views for Extended Events
 

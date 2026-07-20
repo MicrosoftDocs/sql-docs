@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "agents [SQL Server replication], alerts"
   - "displaying alerts"
   - "Snapshot Agent, alerts"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Use Alerts for Replication Agent Events
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

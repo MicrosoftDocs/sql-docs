@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "articles [SQL Server replication], transactional replication options"
   - "articles [SQL Server replication], merge replication options"
   - "articles [SQL Server replication], schema options"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Specify Schema Options for SQL Server replication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

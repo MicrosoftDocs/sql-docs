@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "transactional replication, replicating schema changes"
   - "schemas [SQL Server replication], replicating changes"
   - "publishing [SQL Server replication], schema changes"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Make Schema Changes on Publication Databases
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

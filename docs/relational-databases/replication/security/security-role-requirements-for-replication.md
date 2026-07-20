@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "security [SQL Server replication], roles"
   - "roles [SQL Server], replication"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Security Role Requirements for Replication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

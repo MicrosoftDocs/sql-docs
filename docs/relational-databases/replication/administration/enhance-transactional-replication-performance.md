@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "Distribution Agent, performance"
   - "transactional replication, performance"
   - "Log Reader Agent, performance"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Enhance Transactional Replication Performance
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

@@ -12,7 +12,7 @@ ms.custom:
 helpviewer_keywords:
   - "articles [SQL Server replication], transactional replication options"
   - "transactional replication, article options"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Article Options for Transactional Replication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

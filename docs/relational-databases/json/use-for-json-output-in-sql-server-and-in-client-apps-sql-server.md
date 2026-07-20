@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "FOR JSON, using in client apps"
   - "FOR JSON, using in SQL Server"
   - "FOR JSON, using in the SQL Database Engine"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Use FOR JSON output in the SQL Database Engine and in client apps
 

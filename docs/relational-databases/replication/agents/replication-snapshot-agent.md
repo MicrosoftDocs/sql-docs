@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "agents [SQL Server replication], Snapshot Agent"
   - "command prompt [SQL Server replication]"
   - "Snapshot Agent, parameter reference"
-monikerRange: "=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
 # Replication Snapshot Agent
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]

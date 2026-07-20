@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "compatibility [SQL Server], data formats"
   - "data formats [SQL Server], compatibility"
   - "bcp utility [SQL Server], compatibility"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Specify compatibility data formats when using bcp (SQL Server)
 

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "articles [SQL Server replication], about articles"
   - "publications [SQL Server replication], about publications"
   - "Distributors [SQL Server replication]"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Replication Publishing Model Overview
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

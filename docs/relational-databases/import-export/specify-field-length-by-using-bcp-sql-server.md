@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "field length [SQL Server]"
   - "data formats [SQL Server], field length"
   - "bcp utility [SQL Server], field length"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Specify field length by using bcp (SQL Server)
 

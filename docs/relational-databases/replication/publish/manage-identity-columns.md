@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "publishing [SQL Server replication], identity columns"
   - "transactional replication, identity range management"
   - "identity columns [SQL Server], replication"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Manage Identity Columns
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

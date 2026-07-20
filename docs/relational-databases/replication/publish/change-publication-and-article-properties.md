@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "administering replication, properties"
   - "publications [SQL Server replication], changing properties"
   - "articles [SQL Server replication], properties"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Change Publication and Article Properties
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

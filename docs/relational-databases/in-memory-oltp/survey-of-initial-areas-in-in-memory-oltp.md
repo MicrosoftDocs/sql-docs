@@ -7,7 +7,7 @@ ms.date: 09/27/2019
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: how-to
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Survey of Initial Areas in In-Memory OLTP
 

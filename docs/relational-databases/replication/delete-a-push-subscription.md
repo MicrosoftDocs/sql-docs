@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "push subscriptions [SQL Server replication], deleting"
   - "deleting subscriptions"
   - "subscriptions [SQL Server replication], push"
-monikerRange: "=azuresqldb-mi-current||=azuresqldb-current||>=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017"
 ---
 # Delete a Push Subscription
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

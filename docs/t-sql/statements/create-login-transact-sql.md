@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "certificates [SQL Server], logins"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ms.custom:
   - build-2025
 ---
@@ -39,7 +39,7 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 :::row:::
     :::column:::

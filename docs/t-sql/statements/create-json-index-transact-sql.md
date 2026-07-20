@@ -10,7 +10,7 @@ ms.subservice: t-sql
 ms.topic: language-reference
 ms.custom:
   - build-2025
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # CREATE JSON INDEX (Transact-SQL)
 

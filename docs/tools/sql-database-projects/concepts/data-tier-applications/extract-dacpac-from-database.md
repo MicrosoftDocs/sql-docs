@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "How to [DAC], extract"
   - "data-tier application [SQL Server], extract"
   - "wizard [DAC], extract"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Extract a DACPAC from a database

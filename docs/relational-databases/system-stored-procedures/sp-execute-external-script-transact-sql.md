@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sp_execute_external_script"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 ---
 # sp_execute_external_script (Transact-SQL)
 
@@ -166,7 +166,7 @@ By default, result sets returned by this stored procedure are output with unname
 
 In addition to returning a result set, you can return scalar values to using OUTPUT parameters.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-ver15"
 You can control the resources used by external scripts by configuring an external resource pool. For more information, see [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Information about the workload can be obtained from the resource governor catalog views, DMVs, and counters. For more information, see [Resource governor catalog views](../system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource governor related dynamic management views](../system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), and [SQL Server, External Scripts object](../performance-monitor/sql-server-external-scripts-object.md).  
 ::: moniker-end
 
@@ -301,7 +301,7 @@ GO
 
 Column headings used in Python code aren't output to SQL Server; therefore, use the WITH RESULT statement to specify the column names and data types for SQL to use.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-ver15"
 
 ### C. Generate an R model based on data from SQL Server
 

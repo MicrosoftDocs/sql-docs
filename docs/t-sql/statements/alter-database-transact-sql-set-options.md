@@ -29,7 +29,7 @@ helpviewer_keywords:
   - "Query Store options"
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # ALTER DATABASE SET options (Transact-SQL)
@@ -47,7 +47,7 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
 
 In the following row, select whichever product name you're interested in. Doing that displays different content here on this webpage, appropriate for whichever product you select.
 
-::: moniker range=">=sql-server-2016 || >=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 :::row:::
     :::column:::

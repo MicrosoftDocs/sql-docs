@@ -11,7 +11,7 @@ ms.collection:
   - data-tools
 helpviewer_keywords:
   - "client protocols [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Client Protocols Properties (Order tab)
 

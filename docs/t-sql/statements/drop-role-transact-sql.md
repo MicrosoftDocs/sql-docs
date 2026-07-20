@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "dropping roles"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # DROP ROLE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricsqldb.md)]

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_help_fulltext_catalogs_cursor"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.sp_help_fulltext_catalogs_cursor (Transact-SQL)
 

@@ -15,7 +15,7 @@ f1_keywords:
   - "sp_describe_undeclared_parameters_TSQL"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
 ---
 
 # sp_describe_undeclared_parameters (Transact-SQL)

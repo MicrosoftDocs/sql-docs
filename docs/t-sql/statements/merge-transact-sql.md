@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "inserting data"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =fabric || = fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =fabric || =fabric-sqldb"
 ---
 # MERGE (Transact-SQL)
 
@@ -38,7 +38,7 @@ This article provides different syntax, arguments, remarks, permissions, and exa
 
 ## Syntax
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric-sqldb"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 
 Syntax for SQL Server, Azure SQL Database, and SQL database in Fabric:
 
@@ -141,7 +141,7 @@ MERGE
 
 Specifies the temporary named result set or view, also known as common table expression, that's defined within the scope of the `MERGE` statement. The result set derives from a simple query and is referenced by the `MERGE` statement. For more information, see [WITH common_table_expression (Transact-SQL)](../queries/with-common-table-expression-transact-sql.md).
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 #### TOP ( *expression* ) [ PERCENT ]
 
@@ -185,7 +185,7 @@ An alternative name to reference a table for the *target_table*.
 
 Specifies the data source that's matched with the data rows in *target_table* based on `<merge_search_condition>`. The result of this match dictates the actions to take by the `WHEN` clauses of the `MERGE` statement. `<table_source>` can be a remote table or a derived table that accesses remote tables.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 `<table_source>` can be a derived table that uses the [!INCLUDE [tsql](../../includes/tsql-md.md)] [table value constructor](../queries/table-value-constructor-transact-sql.md) to construct a table by specifying multiple rows.
 
@@ -232,7 +232,7 @@ When no rows are returned by `<table_source>`, columns in the source table can't
 
 Specifies any valid search condition. For more information, see [Search condition (Transact-SQL)](../queries/search-condition-transact-sql.md).
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 #### \<table_hint_limited>
 
@@ -285,7 +285,7 @@ A list of one or more columns of the target table in which to insert data. Colum
 
 A comma-separated list of constants, variables, or expressions that return values to insert into the target table. Expressions can't contain an `EXECUTE` statement.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 #### DEFAULT VALUES
 
@@ -298,7 +298,7 @@ For more information about this clause, see [INSERT (Transact-SQL)](insert-trans
 
 Specifies the search conditions to specify `<merge_search_condition>` or `<clause_search_condition>`. For more information about the arguments for this clause, see [Search condition (Transact-SQL)](../queries/search-condition-transact-sql.md).
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 #### \<graph search pattern>
 
@@ -609,7 +609,7 @@ The following features are available to assist you in measuring and diagnosing t
 
 A common scenario is updating one or more columns in a table if a matching row exists. Or, inserting the data as a new row if a matching row doesn't exist. You usually do either scenario by passing parameters to a stored procedure that contains the appropriate `UPDATE` and `INSERT` statements. With the `MERGE` statement, you can do both tasks in a single statement. The following example shows a stored procedure in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database that contains both an `INSERT` statement and an `UPDATE` statement. The procedure is then modified to run the equivalent operations by using a single `MERGE` statement.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 ```sql
 CREATE PROCEDURE dbo.InsertUnitMeasure @UnitMeasureCode NCHAR(3), @Name NVARCHAR(25)
@@ -775,7 +775,7 @@ GO
 
 The following example uses `MERGE` to update the `ProductInventory` table in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database, daily, based on orders that are processed in the `SalesOrderDetail` table. The `Quantity` column of the `ProductInventory` table is updated by subtracting the number of orders placed each day for each product in the `SalesOrderDetail` table. If the number of orders for a product drops the inventory level of a product to 0 or less, the row for that product is deleted from the `ProductInventory` table.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 ```sql
 CREATE PROCEDURE Production.usp_UpdateInventory @OrderDate DATETIME
@@ -850,7 +850,7 @@ EXECUTE Production.usp_UpdateInventory '20030501';
 
 The following example uses `MERGE` to modify the `SalesReason` table in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by either updating or inserting rows.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` doesn't match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE [tsql](../../includes/tsql-md.md)] table value constructor to specify multiple rows for the source table. For more information about using the table value constructor in a derived table, see [Table Value Constructor (Transact-SQL)](../queries/table-value-constructor-transact-sql.md).
 
@@ -912,7 +912,7 @@ WHEN NOT MATCHED BY TARGET
 
 ::: moniker-end
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
 ### D. Insert the results of the MERGE statement into another table
 

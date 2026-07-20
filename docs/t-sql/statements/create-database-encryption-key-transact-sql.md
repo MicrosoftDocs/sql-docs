@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "database encryption key, create"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)

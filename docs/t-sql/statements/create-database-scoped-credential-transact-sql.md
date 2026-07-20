@@ -25,7 +25,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ai-usage: ai-assisted
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=aps-pdw-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=aps-pdw-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 

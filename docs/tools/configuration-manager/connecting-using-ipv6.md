@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Internet Protocol"
   - "IPv4"
   - "IPv6"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Connect using IPv6
 

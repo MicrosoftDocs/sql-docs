@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "sp_rxPredict procedure"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # sp_rxPredict
 

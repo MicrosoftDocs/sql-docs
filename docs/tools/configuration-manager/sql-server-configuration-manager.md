@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "tools [SQL Server], SQL Server Configuration Manager"
   - "configuration manager [SQL Server]"
 ai-usage: ai-assisted
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # SQL Server Configuration Manager

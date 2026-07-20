@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "wizard [DAC], export"
   - "export DAC"
   - "data-tier application [SQL Server], export"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Export a BACPAC file

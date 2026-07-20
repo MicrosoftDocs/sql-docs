@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_configure"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # sys.sp_configure (Transact-SQL)
 

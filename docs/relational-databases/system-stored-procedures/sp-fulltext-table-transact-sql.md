@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_fulltext_table"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.sp_fulltext_table (Transact-SQL)
 

@@ -9,7 +9,7 @@ ms.subservice: tools-other
 ms.topic: ui-reference
 ms.collection:
   - data-tools
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # SQL Server Integration Services Properties (Log On tab)
 

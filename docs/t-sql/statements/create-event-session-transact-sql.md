@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "CREATE EVENT SESSION statement"
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # CREATE EVENT SESSION (Transact-SQL)

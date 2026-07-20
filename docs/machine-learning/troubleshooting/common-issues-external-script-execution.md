@@ -8,7 +8,7 @@ ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: troubleshooting
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 # Troubleshoot issues with Launchpad service executing Python and R scripts in SQL Server Machine Learning Services
 
@@ -72,7 +72,7 @@ For more information, see [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
 This section lists the most common error messages that Launchpad returns.
 
-::: moniker range=">=sql-server-2016"
+::: moniker range=">=sql-server-2017"
 
 ## "Unable to launch runtime for R script"
 
@@ -184,12 +184,12 @@ EXECUTE sp_execute_external_script
 
 To resolve the issue, you must reinstall the package to the SQL Server instance library.
 
-::: moniker range=">=sql-server-2016"
+::: moniker range=">=sql-server-2017"
 > [!NOTE]  
 > If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Default R library location](../package-management/r-package-information.md#default-r-library-location).
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016"
+::: moniker range=">=sql-server-2017"
 
 ## Launchpad shuts down due to mismatched DLLs
 

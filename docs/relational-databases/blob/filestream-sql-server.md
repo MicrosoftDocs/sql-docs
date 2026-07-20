@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server]"
   - "FILESTREAM [SQL Server], about"
   - "FILESTREAM [SQL Server], overview"
-monikerRange: ">=sql-server-2016 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || =azuresqldb-mi-current"
 ---
 # FILESTREAM (SQL Server)
 

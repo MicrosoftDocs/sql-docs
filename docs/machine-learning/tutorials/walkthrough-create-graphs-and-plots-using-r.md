@@ -7,7 +7,7 @@ ms.date: 06/13/2019
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 # Create graphs and plots using SQL and R (walkthrough)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: overview
 ms.custom: intro-whats-new, linux-related-content
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 # What's new in SQL Server Machine Learning Services?
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
@@ -93,7 +93,7 @@ You can use the T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) functi
 This release also adds [SQL Server Machine Learning Server (Standalone)](r/r-server-standalone.md), a fully independent data science server, supporting statistical and predictive analytics in R and Python. As with R Services, this server is the next version of SQL Server 2016 R Server (Standalone). With the standalone server, you can distribute and scale R or Python solutions with no dependencies on SQL Server.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016"
+::: moniker range=">=sql-server-2017"
 ## New in SQL Server 2016
 
 This release introduced machine learning capabilities into SQL Server through **SQL Server 2016 R Services**, an in-database analytics engine for processing R script on resident data within a database engine instance.

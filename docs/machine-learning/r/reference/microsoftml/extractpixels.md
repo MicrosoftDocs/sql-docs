@@ -12,7 +12,7 @@ keywords:
   - extractPixels
   - image
   - transform
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 
 

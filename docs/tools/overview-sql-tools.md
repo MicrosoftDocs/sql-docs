@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
   - ignite-2025
 ai-usage: ai-assisted
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 ---
 
 # SQL tools overview

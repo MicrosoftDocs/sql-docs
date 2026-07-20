@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
 ms.custom: intro-deployment
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
 # Deploy the R model and use it in SQL Server (walkthrough)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]

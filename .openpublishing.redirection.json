@@ -1,6 +1,30 @@
 {
   "redirections": [
     {
+      "source_path": "docs/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md",
+      "redirect_url": "/previous-versions/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/deprecated-database-engine-features-in-sql-server-2016.md",
+      "redirect_url": "/previous-versions/sql/database-engine/deprecated-database-engine-features-in-sql-server-2016",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-2016"
+      ]
+    },
+    {
       "source_path": "docs/reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md",
       "redirect_url": "/previous-versions/sql/reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016",
       "redirect_document_id": false,

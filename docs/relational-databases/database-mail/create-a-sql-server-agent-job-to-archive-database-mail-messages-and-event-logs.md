@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "removing mail messages and attachments"
   - "Database Mail [SQL Server], archiving"
   - "saving mail messages and attachments"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs
 

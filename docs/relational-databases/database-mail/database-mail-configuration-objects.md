@@ -28,7 +28,7 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], profiles"
   - "profiles [SQL Server], Database Mail"
   - "accounts [Database Mail]"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Database Mail Configuration Objects
 

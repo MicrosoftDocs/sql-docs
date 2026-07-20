@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "external programs [Database Mail]"
   - "DatabaseMail90.exe"
   - "Database Mail [SQL Server], external programs"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Database Mail external program
 

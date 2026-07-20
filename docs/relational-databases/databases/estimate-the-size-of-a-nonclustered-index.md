@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "clustered indexes, table size"
   - "designing databases [SQL Server], estimating size"
   - "calculating table size"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || =fabric-sqldb"
 ---
 # Estimate the size of a nonclustered index
 

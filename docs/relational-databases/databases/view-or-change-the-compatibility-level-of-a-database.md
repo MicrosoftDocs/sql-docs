@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "compatibility levels [SQL Server], viewing"
   - "compatibility [SQL Server], databases"
   - "compatibility levels [SQL Server], changing"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # View or change the compatibility level of a database
 

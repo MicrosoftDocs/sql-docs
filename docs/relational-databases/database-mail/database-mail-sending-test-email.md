@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "architecture [SQL Server], Database Mail"
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Send a test email with database mail
 

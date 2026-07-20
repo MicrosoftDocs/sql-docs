@@ -3,7 +3,7 @@ title: Full-Text Search
 description: Full-Text Search lets users and applications run full-text queries against character-based data in Database Engine tables.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/02/2026
+ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search
 ms.topic: concept-article
@@ -11,7 +11,7 @@ ms.custom:
   - ignite-2025
 helpviewer_keywords:
   - "full-text search [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current"
 ---
 # Full-Text Search
 
@@ -38,13 +38,13 @@ This article provides an overview of Full-Text Search and describes its componen
 - [Populate Full-Text Indexes](populate-full-text-indexes.md)
 - [Query with Full-Text Search](query-with-full-text-search.md)
 
-Full-Text Search is an optional component of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine. If you don't select Full-Text Search when you install SQL Server, add it later by running SQL Server Setup again.
+Full-Text Search is an optional component of the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)]. If you don't select Full-Text Search when you install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], add it later by running Setup again.
 
 ## Overview
 
 A full-text index includes one or more character-based columns in a table. These columns can have any of the following data types: **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, or **varbinary(max)** and FILESTREAM. Each full-text index indexes one or more columns from the table, and each column can use a specific language.
 
-Full-text queries perform linguistic searches against text data in full-text indexes, by operating on words and phrases based on the rules of a particular language, such as English or Japanese. Full-text queries can include simple words and phrases or multiple forms of a word or phrase. A full-text query returns any documents that contain at least one match (also known as a *hit*). A match occurs when a target document contains all the terms specified in the full-text query, and meets any other search conditions, such as the distance between the matching terms.
+Full-text queries perform linguistic searches against text data in full-text indexes, by operating on words and phrases based on the rules of a particular language, such as English or Japanese. Full-text queries can include basic words and phrases or multiple forms of a word or phrase. A full-text query returns any documents that contain at least one match (also known as a *hit*). A match occurs when a target document contains all the terms specified in the full-text query, and meets any other search conditions, such as the distance between the matching terms.
 
 <a id="queries"></a>
 
@@ -88,7 +88,7 @@ For more information, see [Query with Full-Text Search](query-with-full-text-sea
 
 ## Compare Full-Text Search queries to the LIKE predicate
 
-In contrast to full-text search, the [LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE [tsql](../../includes/tsql-md.md)] predicate works on character patterns only. Also, you can't use the `LIKE` predicate to query formatted binary data. Furthermore, a `LIKE` query against a large amount of unstructured text data is much slower than an equivalent full-text query against the same data. A `LIKE` query against millions of rows of text data can take minutes to return; whereas a full-text query can take only seconds or less against the same data, depending on the number of rows that are returned.
+In contrast to full-text search, the [LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE [tsql](../../includes/tsql-md.md)] predicate works on character patterns only. Also, you can't use the `LIKE` predicate to query formatted binary data. Furthermore, a `LIKE` query against a large amount of unstructured text data is much slower than an equivalent full-text query against the same data. A `LIKE` query against millions of rows of text data can take minutes to return. In contrast, a full-text query can take only seconds or less against the same data, depending on the number of rows that are returned.
 
 <a id="architecture"></a>
 
@@ -100,7 +100,7 @@ Full-text search architecture consists of the following processes:
 
 - The filter daemon host process (`fdhost.exe`).
 
-  For security reasons, filters are loaded by separate processes called the filter daemon hosts. The `fdhost.exe` processes are created by an FDHOST launcher service (`MSSQLFDLauncher`), and they run under the security credentials of the FDHOST launcher service account. Therefore, the FDHOST launcher service must be running for full-text indexing and full-text querying to work. For information about setting the service account for this service, see [Set the Service Account for the Full-text Filter Daemon Launcher](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).
+  For security reasons, a separate process called the filter daemon host loads filters and word breakers. The `fdhost.exe` process is created by an FDHOST launcher service (`MSSQLFDLauncher`). It runs under the security credentials of the FDHOST launcher service account. Therefore, the FDHOST launcher service must be running for full-text indexing and full-text querying to work. For information about setting the service account for this service, see [Set the service account for the full-text Filter Daemon Launcher](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).
 
 These two processes contain the components of the full-text search architecture. The following illustration summarizes these components and their relationships. The components are described after the illustration.
 
@@ -110,16 +110,16 @@ These two processes contain the components of the full-text search architecture.
 
 ### SQL Server process
 
-The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] process uses the following components for full-text search:
+The [!INCLUDE [ssde-md](../../includes/ssde-md.md)] process uses the following components for full-text search:
 
 | Component | Description |
 | --- | --- |
 | **User tables** | These tables contain the data to be full-text indexed. |
 | **Full-text gatherer** | The full-text gatherer works with the full-text crawl threads. It's responsible for scheduling and driving the population of full-text indexes, and also for monitoring full-text catalogs. |
 | **Thesaurus files** | These files contain synonyms of search terms. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md). |
-| **Stoplist objects** | Stoplist objects contain a list of common words that aren't useful for the search. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md). |
-| **[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] query processor** | The query processor compiles and executes SQL queries. If a SQL query includes a full-text search query, the query is sent to the Full-Text Engine, both during compilation and during execution. The query result is matched against the full-text index. |
-| **Full-Text Engine** | The Full-Text Engine in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is fully integrated with the query processor. The Full-Text Engine compiles and executes full-text queries. As part of query execution, the Full-Text Engine might receive input from the thesaurus and stoplist. |
+| **Stoplist objects** | Stoplist objects contain a list of common words that aren't useful for the search. For more information, see [Configure and manage stopwords and stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md). |
+| **[!INCLUDE [ssde-md](../../includes/ssde-md.md)] query processor** | The query processor compiles and executes SQL queries. If a SQL query includes a full-text search query, the query is sent to the Full-Text Engine, both during compilation and during execution. The query result is matched against the full-text index. |
+| **Full-Text Engine** | The Full-Text Engine in the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] is fully integrated with the query processor. The Full-Text Engine compiles and executes full-text queries. As part of query execution, the Full-Text Engine might receive input from the thesaurus and stoplist. |
 | **Index writer (indexer)** | The index writer builds the structure that is used to store the indexed tokens. |
 | **Filter daemon manager** | The filter daemon manager is responsible for monitoring the status of the Full-Text Engine filter daemon host. |
 
@@ -133,11 +133,11 @@ The components of the filter daemon host are as follows:
 
 | Component | Description |
 | --- | --- |
-| **Protocol handler** | This component pulls the data from memory for further processing and accesses data from a user table in a specified database. One of its responsibilities is to gather data from the columns being full-text indexed and pass it to the filter daemon host, which applies filtering and word breaker as required. |
-| **Filters** | Some data types require filtering before the data in a document can be full-text indexed, including data in **varbinary**, **varbinary(max)**, **image**, or **xml** columns. The filter used for a given document depends on its document type. For example, different filters are used for Microsoft Word (`.doc`) documents, Microsoft Excel (`.xls`) documents, and XML (`.xml`) documents. Then the filter extracts chunks of text from the document, removing embedded formatting and retaining the text and, potentially, information about the position of the text. The result is a stream of textual information. For more information, see [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md). |
-| **Word breakers and stemmers** | A word breaker is a language-specific component that finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a language-specific stemmer component that conjugates verbs and performs inflectional expansions. At indexing time, the filter daemon host uses a word breaker and stemmer to perform linguistic analysis on the textual data from a given table column. The language that is associated with a table column in the full-text index determines which word breaker and stemmer are used for indexing the column. For more information, see [Configure and manage word breakers and stemmers for search (SQL Server)](configure-and-manage-word-breakers-and-stemmers-for-search.md). |
+| **Protocol handler** | This component pulls the data from memory for further processing and accesses data from a user table in a specified database. One of its responsibilities is to gather data from the columns being full-text indexed and pass it to the filter daemon host, which applies filtering and word breaking as required. |
+| **Filters** | Some data types require filtering before the data in a document can be full-text indexed. These data types include data in **varbinary(max)**, **image**, or **xml** columns. The filter used for a given document depends on its document type. For example, different filters are used for Microsoft Word (`.doc`) documents, Microsoft Excel (`.xls`) documents, and XML (`.xml`) documents. The filter extracts chunks of text from the document, removes embedded formatting, and retains the text and, potentially, information about the position of the text. The result is a stream of textual information. For more information, see [Configure and manage filters](configure-and-manage-filters-for-search.md). |
+| **Word breakers and stemmers** | A word breaker is a language-specific component that finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a language-specific stemmer component that conjugates verbs and performs inflectional expansions. At indexing time, the filter daemon host uses a word breaker and stemmer to perform linguistic analysis on the textual data from a given table column. The language that is associated with a table column in the full-text index determines which word breaker and stemmer are used for indexing the column. For more information, see [Configure and manage word breakers and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md). |
 
-[!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] installs a new version of the word breakers and stemmers for US English (LCID 1033) and UK English (LCID 2057). However, you can switch to the previous version of these components if you want to retain the previous behavior. For more information, see [Change the word breaker and filter in SQL Server 2025](change-the-word-breaker-used-for-us-english-and-uk-english.md).
+[!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] installs a new version of the word breakers and stemmers for US English (LCID 1033) and UK English (LCID 2057). However, you can switch to the previous version of these components if you want to retain the previous behavior. For more information, see [Change the word breaker used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md).
 
 <a id="processing"></a>
 
@@ -149,13 +149,13 @@ Full-text search is powered by the Full-Text Engine. The Full-Text Engine has tw
 
 ### Full-text indexing process
 
-When a full-text population (also known as a crawl) is initiated, the Full-Text Engine pushes large batches of data into memory and notifies the filter daemon host. The host filters and word-breaks the data and converts the converted data into inverted word lists. The full-text search then pulls the converted data from the word lists, processes the data to remove stopwords, and persists the word lists for a batch into one or more inverted indexes.
+When you initiate a full-text population (also known as a crawl), the Full-Text Engine pushes large batches of data into memory and notifies the filter daemon host. The host filters and word-breaks the data, and converts the data into inverted word lists. The indexer then pulls the converted data from the word lists, processes the data to remove stopwords, and persists the word lists for a batch into one or more inverted indexes.
 
-When indexing data stored in a **varbinary(max)** or **image** column, the filter, which implements the `IFilter` interface, extracts text based on the specified file format for that data (for example, [!INCLUDE [msCoName](../../includes/msconame-md.md)] Word). In some cases, the filter components require the **varbinary(max)**, or **image** data to be written out to the `filterdata` folder, instead of being pushed into memory.
+When indexing data stored in an **xml**, **varbinary(max)**, or **image** column, the filter, which implements the `IFilter` interface, extracts text based on the specified file format for that data (for example, [!INCLUDE [msCoName](../../includes/msconame-md.md)] Word). In some cases, the filter components require the binary data to be written out to the `FTData\FilterData` folder, instead of being directly streamed through memory.
 
 As part of processing, the gathered text data is passed through a word breaker to separate the text into individual tokens, or keywords. The language used for tokenization is specified at the column level, or can be identified within **varbinary(max)**, **image**, or **xml** data by the filter component.
 
-Extra processing might be performed to remove stopwords, and to normalize tokens before they're stored in the full-text index or an index fragment.
+Extra processing might be performed to remove stopwords and normalize tokens before they're stored in a full-text index fragment.
 
 When a population is complete, a final merge process is triggered that merges the index fragments together into one *master* full-text index. This process results in improved query performance since only the master index needs to be queried rather than several index fragments, and better scoring statistics might be used for relevance ranking.
 
@@ -169,9 +169,9 @@ The query processor passes the full-text portions of a query to the Full-Text En
 
 The information in full-text indexes is used by the Full-Text Engine to compile full-text queries that can quickly search a table for particular words or combinations of words. A full-text index stores information about significant words and their location within one or more columns of a database table. A full-text index is a special type of token-based functional index that is built and maintained by the Full-Text Engine for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. The process of building a full-text index differs from building other types of indexes. Instead of constructing a B-tree structure based on a value stored in a particular row, the Full-Text Engine builds an inverted, stacked, compressed index structure based on individual tokens from the text being indexed. The size of a full-text index is limited only by the available memory resources of the computer on which the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running.
 
-Beginning in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], the full-text indexes are integrated with the Database Engine, instead of residing in the file system as in previous versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a new database, the full-text catalog is now a virtual object that doesn't belong to any filegroup; it's merely a logical concept that refers to a group of the full-text indexes. Note, however, that during upgrade of a [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] database, any full-text catalog that contains data files, a new filegroup is created; for more information, see [Upgrade Full-Text Search](upgrade-full-text-search.md).
+Beginning in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], the full-text indexes are integrated with the Database Engine, instead of residing in the file system as in previous versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a new database, the full-text catalog is now a virtual object that doesn't belong to any filegroup. It's merely a logical concept that refers to a group of the full-text indexes. Note, however, that during upgrade of a [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] database, for any full-text catalog that contains data files, a new filegroup is created. For more information, see [Upgrade Full-Text Search](upgrade-full-text-search.md).
 
-Only one full-text index is allowed per table. For a full-text index to be created on a table, the table must have a single, unique non-null column. You can build a full-text index on columns of type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**, and **varbinary(max)** can be indexed for full-text search. Creating a full-text index on a column whose data type is **varbinary**, **varbinary(max)**, **image**, or **xml** requires that you specify a type column. A *type column* is a table column in which you store the file extension (`.doc`, `.pdf`, `.xls`, and so forth) of the document in each row.
+Each table can have only one full-text index. To create a full-text index on a table, the table must have a single, unique non-null column. You can build a full-text index on columns of type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, and **varbinary(max)**. When you create a full-text index on a column whose data type is **varbinary(max)**, **image**, or **xml**, you must specify a type column. A *type column* is a table column in which you store the file extension (`.doc`, `.pdf`, `.xls`, and so forth) of the document in each row.
 
 <a id="structure"></a>
 
@@ -179,7 +179,7 @@ Only one full-text index is allowed per table. For a full-text index to be creat
 
 A good understanding of the structure of a full-text index helps you understand how the Full-Text Engine works. This article uses the following excerpt of the `Document` table in [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] as an example table. This excerpt shows only two columns, the `DocumentID` column and the `Title` column, and three rows from the table.
 
-For this example, we assume that a full-text index has been created on the `Title` column.
+For this example, assume that a full-text index has been created on the `Title` column.
 
 | DocumentID | Title |
 | --- | --- |
@@ -218,19 +218,19 @@ The `ColId` column contains a value that corresponds to a particular column that
 
 The `DocId` column contains values for an 8-byte integer that maps to a particular full-text key value in a full-text indexed table. This mapping is necessary when the full-text key isn't an integer data type. In such cases, mappings between full-text key values and `DocId` values are maintained in a separate table called the `DocId Mapping` table. To query for these mappings, use the [sp_fulltext_keymappings](../system-stored-procedures/sp-fulltext-keymappings-transact-sql.md) system stored procedure. To satisfy a search condition, `DocId` values from the previous table need to be joined with the `DocId` mapping table to retrieve rows from the base table being queried. If the full-text key value of the base table is an integer type, the value directly serves as the `DocId` and no mapping is necessary. Therefore, using integer full-text key values can help optimize full-text queries.
 
-The `Occurrence` column contains an integer value. For each DocId value, there's a list of occurrence values that correspond to the relative word offsets of the particular keyword within that DocId. Occurrence values are useful in determining phrase or proximity matches, for example, phrases have numerically adjacent occurrence values. They're also useful in computing relevance scores; for example, the number of occurrences of a keyword in a DocId might be used in scoring.
+The `Occurrence` column contains an integer value. For each `DocId` value, there's a list of occurrence values that correspond to the relative word offsets of the particular keyword within that `DocId`. Occurrence values are useful in determining phrase or proximity matches, for example, phrases have numerically adjacent occurrence values. They're also useful in computing relevance scores. For example, the number of occurrences of a keyword in a `DocId` might be used in scoring.
 
 <a id="fragments"></a>
 
 ### Full-text index fragments
 
-The logical full-text index is usually split across multiple internal tables. Each internal table is called a full-text index fragment. Some of these fragments might contain newer data than others. For example, if a user updates the following row whose DocId is 3 and the table is auto change-tracked, a new fragment is created.
+The logical full-text index is usually split across multiple internal tables. Each internal table is called a full-text index fragment. Some of these fragments might contain newer data than others. For example, if a user updates the following row whose `DocId` is 3 and the table is auto change-tracked, a new fragment is created.
 
 | DocumentID | Title |
 | --- | --- |
 | `3` | `Rear Reflector` |
 
-In the following example, which shows Fragment 2, the fragment contains newer data about DocId 3 compared to Fragment 1. Therefore, when the user queries for `Rear Reflector` the data from Fragment 2 is used for DocId 3. Each fragment is marked with a creation timestamp that can be queried by using the [sys.fulltext_index_fragments](../system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) catalog view.
+In the following example, which shows Fragment 2, the fragment contains newer data about `DocId` 3 compared to Fragment 1. Therefore, when the user queries for `Rear Reflector`, the data from Fragment 2 is used for `DocId` 3. Each fragment is marked with a creation timestamp that can be queried by using the [sys.fulltext_index_fragments](../system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) catalog view.
 
 **Fragment 2**
 
@@ -239,7 +239,7 @@ In the following example, which shows Fragment 2, the fragment contains newer da
 | `Rear` | 1 | 3 | 1 |
 | `Reflector` | 1 | 3 | 2 |
 
-As can be seen from Fragment 2, full-text queries need to query each fragment internally and discard older entries. Therefore, too many full-text index fragments in the full-text index can lead to substantial degradation in query performance. To reduce the number of fragments, reorganize the fulltext catalog by using the `REORGANIZE` option of the [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE [tsql](../../includes/tsql-md.md)] statement. This statement performs a *master merge*, which merges the fragments into a single larger fragment and removes all obsolete entries from the full-text index.
+As can be seen from Fragment 2, full-text queries need to query each fragment internally and discard older entries. Therefore, too many full-text index fragments in the full-text index can lead to substantial degradation in query performance. To reduce the number of fragments, reorganize the full-text catalog by using the `REORGANIZE` option of the [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md) [!INCLUDE [tsql](../../includes/tsql-md.md)] statement. This statement performs a *master merge*, which merges the fragments into a single larger fragment and removes all obsolete entries from the full-text index.
 
 After being reorganized, the example index would contain the following rows:
 
@@ -268,20 +268,18 @@ After being reorganized, the example index would contain the following rows:
 
 <a id="components"></a>
 
-## Full-text search linguistic components and language support
+## Full-Text Search linguistic components and language support
 
-Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bangla, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages](../system-catalog-views/sys-fulltext-languages-transact-sql.md). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.
+Full-text search supports more than 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bangla, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages](../system-catalog-views/sys-fulltext-languages-transact-sql.md). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that full-text search supports. For example, LCID 1033 equates to U.S. English, and LCID 2057 equates to British English. For each supported full-text language, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.
 
 Language-specific components include the following items:
 
 | Component | Description |
 | --- | --- |
-| **Word breakers and stemmers** | A word breaker finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a stemmer that conjugates verbs for the same language. For more information, see [Configure and manage word breakers and stemmers for search (SQL Server)](configure-and-manage-word-breakers-and-stemmers-for-search.md). |
-| **Stoplists** | A system stoplist is provided, which contains a basic set of stopwords (also known as noise words). A *stopword* is a word that doesn't help the search and is ignored by full-text queries. For example, for the English locale words such as `a`, `and`, `is`, and `the` are considered stopwords. Typically, you need to configure one or more thesaurus files and stoplists. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md). |
-| **Thesaurus files** | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] also installs a thesaurus file for each full-text language, and a global thesaurus file. The installed thesaurus files are empty, but you can edit them to define synonyms for a specific language or business scenario. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md). |
-| **Filters (iFilters)** | Indexing a document in a **varbinary(max)**, **image**, or **xml** data type column requires a filter to perform extra processing. The filter must be specific to the document type (`.doc`, `.pdf`, `.xls`, `.xml`, and so forth). For more information, see [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md). |
-
-Word breakers (and stemmers) and filters run in the filter daemon host process (`fdhost.exe`).
+| **Word breakers and stemmers** | A word breaker finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a stemmer that conjugates verbs for the same language. For more information, see [Configure and manage word breakers and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md). |
+| **Stoplists** | A system stoplist is provided, which contains a basic set of stopwords (also known as noise words). A *stopword* is a word that doesn't help the search and is ignored by full-text queries. For example, for the English locale words such as `a`, `and`, `is`, and `the` are considered stopwords. Typically, you need to configure one or more thesaurus files and stoplists. For more information, see [Configure and manage stopwords and stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md). |
+| **Thesaurus files** | The [!INCLUDE [ssde-md](../../includes/ssde-md.md)] also installs a thesaurus file for each full-text language, and a global thesaurus file. The installed thesaurus files are empty, but you can edit them to define synonyms for a specific language or business scenario. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md). |
+| **Filters (IFilters)** | Indexing a document in a **varbinary(max)**, **image**, or **xml** data type column requires a filter to perform extra processing. The filter must be specific to the document type (`.doc`, `.pdf`, `.xls`, `.xml`, and so forth). For more information, see [Configure and manage filters](configure-and-manage-filters-for-search.md). |
 
 ## Related content
 

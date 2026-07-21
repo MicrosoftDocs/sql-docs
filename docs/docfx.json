@@ -467,12 +467,7 @@
         "integration-services/**/*.md": "None"
       },
       "feedback_product_url": {},
-      "manager": {
-        "**/*.md": "jroth",
-        "dmx/**/*.md": "kfollis",
-        "mdx/**/*.md": "kfollis",
-        "reporting-services/**/*.md": "kfollis"
-      },
+      
       "titleSuffix": {
         "ado/**/*.md": "ActiveX Data Objects (ADO)",
         "analysis-services/**/*.md": "",
@@ -594,6 +589,7 @@
         "azdata/**/*.md": "swells",
         "**/*/index.yml": "rwestMSFT",
         "reporting-services/**/*.md": "JulCsc",
+        "integration-services/**/*.md": "kromerm",
         "dmx/**/*.md": "KayUnkroth",
         "mdx/**/*.md": "KayUnkroth"
       },
@@ -601,11 +597,11 @@
         "azdata/**/*.md": "seanw",
         "**/*/index.yml": "randolphwest",
         "reporting-services/**/*.md": "juliacawthra",
+        "integration-services/**/*.md": "makromer",
         "dmx/**/*.md": "kayu",
         "mdx/**/*.md": "kayu"
       },
       "ms.reviewer": {
-        "reporting-services/**/*.md": "dniwenshuti"
       },
       "ms.date": {
         "azdata/**/*.md": "02/13/2026"

@@ -3658,16 +3658,140 @@
   - name: Microsoft Python Driver for SQL Server - mssql-python
     href: ../connect/python/mssql-python/python-sql-driver-mssql-python.md
     items:
-    - name: 'Quickstart: mssql-python driver for Python'
-      href: ../connect/python/mssql-python/python-sql-driver-mssql-python-quickstart.md
-    - name: 'Quickstart: Connect to a SQL database from a Jupyter Notebook'
-      href: ../connect/python/mssql-python/python-sql-driver-mssql-python-connect-jupyter-notebook.md
-    - name: 'Quickstart: Repeatable deployments with the Python driver for SQL Server'
-      href: ../connect/python/mssql-python/python-sql-driver-mssql-python-repeatable-deployments-quickstart.md
-    - name: 'Quickstart: Rapid prototyping with the Python driver for SQL Server'
-      href: ../connect/python/mssql-python/python-sql-driver-mssql-python-rapid-prototyping-quickstart.md
-    - name: 'Quickstart: Bulk copy with the Python driver for SQL Server'
-      href: ../connect/python/mssql-python/python-sql-driver-mssql-python-bulk-copy-quickstart.md
+    - name: What's new
+      href: ../connect/python/mssql-python/whats-new.md
+    - name: Installation
+      href: ../connect/python/mssql-python/installation.md
+    - name: Support lifecycle
+      href: ../connect/python/mssql-python/support-lifecycle.md
+    - name: Getting started
+      items:
+      - name: 'Quickstart: mssql-python driver for Python'
+        href: ../connect/python/mssql-python/python-sql-driver-mssql-python-quickstart.md
+      - name: 'Quickstart: Connect to a SQL database from a Jupyter Notebook'
+        href: ../connect/python/mssql-python/python-sql-driver-mssql-python-connect-jupyter-notebook.md
+      - name: 'Quickstart: Repeatable deployments with the Python driver for SQL Server'
+        href: ../connect/python/mssql-python/python-sql-driver-mssql-python-repeatable-deployments-quickstart.md
+      - name: 'Quickstart: Rapid prototyping with the Python driver for SQL Server'
+        href: ../connect/python/mssql-python/python-sql-driver-mssql-python-rapid-prototyping-quickstart.md
+      - name: 'Quickstart: Bulk copy with the Python driver for SQL Server'
+        href: ../connect/python/mssql-python/python-sql-driver-mssql-python-bulk-copy-quickstart.md
+    - name: Connecting to SQL Server
+      items:
+      - name: Connection strings
+        href: ../connect/python/mssql-python/connection-strings.md
+      - name: Build connection strings programmatically
+        href: ../connect/python/mssql-python/build-connection-strings.md
+      - name: Connection management
+        href: ../connect/python/mssql-python/connection-management.md
+      - name: Connection pooling
+        href: ../connect/python/mssql-python/connection-pooling.md
+      - name: Encryption and certificates
+        href: ../connect/python/mssql-python/encryption-certificates.md
+    - name: Executing queries
+      items:
+      - name: Executing queries
+        href: ../connect/python/mssql-python/executing-queries.md
+      - name: Retrieving data
+        href: ../connect/python/mssql-python/retrieving-data.md
+      - name: Parameterized queries
+        href: ../connect/python/mssql-python/parameterized-queries.md
+      - name: Stored procedures
+        href: ../connect/python/mssql-python/stored-procedures.md
+      - name: Cursor management
+        href: ../connect/python/mssql-python/cursor-management.md
+      - name: Transaction management
+        href: ../connect/python/mssql-python/transaction-management.md
+      - name: Pagination
+        href: ../connect/python/mssql-python/pagination.md
+    - name: Working with data types
+      items:
+      - name: Data type mappings
+        href: ../connect/python/mssql-python/data-type-mappings.md
+      - name: NULL handling
+        href: ../connect/python/mssql-python/null-handling.md
+      - name: String and Unicode handling
+        href: ../connect/python/mssql-python/string-unicode.md
+      - name: DateTime handling
+        href: ../connect/python/mssql-python/datetime-handling.md
+      - name: Decimal and money types
+        href: ../connect/python/mssql-python/decimal-money.md
+      - name: Binary data
+        href: ../connect/python/mssql-python/binary-data.md
+      - name: Custom type converters
+        href: ../connect/python/mssql-python/custom-type-converters.md
+      - name: Row objects
+        href: ../connect/python/mssql-python/row-objects.md
+    - name: Authentication and security
+      items:
+      - name: Entra authentication
+        href: ../connect/python/mssql-python/entra-authentication.md
+      - name: Security best practices
+        href: ../connect/python/mssql-python/security-best-practices.md
+    - name: SQL Server features
+      items:
+      - name: Bulk copy operations
+        href: ../connect/python/mssql-python/bulk-copy.md
+      - name: Availability group connections
+        href: ../connect/python/mssql-python/availability-groups.md
+      - name: JSON data
+        href: ../connect/python/mssql-python/json-data.md
+      - name: XML data
+        href: ../connect/python/mssql-python/xml-data.md
+      - name: Spatial data
+        href: ../connect/python/mssql-python/spatial-data.md
+      - name: Sparse columns
+        href: ../connect/python/mssql-python/sparse-columns.md
+      - name: Schema discovery
+        href: ../connect/python/mssql-python/schema-discovery.md
+      - name: Data loading and movement patterns
+        href: ../connect/python/mssql-python/data-loading-movement-patterns.md
+    - name: Framework integration
+      items:
+      - name: Apache Arrow integration
+        href: ../connect/python/mssql-python/arrow-integration.md
+      - name: pandas integration
+        href: ../connect/python/mssql-python/pandas-integration.md
+      - name: Polars integration
+        href: ../connect/python/mssql-python/polars-integration.md
+      - name: DuckDB integration
+        href: ../connect/python/mssql-python/duck-db-integration.md
+      - name: FastAPI integration
+        href: ../connect/python/mssql-python/fast-api-integration.md
+      - name: Flask integration
+        href: ../connect/python/mssql-python/flask-integration.md
+      - name: SQLAlchemy integration
+        href: ../connect/python/mssql-python/sql-alchemy-integration.md
+      - name: Async patterns
+        href: ../connect/python/mssql-python/asynchronous-patterns.md
+      - name: Data access and analytics patterns
+        href: ../connect/python/mssql-python/data-access-analytics-patterns.md
+    - name: Development environments
+      items:
+      - name: Container and local development
+        href: ../connect/python/mssql-python/container-local-development.md
+    - name: Performance and troubleshooting
+      items:
+      - name: Performance tuning
+        href: ../connect/python/mssql-python/performance-tuning.md
+      - name: Retry logic
+        href: ../connect/python/mssql-python/retry-logic.md
+      - name: Error handling
+        href: ../connect/python/mssql-python/error-handling.md
+      - name: Troubleshooting
+        href: ../connect/python/mssql-python/troubleshooting.md
+    - name: Migration and reference
+      items:
+      - name: Migrate from pyodbc
+        href: ../connect/python/mssql-python/migrate-from-pyodbc.md
+      - name: Migrate from pymssql
+        href: ../connect/python/mssql-python/migrate-from-pymssql.md
+      - name: Migrate from SQLite
+        href: ../connect/python/mssql-python/migrate-from-sql-lite.md
+      - name: Migrate from PostgreSQL
+        href: ../connect/python/mssql-python/migrate-from-postgresql.md
+      - name: Module configuration
+        href: ../connect/python/mssql-python/module-configuration.md
   - name: Microsoft Django Backend for SQL Server - mssql-django
     href: ../connect/python/mssql-django/python-sql-driver-mssql-django.md
     items:

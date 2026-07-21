@@ -39,7 +39,7 @@ helpviewer_keywords:
   - "databases [SQL Server], moving"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options
 
@@ -51,7 +51,7 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
 
 [!INCLUDE [alter-db](../../includes/alter-db.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 :::row:::
     :::column:::

@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "locking [SQL Server], SET statements"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest || =azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
+monikerRange: "=azure-sqldw-latest || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
 ---
 # SET Statements (Transact-SQL)
 

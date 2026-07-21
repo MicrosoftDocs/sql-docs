@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]

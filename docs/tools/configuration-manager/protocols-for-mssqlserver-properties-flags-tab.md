@@ -11,7 +11,7 @@ ms.collection:
   - data-tools
 helpviewer_keywords:
   - "MSSQLSERVER property protocols"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Protocols for MSSQLSERVER Properties (Flags tab)
 

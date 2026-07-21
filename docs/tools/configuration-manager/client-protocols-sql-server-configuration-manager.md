@@ -9,7 +9,7 @@ ms.subservice: tools-other
 ms.topic: how-to
 ms.collection:
   - data-tools
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Client Protocols (SQL Server Configuration Manager)
 

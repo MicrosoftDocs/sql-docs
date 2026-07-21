@@ -1,10 +1,10 @@
 ---
-title: "Configure and manage word breakers and stemmers"
+title: Configure and Manage Word Breakers and Stemmers
 titleSuffix: SQL Server Full-Text Search
-description: "Configure and manage word breakers and stemmers for Full-Text Search."
+description: Configure and manage word breakers and stemmers for Full-Text Search.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/27/2025
+ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search
 ms.topic: how-to
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "stemmers [full-text search]"
   - "conjugating verbs [full-text search]"
   - "word breakers [full-text search]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Configure and manage word breakers and stemmers
 
@@ -34,7 +34,7 @@ Word breakers and stemmers perform linguistic analysis on all full-text indexed 
 
 Word breakers and stemmers are language specific, and the rules for linguistic analysis differ for different languages. Language-specific word breakers make the resulting terms more accurate for that language.
 
-To use the word breakers and stemmers provided for all the languages supported by SQL Server, you typically don't have to take any action.
+To use the word breakers and stemmers provided for all the languages supported by the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)], you typically don't have to take any action.
 
 - Where there's a word breaker for the language family, but not for the specific sublanguage, the major language is used. For example, the French word breaker is used to handle text that is French Canadian.
 
@@ -42,7 +42,7 @@ To use the word breakers and stemmers provided for all the languages supported b
 
 ## Get the list of supported languages
 
-To see the list of languages supported by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search, use the following [!INCLUDE [tsql](../../includes/tsql-md.md)] statement. The presence of a language in this list indicates that word breakers are registered for the language.
+To see the list of languages supported by Full-Text Search, use the following [!INCLUDE [tsql](../../includes/tsql-md.md)] statement. The presence of a language in this list indicates that word breakers are registered for the language.
 
 ```sql
 SELECT *
@@ -51,7 +51,7 @@ FROM sys.fulltext_languages;
 
 ## Get the list of registered word breakers
 
-For Full-Text Search to use the word breakers for a language, they must be registered. For registered word breakers, associated linguistic resources - stemmers, noise words (stopwords), and thesaurus files - also become available to full-text indexing and querying operations.
+For Full-Text Search to use the word breakers for a language, they must be registered. For registered word breakers, associated linguistic resources also become available to full-text indexing and querying operations. These resources include stemmers, noise words (stopwords), and thesaurus files.
 
 To see the list of registered word breaker components, use the following statement.
 
@@ -73,13 +73,13 @@ For a localized version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md
 When you create or alter a full-text index, you can specify a different language for each full-text indexed column. If no language is specified for a column, the default is the value of the configuration option **default full-text language**.
 
 > [!NOTE]  
-> All columns listed in a single full-text query function clause must use the same language, unless the LANGUAGE option is specified in the query. The language used for the full-text indexed column being queried determines the linguistic analysis performed on arguments of the full-text query predicates ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) and functions ([CONTAINSTABLE](../system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../system-functions/freetexttable-transact-sql.md)).
+> All columns listed in a single full-text query function clause must use the same language, unless the `LANGUAGE` option is specified in the query. The language used for the full-text indexed column being queried determines the linguistic analysis performed on arguments of the full-text query predicates ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) and functions ([CONTAINSTABLE](../system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../system-functions/freetexttable-transact-sql.md)).
 
 ## Choose the language for an indexed column
 
-When creating a full-text index, we recommend that you specify a language for each indexed column. If a language isn't specified for a column, the system default language is used. The language of a column determines which word breaker and stemmer are used for indexing that column. Also, the thesaurus file of that language is used by full-text queries on the column.
+When you create a full-text index, specify a language for each indexed column. If a language isn't specified for a column, the system default language is used. The language of a column determines which word breaker and stemmer are used for indexing that column. Also, the thesaurus file of that language is used by full-text queries on the column.
 
-There are a couple of things to consider when choosing the column language for creating a full-text index. These considerations relate to how your text is tokenized and then indexed by Full-Text Engine. For more information, see [Choose a Language When Creating a Full-Text Index](choose-a-language-when-creating-a-full-text-index.md).
+There are a couple of things to consider when choosing the column language for creating a full-text index. These considerations relate to how your text is tokenized and then indexed by Full-Text Engine. For more information, see [Choose a language when creating a full-text index](choose-a-language-when-creating-a-full-text-index.md).
 
 To view the word breaker language of specific columns, run the following statement.
 
@@ -94,7 +94,7 @@ For more information, see [sys.fulltext_index_columns](../system-catalog-views/s
 
 A word-breaking timeout error can occur in various situations. For information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
-### Info about the MSSQLSERVER_30053 error
+### Information about the MSSQLSERVER_30053 error
 
 | Property | Value |
 | --- | --- |
@@ -109,17 +109,17 @@ A word-breaking timeout error can occur in various situations. For information a
 
 A word-breaking timeout error can occur in the following situations:
 
-- The word breaker for the query language is configured incorrectly; for example, its registry settings are incorrect.
+- The word breaker for the query language is configured incorrectly. For example, its registry settings are incorrect.
 
 - The word breaker malfunctions for a specific query string.
 
-- The word breaker returns too much data for a specific query string. Excess data is treated as a potential buffer overrun attack, and shuts down the filter daemon process (fdhost.exe), which hosts the word-breaking services.
+- The word breaker returns too much data for a specific query string. Excess data is treated as a potential buffer overrun attack, and shuts down the filter daemon process (`fdhost.exe`), which hosts the word-breaking services.
 
 - The filter daemon process configuration is incorrect.
 
   The most common configuration problems are password expiration or a domain policy that prevents the filter daemon account from logging on.
 
-- A very heavy query workload is running on the server instance; for example, the word-breaker took a long time to process the full-text query string, or a large number of queries are running on the server. This is the least likely cause.
+- A very heavy query workload is running on the server instance. For example, the word breaker took a long time to process the full-text query string, or a large number of queries are running on the server. This is the least likely cause.
 
 #### User action
 
@@ -128,16 +128,16 @@ Select the user action that is appropriate to the probable cause of the timeout,
 | Probable cause | User action |
 | --- | --- |
 | The word breaker for the query language is configured incorrectly. | If you're using a third-party word breaker, it might be incorrectly registered with the operating system. In this case, re-register the word breaker. For more information, see [Revert word breakers used by Full-Text Search to previous version](revert-the-word-breakers-used-by-search-to-the-previous-version.md). |
-| The word breaker malfunctions for a specific query string. | If the word breaker is supported by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support. |
-| The word breaker returns too much data for a specific query string. | If the word breaker is supported by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support. |
+| The word breaker malfunctions for a specific query string. | If the word breaker is supported by the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], contact Microsoft Customer Service and Support. |
+| The word breaker returns too much data for a specific query string. | If the word breaker is supported by the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], contact Microsoft Customer Service and Support. |
 | The filter daemon process configuration is incorrect. | Ensure that you're using the current password and that a domain policy isn't preventing the filter daemon account from logging on. |
 | A very heavy query workload is running on the server instance. | Try running the query again under a lighter load. |
 
 ## Understand the impact of updated word breakers
 
-Each version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] typically includes new word breakers that have better linguistic rules and are more accurate than earlier word breakers. Potentially, the new word breakers might behave differently from the word breakers in full-text indexes that were imported from previous versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+Each version of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] can include updated word breakers with revised linguistic rules. These updated word breakers might behave differently from word breakers in full-text indexes that were imported from previous versions of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)].
 
-This is significant if a full-text catalog was imported when a database was upgraded to the current version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. One or more languages used by the full-text indexes in the full-text catalog might now be associated with new word breakers. For more information, see [Upgrade Full-Text Search](upgrade-full-text-search.md).
+This is significant if a full-text catalog was imported when a database was upgraded to the current version of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)]. One or more languages used by the full-text indexes in the full-text catalog might now be associated with new word breakers. For more information, see [Upgrade Full-Text Search](upgrade-full-text-search.md).
 
 ## Related content
 
@@ -145,4 +145,4 @@ This is significant if a full-text catalog was imported when a database was upgr
 - [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)
 - [Full-text word breaker and stemmer binaries](full-text-word-breaker-and-stemmer-binaries.md)
 - [Customize filters and word breakers](view-or-change-registered-filters-and-word-breakers.md)
-- [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
+- [Configure and manage stopwords and stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)

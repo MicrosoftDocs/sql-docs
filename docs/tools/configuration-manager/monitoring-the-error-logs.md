@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "logs [SQL Server], SQL Server error logs"
   - "error logs [SQL Server]"
   - "logs [SQL Server], Windows application logs"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Monitor the error logs
 

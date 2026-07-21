@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "command-line [SQL Server]"
   - "utilities [SQL Server], command-line"
   - "command-line [SQL Server], utilities"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 
 # SQL command-line utilities (Database Engine)

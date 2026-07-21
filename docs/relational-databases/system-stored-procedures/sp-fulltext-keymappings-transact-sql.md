@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], troubleshooting"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_fulltext_keymappings (Transact-SQL)
 

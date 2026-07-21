@@ -31,7 +31,7 @@ helpviewer_keywords:
   - "RESET command"
   - "GO command"
 zone_pivot_groups: cs1-command-shell
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 ---
 # Check installed version of sqlcmd utility
 

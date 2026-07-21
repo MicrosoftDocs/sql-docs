@@ -12,7 +12,7 @@ ms.collection:
 helpviewer_keywords:
   - "TCP/IP [SQL Server], client protocols"
   - "client protocols [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Client Protocols - TCP IP Properties (Protocol tab)
 

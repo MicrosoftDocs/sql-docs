@@ -11,7 +11,7 @@ ms.collection:
   - data-tools
 helpviewer_keywords:
   - "SQL Server Configuration Manager, help"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # SQL Server Configuration Manager help

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "ALTER SERVER ROLE statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
+monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azuresqldb-current"
 ---
 # ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]

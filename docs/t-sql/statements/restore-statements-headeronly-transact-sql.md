@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "backup header information [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # RESTORE statements - HEADERONLY (Transact-SQL)
 

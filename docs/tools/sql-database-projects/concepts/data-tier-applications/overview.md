@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "How to [DAC]"
   - "data-tier application [SQL Server], designing"
   - "wizard [DAC]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Data-tier applications (DAC) overview

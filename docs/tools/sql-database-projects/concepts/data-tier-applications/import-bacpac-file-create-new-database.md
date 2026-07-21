@@ -35,7 +35,7 @@ helpviewer_keywords:
   - "DAC"
   - "deploy database wizard"
   - "database deploy [SQL Server]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Import a BACPAC file to create a new database

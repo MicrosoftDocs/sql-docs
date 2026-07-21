@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "identity columns [SQL Server], explicit values"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =fabric-sqldb"
 ---
 # SET IDENTITY_INSERT (Transact-SQL)
 

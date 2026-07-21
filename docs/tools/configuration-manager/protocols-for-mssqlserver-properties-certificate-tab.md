@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.swb.computermgr.cert.general.f1"
 helpviewer_keywords:
   - "MSSQLSERVER property protocols"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Protocols for MSSQLSERVER Properties (Certificate tab)
 

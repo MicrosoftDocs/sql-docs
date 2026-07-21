@@ -12,7 +12,7 @@ ms.collection:
   - data-tools
 ms.custom:
   - linux-related-content
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 
 # Quickstart: Create a new local copy of a database in a container with sqlcmd

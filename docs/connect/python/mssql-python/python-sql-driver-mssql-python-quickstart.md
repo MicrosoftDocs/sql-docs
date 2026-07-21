@@ -1,16 +1,17 @@
 ---
 title: "Quickstart: Python SQL Driver - mssql-python"
-description: This quickstart describes installing Python, and mssql-python then shows how to connect to and interact with a SQL database.
+description: Install mssql-python, connect to a SQL database, run queries, and insert data from a Python script.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sumitsar
-ms.date: 12/29/2025
+ms.reviewer: vanto, randolphwest
+ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
 ms.custom:
   - sfi-ropc-nochange
   - ignite-2025
+ai-usage: ai-assisted
 ---
 
 # Quickstart: Connect with the mssql-python driver for Python
@@ -19,28 +20,28 @@ In this quickstart, you connect a Python script to a database that you created a
 
 The `mssql-python` driver doesn't require any external dependencies on Windows machines. The driver installs everything that it needs with a single `pip` install, allowing you to use the latest version of the driver for new scripts without breaking other scripts that you don't have time to upgrade and test.
 
-[mssql-python documentation](https://github.com/microsoft/mssql-python/wiki) | [mssql-python source code](https://github.com/microsoft/mssql-python) | [Package (PyPI)](https://pypi.org/project/mssql-python/) | [Visual Studio Code](https://code.visualstudio.com/download)
+Use the local SQL authentication example in this article only for local development against a SQL Server instance that you control. For Azure SQL Database, SQL database in Fabric, shared development environments, CI, and production deployments, start with Microsoft Entra authentication or another passwordless flow.
+
+[mssql-python documentation](python-sql-driver-mssql-python.md) | [mssql-python source code](https://github.com/microsoft/mssql-python) | [Package (PyPI)](https://pypi.org/project/mssql-python/) | [Visual Studio Code](https://code.visualstudio.com/download)
 
 ## Prerequisites
 
-- Python 3
-
-  - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
-
-  - Don't want to use your own environment? Open as a devcontainer using [GitHub Codespaces](https://github.com/features/codespaces).
-
-    [:::image type="icon" source="https://github.com/codespaces/badge.svg":::](https://codespaces.new/github/codespaces-blank?quickstart=1)
+- Python 3.10 or later
+- If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
+- Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 
 - [(Optional) Azure Command-Line Interface (CLI)](/cli/azure/install-azure-cli)
 
-- A database on SQL Server, Azure SQL Database, or SQL database in Fabric with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema and a valid connection string.
+Create or connect to a database on SQL Server, Azure SQL Database, or SQL database in Fabric. Use the following steps to set up a database with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema, and keep the connection string for later.
+
+[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
 
 ## Setup
 
 Follow these steps to configure your development environment to develop an application using the `mssql-python` Python driver.
 
 > [!NOTE]  
-> This driver uses the [Tabular Data Stream (TDS)](/openspecs/windows_protocols/ms-tds/b46a581a-39de-4745-b076-ec4dbb7d13ec) protocol, which is enabled by default in SQL Server, SQL database in Fabric and Azure SQL Database. No extra configuration is required.
+> This driver uses the [Tabular Data Stream (TDS)](/openspecs/windows_protocols/ms-tds/b46a581a-39de-4745-b076-ec4dbb7d13ec) protocol. SQL Server, SQL database in Fabric, and Azure SQL Database enable TDS by default, so no extra configuration is necessary.
 
 ### Install the mssql-python package
 
@@ -100,9 +101,9 @@ Get the [`mssql-python` package](https://pypi.org/project/mssql-python/) from Py
 
    ---
 
-### Install python-dotenv package
+### Install the python-dotenv package
 
-Get the [`python-dotenv`](https://pypi.org/project/python-dotenv/) from PyPI.
+Get the [`python-dotenv`](https://pypi.org/project/python-dotenv/) package from PyPI.
 
 1. In the same directory, install the `python-dotenv` package.
 
@@ -119,28 +120,6 @@ You can use the PyPI command-line tool to verify that your intended packages are
    ```console
    pip list
    ```
-
-### Create a SQL database
-
-This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/sssampledbnormal-md.md)] Lightweight* schema, on Microsoft SQL Server, SQL database in Fabric or Azure SQL Database.
-
-### [Azure SQL Database](#tab/azure-sql)
-
-[Create a SQL database in minutes using the Azure portal](/azure/azure-sql/database/single-database-create-quickstart)
-
-### [SQL database in Fabric](#tab/fabric-sql)
-
-[Load AdventureWorks sample data in your SQL database in Microsoft Fabric](/fabric/database/sql/load-AdventureWorks-sample-data)
-
-### [Microsoft SQL Server](#tab/sql-server)
-
-[AdventureWorks sample databases](../../../samples/adventureworks-install-configure.md)
-
-[Create a new local copy of a database in a container with sqlcmd](../../../tools/sqlcmd/quickstart-sqlcmd-create-container.md)
-
-[Create a new SQL Server container using the MSSQL extension for Visual Studio Code](../../../tools/visual-studio-code-extensions/mssql/mssql-local-container.md)
-
----
 
 ## Run the code
 
@@ -168,7 +147,7 @@ This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/
    from mssql_python import connect
    ```
 
-1. Use the [`mssql-python.connect`](https://github.com/microsoft/mssql-python/wiki/Connection#connect-method) function to connect to a SQL database.
+1. Use the [`mssql-python.connect`](connection-management.md) function to connect to a SQL database.
 
    ```python
    load_dotenv()
@@ -177,14 +156,24 @@ This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/
 
 1. In the current directory, create a new file named `.env`.
 
-1. Within the `.env` file, add an entry for your connection string named `SQL_CONNECTION_STRING`. Replace the example here with your actual connection string value.
+1. Within the `.env` file, add an entry for your connection string named `SQL_CONNECTION_STRING`. Use one of the following examples and replace the placeholders with your actual values.
+
+   For Azure SQL Database or SQL database in Fabric, start with Microsoft Entra authentication:
 
    ```text
    SQL_CONNECTION_STRING="Server=<server_name>;Database=<database_name>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
    ```
 
-   > [!TIP]  
-   > The connection string used here largely depends on the type of SQL database you're connecting to. If you're connecting to an *Azure SQL Database* or a *SQL database in Fabric*, use the *ODBC* connection string from the connection strings tab. You might need to adjust the authentication type depending on your scenario. For more information on connection strings and their syntax, see [connection string syntax reference](../../odbc/dsn-connection-string-attribute.md).
+   For local SQL Server during development, start with SQL authentication:
+
+   ```text
+   SQL_CONNECTION_STRING="Server=localhost,1433;Database=<database_name>;UID=<username>;PWD=<password>;Encrypt=yes;TrustServerCertificate=yes"
+   ```
+
+   > [!CAUTION]
+   > Treat `.env` as a local development convenience, not a deployment mechanism. Never commit it, never reuse this SQL authentication sample in shared or production environments, and keep certificate validation enabled outside local development.
+
+   Use [Connection strings](connection-strings.md) to adapt the sample for named instances, containers, or advanced settings. If you're connecting to Azure SQL Database or SQL database in Fabric, use [Microsoft Entra authentication](entra-authentication.md) for passwordless and interactive sign-in options. For broader secret and certificate guidance, see [Security best practices](security-best-practices.md).
 
 ### Execute a query
 
@@ -209,7 +198,7 @@ Use a SQL query string to execute a query and parse the results.
    """
    ```
 
-1. Use [`cursor.execute`](https://github.com/microsoft/mssql-python/wiki/Connection#cursor-method) to retrieve a result set from a query against the database.
+1. Use [`cursor.execute`](executing-queries.md) to retrieve a result set from a query against the database.
 
    ```python
    cursor = conn.cursor()
@@ -217,9 +206,9 @@ Use a SQL query string to execute a query and parse the results.
    ```
 
    > [!NOTE]  
-   > This function essentially accepts any query and returns a result set, which can be iterated over with the use of [cursor.fetchone()](https://github.com/microsoft/mssql-python/wiki/Connection#cursor-method).
+   > This function essentially accepts any query and returns a result set. To iterate over the result set, use [cursor.fetchone()](retrieving-data.md#fetchone).
 
-1. Use [`cursor.fetchall`](https://github.com/microsoft/mssql-python/wiki/Connection#cursor-method) with a `foreach` loop to get all the records from the database. Then print the records.
+1. Use [`cursor.fetchall`](retrieving-data.md#fetchall) with a `for` loop to get all the records from the database. Then, print the records.
 
    ```python
    records = cursor.fetchall()
@@ -229,8 +218,8 @@ Use a SQL query string to execute a query and parse the results.
 
 1. **Save** the `app.py` file.
 
-> [!TIP]  
-> On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, log in once via the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
+   > [!TIP]
+   > On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once through the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
 
 1. Open a terminal and test the application.
 
@@ -278,7 +267,7 @@ Execute an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement 
    ListPrice,
    SellStartDate
    ) OUTPUT INSERTED.ProductID
-   VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)
+   VALUES (%(name)s, %(product_number)s, %(standard_cost)s, %(list_price)s, CURRENT_TIMESTAMP)
    """
    ```
 
@@ -287,27 +276,27 @@ Execute an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement 
    ```python
    cursor.execute(
       SQL_STATEMENT,
-      (
-         f'Example Product {productNumber}',
-         f'EXAMPLE-{productNumber}',
-         100,
-         200
-      )
+      {
+         'name': f'Example Product {productNumber}',
+         'product_number': f'EXAMPLE-{productNumber}',
+         'standard_cost': 100,
+         'list_price': 200
+      }
    )
    ```
 
-1. Fetch the single result using [`cursor.fetchone`](https://github.com/microsoft/mssql-python/wiki/Cursor#fetchone), print the result's unique identifier, and then commit the operation as a transaction using [`connection.commit`](https://github.com/microsoft/mssql-python/wiki/Connection#commit-method).
+1. Fetch the single result using [`cursor.fetchone`](retrieving-data.md#fetchone), print the result's unique identifier, and then commit the operation as a transaction using [`connection.commit`](transaction-management.md).
 
    ```python
    result = cursor.fetchone()
-   print(f"Inserted Product ID : {result['ProductID']}")
+   print(f"Inserted Product ID : {result.ProductID}")
    conn.commit()
    ```
 
    > [!TIP]  
-   > Optionally, you can use [`connection.rollback`](https://github.com/microsoft/mssql-python/wiki/Connection#rollback-method) to roll back the transaction.
+   > Optionally, you can use [`connection.rollback`](transaction-management.md) to roll back the transaction.
 
-1. Close the cursor and connection using [`cursor.close`](https://github.com/microsoft/mssql-python/wiki/Cursor#close) and [`connection.close`](https://github.com/microsoft/mssql-python/wiki/Connection#close-method).
+1. Close the cursor and connection using [`cursor.close`](executing-queries.md) and [`connection.close`](connection-management.md).
 
    ```python
    cursor.close()
@@ -326,9 +315,13 @@ Execute an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement 
    Inserted Product ID : 1001
    ```
 
-## Next step
+## Next steps
 
-Visit the `mssql-python` driver GitHub repository for more examples, to contribute ideas or report issues.
+Use these articles to keep building:
+
+- [Connection strings](connection-strings.md) to adapt the sample for local SQL Server, Azure SQL, containers, and named instances.
+- [Connection management](connection-management.md) to use context managers, pooling, and connection settings.
+- [Troubleshooting](troubleshooting.md) to diagnose authentication, certificate, and connectivity problems.
 
 > [!div class="nextstepaction"]
-> [mssql-python driver on GitHub](https://github.com/microsoft/mssql-python?tab=readme-ov-file#microsoft-python-driver-for-sql-server)
+> [Connection strings](connection-strings.md)

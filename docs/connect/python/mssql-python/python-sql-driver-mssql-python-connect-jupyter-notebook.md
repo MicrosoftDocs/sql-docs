@@ -1,35 +1,32 @@
 ---
 title: "Quickstart: Python SQL Driver - mssql-python Connect to a SQL Database from a Jupyter Notebook in Visual Studio Code"
-description: This quickstart describes connect to your SQL database from a Jupyter Notebook in Visual Studio Code.
+description: Connect to a SQL database from a Jupyter Notebook in Visual Studio Code by using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sumitsar
-ms.date: 12/29/2025
+ms.reviewer: vanto, randolphwest
+ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
 ms.custom:
   - sfi-ropc-nochange
   - ignite-2025
+ai-usage: ai-assisted
 ---
 
 # Quickstart: Connect to a SQL database from a Jupyter Notebook
 
-In this quickstart, you use Jupyter Notebook in Visual Studio Code to quickly derive business insights. You use the `mssql-python` driver for Python to connect to your **SQL database** and read the data that is then formatted for use in emails, reports presentations, etc.
+In this quickstart, use Jupyter Notebook in Visual Studio Code to quickly derive business insights. Use the `mssql-python` driver for Python to connect to your **SQL database**, read the data, and then format it for use in emails, reports, and presentations.
 
 The `mssql-python` driver doesn't require any external dependencies on Windows machines. The driver installs everything that it needs with a single `pip` install, allowing you to use the latest version of the driver for new scripts without breaking other scripts that you don't have time to upgrade and test.
 
-[mssql-python documentation](https://github.com/microsoft/mssql-python/wiki) | [mssql-python source code](https://github.com/microsoft/mssql-python) | [Package (PyPI)](https://pypi.org/project/mssql-python/) | [Visual Studio Code](https://code.visualstudio.com/download)
+[mssql-python documentation](python-sql-driver-mssql-python.md) | [mssql-python source code](https://github.com/microsoft/mssql-python) | [Package (PyPI)](https://pypi.org/project/mssql-python/) | [Visual Studio Code](https://code.visualstudio.com/download)
 
 ## Prerequisites
 
-- Python 3
-
-  - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
-
-  - Don't want to use your own environment? Open as a devcontainer using [GitHub Codespaces](https://github.com/features/codespaces).
-
-    [:::image type="icon" source="https://github.com/codespaces/badge.svg":::](https://codespaces.new/github/codespaces-blank?quickstart=1)
+- Python 3.10 or later
+- If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
+- Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 
 - [Visual Studio Code](https://code.visualstudio.com/download) with the following extensions:
 
@@ -83,27 +80,7 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
    ---
 
-### Create a SQL database
-
-This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/sssampledbnormal-md.md)] Lightweight* schema, on Microsoft SQL Server, SQL database in Fabric or Azure SQL Database.
-
-### [Azure SQL Database](#tab/azure-sql)
-
-[Create a SQL database in minutes using the Azure portal](/azure/azure-sql/database/single-database-create-quickstart)
-
-### [SQL database in Fabric](#tab/fabric-sql)
-
-[Load AdventureWorks sample data in your SQL database in Microsoft Fabric](/fabric/database/sql/load-AdventureWorks-sample-data)
-
-### [Microsoft SQL Server](#tab/sql-server)
-
-[AdventureWorks sample databases](../../../samples/adventureworks-install-configure.md)
-
-[Create a new local copy of a database in a container with sqlcmd](../../../tools/sqlcmd/quickstart-sqlcmd-create-container.md)
-
-[Create a new SQL Server container using the MSSQL extension for Visual Studio Code](../../../tools/visual-studio-code-extensions/mssql/mssql-local-container.md)
-
----
+[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 
@@ -118,7 +95,7 @@ This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/
 
 ### Create a new project
 
-1. Open a command prompt in your development directory. If you don't have one, create a new directory called `python`, `scripts`, etc. Avoid folders on your OneDrive, the synchronization can interfere with managing your virtual environment.
+1. Open a command prompt in your development directory. If you don't have one, create a new directory, such as `python` or `scripts`. Avoid folders on your OneDrive, as synchronization can interfere with managing your virtual environment.
 
 1. Create a new [project](https://docs.astral.sh/uv/guides/projects/#project-structure) with `uv`.
 
@@ -129,10 +106,10 @@ This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/
 
 ### Add dependencies
 
-In the same directory, install the `mssql-python`, `python-dotenv`, `rich`, `pandas`, and `matplotlib` packages. Then add `ipykernel` and `uv` as dev dependencies. VS Code requires `ipykernel` and `uv` are added to be able to interact with `uv` from within your notebook cells using commands like `!uv add mssql_python`.
+In the same directory, install the `mssql-python`, `python-dotenv`, `rich`, `pandas`, and `matplotlib` packages. Then add `ipykernel` and `uv` as dev dependencies. VS Code requires `ipykernel` to run notebook cells and `uv` to manage packages from within your notebook cells.
 
 ```console
-uv add mssql_python dotenv rich pandas matplotlib
+uv add mssql-python python-dotenv rich pandas matplotlib
 uv add --dev ipykernel
 uv add --dev uv
 ```
@@ -151,7 +128,7 @@ code .
 
 1. Update the description to be more descriptive.
 
-   ```python
+   ```toml
    description = "A quick example using the mssql-python driver and Jupyter Notebooks."
    ```
 
@@ -288,7 +265,7 @@ code .
    ```
 
    > [!TIP]  
-   > On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, log in once via the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
+   > On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once through the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
 
 1. Use the **Run All** button at the top of the notebook to run the notebook.
 
@@ -324,9 +301,13 @@ code .
 
 1. Review the results. Make this notebook your own.
 
-## Next step
+## Next steps
 
-Visit the `mssql-python` driver GitHub repository for more examples, to contribute ideas or report issues.
+Use these articles to keep building:
+
+- [Build connection strings](build-connection-strings.md) to configure connections for different SQL database types and authentication methods.
+- [pandas integration](pandas-integration.md) to load query results directly into DataFrames for analysis in notebooks.
+- [Arrow integration](arrow-integration.md) to work with columnar data using Apache Arrow for high-performance analytics.
 
 > [!div class="nextstepaction"]
-> [mssql-python driver on GitHub](https://github.com/microsoft/mssql-python?tab=readme-ov-file#microsoft-python-driver-for-sql-server)
+> [Build connection strings](build-connection-strings.md)

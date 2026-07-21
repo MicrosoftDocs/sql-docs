@@ -3,8 +3,8 @@ title: "Quickstart: Python SQL Driver - mssql-python Bulk Copy with the Python D
 description: This quickstart describes bulk copying data between databases using mssql-python and Apache Arrow (Parquet).
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sumitsar
-ms.date: 03/14/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -21,17 +21,13 @@ In this quickstart, you use the `mssql-python` driver to bulk copy data between 
 
 The `mssql-python` driver doesn't require any external dependencies on Windows machines. The driver installs everything that it needs with a single `pip` install, allowing you to use the latest version of the driver for new scripts without breaking other scripts that you don't have time to upgrade and test.
 
-[mssql-python documentation](https://github.com/microsoft/mssql-python/wiki) | [mssql-python source code](https://github.com/microsoft/mssql-python) | [Package (PyPI)](https://pypi.org/project/mssql-python/) | [uv](https://docs.astral.sh/uv/)
+[mssql-python documentation](python-sql-driver-mssql-python.md) | [mssql-python source code](https://github.com/microsoft/mssql-python) | [Package (PyPI)](https://pypi.org/project/mssql-python/) | [uv](https://docs.astral.sh/uv/)
 
 ## Prerequisites
 
-- Python 3
-
-  - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
-
-  - Don't want to use your own environment? Open as a devcontainer using [GitHub Codespaces](https://github.com/features/codespaces).
-
-    [:::image type="icon" source="https://github.com/codespaces/badge.svg":::](https://codespaces.new/github/codespaces-blank?quickstart=1)
+- Python 3.10 or later
+- If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
+- Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 
 - [Visual Studio Code](https://code.visualstudio.com/download) with the following extensions:
 
@@ -40,69 +36,11 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 - [Azure Command-Line Interface (CLI)](/cli/azure/install-azure-cli) for passwordless authentication on macOS and Linux.
 
 - If you don't already have `uv`, follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
-- A source database on SQL Server, Azure SQL Database, or SQL database in Fabric with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema and a valid connection string.
-- A destination database on SQL Server, Azure SQL Database, or SQL database in Fabric with a valid connection string. The user must have permission to create and write to tables. If you don't have a second database, you can change the destination connection string to point to the same database and use a different schema for the destination tables.
-- Install one-time operating system specific prerequisites.
+- A source database with the `AdventureWorksLT` sample schema and a valid connection string.
+- A destination database with a valid connection string. The user must have permission to create and write to tables. If you don't have a second database, you can use the same database and a different schema for the destination tables.
+[!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
-  ### [Alpine](#tab/alpine-linux)
-
-  ```console
-  apk add libtool krb5-libs krb5-dev
-  ```
-
-  ### [Debian/Ubuntu](#tab/debianUbuntu-linux)
-
-  ```console
-  apt-get install -y libltdl7 libkrb5-3 libgssapi-krb5-2
-  ```
-
-  ### [RHEL](#tab/RHEL-linux)
-
-  ```console
-  dnf install -y libtool-ltdl krb5-libs
-  ```
-
-  ### [SUSE](#tab/SUSE-linux)
-
-  ```console
-  zypper install -y libltdl7 libkrb5-3 libgssapi-krb5-2
-  ```
-
-  ### [openSUSE](#tab/openSUSE-linux)
-
-  ```console
-  zypper install -y libltdl7
-  ```
-
-  ### [macOS](#tab/mac)
-
-  ```console
-  brew install openssl
-  ```
-
-   ---
-
-## Create a SQL database
-
-This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/sssampledbnormal-md.md)] Lightweight* schema as the source database.
-
-### [Azure SQL Database](#tab/azure-sql)
-
-[Create a SQL database in minutes using the Azure portal](/azure/azure-sql/database/single-database-create-quickstart)
-
-### [SQL database in Fabric](#tab/fabric-sql)
-
-[Load AdventureWorks sample data in your SQL database in Microsoft Fabric](/fabric/database/sql/load-AdventureWorks-sample-data)
-
-### [Microsoft SQL Server](#tab/sql-server)
-
-[AdventureWorks sample databases](../../../samples/adventureworks-install-configure.md)
-
-[Create a new local copy of a database in a container with sqlcmd](../../../tools/sqlcmd/quickstart-sqlcmd-create-container.md)
-
-[Create a new SQL Server container using the MSSQL extension for Visual Studio Code](../../../tools/visual-studio-code-extensions/mssql/mssql-local-container.md)
-
----
+[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 
@@ -116,7 +54,7 @@ This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/
 
 ### Create a new project
 
-1. Open a command prompt in your development directory. If you don't have one, create a new directory called `python`, `scripts`, etc. Avoid folders on your OneDrive, the synchronization can interfere with managing your virtual environment.
+1. Open a command prompt in your development directory. If you don't have one, create a new directory, such as `python` or `scripts`. Avoid folders on your OneDrive, as synchronization can interfere with managing your virtual environment.
 
 1. Create a new [project](https://docs.astral.sh/uv/guides/projects/#project-structure) with `uv`.
 
@@ -129,9 +67,9 @@ This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/
 
 In the same directory, install the `mssql-python`, `python-dotenv`, and `pyarrow` packages.
 
-   ```console
-   uv add mssql-python python-dotenv pyarrow
-   ```
+```console
+uv add mssql-python python-dotenv pyarrow
+```
 
 ### Launch Visual Studio Code
 
@@ -155,7 +93,7 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.4.0",
+       "mssql-python>=1.5.0",
        "python-dotenv>=1.1.1",
        "pyarrow>=19.0.0",
    ]
@@ -186,7 +124,7 @@ code .
    > [!TIP]  
    > If Visual Studio Code is having trouble resolving packages, you need to [update the interpreter to use the virtual environment](https://code.visualstudio.com/docs/python/environments).
 
-1. At the top of `main.py`, add the imports and constants. The script uses `mssql_python` for database connectivity, `pyarrow` and `pyarrow.parquet` for columnar data handling and Parquet file I/O, `python-dotenv` for loading connection strings from a `.env` file, and a compiled regex pattern that validates SQL identifiers to prevent injection.
+1. At the top of `main.py`, add the imports and constants. The script uses `mssql_python` for database connectivity and Arrow fetch, `pyarrow` and `pyarrow.parquet` for columnar data handling and Parquet file I/O, `python-dotenv` for loading connection strings from a `.env` file, and a compiled regex pattern that validates SQL identifiers to prevent injection.
 
    ```python
    """Round-trip: download tables from a source DB/schema to parquet, upload to a destination DB/schema."""
@@ -194,7 +132,6 @@ code .
    import os
    import re
    import time
-   from uuid import UUID
 
    import pyarrow as pa
    import pyarrow.parquet as pq
@@ -211,7 +148,7 @@ code .
        return name
    ```
 
-1. Below the imports, add the SQL-to-Arrow type mapping. This dictionary translates SQL Server column types to their Apache Arrow equivalents so that data fidelity is preserved when writing to Parquet. The two helper functions build exact SQL type strings (for example, `NVARCHAR(100)` or `DECIMAL(18,2)`) from `INFORMATION_SCHEMA` metadata and resolve the matching Arrow type for each column.
+1. Below the imports, add the SQL-to-Arrow type mapping. This dictionary translates SQL Server column types to their Apache Arrow equivalents so that data fidelity is preserved when writing to Parquet. The helper functions build exact SQL type strings (for example, `NVARCHAR(100)` or `DECIMAL(18,2)`) from `INFORMATION_SCHEMA` metadata and resolve the matching Arrow type for each column. These types are stored as field metadata in the Parquet files so that the destination table can be recreated with exact column definitions.
 
    ```python
    _SQL_TO_ARROW = {
@@ -225,7 +162,7 @@ code .
        "smallmoney": pa.decimal128(10, 4),
        "money": pa.decimal128(19, 4),
        "date": pa.date32(),
-       "datetime": pa.timestamp("ms"),
+       "datetime": pa.timestamp("us"),
        "datetime2": pa.timestamp("us"),
        "smalldatetime": pa.timestamp("s"),
        "uniqueidentifier": pa.string(),
@@ -257,13 +194,6 @@ code .
        if sql_type in ("char", "varchar", "nchar", "nvarchar", "text", "ntext", "sysname"):
            return pa.string()
        return pa.string()
-
-
-   def _convert_value(v):
-       """Convert a SQL value to an Arrow-compatible Python type."""
-       if isinstance(v, UUID):
-           return str(v)
-       return v
    ```
 
 1. Add the schema introspection and DDL generation functions. `_get_arrow_schema` queries `INFORMATION_SCHEMA.COLUMNS` using parameterized queries, builds an Arrow schema, and stores the original SQL type as field metadata so the destination table can be recreated with exact column definitions. `_create_table_ddl` reads that metadata back to generate `DROP`/`CREATE TABLE` DDL. The `timestamp` (rowversion) type is remapped to `VARBINARY(8)` because it's auto-generated and not directly insertable.
@@ -320,18 +250,18 @@ code .
        )
    ```
 
-1. Add the download function. `download_table` streams rows from a source table in batches using `fetchmany()`, converts each value to an Arrow-compatible Python type, and writes record batches incrementally to a local Parquet file using `ParquetWriter`. This keeps memory bounded regardless of table size. The function uses two separate cursors: one to read column metadata, and another to stream the data.
+1. Add the download function. `download_table` uses `cursor.arrow_batch()` to fetch data directly as Arrow record batches in the driver's C++ layer, which avoids creating intermediate Python objects. Each batch is cast to the metadata-enriched schema from `_get_arrow_schema` so that the original SQL types (for example, `NVARCHAR(100)`) are preserved in the Parquet file. The function uses two separate cursors: one to read column metadata, and another to stream the data.
 
    ```python
    def download_table(conn, schema_name: str, table_name: str, parquet_file: str) -> int:
        """Download a SQL table to a parquet file. Returns row count (0 if empty)."""
+       _validate_ident(schema_name)
        _validate_ident(table_name)
        source = f"{schema_name}.[{table_name}]"
 
        with conn.cursor() as cursor:
            schema = _get_arrow_schema(cursor, schema_name, table_name)
 
-       n_cols = len(schema)
        row_count = 0
        t0 = time.perf_counter()
 
@@ -340,22 +270,19 @@ code .
            writer = None
            try:
                while True:
-                   rows = cursor.fetchmany(BATCH_SIZE)
-                   if not rows:
+                   batch = cursor.arrow_batch(BATCH_SIZE)
+                   if batch.num_rows == 0:
                        break
-                   columns = [[] for _ in range(n_cols)]
-                   for row in rows:
-                       for i in range(n_cols):
-                           columns[i].append(_convert_value(row[i]))
+                   # Cast to the schema to preserve SQL type metadata in Parquet
                    arrays = [
-                       pa.array(columns[i], type=schema.field(i).type)
-                       for i in range(n_cols)
+                       batch.column(i).cast(schema.field(i).type)
+                       for i in range(batch.num_columns)
                    ]
                    batch = pa.record_batch(arrays, schema=schema)
                    if writer is None:
                        writer = pq.ParquetWriter(parquet_file, schema)
                    writer.write_batch(batch)
-                   row_count += len(rows)
+                   row_count += batch.num_rows
            finally:
                if writer is not None:
                    writer.close()
@@ -377,12 +304,12 @@ code .
    ```python
    def enrich_parquet(parquet_file: str) -> str:
        """Enrich a parquet file before upload. Returns the (possibly new) file path."""
-       # TODO: add transformations, derived columns, joins, etc.
+       # TODO: add transformations, derived columns, or joins
        print(f"Enriching {parquet_file} (no-op)")
        return parquet_file
    ```
 
-1. Add the upload function. `upload_parquet` reads the Arrow schema from the Parquet file, generates and executes `DROP`/`CREATE TABLE` DDL to prepare the destination, then reads the file in batches and calls `cursor.bulkcopy()` for high-performance bulk insert. The `table_lock=True` option improves throughput by minimizing lock contention. After the upload completes, the function runs a `SELECT COUNT(*)` to verify the row count matches.
+1. Add the upload function. `upload_parquet` reads the Arrow schema from the Parquet file, generates and executes `DROP`/`CREATE TABLE` DDL to prepare the destination, then reads the file in batches and calls `cursor.bulkcopy()` for high-performance bulk insert. The `table_lock=True` option improves throughput by minimizing lock contention. After the upload completes, the function runs a `SELECT COUNT(*)` and raises an error if the destination row count doesn't match the uploaded row count.
 
    ```python
    def upload_parquet(conn, parquet_file: str, target: str) -> int:
@@ -411,17 +338,21 @@ code .
        with conn.cursor() as cursor:
            cursor.execute(f"SELECT COUNT(*) FROM {target}")
            count = cursor.fetchone()[0]
+       if count != uploaded:
+           raise ValueError(
+               f"Row count mismatch for {target}: uploaded {uploaded:,}, destination has {count:,}"
+           )
 
        rate = f"{int(uploaded / elapsed):,} rows/sec" if elapsed > 0 else "n/a"
        print(
            f"{parquet_file} → {target}: {uploaded:,} rows uploaded "
            f"in {elapsed:.2f}s ({rate}) "
-           f"| verified: {count:,}"
+           f"| destination rows: {count:,}"
        )
        return uploaded
    ```
 
-1. Add the orchestration function. `transfer_tables` ties the three phases together. It connects to the source database, discovers all base tables in the given schema via `INFORMATION_SCHEMA.TABLES`, downloads each one to a local Parquet file, runs the enrichment hook, then connects to the destination database and uploads each file.
+1. Add the orchestration function. `transfer_tables` ties the three phases together. It connects to the source database, discovers all base tables in the given schema through `INFORMATION_SCHEMA.TABLES`, downloads each one to a local Parquet file, runs the enrichment hook, then connects to the destination database and uploads each file.
 
    ```python
    def transfer_tables(
@@ -527,7 +458,7 @@ code .
    > The connection string used here largely depends on the type of SQL database you're connecting to. If you're connecting to an *Azure SQL Database* or a *SQL database in Fabric*, use the *ODBC* connection string from the connection strings tab. You might need to adjust the authentication type depending on your scenario. For more information on connection strings and their syntax, see [connection string syntax reference](../../odbc/dsn-connection-string-attribute.md).
 
 > [!TIP]  
-> On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once via the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
+> On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once through the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
 
 ### Use uv run to execute the script
 
@@ -549,7 +480,7 @@ code .
    Total: 2.35s
    ```
 
-1. Connect to the destination database using [SQL Server Management Studio (SSMS)](../../../ssms/sql-server-management-studio-ssms.md) or the [MSSQL extension for VS Code](../../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) and verify that the tables and data were created successfully.
+1. Connect to the destination database by using the [MSSQL extension for VS Code](../../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md), and verify that the tables and data were created successfully.
 
 1. To deploy your script to another machine, copy all files except for the `.venv` folder to the other machine. The virtual environment is recreated with the first run.
 
@@ -561,9 +492,13 @@ The application performs a full round-trip data transfer in three phases:
 1. **Enrich** (optional): Provides a hook (`enrich_parquet`) where you can add transformations, derived columns, or joins before uploading.
 1. **Upload**: Reads each Parquet file in batches, recreates the table in the destination database using DDL generated from Arrow schema metadata, then uses `cursor.bulkcopy()` for high-performance bulk insert.
 
-## Next step
+## Next steps
 
-Visit the `mssql-python` driver GitHub repository for more examples, to contribute ideas or report issues.
+Use these articles to keep building:
+
+- [Bulk copy](bulk-copy.md) for advanced bulk copy patterns including column mappings, batch sizing, and error handling.
+- [Data loading and movement patterns](data-loading-movement-patterns.md) for strategies to load data from files, APIs, and other databases.
+- [Performance tuning](performance-tuning.md) to optimize throughput for large data operations.
 
 > [!div class="nextstepaction"]
-> [mssql-python driver on GitHub](https://github.com/microsoft/mssql-python?tab=readme-ov-file#microsoft-python-driver-for-sql-server)
+> [Bulk copy](bulk-copy.md)

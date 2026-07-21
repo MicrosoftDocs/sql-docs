@@ -1,16 +1,17 @@
 ---
 title: "Quickstart: Python SQL Driver - mssql-python Repeatable Deployments with the Python Driver for SQL Server"
-description: This quickstart describes repeatable deployments of the mssql-python.
+description: Use uv to create repeatable Python environments for database applications that use the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sumitsar
-ms.date: 12/29/2025
+ms.reviewer: vanto, randolphwest
+ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
 ms.custom:
   - sfi-ropc-nochange
   - ignite-2025
+ai-usage: ai-assisted
 ---
 
 # Quickstart: Repeatable deployments with the mssql-python driver for Python
@@ -19,17 +20,13 @@ In this quickstart, you use [`uv`](https://docs.astral.sh/uv/) to manage project
 
 The `mssql-python` driver doesn't require any external dependencies on Windows machines. The driver installs everything that it needs with a single `pip` install, allowing you to use the latest version of the driver for new scripts without breaking other scripts that you don't have time to upgrade and test.
 
-[mssql-python documentation](https://github.com/microsoft/mssql-python/wiki) | [mssql-python source code](https://github.com/microsoft/mssql-python) | [Package (PyPI)](https://pypi.org/project/mssql-python/) | [uv](https://docs.astral.sh/uv/)
+[mssql-python documentation](python-sql-driver-mssql-python.md) | [mssql-python source code](https://github.com/microsoft/mssql-python) | [Package (PyPI)](https://pypi.org/project/mssql-python/) | [uv](https://docs.astral.sh/uv/)
 
 ## Prerequisites
 
-- Python 3
-
-  - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
-
-  - Don't want to use your own environment? Open as a devcontainer using [GitHub Codespaces](https://github.com/features/codespaces).
-
-    [:::image type="icon" source="https://github.com/codespaces/badge.svg":::](https://codespaces.new/github/codespaces-blank?quickstart=1)
+- Python 3.10 or later
+- If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
+- Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 
 - [Visual Studio Code](https://code.visualstudio.com/download) with the following extensions:
 
@@ -39,67 +36,9 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
 - If you don't already have `uv`, follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
 - A database on SQL Server, Azure SQL Database, or SQL database in Fabric with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema and a valid connection string.
-- Install one-time operating system specific prerequisites.
+[!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
-  ### [Alpine](#tab/alpine-linux)
-
-  ```console
-  apk add libtool krb5-libs krb5-dev
-  ```
-
-  ### [Debian/Ubuntu](#tab/debianUbuntu-linux)
-
-  ```console
-  apt-get install -y libltdl7 libkrb5-3 libgssapi-krb5-2
-  ```
-
-  ### [RHEL](#tab/RHEL-linux)
-
-  ```console
-  dnf install -y libtool-ltdl krb5-libs
-  ```
-
-  ### [SUSE](#tab/SUSE-linux)
-
-  ```console
-  zypper install -y libltdl7 libkrb5-3 libgssapi-krb5-2
-  ```
-
-  ### [openSUSE](#tab/openSUSE-linux)
-
-  ```console
-  zypper install -y libltdl7
-  ```
-
-  ### [macOS](#tab/mac)
-
-  ```console
-  brew install openssl
-  ```
-
-   ---
-
-### Create a SQL database
-
-This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/sssampledbnormal-md.md)] Lightweight* schema, on Microsoft SQL Server, SQL database in Fabric or Azure SQL Database.
-
-### [Azure SQL Database](#tab/azure-sql)
-
-[Create a SQL database in minutes using the Azure portal](/azure/azure-sql/database/single-database-create-quickstart)
-
-### [SQL database in Fabric](#tab/fabric-sql)
-
-[Load AdventureWorks sample data in your SQL database in Microsoft Fabric](/fabric/database/sql/load-AdventureWorks-sample-data)
-
-### [Microsoft SQL Server](#tab/sql-server)
-
-[AdventureWorks sample databases](../../../samples/adventureworks-install-configure.md)
-
-[Create a new local copy of a database in a container with sqlcmd](../../../tools/sqlcmd/quickstart-sqlcmd-create-container.md)
-
-[Create a new SQL Server container using the MSSQL extension for Visual Studio Code](../../../tools/visual-studio-code-extensions/mssql/mssql-local-container.md)
-
----
+[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 
@@ -113,7 +52,7 @@ This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/
 
 ### Create a new project
 
-1. Open a command prompt in your development directory. If you don't have one, create a new directory called `python`, `scripts`, etc. Avoid folders on your OneDrive, the synchronization can interfere with managing your virtual environment.
+1. Open a command prompt in your development directory. If you don't have one, create a new directory, such as `python` or `scripts`. Avoid folders on your OneDrive, as synchronization can interfere with managing your virtual environment.
 
 1. Create a new [project](https://docs.astral.sh/uv/guides/projects/#project-structure) with `uv`.
 
@@ -142,9 +81,9 @@ code .
 
 1. The [pyproject.toml](https://docs.astral.sh/uv/concepts/projects/layout/#the-pyprojecttoml) contains the metadata for your project. Open the file in your favorite editor.
 
-1. Review the contents of the file. It should be similar to this example. Note the Python version and dependency for `mssql-python` uses `>=` to define a minimum version. If you prefer an exact version, change the `>=` before the version number to `==`. The resolved versions of each package are then stored in the [uv.lock](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile). The lockfile ensures that developers working on the project are using consistent package versions. It also ensures that the exact same set of package versions is used when distributing your package to end users. You shouldn't edit the `uv.lock` file.
+1. Review the contents of the file. It should be similar to this example. Note the Python version and dependency for `mssql-python` use `>=` to define a minimum version. If you prefer an exact version, change the `>=` before the version number to `==`. The resolved versions of each package are stored in the [uv.lock](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile). The lockfile ensures that developers working on the project use consistent package versions. It also ensures that the exact same set of package versions is used when distributing your package to end users. Commit both `pyproject.toml` and `uv.lock`, review lockfile changes in pull requests, and run an organization-approved dependency scanner in CI. Don't edit the `uv.lock` file directly.
 
-   ```python
+   ```toml
    [project]
    name = "mssql-python-repeatable-qs"
    version = "0.1.0"
@@ -160,7 +99,7 @@ code .
 
 1. Update the description to be more descriptive.
 
-   ```python
+   ```toml
    description = "Connects to a SQL database using mssql-python"
    ```
 
@@ -178,7 +117,7 @@ code .
        main()
    ```
 
-1. At the top of the file, add the following imports above the line with `def main()`.
+1. At the top of the file, add the following imports before the line with `def main()`.
 
    > [!TIP]  
    > If Visual Studio Code is having trouble resolving packages, you need to [update the interpreter to use the virtual environment](https://code.visualstudio.com/docs/python/environments).
@@ -275,7 +214,7 @@ code .
 
    ```python
    def main():
-       print("Hello from test!")
+       print("Hello from mssql-python-repeatable-qs!")
    ```
 
 1. Replace it with this code.
@@ -326,13 +265,15 @@ code .
    SQL_CONNECTION_STRING="Server=<server_name>;Database=<database_name>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
    ```
 
+   > [!IMPORTANT]
+   > Keep `.env` local and out of source control. For CI and deployed environments, inject the connection string or its component secrets from your platform secret store instead of copying `.env` between machines.
    > [!TIP]  
    > The connection string used here largely depends on the type of SQL database you're connecting to. If you're connecting to an *Azure SQL Database* or a *SQL database in Fabric*, use the *ODBC* connection string from the connection strings tab. You might need to adjust the authentication type depending on your scenario. For more information on connection strings and their syntax, see [connection string syntax reference](../../odbc/dsn-connection-string-attribute.md).
 
 ### Use uv run to execute the script
 
 > [!TIP]  
-> On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once via the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
+> On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once through the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
 
 1. In the terminal window from before, or a new terminal window open to the same directory, run the following command.
 
@@ -361,11 +302,15 @@ code .
    └─────────────┴────────────────────────────────┴─────────────┘
    ```
 
-1. To deploy your script to another machine, copy all files except for the `.venv` folder to the other machine. The virtual environment is recreated with the first run.
+1. To deploy your script to another machine, copy the project files, including `pyproject.toml` and `uv.lock`, but not the `.venv` folder or any local `.env` file. Recreate the virtual environment on first run and supply secrets through the target environment.
 
-## Next step
+## Next steps
 
-Visit the `mssql-python` driver GitHub repository for more examples, to contribute ideas or report issues.
+Use these articles to keep building:
+
+- [Build connection strings](build-connection-strings.md) to configure connections for different SQL database types and authentication methods.
+- [Executing queries](executing-queries.md) to learn about query patterns, parameterized queries, and result handling.
+- [Connection management](connection-management.md) to use context managers, pooling, and connection settings.
 
 > [!div class="nextstepaction"]
-> [mssql-python driver on GitHub](https://github.com/microsoft/mssql-python?tab=readme-ov-file#microsoft-python-driver-for-sql-server)
+> [Build connection strings](build-connection-strings.md)

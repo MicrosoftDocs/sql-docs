@@ -36,7 +36,7 @@ helpviewer_keywords:
   - "RESTORE LOG, see RESTORE statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || >=aps-pdw-2016"
 ---
 # RESTORE Statements (Transact-SQL)
 
@@ -46,7 +46,7 @@ Restores SQL database backups taken using the [BACKUP](backup-transact-sql.md) c
 
 For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 :::row:::
     :::column:::

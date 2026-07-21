@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "PolyBase, external table"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -32,7 +32,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -138,7 +138,7 @@ In the following image example, if `LOCATION='/webdata/'`, a PolyBase query retu
 To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf` under the `bin` root of SQL Server. For example, `C:\Program Files\Microsoft SQL Server\MSSQL13.XD14\MSSQL\Binn`.
 
 ::: moniker-end
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 #### DATA_SOURCE = *external_data_source_name*
 

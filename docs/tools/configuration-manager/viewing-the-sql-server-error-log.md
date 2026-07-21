@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "SQL Server error log"
   - "displaying SQL Server error log"
   - "logs [SQL Server], SQL Server error logs"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # View the SQL Server error log
 

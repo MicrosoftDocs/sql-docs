@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
   - intro-installation
   - sfi-ropc-blocked
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 
 # Install Distributed Replay

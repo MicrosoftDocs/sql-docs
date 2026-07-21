@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "security logs [SQL Server]"
   - "displaying Windows application logs"
   - "logs [SQL Server], Windows application logs"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # View the Windows Application log to troubleshoot SQL Server

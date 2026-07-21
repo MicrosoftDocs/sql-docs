@@ -12,7 +12,7 @@ ms.collection:
 helpviewer_keywords:
   - "shared memory [SQL Server]"
   - "client protocols [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Client Protocols - Shared Memory Properties (Protocol tab)
 

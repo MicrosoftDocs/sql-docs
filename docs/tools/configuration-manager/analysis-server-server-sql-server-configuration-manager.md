@@ -11,7 +11,7 @@ ms.collection:
   - data-tools
 f1_keywords:
   - "sql13.swb.registerserver.general.analysisservices.f1"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # Analysis Server &lt;server&gt; (SQL Server Configuration Manager)

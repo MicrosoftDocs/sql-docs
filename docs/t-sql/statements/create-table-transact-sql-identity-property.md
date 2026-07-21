@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "autonumbers, identity numbers"
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)
 
@@ -51,7 +51,7 @@ IDENTITY
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
 ```syntaxsql
 IDENTITY [ (seed , increment) ]
@@ -75,7 +75,7 @@ You must specify both the seed and increment or neither. If neither is specified
 
 Identity columns can be used for generating key values. 
 
-::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
 The identity property on a column guarantees the following conditions:
 
@@ -122,7 +122,7 @@ Azure Synapse Analytics doesn't support `PRIMARY KEY` or `UNIQUE` constraint or 
 
 ## Examples
 
-::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
 ### A. Use the IDENTITY property with CREATE TABLE
 
@@ -264,7 +264,7 @@ The column on the target table inherits the `IDENTITY` property from the source 
 
 ## Related content
 
-::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
 - [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)

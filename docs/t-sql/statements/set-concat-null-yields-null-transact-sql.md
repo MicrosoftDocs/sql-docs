@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SET CONCAT_NULL_YIELDS_NULL statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]

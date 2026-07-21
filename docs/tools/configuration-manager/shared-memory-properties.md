@@ -11,7 +11,7 @@ ms.collection:
   - data-tools
 helpviewer_keywords:
   - "shared memory [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Shared Memory Properties
 

@@ -35,7 +35,7 @@ helpviewer_keywords:
   - "attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH"
 dev_langs:
   - TSQL
-monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016"
 ---
 
 # CREATE DATABASE
@@ -46,7 +46,7 @@ Select one of the following tabs for the syntax, arguments, remarks, permissions
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 :::row:::
     :::column:::

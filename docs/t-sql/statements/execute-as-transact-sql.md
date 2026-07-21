@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "switching execution context"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest"
 ---
 # EXECUTE AS (Transact-SQL)
 

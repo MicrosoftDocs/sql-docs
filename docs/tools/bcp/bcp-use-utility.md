@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "exporting data, bcp utility"
   - "importing data, bcp utility"
   - "copying data [SQL Server], bcp utility"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb ||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
 ---
 # How to use the bcp utility
 

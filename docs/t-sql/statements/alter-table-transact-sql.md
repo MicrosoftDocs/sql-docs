@@ -59,7 +59,7 @@ helpviewer_keywords:
   - "table changes [SQL Server]"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # ALTER TABLE (Transact-SQL)
@@ -71,7 +71,7 @@ Modifies a table definition by altering, adding, or dropping columns and constra
 > [!TIP]  
 > The syntax of `ALTER TABLE` varies in different versions of the [Microsoft SQL Database Engine](../../database-engine/sql-database-engine.md). Use the version selector dropdown list to [choose the appropriate product version](../../sql-server/sql-docs-navigation-guide.md#what-the-applies-to-options-mean).
 
-::: moniker range=" =azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+::: moniker range="=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
 The syntax for `ALTER TABLE` is different for disk-based tables and memory-optimized tables. Use the following links to take you directly to the appropriate syntax block for your table types and to the appropriate syntax examples:
 
@@ -491,7 +491,7 @@ The name of the table to alter. If the table isn't in the current database or if
 
 Specifies the named column to alter.
 
-::: moniker range=">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+::: moniker range=">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
 `ALTER TABLE ... ALTER COLUMN` for Fabric Data Warehouse has different capabilities. For more information, see [the Fabric Data Warehouse version of this article](alter-table-transact-sql.md?view=fabric&preserve-view=true#alter-column).
 
@@ -1302,7 +1302,7 @@ You can change the length, precision, or scale of a column by specifying a new s
 
 Changes you specify in `ALTER TABLE` take effect immediately. If the changes require modifications to the rows in the table, `ALTER TABLE` updates the rows. `ALTER TABLE` acquires a schema modify (Sch-M) lock on the table to ensure that no other connections reference even the metadata for the table during the change, except online index operations that require a short Sch-M lock at the end. In an `ALTER TABLE...SWITCH` operation, the lock is acquired on both the source and target tables. The modifications made to the table are logged and fully recoverable. Changes that affect all the rows in large tables, such as dropping a column or, on some editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], adding a `NOT NULL` column with a default value, can take a long time to complete and generate many log records. Run these `ALTER TABLE` statements with the same care as any `INSERT`, `UPDATE`, or `DELETE` statement that affects many rows.
 
-::: moniker range=">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+::: moniker range=">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
 ### Extended Events (XEvents) for partition switch
 

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "bcp utility [SQL Server], Microsoft Entra ID"
   - "Microsoft Entra ID, bcp"
   - "managed identity, bcp"
-monikerRange: ">=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
+monikerRange: ">=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
 ---
 # Authenticate with Microsoft Entra ID in bcp
 

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "listening [SQL Server], pipes"
   - "pipes [SQL Server], listening on pipes"
   - "Named Pipes [SQL Server], listening on pipes"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Named Pipes properties
 

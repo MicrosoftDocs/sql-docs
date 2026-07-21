@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=aps-pdw-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=aps-pdw-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 

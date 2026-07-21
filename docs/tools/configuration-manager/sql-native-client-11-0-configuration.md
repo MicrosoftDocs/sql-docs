@@ -11,7 +11,7 @@ ms.collection:
   - data-tools
 helpviewer_keywords:
   - "client configuration [SQL Server], SQL Server Native Client"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # SQL Native Client 11.0 Configuration
 

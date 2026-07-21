@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "bcp utility [SQL Server], install"
   - "command prompt utilities [SQL Server], bcp"
   - "Microsoft Command Line Utilities for SQL Server"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
 ---
 # Download and install the bcp utility
 

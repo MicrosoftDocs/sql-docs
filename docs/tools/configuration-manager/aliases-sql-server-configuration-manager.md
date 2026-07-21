@@ -9,7 +9,7 @@ ms.subservice: tools-other
 ms.topic: concept-article
 ms.collection:
   - data-tools
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Aliases (SQL Server Configuration Manager)
 

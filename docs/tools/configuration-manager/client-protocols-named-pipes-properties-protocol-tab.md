@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "pipes [SQL Server], connecting to"
   - "Named Pipes [SQL Server], default pipe"
   - "client protocols [SQL Server]"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 
 # Client Protocols - Named Pipes Properties (Protocol tab)

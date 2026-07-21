@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "file importing [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # BULK INSERT (Transact-SQL)
 
@@ -36,7 +36,7 @@ Imports a data file into a database table or view in a user-specified format in 
 
 ## Syntax
 
-::: moniker range="=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+::: moniker range="=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 
 ```syntaxsql
 BULK INSERT
@@ -143,7 +143,7 @@ Specifies the name of the table or view to bulk import data into. Only views in 
 
 Specifies the full path of the data file that contains data to import into the specified table or view.
 
-::: moniker range=">=sql-server-2016 || >=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 `BULK INSERT` can import data from a disk or Azure Storage (including network, floppy disk, hard disk, and so on).
 
@@ -230,7 +230,7 @@ WITH (DATA_SOURCE = 'pandemicdatalake', FIRSTROW = 2, CODEPAGE = '65001');
 
 You should specify a collation name for each column in a [format file](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-::: moniker range="=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+::: moniker range="=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 
 | `CODEPAGE` value | Description |
 | --- | --- |
@@ -262,7 +262,7 @@ WITH (DATA_SOURCE = 'pandemicdatalake', FIRSTROW = 2, DATAFILETYPE = 'char');
 > [!NOTE]  
 > Replace `<data-lake>.blob.core.windows.net` with an appropriate URL.
 
-::: moniker range="=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+::: moniker range="=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 
 | `DATAFILETYPE` value | All data represented in |
 | --- | --- |
@@ -345,7 +345,7 @@ The `FIRSTROW` attribute isn't intended to skip column headers. The `BULK INSERT
 
 Specifies the number of the last row to load. The default is 0, which indicates the last row in the specified data file.
 
-::: moniker range="=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+::: moniker range="=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 
 #### BATCHSIZE
 

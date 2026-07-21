@@ -8,7 +8,7 @@ ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: search
 ms.topic: how-to
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Revert word breakers used by Full-Text Search to previous version
 

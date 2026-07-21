@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], creating"
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], setting up"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Get Started with Full-Text Search
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

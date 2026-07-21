@@ -10,7 +10,7 @@ ms.topic: how-to
 helpviewer_keywords:
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], server management"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Manage and Monitor Full-Text Search for a Server Instance
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

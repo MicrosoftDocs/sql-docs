@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 helpviewer_keywords:
   - "full-text search [SQL Server], filters"
   - "filters [full-text search]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Full-text filter binaries
 

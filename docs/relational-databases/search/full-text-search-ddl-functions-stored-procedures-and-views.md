@@ -7,7 +7,7 @@ ms.date: 01/19/2026
 ms.service: sql
 ms.subservice: search
 ms.topic: reference
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Full-Text Search DDL, functions, stored procedures, and views
 

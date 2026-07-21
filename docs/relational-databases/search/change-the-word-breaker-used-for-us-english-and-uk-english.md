@@ -8,7 +8,7 @@ ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: search
 ms.topic: how-to
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2017"
 ---
 # Change the word breaker used for US English and UK English
 

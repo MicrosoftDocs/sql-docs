@@ -71274,6 +71274,26 @@
       "source_path": "docs/linux/sql-server-linux-replication-non-default-ports.md",
       "redirect_url": "/sql/linux/replication/non-default-ports",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/python/mssql-python/duckdb-integration.md",
+      "redirect_url": "/sql/connect/python/mssql-python/duck-db-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/python/mssql-python/fastapi-integration.md",
+      "redirect_url": "/sql/connect/python/mssql-python/fast-api-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/python/mssql-python/sqlalchemy-integration.md",
+      "redirect_url": "/sql/connect/python/mssql-python/sql-alchemy-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/python/mssql-python/migrate-from-sqlite.md",
+      "redirect_url": "/sql/connect/python/mssql-python/migrate-from-sql-lite",
+      "redirect_document_id": false
     }
   ]
 }

@@ -3,7 +3,7 @@ title: Driver Feature Support Matrix
 description: Learn which SQL Server features are supported in the drivers for .NET, ODBC, OLE DB, Go, JDBC, Node.js, JavaScript, and Python.
 author: David-Engel
 ms.author: davidengel
-ms.date: 01/05/2026
+ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -97,13 +97,13 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Microsoft Entra service principal certificate authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | | | [Yes](golang/entra-authentication.md) |
 | [Microsoft Entra default Azure authentication](/azure/developer/intro/passwordless-overview#introducing-defaultazurecredential) | | | | Yes | [Yes](golang/entra-authentication.md) |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](php/how-to-connect-using-windows-authentication.md) | [Yes](odbc/linux-mac/using-integrated-authentication.md) | | Yes | [Yes](golang/authentication.md) |
-| [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | | | [Yes](https://tediousjs.github.io/tedious/bulk-load.html) | | [Yes](golang/bulk-operations.md) |
+| [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | | | [Yes](https://tediousjs.github.io/tedious/bulk-load.html) | [Yes](python/mssql-python/bulk-copy.md) (v1.4.0+) | [Yes](golang/bulk-operations.md) |
 | [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | Yes (v5.8+) | Yes (v5.8+) | | | |
 | [Multiple Active Result Sets (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Yes](php/how-to-disable-multiple-active-resultsets-mars.md) | [Yes](php/how-to-disable-multiple-active-resultsets-mars.md) | | Yes | |
 | [Spatial Data Types](../relational-databases/spatial/spatial-data-sql-server.md) | | | | | [Partial](golang/data-type-mappings.md) (v1.8.0+ via UDT) |
 | [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](https://tediousjs.github.io/tedious/parameters.html) | | [Yes](golang/table-valued-parameters.md) |
-| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](golang/connection-options.md) (always enabled) |
-| [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](odbc/using-transparent-network-ip-resolution.md) | [Yes](golang/connection-options.md) |
+| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](python/mssql-python/availability-groups.md) | [Yes](golang/connection-options.md) (always enabled) |
+| [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | Yes | [Yes](golang/connection-options.md) |
 | [TDS 8.0 (strict encryption) and TLS 1.3](../relational-databases/security/networking/tds-8.md) | Yes (v5.10+) | Yes (v5.10+) | Yes (v16.3+) | Yes | [Yes](golang/encryption-certificates.md) (v1.6.0+) |
 | [JSON data type](../relational-databases/json/json-data-sql-server.md) | | | | | |
 | [Vector (float32) data type](../t-sql/data-types/vector-data-type.md) | | | | | |

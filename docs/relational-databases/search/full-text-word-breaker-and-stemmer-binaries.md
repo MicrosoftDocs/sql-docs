@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "full-text search [SQL Server], word breakers"
   - "word breakers [full-text search]"
   - "stemmers [full-text search]"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Full-text word breaker and stemmer binaries
 

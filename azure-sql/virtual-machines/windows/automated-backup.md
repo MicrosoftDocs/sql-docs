@@ -455,7 +455,7 @@ The following table lists the possible solutions if you're having issues disabli
 | Symptom | Solution |
 |--|--|
 | **Disabling Auto backups fails if your SQL IaaS Agent extension is in a failed state** | Repair the [SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) if it's in a failed state. |
-| **Disabling Automated Backup fails due to metadata issues** | Stop the SQL IaaS Agent service. Run the T-SQL command: `use msdb exec autoadmin_metadata_delete`. Start SQL Iaas Agent service and try to disable Automated Backup from Azure portal. |
+| **Disabling Automated Backup fails due to metadata issues** | Stop the SQL Server Agent and SQL IaaS Agent service. Run the following T-SQL command: `USE msdb; EXECUTE autoadmin_metadata_delete`. Start SQL Server Agent and SQL Iaas Agent services and try to disable Automated Backup from the Azure portal. |
 | **Automated Backup can't be disabled due to account and permissions** | Check the following: <br /> - The SQL Server Agent is running. <br /> - The  **NT Service\SqlIaaSExtensionQuery**  account has proper [permissions](sql-server-iaas-agent-extension-automate-management.md#permission-models) for the Automated Backup feature both within SQL Server, and also for the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal. <br /> - The **SA** account hasn't been renamed, though disabling the account is acceptable. |
 
 ### I want to find out what service/application is taking SQL Server backups

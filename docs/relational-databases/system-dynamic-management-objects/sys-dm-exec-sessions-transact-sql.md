@@ -85,7 +85,7 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 | `open_transaction_count` | **int** | No | Number of open transactions per session.<br /><br />**Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions. |
 | `pdw_node_id` | **int** | No | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]. |
 | `page_server_reads` | **bigint** | No | Number of page server reads performed, by requests in this session, during this session.<br /><br />**Applies to**: Azure SQL Database Hyperscale. |
-| `contained_availability_group_id` | **uniqueidentifier** | Yes | ID of the contained availability group.<br /><br />**Applies to**: [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions. |
+| `contained_availability_group_id` | **uniqueidentifier** | Yes | ID of the contained availability group.<br /><br />**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions. |
 
 <sup>1</sup> Specifies when a page is marked dirty in the buffer pool. This value doesn't directly equate to actual writes, because the same page can be marked more than once. These counters are aggregated at the end of the batch.
 

@@ -741,8 +741,12 @@
         href: database/audit-write-storage-account-behind-vnet-firewall.md
       - name: Configure threat detection
         href: database/threat-detection-configure.md
-      - name: Configure dynamic data masking
-        href: database/dynamic-data-masking-configure-portal.md
+      - name: Dynamic data masking
+        items:
+        - name: Configure dynamic data masking
+          href: database/dynamic-data-masking-configure-portal.md
+        - name: Regex-based dynamic data masking
+          href: database/dynamic-data-masking-regex.md
       - name: IP-based firewall
         href: database/firewall-configure.md
       - name: Ledger

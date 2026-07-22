@@ -131,9 +131,7 @@ You can probe connectivity to all regions with the [test-connectivity.ps1](https
 
 ## Check TLS version compatibility
 
-The data processing service endpoint supports the following TLS versions: TLS 1.2 and 1.3. Windows Server 2012 and older versions aren't supported.
-
-For telemetry endpoints, Windows Server 2012 R2 and older aren't supported.
+The data processing service endpoint supports the following TLS versions: TLS 1.2 and 1.3. Windows Server versions earlier than [!INCLUDE [winserver2016-md](../../includes/winserver2016-md.md)] aren't supported.
 
 If an unsupported TLS version is being used, you might see an error in the log
 

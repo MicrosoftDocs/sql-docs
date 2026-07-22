@@ -1,64 +1,69 @@
 ---
-title: "Restore a database master key"
-description: Learn how to restore the database master key in SQL Server by using SQL Server Management Studio with Transact-SQL.
+title: Restore a Database Master Key
+description: Learn how to restore a database master key in SQL Server by using Transact-SQL. This essential key encrypts other keys and certificates.
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto
-ms.date: "12/16/2021"
+ms.reviewer: vanto, randolphwest
+ms.date: 07/22/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
 helpviewer_keywords:
   - "database master key [SQL Server], importing"
 ---
+
 # Restore a database master key
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to restore the database master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
-  
-## Before you begin  
-  
-### Limitations and restrictions  
-  
-- When the master key is restored, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] decrypts all the keys that are encrypted with the currently active master key, and then encrypts these keys with the restored master key. This resource-intensive operation should be scheduled during a period of low demand. If the current database master key isn't open or can't be opened, or if any of the keys that are encrypted by it cannot be decrypted, the restore operation fails.  
-  
-- If any one of the decryptions fails, the restore will fail. You can use the FORCE option to ignore errors, but this option will cause the loss of any data that cannot be decrypted.  
-  
-- If the master key was encrypted by the service master key, the restored master key will also be encrypted by the service master key.  
-  
-- If there's no master key in the current database, RESTORE MASTER KEY creates a master key. The new master key won't be automatically encrypted with the service master key.  
-  
-## Security  
-  
-### Permissions
-Requires CONTROL permission on the database.  
-  
-## Using SQL Server Management Studio with Transact-SQL  
-  
-### To restore the database master key  
-  
-1. Retrieve a copy of the backed-up database master key, either from a physical backup medium or a directory on the local file system.  
-  
-2. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
-  
-3. On the Standard bar, click **New Query**.  
-  
-4. Copy and paste the following example into the query window and click **Execute**.  
 
-    ```sql
-    -- Restores the database master key of the AdventureWorks2022 database.  
-    USE AdventureWorks2022;  
-    GO  
-    RESTORE MASTER KEY   
-        FROM FILE = 'c:\backups\keys\AdventureWorks2022_master_key'   
-        DECRYPTION BY PASSWORD = '3dH85Hhk003#GHkf02597gheij04'   
-        ENCRYPTION BY PASSWORD = '259087M#MyjkFkjhywiyedfgGDFD';  
-    GO  
-    ```  
-  
-    > [!NOTE]  
-    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.  
+This article describes how to restore a *database master key* in [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE [tsql](../../../includes/tsql-md.md)]. The database master key encrypts other keys and certificates inside a database. If it's deleted or corrupted, [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] might be unable to decrypt those keys, and the data encrypted with them is effectively lost. Restore the database master key from a backup to recover access to those keys.
 
+## Limitations
 
-## See also
+When you restore the database master key, [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] decrypts all the keys encrypted with the currently active database master key, and then encrypts them with the restored database master key. Schedule this resource-intensive operation during a period of low demand. If the current database master key isn't open or can't be opened, or if any of the keys encrypted by it can't be decrypted, the restore operation fails.
 
-- [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-master-key-transact-sql.md)  
+If any one of the decryptions fails, the restore fails. You can use the `FORCE` option to ignore errors, but this option causes the loss of any data that can't be decrypted.
+
+If the service master key encrypts the database master key, it also encrypts the restored database master key.
+
+If there's no database master key in the current database, `RESTORE MASTER KEY` creates a database master key. The service master key doesn't automatically encrypt the new database master key.
+
+## Permissions
+
+Requires `CONTROL` permission on the database.
+
+## Restore the database master key
+
+[!INCLUDE [article-uses-adventureworks](../../../includes/article-uses-adventureworks.md)]
+
+1. Retrieve a copy of the backed-up database master key, either from a physical backup medium or a directory on the local file system.
+
+1. Connect to the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance containing the database master key you want to restore. [!INCLUDE [connect-instance-client](../../../includes/connect-instance-client.md)]
+
+1. Review and run the following Transact-SQL script.
+
+   In this example:
+
+   - You restore the database master key for [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] from `C:\Temp\AdventureWorks2025_master_key`.
+
+   - You set a new encryption password `<new-password>`. Change these settings to match your environment.
+
+   > [!CAUTION]  
+   > You need the new password to open the database master key in the future. Make sure you store this password safely and securely.
+
+   ```sql
+   USE AdventureWorks2025;
+   GO
+
+   RESTORE MASTER KEY
+       FROM FILE = 'C:\Backups\Keys\AdventureWorks2025_master_key'
+       DECRYPTION BY PASSWORD = '<password>'
+       ENCRYPTION BY PASSWORD = '<new-password>';
+   GO
+   ```
+
+## Related content
+
+- [Create a database master key](create-a-database-master-key.md)
+- [Back up a database master key](back-up-a-database-master-key.md)
+- [RESTORE MASTER KEY (Transact-SQL)](../../../t-sql/statements/restore-master-key-transact-sql.md)

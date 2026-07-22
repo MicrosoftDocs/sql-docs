@@ -1,10 +1,10 @@
 ---
-title: "Back up a database master key"
+title: Back up a Database Master Key
 description: Learn how to back up a database master key in SQL Server by using Transact-SQL. This essential key encrypts other keys and certificates.
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto
-ms.date: "12/16/2021"
+ms.reviewer: vanto, randolphwest
+ms.date: 07/22/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
@@ -15,59 +15,60 @@ helpviewer_keywords:
 # Back up a database master key
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to back up a database master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The database master key is used to encrypt other keys and certificates inside a database. If it's deleted or corrupted, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] may be unable to decrypt those keys, and the data encrypted using them will be effectively lost. For this reason, you should back up the database master key and store the backup in a secure off-site location.  
-  
-## Before you begin  
-  
-### Limitations and restrictions  
-  
-- The database master key must be open and, therefore, decrypted before it's backed up. If it's encrypted with the service master key, the database master key doesn't have to be explicitly opened. But if the database master key is encrypted only with a password, it must be explicitly opened.  
-  
-- We recommend that you back up the database master key as soon as it's created, and store the backup in a secure, off-site location.  
-  
-## Security  
-  
-### Permissions
-Requires CONTROL permission on the database.  
-  
-## Using SQL Server Management Studio with Transact-SQL  
-  
-### To back up the database master key  
-  
-1. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance containing the database master key you wish to back up.  
-  
-2. Choose a password that will be used to encrypt the database master key on the backup medium. This password is subject to complexity checks.  
-  
-3. Obtain a removable backup medium for storing a copy of the backed-up key.  
-  
-4. Identify an NTFS directory in which to create the backup of the key. This is where you'll create the file specified in the next step. The directory should be protected with highly restrictive access control lists (ACLs).  
-  
-5. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
-  
-6. On the Standard bar, click **New Query**.  
-  
-7. Copy and paste the following example into the query window and click **Execute**.  
-  
-    ```sql
-    -- Creates a backup of the "AdventureWorks2022" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
-    USE AdventureWorks2022;   
-    GO  
-    OPEN MASTER KEY DECRYPTION BY PASSWORD = 'sfj5300osdVdgwdfkli7';   
-  
-    BACKUP MASTER KEY TO FILE = 'c:\temp\exportedmasterkey'   
-        ENCRYPTION BY PASSWORD = 'sd092735kjn$&adsg';   
-    GO  
-    ```  
-  
-    > [!NOTE]  
-    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.
-    > [!NOTE]  
-    > TThe password is required for a backup. Please be sure this password is stored safely and securely.
-  
-8. Copy the file to the backup medium and verify the copy.  
-  
-9. Store the backup in a secure, off-site location.  
 
-## See also
+This article describes how to back up a *database master key* in [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE [tsql](../../../includes/tsql-md.md)]. The database master key encrypts other keys and certificates inside a database. If it's deleted or corrupted, [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] might be unable to decrypt those keys, and the data encrypted with them is effectively lost. For this reason, back up the database master key and store the backup in a secure off-site location.
 
- For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) and [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  
+## Limitations
+
+You must open and decrypt the database master key before backing it up. If the service master key encrypts the database master key, you don't need to explicitly open the database master key. However, if a password is the only encryption method for the database master key, you must explicitly open it.
+
+Back up the database master key as soon as you create it, and store the backup in a secure, off-site location.
+
+## Permissions
+
+Requires `CONTROL` permission on the database.
+
+## Back up the database master key
+
+[!INCLUDE [article-uses-adventureworks](../../../includes/article-uses-adventureworks.md)]
+
+1. Connect to the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance containing the database master key you want to back up. [!INCLUDE [connect-instance-client](../../../includes/connect-instance-client.md)]
+
+1. Choose a unique password for encrypting the database master key on the backup medium. [!INCLUDE [password-complexity](../../../linux/includes/password-complexity.md)]
+
+1. Get a removable backup medium for storing a copy of the backed-up key.
+
+1. Identify an NTFS directory where you create the backup of the key. This directory is where you create the file in the next step. Protect the directory with highly restrictive access control lists (ACLs).
+
+1. Review and run the following Transact-SQL script.
+
+   In this example:
+
+   - The service master key doesn't encrypt the database master key, so you must specify a password when opening it.
+
+   - You back up the database master key for [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] to `C:\Backups\Keys\AdventureWorks2025_master_key`. Change these settings to match your environment.
+
+   > [!CAUTION]  
+   > You need the password to restore a database backup. Make sure you store this password safely and securely.
+
+   ```sql
+   USE AdventureWorks2025;
+   GO
+
+   OPEN MASTER KEY DECRYPTION BY PASSWORD = '<dmk-password>';
+
+   BACKUP MASTER KEY TO FILE = 'C:\Backups\Keys\AdventureWorks2025_master_key'
+       ENCRYPTION BY PASSWORD = '<password>';
+   GO
+   ```
+
+1. Copy the backed up file to the backup medium and verify the copy.
+
+1. Store the backup in a secure, off-site location.
+
+## Related content
+
+- [Create a database master key](create-a-database-master-key.md)
+- [Restore a database master key](restore-a-database-master-key.md)
+- [OPEN MASTER KEY (Transact-SQL)](../../../t-sql/statements/open-master-key-transact-sql.md)
+- [BACKUP MASTER KEY (Transact-SQL)](../../../t-sql/statements/backup-master-key-transact-sql.md)

@@ -36,7 +36,7 @@ Discovery of SQL Server instances and generation of readiness reports happen aut
 
 First, you choose an appropriate SQL Managed Instance target and prepare your environment. Then, you can migrate your SQL Server databases to SQL Managed Instance directly from the Azure portal through a fully managed and automated process.
 
-Database migration is available by default for all SQL Server instances enabled by Azure Arc, starting with [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)].
+Database migration is available by default for all SQL Server instances enabled by Azure Arc, starting with [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)].
 
 The **Database Migration** pane also has a useful summary of the migration status for your instance, such as the number of total databases, the recommended target, the number of completed migrations, and the number of ongoing migrations:
 

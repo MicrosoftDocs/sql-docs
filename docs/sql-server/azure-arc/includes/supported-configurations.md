@@ -9,7 +9,7 @@ ms.topic: include
 
 ### SQL Server version
 
-[!INCLUDE [sssql11-md](../../../includes/sssql11-md.md)] and later versions.
+[!INCLUDE [sssql14-md](../../../includes/sssql14-md.md)] and later versions.
 
 > [!NOTE]
 > Only 64-bit SQL Server versions are supported.
@@ -17,19 +17,16 @@ ms.topic: include
 ### Operating systems
 
 - Windows 10 and 11
-- [!INCLUDE [winserver2012-md](../../../includes/winserver2012-md.md)] and later versions
+- [!INCLUDE [winserver2016-md](../../../includes/winserver2016-md.md)] and later versions
 - Ubuntu 20.04 (x64)
 - Red Hat Enterprise Linux (RHEL) 8 (x64)
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
-
-> [!IMPORTANT]  
-> Windows Server 2012 and Windows Server 2012 R2 support ended on October 10, 2023. For more information, see [SQL Server 2012 and Windows Server 2012/2012 R2 end of support](/lifecycle/announcements/sql-server-2012-windows-server-2012-2012-r2-end-of-support).
 
 ### .NET Framework
 
 On Windows, .NET Framework 4.7.2 and later.
 
-This requirement begins with extension version `1.1.2504.99` (November, 14 2023 release). Without this version, the extension might not function as intended. Windows Server 2012 R2 doesn't come with .NET Framework 4.7.2 by default and must be updated accordingly.
+This requirement starts with extension version `1.1.2504.99` (November, 14 2023 release). Without this version, the extension might not function as intended.
 
 ### Support on VMware
 

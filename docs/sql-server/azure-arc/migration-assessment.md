@@ -218,8 +218,8 @@ The high-level metrics that are collected to decide the optimal Azure SQL target
 ## Limitations
 
 - SQL Server migration assessments are currently limited to SQL Server running on Windows machines. Migration assessments don't apply to SQL Server running on Linux machines.
-- SQL Server running on Windows Server 2012 R2 and older versions aren't supported.
-- SQL Server versions must be 2012 or later.
+- SQL Server running on Windows Server versions earlier than [!INCLUDE [winserver2016-md](../../includes/winserver2016-md.md)] isn't supported.
+- SQL Server versions must be [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
 - Failover cluster instances aren't supported at this time.
 
 ## Known issues

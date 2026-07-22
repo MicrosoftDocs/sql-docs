@@ -29,7 +29,7 @@ When your SQL Server instance is enabled by Azure Arc, you can:
 
 Discovery of SQL Server instances and generation of readiness reports happen automatically every weekend, but you can start them manually at any time. The process takes only a few minutes to complete. No extra configuration or setup is required. First, choose an appropriate Azure SQL target and prepare your environment. Then, you can migrate your SQL Server databases to Azure directly from the Azure portal through a fully managed and automated process.
 
-SQL Server migration in Azure Arc is available by default for all SQL Server instances enabled by Azure Arc, starting with [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)].
+SQL Server migration in Azure Arc is available by default for all SQL Server instances enabled by Azure Arc, starting with [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)].
 
 ## Migration targets
 

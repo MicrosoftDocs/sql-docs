@@ -47,9 +47,9 @@ The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 $locale = strtoupper(PHP_OS) === 'LINUX' ? 'en_US.ISO-8859-1' : 'en_US.ISO8859-1';
 setlocale(LC_ALL, $locale);
         
-$serverName = 'MyServer';
-$database = 'Test';
-$connectionInfo = array('Database'=>'Test', 'UID'=>$uid, 'PWD'=>$pwd);
+$serverName = '<server>';
+$database = '<database>';
+$connectionInfo = array('Database'=>$database, 'UID'=>$uid, 'PWD'=>$pwd);
 $conn = sqlsrv_connect($serverName, $connectionInfo);
   
 if ($conn === false) {
@@ -117,8 +117,8 @@ sqlsrv_close($conn);
 $locale = strtoupper(PHP_OS) === 'LINUX' ? 'en_US.ISO-8859-1' : 'en_US.ISO8859-1';
 setlocale(LC_ALL, $locale);
         
-$serverName = 'MyServer';
-$database = 'Test';
+$serverName = '<server>';
+$database = '<database>';
 
 try {
     $conn = new PDO("sqlsrv:Server=$serverName;Database=$database;", $uid, $pwd);

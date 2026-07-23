@@ -38,7 +38,7 @@ The following example shows how to disable MARS support, using the SQLSRV driver
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
-$serverName = "MyServer";  
+$serverName = "<server>";  
 $connectionInfo = array( "Database"=>"AdventureWorks", 'MultipleActiveResultSets'=> false);  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
 if( $conn === false )  

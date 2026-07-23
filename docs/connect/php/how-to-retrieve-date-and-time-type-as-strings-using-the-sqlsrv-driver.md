@@ -29,7 +29,7 @@ The following example shows the syntax specifying to retrieve date and time type
 
 ```php
 <?php
-$serverName = "MyServer";
+$serverName = "<server>";
 $connectionInfo = array("Database"=>"AdventureWorks", 'ReturnDatesAsStrings'=> true);
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn === false) {
@@ -46,7 +46,7 @@ The following example shows that you can retrieve dates as strings by specifying
 
 ```php
 <?php
-$serverName = "MyServer";
+$serverName = "<server>";
 $connectionInfo = array("Database"=>"AdventureWorks", "ReturnDatesAsStrings" => false);
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn === false) {
@@ -83,7 +83,7 @@ The following example shows how to retrieve dates as strings by specifying UTF-8
 
 ```php
 <?php
-$serverName = "MyServer";
+$serverName = "<server>";
 $connectionInfo = array("Database"=>"AdventureWorks", 'ReturnDatesAsStrings'=> true, "CharacterSet" => 'utf-8');
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn === false) {
@@ -119,7 +119,7 @@ The following example shows how to retrieve the date as a PHP type. `'ReturnDate
 
 ```php
 <?php
-$serverName = "MyServer";
+$serverName = "<server>";
 $connectionInfo = array("Database"=>"AdventureWorks");
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn === false) {
@@ -157,8 +157,8 @@ The ReturnDatesAsStrings option at the statement level overrides the correspondi
 
 ```php
 <?php
-$serverName = 'MyServer';
-$connectionInfo = array('Database' => 'MyDatabase', 'ReturnDatesAsStrings' => false);
+$serverName = '<server>';
+$connectionInfo = array('Database' => '<database>', 'ReturnDatesAsStrings' => false);
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn === false) {
    echo "Could not connect.\n";

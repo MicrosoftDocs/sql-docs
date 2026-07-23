@@ -40,9 +40,9 @@ Sequences are supported only in SQL Server 2012 and above.
   
 ```
 <?php
-$server = "myserver";
-$databaseName = "mydatabase";
-$uid = "myusername";
+$server = "<server>";
+$databaseName = "<database>";
+$uid = "<user_id>";
 $pwd = "<password>";
 
 try {

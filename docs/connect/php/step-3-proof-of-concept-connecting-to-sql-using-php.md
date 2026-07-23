@@ -20,9 +20,9 @@ This **OpenConnection** function is called near the top in all of the functions 
 ```php
     function OpenConnection()
     {
-        $serverName = "tcp:myserver.database.windows.net,1433";
+        $serverName = "tcp:<server>.database.windows.net,1433";
         $connectionOptions = array("Database"=>"AdventureWorks",
-            "Uid"=>"MyUser", "PWD"=>"<password>");
+            "Uid"=>"<user_id>", "PWD"=>"<password>");
         $conn = sqlsrv_connect($serverName, $connectionOptions);
         if($conn == false)
             die(FormatErrors(sqlsrv_errors()));

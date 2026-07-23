@@ -4,7 +4,7 @@ description: "This topic describes how to send and retrieve ASCII data in Linux 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/16/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -37,7 +37,7 @@ The following examples demonstrate how to send and retrieve ASCII data using the
   
 The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a server. All output is written to the browser when the examples are run from the browser.  
   
-```  
+```php  
 <?php  
   
 // SQLSRV Example
@@ -107,7 +107,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-```
+```php
 <?php  
   
 // PDO_SQLSRV Example:

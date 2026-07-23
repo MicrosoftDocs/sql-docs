@@ -4,7 +4,7 @@ description: "Learn how to use Always Encrypted with secure enclaves with the Mi
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 01/31/2020
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -27,7 +27,7 @@ Support for Always Encrypted with secure enclaves is available in the PHP Driver
 
 Always Encrypted with secure enclaves ensures the security of encrypted data by attesting the enclave - that is, verifying the enclave against an external attestation service. To use secure enclaves, the `ColumnEncryption` keyword must identify the attestation type and protocol along with associated attestation data, separated by a comma. Version 17.4 of the ODBC driver supports only Virtualization-Based Security (VBS) and the Host Guardian Service (HGS) protocol for the enclave type and protocol. The associated attestation data is the URL of the attestation server. Thus, the following setting would be added to the connection string:
 
-```
+```text
 ColumnEncryption=VBS-HGS,http://<attestation-server>/Attestation
 ```
 
@@ -373,7 +373,7 @@ function getResults($stmt)
 
 Output:
 
-```
+```output
 Test comparisons:
 1
 100

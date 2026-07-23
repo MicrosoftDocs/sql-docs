@@ -4,7 +4,7 @@ description: "API reference for the PDO::exec function in the Microsoft PDO_SQLS
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Prepares and executes a SQL statement in a single function call, returning the n
   
 ## Syntax  
   
-```  
+```php  
   
 int PDO::exec ($statement)  
 ```  
@@ -47,7 +47,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
 ## Example  
 This example deletes rows in Table1 that have 'xxxyy' in col1. The example then reports how many rows were deleted.  
   
-```  
+```php  
 <?php  
    $c = new PDO( "sqlsrv:server=(local)");  
   

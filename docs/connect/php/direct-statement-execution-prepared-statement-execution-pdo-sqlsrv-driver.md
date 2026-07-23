@@ -4,7 +4,7 @@ description: "Learn how to use the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute for d
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -31,7 +31,7 @@ The following sample shows that when context from a previous statement is requir
 > If the query is to invoke a stored procedure and temporary tables are used in this 
 > stored procedure, use [PDO::exec](../../connect/php/pdo-exec.md) instead.
 
-```  
+```php  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  
    $conn->setAttribute(constant('PDO::SQLSRV_ATTR_DIRECT_QUERY'), true);  

@@ -4,7 +4,7 @@ description: "sqlsrv_server_info"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/19/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -21,7 +21,7 @@ Returns information about the server. A connection must be established before ca
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_server_info( resource $conn)  
 ```  
@@ -41,7 +41,7 @@ An associative array with the following keys:
 ## Example  
 The following example writes server information to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication. */  
 $serverName = "(local)";  

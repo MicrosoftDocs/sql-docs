@@ -4,7 +4,7 @@ description: "This page provides instructions for loading the Microsoft Drivers 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 02/24/2026
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -28,7 +28,7 @@ You can also build the drivers from source either when building PHP or by using 
 
 The driver file must be located in a directory where the PHP runtime can find it. It's easiest to put the driver file in your default PHP extension directory - to find the default directory, run `php -i | sls extension_dir` on Windows or `php -i | grep extension_dir` on Linux/macOS. If you aren't using the default extension directory, specify a directory in the PHP configuration file (php.ini), using the **extension_dir** option. For example, on Windows, if you put the driver file in your `c:\php\ext` directory, add the following line to php.ini:
 
-```
+```ini
 extension_dir = "c:\PHP\ext"
 ```
 

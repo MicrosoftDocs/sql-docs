@@ -4,7 +4,7 @@ description: "API reference for the sqlsrv_num_rows function in the Microsoft SQ
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/19/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -19,7 +19,7 @@ Reports the number of rows in a result set.
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_num_rows( resource $stmt )  
 ```  
@@ -35,7 +35,7 @@ sqlsrv_num_rows requires a client-side, static, or keyset cursor, and will retur
   
 ## Example  
   
-```  
+```php  
 <?php  
    $server = "server_name";  
    $conn = sqlsrv_connect( $server, array( 'Database' => 'Northwind' ) );  
@@ -53,7 +53,7 @@ sqlsrv_num_rows requires a client-side, static, or keyset cursor, and will retur
   
 The following sample shows that when there is more than one result set (a batch query), the number of rows is only available when you use a client-side cursor.  
   
-```  
+```php  
 <?php  
 $serverName = "(local)";  
 $connectionInfo = array("Database"=>"AdventureWorks");  

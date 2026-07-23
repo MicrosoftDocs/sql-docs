@@ -4,7 +4,7 @@ description: "Learn how different locale settings in Linux and macOS affect the 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -25,7 +25,7 @@ Starting with version 5.8.0, users may configure the localization settings using
 ## Set locale info using the SQLSRV Driver  
 Add the following at the end of your php.ini file:
   
-```  
+```ini  
 [sqlsrv]  
 sqlsrv.SetLocaleInfo = <option>
 ```  
@@ -33,7 +33,7 @@ sqlsrv.SetLocaleInfo = <option>
 ## Set locale info using the PDO_SQLSRV Driver  
 Add the following at the end of your php.ini file:
   
-```  
+```ini  
 [pdo_sqlsrv]  
 pdo_sqlsrv.set_locale_info = <option>
 ```  

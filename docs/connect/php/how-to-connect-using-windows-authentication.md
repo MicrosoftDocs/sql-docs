@@ -4,7 +4,7 @@ description: "Learn what it means to connect using Windows integrated authentica
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/26/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -38,7 +38,7 @@ Using the SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
   
-```  
+```php  
 <?php  
 /* Specify the server and connection string attributes. */  
 $serverName = "(local)";  
@@ -75,7 +75,7 @@ sqlsrv_close( $conn);
 ## PDO_SQLSRV example  
 The following example uses the PDO_SQLSRV driver to accomplish the same task as the previous sample.  
   
-```  
+```php  
 <?php  
 try {  
    $conn = new PDO( "sqlsrv:Server=(local);Database=AdventureWorks", NULL, NULL);   

@@ -4,7 +4,7 @@ description: "Support for High Availability, Disaster Recovery for the Microsoft
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "07/31/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -34,7 +34,7 @@ TNIR is enabled by default, and **MultiSubnetFailover** is Disabled by default.
 
 This is an example of enabling both TNIR and **MultiSubnetFailover** using the PDO_SQLSRV driver:
 
-```
+```php
 <?php
 $serverName = "yourservername";
 $username = "yourusername";

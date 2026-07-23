@@ -4,7 +4,7 @@ description: "API reference for the PDOStatement::rowCount function in the Micro
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Returns the number of rows added, deleted, or changed by the last statement.
   
 ## Syntax  
   
-```  
+```php  
   
 int PDOStatement::rowCount ();  
 ```  
@@ -32,7 +32,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
 ## Example  
 This example shows two uses of rowCount. The first use returns the number of rows that were added to the table. The second use shows that rowCount can return the number of rows in a result set when you specify a scrollable cursor.  
   
-```  
+```php  
 <?php  
 $database = "Test";  
 $server = "(local)";  

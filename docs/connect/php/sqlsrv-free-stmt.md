@@ -4,7 +4,7 @@ description: "sqlsrv_free_stmt"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/19/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -21,7 +21,7 @@ Frees all resources associated with the specified statement. The statement canno
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_free_stmt( resource $stmt)  
 ```  
@@ -38,7 +38,7 @@ The Boolean value **true** unless the function is called with an invalid paramet
 ## Example  
 The following example creates a statement resource, executes a simple query, and calls **sqlsrv_free_stmt** to free all resources associated with the statement. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  

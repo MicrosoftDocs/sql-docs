@@ -4,7 +4,7 @@ description: "sqlsrv_field_metadata"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/29/2021"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -21,7 +21,7 @@ Retrieves metadata for the fields of a prepared statement. For information about
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_field_metadata( resource $stmt)  
 ```  
@@ -84,7 +84,7 @@ The Nullable key can either be yes or no.
 ## Example  
 The following example creates a statement resource, then retrieves and displays the field metadata. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```
+```php
 <?php
 /* Connect to the local server using Windows Authentication and
 specify the AdventureWorks database as the database in use. */
@@ -125,7 +125,7 @@ By default, the option `DataClassification` is `false`, but when set to `true`, 
 
 Take a Patients table for example:
 
-```
+```sql
 CREATE TABLE Patients 
       [PatientId] int identity,
       [SSN] char(11),
@@ -136,14 +136,14 @@ CREATE TABLE Patients
 
 We can classify the SSN and BirthDate columns as shown below:
 
-```
+```sql
 ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confidential - secure privacy', INFORMATION_TYPE = 'Credentials')
 ADD SENSITIVITY CLASSIFICATION TO [Patients].BirthDate WITH (LABEL = 'Confidential Personal Data', INFORMATION_TYPE = 'Birthdays')
 ```
 
 To access the metadata, invoke `sqlsrv_field_metadata` as shown in the snippet below:
 
-```
+```php
 $tableName = 'Patients';
 $tsql = "SELECT * FROM $tableName";
 $stmt = sqlsrv_prepare($conn, $tsql, array(), array('DataClassification' => true));
@@ -161,7 +161,7 @@ if (sqlsrv_execute($stmt)) {
 
 The output will be:
 
-```
+```output
 SSN: 
 Array
 (
@@ -206,7 +206,7 @@ Array
 
 If using `sqlsrv_query` instead of `sqlsrv_prepare`, the above snippet can be modified, like this:
 
-```
+```php
 $tableName = 'Patients';
 $tsql = "SELECT * FROM $tableName";
 $stmt = sqlsrv_query($conn, $tsql, array(), array('DataClassification' => true));
@@ -220,7 +220,7 @@ foreach ($fieldmeta as $f) {
 
 As you can see in the JSON representation below, the data classification metadata is shown if associated with the columns:
 
-```
+```json
 {"Name":"PatientId","Type":4,"Size":null,"Precision":10,"Scale":null,"Nullable":0,"Data Classification":[]}
 {"Name":"SSN","Type":1,"Size":11,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""}}]}
 {"Name":"FirstName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
@@ -234,14 +234,14 @@ Beginning with 5.9.0, PHP drivers added classification rank retrieval when using
 
 For example, if the user assigns `NONE` and `LOW` to BirthDate and SSN respectively, the JSON representation is shown as follows:
 
-```
+```json
 {"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
 {"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
 ```
 
 As shown in [sensitivity classification](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md), the numerical values of the ranks are:
 
-```
+```text
 0 for NONE
 10 for LOW
 20 for MEDIUM
@@ -251,7 +251,7 @@ As shown in [sensitivity classification](../../relational-databases/system-catal
 
 Hence, if instead of `RANK=NONE`, the user defines `RANK=CRITICAL` when classifying the column BirthDate, the classification metadata will be:
 
-```
+```output
   array(7) {
     ["Name"]=>
     string(9) "BirthDate"
@@ -294,7 +294,7 @@ Hence, if instead of `RANK=NONE`, the user defines `RANK=CRITICAL` when classify
 
 The updated JSON representation is shown below:
 
-```
+```json
 {"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
 ```
 

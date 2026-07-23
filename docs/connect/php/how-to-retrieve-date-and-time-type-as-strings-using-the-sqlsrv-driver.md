@@ -4,7 +4,7 @@ description: "Learn how to retrieve date and time types as strings using the SQL
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "02/11/2019"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -16,7 +16,7 @@ helpviewer_keywords:
 
 When using the SQLSRV driver for the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can retrieve date and time types (**smalldatetime**, **datetime**, **date**, **time**, **datetime2**, and **datetimeoffset**) as strings by specifying the following option in the connection string or at the statement level:
 
-```
+```php
 'ReturnDatesAsStrings'=>true
 ```
 

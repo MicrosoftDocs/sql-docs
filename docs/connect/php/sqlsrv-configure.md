@@ -4,7 +4,7 @@ description: "sqlsrv_configure"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/26/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -21,7 +21,7 @@ Changes the settings for error handling and logging options.
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_configure( string $setting, mixed $value )  
 ```  

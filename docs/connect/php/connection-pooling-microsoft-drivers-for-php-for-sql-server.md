@@ -4,7 +4,7 @@ description: "Learn the details of connection pooling when using the Microsoft D
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "04/30/2026"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -43,7 +43,7 @@ The *ConnectionPooling* attribute can't be used to enable or disable connection 
 Connection pooling can be enabled or disabled by editing the odbcinst.ini configuration file. The driver should be reloaded for the changes to take effect.
 
 Setting `Pooling` to `Yes` and a positive `CPTimeout` value in the odbcinst.ini file enables connection pooling. 
-```
+```ini
 [ODBC]
 Pooling=Yes
 
@@ -53,7 +53,7 @@ CPTimeout=<int value>
   
 At a minimum, the odbcinst.ini file should look like the following example:
 
-```
+```ini
 [ODBC]
 Pooling=Yes
 
@@ -65,7 +65,7 @@ CPTimeout=120
 ```
 
 Setting `Pooling` to `No` in the odbcinst.ini file forces the driver to create a new connection.
-```
+```ini
 [ODBC]
 Pooling=No
 ```
@@ -77,7 +77,7 @@ Pooling=No
 
 - When using `AccessToken` with connection pooling, the driver appends a hash of the token content to the `APP` connection keyword to ensure that connections with different access tokens are not pooled together. This prevents identity cross-contamination where a pooled connection authenticated as one identity could be reused for a different identity. Token data is cached with TTL-based expiry to ensure pointer stability for the ODBC driver. This behavior was introduced in version 5.13.1.
 
-```
+```php
 <?php
 $connectionInfo = array("Database"=>"test", "UID"=>"username", "PWD"=>"password");
 

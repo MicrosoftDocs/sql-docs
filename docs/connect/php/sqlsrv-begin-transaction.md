@@ -4,7 +4,7 @@ description: "sqlsrv_begin_transaction"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/26/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -28,7 +28,7 @@ Begins a transaction on a specified connection. The current transaction includes
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_begin_transaction( resource $conn)  
 ```  
@@ -46,7 +46,7 @@ The first query in the example inserts a new sales order into the *Sales.SalesOr
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  

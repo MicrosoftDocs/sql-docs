@@ -4,7 +4,7 @@ description: "API reference for the PDO::query function in the Microsoft PDO_SQL
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/01/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Executes a SQL query and returns a result set as a PDOStatement object.
   
 ## Syntax  
   
-```  
+```php  
   
 PDOStatement PDO::query ($statement[, $fetch_style);  
 ```  
@@ -56,7 +56,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
 ## Query example  
 This example shows several queries.  
   
-```  
+```php  
 <?php  
 $database = "AdventureWorks";  
 $conn = new PDO( "sqlsrv:server=(local) ; Database = $database", "", "");  
@@ -112,7 +112,7 @@ $stmt = null;
 ## Sql_variant example
 This code sample shows how to create a table of [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) types and fetch the inserted data.
 
-```
+```php
 <?php
 $server = 'serverName';
 $dbName = 'databaseName';
@@ -149,7 +149,7 @@ try {
 
 The expected output would be:
 
-```
+```output
 Array
 (
     [c1_int] => 1

@@ -4,7 +4,7 @@ description: "Creates a connection resource and opens a connection using the sql
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/26/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -23,7 +23,7 @@ Creates a connection resource and opens a connection. By default, the connection
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_connect( string $serverName [, array $connectionInfo])  
 ```  
@@ -46,7 +46,7 @@ If values for the *UID* and *PWD* keys are not specified in the optional *$conne
 ## Example  
 The following example creates and opens a connection using Windows Authentication. The example assumes that SQL Server and the AdventureWorks database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /*  
 Connect to the local server using Windows Authentication and specify  

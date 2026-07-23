@@ -4,7 +4,7 @@ description: "sqlsrv_has_rows"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/19/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -19,7 +19,7 @@ Indicates if the result set has one or more rows.
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_has_rows( resource $stmt )  
 ```  
@@ -32,7 +32,7 @@ If there are rows in the result set, the return value will be **true**. If there
   
 ## Example  
   
-```  
+```php  
 <?php  
    $server = "server_name";  
    $conn = sqlsrv_connect( $server, array( 'Database' => 'Northwind' ) );  

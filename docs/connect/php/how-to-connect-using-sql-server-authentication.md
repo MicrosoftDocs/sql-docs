@@ -4,7 +4,7 @@ description: "Learn important considerations when using SQL Server Authenticatio
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/26/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -46,7 +46,7 @@ The following example uses the SQLSRV driver with SQL Server Authentication to c
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
   
-```  
+```php  
 <?php  
 /* Specify the server and connection string attributes. */  
 $serverName = "(local)";  
@@ -89,7 +89,7 @@ sqlsrv_close( $conn);
 ## PDO_SQLSRV example  
 This sample uses the PDO_SQLSRV driver to demonstrate how to connect with SQL Server Authentication.  
   
-```  
+```php  
 <?php  
    $serverName = "(local)";   
    $database = "AdventureWorks";  

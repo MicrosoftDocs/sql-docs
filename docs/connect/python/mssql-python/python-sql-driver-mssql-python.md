@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Python Driver for SQL Server - mssql-python"
-description: Overview and task hub for installing, connecting, querying, authenticating, troubleshooting, and migrating with the mssql-python driver.
+description: mssql-python is Microsoft's Python driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest

@@ -114,7 +114,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 
 ## Transfer files
 
@@ -137,6 +137,7 @@ When you run SQL Server Setup on a computer disconnected from the internet, Setu
 1. Continue following the on-screen prompts to complete the installation.
 
 ::: moniker-end
+
 <a id="apply-cu"></a>
 
 ## Apply cumulative updates
@@ -157,7 +158,7 @@ We recommend that you apply the latest cumulative update to both the database en
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 
 Cumulative updates are installed through the Setup program.
 
@@ -167,7 +168,7 @@ Cumulative updates are installed through the Setup program.
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 3. Select the latest cumulative update to download the executable.
 
 1. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).

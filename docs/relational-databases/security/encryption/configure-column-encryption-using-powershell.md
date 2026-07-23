@@ -24,6 +24,7 @@ This article provides the steps for setting the target Always Encrypted configur
 > If you are using [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
 
 ::: moniker-end
+
 For more information about Always Encrypted support in the SqlServer PowerShell module, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 ## Prerequisites

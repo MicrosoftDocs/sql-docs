@@ -39,7 +39,7 @@ The following features are installed when you select **SQL Server Database Engin
 - [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R and Python) and [Language Extensions](../../language-extensions/install/windows-java.md) (Java) - is an optional component
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 
 - [Machine Learning Services (In-Database)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R and Python) - is an optional component
 ::: moniker-end

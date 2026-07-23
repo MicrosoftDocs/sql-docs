@@ -58,7 +58,7 @@ helpviewer_keywords:
 |Manage individual subscriptions|Shows fields that enable users to automate and deliver a report to themselves. In this mode, fields that accept email aliases aren't available.|  
 |Manage all subscriptions|Shows fields that support wider distribution, including **To:**, **Cc:**, **Bcc:**, and **Reply-To:** fields, providing more ways to route a report to more subscribers. The availability of email alias fields is defined through the RSReportServer configuration file settings.| 
 
-::: moniker range="<=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 > [!NOTE]  
 > In versions prior to Reporting Services 2019, the Comment field is only available for roles that include the 'Manage all subscriptions' task.

@@ -51,16 +51,17 @@ You can use several different environment variables to configure [!INCLUDE [ssno
 
 ### SQL Server editions
 
-:::moniker range="<=sql-server-ver16 || <=sql-server-linux-ver16"
+::: moniker range="<=sql-server-ver16 || <=sql-server-linux-ver16"
 
 [!INCLUDE [editions-sql-server-2022-earlier-versions](../includes/editions-sql-server-2022-earlier-versions.md)]
 
-:::moniker-end
-:::moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17"
+::: moniker-end
+
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17"
 
 [!INCLUDE [editions-sql-server-2025-later-versions](../includes/editions-sql-server-2025-later-versions.md)]
 
-:::moniker-end
+::: moniker-end
 
 ## Use with initial setup
 
@@ -109,6 +110,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<pass
 > The process for running production editions in containers is slightly different. For more information, see [Run production container images](../containers/deploy.md#production).
 
 ::: moniker-end
+
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="=sql-server-linux-ver15 || =sql-server-ver15"
 

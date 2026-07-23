@@ -1214,6 +1214,7 @@ WHERE r.command LIKE 'BACKUP%';
 - [Piecemeal Restore of Databases With Memory-Optimized Tables](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -1470,6 +1471,7 @@ WITH COPY_ONLY;
 - [RESTORE Statements (Transact-SQL)](restore-statements-transact-sql.md)
 
 ::: moniker-end
+
 ::: moniker range=">=aps-pdw-2016"
 
 :::row:::

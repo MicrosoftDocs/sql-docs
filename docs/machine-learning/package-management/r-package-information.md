@@ -14,12 +14,14 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-c
 
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15"
 This article describes how to get information about installed R packages on [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [SQL Server 2019 Big Data Clusters](../../big-data-cluster/machine-learning-services.md). Example R scripts show you how to list package information such as installation path and version.
 ::: moniker-end
+
 ::: moniker range="=sql-server-2017"
 This article describes how to get information about installed R packages on [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Example R scripts show you how to list package information such as installation path and version.
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 This article describes how to get information about installed R packages on [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). Example R scripts show you how to list package information such as installation path and version.
 ::: moniker-end
@@ -75,7 +77,7 @@ The following Microsoft R packages are installed with SQL Server Machine Learnin
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sql-server-linux-ver15||=azuresqldb-mi-current"
+::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15 || =azuresqldb-mi-current"
 
 ## Default Microsoft R packages
 
@@ -94,7 +96,7 @@ The following Microsoft R packages are installed with SQL Server Machine Learnin
 
 By default, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are possible only through product upgrades.
 
-::: moniker range="=sql-server-2017 || =sql-server-ver15 ||=azuresqldb-mi-current"
+::: moniker range="=sql-server-2017 || =sql-server-ver15 || =azuresqldb-mi-current"
 ## Default open-source R packages
 
 R support includes open-source R so that you can call base R functions and install additional open-source and third-party packages. R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt).
@@ -156,6 +158,7 @@ print(packageDescription("MicrosoftML"))
 ::: moniker range="=sql-server-2017"
 + [Install packages with R tools](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+
+::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 + [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

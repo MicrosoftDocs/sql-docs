@@ -545,6 +545,7 @@ When you use Always Encrypted with secure enclaves, you can change any encryptio
 When you modify a column, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] keeps track of each modification by adding a row in a system table and marking the previous column modification as a dropped column. In the rare case that you modify a column too many times, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] might reach the record size limit. If this happens, you get error [MSSQLSERVER_511](../../relational-databases/errors-events/mssqlserver-511-database-engine-error.md) or 1708. To avoid these errors, either rebuild the clustered index on the table periodically or reduce the number of column modifications.
 
 ::: moniker-end
+
 ::: moniker range="=fabric"
 
 Supported `ALTER TABLE ... ALTER COLUMN` scenarios allow certain column definition changes to be applied *without modifying the underlying stored data files*. These operations update table metadata and enable compatible interpretation of existing data during subsequent reads.
@@ -1278,7 +1279,7 @@ To add new rows of data, use [INSERT (Transact-SQL)](insert-transact-sql.md). To
 
 If there are any execution plans in the procedure cache that reference the table, `ALTER TABLE` marks them to be recompiled on their next execution.
 
-::: moniker range=" =fabric-sqldb"
+::: moniker range="=fabric-sqldb"
 
 Currently, in-memory, ledger, ledger history, and Always Encrypted tables cannot be created in [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]. For more information, see [Limitations in SQL database in Microsoft Fabric](/fabric/database/sql/limitations).
 

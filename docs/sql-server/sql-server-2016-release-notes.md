@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "build notes"
   - "release issues"
   - "Release Notes, SQL Server 2016"
-monikerRange: "<=sql-server-2017"
 ---
 
 # SQL Server 2016 release notes

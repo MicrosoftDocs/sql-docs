@@ -43,7 +43,7 @@ Before you install [!INCLUDE [ssMDSshort](../../includes/ssmdsshort-md.md)], rev
 ### Microsoft Silverlight
 
 To work in the [!INCLUDE [ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, Silverlight 5 must be installed on the client computer. If you don't have the required version of Silverlight, you're prompted to install it when you navigate to an area of the web application that requires it.  
-:::moniker-end
+::: moniker-end
 
 ### Role and role services
 

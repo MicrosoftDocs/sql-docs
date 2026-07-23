@@ -42,7 +42,7 @@ The installation experience depends on the version of [!INCLUDE [ssNoVersion](..
     :::column-end:::
 :::row-end:::
 
-:::moniker-end
+::: moniker-end
 
 ::: moniker range="=sql-server-ver15"
 
@@ -61,7 +61,7 @@ The installation experience depends on the version of [!INCLUDE [ssNoVersion](..
     :::column-end:::
 :::row-end:::
 
-:::moniker-end
+::: moniker-end
 
 ::: moniker range="=sql-server-ver16"
 
@@ -80,7 +80,7 @@ The installation experience depends on the version of [!INCLUDE [ssNoVersion](..
     :::column-end:::
 :::row-end:::
 
-:::moniker-end
+::: moniker-end
 
 ::: moniker range="=sql-server-ver17"
 
@@ -99,7 +99,7 @@ The installation experience depends on the version of [!INCLUDE [ssNoVersion](..
     :::column-end:::
 :::row-end:::
 
-:::moniker-end
+::: moniker-end
 
 This article provides a step-by-step procedure for installing a new instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] by using the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup Installation Wizard. The Installation Wizard provides a single feature tree for installation of all [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] components so that you don't have to install them individually. To install the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server](install-sql-server.md#individual-component-installation).
 

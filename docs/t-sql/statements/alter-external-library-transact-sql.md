@@ -73,6 +73,7 @@ WITH ( LANGUAGE = <language> )
 ```
 
 ::: moniker-end
+
 ::: moniker range="=sql-server-2017"
 
 ## Syntax for SQL Server 2017
@@ -168,7 +169,7 @@ This option is useful if you have the required permission to alter a library, bu
 
 Instead, you can pass the package contents as a variable in binary format.
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 #### PLATFORM = WINDOWS
 
@@ -184,7 +185,7 @@ Specifies the platform for the content of the library. This value is required wh
 In [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], Windows and Linux are the supported platforms.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017"
+::: moniker range="=sql-server-2017"
 
 #### LANGUAGE = 'R'
 
@@ -207,7 +208,7 @@ Specifies the language of the package. The value can be `R`, `Python`, or the na
 
 ## Remarks
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017"
+::: moniker range="=sql-server-2017"
 For the R language, packages must be prepared in the form of zipped archive files with the `.zip` extension for Windows. In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], only the Windows platform is supported.  
 ::: moniker-end
 
@@ -264,7 +265,7 @@ ALTER EXTERNAL LIBRARY customLibrary
 SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
-::: moniker range=">=sql-server-ver15 || =sql-server-linux-ver15||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-ver15 || =sql-server-linux-ver15 || =azuresqldb-mi-current"
 For the Python language, the example also works by replacing `'R'` with `'Python'`.
 ::: moniker-end
 

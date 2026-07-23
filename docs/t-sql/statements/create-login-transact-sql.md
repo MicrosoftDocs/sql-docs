@@ -361,6 +361,7 @@ CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-current"
 
 :::row:::
@@ -527,6 +528,7 @@ For more information on obtaining the Object ID of a service principal, see [ser
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md?view=azuresql-db&preserve-view=true)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -753,6 +755,7 @@ GO
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 
 :::row:::
@@ -899,6 +902,7 @@ GO
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
+
 ::: moniker range=">=aps-pdw-2016"
 
 :::row:::

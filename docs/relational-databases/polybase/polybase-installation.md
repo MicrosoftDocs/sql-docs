@@ -114,8 +114,9 @@ Use the values in this table to create installation scripts. The SQL Server Poly
 | PolyBase | **Optional**<br /><br />/PBPORTRANGE | Specifies a port range with at least six ports for PolyBase services. Example:<br />`/PBPORTRANGE=16450-16460` |
 
 ::: moniker-end
+
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 "
+::: moniker range=">=sql-server-ver15"
 
 | SQL Server component | Parameter and values | Description |
 | --- | --- | --- |
@@ -148,7 +149,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15"
 
 <a id="enable"></a>
 

@@ -8,7 +8,7 @@ ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-monikerRange: "=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
+monikerRange: "=sql-server-2017 || =sql-server-ver15 || =sql-server-linux-ver15"
 ms.custom:
   - linux-related-content
   - sfi-ropc-nochange

@@ -32,11 +32,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
   Creates a security policy for [row-level security](../../relational-databases/security/row-level-security.md) in the SQL Database Engine.
 
-:::moniker range="=fabric"
+::: moniker range="=fabric"
   
   Row-level security in Fabric Data Warehouse operates similarly to other SQL Database Engine products. For more information and examples of row-level security in Fabric Data Warehouse or the SQL analytics endpoint, see [Row-level security in Fabric data warehousing](/fabric/data-warehouse/row-level-security).
 
-:::moniker-end
+::: moniker-end
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
   

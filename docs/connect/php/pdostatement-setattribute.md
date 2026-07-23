@@ -4,7 +4,7 @@ description: "API reference for the PDOStatement::setAttribute function in the M
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Sets an attribute value, either a predefined PDO attribute or a custom driver at
   
 ## Syntax  
   
-```  
+```php  
 bool PDOStatement::setAttribute ($attribute, $value );  
 ```  
   
@@ -44,7 +44,7 @@ The following table contains the list of available attributes:
   
 ## Example  
   
-```  
+```php  
 <?php  
 $database = "AdventureWorks";  
 $server = "(local)";  

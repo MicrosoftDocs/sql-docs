@@ -4,7 +4,7 @@ description: "API reference for the PDOStatement::bindParam function in the Micr
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Binds a parameter to a named or question mark placeholder in the SQL statement.
   
 ## Syntax  
   
-```  
+```php  
   
 bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $driver_options]]]);  
 ```  
@@ -43,7 +43,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
 ## Parameter example  
 This code sample shows that after $contact is bound to the parameter, changing the value does change the value passed in the query.  
   
-```  
+```php  
 <?php  
 $database = "AdventureWorks";  
 $server = "(local)";  
@@ -75,7 +75,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ## Output parameter example  
 This code sample shows how to access an output parameter.  
   
-```  
+```php  
 <?php  
 $database = "Test";  
 $server = "(local)";  
@@ -96,7 +96,7 @@ echo $input1;
 ## Input/Output example  
 This code sample shows how to use an input/output parameter.  
   
-```  
+```php  
 <?php  
    $database = "AdventureWorks";  
    $server = "(local)";  
@@ -118,7 +118,7 @@ This code sample shows how to use an input/output parameter.
 ## Decimal input example  
 This code sample shows how to bind a decimal value as an input parameter.  
 
-```
+```php
 <?php  
 $database = "Test";  
 $server = "(local)";  

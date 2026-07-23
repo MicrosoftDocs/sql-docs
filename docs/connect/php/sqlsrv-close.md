@@ -4,7 +4,7 @@ description: "sqlsrv_close"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/19/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -21,7 +21,7 @@ Closes the specified connection and releases associated resources.
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_close( resource $conn )  
 ```  
@@ -38,7 +38,7 @@ The Boolean value **true** unless the function is called with an invalid paramet
 ## Example  
 The following example closes a connection. The example assumes that SQL Server is installed on the local computer. All output is writing to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /*Connect to the local server using Windows Authentication and   
 specify the AdventureWorks database as the database in use. */  

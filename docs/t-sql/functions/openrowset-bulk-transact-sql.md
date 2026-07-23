@@ -87,6 +87,7 @@ OPENROWSET( BULK 'data_file_path',
    ROWS_PER_BATCH = rows_per_batch
 ```
 ::: moniker-end
+
 ::: moniker range="=fabric"
 
 ### Syntax for Fabric Data Warehouse
@@ -174,6 +175,7 @@ The supported path formats are:
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *data_file* can be in Azure Blob Storage. For examples, see [Examples of bulk access to data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 ::: moniker-end
+
 ::: moniker range="=fabric"
 
 - `https://<storage>.blob.core.windows.net/<container>/<file path>` to access Azure Blob Storage or Azure Data Lake Storage
@@ -626,7 +628,7 @@ SELECT * FROM OPENROWSET(
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=azuresqldb-current||=fabric"
+::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || =fabric"
 
 ### WITH Schema
 

@@ -62,7 +62,7 @@ The `event_file` target writes event session output from memory buffers to a dis
 > [!IMPORTANT]  
 > Depending on the events added to a session, the files produced by the `event_file` target might contain sensitive data. Carefully review the file system and share permissions on the directory and individual `.xel` files, including inherited access, to avoid granting unnecessary read access. Follow the [principle of least privilege](/entra/identity-platform/secure-least-privileged-access). To reduce the risk of collecting sensitive data inadvertently, avoid long-running event sessions if they might collect sensitive data.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
+::: moniker range="=azuresqldb-current || =azuresqldb-mi-current"
 
 > [!NOTE]  
 > [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] only support blobs in [Azure Storage](/azure/storage/common/storage-account-create) as the value of the `filename` parameter. For an `event_file` code example for Azure SQL Database, SQL database in Fabric, or Azure SQL Managed Instance, see [Create an event session with an event_file target in Azure Storage](/azure/azure-sql/database/xevent-code-event-file).

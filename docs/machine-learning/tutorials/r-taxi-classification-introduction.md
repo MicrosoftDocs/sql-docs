@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || >=azuresqldb-mi-
 # R tutorial: Predict NYC taxi fares with binary classification
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15"
 In this five-part tutorial series for SQL programmers, you'll learn about R integration in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
@@ -51,7 +51,7 @@ In [part five](r-taxi-classification-deploy-model.md), you'll learn how to opera
 
 ## Prerequisites
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-ver15"
 + Install [SQL Server Machine Learning Services with R enabled](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 ::: moniker-end
 
@@ -59,7 +59,7 @@ In [part five](r-taxi-classification-deploy-model.md), you'll learn how to opera
 
 + [Grant permissions to execute Python scripts](../security/user-permission.md)
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15"
 + Starting in SQL Server 2019, the isolation mechanism requires you to give appropriate permissions to the directory where the plot file is stored. For more information on how to set these permissions, see the [File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 

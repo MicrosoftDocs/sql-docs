@@ -70,7 +70,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-linux-2017"
+::: moniker range="=sql-server-2017 || =sql-server-linux-2017"
 
 ## Overview: SQL Server 2017
 
@@ -101,7 +101,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-linux-2017"
+::: moniker range="=sql-server-2017 || =sql-server-linux-2017"
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -383,6 +383,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 
 ::: moniker-end
+
 ::: moniker range="=sql-server-linux-ver15"
 
 > [!NOTE]  
@@ -399,7 +400,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sql-server-linux-ver15"
+::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -921,7 +922,7 @@ WITH (
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver16||=sql-server-linux-ver16"
+::: moniker range="=sql-server-ver16 || =sql-server-linux-ver16"
 
 ## Overview: SQL Server 2022
 
@@ -2101,7 +2102,7 @@ WITH (
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=azuresqledge-current"
+::: moniker range="=azuresqldb-current || =azuresqledge-current"
 
 :::row:::
     :::column:::
@@ -2388,6 +2389,7 @@ WITH (
 - [Introduction to elastic query](/azure/azure-sql/database/elastic-query-overview?view=azuresql-db&preserve-view=true)
 
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 
 :::row:::
@@ -2673,6 +2675,7 @@ WITH (
 - [Using Shared Access Signatures (SAS)](/azure/storage/common/storage-sas-overview)
 
 ::: moniker-end
+
 ::: moniker range=">=aps-pdw-2016"
 
 :::row:::
@@ -2918,6 +2921,7 @@ WITH (
 - [Using Shared Access Signatures (SAS)](/azure/storage/common/storage-sas-overview)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::

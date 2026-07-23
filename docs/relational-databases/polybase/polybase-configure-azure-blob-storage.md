@@ -61,6 +61,7 @@ First, configure SQL Server PolyBase to use Azure Blob Storage.
    :::image type="content" source="media/polybase-stop-start.png" alt-text="Screenshot of stop and start PolyBase services in services.msc.":::
 
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver16"
 
 1. Restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:
@@ -145,6 +146,7 @@ To query the data in your Hadoop data source, you must define an external table 
    ```
 
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver16"
 
 1. Create a database master key (DMK) on the database. The DMK is required to encrypt the credential secret.

@@ -4,7 +4,7 @@ description: "API reference for the PDO::commit function in the Microsoft PDO_SQ
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Sends commands to the database that were issued after calling [PDO::beginTransac
   
 ## Syntax  
   
-```  
+```php  
   
 bool PDO::commit();  
 ```  

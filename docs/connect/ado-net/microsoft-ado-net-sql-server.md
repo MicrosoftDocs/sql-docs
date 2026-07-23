@@ -17,8 +17,6 @@ ms.topic: get-started
 
 ADO.NET is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient library or Entity Framework to access SQL Server, or providers from other suppliers to access their stores. Use System.Data.Odbc or System.Data.OleDb to access data from .NET languages using other data access technologies. Use System.Data.DataSet when you need an offline data cache in client applications. It also provides local persistence and XML capabilities that can be useful in web services.
 
-
-
 ::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 ## Getting started (SQL Server)

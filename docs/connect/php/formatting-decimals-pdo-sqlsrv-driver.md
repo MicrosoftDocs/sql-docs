@@ -39,13 +39,13 @@ The statement attributes always override the corresponding connection settings. 
     $attrs = array(PDO::SQLSRV_ATTR_FORMAT_DECIMALS => true,
                    PDO::SQLSRV_ATTR_DECIMAL_PLACES => 2);
 
-    $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password, $attrs);
+    $conn = new PDO("sqlsrv:Server = <server>; Database = <database>", $username, $password, $attrs);
     ```
 
 -   Set attributes post connection:
 
     ```php
-    $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password);
+    $conn = new PDO("sqlsrv:Server = <server>; Database = <database>", $username, $password);
     $conn->setAttribute(PDO::SQLSRV_ATTR_FORMAT_DECIMALS, true);
     $conn->setAttribute(PDO::SQLSRV_ATTR_DECIMAL_PLACES, 2);
     ```
@@ -55,7 +55,7 @@ The following example shows how to fetch money data using [PDOStatement::bindCol
 
 ```php
 <?php
-$database = "myDB";
+$database = "<database>";
 $server = "(local)";
 $conn = new PDO( "sqlsrv:server=$server; Database = $database", "", "");
 $conn->setAttribute(PDO::SQLSRV_ATTR_FORMAT_DECIMALS, true);
@@ -80,9 +80,9 @@ The following example shows how to override the connection attributes:
 
 ```php
 <?php
-$database = 'myDatabase';
-$server = 'myServer';
-$username = 'myuser';
+$database = '<database>';
+$server = '<server>';
+$username = '<user_id>';
 $password = '<password>'
 
 $conn = new PDO("sqlsrv:server=$server; Database = $database", $username, $password);

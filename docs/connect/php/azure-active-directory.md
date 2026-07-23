@@ -44,9 +44,11 @@ On Windows, the underlying ODBC driver supports one more value for the **Authent
 ```php
 <?php
 // First connect to a local SQL Server instance by setting Authentication to SqlPassword
-$serverName = "myserver.mydomain";
+$serverName = "<server>";
+$user       = "<user_id>";
+$password   = "<password>";
 
-$connectionInfo = array("UID"=>$myusername, "PWD"=>$mypassword, "Authentication"=>'SqlPassword');
+$connectionInfo = array("UID"=>$user, "PWD"=>$password, "Authentication"=>'SqlPassword');
 
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn === false) {
@@ -58,9 +60,9 @@ if ($conn === false) {
 }
 
 // Now connect to an Azure SQL database by setting Authentication to ActiveDirectoryPassword
-$azureServer = "myazureserver.database.windows.net";
-$azureDatabase = "myazuredatabase";
-$azureUsername = "myuid";
+$azureServer = "<server>.database.windows.net";
+$azureDatabase = "<database>";
+$azureUsername = "<user_id>";
 $azurePassword = "<password>";
 $connectionInfo = array("Database"=>$azureDatabase,
                         "UID"=>$azureUsername,
@@ -84,12 +86,15 @@ if ($conn === false) {
 ```php
 <?php
 // First connect to a local SQL Server instance by setting Authentication to SqlPassword
-$serverName = "myserver.mydomain";
+$serverName   = "<server>";
+$databaseName = "<database>";
+$user         = "<user_id>";
+$password     = "<password>";
 
 $connectionInfo = "Database = $databaseName; Authentication = SqlPassword;";
 
 try {
-    $conn = new PDO("sqlsrv:server = $serverName ; $connectionInfo", $myusername, $mypassword);
+    $conn = new PDO("sqlsrv:server = $serverName ; $connectionInfo", $user, $password);
     echo "Connected successfully with Authentication=SqlPassword.\n";
     $conn = null;
 } catch (PDOException $e) {
@@ -99,9 +104,9 @@ try {
 }
 
 // Now connect to an Azure SQL database by setting Authentication to ActiveDirectoryPassword
-$azureServer = "myazureserver.database.windows.net";
-$azureDatabase = "myazuredatabase";
-$azureUsername = "myuid";
+$azureServer = "<server>.database.windows.net";
+$azureDatabase = "<database>";
+$azureUsername = "<user_id>";
 $azurePassword = "<password>";
 $connectionInfo = "Database = $azureDatabase; Authentication = ActiveDirectoryPassword;";
 
@@ -128,6 +133,10 @@ try {
 <?php
 // Using an access token to connect: do not use UID or PWD connection options
 // Assume $accToken is the valid byte string extracted from an OAuth JSON response
+$azureAdServer   = "<server>.database.windows.net";
+$azureAdDatabase = "<database>";
+$accToken        = "<access-token>";
+
 $connectionInfo = array("Database"=>$azureAdDatabase, "AccessToken"=>$accToken);
 $conn = sqlsrv_connect($azureAdServer, $connectionInfo);
 if ($conn === false) {
@@ -144,6 +153,10 @@ if ($conn === false) {
 
 ```php
 <?php
+$azureAdServer   = "<server>.database.windows.net";
+$azureAdDatabase = "<database>";
+$accToken        = "<access-token>";
+
 try {
     // Using an access token to connect: do not pass in $uid or $pwd
     // Assume $accToken is the valid byte string extracted from an OAuth JSON response
@@ -168,8 +181,8 @@ When connecting using the system-assigned managed identity, do not use the UID o
 ```php
 <?php
 
-$azureServer = 'myazureserver.database.windows.net';
-$azureDatabase = 'myazuredatabase';
+$azureServer = '<server>.database.windows.net';
+$azureDatabase = '<database>';
 $connectionInfo = array('Database'=>$azureDatabase,
                         'Authentication'=>'ActiveDirectoryMsi');
 $conn = sqlsrv_connect($azureServer, $connectionInfo);
@@ -211,10 +224,10 @@ To authenticate using a service principal object, you will need the correspondin
 ```php
 <?php
 
-$adServer = 'myazureserver.database.windows.net';
-$adDatabase = 'myazuredatabase';
-$adSPClientId = 'myAppClientId';
-$adSPClientSecret = 'myClientSecret';
+$adServer = '<server>.database.windows.net';
+$adDatabase = '<database>';
+$adSPClientId = '<client-id>';
+$adSPClientSecret = '<client-secret>';
 
 $conn = false;
 $connectionInfo = array("Database"=>$adDatabase, 
@@ -238,10 +251,10 @@ sqlsrv_close($conn);
 ```php
 <?php
 
-$adServer = 'myazureserver.database.windows.net';
-$adDatabase = 'myazuredatabase';
-$adSPClientId = 'myAppClientId';
-$adSPClientSecret = 'myClientSecret';
+$adServer = '<server>.database.windows.net';
+$adDatabase = '<database>';
+$adSPClientId = '<client-id>';
+$adSPClientSecret = '<client-secret>';
 
 $conn = false;
 try {

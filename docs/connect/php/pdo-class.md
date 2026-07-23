@@ -4,7 +4,7 @@ description: "API reference for the PDO class in the Microsoft PDO_SQLSRV Driver
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ The PDO class contains methods that allow your PHP application to connect to an 
   
 ## Syntax  
   
-```  
+```php  
   
 PDO {}  
 ```  

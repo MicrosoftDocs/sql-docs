@@ -4,7 +4,7 @@ description: "API reference for the sqlsrv_fetch_array function in the Driver fo
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/26/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -22,7 +22,7 @@ Retrieves the next row of data as a numerically indexed array, associative array
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])  
 ```  
@@ -59,14 +59,14 @@ Based on the value of the *$fetchType* parameter, the returned **array** can be 
 ## Remarks  
 If a column with no name is returned, the associative key for the array element will be an empty string (""). For example, consider this Transact-SQL statement that inserts a value into a database table and retrieves the server-generated primary key:  
   
-```
+```sql
 INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
 SELECT SCOPE_IDENTITY()
 ```
   
 If the result set returned by the `SELECT SCOPE_IDENTITY()` portion of this statement is retrieved as an associative array, the key for the returned value will be an empty string ("") because the returned column has no name. To avoid this, you can retrieve the result as a numeric array, or you can specify a name for the returned column in the Transact-SQL statement. The following statement is one way to specify a column name in Transact-SQL:  
   
-```
+```sql
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
@@ -75,7 +75,7 @@ If a result set contains multiple columns without names, the value of the last u
 ## Associative array example  
 The following example retrieves each row of a result set as an associative **array**. The example assumes that the SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -118,7 +118,7 @@ The example retrieves product information from the *Purchasing.PurchaseOrderDeta
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  

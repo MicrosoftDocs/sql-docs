@@ -4,7 +4,7 @@ description: "Learn how to use Always Encrypted with secure enclaves with the Mi
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 01/31/2020
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -27,8 +27,8 @@ Support for Always Encrypted with secure enclaves is available in the PHP Driver
 
 Always Encrypted with secure enclaves ensures the security of encrypted data by attesting the enclave - that is, verifying the enclave against an external attestation service. To use secure enclaves, the `ColumnEncryption` keyword must identify the attestation type and protocol along with associated attestation data, separated by a comma. Version 17.4 of the ODBC driver supports only Virtualization-Based Security (VBS) and the Host Guardian Service (HGS) protocol for the enclave type and protocol. The associated attestation data is the URL of the attestation server. Thus, the following setting would be added to the connection string:
 
-```
-ColumnEncryption=VBS-HGS,http://attestationserver.mydomain/Attestation
+```text
+ColumnEncryption=VBS-HGS,http://<attestation-server>/Attestation
 ```
 
 If the protocol is incorrect, the driver will not recognize it, connection will fail, and an error will be returned. If only the attestation URL is incorrect, connection will succeed and an error will be thrown when an enclave-enabled computation is attempted, but otherwise the behavior will be identical to the original Always Encrypted behavior. Setting `ColumnEncryption` to `enabled` will provide regular Always Encrypted functionality, but attempting an enclave-enabled operation will return an error.
@@ -104,15 +104,20 @@ $encryptQuery = " ALTER TABLE $myTable
 <?php
 // Specify Azure Key Vault credentials using the KeyStoreAuthentication, KeyStorePrincipalId, and KeyStoreSecret keywords
 // Otherwise, the local Windows Certificate Store will be used
+$server   = "<server>";
+$user     = "<user_id>";
+$password = "<password>";
+$myDatabase = "<database>";
+
 $options = array('database'=>$myDatabase,
-                 'uid'=>$myUsername,
-                 'pwd'=>$myPassword,
+                 'uid'=>$user,
+                 'pwd'=>$password,
                  'CharacterSet'=>'UTF-8',
                  'ReturnDatesAsStrings'=>true,
-                 'ColumnEncryption'=>"VBS-HGS,http://myattestationserver.mydomain/Attestation",
+                 'ColumnEncryption'=>"VBS-HGS,http://<attestation-server>/Attestation",
                  );
                  
-$conn = sqlsrv_connect($myServer, $options);
+$conn = sqlsrv_connect($server, $options);
 
 // Create the table and insert the test data
 $stmt = sqlsrv_query($conn, $createTable);
@@ -238,10 +243,15 @@ function getResults($stmt)
 <?php
 // Specify Azure Key Vault credentials using the KeyStoreAuthentication, KeyStorePrincipalId, and KeyStoreSecret keywords
 // Otherwise, the local Windows Certificate Store will be used
-$options = "sqlsrv:server=$myServer;database=$myDatabase;driver={ODBC Driver 18 for SQL Server};";
-$options .= "ColumnEncryption=VBS-HGS,http://myattestationserver.mydomain/Attestation",
+$server   = "<server>";
+$user     = "<user_id>";
+$password = "<password>";
+$myDatabase = "<database>";
 
-$conn = new PDO($options, $myUsername, $myPassword);
+$options = "sqlsrv:server=$server;database=$myDatabase;driver={ODBC Driver 18 for SQL Server};";
+$options .= "ColumnEncryption=VBS-HGS,http://<attestation-server>/Attestation",
+
+$conn = new PDO($options, $user, $password);
 
 // Create the table and insert the test data
 $stmt = $conn->query($createTable);
@@ -363,7 +373,7 @@ function getResults($stmt)
 
 Output:
 
-```
+```output
 Test comparisons:
 1
 100

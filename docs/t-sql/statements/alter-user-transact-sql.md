@@ -252,7 +252,8 @@ GO
 - [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=fabric||=fabric-sqldb"
+
+::: moniker range="=azuresqldb-current || =fabric || =fabric-sqldb"
 
 :::row:::
     :::column:::
@@ -536,6 +537,7 @@ GO
 - [Authentication in Microsoft Fabric SQL database](/fabric/database/sql/authentication)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -836,6 +838,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup;
 - [Tutorial: Migrating SQL Server on-premises Windows users and groups to SQL Managed Instance using T-SQL DDL syntax](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 
 :::row:::
@@ -980,6 +983,7 @@ GO
 - [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
+
 ::: moniker range=">=aps-pdw-2016"
 
 :::row:::

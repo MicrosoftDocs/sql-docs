@@ -4,7 +4,7 @@ description: "Creates a connection resource and opens a connection using the sql
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/26/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -23,13 +23,13 @@ Creates a connection resource and opens a connection. By default, the connection
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_connect( string $serverName [, array $connectionInfo])  
 ```  
   
 #### Parameters  
-*$serverName*: A string specifying the name of the server to which a connection is being established. An instance name (for example, "myServer\instanceName") or port number (for example, "myServer, 1521") can be included as part of this string. For a complete description of the options available for this parameter, see the Server keyword in the ODBC Driver Connection String Keywords section of [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+*$serverName*: A string specifying the name of the server to which a connection is being established. An instance name (for example, `<server>\instanceName`) or port number (for example, `<server>, 1521`) can be included as part of this string. For a complete description of the options available for this parameter, see the Server keyword in the ODBC Driver Connection String Keywords section of [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 Beginning in version 3.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can also specify a LocalDB instance with `"(localdb)\instancename"`. For more information, see [Support for LocalDB](php-driver-for-sql-server-support-for-localdb.md).  
   
@@ -46,7 +46,7 @@ If values for the *UID* and *PWD* keys are not specified in the optional *$conne
 ## Example  
 The following example creates and opens a connection using Windows Authentication. The example assumes that SQL Server and the AdventureWorks database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /*  
 Connect to the local server using Windows Authentication and specify  

@@ -77,7 +77,6 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /MPYCACHEDIRECTORY | Reserved for future use. Use %TEMP% to store Python component CAB files for installation on computers that do not have an internet connection. |
 ::: moniker-end
 
-
 ::: moniker range="=sql-server-ver16"
 
 ### Command line arguments for SQL Server 2022
@@ -155,7 +154,7 @@ Two more tasks are required to complete the installation:
 1. SQL Server Machine Learning Services: Enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) as your next step. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 ## <a name="add-existing"></a> Add advanced analytics to an existing database engine instance
 
 When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2017 or later database engine and Python, you could use this command to add R.
@@ -165,6 +164,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 ::: moniker-end
+
 ::: moniker range="=sql-server-ver16"
 ## <a name="add-existing-2022"></a> Add advanced analytics to an existing database engine instance
 
@@ -176,6 +176,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=ADVANCEDANALYTICS /INSTANCENAME=MSSQLSER
 ```
 
 ::: moniker-end
+
 ::: moniker range="=sql-server-ver16"
 ## <a name="silent-sql2022"></a> Silent install for SQL Server 2022
 
@@ -187,6 +188,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS
 /IACCEPTSQLSERVERLICENSETERMS 
 ```
 ::: moniker-end
+
 ::: moniker range="=sql-server-2017 || =sql-server-ver15"
 
 ## <a name="silent"></a> Silent install

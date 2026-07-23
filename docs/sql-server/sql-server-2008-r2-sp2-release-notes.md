@@ -11,7 +11,6 @@ ms.topic: release-notes
 helpviewer_keywords:
   - "SQL Server 2008 R2 SP2"
   - "Release Notes, SQL Server 2008 R2 SP2"
-monikerRange: "<=sql-server-2017"
 ---
 # SQL Server 2008 R2 SP2 release notes
 

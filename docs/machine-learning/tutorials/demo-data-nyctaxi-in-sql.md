@@ -28,7 +28,7 @@ The sample database is a SQL Server 2016 backup (.bak) file hosted by Microsoft.
 
 File size is approximately 90 MB.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15"
 >[!NOTE]
 >To restore the sample database on [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview.md), download [NYCTaxi_Sample.bak](https://aka.ms/sqlmldocument/NYCTaxi_Sample.bak) and follow the directions in [Restore a database into the SQL Server big data cluster master instance](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end

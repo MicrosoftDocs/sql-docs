@@ -4,7 +4,7 @@ description: "Learn how to handle errors and warnings when using the Microsoft S
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -36,7 +36,7 @@ Also note that the example code checks for errors after each call to a **sqlsrv*
   
 This example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line. When the example is run against a new installation of the AdventureWorks database, it produces three warnings and two errors. The first two warnings are standard warnings that are issued when you connect to a database. The third warning occurs because an employee's available vacation hours are updated to a value less than zero. The errors occur because an employee's available vacation hours are updated to a value less than -40 hours, which is a violation of a constraint on the table.  
   
-```  
+```php  
 <?php  
 /* Turn off the default behavior of treating errors as warnings.  
 Note: Turning off the default behavior is done here for demonstration  

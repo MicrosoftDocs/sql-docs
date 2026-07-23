@@ -1808,6 +1808,7 @@ SET QUERY_STORE = ON
 - [Best practices for monitoring workloads with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-current"
 
 :::row:::
@@ -2896,6 +2897,7 @@ SET QUERY_STORE = ON
 - [Query Store hints](../../relational-databases/performance/query-store-hints.md)
 
 ::: moniker-end
+
 ::: moniker range="=fabric-sqldb"
 
 :::row:::
@@ -3826,6 +3828,7 @@ SET QUERY_STORE = ON
 - [Query Store hints](../../relational-databases/performance/query-store-hints.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -4738,6 +4741,7 @@ SET QUERY_STORE = ON
 - [Best practices for monitoring workloads with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 
 :::row:::
@@ -4999,6 +5003,7 @@ SET READ_COMMITTED_SNAPSHOT ON;
 - [Designing tables in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-tables-overview#statistics)
 
 ::: moniker-end
+
 ::: moniker range="=fabric"
 
 :::row:::

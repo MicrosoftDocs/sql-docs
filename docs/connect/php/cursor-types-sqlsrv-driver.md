@@ -4,7 +4,7 @@ description: "Learn how to use cursor types to create a result set that you can 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "02/11/2019"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -46,7 +46,7 @@ The following table describes the values you can specify in the *row* parameter.
 ## Server-Side Cursors and the SQLSRV Driver  
 The following example shows the effect of the various cursors. On line 33 of the example, you see the first of three query statements that specify different cursors.  Two of the query statements are commented. Each time you run the program, use a different cursor type to see the effect of the database update on line 47.  
   
-```  
+```php  
 <?php  
 $server = "server_name";  
 $conn = sqlsrv_connect( $server, array( 'Database' => 'test' ));  
@@ -125,7 +125,7 @@ The following sample shows:
   
 -   Use of client-side cursors and batch statements.  
   
-```  
+```php  
 <?php  
 $serverName = "(local)";  
 $connectionInfo = array("Database"=>"AdventureWorks");  
@@ -183,7 +183,7 @@ echo "Employee ID = $EmployeeID \n";
   
 The following sample shows a client-side cursor using [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) and a different client buffer size.
   
-```  
+```php  
 <?php  
 $serverName = "(local)";  
 $connectionInfo = array( "Database"=>"AdventureWorks");  

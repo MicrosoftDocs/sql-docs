@@ -4,7 +4,7 @@ description: "The sqlsrv_query function provides a method to execute a query wit
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "04/11/2019"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -22,7 +22,7 @@ Prepares and executes a statement.
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
@@ -69,7 +69,7 @@ In the following example, a single row is inserted into the *Sales.SalesOrderDet
 > [!NOTE]  
 > Although the following example uses an INSERT statement to demonstrate the use of **sqlsrv_query** for a one-time statement execution, the concept applies to any Transact-SQL statement.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -113,7 +113,7 @@ sqlsrv_close($conn);
 ## Example 2  
 The following example updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -152,7 +152,7 @@ sqlsrv_close($conn);
 ## Example 3  
 This code sample shows how to bind a decimal value as an input parameter.  
 
-```
+```php
 <?php
 $serverName = "(local)";
 $connectionInfo = array("Database"=>"YourTestDB");  
@@ -176,7 +176,7 @@ sqlsrv_close($conn);
 ## Example 4
 This code sample shows how to create a table of [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) types and fetch the inserted data.
 
-```
+```php
 <?php
 $server = 'serverName';
 $dbName = 'databaseName';
@@ -226,7 +226,7 @@ sqlsrv_close($conn);
 
 The expected output would be:
 
-```
+```output
 First field:  1
 Second field:  test_data
 ```

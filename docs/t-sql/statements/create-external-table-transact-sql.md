@@ -125,7 +125,8 @@ The column definitions, including the data types and number of columns, must mat
 Specifies the folder or the file path and file name for the actual data in Hadoop or Azure Blob Storage. Additionally, S3-compatible object storage is supported starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]). The location starts from the root folder. The root folder is the data location specified in the external data source.
 
 ::: moniker-end
-::: moniker range="=sql-server-linux-2017||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
+
+::: moniker range="=sql-server-linux-2017 || =sql-server-2017 || =sql-server-ver15 || =sql-server-linux-ver15"
 <!-- content only applies to SQL Server 2016-2019, no other platforms/versions -->
 In SQL Server, the `CREATE EXTERNAL TABLE` statement creates the path and folder if it doesn't already exist. You can then use `INSERT INTO` to export data from a local SQL Server table to the external data source. For more information, see [PolyBase query scenarios](../../relational-databases/polybase/polybase-queries.md).
 
@@ -138,6 +139,7 @@ In the following image example, if `LOCATION='/webdata/'`, a PolyBase query retu
 To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf` under the `bin` root of SQL Server. For example, `C:\Program Files\Microsoft SQL Server\MSSQL13.XD14\MSSQL\Binn`.
 
 ::: moniker-end
+
 ::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
 #### DATA_SOURCE = *external_data_source_name*
@@ -683,6 +685,7 @@ WITH (
 - [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-current"
 
 :::row:::
@@ -1043,6 +1046,7 @@ WITH (
 - [Data virtualization with Azure SQL Database (Preview)](/azure/azure-sql/database/data-virtualization-overview)
 
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 
 :::row:::
@@ -1437,6 +1441,7 @@ FROM census_external_table;
 - [CREATE TABLE AS SELECT](create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
+
 ::: moniker range=">=aps-pdw-2016"
 
 :::row:::
@@ -1711,6 +1716,7 @@ FROM ClickStream;
 - [CREATE TABLE AS SELECT](create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -1973,6 +1979,7 @@ For more information and examples for `OPENROWSET` in Fabric Data Warehouse, see
 - [Tutorial: Load data with T-SQL into a Warehouse](/fabric/data-warehouse/tutorial-load-data)
 
 ::: moniker-end
+
 ::: moniker range="=fabric-sqldb"
 
 :::row:::

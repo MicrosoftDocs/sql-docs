@@ -4,7 +4,7 @@ description: This article discuss data integrity in Azure SQL Managed Instance, 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dfurman, mathoma, oslake, adbadram, dinethi
-ms.date: 07/07/2026
+ms.date: 07/20/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: concept-article
@@ -63,7 +63,11 @@ The engineering team conducts detailed postmortems on problems that lead to wron
 
 ## Customer-initiated integrity checks 
 
-In addition to the existing monitoring and protection provided by the service, you can choose to execute user-initiated integrity checks as an extra layer of protection. For example, you can manually run `DBCC CHECKDB` in the database offerings where this command is available.
+The Microsoft-managed data integrity protection provides early detection of new data integrity issues and repairs them when possible. Customer-initiated integrity checks using `DBCC CHECKDB` provide an extra layer of protection because `DBCC CHECKDB` is a comprehensive corruption detection mechanism for the entire database. `DBCC CHECKDB` complements the Microsoft-managed data integrity protection features.
+
+This breadth and depth of detection require significant time and extra compute and I/O resources during `DBCC CHECKDB` execution. As a result, `DBCC CHECKDB` might affect your workloads due to resource contention.
+
+In addition to the monitoring and protection that the service provides, you can run `DBCC CHECKDB` at a frequency and time of your choice, balancing the extra data integrity protection against the extra resource consumption.
 
 ## Customer feedback and evolving methodologies
 

@@ -4,7 +4,7 @@ description: "This topic describes how to send and retrieve ASCII data in Linux 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/16/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -37,7 +37,7 @@ The following examples demonstrate how to send and retrieve ASCII data using the
   
 The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a server. All output is written to the browser when the examples are run from the browser.  
   
-```  
+```php  
 <?php  
   
 // SQLSRV Example
@@ -47,9 +47,9 @@ The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 $locale = strtoupper(PHP_OS) === 'LINUX' ? 'en_US.ISO-8859-1' : 'en_US.ISO8859-1';
 setlocale(LC_ALL, $locale);
         
-$serverName = 'MyServer';
-$database = 'Test';
-$connectionInfo = array('Database'=>'Test', 'UID'=>$uid, 'PWD'=>$pwd);
+$serverName = '<server>';
+$database = '<database>';
+$connectionInfo = array('Database'=>$database, 'UID'=>$uid, 'PWD'=>$pwd);
 $conn = sqlsrv_connect($serverName, $connectionInfo);
   
 if ($conn === false) {
@@ -107,7 +107,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-```
+```php
 <?php  
   
 // PDO_SQLSRV Example:
@@ -117,8 +117,8 @@ sqlsrv_close($conn);
 $locale = strtoupper(PHP_OS) === 'LINUX' ? 'en_US.ISO-8859-1' : 'en_US.ISO8859-1';
 setlocale(LC_ALL, $locale);
         
-$serverName = 'MyServer';
-$database = 'Test';
+$serverName = '<server>';
+$database = '<database>';
 
 try {
     $conn = new PDO("sqlsrv:Server=$serverName;Database=$database;", $uid, $pwd);

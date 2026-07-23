@@ -4,7 +4,7 @@ description: "sqlsrv_get_field"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "06/26/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -22,7 +22,7 @@ Retrieves data from the specified field of the current row. Field data must be a
   
 ## Syntax  
   
-```  
+```php  
 sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])  
 ```  
   
@@ -44,7 +44,7 @@ The combination of **sqlsrv_fetch**/**sqlsrv_get_field** loads only one field of
 ## Example  
 The following example retrieves a row of data that contains a product review and the name of the reviewer. To retrieve data from the result set, **sqlsrv_get_field** is used. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /*Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  

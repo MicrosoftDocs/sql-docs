@@ -4,7 +4,7 @@ description: "sqlsrv_num_fields"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/23/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -21,7 +21,7 @@ Retrieves the number of fields in an active result set. This function can be cal
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_num_fields( resource $stmt)  
 ```  
@@ -37,7 +37,7 @@ The following example executes a query to retrieve all fields for the top three 
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and   
 specify the AdventureWorks database as the database in use. */  

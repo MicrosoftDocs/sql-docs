@@ -4,7 +4,7 @@ description: "API reference for the sqlsrv_prepare function in the Microsoft SQL
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "04/11/2019"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -22,7 +22,7 @@ Creates a statement resource associated with the specified connection. This func
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
@@ -83,7 +83,7 @@ For more information, see [How to: Retrieve Output Parameters Using the SQLSRV D
 ## Example 1  
 The following example prepares and executes a statement. The statement, when executed (see [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -130,7 +130,7 @@ sqlsrv_close($conn);
 ## Example 2  
 The following example demonstrates how to prepare a statement and then re-execute it with different parameter values. The example updates the *OrderQty* column of the *Sales.SalesOrderDetail* table in the AdventureWorks database. After the updates have occurred, the database is queried to verify that the updates were successful. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -218,7 +218,7 @@ sqlsrv_close($conn);
 ## Example 3  
 This code sample shows how to bind a decimal value as an input parameter.  
 
-```
+```php
 <?php
 $serverName = "(local)";
 $connectionInfo = array("Database"=>"YourTestDB");  

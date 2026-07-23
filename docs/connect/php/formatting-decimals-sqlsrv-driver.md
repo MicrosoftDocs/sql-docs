@@ -36,12 +36,12 @@ The following example shows how to use the new options in a simple fetch.
 
 ```php
 <?php
-$username = 'myusername';
+$username = '<user_id>';
 $password = '<password>';
 $tableName = 'mytable';
 
-$connectionInfo = array("UID" => $username, "PWD" => $password, "Database" => "myDB", "FormatDecimals" => true);  
-$server = "myServer";  // IP address also works
+$connectionInfo = array("UID" => $username, "PWD" => $password, "Database" => "<database>", "FormatDecimals" => true);  
+$server = "<server>";  // IP address also works
 $conn = sqlsrv_connect( $server, $connectionInfo);  
 
 $numDigits = 2;

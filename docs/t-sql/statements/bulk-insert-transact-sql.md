@@ -82,6 +82,7 @@ BULK INSERT
 ```
 
 ::: moniker-end
+
 ::: moniker range="=fabric"
 
 ```syntaxsql
@@ -240,6 +241,7 @@ You should specify a collation name for each column in a [format file](../../rel
 | *code_page* | Specific code page number, for example, 850.<br /><br />Versions before [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] don't support code page 65001 (UTF-8 encoding). |
 
 ::: moniker-end
+
 ::: moniker range="=fabric"
 
 | `CODEPAGE` value | Description |
@@ -272,6 +274,7 @@ WITH (DATA_SOURCE = 'pandemicdatalake', FIRSTROW = 2, DATAFILETYPE = 'char');
 | `widenative` | Native (database) data types, except in **char**, **varchar**, and **text** columns, in which data is stored as Unicode. Create the `widenative` data file by bulk importing data from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] using the **bcp** utility.<br /><br />The `widenative` value offers a higher performance alternative to `widechar`. If the data file contains [!INCLUDE [vcpransi](../../includes/vcpransi-md.md)] extended characters, specify `widenative`.<br /><br />For more information, see [Use Unicode Native Format to Import or Export Data](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md). |
 
 ::: moniker-end
+
 ::: moniker range="=fabric"
 
 | `DATAFILETYPE` value | All data represented in |

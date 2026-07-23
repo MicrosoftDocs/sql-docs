@@ -4,7 +4,7 @@ description: "API reference for the PDO::lastInsertId function in the Microsoft 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Returns the identifier for the row most recently inserted into a table in the da
   
 ## Syntax  
   
-```  
+```php  
   
 string PDO::lastInsertId ([ $name = NULL ] );  
 ```  
@@ -38,11 +38,11 @@ Sequences are supported only in SQL Server 2012 and above.
   
 ## Example
   
-```
+```php
 <?php
-$server = "myserver";
-$databaseName = "mydatabase";
-$uid = "myusername";
+$server = "<server>";
+$databaseName = "<database>";
+$uid = "<user_id>";
 $pwd = "<password>";
 
 try {
@@ -131,7 +131,7 @@ try {
 
 The expected output is:
 
-```
+```output
 Last sequence number = 3
 Last inserted ID     = 1
 Last inserted ID when a table name is supplied =

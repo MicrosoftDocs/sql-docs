@@ -21,7 +21,8 @@ Machine Learning Services is a feature in SQL Server that gives the ability to r
 > [!NOTE]
 > Machine Learning Services is also available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+
+::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15"
 > [!NOTE]
 > Machine Learning Services is also available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
 >
@@ -46,7 +47,7 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 
 ## Get started with Machine Learning Services
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). You can also use [Machine Learning Services on Big Data Clusters](../big-data-cluster/machine-learning-services.md) and [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 1. Configure your development tools. You can use [Run Python and R scripts in Visual Studio Code notebooks](install/sql-machine-learning-visual-studio-code.md). You can also run T-SQL with the [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md).
@@ -107,11 +108,12 @@ The following Python and R packages from Microsoft are also included at installa
 
 For more information on which packages are installed with Machine Learning Services and how to install other packages, see:
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
 - [Get Python package information](package-management/python-package-information.md)
 - [Get R package information](package-management/r-package-information.md)
 - [Install new R packages with sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md).
 ::: moniker-end
+
 ::: moniker range="=sql-server-2017"
 - [Get Python package information](package-management/python-package-information.md)
 - [Install packages with Python tools on SQL Server](package-management/install-python-packages-standard-tools.md)

@@ -4,7 +4,7 @@ description: "API reference for the PDO::errorInfo function in the Microsoft PDO
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/29/2021"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Retrieves extended error information of the most recent operation on the databas
   
 ## Syntax  
   
-```  
+```php  
 array PDO::errorInfo();  
 ```  
   
@@ -54,7 +54,7 @@ print_r ($conn->errorInfo());
 ## Additional ODBC messages
 
 When an exception occurs, the ODBC Driver may return more than one error to help diagnose problems. However, PDO::errorInfo always shows only the first error. In response to this [bug report](https://bugs.php.net/bug.php?id=78196), [PDO::errorInfo](https://www.php.net/manual/en/pdo.errorinfo.php) and [PDOStatement::errorInfo](https://www.php.net/manual/en/pdostatement.errorinfo.php) have been updated to indicate that drivers should display *at least* the following three fields:
-```
+```text
 0	SQLSTATE error code (a five characters alphanumeric identifier defined in the ANSI SQL standard).
 1	Driver specific error code.
 2	Driver specific error message.
@@ -77,7 +77,7 @@ try {
 
 Running the above script should have thrown an exception, and the output is like this:
 
-```
+```output
 array(6) {
   [0]=>
   string(5) "01000"
@@ -96,13 +96,13 @@ array(6) {
 
 If the user prefers the previous way, a new configuration option `pdo_sqlsrv.report_additional_errors` can be used to turn it off. Simply add the following line in the beginning of any php script:
 
-```
+```php
 ini_set('pdo_sqlsrv.report_additional_errors', 0);
 ```
 
 In this case, the error info shown will be like this, when running the same example script:
 
-```
+```output
 array(3) {
   [0]=>
   string(5) "01000"
@@ -115,7 +115,7 @@ array(3) {
 
 If necessary, the user may choose to add the following line to the php.ini file in order to turn off this feature in all their php scripts:
 
-```
+```ini
 pdo_sqlsrv.report_additional_errors = 0
 ```
 
@@ -123,7 +123,7 @@ pdo_sqlsrv.report_additional_errors = 0
 
 Beginning with 5.9.0, ODBC warnings will no longer be logged as errors. That is, [error codes](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) with prefix "01" are logged as warnings. In other words, if the user wants to log errors only, update the php.ini like this:
 
-```
+```ini
 [pdo_sqlsrv]  
 pdo_sqlsrv.log_severity = 1
 ```

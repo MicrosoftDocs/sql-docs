@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2017"
 
 [!INCLUDE [SQL Server 2016 2017 2019](../../includes/applies-to-version/sqlserver2016-2019-only.md)]
 
-::: moniker range="=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 
 This article lists download links to CAB files for each cumulative update. For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).
@@ -29,7 +29,7 @@ This article applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!
 > R and Python runtimes and packages are not shipped or installed by SQL Setup for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. There are no CAB files to download starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. Instead, refer to [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 Start with a baseline installation. On SQL Server Machine Learning Services, the initial release is the baseline installation. You can also apply cumulative updates.
 ::: moniker-end
 

@@ -1,65 +1,66 @@
 ---
-title: "Back Up the Service Master Key"
-description: Learn how to back up the service master key in SQL Server by using Transact-SQL. The service master key is the root of the encryption hierarchy.
+title: Back up the Service Master Key
+description: Learn how to back up the service master key in SQL Server by using Transact-SQL. This key is the root of the encryption hierarchy.
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto
-ms.date: "04/05/2024"
+ms.reviewer: vanto, randolphwest
+ms.date: 07/22/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
 helpviewer_keywords:
   - "service master key [SQL Server], exporting"
 ---
-# Back Up the Service Master Key
+
+# Back up a service master key
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  This article describes how to back up the Service Master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. The service master key directly or indirectly protects all other keys and secrets in the tree. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
-  
-We recommend that you back up the master key as soon as it is created, and store the backup in a secure, off-site location.  
-  
+
+This article describes how to back up the *service master key* in [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE [tsql](../../../includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy, and directly or indirectly protects all other keys and secrets on the server.
+
+If it's deleted or corrupted, [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] might be unable to decrypt those keys, and the data encrypted with them is effectively lost. For this reason, back up the service master key and store the backup in a secure off-site location.
+
+## Remarks
+
+Back up the service master key as soon as [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] generates it, and store the backup in a secure, off-site location.
+
+Creating this backup should be one of the first administrative actions performed on the server.
+
 ## Permissions
 
-Requires CONTROL permission on the database.  
-  
-## Using Transact-SQL  
-  
-### To back up the Service Master key
-  
-1. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance containing the service master key you wish to back up.  
-  
-2. Choose a password that will be used to encrypt the service master key on the backup medium. This password is subject to complexity checks. For more information, see [Password Policy](../../../relational-databases/security/password-policy.md).  
-  
-3. Obtain a removable backup medium for storing a copy of the backed-up key.  
-  
-4. Identify an NTFS directory in which to create the backup of the key. This directory is where you will create the file specified in the next step. The directory should be protected with highly restrictive access control lists (ACLs).  
-  
-5. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
-  
-6. On the Standard bar, click **New Query**.  
-  
-7. Copy and paste the following example into the query window and click **Execute**.  
-  
-    ```sql
-    -- Creates a backup of the service master key.
-    USE master;
-    GO
-    BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_ key'
-        ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';
-    GO
-    ```  
-  
-    > [!NOTE]  
-    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Make sure that both are specific to your server and key set-up.
-  
-8. Copy the file to the backup medium and verify the copy.  
-  
-9. Store the backup in a secure, off-site location.  
+Requires `CONTROL SERVER` permission on the server.
 
-## Next steps
+## Back up the service master key
 
-- [Restore the Service Master Key](restore-the-service-master-key.md)
+1. Connect to the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance containing the service master key you want to back up. [!INCLUDE [connect-instance-client](../../../includes/connect-instance-client.md)]
 
-## See also
+1. Choose a unique password for encrypting the service master key on the backup medium. [!INCLUDE [password-complexity](../../../linux/includes/password-complexity.md)]
 
-- [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md)
-- [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md)
+1. Get a removable backup medium for storing a copy of the backed-up key.
+
+1. Identify an NTFS directory where you create the backup of the key. This directory is where you create the file in the next step. Protect the directory with highly restrictive access control lists (ACLs).
+
+1. Review and run the following Transact-SQL script.
+
+   In this example, you back up the service master key to `C:\Backups\Keys\service_master_key`. Change these settings to match your environment.
+
+   > [!CAUTION]  
+   > You need the password to restore the service master key. Make sure you store this password safely and securely.
+
+   ```sql
+   USE master;
+   GO
+
+   BACKUP SERVICE MASTER KEY TO FILE = 'C:\Backups\Keys\service_master_key' ENCRYPTION BY PASSWORD = '<password>';
+   GO
+   ```
+
+1. Copy the backed up file to the backup medium and verify the copy.
+
+1. Store the backup in a secure, off-site location.
+
+## Related content
+
+- [Restore the service master key](restore-the-service-master-key.md)
+- [BACKUP SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/backup-service-master-key-transact-sql.md)
+- [Back up a database master key](back-up-a-database-master-key.md)

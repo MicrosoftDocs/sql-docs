@@ -57,6 +57,12 @@ For End of Support events in the past, [!INCLUDE [ssNoVersion](../../includes/ss
 
 If there are situations where new [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] important updates aren't provided, and it's deemed critical by the customer but not by MSRC, Microsoft works with the customer on a case-by-case basis to suggest appropriate mitigation.
 
+## How are ESU patches delivered?
+
+After you subscribe to ESUs, you receive patches through the same channels as regular updates, such as Microsoft Update, Windows Update, System Center Configuration Manager, or Azure Update Manager. You can also download the patches directly from the Azure portal. 
+
+Instances that have automatic updates enabled receive ESUs automatically.
+
 ## What Licensing programs are eligible for ESUs?
 
 Software Assurance customers can subscribe to ESUs on-premises under an Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), a Server & Cloud Enrollment (SCE), or an Enrollment for Education Solutions (EES). Software Assurance doesn't need to be on the same enrollment.

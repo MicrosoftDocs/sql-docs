@@ -82,7 +82,6 @@ You can get ESUs for SQL Server on Azure VMs in the following supported regions:
 - East US 2
 - North Central US
 - South Central US
-- US Government Virginia
 - West Central US
 - West US
 - West US 2

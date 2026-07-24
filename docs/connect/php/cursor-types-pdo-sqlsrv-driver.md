@@ -4,7 +4,7 @@ description: "Learn about various server-side and client-side cursors and how us
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -46,7 +46,7 @@ You can request a client-side cursor by using [PDO::prepare](../../connect/php/p
 
 ## Example
 The following example shows how to specify a buffered cursor.
-```
+```php
 <?php
 $database = "AdventureWorks";
 $server = "(local)";

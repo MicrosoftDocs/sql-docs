@@ -4,7 +4,7 @@ description: "sqlsrv_execute"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/19/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -25,7 +25,7 @@ Executes a previously prepared statement. See [sqlsrv_prepare](../../connect/php
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_execute( resource $stmt)  
 ```  
@@ -39,7 +39,7 @@ A Boolean value: **true** if the statement was successfully executed. Otherwise,
 ## Example  
 The following example executes a statement that updates a field in the *Sales.SalesOrderDetail* table in the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database. The example assumes that SQL Server and the AdventureWorks database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /*Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  

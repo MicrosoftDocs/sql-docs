@@ -4,7 +4,7 @@ description: "Learn how to use streams to send large objects to the database usi
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "02/28/2019"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -24,7 +24,7 @@ The following example inserts a row into the *Production.ProductReview* table of
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -76,7 +76,7 @@ The next example is the same as the preceding example, but the default behavior 
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -137,7 +137,7 @@ Although the examples in this topic send character data to the server, data in a
   
 ## Example: Sending an Image as a Stream 
   
-```  
+```php  
 <?php  
    $server = "(local)";   
    $database = "Test";  

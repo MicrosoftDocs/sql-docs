@@ -4,7 +4,7 @@ description: "API reference for the PDOStatement::fetch function in the Microsof
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Retrieves a row from a result set.
   
 ## Syntax  
   
-```  
+```php  
   
 mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset]]] );  
 ```  
@@ -64,7 +64,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
   
 ## Example  
   
-```  
+```php  
 <?php  
    $server = "(local)";  
    $database = "AdventureWorks";  

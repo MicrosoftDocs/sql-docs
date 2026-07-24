@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
   Returns one row for each database scoped credential in the database.  
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current|| =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|  
 | `name` |**sysname**|Name of the database scoped credential. Is unique in the database.|  

@@ -4,7 +4,7 @@ description: "Learn how to specify SQL Server Data Types with the optional *$par
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -50,7 +50,7 @@ The following example inserts data into the *HumanResources.EmployeePayHistory* 
   
 This example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and   
 specify the AdventureWorks database as the database in use. */  

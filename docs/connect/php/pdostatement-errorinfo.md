@@ -4,7 +4,7 @@ description: "API reference for the PDOStatement::errorInfo function in the Micr
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/29/2021"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Retrieves extended error information of the most recent operation on the stateme
   
 ## Syntax  
 
-```
+```php
 array PDOStatement::errorInfo();
 ```
   
@@ -50,7 +50,7 @@ print_r ($stmt->errorInfo());
 ## Additional ODBC messages
 
 When an exception occurs, the ODBC Driver may return more than one error to help diagnose problems. However, PDOStatement::errorInfo always shows only the first error. In response to this [bug report](https://bugs.php.net/bug.php?id=78196), [PDO::errorInfo](https://www.php.net/manual/en/pdo.errorinfo.php) and [PDOStatement::errorInfo](https://www.php.net/manual/en/pdostatement.errorinfo.php) have been updated to indicate that drivers should display *at least* the following three fields:
-```
+```text
 0	SQLSTATE error code (a five characters alphanumeric identifier defined in the ANSI SQL standard).
 1	Driver specific error code.
 2	Driver specific error message.

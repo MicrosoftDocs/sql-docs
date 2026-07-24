@@ -4,7 +4,7 @@ description: "Learn how to send and retrieve UTF-8 encoded data using UTF-8 supp
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/23/2018"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -35,13 +35,13 @@ The following example demonstrates how to send and retrieve UTF-8 encoded data b
   
 The example assumes that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
   
-```  
+```php  
 <?php  
   
 // Connect to the local server using Windows Authentication and  
 // specify the AdventureWorks database as the database in use.   
 //   
-$serverName = "MyServer";  
+$serverName = "<server>";  
 $connectionInfo = array( "Database"=>"AdventureWorks", "CharacterSet" => "UTF-8");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
   
@@ -122,13 +122,13 @@ For information about storing Unicode data, see [Working with Unicode Data](/pre
 ## Column example  
 The following example is similar to the first sample but instead of specifying the UTF-8 character set on the connection, this sample shows how to specify the UTF-8 character set on the column.  
   
-```  
+```php  
 <?php  
   
 // Connect to the local server using Windows Authentication and  
 // specify the AdventureWorks database as the database in use.   
 //   
-$serverName = "MyServer";  
+$serverName = "<server>";  
 $connectionInfo = array( "Database"=>"AdventureWorks");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
   

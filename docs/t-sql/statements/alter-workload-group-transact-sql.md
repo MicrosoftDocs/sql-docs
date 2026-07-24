@@ -42,6 +42,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-late
 [!INCLUDE [alter-workload-group](../includes/alter-workload-group.md)]
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -63,6 +64,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-late
 [!INCLUDE [alter-workload-group](../includes/alter-workload-group.md)]
 
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 
 :::row:::

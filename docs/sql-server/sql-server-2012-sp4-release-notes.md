@@ -10,7 +10,6 @@ ms.subservice: release-landing
 ms.topic: release-notes
 helpviewer_keywords:
   - "Release Notes, SQL Server 2012 SP4"
-monikerRange: "<=sql-server-2017"
 ---
 # SQL Server 2012 Service Pack release notes
 

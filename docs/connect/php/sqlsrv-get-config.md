@@ -4,7 +4,7 @@ description: "sqlsrv_get_config"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/19/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -21,7 +21,7 @@ Returns the current value of the specified configuration setting.
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_get_config( string $setting )  
 ```  

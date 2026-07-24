@@ -102,7 +102,7 @@ Parquet and Delta Lake files contain type descriptions for every column. The fol
 <sup>1</sup> UTF-8 collation.
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 "
+::: moniker range=">=sql-server-ver15"
 
 ## Oracle Type mapping reference
 

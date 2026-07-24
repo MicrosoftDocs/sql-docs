@@ -30,9 +30,9 @@ The following examples omit error checking for clarity. This one shows how to se
 
 ```php
 <?php
-$server = 'myserver';
-$databaseName = 'mydatabase';
-$username = 'myusername';
+$server = '<server>';
+$databaseName = '<database>';
+$username = '<user_id>';
 $passwd = '<password>';
 $tableName = 'mytable';
 
@@ -58,7 +58,7 @@ This example shows how to set the statement attribute:
 
 ```php
 <?php
-$database = "test";
+$database = "<database>";
 $server = "(local)";
 $conn = new PDO("sqlsrv:server = $server; Database = $database", "", "");
 $query = "SELECT DateTimeCol FROM myTable";
@@ -80,7 +80,7 @@ Alternatively, the statement attribute can be set as an option:
 
 ```php
 <?php
-$database = "test";
+$database = "<database>";
 $server = "(local)";
 $conn = new PDO("sqlsrv:server = $server; Database = $database", "", "");
 
@@ -103,7 +103,7 @@ The following example shows how to achieve the opposite (which is not really nec
 
 ```php
 <?php
-$database = "MyData";
+$database = "<database>";
 $conn = new PDO("sqlsrv:server = (local); Database = $database");
 
 $dateStr = null;

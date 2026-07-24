@@ -77,7 +77,8 @@ WITH ( LANGUAGE = <language> )
 ```
 
 ::: moniker-end
-::: moniker range=">=sql-server-2017 <=sql-server-2017"
+
+::: moniker range="=sql-server-2017"
 
 ## Syntax for SQL Server 2017
 
@@ -167,6 +168,7 @@ The file can be specified in the form of a local path, or network path.
 When attempting to access the file specified in `<client_library_specifier>`, SQL Server impersonates the security context of the current Windows login. If `<client_library_specifier>` specifies a network location (UNC path), the impersonation of the current login isn't carried forward to the network location because of delegation limitations. In this case, access is made using the security context of the SQL Server service account. For more information, see [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15"
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
 ::: moniker-end
@@ -208,7 +210,7 @@ Specifies the language of the package. The value can be `R`, `Python`, or the na
 
 ## Remarks
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017"
+::: moniker range="=sql-server-2017"
 For the R language, when using a file, packages must be prepared in the form of zipped archive files with the `.zip` extension for Windows.
 In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], only the Windows platform is supported.
 ::: moniker-end

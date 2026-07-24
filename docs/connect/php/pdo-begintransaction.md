@@ -4,7 +4,7 @@ description: "API reference for the PDO::beginTransaction function in the Micros
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Turns off auto commit mode and begins a transaction.
   
 ## Syntax  
   
-```  
+```php  
   
 bool PDO::beginTransaction();  
 ```  
@@ -38,7 +38,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
 ## Example  
 The following example uses a database called Test and a table called Table1. It starts a transaction and then issues commands to add two rows and then delete one row. The commands are sent to the database and the transaction is explicitly ended with `PDO::commit`.  
   
-```  
+```php  
 <?php  
    $conn = new PDO( "sqlsrv:server=(local); Database = Test", "", "");  
    $conn->beginTransaction();  

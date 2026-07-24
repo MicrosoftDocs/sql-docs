@@ -4,7 +4,7 @@ description: "API reference for the PDO::rollBack function in the Microsoft PDO_
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Discards database commands that were issued after calling [PDO::beginTransaction
   
 ## Syntax  
   
-```  
+```php  
   
 bool PDO::rollBack ();  
 ```  

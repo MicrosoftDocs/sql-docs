@@ -290,6 +290,7 @@ GO
 - [System Databases](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-current"
 
 :::row:::
@@ -757,6 +758,7 @@ ALTER DATABASE [mySampleDatabase] PERFORM_CUTOVER;
 - [vCore Resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -918,6 +920,7 @@ ALTER DATABASE WideWorldImporters
 - [System Databases](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 
 :::row:::
@@ -1111,6 +1114,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 - [T-SQL language elements for dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+
 ::: moniker range=">=aps-pdw-2016"
 
 :::row:::
@@ -1358,6 +1362,7 @@ ALTER DATABASE
 - [DROP DATABASE](drop-database-transact-sql.md)
 
 ::: moniker-end
+
 ::: moniker range="=fabric"
 
 ## Overview: Microsoft Fabric

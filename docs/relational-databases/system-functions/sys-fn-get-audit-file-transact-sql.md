@@ -34,13 +34,15 @@ Returns information from an audit file created by a server audit in [!INCLUDE [s
 > Consider using [sys.fn_get_audit_file_v2](sys-fn-get-audit-file-v2-transact-sql.md) instead. The `sys.fn_get_audit_file_v2` function introduces time-based filtering at both the file and record levels, providing significant performance improvements, particularly for queries targeting specific time ranges.
 
 ::: moniker-end
+
 ::: moniker range="=fabric"
 
 > [!TIP]
 > For Fabric Data Warehouse, `sys.fn_get_audit_file` is supported but [sys.fn_get_audit_file_v2 (Transact-SQL)](sys-fn-get-audit-file-v2-transact-sql.md) is recommended. The `sys.fn_get_audit_file_v2` function introduces time-based filtering at both the file and record levels, providing significant performance improvements, particularly for queries targeting specific time ranges. For more information and examples, see [Configure Auditing in Fabric Data Warehouse](/fabric/data-warehouse/configure-sql-audit-logs).
 
 ::: moniker-end
-::: moniker range="= fabric-sqldb"
+
+::: moniker range="=fabric-sqldb"
 
 > [!TIP]
 > For SQL database in Fabric, `sys.fn_get_audit_file` is supported but [sys.fn_get_audit_file_v2 (Transact-SQL)](sys-fn-get-audit-file-v2-transact-sql.md) is recommended. The `sys.fn_get_audit_file_v2` function introduces time-based filtering at both the file and record levels, providing significant performance improvements, particularly for queries targeting specific time ranges. For more information and examples, see [Configure Auditing in Fabric SQL database](/fabric/database/sql/auditing).

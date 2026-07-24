@@ -4,7 +4,7 @@ description: "API reference for the PDO::__construct function in the Microsoft P
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Creates a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
 ## Syntax  
   
-```  
+```php  
   
 PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )  
 ```  
@@ -48,7 +48,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
 ## Example with database  
 This example shows how to connect to a server using Windows Authentication, and specify a database.  
   
-```  
+```php  
 <?php  
    $c = new PDO( "sqlsrv:Server=(local) ; Database = AdventureWorks ", "", "", array(PDO::SQLSRV_ATTR_DIRECT_QUERY => true));   
   
@@ -64,7 +64,7 @@ This example shows how to connect to a server using Windows Authentication, and 
 ## Example without database  
 This example shows how to connect to a server, specifying the database later.  
   
-```  
+```php  
 <?php  
    $c = new PDO( "sqlsrv:server=(local)");  
   

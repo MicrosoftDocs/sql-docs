@@ -28,11 +28,11 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
 
-::: moniker range="<=sql-server-ver15 || <=sql-server-linux-ver15 "
+::: moniker range="<=sql-server-ver15 || <=sql-server-linux-ver15"
 Returns a character string after truncating all leading spaces.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current ||=fabric"
+::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16 || =azure-sqldw-latest || =azuresqldb-current || =azuresqldb-mi-current || =fabric"
 Removes space character `char(32)` or other specified characters from the start of a string.
 ::: moniker-end
 

@@ -18,7 +18,7 @@ This articles describes what new capabilities and features are included in each 
 > [!NOTE]
 > Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
 
-::: moniker range=">=sql-server-ver16||>=sql-server-linux-ver16"
+::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 
 ## New in SQL Server 2022
 
@@ -26,7 +26,7 @@ This articles describes what new capabilities and features are included in each 
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sql-server-linux-ver15"
+::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
 ## New in SQL Server 2019
 
 This release adds the top-requested features for Python and R machine learning operations in SQL Server. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md) and [SQL Server 2019 release notes](../sql-server/sql-server-2019-release-notes.md).

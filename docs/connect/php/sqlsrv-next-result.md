@@ -4,7 +4,7 @@ description: "sqlsrv_next_result"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/19/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -26,7 +26,7 @@ Makes the next result (result set, row count, or output parameter) of the specif
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_next_result( resource $stmt )  
 ```  
@@ -45,7 +45,7 @@ The following example creates and executes a stored procedure that inserts a pro
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and   
 specify the AdventureWorks database as the database in use. */  
@@ -178,7 +178,7 @@ The following example executes a batch query that retrieves product review infor
   
 The example uses the *Purchasing.ProductReview* table of the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database, and assumes that this database is installed on the server. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  

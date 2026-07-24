@@ -790,6 +790,7 @@ WITH METADATA_ONLY,
 - [Backup History and Header Information](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -933,6 +934,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > This view will probably show two restore requests. One is original RESTORE statement sent by the client, and the another one is background RESTORE statement that is executing even if the client connection fails.
 
 ::: moniker-end
+
 ::: moniker range=">=aps-pdw-2016"
 
 :::row:::

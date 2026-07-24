@@ -18,7 +18,7 @@ monikerRange: "=sql-server-2017 || =sql-server-ver15"
 > [!IMPORTANT]
 > Machine Learning Server (Standalone) is not shipped with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. This article refers to a retired feature of [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].
 
-::: moniker range="=sql-server-2017||=sql-server-ver15"
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. It's called **Machine Learning Server (Standalone)** and includes Python and R. 
 ::: moniker-end
 
@@ -57,12 +57,15 @@ For local installations, you must run Setup as an administrator. If you install 
 2. Click the **Installation** tab, and select **New Machine Learning Server (Standalone) installation**.
     
    ::: moniker-end
+
    ::: moniker range="=sql-server-2017"
    ![Install Machine Learning Server Standalone](media/2017setup-installation-page-mlsvr.png "Start installation of Machine Learning Server Standalone")
    ::: moniker-end
+
    ::: moniker range="=sql-server-ver15"
    ![Install Machine Learning Server Standalone](media/2019setup-installation-page-mlsvr.png "Start installation of Machine Learning Server Standalone")
    ::: moniker-end
+
    ::: moniker range=">=sql-server-2017"
 
 3. After the rules check is complete, accept SQL Server licensing terms, and select a new installation.
@@ -74,12 +77,15 @@ For local installations, you must run Setup as an administrator. If you install 
     - **R** and **Python** are both selected by default. You can deselect either language, but we recommend that you install at least one of the supported languages.
 
    ::: moniker-end
+
    ::: moniker range="=sql-server-2017"
    ![Choose R or Python features](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
    ::: moniker-end
+
    ::: moniker range="=sql-server-ver15"
    ![Choose R or Python features](media/2019setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
    ::: moniker-end
+
    ::: moniker range=">=sql-server-2017"
     
    All other options should be ignored. 

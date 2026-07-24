@@ -36,6 +36,7 @@ The databases are created together and bound by name. With a default [!INCLUDE[s
 ## Database server version requirements
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is used to host the report server databases. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance can be local or remote. The following supported versions of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can host the report server databases:  
+
 ::: moniker range=">=sql-server-ver15"
 
 - Azure SQL Managed Instance
@@ -47,6 +48,7 @@ The databases are created together and bound by name. With a default [!INCLUDE[s
 - SQL Server 2019
 
 ::: moniker-end
+
 ::: moniker range=">=sql-server-2017"
 
 - SQL Server 2017  

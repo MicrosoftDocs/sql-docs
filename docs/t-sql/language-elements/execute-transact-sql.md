@@ -111,7 +111,7 @@ Syntax for SQL Server 2019 and later versions.
 
 ::: moniker-end
 
-::: moniker range="<=sql-server-2017 || <=sql-server-linux-2017"
+::: moniker range="=sql-server-2017 || =sql-server-linux-2017"
 
 The following code block shows the syntax in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and earlier versions. Alternatively, see [syntax in SQL Server 2019](execute-transact-sql.md?view=sql-server-ver15&preserve-view=true) instead.
 

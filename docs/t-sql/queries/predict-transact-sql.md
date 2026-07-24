@@ -34,7 +34,7 @@ Generates a predicted value or scores based on a stored model. For more informat
 > [!IMPORTANT]
 > The `PREDICT` syntax varies by product. Use the product selector to view the correct syntax for your platform. In particular, Azure Synapse Analytics requires the `RUNTIME = ONNX` argument, which isn't used in SQL Server or Azure SQL Managed Instance.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 :::row:::
     :::column:::
         **_\* SQL Server \*_** &nbsp;
@@ -47,6 +47,7 @@ Generates a predicted value or scores based on a stored model. For more informat
     :::column-end:::
 :::row-end:::
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 :::row:::
     :::column:::
@@ -60,6 +61,7 @@ Generates a predicted value or scores based on a stored model. For more informat
     :::column-end:::
 :::row-end:::
 ::: moniker-end
+
 ::: moniker range=">=azure-sqldw-latest"
 :::row:::
     :::column:::
@@ -76,7 +78,8 @@ Generates a predicted value or scores based on a stored model. For more informat
 [!INCLUDE [synapse-fabric-migration](../../includes/synapse-fabric-migration.md)]
 
 ::: moniker-end
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 
 ## Syntax
 
@@ -138,7 +141,7 @@ WITH ( <result_set_definition> )
 
 **MODEL**
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 Use the `MODEL` parameter to specify the model for scoring or prediction. Specify the model as a variable, a literal, or a scalar expression.
 
 `PREDICT` supports models trained using the [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) and [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) packages.
@@ -182,7 +185,7 @@ No predefined schema is available; the contents of the model isn't validated and
 
 Any error messages related to the data, the model, or the column format are returned by the underlying prediction function associated with the model.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 ## Remarks
 
 The `PREDICT` function is supported in all editions of SQL Server 2017 or later, on Windows and Linux. [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) doesn't need to be enabled to use `PREDICT`.
@@ -190,12 +193,14 @@ The `PREDICT` function is supported in all editions of SQL Server 2017 or later,
 
 ### Supported algorithms
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 The model that you use must have been created using one of the supported algorithms from the [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) or [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) packages. For a list of currently supported models, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 Algorithms that can be converted to [ONNX](https://onnx.ai/) model format are supported.
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 Algorithms that can be converted to [ONNX](https://onnx.ai/) model format and models that you have created using one of the supported algorithms from the [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) or [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) packages are supported. For a list of currently supported algorithms in RevoScaleR and revoscalepy, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 ::: moniker-end
@@ -212,7 +217,7 @@ The following examples demonstrate the syntax for calling `PREDICT`.
 
 This example references the `PREDICT` function in the `FROM` clause of a `SELECT` statement:
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 
 ```sql
 SELECT d.*, p.Score
@@ -253,13 +258,13 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
              DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
-:::moniker-end
+::: moniker-end
 
 ### Combining PREDICT with an INSERT statement
 
 A common use case for prediction is to generate a score for input data, and then insert the predicted values into a table. The following example assumes the calling application uses a stored procedure to insert a row containing the predicted value into a table:
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
@@ -269,7 +274,7 @@ SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
 
-:::moniker-end
+::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest"
 
@@ -281,7 +286,7 @@ SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
 ```
 
-:::moniker-end
+::: moniker-end
 
 - The results of `PREDICT` are stored in a table called `PredictionResults`. 
 - The model is stored as **varbinary(max)** column in table called `Models`. Additional information such as ID and description can be saved in the table to identify the model.

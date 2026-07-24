@@ -4,7 +4,7 @@ description: "Learn how to configure different combinations of logging options w
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "09/22/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -21,7 +21,7 @@ The only available logging configuration specific to the PDO_SQLSRV driver is th
   
 Add the following at the end of your php.ini file:  
   
-```  
+```ini  
 [pdo_sqlsrv]  
 pdo_sqlsrv.log_severity = <number>  
 ```  

@@ -4,7 +4,7 @@ description: "sqlsrv_send_stream_data"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "02/28/2019"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -25,7 +25,7 @@ Sends data from parameter streams to the server. Up to eight kilobytes (8K) of d
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_send_stream_data( resource $stmt)  
 ```  
@@ -39,7 +39,7 @@ Boolean : **true** if there is more data to be sent. Otherwise, **false**.
 ## Example  
 The following example opens a product review as a stream and sends it to the server. The default behavior of sending the all stream data at the time of execution is disabled. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  

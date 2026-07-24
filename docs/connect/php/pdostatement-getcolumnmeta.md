@@ -4,7 +4,7 @@ description: "API reference for the PDOStatement::getColumnMeta function in the 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/29/2021"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Retrieves metadata for a column.
   
 ## Syntax  
   
-```  
+```php  
   
 array PDOStatement::getColumnMeta ( $column );  
 ```  
@@ -45,7 +45,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
   
 ## Example  
   
-```  
+```php  
 <?php  
 $database = "AdventureWorks";  
 $server = "(local)";  
@@ -69,7 +69,7 @@ Note the attribute `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` is `false` by default,
 
 Take a Patients table for example:
 
-```
+```sql
 CREATE TABLE Patients 
       [PatientId] int identity,
       [SSN] char(11),
@@ -80,14 +80,14 @@ CREATE TABLE Patients
 
 We can classify the SSN and BirthDate columns as shown below:
 
-```
+```sql
 ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confidential - secure privacy', INFORMATION_TYPE = 'Credentials')
 ADD SENSITIVITY CLASSIFICATION TO [Patients].BirthDate WITH (LABEL = 'Confidential Personal Data', INFORMATION_TYPE = 'Birthdays')
 ```
 
 To access the metadata, use `PDOStatement::getColumnMeta` after setting `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` to true, as shown in the snippet below:
 
-```
+```php
 $options = array(PDO::SQLSRV_ATTR_DATA_CLASSIFICATION => true);
 $tableName = 'Patients';
 $tsql = "SELECT * FROM $tableName";
@@ -104,7 +104,7 @@ for ($i = 0; $i < $numCol; $i++) {
 
 The output of metadata for all columns is:
 
-```
+```json
 {"flags":{"Data Classification":[]},"sqlsrv:decl_type":"int identity","native_type":"string","table":"","pdo_type":2,"name":"PatientId","len":10,"precision":0}
 {"flags":{"Data Classification":[{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""}}]},"sqlsrv:decl_type":"char","native_type":"string","table":"","pdo_type":2,"name":"SSN","len":11,"precision":0}
 {"flags":{"Data Classification":[]},"sqlsrv:decl_type":"nvarchar","native_type":"string","table":"","pdo_type":2,"name":"FirstName","len":50,"precision":0}
@@ -114,7 +114,7 @@ The output of metadata for all columns is:
 
 If we modify the above snippet by setting `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` to `false` (the default case), the `flags` field will always be `0` as before, like this:
 
-```
+```json
 {"flags":0,"sqlsrv:decl_type":"int identity","native_type":"string","table":"","pdo_type":2,"name":"PatientId","len":10,"precision":0}
 {"flags":0,"sqlsrv:decl_type":"char","native_type":"string","table":"","pdo_type":2,"name":"SSN","len":11,"precision":0}
 {"flags":0,"sqlsrv:decl_type":"nvarchar","native_type":"string","table":"","pdo_type":2,"name":"FirstName","len":50,"precision":0}
@@ -128,14 +128,14 @@ Beginning with 5.9.0, PHP drivers added classification rank retrieval when using
 
 For example, if the user assigns `NONE` and `LOW` to BirthDate and SSN respectively, the JSON representation is shown as follows:
 
-```
+```json
 {"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
 {"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
 ```
 
 As shown in [sensitivity classification](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md), the numerical values of the ranks are:
 
-```
+```text
 0 for NONE
 10 for LOW
 20 for MEDIUM
@@ -145,7 +145,7 @@ As shown in [sensitivity classification](../../relational-databases/system-catal
 
 Hence, if instead of `RANK=NONE`, the user defines `RANK=CRITICAL` when classifying the column BirthDate, the classification metadata will be:
 
-```
+```output
 array(1) {
   ["Data Classification"]=>
   array(2) {
@@ -176,7 +176,7 @@ array(1) {
 
 The updated JSON representation is shown below:
 
-```
+```json
 {"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
 ```
 

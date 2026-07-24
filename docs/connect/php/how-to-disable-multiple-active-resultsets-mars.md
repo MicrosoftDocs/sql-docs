@@ -4,7 +4,7 @@ description: "Learn how to disable Multiple Active Resultsets support when using
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -34,11 +34,11 @@ If you need to connect to a SQL Server data source that does not enable Multiple
 ## SQLSRV example  
 The following example shows how to disable MARS support, using the SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-```  
+```php  
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
-$serverName = "MyServer";  
+$serverName = "<server>";  
 $connectionInfo = array( "Database"=>"AdventureWorks", 'MultipleActiveResultSets'=> false);  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
 if( $conn === false )  
@@ -54,7 +54,7 @@ sqlsrv_close( $conn);
 ## PDO_SQLSRV example  
 The following example shows how to disable MARS support, using the PDO_SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-```  
+```php  
 <?php  
 // Connect to the local server using Windows Authentication and AdventureWorks database  
 $serverName = "(local)";   

@@ -4,7 +4,7 @@ description: "The AdventureWorks Product Reviews example is a Web application th
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "03/30/2026"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: sample
@@ -51,7 +51,7 @@ This example returns product information from the database for products whose na
   
 Put the following code in a file named adventureworks_demo_pdo.php:  
   
-```  
+```php  
 <!--=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
 Copyright (C) Microsoft Corporation.  All rights reserved.  
@@ -457,7 +457,7 @@ The photo.php script returns a product photo for a specified **ProductID**. This
   
 Put the following code in a file named photo_pdo.php:  
   
-```  
+```php  
 <?php  
 /*  
 =============  

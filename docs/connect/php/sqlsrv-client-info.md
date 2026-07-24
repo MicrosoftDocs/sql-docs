@@ -4,7 +4,7 @@ description: "API reference for the sqlsrv_client_info function in the Microsoft
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "01/19/2017"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -21,7 +21,7 @@ Returns information about the connection and client stack.
   
 ## Syntax  
   
-```  
+```php  
   
 sqlsrv_client_info( resource $conn)  
 ```  
@@ -53,7 +53,7 @@ An associative array with keys described in the table below, or **false** if the
 ## Example  
 The following example writes client information to the console when the example is run from the command line. The example assumes that SQL Server is installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
+```php  
 <?php  
 /*Connect to the local server using Windows Authentication and   
 specify the AdventureWorks database as the database in use. */  

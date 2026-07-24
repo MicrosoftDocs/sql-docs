@@ -10,7 +10,6 @@ ms.subservice: release-landing
 ms.topic: release-notes
 helpviewer_keywords:
   - "Release Notes, SQL Server 2014"
-monikerRange: "<=sql-server-2017"
 ---
 # SQL Server 2014 release notes
 

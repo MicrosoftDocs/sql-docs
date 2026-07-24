@@ -302,6 +302,7 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-current"
 
 :::row:::
@@ -459,6 +460,7 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -750,6 +752,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE;
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 
 :::row:::
@@ -918,6 +921,7 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
+
 ::: moniker range=">=aps-pdw-2016"
 
 :::row:::

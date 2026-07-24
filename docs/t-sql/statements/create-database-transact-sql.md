@@ -943,6 +943,7 @@ GO
 - [Binary Large Object (Blob) Data (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-current"
 
 :::row:::
@@ -1340,6 +1341,7 @@ AS COPY OF [test_db]
 - [vCore Resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
 
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -1447,6 +1449,7 @@ CREATE DATABASE MyLedgerDB
 - [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 
 :::row:::
@@ -1607,6 +1610,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS;
 - [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 
 ::: moniker-end
+
 ::: moniker range=">=aps-pdw-2016"
 
 :::row:::

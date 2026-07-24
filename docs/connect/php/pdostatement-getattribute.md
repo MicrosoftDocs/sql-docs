@@ -4,7 +4,7 @@ description: "API reference for the PDOStatement::getAttribute function in the M
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "08/10/2020"
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -16,7 +16,7 @@ Retrieves the value of a predefined PDOStatement attribute or custom driver attr
   
 ## Syntax  
   
-```  
+```php  
   
 mixed PDOStatement::getAttribute( $attribute );  
 ```  

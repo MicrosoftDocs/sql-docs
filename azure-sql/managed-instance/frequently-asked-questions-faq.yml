@@ -557,6 +557,19 @@ sections:
           | Minimum password length | 14 characters |
           | Password must meet complexity requirements | Enabled |
 
+      - question: What are login lockout policies?
+        answer: |
+          The following observed lockout values apply to SQL Managed Instance logins. Use these values to size retry logic and back-off behavior in your applications.
+
+          | **Policy** | **Security Setting** |
+          | --- | --- |
+          | Account lockout threshold | 10 failed login attempts |
+          | Account lockout duration | 10 minutes |
+          | Reset account lockout counter after | 10 minutes |
+
+          > [!IMPORTANT]
+          > These lockout values are observed from the underlying Azure platform and are provided as a reference. Azure platform can change policy requirements without notifying services relying on that policy.
+
       - question: Is it possible to disable password complexity and expiration in SQL Managed Instance at the login level?
         answer: |
           Yes, it's possible to control CHECK_POLICY and CHECK_EXPIRATION fields at the login level. You can check current settings by executing the following T-SQL command:

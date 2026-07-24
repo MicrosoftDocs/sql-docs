@@ -105,6 +105,13 @@ For resources:
 
 [!INCLUDE [esu-enable-sql-server-instances](../../includes/esu-enable-sql-server-instances.md)]
 
+
+## ESU patch delivery
+
+After you subscribe to ESUs, you receive patches through the same channels as regular updates, such as Microsoft Update, Windows Update, System Center Configuration Manager, or Azure Update Manager. You can also download the patches directly from the Azure portal.
+ 
+Instances that have automatic updates enabled receive ESUs automatically.
+
 ## Register disconnected SQL Server instances in Azure portal
 
 If you can't connect your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance to Azure Arc, you might be eligible to purchase ESUs through volume licensing. Contact your Microsoft account team for more information.
@@ -125,7 +132,6 @@ Outside of Azure, you can subscribe to ESUs in any region that supports SQL Serv
 ## Frequently asked questions
 
 For a full list of frequently asked questions, see the [SQL Server ESUs: Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
-
 
 ## Related content
 

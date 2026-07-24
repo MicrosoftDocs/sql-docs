@@ -119,4 +119,53 @@ MODIFY FILE encountered operating system error 112(There is not enough space on 
 
 **Resolution:**
 
-If you encounter a similar scenario, address the underlying OS 112 error. In this case work with your system administrator to free up disk space on the device and then attempt to address the full transaction log. For detailed steps on troubleshooting error 9002, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).
+If you encounter a similar scenario, address the underlying OS 112 error. In this case, work with your system administrator to free up disk space on the device and then attempt to address the full transaction log. For detailed steps on troubleshooting error 9002, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).
+
+### Example with error 17053 and 5173
+
+In this case, the underlying OS error 112 is reported at startup because a database file (frequently `tempdb`) is configured with an *initial size* that's larger than the free space on its drive. SQL Server can't create or grow the file, and the instance fails to start. Because SQL Server can't start, you can't fix the file size through a normal connection. You first need to bring SQL Server up with minimal configuration.
+
+```output
+2026-07-19 17:18:46.70 spid21s     Error: 17053, Severity: 16, State: 1.
+2026-07-19 17:18:46.70 spid21s     D:\SQLTemp\Log\tempdb.ldf: Operating system error 112(There is not enough space on the disk.) encountered.
+
+2026-07-19 17:18:46.72 spid21s     Error: 5173, Severity: 16, State: 1.
+2026-07-19 17:18:46.72 spid21s     One or more files do not match the primary file of the database. If you are attempting to attach a database, retry the operation with the correct files. If this is an existing database, the file may be corrupted and should be restored from a backup.
+
+2026-07-19 17:18:46.72 spid21s     Error: 1802, Severity: 16, State: 4.
+2026-07-19 17:18:46.72 spid21s     CREATE DATABASE failed. Some file names listed could not be created. Check related errors.
+```
+
+**Resolution:**
+
+If SQL Server fails to start and repeatedly crashes because a database file's configured initial size exceeds the disk's free space:
+
+1. Start the SQL Server service with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) (`-f` startup parameter). This starts SQL Server with a minimal `tempdb` and lets you connect through the dedicated administrator connection (DAC).
+
+1. Inspect the configured initial size of the user database files:
+
+   ```sql
+   SELECT
+       DB_NAME(database_id) AS DatabaseName,
+       name AS LogicalFileName,
+       type_desc AS FileType,       -- ROWS = Data file, LOG = Log file
+       size * 8 / 1024 AS SizeMB    -- Initial size in MB
+   FROM sys.master_files
+   WHERE database_id > 4            -- Exclude system databases
+   ORDER BY DatabaseName, FileType;
+   ```
+
+1. For any file whose initial size is larger than the available disk space, reduce it to a value that fits:
+
+   ```sql
+   ALTER DATABASE YourDatabaseName
+   MODIFY FILE
+   (
+       NAME = YourDataFileLogicalName,
+       SIZE = 512MB                 -- new initial size
+   );
+   ```
+
+1. Close the DAC connection and restart the SQL Server service normally from SQL Server Configuration Manager or the Services console.
+
+For `tempdb`, the same principle applies: reduce the configured initial size of the `tempdb` data or log files so they fit the drive, then restart SQL Server. For more information on sizing `tempdb`, see [Optimize tempdb performance in SQL Server](../databases/tempdb-database.md#optimize-tempdb-performance-in-sql-server).

@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 12/09/2025
-ms.service: virtual-machines
+ms.service: azure-vm-sql-server
 ms.topic: include
 ---
 - Monitor the application and [determine storage bandwidth and latency requirements](/azure/virtual-machines/premium-storage-performance#counters-to-measure-application-performance-requirements) for SQL Server data, log, and `tempdb` files before choosing the disk type.

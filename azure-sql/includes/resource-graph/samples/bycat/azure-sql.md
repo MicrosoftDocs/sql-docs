@@ -1,6 +1,6 @@
 ---
 author: WilliamDAssafMSFT
-ms.service: resource-graph
+ms.service: azure-resource-graph
 ms.topic: include
 ms.date: 07/07/2022
 ms.author: wiassaf

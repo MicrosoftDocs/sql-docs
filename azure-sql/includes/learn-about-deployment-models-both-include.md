@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 11/25/2018
-ms.service: virtual-machines
+ms.service: azure-vm-sql-server
 ms.topic: include
 ---
 > [!NOTE]

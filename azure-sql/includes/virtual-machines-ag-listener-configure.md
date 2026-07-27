@@ -3,7 +3,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 09/23/2025
-ms.service: virtual-machines
+ms.service: azure-vm-sql-server
 ms.topic: include
 ms.custom:
   - sfi-image-nochange

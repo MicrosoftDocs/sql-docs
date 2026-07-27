@@ -3,7 +3,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 01/23/2026
-ms.service: virtual-machines
+ms.service: azure-vm-sql-server
 ms.topic: include
 ms.custom:
 ---

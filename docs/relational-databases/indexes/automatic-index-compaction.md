@@ -4,7 +4,7 @@ description: Describes the automatic index compaction feature in the SQL Server 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: dfurman
-ms.date: 07/08/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.topic: concept-article
 monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
@@ -199,6 +199,10 @@ Ghost cleanup removes soft-deleted rows from pages, which leaves empty space on 
 ### What happens if I run an index rebuild or an index reorganization while auto compaction is enabled?
 
 Auto compaction skips indexes that are being rebuilt or reorganized, including the indexes in the middle of paused resumable index operations.
+
+### Can auto compaction prevent a serverless database from auto-pausing?
+
+No. Indexes that remain eligible for auto compaction when a database pauses are compacted after the database resumes. Auto index compaction doesn't resume a paused serverless database. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-overview#auto-pause-and-auto-resume).
 
 ## Examples
 

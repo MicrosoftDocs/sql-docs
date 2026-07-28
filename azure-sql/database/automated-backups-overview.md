@@ -385,3 +385,4 @@ For a full list of built-in policy definitions for SQL Database, see the [policy
 - To restore a backup, see [Recover by using backups](recovery-using-backups.md) or [Restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob Storage, see [Manage long-term backup retention](long-term-backup-retention-configure.md).
 - For Azure SQL Managed Instance, see [Automated backups for SQL Managed Instance](../managed-instance/automated-backups-overview.md).
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

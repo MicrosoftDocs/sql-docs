@@ -269,3 +269,4 @@ Azure SQL Database features a built-in high availability solution that is deeply
 - [Service Fabric](/azure/service-fabric/service-fabric-overview)
 - [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
 - [Business continuity in Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

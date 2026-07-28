@@ -981,3 +981,4 @@ vCore resource limits are listed in the following articles, please be sure to up
 - For vCore resource limits for a single database, see [resource limits for single databases using the vCore purchasing model](resource-limits-vcore-single-databases.md)
 - For information about general Azure limits, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 - For information about resource limits on a logical SQL server, see [overview of resource limits on a logical SQL server](resource-limits-logical-server.md) for information about limits at the server and subscription levels.
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

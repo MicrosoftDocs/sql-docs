@@ -1951,6 +1951,14 @@
     - name: Azure SQL Managed Instance
       displayName: Feature availability by region Azure SQL Managed Instance
       href: managed-instance/region-availability.md
+  - name: Modifiable configuration reference
+    items:
+    - name: Azure SQL Database
+      displayName: Modifiable configuration reference Azure SQL Database
+      href: database/modifiable-configuration-reference.md
+    - name: Azure SQL Managed Instance
+      displayName: Modifiable configuration reference Azure SQL Managed Instance
+      href: managed-instance/modifiable-configuration-reference.md
   - name: Monitoring data reference 
     items:  
     - name: Azure SQL Database 

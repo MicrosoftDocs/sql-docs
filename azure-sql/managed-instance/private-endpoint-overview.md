@@ -191,3 +191,4 @@ Follow these steps if the private endpoint and Azure SQL Managed Instance are in
 - [Connectivity architecture for Azure SQL Managed Instance](connectivity-architecture-overview.md)
 - [Azure Private Link](/azure/private-link/private-link-overview) and [private endpoints](/azure/private-link/private-endpoint-overview)
 - [Azure Private Link availability](/azure/private-link/availability)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

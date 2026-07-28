@@ -417,3 +417,4 @@ If you need more instances in your current regions, send a support request to ex
 - [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/)
 - [the quickstart guide](instance-create-quickstart.md)
 - [SLA for Azure SQL Managed Instance](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

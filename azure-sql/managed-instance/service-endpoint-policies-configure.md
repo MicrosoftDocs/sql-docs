@@ -130,3 +130,4 @@ To associate your policy, follow these steps:
 - [Secure your Azure Storage accounts](/azure/storage/common/storage-network-security)
 - [SQL Managed Instance security capabilities](../database/security-overview.md)
 - [Connectivity architecture for Azure SQL Managed Instance](connectivity-architecture-overview.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

@@ -579,3 +579,4 @@ Failover groups can also be managed programmatically using Azure PowerShell, Azu
 - [Add a managed instance to a failover group](failover-group-configure-sql-mi.md)
 - [Failover groups](failover-group-sql-mi.md)
 - [Configure standby replica](failover-group-standby-replica-how-to-configure.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

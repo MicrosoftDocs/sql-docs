@@ -134,3 +134,4 @@ For the full reference of the sample queries and how to use them across tools li
 - [Maintenance window FAQ](maintenance-window-faq.yml)
 - [Azure SQL Database](sql-database-paas-overview.md)
 - [Plan for Azure maintenance events in Azure SQL Database and Azure SQL Managed Instance](planned-maintenance.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

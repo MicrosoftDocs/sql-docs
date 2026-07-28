@@ -553,3 +553,4 @@ If the Azure Policy for customer-managed TDE is set to **Deny**, Azure SQL logic
 - [Remove a Transparent Data Encryption (TDE) protector using PowerShell](transparent-data-encryption-byok-remove-tde-protector.md)
 - [Manage transparent data encryption in SQL Managed Instance with your own key using PowerShell](../managed-instance/scripts/transparent-data-encryption-byok-powershell.md?toc=%2fpowershell%2fmodule%2ftoc.json)
 - [Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-introduction)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

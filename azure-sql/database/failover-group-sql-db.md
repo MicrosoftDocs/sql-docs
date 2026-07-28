@@ -222,3 +222,4 @@ In a scenario where high availability is enabled on the primary database, and th
 - To learn about using automated backups for recovery, see [Restore a database from the service-initiated backups](recovery-using-backups.md).
 - To learn about authentication requirements for a new primary server and database, see [SQL Database security after disaster recovery](active-geo-replication-security-configure.md).
 - For troubleshooting geo-replication issues, see [Troubleshoot geo-replication redo lag](troubleshoot-geo-replication-redo.md).
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

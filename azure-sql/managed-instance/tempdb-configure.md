@@ -262,3 +262,4 @@ The following table defines limits for various `tempdb` configuration settings:
 - [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance)
 - [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)
 - [SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

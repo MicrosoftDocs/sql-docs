@@ -80,3 +80,4 @@ az sql mi update -n sql-instance-name -g resource-group --set minimalTlsVersion=
 ## Related content
 
 - [Connectivity architecture for Azure SQL Managed Instance](connectivity-architecture-overview.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

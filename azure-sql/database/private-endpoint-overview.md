@@ -263,3 +263,4 @@ With Private Link, customers can now set up network access controls like NSGs to
 - [An overview of Azure SQL Database and SQL Managed Instance security capabilities](security-overview.md)
 - [Azure SQL Database and Azure Synapse Analytics connectivity architecture](connectivity-architecture.md)
 - [Web app with private connectivity to Azure SQL database](/azure/architecture/example-scenario/private-web-app/private-web-app)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

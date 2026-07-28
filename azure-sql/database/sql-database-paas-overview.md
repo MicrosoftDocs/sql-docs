@@ -266,3 +266,4 @@ Azure SQL Database backups are managed automatically. No one has direct access t
 
 - For information about new capabilities as they're announced, see [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
 - See the [Azure SQL Database blog](https://azure.microsoft.com/blog/topics/database), where SQL Server product team members blog about SQL Database news and features.
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

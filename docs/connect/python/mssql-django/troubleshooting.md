@@ -4,7 +4,7 @@ description: Diagnose and resolve common issues when using the mssql-django Djan
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -150,6 +150,34 @@ django.db.utils.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 
 ## Migration issues
 
 These errors occur during Django migration operations against SQL Server.
+
+## Raw SQL and GROUP BY issues
+
+These errors occur when raw or annotated queries with a `GROUP BY` clause pass through the backend's placeholder-rewriting step.
+
+### `IndexError` on GROUP BY with escaped `%%` and real params
+
+**Symptoms**:
+
+```output
+IndexError: Replacement index N out of range for positional args tuple
+```
+
+The query works without the `GROUP BY` clause and works without the escaped `%%` literal, but fails when both are present alongside a real `%s` parameter.
+
+**Solution**: Upgrade to `mssql-django` 1.7.4 or later. Version 1.7.4 narrows the placeholder-rewriting regex to `%%` and `%s` only, so escaped `%%` literals are preserved verbatim and no phantom placeholders are injected.
+
+### `NotImplementedError` for `IntegerChoices` in raw GROUP BY queries
+
+**Symptoms**:
+
+```output
+NotImplementedError: Not supported type <enum '...'> (StatusChoices.IN_PROGRESS)
+```
+
+The same enum value works in ORM queries and in raw queries without `GROUP BY`, but fails when passed as a parameter to a raw query that contains a `GROUP BY` clause.
+
+**Solution**: Upgrade to `mssql-django` 1.7.4 or later. Version 1.7.4 uses `isinstance` for parameter type checks in the `GROUP BY` path, so `IntegerChoices` (an `int` subclass) binds correctly. `bool` still binds `BIT`, and plain `int` is unchanged.
 
 ## Date and time issues
 

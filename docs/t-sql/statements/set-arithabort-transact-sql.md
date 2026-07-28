@@ -3,7 +3,7 @@ title: SET ARITHABORT (Transact-SQL)
 description: The SET ARITHABORT setting determines whether a query stops when an overflow or divide-by-zero error occurs during query execution.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/21/2026
+ms.date: 07/27/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -57,12 +57,12 @@ SET ARITHABORT ON
 
 ## Remarks
 
-When `ANSI_WARNINGS` is `ON` (the default), the setting of `ARITHABORT` has no functional effect. Arithmetic errors cause the query to end, but the batch doesn't abort (as long as the setting `XACT_ABORT` is `OFF`).
+When `ANSI_WARNINGS` is `ON` (the default), the setting of `ARITHABORT` has no functional effect. Arithmetic errors cause the query to end, but the batch doesn't abort (as long as the setting `XACT_ABORT` is `OFF`). Arithmetic errors include overflow, divide-by-zero, or domain errors.
 
 > [!WARNING]  
 > The default `ARITHABORT` setting for [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) is `ON`, while a client connection in an application defaults to `ARITHABORT OFF`. Even if there's no functional difference as long as `ANSI_WARNINGS` is `ON`, the `ARITHABORT` setting is still a cache key. Therefore, SSMS and an application both using their respective defaults, have different cache entries, and might get different query plans, making it difficult to troubleshoot poorly performing queries. That is, the same query might execute slower in the application than in SSMS. When troubleshooting queries with [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)], always match the client `ARITHABORT` setting.
 
-For expression evaluation, if both `SET ANSI_WARNINGS` and `SET ARITHABORT` are `OFF` and an `INSERT`, `UPDATE`, or `DELETE` statement comes across an arithmetic, overflow, divide-by-zero, or domain error, the query inserts or updates a `NULL` value. If the target column isn't nullable, the insert or update action fails and the user sees an error.
+For expression evaluation, if both `SET ANSI_WARNINGS` and `SET ARITHABORT` are `OFF` and an `INSERT`, `UPDATE`, or `DELETE` statement comes across an arithmetic error, the query inserts or updates a `NULL` value. If the target column isn't nullable, the insert or update action fails and the user sees an error.
 
 The setting of `SET ARITHABORT` happens at execute or run time and not at parse time.  
 

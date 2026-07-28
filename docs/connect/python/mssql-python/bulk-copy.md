@@ -3,7 +3,7 @@ title: Use Bulk Copy with mssql-python Driver
 description: Learn how to efficiently insert large amounts of data using the bulk copy feature with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -260,13 +260,16 @@ When `keep_identity=False` (the default), omit the identity column from your dat
 | Parameter | Default | Description |
 | --- | --- | --- |
 | `batch_size` | `0` | Rows per batch. `0` lets the server choose the optimal size. |
-| `timeout` | `30` | Operation timeout in seconds. |
+| `timeout` | `30` | Operation timeout in seconds. Applies to the bulk copy operation itself, not to the internal connection. |
 | `keep_identity` | `False` | Preserve identity values from source data. |
 | `check_constraints` | `False` | Check table constraints during the load. |
 | `table_lock` | `False` | Acquire a table-level lock instead of row-level locks. |
 | `keep_nulls` | `False` | Preserve NULL values instead of inserting column defaults. |
 | `fire_triggers` | `False` | Fire INSERT triggers on the target table. |
 | `use_internal_transaction` | `False` | Wrap each batch in an internal transaction. |
+
+> [!NOTE]
+> `bulkcopy()` opens a separate internal connection to the server. Starting in mssql-python 1.12.0, that internal connection inherits the cursor's connection timeout: if you passed `timeout=<seconds>` to `mssql_python.connect()`, the same positive value is applied when the bulk copy connection is opened. If you didn't set one (or passed `timeout=0`), the internal connection uses its default 15-second connect timeout. The value is snapshotted when `bulkcopy()` is called, so later changes to the parent connection don't affect an in-flight bulk copy. Increase the connect timeout on your parent connection for slow, throttled, or high-latency endpoints (for example, over a VPN or across regions).
 
 ## Handle errors
 

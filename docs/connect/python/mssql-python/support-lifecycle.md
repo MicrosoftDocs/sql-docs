@@ -3,7 +3,7 @@ title: Support Lifecycle for mssql-python Driver
 description: Learn about the support lifecycle, versioning policy, and compatibility for the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: lifecycle
@@ -20,13 +20,14 @@ Always use the latest release to get new features, performance improvements, and
 
 ### Current version
 
-Version 1.11.0 is the current general availability (GA) release.
+Version 1.12.0 is the current general availability (GA) release.
 
 ### Version history
 
 | Version | Release date | Status | Key features |
 | --------- | -------------- | -------- | -------------- |
-| 1.11.0 | July 2026 | **Current** | Context manager commit/rollback, Apple Silicon fix, service principal bulk copy fix |
+| 1.12.0 | July 2026 | **Current** | Standalone `mssql-python-odbc` companion package, bulk copy connect-timeout fix, bulk copy CLR UDT fix |
+| 1.11.0 | July 2026 | Previous | Context manager commit/rollback, Apple Silicon fix, service principal bulk copy fix |
 | 1.10.0 | June 2026 | Previous | Bulk copy with ActiveDirectoryServicePrincipal, Arrow VARCHAR fixes |
 | 1.9.0 | June 2026 | Previous | Bulk copy with Row objects, improved NULL parameter typing |
 | 1.8.0 | May 2026 | Previous | Bulk copy with ActiveDirectoryMSI, Row string-key indexing |
@@ -40,7 +41,7 @@ Version 1.11.0 is the current general availability (GA) release.
 | 1.0.0 | July 2024 | Previous | Initial GA release |
 
 > [!IMPORTANT]
-> Only the current version (1.11.0) receives new features and bug fixes. Previous versions remain functional but don't receive updates. Upgrade to the latest version for the best experience.
+> Only the current version (1.12.0) receives new features and bug fixes. Previous versions remain functional but don't receive updates. Upgrade to the latest version for the best experience.
 
 ## Python version compatibility
 
@@ -99,7 +100,7 @@ The mssql-python driver uses DDBC (Direct Database Connectivity) and doesn't req
 
 ## Feature compatibility
 
-The following tables list SQL Server features and their support status in the current version (1.11.0) of the mssql-python driver. If a feature you need isn't supported (such as Always Encrypted or MARS), consider using [pyodbc](../pyodbc/python-sql-driver-pyodbc.md) instead. For information about features added in earlier versions, see [What's new in mssql-python](whats-new.md).
+The following tables list SQL Server features and their support status in the current version (1.12.0) of the mssql-python driver. If a feature you need isn't supported (such as Always Encrypted or MARS), consider using [pyodbc](../pyodbc/python-sql-driver-pyodbc.md) instead. For information about features added in earlier versions, see [What's new in mssql-python](whats-new.md).
 
 ### SQL Server features
 
@@ -137,8 +138,9 @@ The mssql-python driver has minimal dependencies:
 | Dependency | Purpose | Version |
 | ------------ | --------- | --------- |
 | azure-identity | Microsoft Entra ID authentication | Required (>= 1.12.0) |
+| mssql-python-odbc | Companion package that ships the ODBC driver binaries | Required (== 18.6.2) as of mssql-python 1.12.0 |
 
-The mssql-python driver doesn't require a Microsoft ODBC Driver installation.
+The `pip install mssql-python` command automatically installs the `mssql-python-odbc` companion package. When it's not present, the driver falls back to the ODBC binaries bundled inside the `mssql-python` wheel. You don't need to install the Microsoft ODBC Driver for SQL Server separately.
 
 ## Migration from pyodbc
 

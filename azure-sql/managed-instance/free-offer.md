@@ -333,3 +333,4 @@ The free Azure SQL Managed Instance offer is available in all regions, and for a
 - [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md)
 - [Azure SQL Database and Azure SQL Managed Instance connect and query articles](../database/connect-query-content-reference-guide.md)
 - [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](../database/connect-query-ssms.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

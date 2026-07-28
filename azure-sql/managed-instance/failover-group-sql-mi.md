@@ -286,3 +286,4 @@ If forced failback is used:
 - [Overview of business continuity with Azure SQL Managed Instance](business-continuity-high-availability-disaster-recover-hadr-overview.md)
 - [Automated backups in Azure SQL Managed Instance](automated-backups-overview.md)
 - [Restore a database from a backup in Azure SQL Managed Instance](recovery-using-backups.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

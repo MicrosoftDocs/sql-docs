@@ -198,3 +198,4 @@ These limitations currently apply to the Hyperscale service tier. The product te
 - [Features comparison: Azure SQL Database and Azure SQL Managed Instance](features-comparison.md)
 - [Hyperscale distributed functions architecture](hyperscale-architecture.md)
 - [How to manage a Hyperscale database](manage-hyperscale-database.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

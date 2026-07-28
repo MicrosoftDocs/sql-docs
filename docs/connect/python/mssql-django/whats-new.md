@@ -4,7 +4,7 @@ description: Learn about new features and changes in each version of the mssql-d
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -14,6 +14,17 @@ ai-usage: ai-assisted
 # What's new in mssql-django
 
 This article describes new features, improvements, and changes in each version of the `mssql-django` Django database backend.
+
+## Version 1.7.4
+
+**Release date**: July 2026
+
+Version 1.7.4 is a backward-compatible patch release with two fixes for raw and annotated `GROUP BY` query handling.
+
+### Bug fixes
+
+- **`IndexError` on `GROUP BY` queries with escaped `%%` and real params**: Previously, any query with a `GROUP BY` clause passed through a placeholder-rewriting step that matched `%\w+` and replaced it with `{}`. That regex also matched escaped `%%` literals, which injected phantom placeholders and raised `IndexError: Replacement index N out of range` whenever a query combined a `%%`-escape with a real `%s` parameter. The narrowed regex now only touches `%%` (preserved verbatim) and `%s` (the real placeholder), which is the only pattern the compiler ever emits. The same fix also prevents an unrelated silent bug where an unescaped pattern such as `LIKE '%abc%'` in a no-param query was rewritten to `LIKE '{}%'` and returned the wrong rows.
+- **`NotImplementedError` for `IntegerChoices` in raw `GROUP BY` queries**: Previously, passing an `IntegerChoices` value into a raw query that contained a `GROUP BY` clause raised `NotImplementedError: Not supported type <enum ...>`. The parameter typing helper used exact type checks (`typ == int`), and `type(IntegerChoices_value)` is the enum class rather than `int`, so the value fell through to the raise even though it subclasses `int`. Type checks now use `isinstance`, and the `bool` branch is evaluated before the `int` branch (because `bool` is itself an `int` subclass). Enum choices now bind correctly, `bool` still binds `BIT`, and plain `int` is unchanged.
 
 ## Version 1.7.3
 

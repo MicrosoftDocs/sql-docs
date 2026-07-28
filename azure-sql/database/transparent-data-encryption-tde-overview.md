@@ -156,3 +156,4 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 - [Azure SQL transparent data encryption with customer-managed key](transparent-data-encryption-byok-overview.md)
 - [PowerShell and Azure CLI: Enable Transparent Data Encryption with customer-managed key from Azure Key Vault](transparent-data-encryption-byok-configure.md)
 - [Secure access to an Azure Key Vault](/azure/key-vault/general/security-features)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

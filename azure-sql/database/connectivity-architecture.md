@@ -110,3 +110,4 @@ Clients connecting to private endpoints don't need connectivity to any of these 
 - [Ports beyond 1433 for ADO.NET 4.5](adonet-v12-develop-direct-route-ports.md)
 - [Application development overview - Azure SQL Database & Azure SQL Managed Instance](develop-overview.md)
 - [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

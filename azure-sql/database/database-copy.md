@@ -307,3 +307,4 @@ The following errors can be encountered while copying a database in Azure SQL Da
 - [Authorize database access to SQL Database, SQL Managed Instance, and Azure Synapse Analytics](logins-create-manage.md)
 - [Configure and manage Azure SQL Database security for geo-restore or failover](active-geo-replication-security-configure.md)
 - [Export to a BACPAC file - Azure SQL Database and Azure SQL Managed Instance](database-export.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

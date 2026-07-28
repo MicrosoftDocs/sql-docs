@@ -36,6 +36,8 @@ In this article, you learn how to:
 
 - [Install and configure Terraform](/azure/developer/terraform/quickstart-configure)
 
+[!INCLUDE [modifiable-config-note](../includes/database/modifiable-config-note.md)]
+
 ### Permissions
 
 **To create databases via Transact-SQL**: `CREATE DATABASE` permissions are necessary. To create a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`. For more information, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).

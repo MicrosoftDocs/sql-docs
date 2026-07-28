@@ -101,3 +101,4 @@ For environments with many databases running heavy OLTP workloads, using server-
 - [Get started with Azure SQL Managed Instance auditing](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)
 - [Set up Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-setup.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

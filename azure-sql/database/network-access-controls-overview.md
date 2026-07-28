@@ -152,3 +152,4 @@ Private Link allows you to connect to a server via a **private endpoint**. A [pr
 - [Ports beyond 1433 for ADO.NET 4.5](adonet-v12-develop-direct-route-ports.md)
 - [Connectivity architecture](connectivity-architecture.md)
 - [An overview of Azure SQL Database and SQL Managed Instance security capabilities](security-overview.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

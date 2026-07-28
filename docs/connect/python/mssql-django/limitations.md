@@ -4,7 +4,7 @@ description: Limitations and unsupported features of the mssql-django Django bac
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -88,6 +88,7 @@ For more information, see [Test Django apps with SQL Server](testing.md).
 
 | mssql-django version | Notes |
 | --- | --- |
+| 1.7.4 | Fixed `IndexError` on `GROUP BY` queries that mix escaped `%%` literals with real params. Fixed `NotImplementedError` for `IntegerChoices` params in raw `GROUP BY` queries. |
 | 1.7.3 | Fixed `FA001` for `Authentication=` modes other than `ActiveDirectoryMsi`. Fixed `KeyError` on subclassed `DatabaseWrapper` (regression from 1.7.1). |
 | 1.7.2 | Fixed time zone handling for **datetimeoffset** and `Now()` with `USE_TZ=True`. Fixed `.explain()` compatibility for Django 4.0 and later. |
 | 1.7.1 | SQL database in Fabric (EngineEdition 12) fix. Descending index `AlterField` fix. |

@@ -230,3 +230,4 @@ GO
 
 - [How to manage a Hyperscale database](manage-hyperscale-database.md)
 - [Convert an existing database to Hyperscale](convert-to-hyperscale.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

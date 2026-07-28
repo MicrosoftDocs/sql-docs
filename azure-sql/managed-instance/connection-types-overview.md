@@ -84,3 +84,4 @@ $mi = $mi | Set-AzSqlInstance -ProxyOverride "Redirect" -force
 - Learn how to set up [private endpoints to your SQL managed instances](private-endpoint-overview.md)
 - Learn how to [configure a public endpoint on SQL Managed Instance](public-endpoint-configure.md)
 - Learn about [SQL Managed Instance connectivity architecture](connectivity-architecture-overview.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

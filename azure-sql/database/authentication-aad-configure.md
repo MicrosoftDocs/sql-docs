@@ -528,6 +528,7 @@ For guidance on troubleshooting issues, see [Blog: Troubleshooting problems rela
 - [Azure SQL Database and Azure Synapse IP firewall rules](firewall-configure.md)
 - [Create Microsoft Entra guest users and set them as a Microsoft Entra admin](authentication-aad-guest-users.md)
 - [Tutorial: Create Microsoft Entra users using Microsoft Entra applications](authentication-aad-service-principal-tutorial.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)
 
 <a id="using-an-azure-ad-identity-to-connect-using-ssms-or-ssdt"></a>  
 <a id="using-a-microsoft-entra-identity-to-connect-using-ssms-or-ssdt"></a>

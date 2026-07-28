@@ -196,3 +196,4 @@ You can use the built-in [performance monitoring](performance-guidance.md) and [
 - To learn more about design patterns for SaaS applications by using elastic pools, see [Design patterns for multitenant SaaS applications with SQL Database](saas-tenancy-app-design-patterns.md).
 - To learn about resource management in elastic pools with many databases, see [Resource management in dense elastic pools](elastic-pool-resource-management.md).
 - Learn more about [Hyperscale elastic pools](./hyperscale-elastic-pool-overview.md).
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

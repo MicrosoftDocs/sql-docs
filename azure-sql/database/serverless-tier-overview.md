@@ -620,3 +620,4 @@ For regional availability, see [Serverless availability by region for Azure SQL 
 
 - To get started, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md).
 - For serverless service tier choices, see [General Purpose](service-tiers-sql-database-vcore.md#general-purpose) and [Hyperscale](service-tier-hyperscale.md).
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

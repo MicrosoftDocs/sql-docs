@@ -240,3 +240,4 @@ Memory optimized premium-series hardware is in preview, and has limited regional
 - [Azure SQL Managed Instance single instance pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/)
 - [Azure SQL Managed Instance pools pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/pools/)
 - [vCore-based resource limits for Azure SQL Managed Instance](resource-limits.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

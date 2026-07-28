@@ -329,3 +329,4 @@ You can use the following methods to restore a database to another server:
 - [Long-term retention](long-term-retention-overview.md)
 - [Active geo-replication](active-geo-replication-overview.md)
 - [Failover groups overview & best practices](failover-group-sql-db.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

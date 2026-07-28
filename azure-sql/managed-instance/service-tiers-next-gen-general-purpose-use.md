@@ -116,3 +116,4 @@ az sql mi create \
 - For details about the specific compute and storage sizes available in the General Purpose and Business Critical service tiers, see [vCore-based resource limits for Azure SQL Managed Instance](resource-limits.md).
 - [SLA for Azure SQL Managed Instance](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)
 - [Frequently asked questions](frequently-asked-questions-faq.yml#next-gen-general-purpose-service-tier-upgrade)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

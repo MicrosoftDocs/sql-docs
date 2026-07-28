@@ -314,3 +314,4 @@ Consider the following points when access to Azure SQL Database doesn't behave a
 - [Client quickstart code samples to Azure SQL Database](connect-query-content-reference-guide.md#libraries)
 - [Ports beyond 1433 for ADO.NET 4.5](adonet-v12-develop-direct-route-ports.md)
 - [An overview of Azure SQL Database and SQL Managed Instance security capabilities](security-overview.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

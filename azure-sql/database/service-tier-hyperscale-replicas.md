@@ -150,3 +150,4 @@ For more information, see:
 - [Active geo-replication](active-geo-replication-overview.md)
 - [Configure isolated access to a Hyperscale named replica](hyperscale-named-replica-security-configure.md)
 - [Azure SQL Database Hyperscale named replicas FAQ](service-tier-hyperscale-frequently-asked-questions-faq.yml#read-scale-out-questions)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

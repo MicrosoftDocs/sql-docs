@@ -168,7 +168,7 @@ CMD ["python", "app.py"]
 Your `requirements.txt`:
 
 ```text
-mssql-python>=1.11.0
+mssql-python>=1.12.0
 ```
 
 Build and run:

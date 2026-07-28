@@ -3,7 +3,7 @@ title: What's New in mssql-python Driver
 description: Learn about new features and changes in each version of the mssql-python driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -13,6 +13,99 @@ ai-usage: ai-assisted
 # What's new in mssql-python
 
 Each release of the mssql-python driver introduces new features, performance improvements, and bug fixes. The following sections detail every version.
+
+## mssql-python 1.12.0
+
+**Release date**: July 2026
+
+### Enhancements
+
+#### Standalone `mssql-python-odbc` companion package
+
+The ODBC driver binaries that `mssql-python` needs at runtime are now also published as a separate, data-only companion package: [mssql-python-odbc](https://pypi.org/project/mssql-python-odbc/) (import name `mssql_python_odbc`, currently pinned to version `18.6.2`). The `mssql-python` package declares `mssql-python-odbc==18.6.2` in `install_requires`, so `pip install mssql-python` transparently installs the companion package alongside it. No code changes are required.
+
+The native loader prefers the external `mssql_python_odbc` package when it's present, and falls back to the ODBC binaries still bundled inside the `mssql-python` wheel when it isn't. The fallback is safe with the Python Global Interpreter Lock (GIL) and works on musl-based Linux distributions such as Alpine.
+
+This split lets you pin or update the driver binaries independently of the Python code, gives redistributors a smaller `mssql-python` wheel over time, and avoids duplicate-ownership issues from bundled ODBC files.
+
+> [!IMPORTANT]
+> This split ships without a breaking change. In a future major release (v2.0.0), the bundled `libs/` tree might be removed, in which case `mssql-python-odbc` becomes a hard runtime requirement.
+
+### Bug fixes
+
+#### `cursor.bulkcopy()` now uses the parent connection's connect timeout
+
+The bulk copy operation opens a separate connection through the `mssql_py_core` native extension. Previously, this operation always used a hardcoded 15-second connect timeout with no way to override it from Python. If you set a connect timeout on the parent connection (`connect(..., timeout=<seconds>)`), `bulkcopy()` now forwards that value into the internal connection. Setting `timeout=0` preserves the *no override* behavior and keeps the internal 15-second default. The cursor's timeout at the time of the `bulkcopy()` call is used for the operation, so later changes to the parent connection don't affect an in-flight bulk copy.
+
+The following example uses the `Production.Culture` lookup table from the [AdventureWorks](/sql/samples/adventureworks-install-configure) sample database. Adjust the connection string and database name for your environment:
+
+```python
+import mssql_python
+from datetime import datetime
+
+# The 60-second timeout applies to both the initial connection and
+# the internal connection that bulkcopy() opens.
+conn = mssql_python.connect(
+    "Server=<server>;"
+    "Database=AdventureWorks2022;"
+    "Encrypt=yes",
+    timeout=60,
+)
+conn.autocommit = True
+cursor = conn.cursor()
+
+# Bulk-copy two rows into Production.Culture (CultureID, Name, ModifiedDate).
+now = datetime.now()
+rows = [
+    ("xx", "Demo culture 1", now),
+    ("yy", "Demo culture 2", now),
+]
+result = cursor.bulkcopy("Production.Culture", rows)
+print(f"Copied {result['rows_copied']} rows")
+
+# Remove the demo rows so the sample is re-runnable.
+cursor.execute("DELETE FROM Production.Culture WHERE CultureID IN ('xx','yy')")
+```
+
+#### `cursor.bulkcopy()` supports CLR user-defined type columns
+
+Previously, `cursor.bulkcopy()` failed with `Protocol Error: Unsupported TDS type for bulk copy: 0xF0` for any destination column that used a common language runtime (CLR) user-defined type, including the built-in **geography**, **geometry**, and **hierarchyid** types and any custom, assembly-registered CLR UDT. The native `mssql_py_core` wire path had no handler for the UDT type token (`0xF0`) and errored while writing column metadata, before any rows were sent. CLR UDT columns are now mapped to **varbinary(max)** on the wire, and the supplied bytes are streamed as the UDT's `IBinarySerialize` payload, matching how `pyodbc` and `python-tds` load UDT columns. SQL Server materializes the UDT on insert. Delivered via the `mssql_py_core` 0.1.6 to 0.1.7 bump.
+
+The following example archives the org-chart column from `HumanResources.Employee` (a **hierarchyid** column, one of SQL Server's built-in CLR UDTs) into a new table. In a real workflow, the UDT bytes might come from another SQL Server instance, a serialized file, or your CLR type's `IBinarySerialize.Write()` output; this example reads them from an existing column via `CAST(... AS varbinary(max))` so the sample is self-contained. The bulk copy includes the row whose `OrganizationNode` is NULL:
+
+```python
+import mssql_python
+
+conn = mssql_python.connect(
+    "Server=<server>;"
+    "Database=AdventureWorks2022;"
+    "Encrypt=yes",
+)
+conn.autocommit = True  # bulkcopy uses a separate connection; the destination must be visible
+cursor = conn.cursor()
+
+cursor.execute(
+    "IF OBJECT_ID('dbo.EmployeeOrgArchive','U') IS NOT NULL "
+    "DROP TABLE dbo.EmployeeOrgArchive;"
+    "CREATE TABLE dbo.EmployeeOrgArchive (BusinessEntityID int, OrganizationNode hierarchyid);"
+)
+
+# Casting a hierarchyid column to varbinary(max) yields the UDT's
+# serialized IBinarySerialize payload.
+cursor.execute(
+    "SELECT BusinessEntityID, CAST(OrganizationNode AS varbinary(max)) "
+    "FROM HumanResources.Employee;"
+)
+rows = cursor.fetchall()
+
+# Stream the (id, bytes) tuples into the destination's hierarchyid column.
+result = cursor.bulkcopy("dbo.EmployeeOrgArchive", rows)
+print(f"Copied {result['rows_copied']} rows")
+
+cursor.execute("DROP TABLE dbo.EmployeeOrgArchive")
+```
+
+For a custom, assembly-registered CLR UDT, use the type in the destination table and supply the bytes produced by the type's `IBinarySerialize.Write()` method.
 
 ## mssql-python 1.11.0
 

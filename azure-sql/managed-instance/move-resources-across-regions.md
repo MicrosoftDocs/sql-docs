@@ -91,3 +91,4 @@ Once the move finishes, remove the resources in the source region to avoid unnec
 
 - [Performance guidance](performance-guidance.md)
 - [High availability](high-availability-sla-local-zone-redundancy.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

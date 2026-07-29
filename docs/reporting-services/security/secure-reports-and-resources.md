@@ -15,6 +15,10 @@ helpviewer_keywords:
   - "resources [Reporting Services], security"
 ---
 # Secure reports and resources
+
+> [!IMPORTANT]
+> A report isn't a security boundary. Granting a user access to a report can also expose data from the report's data source beyond what appears in the report. Enforce data access at the data source — for example, by using row-level or object-level security on an Analysis Services model, or database permissions on a relational source — not by hiding report items. Report-level controls such as folder permissions, role assignments, and hidden parameters govern access to the *report*, not to the *data* it can return.
+
   You can set security for individual reports and resources to control the degree of access that users have to these items. By default, only users who are members of the **Administrators** built-in group can run reports, view resources, modify properties, and delete the items. All other users must have role assignments created for them that allow access to a report or resource.  
   
 ## Role-based access to reports and resources  

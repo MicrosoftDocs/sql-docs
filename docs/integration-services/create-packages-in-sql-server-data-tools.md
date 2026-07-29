@@ -1,8 +1,6 @@
 ---
 title: "Create Packages in SQL Server Data Tools"
 description: "Create Packages in SQL Server Data Tools"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

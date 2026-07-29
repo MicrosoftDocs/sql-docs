@@ -1,8 +1,6 @@
 ---
 title: "Split a Dataset by Using the Conditional Split Transformation"
 description: "Split a Dataset by Using the Conditional Split Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

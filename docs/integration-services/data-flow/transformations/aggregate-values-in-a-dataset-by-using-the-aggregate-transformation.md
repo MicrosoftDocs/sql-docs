@@ -1,8 +1,6 @@
 ---
 title: "Aggregate Values in a Dataset with the Aggregate Transformation"
 description: "Aggregate Values in a Dataset with the Aggregate Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

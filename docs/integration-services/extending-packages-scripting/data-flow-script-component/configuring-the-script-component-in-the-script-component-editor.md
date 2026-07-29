@@ -1,8 +1,6 @@
 ---
 title: "Configuring the Script Component in the Script Component Editor"
 description: "Configuring the Script Component in the Script Component Editor"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

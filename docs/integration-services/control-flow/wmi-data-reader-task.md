@@ -1,8 +1,6 @@
 ---
 title: "WMI Data Reader Task"
 description: "WMI Data Reader Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

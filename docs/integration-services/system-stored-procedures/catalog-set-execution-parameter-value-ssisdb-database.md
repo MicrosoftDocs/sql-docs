@@ -1,8 +1,6 @@
 ---
 title: "catalog.set_execution_parameter_value (SSISDB Database)"
 description: "catalog.set_execution_parameter_value (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

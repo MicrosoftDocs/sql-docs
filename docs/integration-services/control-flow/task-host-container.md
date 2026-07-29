@@ -1,8 +1,6 @@
 ---
 title: "Task Host Container"
 description: "Task Host Container"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

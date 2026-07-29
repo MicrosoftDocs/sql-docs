@@ -1,8 +1,6 @@
 ---
 title: "Run-time Methods of a Data Flow Component"
 description: "Run-time Methods of a Data Flow Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

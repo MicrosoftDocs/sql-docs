@@ -1,8 +1,6 @@
 ---
 title: "Integration Services (SSIS) Server and Catalog"
 description: "Integration Services (SSIS) Server and Catalog"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

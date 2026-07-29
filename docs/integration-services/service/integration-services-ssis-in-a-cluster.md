@@ -1,8 +1,6 @@
 ---
 title: "Integration Services (SSIS) in a Cluster"
 description: "Integration Services (SSIS) in a Cluster"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/25/2025"
 ms.service: sql
 ms.subservice: integration-services

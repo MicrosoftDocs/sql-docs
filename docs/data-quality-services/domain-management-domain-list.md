@@ -1,8 +1,6 @@
 ---
 title: "Domain Management: Domain List"
 description: "Domain Management: Domain List"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/08/2011"
 ms.service: sql
 ms.subservice: data-quality-services

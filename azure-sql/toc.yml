@@ -395,10 +395,25 @@
       - name: vCore model
         displayName: Provisioned compute tier
         href: database/service-tiers-sql-database-vcore.md
-      - name: Serverless compute tier
-        href: database/serverless-tier-overview.md
       - name: DTU model
         href: database/service-tiers-dtu.md
+      - name: Serverless compute tier
+        items:
+        - name: Serverless compute tier overview
+          href: database/serverless-tier-overview.md
+        - name: Create a serverless database
+          href: database/serverless-tier-create-configure.md
+        - name: Monitor serverless databases
+          href: database/serverless-tier-monitor.md
+        - name: Serverless auto-pause and auto-resume
+          href: database/serverless-tier-auto-pause-resume.md
+        - name: Serverless autoscaling
+          href: database/serverless-tier-auto-scaling.md
+        - name: Serverless billing
+          href: database/serverless-tier-billing.md
+        - name: Serverless FAQ
+          href: database/serverless-tier-faq.yml
+
       - name: Resource limits
         items:
         - name: T-SQL differences from SQL Server

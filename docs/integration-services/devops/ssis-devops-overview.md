@@ -1,8 +1,6 @@
 ---
 title: "SQL Server Integration Services DevOps overview"
 description: Learn how to build SSIS CICD with SSIS DevOps Tools.
-author: chugugrace
-ms.author: chugu
 ms.date: "7/22/2022"
 ms.service: sql
 ms.subservice: integration-services

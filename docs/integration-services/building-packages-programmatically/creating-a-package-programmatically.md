@@ -1,8 +1,6 @@
 ---
 title: "Creating a Package Programmatically"
 description: "Creating a Package Programmatically"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: integration-services

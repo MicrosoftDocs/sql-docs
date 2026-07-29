@@ -1,8 +1,6 @@
 ---
 title: "catalog.create_folder (SSISDB Database)"
 description: "catalog.create_folder (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

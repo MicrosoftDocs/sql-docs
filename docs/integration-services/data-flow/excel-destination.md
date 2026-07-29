@@ -1,8 +1,6 @@
 ---
 title: "Excel Destination"
 description: "Excel Destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "04/02/2018"
 ms.service: sql
 ms.subservice: integration-services

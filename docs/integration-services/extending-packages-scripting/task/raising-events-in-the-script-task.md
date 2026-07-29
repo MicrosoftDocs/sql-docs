@@ -1,8 +1,6 @@
 ---
 title: "Raising Events in the Script Task"
 description: "Raising Events in the Script Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

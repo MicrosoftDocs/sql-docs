@@ -1,8 +1,6 @@
 ---
 title: "Lookup Transformation"
 description: "Lookup Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/19/2023"
 ms.service: sql
 ms.subservice: integration-services

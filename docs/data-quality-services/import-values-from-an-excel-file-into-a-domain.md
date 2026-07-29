@@ -1,8 +1,6 @@
 ---
 title: "Import Values from an Excel File into a Domain"
 description: "Import Values from an Excel File into a Domain"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: data-quality-services

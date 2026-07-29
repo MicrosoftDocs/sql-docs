@@ -1,8 +1,6 @@
 ---
 title: "Debugging Script"
 description: "Debugging Script"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

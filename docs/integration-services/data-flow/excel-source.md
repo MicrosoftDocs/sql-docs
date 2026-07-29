@@ -1,8 +1,6 @@
 ---
 title: "Excel Source"
 description: "Excel Source"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/15/2018"
 ms.service: sql
 ms.subservice: integration-services

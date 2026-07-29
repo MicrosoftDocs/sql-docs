@@ -1,8 +1,6 @@
 ---
 title: "View the List of Packages on the Integration Services Server"
 description: "View the List of Packages on the Integration Services Server"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

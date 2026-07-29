@@ -1,8 +1,6 @@
 ---
 title: "Discovering Data Flow Components Programmatically"
 description: "Discovering Data Flow Components Programmatically"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

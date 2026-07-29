@@ -1,8 +1,6 @@
 ---
 title: "Import and Export Data with the SQL Server Import and Export Wizard"
 description: "Import and Export Data with the SQL Server Import and Export Wizard"
-author: chugugrace
-ms.author: chugu
 ms.date: "10/17/2017"
 ms.service: sql
 ms.subservice: integration-services

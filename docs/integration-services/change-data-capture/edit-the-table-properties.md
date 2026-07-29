@@ -1,8 +1,6 @@
 ---
 title: "Edit the Table Properties"
 description: "Edit the Table Properties"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

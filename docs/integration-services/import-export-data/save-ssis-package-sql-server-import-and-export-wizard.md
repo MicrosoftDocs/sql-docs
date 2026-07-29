@@ -1,8 +1,6 @@
 ---
 title: "Save SSIS Package (SQL Server Import and Export Wizard)"
 description: "Save SSIS Package (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/17/2017"
 ms.service: sql
 ms.subservice: integration-services

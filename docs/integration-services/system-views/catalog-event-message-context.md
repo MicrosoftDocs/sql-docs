@@ -1,8 +1,6 @@
 ---
 title: "catalog.event_message_context"
 description: "catalog.event_message_context"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

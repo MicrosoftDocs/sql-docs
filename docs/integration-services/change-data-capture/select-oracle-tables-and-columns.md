@@ -1,8 +1,6 @@
 ---
 title: "Select Oracle Tables and Columns"
 description: "Select Oracle Tables and Columns"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

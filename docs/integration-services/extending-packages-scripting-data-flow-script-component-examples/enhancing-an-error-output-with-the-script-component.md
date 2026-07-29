@@ -1,8 +1,6 @@
 ---
 title: "Enhancing an Error Output with the Script Component"
 description: "Enhancing an Error Output with the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/04/2019"
 ms.service: sql
 ms.subservice: integration-services

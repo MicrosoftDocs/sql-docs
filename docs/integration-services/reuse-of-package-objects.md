@@ -1,8 +1,6 @@
 ---
 title: "Reuse of Package Objects"
 description: "Reuse of Package Objects"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

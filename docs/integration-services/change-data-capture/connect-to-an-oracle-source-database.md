@@ -1,8 +1,6 @@
 ---
 title: "Connect to an Oracle Source Database"
 description: "Connect to an Oracle Source Database"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

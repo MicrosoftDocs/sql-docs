@@ -1,8 +1,6 @@
 ---
 title: "Run an SSIS package from the command prompt"
 description: "Run an SSIS package from the command prompt with DTExec.exe"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/21/2018"
 ms.service: sql
 ms.subservice: integration-services

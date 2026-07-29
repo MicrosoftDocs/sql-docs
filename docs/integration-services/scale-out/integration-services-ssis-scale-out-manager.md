@@ -1,8 +1,6 @@
 ---
 title: "SQL Server Integration Services Scale Out Manager"
 description: "This article describes the Scale Out Manager tool which you can use to manager SSIS Scale Out"
-author: chugugrace
-ms.author: chugu
 ms.date: "12/19/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Generate Mirror Tables and CDC Capture Instances"
 description: "Generate Mirror Tables and CDC Capture Instances"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

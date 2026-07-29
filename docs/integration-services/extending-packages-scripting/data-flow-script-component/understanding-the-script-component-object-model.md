@@ -1,8 +1,6 @@
 ---
 title: "Understanding the Script Component Object Model"
 description: "Understanding the Script Component Object Model"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

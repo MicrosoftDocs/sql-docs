@@ -1,8 +1,6 @@
 ---
 title: "Coding and Debugging the Script Task"
 description: "Coding and Debugging the Script Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

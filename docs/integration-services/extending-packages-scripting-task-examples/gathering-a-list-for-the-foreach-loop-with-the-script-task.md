@@ -1,8 +1,6 @@
 ---
 title: "Gathering a List for the ForEach Loop with the Script Task"
 description: "Gathering a List for the ForEach Loop with the Script Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Validate XML with the XML Task"
 description: "Validate XML with the XML Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "09/08/2020"
 ms.service: sql
 ms.subservice: integration-services

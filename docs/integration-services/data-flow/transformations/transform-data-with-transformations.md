@@ -1,8 +1,6 @@
 ---
 title: "Transform Data with Transformations"
 description: "Transform Data with Transformations"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

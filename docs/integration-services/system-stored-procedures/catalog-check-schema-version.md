@@ -1,8 +1,6 @@
 ---
 title: "catalog.check_schema_version"
 description: "catalog.check_schema_version"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Execute Process task"
 description: The Execute Process task runs an application or batch file as part of a SQL Server Integration Services package workflow.
-author: chugugrace
-ms.author: chugu
 ms.reviewer: randolphwest
 ms.date: 01/22/2024
 ms.service: sql

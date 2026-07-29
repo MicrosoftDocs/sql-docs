@@ -1,8 +1,6 @@
 ---
 title: "SQL Server Compact Edition Connection Manager"
 description: "SQL Server Compact Edition Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

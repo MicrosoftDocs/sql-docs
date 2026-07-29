@@ -1,8 +1,6 @@
 ---
 title: "What's New in Integration Services in SQL Server 2017"
 description: What's New in Integration Services in SQL Server 2017
-author: chugugrace
-ms.author: chugu
 ms.reviewer: randolphwest
 ms.date: 10/22/2025
 ms.service: sql

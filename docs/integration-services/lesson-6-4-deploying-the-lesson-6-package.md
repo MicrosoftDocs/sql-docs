@@ -1,8 +1,6 @@
 ---
 title: "Step 4: Deploy the Lesson 6 package"
 description: "Lesson 6-4: Deploy the Lesson 6 package"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: randolphwest
 ms.date: 03/09/2023
 ms.service: sql

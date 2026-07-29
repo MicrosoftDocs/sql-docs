@@ -1,8 +1,6 @@
 ---
 title: "Specify an Interval of Change Data"
 description: "Specify an Interval of Change Data"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/13/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "catalog.get_project (SSISDB Database)"
 description: "catalog.get_project (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

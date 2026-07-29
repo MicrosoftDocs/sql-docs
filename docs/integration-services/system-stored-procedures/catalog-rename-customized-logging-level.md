@@ -1,8 +1,6 @@
 ---
 title: "catalog.rename_customized_logging_level"
 description: "catalog.rename_customized_logging_level"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

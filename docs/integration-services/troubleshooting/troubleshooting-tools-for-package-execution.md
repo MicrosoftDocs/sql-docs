@@ -1,8 +1,6 @@
 ---
 title: "Troubleshooting Tools for Package Execution"
 description: "Troubleshooting Tools for Package Execution"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/26/2016"
 ms.service: sql
 ms.subservice: integration-services

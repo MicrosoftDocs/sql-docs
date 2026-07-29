@@ -1,8 +1,6 @@
 ---
 title: "Manage a CDC Service"
 description: "Manage a CDC Service"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

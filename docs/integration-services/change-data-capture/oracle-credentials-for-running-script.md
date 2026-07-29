@@ -1,8 +1,6 @@
 ---
 title: "Oracle Credentials for Running Script"
 description: "Oracle Credentials for Running Script"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

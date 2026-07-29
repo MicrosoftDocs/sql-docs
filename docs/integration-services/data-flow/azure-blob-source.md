@@ -1,8 +1,6 @@
 ---
 title: "Azure Blob Source"
 description: "Azure Blob Source"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/20/2018"
 ms.service: sql
 ms.subservice: integration-services

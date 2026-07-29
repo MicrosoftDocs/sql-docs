@@ -1,8 +1,6 @@
 ---
 title: "Azure HDInsight Create Cluster Task"
 description: "Azure HDInsight Create Cluster Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/28/2017"
 ms.service: sql
 ms.subservice: integration-services

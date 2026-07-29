@@ -1,8 +1,6 @@
 ---
 title: "Step 4: Test the Lesson 5 package"
 description: "Lesson 5-4: Test the Lesson 5 package"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/08/2019"
 ms.service: sql
 ms.subservice: integration-services

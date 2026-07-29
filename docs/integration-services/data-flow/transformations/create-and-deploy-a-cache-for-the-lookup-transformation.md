@@ -1,8 +1,6 @@
 ---
 title: "Create and Deploy a Cache for the Lookup Transformation"
 description: "Create and Deploy a Cache for the Lookup Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

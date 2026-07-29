@@ -1,8 +1,6 @@
 ---
 title: "Package Management (SSIS Service)"
 description: "Package Management (SSIS Service)"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/16/2016"
 ms.service: sql
 ms.subservice: integration-services

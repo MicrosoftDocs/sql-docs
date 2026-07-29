@@ -1,8 +1,6 @@
 ---
 title: "SSIS Toolbox"
 description: "SSIS Toolbox"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/16/2016"
 ms.service: sql
 ms.subservice: integration-services

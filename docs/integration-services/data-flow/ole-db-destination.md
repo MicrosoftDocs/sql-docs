@@ -1,8 +1,6 @@
 ---
 title: "OLE DB Destination"
 description: "OLE DB Destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

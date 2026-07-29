@@ -1,8 +1,6 @@
 ---
 title: "Creating a Destination with the Script Component"
 description: "Creating a Destination with the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: 03/13/2026
 ms.service: sql
 ms.subservice: integration-services

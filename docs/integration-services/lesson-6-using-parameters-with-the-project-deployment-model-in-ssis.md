@@ -1,8 +1,6 @@
 ---
 title: "Lesson 6: Use parameters with the Project Deployment Model"
 description: "Lesson 6: Use parameters with the Project Deployment Model in SSIS"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/11/2019"
 ms.service: sql
 ms.subservice: integration-services

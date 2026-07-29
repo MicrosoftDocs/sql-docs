@@ -1,8 +1,6 @@
 ---
 title: "&lt;= (Less Than or Equal To) (SSIS Expression)"
 description: "&lt;= (Less Than or Equal To) (SSIS Expression)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

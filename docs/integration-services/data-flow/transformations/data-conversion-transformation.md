@@ -1,8 +1,6 @@
 ---
 title: "Data Conversion Transformation"
 description: "Data Conversion Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: integration-services

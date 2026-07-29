@@ -1,8 +1,6 @@
 ---
 title: "Connecting to Data Sources in a Custom Task"
 description: "Connecting to Data Sources in a Custom Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

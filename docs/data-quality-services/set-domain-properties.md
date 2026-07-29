@@ -1,8 +1,6 @@
 ---
 title: "Set Domain Properties"
 description: "Set Domain Properties"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/08/2011"
 ms.service: sql
 ms.subservice: data-quality-services

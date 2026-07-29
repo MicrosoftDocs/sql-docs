@@ -1,8 +1,6 @@
 ---
 title: "Apply the Changes to the Destination"
 description: "Apply the Changes to the Destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

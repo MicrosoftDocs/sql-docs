@@ -1,8 +1,6 @@
 ---
 title: "dm_execution_performance_counters (SSISDB Database)"
 description: "dm_execution_performance_counters (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

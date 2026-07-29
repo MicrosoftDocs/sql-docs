@@ -1,8 +1,6 @@
 ---
 title: "Cache Connection Manager"
 description: "Cache Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: integration-services

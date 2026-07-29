@@ -1,8 +1,6 @@
 ---
 title: "catalog.set_environment_variable_value (SSISDB Database)"
 description: "catalog.set_environment_variable_value (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

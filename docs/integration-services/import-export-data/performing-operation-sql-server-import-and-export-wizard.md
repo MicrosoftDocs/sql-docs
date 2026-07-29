@@ -1,8 +1,6 @@
 ---
 title: "Performing Operation (SQL Server Import and Export Wizard)"
 description: "Performing Operation (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/11/2017"
 ms.service: sql
 ms.subservice: integration-services

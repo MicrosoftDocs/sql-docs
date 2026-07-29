@@ -1,8 +1,6 @@
 ---
 title: "Step 4: Add a Flat File destination"
 description: "Lesson 4-4: Add a Flat File destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/07/2019"
 ms.service: sql
 ms.subservice: integration-services

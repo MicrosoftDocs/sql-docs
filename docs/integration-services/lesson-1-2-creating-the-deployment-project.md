@@ -1,8 +1,6 @@
 ---
 title: "Step 2: Creating the Deployment Project"
 description: "Lesson 1-2 - Creating the Deployment Project"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

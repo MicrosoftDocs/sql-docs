@@ -1,8 +1,6 @@
 ---
 title: "Transfer Logins Task"
 description: "Transfer Logins Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

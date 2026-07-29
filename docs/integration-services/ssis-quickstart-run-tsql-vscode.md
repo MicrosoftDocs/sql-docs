@@ -1,8 +1,6 @@
 ---
 title: "Run an SSIS package with Transact-SQL (VS Code)"
 description: "Run an SSIS package from Visual Studio Code with Transact-SQL"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/21/2018"
 ms.service: sql
 ms.subservice: integration-services

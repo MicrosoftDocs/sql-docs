@@ -1,8 +1,6 @@
 ---
 title: "Integration Services (SSIS) Packages"
 description: "Integration Services (SSIS) Packages"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/31/2016"
 ms.service: sql
 ms.subservice: integration-services

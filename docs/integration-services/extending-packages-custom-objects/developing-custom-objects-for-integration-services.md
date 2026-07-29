@@ -1,8 +1,6 @@
 ---
 title: "Developing Custom Objects for Integration Services"
 description: "Developing Custom Objects for Integration Services"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

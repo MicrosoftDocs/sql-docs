@@ -1,8 +1,6 @@
 ---
 title: "Step 1: Copy the Lesson 3 package"
 description: "Lesson 4-1: Copy the Lesson 3 package"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/07/2019"
 ms.service: sql
 ms.subservice: integration-services

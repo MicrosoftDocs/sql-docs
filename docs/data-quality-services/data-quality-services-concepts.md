@@ -1,8 +1,6 @@
 ---
 title: "Data Quality Services Concepts"
 description: "Data Quality Services Concepts"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/01/2012"
 ms.service: sql
 ms.subservice: data-quality-services

@@ -1,8 +1,6 @@
 ---
 title: "Loading and Running a Remote Package Programmatically"
 description: "Loading and Running a Remote Package Programmatically"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/23/2026"
 ai-usage: ai-assisted
 ms.service: sql

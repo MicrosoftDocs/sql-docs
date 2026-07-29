@@ -1,8 +1,6 @@
 ---
 title: "Create the Function to Retrieve the Change Data"
 description: "Create the Function to Retrieve the Change Data"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: "wiassaf"
 ms.date: "07/26/2021"
 ms.service: sql

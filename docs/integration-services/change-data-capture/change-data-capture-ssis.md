@@ -1,8 +1,6 @@
 ---
 title: "Change Data Capture (SSIS)"
 description: "Change Data Capture (SSIS)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Column Value Distribution Profile Request Options (Data Profiling Task)"
 description: "Column Value Distribution Profile Request Options (Data Profiling Task)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

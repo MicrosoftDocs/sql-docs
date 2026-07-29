@@ -1,8 +1,6 @@
 ---
 title: "Adding the Data Flow Task Programmatically"
 description: "Adding the Data Flow Task Programmatically"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

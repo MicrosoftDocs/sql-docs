@@ -1,8 +1,6 @@
 ---
 title: "Deploy Integration Services (SSIS) Projects and Packages"
 description: "Deploy Integration Services (SSIS) Projects and Packages"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: vanto
 ms.date: 09/17/2024
 ms.service: sql

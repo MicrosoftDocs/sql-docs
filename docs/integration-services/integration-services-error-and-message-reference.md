@@ -1,8 +1,6 @@
 ---
 title: Integration Services error and message reference
 description: Integration Services errors, warnings, and informational messages, in ascending numerical order within each category.
-author: chugugrace
-ms.author: chugu
 ms.reviewer: invand, randolphwest
 ms.date: 01/16/2023
 ms.service: sql

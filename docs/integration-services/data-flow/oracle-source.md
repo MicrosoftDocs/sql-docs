@@ -1,8 +1,6 @@
 ---
 title: Oracle source
 description: "Oracle source"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/14/2019"
 ms.service: sql
 ms.subservice: integration-services

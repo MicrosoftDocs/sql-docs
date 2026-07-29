@@ -1,8 +1,6 @@
 ---
 title: "Sort Data for the Merge and Merge Join Transformations"
 description: "Sort Data for the Merge and Merge Join Transformations"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

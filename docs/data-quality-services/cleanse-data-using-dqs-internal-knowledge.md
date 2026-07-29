@@ -1,8 +1,6 @@
 ---
 title: "Cleanse Data Using DQS (Internal) Knowledge"
 description: "Cleanse Data Using DQS (Internal) Knowledge"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: data-quality-services

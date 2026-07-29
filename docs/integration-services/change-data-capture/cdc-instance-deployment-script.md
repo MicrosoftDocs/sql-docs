@@ -1,8 +1,6 @@
 ---
 title: "CDC Instance Deployment Script"
 description: "CDC Instance Deployment Script"
-author: chugugrace
-ms.author: chugu
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: integration-services

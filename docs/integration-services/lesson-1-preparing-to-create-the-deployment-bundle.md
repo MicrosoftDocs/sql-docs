@@ -1,8 +1,6 @@
 ---
 title: "Lesson 1: Preparing to Create the Deployment Bundle"
 description: "Lesson 1: Preparing to Create the Deployment Bundle"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

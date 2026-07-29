@@ -1,8 +1,6 @@
 ---
 title: "Azure Resource Manager Connection Manager"
 description: "Azure Resource Manager Connection Manager"
-author: "Lingxi-Li"
-ms.author: "lingxl"
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

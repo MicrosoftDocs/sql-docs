@@ -1,8 +1,6 @@
 ---
 title: "Lesson 2: Add looping with SSIS"
 description: "Lesson 2: Add looping with SSIS"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/03/2019"
 ms.service: sql
 ms.subservice: integration-services

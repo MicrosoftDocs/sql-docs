@@ -1,8 +1,6 @@
 ---
 title: "Microsoft Connector for SAP BW F1 Help"
 description: "Microsoft Connector for SAP BW F1 Help"
-author: chugugrace
-ms.author: chugu
 ms.date: 02/13/2025
 ms.service: sql
 ms.subservice: integration-services

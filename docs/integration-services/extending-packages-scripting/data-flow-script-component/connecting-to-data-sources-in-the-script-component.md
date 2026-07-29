@@ -1,8 +1,6 @@
 ---
 title: "Connecting to Data Sources in the Script Component"
 description: "Connecting to Data Sources in the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

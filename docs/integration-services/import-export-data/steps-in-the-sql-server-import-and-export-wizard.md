@@ -1,8 +1,6 @@
 ---
 title: "Steps in the SQL Server Import and Export Wizard"
 description: "Steps in the SQL Server Import and Export Wizard"
-author: chugugrace
-ms.author: chugu
 ms.date: 06/29/2020
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Run DQSInstaller.exe to complete Data Quality Server installation"
 description: Learn how to run the DQSInstaller.exe to complete an installation of SQL Server Data Quality Services (DQS).
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: data-quality-services

@@ -1,8 +1,6 @@
 ---
 title: "Creating an ODBC Destination with the Script Component"
 description: "Creating an ODBC Destination with the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "10/10/2018"
 ms.service: sql
 ms.subservice: integration-services

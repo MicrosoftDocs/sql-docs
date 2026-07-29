@@ -74,7 +74,9 @@ Locally redundant availability is available to all databases in all service tier
 
 ### Basic, Standard, and General Purpose service tiers
 
-The Basic, and Standard service tiers of the [DTU-based purchasing model overview](service-tiers-dtu.md), and the General Purpose service tier of the [vCore-based purchasing model](service-tiers-sql-database-vcore.md) use the remote storage availability model for both serverless and provisioned compute. The following diagram shows nodes with the separated compute and storage layers.
+The Basic DTU, Standard DTU, and General Purpose vCore service tiers use the remote storage availability model for both serverless and provisioned compute.
+
+The following diagram shows nodes with the separated compute and storage layers.
 
 :::image type="content" source="media/high-availability-sla-local-zone-redundancy/general-purpose-service-tier.png" alt-text="Diagram showing separation of compute and storage.":::
 
@@ -87,8 +89,9 @@ The remote storage availability model includes two layers:
 Whenever the database engine or the operating system is upgraded, or a failure is detected, Azure Service Fabric moves the stateless database engine process to another stateless compute node with sufficient free capacity. Data in Azure Blob storage isn't affected by the move, and the data/log files are attached to the newly initialized database engine process. This process guarantees high availability, but a heavy workload might experience some performance degradation during the transition since the new database engine process starts with cold cache.
 
 <a id="premium-and-business-critical-service-tier-locally-redundant-availability"></a>
+<a id="premium-and-business-critical-service-tier"></a>
 
-### Premium and Business Critical service tier
+### Premium and Business Critical service tiers
 
 The Premium service tier of the [DTU-based purchasing model](service-tiers-dtu.md) and the Business Critical service tier of the [vCore-based purchasing model](service-tiers-sql-database-vcore.md) use the local storage availability model, which integrates compute resources (database engine process) and storage (locally attached SSD) on a single node. High availability is achieved by replicating both compute and storage to additional nodes.
 
@@ -218,7 +221,12 @@ Consider the following limitations:
 - There's currently no option to specify zone redundancy when migrating a database to Hyperscale using the Azure portal. However, zone redundancy can be specified using Azure PowerShell, Azure CLI, or the REST API when migrating an existing database from another Azure SQL Database service tier to Hyperscale. Here's an example with Azure CLI:
 
   ```azurecli
-  az sql db update --resource-group "myRG" --server "myServer" --name "myDB" --edition Hyperscale --zone-redundant true`
+  az sql db update --resource-group "myRG" `
+  --server "myServer" `
+  --name "myDB" `
+  --edition Hyperscale `
+  --zone-redundant true
+
   ```
 
 - At least one high availability compute replica and the use of zone-redundant or geo-zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.
@@ -227,7 +235,7 @@ Consider the following limitations:
 
 ### Database zone redundant availability
 
-In Azure SQL Database, a [server](logical-servers.md) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, authentication method, firewall rules, auditing rules, threat detection policies, and failover groups. Data related to some of these features, such as logins and firewall rules, is stored in the `master` database. Similarly, data for some DMVs, for example [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database), is also stored in the `master` database.
+In Azure SQL Database, a [logical server](logical-servers.md) is a logical construct that acts as a central administrative point for a collection of databases. At the logical server level, you can administer logins, authentication methods, firewall rules, auditing rules, threat detection policies, and failover groups. Data related to some of these features, such as logins and firewall rules, is stored in the `master` database. Similarly, data for some DMVs, for example [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database), is also stored in the `master` database.
 
 When a database with a zone-redundant configuration is created on a logical server, the `master` database associated with the server is automatically made zone-redundant as well. This ensures that in a zone outage, applications using the database remain unaffected because features dependent on the `master` database, such as logins and firewall rules, are still available. Making the `master` database zone-redundant is an asynchronous process and will take some time to finish in the background.
 

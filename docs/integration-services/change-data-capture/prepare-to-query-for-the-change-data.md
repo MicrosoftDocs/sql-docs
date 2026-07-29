@@ -1,8 +1,6 @@
 ---
 title: "Prepare to Query for the Change Data"
 description: "Prepare to Query for the Change Data"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

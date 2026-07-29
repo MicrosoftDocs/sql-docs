@@ -1,8 +1,6 @@
 ---
 title: "Direct the CDC Stream According to the Type of Change"
 description: "Direct the CDC Stream According to the Type of Change"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

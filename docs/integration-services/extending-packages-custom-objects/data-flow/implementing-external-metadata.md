@@ -1,8 +1,6 @@
 ---
 title: "Implementing External Metadata"
 description: "Implementing External Metadata"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Creating a Source with the Script Component"
 description: "Creating a Source with the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/23/2026"
 ai-usage: ai-assisted
 ms.service: sql

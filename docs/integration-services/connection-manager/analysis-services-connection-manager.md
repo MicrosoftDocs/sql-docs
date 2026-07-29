@@ -1,8 +1,6 @@
 ---
 title: "Analysis Services Connection Manager"
 description: "Analysis Services Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: 03/29/2024
 ms.service: sql
 ms.subservice: integration-services

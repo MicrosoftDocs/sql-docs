@@ -1,8 +1,6 @@
 ---
 title: "Troubleshoot Integration Services (SSIS) Packages"
 description: "Troubleshoot Integration Services (SSIS) Packages"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/09/2016"
 ms.service: sql
 ms.subservice: integration-services

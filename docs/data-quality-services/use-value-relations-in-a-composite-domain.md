@@ -1,8 +1,6 @@
 ---
 title: "Use Value Relations in a Composite Domain"
 description: "Use Value Relations in a Composite Domain"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/22/2011"
 ms.service: sql
 ms.subservice: data-quality-services

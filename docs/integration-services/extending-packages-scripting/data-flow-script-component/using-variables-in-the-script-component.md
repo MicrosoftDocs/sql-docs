@@ -1,8 +1,6 @@
 ---
 title: "Using Variables in the Script Component"
 description: "Using Variables in the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

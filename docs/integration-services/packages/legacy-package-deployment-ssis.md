@@ -1,8 +1,6 @@
 ---
 title: "Legacy Package Deployment (SSIS)"
 description: "Learn about the tools and wizards that make it simple to deploy SSIS packages from the development computer to the production server or to other computers."
-author: chugugrace
-ms.author: chugu
 ms.reviewer: randolphwest
 ms.date: 08/17/2022
 ms.service: sql

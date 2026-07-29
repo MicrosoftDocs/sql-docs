@@ -1,8 +1,6 @@
 ---
 title: "The Oracle CDC Service"
 description: "The Oracle CDC Service"
-author: chugugrace
-ms.author: chugu
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: integration-services

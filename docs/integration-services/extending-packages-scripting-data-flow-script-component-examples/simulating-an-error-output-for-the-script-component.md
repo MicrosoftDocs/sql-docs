@@ -1,8 +1,6 @@
 ---
 title: "Simulating an Error Output for the Script Component"
 description: "Simulating an Error Output for the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

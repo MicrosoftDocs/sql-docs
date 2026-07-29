@@ -1,8 +1,6 @@
 ---
 title: "catalog.clear_object_parameter_value (SSISDB Database)"
 description: "catalog.clear_object_parameter_value (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

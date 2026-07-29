@@ -1,8 +1,6 @@
 ---
 title: "Sending an HTML Mail Message with the Script Task"
 description: "Sending an HTML Mail Message with the Script Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

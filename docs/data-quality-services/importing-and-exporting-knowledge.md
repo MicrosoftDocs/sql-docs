@@ -1,8 +1,6 @@
 ---
 title: "Importing and Exporting Knowledge"
 description: "Importing and Exporting Knowledge"
-author: chugugrace
-ms.author: chugu
 ms.date: "07/31/2012"
 ms.service: sql
 ms.subservice: data-quality-services

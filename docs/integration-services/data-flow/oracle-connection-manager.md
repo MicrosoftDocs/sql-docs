@@ -1,8 +1,6 @@
 ---
 title: "Oracle Connection Manager"
 description: "Oracle Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/14/2019"
 ms.service: sql
 ms.subservice: integration-services

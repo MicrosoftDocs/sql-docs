@@ -1,8 +1,6 @@
 ---
 title: "Events Logged by the Integration Services Service"
 description: "Events Logged by the Integration Services Service"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

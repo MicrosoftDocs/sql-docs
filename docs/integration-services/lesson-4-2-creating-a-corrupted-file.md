@@ -1,8 +1,6 @@
 ---
 title: "Step 2: Create a corrupted file"
 description: "Lesson 4-2: Create a corrupted file"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/07/2019"
 ms.service: sql
 ms.subservice: integration-services

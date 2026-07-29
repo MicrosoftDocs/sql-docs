@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/30/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: include
 ---
 

@@ -1,8 +1,6 @@
 ---
 title: "Logging and Defining Log Entries in a Data Flow Component"
 description: "Logging and Defining Log Entries in a Data Flow Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/29/2023
-ms.service: virtual-machines
+ms.service: azure-vm-sql-server
 ms.topic: include
 ---
 High availability and disaster recovery (HADR) features, such as the [Always On availability group](../virtual-machines/windows/availability-group-overview.md) and the [failover cluster instance](../virtual-machines/windows/failover-cluster-instance-overview.md) rely on underlying [Windows Server Failover Cluster](../virtual-machines/windows/hadr-windows-server-failover-cluster-overview.md) technology. Review the best practices for modifying your HADR settings to better support the cloud environment.

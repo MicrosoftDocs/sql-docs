@@ -1,8 +1,6 @@
 ---
 title: "Import a Domain from a .dqs File"
 description: "Import a Domain from a .dqs File"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: data-quality-services

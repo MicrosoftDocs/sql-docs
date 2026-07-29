@@ -1,8 +1,6 @@
 ---
 title: "Step 2: Verifying the Deployment Bundle"
 description: "Lesson 2-2 - Verifying the Deployment Bundle"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,6 +1,4 @@
 ---
-author: chugugrace
-ms.author: chugu
 ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: integration-services

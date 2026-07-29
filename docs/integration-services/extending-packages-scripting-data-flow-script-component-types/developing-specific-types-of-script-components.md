@@ -1,8 +1,6 @@
 ---
 title: "Developing Specific Types of Script Components"
 description: "Developing Specific Types of Script Components"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

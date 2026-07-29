@@ -1,8 +1,6 @@
 ---
 title: "Extract Data by Using the OLE DB Source"
 description: "Extract Data by Using the OLE DB Source"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

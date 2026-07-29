@@ -1,8 +1,6 @@
 ---
 title: "Finish the Slowly Changing Dimension Wizard"
 description: "Finish the Slowly Changing Dimension Wizard"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

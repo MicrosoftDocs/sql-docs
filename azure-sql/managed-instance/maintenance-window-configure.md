@@ -183,3 +183,4 @@ az sql mi update -g mygroup  -n myinstance -m /subscriptions/{SubID}/providers/M
 - [Maintenance window in Azure SQL Managed Instance](maintenance-window.md)
 - [Maintenance window FAQ](maintenance-window-faq.yml)
 - [Monitor and performance tuning in Azure SQL Database and Azure SQL Managed Instance](../database/monitor-tune-overview.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

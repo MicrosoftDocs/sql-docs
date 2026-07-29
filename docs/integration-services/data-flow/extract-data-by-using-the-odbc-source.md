@@ -1,8 +1,6 @@
 ---
 title: "Extract Data by Using the ODBC Source"
 description: "Extract Data by Using the ODBC Source"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

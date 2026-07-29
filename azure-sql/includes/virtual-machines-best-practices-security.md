@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/29/2023
-ms.service: virtual-machines
+ms.service: azure-vm-sql-server
 ms.topic: include
 ---
 SQL Server features and capabilities provide methods of securing data at the database level that can be combined with security features at the infrastructure level. Together, these features provide defense-in-depth at the infrastructure level for cloud-based and hybrid solutions. In addition, with Azure security measures, it's possible to encrypt your sensitive data, protect virtual machines from viruses and malware, secure network traffic, identify and detect threats, meet compliance requirements, and provides a single method for administration and reporting for any security need in the hybrid cloud.

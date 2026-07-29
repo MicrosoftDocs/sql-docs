@@ -1,8 +1,6 @@
 ---
 title: "Add or Delete a Component in a Data Flow"
 description: "Add or Delete a Component in a Data Flow"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

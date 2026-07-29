@@ -1,8 +1,6 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS)"
 description: "Azure Feature Pack for Integration Services (SSIS)"
-author: chugugrace
-ms.author: chugu
 ms.date: "12/24/2019"
 ms.service: sql
 ms.subservice: integration-services

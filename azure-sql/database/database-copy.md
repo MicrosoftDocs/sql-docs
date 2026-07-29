@@ -4,7 +4,7 @@ description: Create a transactionally consistent copy of an existing database in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest, hudequei
-ms.date: 12/10/2024
+ms.date: 07/29/2026
 ms.service: azure-sql-database
 ms.subservice: data-movement
 ms.topic: how-to
@@ -31,11 +31,11 @@ After the copy is complete, the new database is a fully functional and independe
 
 ## Database copy for Hyperscale databases
 
-For databases in the [Hyperscale service tier](service-tier-hyperscale.md), the target database determines whether the copy is a fast copy, or a size-of-data copy: 
+For databases in the [Hyperscale service tier](service-tier-hyperscale.md), the target database determines whether the copy is a fast copy or a size-of-data copy: 
 
 - **Fast copy**: When the copy is done in the same region as the source, the copy is created from the snapshots of blobs, this copy is a fast operation regardless of the database size.
 
-- **Size-of-data copy**: When the target database is in a different region than the source or if the database backup storage redundancy (Local, Zonal, Geo) from the target differs from the source database, the copy operation is a size-of-data operation. Copy time isn't directly proportional to size, as page server blobs are copied in parallel.
+- **Size-of-data copy**: When the target database is in a different region than the source, or if the database backup storage redundancy (Local, Zonal, Geo) from the target differs from the source database, the copy operation is a size-of-data operation. Copy time isn't directly proportional to size, as page server blobs are copied in parallel.
 
 ## Logins in the database copy
 
@@ -78,8 +78,12 @@ For a complete sample PowerShell script, see [Use PowerShell to copy a database 
 ### [Azure CLI](#tab/azure-cli)
 
 ```azurecli
-az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myResourceGroup" --dest-server $targetserver `
-    --name "<databaseName>" --resource-group "<resourceGroup>" --server $sourceserver
+az sql db copy --dest-name "<new database copy name>" `
+--dest-resource-group "<destination resource group name>" `
+--dest-server "<destination logical SQL server name>" `
+--name "<source database name>" `
+--resource-group "<source resource group name>" `
+--server "<source logical SQL server name>"
 ```
 
 The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the target database using the [az sql db delete](/cli/azure/sql/db#az-sql-db-delete) command.
@@ -120,7 +124,7 @@ Sign in to the `master` database with the server administrator login or the logi
 
 This command copies `Database1` to a new database named `Database2` in an elastic pool named pool1. Depending on the size of your database, the copying operation might take some time to complete.
 
-`Database1` can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies fail. For example, you can copy a single or elastic standard db into a General Purpose pool, but you can't copy a standard elastic db into a premium pool.
+`Database1` can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies fail. For example, you can copy a single or elastic standard database into a General Purpose pool, but you can't copy a standard elastic database into a premium pool.
 
 ```sql
 -- Execute on the master database to start copying
@@ -243,7 +247,7 @@ Monitor the copying process by querying the [sys.databases](/sql/relational-data
 
 ## Permissions
 
-To create a database copy, you need to be in the following roles:
+To create a database copy, you need to be a member of one of the following roles:
 
 - Subscription Owner or
 - SQL Server Contributor role or
@@ -255,7 +259,7 @@ To create a database copy, you need to be in the following roles:
   - `Microsoft.Sql/servers/databases/read`
   - `Microsoft.Sql/servers/databases/write`
 
-To cancel a database copy, you need to be in the following roles:
+To cancel a database copy, you need to be a member of one of the following roles:
 
 - Subscription Owner or
 - SQL Server Contributor role or
@@ -307,3 +311,4 @@ The following errors can be encountered while copying a database in Azure SQL Da
 - [Authorize database access to SQL Database, SQL Managed Instance, and Azure Synapse Analytics](logins-create-manage.md)
 - [Configure and manage Azure SQL Database security for geo-restore or failover](active-geo-replication-security-configure.md)
 - [Export to a BACPAC file - Azure SQL Database and Azure SQL Managed Instance](database-export.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

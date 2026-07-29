@@ -1,8 +1,6 @@
 ---
 title: "Create a Knowledge Base"
 description: "Create a Knowledge Base"
-author: chugugrace
-ms.author: chugu
 ms.date: "06/04/2013"
 ms.service: sql
 ms.subservice: data-quality-services

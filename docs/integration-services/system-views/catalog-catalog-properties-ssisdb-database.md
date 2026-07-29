@@ -1,8 +1,6 @@
 ---
 title: "catalog.catalog_properties (SSISDB Database)"
 description: "catalog.catalog_properties (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "12/11/2018"
 ms.service: sql
 ms.subservice: integration-services

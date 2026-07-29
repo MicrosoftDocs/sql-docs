@@ -1,8 +1,6 @@
 ---
 title: "catalog.deploy_project (SSISDB Database)"
 description: "catalog.deploy_project (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: integration-services

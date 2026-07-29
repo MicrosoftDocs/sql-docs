@@ -1,8 +1,6 @@
 ---
 title: "The Oracle CDC Instance"
 description: "The Oracle CDC Instance"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

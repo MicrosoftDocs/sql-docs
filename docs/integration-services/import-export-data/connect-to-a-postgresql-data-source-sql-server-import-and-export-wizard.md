@@ -1,8 +1,6 @@
 ---
 title: "Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)"
 description: "Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: 
 ms.date: 05/30/2024
 ms.service: sql

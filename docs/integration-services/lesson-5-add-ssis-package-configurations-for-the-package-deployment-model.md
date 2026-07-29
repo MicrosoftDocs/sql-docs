@@ -1,8 +1,6 @@
 ---
 title: "Lesson 5: Add SSIS package configurations for the Package Deployment Model"
 description: "Lesson 5: Add SSIS package configurations for the Package Deployment Model"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/08/2019"
 ms.service: sql
 ms.subservice: integration-services

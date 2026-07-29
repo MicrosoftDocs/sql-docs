@@ -1,8 +1,6 @@
 ---
 title: "Slowly Changing Dimension Transformation"
 description: "Slowly Changing Dimension Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/31/2019"
 ms.service: sql
 ms.subservice: integration-services

@@ -113,3 +113,4 @@ The following table lists common and recommended alert rules for Azure SQL Manag
 
 - [Azure SQL Managed Instance monitoring data reference](monitoring-sql-managed-instance-azure-monitor-reference.md)
 - [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

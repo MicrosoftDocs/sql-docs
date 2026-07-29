@@ -1,8 +1,6 @@
 ---
 title: "Microsoft Connector for SAP BW Components"
 description: "Microsoft Connector for SAP BW Components"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

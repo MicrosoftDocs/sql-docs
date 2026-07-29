@@ -1,0 +1,70 @@
+### YamlMime:FAQ
+metadata:
+  title: Azure SQL Database serverless FAQ
+  description: Frequently asked questions about the serverless compute tier in Azure SQL Database, including billing, auto-pause, auto-resume, and scaling.
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.reviewer: kendalv, moslake, mathoma, dfurman
+  ms.date: 07/28/2026
+  ms.service: azure-sql-database
+  ms.subservice: service-overview
+  ms.topic: faq
+  ai-usage: ai-assisted
+  monikerRange: "=azuresql||=azuresql-db"
+title: Azure SQL Database serverless compute tier FAQ
+summary: |
+  [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+  This article answers frequently asked questions about the [serverless compute tier](serverless-tier-overview.md) in Azure SQL Database.
+
+sections:
+  - name: General
+    questions:
+
+      - question: |
+          Does Azure SQL Database Hyperscale support the serverless compute tier?
+        answer: |
+          Yes, the serverless compute tier is supported in the Hyperscale service tier. However, Hyperscale doesn't currently support auto-pause and auto-resume. 
+
+      - question: |
+          Which service tiers support the serverless compute tier?
+        answer: |
+          The serverless compute tier is available in the [Hyperscale](service-tier-hyperscale.md) and [General Purpose](service-tiers-sql-database-vcore.md#general-purpose) service tiers using the [vCore purchasing model](service-tiers-vcore.md). It's not available in the [DTU purchasing model](service-tiers-dtu.md). Only Standard-series (Gen5) hardware is supported.
+
+      - question: |
+          Which application or load scenarios are best for the Azure SQL Database serverless compute tier?
+        answer: |
+          Serverless is price-performance optimized for single databases with intermittent, unpredictable usage patterns that can afford some delay in compute warm-up after idle usage periods. In contrast, the [provisioned compute tier](service-tiers-sql-database-vcore.md#compute) is price-performance optimized for single databases or multiple databases in [elastic pools](elastic-pool-overview.md) with higher average usage that can't afford any delay in compute warm-up. For more information and scenarios well suited for serverless, see [Serverless compute tier for Azure SQL Database](serverless-tier-overview.md#scenarios-well-suited-for-serverless-compute).
+
+
+  - name: Auto-pause and auto-resume
+    questions:
+      - question: |
+          What happens when my serverless database is paused and a connection is attempted?
+        answer: |
+          When a serverless database is paused, the first connection attempt resumes the database. Applications might receive an error stating that the database is unavailable with error code 40613. Once the database is resumed, retry the connection. Database clients that follow [connection retry logic recommendations](/azure/architecture/patterns/retry) shouldn't need to be modified. For more information, see [Auto-pause and auto-resume in serverless](serverless-tier-auto-pause-resume.md#connectivity).
+
+      - question: |
+          Why doesn't my serverless database auto-pause after the delay period?
+        answer: |
+          Several features prevent auto-pausing, including active geo-replication, failover groups, long-term backup retention (LTR), DNS aliases, and elastic jobs (when the database is used as a job database). Additionally, open application or user sessions prevent auto-pausing. To troubleshoot, check for open sessions by querying [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql?view=azuresqldb-current&preserve-view=true). For more information, see [Auto-pause troubleshooting](serverless-tier-auto-pause-resume.md#features-that-prevent-auto-pause).
+
+  - name: Billing
+    questions:
+      - question: |
+          Can I use Azure Hybrid Benefit or reserved capacity with the serverless compute tier?
+        answer: |
+          No. [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md) and [Azure Reservations discounts](reservations-discount-overview.md) don't apply to the serverless compute tier. For more information, see [Serverless compute tier billing](serverless-tier-billing.md#azure-hybrid-benefit-and-reservations).
+
+      - question: |
+          How is the minimum compute bill calculated for a serverless database?
+        answer: |
+          When a serverless database is paused, you aren't billed for compute. If the database isn't paused, the minimum compute bill scales with the maximum setting. For more information and examples, see [Minimum compute bill](serverless-tier-billing.md#minimum-compute-bill).
+
+additionalContent: |
+  ## Related content
+
+  - [Serverless compute tier billing](serverless-tier-billing.md)
+  - [Auto-pause and auto-resume in serverless](serverless-tier-auto-pause-resume.md)
+  - [Create and configure a serverless database](serverless-tier-create-configure.md)
+  - [Serverless compute tier for Azure SQL Database](serverless-tier-overview.md)

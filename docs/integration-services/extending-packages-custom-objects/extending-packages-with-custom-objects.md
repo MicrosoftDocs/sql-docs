@@ -1,8 +1,6 @@
 ---
 title: "Extending Packages with Custom Objects"
 description: "Extending Packages with Custom Objects"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

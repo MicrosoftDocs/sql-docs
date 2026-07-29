@@ -1,8 +1,6 @@
 ---
 title: "Step 2: Add and configure logging"
 description: "Lesson 3-2: Add and configure logging"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/04/2019"
 ms.service: sql
 ms.subservice: integration-services

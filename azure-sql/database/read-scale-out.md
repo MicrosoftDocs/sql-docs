@@ -245,3 +245,4 @@ Query Store on secondary replicas is supported in Azure SQL Database and Azure S
 
 - [Configure a license-free standby replica for Azure SQL Database](standby-replica-how-to-configure.md)
 - [Dynamically scale database resources with minimal downtime - Azure SQL Database & Azure SQL Managed Instance](scale-resources.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

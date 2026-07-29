@@ -135,3 +135,4 @@ For the full reference of the sample queries and how to use them across tools li
 - [Maintenance window FAQ](maintenance-window-faq.yml)
 - [Overview of alerts in Microsoft Azure](/azure/azure-monitor/alerts/alerts-overview)
 - [Email Azure Resource Manager Role](/azure/azure-monitor/alerts/action-groups#email-azure-resource-manager-role)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

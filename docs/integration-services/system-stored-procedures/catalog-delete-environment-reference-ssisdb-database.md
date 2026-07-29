@@ -1,8 +1,6 @@
 ---
 title: "catalog.delete_environment_reference (SSISDB Database)"
 description: "catalog.delete_environment_reference (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

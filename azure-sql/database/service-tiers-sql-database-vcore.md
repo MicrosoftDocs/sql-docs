@@ -303,4 +303,5 @@ Gen4 hardware has been retired and isn't available for provisioning, upscaling, 
 - [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/)
 - [Resource limits for single databases using the vCore purchasing model](resource-limits-vcore-single-databases.md)
 - [Resource limits for elastic pools using the vCore purchasing model](resource-limits-vcore-elastic-pools.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)
 

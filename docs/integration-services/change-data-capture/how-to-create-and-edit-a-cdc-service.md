@@ -1,8 +1,6 @@
 ---
 title: "How to Create and Edit a CDC Service"
 description: "How to Create and Edit a CDC Service"
-author: chugugrace
-ms.author: chugu
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: integration-services

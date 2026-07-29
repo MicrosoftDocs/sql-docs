@@ -1,8 +1,6 @@
 ---
 title: "SAP BW Source Editor (Error Output Page)"
 description: "SAP BW Source Editor (Error Output Page)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

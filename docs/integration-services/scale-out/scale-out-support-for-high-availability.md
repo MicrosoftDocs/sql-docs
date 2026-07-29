@@ -1,8 +1,6 @@
 ---
 title: "Scale Out Support for High Availability"
 description: "Learn to configure SQL Server Integration Services (SSIS) Scale Out Master side for high availability."
-author: chugugrace
-ms.author: chugu
 ms.date: "05/23/2018"
 ms.service: sql
 ms.subservice: integration-services

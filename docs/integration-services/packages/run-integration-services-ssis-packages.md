@@ -1,8 +1,6 @@
 ---
 title: "Run Integration Services (SSIS) Packages"
 description: "Run Integration Services (SSIS) Packages"
-author: chugugrace
-ms.author: chugu
 ms.date: 06/04/2018
 ms.service: sql
 ms.subservice: integration-services

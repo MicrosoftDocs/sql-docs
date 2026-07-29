@@ -1,8 +1,6 @@
 ---
 title: "Step 5: Testing the Updated Packages"
 description: "Lesson 1-5 - Testing the Updated Packages"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

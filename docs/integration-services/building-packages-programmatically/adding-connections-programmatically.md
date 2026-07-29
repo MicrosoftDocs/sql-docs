@@ -1,8 +1,6 @@
 ---
 title: "Adding Connections Programmatically"
 description: "Adding Connections Programmatically"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: 
 ms.date: 07/04/2023
 ms.service: sql

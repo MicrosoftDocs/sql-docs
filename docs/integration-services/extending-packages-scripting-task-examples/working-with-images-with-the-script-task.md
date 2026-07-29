@@ -1,8 +1,6 @@
 ---
 title: "Working with Images with the Script Task"
 description: "Working with Images with the Script Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: integration-services

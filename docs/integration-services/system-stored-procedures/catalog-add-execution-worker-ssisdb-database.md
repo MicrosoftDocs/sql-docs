@@ -1,8 +1,6 @@
 ---
 title: "catalog.add_execution_worker (SSISDB Database)"
 description: "catalog.add_execution_worker (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "12/16/2016"
 ms.service: sql
 ms.subservice: integration-services

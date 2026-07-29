@@ -1,8 +1,6 @@
 ---
 title: "Implement a Lookup in No Cache or Partial Cache Mode"
 description: "Implement a Lookup in No Cache or Partial Cache Mode"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

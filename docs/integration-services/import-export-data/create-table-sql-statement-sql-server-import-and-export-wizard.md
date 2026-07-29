@@ -1,8 +1,6 @@
 ---
 title: "Create Table SQL Statement (SQL Server Import and Export Wizard)"
 description: "Create Table SQL Statement (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/16/2017"
 ms.service: sql
 ms.subservice: integration-services

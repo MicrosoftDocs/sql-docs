@@ -1,8 +1,6 @@
 ---
 title: "Hadoop Connection Manager"
 description: "Hadoop Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: 06/29/2020
 ms.service: sql
 ms.subservice: integration-services

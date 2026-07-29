@@ -1,8 +1,6 @@
 ---
 title: "Data Quality Services Features and Tasks"
 description: "Data Quality Services Features and Tasks"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: data-quality-services

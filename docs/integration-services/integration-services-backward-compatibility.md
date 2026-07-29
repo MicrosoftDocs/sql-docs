@@ -1,8 +1,6 @@
 ---
 title: "Integration Services Backward Compatibility"
 description: "Integration Services Backward Compatibility"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/28/2024"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Data Mining Model Training Destination Custom Properties"
 description: "Data Mining Model Training Destination Custom Properties"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

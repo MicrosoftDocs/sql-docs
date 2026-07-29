@@ -2,8 +2,6 @@
 title: Start the SQL Server Import and Export Wizard
 titleSuffix: Integration Services (SSIS)
 description: "Start the SQL Server Import and Export Wizard"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: mathoma
 ms.date: 09/27/2024
 ms.service: sql

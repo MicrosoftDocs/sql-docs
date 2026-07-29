@@ -1,8 +1,6 @@
 ---
 title: "Developing a Custom Source Component"
 description: "Developing a Custom Source Component"
-author: chugugrace
-ms.author: chugu
 ms.date: 03/13/2026
 ms.service: sql
 ms.subservice: integration-services

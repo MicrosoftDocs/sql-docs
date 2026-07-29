@@ -1,8 +1,6 @@
 ---
 title: "Walkthrough: Publish an SSIS Package as a SQL View"
 description: "Walkthrough: Publish an SSIS Package as a SQL View"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

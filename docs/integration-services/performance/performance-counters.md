@@ -1,8 +1,6 @@
 ---
 title: "Performance Counters"
 description: "Performance Counters"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/27/2016"
 ms.service: sql
 ms.subservice: integration-services

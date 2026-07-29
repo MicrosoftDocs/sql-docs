@@ -1,8 +1,6 @@
 ---
 title: "Flexible File Destination"
 description: "Flexible File Destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/22/2019"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Integration Services Paths"
 description: "Integration Services Paths"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -77,3 +77,4 @@ Learn more about the [recommended migration process](../migration-guides/managed
 - [T-SQL differences between SQL Server and Azure SQL Managed Instance](transact-sql-tsql-differences-sql-server.md)
 - [Technical characteristics of SQL Managed Instance](resource-limits.md#service-tier-characteristics)
 - [Azure SQL Managed Instance content reference](how-to-content-reference-guide.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

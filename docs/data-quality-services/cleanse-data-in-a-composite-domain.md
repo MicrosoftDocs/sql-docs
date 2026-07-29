@@ -1,8 +1,6 @@
 ---
 title: "Cleanse Data in a Composite Domain"
 description: "Cleanse Data in a Composite Domain"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: data-quality-services

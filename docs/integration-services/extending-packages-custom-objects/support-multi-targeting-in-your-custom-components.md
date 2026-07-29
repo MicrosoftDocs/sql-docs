@@ -1,8 +1,6 @@
 ---
 title: "Support multi-targeting in your custom components"
 description: "Support multi-targeting in your custom components"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

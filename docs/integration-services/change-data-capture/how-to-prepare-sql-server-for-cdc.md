@@ -1,8 +1,6 @@
 ---
 title: "How to Prepare SQL Server for CDC"
 description: "How to Prepare SQL Server for CDC"
-author: chugugrace
-ms.author: chugu
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: integration-services

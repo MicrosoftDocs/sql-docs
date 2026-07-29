@@ -1,8 +1,6 @@
 ---
 title: "Upgrade Integration Services"
 description: "Upgrade Integration Services"
-author: "markingmyname"
-ms.author: "maghan"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

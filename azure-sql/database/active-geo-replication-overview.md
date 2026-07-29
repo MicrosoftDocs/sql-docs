@@ -20,7 +20,7 @@ This article provides an overview of the active geo-replication feature for [Azu
 
 Active geo-replication is configured per database. To fail over a group of databases, or if your application requires a stable connection endpoint, consider [Failover groups](failover-group-sql-db.md) instead.
 
-You can also [migrate a SQL database with active geo-replication](/azure/germany/germany-migration-databases#migrate-sql-database-using-active-geo-replication).
+You can also [configure active geo-replication](active-geo-replication-configure-portal.md) for a SQL database.
 
 ## Overview
 
@@ -264,3 +264,4 @@ Other business continuity content:
 - [Hyperscale Geo-replica](service-tier-hyperscale-replicas.md#geo-replica)
 - [Automated backups in Azure SQL Database](automated-backups-overview.md)
 - [Restore a database from a backup in Azure SQL Database](recovery-using-backups.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

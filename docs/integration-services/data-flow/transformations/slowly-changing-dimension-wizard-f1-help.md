@@ -1,8 +1,6 @@
 ---
 title: "Slowly Changing Dimension Wizard F1 Help"
 description: "Slowly Changing Dimension Wizard F1 Help"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

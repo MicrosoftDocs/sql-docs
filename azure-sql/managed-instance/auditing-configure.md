@@ -286,3 +286,4 @@ Azure Monitor logs gives you real-time operational insights using integrated sea
 - [Create a server audit and database audit specification](/sql/relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification?view=azuresqldb-mi-current&preserve-view=true)
 - [View a SQL Server Audit Log](/sql/relational-databases/security/auditing/view-a-sql-server-audit-log?view=azuresqldb-mi-current&preserve-view=true)
 - [Write SQL Server Audit events to the Security log](/sql/relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log?view=azuresqldb-mi-current&preserve-view=true)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

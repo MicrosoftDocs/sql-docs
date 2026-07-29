@@ -1,8 +1,6 @@
 ---
 title: "Comparing Scripting Solutions and Custom Objects"
 description: "Comparing Scripting Solutions and Custom Objects"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

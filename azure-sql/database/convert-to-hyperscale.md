@@ -240,3 +240,4 @@ ALTER DATABASE [mySampleDatabase] PERFORM_CUTOVER;
 
 - [How to manage a Hyperscale database](manage-hyperscale-database.md)
 - [Reverse migrate a database from Hyperscale](reverse-migrate-from-hyperscale.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

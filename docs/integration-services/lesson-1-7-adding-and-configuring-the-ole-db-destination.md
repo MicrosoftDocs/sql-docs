@@ -1,8 +1,6 @@
 ---
 title: "Step 7: Add and configure the OLE DB destination"
 description: "Lesson 1-7: Add and configure the OLE DB destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/03/2019"
 ms.service: sql
 ms.subservice: integration-services

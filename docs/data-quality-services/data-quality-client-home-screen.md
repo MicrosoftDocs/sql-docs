@@ -1,8 +1,6 @@
 ---
 title: "Data Quality Client Home Screen"
 description: "Data Quality Client Home Screen"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/29/2012"
 ms.service: sql
 ms.subservice: data-quality-services

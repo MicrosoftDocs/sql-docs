@@ -1,8 +1,6 @@
 ---
 title: "catalog.worker_agents (SSISDB Database)"
 description: "catalog.worker_agents (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "12/16/2016"
 ms.service: sql
 ms.subservice: integration-services

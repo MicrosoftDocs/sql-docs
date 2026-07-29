@@ -1,8 +1,6 @@
 ---
 title: "Save and Run Package (SQL Server Import and Export Wizard)"
 description: "Save and Run Package (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/16/2017"
 ms.service: sql
 ms.subservice: integration-services

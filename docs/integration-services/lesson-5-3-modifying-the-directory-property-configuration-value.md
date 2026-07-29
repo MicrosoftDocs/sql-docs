@@ -1,8 +1,6 @@
 ---
 title: "Step 3: Modify the Directory property configuration value"
 description: "Lesson 5-3: Modify the Directory property configuration value"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/08/2019"
 ms.service: sql
 ms.subservice: integration-services

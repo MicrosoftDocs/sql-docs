@@ -1,8 +1,6 @@
 ---
 title: "catalog.set_customized_logging_level_value"
 description: "catalog.set_customized_logging_level_value"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

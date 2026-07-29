@@ -1,8 +1,6 @@
 ---
 title: "catalog.operation_messages (SSISDB Database)"
 description: "catalog.operation_messages (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

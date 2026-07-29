@@ -1,8 +1,6 @@
 ---
 title: "Change Data Capture for Oracle by Attunity"
 description: "Change Data Capture for Oracle by Attunity"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/02/2017"
 ms.service: sql
 ms.subservice: integration-services

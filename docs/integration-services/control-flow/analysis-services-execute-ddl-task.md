@@ -1,8 +1,6 @@
 ---
 title: "Analysis Services Execute DDL Task"
 description: "Analysis Services Execute DDL Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

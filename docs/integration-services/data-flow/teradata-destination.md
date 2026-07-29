@@ -1,8 +1,6 @@
 ---
 title: "Teradata destination"
 description: "Teradata destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/22/2019"
 ms.service: sql
 ms.subservice: integration-services

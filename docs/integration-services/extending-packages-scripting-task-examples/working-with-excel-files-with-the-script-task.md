@@ -1,8 +1,6 @@
 ---
 title: "Working with Excel Files with the Script Task"
 description: "Working with Excel Files with the Script Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/15/2018"
 ms.service: sql
 ms.subservice: integration-services

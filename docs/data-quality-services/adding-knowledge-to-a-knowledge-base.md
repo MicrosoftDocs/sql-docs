@@ -1,8 +1,6 @@
 ---
 title: "Adding Knowledge to a Knowledge Base"
 description: "Adding Knowledge to a Knowledge Base"
-author: chugugrace
-ms.author: chugu
 ms.date: "06/04/2013"
 ms.service: sql
 ms.subservice: data-quality-services

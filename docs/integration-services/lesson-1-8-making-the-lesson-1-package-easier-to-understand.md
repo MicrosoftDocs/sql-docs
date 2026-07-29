@@ -1,8 +1,6 @@
 ---
 title: "Step 8: Annotate and format the Lesson 1 package"
 description: "Lesson 1-8: Annotate and format the Lesson 1 package"
-author: chugugrace
-ms.author: chugu
 ms.date: 06/29/2020
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Step 1: Create a new Integration Services project"
 description: "Lesson 1-1: Create a new Integration Services project"
-author: chugugrace
-ms.author: chugu
 ms.date: 09/17/2024
 ms.service: sql
 ms.subservice: integration-services

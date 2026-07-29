@@ -1,8 +1,6 @@
 ---
 title: "Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)"
 description: "Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: 06/29/2020
 ms.service: sql
 ms.subservice: integration-services

@@ -455,3 +455,4 @@ providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedule
 - [Configure an existing virtual network for Azure SQL Managed Instance](vnet-existing-add-subnet.md)
 - [Quickstart: Create Azure SQL Managed Instance](instance-create-quickstart.md)
 - [Resolve private domain names in Azure SQL Managed Instance](resolve-private-domain-names.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

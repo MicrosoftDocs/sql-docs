@@ -448,3 +448,4 @@ Consider the following limitations:
 
 - [Automated backups in Azure SQL Managed Instance](automated-backups-overview.md)
 - [Long-term retention backups](../database/long-term-retention-overview.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

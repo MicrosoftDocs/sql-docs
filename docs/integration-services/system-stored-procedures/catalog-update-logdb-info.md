@@ -1,8 +1,6 @@
 ---
 title: "catalog.update_logdb_info (SSISDB Database)"
 description: "catalog.update_logdb_info (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "07/18/2017"
 ms.service: sql
 ms.subservice: integration-services

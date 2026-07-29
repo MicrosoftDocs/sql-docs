@@ -314,3 +314,4 @@ az resource update --ids %sqlserverid% --set properties.connectionType=Proxy
 ## Related content
 
 - [Connectivity architecture](connectivity-architecture.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

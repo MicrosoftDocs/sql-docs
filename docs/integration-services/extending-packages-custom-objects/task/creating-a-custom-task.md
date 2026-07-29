@@ -1,8 +1,6 @@
 ---
 title: "Creating a Custom Task"
 description: "Creating a Custom Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

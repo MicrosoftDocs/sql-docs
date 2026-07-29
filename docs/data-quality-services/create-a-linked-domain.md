@@ -1,8 +1,6 @@
 ---
 title: "Create a Linked Domain"
 description: "Create a Linked Domain"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/08/2011"
 ms.service: sql
 ms.subservice: data-quality-services

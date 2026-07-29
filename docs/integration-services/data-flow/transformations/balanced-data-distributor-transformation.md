@@ -1,8 +1,6 @@
 ---
 title: "Balanced Data Distributor Transformation"
 description: "Balanced Data Distributor Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

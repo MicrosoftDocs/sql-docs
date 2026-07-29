@@ -1,8 +1,6 @@
 ---
 title: "OData Source"
 description: "OData Source"
-author: chugugrace
-ms.author: chugu
 ms.date: "09/17/2018"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Step 2: Add and configure a Flat File connection manager"
 description: "Lesson 1-2: Add and configure a Flat File connection manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/03/2019"
 ms.service: sql
 ms.subservice: integration-services

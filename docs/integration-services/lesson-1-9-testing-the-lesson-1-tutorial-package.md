@@ -1,8 +1,6 @@
 ---
 title: "Step 9: Test the Lesson 1 tutorial package"
 description: "Step 9: Test the Lesson 1 tutorial package"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/03/2019"
 ms.service: sql
 ms.subservice: integration-services

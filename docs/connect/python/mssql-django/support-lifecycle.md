@@ -4,7 +4,7 @@ description: Learn about the support lifecycle, version compatibility, and how t
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -21,7 +21,7 @@ Always use the latest release to gain new features, performance improvements, an
 
 ### Current version
 
-Version 1.7.3 is the current general availability (GA) release.
+Version 1.7.4 is the current general availability (GA) release.
 
 ### Support status definitions
 
@@ -36,7 +36,8 @@ Use these status values in the version table:
 
 | Version | Release date | Status | Django versions | Key features |
 | --- | --- | --- | --- | --- |
-| 1.7.3 | June 2026 | **Current** | 3.2 - 6.0 | `FA001` fix for `Authentication=` modes other than `ActiveDirectoryMsi`, subclassed `DatabaseWrapper` `KeyError` fix (regression from 1.7.1) |
+| 1.7.4 | July 2026 | **Current** | 3.2 - 6.0 | `GROUP BY` fixes for escaped `%%` literals with real params and for `IntegerChoices` params in raw queries |
+| 1.7.3 | June 2026 | Previous | 3.2 - 6.0 | `FA001` fix for `Authentication=` modes other than `ActiveDirectoryMsi`, subclassed `DatabaseWrapper` `KeyError` fix (regression from 1.7.1) |
 | 1.7.2 | May 2026 | Previous | 3.2 - 6.0 | **datetimeoffset** time zone fix, `Now()` time zone fix, `.explain()` compatibility fix |
 | 1.7.1 | April 2026 | Previous | 3.2 - 6.0 | SQL database in Fabric fix, descending index AlterField fix |
 | 1.7 | March 2026 | Previous | 3.2 - 6.0 | Django 6.0 support, ODBC Driver 18 default, SQL Server 2025 support |
@@ -162,14 +163,14 @@ The `mssql-django` package automatically installs the following dependencies:
 | --- | --- | --- |
 | Django | Web framework | >= 3.2 |
 | `pyodbc` | ODBC database driver for Python | >= 3.0 |
-| `pytz` | Time zone support (legacy; modern Django uses built-in `zoneinfo` with `USE_TZ=True`) | Any |
+| `pytz` | Time zone support (used by the backend for `datetime` conversion, regardless of `USE_TZ`) | Any |
 
 The `mssql-django` backend also requires the Microsoft ODBC Driver for SQL Server to be installed on the host system. For more information, see [Install mssql-django](installation.md).
 
 ## Policy for versioning and breaking changes
 
 - **Minor versions** (1.6, 1.7): Include new Django version support, new features, and bug fixes. Maintain backward compatibility.
-- **Patch versions** (1.7.1, 1.7.2, 1.7.3): Include bug fixes only.
+- **Patch versions** (1.7.1, 1.7.2, 1.7.3, 1.7.4): Include bug fixes only.
 
 The team documents breaking changes in release notes. See [What's new in mssql-django](whats-new.md) for version-specific notes.
 

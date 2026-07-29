@@ -4,7 +4,7 @@ description: Learn how to install the mssql-django Django database backend for S
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -41,12 +41,12 @@ pip install --upgrade mssql-django
 To install a specific version:
 
 ```bash
-pip install mssql-django==1.7.3
+pip install mssql-django==1.7.4
 ```
 
 ## Dependency and version compatibility
 
-For `mssql-django` 1.7.3, the package metadata includes these dependency constraints:
+For `mssql-django` 1.7.4, the package metadata includes these dependency constraints:
 
 | Component | Version guidance |
 | --- | --- |
@@ -70,7 +70,7 @@ Expected output:
 
 ```output
 Name: mssql-django
-Version: 1.7.3
+Version: 1.7.4
 Summary: Django backend for Microsoft SQL Server
 ```
 
@@ -148,7 +148,7 @@ The `mssql-django` package automatically installs the following dependencies:
 | `pyodbc` | ODBC database driver for Python |
 | `pytz` | Time zone support |
 
-`pytz` remains a package dependency for compatibility, but most modern Django time zone workflows use `USE_TZ=True` with Django's built-in time zone handling.
+The backend imports `pytz` internally to convert timezone-aware `datetime` values against SQL Server, so `pytz` remains a required runtime dependency even if your Django project uses `USE_TZ=True` with the standard library `zoneinfo` module.
 
 ## Related content
 

@@ -1,8 +1,6 @@
 ---
 title: "SSIS Catalog"
 description: "SSIS Catalog"
-author: chugugrace
-ms.author: chugu
 ms.date: 02/23/2026
 ai-usage: ai-assisted
 ms.service: sql

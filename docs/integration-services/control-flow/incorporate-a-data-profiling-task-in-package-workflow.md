@@ -1,8 +1,6 @@
 ---
 title: "Incorporate a Data Profiling Task in Package Workflow"
 description: "Incorporate a Data Profiling Task in Package Workflow"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

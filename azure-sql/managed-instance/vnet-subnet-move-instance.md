@@ -234,3 +234,4 @@ az sql mi op list -g myResourceGroup --mi mySqlManagedInstance
 - [Features comparison: Azure SQL Database and Azure SQL Managed Instance](../database/features-comparison.md)
 - [Connectivity architecture for Azure SQL Managed Instance](connectivity-architecture-overview.md)
 - [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

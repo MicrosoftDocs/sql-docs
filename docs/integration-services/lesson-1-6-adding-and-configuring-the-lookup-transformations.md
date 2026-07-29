@@ -1,8 +1,6 @@
 ---
 title: "Step 6: Add and configure the Lookup transformations"
 description: "Lesson 1-6: Add and configure the Lookup transformations"
-author: chugugrace
-ms.author: chugu
 ms.date: 03/19/2019
 ms.service: sql
 ms.subservice: integration-services

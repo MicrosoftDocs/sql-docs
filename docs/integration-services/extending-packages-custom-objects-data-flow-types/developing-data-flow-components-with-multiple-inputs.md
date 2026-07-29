@@ -1,8 +1,6 @@
 ---
 title: "Developing Data Flow Components with Multiple Inputs"
 description: "Developing Data Flow Components with Multiple Inputs"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

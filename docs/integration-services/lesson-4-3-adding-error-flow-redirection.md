@@ -1,8 +1,6 @@
 ---
 title: "Step 3: Add error flow redirection"
 description: "Lesson 4-3: Add error flow redirection"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/07/2019"
 ms.service: sql
 ms.subservice: integration-services

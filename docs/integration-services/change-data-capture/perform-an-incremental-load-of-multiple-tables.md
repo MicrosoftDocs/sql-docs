@@ -1,8 +1,6 @@
 ---
 title: "Perform an Incremental Load of Multiple Tables"
 description: "Perform an Incremental Load of Multiple Tables"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

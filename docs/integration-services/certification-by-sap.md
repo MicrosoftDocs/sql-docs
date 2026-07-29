@@ -1,8 +1,6 @@
 ---
 title: "Certification by SAP"
 description: "Certification by SAP"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

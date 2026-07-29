@@ -1,8 +1,6 @@
 ---
 title: "Run an SSIS package with PowerShell"
 description: "Run an SSIS package with PowerShell"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/23/2026"
 ai-usage: ai-assisted
 ms.service: sql

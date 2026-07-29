@@ -1,8 +1,6 @@
 ---
 title: "catalog.validations (SSISDB Database)"
 description: "catalog.validations (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Developing a Custom Transformation Component with Asynchronous Outputs"
 description: "Developing a Custom Transformation Component with Asynchronous Outputs"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: integration-services

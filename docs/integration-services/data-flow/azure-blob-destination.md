@@ -1,8 +1,6 @@
 ---
 title: "Azure Blob Destination"
 description: "Azure Blob Destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "07/25/2016"
 ms.service: sql
 ms.subservice: integration-services

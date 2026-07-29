@@ -39,6 +39,8 @@ In this article, you learn how to:
 - If provisioning in a subnet that is already delegated to Azure SQL Managed Instance, your user only needs the **Microsoft.Sql/managedInstances/write** permission assigned at subscription scope.
 - [Install and configure Terraform](/azure/developer/terraform/quickstart-configure)
 
+[!INCLUDE [modifiable-config-note](../includes/sql-managed-instance/modifiable-config-note.md)]
+
 ## Implement the Terraform code
 
 1. Create a directory in which to test and run the sample Terraform code and make it the current directory.

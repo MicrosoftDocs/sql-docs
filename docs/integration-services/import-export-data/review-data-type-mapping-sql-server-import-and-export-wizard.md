@@ -1,8 +1,6 @@
 ---
 title: "Review Data Type Mapping (SQL Server Import and Export Wizard)"
 description: "Review Data Type Mapping (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: integration-services

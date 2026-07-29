@@ -216,3 +216,4 @@ The following values for `ProductUpdateType` indicate the update policy for the 
 - [Automated backups in Azure SQL Managed Instance](automated-backups-overview.md)
 - [Long-term retention backups - Azure SQL Database and Azure SQL Managed Instance](../database/long-term-retention-overview.md)
 - [Failover groups overview & best practices - Azure SQL Managed Instance](failover-group-sql-mi.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

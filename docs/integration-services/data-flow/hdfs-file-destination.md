@@ -1,8 +1,6 @@
 ---
 title: "HDFS File Destination"
 description: "HDFS File Destination"
-author: chugugrace
-ms.author: chugu
 ms.date: 01/09/2019
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Choose a Data Source (SQL Server Import and Export Wizard)"
 description: "Choose a Data Source (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/28/2019"
 ms.service: sql
 ms.subservice: integration-services

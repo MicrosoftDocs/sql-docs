@@ -1,8 +1,6 @@
 ---
 title: "High Availability Support"
 description: "High Availability Support"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

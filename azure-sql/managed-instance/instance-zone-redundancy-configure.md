@@ -150,3 +150,4 @@ Review [zone redundancy availability by region](region-availability.md#zone-redu
 - [Restore a database from a backup in Azure SQL Managed Instance](recovery-using-backups.md)
 - [Failover groups overview & best practices - Azure SQL Managed Instance](failover-group-sql-mi.md)
 - [Geo-restore](recovery-using-backups.md#point-in-time-restore)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

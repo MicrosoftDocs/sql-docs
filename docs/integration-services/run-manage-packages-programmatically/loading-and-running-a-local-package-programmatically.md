@@ -1,8 +1,6 @@
 ---
 title: "Loading and Running a Local Package Programmatically"
 description: "Loading and Running a Local Package Programmatically"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

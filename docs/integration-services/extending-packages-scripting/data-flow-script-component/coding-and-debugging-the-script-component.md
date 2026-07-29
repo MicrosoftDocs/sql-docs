@@ -1,8 +1,6 @@
 ---
 title: "Coding and Debugging the Script Component"
 description: "Coding and Debugging the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

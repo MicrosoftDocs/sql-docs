@@ -1,8 +1,6 @@
 ---
 title: "Using the DQS Default Knowledge Base"
 description: "Using the DQS Default Knowledge Base"
-author: chugugrace
-ms.author: chugu
 ms.date: "07/31/2012"
 ms.service: sql
 ms.subservice: data-quality-services

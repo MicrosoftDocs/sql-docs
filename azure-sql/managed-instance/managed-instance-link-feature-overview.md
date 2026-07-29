@@ -256,3 +256,4 @@ For other replication and migration scenarios, consider:
 
 - [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
 - [Log Replay Service (LRS)](log-replay-service-overview.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

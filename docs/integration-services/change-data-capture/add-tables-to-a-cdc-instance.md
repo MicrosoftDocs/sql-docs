@@ -1,8 +1,6 @@
 ---
 title: "Add Tables to a CDC Instance"
 description: "Add Tables to a CDC Instance"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

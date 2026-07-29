@@ -1,8 +1,6 @@
 ---
 title: "Select Variables Page"
 description: "Select Variables Page"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

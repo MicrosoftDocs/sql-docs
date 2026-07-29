@@ -1,8 +1,6 @@
 ---
 title: "Azure SQL DW Upload Task"
 description: "Azure SQL DW Upload Task"
-author: "Lingxi-Li"
-ms.author: "lingxl"
 ms.date: "12/16/2016"
 ms.service: sql
 ms.subservice: integration-services

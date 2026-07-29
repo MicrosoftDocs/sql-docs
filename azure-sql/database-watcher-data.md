@@ -5,7 +5,7 @@ description: A detailed description of SQL monitoring data collected by database
 author: lcwright
 ms.author: lancewright
 ms.reviewer: dfurman
-ms.date: 09/02/2025
+ms.date: 07/29/2026
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: concept-article
@@ -140,7 +140,7 @@ To monitor a dense elastic pool, enable monitoring at the pool level by adding t
 
 If a [serverless](./database/serverless-tier-overview.md) database has auto-pause disabled, database watcher monitors it just like a provisioned database.
 
-If you enable auto-pause on a serverless database, database watcher data collection stops when the database pauses. Database watcher monitoring queries do not prevent a serverless database from pausing if it is [eligible to be paused](./database/serverless-tier-overview.md#auto-pause) otherwise.
+If you enable auto-pause on a serverless database, database watcher data collection stops when the database pauses. Database watcher monitoring queries don't prevent a serverless database from pausing if it's [eligible to be paused](./database/serverless-tier-auto-pause-resume.md#auto-pause).
 
 Shortly after a serverless database transitions to a **Paused** state, its status on the watcher summary dashboard changes to **Not collecting**. The previously collected data for the database remains in the watcher data store, and is accessible via dashboards and queries.
 

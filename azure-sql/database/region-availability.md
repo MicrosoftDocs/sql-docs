@@ -367,3 +367,4 @@ Currently, all regions with serverless support 40 vCores and provide [availabili
 - [Designing globally available services using Azure SQL Database](designing-cloud-solutions-for-disaster-recovery.md?view=azuresql-db&preserve-view=true)
 - [Move resources to new region - Azure SQL Database](move-resources-across-regions.md?view=azuresql-db&preserve-view=true)
 - [Disaster recovery guidance - Azure SQL Database](disaster-recovery-guidance.md)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

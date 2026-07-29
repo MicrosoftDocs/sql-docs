@@ -32,6 +32,8 @@ To create a SQL managed instance, you need the following prerequisites:
 
 For limitations, see [Supported regions](resource-limits.md#supported-regions) and [Supported subscription types](resource-limits.md#supported-subscription-types).
 
+[!INCLUDE [modifiable-config-note](../includes/sql-managed-instance/modifiable-config-note.md)]
+
 ## Create Azure SQL Managed Instance
 
 You can create a deployment of Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 
@@ -261,3 +263,4 @@ To restore an existing SQL Server database from on-premises to SQL Managed Insta
 - [Migration overview: SQL Server to SQL Managed Instance](../migration-guides/managed-instance/sql-server-to-managed-instance-overview.md)
 - [Quickstart: Configure a point-to-site connection to Azure SQL Managed Instance from on-premises](point-to-site-p2s-configure.md)
 - [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

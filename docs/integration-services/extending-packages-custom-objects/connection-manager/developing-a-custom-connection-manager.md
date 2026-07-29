@@ -1,8 +1,6 @@
 ---
 title: "Developing a Custom Connection Manager"
 description: "Developing a Custom Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

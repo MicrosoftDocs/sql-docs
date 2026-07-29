@@ -1,8 +1,6 @@
 ---
 title: "SSIS Package Upgrade Wizard F1 Help"
 description: "SSIS Package Upgrade Wizard F1 Help"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Step 3: Add and configure an OLE DB connection manager"
 description: "Lesson 1-3: Add and configure an OLE DB connection manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/03/2019"
 ms.service: sql
 ms.subservice: integration-services

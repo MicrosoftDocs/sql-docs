@@ -1,8 +1,6 @@
 ---
 title: "Run an SSIS project with .NET code (C#)"
 description: "Run an SSIS package with C# code in a .NET app"
-author: chugugrace
-ms.author: chugu
 ms.date: 02/09/2026
 ms.service: sql
 ms.subservice: integration-services

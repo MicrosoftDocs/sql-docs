@@ -1,8 +1,6 @@
 ---
 title: "Developing a User Interface for a Data Flow Component"
 description: "Developing a User Interface for a Data Flow Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

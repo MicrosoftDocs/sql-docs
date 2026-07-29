@@ -1,8 +1,6 @@
 ---
 title: "Development and Management Tools"
 description: "Integration Services (SSIS) Development and Management Tools"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: 
 ms.date: 10/14/2022
 ms.service: sql

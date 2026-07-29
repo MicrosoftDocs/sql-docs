@@ -1,8 +1,6 @@
 ---
 title: "CDC Source"
 description: The CDC source reads a range of change data from SQL Server change tables and delivers the changes downstream to other SSIS components.
-author: chugugrace
-ms.author: chugu
 ms.reviewer: randolphwest
 ms.date: 02/22/2023
 ms.service: sql

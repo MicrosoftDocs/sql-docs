@@ -27,6 +27,8 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - Much of this article can be accomplished with the Azure portal alone. Optionally, use the latest version of [Azure PowerShell](/powershell/azure/install-az-ps) or [Azure CLI](/cli/azure/install-azure-cli-windows).
 
+[!INCLUDE [modifiable-config-note](../includes/database/modifiable-config-note.md)]
+
 ### Permissions
 
 **To create databases via Transact-SQL**: `CREATE DATABASE` permissions are necessary. To create a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`. For more information, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).
@@ -330,3 +332,4 @@ Want to optimize and save on your cloud spending?
 - [Connect and query your database](connect-query-content-reference-guide.md)
 - [Quickstart: Use SSMS to connect to and query Azure SQL Database](connect-query-ssms.md)
 - [Connect and with the MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/connect-database-visual-studio-code)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

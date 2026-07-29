@@ -1,8 +1,6 @@
 ---
 title: "Errors and Events Reference (Integration Services)"
 description: "Errors and Events Reference (Integration Services)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

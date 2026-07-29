@@ -1,8 +1,6 @@
 ---
 title: "Load Data by Using the ODBC Destination"
 description: "Load Data by Using the ODBC Destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

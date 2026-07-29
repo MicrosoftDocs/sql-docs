@@ -1,8 +1,6 @@
 ---
 title: "Choose a Destination (SQL Server Import and Export Wizard)"
 description: "Choose a Destination (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: integration-services

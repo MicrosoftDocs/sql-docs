@@ -1,8 +1,6 @@
 ---
 title: "General Page of Integration Services Designers Options"
 description: "General Page of Integration Services Designers Options"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

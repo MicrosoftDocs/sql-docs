@@ -1,8 +1,6 @@
 ---
 title: "catalog.extended_operation_info (SSISDB Database)"
 description: "catalog.extended_operation_info (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

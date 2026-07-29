@@ -1,8 +1,6 @@
 ---
 title: "Adding Tasks Programmatically"
 description: "Adding Tasks Programmatically"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -327,3 +327,4 @@ The following table shows several properties, accessible through Transact-SQL, t
 - [SQL Managed Instance migration using Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance)
 - [Monitor Azure SQL Managed Instance using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql)
 - [SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

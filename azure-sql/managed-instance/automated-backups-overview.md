@@ -354,3 +354,4 @@ If the default retention doesn't meet your compliance requirements, you can chan
 - [Restore a database from a backup in Azure SQL Managed Instance](recovery-using-backups.md)
 - [Backup storage consumption on SQL Managed Instance explained](https://aka.ms/mi-backup-explained)
 - [Fine tuning backup storage costs on SQL Managed Instance](https://aka.ms/mi-backup-tuning)
+- [Modifiable configuration reference for Azure SQL Managed Instance](modifiable-configuration-reference.md)

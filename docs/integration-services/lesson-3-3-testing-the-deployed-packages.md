@@ -1,8 +1,6 @@
 ---
 title: "Step 3: Testing the Deployed Packages"
 description: "Lesson 3-3 - Testing the Deployed Packages"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

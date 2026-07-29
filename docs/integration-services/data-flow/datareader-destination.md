@@ -1,8 +1,6 @@
 ---
 title: "DataReader Destination"
 description: "DataReader Destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

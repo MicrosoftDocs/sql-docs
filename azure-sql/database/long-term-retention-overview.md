@@ -149,3 +149,4 @@ Because database backups protect data from accidental corruption or deletion, th
 - [Business continuity overview for Azure SQL Managed Instance](../managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-mi&preserve-view=true)
 - [Automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true)
 - [Automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true)
+- [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

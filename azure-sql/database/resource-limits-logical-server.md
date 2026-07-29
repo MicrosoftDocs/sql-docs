@@ -50,7 +50,7 @@ Consider the following:
 
 - These limits are applicable to new and existing subscriptions. 
 - Databases and elastic pools provisioned with the [DTU purchasing model](service-tiers-dtu.md) are counted against the vCore quota, and vice-versa. Each vCore consumed is considered equivalent to 100 DTUs consumed for the server-level quota.
-- Default limits include both the vCores configured for provisioned compute databases / elastic pools, and the **max vCores** configured for [serverless](serverless-tier-overview.md#create-serverless-db) databases. 
+- Default limits include both the vCores configured for provisioned compute databases / elastic pools, and the **max vCores** configured for [serverless](serverless-tier-overview.md) databases. 
 - You can use the [Subscription Usages - Get](/rest/api/sql/subscription-usages/get) REST API call to determine your current vCore usage for your subscription. 
 - To request a higher vCore quota than the default, submit a new support request in the Azure portal. For more information, see [Request quota increases for Azure SQL Database and SQL Managed Instance](quota-increase-request.md).
 

@@ -1,8 +1,6 @@
 ---
 title: "Stored Procedures (Integration Services Catalog)"
 description: "Stored Procedures (Integration Services Catalog)"
-author: chugugrace
-ms.author: chugu
 ms.date: "12/16/2016"
 ms.service: sql
 ms.subservice: integration-services

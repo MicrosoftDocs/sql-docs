@@ -1,8 +1,6 @@
 ---
 title: "Data Mining Query"
 description: "Data Mining Query"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

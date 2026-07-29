@@ -1,8 +1,6 @@
 ---
 title: "Azure Subscription Connection Manager"
 description: "Azure Subscription Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/02/2017"
 ms.service: sql
 ms.subservice: integration-services

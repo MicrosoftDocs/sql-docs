@@ -1,8 +1,6 @@
 ---
 title: "catalog.environment_references (SSISDB Database)"
 description: "catalog.environment_references (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

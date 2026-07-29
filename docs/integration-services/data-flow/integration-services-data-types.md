@@ -1,8 +1,6 @@
 ---
 title: "Integration Services Data Types"
 description: "Integration Services Data Types"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: integration-services

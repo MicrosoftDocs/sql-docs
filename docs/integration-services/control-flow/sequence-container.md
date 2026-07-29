@@ -1,8 +1,6 @@
 ---
 title: "Sequence Container"
 description: "Sequence Container"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

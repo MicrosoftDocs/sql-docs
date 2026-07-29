@@ -1,8 +1,6 @@
 ---
 title: "Load data from or into Oracle database"
 description: Learn how to load data from or into Oracle database
-author: chugugrace
-ms.author: chugu
 ms.date: 01/06/2025
 ms.service: sql
 ms.subservice: integration-services

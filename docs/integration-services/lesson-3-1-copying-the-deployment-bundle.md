@@ -1,8 +1,6 @@
 ---
 title: "Step 1: Copying the Deployment Bundle"
 description: "Lesson 3-1 - Copying the Deployment Bundle"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

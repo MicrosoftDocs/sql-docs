@@ -1,8 +1,6 @@
 ---
 title: "Convert Types no Conversion Checking (SQL Server Import-Export Wizard)"
 description: "Convert Types without Conversion Checking (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/11/2017"
 ms.service: sql
 ms.subservice: integration-services

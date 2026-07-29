@@ -1,8 +1,6 @@
 ---
 title: "Multiple Files Connection Manager"
 description: "Multiple Files Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

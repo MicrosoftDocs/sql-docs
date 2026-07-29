@@ -1,8 +1,6 @@
 ---
 title: "Welcome to the Slowly Changing Dimension Wizard"
 description: "Welcome to the Slowly Changing Dimension Wizard"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

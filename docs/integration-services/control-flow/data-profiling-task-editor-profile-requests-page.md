@@ -1,8 +1,6 @@
 ---
 title: "Data Profiling Task Editor (Profile Requests Page)"
 description: "Data Profiling Task Editor (Profile Requests Page)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

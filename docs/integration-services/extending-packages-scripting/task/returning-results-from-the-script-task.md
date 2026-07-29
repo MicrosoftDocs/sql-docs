@@ -1,8 +1,6 @@
 ---
 title: "Returning Results from the Script Task"
 description: "Returning Results from the Script Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

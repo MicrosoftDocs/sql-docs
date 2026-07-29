@@ -1,8 +1,6 @@
 ---
 title: "! (Logical Not) (SSIS Expression)"
 description: "! (Logical Not) (SSIS Expression)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

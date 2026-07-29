@@ -1,8 +1,6 @@
 ---
 title: "catalog.move_environment (SSISDB Database)"
 description: "catalog.move_environment (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

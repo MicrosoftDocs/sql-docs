@@ -1,8 +1,6 @@
 ---
 title: "Error Handling in Data"
 description: "Error Handling in Data"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

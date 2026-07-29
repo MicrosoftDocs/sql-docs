@@ -1,8 +1,6 @@
 ---
 title: "catalog.execution_component_phases"
 description: "catalog.execution_component_phases"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

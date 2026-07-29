@@ -1,8 +1,6 @@
 ---
 title: "Developing a Custom Transformation Component with Synchronous Outputs"
 description: "Developing a Custom Transformation Component with Synchronous Outputs"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

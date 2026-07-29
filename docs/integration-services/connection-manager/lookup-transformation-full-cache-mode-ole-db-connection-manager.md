@@ -1,8 +1,6 @@
 ---
 title: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager"
 description: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "catalog.set_worker_agent_property (SSISDB Database)"
 description: "catalog.set_worker_agent_property (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/02/2017"
 ms.service: sql
 ms.subservice: integration-services

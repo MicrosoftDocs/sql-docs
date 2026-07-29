@@ -1,8 +1,6 @@
 ---
 title: "Comparing the Script Task and the Script Component"
 description: "Comparing the Script Task and the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "catalog.remove_data_tap"
 description: "catalog.remove_data_tap"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

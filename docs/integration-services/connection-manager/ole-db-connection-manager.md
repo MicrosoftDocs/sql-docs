@@ -1,8 +1,6 @@
 ---
 title: "OLEDB connection manager"
 description: An OLEDB connection manager enables a package to connect to a data source by using an OLEDB provider.
-author: chugugrace
-ms.author: chugu
 ms.date: "10/13/2023"
 ms.service: sql
 ms.subservice: integration-services

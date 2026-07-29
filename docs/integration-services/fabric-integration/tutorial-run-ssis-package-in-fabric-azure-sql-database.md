@@ -1,8 +1,6 @@
 ---
 title: "Tutorial: Run SSIS Packages in Fabric with SQL Authentication to Azure SQL Database"
 description: Learn how to run SSIS packages in Microsoft Fabric with SQL authentication to Azure SQL Database.
-author: chugugrace
-ms.author: chugu
 ms.reviewer: randolphwest, mathoma, wiassaf
 ms.date: 05/13/2026
 ms.service: sql

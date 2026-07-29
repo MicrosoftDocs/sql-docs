@@ -1,8 +1,6 @@
 ---
 title: "Step 4: Add a Data Flow task to the package"
 description: "Lesson 1-4: Add a Data Flow task to the package"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/03/2019"
 ms.service: sql
 ms.subservice: integration-services

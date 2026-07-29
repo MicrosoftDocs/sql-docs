@@ -1,8 +1,6 @@
 ---
 title: "Extend a Dataset by Using the Merge Join Transformation"
 description: "Extend a Dataset by Using the Merge Join Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

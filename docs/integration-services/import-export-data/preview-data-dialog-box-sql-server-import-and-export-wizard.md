@@ -1,8 +1,6 @@
 ---
 title: "Preview Data Dialog Box (SQL Server Import and Export Wizard)"
 description: "Preview Data Dialog Box (SQL Server Import and Export Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/16/2017"
 ms.service: sql
 ms.subservice: integration-services

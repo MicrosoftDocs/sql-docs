@@ -1,8 +1,6 @@
 ---
 title: "SQL Server Integration Services migration to Azure overview| Microsoft Docs"
 description: This article highlights process and tools to migrate SQL Server Integration Services migration to Azure.
-author: chugugrace
-ms.author: chugu
 ms.date: "04/10/2020"
 ms.service: sql
 ms.subservice: integration-services

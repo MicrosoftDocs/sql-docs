@@ -1,8 +1,6 @@
 ---
 title: "Import from Excel or Export to Excel with SSIS"
 description: "Learn how to import or export Excel data with SQL Server Integration Services (SSIS), along with prerequisites, known issues, and limitations."
-author: chugugrace
-ms.author: chugu
 ms.reviewer: mathoma
 ms.date: 09/08/2025
 ms.service: sql

@@ -1,8 +1,6 @@
 ---
 title: "Operator Precedence and Associativity"
 description: "Operator Precedence and Associativity"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

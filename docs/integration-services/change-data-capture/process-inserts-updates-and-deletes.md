@@ -1,8 +1,6 @@
 ---
 title: "Process Inserts, Updates, and Deletes"
 description: "Process Inserts, Updates, and Deletes"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

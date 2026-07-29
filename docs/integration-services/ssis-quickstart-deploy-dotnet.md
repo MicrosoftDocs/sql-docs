@@ -1,8 +1,6 @@
 ---
 title: "Deploy an SSIS project with .NET code (C#)"
 description: "Deploy an SSIS project with C# code in a .NET app"
-author: chugugrace
-ms.author: chugu
 ms.date: 02/09/2026
 ms.service: sql
 ms.subservice: integration-services

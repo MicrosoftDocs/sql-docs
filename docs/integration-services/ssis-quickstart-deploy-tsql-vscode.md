@@ -1,8 +1,6 @@
 ---
 title: "Deploy an SSIS project with Transact-SQL (VS Code)"
 description: "Deploy an SSIS project from Visual Studio Code with Transact-SQL"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/21/2018"
 ms.service: sql
 ms.subservice: integration-services

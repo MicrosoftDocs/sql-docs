@@ -1,8 +1,6 @@
 ---
 title: "catalog.set_environment_variable_protection (SSISDB Database)"
 description: "catalog.set_environment_variable_protection (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "SSIS Designer"
 description: "SSIS Designer"
-author: chugugrace
-ms.author: chugu
 ms.date: "04/01/2026"
 ai-usage: ai-assisted
 ms.service: sql

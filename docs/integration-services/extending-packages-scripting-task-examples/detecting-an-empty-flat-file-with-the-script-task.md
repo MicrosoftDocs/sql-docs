@@ -1,8 +1,6 @@
 ---
 title: "Detecting an Empty Flat File with the Script Task"
 description: "Detecting an Empty Flat File with the Script Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

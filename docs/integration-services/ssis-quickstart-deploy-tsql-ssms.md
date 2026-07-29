@@ -1,8 +1,6 @@
 ---
 title: "Deploy an SSIS project with Transact-SQL (SSMS)"
 description: "Deploy an SSIS project from SSMS with Transact-SQL"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/21/2018"
 ms.service: sql
 ms.subservice: integration-services

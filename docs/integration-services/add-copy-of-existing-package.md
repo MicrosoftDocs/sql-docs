@@ -1,8 +1,6 @@
 ---
 title: "Add Copy of Existing Package"
 description: "Add Copy of Existing Package"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Loop through Excel Files and Tables with a Foreach Loop Container"
 description: "Loop through Excel Files and Tables with a Foreach Loop Container"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/15/2018"
 ms.service: sql
 ms.subservice: integration-services

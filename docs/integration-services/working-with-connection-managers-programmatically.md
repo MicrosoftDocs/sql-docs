@@ -1,8 +1,6 @@
 ---
 title: "Working with Connection Managers Programmatically"
 description: "Working with Connection Managers Programmatically"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

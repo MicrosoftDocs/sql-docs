@@ -1,8 +1,6 @@
 ---
 title: "catalog.disable_worker_agent (SSISDB Database)"
 description: "catalog.disable_worker_agent (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "12/16/2016"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Loading the Output of a Local Package"
 description: "Loading the Output of a Local Package"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

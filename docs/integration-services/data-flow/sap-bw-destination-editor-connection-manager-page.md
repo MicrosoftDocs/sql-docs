@@ -1,8 +1,6 @@
 ---
 title: "SAP BW Destination Editor (Connection Manager Page)"
 description: "SAP BW Destination Editor (Connection Manager Page)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

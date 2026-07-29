@@ -1,8 +1,6 @@
 ---
 title: "Understanding Synchronous and Asynchronous Transformations"
 description: "Understanding Synchronous and Asynchronous Transformations"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

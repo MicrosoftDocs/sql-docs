@@ -1,8 +1,6 @@
 ---
 title: "Monitor Running Packages and Other Operations"
 description: "Monitor Running Packages and Other Operations"
-author: chugugrace
-ms.author: chugu
 ms.date: 06/04/2018
 ms.service: sql
 ms.subservice: integration-services

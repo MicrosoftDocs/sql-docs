@@ -1,8 +1,6 @@
 ---
 title: "How to View the CDC Instance Properties"
 description: "How to View the CDC Instance Properties"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

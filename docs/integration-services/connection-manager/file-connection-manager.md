@@ -1,8 +1,6 @@
 ---
 title: "File Connection Manager"
 description: "File Connection Manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/29/2024"
 ms.service: sql
 ms.subservice: integration-services

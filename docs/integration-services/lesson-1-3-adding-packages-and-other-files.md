@@ -1,8 +1,6 @@
 ---
 title: "Step 3: Adding Packages and Other Files"
 description: "Lesson 1-3 - Adding Packages and Other Files"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

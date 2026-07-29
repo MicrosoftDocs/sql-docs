@@ -1,8 +1,6 @@
 ---
 title: "Reuse Control Flow across Packages by Using Control Flow Package Parts"
 description: "Reuse Control Flow across Packages by Using Control Flow Package Parts"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

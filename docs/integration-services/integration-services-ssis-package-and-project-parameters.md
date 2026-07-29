@@ -1,8 +1,6 @@
 ---
 title: "Package and Project Parameters"
 description: "Integration Services (SSIS) Package and Project Parameters"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

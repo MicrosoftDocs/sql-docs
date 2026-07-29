@@ -1,8 +1,6 @@
 ---
 title: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent"
 description: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

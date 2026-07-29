@@ -1,8 +1,6 @@
 ---
 title: "Derive Column Values with the Derived Column Transformation"
 description: "Derive Column Values with the Derived Column Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

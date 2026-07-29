@@ -1,8 +1,6 @@
 ---
 title: "catalog.startup"
 description: "catalog.startup"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

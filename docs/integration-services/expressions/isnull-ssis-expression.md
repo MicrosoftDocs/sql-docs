@@ -1,8 +1,6 @@
 ---
 title: "ISNULL (SSIS Expression)"
 description: "ISNULL (SSIS Expression)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

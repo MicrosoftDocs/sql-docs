@@ -1,8 +1,6 @@
 ---
 title: "Azure HDInsight Pig Task"
 description: "Azure HDInsight Pig Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/28/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "catalog.cleanup_server_log"
 description: "catalog.cleanup_server_log"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

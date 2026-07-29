@@ -1,8 +1,6 @@
 ---
 title: "Add or Delete a Task or a Container in a Control Flow"
 description: "Add or Delete a Task or a Container in a Control Flow"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

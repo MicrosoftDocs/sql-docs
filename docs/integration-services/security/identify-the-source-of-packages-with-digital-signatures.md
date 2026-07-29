@@ -1,8 +1,6 @@
 ---
 title: "Identify the Source of Packages with Digital Signatures"
 description: "Identify the Source of Packages with Digital Signatures"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/24/2016"
 ms.service: sql
 ms.subservice: integration-services

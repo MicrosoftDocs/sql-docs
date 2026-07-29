@@ -1,8 +1,6 @@
 ---
 title: "catalog.execution_data_statistics"
 description: "catalog.execution_data_statistics"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

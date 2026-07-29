@@ -1,8 +1,6 @@
 ---
 title: "SAP BW Source Editor (Connection Manager Page)"
 description: "SAP BW Source Editor (Connection Manager Page)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

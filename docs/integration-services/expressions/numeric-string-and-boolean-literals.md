@@ -1,8 +1,6 @@
 ---
 title: "Literals (SSIS)"
 description: "Numeric, string, and Boolean literals"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: randolphwest
 ms.date: 08/17/2022
 ms.service: sql

@@ -1,8 +1,6 @@
 ---
 title: "Azure Data Lake Store Source"
 description: "Azure Data Lake Store Source"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/16/2018"
 ms.service: sql
 ms.subservice: integration-services

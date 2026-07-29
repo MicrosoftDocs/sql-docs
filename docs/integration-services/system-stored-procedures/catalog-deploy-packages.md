@@ -1,8 +1,6 @@
 ---
 title: "catalog.deploy_packages"
 description: "catalog.deploy_packages"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

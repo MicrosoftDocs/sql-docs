@@ -1,8 +1,6 @@
 ---
 title: "Historical Attribute Options (Slowly Changing Dimension Wizard)"
 description: "Historical Attribute Options (Slowly Changing Dimension Wizard)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

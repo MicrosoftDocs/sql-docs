@@ -1,8 +1,6 @@
 ---
 title: "Coding a Custom Task"
 description: "Coding a Custom Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: integration-services

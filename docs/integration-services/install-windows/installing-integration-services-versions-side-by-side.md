@@ -1,8 +1,6 @@
 ---
 title: "Installing Integration Services Versions Side by Side"
 description: "Installing Integration Services Versions Side by Side"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

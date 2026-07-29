@@ -1,8 +1,6 @@
 ---
 title: "Azure HDInsight Connection Manager"
 description: "Azure HDInsight Connection Manager"
-author: "Lingxi-Li"
-ms.author: "lingxl"
 ms.date: "02/28/2017"
 ms.service: sql
 ms.subservice: integration-services

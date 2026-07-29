@@ -1,8 +1,6 @@
 ---
 title: "Enumerated Constants in Property Expressions"
 description: "Enumerated Constants in Property Expressions"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Convert Data Type with Data Conversion Transformation"
 description: "Convert Data Type with Data Conversion Transformation"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: integration-services

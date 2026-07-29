@@ -1,8 +1,6 @@
 ---
 title: "Integration Services Roles (SSIS Service)"
 description: "Integration Services Roles (SSIS Service)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

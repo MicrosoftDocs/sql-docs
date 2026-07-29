@@ -1,8 +1,6 @@
 ---
 title: "The CDC Designer Console Introduction"
 description: "The CDC Designer Console Introduction"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

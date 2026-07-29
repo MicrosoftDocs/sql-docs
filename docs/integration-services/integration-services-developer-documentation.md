@@ -1,8 +1,6 @@
 ---
 title: "Integration Services Developer Documentation"
 description: "Integration Services Developer Documentation"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

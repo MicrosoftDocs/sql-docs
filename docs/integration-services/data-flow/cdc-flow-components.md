@@ -1,8 +1,6 @@
 ---
 title: "CDC Flow Components"
 description: "CDC Flow Components"
-author: chugugrace
-ms.author: chugu
 ms.date: "05/09/2024"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Oracle Supplemental Logging Script"
 description: "Oracle Supplemental Logging Script"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

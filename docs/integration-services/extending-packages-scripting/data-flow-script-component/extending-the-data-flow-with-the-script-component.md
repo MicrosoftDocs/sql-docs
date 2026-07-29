@@ -1,8 +1,6 @@
 ---
 title: "Extending the Data Flow with the Script Component"
 description: "Extending the Data Flow with the Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Data Sources"
 description: "Data Sources for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages"
-author: chugugrace
-ms.author: chugu
 ms.date: "08/27/2016"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Step 2: Add and configure the Foreach Loop container"
 description: "Lesson 2-2: Add and configure the Foreach Loop container"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/03/2019"
 ms.service: sql
 ms.subservice: integration-services

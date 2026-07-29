@@ -1,8 +1,6 @@
 ---
 title: "catalog.explicit_object_permissions (SSISDB Database)"
 description: "catalog.explicit_object_permissions (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

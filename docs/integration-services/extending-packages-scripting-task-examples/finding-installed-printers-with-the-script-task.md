@@ -1,8 +1,6 @@
 ---
 title: "Finding Installed Printers with the Script Task"
 description: "Finding Installed Printers with the Script Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

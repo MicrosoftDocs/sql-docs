@@ -1,8 +1,6 @@
 ---
 title: "Microsoft Connector for Oracle"
 description: "Microsoft Connector for Oracle"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/18/2024"
 ms.service: sql
 ms.subservice: integration-services

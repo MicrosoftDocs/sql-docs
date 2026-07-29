@@ -1,8 +1,6 @@
 ---
 title: "Access Control for Sensitive Data in Packages"
 description: "Access Control for Sensitive Data in Packages"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

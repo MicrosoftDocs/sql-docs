@@ -1,8 +1,6 @@
 ---
 title: "Hadoop and HDFS Support in Integration Services (SSIS)"
 description: "Hadoop and HDFS Support in Integration Services (SSIS)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

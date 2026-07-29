@@ -1,8 +1,6 @@
 ---
 title: "How to Use the CDC Service Command-Line Interface"
 description: "How to Use the CDC Service Command-Line Interface"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

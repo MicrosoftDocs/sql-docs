@@ -1,8 +1,6 @@
 ---
 title: "Views (Integration Services Catalog)"
 description: "Views (Integration Services Catalog)"
-author: chugugrace
-ms.author: chugu
 ms.date: "12/16/2016"
 ms.service: sql
 ms.subservice: integration-services

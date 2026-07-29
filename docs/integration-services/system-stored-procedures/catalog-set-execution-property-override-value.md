@@ -1,8 +1,6 @@
 ---
 title: "catalog.set_execution_property_override_value"
 description: "catalog.set_execution_property_override_value"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

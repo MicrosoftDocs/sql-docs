@@ -1,8 +1,6 @@
 ---
 title: "Connect to the Teradata source"
 description: "Connect to the Teradata source"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/22/2019"
 ms.service: sql
 ms.subservice: integration-services

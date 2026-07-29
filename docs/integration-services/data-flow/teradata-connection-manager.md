@@ -1,8 +1,6 @@
 ---
 title: "Use the Teradata connection manager"
 description: "Use the Teradata connection manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/22/2019"
 ms.service: sql
 ms.subservice: integration-services

@@ -1,8 +1,6 @@
 ---
 title: "Execute T-SQL Statement Task"
 description: "Execute T-SQL Statement Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/13/2017"
 ms.service: sql
 ms.subservice: integration-services

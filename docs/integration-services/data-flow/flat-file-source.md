@@ -1,8 +1,6 @@
 ---
 title: "Flat File Source"
 description: "Flat File Source"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

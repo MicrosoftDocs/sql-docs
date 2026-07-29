@@ -1,8 +1,6 @@
 ---
 title: "Installing the Microsoft Connector for SAP BW"
 description: "Installing the Microsoft Connector for SAP BW"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: 
 ms.date: 02/13/2025
 ms.service: sql

@@ -1,8 +1,6 @@
 ---
 title: "Debug a Script by Setting Breakpoints in a Script Task and Script Component"
 description: "Debug a Script by Setting Breakpoints in a Script Task and Script Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: integration-services

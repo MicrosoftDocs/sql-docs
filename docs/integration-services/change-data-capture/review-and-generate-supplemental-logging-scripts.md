@@ -1,8 +1,6 @@
 ---
 title: "Review and Generate Supplemental Logging Scripts"
 description: "Review and Generate Supplemental Logging Scripts"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

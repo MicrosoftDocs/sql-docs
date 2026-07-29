@@ -1,8 +1,6 @@
 ---
 title: "Step 1: Creating Working Folders and Environment Variables"
 description: "Lesson 1-1 - Creating Working Folders and Environment Variables"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

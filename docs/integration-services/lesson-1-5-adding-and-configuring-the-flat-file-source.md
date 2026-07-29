@@ -1,8 +1,6 @@
 ---
 title: "Step 5: Add and configure the Flat File source"
 description: "Lesson 1-5: Add and configure the Flat File source"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/03/2019"
 ms.service: sql
 ms.subservice: integration-services

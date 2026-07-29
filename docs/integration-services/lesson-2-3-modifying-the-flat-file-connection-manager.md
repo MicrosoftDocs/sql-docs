@@ -1,8 +1,6 @@
 ---
 title: "Step 3: Modify the Flat File connection manager"
 description: "Lesson 2-3: Modify the Flat File connection manager"
-author: chugugrace
-ms.author: chugu
 ms.date: "01/03/2019"
 ms.service: sql
 ms.subservice: integration-services

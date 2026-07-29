@@ -1,8 +1,6 @@
 ---
 title: "Working with Data Types in the Data Flow"
 description: "Working with Data Types in the Data Flow"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: integration-services

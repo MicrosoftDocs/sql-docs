@@ -1,8 +1,6 @@
 ---
 title: "Analysis Services Processing Task"
 description: "Analysis Services Processing Task"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

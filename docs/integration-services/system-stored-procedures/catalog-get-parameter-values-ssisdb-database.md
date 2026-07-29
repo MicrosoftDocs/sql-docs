@@ -1,8 +1,6 @@
 ---
 title: "catalog.get_parameter_values (SSISDB Database)"
 description: "catalog.get_parameter_values (SSISDB Database)"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: integration-services

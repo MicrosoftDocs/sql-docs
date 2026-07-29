@@ -1,8 +1,6 @@
 ---
 title: "Lesson 1: Create a Project and Basic Package with SSIS"
 description: "Lesson 1: Create a project and basic package with SSIS"
-author: chugugrace
-ms.author: chugu
 ms.reviewer: randolphwest
 ms.date: 01/23/2025
 ms.service: sql

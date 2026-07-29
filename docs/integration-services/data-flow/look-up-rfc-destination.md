@@ -1,8 +1,6 @@
 ---
 title: "Look Up RFC Destination"
 description: "Look Up RFC Destination"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services

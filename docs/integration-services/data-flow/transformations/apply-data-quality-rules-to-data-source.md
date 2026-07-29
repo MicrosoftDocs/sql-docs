@@ -1,8 +1,6 @@
 ---
 title: "Apply Data Quality Rules to Data Source"
 description: "Apply Data Quality Rules to Data Source"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

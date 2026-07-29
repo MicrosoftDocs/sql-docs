@@ -1,8 +1,6 @@
 ---
 title: "Get started with this simple example of the Import and Export Wizard"
 description: "Get started with this simple example of the Import and Export Wizard"
-author: chugugrace
-ms.author: chugu
 ms.date: "02/15/2017"
 ms.service: sql
 ms.subservice: integration-services

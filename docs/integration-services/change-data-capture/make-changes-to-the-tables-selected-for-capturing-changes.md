@@ -1,8 +1,6 @@
 ---
 title: "Make Changes to the Tables Selected for Capturing Changes"
 description: "Make Changes to the Tables Selected for Capturing Changes"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services

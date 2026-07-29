@@ -1,8 +1,6 @@
 ---
 title: "Configuring the Script Task in the Script Task Editor"
 description: "Configuring the Script Task in the Script Task Editor"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: integration-services

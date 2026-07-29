@@ -1,8 +1,6 @@
 ---
 title: "Using Error Outputs in a Data Flow Component"
 description: "Using Error Outputs in a Data Flow Component"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: integration-services

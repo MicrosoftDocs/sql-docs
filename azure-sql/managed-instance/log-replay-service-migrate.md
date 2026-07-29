@@ -479,6 +479,9 @@ Start-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
     -LastBackupName "last_backup.bak"
 ```
 
+> [!NOTE]
+>  Backup file names with special characters such as `$`, `%`, or spaces might need extra formatting. For example, use single quotes for file names that contain `$` (`'backup$prod.bak'`) and URL-encode reserved URL characters (`Test%percent.bak` becomes `Test%25percent.bak`, and `My Backup.bak` becomes `My%20Backup.bak`).
+
 ---
 
 ### Start LRS in continuous mode

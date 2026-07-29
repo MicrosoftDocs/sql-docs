@@ -95,6 +95,9 @@ When you use the **Windows Integrated Security** option, the report server passe
 
 You can store the credentials used to access an external data source. Credentials are stored in reversible encryption in the report server database. You can specify one set of stored credentials for each data source used in a report. The credentials you provide retrieve the same data for every user who runs the report.
 
+> [!NOTE]
+> With stored credentials, every user who runs the report retrieves data under the same identity, so the report can't enforce per-user data access. To restrict the data that each user can see, use Windows integrated security and configure security at the data source. A report isn't a security boundary — see [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md).
+
 Stored credentials are recommended as part of a strategy for accessing remote database servers. Stored credentials are required if you want to support subscriptions, or schedule report history generation or report snapshot refreshes. When a report runs as a background process, the report server is the agent that executes the report. Because there's no user context in place, the report server must get credential information from the report server database to connect to a data source.
 
 The user name and password that you specify can be Windows credentials or a database sign-in. If you specify Windows credentials, the report server passes the credentials to Windows for subsequent authentication. Otherwise, the credentials are passed to the database server for authentication.

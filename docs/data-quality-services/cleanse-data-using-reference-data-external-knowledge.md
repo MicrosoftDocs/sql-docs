@@ -1,8 +1,6 @@
 ---
 title: "Cleanse data using (external) knowledge reference data "
 description: Learn how to cleanse data using knowledge from the reference data providers with Data Quality Services (DQS) in SQL Server.
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: data-quality-services

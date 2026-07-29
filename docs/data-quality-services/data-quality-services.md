@@ -1,8 +1,6 @@
 ---
 title: "Data Quality Services"
 description: "Data Quality Services"
-author: chugugrace
-ms.author: chugu
 ms.date: "10/12/2013"
 ms.service: sql
 ms.subservice: data-quality-services

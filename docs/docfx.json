@@ -590,6 +590,7 @@
         "**/*/index.yml": "rwestMSFT",
         "reporting-services/**/*.md": "JulCsc",
         "integration-services/**/*.md": "kromerm",
+        "data-quality-services/**/*.md": "kromerm",
         "dmx/**/*.md": "KayUnkroth",
         "mdx/**/*.md": "KayUnkroth"
       },
@@ -598,6 +599,7 @@
         "**/*/index.yml": "randolphwest",
         "reporting-services/**/*.md": "juliacawthra",
         "integration-services/**/*.md": "makromer",
+        "data-quality-services/**/*.md": "makromer",
         "dmx/**/*.md": "kayu",
         "mdx/**/*.md": "kayu"
       },

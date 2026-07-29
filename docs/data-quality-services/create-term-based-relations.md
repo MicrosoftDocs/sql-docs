@@ -1,8 +1,6 @@
 ---
 title: "Create Term-Based Relations"
 description: "Create Term-Based Relations"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/08/2011"
 ms.service: sql
 ms.subservice: data-quality-services

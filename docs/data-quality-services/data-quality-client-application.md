@@ -1,8 +1,6 @@
 ---
 title: "Data Quality Client Application"
 description: "Data Quality Client Application"
-author: chugugrace
-ms.author: chugu
 ms.date: "10/01/2012"
 ms.service: sql
 ms.subservice: data-quality-services

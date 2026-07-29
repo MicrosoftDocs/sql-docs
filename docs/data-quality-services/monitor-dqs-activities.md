@@ -1,8 +1,6 @@
 ---
 title: "Monitor DQS Activities"
 description: "Monitor DQS Activities"
-author: chugugrace
-ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: data-quality-services

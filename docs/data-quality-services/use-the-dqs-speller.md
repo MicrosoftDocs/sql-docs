@@ -1,8 +1,6 @@
 ---
 title: "Use the DQS Speller"
 description: "Use the DQS Speller"
-author: chugugrace
-ms.author: chugu
 ms.date: "11/08/2011"
 ms.service: sql
 ms.subservice: data-quality-services

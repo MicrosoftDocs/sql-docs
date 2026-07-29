@@ -1,8 +1,6 @@
 ---
 title: "DQS Knowledge Bases and Domains"
 description: "DQS Knowledge Bases and Domains"
-author: chugugrace
-ms.author: chugu
 ms.date: "10/01/2012"
 ms.service: sql
 ms.subservice: data-quality-services

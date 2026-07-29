@@ -4,7 +4,7 @@ description: Learn about the AppContext switches available in SqlClient and how 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 03/17/2026
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -102,20 +102,51 @@ This switch toggles the driver's behavior to use a managed networking implementa
 
 [!INCLUDE [dotnet-framework-only](../../includes/products/applies-plain/dotnet-framework-only.md)]
 
-Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. TNIR affects the connection sequence of the driver in the case where the first resolved IP of the hostname doesn't respond and there are multiple IPs associated with the hostname. TNIR interacts with MultiSubnetFailover to provide the following three connection sequences:
+Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. TNIR affects the connection sequence of the driver in the case where the first resolved IP of the hostname doesn't respond and there are multiple IPs associated with the hostname. The combination of `TransparentNetworkIPResolution` and `MultiSubnetFailover` selects the connection sequence:
 
-* 0: One IP is attempted, followed by all IPs in parallel
-* 1: All IPs are attempted in parallel
-* 2: All IPs are attempted one after another
-
-|TransparentNetworkIPResolution|MultiSubnetFailover|Behavior|
+|TransparentNetworkIPResolution|MultiSubnetFailover|Connection sequence|
 |--------|--------|--------|
-|True|True|1|
-|True|False|0|
-|False|True|1|
-|False|False|2|
+|True|True|`TransparentNetworkIPResolution` is ignored. The driver attempts the DNS-resolved IP addresses in parallel and completes the authentication with the first responder.|
+|True|False|The driver runs multiple connect rounds across the DNS-resolved IP addresses, with a 500-millisecond minimum on the first attempt and progressively larger per-attempt timeouts, until a connection succeeds or the overall `Connect Timeout` is reached.|
+|False|True|The driver attempts the DNS-resolved IP addresses in parallel and completes the authentication with the first responder.|
+|False|False|The driver attempts each DNS-resolved IP address sequentially until one succeeds or `Connect Timeout` is reached.|
 
-TransparentNetworkIPResolution is enabled by default. MultiSubnetFailover is disabled by default. To disable TNIR, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString"** to `true` at application startup:
+`TransparentNetworkIPResolution` is enabled by default on .NET Framework, and `MultiSubnetFailover` is disabled by default. On .NET 5 and later versions, `TransparentNetworkIPResolution` isn't a recognized connection-string keyword and setting it (with any value) throws `ArgumentException` (`KeywordNotSupported`). Those versions honor `MultiSubnetFailover` only. The rest of this section (the automatic override, the failure modes in the following warning, and the AppContext switch) applies to .NET Framework.
+
+> [!TIP]
+> Set `MultiSubnetFailover=True` on every connection string, regardless of .NET version or whether the target is Azure SQL or on-premises SQL Server. `MultiSubnetFailover=True` selects a parallel-connect code path that finds the first responsive replica quickly. On .NET Framework, it also bypasses TNIR's sequential per-IP retry loop, which is a common cause of long connect delays and pre-authentication handshake timeouts.
+
+On .NET Framework, when `TransparentNetworkIPResolution` isn't specified in the connection string, the driver automatically disables TNIR when the data source is a recognized Azure SQL endpoint, when the `Authentication` key is set to any Microsoft Entra ID method (`Active Directory Password`, `Active Directory Integrated`, `Active Directory Interactive`, `Active Directory Service Principal`, `Active Directory Device Code Flow`, `Active Directory Managed Identity`, `Active Directory MSI`, `Active Directory Default`, or `Active Directory Workload Identity`), or when the [`SqlConnection.AccessToken`](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) property is set. For the endpoint suffixes the driver recognizes, see the `TransparentNetworkIPResolution` entry in [SqlConnection.ConnectionString](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring).
+
+An explicit `TransparentNetworkIPResolution` value bypasses this automatic behavior: `True` enables TNIR, and `False` disables TNIR unconditionally. To restore the automatic behavior, remove the keyword from the connection string. The automatic override also doesn't apply when the connection string points at Azure SQL through a custom CNAME or vanity DNS name whose suffix isn't recognized as an Azure SQL endpoint. The automatic override targets Azure SQL specifically; it doesn't fire for on-premises SQL Server, so TNIR is on by default there.
+
+### Long connect delays on .NET Framework
+
+On .NET Framework, `TransparentNetworkIPResolution=True` (the default) can cause long connect delays and pre-authentication handshake timeouts whenever the target DNS name resolves to multiple IPs and one of the earlier IPs is unhealthy, stale, or unreachable. TNIR tries the resolved IPs sequentially and increases the per-attempt timeout each round until the overall `Connect Timeout` is reached. You typically observe an unexpectedly long connect delay that ends in this error:
+
+```output
+Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-authentication handshake acknowledgement.  This could be because the pre-authentication handshake failed or the server was unable to respond back in time.
+```
+
+The pattern shows up in several topologies:
+
+- **Azure SQL Database, Azure SQL Managed Instance, or SQL database in Microsoft Fabric.** The Azure SQL gateway routes each authentication to a backend replica. When a routed connection fails, TNIR retries the routed backend without returning to the gateway to be rerouted, which extends the delay during a backend failover.
+- **On-premises SQL Server behind an Always On availability group listener** whose DNS name resolves to multiple replica IPs. A stale DNS entry or an unhealthy replica IP is tried sequentially before TNIR reaches a working replica.
+- **Failover cluster instances with a multi-subnet cluster listener**, or any other configuration where the target DNS name has multiple `A`/`AAAA` records (such as DNS round-robin).
+
+To avoid this behavior, set `MultiSubnetFailover=True` in the connection string:
+
+```text
+MultiSubnetFailover=True
+```
+
+This recommendation works on every .NET version and covers both Azure SQL and on-premises SQL Server. When `MultiSubnetFailover=True`, the driver ignores `TransparentNetworkIPResolution`, attempts the DNS-resolved IP addresses in parallel, and completes authentication with the first responsive replica. Despite the name, `MultiSubnetFailover` applies to any listener whose DNS name resolves to multiple target IPs, regardless of whether those IPs are in different subnets, and it's safe on stand-alone servers whose DNS resolves to a single IP.
+
+For process-wide control without editing every connection string, use the [Enable MultiSubnetFailover by default](#enable-multisubnetfailover-by-default) AppContext switch.
+
+### Disable TNIR with an AppContext switch
+
+To flip the default value of `TransparentNetworkIPResolution` from `true` to `false` on .NET Framework, set the AppContext switch `Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString` to `true` at application startup. This switch only changes the default value when `TransparentNetworkIPResolution` isn't in the connection string; it doesn't override an explicit value.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString", true);

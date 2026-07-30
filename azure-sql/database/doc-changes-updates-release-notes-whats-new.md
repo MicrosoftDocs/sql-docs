@@ -99,7 +99,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | Changes | Details |
 | --- | --- |
 | **Change event streaming to Fabric Eventstreams** | You can now [stream SQL data changes to Fabric Eventstreams](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream) in addition to Azure Event Hubs. Change event streaming (CES) captures and publishes incremental changes of data to the destination in near real-time. Captured changes include updates, inserts, and deletes (DML). For more information, see [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview). |
-| **Regex-based dynamic data masking (preview)** | A new article shows you how to use the `REGEXP_REPLACE` masking function to define pattern-driven masks that preserve specific segments of string data. Built-in masking functions can't express these variable-length patterns. For more information, see [Regex-based dynamic data masking in Azure SQL Database (preview)](dynamic-data-masking-regex.md). |
+| **Regex-based dynamic data masking (preview)** | You can [define pattern-driven masking rules with the `REGEXP_REPLACE` function](dynamic-data-masking-regex.md) for variable-length string data such as email addresses, phone numbers, and identification numbers. Regex masks preserve the segments you choose to reveal, which the built-in masking functions can't express. This capability is now in preview. |
 
 ### June 2026
 

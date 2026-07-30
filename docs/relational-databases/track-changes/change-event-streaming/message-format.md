@@ -9,13 +9,13 @@ ms.service: sql
 ms.topic: "reference"
 ms.custom:
   - ignite-2025
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # JSON message format - change event streaming
-[!INCLUDE [sqlserver2025](../../../includes/applies-to-version/sqlserver2025-asdb-asmi.md)]
+[!INCLUDE [sql25-sqldb-sqlmi-sqldbfabric](../../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
-This article describes the JSON format of a CloudEvents message that streams from SQL Server to Azure Event Hubs when using the [change event streaming (CES)](overview.md) feature introduced in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], Azure SQL Database, and Azure SQL Managed Instance.
+This article describes the JSON format of a CloudEvents message that streams to Azure Event Hubs or Fabric Eventstream when using the [change event streaming (CES)](overview.md) feature in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 
 [!INCLUDE [change-event-streaming-preview](../../../includes/change-event-streaming-preview.md)]
 
@@ -38,7 +38,7 @@ When applicable, the descriptions in this section come from the [CloudEvent spec
   - Data type: String
   - Required CloudEvent attribute
   - Contains a value that describes the type of event related to the originating occurrence. The format of this value is defined by the producer and might include information such as the version of the type. For more information, see [Versioning of CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md).
-  - For Change Event Streaming events, the type is currently: `com.microsoft.SQL.CES.DML.V{n}`, where `{n}` indicates the version of Microsoft Change Event Streaming DML event schema.
+  - For change event streaming events, the type is currently: `com.microsoft.SQL.CES.DML.V{n}`, where `{n}` indicates the version of Microsoft change event streaming DML event schema.
     - The current latest schema version is 1.
 
 - **`source`**

@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 06/05/2026
+ms.date: 07/29/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -43,7 +43,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | **Approximate or fuzzy string matching**| Check if two strings are similar, and calculate the difference between two strings. Use this capability to identify strings that might be different because of character corruption. [What is fuzzy string matching?](/sql/relational-databases/fuzzy-string-match/overview)|
 | **Availability metric**| Availability is now a metric in the Azure Monitor metrics. Driven by a variety of user connection failures, you can [monitor and configure alerts on Azure SQL Database Availability](monitoring-metrics-alerts.md#availability-metric). |
 | **Automatic index compaction** | [Automatic index compaction](/sql/relational-databases/indexes/automatic-index-compaction) helps you reduce the consumption of storage space, disk I/O, memory, and improve workload performance without investing time and effort into index maintenance jobs. |
-|**Change event streaming** | Capture and publish incremental DML changes of data (such as updates, inserts, and deletes) in near real-time. Change event streaming sends details of data changes such as the schema, previous values, and new values to Azure Event Hubs in a simple CloudEvent, serialized as either native JSON or Avro Binary. To learn more, review [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview). |
+|**Change event streaming** | Capture and publish row-level DML changes (inserts, updates, and deletes) on tracked tables in near real-time. Change event streaming publishes each change to Azure Event Hubs or Fabric Eventstream as a CloudEvent that includes the row's current schema, previous values, and new values, serialized as either native JSON or Avro Binary. To learn more, review [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview). |
 | **Database watcher for Azure SQL** |[Database watcher](../database-watcher-overview.md) is a managed monitoring solution for database services in the Azure SQL family. Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Learn more about [database watcher](https://aka.ms/dbwatcher-preview-announcement). |
 | **Data Virtualization for Azure SQL Database** |Data virtualization, now in preview in Azure SQL Database, enables you to leverage all the power of Transact-SQL (T-SQL) and seamlessly query external data from Azure Data Lake Storage Gen2 or Azure Blob Storage. For more information, see [Data virtualization with Azure SQL Database (Preview)](data-virtualization-overview.md).|
 | **Elastic queries** | The [elastic queries](elastic-query-overview.md) feature allows for cross-database queries in Azure SQL Database. |
@@ -93,6 +93,12 @@ The following table lists features of Azure SQL Database that have been made gen
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
+### July 2026
+
+| Changes | Details |
+| --- | --- |
+| **Change event streaming to Fabric Eventstreams** | You can now [stream SQL data changes to Fabric Eventstreams](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream) in addition to Azure Event Hubs. Change event streaming (CES) captures and publishes incremental changes of data to the destination in near real-time. Captured changes include updates, inserts, and deletes (DML). For more information, see [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview). |
+
 ### June 2026
 
 | Changes | Details |
@@ -105,6 +111,8 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | Changes | Details |
 | --- | --- |
 | **MAX_ROLLOVER_FILES in extended event sessions using Azure Storage blobs (preview)** | For new extended event sessions, you can specify the `MAX_ROLLOVER_FILES` option to retain only the specified number of the most recent Azure Storage blobs. For more information, see [event_file target](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#event_file-target). |
+
+
 
 ### March 2026
 

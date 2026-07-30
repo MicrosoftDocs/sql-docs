@@ -1,23 +1,25 @@
 ---
-title: Configure Change Event Streaming
+title: Configure Change Event Streaming to Azure Event Hubs
 description: Describes how to configure change event streaming.
 author: nzagorac-ms
 ms.author: nzagorac
-ms.reviewer: mathoma,randolphwest
+ms.reviewer: mathoma, randolphwest
 ms.date: 07/29/2026
 ms.service: sql
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.custom:
   - ignite-2025
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
-# Configure change event streaming (preview)
+# Configure change event streaming (preview) to Azure Event Hubs
 
-[!INCLUDE [sqlserver2025](../../../includes/applies-to-version/sqlserver2025-asdb-asmi.md)]
+[!INCLUDE [sqlserver2025](../../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
-This article describes how to configure the [change event streaming (CES)](overview.md) feature introduced in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], Azure SQL Database, and Azure SQL Managed Instance.
+This article describes how to configure the [change event streaming (CES)](overview.md) feature in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric to stream to Azure Event Hubs.
+
+To configure CES to Fabric Eventstream, see [Stream to Fabric Eventstream](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream).
 
 [!INCLUDE [change-event-streaming-preview](../../../includes/change-event-streaming-preview.md)]
 
@@ -27,8 +29,8 @@ To configure and use change event streaming, follow these steps:
 
 1. Use an existing or create a new [Azure Event Hubs](/azure/event-hubs/event-hubs-about) namespace and Event Hubs instance. The Event Hubs instance receives events.
 1. Enable change event streaming for a user database.
-1. Create an event stream group. With this group, configure the destination, credentials, message size limits, and partitioning schema.
-1. Add one or more tables to the event stream group.
+1. Create a stream group. With this group, configure the destination, credentials, message size limits, and partitioning schema.
+1. Add one or more tables to the stream group.
 
 Each step is described in detail in the following sections of this article.
 
@@ -54,7 +56,7 @@ To learn how to create Azure Event Hubs, review [Create an event hub using the A
 
 ## Azure Event Hubs access control
 
-Configure access control for your SQL resource to Azure Event Hubs. Microsoft Entra authentication is the most secure method. CES supports Microsoft Entra authentication in Azure SQL Database, Azure SQL Managed Instance, and SQL Server 2025 starting with Cumulative Update 3 (CU3) for instances [enabled by Azure Arc](../../../sql-server/azure-arc/connect.md) or running on an [Azure VM](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview). While shared access policies are supported, use them only when Microsoft Entra authentication isn't an option.
+Configure access control for your SQL resource to Azure Event Hubs. Microsoft Entra authentication is the most secure method. CES supports Microsoft Entra authentication in Azure SQL Database and Azure SQL Managed Instance. For SQL Server 2025, Microsoft Entra authentication is supported starting with Cumulative Update 3 (CU3) for instances [enabled by Azure Arc](../../../sql-server/azure-arc/connect.md) or running on an [Azure VM](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview). While shared access policies are supported, use them only when Microsoft Entra authentication isn't an option.
 
 ### [Shared access policy based access control](#tab/sas-access-1)
 
@@ -228,7 +230,7 @@ SharedAccessSignature sr=https%3a%2f%YourEventHubNamespace.servicebus.windows.ne
 
 ### [Microsoft Entra based access control](#tab/entra-access-1)
 
-Use Microsoft Entra [managed identities](/entra/identity/managed-identities-azure-resources/overview) to control access to Azure Event Hubs. It's the simplest and most secure way to grant access to Azure Event Hubs. CES supports Microsoft Entra authentication in Azure SQL Database, Azure SQL Managed Instance, and SQL Server 2025 instances enabled by Azure Arc or running on an Azure VM starting with Cumulative Update 3 (CU3).
+Use Microsoft Entra [managed identities](/entra/identity/managed-identities-azure-resources/overview) to control access to Azure Event Hubs. It's the simplest and most secure way to grant access to Azure Event Hubs. CES supports Microsoft Entra authentication in Azure SQL Database and Azure SQL Managed Instance. For SQL Server 2025, Microsoft Entra authentication is supported starting with Cumulative Update 3 (CU3) for instances enabled by Azure Arc or running on an Azure VM. Microsoft Entra authentication isn't currently available for SQL database in Microsoft Fabric. 
 
 > [!IMPORTANT]
 > If your SQL Server instance isn't enabled by Azure Arc or running on an Azure VM, and you didn't install CU3 or later, Microsoft Entra authentication isn't available. You must use shared access policies instead.
@@ -255,8 +257,8 @@ To enable and configure change event streaming, change the database context to t
 1. If it's not already configured, set the database to the [full recovery model](../../backup-restore/recovery-models-sql-server.md#recovery-model-overview).
 1. Create a master key and a database scoped credential.
 1. Enable event streaming.
-1. Create the event stream group.
-1. Add one or more tables to the event stream group.
+1. Create the stream group.
+1. Add one or more tables to the stream group.
 
 The examples in this section demonstrate how to enable CES for the AMQP protocol and the Apache Kafka protocol:
 
@@ -268,7 +270,7 @@ The following table lists sample parameter values for the examples in this secti
 | Parameter | Sample value | Notes |
 | --- | --- | --- |
 | `@stream_group_name` | `N'myStreamGroup'` | Name of the event stream group. |
-| `@destination_location` | `N'myEventHubsNamespace.servicebus.windows.net/myEventHubsInstance'` | The FQDN of the specific Azure Event Hubs namespace and instance name. |
+| `@destination_location` | `N'myEventHubsNamespace.servicebus.windows.net/myEventHubsInstance'` | For Azure Event Hubs, the FQDN of the specific Azure Event Hubs namespace and instance name. For Fabric Eventstream, use the Fabric Eventstream custom input endpoint. To find the endpoint, see [Stream SQL change events to Fabric Eventstream](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream#4-create-the-event-streaming-group). |
 | `@partition_key_scheme` | `N'None'` | (Default) Partitions are chosen round robin. Other options are `StreamGroup` (partitioning by the stream group), `Table` (partitioning by table), and `Column` (partitioning by columns). |
 | `@max_message_size_kb` | `256` | 256 KB is the default maximum message size. Align this value with the limits of the destination Azure Event Hubs. |
 
@@ -446,7 +448,7 @@ To confirm that streaming is enabled and to view the tables configured for a str
 
 ## Message size and column truncation
 
-Azure Event Hubs limits the maximum size of each message it receives. CES uses the `@max_message_size_kb` setting to split a large outbound event into multiple message chunks that fit the configured destination. Set this value to align with the limits of your destination Azure Event Hubs. For the JSON attributes that identify message chunks, see [JSON message format - change event streaming](message-format.md).
+Azure Event Hubs and Fabric Eventstream limit the maximum size of each message they receive. CES uses the `@max_message_size_kb` setting to split a large outbound event into multiple message chunks that fit the configured destination. Set this value to align with the limits of your destination. For the JSON attributes that identify message chunks, see [JSON message format - change event streaming](message-format.md).
 
 If one or more streamed column values are larger than 1 MB, CES truncates each affected column value to 1 MB before it forms the outbound event. The 1 MB limit applies to each column value separately. This truncation is separate from message splitting. After truncating oversized column values, CES forms the outbound event, splits it into chunks as needed according to `@max_message_size_kb`, and sends each chunk to the destination.
 
@@ -537,7 +539,7 @@ On SQL Server, Azure SQL Managed Instance and Azure SQL Database elastic pools, 
 
 Change event streaming (CES) has the following limitations:
 
-- [Azure SQL Database](#azure-sql-database)
+- [Platform specific limitations](#platform-specific-limitations)
 - [Server-level and general limitations](#server-level-and-general-limitations)
 - [Database-level limitations](#database-level-limitations)
 - [Table-level limitations](#table-level-limitations)
@@ -545,14 +547,36 @@ Change event streaming (CES) has the following limitations:
 - [Permissions in the source database](#permissions-in-the-source-database-and-data-residency)
 - [Networking and connectivity](#networking-and-connectivity)
 
-### Azure SQL Database
+### Platform specific limitations
 
-The following limitations apply when using CES with Azure SQL Database:
+The following limitations apply to specific platforms for CES:
 
-- Extended Event (xEvent) debugging in Azure SQL Database isn't currently available.
+### [SQL Server 2025](#tab/sql-2025)
+
+CES in SQL Server 2025 has the following limitations:
+- You must enable the [preview feature database scoped configuration](../../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features).
+- Microsoft Entra authentication is supported starting with Cumulative Update 3 (CU3) for instances [enabled by Azure Arc](../../../sql-server/azure-arc/connect.md) or running on an [Azure VM](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview).
+
+### [Azure SQL Database](#tab/sql-db)
+
+xEvent debugging isn't currently available in Azure SQL Database.
+
+### [Azure SQL Managed Instance](#tab/sql-mi)
+
+CES isn't available to instances configured with the SQL Server 2022 [update policy](/azure/azure-sql/managed-instance/update-policy).
+
+### [SQL database in Fabric](#tab/sql-db-fabric)
+
+CES has the following limitations in SQL database in Fabric:
+- xEvent debugging isn't currently available.
+- Microsoft Entra authentication isn't currently available.
+
+---
 
 ### Server-level and general limitations
 
+
+The following list describes server-level and general limitations:
 - CES isn't supported on [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] on Linux.
 - CES emits events only for data changes from `INSERT`, `UPDATE`, and `DELETE` DML statements.
 - CES doesn't handle schema changes (DDL operations), which means it doesn't emit events for DDL operations. However, DDL operations aren't blocked, so if you execute them, the schema of subsequent DML events reflects the updated table structure. You're expected to gracefully handle events with the updated schema.
@@ -560,10 +584,11 @@ The following limitations apply when using CES with Azure SQL Database:
 - If a message exceeds the Azure Event Hubs message size limit, the failure is currently only observable through Extended Events. CES xEvents are currently only available in SQL Server 2025, and not Azure SQL Database.
 - Renaming tables and columns configured for CES isn't supported. Renaming a table or column fails. Database renames **are allowed**.
 - CES isn't available to Azure SQL Managed Instance configured with the SQL Server 2022 [update policy](/azure/azure-sql/managed-instance/update-policy). It's only available to instances configured with the SQL Server 2025 or Always-up-to-date update policy.
-- When using Kafka protocol, CES doesn't support SAS Token auth. The only available authentication methods are Microsoft Entra and Shared Access policy key value.
+- When using Kafka protocol, CES doesn't support SAS token authentication. The only available authentication methods are Microsoft Entra and Shared Access policy key value.
 
 ### Database-level limitations
 
+The following list describes database-level limitations:
 - CES only supports databases configured with the full recovery model.
 - CES doesn't support databases configured with [Fabric Mirrored Databases for SQL Server](/fabric/database/mirrored-database/sql-server), [transactional replication](../../replication/transactional/transactional-replication.md), [change data capture](../about-change-data-capture-sql-server.md), or [Azure Synapse Link](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). [Change tracking](../about-change-tracking-sql-server.md) is supported on databases configured with CES.
 - CES can only stream from writable primary databases. Secondary databases that are part of Always On availability groups or that use the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) can't be configured as streaming sources.
@@ -571,11 +596,11 @@ The following limitations apply when using CES with Azure SQL Database:
 
 ### Table-level limitations
 
+The following list describes table-level limitations:
 - A table can belong to only one streaming group. You can't stream the same table to multiple destinations.
 - You can only configure user tables for CES. CES doesn't support streaming system tables.
 - You can configure up to 4,096 stream groups. Each stream group can include up to 40,000 tables.
 - While CES is enabled on a table, you can't add or drop a primary key constraint on that table.
-
 - `ALTER TABLE SWITCH PARTITION` isn't supported on tables configured for CES.
 - `TRUNCATE TABLE` isn't supported on tables enabled for CES.
 - CES doesn't support tables that use any of the following features:
@@ -591,6 +616,7 @@ The following limitations apply when using CES with Azure SQL Database:
 
 ### Column-level limitations
 
+The following list describes column-level limitations:
 - CES doesn't support the following data types. Streaming skips columns of these types:
   - **geography**
   - **geometry**
@@ -606,6 +632,7 @@ The following limitations apply when using CES with Azure SQL Database:
 
 ### Permissions in the source database and data residency
 
+The following list describes permissions and data residency limitations:
 - For row-level security, CES emits changes from all rows, regardless of user permissions.
 - Dynamic data masking doesn't apply to data sent through CES. Data is streamed unmasked, even if masking is configured.
 - CES doesn't emit events related to object-level permission changes (for example, granting permissions to specific columns).
@@ -613,6 +640,7 @@ The following limitations apply when using CES with Azure SQL Database:
 
 ### Networking and connectivity
 
+The following list describes a network and connectivity limitation:
 - Currently, CES can only stream to Azure Event Hubs public endpoints. Service endpoints and private endpoints aren't currently supported.
 - When using the AMQP protocol, set the Azure Event Hubs [Minimum TLS version](/azure/event-hubs/transport-layer-security-enforce-minimum-version) configuration option to 1.2. CES doesn't support AMQP when this option is set to 1.3.
 
@@ -621,3 +649,4 @@ The following limitations apply when using CES with Azure SQL Database:
 - [What is change event streaming?](overview.md)
 - [Frequently asked questions](frequently-asked-questions-faq.yml)
 - [JSON message format - change event streaming](message-format.md)
+- [Stream to Fabric Eventstream](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream)

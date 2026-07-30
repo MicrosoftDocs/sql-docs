@@ -33,7 +33,7 @@ Use this dynamic management view for:
 - [SQL database in Microsoft Fabric](/fabric/database/sql/overview)
 - [Microsoft Fabric mirrored databases](/fabric/database/mirrored-database/overview)
 - [Azure Synapse Link](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [Change event streaming (preview)](../track-changes/change-event-streaming/overview.md) introduced in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and Azure SQL Database. 
+- [Change event streaming (preview)](../track-changes/change-event-streaming/overview.md) in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. 
 
 This view returns rows only when one of the preceding features is configured and has logged an error. Otherwise, the view is empty.
   
@@ -58,7 +58,7 @@ This view returns rows only when one of the preceding features is configured and
 
 ## Remarks
 
-This DMV shows errors from the last 32 log scan sessions. One session might include multiple errors, such as retry attempts on landing zone failures (failures writing to the staging storage where the change feed publishes changes). This DMV also shows errors that occur during the snapshot and incremental change publish process.
+This DMV shows up to the 64 most recently logged errors. The DMV might include multiple errors per log scan session, such as retry attempts on landing zone failures (failures writing to the staging storage where the change feed publishes changes). This DMV also shows errors that occur during the snapshot and incremental change publish process.
 
 The list of errors auto-rotates. Newer errors push out earlier entries. Errors that stop occurring remain until newer errors push them out or the list clears completely. The error list is stored in SQL memory, so events such as SQL engine restarts, or disabling change feed, clear it.
 

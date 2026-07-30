@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, randolphwest
-ms.date: 05/12/2026
+ms.date: 07/29/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -35,7 +35,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 | ---| --- |
 |[Approximate or fuzzy string matching](/sql/relational-databases/fuzzy-string-match/overview)| Check if two strings are similar, and calculate the difference between two strings. Use this capability to identify strings that might be different because of character corruption.|
 | [Automatic index compaction](/sql/relational-databases/indexes/automatic-index-compaction) | Reduce the consumption of storage space, disk I/O, memory, and improve workload performance without investing time and effort into index maintenance jobs. |
-| [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview) | Capture and publish incremental DML changes of data (such as updates, inserts, and deletes) in near real-time. Change event streaming sends details of data changes such as the schema, previous values, and new values to Azure Event Hubs in a simple CloudEvent, serialized as either native JSON or Avro Binary. |
+| [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview) | Capture and publish row-level DML changes (inserts, updates, and deletes) on tracked tables in near real-time. Change event streaming publishes each change to Azure Event Hubs or Fabric Eventstream as a CloudEvent that includes the row's current schema, previous values, and new values, serialized as either native JSON or Avro Binary. |
 |[Database watcher for Azure SQL](../database-watcher-overview.md) | Database watcher is a managed monitoring solution for database services in the Azure SQL family. Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Learn more about [database watcher](https://aka.ms/dbwatcher-preview-announcement).|
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
 | [Flexible memory](resource-limits.md#flexible-memory) | Save on cost and better serve your workload needs by modifying the memory allocation for your Business Critical SQL managed instance. |
@@ -77,11 +77,18 @@ The following table lists features of Azure SQL Managed Instance that have been 
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
+### July 2026
+
+| Changes | Details |
+| --- | --- |
+| **Change event streaming to Fabric Eventstreams** | You can now [stream SQL data changes to Fabric Eventstreams](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream) in addition to Azure Event Hubs. Change event streaming (CES) captures and publishes incremental changes of data to the destination in near real-time. Captured changes include updates, inserts, and deletes (DML). For more information, see [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview). |
+
 ### May 2026
 
 | Changes | Details |
 | --- | --- |
 | **Internal connectivity testing GA** | [!INCLUDE [auto-connectivity-tests](../includes/auto-connectivity-tests.md)] |
+
 
 ### April 2026
 
@@ -95,7 +102,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | --- | --- |
 | **Automatic index compaction preview** | Automatic index compaction helps you reduce the consumption of storage space, disk I/O, memory, and improve workload performance without investing time and effort into index maintenance jobs. This feature is now in preview. To learn more, review [Automatic index compaction](/sql/relational-databases/indexes/automatic-index-compaction). |
 | **Block T-SQL CRUD GA** | Allow Azure administrators to block the creation or modification of Azure SQL Managed Instance resources through T-SQL. This is enforced at the subscription level to block T-SQL commands from affecting SQL managed instance resources. This feature is generally available for Azure SQL Managed Instance. To learn more, review [Block T-SQL CRUD](../database/block-crud-tsql.md). |
-| **Change event streaming preview** | Capture and publish incremental DML changes of data (such as updates, inserts, and deletes) in near real-time. Change event streaming sends details of data changes such as the schema, previous values, and new values to Azure Event Hubs in a simple CloudEvent, serialized as either native JSON or Avro Binary. This feature is now in preview for Azure SQL Managed Instance configured with the SQL Server 2025 and Always-up-to-date update policy. To learn more, review [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview).
+| **Change event streaming preview** | Capture and publish row-level DML changes (inserts, updates, and deletes) on tracked tables in near real-time. Change event streaming publishes each change to Azure Event Hubs or Fabric Eventstream as a CloudEvent that includes the row's current schema, previous values, and new values, serialized as either native JSON or Avro Binary. This feature is now in preview for Azure SQL Managed Instance configured with the SQL Server 2025 and Always-up-to-date update policy. To learn more, review [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview).
 | **Deploy free instance with command line tools** | You can now create your free SQL managed instance by using [Azure PowerShell](free-offer.md?tabs=powershell#create-a-free-sql-managed-instance), the [Azure CLI](free-offer.md?tabs=azure-cli#create-a-free-sql-managed-instance), and the [REST API](free-offer.md?tabs=rest-api#create-a-free-sql-managed-instance). |
 | **Easily upgrade your free instance** | You can now easily upgrade your free SQL managed instance to a paid offer in the Azure portal. To upgrade, navigate to the **Overview** page for your instance and select **Upgrade** from the navigation bar to open the **Compute + storage** page, where you can choose the paid offer under **Offer type**. For more information, see [Free SQL Managed Instance](free-offer.md#upgrade-to-paid-instance). |
 | **Free offer supportability** | The free SQL Managed Instance offer is now available in all regions, and for all subscription types, that support the paid Azure SQL Managed Instance offer. For more information about the free offer, see [Free SQL Managed Instance](free-offer.md#supportability). |

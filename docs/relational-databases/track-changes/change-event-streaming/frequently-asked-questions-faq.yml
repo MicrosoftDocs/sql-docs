@@ -9,12 +9,12 @@ metadata:
   author: nzagorac-ms
   ms.author: nzagorac
   ms.reviewer: mathoma
-  monikerRange: " = sql-server-ver17 || = sql-server-linux-ver17 "    
+  monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
   ms.custom: build-2025
 title: Frequently Asked Questions (FAQ) for Change Event Streaming (CES)
 summary: |
-  [!INCLUDE [sqlserver2025](../../../includes/applies-to-version/sqlserver2025-asdb-asmi.md)]
-  The following are answers to questions about the Change Event Streaming (CES) feature for [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], Azure SQL Database, and Azure SQL Managed Instance.
+  [!INCLUDE [sql25-sqldb-sqlmi-sqldbfabric](../../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
+  The following are answers to questions about the change event streaming (CES) feature for [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 
   [!INCLUDE [change-event-streaming-preview](../../../includes/change-event-streaming-preview.md)]
 
@@ -26,7 +26,7 @@ sections:
       - question: Is the full recovery model required for CES?
         answer: Yes. CES relies on reading the transaction log, so the SQL Server database must be configured with the full recovery model.
       - question: What is the cost of using CES?
-        answer: For CES, Azure Event Hubs usage is billed at standard rates. Ingress and egress charges also apply.
+        answer: For CES, Azure Event Hubs and Fabric Eventstream usage is billed at standard rates. Ingress and egress charges also apply.
 
   - name: Performance and impact
     questions:
@@ -34,7 +34,7 @@ sections:
         answer: The performance impact depends on your specific workload and configuration. However, CES is expected to have a lower overhead than change data capture (CDC), as there is no writing data back into the database.
       - question: What is the maximum message size supported by CES?
         answer: |
-          CES uses the `@max_message_size_kb` setting to split large outbound events into message chunks that fit the destination [Azure Event Hubs limits](/azure/event-hubs/event-hubs-quotas). This setting controls message splitting only. It doesn't change the per-column truncation limit: before CES forms the outbound event, each streamed column value larger than 1 MB is truncated to 1 MB.
+          CES uses the `@max_message_size_kb` setting to split large outbound events into message chunks that fit the destination [Azure Event Hubs limits](/azure/event-hubs/event-hubs-quotas) or the [configured Fabric Eventstream throughput](/fabric/real-time-intelligence/event-streams/configure-settings#event-throughput-setting). This setting controls message splitting only. It doesn't change the per-column truncation limit: before CES forms the outbound event, each streamed column value larger than 1 MB is truncated to 1 MB.
       - question: Will the transaction log continue to grow if CES can't deliver events (such as due to a destination issue, expired authorization credential, etc.)?
         answer: Yes. CES ensures reliable ("at least once") message delivery, so the transaction log won't be truncated until events are successfully delivered. If delivery fails, the log grows until the issue is resolved. It's important to maintain the health of CES by monitoring message delivery, [errors](#how-can-i-monitor-ces-activity--for-example--events-processed--errors-), and the utilization of the transaction log for databases that have CES enabled. 
 
@@ -61,11 +61,13 @@ sections:
       - question: How does CES work in a high availability (HA) configuration? Can I use a DNN connection string?
         answer: CES only streams from the primary replica. In the event of a failover, CES must be reconfigured on the new primary. You can connect to the primary replica using any method supported by SQL Server, including a distributed network name (DNN). 
       - question: Which protocols does CES use to communicate with the destination?
-        answer: CES supports AMQP and Kafka protocols for Azure Event Hubs. HTTPS isn't supported. If you use the AMQP protocol, set the Azure Event Hubs [Minimum TLS version](/azure/event-hubs/transport-layer-security-enforce-minimum-version) configuration option to 1.2. CES doesn't support AMQP when this option is set to 1.3.
+        answer: CES supports AMQP and Kafka protocols for Azure Event Hubs and Fabric Eventstream. HTTPS isn't supported. If you use the AMQP protocol, set the Azure Event Hubs [Minimum TLS version](/azure/event-hubs/transport-layer-security-enforce-minimum-version) configuration option to 1.2. CES doesn't support AMQP when this option is set to 1.3.
       - question: Can CES stream directly to Kafka?
         answer: No. CES currently supports only Azure Event Hubs (AMQP and Kafka protocol) as the destination.
-      - question: Does CES support Microsoft Entra managed identity for authentication with Azure Event Hubs?
-        answer: Yes. CES supports Microsoft Entra authentication in Azure SQL Database, Azure SQL Managed Instance and SQL Server 2025 starting with Cumulative Update 3 (CU3) for instances [enabled by Azure Arc](../../../sql-server/azure-arc/connect.md) or running on an [Azure VM](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview).
+      - question: Can CES stream to Fabric Eventstream?
+        answer: Yes. You can connect CES to [Fabric Eventstream](/fabric/real-time-intelligence/event-streams/overview) by using the Azure Event Hubs-compatible custom input endpoint that eventstream provides. Configure CES with the eventstream connection string the same way you would configure it for Azure Event Hubs.
+      - question: Does CES support Microsoft Entra managed identity for authentication with Azure Event Hubs and Fabric Eventstream?
+        answer: Yes. CES supports Microsoft Entra authentication in Azure SQL Database and Azure SQL Managed Instance. For SQL Server 2025, Microsoft Entra authentication is supported starting with Cumulative Update 3 (CU3) for instances [enabled by Azure Arc](../../../sql-server/azure-arc/connect.md) or running on an [Azure VM](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview). Microsoft Entra authentication isn't currently supported in SQL database in Microsoft Fabric.
 
   - name: Functionality and features
     questions:
@@ -90,7 +92,7 @@ sections:
           - [sys.dm_change_feed_errors](../../system-dynamic-management-objects/sys-dm-change-feed-errors.md) for event delivery errors. 
           - [sys.dm_change_feed_log_scan_sessions](../../system-dynamic-management-objects/sys-dm-change-feed-log-scan-sessions.md) for log scan activity.
           
-          In SQL Server 2025, you can create a CES-related XEvent session and get more details on CES activity and potential errors.
+          In SQL Server 2025, you can create a CES-related xEvent session and get more details on CES activity and potential errors.
           
           ```sql
             CREATE EVENT SESSION ChangeEventStreaming
@@ -103,7 +105,7 @@ sections:
             GO
           ```
 
-          When configuring CES XEvent monitoring for Azure SQL Managed Instance, store your `.xel` file in an Azure Blob Storage container. You can observe Change Event Streaming trace information in Azure SQL Managed Instance by observing `synapse_link_error` events: 
+          When configuring CES xEvent monitoring for Azure SQL Managed Instance, store your `.xel` file in an Azure Blob Storage container. You can observe change event streaming trace information in Azure SQL Managed Instance by observing `synapse_link_error` events: 
           
           ```sql
           CREATE CREDENTIAL
@@ -124,9 +126,9 @@ sections:
           ```
 
           
-          XEvent debugging isn't supported for troubleshooting CES in Azure SQL Database.
+          xEvent debugging isn't supported for troubleshooting CES in Azure SQL Database.
 
-          You can monitor Azure Event Hubs and use associated metrics and logs.
+          You can monitor Azure Event Hubs or Fabric Eventstream and use associated metrics and logs.
       - question: How long are CES errors retained in sys.dm_change_feed_errors?
         answer: The [sys.dm_change_feed_errors](../../system-dynamic-management-objects/sys-dm-change-feed-errors.md) error list auto-rotates. Newer errors push out earlier entries. Errors that stop occurring aren't removed from the list immediately; they remain until newer errors push them out or the list clears completely.
       - question: Is there a limit to how many tables can be configured for streaming?

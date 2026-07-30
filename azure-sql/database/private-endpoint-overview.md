@@ -5,7 +5,7 @@ description: Overview of private endpoint feature.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 03/30/2026
+ms.date: 07/29/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: overview
@@ -85,6 +85,12 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
 > [!IMPORTANT]  
 > When you add a private endpoint connection, public routing to your logical server isn't blocked by default. In the **Firewall and virtual networks** pane, the setting **Deny public network access** isn't selected by default. To disable public network access, ensure that you select **Deny public network access**.
+
+## IPv6 support (preview)
+
+Azure Private Link for Azure SQL Database now supports IPv6 connectivity, in preview. You can configure private endpoints with IPv6 addresses to enable connectivity over IPv6 networks.
+
+For configuration requirements and step-by-step guidance, see [Configure Azure Private Link over IPv6 (preview)](/azure/private-link/private-link-ipv6).
 
 ## Disable public access to your logical server
 

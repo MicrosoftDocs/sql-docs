@@ -4,7 +4,7 @@ description: Learn about new features for SQL Server 2025 (17.x), which gives yo
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf, randolphwest
-ms.date: 04/02/2026
+ms.date: 07/29/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: whats-new
@@ -112,7 +112,7 @@ The following sections identify features that are improved or introduced in [!IN
 | New feature or update | Details |
 | --- | --- |
 | Batch mode optimizations for built-in functions | Performance improvements for the following built-in functions:<br /><br />- [Mathematical functions](../t-sql/functions/mathematical-functions-transact-sql.md)<br />- [DATETRUNC](../t-sql/functions/datetrunc-transact-sql.md) |
-| [Change event streaming](../relational-databases/track-changes/change-event-streaming/overview.md) | Capture and publish incremental DML changes of data (such as updates, inserts, and deletes) in near real-time. Change event streaming sends details of data changes such as the schema, previous values, and new values to Azure Event Hubs in a simple *CloudEvent*, serialized as either native JSON or Avro Binary. Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). |
+| [Change event streaming](../relational-databases/track-changes/change-event-streaming/overview.md) | Capture and publish row-level DML changes (inserts, updates, and deletes) on tracked tables in near real-time to Azure Event Hubs or Fabric Eventstream. Change event streaming publishes each change as a *CloudEvent* that includes the row's current schema, previous values, and new values, serialized as either native JSON or Avro Binary. Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). Microsoft Entra authentication is available to instances enabled by Azure Arc or running on an Azure VM starting with Cumulative Update 3 (CU3). |
 | [Data API builder (DAB)](/azure/data-api-builder/overview) | Connect apps to the database over [automatic REST](/azure/data-api-builder/concept/rest/overview) or [GraphQL endpoints](/azure/data-api-builder/concept/graphql/overview). |
 | [External REST endpoint invocation](../relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md) | With a call to the system stored procedure [sp_invoke_external_rest_endpoint](../relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md), you can:<br /><br />- Call REST/GraphQL endpoints from other Azure services<br />- Have data processed via an Azure Function<br />- Update a Power BI dashboard<br />- Call an on-premises REST endpoint<br />- Talk to Azure OpenAI services |
 | [Fuzzy string matching](../relational-databases/fuzzy-string-match/overview.md) | Check if two strings are similar, and calculate the difference between two strings. Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). |
@@ -211,7 +211,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | [VECTOR_NORMALIZE](../t-sql/functions/vector-normalize-transact-sql.md) | Returns a normalized vector. |
 | [VECTORPROPERTY](../t-sql/functions/vectorproperty-transact-sql.md) | Returns specific properties of a given vector. |
 | [CREATE VECTOR INDEX](../t-sql/statements/create-vector-index-transact-sql.md) | Create an approximate index on a vector column to improve performances of nearest neighbors search. Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). |
-| [VECTOR_SEARCH](../t-sql/functions/vector-search-transact-sql.md). | Search for vectors similar to a given query vectors using an approximate nearest neighbors vector search algorithm. Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). |
+| [VECTOR_SEARCH](../t-sql/functions/vector-search-transact-sql.md). | Search for vectors similar to a given query vector using an approximate nearest neighbors vector search algorithm. Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). |
 | [CREATE EXTERNAL MODEL](../t-sql/statements/create-external-model-transact-sql.md) | Creates an external model object that contains the location, authentication method, and purpose of an AI model inference endpoint. |
 | [ALTER EXTERNAL MODEL](../t-sql/statements/alter-external-model-transact-sql.md) | Alters an external model object. |
 | [DROP EXTERNAL MODEL](../t-sql/statements/drop-external-model-transact-sql.md) | Drops an external model object. |

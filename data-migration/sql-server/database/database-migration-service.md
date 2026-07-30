@@ -50,7 +50,7 @@ Before you begin the tutorial:
 
 - Create a target [Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart).
 
-- Make sure that the SQL Server login that connects to the source SQL Server instance is a member of the **db_datareader** role, and that the login for the target SQL Server instance is a member of the **db_owner** role.
+- The source SQL Server login must be a member of the **db_datareader** role on the source database and have the **VIEW ANY DEFINITION** server permission. The target SQL Server login must be a member of the db_owner role on the target database.
 
 - To migrate the database Schema from the source to the target Azure SQL Database by using the Database Migration Service, the minimum supported [SHIR version](https://www.microsoft.com/download/details.aspx?id=39717) required is 5.37 or above.
 

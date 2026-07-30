@@ -2,9 +2,10 @@
 metadata:
   title: "Frequently Asked Questions (FAQ) for Change Event Streaming"
   description: "Find answers to common questions about the change event streaming feature for [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)]."
-  ms.date: 05/11/2026
+  ms.date: 07/29/2026
   ms.service: sql
   ms.topic: concept-article
+  ai-usage: ai-assisted
   author: nzagorac-ms
   ms.author: nzagorac
   ms.reviewer: mathoma
@@ -32,7 +33,8 @@ sections:
       - question: What is the expected performance impact on a large database with millions of rows when CES is enabled?
         answer: The performance impact depends on your specific workload and configuration. However, CES is expected to have a lower overhead than change data capture (CDC), as there is no writing data back into the database.
       - question: What is the maximum message size supported by CES?
-        answer: The message size is configurable, up to a maximum of 1 MB and should align with [the limits of your Azure Event Hubs instance](/azure/event-hubs/event-hubs-quotas).
+        answer: |
+          CES uses the `@max_message_size_kb` setting to split large outbound events into message chunks that fit the destination [Azure Event Hubs limits](/azure/event-hubs/event-hubs-quotas). This setting controls message splitting only. It doesn't change the per-column truncation limit: before CES forms the outbound event, each streamed column value larger than 1 MB is truncated to 1 MB.
       - question: Will the transaction log continue to grow if CES can't deliver events (such as due to a destination issue, expired authorization credential, etc.)?
         answer: Yes. CES ensures reliable ("at least once") message delivery, so the transaction log won't be truncated until events are successfully delivered. If delivery fails, the log grows until the issue is resolved. It's important to maintain the health of CES by monitoring message delivery, [errors](#how-can-i-monitor-ces-activity--for-example--events-processed--errors-), and the utilization of the transaction log for databases that have CES enabled. 
 
@@ -41,7 +43,12 @@ sections:
       - question: How does CES handle schema changes, such as deleting a column?
         answer: CES includes the row schema with each event. If a DDL operation modifies the table (such as deleting, renaming, or adding a column), the next DML event reflects the updated schema. CES doesn't emit events for DDL operations themselves.
       - question: Are tables with LOB columns (for example, varchar(max)) supported by CES?
-        answer: Yes. CES supports tables with LOB columns. For each table configured for streaming, you can configure whether large objects are included in the streamed events.
+        answer: Yes. CES supports tables with LOB columns. For each table configured for streaming, you can control whether the **old** row includes LOB column values by using [sys.sp_add_object_to_event_stream_group](../../system-stored-procedures/sys-sp-add-object-to-event-stream-group-transact-sql.md). Each streamed LOB value is still subject to the 1 MB per-column truncation limit. Configure the [max text repl size](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) server configuration option to allow more than 65,536 bytes to be written to LOB columns when CES is enabled.
+      - question: What happens if a streamed column value is larger than 1 MB?
+        answer: |
+          If one or more streamed column values are larger than 1 MB, CES truncates each affected column value to 1 MB before it forms the outbound event. The limit applies to each column separately. For example, if a row has five columns and the first three column values are each larger than 1 MB, CES truncates each of those three values to 1 MB, forms the outbound event, splits the event into message chunks according to `@max_message_size_kb`, and sends each chunk to the destination.
+
+          Column data truncation is unconditional. CES doesn't log errors or warnings when this truncation occurs. Configure the [max text repl size](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) server configuration option to allow more than 65,536 bytes to be written to LOB columns when CES is enabled.
       - question: Does a table need a primary key to use CES?
         answer: No. CES doesn't require a primary key on the table.
       - question: How granular are CES events?
@@ -52,9 +59,9 @@ sections:
   - name: Integration and configuration
     questions:
       - question: How does CES work in a high availability (HA) configuration? Can I use a DNN connection string?
-        answer: CES only streams from the primary replica. In the event of a failover, CES must be reconfigured on the new primary. You can connect to the primary replica using any method supported by SQL Server, including DNN. 
+        answer: CES only streams from the primary replica. In the event of a failover, CES must be reconfigured on the new primary. You can connect to the primary replica using any method supported by SQL Server, including a distributed network name (DNN). 
       - question: Which protocols does CES use to communicate with the destination?
-        answer: CES supports AMQP and Kafka protocols for Azure Event Hubs. HTTPS isn't supported.
+        answer: CES supports AMQP and Kafka protocols for Azure Event Hubs. HTTPS isn't supported. If you use the AMQP protocol, set the Azure Event Hubs [Minimum TLS version](/azure/event-hubs/transport-layer-security-enforce-minimum-version) configuration option to 1.2. CES doesn't support AMQP when this option is set to 1.3.
       - question: Can CES stream directly to Kafka?
         answer: No. CES currently supports only Azure Event Hubs (AMQP and Kafka protocol) as the destination.
       - question: Does CES support Microsoft Entra managed identity for authentication with Azure Event Hubs?
@@ -80,10 +87,10 @@ sections:
       - question: How can I monitor CES activity (for example, events processed, errors)?
         answer: |
           Use the following system views to monitor CES activity:
-          - [sys.dm_change_feed_errors](../../system-dynamic-management-views/sys-dm-change-feed-errors.md) for event delivery errors. 
-          - [sys.dm_change_feed_log_scan_sessions](../../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md) for log scan activity.
+          - [sys.dm_change_feed_errors](../../system-dynamic-management-objects/sys-dm-change-feed-errors.md) for event delivery errors. 
+          - [sys.dm_change_feed_log_scan_sessions](../../system-dynamic-management-objects/sys-dm-change-feed-log-scan-sessions.md) for log scan activity.
           
-          In SQL Server 2025, you can create CES related XEvent session and get more details on CES activity and potential errors.
+          In SQL Server 2025, you can create a CES-related XEvent session and get more details on CES activity and potential errors.
           
           ```sql
             CREATE EVENT SESSION ChangeEventStreaming
@@ -96,11 +103,11 @@ sections:
             GO
           ```
 
-          When configuring CES xEvent monitoring for Azure SQL Managed Instance, store your `.xel` file in an Azure Blob Storage container. You can observe Change Event Streaming trace information in Azure SQL Managed Instance by observing `synapse_link_error` events: 
+          When configuring CES XEvent monitoring for Azure SQL Managed Instance, store your `.xel` file in an Azure Blob Storage container. You can observe Change Event Streaming trace information in Azure SQL Managed Instance by observing `synapse_link_error` events: 
           
           ```sql
           CREATE CREDENTIAL
-          [your blob container URL here] --make suire to not leave / at the end
+          [your blob container URL here] --make sure to not leave / at the end
           WITH IDENTITY = 'MANAGED IDENTITY';
           
           DROP EVENT SESSION ChangeEventStreaming ON SERVER
@@ -117,10 +124,10 @@ sections:
           ```
 
           
-          xEvent debugging isn't supported for troubleshooting CES in Azure SQL Database.
+          XEvent debugging isn't supported for troubleshooting CES in Azure SQL Database.
 
           You can monitor Azure Event Hubs and use associated metrics and logs.
+      - question: How long are CES errors retained in sys.dm_change_feed_errors?
+        answer: The [sys.dm_change_feed_errors](../../system-dynamic-management-objects/sys-dm-change-feed-errors.md) error list auto-rotates. Newer errors push out earlier entries. Errors that stop occurring aren't removed from the list immediately; they remain until newer errors push them out or the list clears completely.
       - question: Is there a limit to how many tables can be configured for streaming?
-        answer: Yes. CES supports up to 4,096 streaming groups, with up to 40,000 tables per group.
-
-
+        answer: Yes. CES supports up to 4,096 stream groups, with up to 40,000 tables per group.

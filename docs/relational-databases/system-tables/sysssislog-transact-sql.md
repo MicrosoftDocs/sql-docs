@@ -1,19 +1,20 @@
 ---
-title: "sysssislog (Transact-SQL)"
+title: sysssislog (Transact-SQL)
 description: sysssislog (Transact-SQL)
-author: lrtoyou1223
-ms.author: lle
-ms.date: "06/10/2016"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: makromer, maghan
+ms.date: 06/10/2016
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords:
   - "sysdtslog90_TSQL"
   - "sysdtslog90"
 helpviewer_keywords:
   - "sysssislog system table"
 dev_langs:
-  - "TSQL"
+  - TSQL
 ---
 # sysssislog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,6 +41,4 @@ dev_langs:
 |message|**nvarchar**|A description of the event and the information associated with the event.|  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md)   
-  
-  
+ [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md)

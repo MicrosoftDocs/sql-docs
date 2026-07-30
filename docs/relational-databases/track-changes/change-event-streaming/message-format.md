@@ -4,7 +4,7 @@ description: "Describes the message format for change event streaming"
 author: nzagorac-ms
 ms.author: nzagorac
 ms.reviewer: mathoma
-ms.date: 05/11/2026
+ms.date: 07/29/2026
 ms.service: sql
 ms.topic: "reference"
 ms.custom:
@@ -15,46 +15,46 @@ monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17"
 # JSON message format - change event streaming
 [!INCLUDE [sqlserver2025](../../../includes/applies-to-version/sqlserver2025-asdb-asmi.md)]
 
-This article describes the JSON format of a CloudEvents message that is streamed from SQL Server to Azure Event Hubs when using the [change event streaming (CES)](overview.md) feature introduced in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], Azure SQL Database, and Azure SQL Managed Instance
+This article describes the JSON format of a CloudEvents message that streams from SQL Server to Azure Event Hubs when using the [change event streaming (CES)](overview.md) feature introduced in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], Azure SQL Database, and Azure SQL Managed Instance.
 
 [!INCLUDE [change-event-streaming-preview](../../../includes/change-event-streaming-preview.md)]
 
 ## Overview
 
-Events emitted by change event streaming follow the [CloudEvents](https://github.com/cloudevents/spec) specification, making them easy to integrate with event-driven systems. All CES CloudEvents contain 11 attributes (fields). CES can be configured to serialize CloudEvents as JSON (native), or as Avro binary. The following sections of this article describe the message format in detail, including CES CloudEvent attributes, and serialization.
+Events that change event streaming emits follow the [CloudEvents](https://github.com/cloudevents/spec) specification, so you can easily integrate them with event-driven systems. All CES CloudEvents contain 11 attributes (fields). You can configure CES to serialize CloudEvents as JSON (native) or as Avro binary. The following sections of this article describe the message format in detail, including CES CloudEvent attributes and serialization.
 
 ## Related specifications and resources
 
-When applicable, the descriptions in this section are taken from [CloudEvent specification](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md), which includes more details.  
+When applicable, the descriptions in this section come from the [CloudEvent specification](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md), which includes more details.  
 
 ## Attributes
 
 - **`specversion`**:
   - Data type: String
   - Required CloudEvent attribute
-  - The version of the CloudEvents specification that the event uses. This enables the interpretation of the context.
+  - The version of the CloudEvents specification that the event uses. This version enables the interpretation of the context.
 
 - **`type`**
   - Data type: String
   - Required CloudEvent attribute
-  - Contains a value that describes the type of event related to the originating occurrence. The format of this is defined by the producer and might include information such as the version of the type. For more information, review [Versioning of CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md).
+  - Contains a value that describes the type of event related to the originating occurrence. The format of this value is defined by the producer and might include information such as the version of the type. For more information, see [Versioning of CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md).
   - For Change Event Streaming events, the type is currently: `com.microsoft.SQL.CES.DML.V{n}`, where `{n}` indicates the version of Microsoft Change Event Streaming DML event schema.
     - The current latest schema version is 1.
 
 - **`source`**
   - Data type: String
   - Required CloudEvent attribute
-  - Identifies the context in which an event happened. Source + ID must be unique for each event. Currently, this field is always sent as `\/` in events streamed from SQL.
+  - Identifies the context in which an event happened. The combination of source and ID must be unique for each event. Currently, this field is always sent as `\/` in events streamed from SQL.
 
 - **`id`**
   - Data type: String
   - Required CloudEvent attribute
-  - Identifies the event. Producers must ensure that source + ID is unique for each distinct event. If a duplicate event is resent (for example, due to a network error) it could have the same ID. Consumers might assume that events with identical source and ID are duplicates.
+  - Identifies the event. Producers must ensure that the combination of source and ID is unique for each distinct event. If a duplicate event is resent (for example, due to a network error) it could have the same ID. Consumers might assume that events with identical source and ID are duplicates.
 
 - **`logicalid`**
   - Data type: String
   - Extension attribute
-  - Split messages (due to Event Hubs msg size restrictions) are identified by shared logical IDs.
+  - Shared logical IDs identify split messages (due to Event Hubs message size restrictions).
 
 - **`time`**
   - Data type: Timestamp
@@ -64,11 +64,11 @@ When applicable, the descriptions in this section are taken from [CloudEvent spe
 - **datacontenttype**
   - Data type: String
   - Optional CloudEvent attribute
-  - Content type of data value. This attribute enables data to carry any type of content, whereby format and encoding might differ from that of the chosen event format. For example, an event rendered using the JSON envelope format might carry an XML payload in the data, and the consumer is informed by this attribute being set to "application/xml". The rules for how data content is rendered for different `datacontenttype` values are defined in the event format specifications
+  - Content type of data value. This attribute enables data to carry any type of content, whereby format and encoding might differ from that of the chosen event format. For example, an event rendered using the JSON envelope format might carry an XML payload in the data, and the consumer is informed by this attribute being set to "application/xml". The rules for how data content is rendered for different `datacontenttype` values are defined in the event format specifications.
 
 - **`operation`**
   - Data type: String
-  - Extension
+  - Extension attribute
   - Represents the type of SQL operation that happened:
     -  INS for inserts
     -  UPD for updates
@@ -77,17 +77,20 @@ When applicable, the descriptions in this section are taken from [CloudEvent spe
 - **`segmentindex`**
   - Data type: Integer
   - Extension attribute
-  - Segment index, that denotes the position of the message within the logical message chunks. The segment index provides information about where the message stands in the sequence of logical message fragments. This field is always present. Use logicalid + segmentindex + finalsegment fields to sort the incoming events representing a large SQL payload split into multiple events.
+  - Segment index, which denotes the position of the message within the logical message chunks. The segment index provides information about where the message stands in the sequence of logical message fragments. This field is always present. Use `logicalid`, `segmentindex`, and `finalsegment` fields to sort incoming events that represent a large SQL payload split according to the configured `max_message_size_kb` value.
 
 - **`finalsegment`**
   - Data type: Boolean
   - Extension attribute
-  - Tells if this segment is final segment of the sequence. This field is always present and helps to identify if a SQL event that was too large for configured max message size was split into subevents.
+  - Indicates whether this segment is the final segment of the sequence. This field is always present and helps to identify whether a SQL event was split into subevents according to the configured `max_message_size_kb` value.
 
 - **`data`**
   - Data type: String
   - Optional CloudEvent attribute
   - Domain specific event data. For CES, data is string that can be parsed as JSON. This JSON describes how data changed. Format of the data attribute is at [Data attribute format](#data-attribute-format).
+
+> [!NOTE]
+> Message splitting is separate from column-value truncation. Before CES serializes the `data` attribute, it truncates each streamed column value larger than 1 MB to 1 MB. CES then splits the formed event into message chunks as needed according to `max_message_size_kb`.
 
 ## Examples
 
@@ -109,7 +112,7 @@ When applicable, the descriptions in this section are taken from [CloudEvent spe
 }
 ```
 
-### JSON message example – updated
+### JSON message example - updated
 
 ```json
 {
@@ -153,10 +156,10 @@ Data is a JSON object wrapped in string attribute that contains two attributes:
 - `eventRow` 
 
 ```json
-"data": "{ "eventsource": {<eventSource>}, "eventdata": {<eventData>}}"
+"data": "{ "eventsource": {<eventSource>}, "eventrow": {<eventRow>}}"
 ```
 
-Details of these two attributes are explained in greater detail in the following sections: 
+The following sections explain these two attributes in greater detail. 
 
 ### eventsource
 
@@ -203,7 +206,7 @@ Describes row-level changes and compares the old and current values of the field
     - `<column_name>` (string): The name of the column.
     - `<column_value>` (string/int/etc.): The new or current value for that column.
 
-## CES CloudEvent JSON schema
+## CES CloudEvent AVRO schema
 
 ```json
 {
@@ -258,7 +261,7 @@ Describes row-level changes and compares the old and current values of the field
 }
 ```
 
-### CES data attribute JSON schema
+### CES data attribute AVRO schema
 
 ```json
 {

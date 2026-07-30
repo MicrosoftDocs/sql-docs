@@ -1,19 +1,20 @@
 ---
-title: "Integration Services Tables (Transact-SQL)"
+title: Integration Services Tables (Transact-SQL)
 description: Integration Services Tables (Transact-SQL)
-author: lrtoyou1223
-ms.author: lle
-ms.date: "03/14/2017"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: makromer, maghan
+ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 helpviewer_keywords:
   - "SQL Server Integration Services system tables"
   - "system tables [SQL Server], Integration Services"
   - "system tables [Integration Services]"
   - "SSIS, system tables"
 dev_langs:
-  - "TSQL"
+  - TSQL
 ---
 # Integration Services Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,6 +36,4 @@ dev_langs:
  [sysssispackages](../../relational-databases/system-tables/sysssispackages-transact-sql.md)  
  Contains one row for each [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
   
- This table is used only when you store packages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-  
+ This table is used only when you store packages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].

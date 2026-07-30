@@ -1,19 +1,20 @@
 ---
-title: "sysssispackages (Transact-SQL)"
+title: sysssispackages (Transact-SQL)
 description: sysssispackages (Transact-SQL)
-author: lrtoyou1223
-ms.author: lle
-ms.date: "06/10/2016"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: makromer, maghan
+ms.date: 06/10/2016
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords:
   - "sysdtspackages90_TSQL"
   - "sysdtspackages90"
 helpviewer_keywords:
   - "sysssispackages system table"
 dev_langs:
-  - "TSQL"
+  - TSQL
 ---
 # sysssispackages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,6 +43,4 @@ dev_langs:
 |**writerolesid**|**varbinary**|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] role that can save packages.|  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)  
-  
-  
+ [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)

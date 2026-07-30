@@ -98,6 +98,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
+| **Change event streaming AMQP deprecation** | Starting August 15, 2026, the AMQP protocol is deprecated for change event streaming. All newly created stream groups must use `AzureEventHubs` as the `destination_type`. Existing AMQP-configured stream groups continue working until April 2027. For migration steps and timelines, see [AMQP protocol deprecation](/sql/relational-databases/track-changes/change-event-streaming/amqp-deprecation). |
 | **Change event streaming to Fabric Eventstreams** | You can now [stream SQL data changes to Fabric Eventstreams](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream) in addition to Azure Event Hubs. Change event streaming (CES) captures and publishes incremental changes of data to the destination in near real-time. Captured changes include updates, inserts, and deletes (DML). For more information, see [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview). |
 | **Regex-based dynamic data masking (preview)** | You can [define pattern-driven masking rules with the `REGEXP_REPLACE` function](dynamic-data-masking-regex.md) for variable-length string data such as email addresses, phone numbers, and identification numbers. Regex masks preserve the segments you choose to reveal, which the built-in masking functions can't express. This capability is now in preview. |
 

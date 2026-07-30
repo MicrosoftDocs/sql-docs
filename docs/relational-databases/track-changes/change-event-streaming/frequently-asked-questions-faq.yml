@@ -61,7 +61,7 @@ sections:
       - question: How does CES work in a high availability (HA) configuration? Can I use a DNN connection string?
         answer: CES only streams from the primary replica. In the event of a failover, CES must be reconfigured on the new primary. You can connect to the primary replica using any method supported by SQL Server, including a distributed network name (DNN). 
       - question: Which protocols does CES use to communicate with the destination?
-        answer: CES supports AMQP and Kafka protocols for Azure Event Hubs and Fabric Eventstream. HTTPS isn't supported. If you use the AMQP protocol, set the Azure Event Hubs [Minimum TLS version](/azure/event-hubs/transport-layer-security-enforce-minimum-version) configuration option to 1.2. CES doesn't support AMQP when this option is set to 1.3.
+        answer: CES supports AMQP and Kafka protocols for Azure Event Hubs and Fabric Eventstream. HTTPS isn't supported. Starting August 15, 2026, the AMQP protocol is deprecated for new stream groups. All newly created stream groups must use `AzureEventHubs` as the `destination_type`. For details, see [AMQP protocol deprecation](amqp-deprecation.md). If you use the AMQP protocol on existing stream groups, set the Azure Event Hubs [Minimum TLS version](/azure/event-hubs/transport-layer-security-enforce-minimum-version) configuration option to 1.2. CES doesn't support AMQP when this option is set to 1.3.
       - question: Can CES stream directly to Kafka?
         answer: No. CES currently supports only Azure Event Hubs (AMQP and Kafka protocol) as the destination.
       - question: Can CES stream to Fabric Eventstream?

@@ -1937,6 +1937,8 @@ items:
         href: relational-databases/track-changes/change-event-streaming/configure.md
       - name: JSON message format
         href: relational-databases/track-changes/change-event-streaming/message-format.md
+      - name: AMQP protocol deprecation
+        href: relational-databases/track-changes/change-event-streaming/amqp-deprecation.md
       - name: Frequently asked questions
         href: relational-databases/track-changes/change-event-streaming/frequently-asked-questions-faq.yml
   - name: Triggers

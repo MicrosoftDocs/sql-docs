@@ -1,19 +1,20 @@
 ---
-title: "sysssispackagefolders (Transact-SQL)"
+title: sysssispackagefolders (Transact-SQL)
 description: sysssispackagefolders (Transact-SQL)
-author: lrtoyou1223
-ms.author: lle
-ms.date: "06/10/2016"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: makromer, maghan
+ms.date: 06/10/2016
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords:
   - "sysdtspackagefolders90"
   - "sysdtspackagefolders90_TSQL"
 helpviewer_keywords:
   - "sysssispackagefolders system table"
 dev_langs:
-  - "TSQL"
+  - TSQL
 ---
 # sysssispackagefolders (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,6 +32,4 @@ dev_langs:
 |-----------------|---------------|-----------------|  
 |**folderid**|**uniqueidentifier**|The GUID of the folder.|  
 |**parentfolderid**|**uniqueidentifier**|The GUID of the folder that is the parent folder.|  
-|**foldername**|**sysname**|The name of the folder. This name appears in the folder hierarchy in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
-  
-  
+|**foldername**|**sysname**|The name of the folder. This name appears in the folder hierarchy in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|

@@ -4,11 +4,12 @@ description: Learn about feature availability by region for Azure SQL Managed In
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: 
-ms.date: 03/18/2026
+ms.date: 07/30/2026
 ms.service: azure-sql-managed-instance
 ms.topic: concept-article
 ms.custom:
   - references_regions
+ai-usage: ai-assisted
 ---
 # Feature availability by region - Azure SQL Managed Instance
 
@@ -112,17 +113,16 @@ Choosing a [maintenance window](maintenance-window.md) for Azure SQL Managed Ins
 - East US
 - East US 2
 - Mexico Central
-- North Central US
 - South Central US
-- West US 2 
+- West US 2
 - West US 3
 
 #### [Asia Pacific](#tab/asia1)
 
 - Australia East
-- Australia Southeast
+- Central India
+- China North 3
 - East Asia
-- India Central
 - Indonesia Central
 - Japan East
 - Japan West
@@ -133,6 +133,8 @@ Choosing a [maintenance window](maintenance-window.md) for Azure SQL Managed Ins
 
 #### [Europe, the Middle East, and Africa](#tab/emea1)
 
+- Austria East
+- Belgium Central
 - France Central
 - Germany West Central
 - Israel Central
@@ -157,7 +159,19 @@ Choosing a [maintenance window](maintenance-window.md) for Azure SQL Managed Ins
 ---
 
 > [!NOTE]
-> Zone redundant deployments to create a new instance or modify an existing instance in a supported region might be temporarily disabled due to limited hardware capacity. Consider using an alternative hardware generation or an alternative Azure region which satisfies your data residency requirements.
+> Limited hardware capacity might temporarily disable zone redundant deployments to create a new instance or modify an existing instance in a supported region.
+
+### Blocked zone redundant deployments
+
+If your region supports zone redundancy but you can't create or modify a zone redundant instance, Azure regional capacity constraints likely block the deployment. These constraints affect specific configurations in that region. This limitation isn't caused by your subscription, configuration, or deployment process.
+
+While capacity is constrained, consider the following options:
+
+- Deploy to an alternative Azure region that supports zone redundancy and satisfies your data residency requirements.
+- Use an alternative hardware generation or service configuration, if applicable.
+- Retry the operation later, when capacity might become available.
+
+If none of these options meet your business needs, contact your account team or [Azure support](https://azure.microsoft.com/support/options/) to escalate the request. Provide your business requirements and the expected business impact of the deployment limitation so the request can be prioritized. 
 
 ## Database watcher
 

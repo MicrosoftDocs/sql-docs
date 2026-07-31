@@ -3,7 +3,7 @@ title: Connection Strings for mssql-python
 description: Reference for mssql-python connection string keywords, syntax, and examples for connecting to SQL Server and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.date: 07/31/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -158,11 +158,11 @@ All connections use `Encrypt=yes` by default. For most applications, the default
 
 ### High availability and failover
 
-These keywords apply to Always On availability group deployments. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when your availability group spans multiple subnets.
+These keywords cover Always On availability groups, Azure SQL targets, and idle connection resiliency. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance.
 
 | Keyword | Aliases | Default | Description |
 | --------- | --------- | --------- | ------------- |
-| `MultiSubnetFailover` | `multisubnetfailover` | `no` | Enable multi-subnet failover for Always On availability groups. |
+| `MultiSubnetFailover` | `multisubnetfailover` | `no` | Try all resolved endpoints in parallel and complete login with the first responsive one. Speeds up failover recovery. |
 | `ApplicationIntent` | `applicationintent` | `ReadWrite` | Declare application workload type. Use `ReadOnly` for read-only routing to secondary replicas. |
 | `ConnectRetryCount` | `connectretrycount` | `1` | Number of automatic reconnection attempts for [idle connection resiliency](/sql/connect/odbc/connection-resiliency). This is a driver-level feature for dropped idle connections, not a substitute for [application-level retry logic](retry-logic.md). |
 | `ConnectRetryInterval` | `connectretryinterval` | `10` | Seconds between idle connection resiliency reconnection attempts. |
@@ -259,6 +259,8 @@ You can also change the timeout on an existing connection:
 ```python
 conn.timeout = 60
 ```
+
+If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) or Hyperscale with auto-pause, use at least `60`. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. A shorter timeout fires before the resume completes and the connect attempt fails.
 
 ## Autocommit mode
 

@@ -3,7 +3,7 @@ title: Manage Connections with mssql-python
 description: Learn how to open, close, and manage database connections using context managers, autocommit, and connection attributes with mssql-python.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.date: 07/31/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -157,6 +157,8 @@ print(conn.timeout)  # 60
 ```
 
 A timeout of `0` means no timeout (wait indefinitely). Define reasonable timeouts in production; a hung connection attempt with no timeout blocks the calling thread permanently.
+
+If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) or Hyperscale with auto-pause, use at least `60`. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. A shorter timeout fires before the resume completes and the connect attempt fails.
 
 ## Connection attributes
 

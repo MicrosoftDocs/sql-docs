@@ -3,7 +3,7 @@ title: "go-mssqldb Troubleshooting"
 description: "Troubleshoot common errors, connection failures, and certificate issues with the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 07/08/2026
+ms.date: 07/31/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -71,6 +71,7 @@ For more information, see [Encryption and certificates](encryption-certificates.
 - Network connectivity problems. Verify you can reach the server by using `telnet <server> 1433` or `Test-NetConnection -ComputerName <server> -Port 1433`.
 - DNS resolution failure. Verify the hostname resolves correctly.
 - Increase `dial timeout` or `connection timeout` in the connection string.
+- [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) or Hyperscale with auto-pause. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. Set a context deadline of at least 60 seconds and retry the first connection.
 
 ## Authentication errors
 

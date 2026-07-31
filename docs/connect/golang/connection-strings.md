@@ -3,7 +3,7 @@ title: "go-mssqldb Connection Strings"
 description: "Connection string formats for the go-mssqldb driver, including URL, ADO, and ODBC styles."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.date: 07/31/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -129,7 +129,7 @@ The following parameters are shared across all three formats:
 | `user id` | `user` | SQL Server login name. |
 | `password` | - | Password for the SQL Server login. |
 | `database` | - | Target database name. |
-| `connection timeout` | - | Login timeout in seconds. The driver default is `0`, which waits indefinitely. Prefer using Go contexts to control connection and query timeouts. |
+| `connection timeout` | - | Login timeout in seconds. The driver default is `0`, which waits indefinitely. Prefer using Go contexts to control connection and query timeouts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) or Hyperscale with auto-pause, use a context deadline of at least 60 seconds. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. |
 | `dial timeout` | - | Network dial timeout in seconds. The driver default is based on the registered protocols. Set `0` to wait indefinitely. |
 | `encrypt` | - | Encryption mode: `strict`, `true`/`mandatory`, `false`/`optional`, `disable`. When omitted, the default is `false`/`optional`. For Azure SQL and production connections, set `encrypt=true` explicitly. |
 | `TrustServerCertificate` | - | Skip certificate validation. When `encrypt` is specified, the default is `false`. When `encrypt` is omitted, the default is `true`. Use `false` for production and Azure SQL connections. |

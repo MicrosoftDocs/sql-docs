@@ -231,7 +231,7 @@ When specifying hardware parameter in templates or scripts, hardware is provided
 
 Standard-series (Gen5) and premium-series hardware is available in all public regions worldwide.
   
-Memory optimized premium-series hardware is in preview, and has limited regional availability. For more information, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
+For more information, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
 
 
 ## Related content

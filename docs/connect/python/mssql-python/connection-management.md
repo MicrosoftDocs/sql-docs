@@ -277,7 +277,7 @@ Default encodings:
 - **Use context managers** (`with` blocks) for all connections in application code. They guarantee cleanup even when exceptions occur.
 - **Use connection pooling** for better performance (enabled by default). See [Connection pooling](connection-pooling.md).
 - **Set appropriate timeouts** for your network environment. A 30-second timeout suits most cloud deployments; increase it for cross-region or VPN connections. Use at least `60` for [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) or Hyperscale with auto-pause, because an auto-paused database can take 30 to 60 seconds or more to resume on the first connect.
-- **Set `MultiSubnetFailover=yes` in the connection string** for faster failover recovery on availability group listeners and failover cluster instances. It's safe on single-IP targets, so leave it on for all Microsoft SQL family endpoints.
+- **Set `MultiSubnetFailover=yes` in the connection string** when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. It's safe on single-IP targets, so leave it on for all Microsoft SQL family endpoints.
 - **Use `autocommit=False`** (the default) for data modification scenarios where you need transactional atomicity.
 - **Use `autocommit=True`** for DDL operations, read-only queries, and admin scripts.
 - **Don't share connections across threads**. The driver's thread safety level is 1 (threads can share the module but not connections).

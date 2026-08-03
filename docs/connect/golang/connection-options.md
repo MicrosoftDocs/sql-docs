@@ -54,7 +54,7 @@ When the primary server is unreachable, the driver attempts to connect to the fa
 | `packet size` | `4096` | TDS packet size in bytes. Valid range: 512-32767. |
 | `keepAlive` | `30` | Keep-alive interval in seconds. `0` uses the OS default. |
 | `TrustServerCertificate` | Depends on `encrypt` | When `true`, skip server certificate validation. The default is `false` when `encrypt` is specified and `true` when `encrypt` is omitted. Ignored when `encrypt=strict`. Not recommended for production. |
-| `multisubnetfailover` | `multi subnet failover` | `true` | Set to `true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. When DNS resolves to multiple IPs, the driver dials all resolved endpoints in parallel and uses the first successful connection. When DNS resolves to one address, the driver falls back to a single sequential dial, so `true` is safe on single-IP targets. The driver defaults to `true` for backward compatibility; other client libraries default to `false`. |
+| `multisubnetfailover`<br>`multi subnet failover` | `true` | Set to `true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. When DNS resolves to multiple IPs, the driver dials all resolved endpoints in parallel and uses the first successful connection. When DNS resolves to one address, the driver falls back to a single sequential dial, so `true` is safe on single-IP targets. The driver defaults to `true` for backward compatibility; other client libraries default to `false`. |
 
 ## Application intent
 

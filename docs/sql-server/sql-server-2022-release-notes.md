@@ -1,10 +1,9 @@
 ---
-title: "SQL Server 2022 Release Notes"
+title: SQL Server 2022 Release Notes
 description: Find information about SQL Server 2022 (16.x) limitations, known issues, help resources, and other release notes.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 05/01/2026
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: release-notes
@@ -29,7 +28,7 @@ This section identifies known issues you might experience with this product. You
 
 #### Help
 
-When you run `setup /HELP`, the information returned doesn't include the new `/AZUREEXTENSION` feature. Complete information for Setup is available at [Install and configure SQL Server on Windows from the command prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
+When you run `setup /HELP`, the information returned doesn't include the new `/AZUREEXTENSION` feature. Complete information for Setup is available at [Install, configure, or uninstall SQL Server on Windows from the command prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 
 #### Localized language interface
 
@@ -39,7 +38,7 @@ In certain localized languages, the Azure Extension configuration screen control
 
 A new Setup command line installation parameter `/PRODUCTCOVEREDBYSA` indicates if the provided product key (`/PID=`) license is covered under a Software Assurance or SQL Server Subscription contract, or just a SQL Server license.
 
-[Install and configure SQL Server on Windows from the command prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) describes this parameter.
+[Install, configure, or uninstall SQL Server on Windows from the command prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) describes this parameter.
 
 #### Deprecated feature parameters
 
@@ -137,6 +136,10 @@ To work around the issue, first drop the index, or the table with the index, fro
 
 > [!CAUTION]  
 > If you create a partitioned index on a table after dropping an index as described in this scenario, the table becomes inaccessible.
+
+### Access violations in Windows Server 2025 with lpim enabled
+
+[!INCLUDE [windows-server-2025-disable-lpim](../includes/windows-server-2025-disable-lpim.md)]
 
 ## Build number
 

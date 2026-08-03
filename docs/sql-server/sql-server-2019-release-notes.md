@@ -1,9 +1,9 @@
 ---
-title: "SQL Server 2019 Release Notes"
+title: SQL Server 2019 Release Notes
 description: Find information about SQL Server 2019 (15.x) limitations, known issues, help resources, and other release notes.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/02/2025
+ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: release-notes
@@ -34,7 +34,7 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
-## Known Issues
+## Known issues
 
 This section identifies known issues you might experience with this product.
 
@@ -74,6 +74,10 @@ This section identifies known issues you might experience with this product.
 - **Workaround**: Open the MDS portal and go to the resource manually.
 
 - **Applies to**: [!INCLUDE [SQL Server 2019](../includes/sssql19-md.md)] RTM
+
+### Access violations in Windows Server 2025 with lpim enabled
+
+[!INCLUDE [windows-server-2025-disable-lpim](../includes/windows-server-2025-disable-lpim.md)]
 
 ## Related content
 

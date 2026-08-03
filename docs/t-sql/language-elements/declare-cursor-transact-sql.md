@@ -142,6 +142,10 @@ Specifies a `FORWARD_ONLY`, `READ_ONLY` cursor with performance optimizations en
 > [!NOTE]  
 > Both `FAST_FORWARD` and `FORWARD_ONLY` can be used in the same `DECLARE CURSOR` statement.
 
+A `FAST_FORWARD` cursor can either behave as a `STATIC` cursor or as a 'DYNAMIC' cursor. This choice is made at run time, depending on estimated costs, and the choice can change between executions. Since this choice affects whether concurrent modifications are visible to the cursor or not, such a run time change might impact your results. If your application requires that concurrent updates are visible, use a `DYNAMIC` or `KEYSET` cursor instead. If your application requires that concurrent updates are not visible, use a `STATIC` cursor instead.
+
+For some more background, see https://techcommunity.microsoft.com/blog/sqlserver/understanding-sql-server-fast-forward-server-cursors/383556.
+
 #### READ_ONLY
 
 Prevents updates made through this cursor. The cursor can't be referenced in a `WHERE CURRENT OF` clause in an `UPDATE` or `DELETE` statement. This option overrides the default capability of a cursor to be updated.

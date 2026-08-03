@@ -172,8 +172,6 @@ func buildConnString(server, database, appName, fedAuth string) string {
 		"TrustServerCertificate": []string{"false"},
 		"app name":               []string{appName},
 		"log":                    []string{"1"},
-		// Parallel dials to all resolved IPs; single sequential dial on single-IP targets.
-		"multisubnetfailover": []string{"true"},
 	}
 
 	return fmt.Sprintf("sqlserver://%s?%s", server, query.Encode())

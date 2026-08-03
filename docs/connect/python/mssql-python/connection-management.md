@@ -158,7 +158,7 @@ print(conn.timeout)  # 60
 
 A timeout of `0` means no timeout (wait indefinitely). Define reasonable timeouts in production; a hung connection attempt with no timeout blocks the calling thread permanently.
 
-If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) or Hyperscale with auto-pause, use at least `60`. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. A shorter timeout fires before the resume completes and the connect attempt fails.
+If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) or Hyperscale with auto-pause, use at least `60`. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. A shorter timeout expires before the resume completes and the connect attempt fails.
 
 ## Connection attributes
 

@@ -158,7 +158,7 @@ All connections use `Encrypt=yes` by default. For most applications, the default
 
 ### High availability and failover
 
-These keywords cover Always On availability groups, Azure SQL targets, and idle connection resiliency. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance.
+These keywords cover Always On availability groups, Azure SQL targets, and idle connection resiliency. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. `MultiSubnetFailover=yes` is safe on single-IP targets: when DNS resolves to one address, the driver does a single connect attempt with no measurable overhead compared to `MultiSubnetFailover=no`, so you can leave it on for all Microsoft SQL Server family endpoints.
 
 | Keyword | Aliases | Default | Description |
 | --------- | --------- | --------- | ------------- |

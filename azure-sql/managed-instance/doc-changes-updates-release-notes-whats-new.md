@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, randolphwest
-ms.date: 07/29/2026
+ms.date: 08/04/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -51,6 +51,7 @@ The following table lists features of Azure SQL Managed Instance that have been 
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+|[Automatic backup immutability](../automatic-backup-immutability.md) | August 2026 | Automatic backup immutability protects the most recent seven days of point-in-time restore backups in Azure SQL Managed Instance. |
 |[Internal connectivity testing](connectivity-testing-overview.md) | May 2026 | Azure SQL Managed Instance now performs automatic internal connectivity tests to monitor service reliability and accelerate issue detection. |
 |[Block T-SQL CRUD commands](../database/block-crud-tsql.md) | March 2026 | Azure administrators can block T-SQL commands to create or modify Azure SQL resources. |
 |[SQL Server 2025 update policy](update-policy.md#sql-server-2025-update-policy) | March 2026 | Align your SQL managed instance database format with the SQL Server 2025 database engine. | 
@@ -66,16 +67,16 @@ The following table lists features of Azure SQL Managed Instance that have been 
 | [Vector data type](/sql/t-sql/data-types/vector-data-type?view=azuresqlmi-current&preserve-view=true) and [vector functions](/sql/t-sql/functions/vector-functions-transact-sql?view=azuresqlmi-current&preserve-view=true) | June 2025 | Working with vector data is now easier in Azure SQL Managed Instance with the Always-up-to-date update policy, with the introduction of a new vector data type and vector functions. For more information, see [Intelligent applications with Azure SQL Managed Instance](/sql/sql-server/ai/artificial-intelligence-intelligent-applications#vectors).|
 |[Zone redundancy for General Purpose](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) | June 2025|  Deploy your General Purpose SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. | 
 |[Invoke an HTTPS REST endpoint SP](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) | June 2025 | Use the `sp_invoke_external_rest_endpoint` stored procedure to invoke an HTTPS REST endpoint provided as an input argument to the procedure. | 
-|[TLS 1.3 support for replication](replication-transactional-overview.md#tls-13-support) | May 2025 | Configure Azure SQL Managed Instance replication agents to use TLS 1.3. |
-|[Free SQL Managed Instance](free-offer.md) | May 2025 | Try Azure SQL Managed Instance for free for the first 12 months after an instance is created.  |
-|[JSON native data type](/sql/t-sql/data-types/json-data-type?view=azuresqlmi-current&preserve-view=true) | May 2025 | The **json** data type provides new capabilities for handling semistructured data in Azure SQL Managed Instance. |
-|[JSON aggregate functions](/sql/relational-databases/json/json-data-sql-server?view=azuresqlmi-current&preserve-view=true#json-data-from-aggregates) | May 2025 | Two **json** aggregate functions (`JSON_OBJECTAGG` and `JSON_ARRAYAGG`) enable construction of JSON objects or arrays based on an aggregate from SQL data. |
-|[MI link from SQL Server 2017](managed-instance-link-feature-overview.md#prerequisites) | March 2025 | Configure a link from SQL Server 2017 to Azure SQL Managed Instance. |
-
 
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### August 2026
+
+| Changes | Details |
+| --- | --- |
+| **Automatic backup immutability GA** |  Automatic backup immutability protects up to the most recent seven days of point-in-time restore backups in Azure SQL Managed Instance. This feature is now generally available (GA). To learn more, see [Automatic backup immutability](../automatic-backup-immutability.md). |
 
 ### July 2026
 

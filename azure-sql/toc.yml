@@ -64,6 +64,8 @@
       - name: Block T-SQL CRUD
         href: database/block-crud-tsql.md
         displayName: block-tsql-crud, block-tsql-mi-crud
+      - name: Automatic backup immutability
+        href: automatic-backup-immutability.md
       - name: Microsoft Entra authentication
         items:
         - name: Microsoft Entra authentication documentation

@@ -49,7 +49,6 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 | [Migration from the Azure portal](/sql/sql-server/azure-arc/migrate-to-sql-server-on-azure-vms) | June 2026 | Migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal. |
 | [VM vCore customization](vm-vcore-customization-for-sql.md) | May 2026 | Customize the number of vCPUs presented to the guest OS for SQL Server workloads with configurable constrained cores (CCC), and disable Simultaneous Multithreading (SMT). This capability allows you to appropriately size the vCPU count to match your SQL Server licensing needs while preserving the VM's memory and I/O capabilities. |
 
-
 ## Documentation changes
 
 Learn about significant changes to the SQL Server on Azure VMs documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).

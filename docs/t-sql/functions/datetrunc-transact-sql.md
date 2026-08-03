@@ -1,6 +1,6 @@
 ---
-title: "DATETRUNC (Transact-SQL)"
-description: The DATETRUNC function returns an input date-related value truncated to a specified datepart.
+title: DATETRUNC (Transact-SQL)
+description: DATETRUNC in Transact-SQL truncates a date, time, or datetime value to a specified datepart. Explore syntax, supported dateparts, return types, and examples.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: derekw, maghan

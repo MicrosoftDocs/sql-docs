@@ -23,9 +23,7 @@ To configure CES to Fabric Eventstream, see [Stream to Fabric Eventstream](/fabr
 
 [!INCLUDE [change-event-streaming-preview](../../../includes/change-event-streaming-preview.md)]
 
-## Overview
-
-To configure and use change event streaming, follow these steps:
+## Procedure for change event streaming
 
 1. Use an existing or create a new [Azure Event Hubs](/azure/event-hubs/event-hubs-about) namespace and Event Hubs instance. The Event Hubs instance receives events.
 1. Enable change event streaming for a user database.
@@ -35,6 +33,8 @@ To configure and use change event streaming, follow these steps:
 Each step is described in detail in the following sections of this article.
 
 ## Prerequisites
+
+[!INCLUDE [change-event-streaming-amqp-deprecation](../../../includes/change-event-streaming-amqp-deprecation.md)]
 
 To configure change event streaming, you need the following resources, permissions, and configuration:
 
@@ -66,7 +66,7 @@ If you use a shared access policy for authentication and authorization, clients 
 
 SAS tokens have a security advantage over service keys: If the client is compromised, the SAS token is only valid until it expires, and the compromised client can't create new SAS tokens. In contrast, service keys don't automatically expire. A compromised client with a service key can generate new SAS tokens by using the key.
 
-To configure streaming to Azure Event Hubs with the AMQP protocol (the default native Azure Event Hubs protocol), create or reuse a shared access policy with **Send** permission and generate a SAS token. You can generate the token programmatically with any programming or scripting language. The example in this article shows how to generate a SAS token from a new or existing policy by using a PowerShell script.
+To configure streaming to Azure Event Hubs with the AMQP protocol, create or reuse a shared access policy with **Send** permission and generate a SAS token. You can generate the token programmatically with any programming or scripting language. The example in this article shows how to generate a SAS token from a new or existing policy by using a PowerShell script.
 
 > [!NOTE]  
 > For improved security, use Microsoft Entra based access control whenever possible. If Microsoft Entra based access control isn't possible and you're using shared access policies, use SAS token authentication instead of service key-based authentication whenever possible. Best practices for SAS tokens include defining an appropriate minimally required access scope, setting a short expiration date, and rotating the SAS key regularly. For key-based authentication, rotate keys periodically. Store all secrets securely by using Azure Key Vault or a similar service.
@@ -281,7 +281,9 @@ The examples also use the following values:
 
 ### Example: Stream to Azure Event Hubs via AMQP protocol
 
-The examples in this section show how to stream change events to Azure Event Hubs by using the AMQP protocol. AMQP is the default native Azure Event Hubs protocol.
+[!INCLUDE [change-event-streaming-amqp-deprecation](../../../includes/change-event-streaming-amqp-deprecation.md)]
+
+The examples in this section show how to stream change events to Azure Event Hubs by using the AMQP protocol.
 
 #### [SAS token authentication](#tab/sas-token-auth-1)
 

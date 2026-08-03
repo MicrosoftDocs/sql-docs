@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 07/29/2026
+ms.date: 08/04/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -58,6 +58,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | **Network Security Perimeter** | [Azure Network Security Perimeter](network-security-perimeter.md) allows organizations to define a logical network isolation boundary for PaaS resources (for example, Azure Storage and SQL Database) that are deployed outside your organization's virtual networks. It restricts public network access to PaaS resources outside of the perimeter, and access can be exempted by using explicit access rules for public inbound and outbound. |
 | **New Query editor experience in the Azure portal** | As of March 2026, there's a new [query editor in the Azure portal](query-editor.md) that allows you to run queries against your Azure SQL Database directly from a web browser. |
 | **Query Store for readable secondary replicas** | [Query Store for readable secondary replicas](/sql/relational-databases/performance/query-store-for-secondary-replicas) enables Query Store insights for workloads that run on secondary replicas. When enabled, secondary replicas stream query execution information (such as runtime and wait statistics) to the primary replica, where the data is persisted in Query Store and made visible across all replicas. |
+| **Regex-based dynamic data masking** | Use the `REGEXP_REPLACE` masking function to define pattern-driven masking rules for variable-length string data such as email addresses, phone numbers, and identifiers. For more information, see [Regex-based dynamic data masking in Azure SQL Database (preview)](dynamic-data-masking-regex.md). |
 | **Restart database in the Azure portal** | You can [restart your SQL database or elastic pool](restart-database.md) from the Azure portal. |
 | **Soft delete retention for logical server** | You can [configure a soft delete retention period](deleted-logical-server-restore.md) for a logical server and restore a deleted server within the retention period.|
 | **Vector indexing and VECTOR_SEARCH enhancements** | DiskANN vector indexes are now in preview with full DML support, iterative filtering, the new `SELECT TOP (N) WITH APPROXIMATE` syntax, and the `FORCE_ANN_ONLY` table hint. Earlier vector index versions and the `TOP_N` parameter are deprecated. For more information, see [CREATE VECTOR INDEX](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqldb-current&preserve-view=true) and [VECTOR_SEARCH](/sql/t-sql/functions/vector-search-transact-sql?view=azuresqldb-current&preserve-view=true). |
@@ -69,6 +70,7 @@ The following table lists features of Azure SQL Database that have been made gen
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
+|**Automatic backup immutability** | August 2026 | [Automatic backup immutability](../automatic-backup-immutability.md) protects the most recent seven days of point-in-time restore backups in Azure SQL Database. |
 | **Microsoft Entra server principals** | June 2026 | The ability to [create server principals (logins) for Microsoft Entra identities](authentication-azure-ad-logins.md) in Azure SQL Database is now generally available. |
 | **DATEADD number allows bigint** | November 2025 | For `DATEADD (datepart, number, date)`, number can be expressed as a **bigint**. For more information, see [DATEADD (Transact-SQL)](/sql/t-sql/functions/dateadd-transact-sql).|
 | **Regular expression functions** | November 2025 | Regular expression (REGEX) functions return text based on values in a search pattern. [Regular expressions](/sql/relational-databases/regular-expressions/overview). |
@@ -81,29 +83,30 @@ The following table lists features of Azure SQL Database that have been made gen
 | **Degrees of Parallelism (DOP) feedback** | July 2025 | [DOP Feedback](/sql/relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback?view=azuresqldb-current&preserve-view=true) is now generally available for Azure SQL Database. For more information, see [Smarter Parallelism: Degree of parallelism feedback in SQL Server 2025](https://techcommunity.microsoft.com/blog/sqlserver/smarter-parallelism-degree-of-parallelism-feedback-in-sql-server-2025/4431318). |
 | **Audit re-architecture** | July 2025 | Increased availability and reliability of server audits through a re-architecture of auditing in Azure SQL Database that is closely aligned with SQL Server and Azure SQL Managed Instance. For more information, see [Auditing](auditing-overview.md#enhancements-to-performance-availability-and-reliability-in-server-auditing-for-azure-sql-database-july-2025-ga).|
 | **Vector data type and functions** | June 2025 | Working with vector data is now easier in Azure SQL Database with the introduction of a new [vector data type](/sql/t-sql/data-types/vector-data-type?view=azuresqldb-current&preserve-view=true) and [vector functions](/sql/t-sql/functions/vector-functions-transact-sql?view=azuresqldb-current&preserve-view=true). For more information, see [Intelligent applications with Azure SQL Database](ai-artificial-intelligence-intelligent-applications.md#vectors).|
-| **Hyperscale increased log generation rate** | May 2025 | The transaction log generation rate in Azure SQL Database Hyperscale single databases has been increased from 100 MiB/s to 150 MiB/s for premium-series and premium-series memory optimized hardware. For more information, read [Blog: Enhancements to Azure SQL Database Hyperscale](https://aka.ms/HSenhancements).|
-| **Hyperscale continuous priming** | May 2025 | [Continuous priming](service-tier-hyperscale.md#continuous-priming) optimizes Hyperscale performance during failovers by priming high availability secondary compute replicas. Continuous priming is now generally available. For more information, read [Blog: Enhancements to Azure SQL Database Hyperscale](https://aka.ms/HSenhancements). |
-| **JSON native data type** | May 2025 | The [**json** data type and JSON aggregate functions](/sql/t-sql/data-types/json-data-type?view=azuresqldb-current&preserve-view=true) provide new capabilities for handling semistructured data in Azure SQL Database. |
-| **JSON aggregate functions** | May 2025 | Two [**json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG`](/sql/relational-databases/json/json-data-sql-server?view=azuresqldb-current&preserve-view=true#json-data-from-aggregates) enable construction of JSON objects or arrays based on an aggregate from SQL data. |
-| **Copilot in Microsoft Azure with SQL Database** | April 2025 | [Copilot in Azure with Azure SQL Database](../copilot/copilot-azure-sql-overview.md) is a [capability](/azure/copilot/capabilities#perform-tasks) of the [Microsoft Copilot in Azure](/azure/copilot/overview) experience that enhances the management and operation of Azure services, providing robust capabilities for SQL-dependent applications. |
-| **Manually initiate cutover for conversion to Hyperscale** | April 2025 | When converting an Azure SQL Database to the Hyperscale service tier, you have a new [option to manually initiate the cutover](https://aka.ms/hs-conversion-v2-ga). For more information, see [Convert an existing database to Hyperscale](convert-to-hyperscale.md). |
-
 
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
+### August 2026
+
+| Changes | Details |
+| --- | --- |
+| **Automatic backup immutability GA** | Automatic backup immutability protects up to the most recent seven days of point-in-time restore backups in Azure SQL Database. This feature is now generally available (GA). To learn more, see [Automatic backup immutability](../automatic-backup-immutability.md). |
+
 ### July 2026
 
 | Changes | Details |
 | --- | --- |
+| **Change event streaming AMQP deprecation** | Starting August 15, 2026, the AMQP protocol is deprecated for change event streaming. All newly created stream groups must use `AzureEventHubs` as the `destination_type`. Existing AMQP-configured stream groups continue working until April 2027. For migration steps and timelines, see [AMQP protocol deprecation](/sql/relational-databases/track-changes/change-event-streaming/amqp-deprecation). |
 | **Change event streaming to Fabric Eventstreams** | You can now [stream SQL data changes to Fabric Eventstreams](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream) in addition to Azure Event Hubs. Change event streaming (CES) captures and publishes incremental changes of data to the destination in near real-time. Captured changes include updates, inserts, and deletes (DML). For more information, see [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview). |
+| **Regex-based dynamic data masking (preview)** | You can [define pattern-driven masking rules with the `REGEXP_REPLACE` function](dynamic-data-masking-regex.md) for variable-length string data such as email addresses, phone numbers, and identification numbers. Regex masks preserve the segments you choose to reveal, which the built-in masking functions can't express. This capability is now in preview. |
 
 ### June 2026
 
 | Changes | Details |
 | --- | --- |
-| **AES keys for transparent data encryption (preview)** | The TDE protector for Azure SQL Database can now be backed by symmetric (AES) keys stored in Azure Key Vault Managed HSM, in addition to asymmetric (RSA) keys. This capability is in public preview. For more information, see [Customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md). |
+| **AES keys for transparent data encryption preview** | The TDE protector for Azure SQL Database can now use symmetric (AES) keys stored in Azure Key Vault Managed HSM, in addition to asymmetric (RSA) keys. This capability is in public preview. For more information, see [Customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md). |
 | **Microsoft Entra server principals** | The ability to [create server principals (logins) for Microsoft Entra identities](authentication-azure-ad-logins.md) in Azure SQL Database is now generally available. |
 
 ### May 2026

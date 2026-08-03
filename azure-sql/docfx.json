@@ -81,7 +81,8 @@
         "**/toc.yml": null
       },
       "breadcrumb_path": {
-        "**/*.md": "/azure/azure-sql/breadcrumb/toc.json"
+        "**/*.md": "/azure/azure-sql/breadcrumb/toc.json",
+        "**/*.yml": "/azure/azure-sql/breadcrumb/toc.json"
       },
       "feedback_product_url": {
         "articles/azure-sql/*.md": "https://aka.ms/sqlfeedback",

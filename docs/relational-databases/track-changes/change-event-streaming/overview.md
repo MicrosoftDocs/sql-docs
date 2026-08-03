@@ -21,9 +21,12 @@ To get started with the feature, see [Configure change event streaming](configur
 
 [!INCLUDE [change-event-streaming-preview](../../../includes/change-event-streaming-preview.md)]
 
-## Overview
 
-Change event streaming (CES) is a modern data integration capability that streams SQL data changes directly into [Azure Event Hubs](/azure/event-hubs/event-hubs-about) or [Fabric Eventstream](/fabric/real-time-intelligence/event-streams/overview), which are high throughput data streaming services. CES captures and publishes incremental changes of data to the destination in near real-time. Captured changes include updates, inserts, and deletes (DML). Details of the data changes, such as the current schema, previous values, and new values, are sent to Azure Event Hubs or Fabric Eventstream in the form of a CloudEvent. The CloudEvent is serialized to JSON (native) or Avro Binary, and then streamed into an Azure Event Hubs or Fabric Eventstream destination.
+## Overview 
+
+CES is a modern data integration capability that streams SQL data changes directly into [Azure Event Hubs](/azure/event-hubs/event-hubs-about) or [Fabric Eventstream](/fabric/real-time-intelligence/event-streams/overview), which are high throughput data streaming services. CES captures and publishes incremental changes of data to the destination in near real-time. Captured changes include updates, inserts, and deletes (DML). Details of the data changes, such as the current schema, previous values, and new values, are sent to Azure Event Hubs or Fabric Eventstream in the form of a CloudEvent. The CloudEvent is serialized to JSON (native) or Avro Binary, and then streamed into an Azure Event Hubs or Fabric Eventstream destination.
+
+[!INCLUDE [change-event-streaming-amqp-deprecation](../../../includes/change-event-streaming-amqp-deprecation.md)]
 
 ## Use cases
 

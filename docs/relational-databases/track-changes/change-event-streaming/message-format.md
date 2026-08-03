@@ -21,7 +21,9 @@ This article describes the JSON format of a CloudEvents message that streams to 
 
 ## Overview
 
-Events that change event streaming emits follow the [CloudEvents](https://github.com/cloudevents/spec) specification, so you can easily integrate them with event-driven systems. All CES CloudEvents contain 11 attributes (fields). You can configure CES to serialize CloudEvents as JSON (native) or as Avro binary. The following sections of this article describe the message format in detail, including CES CloudEvent attributes and serialization.
+Change event streaming emits events that follow the [CloudEvents](https://github.com/cloudevents/spec) specification, so you can easily integrate them with event-driven systems. All CES CloudEvents contain 11 attributes (fields). You can configure CES to serialize CloudEvents as JSON (native) or as Avro binary. The following sections of this article describe the message format in detail, including CES CloudEvent attributes and serialization.
+
+[!INCLUDE [change-event-streaming-amqp-deprecation](../../../includes/change-event-streaming-amqp-deprecation.md)]
 
 ## Related specifications and resources
 

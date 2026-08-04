@@ -134,10 +134,15 @@ After making changes, verify that the extension provisions successfully.
 
 ### Set proxy exclusions
 
-> [!NOTE]  
-> Starting with the April 2024 release, this exclusion isn't required. Beginning with extension version 1.1.2986.256, you can set the `NO_PROXY` environment variable to bypass the proxy for specific URLs while routing all other requests through the proxy server. For example, use `NO_PROXY` to route requests to Azure Key Vault through private endpoints.
+> [!NOTE]
+> Starting with the April 2024 release (extension version 1.1.2986.256), you don't need to set these exclusions. You can also use `NO_PROXY` to bypass the proxy for specific URLs while routing all other requests through the proxy server. For example, use `NO_PROXY` to route requests to Azure Key Vault through private endpoints.
 
-If you use a proxy server, set the `NO_PROXY` environment variable to exclude proxy traffic for:
+Set the `NO_PROXY` environment variable to exclude proxy traffic for the following addresses when either condition applies:
+
+- The extension version is earlier than 1.1.2986.256.
+- The machine has a system-level `HTTPS_PROXY` environment variable, regardless of the extension version. This condition prevents requests to the local Azure Arc identity endpoint (`https://localhost:40341`) from being routed through the proxy.
+
+Exclude these addresses:
 
 - `localhost`
 - `127.0.0.1`

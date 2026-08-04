@@ -56,7 +56,7 @@ The name of a table with an identity column.
 
 At any time, only one table in a session can have the `IDENTITY_INSERT` property set to `ON`. If a table already has this property set to `ON`, and a `SET IDENTITY_INSERT ON` statement is issued for another table, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message that states `SET IDENTITY_INSERT` is already `ON`, and reports the table for which `ON` is set.
 
-If the value inserted is larger than the current identity value for the table, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically uses the new inserted value as the current identity value.
+If the value inserted is beyond the current identity value (according to the INCREMENT setting) for the table, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically uses the new inserted value as the current identity value.
 
 The setting of `SET IDENTITY_INSERT` is set at execute or run time and not at parse time.
 

@@ -200,6 +200,9 @@ The created `DATABASE SCOPED CREDENTIAL` used by an external model must follow t
 
 - The credential must point to a path that's more generic than the request URL. For example, a credential created for path `https://northwind.azurewebsite.net/customers` can't be used for the URL `https://northwind.azurewebsite.net`.
 
+> [!NOTE]  
+> On Azure SQL Database and Azure SQL Managed Instance, the allowed domains for AI endpoints are `*.cognitiveservices.azure.com`, `*.api.cognitive.microsoft.com`, and `*.openai.azure.com`. Azure AI Foundry resources also expose a `*.services.ai.azure.com` endpoint, which isn't in the allowed list. Use the `*.cognitiveservices.azure.com` endpoint of the same resource for both `CREDENTIAL` and `LOCATION`. For the full list, see [Allowed endpoints](../../relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md#allowed-endpoints).
+
 #### Collation and credential name rules
 
 [RFC 3986 Section 6.2.2.1](https://www.rfc-editor.org/rfc/rfc3986#section-6.2.2.1) states that "When a URI uses components of the generic syntax, the component syntax equivalence rules always apply; namely, that the scheme and host are case-insensitive." [RFC 7230 Section 2.7.3](https://www.rfc-editor.org/rfc/rfc7230#section-2.7.3) mentions that "all other are compared in a case-sensitive manner."

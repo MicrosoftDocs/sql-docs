@@ -567,18 +567,19 @@ Available [Azure CLI](/cli/azure/sql) commands:
 SQL managed instances in a pool have the following limitations:
 
 - The pool name can contain only lowercase letters, numbers and hyphens, and can't start with a hyphen.
-- All instances in the pool use the same licensing model. When you specify a license model for an instance that is different than the license model for the pool, the pool license model is used. When the instance is moved out of the pool, it automatically switches to a full paid license (`LicenseType` = 'LicenseIncluded'). Manually activate the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) or the [hybrid failover rights benefit](managed-instance-link-feature-overview.md#license-free-passive-dr-replica) to change the licensing model.
+- All instances in the pool use the same licensing model. When you specify a license model for an instance that is different from the license model for the pool, the pool license model is used. When you move the instance out of the pool, it automatically switches to a full paid license (`LicenseType` = 'LicenseIncluded'). To change the licensing model, manually activate the [Azure Hybrid Benefit](../azure-hybrid-benefit.md).
 - Pooled instances must belong to the same subnet and resource group. Moving an instance in and out of the pool is only possible within the subnet of the pool and same resource group.
 - Moving an instance pool to another subnet is not supported.
-- Only General Purpose service tier is available. The Next-gen General Purpose and Business Critical service tiers aren't available. 
-- Only the standard-series (Gen5) or premium-series hardware is supported. The premium-series memory optimized hardware isn't supported.  
+- Only the General Purpose service tier is available. The Next-gen General Purpose and Business Critical service tiers aren't available.
+- Only the standard-series (Gen5) or premium-series hardware is supported. The premium-series memory optimized hardware isn't supported.
 - The maximum possible number of instances in the pool is 40.
 - An instance pool can only be deleted after all instances in the pool are either deleted or moved out of the pool.
 - You can't use the Azure portal to move instances in and out of the pool. Use PowerShell or the Azure CLI instead.
 - The following SQL Managed Instance features aren't supported on instances in a pool:
-    - [Failover groups](failover-group-sql-mi.md). [Failover rights](failover-group-standby-replica-how-to-configure.md) aren't available to instances in a pool.
-    - [Stop and start an instance](instance-stop-start-how-to.md).
-    - [Zone Redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability).
+   - [License-free DR replicas](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) aren't available to instances in an instance pool, either as failover rights or as hybrid failover rights.
+   - [Failover groups](failover-group-sql-mi.md) aren't available to instances in an instance pool.
+   - [Stop and start an instance](instance-stop-start-how-to.md).
+   - [Zone Redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability).
 
 ## Support requests
 

@@ -96,10 +96,10 @@ To get started, review [Restore database to SQL Server 2022](restore-database-to
 You can save on licensing costs by activating the [Hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) for your passive secondary SQL managed instance when it's used only for disaster recovery.  The **Hybrid failover benefit** can be activated for new and existing instances. 
 
 > [!NOTE]
-> The **Hybrid failover benefit** is only applicable when you configure a secondary instance as a passive _in a hybrid environment between SQL Server and SQL Managed Instance_. For failover benefits between two instances in a _failover group_, use the [failover benefit](failover-group-standby-replica-how-to-configure.md) instead. 
+> - The **Hybrid failover benefit** only applies when you configure a secondary instance as a passive _in a hybrid environment between SQL Server and SQL Managed Instance_. For failover benefits between two instances in a _failover group_, use the [failover benefit](failover-group-standby-replica-how-to-configure.md) instead.
+> - The **Hybrid failover benefit** doesn't apply to instances in an [instance pool](instance-pools-configure.md).
 
-
-### New instances 
+### New instances
 
 To activate the **Hybrid failover benefit** for a new instance, follow these steps: 
 
@@ -125,13 +125,20 @@ To activate the **Hybrid failover benefit** for an existing instance, follow the
 
 1. Select **Apply** to save your changes. 
 
-## Limitations 
+## Limitations
 
 The following capabilities are only supported between SQL Server 2022 and SQL managed instances with the [SQL Server 2022 update policy](update-policy.md#sql-server-2022-update-policy): 
    - Establishing a link _from_ SQL Managed Instance _to_ SQL Server. 
    - Failing over from SQL Managed Instance to SQL Server 2022. 
 
-While you can establish a link from SQL Server 2022 to a SQL managed instance configured with the [Always-up-to-date update policy](update-policy.md#always-up-to-date-update-policy), after fail over to SQL Managed Instance, you will no longer be able to replicate data or fail back to SQL Server 2022. 
+While you can establish a link from SQL Server 2022 to a SQL managed instance configured with the [Always-up-to-date update policy](update-policy.md#always-up-to-date-update-policy), after fail over to SQL Managed Instance, you can't replicate data or fail back to SQL Server 2022.
+
+The following capabilities are only supported between SQL Server 2025 and SQL managed instances with the [SQL Server 2025 update policy](update-policy.md#sql-server-2025-update-policy): 
+   - Establishing a link _from_ SQL Managed Instance _to_ SQL Server. 
+   - Failing over from SQL Managed Instance to SQL Server 2025. 
+
+While you can establish a link from SQL Server 2025 to a SQL managed instance configured with the [Always-up-to-date update policy](update-policy.md#always-up-to-date-update-policy), after fail over to SQL Managed Instance, you can't replicate data or fail back to SQL Server 2025.
+
 
 ## Related content
 

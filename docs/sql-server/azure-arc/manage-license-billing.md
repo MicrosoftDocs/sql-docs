@@ -90,11 +90,7 @@ The following license types are supported when you license virtual cores:
 | License with Software Assurance | Bring your own Standard or Enterprise license with Software Assurance or a SQL Server subscription. Your software usage is reported through a free hourly meter according to the metering rules. See [Metering software usage](#usage-metering) later in this article. | `Paid` |
 | License only | You use a perpetual license for Standard or Enterprise edition, or you use the free Developer, Evaluation, or Express editions. Your software usage is reported according to the metering rules. See [Metering software usage](#usage-metering) later in this article. | `LicenseOnly` |
 
-#### Important considerations
-
-- The pay-as-you-go subscription requires the hosting machine to maintain connectivity with Azure. Hourly charges apply only when SQL Server is running on the machine during any part of an hour and the machine is online.
-
-   Built-in resilience tolerates intermittent connectivity disruptions for up to 30 consecutive days without affecting billing accuracy. This means that as long as connectivity is not interrupted for more than 30 days, your billing remains correct—even if there are short, intermittent disconnections. If the machine stays disconnected for more than 30 days, the pay-as-you-go subscription expires, and you're no longer authorized to use the software.
+#### Important pay-as-you-go considerations
 
 - If you're using an Azure subscription managed by a Cloud Service Provider (CSP), enabling pay-as-you-go requires that you or the CSP consents to recurrent billing. For details, review [Manage recurrent billing for SQL Server enabled by Azure Arc with pay-as-you-go license](manage-pay-as-you-go-transition.md).
 
@@ -112,6 +108,26 @@ The following license types are supported when you license virtual cores:
 - For SQL Server Enterprise, Standard, or Web edition instances of SQL Server licensed from cloud service providers or hosting service providers using the Service Provider Licensing Agreement (SPLA), use `license only` for the license type. Web edition isn't available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions.
 
 - [Microsoft.AzureArcData tag support](/azure/azure-resource-manager/management/tag-support#microsoftazurearcdata) explains what types of tags are currently supported for Arc data resources.
+
+#### Pay-as-you-go networking requirements
+
+The pay-as-you-go subscription requires the hosting machine to maintain connectivity with Azure. Hourly charges apply only when SQL Server is running on the machine during any part of an hour and the machine is online.
+
+Built-in resilience tolerates intermittent connectivity disruptions for up to 30 consecutive days without affecting billing accuracy. This means that as long as connectivity isn't interrupted for more than 30 days, your billing remains correct, even if there are short, intermittent disconnections. If the machine stays disconnected for more than 30 days, the pay-as-you-go subscription expires, and you're no longer authorized to use the software.
+
+SQL Server pay-as-you-go licensing depends on successful communication with Microsoft usage reporting services. 
+
+Periodically verify that usage reporting is functioning correctly by reviewing the **Last Usage Upload Time** in the Azure portal. A recent timestamp indicates that usage records are received and processed.
+
+If usage uploads aren't received for more than 24 hours, check the following things:
+
+- Review and implement all [Azure Arc network requirements](prerequisites.md).
+- Ensure all required HTTPS outbound endpoints for Azure Arc and SQL Server usage reporting remain accessible.
+- Verify that proxy, firewall, DNS, and other network security configurations aren't blocking or interfering with usage reporting traffic.
+- Review Azure Arc Activity Logs for warning or informational events indicating that usage records aren't received within the expected timeframe.
+- Resolve any identified connectivity or configuration issues and confirm that usage uploads resume successfully.
+
+Blocking or restricting required outbound connectivity can prevent usage data from being uploaded, which can affect licensing and billing accuracy.
 
 #### Available benefits
 

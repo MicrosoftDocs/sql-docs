@@ -158,7 +158,7 @@ After recovery from either recovery mechanism, you must perform the following ad
 
 ## License-free DR replicas
 
-You can save on licensing costs by configuring a secondary Azure SQL Managed Instance for only disaster recovery (DR). This benefit is available if you're using a failover group between two SQL managed instances, or you've configured a hybrid link between SQL Server and Azure SQL Managed Instance. As long as the secondary instance doesn't have any read or write workloads on it  and is only a passive DR standby, you aren't charged for the vCore licensing costs used by the secondary instance. 
+You can save on licensing costs by configuring a secondary Azure SQL Managed Instance for only disaster recovery (DR). This benefit is available if you're using a failover group between two SQL managed instances, or you configured a hybrid link between SQL Server and Azure SQL Managed Instance. As long as the secondary instance doesn't have any read or write workloads on it and is only a passive DR standby, you aren't charged for the vCore licensing costs used by the secondary instance.
 
 When you designate a secondary instance for only disaster recovery, and no read or write workloads are running on the instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit. You're still billed for the compute and storage that the secondary instance uses. For precise terms and conditions of the Hybrid failover rights benefit, see the SQL Server licensing terms online in the ["SQL Server – Fail-over Rights"](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS) section.
 

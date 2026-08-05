@@ -92,7 +92,7 @@ landingContent:
       - text: Extended Support Updates (ESUs) 
         url: ../end-of-support/sql-server-extended-security-updates.md
       - text: ESU frequently asked questions
-        url: ../end-of-support/extended-security-updates-frequently-asked-questions.md
+        url: ../end-of-support/extended-security-updates-frequently-asked-questions.yml
     - linkListType: download
       links: 
       - text: Extended security updates datasheet PDF

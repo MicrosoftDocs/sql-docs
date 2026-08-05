@@ -22,7 +22,7 @@ ESUs are available for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], an
 For more information, see:
 - [Plan your Windows Server and SQL Server end of support](https://www.microsoft.com/windows-server/extended-security-updates)
 - [SQL Server end of support options](sql-server-end-of-support-overview.md)
-- [Frequently asked ESU questions](extended-security-updates-frequently-asked-questions.md)
+- [Frequently asked ESU questions](extended-security-updates-frequently-asked-questions.yml)
 
 ## Overview
 
@@ -131,7 +131,7 @@ Outside of Azure, you can subscribe to ESUs in any region that supports SQL Serv
 
 ## Frequently asked questions
 
-For a full list of frequently asked questions, see the [SQL Server ESUs: Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
+For a full list of frequently asked questions, see the [SQL Server ESUs: Frequently asked questions](extended-security-updates-frequently-asked-questions.yml).
 
 ## Related content
 

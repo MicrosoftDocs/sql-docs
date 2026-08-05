@@ -162,7 +162,7 @@ After you link your ESU invoice, you can manually download ESUs from the **Exten
 
 ## Frequently asked questions
 
-For a full list of frequently asked questions, see the [Extended Security Updates: Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
+For a full list of frequently asked questions, see the [Extended Security Updates: Frequently asked questions](extended-security-updates-frequently-asked-questions.yml).
 
 ## Related content
 

@@ -4497,7 +4497,7 @@ items:
     - name: Register disconnected instances
       href: sql-server/end-of-support/extended-security-updates-disconnected-instances.md
     - name: ESU frequently asked questions
-      href: sql-server/end-of-support/extended-security-updates-frequently-asked-questions.md
+      href: sql-server/end-of-support/extended-security-updates-frequently-asked-questions.yml
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:

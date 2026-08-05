@@ -40,7 +40,7 @@ For more information, guidance, and tools to plan and automate your upgrade or m
 - [SQL Server 2016 end of support](/lifecycle/products/sql-server-2016)
 - [SQL Server 2014 end of support](/lifecycle/products/sql-server-2014)
 - [What are ESUs for SQL Server?](sql-server-extended-security-updates.md)
-- [Frequently asked SQL Server ESU questions](extended-security-updates-frequently-asked-questions.md)
+- [Frequently asked SQL Server ESU questions](extended-security-updates-frequently-asked-questions.yml)
 - [ESUs enabled by Azure Arc](../azure-arc/extended-security-updates.md)
 
 The following table summarizes options for a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance that is out of extended support: 

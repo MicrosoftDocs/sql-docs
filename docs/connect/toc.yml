@@ -3373,148 +3373,160 @@
   items:
   - name: Microsoft Drivers for PHP for SQL Server
     href: ../connect/php/microsoft-php-driver-for-sql-server.md
-  - name: Getting started
-    href: ../connect/php/getting-started-with-the-php-sql-driver.md
+  - name: Get started
     items:
-    - name: 'Step 1: Configure development environment'
-      href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-    - name: 'Step 2: Create a SQL database'
-      href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-    - name: 'Step 3: Proof of concept connecting to SQL'
-      href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-    - name: 'Step 4: Connect resiliently to SQL'
-      href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
-  - name: Overview
-    href: ../connect/php/overview-of-the-php-sql-driver.md
-    items:
-    - name: Download
-      href: ../connect/php/download-drivers-php-sql-server.md
-    - name: Installation on Linux and macOS
-      href: ../connect/php/installation-tutorial-linux-mac.md
-    - name: Release notes
-      href: ../connect/php/release-notes-php-sql-driver.md
     - name: System requirements
       href: ../connect/php/system-requirements-for-the-php-sql-driver.md
     - name: Support matrix
       href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
+    - name: Download
+      href: ../connect/php/download-drivers-php-sql-server.md
+    - name: Installation on Linux and macOS
+      href: ../connect/php/installation-tutorial-linux-mac.md
     - name: Loading the drivers
       href: ../connect/php/loading-the-php-sql-driver.md
-    - name: Support resources
-      href: ../connect/php/support-resources-for-the-php-sql-driver.md
-    - name: About code samples
-      href: ../connect/php/about-code-examples-in-the-documentation.md
-  - name: Programming guide
-    href: ../connect/php/programming-guide-for-php-sql-driver.md
-    items:
-    - name: Connecting to the Server
-      href: ../connect/php/connecting-to-the-server.md
+    - name: Getting started with the PHP SQL driver
+      href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-      - name: 'How to: Connect Using Windows Authentication'
-        href: ../connect/php/how-to-connect-using-windows-authentication.md
-      - name: 'How to: Connect Using SQL Server Authentication'
-        href: ../connect/php/how-to-connect-using-sql-server-authentication.md
-      - name: 'How to: Connect Using Microsoft Entra authentication'
-        href: ../connect/php/azure-active-directory.md
-      - name: 'How to: Connect on a Specified Port'
-        href: ../connect/php/how-to-connect-on-a-specified-port.md
-      - name: Connection Pooling
-        href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-      - name: 'How to: Disable Multiple Active Result Sets (MARS)'
-        href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
-      - name: Connection Options
-        href: ../connect/php/connection-options.md
-      - name: Support for LocalDB
-        href: ../connect/php/php-driver-for-sql-server-support-for-localdb.md
-      - name: Support for High Availability, Disaster Recovery
-        href: ../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md
-      - name: Connecting to Microsoft Azure SQL Database
-        href: ../connect/php/connecting-to-microsoft-azure-sql-database.md
-      - name: Connection Resiliency
-        href: ../connect/php/connection-resiliency.md
-    - name: Comparing Execution Functions
+      - name: 'Step 1: Configure development environment'
+        href: ../connect/php/step-1-configure-development-environment-for-php-development.md
+      - name: 'Step 2: Create a SQL database'
+        href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
+      - name: 'Step 3: Proof of concept connecting to SQL'
+        href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
+      - name: 'Step 4: Connect resiliently to SQL'
+        href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
+    - name: Overview
+      href: ../connect/php/overview-of-the-php-sql-driver.md
+  - name: Configure and connect
+    items:
+    - name: Connecting to the server
+      href: ../connect/php/connecting-to-the-server.md
+    - name: Connection options
+      href: ../connect/php/connection-options.md
+    - name: Connecting to Microsoft Azure SQL Database
+      href: ../connect/php/connecting-to-microsoft-azure-sql-database.md
+    - name: Connect on a specified port
+      href: ../connect/php/how-to-connect-on-a-specified-port.md
+    - name: Connection pooling
+      href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
+    - name: Disable Multiple Active Result Sets (MARS)
+      href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
+    - name: Support for LocalDB
+      href: ../connect/php/php-driver-for-sql-server-support-for-localdb.md
+    - name: Support for High Availability, disaster recovery
+      href: ../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md
+    - name: Idle connection resiliency
+      href: ../connect/php/connection-resiliency.md
+  - name: Authenticate
+    items:
+    - name: Connect using Microsoft Entra authentication
+      href: ../connect/php/azure-active-directory.md
+    - name: Connect using SQL Server authentication
+      href: ../connect/php/how-to-connect-using-sql-server-authentication.md
+    - name: Connect using Windows authentication
+      href: ../connect/php/how-to-connect-using-windows-authentication.md
+  - name: Secure
+    items:
+    - name: Security considerations
+      href: ../connect/php/security-considerations-for-php-sql-driver.md
+    - name: Always Encrypted with the PHP drivers
+      href: ../connect/php/using-always-encrypted-php-drivers.md
+    - name: Always Encrypted with secure enclaves
+      href: ../connect/php/always-encrypted-secure-enclaves.md
+  - name: Retrieve and update data
+    items:
+    - name: Programming guide
+      href: ../connect/php/programming-guide-for-php-sql-driver.md
+    - name: Comparing execution functions
       href: ../connect/php/comparing-execution-functions.md
-    - name: Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver
+    - name: Direct and prepared statement execution (PDO_SQLSRV)
       href: ../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md
-    - name: Retrieving Data
+    - name: Retrieving data
       href: ../connect/php/retrieving-data.md
       items:
-      - name: Retrieving Data as a Stream Using the SQLSRV Driver
+      - name: Retrieve data as a stream (SQLSRV)
         href: ../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md
         items:
-        - name: Data Types with Stream Support Using the SQLSRV Driver
+        - name: Data types with stream support (SQLSRV)
           href: ../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md
-        - name: 'How to: Retrieve Character Data as a Stream Using the SQLSRV Driver'
+        - name: Retrieve character data as a stream (SQLSRV)
           href: ../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
-        - name: 'How to: Retrieve Binary Data as a Stream Using the SQLSRV Driver'
+        - name: Retrieve binary data as a stream (SQLSRV)
           href: ../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
-      - name: Using Directional Parameters
+      - name: Directional parameters
         href: ../connect/php/using-directional-parameters.md
         items:
-        - name: 'How to: Specify Parameter Direction Using the SQLSRV Driver'
+        - name: Specify parameter direction (SQLSRV)
           href: ../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md
-        - name: 'How to: Retrieve Output Parameters Using the SQLSRV Driver'
+        - name: Retrieve output parameters (SQLSRV)
           href: ../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md
-        - name: 'How to: Retrieve Input and Output Parameters Using the SQLSRV Driver'
+        - name: Retrieve input and output parameters (SQLSRV)
           href: ../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md
-      - name: Specifying a Cursor Type and Selecting Rows
+      - name: Specify a cursor type and select rows
         href: ../connect/php/specifying-a-cursor-type-and-selecting-rows.md
         items:
-        - name: Cursor Types (SQLSRV Driver)
+        - name: Cursor types (SQLSRV)
           href: ../connect/php/cursor-types-sqlsrv-driver.md
-        - name: Cursor Types (PDO_SQLSRV Driver)
+        - name: Cursor types (PDO_SQLSRV)
           href: ../connect/php/cursor-types-pdo-sqlsrv-driver.md
-      - name: 'How to: Retrieve Date and Time Types as Strings Using the SQLSRV Driver'
+      - name: Retrieve date and time types as strings (SQLSRV)
         href: ../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md
-      - name: 'How to: Retrieve Date and Time Types as PHP Datetime Objects Using the PDO_SQLSRV Driver'
+      - name: Retrieve date and time types as PHP datetime objects (PDO_SQLSRV)
         href: ../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md
-      - name: Formatting Decimal Strings and Money Values (SQLSRV Driver)
-        href: ../connect/php/formatting-decimals-sqlsrv-driver.md
-      - name: Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)
-        href: ../connect/php/formatting-decimals-pdo-sqlsrv-driver.md
-    - name: Updating Data
+    - name: Updating data
       href: ../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md
       items:
-      - name: 'How to: Perform Parameterized Queries'
+      - name: Perform parameterized queries
         href: ../connect/php/how-to-perform-parameterized-queries.md
-      - name: 'How to: Send Data as a Stream'
+      - name: Send data as a stream
         href: ../connect/php/how-to-send-data-as-a-stream.md
-      - name: 'How to: Perform Transactions'
+      - name: Perform transactions
         href: ../connect/php/how-to-perform-transactions.md
-    - name: Converting Data Types
-      href: ../connect/php/converting-data-types.md
-      items:
-      - name: Default SQL Server Data Types
-        href: ../connect/php/default-sql-server-data-types.md
-      - name: Default PHP Data Types
-        href: ../connect/php/default-php-data-types.md
-      - name: 'How to: Specify SQL Server Data Types When Using the SQLSRV Driver'
-        href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
-      - name: 'How to: Specify PHP Data Types'
-        href: ../connect/php/how-to-specify-php-data-types.md
-      - name: 'How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support'
-        href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
-      - name: 'How to: Send and Retrieve ASCII Data in Linux and macOS'
-        href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
-    - name: Handling Errors and Warnings
-      href: ../connect/php/handling-errors-and-warnings.md
-      items:
-      - name: 'How to: Configure Error and Warning Handling Using the SQLSRV Driver'
-        href: ../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md
-      - name: 'How to: Handle Errors and Warnings Using the SQLSRV Driver'
-        href: ../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md
-    - name: Logging Activity
-      href: ../connect/php/logging-activity.md
-    - name: Using Always Encrypted with the PHP Drivers for SQL Server
-      href: ../connect/php/using-always-encrypted-php-drivers.md
-    - name: Always Encrypted with secure enclaves with the PHP Drivers for SQL Server
-      href: ../connect/php/always-encrypted-secure-enclaves.md
     - name: Use table-valued parameters (PHP)
       href: ../connect/php/use-table-valued-parameters.md
-    - name: Non-System Locale Settings
+  - name: Data types
+    items:
+    - name: Converting data types
+      href: ../connect/php/converting-data-types.md
+    - name: Default SQL Server data types
+      href: ../connect/php/default-sql-server-data-types.md
+    - name: Default PHP data types
+      href: ../connect/php/default-php-data-types.md
+    - name: Specify SQL Server data types (SQLSRV)
+      href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
+    - name: Specify PHP data types
+      href: ../connect/php/how-to-specify-php-data-types.md
+    - name: Send and retrieve UTF-8 data with built-in UTF-8 support
+      href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
+    - name: Send and retrieve ASCII data on Linux and macOS
+      href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
+    - name: Format decimals and money (SQLSRV)
+      href: ../connect/php/formatting-decimals-sqlsrv-driver.md
+    - name: Format decimals and money (PDO_SQLSRV)
+      href: ../connect/php/formatting-decimals-pdo-sqlsrv-driver.md
+    - name: Non-system locale settings
       href: ../connect/php/non-system-locale-settings.md
-    - name: Constants (Microsoft Drivers for PHP for SQL Server)
-      href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
-    - name: SQLSRV Driver API Reference
+  - name: Errors and diagnostics
+    items:
+    - name: Handling errors and warnings
+      href: ../connect/php/handling-errors-and-warnings.md
+      items:
+      - name: Configure error and warning handling (SQLSRV)
+        href: ../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md
+      - name: Handle errors and warnings (SQLSRV)
+        href: ../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md
+    - name: Logging activity
+      href: ../connect/php/logging-activity.md
+  - name: Deploy and operate
+    items:
+    - name: Performance tuning
+      href: ../connect/php/performance-tuning-php-sql-driver.md
+    - name: Troubleshooting
+      href: ../connect/php/troubleshooting-php-sql-driver.md
+  - name: Reference
+    items:
+    - name: SQLSRV driver API reference
       href: ../connect/php/sqlsrv-driver-api-reference.md
       items:
       - name: sqlsrv_begin_transaction
@@ -3569,10 +3581,10 @@
         href: ../connect/php/sqlsrv-send-stream-data.md
       - name: sqlsrv_server_info
         href: ../connect/php/sqlsrv-server-info.md
-    - name: PDO_SQLSRV Driver Reference
+    - name: PDO_SQLSRV driver reference
       href: ../connect/php/pdo-sqlsrv-driver-reference.md
       items:
-      - name: PDO Class
+      - name: PDO class
         href: ../connect/php/pdo-class.md
         items:
         - name: PDO::__construct
@@ -3603,7 +3615,7 @@
           href: ../connect/php/pdo-rollback.md
         - name: PDO::setAttribute
           href: ../connect/php/pdo-setattribute.md
-      - name: PDOStatement Class
+      - name: PDOStatement class
         href: ../connect/php/pdostatement-class.md
         items:
         - name: PDOStatement::bindColumn
@@ -3644,15 +3656,23 @@
           href: ../connect/php/pdostatement-setattribute.md
         - name: PDOStatement::setFetchMode
           href: ../connect/php/pdostatement-setfetchmode.md
-  - name: Security considerations
-    href: ../connect/php/security-considerations-for-php-sql-driver.md
-  - name: Code samples
-    href: ../connect/php/code-samples-for-php-sql-driver.md
+    - name: Constants
+      href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
+  - name: Related tasks
     items:
-    - name: Example application (PDO_SQLSRV)
-      href: ../connect/php/example-application-pdo-sqlsrv-driver.md
-    - name: Example application (SQLSRV)
-      href: ../connect/php/example-application-sqlsrv-driver.md
+    - name: Release notes
+      href: ../connect/php/release-notes-php-sql-driver.md
+    - name: Code samples
+      href: ../connect/php/code-samples-for-php-sql-driver.md
+      items:
+      - name: Example application (PDO_SQLSRV)
+        href: ../connect/php/example-application-pdo-sqlsrv-driver.md
+      - name: Example application (SQLSRV)
+        href: ../connect/php/example-application-sqlsrv-driver.md
+    - name: About code samples
+      href: ../connect/php/about-code-examples-in-the-documentation.md
+    - name: Support resources
+      href: ../connect/php/support-resources-for-the-php-sql-driver.md
 - name: Python
   items:
   - name: Microsoft Python Driver for SQL Server - mssql-python

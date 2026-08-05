@@ -400,7 +400,7 @@ To avoid unexpected charges, monitor your Azure Arc-enabled machines for connect
 - [SQL Server 2022 pricing and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
 - [Configure SQL Server enabled by Azure Arc](manage-configuration.md)
 - [Frequently asked questions about billing](faq.yml#recurring-pay-as-you-go-billing)
-- [Extended Security Updates: Frequently asked questions](../end-of-support/extended-security-updates-frequently-asked-questions.md)
+- [Extended Security Updates: Frequently asked questions](../end-of-support/extended-security-updates-frequently-asked-questions.yml)
 - [Prerequisites - SQL Server enabled by Azure Arc](prerequisites.md)
 - [Manage the unlimited virtualization benefit for a SQL Server ESU subscription](manage-configuration.md#manage-pcore-esu-license)
 - [Microsoft.AzureArcData tag support](/azure/azure-resource-manager/management/tag-support#microsoftazurearcdata)

@@ -4,21 +4,20 @@ description: "This page contains the support matrix and support lifecycle policy
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 03/25/2026
+ms.date: 07/22/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
 ms.custom:
   - linux-related-content
-  - ignite-2024
 ---
 # Microsoft PHP Drivers for SQL Server Support Matrix
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-This page contains the support matrix and support lifecycle policy for the Microsoft PHP Drivers for SQL Server.
+Find the support lifecycle policy, end-of-support dates, and certified compatibility matrices (SQL Server versions, PHP versions, and operating systems) for the Microsoft PHP Drivers for SQL Server.
 
-## Microsoft PHP Drivers Support Lifecycle Matrix and Policy
+## Microsoft PHP drivers support lifecycle matrix and policy
 
 The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. PHP Drivers versions 3.x, 4.x, and 5.2-5.12 have five years of Mainstream support from the driver release date. PHP Drivers version 5.13 has four years of Mainstream support from the driver release date to align with PHP's support life cycle. Mainstream support is defined on the [Microsoft support lifecycle website](https://support.microsoft.com/lifecycle).
 
@@ -50,7 +49,7 @@ The following Microsoft PHP Drivers are no longer supported.
 |Microsoft PHP Drivers 2.0 for SQL Server|2.0|August 10, 2015|
 |Microsoft PHP Drivers 1.0 for SQL Server|1.0|April 28, 2014|
 
-## SQL Server Version Certified Compatibility
+## SQL Server version certified compatibility
 
  The following matrix lists database versions that are tested and certified as compatible with the corresponding driver version. We strive to maintain backward compatibility with previous driver versions, but only the latest supported driver is tested and certified with new SQL Server versions as SQL Server is released.
 
@@ -72,7 +71,7 @@ The following Microsoft PHP Drivers are no longer supported.
 
 For information about using PHP with Azure SQL Database, see [Connecting to Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md).
 
-## PHP Version Support
+## PHP version support
 
 The following versions of PHP are supported with the listed version of the Microsoft PHP Drivers:
 
@@ -95,7 +94,7 @@ The following versions of PHP are supported with the listed version of the Micro
 
 <sup>1</sup> Versions 7.2.1 and later are supported on Windows, while versions 7.2.0 and later are supported on Linux and macOS.
 
-## Supported Operating Systems
+## Supported operating systems
 
 The following Windows operating system versions are supported with the listed version of the Microsoft PHP Drivers:
 

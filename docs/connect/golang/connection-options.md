@@ -20,7 +20,7 @@ This article provides a complete reference for all connection parameters accepte
 | `user id` | `user` | - | SQL Server login name. |
 | `password` | - | - | Password for the SQL Server login. |
 | `database` | - | - | Target database. |
-| `connection timeout` | - | `0` | Login timeout in seconds. `0` waits indefinitely. Prefer Go contexts for connection and query timeouts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) or Hyperscale with auto-pause, use a context deadline of at least 60 seconds. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. |
+| `connection timeout` | - | `0` | Login timeout in seconds. `0` waits indefinitely. Prefer Go contexts for connection and query timeouts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, the first connection to a paused database fails with error 40613 while the database resumes. Add retry logic rather than a longer timeout. Databases generally resume in less than one minute. See [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume). |
 | `dial timeout` | - | `15 x protocol count` | Network dial timeout in seconds. `0` waits indefinitely. The driver defaults to 15 seconds per registered protocol. |
 | `encrypt` | - | `false` | Encryption mode. Azure SQL always requires encryption server-side. See [Encryption and certificates](encryption-certificates.md). |
 | `app name` | - | - | Application name sent in the login record. |
@@ -54,7 +54,7 @@ When the primary server is unreachable, the driver attempts to connect to the fa
 | `packet size` | `4096` | TDS packet size in bytes. Valid range: 512-32767. |
 | `keepAlive` | `30` | Keep-alive interval in seconds. `0` uses the OS default. |
 | `TrustServerCertificate` | Depends on `encrypt` | When `true`, skip server certificate validation. The default is `false` when `encrypt` is specified and `true` when `encrypt` is omitted. Ignored when `encrypt=strict`. Not recommended for production. |
-| `multisubnetfailover`<br>`multi subnet failover` | `true` | Set to `true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. When DNS resolves to multiple IPs, the driver dials all resolved endpoints in parallel and uses the first successful connection. When DNS resolves to one address, the driver falls back to a single sequential dial, so `true` is safe on single-IP targets. The driver defaults to `true` for backward compatibility; other client libraries default to `false`. |
+| `multisubnetfailover` | `true` | Dial behavior when DNS resolves the host to multiple IP addresses. When `true` and DNS returns multiple addresses, the driver dials all resolved endpoints in parallel and uses the first successful connection. When DNS returns a single address, the driver dials it sequentially, so `true` is safe on single-IP targets. Keep the default for availability group listeners, failover cluster instances, and Azure SQL failover group listeners. This driver defaults to `true` for backward compatibility; other Microsoft SQL drivers default to `false`. Alias: `multi subnet failover`. |
 
 ## Application intent
 

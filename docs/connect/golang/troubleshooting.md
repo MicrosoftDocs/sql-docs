@@ -71,7 +71,6 @@ For more information, see [Encryption and certificates](encryption-certificates.
 - Network connectivity problems. Verify you can reach the server by using `telnet <server> 1433` or `Test-NetConnection -ComputerName <server> -Port 1433`.
 - DNS resolution failure. Verify the hostname resolves correctly.
 - Increase `dial timeout` or `connection timeout` in the connection string.
-- [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) or Hyperscale with auto-pause. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. Set a context deadline of at least 60 seconds and retry the first connection.
 
 ## Authentication errors
 
@@ -197,9 +196,12 @@ For retry implementation patterns, see [Error handling and retry patterns](error
 
 **Error message**: `mssql: Database 'AdventureWorks2025' on server '<server>' is not currently available. Code: 40613.`
 
-**Cause**: Azure SQL is reconfiguring the database (failover, update, or scaling operation). This condition is a transient error.
+**Causes**:
 
-**Solution**: Retry the operation. The database typically becomes available within seconds. For more information, see [Error handling and retry patterns](error-handling.md).
+- Azure SQL is reconfiguring the database (failover, update, or scaling operation). This condition is a transient error.
+- An [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) database with auto-pause enabled is resuming. The first connection to a paused database fails with this error while the database resumes.
+
+**Solution**: Retry the operation. A reconfigured database typically becomes available within seconds, and an auto-paused database generally resumes in less than one minute. Add retry logic rather than a longer timeout. For more information, see [Error handling and retry patterns](error-handling.md) and [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
 
 ## Bad connection errors
 

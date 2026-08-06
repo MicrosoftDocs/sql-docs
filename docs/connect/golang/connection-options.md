@@ -49,12 +49,12 @@ When the primary server is unreachable, the driver attempts to connect to the fa
 
 ## Network and performance
 
-| Parameter | Default | Description |
-| --- | --- | --- |
-| `packet size` | `4096` | TDS packet size in bytes. Valid range: 512-32767. |
-| `keepAlive` | `30` | Keep-alive interval in seconds. `0` uses the OS default. |
-| `TrustServerCertificate` | Depends on `encrypt` | When `true`, skip server certificate validation. The default is `false` when `encrypt` is specified and `true` when `encrypt` is omitted. Ignored when `encrypt=strict`. Not recommended for production. |
-| `multisubnetfailover` | `true` | Dial behavior when DNS resolves the host to multiple IP addresses. When `true` and DNS returns multiple addresses, the driver dials all resolved endpoints in parallel and uses the first successful connection. When DNS returns a single address, the driver dials it sequentially, so `true` is safe on single-IP targets. Keep the default for availability group listeners, failover cluster instances, and Azure SQL failover group listeners. This driver defaults to `true` for backward compatibility; other Microsoft SQL drivers default to `false`. Alias: `multi subnet failover`. |
+| Parameter | Aliases | Default | Description |
+| --- | --- | --- | --- |
+| `packet size` | - | `4096` | TDS packet size in bytes. Valid range: 512-32767. |
+| `keepAlive` | - | `30` | Keep-alive interval in seconds. `0` uses the OS default. |
+| `TrustServerCertificate` | - | Depends on `encrypt` | When `true`, skip server certificate validation. The default is `false` when `encrypt` is specified and `true` when `encrypt` is omitted. Ignored when `encrypt=strict`. Not recommended for production. |
+| `multisubnetfailover` | `multi subnet failover` | `true` | Dial behavior when DNS resolves the host to multiple IP addresses. When `true` and DNS returns multiple addresses, the driver dials all resolved endpoints in parallel and uses the first successful connection. When DNS returns a single address, the driver dials it sequentially, so `true` is safe on single-IP targets. Keep the default for availability group listeners, failover cluster instances, and Azure SQL failover group listeners. This driver defaults to `true` for backward compatibility; other Microsoft SQL drivers default to `false`. |
 
 ## Application intent
 

@@ -10,7 +10,7 @@ ms.custom: generated, devx-track-azurecli
 
 Use the following Azure CLI commands to associate an identity with your app:
 
-Assign a managed identity to an Azure App Service instance by using the [az webapp identity assign](/cli/azure/webapp/identity#az-webapp-identity-assign) command. The `--identities` parameter requires the fully qualified resource ID of the managed identity you retrieved in the previous step. A fully qualified resource ID starts with `/subscriptions/{subscriptionId}` or `/providers/{resourceProviderNamespace}/`.
+Retrieve the fully qualified resource ID of the managed identity you created by using the [az identity show](/cli/azure/identity#az-identity-show) command. Copy the output value to use in the next step.
 
 ```azurecli
 az identity show --name MigrationIdentity -g <your-identity-resource-group-name> --query id
@@ -43,7 +43,7 @@ az spring app identity assign \
 
 # [Azure Container Apps](#tab/container-apps-identity)
 
-Assign a managed identity to a virtual machine by using the [az containerapp identity assign](/cli/azure/containerapp/identity) command.
+Assign a managed identity to a container app by using the [az containerapp identity assign](/cli/azure/containerapp/identity) command.
 
 ```azurecli
 az containerapp identity assign \
@@ -65,7 +65,7 @@ az vm identity assign \
 
 # [Azure Kubernetes Service](#tab/aks-identity)
 
-Use the [az aks update](/cli/azure/aks) command to assign a managed identity to an Azure Kubernetes Service (AKS) instance.
+Assign a managed identity to an Azure Kubernetes Service (AKS) instance by using the [az aks update](/cli/azure/aks) command.
 
 ```azurecli
 az aks update \

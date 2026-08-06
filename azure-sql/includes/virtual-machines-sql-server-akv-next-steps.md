@@ -5,7 +5,7 @@ ms.date: 10/26/2018
 ms.service: azure-vm-sql-server
 ms.topic: include
 ---
-After you enable Azure Key Vault Integration, you can enable SQL Server encryption on your SQL VM. First, create an asymmetric key in your Key Vault and a symmetric key in SQL Server on your VM. Then, run T-SQL statements to enable encryption for your databases and backups.
+After you enable Azure Key Vault Integration, you can enable SQL Server encryption on your SQL VM. First, create an asymmetric key in your key vault and a symmetric key in SQL Server on your VM. Then, run T-SQL statements to enable encryption for your databases and backups.
 
 Take advantage of several forms of encryption, including:
 
@@ -17,7 +17,7 @@ The following Transact-SQL scripts provide examples for each of these areas.
 
 ### Prerequisites for examples
 
-Each example is based on two prerequisites: an asymmetric key from your Key Vault named **CONTOSO_KEY** and a credential created by the AKV Integration feature named **Azure_EKM_cred**. The following Transact-SQL commands set up these prerequisites for running the examples.
+Each example is based on two prerequisites: an asymmetric key from your key vault named **CONTOSO_KEY** and a credential created by the AKV Integration feature named **Azure_EKM_cred**. The following Transact-SQL commands set up these prerequisites for running the examples.
 
 ```sql
 USE master;
@@ -81,7 +81,7 @@ CREATION_DISPOSITION = OPEN_EXISTING;
 
 ### Encrypted backups
 
-1. Create a SQL Server authentication login for the Database Engine to use when encrypting backups, and add the credential to the authentication login.
+1. Create a SQL Server login for the Database Engine to use when it encrypts backups, and add the credential to the login.
 
    ```sql
    USE master;
@@ -98,7 +98,7 @@ CREATION_DISPOSITION = OPEN_EXISTING;
    GO
    ```
 
-1. Back up the database and specify encryption by using the asymmetric key stored in the Key Vault.
+1. Back up the database and specify encryption by using the asymmetric key stored in the key vault.
 
    ```sql
    USE master;
@@ -111,7 +111,7 @@ CREATION_DISPOSITION = OPEN_EXISTING;
 
 ### Column Level Encryption (CLE)
 
-This script creates a symmetric key that's protected by the asymmetric key in the Key Vault. Then, it uses the symmetric key to encrypt data in the database.
+This script creates a symmetric key that's protected by the asymmetric key in the key vault. Then, it uses the symmetric key to encrypt data in the database.
 
 ```sql
 CREATE SYMMETRIC KEY DATA_ENCRYPTION_KEY

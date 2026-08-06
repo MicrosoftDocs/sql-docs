@@ -4,7 +4,7 @@ description: This article provides details about the configuration and use of th
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, dfurman
-ms.date: 12/29/2025
+ms.date: 08/06/2026
 ms.service: sql
 ms.topic: concept-article
 ms.custom:
@@ -442,7 +442,7 @@ SET MEMORY_OPTIMIZED TEMPDB_METADATA = OFF;
 
   This limitation also applies to other scenarios where a single transaction attempts to access memory-optimized tables in more than one database.
 
-  For example, you might get error 41317 if you query the [sys.stats](../system-catalog-views/sys-stats-transact-sql.md) catalog view in a user database that contains memory-optimized tables. This happens because the query attempts to access [statistics](../in-memory-oltp/statistics-for-memory-optimized-tables.md) data on a memory-optimized table in the user database and the memory-optimized metadata in `tempdb`.
+  For example, you might get error 41317 if you query the [sys.stats](../system-catalog-views/sys-stats-transact-sql.md) catalog view in a user database that contains memory-optimized tables, or if you run [sp_updatestats](../system-stored-procedures/sp-updatestats-transact-sql.md) that references `sys.stats` internally. This happens because the query attempts to access [statistics](../in-memory-oltp/statistics-for-memory-optimized-tables.md) data on a memory-optimized table in the user database and the memory-optimized metadata tables in `tempdb`.
 
   The following example script produces this error when Memory-optimized TempDB metadata is enabled:
 

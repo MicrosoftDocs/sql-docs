@@ -4,7 +4,7 @@ description: "Runs UPDATE STATISTICS against all user-defined and internal table
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf, randolphwest
-ms.date: 06/19/2026
+ms.date: 08/06/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -52,7 +52,9 @@ Specifies that `sp_updatestats` uses the `RESAMPLE` option of the [UPDATE STATIS
 
 `sp_updatestats` updates statistics on disabled nonclustered indexes and doesn't update statistics on disabled clustered indexes.
 
-For disk-based tables, `sp_updatestats` updates statistics based on the `modification_counter` information in the [sys.dm_db_stats_properties](../system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) catalog view, updating statistics where at least one row is modified. Statistics on memory-optimized tables are always updated when executing `sp_updatestats`. Therefore don't execute `sp_updatestats` more than necessary.
+For disk-based tables, `sp_updatestats` updates statistics based on the `modification_counter` information in the [sys.dm_db_stats_properties](../system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) catalog view, updating statistics where at least one row is modified.
+
+For memory-optimized tables, `sp_updatestats` updates all statistics unconditionally. However, if [Memory-optimized TempDB metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) is enabled, `sp_updatestats` fails with error 41317 because a single transaction isn't allowed to access memory-optimized tables in more than one database. For more information, see [Limitations of Memory-optimized TempDB metadata](../databases/tempdb-database.md#limitations-of-memory-optimized-tempdb-metadata).
 
 `sp_updatestats` can trigger a recompile of stored procedures or other compiled code. However, `sp_updatestats` might not cause a recompile, if only one query plan is possible for the tables referenced and the indexes on them. A recompilation would be unnecessary in these cases even if statistics are updated.
 

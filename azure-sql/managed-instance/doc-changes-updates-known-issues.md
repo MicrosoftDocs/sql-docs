@@ -5,7 +5,7 @@ description: Learn about the currently known issues with Azure SQL Managed Insta
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/25/2026
+ms.date: 08/11/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: troubleshooting-known-issue
@@ -22,6 +22,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
+| [Committime incorrectly appends Z suffix in change event streaming messages](#incorrect-utc-qualifier-for-the-committime-ces-value) | August 2026 | No resolution | |
 | [Linked server queries that use MSDASQL fail with error 7416](#linked-server-queries-that-use-msdasql-fail-with-error-7416) | April 2026 | Has workaround | |
 | [Restore operation failures after migrating to SQL Managed Instance](#restore-operation-failures-after-migrating-to-sql-managed-instance) | March 2026 | Has workaround | |
 | [Unable to use Service Broker after migrating to SQL Managed Instance](#unable-to-use-service-broker-after-migrating-to-sql-managed-instance) | March 2026 | Has workaround | |
@@ -91,7 +92,6 @@ You might see this error as an exception for the **Microsoft OLE DB Driver 19 fo
 This error occurs when the secondary replica isn't available for logins because row versions are missing for transactions that were in-flight when a secondary replica restarted or recycled, whether for maintenance or due to a failover. When an instance restarts or fails over, the versioning data stored in `tempdb` is cleared. Secondary read queries are aborted if there are long-running active transactions that started before the failover or restart.
 
 To resolve this issue, roll back or commit active transactions on the primary replica. To avoid this error, minimize long-running write transactions on the primary replica.
-
 
 ### Error 8992 when running DBCC CHECKDB on a SQL Server database that originated from SQL Managed Instance
 
@@ -251,6 +251,10 @@ WHERE database_id > 4;
 CLR modules in SQL Managed Instance and linked servers or distributed queries that reference a current instance sometimes can't resolve the IP of a local instance. This error is a transient issue.
 
 ## No resolution
+
+### Incorrect UTC qualifier for the committime CES value
+
+On SQL products configured with a non-UTC time zone, the `committime` field in a [change event streaming message](/sql/relational-databases/track-changes/change-event-streaming/message-format) incorrectly includes a **Z** suffix, even though this field shows the local time of the publishing database. When the database uses UTC, the value and suffix agree. This problem is known, and a fix is pending in a future release of the feature.
 
 ### Misleading error message when connecting to a read replica using invalid credentials
 

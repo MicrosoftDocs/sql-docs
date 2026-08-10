@@ -1,6 +1,14 @@
 {
   "redirections": [
     {
+      "source_path": "azure-sql/managed-instance/managed-instance-link-preparation-wsfc.md",
+      "redirect_url": "/previous-versions/azure/azure-sql/managed-instance/managed-instance-link-preparation-wsfc",
+      "redirect_document_id": false,
+      "monikers": [
+        "azuresql"
+      ]
+    },
+    {
       "source_path": "docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016.md",
       "redirect_url": "/previous-versions/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2016",
       "redirect_document_id": false,

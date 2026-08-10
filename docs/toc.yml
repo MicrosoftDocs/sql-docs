@@ -23,8 +23,6 @@ items:
       href: sql-server/what-s-new-in-sql-server-2019.md?view=sql-server-ver15&preserve-view=true
     - name: SQL Server 2017
       href: sql-server/what-s-new-in-sql-server-2017.md?view=sql-server-2017&preserve-view=true
-    - name: SQL Server 2016
-      href: sql-server/what-s-new-in-sql-server-2016.md?view=sql-server-2016&preserve-view=true
   - name: Editions and features
     items:
     - name: SQL Server 2025
@@ -35,8 +33,6 @@ items:
       href: sql-server/editions-and-components-of-sql-server-2019.md?view=sql-server-ver15&preserve-view=true
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017&preserve-view=true
-    - name: SQL Server 2016
-      href: sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016&preserve-view=true
   - name: Release notes
     items:
     - name: SQL Server 2025
@@ -4364,8 +4360,6 @@ items:
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md
       - name: SQL Server 2017
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2017.md
-      - name: SQL Server 2016
-        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md
     - name: Security considerations
       href: sql-server/install/security-considerations-for-a-sql-server-installation.md
     - name: Network protocols & libraries

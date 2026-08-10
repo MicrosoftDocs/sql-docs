@@ -184,6 +184,9 @@
         ],
         "database/saas-tenancy-wingtip-app-guidance-tips.md": [
           "azuresql"
+        ],
+        "managed-instance/managed-instance-link-preparation-wsfc.md": [
+          "azuresql"
         ]
       },
       "ms.update-cycle": {

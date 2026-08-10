@@ -1,6 +1,14 @@
 {
   "redirections": [
     {
+      "source_path": "azure-sql/managed-instance/managed-instance-link-preparation-wsfc.md",
+      "redirect_url": "/previous-versions/azure/azure-sql/managed-instance/managed-instance-link-preparation-wsfc",
+      "redirect_document_id": false,
+      "monikers": [
+        "azuresql"
+      ]
+    },
+    {
       "source_path": "docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016.md",
       "redirect_url": "/previous-versions/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2016",
       "redirect_document_id": false,
@@ -71293,6 +71301,21 @@
     {
       "source_path": "docs/connect/python/mssql-python/migrate-from-sqlite.md",
       "redirect_url": "/sql/connect/python/mssql-python/migrate-from-sql-lite",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/what-s-new-in-sql-server-2016.md",
+      "redirect_url": "/previous-versions/sql/sql-server/what-s-new-in-sql-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/editions-and-components-of-sql-server-2016.md",
+      "redirect_url": "/previous-versions/sql/sql-server/editions-and-components-of-sql-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md",
+      "redirect_url": "/previous-versions/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016",
       "redirect_document_id": false
     }
   ]

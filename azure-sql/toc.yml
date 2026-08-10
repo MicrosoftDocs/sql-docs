@@ -62,8 +62,8 @@
         displayName: database
         href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview?toc=/azure/azure-sql/toc.json
       - name: Block T-SQL CRUD
-        href: database/block-crud-tsql.md
         displayName: block-tsql-crud, block-tsql-mi-crud
+        href: database/block-crud-tsql.md
       - name: Automatic backup immutability
         href: automatic-backup-immutability.md
       - name: Microsoft Entra authentication
@@ -1116,7 +1116,7 @@
     - name: Data virtualization
       href: managed-instance/data-virtualization-overview.md
     - name: Architecture
-      items: 
+      items:
       - name: Instance pools
         href: managed-instance/instance-pools-overview.md
       - name: Resource limits
@@ -1129,15 +1129,14 @@
         href: managed-instance/connectivity-architecture-overview.md
       - name: Internal connectivity tests
         href: managed-instance/connectivity-testing-overview.md
-
     - name: Log Replay Service (LRS)
-      items: 
-        - name: Log Replay Service (LRS) Overview
-          href: managed-instance/log-replay-service-overview.md
-        - name: Compare with MI link 
-          href: managed-instance/log-replay-service-compare-mi-link.md
+      items:
+      - name: Log Replay Service (LRS) Overview
+        href: managed-instance/log-replay-service-overview.md
+      - name: Compare with MI link
+        href: managed-instance/log-replay-service-compare-mi-link.md
     - name: SQL Server Features
-      items: 
+      items:
       - name: Transactional replication
         href: managed-instance/replication-transactional-overview.md
       - name: Linked servers
@@ -1146,7 +1145,6 @@
         href: /sql/database-engine/configure-windows/sql-server-service-broker
       - name: Database mail
         href: /sql/relational-databases/database-mail/database-mail
-
     - name: Security
       items:
       - name: Secure your instance
@@ -1392,7 +1390,6 @@
           items:
           - name: Give users permission
             href: /sql/machine-learning/security/user-permission?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
-
   - name: How to
     items:
     - name: How-to documentation
@@ -1961,7 +1958,7 @@
     displayName: samples, policies, definitions
     href: ./database/policy-reference.md
   - name: Feature availability by region
-    items: 
+    items:
     - name: Azure SQL Database
       displayName: Feature availability by region Azure SQL Database
       href: database/region-availability.md
@@ -1983,7 +1980,7 @@
     - name: Azure SQL Managed Instance
       href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
   - name: Tools
-    items: 
+    items:
     - name: SQL Server tools overview
       href: /sql/tools/overview-sql-tools
     - name: SQL Server Management Studio (SSMS)
@@ -2000,9 +1997,8 @@
       href: database/query-editor-classic.md
     - name: Connect to the Query editor (Classic)
       href: database/connect-query-portal-classic.md
-
   - name: Languages & code
-    items: 
+    items:
     - name: T-SQL language reference
       href: /sql/t-sql/language-reference
     - name: Azure.ResourceManager.Sql NuGet Gallery
@@ -2038,7 +2034,6 @@
       href: /sql/connect/python/python-driver-for-sql-server
     - name: Ruby
       href: /sql/connect/ruby/ruby-driver-for-sql-server
-
 - name: Blogs
   items:
   - name: Azure SQL Database Blog
@@ -2079,9 +2074,9 @@
       items:
       - name: Azure SQL Shows
         href: /shows/browse?products=azure-sql-database%2Cazure-sql-managed-instance%2Csql-server
-      - name: "@AzureSQL on YouTube"
+      - name: '@AzureSQL on YouTube'
         href: https://aka.ms/azuresqlyt
-      - name: Azure SQL for beginners 
+      - name: Azure SQL for beginners
         href: /shows/Azure-SQL-for-Beginners/
       - name: Azure SQL Database essentials
         href: /shows/azure-sql-database-essentials/

@@ -4,7 +4,7 @@ description: Transact-SQL reference for the SET IDENTITY_INSERT statement. When 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 01/16/2025
+ms.date: 08/10/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
-Allows explicit values to be inserted into the identity column of a table.
+By using this statement, you can insert explicit values into the [IDENTITY](../functions/identity-function-transact-sql.md) column of a table.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -42,11 +42,11 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
 
 #### *database_name*
 
-The name of the database in which the specified table resides.
+The name of the database where the specified table resides.
 
 #### *schema_name*
 
-The name of the schema to which the table belongs.
+The name of the schema that contains the table.
 
 #### *table_name*
 
@@ -54,15 +54,16 @@ The name of a table with an identity column.
 
 ## Remarks
 
-At any time, only one table in a session can have the `IDENTITY_INSERT` property set to `ON`. If a table already has this property set to `ON`, and a `SET IDENTITY_INSERT ON` statement is issued for another table, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message that states `SET IDENTITY_INSERT` is already `ON`, and reports the table for which `ON` is set.
+At any time, only one table in a session can have the `IDENTITY_INSERT` property set to `ON`. If a table already has this property set to `ON`, and you issue a `SET IDENTITY_INSERT ON` statement for another table, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message that states `SET IDENTITY_INSERT` is already `ON`, and reports the table for which `ON` is set.
 
-If the value inserted is larger than the current identity value for the table, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically uses the new inserted value as the current identity value.
+- When the `increment` argument of the [IDENTITY function](../functions/identity-function-transact-sql.md) is positive, and the value inserted is larger than the current identity value for the table, the SQL Database Engine automatically uses the new inserted value as the current identity value.
+- When the `increment` argument of the [IDENTITY function](../functions/identity-function-transact-sql.md) is negative, and the value inserted is smaller than the current identity value for the table, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically uses the new inserted value as the current identity value.
 
 The setting of `SET IDENTITY_INSERT` is set at execute or run time and not at parse time.
 
 ## Permissions
 
-User must own the table or have `ALTER` permission on the table.
+You must own the table or have `ALTER` permission on the table.
 
 ## Examples
 
@@ -115,7 +116,7 @@ VALUES (3, 'Garden shovel');
 GO
 ```
 
-The previous `INSERT` code should return the following error:
+The preceding `INSERT` code returns the following error:
 
 ```output
 An explicit value for the identity column in table 'AdventureWorks2022.dbo.Tool' can only be specified when a column list is used and IDENTITY_INSERT is ON.

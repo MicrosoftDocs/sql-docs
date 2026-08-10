@@ -4,7 +4,7 @@ description: CREATE SERVER AUDIT creates a server audit object using SQL Server 
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: randolphwest
-ms.date: 04/23/2026
+ms.date: 08/10/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -19,14 +19,16 @@ helpviewer_keywords:
   - "audits [SQL Server], creating"
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric"
 ---
 
 # CREATE SERVER AUDIT (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server SQL MI Fabric SE Fabric DW](../../includes/applies-to-version/sql-asdbmi-fabricse-fabricdw.md)]
 
-Creates a server audit object using [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Audit. For more information, see [SQL Server Audit (Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
+Creates a server audit object by using [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Audit. For more information, see [SQL Server Audit (Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
+
+[!INCLUDE [fabric-dw-full](../../includes/fabric-dw-full.md)] supports predicate functionality as part of [SQL Audit Logs](/fabric/data-warehouse/sql-audit-logs).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -156,6 +158,8 @@ Indicates the number of days to store the audit log file.
 
 Specifies the predicate expression used to determine if an event should be processed or not. Predicate expressions are limited to a length of 3,000 characters, which limits string arguments.
 
+For examples in [!INCLUDE [fabric-dw-full](../../includes/fabric-dw-full.md)] [SQL Audit Logs](/fabric/data-warehouse/sql-audit-logs), see [Configure SQL Audit Logs in Fabric Data Warehouse](/fabric/data-warehouse/configure-sql-audit-logs).
+
 #### *event_field_name*
 
 The name of the event field that identifies the predicate source. Audit fields are described in [sys.fn_get_audit_file](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). You can filter all fields except `file_name`, `audit_file_offset`, and `event_time`.
@@ -179,7 +183,7 @@ Either an ANSI or Unicode string as required by the predicate compare. The predi
 
 ## Remarks
 
-A server audit is created in a disabled state.
+You create a server audit in a disabled state.
 
 The `CREATE SERVER AUDIT` statement is part of a transaction. If you roll back the transaction, the statement is also rolled back.
 

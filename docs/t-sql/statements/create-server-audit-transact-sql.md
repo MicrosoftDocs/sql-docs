@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux
 
 # CREATE SERVER AUDIT (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL MI Fabric SE Fabric DW](../../includes/applies-to-version/sql-asdbmi-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance Fabric SQL analytics endpoint Fabric Data Warehouse](../../includes/applies-to-version/sql-asdbmi-fabricse-fabricdw.md)]
 
 Creates a server audit object by using [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Audit. For more information, see [SQL Server Audit (Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
@@ -158,7 +158,7 @@ Indicates the number of days to store the audit log file.
 
 Specifies the predicate expression used to determine if an event should be processed or not. Predicate expressions are limited to a length of 3,000 characters, which limits string arguments.
 
-For examples in [!INCLUDE [fabric-dw-full](../../includes/fabric-dw-full.md)] [SQL Audit Logs](/fabric/data-warehouse/sql-audit-logs), see [Configure SQL Audit Logs in Fabric Data Warehouse](/fabric/data-warehouse/configure-sql-audit-logs).
+For predicate examples in [!INCLUDE [fabric-dw-full](../../includes/fabric-dw-full.md)] [SQL Audit Logs](/fabric/data-warehouse/sql-audit-logs), see [Configure SQL Audit Logs in Fabric Data Warehouse](/fabric/data-warehouse/configure-sql-audit-logs).
 
 #### *event_field_name*
 

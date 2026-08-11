@@ -213,7 +213,7 @@ Use regular SQL Server connection strings to connect your application, your BI, 
 
 ## Best practices
 
-- Configure external data sources only for trusted endpoints. Restrict outbound networking for the logical server to independently allowlist approved destination FQDNs. For more information, see [Secure external data sources](elastic-query-overview.md#secure-external-data-sources).
+- Configure external data sources only for trusted endpoints. Restrict outbound networking for the logical server to independently allow list approved destination FQDNs. For more information, see [Secure external data sources](elastic-query-overview.md#secure-external-data-sources).
 - Ensure that the elastic query endpoint database has been given access to the shardmap database and all shards through the SQL Database firewalls.  
 - Validate or enforce the data distribution defined by the external table. If your actual data distribution is different from the distribution specified in your table definition, your queries might yield unexpected results.
 - Elastic query currently does not perform shard elimination when predicates over the sharding key would allow it to safely exclude certain shards from processing.

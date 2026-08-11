@@ -131,11 +131,11 @@ Once you have defined your external data sources and your external tables, you c
 
 ## Secure external data sources
 
-The `LOCATION` of an external data source can identify a SQL endpoint by fully qualified domain name (FQDN) or IP address, including an endpoint that isn't an Azure SQL Database logical server. When an elastic query runs, authentication information, query text, parameters, and any data transferred by the query are sent to the configured endpoint. Configure external data sources only for endpoints that your organization trusts.
+The `LOCATION` of an external data source can identify a SQL endpoint by fully qualified domain name (FQDN) or IP address, including an endpoint that isn't an Azure SQL Database logical server. When an elastic query runs, it sends authentication information, query text, parameters, and any data transferred by the query to the configured endpoint. Configure external data sources only for endpoints that your organization trusts.
 
 Only principals with `ALTER ANY EXTERNAL DATA SOURCE` permission can create or change an external data source. Limit this permission to database administrators who require it, and periodically review external data sources by querying [sys.external_data_sources](/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql).
 
-As a separate network control, have a network administrator [restrict outbound networking and allow only approved destination FQDNs](outbound-firewall-rule-overview.md) for the logical server. Use an FQDN instead of an IP address in each external data source so that its destination can be explicitly allowlisted. Separating database configuration from network approval implements separation of duties and prevents a database administrator from establishing an unapproved communication path without an independent network policy change.
+As a separate network control, have a network administrator [restrict outbound networking and allow only approved destination FQDNs](outbound-firewall-rule-overview.md) for the logical server. Use an FQDN instead of an IP address in each external data source so that its destination can be explicitly allow listed. Separating database configuration from network approval implements separation of duties and prevents a database administrator from establishing an unapproved communication path without an independent network policy change.
 
 ## Connectivity for tools
 

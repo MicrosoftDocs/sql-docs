@@ -1,10 +1,10 @@
 ---
 title: "queryinsights.frequently_run_queries (Transact-SQL)"
-description: "The queryinsights.frequently_run_queries provides information about frequently run queries in Fabric Data Warehousing."
+description: "The queryinsights.frequently_run_queries provides information about frequently run queries in Fabric Data Warehouse."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mariyaali
-ms.date: 04/30/2026
+ms.reviewer: mariyaali, marakiketema
+ms.date: 08/03/2026
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:
@@ -21,7 +21,7 @@ monikerRange: "=fabric"
 # queryinsights.frequently_run_queries (Transact-SQL)
 [!INCLUDE [Fabric SE DW](../../includes/applies-to-version/fabric-se-dw.md)]
 
-  The `queryinsights.frequently_run_queries` in [!INCLUDE [fabric](../../includes/fabric.md)] provides information about frequently run queries in Fabric Data Warehousing.
+  The `queryinsights.frequently_run_queries` view in [!INCLUDE [fabric](../../includes/fabric.md)] provides information about frequently run queries in Fabric Data Warehouse.
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -37,11 +37,12 @@ monikerRange: "=fabric"
 | `number_of_successful_runs` | **int** |Number of successful query executions.|
 | `number_of_failed_runs` | **int** |Number of failed query executions.|
 | `number_of_cancelled_runs` |**int** |Number of canceled query executions.|
-| `query_hash` | **varchar(200)** | Binary hash value calculated on the query and used to identify semantically-similar queries. For example, queries that are identical but have different parameterized values will share a `query_hash`. You can use the query hash to correlate between Query Insight views. For more information, see [Query Insights - Aggregation](/fabric/data-warehouse/query-insights#similar-queries). |
+| `number_of_accelerated_runs` |**int** |Number of [accelerated](/fabric/data-warehouse/query-acceleration) query executions.|
+| `query_hash` | **varchar(200)** | Binary hash value calculated on the query and used to identify semantically similar queries. For example, queries that are identical but have different parameterized values share a `query_hash`. Use the query hash to correlate between Query Insight views. For more information, see [Query Insights - Aggregation](/fabric/data-warehouse/query-insights#similar-queries). |
 
 ## Permissions
 
-You should have access to a [[!INCLUDE [fabric-se](../../includes/fabric-se.md)]](/fabric/data-warehouse/data-warehousing#sql-endpoint-of-the-lakehouse) or [[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]](/fabric/data-warehouse/data-warehousing#synapse-data-warehouse) within a [Premium capacity](/power-bi/enterprise/service-premium-what-is) workspace with Contributor or above permissions.
+You need access to a [[!INCLUDE [fabric-se](../../includes/fabric-se.md)]](/fabric/data-warehouse/data-warehousing#sql-endpoint-of-the-lakehouse) or [[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]](/fabric/data-warehouse/data-warehousing#synapse-data-warehouse) within a [Premium capacity](/power-bi/enterprise/service-premium-what-is) workspace with Contributor or higher permissions.
 
 ## Next step
 

@@ -6,9 +6,9 @@ metadata:
   description: Choose the area of SQL Server you are interested in.
   ms.service: sql
   ms.topic: landing-page
-  author: MashaMSFT
-  ms.author: mathoma
-  ms.reviewer: randolphwest, wiassaf
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.reviewer: randolphwest, mathoma
   ms.date: 04/02/2026
   ms.custom: build-2025
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new

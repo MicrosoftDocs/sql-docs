@@ -1,6 +1,4 @@
 ---
-author: nidenyse
-ms.author: dniwenshuti
 ms.reviewer: randolphwest
 ms.date: 06/16/2025
 ms.service: reporting-services

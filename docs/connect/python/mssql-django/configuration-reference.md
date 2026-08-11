@@ -4,7 +4,7 @@ description: Review the complete settings.py reference for the mssql-django Djan
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.date: 08/03/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -97,7 +97,7 @@ The `OPTIONS` dictionary provides backend-specific configuration. Place these se
 | `unicode_results` | Boolean | `False` | Activate pyodbc's `unicode_results` feature. |
 | `extra_params` | String | `None` | Additional ODBC parameters in `"param=value;param=value"` format. Used for [Microsoft Entra authentication](microsoft-entra-authentication.md). |
 | `collation` | String | `None` | Collation for text field lookups (for example, `"Chinese_PRC_CI_AS"`). |
-| `connection_timeout` | Integer | `0` | Connection timeout in seconds (`0` = disabled). |
+| `connection_timeout` | Integer | `0` | Connection timeout in seconds (`0` = disabled). Use at least 60 for [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. |
 | `connection_retries` | Integer | `5` | Number of connection retry attempts. |
 | `connection_retry_backoff_time` | Integer | `5` | Back-off time in seconds between retries. |
 | `query_timeout` | Integer | `0` | Query timeout in seconds (`0` = disabled). |

@@ -4,7 +4,7 @@ description: Configure ODBC driver selection, DSN, FreeTDS, timeouts, and connec
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.date: 07/31/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -151,6 +151,8 @@ DATABASES = {
 
 This setting is also used for [Microsoft Entra authentication](microsoft-entra-authentication.md) keywords.
 
+When connecting to Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance, add `MultiSubnetFailover=Yes` to `extra_params`. The driver attempts connections to all resolved endpoints in parallel and completes authentication with the first responsive one. It's safe on single-IP targets: when DNS resolves to one address, the driver does a single connect attempt with no measurable overhead, so you can leave the setting on for all Django deployments that target a Microsoft SQL family endpoint.
+
 [!INCLUDE [trust-server-certificate-caution](includes/trust-server-certificate-caution.md)]
 
 ## Connection timeouts and retries
@@ -185,6 +187,10 @@ DATABASES = {
     },
 }
 ```
+
+`connection_timeout=0` is the mssql-django default. Because pyodbc only calls `SQLSetConnectAttr(SQL_ATTR_LOGIN_TIMEOUT, ...)` when you supply a positive value, the [driver-dependent default](../../../odbc/reference/syntax/sqlsetconnectattr-function.md#comments) applies (15 seconds for the Microsoft ODBC Driver for SQL Server). Set an explicit value so unresponsive connect attempts fail predictably.
+
+If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, use at least `60`. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. With a shorter timeout, the first connect attempt times out before the resume completes. `connection_retries` recovers eventually, but the first request pays multiple timeout intervals before it succeeds.
 
 ## Collation
 

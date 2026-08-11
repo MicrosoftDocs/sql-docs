@@ -586,22 +586,34 @@
         "machine-learning/**/*.md": "machine-learning/machine-learning-zone-pivot-groups.json"
       },
       "author": {
-        "azdata/**/*.md": "swells",
         "**/*/index.yml": "rwestMSFT",
         "reporting-services/**/*.md": "JulCsc",
+        "reporting-services/**/*.yml": "JulCsc",
         "integration-services/**/*.md": "kromerm",
+        "integration-services/**/*.yml": "kromerm",
         "data-quality-services/**/*.md": "kromerm",
+        "data-quality-services/**/*.yml": "kromerm",
         "dmx/**/*.md": "KayUnkroth",
-        "mdx/**/*.md": "KayUnkroth"
+        "dmx/**/*.yml": "KayUnkroth",
+        "mdx/**/*.md": "KayUnkroth",
+        "mdx/**/*.yml": "KayUnkroth",
+        "machine-learning/**/*.md": "VanMSFT",
+        "machine-learning/**/*.yml": "VanMSFT"
       },
       "ms.author": {
-        "azdata/**/*.md": "seanw",
         "**/*/index.yml": "randolphwest",
         "reporting-services/**/*.md": "juliacawthra",
+        "reporting-services/**/*.yml": "juliacawthra",
         "integration-services/**/*.md": "makromer",
+        "integration-services/**/*.yml": "makromer",
         "data-quality-services/**/*.md": "makromer",
+        "data-quality-services/**/*.yml": "makromer",
         "dmx/**/*.md": "kayu",
-        "mdx/**/*.md": "kayu"
+        "dmx/**/*.yml": "kayu",
+        "mdx/**/*.md": "kayu",
+        "mdx/**/*.yml": "kayu",
+        "machine-learning/**/*.md": "vanto",
+        "machine-learning/**/*.yml": "vanto"
       },
       "ms.reviewer": {
       },

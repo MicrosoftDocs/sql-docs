@@ -9,8 +9,7 @@ metadata:
   ms.service: sql
   ms.subservice: machine-learning
   ms.topic: landing-page
-  author: WilliamDAssafMSFT
-  ms.author: wiassaf
+  ms.reviewer: randolphwest, wiassaf
   ms.date: 05/24/2022
 landingContent:
   - title: Machine learning on SQL Server

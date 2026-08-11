@@ -23,7 +23,7 @@ monikerRange: "=fabric"
 
 [!INCLUDE [Fabric SE DW](../../includes/applies-to-version/fabric-se-dw.md)]
 
-  The `queryinsights.sql_pool_insights` in [!INCLUDE [fabric](../../includes/fabric.md)] Data Warehouse monitors resource allocation, tracks configuration changes, and identify periods when pools are under pressure. 
+  The `queryinsights.sql_pool_insights` in [!INCLUDE [fabric](../../includes/fabric.md)] Data Warehouse monitors resource allocation, tracks configuration changes, and identifies periods when pools are under pressure. 
 
 | Column name                | Data type        | Description                                                                 |
 | ---                        | ---              | ---                                                                         |
@@ -38,22 +38,22 @@ monikerRange: "=fabric"
 
 In Fabric Data Warehouse, resource isolation is enforced between `SELECT` and `NON SELECT` pools, preventing contention. Two pools are present by default:
 
-  - `SELECT`: Handles read (`SELECT`) queries, optimized for analytics/reporting.
-  - `NON SELECT` Handles data modification (`INSERT`, `UPDATE`, `DELETE`), optimized for ETL/ingestion.
+  - `SELECT`: Handles read (`SELECT`) queries, optimized for analytics and reporting.
+  - `NON SELECT`: Handles data modification (`INSERT`, `UPDATE`, `DELETE`), optimized for ETL and ingestion.
 
 ### Event-based reporting
 
-- New records are logged when pool configuration, workspace capacity, or pressure state changes.
-- Pressure state changes are logged if the pressure is sustained for **1 minute** or longer.
-- Events are only logged when the warehouse is active. If there is no activity on the warehouse, periodic events are paused and resume once activity is detected. This means that during periods of inactivity, there can be gaps in event logging until the warehouse becomes active again.
+- The database logs new records when pool configuration, workspace capacity, or pressure state changes.
+- The database logs pressure state changes if the pressure is sustained for **1 minute** or longer.
+- The SQL Database Engine logs events only when the warehouse is active. If there's no activity on the warehouse, events pause and resume once activity is detected. This condition means that during periods of inactivity, event logging can have gaps until the warehouse becomes active again.
 
 ## Permissions
 
-You should have access to a SQL analytics endpoint or warehouse within a Fabric Capacity workspace with Contributor or above permissions or Viewer with Monitor permissions.
+You need access to a SQL analytics endpoint or warehouse within a Fabric Capacity workspace with Contributor or higher permissions, or Viewer with Monitor permissions.
 
 ## Examples
 
-Use this view to correlate query performance issues with pool pressure and configuration changes. Visualize periods of pressure using window functions or external tools. Some examples follow:
+Use this view to correlate query performance problems with pool pressure and configuration changes. Visualize periods of pressure by using window functions or external tools. Some examples follow:
 
 ### A. Periods of pressure in the last 24 hours
 
@@ -71,7 +71,7 @@ ORDER BY timestamp DESC;
 
 ### B. Visualize pressure trends
 
-Calculate consecutive pressure periods and gaps using window functions:
+Calculate consecutive pressure periods and gaps by using window functions:
 
 ```sql
 -- Calculate consecutive pressure periods and gaps using window functions

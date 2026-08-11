@@ -8,7 +8,6 @@ ms.date: 08/11/2026
 ms.service: azure-sql-database
 ms.subservice: scale-out
 ms.topic: overview
-ai-usage: ai-assisted
 ms.custom:
   - sqldbrb=1
 ---

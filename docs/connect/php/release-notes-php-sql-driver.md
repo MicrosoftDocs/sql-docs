@@ -4,7 +4,7 @@ description: This page discusses what was changed in each version of the Microso
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 04/30/2026
+ms.date: 07/29/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -15,6 +15,26 @@ helpviewer_keywords:
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## 5.13.2
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?LinkId=2374713)**  
+[GitHub Release Tag v5.13.2 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.13.2)
+
+- Release number: 5.13.2
+- Released: July 29, 2026
+
+### What's new in 5.13.2
+
+| New item | Details |
+| :------- | :------ |
+| Added support for installing the drivers with PIE (PHP Installer for Extensions). | You can now install the drivers by using the PIE tool in addition to PECL. |
+| Fixed a SQL injection vulnerability in `PDO::lastInsertId()` (CWE-89). | The sequence-name lookup is now parameterized, and non-ASCII sequence names are handled correctly. |
+| Fixed binary parameter truncation at embedded null bytes with PDO emulated prepares (CWE-626). | Binary data containing null bytes is no longer truncated when `PDO::ATTR_EMULATE_PREPARES` is enabled. |
+| Fixed a link failure on Windows thread-safe (ZTS) shared builds. | Resolved an unresolved external symbol (`_tsrm_ls_cache`) when building the extensions as shared on ZTS. |
+| Fixed stale unixODBC configuration cache on Linux and macOS. | The driver now clears the unixODBC INI cache at module shutdown. |
+| Fixed an AddressSanitizer ODR violation when both extensions are loaded. | &nbsp; |
+| Addressed static code analysis (CodeQL) findings. | &nbsp; |
 
 ## 5.13.1
 

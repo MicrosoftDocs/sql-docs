@@ -1,10 +1,10 @@
 ---
 title: "queryinsights.long_running_queries (Transact-SQL)"
-description: "The queryinsights.long_running_queries in Microsoft Fabric provides information about SQL query execution times."
+description: "The queryinsights.long_running_queries in Fabric Data Warehouse provides information about SQL query execution times."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mariyaali
-ms.date: 04/30/2026
+ms.reviewer: mariyaali, marakiketema
+ms.date: 08/03/2026
 ms.service: sql
 ms.topic: "reference"
 ms.custom:
@@ -24,7 +24,7 @@ monikerRange: "=fabric"
 
 [!INCLUDE [Fabric SE DW](../../includes/applies-to-version/fabric-se-dw.md)]
 
-  The `queryinsights.long_running_queries` in [!INCLUDE [fabric](../../includes/fabric.md)] provides information about SQL query execution times.
+  The `queryinsights.long_running_queries` view in [!INCLUDE [fabric](../../includes/fabric.md)] Data Warehouse provides information about SQL query execution times.
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -32,18 +32,19 @@ monikerRange: "=fabric"
 | `last_run_command` | **varchar(8000)** |  Text of the last query execution.|
 | `median_total_elapsed_time_ms` | **int** | Median query execution time (ms) across runs.|
 | `number_of_runs` | **int** | Total number of times the query was executed.|
+| `number_of_accelerated_runs` | **int** | Total number of times the query was [accelerated](/fabric/data-warehouse/query-acceleration).|
 | `last_run_total_elapsed_time_ms` | **int** | Time taken by the last execution (ms).|
 | `last_dist_statement_id` | **uniqueidentifier** | ID linking the query to `queryinsights.exec_requests_history`.|
 | `last_run_session_id` | **smallint** | User session ID for the last execution.|
-| `query_hash` | **varchar(200)** | Binary hash value calculated on the query and used to identify semantically-similar queries. For example, queries that are identical but have different parameterized values will share a `query_hash`. You can use the query hash to correlate between Query Insight views. For more information, see [Query Insights - Aggregation](/fabric/data-warehouse/query-insights#similar-queries). |
+| `query_hash` | **varchar(200)** | Binary hash value calculated on the query and used to identify semantically similar queries. For example, queries that are identical but have different parameterized values share a `query_hash`. Use the query hash to correlate between Query Insight views. For more information, see [Query Insights - Aggregation](/fabric/data-warehouse/query-insights#similar-queries). |
 
 ## Permissions
 
-You should have access to a [[!INCLUDE [fabric-se](../../includes/fabric-se.md)]](/fabric/data-warehouse/data-warehousing#sql-endpoint-of-the-lakehouse) or [[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]](/fabric/data-warehouse/data-warehousing#synapse-data-warehouse) within a [Premium capacity](/power-bi/enterprise/service-premium-what-is) workspace with Contributor or above permissions.
+You need access to a [[!INCLUDE [fabric-se](../../includes/fabric-se.md)]](/fabric/data-warehouse/data-warehousing#sql-endpoint-of-the-lakehouse) or [[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]](/fabric/data-warehouse/data-warehousing#synapse-data-warehouse) within a [Premium capacity](/power-bi/enterprise/service-premium-what-is) workspace with Contributor or higher permissions.
 
 ## Example
 
-You can then find the performance of long-running queries, for example:
+You can find the performance of long-running queries, for example:
 
 ```sql
 SELECT * 

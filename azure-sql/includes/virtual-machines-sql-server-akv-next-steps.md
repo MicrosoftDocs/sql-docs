@@ -5,9 +5,9 @@ ms.date: 10/26/2018
 ms.service: azure-vm-sql-server
 ms.topic: include
 ---
-After enabling Azure Key Vault Integration, you can enable SQL Server encryption on your SQL VM. First, you will need to create an asymmetric key inside your key vault and a symmetric key within SQL Server on your VM. Then, you will be able to execute T-SQL statements to enable encryption for your databases and backups.
+After you enable Azure Key Vault Integration, you can enable SQL Server encryption on your SQL VM. First, create an asymmetric key in your key vault and a symmetric key in SQL Server on your VM. Then, run T-SQL statements to enable encryption for your databases and backups.
 
-There are several forms of encryption you can take advantage of:
+Take advantage of several forms of encryption, including:
 
 * [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption)
 * [Encrypted backups](/sql/relational-databases/backup-restore/backup-encryption)
@@ -17,7 +17,7 @@ The following Transact-SQL scripts provide examples for each of these areas.
 
 ### Prerequisites for examples
 
-Each example is based on the two prerequisites: an asymmetric key from your key vault called **CONTOSO_KEY** and a credential created by the AKV Integration feature called **Azure_EKM_cred**. The following Transact-SQL commands setup these prerequisites for running the examples.
+Each example is based on two prerequisites: an asymmetric key from your key vault named **CONTOSO_KEY** and a credential created by the AKV Integration feature named **Azure_EKM_cred**. The following Transact-SQL commands set up these prerequisites for running the examples.
 
 ```sql
 USE master;
@@ -81,7 +81,7 @@ CREATION_DISPOSITION = OPEN_EXISTING;
 
 ### Encrypted backups
 
-1. Create a SQL Server login to be used by the Database Engine for encrypting backups, and add the credential to it.
+1. Create a SQL Server login for the Database Engine to use when it encrypts backups, and add the credential to the login.
 
    ```sql
    USE master;
@@ -98,7 +98,7 @@ CREATION_DISPOSITION = OPEN_EXISTING;
    GO
    ```
 
-1. Backup the database specifying encryption with the asymmetric key stored in the key vault.
+1. Back up the database and specify encryption by using the asymmetric key stored in the key vault.
 
    ```sql
    USE master;
@@ -111,7 +111,7 @@ CREATION_DISPOSITION = OPEN_EXISTING;
 
 ### Column Level Encryption (CLE)
 
-This script creates a symmetric key protected by the asymmetric key in the key vault, and then uses the symmetric key to encrypt data in the database.
+This script creates a symmetric key that's protected by the asymmetric key in the key vault. Then, it uses the symmetric key to encrypt data in the database.
 
 ```sql
 CREATE SYMMETRIC KEY DATA_ENCRYPTION_KEY
@@ -136,6 +136,6 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 
 ## Additional resources
 
-For more information on how to use these encryption features, see [Using EKM with SQL Server Encryption Features](/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server#UsesOfEKM).
+For more information about how to use these encryption features, see [Using EKM with SQL Server Encryption Features](/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server#UsesOfEKM).
 
-Note that the steps in this article assume that you already have SQL Server running on an Azure virtual machine. If not, see [Provision a SQL Server virtual machine in Azure](../virtual-machines/windows/create-sql-vm-portal.md). For other guidance on running SQL Server on Azure VMs, see [Overview of SQL Server on Azure Windows Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md).
+The steps in this article assume that you already have SQL Server running on an Azure virtual machine. If not, see [Provision a SQL Server virtual machine in Azure](../virtual-machines/windows/create-sql-vm-portal.md). For other guidance on running SQL Server on Azure VMs, see [Overview of SQL Server on Azure Windows Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md).

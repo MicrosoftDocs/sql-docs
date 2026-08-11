@@ -1,10 +1,10 @@
 ---
 title: "queryinsights.exec_requests_history (Transact-SQL)"
-description: "The queryinsights.exec_requests_history in Microsoft Fabric provides information about each complete SQL request."
+description: "The queryinsights.exec_requests_history in Fabric Data Warehouse provides information about each complete SQL request."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mariyaali, randolphwest, emtehran
-ms.date: 04/23/2026
+ms.reviewer: mariyaali, randolphwest, emtehran, marakiketema
+ms.date: 08/05/2026
 ms.service: sql
 ms.topic: "reference"
 ms.custom:
@@ -54,16 +54,17 @@ The `queryinsights.exec_requests_history` in [!INCLUDE [fabric](../../includes/f
 | `data_scanned_disk_mb` | **decimal(18,3)** | Shows how much data was scanned/read from local disk. Data scanned from disk and memory together indicates how much data was read from cache. |
 | `command` | **varchar(max)** | Complete text of the executed query. |
 | `error_code` | **int** | Error code if query failed after beginning execution. `0` if no error encountered. |
+| `is_accelerated` | **int** | Specifies whether [acceleration](/fabric/data-warehouse/query-acceleration) was applied (`1`), or not (`0`) because acceleration was off or the query didn't qualify for acceleration.  |
 
 ## Permissions
 
-You should have access to a [[!INCLUDE [fabric-se](../../includes/fabric-se.md)]](/fabric/data-warehouse/data-warehousing#sql-endpoint-of-the-lakehouse) or [[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]](/fabric/data-warehouse/data-warehousing#synapse-data-warehouse) within a [Premium capacity](/power-bi/enterprise/service-premium-what-is) workspace with Contributor or above permissions.
+You need access to a [[!INCLUDE [fabric-se](../../includes/fabric-se.md)]](/fabric/data-warehouse/data-warehousing#sql-endpoint-of-the-lakehouse) or [[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]](/fabric/data-warehouse/data-warehousing#synapse-data-warehouse) within a [Premium capacity](/power-bi/enterprise/service-premium-what-is) workspace with Contributor or higher permissions.
 
 ## Examples
 
 ### A. Find query performance on specific command text
 
-You can the `queryinsights.exec_requets_history` view to find the history of query executions with commands on key words, such as a table, view, or column. For example, to look for queries on the `SalesInvoices` table:
+Use the `queryinsights.exec_requests_history` view to find the history of query executions with commands on keywords, such as a table, view, or column. For example, to look for queries on the `SalesInvoices` table:
 
 ```sql
 SELECT *
@@ -75,7 +76,7 @@ WHERE
 
 ### B. Compare query with different labels
 
-You can the `queryinsights.exec_requets_history` view to compare differences between the queries with different labels, for example, a query run with or without [data clustering](/fabric/data-warehouse/data-clustering). For a tutorial on using data clustering in Fabric Data Warehouse, see [Use data clustering in Fabric Data Warehouse](/fabric/data-warehouse/tutorial-data-clustering).
+Use the `queryinsights.exec_requests_history` view to compare differences between the queries with different labels, such as a query run with or without [data clustering](/fabric/data-warehouse/data-clustering). For a tutorial on using data clustering in Fabric Data Warehouse, see [Use data clustering in Fabric Data Warehouse](/fabric/data-warehouse/tutorial-data-clustering).
 
 ```sql
 SELECT *

@@ -555,9 +555,6 @@ sections:
           | Maximum password age | 42 days |
           | Minimum password age | One day |
           | Minimum password length | 14 characters |
-          | Lockout threshold | 10 failed login attempts |
-          | Lockout duration | 10 minutes |
-          | Lockout observation window | 10 minutes |
           | Password must meet complexity requirements | Enabled |
 
       - question: What are login lockout policies?

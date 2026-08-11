@@ -4,7 +4,7 @@ description: Microsoft.Data.SqlClient is the .NET data provider for connecting a
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 07/29/2026
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -53,7 +53,7 @@ public static void QuerySalesWithResilience(IConfiguration config, ILogger logge
         // This is separate from the initial-connect retry provider defined next.
         ConnectRetryCount = 3,
         ConnectRetryInterval = 10,
-        MultiSubnetFailover = true,                  // recommended for any target; enables parallel connect
+        MultiSubnetFailover = true,                  // recommended for TCP endpoints; enables parallel connect
         // ApplicationIntent = ApplicationIntent.ReadOnly, // uncomment to route to a readable secondary
     };
 
@@ -139,7 +139,7 @@ This snippet is tuned for Azure SQL Database failover groups and Azure SQL Manag
 
 The <xref:Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider.Retrying> event on each provider fires before each retry attempt and carries the retry count, the delay before the next attempt, and the exceptions observed so far. Route it to <xref:Microsoft.Extensions.Logging.ILogger> or your telemetry pipeline to keep the retry loop visible in production.
 
-Set `MultiSubnetFailover = true` for any SQL Server target. It selects a parallel-connect code path that completes login with the first responsive endpoint, avoiding the slow sequential per-IP walk that can otherwise stall connects to Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, availability group listeners, and failover cluster instances. On single-IP targets, the setting is safe. For more information, see [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md) and [Disabling Transparent Network IP Resolution](appcontext-switches.md#disabling-transparent-network-ip-resolution).
+Set `MultiSubnetFailover = true` for Microsoft SQL family TCP endpoints. It selects a parallel-connect code path that completes authentication with the first responsive endpoint, avoiding the slow sequential per-IP walk that can otherwise stall connects to Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, availability group listeners, and failover cluster instances. On single-IP targets, the setting is safe. `MultiSubnetFailover` isn't supported when you connect to a named instance or over a protocol other than TCP. For more information, see [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md) and [Disabling Transparent Network IP Resolution](appcontext-switches.md#disabling-transparent-network-ip-resolution).
 
 If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, raise `ConnectTimeout` to at least 60 seconds. An auto-paused database resumes on the first `Open()`, and the resume can take 30 to 60 seconds or more. Client-side timeouts surface as error `-2`, which isn't in the built-in transient error list, so `openRetry` won't rescue an `Open()` that times out mid-resume. The individual connect attempt must be long enough to cover the resume.
 

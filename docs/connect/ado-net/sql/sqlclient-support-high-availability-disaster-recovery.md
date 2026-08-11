@@ -4,7 +4,7 @@ description: "Describes SqlClient support for high-availability, disaster recove
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: "08/15/2019"
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -42,7 +42,7 @@ The `MultiSubnetFailover` connection property indicates that the application is 
   
 For more information about connection string keywords in SqlClient, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
-Specifying `MultiSubnetFailover=True` when connecting to something other than an availability group listener or SQL Server 2012 Failover Cluster Instance may result in a negative performance impact, and is not supported.  
+`MultiSubnetFailover=True` is also appropriate for Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. On a single-IP target, the driver makes a single connection attempt, so you can leave the setting on for Microsoft SQL family TCP endpoints. `MultiSubnetFailover` isn't supported when you connect to a named instance or over a protocol other than TCP.  
   
 Use the following guidelines to connect to a server in an availability group or SQL Server 2012 Failover Cluster Instance:  
   

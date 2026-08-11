@@ -162,7 +162,7 @@ These keywords cover Always On availability groups, Azure SQL targets, and idle 
 
 | Keyword | Aliases | Default | Description |
 | --------- | --------- | --------- | ------------- |
-| `MultiSubnetFailover` | `multisubnetfailover` | `no` | Try all resolved endpoints in parallel and complete login with the first responsive one. Speeds up failover recovery. |
+| `MultiSubnetFailover` | `multisubnetfailover` | `no` | Try all resolved endpoints in parallel and complete authentication with the first responsive one. Speeds up failover recovery. |
 | `ApplicationIntent` | `applicationintent` | `ReadWrite` | Declare application workload type. Use `ReadOnly` for read-only routing to secondary replicas. |
 | `ConnectRetryCount` | `connectretrycount` | `1` | Number of automatic reconnection attempts for [idle connection resiliency](/sql/connect/odbc/connection-resiliency). This is a driver-level feature for dropped idle connections, not a substitute for [application-level retry logic](retry-logic.md). |
 | `ConnectRetryInterval` | `connectretryinterval` | `10` | Seconds between idle connection resiliency reconnection attempts. |

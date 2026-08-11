@@ -4,10 +4,11 @@ description: Elastic query enables you to run a Transact-SQL query that spans mu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: drskwier, bgavrilovic, mathoma, randolphwest
-ms.date: 03/17/2026
+ms.date: 08/11/2026
 ms.service: azure-sql-database
 ms.subservice: scale-out
 ms.topic: overview
+ai-usage: ai-assisted
 ms.custom:
   - sqldbrb=1
 ---
@@ -129,6 +130,14 @@ To begin coding, see [Getting started with elastic query for horizontal partitio
 
 Once you have defined your external data sources and your external tables, you can use regular SQL Server connection strings to connect to the databases where you defined your external tables. You can then run T-SQL statements over your external tables on that connection with the limitations outlined later in this article. You can find more information and examples of T-SQL queries in the documentation articles for [horizontal partitioning](elastic-query-horizontal-partitioning.md) and [vertical partitioning](elastic-query-vertical-partitioning.md).
 
+## Secure external data sources
+
+The `LOCATION` of an external data source can identify a SQL endpoint by fully qualified domain name (FQDN) or IP address, including an endpoint that isn't an Azure SQL Database logical server. When an elastic query runs, authentication information, query text, parameters, and any data transferred by the query are sent to the configured endpoint. Configure external data sources only for endpoints that your organization trusts.
+
+Only principals with `ALTER ANY EXTERNAL DATA SOURCE` permission can create or change an external data source. Limit this permission to database administrators who require it, and periodically review external data sources by querying [sys.external_data_sources](/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql).
+
+As a separate network control, have a network administrator [restrict outbound networking and allow only approved destination FQDNs](outbound-firewall-rule-overview.md) for the logical server. Use an FQDN instead of an IP address in each external data source so that its destination can be explicitly allowlisted. Separating database configuration from network approval implements separation of duties and prevents a database administrator from establishing an unapproved communication path without an independent network policy change.
+
 ## Connectivity for tools
 
 You can use regular SQL Server connection strings to connect your applications and BI or data integration tools to databases that have external tables. Make sure that SQL Server is supported as a data source for your tool. Once connected, refer to the elastic query database and the external tables in that database just like you would do with any other SQL Server database that you connect to with your tool.
@@ -154,7 +163,7 @@ Elastic query is included in the cost of Azure SQL Database. Topologies where yo
 
 - Cursors aren't supported for external tables in Azure SQL Database.
 
-- Elastic query works with Azure SQL Database only. You can't use it for querying a SQL Server instance, Azure SQL Managed Instance, or Fabric SQL database.
+- Elastic query scenarios documented and supported in this article use Azure SQL Database as the remote data source. The external data source syntax doesn't restrict `LOCATION` to an Azure SQL Database logical server. Protect any configured destination as described in [Secure external data sources](#secure-external-data-sources).
 
 - Private links are currently not supported with elastic query for those databases that are targets of external data sources.
 

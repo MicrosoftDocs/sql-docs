@@ -3,7 +3,7 @@ title: Manage Connections with mssql-python
 description: Learn how to open, close, and manage database connections using context managers, autocommit, and connection attributes with mssql-python.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.date: 07/31/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -158,6 +158,8 @@ print(conn.timeout)  # 60
 
 A timeout of `0` means no timeout (wait indefinitely). Define reasonable timeouts in production; a hung connection attempt with no timeout blocks the calling thread permanently.
 
+If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, use at least `60`. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. A shorter timeout expires before the resume completes and the connect attempt fails.
+
 ## Connection attributes
 
 Use `set_attr()` to modify connection behavior at runtime. Connection attributes control low-level driver settings like access mode, transaction isolation, and packet size. Most applications don't need to change these attributes, but they're useful for specific scenarios:
@@ -274,7 +276,8 @@ Default encodings:
 
 - **Use context managers** (`with` blocks) for all connections in application code. They guarantee cleanup even when exceptions occur.
 - **Use connection pooling** for better performance (enabled by default). See [Connection pooling](connection-pooling.md).
-- **Set appropriate timeouts** for your network environment. A 30-second timeout suits most cloud deployments; increase it for cross-region or VPN connections.
+- **Set appropriate timeouts** for your network environment. A 30-second timeout suits most cloud deployments; increase it for cross-region or VPN connections. Use at least `60` for [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, because an auto-paused database can take 30 to 60 seconds or more to resume on the first connect.
+- **Set `MultiSubnetFailover=yes` in the connection string** when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. It's safe on single-IP targets, so leave it on for all Microsoft SQL family TCP endpoints.
 - **Use `autocommit=False`** (the default) for data modification scenarios where you need transactional atomicity.
 - **Use `autocommit=True`** for DDL operations, read-only queries, and admin scripts.
 - **Don't share connections across threads**. The driver's thread safety level is 1 (threads can share the module but not connections).

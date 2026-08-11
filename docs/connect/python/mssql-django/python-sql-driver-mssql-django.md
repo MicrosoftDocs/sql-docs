@@ -48,6 +48,8 @@ DATABASES = {
                 "Authentication=ActiveDirectoryMsi;"
                 "Encrypt=yes;"
                 "TrustServerCertificate=no;"
+                # Parallel dials to all resolved IPs; safe on single-IP targets.
+                "MultiSubnetFailover=Yes;"
                 # ODBC driver reconnects connections dropped while idle.
                 "ConnectRetryCount=3;"
                 "ConnectRetryInterval=10;"

@@ -4,7 +4,7 @@ description: Diagnose and resolve common issues when using the mssql-django Djan
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 07/24/2026
+ms.date: 08/03/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -133,6 +133,10 @@ django.db.utils.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 
 - **Network latency**
 
   Increase `connection_timeout` in OPTIONS.
+
+- **Azure SQL Database serverless with auto-pause enabled**
+
+  An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. Set `connection_timeout` to at least 60 and retry the first connection. For more information, see [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview).
 
 - **Server overloaded**
 

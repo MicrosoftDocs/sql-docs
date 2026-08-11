@@ -12,45 +12,31 @@
   href: ../connect/sql-data-developer.md
 - name: ADO.NET
   items:
-  - name: Microsoft ADO.NET for SQL Server
+  - name: Microsoft.Data.SqlClient for SQL Server
     href: ../connect/ado-net/microsoft-ado-net-sql-server.md
-  - name: Getting started
-    href: ../connect/ado-net/get-started-sqlclient-driver.md
+  - name: Get started
     items:
-    - name: 'Step 1: Configure development environment'
-      href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-    - name: 'Step 2: Create a SQL database'
-      href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-    - name: 'Step 3: Proof of concept connecting to SQL'
-      href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-    - name: 'Step 4: Connect resiliently to SQL'
-      href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
-  - name: Overview
-    href: ../connect/ado-net/overview-sqlclient-driver.md
-    items:
-    - name: Microsoft.Data.SqlClient namespace
-      href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
-    - name: Download
-      href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
-    - name: Support lifecycle
-      href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
-    - name: Enable event tracing
-      href: ../connect/ado-net/enable-eventsource-tracing.md
-    - name: AppContext switches
-      href: ../connect/ado-net/appcontext-switches.md
-    - name: Troubleshooting guide
-      href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
-    - name: Finding additional information
-      href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
-  - name: Data Type Mappings In ADO.NET
-    href: ../connect/ado-net/data-type-mappings-ado-net.md
-    items:
-    - name: SQL Server Data Type Mappings
-      href: ../connect/ado-net/sql-server-data-type-mappings.md
-    - name: Floating-Point Numbers
-      href: ../connect/ado-net/floating-point-numbers.md
-  - name: Retrieving and Modifying Data In ADO.NET
-    href: ../connect/ado-net/retrieving-modifying-data.md
+    - name: Getting started
+      href: ../connect/ado-net/get-started-sqlclient-driver.md
+      items:
+      - name: 'Step 1: Configure development environment'
+        href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
+      - name: 'Step 2: Create a SQL database'
+        href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
+      - name: 'Step 3: Proof of concept connecting to SQL'
+        href: ../connect/ado-net/step-3-connect-sql-ado-net.md
+      - name: 'Step 4: Connect resiliently to SQL'
+        href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
+    - name: Overview
+      href: ../connect/ado-net/overview-sqlclient-driver.md
+      items:
+      - name: Microsoft.Data.SqlClient namespace
+        href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
+      - name: Download
+        href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+      - name: Support lifecycle
+        href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
+  - name: Configure and connect
     items:
     - name: Connecting To Data Source
       href: ../connect/ado-net/connecting-to-data-source.md
@@ -70,112 +56,20 @@
         href: ../connect/ado-net/connection-string-syntax.md
       - name: Encryption and certificate validation
         href: ../connect/ado-net/encryption-and-certificate-validation.md
-      - name: Protecting Connection Information
-        href: ../connect/ado-net/protecting-connection-information.md
     - name: Connection Pooling
       href: ../connect/ado-net/connection-pooling.md
       items:
       - name: SQL Server Connection Pooling (ADO.NET)
         href: ../connect/ado-net/sql-server-connection-pooling.md
-    - name: Commands and Parameters
-      href: ../connect/ado-net/commands-parameters.md
-      items:
-      - name: Executing a Command
-        href: ../connect/ado-net/execute-command.md
-      - name: Configuring Parameters
-        href: ../connect/ado-net/configure-parameters.md
-      - name: Generating Commands with CommandBuilders
-        href: ../connect/ado-net/generate-commands-with-commandbuilders.md
-      - name: Obtaining a Single Value from a Database
-        href: ../connect/ado-net/obtain-single-value-from-database.md
-      - name: Using Commands to Modify Data
-        href: ../connect/ado-net/use-commands-to-modify-data.md
-        items:
-        - name: Updating Data in a Data Source
-          href: ../connect/ado-net/update-data-inside-data-source.md
-        - name: Performing Catalog Operations
-          href: ../connect/ado-net/perform-catalog-operations.md
-    - name: DataAdapters and DataReaders
-      href: ../connect/ado-net/dataadapters-datareaders.md
-      items:
-      - name: Retrieve data by a DataReader
-        href: ../connect/ado-net/retrieve-data-by-datareader.md
-      - name: Populate a DataSet from a DataAdapter
-        href: ../connect/ado-net/populate-dataset-from-dataadapter.md
-      - name: DataAdapter parameters
-        href: ../connect/ado-net/dataadapter-parameters.md
-      - name: Add existing constraints to a DataSet
-        href: ../connect/ado-net/add-existing-constraints-to-dataset.md
-      - name: DataAdapter, DataTable, and DataColumn mappings
-        href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
-      - name: Paging through a query result
-        href: ../connect/ado-net/paging-through-query-result.md
-      - name: Update data sources with DataAdapters
-        href: ../connect/ado-net/update-data-sources-with-dataadapters.md
-      - name: Handle DataAdapter events
-        href: ../connect/ado-net/handle-dataadapter-events.md
-      - name: Batch operations using DataAdapters
-        href: ../connect/ado-net/batch-operations-using-dataadapters.md
-    - name: Transactions and concurrency
-      href: ../connect/ado-net/transactions-and-concurrency.md
-      items:
-      - name: Local transactions
-        href: ../connect/ado-net/local-transactions.md
-      - name: Distributed transactions
-        href: ../connect/ado-net/distributed-transactions.md
-      - name: System.Transactions integration with SQL Server
-        href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
-      - name: Optimistic concurrency
-        href: ../connect/ado-net/optimistic-concurrency.md
-    - name: Retrieving database schema information
-      href: ../connect/ado-net/retrieving-database-schema-information.md
-      items:
-      - name: GetSchema and schema collections
-        href: ../connect/ado-net/getschema-and-schema-collections.md
-      - name: Schema restrictions
-        href: ../connect/ado-net/schema-restrictions.md
-      - name: Common schema collections
-        href: ../connect/ado-net/common-schema-collections.md
-      - name: SQL Server schema collections
-        href: ../connect/ado-net/sql-server-schema-collections.md
-    - name: Configurable retry logic
-      href: ../connect/ado-net/configurable-retry-logic.md
-      items:
-      - name: Introduction
-        href: ../connect/ado-net/configurable-retry-logic-sqlclient-introduction.md
-      - name: Internal providers
-        href: ../connect/ado-net/internal-retry-logic-providers-sqlclient.md
-      - name: Core APIs
-        href: ../connect/ado-net/configurable-retry-logic-core-apis-sqlclient.md
-      - name: Configuration file
-        href: ../connect/ado-net/configurable-retry-logic-config-file-sqlclient.md
     - name: DbProviderFactories
       href: ../connect/ado-net/dbproviderfactories.md
       items:
       - name: Obtain a SqlClientFactory
         href: ../connect/ado-net/obtain-sqlclientfactory.md
-    - name: Diagnostic counters
-      href: ../connect/ado-net/diagnostic-counters.md
-      items:
-      - name: Event counters
-        href: ../connect/ado-net/event-counters.md
-      - name: Performance counters
-        href: ../connect/ado-net/performance-counters.md
-    - name: Retrieve identity or autonumber values
-      href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
-    - name: Retrieve binary data
-      href: ../connect/ado-net/retrieve-binary-data.md
-    - name: Modify data with stored procedures
-      href: ../connect/ado-net/modify-data-with-stored-procedures.md
-    - name: Data tracing in SqlClient
-      href: ../connect/ado-net/data-tracing.md
-    - name: Asynchronous programming
-      href: ../connect/ado-net/asynchronous-programming.md
-    - name: SqlClient streaming support
-      href: ../connect/ado-net/sqlclient-streaming-support.md
-  - name: SQL Server and ADO.NET
-    href: ../connect/ado-net/sql/index.md
+  - name: Authenticate and secure
     items:
+    - name: Protecting connection information
+      href: ../connect/ado-net/protecting-connection-information.md
     - name: SQL Server security
       href: ../connect/ado-net/sql/sql-server-security.md
       items:
@@ -190,6 +84,134 @@
           href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
       - name: SQL Server Express security
         href: ../connect/ado-net/sql/sql-server-express-security.md
+    - name: SqlClient support for Always Encrypted
+      href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+      items:
+      - name: Develop a .NET application using Always Encrypted with secure enclaves
+        href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+      - name: Using Azure Key Vault with Always Encrypted
+        href: ado-net/sql/azure-key-vault-example.md
+      - name: Using Azure Key Vault with Always Encrypted with secure enclaves
+        href: ado-net/sql/azure-key-vault-enclave-example.md
+  - name: Retrieve and update data
+    items:
+    - name: Retrieving and Modifying Data In ADO.NET
+      href: ../connect/ado-net/retrieving-modifying-data.md
+      items:
+      - name: Commands and Parameters
+        href: ../connect/ado-net/commands-parameters.md
+        items:
+        - name: Executing a Command
+          href: ../connect/ado-net/execute-command.md
+        - name: Configuring Parameters
+          href: ../connect/ado-net/configure-parameters.md
+        - name: Generating Commands with CommandBuilders
+          href: ../connect/ado-net/generate-commands-with-commandbuilders.md
+        - name: Obtaining a Single Value from a Database
+          href: ../connect/ado-net/obtain-single-value-from-database.md
+        - name: Using Commands to Modify Data
+          href: ../connect/ado-net/use-commands-to-modify-data.md
+          items:
+          - name: Updating Data in a Data Source
+            href: ../connect/ado-net/update-data-inside-data-source.md
+          - name: Performing Catalog Operations
+            href: ../connect/ado-net/perform-catalog-operations.md
+      - name: DataAdapters and DataReaders
+        href: ../connect/ado-net/dataadapters-datareaders.md
+        items:
+        - name: Retrieve data by a DataReader
+          href: ../connect/ado-net/retrieve-data-by-datareader.md
+        - name: Populate a DataSet from a DataAdapter
+          href: ../connect/ado-net/populate-dataset-from-dataadapter.md
+        - name: DataAdapter parameters
+          href: ../connect/ado-net/dataadapter-parameters.md
+        - name: Add existing constraints to a DataSet
+          href: ../connect/ado-net/add-existing-constraints-to-dataset.md
+        - name: DataAdapter, DataTable, and DataColumn mappings
+          href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
+        - name: Paging through a query result
+          href: ../connect/ado-net/paging-through-query-result.md
+        - name: Update data sources with DataAdapters
+          href: ../connect/ado-net/update-data-sources-with-dataadapters.md
+        - name: Handle DataAdapter events
+          href: ../connect/ado-net/handle-dataadapter-events.md
+        - name: Batch operations using DataAdapters
+          href: ../connect/ado-net/batch-operations-using-dataadapters.md
+      - name: Transactions and concurrency
+        href: ../connect/ado-net/transactions-and-concurrency.md
+        items:
+        - name: Local transactions
+          href: ../connect/ado-net/local-transactions.md
+        - name: Distributed transactions
+          href: ../connect/ado-net/distributed-transactions.md
+        - name: System.Transactions integration with SQL Server
+          href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
+        - name: Optimistic concurrency
+          href: ../connect/ado-net/optimistic-concurrency.md
+      - name: Retrieving database schema information
+        href: ../connect/ado-net/retrieving-database-schema-information.md
+        items:
+        - name: GetSchema and schema collections
+          href: ../connect/ado-net/getschema-and-schema-collections.md
+        - name: Schema restrictions
+          href: ../connect/ado-net/schema-restrictions.md
+        - name: Common schema collections
+          href: ../connect/ado-net/common-schema-collections.md
+        - name: SQL Server schema collections
+          href: ../connect/ado-net/sql-server-schema-collections.md
+      - name: Retrieve identity or autonumber values
+        href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
+      - name: Retrieve binary data
+        href: ../connect/ado-net/retrieve-binary-data.md
+      - name: Modify data with stored procedures
+        href: ../connect/ado-net/modify-data-with-stored-procedures.md
+      - name: Asynchronous programming
+        href: ../connect/ado-net/asynchronous-programming.md
+      - name: SqlClient streaming support
+        href: ../connect/ado-net/sqlclient-streaming-support.md
+      - name: SQL Server data operations in ADO.NET
+        href: ../connect/ado-net/sql/sql-server-data-operations.md
+        items:
+        - name: Bulk copy operations in SQL Server
+          href: ../connect/ado-net/sql/bulk-copy-operations-sql-server.md
+          items:
+          - name: Bulk copy example setup
+            href: ../connect/ado-net/sql/bulk-copy-example-setup.md
+          - name: Single bulk copy operations
+            href: ../connect/ado-net/sql/single-bulk-copy-operations.md
+          - name: Multiple bulk copy operations
+            href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
+          - name: Transaction and bulk copy operations
+            href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+          - name: Order hints for bulk copy operations
+            href: ../connect/ado-net/sql/bulk-copy-order-hints.md
+        - name: Multiple Active Result Sets (MARS)
+          href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
+          items:
+          - name: Enabling Multiple Active Result Sets
+            href: ../connect/ado-net/sql/enable-multiple-active-result-sets.md
+          - name: Manipulating data
+            href: ../connect/ado-net/sql/manipulate-data.md
+        - name: Asynchronous operations
+          href: ../connect/ado-net/sql/asynchronous-operations.md
+          items:
+          - name: Windows applications using callbacks
+            href: ../connect/ado-net/sql/windows-applications-callbacks.md
+          - name: ASP.NET applications using wait handles
+            href: ../connect/ado-net/sql/aspnet-apps-use-wait-handles.md
+          - name: Polling in console applications
+            href: ../connect/ado-net/sql/poll-console-applications.md
+        - name: Table-valued parameters
+          href: ../connect/ado-net/sql/table-valued-parameters.md
+  - name: Data types
+    items:
+    - name: Data Type Mappings In ADO.NET
+      href: ../connect/ado-net/data-type-mappings-ado-net.md
+      items:
+      - name: SQL Server Data Type Mappings
+        href: ../connect/ado-net/sql-server-data-type-mappings.md
+      - name: Floating-Point Numbers
+        href: ../connect/ado-net/floating-point-numbers.md
     - name: SQL Server data types and ADO.NET
       href: ../connect/ado-net/sql/sql-server-data-types.md
       items:
@@ -223,81 +245,74 @@
         href: ../connect/ado-net/sql/filestream-data.md
       - name: Inserting an image from a file
         href: ../connect/ado-net/sql/insert-image-file.md
-    - name: SQL Server data operations in ADO.NET
-      href: ../connect/ado-net/sql/sql-server-data-operations.md
+  - name: Reliability and diagnostics
+    items:
+    - name: Configurable retry logic
+      href: ../connect/ado-net/configurable-retry-logic.md
       items:
-      - name: Bulk copy operations in SQL Server
-        href: ../connect/ado-net/sql/bulk-copy-operations-sql-server.md
-        items:
-        - name: Bulk copy example setup
-          href: ../connect/ado-net/sql/bulk-copy-example-setup.md
-        - name: Single bulk copy operations
-          href: ../connect/ado-net/sql/single-bulk-copy-operations.md
-        - name: Multiple bulk copy operations
-          href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
-        - name: Transaction and bulk copy operations
-          href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
-        - name: Order hints for bulk copy operations
-          href: ../connect/ado-net/sql/bulk-copy-order-hints.md
-      - name: Multiple Active Result Sets (MARS)
-        href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
-        items:
-        - name: Enabling Multiple Active Result Sets
-          href: ../connect/ado-net/sql/enable-multiple-active-result-sets.md
-        - name: Manipulating data
-          href: ../connect/ado-net/sql/manipulate-data.md
-      - name: Asynchronous operations
-        href: ../connect/ado-net/sql/asynchronous-operations.md
-        items:
-        - name: Windows applications using callbacks
-          href: ../connect/ado-net/sql/windows-applications-callbacks.md
-        - name: ASP.NET applications using wait handles
-          href: ../connect/ado-net/sql/aspnet-apps-use-wait-handles.md
-        - name: Polling in console applications
-          href: ../connect/ado-net/sql/poll-console-applications.md
-      - name: Table-valued parameters
-        href: ../connect/ado-net/sql/table-valued-parameters.md
+      - name: Get started
+        href: ../connect/ado-net/configurable-retry-logic-sqlclient-introduction.md
+      - name: Built-in providers
+        href: ../connect/ado-net/internal-retry-logic-providers-sqlclient.md
+      - name: Custom provider
+        href: ../connect/ado-net/configurable-retry-logic-core-apis-sqlclient.md
+      - name: Configuration file
+        href: ../connect/ado-net/configurable-retry-logic-config-file-sqlclient.md
+    - name: Enable event tracing
+      href: ../connect/ado-net/enable-eventsource-tracing.md
+    - name: Data tracing in SqlClient
+      href: ../connect/ado-net/data-tracing.md
+    - name: Diagnostic counters
+      href: ../connect/ado-net/diagnostic-counters.md
+      items:
+      - name: Event counters
+        href: ../connect/ado-net/event-counters.md
+      - name: Performance counters
+        href: ../connect/ado-net/performance-counters.md
+    - name: Troubleshooting guide
+      href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
+    - name: Provider statistics for SQL Server
+      href: ../connect/ado-net/sql/provider-statistics-sql-server.md
+    - name: Database mirroring in SQL Server
+      href: ../connect/ado-net/sql/database-mirroring-sql-server.md
+    - name: Query notifications in SQL Server
+      href: ../connect/ado-net/sql/query-notifications-sql-server.md
+      items:
+      - name: Enabling query notifications
+        href: ../connect/ado-net/sql/enable-query-notifications.md
+      - name: SqlDependency in an ASP.NET application
+        href: ../connect/ado-net/sql/sqldependency-aspnet-app.md
+      - name: Detecting changes with SqlDependency
+        href: ../connect/ado-net/sql/detect-changes-sqldependency.md
+      - name: SqlCommand execution with a SqlNotificationRequest
+        href: ../connect/ado-net/sql/sqlcommand-execution-sqlnotificationrequest.md
+    - name: SqlClient support for high availability, disaster recovery
+      href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
+  - name: SQL Server features
+    items:
+    - name: SQL Server and ADO.NET
+      href: ../connect/ado-net/sql/index.md
     - name: SQL Server features and ADO.NET
       href: ../connect/ado-net/sql/sql-server-features-adonet.md
       items:
       - name: Enumerating instances of SQL Server (ADO.NET)
         href: ../connect/ado-net/sql/enumerate-instances-sql-server.md
-      - name: Provider statistics for SQL Server
-        href: ../connect/ado-net/sql/provider-statistics-sql-server.md
       - name: SQL Server Express user instances
         href: ../connect/ado-net/sql/sql-server-express-user-instances.md
-      - name: Database mirroring in SQL Server
-        href: ../connect/ado-net/sql/database-mirroring-sql-server.md
       - name: The context connection
         href: ../connect/ado-net/sql/context-connection.md
-      - name: Query notifications in SQL Server
-        href: ../connect/ado-net/sql/query-notifications-sql-server.md
-        items:
-        - name: Enabling query notifications
-          href: ../connect/ado-net/sql/enable-query-notifications.md
-        - name: SqlDependency in an ASP.NET application
-          href: ../connect/ado-net/sql/sqldependency-aspnet-app.md
-        - name: Detecting changes with SqlDependency
-          href: ../connect/ado-net/sql/detect-changes-sqldependency.md
-        - name: SqlCommand execution with a SqlNotificationRequest
-          href: ../connect/ado-net/sql/sqlcommand-execution-sqlnotificationrequest.md
       - name: Snapshot isolation in SQL Server
         href: ../connect/ado-net/sql/snapshot-isolation-sql-server.md
-      - name: SqlClient support for high availability, disaster recovery
-        href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
       - name: SqlClient support for LocalDB
         href: ../connect/ado-net/sql/sqlclient-support-localdb.md
-      - name: SqlClient support for Always Encrypted
-        href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
-        items:
-        - name: Develop a .NET application using Always Encrypted with secure enclaves
-          href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
-        - name: Using Azure Key Vault with Always Encrypted
-          href: ado-net/sql/azure-key-vault-example.md
-        - name: Using Azure Key Vault with Always Encrypted with secure enclaves
-          href: ado-net/sql/azure-key-vault-enclave-example.md
       - name: Data Discovery and Classification in SqlClient
         href: ../connect/ado-net/sql/data-classification.md
+  - name: Reference and resources
+    items:
+    - name: AppContext switches
+      href: ../connect/ado-net/appcontext-switches.md
+    - name: Finding additional information
+      href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
 - name: Go
   items:
   - name: Microsoft go-mssqldb driver for SQL Server

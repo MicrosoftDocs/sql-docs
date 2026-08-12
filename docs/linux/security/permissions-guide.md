@@ -3,7 +3,7 @@ title: Security and Permissions Guide for SQL Server on Linux
 description: Learn about the required service accounts, and file system permissions for SQL Server on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/14/2025
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: concept-article
@@ -11,23 +11,23 @@ ms.custom:
   - linux-related-content
 ai-usage: ai-assisted
 ---
-# SQL Server on Linux - Security and permissions guide
+# Security and permissions guide for SQL Server on Linux
 
 This article describes the required service accounts, and file system permissions for [!INCLUDE [sqlonlinux-md](../../includes/sqlonlinux-md.md)]. For more information about SQL Server on Windows permissions, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-## Built‑in Windows principals
+## Built-in Windows principals
 
 Even though [!INCLUDE [sqlonlinux-md](../../includes/sqlonlinux-md.md)] runs under the `mssql` operating system account, the following Windows principals exist at the SQL Server layer for compatibility. Don't remove or deny them unless you fully understand the risks.
 
 | Principal | Default SQL&nbsp;Server role | Details |
 | --- | --- | --- |
-| `BUILTIN\Administrators` | **sysadmin** | Maps to the root‑level administrators of the host. Certain system objects run in the context of this account. |
-| `NT AUTHORITY\SYSTEM` | **public** | Service identifier (SID) reserved for the Windows `SYSTEM` account. Still created so that cross‑platform scripts that expect it succeed. |
+| `BUILTIN\Administrators` | **sysadmin** | Maps to the root-level administrators of the host. Certain system objects run in the context of this account. |
+| `NT AUTHORITY\SYSTEM` | **public** | Security identifier (SID) reserved for the Windows `SYSTEM` account. Still created so that cross-platform scripts that expect it succeed. |
 | `NT AUTHORITY\NETWORK SERVICE` | None (compatibility only) | Historically the default startup account for several SQL Server services on Windows. Present only for backward compatibility. Not used by the [!INCLUDE [sqlonlinux-md](../../includes/sqlonlinux-md.md)] [!INCLUDE [ssde-md](../../includes/ssde-md.md)] itself. |
 
 ## File and directory ownership
 
-All files under the folder `/var/opt/mssql` must be owned by the `mssql` user, and `mssql` group (`mssql:mssql`), with read and write access for both. If you change the default umask (`0022`), or use alternative mount points, you must reapply these permissions manually.
+The `mssql` user and `mssql` group (`mssql:mssql`) must own all files under the `/var/opt/mssql` folder, with read and write access for both. If you change the default umask (`0022`) or use alternative mount points, you must reapply these permissions manually.
 
 The default permissions for the `mssql` folder are as follows:
 
@@ -59,16 +59,16 @@ For more information on how to change user data location, log file location, or 
 | System and user databases | `/var/opt/mssql/data` | Includes `master`, `model`, `tempdb`, and any new databases unless **`mssql-conf`** redirects them. For more information, see [Change the default location for system databases](../configure/mssql-conf.md#masterdatabasedir). |
 | Transaction logs (if separated) | `/var/opt/mssql/data`, or the path set via `mssql-conf set filelocation.defaultlogdir`. | Keep the same ownership if you move transaction logs. For more information, see [Change the default data or log directory location](../configure/mssql-conf.md#change-the-default-data-or-log-directory-location). |
 | Backups | `/var/opt/mssql/data` | Create and set with `chown` before first backup, or when mapping a volume or directory. For more information, see [Change the default backup directory location](../configure/mssql-conf.md#change-the-default-backup-directory-location). |
-| Error logs, and Extended Event (XE) logs | `/var/opt/mssql/log` | Also hosts the default system‑health XE session. For more information, see [Change the default error log file directory location](../configure/mssql-conf.md#change-the-default-error-log-file-directory-location). |
-| Memory dumps | `/var/opt/mssql/log` | Used for core dumps and `DBCC CHECK*` dumps. For more information, see [Change the default dump directory location](../configure/mssql-conf.md#change-the-default-dump-directory-location). |
-| Security secrets | `/var/opt/mssql/secrets` | Stores TLS certificates, column master keys, etc. |
+| Error logs, and Extended Event (XE) logs | `/var/opt/mssql/log` | Also hosts the default system-health XE session. For more information, see [Change the default error log file directory location](../configure/mssql-conf.md#change-the-default-error-log-file-directory-location). |
+| Memory dumps | `/var/opt/mssql/log` | Stores core dumps and `DBCC CHECK*` dumps. For more information, see [Change the default dump directory location](../configure/mssql-conf.md#change-the-default-dump-directory-location). |
+| Security secrets | `/var/opt/mssql/secrets` | Stores items such as TLS certificates and column master keys. |
 
 ### Minimum SQL Server roles for each agent
 
 | Agent | Runs as (Linux) | Connects to | Required database roles/rights |
 | --- | --- | --- | --- |
 | Snapshot Agent | `mssql` (via SQL Agent job) | Distributor | **db_owner** in distribution database; read/write on snapshot folder |
-| Log Reader Agent | `mssql` | Publisher & Distributor | **db_owner** in publication database and distribution. Might need **sysadmin** when using initialize from backup |
+| Log Reader Agent | `mssql` | Publisher & Distributor | **db_owner** in publication database and distribution. Might need **sysadmin** when you use [initialize from backup](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md) |
 | Distribution Agent (push) | `mssql` | Distributor to Subscriber | **db_owner** in distribution; **db_owner** in subscription database. Read snapshot folder. PAL member. |
 | Distribution Agent (pull) | `mssql` (on Subscriber) | Subscriber to Distributor<br />Distributor to Subscriber | Same as Distribution Agent (push), but snapshot share permissions apply on Subscriber host |
 | Merge Agent | `mssql` | Publisher, Distributor, Subscriber | **db_owner** in distribution. PAL member. Read snapshot folder. Read/write in publication & subscription databases. |
@@ -76,13 +76,13 @@ For more information on how to change user data location, log file location, or 
 
 ## Best practices
 
-The `mssql` user and group used by SQL Server is a non-login account by default, and should be kept that way. For security purposes, use Windows authentication for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux where possible. For more information on how to configure Windows authentication for SQL Server on Linux, see [Tutorial: Use adutil to configure Active Directory authentication with SQL Server on Linux](authentication/adutil-tutorial.md).
+The `mssql` user and group that SQL Server uses is a non-login account by default. Keep it that way for security purposes. Use Windows authentication for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux where possible. For more information on how to configure Windows authentication for SQL Server on Linux, see [Tutorial: Use adutil to configure Active Directory authentication with SQL Server on Linux](authentication/adutil-tutorial.md).
 
 Restrict file permissions further (using the command `chmod 700`) whenever the directory doesn't need group access.
 
-When binding host directories or NFS shares into containers or virtual machines, create them first, them, and map UID `10001` (default for `mssql`).
+When binding host directories or NFS shares into containers or virtual machines, create them first, and then map UID `10001` (default for `mssql`).
 
-Avoid granting **sysadmin** to application logins. Use granular roles instead, and `EXECUTE AS` wrappers. Disable or rename the `sa` account once you have another **sysadmin** account created. For more information, see [Disable the SA account as a best practice](overview.md#disable-the-sa-account-as-a-best-practice).
+Avoid granting **sysadmin** to application logins. Use granular roles instead, and `EXECUTE AS` wrappers. Disable or rename the `sa` account once you create another **sysadmin** account. For more information, see [Disable the SA account as a best practice](overview.md#disable-the-sa-account-as-a-best-practice).
 
 ## Related content
 

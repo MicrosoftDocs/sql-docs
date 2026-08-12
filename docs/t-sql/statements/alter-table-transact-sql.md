@@ -884,7 +884,7 @@ Use the `MAXDOP` option to limit the number of processors used in parallel plan 
 For more information, see [Configure parallel index operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]  
-> Parallel index operations aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+> Parallel index operations aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 #### ONLINE = { ON | OFF } \<as applies to drop_clustered_constraint_option>
 
@@ -903,7 +903,7 @@ Specifies whether underlying tables and associated indexes are available for que
   For more information, see [How online index operations work](../../relational-databases/indexes/how-online-index-operations-work.md).
 
   > [!NOTE]  
-  > Online index operations aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+  > Online index operations aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 #### MOVE TO { *partition_scheme_name*(*column_name* [ ,...*n* ] ) | *filegroup* | "default" }
 

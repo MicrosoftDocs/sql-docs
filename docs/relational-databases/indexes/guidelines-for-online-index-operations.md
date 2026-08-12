@@ -35,7 +35,7 @@ When you perform online index operations, the following guidelines apply:
 - You can start an online index operation as a resumable operation by using the `RESUMABLE` clause of [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) or [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). A resumable index operation can restart after an unexpected failure, database failover, or an `ALTER INDEX PAUSE` command and continue from where it was interrupted.
 
 > [!NOTE]  
-> Online index operations aren't available in every edition of [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+> Online index operations aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 The following table shows the index operations that can be performed online, the indexes that are excluded from these online operations, and resumable index restrictions. Additional restrictions are also included.
 
@@ -80,7 +80,7 @@ Because both the source and target structures are maintained during the online i
 
 Although we recommend online operations, you should evaluate your environment and specific requirements. It might be optimal to run index operations offline. In doing so, user access to the data is restricted during the operation, but the operation finishes faster and uses fewer resources.
 
-On multiprocessor computers that are running [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions, index operations can use parallelism to perform the scan and sort operations associated with the index statement. You can use the `MAXDOP` index option to control the degree of parallelism of the online index operation. In this way, you can balance the resources that are used by index operation with resources of the concurrent users. For more information, see [Configure parallel index operations](configure-parallel-index-operations.md). For more information about the editions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] that support parallel index operations, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+On multiprocessor computers that are running [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions, index operations can use parallelism to perform the scan and sort operations associated with the index statement. You can use the `MAXDOP` index option to control the degree of parallelism of the online index operation. In this way, you can balance the resources that are used by index operation with resources of the concurrent users. For more information, see [Configure parallel index operations](configure-parallel-index-operations.md). [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 Because a shared (`S`) lock or a schema modification (`Sch-M`) lock is held in the final phase of the index operation, be careful when you run an online index operation inside an explicit user transaction, such as `BEGIN TRANSACTION ... COMMIT` block. Doing this causes the locks to be held until the end of the transaction, potentially blocking other workloads.
 

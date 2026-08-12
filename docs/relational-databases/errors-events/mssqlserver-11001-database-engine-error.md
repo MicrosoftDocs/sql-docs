@@ -35,7 +35,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client cannot conn
 Make sure that you have entered the correct server name on the client, and that you can resolve the name of the server from the client. To check TCP/IP name resolution, you can use the **ping** command in the Windows operating system.  
   
 ## See Also  
-[Network Protocols and Network Libraries](~/sql-server/install/network-protocols-and-network-libraries.md)  
+[Network protocols and network libraries](../../sql-server/install/network-protocols-and-network-libraries.md)  
 [Client Network Configuration](~/database-engine/configure-windows/client-network-configuration.md)  
 [Configure Client Protocols](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Enable or Disable a Server Network Protocol](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  

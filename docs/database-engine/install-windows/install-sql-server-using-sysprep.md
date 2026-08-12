@@ -107,7 +107,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName> /FAILO
    | --- | --- |
    | [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] SysPrep | [!INCLUDE [ssDE](../../includes/ssde-md.md)]<br />[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br />Full-Text Features<br />Data Quality Services<br />[!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Native mode<br />[!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)]<br />Redistributable Features<br />Shared Features |
 
-   A description for each component group appears in the right pane when you highlight the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+   A description for each component group appears in the right pane when you highlight the feature name. You can select any combination of check boxes. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
    The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the prerequisites that aren't already installed during the installation step described later in this procedure.
 
@@ -149,7 +149,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName> /FAILO
 
 1. The System Configuration Checker verifies the system state of your computer before Setup continues. After the check is complete, select **Next** to continue. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.
 
-1. On the **Product Key** page, select an option button to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md). If you're installing Evaluation edition the 180-day trial period starts when you complete this step.
+1. On the **Product Key** page, select an option button to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], or a production version of the product that has a PID key. If you're installing Evaluation edition the 180-day trial period starts when you complete this step. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 1. On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE [msCoName](../../includes/msconame-md.md)].
 
@@ -159,7 +159,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName> /FAILO
 
 1. On the **Feature Review** page, you see the selected features and components included in the install during the prepare step. If you wish to add more features to your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Instance not included in the prepared instance, you must first complete this step to complete the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Instance, then add the features from the **Add Features** on the **Installation Center**.
 
-   You can add features that are available for the product version that you're installing. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+   You can add features that are available for the product version that you're installing. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 1. On the Instance Configuration page, specify the Instance name for the prepared Instance. This is the name of the instance once you have completed the configuration of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Select **Next** to continue.
 

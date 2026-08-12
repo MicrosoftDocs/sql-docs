@@ -104,7 +104,7 @@ The following software client applications are available on the Microsoft Downlo
 
 ## Related content
 
-- [Editions and supported features of SQL Server 2025](../sql-server/editions-and-components-of-sql-server-2025.md)
+- [Editions and supported features of SQL Server 2016](/previous-versions/sql/sql-server/editions-and-components-of-sql-server-2016)
 - [Release notes for SQL Server Reporting Services (SSRS) 2017 and later](release-notes-reporting-services.md)
 - [What's new in SQL Server Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)
 - [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -63,7 +63,7 @@ catch
 ```
 
 > [!NOTE]  
-> For information about behavior changes in impersonation, see [Breaking changes to Database Engine features in SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).
+> For information about behavior changes in impersonation, see [Breaking changes to Database Engine features in SQL Server 2016](/previous-versions/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016).
 
 Furthermore, if you obtained the Windows identity instance, by default you can't propagate that instance to another computer; Windows security infrastructure restricts that by default. However, there's a mechanism called *delegation* that enables propagation of Windows identities across multiple trusted computers. For more information about delegation, see [Kerberos Protocol Transition and Constrained Delegation](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
 

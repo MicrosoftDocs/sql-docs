@@ -4,10 +4,11 @@ description: Article that provides resolutions to commonly observed problems.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, paulmedynski, cmalhotra
-ms.date: 07/24/2025
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting-general
+ai-usage: ai-assisted
 dev_langs:
   - "csharp"
   - "vb"
@@ -105,6 +106,26 @@ Verify that the instance name is correct and that SQL Server is configured to al
 - Hostname not known
 
   **Recommended Solution:** Ensure the hostname resolves to the Server's IP address from the client where the connection is being initiated.
+
+### Long connect delays with pre-login handshake timeout
+
+Stack trace observed:
+
+```output
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.
+```
+
+#### Possible reasons and solutions
+
+On .NET Framework, `TransparentNetworkIPResolution=True` is the default. When the target DNS name resolves to multiple IPs and an earlier IP is unhealthy, stale, or unreachable, the driver tries the resolved IPs sequentially and increases the per-attempt timeout each round until the overall `Connect Timeout` is reached. The long connect delay surfaces as a pre-login handshake timeout.
+
+Common topologies where this problem appears include:
+
+- Azure SQL Database, Azure SQL Managed Instance, or SQL database in Microsoft Fabric.
+- On-premises SQL Server behind an Always On availability group listener whose DNS name resolves to multiple replica IPs.
+- Failover cluster instances with a multi-subnet cluster listener, or any other target whose DNS name has multiple `A` or `AAAA` records.
+
+**Recommended solution**: Set `MultiSubnetFailover=True` in the connection string. This setting selects a parallel-connect code path that completes authentication with the first responsive replica and, on .NET Framework, bypasses the sequential per-IP retry loop. This recommendation works on every .NET version. For more information, see [Disabling Transparent Network IP Resolution](appcontext-switches.md#disabling-transparent-network-ip-resolution).
 
 ### Login-phase errors
 

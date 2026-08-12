@@ -71,7 +71,7 @@ If you're upgrading the [!INCLUDE [ssDE](../../includes/ssde-md.md)], review [Pl
 
 1. The Installation Wizard starts the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To upgrade an existing instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left-hand navigation area, and then select **Upgrade from...** previous versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-1. On the Product Key page, select an option to indicate whether you're upgrading to a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md) and [Supported version and edition upgrades (SQL Server 2022)](supported-version-and-edition-upgrades-2022.md).
+1. On the Product Key page, select an option to indicate whether you're upgrading to a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 1. On the License Terms page, review the license agreement and, if you agree, select the **I accept the license terms** check box, and then select **Next**. To help improve [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE [msCoName](../../includes/msconame-md.md)].
 

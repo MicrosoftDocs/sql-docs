@@ -39,7 +39,6 @@ Beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE 
   - [SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
   - [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
   - [SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
-  - [SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 
 - **Requirements**: Review hardware and software installation requirements:
 

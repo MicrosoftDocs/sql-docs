@@ -271,7 +271,7 @@ You might need to temporarily scale up your SQL managed instance storage capacit
 By default, `DBCC CHECKDB` performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured just like parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Server configuration: max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Parallel checking can be disabled by using trace flag 2528. For more information, see [Set trace flags with DBCC TRACEON](dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!NOTE]  
-> This feature isn't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see parallel consistency check in the [RDBMS manageability](../../sql-server/editions-and-components-of-sql-server-2022.md#rdbms-manageability) section of [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+> This feature isn't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ## Understand DBCC error messages
 

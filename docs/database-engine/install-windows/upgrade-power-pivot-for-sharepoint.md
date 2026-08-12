@@ -359,5 +359,5 @@ For step-by-step instructions that guide you through all of the post-installatio
 
 ## Related content
 
-- [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
+- [Editions and supported features of SQL Server 2016](/previous-versions/sql/sql-server/editions-and-components-of-sql-server-2016)
 - [Power Pivot for SharePoint 2010 Installation](https://sharepointgeorge.com/2012/installing-sql-server-powerpivot-sharepointstep-step-guide/)

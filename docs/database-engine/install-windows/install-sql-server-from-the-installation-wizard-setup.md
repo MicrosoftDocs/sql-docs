@@ -149,7 +149,7 @@ The Installation Wizard runs the [!INCLUDE [ssNoVersion](../../includes/ssnovers
 
 #### 3. Product Key
 
-On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 To continue, select **Next**.
 
@@ -204,7 +204,7 @@ If this is the first installation of [!INCLUDE [ssNoVersion](../../includes/ssno
 
 On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
-A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 The prerequisites for the selected features are displayed in the **Prerequisites for selected features** pane. Setup installs the prerequisites that aren't already installed during the installation step described later in this procedure.
 
@@ -404,7 +404,7 @@ The Installation Wizard runs the [!INCLUDE [ssNoVersion](../../includes/ssnovers
 
 #### 3. Product Key
 
-On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 To continue, select **Next**.
 
@@ -461,7 +461,7 @@ If this is the first installation of [!INCLUDE [ssNoVersion](../../includes/ssno
 
 On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
-A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 The prerequisites for the selected features are displayed in the **Prerequisites for selected features** pane. Setup installs the prerequisites that aren't already installed during the installation step described later in this procedure.
 

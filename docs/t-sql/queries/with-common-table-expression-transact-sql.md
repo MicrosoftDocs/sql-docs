@@ -142,7 +142,7 @@ The following items aren't allowed in the *CTE_query_definition* of a recursive 
 - Subqueries
 - A hint applied to a recursive reference to a CTE inside a *CTE_query_definition*.
 
-<sup>1</sup> When the database compatibility level is 110 or higher. See [Breaking changes to Database Engine features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).
+<sup>1</sup> When the database compatibility level is 110 or higher.
 
 The following guidelines apply to using a recursive common table expression:
 

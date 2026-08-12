@@ -326,7 +326,7 @@ The following options are available on this page.
      Selecting this option also activates Low Priority Used, which uses the `WAIT_AT_LOW_PRIORITY` option. Online index rebuild operations wait for low priority locks for `MAX_DURATION` minutes, allowing other operations to proceed while the online index build operation is waiting.
 
      > [!NOTE]  
-     > Online index operations aren't available in every edition of [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+     > Online index operations aren't available in every edition of [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
    - **MAXDOP** check box
 

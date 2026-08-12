@@ -25,7 +25,7 @@ dev_langs:
 
 Creates a [resource governor](../../relational-databases/resource-governor/resource-governor.md) resource pool. A resource pool represents a subset of the physical resources (CPU, memory, and IO) of a [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance. Resource governor enables you to reserve or limit server resources among resource pools, up to a maximum of 64 pools for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or 40 for [!INCLUDE[ssazuremi-md.md](../../includes/ssazuremi-md.md)].
 
-Resource governor isn't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](~/sql-server/editions-and-components-of-sql-server-2022.md).
+Resource governor isn't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 > [!NOTE]
 > To modify resource governor configuration in [!INCLUDE[ssazuremi-md.md](../../includes/ssazuremi-md.md)], you must be in the context of the `master` database on the primary replica.

@@ -34,7 +34,7 @@ For older versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.m
 
 ## Pre-upgrade checklist
 
-- Before you upgrade from one edition of [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] to another, verify that the functionality you're currently using is supported in the edition to which you're moving. For more information, see [Editions and supported features of SQL Server 2025](../../sql-server/editions-and-components-of-sql-server-2025.md).
+- Before you upgrade from one edition of [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] to another, verify that the functionality you're currently using is supported in the edition to which you're moving. [!INCLUDE [editions-latest](../../includes/editions-2025.md)]
 
 - Verify supported hardware and software, including the supported operating system. For more information, see [Hardware and software requirements for SQL Server 2025](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025.md).
 
@@ -166,7 +166,7 @@ Additionally you can also perform an edition upgrade between [!INCLUDE [sssql25-
 
 ## Related content
 
-- [Editions and supported features of SQL Server 2025](../../sql-server/editions-and-components-of-sql-server-2025.md)
+- [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-latest.md)
 - [Hardware and software requirements for SQL Server 2025](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025.md)
 - [Upgrade SQL Server](upgrade-sql-server.md)
 - [Upgrade the Database Engine](upgrade-database-engine.md)

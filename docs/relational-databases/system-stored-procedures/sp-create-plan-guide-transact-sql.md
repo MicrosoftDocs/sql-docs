@@ -113,7 +113,7 @@ Plan guides of type `OBJECT` can't be created for an *@module_or_batch* value th
 
 Trying to drop or modify a function, stored procedure, or DML trigger that is referenced by a plan guide, either enabled or disabled, causes an error. Trying to drop a table that's a trigger defined on it that is referenced by a plan guide also causes an error.
 
-Plan guides can't be used in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md). Plan guides are visible in any edition. You can also attach a database that contains plan guides to any edition. Plan guides remain intact when you restore or attach a database to an upgraded version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. You should verify the desirability of the plan guides in each database after performing a server upgrade.
+Plan guides can't be used in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. You can also attach a database that contains plan guides to any edition. Plan guides remain intact when you restore or attach a database to an upgraded version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. You should verify the desirability of the plan guides in each database after performing a server upgrade. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ## Plan guide matching requirements
 

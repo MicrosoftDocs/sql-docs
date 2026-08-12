@@ -16,7 +16,7 @@ ms.custom:
 This article describes the features that have been added or updated in [!INCLUDE [ssSQLv14_md](../includes/sssql17-md.md)] [!INCLUDE [ssISnoversion](../includes/ssisnoversion-md.md)].
 
 > [!NOTE]  
-> SQL Server 2017 also includes the features of SQL Server 2016 and the features added in SQL Server 2016 updates. For info about the new SSIS features in SQL Server 2016, see [What's New in Integration Services in SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md).
+> SQL Server 2017 also includes the features of SQL Server 2016 and the features added in SQL Server 2016 updates. For info about the new SSIS features in SQL Server 2016, see [What's New in Integration Services in SQL Server 2016](/previous-versions/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2016).
 
 ## Highlights of this release
 
@@ -24,7 +24,7 @@ Here are the most important new features of Integration Services in SQL Server 2
 
 - **Scale Out**. Distribute SSIS package execution more easily across multiple worker computers, and manage executions and workers from a single master computer. For more info, see [Integration Services (SSIS) Scale Out](scale-out/integration-services-ssis-scale-out.md).
 
-- **Integration Services on Linux**. Run SSIS packages on Linux computers. For more info, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
+- **Integration Services on Linux**. Run SSIS packages on Linux computers. For more info, see [Extract, transform, and load data on Linux with SSIS](../linux/migrate/ssis.md).
 
 - **Connectivity improvements**. Connect to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online with the updated OData components.
 

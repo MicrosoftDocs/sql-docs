@@ -25,7 +25,7 @@ You can record server audit action groups per-instance, and either database audi
 
 This article applies to [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazuremi-md](../../../includes/ssazuremi-md.md)].
 
-- All editions of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] support server level audits. In [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] with Service Pack 1 and later versions, all editions support database level audits. Before [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)], database level auditing was limited to Enterprise, Developer, and Evaluation editions. For more information, see [Editions and supported features of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).
+- All editions of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] support server level audits. In [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] with Service Pack 1 and later versions, all editions support database level audits. Before [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)], database level auditing was limited to Enterprise, Developer, and Evaluation editions. For more information, see [Editions and supported features of SQL Server 2016](/previous-versions/sql/sql-server/editions-and-components-of-sql-server-2016).
 - In [!INCLUDE [ssazuremi-md](../../../includes/ssazuremi-md.md)], SQL Server Audit is supported and there are [differences between databases in Azure SQL Managed Instance and databases in SQL Server](/azure/azure-sql/managed-instance/auditing#audit-differences-between-databases-in-azure-sql-managed-instance-and-databases-in-sql-server).
 - For [!INCLUDE [ssSDS](../../../includes/sssds-md.md)], see [Auditing for Azure SQL Database](/azure/azure-sql/database/auditing-overview?view=azuresql-db&preserve-view=true).
 
@@ -187,9 +187,9 @@ The following table lists the dynamic views and function that you can use for [!
 
 | Dynamic views and functions | Description |
 | --- | --- |
-| [sys.dm_audit_actions](../../system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md) | Returns a row for every audit action that can be reported in the audit log and every audit action group that can be configured as part of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Audit. |
-| [sys.dm_server_audit_status](../../system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md) | Provides information about the current state of the audit. |
-| [sys.dm_audit_class_type_map](../../system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md) | Returns a table that maps the class_type field in the audit log to the class_desc field in `sys.dm_audit_actions`. |
+| [sys.dm_audit_actions](../../system-dynamic-management-objects/sys-dm-audit-actions-transact-sql.md) | Returns a row for every audit action that can be reported in the audit log and every audit action group that can be configured as part of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Audit. |
+| [sys.dm_server_audit_status](../../system-dynamic-management-objects/sys-dm-server-audit-status-transact-sql.md) | Provides information about the current state of the audit. |
+| [sys.dm_audit_class_type_map](../../system-dynamic-management-objects/sys-dm-audit-class-type-map-transact-sql.md) | Returns a table that maps the class_type field in the audit log to the class_desc field in `sys.dm_audit_actions`. |
 | [fn_get_audit_file](../../system-functions/sys-fn-get-audit-file-transact-sql.md) | Returns information from an audit file created by a server audit. |
 
 ### Catalog views

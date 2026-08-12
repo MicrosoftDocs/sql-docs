@@ -36,15 +36,15 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
 - New **graph database capabilities** for modeling many-to-many relationships include new [CREATE TABLE (SQL Graph)](../t-sql/statements/create-table-sql-graph.md) syntax for creating node and edge tables, and the keyword [MATCH (Transact-SQL)](../t-sql/queries/match-sql-graph.md) for queries. See [Graph processing with SQL Server and Azure SQL Database](../relational-databases/graphs/sql-graph-overview.md).
 - An `sp_configure` option called `clr strict security` is enabled by default to enhance the security of CLR assemblies. See [Server configuration: clr strict security](../database-engine/configure-windows/clr-strict-security.md).
 - Setup now allows specifying initial `tempdb` file size up to **256 GB** (262,144 MB) per file, with a warning if the file size is set greater than 1GB with IFI not enabled.
-- The **modified_extent_page_count** column in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) tracks differential changes in each database file, enabling smart backup solutions that perform differential backup or full backup based on percentage of changed pages in the database.
+- The **modified_extent_page_count** column in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-objects/sys-dm-db-file-space-usage-transact-sql.md) tracks differential changes in each database file, enabling smart backup solutions that perform differential backup or full backup based on percentage of changed pages in the database.
 - [SELECT - INTO Clause (Transact-SQL)](../t-sql/queries/select-into-clause-transact-sql.md) T-SQL syntax now supports loading a table into a FileGroup other than the user's default by using the `ON` keyword.
 - Cross database transactions are now supported among all databases that are part of an **Always On Availability Group**, including databases that are part of the same instance. See [Transactions - availability groups and database mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - New **Availability Groups** functionality includes read-scale support without a cluster, Minimum Replica Commit Availability Groups setting, and Windows-Linux cross-OS migrations and testing.
 - New dynamic management views:
-  - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) exposes summary level attributes and information on transaction log files, helpful for monitoring transaction log health.
-  - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) tracks version store usage per database, useful for proactively planning `tempdb` sizing based on the version store usage per database.
-  - [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) exposes VLF information to monitor, alert, and avert potential transaction log issues.
-  - [sys.dm_db_stats_histogram](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) is a new dynamic management view for examining statistics.
+  - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-objects/sys-dm-db-log-stats-transact-sql.md) exposes summary level attributes and information on transaction log files, helpful for monitoring transaction log health.
+  - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-objects/sys-dm-tran-version-store-space-usage.md) tracks version store usage per database, useful for proactively planning `tempdb` sizing based on the version store usage per database.
+  - [sys.dm_db_log_info](../relational-databases/system-dynamic-management-objects/sys-dm-db-log-info-transact-sql.md) exposes VLF information to monitor, alert, and avert potential transaction log issues.
+  - [sys.dm_db_stats_histogram](../relational-databases/system-dynamic-management-objects/sys-dm-db-stats-histogram-transact-sql.md) is a new dynamic management view for examining statistics.
   - `sys.dm_os_host_info` provides operating system information for both Windows and Linux.
 - The **Database Tuning Advisor (DTA)** has more options and improved performance.
 - **In-memory enhancements** include support for computed columns in memory-optimized tables, full support for JSON functions in natively compiled modules, and the `CROSS APPLY` operator in natively compiled modules.
@@ -123,6 +123,5 @@ For more information, see [What's new in SQL Server Machine Learning Services?](
 
 - [SQL Server 2017 release notes](sql-server-2017-release-notes.md)
 - [What's new for SQL Server 2017 on Linux](../linux/sql-server-linux-whats-new-2017.md)
-- [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md)
 
 [!INCLUDE [get-help-options](../includes/paragraph-content/get-help-options.md)]

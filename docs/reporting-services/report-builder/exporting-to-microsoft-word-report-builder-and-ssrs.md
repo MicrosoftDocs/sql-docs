@@ -185,7 +185,7 @@ The **Word 2003** menu option is never visible in the following scenarios:
 
 - Report Builder in disconnected mode and you preview a report in Report Builder.
 
-- Report Viewer Web Part in local mode and the SharePoint farm isn't integrated with a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. For more information, see [Local mode vs. connected mode reports in the Report Viewer (Reporting Services in SharePoint mode)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)
+- Report Viewer Web Part in local mode and the SharePoint farm isn't integrated with a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. For more information, see [Local mode vs. connected mode reports in the Report Viewer (Reporting Services in SharePoint mode)](/previous-versions/sql/reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer)
 
 If the **Word 2003** renderer is configured to be visible, both the **Word** and **Word 2003** menu options are available in the following scenarios:
 

@@ -47,7 +47,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 1. The System Configuration Checker runs a discovery operation on your computer. To continue, select **OK**.
 
-1. On the **Product Key** page, select a radio button to indicate whether you're upgrading to a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md) and [Supported version and edition upgrades (SQL Server 2022)](supported-version-and-edition-upgrades-2022.md).
+1. On the **Product Key** page, select a radio button to indicate whether you're upgrading to a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. [!INCLUDE [editions-2022](../../includes/editions-2022.md)]
 
 1. On the License Terms page, read the license agreement, and then select the check box to accept the licensing terms and conditions. To continue, select **Next**. To end Setup, select **Cancel**.
 

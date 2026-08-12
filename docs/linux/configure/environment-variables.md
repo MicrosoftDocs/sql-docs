@@ -33,7 +33,7 @@ You can use several different environment variables to configure [!INCLUDE [ssno
 | `MSSQL_DB` | Sets the name of a database to create on container startup. |
 | `MSSQL_USER` | If `MSSQL_DB` is set, sets the name of a non-`sa` user to create on container startup. The user is granted access rights on the `MSSQL_DB` database. If this variable is used, `MSSQL_PASSWORD` must also be set. If `MSSQL_DB` isn't set, this variable is ignored. |
 | `MSSQL_PASSWORD` | Sets the password of the user whose name is in `MSSQL_USER`. If this variable is used, `MSSQL_USER` must also be set. If `MSSQL_DB` isn't set, this variable is ignored. |
-| `MSSQL_PID` | Sets the [SQL Server edition](../../sql-server/editions-and-components-of-sql-server-2025.md#sql-server-editions) or product key. Possible values are listed in the following [SQL Server editions](#sql-server-editions) table. If you specify a product key, it must be in the form of `#####-#####-#####-#####-#####`, where `#` is a number or a letter. |
+| `MSSQL_PID` | Sets the [SQL Server edition](../../sql-server/editions-and-components-of-sql-server-latest.md#sql-server-editions) or product key. Possible values are listed in the following [SQL Server editions](#sql-server-editions) table. If you specify a product key, it must be in the form of `#####-#####-#####-#####-#####`, where `#` is a number or a letter. |
 | `MSSQL_LCID` | Sets the language ID to use for SQL Server. For example, 1036 is French. |
 | `MSSQL_COLLATION` | Sets the default collation for SQL Server. This setting overrides the default mapping of language ID (LCID) to collation. |
 | `MSSQL_MEMORY_LIMIT_MB` | Sets the maximum amount of memory (in MB) that SQL Server can use. By default, it's 80% of the total physical memory. |

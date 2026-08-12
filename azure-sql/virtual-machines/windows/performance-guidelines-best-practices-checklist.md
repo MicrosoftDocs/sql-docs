@@ -108,7 +108,7 @@ The following checklist summarizes best practices for SQL Server configuration s
 - Schedule SQL Server Agent jobs to run [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#a-checking-both-the-current-and-another-database), [index reorganize](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes#reorganize-an-index), [index rebuild](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes#rebuild-an-index), and [update statistics](/sql/t-sql/statements/update-statistics-transact-sql#examples) jobs.
 - Monitor and manage the health and size of the SQL Server [transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file#Recommendations).
 - Take advantage of any new [SQL Server features](/sql/sql-server/what-s-new-in-sql-server-2025) available for the version you're using.
-- Be aware of the differences in [supported features](/sql/sql-server/editions-and-components-of-sql-server-2025) between the editions you're considering deploying.
+- Be aware of the differences in [supported features](/sql/sql-server/editions-and-components-of-sql-server-latest) between the editions you're considering deploying.
 - [Exclude SQL Server files](/troubleshoot/sql/database-engine/security/antivirus-and-sql-server) from antivirus software scanning. This exclusion includes data files, log files, and backup files.
 
 ## Azure features

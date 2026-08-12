@@ -97,7 +97,7 @@ The NTFS file system provides a file that requires much less disk space than wou
 The source database, which can use any recovery model, must meet the following prerequisites:
 
 - The server instance must run on an edition of SQL Server that supports database snapshots.
-  - For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
+  - [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 - The source database must be online unless it's a mirror database within a database mirroring session.
 

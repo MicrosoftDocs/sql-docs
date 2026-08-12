@@ -49,7 +49,7 @@ When you create a schedule, the report saves the schedule information in the rep
 For details on how to create and manage schedules, see [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
-> Schedule operations aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).  
+> Schedule operations aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
   
 ## <a name="bkmk_compare"></a> Compare shared and report-specific schedules  
 

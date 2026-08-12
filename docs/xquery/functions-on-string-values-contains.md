@@ -44,7 +44,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  In order to get case-insensitive comparisons, the [upper-case](../xquery/functions-on-string-values-upper-case.md) or lower-case functions can be used.  
   
 ## Supplementary Characters (Surrogate Pairs)  
- The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see the section "XQuery Functions Are Surrogate-Aware" in the topic [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Also see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## Examples  
  This topic provides XQuery examples against XML instances stored in various xml-type columns in the AdventureWorks database.  

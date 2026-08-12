@@ -46526,7 +46526,7 @@
     },
     {
       "source_path": "docs/2014/sql-server/editions-and-components-of-sql-server-2016.md",
-      "redirect_url": "/previous-versions/sql/2014/sql-server/editions-and-components-of-sql-server-2016",
+      "redirect_url": "/previous-versions/sql/sql-server/editions-and-components-of-sql-server-2016",
       "redirect_document_id": false
     },
     {
@@ -55171,7 +55171,7 @@
     },
     {
       "source_path": "docs/sql-server/editions-and-supported-features-for-sql-server-2016.md",
-      "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2016",
+      "redirect_url": "/previous-versions/sql/sql-server/editions-and-components-of-sql-server-2016",
       "redirect_document_id": false
     },
     {
@@ -60991,7 +60991,7 @@
     },
     {
       "source_path": "docs/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md",
-      "redirect_url": "/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016",
+      "redirect_url": "/analysis-services/analysis-services-features-by-edition",
       "redirect_document_id": false
     },
     {
@@ -68017,6 +68017,11 @@
     {
       "source_path": "docs/database-engine/availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md",
       "redirect_url": "/azure/azure-sql/virtual-machines/windows/availability-group-manually-configure-multiple-regions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/editions-and-components-of-sql-server-latest.md",
+      "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2025",
       "redirect_document_id": false
     },
     {

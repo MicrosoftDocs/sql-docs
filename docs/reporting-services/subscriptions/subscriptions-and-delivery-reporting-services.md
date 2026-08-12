@@ -26,7 +26,7 @@ helpviewer_keywords:
   
 :::image type="content" source="../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png" alt-text="Diagram of an example SSRS subscription flow.":::
    
- Subscriptions aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+ Subscriptions aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
   
  **In this topic:**  
   

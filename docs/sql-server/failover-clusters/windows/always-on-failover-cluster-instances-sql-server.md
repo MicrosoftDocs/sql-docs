@@ -196,12 +196,10 @@ Each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] FCI requir
 
 For details on the maximum number of supported nodes for Always On failover cluster instances, see:
 
-- [SQL Server 2012](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110)#high-availability)
-- [SQL Server 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014#High_availability)
-- [SQL Server 2016](../../editions-and-components-of-sql-server-2016.md#RDBMSHA)
-- [SQL Server 2017](../../editions-and-components-of-sql-server-2017.md#RDBMSHA)
-- [SQL Server 2019](../../editions-and-components-of-sql-server-2019.md#RDBMSHA)
+- [SQL Server 2025](../../editions-and-components-of-sql-server-2025.md#rdbms-high-availability)
 - [SQL Server 2022](../../editions-and-components-of-sql-server-2022.md#rdbms-high-availability)
+- [SQL Server 2019](../../editions-and-components-of-sql-server-2019.md#RDBMSHA)
+- [SQL Server 2017](../../editions-and-components-of-sql-server-2017.md#RDBMSHA)
 
 ### Supported operating system
 

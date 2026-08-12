@@ -111,7 +111,7 @@ After upgrading [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] in a 
 
 ### Upgrade to Standard, Workgroup, or Express editions
 
-Before upgrading from one edition of [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] to another, verify that the functionality you're currently using is supported in the edition to which you're upgrading. For more information, see the section on Replication in [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+Before upgrading from one edition of [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] to another, verify that the functionality you're currently using is supported in the edition to which you're upgrading. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ## Steps to upgrade a replication topology
 

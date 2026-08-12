@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to install SQL Server Java Language Extension on Red Hat, Ubuntu, and SUSE Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/11/2025
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: how-to
@@ -23,38 +23,38 @@ Although you can [install the Database Engine and Language Extensions concurrent
 
 ## Prerequisites
 
-- The Linux version must be [supported by SQL Server](../sql-server-linux-release-notes-2019.md#supported-platforms), but doesn't include the Docker Engine. Supported versions include:
+- Your Linux distribution must be [supported by SQL Server](../sql-server-linux-release-notes-2019.md#supported-platforms). Containers are covered separately in a later bullet. Supported distributions include:
 
   - [Red Hat Enterprise Linux](quickstart-install-red-hat.md) (RHEL)
   - [SUSE Linux Enterprise Server](quickstart-install-suse.md) (SLES)
   - [Ubuntu](quickstart-install-ubuntu.md)
 
-- You should have a tool for running Transact-SQL (T-SQL) commands. A query editor is necessary for post-install configuration and validation. We recommend the [MSSQL extension for Visual Studio Code](../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md), which is a free download that runs on Linux.
+- You need a query editor to run Transact-SQL (T-SQL) commands for post-install configuration and validation. We recommend the [MSSQL extension for Visual Studio Code](../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md). It's a free download that runs on Linux.
 
 ::: monikerRange="=sql-server-ver15||=sql-server-linux-ver15"
 
-- Package location for the Java extensions is in the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux source repositories. If you already configured source repositories for the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] install, you can run the `mssql-server-extensibility-java` package install commands using the same repo registration.
+- The Java extensions package is in the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux source repositories. If you already configured source repositories for the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] installation, run the `mssql-server-extensibility-java` package install commands by using the same repo registration.
 
 ::: moniker-end
 
-- Language Extensions is also supported on Linux containers. We don't provide prebuilt containers with Language Extensions, but you can create one from the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
+- Language Extensions is also supported on Linux containers. Prebuilt containers with Language Extensions aren't available, but you can create one from the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers by using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
 - Language Extensions and [Machine Learning Services](../../machine-learning/index.yml) are installed by default on [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Big Data Clusters. If you use Big Data Clusters, you don't need to follow the steps in this article.
 
 ## Package list
 
-On an internet-connected device, packages are downloaded and installed independently of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] using the package installer for each operating system. The following table describes all available packages.
+On an internet-connected device, you download and install packages independently of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] by using the package installer for each operating system. The following table describes all available packages.
 
-| Package name | Applies-to | Description |
+| Package name | Applies to | Description |
 | --- | --- | --- |
 | `mssql-server-extensibility` | All languages | Extensibility framework used for the Java language extension |
-| `mssql-server-extensibility-java` | Java | **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Linux only<br /><br />Extensibility framework used for the Java language extension and includes a supported Java runtime |
+| `mssql-server-extensibility-java` | Java | Extensibility framework used for the Java language extension and includes a supported Java runtime<br /><br />**Applies to**: [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Linux only |
 
 ## Install Java language extension
 
 ::: monikerRange="=sql-server-ver15||=sql-server-linux-ver15"
 
-You can install Language Extensions and Java on Linux by installing `mssql-server-extensibility-java`. When you install `mssql-server-extensibility-java`, the package automatically installs JRE 11 if it isn't already installed. It also adds the JVM path to an environment variable called `JRE_HOME`.
+To install Language Extensions and Java on Linux, install the `mssql-server-extensibility-java` package. The package automatically installs JRE 11 (if it isn't already installed) and adds the JVM path to an environment variable called `JRE_HOME`.
 
 To enable the Java Language Extension, build a custom binary by following the instructions from the [Java Language Extension page on GitHub](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/java).
 
@@ -65,7 +65,7 @@ To enable the Java Language Extension, build a custom binary by following the in
 
 ::: monikerRange="=sql-server-ver16||=sql-server-linux-ver16"
 
-You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Setup doesn't install a Java runtime.
+You can download and install any Java runtime, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or an officially licensed Java runtime. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Setup doesn't install a Java runtime.
 
 To enable the Java Language Extension, build a custom binary by following the instructions from the [Java Language Extension page on GitHub](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/java).
 
@@ -77,7 +77,7 @@ To enable the Java Language Extension, build a custom binary by following the in
 
 ### Red Hat install command
 
-You can install Language Extensions for Java on Red Hat using the following command.
+To install Language Extensions for Java on Red Hat, use the following command.
 
 > [!TIP]  
 > If possible, run `yum clean all` to refresh packages on the system before installation.
@@ -91,10 +91,10 @@ sudo yum install mssql-server-extensibility-java
 
 ### Ubuntu install command
 
-You can install Language Extensions for Java on Ubuntu using the following command.
+To install Language Extensions for Java on Ubuntu, use the following command.
 
 > [!TIP]  
-> If possible, run `apt-get update` to refresh packages on the system before installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
+> If possible, run `apt-get update` to refresh packages on the system before installation. Some Ubuntu Docker images don't include the `apt-transport-https` package. To install it, run `apt-get install apt-transport-https`.
 
 ```bash
 # Install as root or sudo
@@ -105,7 +105,7 @@ sudo apt-get install mssql-server-extensibility-java
 
 ### SUSE install command
 
-You can install Language Extensions for Java on SUSE using the following command.
+To install Language Extensions for Java on SUSE, use the following command.
 
 ```bash
 # Install as root or sudo
@@ -114,21 +114,21 @@ sudo zypper install mssql-server-extensibility-java
 
 ::: moniker-end
 
-## Post-install config (required)
+## Post-install configuration (required)
 
 1. Grant permissions on Linux
 
-   You don't need to perform this step if you use external libraries. The recommended way of working is using external libraries. For help with creating an external library from your `jar` file, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)
+   You don't need to perform this step if you use external libraries. External libraries are the recommended approach. For help with creating an external library from your `jar` file, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
    If you aren't using external libraries, you need to provide [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with permissions to execute the Java classes in your `jar`.
 
-   To grant read and execute access to a `jar` file, run the following **chmod** command on the `jar` file. We recommend always putting your class files in a `jar` when you work with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For help with creating a `jar`, see [Create a Java .jar file from class files](../../language-extensions/how-to/create-a-java-jar-file-from-class-files.md).
+   To grant read and execute access to a `jar` file, run the following `chmod` command on the `jar` file. Always put your class files in a `jar` when you work with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For help with creating a `jar`, see [Create a Java .jar file from class files](../../language-extensions/how-to/create-a-java-jar-file-from-class-files.md).
 
    ```bash
    chmod ug+rx <MyJarFile.jar>
    ```
 
-   You also need to give `mssql_satellite` permissions the `jar` file to read/execute.
+   You also need to give `mssql_satellite` permissions to read and execute the `jar` file.
 
    ```bash
    chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -136,13 +136,13 @@ sudo zypper install mssql-server-extensibility-java
 
    Additional configuration is primarily through the [mssql-conf tool](../configure/mssql-conf.md).
 
-1. Add the `mssql` user account used to run the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service. This is required if you haven't run the setup previously.
+1. Add the `mssql` user account used to run the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service. This step is required if you haven't run the setup previously.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-1. Enable outbound network access. Outbound network access is disabled by default. To enable outbound requests, set the `outboundnetworkaccess` Boolean property using the **`mssql-conf`** tool. For more information, see [Configure SQL Server on Linux with mssql-conf](../configure/mssql-conf.md#mlservices-outbound-access).
+1. Enable outbound network access. Outbound network access is disabled by default. To enable outbound requests, set the `outboundnetworkaccess` Boolean property with the **`mssql-conf`** tool. For more information, see [Configure SQL Server on Linux with mssql-conf](../configure/mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -150,7 +150,7 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-1. Restart the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Launchpad service and the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] instance to read the updated values from the INI file. A restart message reminds you whenever an extensibility-related setting is modified.
+1. Restart the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Launchpad service and the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] instance to read the updated values from the INI file. A restart message reminds you whenever you modify an extensibility-related setting.
 
    ```bash
    systemctl restart mssql-launchpadd
@@ -167,11 +167,11 @@ sudo zypper install mssql-server-extensibility-java
 
 1. Restart the `mssql-launchpadd` service again.
 
-1. For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md). See steps in the next section.
+1. For each database where you want to use language extensions, register the external language with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md). See the next section for steps.
 
 ## Register external language
 
-For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
+For each database where you want to use language extensions, register the external language with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 The following example adds an external language called Java to a database on [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux.
 
@@ -184,15 +184,15 @@ FROM (
 );
 ```
 
-For the Java extension, the environment variable `JRE_HOME` is used to determine the path to find and initialize the JVM from.
+For the Java extension, the environment variable `JRE_HOME` determines the path to find and initialize the JVM.
 
-The `CREATE EXTERNAL LANGUAGE` DDL provides a parameter (`ENVIRONMENT_VARIABLES`) to set environment variables specifically for the process hosting the extension. This process is the recommended and most effective way to set environment variables required by external language extensions.
+The `CREATE EXTERNAL LANGUAGE` DDL provides an `ENVIRONMENT_VARIABLES` parameter to set environment variables for the process that hosts the extension. Use this parameter to set environment variables that external language extensions require.
 
 For more information, see [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 ## Verify installation
 
-Java feature integration doesn't include libraries, but you can run `grep -r JRE_HOME /etc` to confirm creation of the `JAVA_HOME` environment variable.
+Java feature integration doesn't include libraries, but you can run `grep -r JRE_HOME /etc` to confirm the `JRE_HOME` environment variable exists.
 
 To validate installation, run a T-SQL script that executes a system stored procedure invoking Java. You need a query tool for this task. [!INCLUDE [connect-instance-client](../../includes/connect-instance-client.md)]
 
@@ -202,17 +202,17 @@ To validate installation, run a T-SQL script that executes a system stored proce
 
 ## Full install of SQL Server and Java Language Extension
 
-You can install and configure the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] and Java Language Extension in one procedure by appending Java packages and parameters on a command that installs the [!INCLUDE [ssde-md](../../includes/ssde-md.md)].
+To install and configure the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] and Java Language Extension in one procedure, append Java packages and parameters to a command that installs the [!INCLUDE [ssde-md](../../includes/ssde-md.md)].
 
 1. Provide a command line that includes the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], plus language extension features.
 
-   You can add Java extensibility to a [!INCLUDE [ssde-md](../../includes/ssde-md.md)] install.
+   The following command adds Java extensibility to a [!INCLUDE [ssde-md](../../includes/ssde-md.md)] install.
 
    ```bash
    sudo yum install -y mssql-server mssql-server-extensibility-java
    ```
 
-1. Accept license agreements and complete the post-install configuration. Use the **`mssql-conf`** tool for this task.
+1. Accept license agreements and complete the post-install configuration. Use the **`mssql-conf`** tool.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -220,7 +220,7 @@ You can install and configure the [!INCLUDE [ssde-md](../../includes/ssde-md.md)
 
    This step prompts you to accept the license agreement for the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], choose an edition, and set the administrator password.
 
-1. Restart the service, if prompted to do so.
+1. Restart the service if prompted.
 
    ```bash
    sudo systemctl restart mssql-server.service
@@ -234,14 +234,14 @@ Use the [unattended install](setup.md#unattended) for the Database Engine and ad
 
 ## Offline installation
 
-Follow the [Offline installation](setup.md#offline) instructions for steps on installing the packages. Find your download site, and then download specific packages using the package list later in this section.
+To install the packages, follow the [Offline installation](setup.md#offline) instructions. Find your download site, and then download the specific packages listed later in this section.
 
 > [!TIP]  
-> Several of the package management tools provide commands that can help you determine package dependencies. For yum, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
+> Several package management tools provide commands that help you determine package dependencies. For `yum`, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
 
 #### Download site
 
-You can download the packages from <https://packages.microsoft.com/>. All of the packages for Java are colocated with the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] package.
+Download the packages from <https://packages.microsoft.com/>. The site hosts all Java packages alongside the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] package.
 
 #### Download paths
 
@@ -253,7 +253,7 @@ You can download the packages from <https://packages.microsoft.com/>. All of the
 
 #### Package list
 
-Depending on which extensions you want to use, download the packages necessary for a specific language. Exact filenames include platform information in the suffix, but the following file names should help you determine which files to get.
+Depending on which extensions you want to use, download the packages necessary for a specific language. Exact filenames include platform information in the suffix, but the following file names help you determine which files to get.
 
 - Core packages
   - `mssql-server-15.0.1000`
@@ -266,22 +266,22 @@ Depending on which extensions you want to use, download the packages necessary f
 
 ## Limitations
 
-Implied authentication is currently not available on Linux at this time, which means you can't connect back to the server from in-progress Java to access data or other resources.
+Implied authentication isn't available on Linux. Java code running in the external process can't connect back to the server to access data or other resources.
 
 ### Resource governance
 
-There's parity between Linux and Windows for [resource governance](../../t-sql/statements/create-external-resource-pool-transact-sql.md) for external resource pools, but the statistics for [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) currently have different units on Linux.
+Linux and Windows have parity for [resource governance](../../t-sql/statements/create-external-resource-pool-transact-sql.md) for external resource pools, but the statistics for [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-external-resource-pools.md) currently have different units on Linux.
 
 > [!NOTE]  
-> Statistics in the following table are sourced from the specified Control Groups (cgroups) subsystems.
+> The statistics in the following table are sourced from the specified Control Groups (cgroups) subsystems.
 
 | Column name | Description | Value on Linux |
 | --- | --- | --- |
-| `peak_memory_kb` | The maximum amount of memory used for the resource pool. | On Linux, this statistic is sourced from the `memory` subsystem, where the value is `memory.max_usage_in_bytes` |
-| `write_io_count` | The total write IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the `blkio` subsystem, where the value on the write row is `blkio.throttle.io_serviced` |
-| `read_io_count` | The total read IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the `blkio` subsystem, where value on the read row is `blkio.throttle.io_serviced` |
-| `total_cpu_kernel_ms` | The cumulative CPU user kernel time in milliseconds since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the `cpuacct` subsystem, where the value on the user row is `cpuacct.stat` |
-| `total_cpu_user_ms` | The cumulative CPU user time in milliseconds since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the `cpuacct` subsystem, where the value on the system row value is `cpuacct.stat` |
+| `peak_memory_kb` | The maximum memory the resource pool uses. | On Linux, this statistic is sourced from the `memory` subsystem, where the value is `memory.max_usage_in_bytes` |
+| `write_io_count` | The total write IOs issued since the last reset of Resource Governor statistics. | On Linux, this statistic is sourced from the `blkio` subsystem, where the value on the write row is `blkio.throttle.io_serviced` |
+| `read_io_count` | The total read IOs issued since the last reset of Resource Governor statistics. | On Linux, this statistic is sourced from the `blkio` subsystem, where the value on the read row is `blkio.throttle.io_serviced` |
+| `total_cpu_kernel_ms` | The cumulative CPU user kernel time in milliseconds since the last reset of Resource Governor statistics. | On Linux, this statistic is sourced from the `cpuacct` subsystem, where the value on the user row is `cpuacct.stat` |
+| `total_cpu_user_ms` | The cumulative CPU user time in milliseconds since the last reset of Resource Governor statistics. | On Linux, this statistic is sourced from the `cpuacct` subsystem, where the value on the system row is `cpuacct.stat` |
 | `active_processes_count` | The number of external processes running at the moment of the request. | On Linux, this statistic is sourced from the `pids` subsystem, where the value is `pids.current` |
 
 ## Related content

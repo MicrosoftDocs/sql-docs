@@ -43,6 +43,7 @@ Use aggregate functions as expressions only in the following situations:
 - [GROUPING_ID](grouping-id-transact-sql.md)
 - [MAX](max-transact-sql.md)
 - [MIN](min-transact-sql.md)
+- [PRODUCT](product-aggregate-sql.md) (applies to SQL Server 2025 (17.x), Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, Warehouse in Microsoft Fabric, SQL database in Microsoft Fabric)
 - [STDEV](stdev-transact-sql.md)
 - [STDEVP](stdevp-transact-sql.md)
 - [STRING_AGG](string-agg-transact-sql.md)

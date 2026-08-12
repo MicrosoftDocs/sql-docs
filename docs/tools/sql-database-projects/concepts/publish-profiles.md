@@ -38,7 +38,7 @@ The following example shows a publish profile that targets a local SQL Server in
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<Project >
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseName>AdventureWorks</TargetDatabaseName>

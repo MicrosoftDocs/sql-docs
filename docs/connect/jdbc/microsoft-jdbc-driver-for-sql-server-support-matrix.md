@@ -4,7 +4,7 @@ description: This page contains the support matrix and support life-cycle policy
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, machavan, sunilbs
-ms.date: 05/11/2026
+ms.date: 08/12/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: feature-availability

@@ -133,6 +133,8 @@ def main() -> None:
         "Encrypt=strict;"
         "ConnectRetryCount=3;"
         "ConnectRetryInterval=10;"
+        # Parallel dials to all resolved IPs; safe on single-IP targets.
+        "MultiSubnetFailover=Yes;"
     )
     if client_id:
         conn_str += f"UID={client_id};"

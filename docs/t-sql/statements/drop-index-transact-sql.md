@@ -156,7 +156,7 @@ Overrides the `max degree of parallelism` configuration option during the index 
 For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]
-> Parallel index operations aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+> Parallel index operations aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-2025](../../includes/editions-latest.md)]
 
 #### ONLINE = ON | OFF
 
@@ -171,7 +171,7 @@ Specifies whether underlying tables and associated indexes are available for que
 The `ONLINE` option can only be specified when you drop clustered indexes. For more information, see the [Remarks](#remarks) section.
 
 > [!NOTE]
-> Online index operations aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+> Online index operations aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-2025](../../includes/editions-latest.md)]
 
 #### MOVE TO { *partition_scheme_name* ( *column_name* ) | *filegroup_name* | "default" }
 

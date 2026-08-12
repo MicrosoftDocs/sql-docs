@@ -48,7 +48,7 @@ You might need to consider the following factors, depending on the complexity of
 | [Generate and Publish Scripts Wizard](/ssms/scripting/generate-and-publish-scripts-wizard) | Use this tool to script database objects when you need to transfer schemas between instances that can't use backup and restore directly. |
 | [Mirrored Backup Media Sets (SQL Server)](../../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md) | Relevant if your backup strategy uses mirrored media sets. Verify that your backup and restore workflow is compatible with the target version. |
 | [Backup overview (SQL Server)](../../../relational-databases/backup-restore/backup-overview-sql-server.md) | Take full backups of all databases before upgrading. Backup compatibility is forward-only: backups from a newer version can't be restored to an older version. |
-| [Editions and supported features of SQL Server 2025](../../editions-and-components-of-sql-server-2025.md) | Verify that features you depend on are available in your target edition. Some features are edition-specific. |
+| [Editions and supported features of SQL Server](../../editions-and-components-of-sql-server-latest.md) | Verify that features you depend on are available in your target edition. Some features are edition-specific. |
 
 ### Migrate databases and logins
 

@@ -41,6 +41,8 @@ This quickstart creates a single database in the [serverless compute tier](serve
 
 [!INCLUDE [azure-sql-database-free-offer-note](../includes/azure-sql-database-free-offer-note.md)]
 
+[!INCLUDE [resource-naming-customer-data-note](~/../reusable-content/ce-skilling/azure/includes/databases/resource-naming-customer-data-note.md)]
+
 # [Portal](#tab/azure-portal)
 
 To create a single database in the Azure portal:
@@ -112,7 +114,7 @@ First, install the latest [Azure CLI](/cli/azure/install-azure-cli-windows).
 
 [!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-h3.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../reusable-content/azure-cli/azure-cli-prepare-your-environment-h3.md)]
 
 [!INCLUDE [cli-launch-cloud-shell-sign-in.md](../includes/cli-launch-cloud-shell-sign-in.md)]
 

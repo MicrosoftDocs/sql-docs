@@ -208,7 +208,7 @@ FCIs provide instance-level high availability. The SQL Server service and its re
    
 ### Prerequisites
 
-- Install SQL Server on all nodes. For more information, see [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
+- Install SQL Server on all nodes. For more information, see [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
 
 - (Recommended) Install the exact same SQL Server feature set and version on every node. In particular, MDS must be installed.
 

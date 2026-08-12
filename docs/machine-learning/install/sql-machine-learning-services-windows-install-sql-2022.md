@@ -47,7 +47,7 @@ This article shows you how to install [SQL Server Machine Learning Services with
 
 [!INCLUDE [GetInstallationMedia](../../includes/getssmedia.md)]
 
-<!-- For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md). -->
+[!INCLUDE [editions-2022](../../includes/editions-2022.md)]
 
 ## Run setup
 

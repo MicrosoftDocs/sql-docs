@@ -34,6 +34,8 @@ For limitations, see [Supported regions](resource-limits.md#supported-regions) a
 
 [!INCLUDE [modifiable-config-note](../includes/sql-managed-instance/modifiable-config-note.md)]
 
+[!INCLUDE [resource-naming-customer-data-note](~/../reusable-content/ce-skilling/azure/includes/databases/resource-naming-customer-data-note.md)]
+
 ## Create Azure SQL Managed Instance
 
 You can create a deployment of Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 

@@ -17,7 +17,7 @@ tags: azure-resource-manager
 
 This article describes how to change the edition of SQL Server on a Windows virtual machine in Azure.
 
-The product key determines the edition of SQL Server, and it's specified during the installation process using the installation media. The edition dictates what [features](/sql/sql-server/editions-and-components-of-sql-server-2017) are available in the SQL Server product. You can change the SQL Server edition with the installation media and either downgrade to reduce cost or upgrade to enable more features.
+The product key determines the edition of SQL Server, and it's specified during the installation process using the installation media. The edition dictates what  [features](/sql/sql-server/editions-and-components-of-sql-server-latest) are available in the SQL Server product. You can change the SQL Server edition with the installation media and either downgrade to reduce cost or upgrade to enable more features.
 
 Once the edition of SQL Server has been changed internally to the SQL Server VM, you must then update the edition property of SQL Server in the Azure portal for billing purposes.
 

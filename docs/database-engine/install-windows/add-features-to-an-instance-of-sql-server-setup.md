@@ -55,7 +55,7 @@ Before you continue, review articles in [Plan a SQL Server installation](../../s
 
 1. On the Installation Type page, select the option **Add features to an existing instance of [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)]**, and select the instance you would like to update.
 
-1. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md). Each component can be installed only once on a given instance of SQL Server. To install multiple components, you must install an additional instance of SQL Server.
+1. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. Each component can be installed only once on a given instance of SQL Server. To install multiple components, you must install an additional instance of SQL Server. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
    The prerequisites for the selected features are displayed on the right-hand pane. SQL Server Setup installs the prerequisites that aren't already installed during the installation step described later in this procedure.
 

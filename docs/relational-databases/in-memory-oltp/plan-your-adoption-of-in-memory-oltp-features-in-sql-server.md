@@ -27,7 +27,7 @@ The following subsections discuss factors you must consider when you plan to ado
 One prerequisite for using the In-Memory features can involve the edition or service tier of the SQL product. For this and other prerequisites, see:
 
 - [Requirements for Using Memory-Optimized Tables](requirements-for-using-memory-optimized-tables.md)
-- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
+- [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-latest.md)
 - [SQL Database pricing tier recommendations](/azure/azure-sql/database/service-tiers-vcore)
 
 ### A.2 Forecast the amount of active memory

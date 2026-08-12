@@ -27,7 +27,7 @@ The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated in [!INCLUDE [sssql15
 
 ## Previous versions
 
-- [Breaking changes to Database Engine features in SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
+- [Breaking changes to Database Engine features in SQL Server 2016](/previous-versions/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016)
 - [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014&preserve-view=true#SQL14)
 
 #### Archived documentation for old versions of SQL Server
@@ -36,6 +36,6 @@ The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated in [!INCLUDE [sssql15
 
 ## Related content
 
-- [Deprecated Database Engine features in SQL Server 2016 (13.x)](deprecated-database-engine-features-in-sql-server-2016.md)
+- [Deprecated Database Engine features in SQL Server 2017 (14.x)](deprecated-database-engine-features-in-sql-server-2017.md)
 - [Discontinued Database Engine functionality in SQL Server](discontinued-database-engine-functionality-in-sql-server.md)
 - [ALTER DATABASE (Transact-SQL) compatibility level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

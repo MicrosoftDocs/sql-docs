@@ -4,7 +4,7 @@ description: This article describes how to configure SQL Server Integration Serv
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: lle, amitkh, atsingh, maghan
-ms.date: 01/21/2025
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: install-set-up-deploy
@@ -15,7 +15,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-You run the `ssis-conf` configuration script when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. For more info about installing SSIS, see [Install SQL Server Integration Services (SSIS) on Linux](../install-upgrade/setup-ssis.md).
+You run the `ssis-conf` configuration script when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. For more information about installing SSIS, see [Install SQL Server Integration Services (SSIS) on Linux](../install-upgrade/setup-ssis.md).
 
 You can also use the `ssis-conf` utility to configure the following properties:
 
@@ -29,9 +29,9 @@ You can also use the `ssis-conf` utility to configure the following properties:
 
 The examples in this article run `ssis-conf` by specifying the full path: `/opt/ssis/bin/ssis-conf`. If you navigate to that location before you run `ssis-conf`, you can run the utility in the context of the current directory: `./ssis-conf`.
 
-Be sure to run the commands that are described in this article with root (super user) privileges. For example, run `sudo /opt/ssis/bin/ssis-conf setup` and not `/opt/ssis/bin/ssis-conf setup`.
+Run the commands in this article with `root` (super user) privileges. For example, run `sudo /opt/ssis/bin/ssis-conf setup` and not `/opt/ssis/bin/ssis-conf setup`.
 
-To run these commands with prompts in the language that you prefer, you can specify a locale. For example, to receive prompts in Chinese, run the following command:
+To run these commands with prompts in your preferred language, specify a locale. For example, to receive prompts in Chinese, run the following command:
 
 ```bash
 sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup
@@ -39,7 +39,7 @@ sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup
 
 ## Use `set-edition` to set the edition of SQL Server Integration Services
 
-The edition of SSIS is aligned with the edition of SQL Server.
+The SSIS edition aligns with the SQL Server edition.
 
 Enter the following command:
 
@@ -80,7 +80,7 @@ Enter the 25-character product key:
 
 The `telemetry` command determines whether SSIS sends feedback to Microsoft.
 
-For free editions (that is, Express, Developer, and Evaluation editions), the telemetry service is always enabled. If you have a free edition, you can't use the `telemetry` command to disable telemetry.
+For free editions (Express, Developer, and Evaluation editions), the telemetry service is always enabled. If you have a free edition, you can't use the `telemetry` command to disable telemetry.
 
 Enter the following command:
 
@@ -96,7 +96,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 [Yes/No]:
 ```
 
-If you select **Yes**, the telemetry service is enabled and starts running. The service starts automatically after each boot. If you select **No**, the telemetry service stops and is disabled.
+If you select **Yes**, the telemetry service is enabled and started. The service starts automatically after each boot. If you select **No**, the telemetry service stops and is disabled.
 
 ## Use `setup` to initialize and set up Microsoft SQL Server Integration Services
 
@@ -113,9 +113,9 @@ The utility prompts you to acknowledge or provide values for the following items
 - Product license
 - EULA agreement
 - Telemetry service
-- The language used by Integration Services
+- The language that Integration Services uses
 
-To run the `setup` command with prompts in the language that you prefer, you can specify a locale. For example, to receive prompts in Chinese, run the following command:
+To run the `setup` command with prompts in the language that you prefer, specify a locale. For example, to receive prompts in Chinese, run the following command:
 
 ```bash
 sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup
@@ -125,9 +125,9 @@ sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup
 
 The following `/var/opt/ssis/ssis.conf` file provides an example for each setting.
 
-For SQL Server, you can change system settings by changing the values in the `mssql.conf` file. For SSIS, you can't change system settings by changing the values in the `ssis.conf` file. The `ssis.conf` file shows only the results of the setup. If you want to change the settings for SSIS, you can delete the `ssis.conf` file and run the `setup` command again.
+For SQL Server, you can change system settings in the `mssql.conf` file. For SSIS, you can't change system settings in the `ssis.conf` file. The `ssis.conf` file shows only the results of the setup. To change SSIS settings, delete the `ssis.conf` file and run the `setup` command again.
 
-Here is a sample `ssis.conf` file. Each field corresponds to the result of one setup step.
+In the following sample `ssis.conf` file, each field corresponds to the result of one setup step.
 
 ```ini
 [LICENSE]

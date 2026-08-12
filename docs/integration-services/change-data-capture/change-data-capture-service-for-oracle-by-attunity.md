@@ -51,7 +51,7 @@ The CDC Service for Oracle supports the following versions:
 
 ### Target SQL Server Database
 
-For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
+[!INCLUDE [editions-2016](../../includes/editions-2016.md)]
 
 <a id="running-the-installation-program"></a>
 

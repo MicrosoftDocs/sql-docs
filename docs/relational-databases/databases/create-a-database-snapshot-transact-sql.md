@@ -21,7 +21,7 @@ The only way to create a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.m
 
 The source database, which can use any recovery model, must meet the following prerequisites:
 
-- The server instance must be running an edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that supports database snapshot. For information about support for database snapshots in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+- The server instance must be running an edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that supports database snapshot. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 - The source database must be online, unless the database is a mirror database within a database mirroring session.
 

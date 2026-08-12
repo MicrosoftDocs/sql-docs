@@ -68,7 +68,7 @@ The following additional features are options for many typical user scenarios:
 
 ## Related content
 
-- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
+- [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-latest.md)
 - [Plan a SQL Server installation](../../sql-server/install/planning-a-sql-server-installation.md)
 - [Business continuity and database recovery - SQL Server](../sql-server-business-continuity-dr.md)
 - [Upgrade SQL Server Using the Installation Wizard (Setup)](upgrade-sql-server-using-the-installation-wizard-setup.md)

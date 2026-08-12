@@ -4,7 +4,7 @@ description: Set up an availability group in SQL Server on Kubernetes using DH2i
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 01/21/2025
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
@@ -17,14 +17,14 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always On availability groups (AGs) for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux based containers deployed to an Azure Kubernetes Service (AKS) Kubernetes cluster, using DH2i DxEnterprise. You can choose between a [sidecar configuration](/azure/architecture/patterns/sidecar) (preferred), or build your own custom container image.
+This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always On availability groups (AGs) with DH2i DxEnterprise for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux based containers deployed to an Azure Kubernetes Service (AKS) Kubernetes cluster. You can choose between a [sidecar configuration](/azure/architecture/patterns/sidecar) (preferred), or build your own custom container image.
 
 > [!NOTE]  
-> Microsoft supports data movement, AG, and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.
+> Microsoft supports data movement, AG, and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] components. DH2i supports the DxEnterprise product, which includes cluster and quorum management.
 
 # [Sidecar configuration](#tab/sidecar)
 
-Using the steps mentioned in this article, learn how to deploy a StatefulSet and use the DH2i DxEnterprise solution to create and configure an AG. This tutorial consists of the following steps.
+Learn how to deploy a StatefulSet and use DH2i DxEnterprise to create and configure an AG. This tutorial consists of the following steps.
 
 > [!div class="checklist"]
 > - Create a headless service configuration
@@ -43,7 +43,7 @@ This tutorial shows an example of an AG with three replicas. You need:
 
 1. In a Kubernetes cluster, headless services allow your pods to connect to one another using hostnames.
 
-   To create the headless service, Create a YAML file called `headless_services.yaml`, with the following sample content.
+   To create the headless service, create a YAML file called `headless_services.yaml` with the following sample content.
 
    ```yaml
    #Headless services for local connections/resolution
@@ -133,7 +133,7 @@ This tutorial shows an example of an AG with three replicas. You need:
 
 1. Create a StatefulSet YAML file with following sample content, and name it `dxemssql.yaml`.
 
-   This StatefulSet configuration creates three DxEMSSQL replicas that utilize persistent volume claims to store their data. Each pod in this StatefulSet comprises two containers: a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container and a DxEnterprise container. These containers are started separately from one another in a "sidecar" configuration, but DxEnterprise manages the AG replica in the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container.
+   This StatefulSet configuration creates three DxEMSSQL replicas that use persistent volume claims to store their data. Each pod in this StatefulSet comprises two containers: a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container and a DxEnterprise container. These containers start separately in a *sidecar* configuration, but DxEnterprise manages the AG replica in the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container.
 
    ```yaml
    #DxEnterprise + MSSQL StatefulSet
@@ -223,11 +223,11 @@ This tutorial shows an example of an AG with three replicas. You need:
 
 ## Create availability group and test failover
 
-For details on creating and configuring AG, adding replicas, and testing failover, refer to [SQL Server Availability Groups in Kubernetes](https://support.dh2i.com/docs/guides/dxenterprise/containers/kubernetes/mssql-ag-k8s-statefulset-qsg/#create-the-availability-group).
+For details on creating and configuring AG, adding replicas, and testing failover, see [SQL Server Availability Groups in Kubernetes](https://support.dh2i.com/docs/guides/dxenterprise/containers/kubernetes/mssql-ag-k8s-statefulset-qsg/#create-the-availability-group).
 
 # [Custom image](#tab/custom)
 
-In this tutorial, Azure Kubernetes Service (AKS) is used as the Kubernetes cluster and the tutorial consists of the following tasks.
+This tutorial uses Azure Kubernetes Service (AKS) as the Kubernetes cluster and consists of the following tasks.
 
 > [!div class="checklist"]
 > - Deploy Azure Kubernetes Service
@@ -242,11 +242,11 @@ For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.co
 
 - To deploy Azure Kubernetes Service, you must have an [Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). A two-node cluster is a good starting point for this tutorial.
 
-- [Create an Azure container registry using the Azure portal](/azure/container-registry/container-registry-get-started-portal). This registry is used in our deployment scripts to retrieve the custom image and deploy the containers to Azure Kubernetes. Instead of Azure Container Registry (ACR), you could use your preferred container registry to push the custom container images.
+- [Create an Azure container registry using the Azure portal](/azure/container-registry/container-registry-get-started-portal). The deployment scripts use this registry to retrieve the custom image and deploy the containers to Azure Kubernetes. Instead of Azure Container Registry (ACR), you can use your preferred container registry to push the custom container images.
 
 ## Deploy Azure Kubernetes Service
 
-Follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster using the Azure Kubernetes Service. After you create the cluster, you can connect to it by following the steps outlined in the [Connect to the cluster](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
+Follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster by using the Azure Kubernetes Service. After you create the cluster, connect to it by following the steps in the [Connect to the cluster](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
 
 You should now have a two-node Kubernetes cluster. Run the following command from your client machine.
 
@@ -264,9 +264,9 @@ aks-nodepool1-75119571-vmss000001   Ready    agent   61d   v1.19.9
 
 ## Prepare the SQL Server and DH2i DxEnterprise custom container image
 
-Create the custom container image that will be used for the deployment manifest. The custom container image deploys [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], .NET, and DxEnterprise in a container. A deployment sample Dockerfile is provided in this section. You can modify it to meet your needs, such as changing the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] version.
+Create the custom container image for the deployment manifest. The custom container image deploys [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], .NET, and DxEnterprise in a container. This section provides a sample Dockerfile. You can modify it to meet your needs, such as changing the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] version.
 
-For more information on Docker and using Dockerfiles, see the [Docker documentation](https://docs.docker.com/get-started/).
+For more information about Docker and Dockerfiles, see the [Docker documentation](https://docs.docker.com/get-started/).
 
 ```dockerfile
 FROM mcr.microsoft.com/mssql/server:2019-latest
@@ -307,19 +307,19 @@ ENTRYPOINT ["/opt/dh2i/sbin/dxstart.sh"]
    nano Dockerfile
    ```
 
-1. Paste the sample Dockerfile content shared previously into this new file, and then save it.
+1. Paste the preceding sample Dockerfile content into this new file, and then save it.
 
-1. Build the image using the command, and replace `<tagname>` with `sqldh2i/latest`.
+1. Build the image with the following command. Replace `<tagname>` with `sqldh2i/latest`.
 
    ```bash
    docker build -t <tagname> .
    ```
 
-   You should now be able to see the new image, sqldh2i when you run the docker images command.
+   You can now see the new image, `sqldh2i`, when you run the `docker images` command.
 
-Tag the image and push it to Azure Container Registry (ACR) using the following commands. Make sure you already signed into Azure Container Registry (ACR) using the `docker login` command. For more information, see [log in to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry).
+Tag the image and push it to Azure Container Registry (ACR) with the following commands. Make sure you're already signed in to ACR with the `docker login` command. For more information, see [Sign in to registry](/azure/container-registry/container-registry-get-started-portal#sign-in-to-registry).
 
-1. Tag the image using the following command.
+1. Tag the image with the following command.
 
    ```bash
    docker tag sqldh2i/latest <registry-name>.azurecr.io/sqldh2i:latest
@@ -331,11 +331,11 @@ Tag the image and push it to Azure Container Registry (ACR) using the following 
    docker push <registry-name>.azurecr.io/sqldh2i:latest
    ```
 
-   You can browse your ACR through the portal and should see the repo and the tag listed in the ACR.
+   You can browse your ACR in the portal to see the repo and tag listed.
 
-This ensures that the custom image is pushed to Azure Container Registry (ACR), and that you can now integrate your Azure Kubernetes Service (AKS) with ACR by running the following command. For more information, see [Authenticate with Azure Container Registry (ACR) from Azure Kubernetes Service (AKS)](/azure/aks/cluster-container-registry-integration).
+These steps ensure that the custom image is pushed to Azure Container Registry (ACR), and that you can now integrate your Azure Kubernetes Service (AKS) with ACR by running the following command. For more information, see [Authenticate with Azure Container Registry (ACR) from Azure Kubernetes Service (AKS)](/azure/aks/cluster-container-registry-integration).
 
-Use the short name for `<registry-name>`. The full qualified name of the registry isn't accepted in the below command.
+Use the short name for `<registry-name>`. The following command doesn't accept the fully qualified name of the registry.
 
 ```azurecli
 az aks update -n myAKSCluster -g <myResourceGroup> --attach-acr <registry-name>
@@ -343,36 +343,36 @@ az aks update -n myAKSCluster -g <myResourceGroup> --attach-acr <registry-name>
 
 ## Deploy containers on Azure Kubernetes Service
 
-This process deploys [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] containers as StatefulSet deployments; a sample deployment file that deploys the containers on the Azure Kubernetes Service is provided later in this article for reference.
+This process deploys [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] containers as StatefulSet deployments. For reference, this article provides a sample deployment file later that deploys the containers on Azure Kubernetes Service.
 
-1. Set up three [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instances: one as a primary replica, and two as secondary replicas. You can optionally add labels to the node to ensure that the primary replica always runs on one node and the secondary replicas run on another. The following are the steps for labeling the nodes.
+1. Set up three [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instances: one as a primary replica, and two as secondary replicas. Optionally, add labels to the nodes to ensure that the primary replica always runs on one node and the secondary replicas run on another. The following steps show how to label the nodes.
 
-   1. Get the node names of the cluster using the command.
+   1. Get the node names of the cluster with the following command.
 
       ```bash
       kubectl get nodes
       ```
 
-   1. Label the nodes using the following commands.
+   1. Label the nodes with the following commands.
 
       ```bash
-      kubectl label node aks-nodepool1-75119571-vmss000000 <role=ags-primary>
+      kubectl label node aks-nodepool1-75119571-vmss000000 role=ags-primary
       ```
 
       ```bash
-      kubectl label node aks-nodepool1-75119571-vmss000001 <role=ags-secondary>
+      kubectl label node aks-nodepool1-75119571-vmss000001 role=ags-secondary
       ```
 
-1. Create the `sa` password secret on Kubernetes before deploying the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] containers using the following command. Replace `<password>` with your own complex password.
+1. Before you deploy the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] containers, create the `sa` password secret on Kubernetes with the following command. Replace `<password>` with your own complex password.
 
    ```bash
    kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="<password>"
    ```
 
-1. Create a manifest (a YAML file) to describe the deployment. The following example shows our current deployment, which makes use of the custom container image created in the preceding steps.
+1. Create a manifest (a YAML file) to describe the deployment. The following example shows the deployment, which uses the custom container image you created in the preceding steps.
 
    > [!NOTE]  
-   > This example needs to be modified to fit your environment, such as replacing port, image, and storage details.
+   > Modify this example to fit your environment. For example, replace port, image, and storage details.
 
    ```yaml
    kind: StorageClass
@@ -559,7 +559,7 @@ This process deploys [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md
 
    1. Copy the preceding code into a new file called `sqldeployment.yaml`.
 
-   1. Create the deployment using the following command.
+   1. Create the deployment with the following command.
 
       ```bash
       kubectl apply -f <Path to sqldeployment.yaml file>
@@ -585,16 +585,16 @@ This process deploys [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md
       statefulset.apps/mssql-sec   2/2     33h
       ```
 
-You should now have three [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instances, each with its own storage and services, exposing ports 1433 ([!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]) and 7979 (DxEnterprise Cluster). You can connect to each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance using the External-IP address. The `sa` password is the same password you provided when creating the `mssql` secret in the preceding steps.
+You should now have three [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instances, each with its own storage and services, exposing ports 1433 ([!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]) and 7979 (DxEnterprise Cluster). You can connect to each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance at its External-IP address. The `sa` password is the same password you provided when creating the `mssql` secret in the preceding steps.
 
 ## Configure the DxEnterprise cluster on the deployed containers
 
-DxEnterprise is high availability clustering software from DH2i that supports AGs, including in containers. A fully featured [developer](https://dh2i.com/trial) edition is available for non-production use. To configure the DxEnterprise cluster in containers, follow the steps in this [DH2i guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group).
+DxEnterprise is high availability clustering software from DH2i that supports AGs, including in containers. A fully featured [developer](https://dh2i.com/trial) edition is available for nonproduction use. To configure the DxEnterprise cluster in containers, follow the steps in this [DH2i guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group).
 
-With these steps, you should have an AG created and databases added to the group supporting high availability.
+These steps create an AG and add databases to the group to support high availability.
 
 > [!NOTE]  
-> You can deploy [basic Always On availability group](../../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md) with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Standard edition, but as you might be aware, one of the limitations of basic AGs is that you're limited to only having two replicas and one additional configuration only replica required for successful automatic failover. For more information on failover with configuration only replica, see [Configuration-only replica and quorum](../availability-groups/overview.md#configuration-only-replica-and-quorum). You can add configuration only replica for containers as well, and to do so, refer to the [DH2i documentation](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group), making sure to pass the availability mode in the 'dxcli add-ags-node' command as 'configuration_only'.
+> You can deploy a [basic Always On availability group](../../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md) with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Standard edition, but basic AGs support only two replicas plus one configuration-only replica required for successful automatic failover. For more information about failover with a configuration-only replica, see [Configuration-only replica and quorum](../availability-groups/overview.md#configuration-only-replica-and-quorum). To add a configuration-only replica for containers, see the [DH2i documentation](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group) and pass the availability mode in the `dxcli add-ags-node` command as `configuration_only`.
 
 ---
 
@@ -602,11 +602,11 @@ With these steps, you should have an AG created and databases added to the group
 
 You can also configure an AG listener, with the following steps.
 
-1. Ensure you created the AG listener using DxEnterprise as outlined in the optional step near the end of the [DH2i documentation](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#add-availability-group-databases-and-a-listener).
+1. Ensure you created the AG listener with DxEnterprise following the optional step near the end of the [DH2i documentation](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#add-availability-group-databases-and-a-listener).
 
-1. In Kubernetes, you can optionally create *static* IP addresses. When you create a static IP address, you ensure that if the listener service is deleted and recreated, the external IP address assigned to your listener service doesn't change. Follow the steps to [create a static IP address](/azure/aks/static-ip#create-a-static-ip-address) in Azure Kubernetes Service (AKS).
+1. In Kubernetes, you can optionally create *static* IP addresses. A static IP address ensures that if you delete and recreate the listener service, the external IP address assigned to your listener service doesn't change. Follow the steps to [create a static IP address](/azure/aks/static-ip#create-a-static-ip-address) in Azure Kubernetes Service (AKS).
 
-1. After you create an IP address, you assign that IP address and create the load balancer service, as shown in the following YAML sample.
+1. After you create an IP address, assign it and create the load balancer service with the following YAML sample.
 
    ```yaml
    apiVersion: v1
@@ -615,7 +615,7 @@ You can also configure an AG listener, with the following steps.
      name: agslistener
    spec:
      type: LoadBalancer
-     loadBalancerIP: 52.140.117.62
+     loadBalancerIP: <static-IP-address>
      selector:
        app: mssql
      ports:
@@ -626,61 +626,46 @@ You can also configure an AG listener, with the following steps.
 
 ## Steps to configure read/write connection redirection (optional)
 
-After you create the AG, you can enable read/write connection redirection from the secondary to primary by following these steps. For more information, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
+After you create the AG, enable read/write connection redirection from the secondary to primary. For more information, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
 
 ```sql
-USE [master];
+USE master;
 GO
 
-ALTER AVAILABILITY
-GROUP [ag_name] MODIFY REPLICA
-    ON N'<name of the primary replica>'
+ALTER AVAILABILITY GROUP [AGS1]
+MODIFY REPLICA ON N'<name of the primary replica>'
 WITH (SECONDARY_ROLE(ALLOW_CONNECTIONS = ALL));
 GO
 
-USE [master];
-GO
-
-ALTER AVAILABILITY
-GROUP [AGS1] MODIFY REPLICA
-    ON N'<name of the secondary-0 replica>'
+ALTER AVAILABILITY GROUP [AGS1]
+MODIFY REPLICA ON N'<name of the secondary-0 replica>'
 WITH (SECONDARY_ROLE(ALLOW_CONNECTIONS = ALL));
 GO
 
-USE [master];
-GO
-
-ALTER AVAILABILITY
-GROUP [AGS1] MODIFY REPLICA
-    ON N'<name of the secondary-1 replica>'
+ALTER AVAILABILITY GROUP [AGS1]
+MODIFY REPLICA ON N'<name of the secondary-1 replica>'
 WITH (SECONDARY_ROLE(ALLOW_CONNECTIONS = ALL));
 GO
 
-USE [master];
+ALTER AVAILABILITY GROUP [AGS1]
+MODIFY REPLICA ON N'<name of the primary replica>'
+WITH (PRIMARY_ROLE(
+    READ_WRITE_ROUTING_URL = 'TCP://<External IP address of primary -0>:1433'
+));
 GO
 
-ALTER AVAILABILITY
-GROUP AGS1 MODIFY REPLICA
-    ON N'<name of the primary replica>'
-WITH (PRIMARY_ROLE(READ_WRITE_ROUTING_URL = 'TCP://<External IP address of primary -0>:1433'));
+ALTER AVAILABILITY GROUP [AGS1]
+MODIFY REPLICA ON N'<name of the secondary-0 replica>'
+WITH (PRIMARY_ROLE(
+    READ_WRITE_ROUTING_URL = 'TCP://<External IP address of secondary -0>:1433'
+));
 GO
 
-USE [master];
-GO
-
-ALTER AVAILABILITY
-GROUP AGS1 MODIFY REPLICA
-    ON N'<name of the secondary-0 replica>'
-WITH (PRIMARY_ROLE(READ_WRITE_ROUTING_URL = 'TCP://<External IP address of secondary -0>:1433'));
-GO
-
-USE [master];
-GO
-
-ALTER AVAILABILITY
-GROUP AGS1 MODIFY REPLICA
-    ON N'<name of the secondary-1 replica>'
-WITH (PRIMARY_ROLE(READ_WRITE_ROUTING_URL = 'TCP://<External IP address of secondary -1>:1433'));
+ALTER AVAILABILITY GROUP [AGS1]
+MODIFY REPLICA ON N'<name of the secondary-1 replica>'
+WITH (PRIMARY_ROLE(
+    READ_WRITE_ROUTING_URL = 'TCP://<External IP address of secondary -1>:1433'
+));
 GO
 ```
 

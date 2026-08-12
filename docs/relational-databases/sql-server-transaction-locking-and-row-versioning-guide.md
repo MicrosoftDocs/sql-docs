@@ -966,7 +966,7 @@ The [!INCLUDE [Database Engine](../includes/ssde-md.md)] uses a dynamic locking 
 
 ## Lock partitioning
 
-For large computer systems, locks on frequently referenced objects can become a performance bottleneck as acquiring and releasing locks place contention on internal synchronization resources. Lock partitioning enhances locking performance by splitting a single lock resource into multiple lock resources. Only object locks can be partitioned. Object locks that have a subtype aren't partitioned. For more information, see [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).
+For large computer systems, locks on frequently referenced objects can become a performance bottleneck as acquiring and releasing locks place contention on internal synchronization resources. Lock partitioning enhances locking performance by splitting a single lock resource into multiple lock resources. Only object locks can be partitioned. Object locks that have a subtype aren't partitioned. For more information, see [sys.dm_tran_locks (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md).
 
 <a id="understanding-lock-partitioning"></a>
 
@@ -1002,7 +1002,7 @@ When acquiring locks on a partitioned resource:
 
 A transaction is assigned to a lock partition when the transaction starts. For the transaction, all lock requests that can be partitioned use the partition assigned to that transaction. By this method, access to lock resources of the same object by different transactions is distributed across different partitions.
 
-The `resource_lock_partition` column in the `sys.dm_tran_locks` Dynamic Management View provides the lock partition ID for a lock partitioned resource. For more information, see [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).
+The `resource_lock_partition` column in the `sys.dm_tran_locks` Dynamic Management View provides the lock partition ID for a lock partitioned resource. For more information, see [sys.dm_tran_locks (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md).
 
 Because more lock resources are acquired with lock partitioning, the likelihood of [deadlocks](sql-server-deadlocks-guide.md) might increase when this feature is enabled and a resource, such as a database or a table, is accessed by multiple concurrent sessions. An increase in the number of deadlocks due to lock partitioning is not common. As with all deadlocks, applications should follow best practices for deadlock detection and resolution. For more information, see [Handle deadlocks](sql-server-deadlocks-guide.md#handle-deadlocks).
 
@@ -1269,7 +1269,7 @@ These 14 bytes are removed from the database row the first time the row is modif
 
 If you use any of the row versioning features, you might need to allocate additional disk space for the database to accommodate the 14 bytes per database row. Adding the row versioning information can cause index page splits or the allocation of a new data page if there isn't enough space available on the current page. For example, if the average row length is 100 bytes, the additional 14 bytes cause an existing table to grow up to 14 percent.
 
-Decreasing the [fill factor](indexes/specify-fill-factor-for-an-index.md) might help to prevent or decrease fragmentation of index pages. To view current page density information for the data and indexes of a table or view, you can use [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
+Decreasing the [fill factor](indexes/specify-fill-factor-for-an-index.md) might help to prevent or decrease fragmentation of index pages. To view current page density information for the data and indexes of a table or view, you can use [sys.dm_db_index_physical_stats](system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md).
 
 #### Space used by the persistent version store (PVS)
 
@@ -1283,9 +1283,9 @@ The first two methods are called **in-row** version storage. The last method is 
 
 Storing row versions as part of the row optimizes data retrieval by transactions that need to read row versions. If a version is stored in-row, a separate read of an off-row PVS page isn't required.
 
-The [sys.dm_db_index_physical_stats](./system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) DMV provides the number and type of versions stored in-row and off-row for a partition of an index. The total size of version data stored in-row is reported in the `total_inrow_version_payload_size_in_bytes` column.
+The [sys.dm_db_index_physical_stats](system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) DMV provides the number and type of versions stored in-row and off-row for a partition of an index. The total size of version data stored in-row is reported in the `total_inrow_version_payload_size_in_bytes` column.
 
-The size of the off-row version storage is reported in the `persistent_version_store_size_kb` column in the [sys.dm_tran_persistent_version_store_stats](./system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md) DMV.
+The size of the off-row version storage is reported in the `persistent_version_store_size_kb` column in the [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-objects/sys-dm-tran-persistent-version-store-stats.md) DMV.
 
 #### Space used in large objects
 
@@ -1307,31 +1307,31 @@ For monitoring row versioning, version store, and snapshot isolation processes f
 
 The following DMVs provide information about the current system state of `tempdb` and the version store, as well as transactions using row versioning.
 
-- `sys.dm_db_file_space_usage`. Returns space usage information for each file in the database. For more information, see [sys.dm_db_file_space_usage (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md).
+- `sys.dm_db_file_space_usage`. Returns space usage information for each file in the database. For more information, see [sys.dm_db_file_space_usage (Transact-SQL)](system-dynamic-management-objects/sys-dm-db-file-space-usage-transact-sql.md).
 
-- `sys.dm_db_session_space_usage`. Returns page allocation and deallocation activity by session for the database. For more information, see [sys.dm_db_session_space_usage (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md).
+- `sys.dm_db_session_space_usage`. Returns page allocation and deallocation activity by session for the database. For more information, see [sys.dm_db_session_space_usage (Transact-SQL)](system-dynamic-management-objects/sys-dm-db-session-space-usage-transact-sql.md).
 
-- `sys.dm_db_task_space_usage`. Returns page allocation and deallocation activity by task for the database. For more information, see [sys.dm_db_task_space_usage (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md).
+- `sys.dm_db_task_space_usage`. Returns page allocation and deallocation activity by task for the database. For more information, see [sys.dm_db_task_space_usage (Transact-SQL)](system-dynamic-management-objects/sys-dm-db-task-space-usage-transact-sql.md).
 
-- `sys.dm_tran_top_version_generators`. Returns a virtual table for the objects producing the most versions in the version store. It groups the top 256 aggregated record lengths by database_id and rowset_id. Use this function to find the largest consumers of the version store. Applies to the version store in `tempdb` only. For more information, see [sys.dm_tran_top_version_generators (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-top-version-generators-transact-sql.md).
+- `sys.dm_tran_top_version_generators`. Returns a virtual table for the objects producing the most versions in the version store. It groups the top 256 aggregated record lengths by database_id and rowset_id. Use this function to find the largest consumers of the version store. Applies to the version store in `tempdb` only. For more information, see [sys.dm_tran_top_version_generators (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-top-version-generators-transact-sql.md).
 
-- `sys.dm_tran_version_store`. Returns a virtual table that displays all version records in the common version store. Applies to the version store in `tempdb` only. For more information, see [sys.dm_tran_version_store (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).
+- `sys.dm_tran_version_store`. Returns a virtual table that displays all version records in the common version store. Applies to the version store in `tempdb` only. For more information, see [sys.dm_tran_version_store (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-version-store-transact-sql.md).
 
-- `sys.dm_tran_version_store_space_usage`. Returns a virtual table that displays the total space in `tempdb` used by version store records for each database. Applies to the version store in `tempdb` only. For more information, see [sys.dm_tran_version_store_space_usage (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md).
+- `sys.dm_tran_version_store_space_usage`. Returns a virtual table that displays the total space in `tempdb` used by version store records for each database. Applies to the version store in `tempdb` only. For more information, see [sys.dm_tran_version_store_space_usage (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-version-store-space-usage.md).
 
     > [!NOTE]  
     > Querying `sys.dm_tran_top_version_generators` and `sys.dm_tran_version_store` can be expensive, since both scan the entire version store, which could be large.
     > `sys.dm_tran_version_store_space_usage` is efficient and isn't expensive to run because it doesn't navigate through individual version store records, and instead returns aggregated version store space consumed in `tempdb` per database.
 
-- `sys.dm_tran_active_snapshot_database_transactions`. Returns a virtual table for all active transactions in all databases within the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] instance that use row versioning. System transactions don't appear in this DMV. For more information, see [sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).
+- `sys.dm_tran_active_snapshot_database_transactions`. Returns a virtual table for all active transactions in all databases within the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] instance that use row versioning. System transactions don't appear in this DMV. For more information, see [sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).
 
-- `sys.dm_tran_transactions_snapshot`. Returns a virtual table that displays snapshots taken by each transaction. The snapshot contains the sequence number of the active transactions that use row versioning. For more information, see [sys.dm_tran_transactions_snapshot (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-transactions-snapshot-transact-sql.md).
+- `sys.dm_tran_transactions_snapshot`. Returns a virtual table that displays snapshots taken by each transaction. The snapshot contains the sequence number of the active transactions that use row versioning. For more information, see [sys.dm_tran_transactions_snapshot (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-transactions-snapshot-transact-sql.md).
 
-- `sys.dm_tran_current_transaction`. Returns a single row that displays row versioning-related state information of the transaction in the current session. For more information, see [sys.dm_tran_current_transaction (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
+- `sys.dm_tran_current_transaction`. Returns a single row that displays row versioning-related state information of the transaction in the current session. For more information, see [sys.dm_tran_current_transaction (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-current-transaction-transact-sql.md).
 
-- `sys.dm_tran_current_snapshot`. Returns a virtual table that displays all active transactions at the time the current snapshot isolation transaction starts. If the current transaction is using snapshot isolation, this function returns no rows. The DMV `sys.dm_tran_current_snapshot` is similar to `sys.dm_tran_transactions_snapshot`, except that it returns only the active transactions for the current snapshot. For more information, see [sys.dm_tran_current_snapshot (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md).
+- `sys.dm_tran_current_snapshot`. Returns a virtual table that displays all active transactions at the time the current snapshot isolation transaction starts. If the current transaction is using snapshot isolation, this function returns no rows. The DMV `sys.dm_tran_current_snapshot` is similar to `sys.dm_tran_transactions_snapshot`, except that it returns only the active transactions for the current snapshot. For more information, see [sys.dm_tran_current_snapshot (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-current-snapshot-transact-sql.md).
 
-- `sys.dm_tran_persistent_version_store_stats`. Returns statistics for the persistent version store in each database used when accelerated database recovery is enabled. For more information, see [sys.dm_tran_persistent_version_store_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md).
+- `sys.dm_tran_persistent_version_store_stats`. Returns statistics for the persistent version store in each database used when accelerated database recovery is enabled. For more information, see [sys.dm_tran_persistent_version_store_stats (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-persistent-version-store-stats.md).
 
 ##### Performance counters
 
@@ -2033,7 +2033,7 @@ To look for long-running transactions, use one of the following:
 
     This dynamic management view returns information about transactions at the database level. For a long-running transaction, columns of particular interest include the time of the first log record (`database_transaction_begin_time`), the current state of the transaction (`database_transaction_state`), and the log sequence number (LSN) of the *begin* record in the transaction log (`database_transaction_begin_lsn`).
 
-    For more information, see [sys.dm_tran_database_transactions (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).
+    For more information, see [sys.dm_tran_database_transactions (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-database-transactions-transact-sql.md).
 
 - `DBCC OPENTRAN`
 
@@ -2058,6 +2058,6 @@ Deadlocks are a complex topic related to locking, but different from blocking.
 
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking)
 - [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)
-- [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects/transaction-related-dynamic-management-views-and-functions-transact-sql.md)
 - [Overhead of Row Versioning](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)
-- [sys.dm_tran_locks (Transact-SQL)](system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)
+- [sys.dm_tran_locks (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md)

@@ -57,7 +57,7 @@ To change the PITR backup retention period for active databases by using the Azu
 
 Prepare your environment for the Azure CLI:
 
-[!INCLUDE[azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE[azure-cli-prepare-your-environment-no-header](~/../reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 Use the following example to change the PITR backup retention of a *single active* database in a managed instance:
 

@@ -64,7 +64,7 @@ Increased capacity limits for [!INCLUDE [sssql25-md](../includes/sssql25-md.md)]
 
 The following free editions are designed to provide all the features of their corresponding paid editions. They can be used to develop SQL Server applications without requiring a paid license.
 
-For features by edition, review [Editions and supported features of SQL Server 2025](editions-and-components-of-sql-server-2025.md).
+[!INCLUDE [editions-latest](../includes/editions-latest.md)]
 
 ### Standard Developer edition
 

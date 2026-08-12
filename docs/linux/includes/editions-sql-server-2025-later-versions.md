@@ -18,4 +18,4 @@ ms.custom:
 | `EnterpriseCore` | SQL Server Enterprise Core edition. `EnterpriseCore` represents the core-based server licensing model with no core limits. For more information, see [Compute capacity limits by edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). |
 | `A product key` | If you specify a product key, it must be in the form of `#####-#####-#####-#####-#####`, where `#` is a number or a letter. |
 
-For more information about these editions, see [SQL Server editions](../../sql-server/editions-and-components-of-sql-server-2025.md#sql-server-editions).
+[!INCLUDE [editions-latest](../../includes/editions-latest.md)]

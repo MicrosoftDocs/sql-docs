@@ -80,7 +80,7 @@ Use the table below to identify the location and name of the file to download ba
 | A 32-bit version of SQL Server 2012 RTM Express | Upgrade to the 32-bit version of SQL Server 2012 Express SP2 | **SQLEXPR_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007) |
 | A 32-bit version of only the client and manageability tools for SQL Server 2012 (including SQL Server 2012 Management Studio) | Upgrade the client and manageability tools to the 32-bit version of SQL Server 2012 SP2 | **SQLEXPRWT_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007) |
 | A 32-bit version of SQL Server 2012 Management Studio Express | Upgrade to the 32-bit version of SQL Server 2012 SP2 Management Studio Express | **SQLManagementStudio_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007) |
-| A 32-bit version of any edition of SQL Server 2012 and a 32-bit version of the client and manageability tools (including SQL Server 2012 RTM Management Studio) | Upgrade all products to the 32-bit version of SQL Server 2012 SP2 | **SQLEXPRADV_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page.](https://go.microsoft.com/fwlink/?LinkID=401007) |
+| A 32-bit version of any edition of SQL Server 2012 and a 32-bit version of the client and manageability tools (including SQL Server 2012 RTM Management Studio) | Upgrade all products to the 32-bit version of SQL Server 2012 SP2 | **SQLEXPRADV_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007). |
 | A 32-bit version of one or more tools from the [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041) or the [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575) | Upgrade the tools to the 32-bit version of Microsoft SQL Server 2012 SP2 Feature Pack | One or more tools from Microsoft [SQL Server 2012 SP2 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=43340) |
 | 64-bit Installations: | | |
 | A 64-bit version of any edition of SQL Server 2012 | Upgrade to the 64-bit version of SQL Server 2012 SP2 | SQLServer2012SP2-KB2958429-\<arch\>-\<langid\>.exe from [SQL Server 2012 SP2 download page](https://go.microsoft.com/fwlink/?LinkID=401006) |
@@ -251,6 +251,6 @@ This release introduces several forward compatibility scenarios for DAC packages
 
 - [Install SQL Server 2012 Servicing Updates](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [Latest updates and version history for SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates)
-- [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
+- [Editions and supported features of SQL Server 2016](/previous-versions/sql/sql-server/editions-and-components-of-sql-server-2016)
 
 [!INCLUDE [get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -51,7 +51,4 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ## See Also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Deprecation Announcement Event Class](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
- [Deprecated Database Engine Features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
-  
-  
-
+ [Deprecated Database Engine Features in SQL Server 2016](/previous-versions/sql/database-engine/deprecated-database-engine-features-in-sql-server-2016)

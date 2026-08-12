@@ -118,7 +118,7 @@ Overrides the **max degree of parallelism** configuration option for the index o
 For more information, see [Configure parallel index operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]  
-> Parallel index operations aren't available in every edition of SQL Server. For a list of features that are supported by the editions of SQL Server, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md) or [Editions and supported features of SQL Server 2025](../../sql-server/editions-and-components-of-sql-server-2025.md).
+> Parallel index operations aren't available in every edition of SQL Server. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ## Upgrade vector indexes to the latest version
 

@@ -30,7 +30,7 @@ If you want to develop, test, or build a proof of concept, then use the freely l
 > [!NOTE]  
 > SQL Server 2025 introduces separate Enterprise Developer and Standard Developer editions of SQL Server.
 
-If you want to run a lightweight workload in production (<=4 cores, <1-GB memory, <=50 GB/database), use the freely licensed **SQL Server Express edition**. A SQL Server Express edition VM only incurs charges for the cost of the VM. However, many [features](/sql/sql-server/editions-and-components-of-sql-server-2025) necessary for production, such as Enterprise-level disaster recovery features, aren't available in the Express edition, so be sure that it meets your business needs before deployment. 
+If you want to run a lightweight workload in production (<=4 cores, <1-GB memory, <=50 GB/database), use the freely licensed **SQL Server Express edition**. A SQL Server Express edition VM only incurs charges for the cost of the VM. However, many [features](/sql/sql-server/editions-and-components-of-sql-server-latest) necessary for production, such as Enterprise-level disaster recovery features, aren't available in the Express edition, so be sure that it meets your business needs before deployment. 
 
 For these development/test and lightweight production workloads, you can also save money by choosing a smaller VM size that matches these workloads. The [D2as_v5](/azure/virtual-machines/dasv5-dadsv5-series) might be a good choice in some scenarios.
 

@@ -3,7 +3,7 @@ title: Database Mail and Email Alerts with SQL Server Agent on Linux
 description: Learn how to use Database Mail and how to set up Email Alerts with SQL Server Agent (mssql-server-agent) on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/03/2025
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: how-to
@@ -14,7 +14,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article shows how to set up Database Mail and use it with SQL Server Agent (**mssql-server-agent**) on Linux.
+This article shows how to set up Database Mail and use it with SQL Server Agent (**`mssql-server-agent`**) on Linux.
 
 ## 1. Enable Database Mail
 
@@ -24,11 +24,13 @@ GO
 
 EXECUTE sp_configure 'show advanced options', 1;
 GO
+
 RECONFIGURE WITH OVERRIDE;
 GO
 
 EXECUTE sp_configure 'Database Mail XPs', 1;
 GO
+
 RECONFIGURE;
 GO
 ```
@@ -97,15 +99,15 @@ GO
 
 ## 7. Set Database Mail profile using mssql-conf or environment variable
 
-You can use the **`mssql-conf`** utility, or environment variables, to register your Database Mail profile. In this case, let's call our profile `default`.
+You can use the **`mssql-conf`** utility, or environment variables, to register your Database Mail profile. In this example, name the profile `default`.
 
-- Set via **`mssql-conf`**:
+- Set with **`mssql-conf`**:
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
   ```
 
-- Set via environment variable:
+- Set with an environment variable:
 
   ```bash
   MSSQL_AGENT_EMAIL_PROFILE=default

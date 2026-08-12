@@ -84,7 +84,7 @@ The **Rebuild Index Task** uses the ALTER INDEX statement. For more info about t
   Use the `ONLINE` option, which allows users to access the underlying table or clustered index data and any associated nonclustered indexes during index operations.
 
   > [!NOTE]  
-  > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+  > Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 - **Do not rebuild indexes | Rebuild indexes offline**
 

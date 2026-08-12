@@ -133,7 +133,7 @@ In [SQL documentation](../sql-server/index.yml), the **Version** selector dropdo
 
 Get started today, for free. You can try the SQL Database Engine for free, with a [free Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn):
 
-- [SQL Server Developer editions](../sql-server/editions-and-components-of-sql-server-2025.md#sql-server-editions) for development and test systems
+- [SQL Server Developer editions](../sql-server/editions-and-components-of-sql-server-latest.md#sql-server-editions) for development and test systems
 - [Azure SQL Database free offer](/azure/azure-sql/database/free-offer?view=azuresql-db&preserve-view=true)
 - [Azure SQL Managed Instance free offer](/azure/azure-sql/managed-instance/free-offer?view=azuresql-mi&preserve-view=true)
 - [Microsoft Fabric for free trial capacity](/fabric/fundamentals/fabric-trial)

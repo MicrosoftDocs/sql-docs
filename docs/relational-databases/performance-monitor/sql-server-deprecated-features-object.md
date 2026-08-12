@@ -72,7 +72,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |Deprecated hash algorithm|Use of the MD2, MD4, MD5, SHA, or SHA1 algorithms.|  
 |DESX algorithm|Syntax that uses the DESX encryption algorithm was encountered. Use another algorithm for encryption. Occurs once per compilation.|  
 |dm_fts_active_catalogs|The dm_fts_active_catalogs counter always remains at 0 because some columns of the `sys.dm_fts_active_catalogs` view are not deprecated. To monitor a deprecated column, use the column-specific counter; for example, `sys.dm_fts_active_catalogs.is_paused`.|  
-|dm_fts_active_catalogs.is_paused|The is_paused column of the [sys.dm_fts_active_catalogs](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md) dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
+|dm_fts_active_catalogs.is_paused|The is_paused column of the [sys.dm_fts_active_catalogs](../system-dynamic-management-objects/sys-dm-fts-active-catalogs-transact-sql.md) dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_active_catalogs.previous_status|The previous_status column of the `sys.dm_fts_active_catalogs` dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_active_catalogs.previous_status_description|The `previous_status_description` column of the `sys.dm_fts_active_catalogs` dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_active_catalogs.row_count_in_thousands|The `row_count_in_thousands` column of the `sys.dm_fts_active_catalogs` dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
@@ -80,7 +80,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |dm_fts_active_catalogs.status_description|The `status_description` column of the `sys.dm_fts_active_catalogs` dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_active_catalogs.worker_count|The `worker_count` column of the `sys.dm_fts_active_catalogs` dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_memory_buffers|The dm_fts_memory_buffers counter always remains at 0 because most columns of the `sys.dm_fts_memory_buffers` view are not deprecated. To monitor the deprecated column, use the column-specific counter: dm_fts_memory_buffers.row_count.|  
-|dm_fts_memory_buffers.row_count|The `row_count` column of the [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
+|dm_fts_memory_buffers.row_count|The `row_count` column of the [sys.dm_fts_memory_buffers](../system-dynamic-management-objects/sys-dm-fts-memory-buffers-transact-sql.md) dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |DROP INDEX with two-part name|The DROP INDEX syntax contained the format *table_name.index_name* syntax in DROP INDEX. Replace with *index_name* ON *table_name* syntax in the DROP INDEX statement. Occurs once per compilation.|  
 |endpoint_webmethods|The CREATE ENDPOINT or ALTER ENDPOINT statement with the FOR SOAP option. Use Windows Communications Foundation (WCF) or ASP.NET instead.|
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|The CREATE or ALTER ENDPOINT statement with the FOR SOAP option was encountered. Native XML Web Services is deprecated. Use Windows Communications Foundation (WCF) or ASP.NET instead.|  
@@ -302,7 +302,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
   
 ## Related content
 
-- [Deprecated Database Engine features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [Deprecated Database Engine features in SQL Server 2025 (17.x)](../../database-engine/deprecated-database-engine-features-in-sql-server-2025.md)
 - [Deprecated Full-Text Search features in SQL Server](../search/deprecated-full-text-search-features-in-sql-server.md)
 - [Deprecation Announcement Event Class](../event-classes/deprecation-announcement-event-class.md)
 - [Deprecation Final Support Event Class](../event-classes/deprecation-final-support-event-class.md)

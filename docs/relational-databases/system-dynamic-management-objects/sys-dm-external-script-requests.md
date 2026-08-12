@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-c
 Returns a row for each active worker account that is running an external script.
   
 > [!NOTE]
-> This dynamic management view (DMV) is available only if you have installed and enabled the feature that supports external script execution. For more information, see [Machine Learning Services (R, Python) in SQL Server 2017 and later](../../machine-learning/sql-server-machine-learning-services.md), [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md), and [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).  
+> This dynamic management view (DMV) is available only if you have installed and enabled the feature that supports external script execution. For more information, see [Machine Learning Services (R, Python) in SQL Server 2017 and later](../../machine-learning/sql-server-machine-learning-services.md), and [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

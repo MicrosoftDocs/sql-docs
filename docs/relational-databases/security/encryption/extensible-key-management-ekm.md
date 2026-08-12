@@ -28,7 +28,7 @@ helpviewer_keywords:
  When running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in an Azure VM, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can use keys stored in the [Azure Key Vault](/azure/key-vault/general/basic-concepts). For more information, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## EKM Configuration  
- Extensible Key Management is not available in every edition of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Extensible Key Management is not available in every edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../../includes/editions-latest.md)]
   
  By default, Extensible Key Management is off. To enable this feature, use the sp_configure command that has the following option and value, as in the following example:  
   
@@ -137,10 +137,10 @@ DECRYPTION BY EKM_AKey1
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   
  [sys.cryptographic_providers &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql.md)   
- [sys.dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql.md)   
- [sys.dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql.md)   
- [sys.dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md)   
- [sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql.md)   
+ [sys.dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](../../system-dynamic-management-objects/sys-dm-cryptographic-provider-sessions-transact-sql.md)   
+ [sys.dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](../../system-dynamic-management-objects/sys-dm-cryptographic-provider-properties-transact-sql.md)   
+ [sys.dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](../../system-dynamic-management-objects/sys-dm-cryptographic-provider-algorithms-transact-sql.md)   
+ [sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](../../system-dynamic-management-objects/sys-dm-cryptographic-provider-keys-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-login-transact-sql.md)   

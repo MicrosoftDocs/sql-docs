@@ -4,7 +4,7 @@ description: Describes how to configure change event streaming.
 author: nzagorac-ms
 ms.author: nzagorac
 ms.reviewer: mathoma, randolphwest
-ms.date: 07/29/2026
+ms.date: 08/11/2026
 ms.service: sql
 ms.topic: how-to
 ai-usage: ai-assisted
@@ -551,6 +551,8 @@ Change event streaming (CES) has the following limitations:
 
 ### Platform specific limitations
 
+On SQL products configured with a non-UTC time zone, the `committime` field in a [change event streaming message](message-format.md) incorrectly includes a **Z** suffix, even though this field shows the local time of the publishing database. When the database uses UTC, the value and suffix agree. This problem is known, and a fix is pending in a future release of the feature.
+
 The following limitations apply to specific platforms for CES:
 
 ### [SQL Server 2025](#tab/sql-2025)
@@ -595,13 +597,13 @@ The following list describes database-level limitations:
 - CES doesn't support databases configured with [Fabric Mirrored Databases for SQL Server](/fabric/database/mirrored-database/sql-server), [transactional replication](../../replication/transactional/transactional-replication.md), [change data capture](../about-change-data-capture-sql-server.md), or [Azure Synapse Link](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). [Change tracking](../about-change-tracking-sql-server.md) is supported on databases configured with CES.
 - CES can only stream from writable primary databases. Secondary databases that are part of Always On availability groups or that use the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) can't be configured as streaming sources.
 - You can't enable CES on views or indexed views.
+- You can configure up to 4,096 stream groups. Each stream group can include up to 40,000 tables.
 
 ### Table-level limitations
 
 The following list describes table-level limitations:
 - A table can belong to only one streaming group. You can't stream the same table to multiple destinations.
 - You can only configure user tables for CES. CES doesn't support streaming system tables.
-- You can configure up to 4,096 stream groups. Each stream group can include up to 40,000 tables.
 - While CES is enabled on a table, you can't add or drop a primary key constraint on that table.
 - `ALTER TABLE SWITCH PARTITION` isn't supported on tables configured for CES.
 - `TRUNCATE TABLE` isn't supported on tables enabled for CES.

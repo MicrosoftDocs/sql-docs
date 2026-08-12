@@ -30,7 +30,7 @@ Before you can create and configure an Always On availability group, you must en
 
 - In [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] and later versions, to support [read-scale availability groups](read-scale-availability-groups.md), you can enable the availability group feature even if the SQL Server instance doesn't reside on a Windows Server Failover Cluster.
 
-- The server instance must run an edition of SQL Server that supports [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)]. For more information, see [Editions and supported features of SQL Server 2025](../../../sql-server/editions-and-components-of-sql-server-2025.md).
+- The server instance must run an edition of SQL Server that supports [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE [editions-latest](../../../includes/editions-latest.md)]
 
 - Enable availability groups on only one server instance at a time. After enabling availability groups, wait until the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] service restarts before you proceed to another server instance.
 

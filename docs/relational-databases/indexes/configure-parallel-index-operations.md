@@ -29,7 +29,7 @@ On multiprocessor systems that are running [!INCLUDE [ssNoVersion](../../include
 The max degree of parallelism option determines the maximum number of processors to use in parallel plan execution. If the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] detects that the system is busy, the degree of parallelism of the index operation is automatically reduced before statement execution starts. The [!INCLUDE [ssDE](../../includes/ssde-md.md)] can also reduce the degree of parallelism if the leading key column of a non-partitioned index has a limited number of distinct values or the frequency of each distinct value varies significantly. For more information, see [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
 
 > [!NOTE]  
-> Parallel index operations aren't available in every [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+> Parallel index operations aren't available in every [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ## Limitations
 

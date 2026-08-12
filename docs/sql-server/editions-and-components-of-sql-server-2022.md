@@ -42,9 +42,9 @@ This article provides details of features supported by the various editions of [
 
 For information about other versions, see:
 
+- [Editions and supported features of SQL Server 2025](editions-and-components-of-sql-server-2025.md)
 - [Editions and supported features of SQL Server 2019](editions-and-components-of-sql-server-2019.md)
 - [Editions and supported features of SQL Server 2017](editions-and-components-of-sql-server-2017.md)
-- [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 
 For information about Azure SQL, see [Features comparison: Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison).
 
@@ -420,7 +420,7 @@ For information about the [!INCLUDE [ssMDSshort_md](../includes/ssmdsshort-md.md
 
 ## Analysis Services
 
-For information about the Analysis Services features supported by the editions of [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the editions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Analysis Services features supported by the editions of [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services features supported by SQL Server edition](/analysis-services/analysis-services-features-by-edition).
 
 ## Reporting Services
 
@@ -428,7 +428,7 @@ For information about the Reporting Services features supported by the editions 
 
 ## Business intelligence clients
 
-For information about the Business Intelligence Client features supported by the editions of [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the editions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) or [SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server.md).
+For information about the Business Intelligence Client features supported by the editions of [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services features supported by SQL Server edition](/analysis-services/analysis-services-features-by-edition) or [SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server.md).
 
 ## Additional database services
 

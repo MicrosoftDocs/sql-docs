@@ -138,7 +138,7 @@ Learn more about partition elimination and related concepts in [Query Processing
 
 ## Limitations
 
-- Prior to [!INCLUDE [ssSQL15_md](../../includes/sssql16-md.md)] SP1, partitioned tables and indexes weren't available in every edition of SQL Server. For a list of features supported by the editions of SQL Server, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+- Prior to [!INCLUDE [ssSQL15_md](../../includes/sssql16-md.md)] SP1, partitioned tables and indexes weren't available in every edition of SQL Server. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 - Partitioned tables and indexes are available in all service tiers of Azure SQL Database, SQL database in Fabric, and Azure SQL Managed Instance.
 

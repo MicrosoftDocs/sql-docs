@@ -13,7 +13,7 @@ ms.custom:
   This article explains how to work around the Excel 2003 row limitation when you export paginated reports to Excel. The workaround is for a report that contains only a table.
 
 > [!IMPORTANT]  
-> The [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 (.xls) rendering extension is deprecated. For more information, see [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).
+> The [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 (.xls) rendering extension is deprecated. For more information, see [Deprecated features in SQL Server Reporting Services](../deprecated-features-in-sql-server-reporting-services-ssrs.md).
 
 Excel 2003 supports a maximum of 65,536 rows per worksheet. You can work around this limitation by forcing an explicit page break after some rows. The Excel renderer creates a new worksheet for each explicit page break.
 

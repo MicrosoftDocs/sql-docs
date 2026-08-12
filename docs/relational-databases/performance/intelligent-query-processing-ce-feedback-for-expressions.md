@@ -103,7 +103,7 @@ This lifecycle ensures that feedback is only applied when beneficial and avoids 
 
 ### Regression protection
 
-CE feedback for expressions includes regression protection. If a hint causes a worse cardinality estimate than before, it's blocked. However, this protection is limited to cardinality estimation and doesn't evaluate query execution time. For execution/runtime related regressions, [automatic plan correction](../automatic-tuning/automatic-tuning.md#automatic-plan-correction) might intervene. If the automatic plan correction feature isn't enabled, actions that the feature would take are recorded and available by querying the [sys.dm_db_tuning_recommendations](../system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md#example-2)
+CE feedback for expressions includes regression protection. If a hint causes a worse cardinality estimate than before, it's blocked. However, this protection is limited to cardinality estimation and doesn't evaluate query execution time. For execution/runtime related regressions, [automatic plan correction](../automatic-tuning/automatic-tuning.md#automatic-plan-correction) might intervene. If the automatic plan correction feature isn't enabled, actions that the feature would take are recorded and available by querying the [sys.dm_db_tuning_recommendations](../system-dynamic-management-objects/sys-dm-db-tuning-recommendations-transact-sql.md#example-2)
 dynamic management view.
 
 ## Telemetry and monitoring

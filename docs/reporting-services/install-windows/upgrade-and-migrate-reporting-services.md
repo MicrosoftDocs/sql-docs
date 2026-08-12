@@ -50,29 +50,19 @@ SQL Server Reporting Services Native mode can be installed side-by-side with a [
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup completes the upgrade. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup can be used to upgrade any or all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, including [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Setup detects the existing instances and prompts you to upgrade. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup provides upgrade options that you can specify as a command-line argument or in the Setup wizard.
 
-When you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, you can select the option to upgrade from one of the following versions or you can install a new instance of SQL Server Reporting Services that runs side-by-side existing installations:
-
-- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
-
-- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]
-
-- [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]
-
-- [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
+When you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, you can select the option to upgrade from an older version, or you can install a new instance of SQL Server Reporting Services that runs side-by-side existing installations.
 
 For more information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
 
-- [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
-
-- [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-
-- [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+- [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
+- [Upgrade SQL Server Using the Installation Wizard (Setup)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 
 ## <a name="bkmk_upgrade_checklist"></a> Pre-upgrade checklist
 
  Before upgrading to SQL Server Reporting Services:
 
-- Review requirements to determine whether your hardware and software can support [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. For more information, see [Hardware and software requirements for SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).
+- Review requirements to determine whether your hardware and software can support [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. For more information, see [Hardware and software requirements for SQL Server 2016](/previous-versions/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016).
 
 - Use System Configuration Checker (SCC) to scan the report server computer for any conditions that might prevent a successful installation of SQL Server Reporting Services. For more information, see [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).
 

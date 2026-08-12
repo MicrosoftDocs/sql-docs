@@ -60,7 +60,7 @@ When `MAXDOP` is greater than 1, each thread used for ordered columnstore index 
 
 You can create or rebuild ordered columnstore indexes online only in some SQL platforms and SQL Server versions. For more information, see [Feature summary for product releases](columnstore-indexes-what-s-new.md#feature-summary-for-product-releases).
 
-In SQL Server, online index operations aren't available in all editions. For more information, see [Editions and supported features of SQL Server 2025](../../sql-server/editions-and-components-of-sql-server-2025.md) and [Perform index operations online](perform-index-operations-online.md).
+In SQL Server, online index operations aren't available in all editions. [!INCLUDE [editions-latest](../../includes/editions-latest.md)] For more information, see [Perform index operations online](perform-index-operations-online.md).
 
 For certain data types and encodings, the [sys.column_store_segments](../system-catalog-views/sys-column-store-segments-transact-sql.md) system view can help you find the number of segment overlaps. A [sample script](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/columnstore/ordered-columnstore/order-quality.sql) based on this view determines the order quality for eligible columns of all columnstore indexes in the current database.
 

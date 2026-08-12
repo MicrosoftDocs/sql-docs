@@ -131,11 +131,11 @@ No other features were discontinued in [!INCLUDE [sssql14](../includes/sssql17-m
 
 ## Related content
 
+- [Deprecated Database Engine features in SQL Server 2025 (17.x)](deprecated-database-engine-features-in-sql-server-2025.md)
 - [Deprecated Database Engine features in SQL Server 2022 (16.x)](deprecated-database-engine-features-in-sql-server-2022.md)
 - [Deprecated Database Engine features in SQL Server 2019 (15.x)](deprecated-database-engine-features-in-sql-server-2019.md)
 - [Deprecated Database Engine features in SQL Server 2017 (14.x)](deprecated-database-engine-features-in-sql-server-2017.md)
-- [Deprecated Database Engine features in SQL Server 2016 (13.x)](deprecated-database-engine-features-in-sql-server-2016.md)
+- [Breaking changes to Database Engine features in SQL Server 2025](breaking-changes-to-database-engine-features-in-sql-server-2025.md)
 - [Breaking changes to Database Engine features in SQL Server 2019](breaking-changes-to-database-engine-features-in-sql-server-2019.md)
 - [Breaking changes to Database Engine features in SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
-- [Breaking changes to Database Engine features in SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 - [Deprecated Features in SQL Server Replication](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

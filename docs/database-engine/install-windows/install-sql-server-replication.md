@@ -40,4 +40,4 @@ See [Install and configure SQL Server on Windows from the command prompt](instal
 
 - [SQL Server installation guide](install-sql-server.md)
 - [Install and configure SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
-- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
+- [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-latest.md)

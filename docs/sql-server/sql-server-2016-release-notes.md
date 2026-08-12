@@ -18,7 +18,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]
 
-This article describes limitations and issues with [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] releases, including service packs. For information on what's new, see [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md).
+This article describes limitations and issues with [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] releases, including service packs. For information on what's new, see [What's new in SQL Server 2016](/previous-versions/sql/sql-server/what-s-new-in-sql-server-2016).
 
 :::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**  
 :::image type="icon" source="../includes/media/azure-vm.svg" border="false"::: **[Spin up a Virtual Machine with SQL Server already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2022-ws2022?tab=Overview)**  
@@ -87,7 +87,7 @@ This section identifies issues which might occur after you apply [!INCLUDE [sssq
 > [!IMPORTANT]  
 > If you do the previous steps, you must manually remove the added key before upgrading to a later version of SQL Server.
 
-For more information, see [Change R runtime version in SQL Server 2016](../machine-learning/install/change-default-language-runtime-version.md#change-r-runtime-version-in-sql-server-2016).
+For more information, see [Change the default R or Python language runtime version](../machine-learning/install/change-default-language-runtime-version.md).
 
 ### Change Tracking cleanup errors
 

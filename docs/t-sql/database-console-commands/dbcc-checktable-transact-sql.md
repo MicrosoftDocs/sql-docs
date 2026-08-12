@@ -208,7 +208,7 @@ Parallel checking can be disabled by using Trace Flag 2528. For more information
 > During a `DBCC CHECKTABLE` operation, the bytes that are stored in a byte-ordered user-defined type column must be equal to the computed serialization of the user-defined type value. If this is not true, the `DBCC CHECKTABLE` routine will report a consistency error.
 
 > [!NOTE]  
-> This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see parallel consistency check in the [RDBMS manageability](../../sql-server/editions-and-components-of-sql-server-2022.md#rdbms-manageability) section of [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+> This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ## Understand DBCC error messages
 

@@ -104,11 +104,12 @@ The synchronization mode. *@sync_method* is **nvarchar(40)**, and can be one of 
 | `character` | Produces character-mode bulk copy program output of all tables. **Note:** For an Oracle Publisher, `character` is valid only for snapshot replication. |
 | `concurrent` <sup>1</sup> | Produces native-mode bulk copy program output of all tables but doesn't lock tables during the snapshot. Only supported for transactional publications. |
 | `concurrent_c` | Produces character-mode bulk copy program output of all tables but doesn't lock tables during the snapshot. Only supported for transactional publications. |
-| `database snapshot` | Produces native-mode bulk copy program output of all tables from a database snapshot. Database snapshots aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md). |
-| `database snapshot character` | Produces character-mode bulk copy program output of all tables from a database snapshot. Database snapshots aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md). |
+| `database snapshot` <sup>2</sup> | Produces native-mode bulk copy program output of all tables from a database snapshot. Database snapshots aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
+| `database snapshot character` <sup>2</sup> | Produces character-mode bulk copy program output of all tables from a database snapshot. Database snapshots aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | `NULL` (default) | Defaults to `native` for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. For non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, defaults to `character` when the value of *@repl_freq* is `Snapshot` and to **concurrent_c** for all other cases. |
 
-<sup>1</sup> Not supported for Oracle Publishers.
+<sup>1</sup> Not supported for Oracle Publishers.  
+<sup>2</sup> [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 #### [ @repl_freq = ] N'*repl_freq*'
 

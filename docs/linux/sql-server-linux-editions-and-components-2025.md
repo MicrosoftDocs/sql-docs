@@ -36,7 +36,7 @@ helpviewer_keywords:
 
 This article provides details of features supported by the various editions of [!INCLUDE [sssql25](../includes/sssql25-md.md)] on Linux.
 
-For editions and supported features of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows, see [Editions and supported features of SQL Server 2025](../sql-server/editions-and-components-of-sql-server-2025.md).
+For a list of features supported by the editions in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows, see [Editions and supported features of SQL Server 2025](../sql-server/editions-and-components-of-sql-server-2025.md).
 
 For more information on what's new in [!INCLUDE [sssql25](../includes/sssql25-md.md)], see:
 

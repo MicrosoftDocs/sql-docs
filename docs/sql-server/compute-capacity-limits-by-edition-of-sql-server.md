@@ -176,7 +176,7 @@ You might want to disable SMT when the performance for each virtual processor is
 
 ## Related content
 
-- [Editions and supported features of SQL Server 2022](editions-and-components-of-sql-server-2022.md)
+- [Editions and supported features of SQL Server](editions-and-components-of-sql-server-latest.md)
 - [Maximum capacity specifications for SQL Server](maximum-capacity-specifications-for-sql-server.md)
 - [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
 

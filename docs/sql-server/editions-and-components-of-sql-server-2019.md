@@ -44,9 +44,9 @@ This article provides details of features supported by the various editions of [
 
 For information about other versions, see:
 
+- [Editions and supported features of SQL Server 2025](editions-and-components-of-sql-server-2025.md)
 - [Editions and supported features of SQL Server 2022](editions-and-components-of-sql-server-2022.md)
 - [Editions and supported features of SQL Server 2017](editions-and-components-of-sql-server-2017.md)
-- [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 
 For information about Azure SQL, see [Features comparison: Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison)
 

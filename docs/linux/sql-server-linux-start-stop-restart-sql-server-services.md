@@ -43,7 +43,7 @@ The [!INCLUDE [ssDE](../includes/ssde-md.md)] service is the default instance, w
 
 ### SQL Server Agent service
 
-The SQL Server Agent service executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](/ssms/agent/sql-server-agent). SQL Server Agent isn't available in every edition of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features supported by the editions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../sql-server/editions-and-components-of-sql-server-2022.md).
+The SQL Server Agent service executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](/ssms/agent/sql-server-agent). SQL Server Agent isn't available in every edition of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../includes/editions-latest.md)]
 
 ### Additional information
 

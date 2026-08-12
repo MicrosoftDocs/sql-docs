@@ -32,7 +32,7 @@ For older versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.m
 
 ## Pre-upgrade checklist
 
-- Before you upgrade from one edition of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] to another, verify that the functionality you're currently using is supported in the edition to which you're moving. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+- Before you upgrade from one edition of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] to another, verify that the functionality you're currently using is supported in the edition to which you're moving. [!INCLUDE [editions-2022](../../includes/editions-2022.md)]
 
 - Verify supported hardware and software, including the supported operating system. For more information, see [Hardware and software requirements for SQL Server 2022](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022.md).
 

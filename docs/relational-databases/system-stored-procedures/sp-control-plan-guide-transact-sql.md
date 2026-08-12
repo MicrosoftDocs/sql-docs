@@ -73,7 +73,7 @@ Trying to drop or modify a function, stored procedure, or DML trigger that is re
 
 Disabling a disabled plan guide or enabling an enabled plan guide has no effect and runs without error.
 
-Plans guides aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md). However, you can execute `sp_control_plan_guide` with the `DROP` or `DROP ALL` option in any edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+Plans guides aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. However, you can execute `sp_control_plan_guide` with the `DROP` or `DROP ALL` option in any edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ## Permissions
 

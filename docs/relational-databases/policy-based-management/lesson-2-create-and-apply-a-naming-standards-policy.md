@@ -147,7 +147,7 @@ This tutorial has shown you how to create Policy-Based Management conditions, po
 ## Next  
 This tutorial is finished. To return to the start, visit [Tutorial: Administering Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
   
-For a list of tutorials, see [Tutorials for SQL Server 2016](../../sql-server/tutorials-for-sql-server.md).  
+For a list of tutorials, see [Tutorials for SQL Server](../../sql-server/tutorials-for-sql-server.md).
   
 ## See Also  
 [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)

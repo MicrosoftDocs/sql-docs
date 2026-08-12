@@ -15,7 +15,7 @@ helpviewer_keywords:
 The following table lists the device information settings for rendering in HTML format.  
   
 > [!IMPORTANT]  
->  The device information settings listed in the following table with a **(\*)** have been deprecated and they should not be used in new applications. For more information, see [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
+>  The device information settings listed in the following table with a **(\*)** have been deprecated and they should not be used in new applications. For more information, see [Deprecated features in SQL Server Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md).
   
 |Setting|Value|  
 |-------------|-----------|  

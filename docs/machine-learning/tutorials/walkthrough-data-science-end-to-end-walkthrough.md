@@ -22,7 +22,7 @@ Because the walkthrough is designed to introduce R developers to [!INCLUDE [rsql
 
 ## Prerequisites
 
-+ [SQL Server Machine Learning Services with R integration](../install/sql-machine-learning-services-windows-install.md#verify-installation) or [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services with R integration](../install/sql-machine-learning-services-windows-install.md#verify-installation).
 
 + [Database permissions](../security/user-permission.md) granted to a database user mapped to a SQL Server login
 

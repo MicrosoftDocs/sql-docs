@@ -29,7 +29,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
   
  Large numbers of retries are indicative of concurrency issues. 
   
- For more information about memory-optimized indexes, see [SQL Server [!INCLUDE[inmemory](../../includes/inmemory-md.md)] Internals for SQL Server 2016](../in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md), page 20.  
+ For more information about memory-optimized indexes, see [SQL Server In-Memory OLTP internals](../in-memory-oltp/sql-server-in-memory-oltp-internals-download.md), page 20.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

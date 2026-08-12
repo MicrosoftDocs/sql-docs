@@ -15,7 +15,7 @@ ms.topic: concept-article
 
 Buffer pool extension integrates SSD storage with the [!INCLUDE [ssDE](../../includes/ssde-md.md)] buffer pool to improve database performance without incurring high costs of additional memory.
 
-The buffer pool extension isn't available in every [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Editions and supported features of SQL Server 2025](../../sql-server/editions-and-components-of-sql-server-2025.md).
+The buffer pool extension isn't available in every [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ## Benefits of the buffer pool extension
 
@@ -76,8 +76,8 @@ If you configure a size that exceeds the maximum, the [!INCLUDE [ssDE](../../inc
   - Up to a maximum of 1 TB in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions.
 
 - SQL Server Standard and Standard Developer editions on *virtual machines* support up to 16 times the physical memory.
-  
-For more information, see [Editions and supported features of SQL Server 2025](../../sql-server/editions-and-components-of-sql-server-2025.md).
+
+[!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ### Minimum size
 

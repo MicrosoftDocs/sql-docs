@@ -34,6 +34,8 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 [!INCLUDE [modifiable-config-note](../includes/database/modifiable-config-note.md)]
 
+[!INCLUDE [resource-naming-customer-data-note](~/../reusable-content/ce-skilling/azure/includes/databases/resource-naming-customer-data-note.md)]
+
 ## Review the Bicep file
 
 A single database has a defined set of compute, memory, IO, and storage resources using one of two [purchasing models](purchasing-models.md). When you create a single database, you also define a [server](logical-servers.md) to manage it and place it within [Azure resource group](/azure/active-directory-b2c/overview) in a specified region.

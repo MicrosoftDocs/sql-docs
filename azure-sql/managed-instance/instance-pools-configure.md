@@ -49,6 +49,8 @@ You can create a SQL managed instance pool by using the Azure portal, PowerShell
 - The pool name can contain only lowercase letters, numbers and hyphens, and can't start with a hyphen.
 - The [Azure Hybrid Benefit](../azure-hybrid-benefit.md) is applied at the instance pool level. You can set the license type when you create the pool, and update the license type after the pool is created.
 
+[!INCLUDE [resource-naming-customer-data-note](~/../reusable-content/ce-skilling/azure/includes/databases/resource-naming-customer-data-note.md)]
+
 > [!IMPORTANT]  
 > Deploying an instance pool is a long running operation that can take up to 4.5 hours.
 
@@ -547,7 +549,7 @@ For operations related to instances both inside pools and single instances, use 
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE [azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE [azure-cli-prepare-your-environment-no-header](~/../reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 Available [Azure CLI](/cli/azure/sql) commands:
 

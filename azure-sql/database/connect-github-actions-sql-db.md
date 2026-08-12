@@ -37,7 +37,7 @@ The file has two sections:
 
 ## Generate deployment credentials
 
-[!INCLUDE [include](~/../azure-sql/reusable-content/github-actions/generate-deployment-credentials.md)]
+[!INCLUDE [include](~/../reusable-content/github-actions/generate-deployment-credentials.md)]
 
 ## Copy the SQL connection string
 
@@ -47,7 +47,7 @@ You'll set the connection string as a GitHub secret, `AZURE_SQL_CONNECTION_STRIN
 
 ## Configure the GitHub secrets
 
-[!INCLUDE [include](~/../azure-sql/reusable-content/github-actions/create-secrets-with-openid.md)]
+[!INCLUDE [include](~/../reusable-content/github-actions/create-secrets-with-openid.md)]
 
 ### Add the SQL connection string secret
 

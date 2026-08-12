@@ -1,9 +1,9 @@
 ---
 title: Configure Security for Disaster Recovery
 description: Learn the security considerations for configuring and managing security after a database restore or a failover to a secondary server.
-author: rajeshsetlem
-ms.author: rsetlem
-ms.reviewer: wiassaf, mathoma, vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer:  mathoma, vanto
 ms.date: 06/10/2025
 ms.service: azure-sql-database
 ms.subservice: high-availability

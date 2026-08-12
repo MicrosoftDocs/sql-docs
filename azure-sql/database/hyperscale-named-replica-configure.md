@@ -3,7 +3,7 @@ title: Configure and Manage Hyperscale Named Replicas
 description: Learn how to configure and manage Hyperscale named replica so that a user can access the named replica but not other replicas.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: atsingh, dinethi, rsetlem
+ms.reviewer: atsingh, dinethi
 ms.date: 03/10/2026
 ms.service: azure-sql-database
 ms.subservice: scale-out

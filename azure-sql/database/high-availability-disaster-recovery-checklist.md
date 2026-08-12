@@ -3,7 +3,7 @@ title: High Availability and Disaster Recovery Checklist
 description: Learn about the recommended user configurations that you can implement to maximize availability and ensure recovery for Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: rsetlem, mathoma
+ms.reviewer: mathoma
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: high-availability

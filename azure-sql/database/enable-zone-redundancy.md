@@ -3,7 +3,7 @@ title: Enable zone redundancy for Azure SQL Database
 description: Learn how to update your Azure SQL Database to enable availability zone support.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: anaharris, rsetlem, mathoma
+ms.reviewer: anaharris, mathoma
 ms.date: 07/25/2025
 ms.service: azure-sql-database
 ms.subservice: high-availability

@@ -1,9 +1,9 @@
 ---
 title: CREATE TABLE AS CLONE OF
 description: "CREATE TABLE AS CLONE OF creates a new table as a clone of another table in Fabric Data Warehouse."
-author: ajagadish-24
-ms.author: ajagadish
-ms.reviewer: wiassaf
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: ajagadish
 ms.date: 11/03/2023
 ms.service: sql
 ms.subservice: t-sql

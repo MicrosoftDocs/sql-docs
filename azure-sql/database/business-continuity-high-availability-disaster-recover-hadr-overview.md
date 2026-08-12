@@ -2,9 +2,9 @@
 title: Cloud Business Continuity - Disaster Recovery
 titleSuffix: Azure SQL Database
 description: Learn what to do when a user or application error affects data integrity, an Azure availability zone or region has an outage, or your application requires maintenance.
-author: rajeshsetlem
-ms.author: rsetlem
-ms.reviewer: wiassaf, mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer:  mathoma
 ms.date: 04/06/2025
 ms.service: azure-sql-database
 ms.subservice: high-availability

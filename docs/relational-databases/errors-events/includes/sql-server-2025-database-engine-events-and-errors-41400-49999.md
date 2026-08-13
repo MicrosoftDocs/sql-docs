@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 04/16/2026
+ms.date: 08/13/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -279,6 +279,8 @@ ms.topic: include
 | 41968 | 16 | No | Changing the server role cannot be executed at this time as there exist a previous role change in progress on Azure SQL Managed Instance. Only when the previous role change completes, a new request could be submitted. Please wait for the previous role change to complete and retry again. |
 | 41969 | 16 | No | Setting the role has failed due to an unknown reason. Please check the error log file. If the issue persists, contact Azure support. |
 | 41970 | 16 | No | Switching to Primary role in planned fashion is not supported. |
+| 41971 | 16 | No | Azure SQL Managed Instance link connectivity was lost because either connection to SQL Server failed, or the server did not respond after a prolonged period of time. Verify that the network connectivity and firewall rules between SQL Server and Managed Instance are properly configured. |
+| 41972 | 16 | No | Azure SQL Managed Instance link creation failed because of a link type mismatch between multi-database and single-database link configurations. A multi-database link and a single-database link cannot be connected to each other. Ensure both sides are configured with the same link type and retry the operation. |
 | [41973](../mssqlserver-41973-database-engine-error.md) | 16 | No | The link cannot be established because the endpoint certificate from SQL Server has not been imported to Azure SQL Managed Instance. Please import the endpoint certificate from SQL Server to Managed Instance, and retry the link creation again. Please see online documentation for Managed Instance link for more information. |
 | [41974](../mssqlserver-41974-database-engine-error.md) | 16 | No | The link cannot be established because the endpoint certificate from SQL Azure SQL Managed Instance has not been imported to SQL Server. Please download the endpoint certificate from Managed Instance and import it to SQL Server, and retry the link creation again. Please see online documentation for Managed Instance link for more information. |
 | 41975 | 16 | No | Unsupported storage type. Azure SQL Managed Instance does not support database backup to the provided storage type. |
@@ -373,7 +375,7 @@ ms.topic: include
 | 42132 | 16 | No | The login failed due to database name not being found in alias DB |
 | 42133 | 16 | No | The firewall rule name cannot contain special characters: '%ls'. |
 | 42134 | 16 | No | Cannot open database "%.\*ls" requested by the login because this database is participating in a failover group as a secondary and has geo link in an inactive state. The login failed. |
-| 42201 | 16 | No | The requested distance metric '%ls' is not supported by vector_distance. Please provide a valid distance metric. |
+| 42201 | 16 | No | The requested distance metric '%.\*ls' is not supported by vector_distance. Provide a valid distance metric. |
 | 42202 | 16 | No | The provided dimension for the vector (%d) does not match allowed value (%d). |
 | 42203 | 16 | No | The provided dimension for the vector (%d) is not within the allowed range \[1-%d\]. |
 | 42204 | 16 | No | The vector dimensions %d and %d do not match. |
@@ -1601,6 +1603,8 @@ ms.topic: include
 | [47521](../mssqlserver-47521-database-engine-error.md) | 16 | No | Secondary replica could not be built as the replica request was not received from the primary, or not processed correctly. Check the state of the primary server and ensure that Availability Group on this server is not empty, and that it contains healthy databases. |
 | 47522 | 16 | No | Database '%.\*ls' has been removed from availability group which participates in Azure SQL Managed Instance link. |
 | 47523 | 16 | No | 'ALTER AVAILABILITY GROUP MODIFY AVAILABILITY GROUP' command failed. Specified option is not supported for altering distributed availability group in which secondary participant is Azure SQL Managed Instance. |
+| 47525 | 16 | No | Cannot create the distributed availability group '%.\*ls' for the link because the database(s) '%.\*ls' in the availability group '%.\*ls' use a custom PVS filegroup for ADR. Change the PVS filegroup to PRIMARY or remove the affected databases from the availability group, and try again. |
+| 47526 | 16 | No | Setting a custom persistent version store (PVS) filegroup is not supported for databases participating in Azure SQL Managed Instance link. |
 | 47600 | 10 | No | Reason: Windows Authentication for Microsoft Entra ID principals is not enabled on this instance. |
 | 47601 | 10 | No | Reason: There was an internal error while attempting Windows Authentication for Microsoft Entra ID principals. |
 | 47602 | 16 | No | When auto-rotation of TDE Protector is enabled, both primary and secondary servers must be connected to the same key vault. Add key '%ls' from the key vault connected to primary server to the secondary server '%ls'. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323439](https://go.microsoft.com/fwlink/?linkid=2323439). |
@@ -1739,6 +1743,7 @@ ms.topic: include
 | 49822 | 10 | No | Move Cost Calculation and Reporting Timer task encountered an error (SQL Error Code: %d). |
 | 49823 | 10 | No | Database cannot be paused due to missing first full backup: Server '%.\*ls', Database '%.\*ls'. |
 | 49824 | 10 | No | (De)activation workflow for database '%.\*ls' in server '%.\*ls' failed because another (de)activation workflow is in progress. Please wait for the current workflow to complete before starting a new one. |
+| 49826 | 10 | No | Managed Server Resource Stats Timer task encountered an error while trying to update server_resource_stats (SQL Error Code: %d). |
 | 49901 | 10 | No | The number of max worker threads that is configured %u is less than the minimum allowed on this computer. The default number of %u will be used instead. To change the number of max worker threads, use sp_configure 'max worker threads'. |
 | 49902 | 10 | No | There are not enough worker threads available for the number of CPUs. This is because one or more CPUs were added. To increase the number of worker threads, use sp_configure 'max worker threads'. |
 | 49903 | 10 | Yes | Detected %I64d MB of RAM, %I64d MB of available memory, %I64d MB of available page file. This is an informational message; no user action is required. |

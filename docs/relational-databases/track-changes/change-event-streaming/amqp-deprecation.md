@@ -4,7 +4,7 @@ description: Learn about the deprecation of the AMQP protocol for change event s
 author: nzagorac-ms
 ms.author: nzagorac
 ms.reviewer: mathoma
-ms.date: 07/29/2026
+ms.date: 08/15/2026
 ms.service: sql
 ms.topic: concept-article
 ms.custom:
@@ -16,7 +16,7 @@ monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-curre
 
 This article describes the deprecation of the AMQP protocol for the [change event streaming (CES)](overview.md) feature in SQL Server 2025, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 
-The deprecation of the AMQP protocol introduces a breaking change to the `destination_type` configuration value when creating new stream groups. This article explains how these changes affect new and existing stream groups and how to migrate existing stream groups from the AMQP protocol to the Kafka protocol.
+The deprecation of the AMQP protocol introduces a breaking change to the `destination_type` configuration value when creating new stream groups. The rollout schedule differs by product. This article explains how these changes affect new and existing stream groups, the platform-specific differences, and how to migrate existing stream groups from the AMQP protocol to the Kafka protocol.
 
 ## What is AMQP protocol?
 
@@ -27,11 +27,24 @@ Before this breaking change, you specified the protocol in the `destination_type
 - `AzureEventHubsAMQP` - AMQP protocol
 - `AzureEventHubsApacheKafka` - Kafka protocol
 
-After this breaking change, the only supported `destination_type` value for newly created stream groups is `AzureEventHubs`, which uses the **Kafka** protocol.
+After this breaking change, the only supported `destination_type` value for newly created stream groups on Azure SQL Database and SQL database in Microsoft Fabric is `AzureEventHubs`, which uses the **Kafka** protocol. Azure SQL Managed Instance and SQL Server 2025 still accept `AzureEventHubsAMQP` and `AzureEventHubsApacheKafka`.
 
-Starting August 15, 2026, **newly created** stream groups must use `AzureEventHubs` as the `destination_type`. Attempts to create a stream group using previous values fail.
+As of August 15, 2026, **newly created** stream groups on Azure SQL Database must use `AzureEventHubs` as the `destination_type`. Attempts to create a stream group using previous values fail. 
 
 The consumers of messages published to Azure Event Hubs can choose between the AMQP or Kafka protocol regardless of the protocol that publishes the message.
+
+## Platform support for destination_type values
+
+The allowed `destination_type` values when creating a new stream group depend on the product and version:
+
+| Product | Allowed `destination_type` values | Notes |
+|---|---|---|
+| **Azure SQL Database** | `AzureEventHubs` | The only supported value. `AzureEventHubsAMQP` and `AzureEventHubsApacheKafka` aren't accepted for new stream groups. |
+| **Azure SQL Managed Instance** | `AzureEventHubsAMQP`, `AzureEventHubsApacheKafka` | These values are still accepted but are deprecated. Avoid `AzureEventHubsAMQP` for new stream groups.  |
+| **SQL Server 2025** | `AzureEventHubsAMQP`, `AzureEventHubsApacheKafka` | These values are still accepted but are deprecated. Avoid `AzureEventHubsAMQP` for new stream groups. |
+| **SQL database in Microsoft Fabric** | `AzureEventHubs` | The only supported value.|
+
+For new stream groups, use `AzureEventHubs` when the platform supports it. For Azure SQL Managed Instance and SQL Server 2025, use `AzureEventHubsApacheKafka` (Kafka protocol). Avoid `AzureEventHubsAMQP` for new stream groups.
 
 ## How to migrate AMQP-configured stream groups to Kafka
 
@@ -53,7 +66,7 @@ exec sys.sp_help_change_event_stream_tables
 
 To migrate an AMQP-configured stream group to Kafka, follow these steps:
 
-1. Create a replacement stream by using the [sp_create_change_event_stream_group](../../system-stored-procedures/sys-sp-create-event-stream-group-transact-sql.md) stored procedure. Specify `AzureEventHubs` as the `destination_type` parameter.
+1. Create a replacement stream by using the [sys.sp_create_event_stream_group](../../system-stored-procedures/sys-sp-create-event-stream-group-transact-sql.md) stored procedure. Specify `AzureEventHubs` as the `destination_type` parameter.
 
    The `destination_location` parameter expects port **9093**, such as the following example: `myEventHubsNamespace.servicebus.windows.net:9093/myEventHubsInstance`. 
 
@@ -65,16 +78,16 @@ To migrate an AMQP-configured stream group to Kafka, follow these steps:
    exec sys.sp_remove_object_from_event_stream_group @stream_group_name = '<old_stream_group_name>', @object_name = '<schema.table_name>'
    ```
 
-1. Add each table you removed from the old stream group to the new replacement stream group by using [sp_add_object_to_change_event_stream_group](../../system-stored-procedures/sys-sp-add-object-to-event-stream-group-transact-sql.md):
+1. Add each table you removed from the old stream group to the new replacement stream group by using [sys.sp_add_object_to_event_stream_group](../../system-stored-procedures/sys-sp-add-object-to-event-stream-group-transact-sql.md):
 
    ```sql
-   exec sys.sp_add_object_to_change_event_stream_group @stream_group_name = '<new_stream_group_name>', @object_name = '<schema.table_name>'
+   exec sys.sp_add_object_to_event_stream_group @stream_group_name = '<new_stream_group_name>', @object_name = '<schema.table_name>'
    ```
 
-1. Once you add all tables to the new stream group, use [sp_drop_change_event_stream_group](../../system-stored-procedures/sys-sp-drop-event-stream-group-transact-sql.md) to remove the old stream group. For details, review [configure CES](configure.md).
+1. Once you add all tables to the new stream group, use [sys.sp_drop_event_stream_group](../../system-stored-procedures/sys-sp-drop-event-stream-group-transact-sql.md) to remove the old stream group. For details, review [configure CES](configure.md).
 
    ```sql
-   exec sp_drop_change_event_stream_group @stream_group_name = '<old_stream_group_name>'
+   exec sys.sp_drop_event_stream_group @stream_group_name = '<old_stream_group_name>'
    ```
 
 1. Verify the new stream group is active by running `sp_help_change_event_stream_groups` and confirming it shows `AzureEventHubs` as the **streaming_dest_type**.
@@ -98,7 +111,8 @@ The deprecation of the AMQP protocol follows these two timelines:
 
 | Stream group type | Effective date | Impact |
 | --- | --- | --- |
-| **New stream groups** | August 15, 2026 | Newly created stream groups must specify `AzureEventHubs` as the `destination_type`. Attempts to use either `AzureEventHubsAMQP` or `AzureEventHubsApacheKafka` fail. |
+| **New stream groups on Azure SQL Database and SQL database in Microsoft Fabric** | August 15, 2026 | Newly created stream groups must specify `AzureEventHubs` as the `destination_type`. Attempts to use either `AzureEventHubsAMQP` or `AzureEventHubsApacheKafka` fail. |
+| **New stream groups on Azure SQL Managed Instance and SQL Server 2025** | Future update (TBD) | `AzureEventHubsAMQP` and `AzureEventHubsApacheKafka` are still accepted but deprecated. A future update adds `AzureEventHubs` as the required value. |
 | **Existing stream groups using the AMQP protocol** | April 2027 | Stream groups already configured with `AzureEventHubsAMQP` continue to work normally until this date. They must be migrated to use the Kafka protocol before support for the AMQP protocol is removed. |
 
 Consumers of published messages don't need to make any changes.
@@ -122,7 +136,7 @@ Existing stream groups configured with `AzureEventHubsAMQP` **continue working a
 
 ### Impact on newly created stream groups
 
-Starting August 15, 2026, the only allowed `destination_type` value for newly created stream groups is `AzureEventHubs`. Attempts to create a stream group by using either previous value, `AzureEventHubsAMQP` or `AzureEventHubsApacheKafka`, fail with the following error message:
+Starting August 15, 2026, the only allowed `destination_type` value for newly created stream groups on Azure SQL Database and SQL database in Microsoft Fabric is `AzureEventHubs`. Attempts to create a stream group by using either previous value, `AzureEventHubsAMQP` or `AzureEventHubsApacheKafka`, fail with the following error message:
 
 ```text
 Msg 23626, Level 16, State 2, Line 481, An error occurred. The error/state returned was 23618/5: 'The value provided for the argument '@destination_type' is invalid. Allowed values: AzureEventHubs.'

@@ -9250,6 +9250,8 @@ items:
         href: linux/sql-server-linux-db-mail-sql-agent.md
       - name: Data virtualization (PolyBase)
         href: linux/sql-server-linux-polybase.md
+      - name: PolyBase EES encryption
+        href: linux/sql-server-linux-polybase-ees-encryption.md
       - name: Create a SQL Server Agent job
         href: linux/sql-server-linux-run-sql-server-agent-job.md
       - name: SQL Assessment API

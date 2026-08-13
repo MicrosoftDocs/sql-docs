@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 08/14/2025
+ms.date: 08/13/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -251,6 +251,7 @@ ms.topic: include
 | 1491 | 16 | No | Enabling Database Mirroring is not allowed when REMOTE_DATA_ARCHIVE is already enabled on database '%.\*ls'. |
 | 1492 | 16 | No | Enabling Database Mirroring is not allowed when Change Feed is enabled on database '%.\*ls'. |
 | 1493 | 16 | No | Database Mirroring cannot be set for database '%.\*ls' because the database has the LEDGER = ON option or contains ledger tables. |
+| 1494 | 16 | No | Enabling Database Mirroring is not allowed when Change Event Streaming is enabled on database '%.\*ls'. |
 | 1499 | 16 | Yes | Database mirroring error: status %u, severity %u, state %u, string %.\*ls. |
 | 1501 | 20 | Yes | Sort failure. Contact Technical Support. |
 | [1505](../mssqlserver-1505-database-engine-error.md) | 16 | No | The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name '%.\*ls' and the index name '%.\*ls'. The duplicate key value is %ls. |

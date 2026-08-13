@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 06/11/2026
+ms.date: 08/13/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -437,6 +437,7 @@ ms.topic: include
 | 12144 | 16 | No | Automatic Index Compaction cannot be enabled at this time. |
 | 12145 | 16 | No | Cannot disable the PREVIEW_FEATURES database-scoped configuration while the '%ls' preview feature is active. |
 | 12146 | 16 | No | Database '%.\*ls' cannot be renamed while Mirroring to Microsoft Fabric is enabled. Disable Mirroring and retry rename operation. |
+| 12147 | 16 | No | Database '%.\*ls' cannot be renamed while Change Event Streaming is enabled. Disable Change Event Streaming and retry rename operation. |
 | [12300](../mssqlserver-12300-database-engine-error.md) | 15 | No | Computed columns are not supported with %S_MSG. |
 | [12301](../mssqlserver-12301-database-engine-error.md) | 15 | No | Nullable columns in the index key are not supported with %S_MSG. |
 | [12302](../mssqlserver-12302-database-engine-error.md) | 15 | No | Updating columns that are part of the PRIMARY KEY constraint is not supported with %S_MSG. |

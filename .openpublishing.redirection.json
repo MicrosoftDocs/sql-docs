@@ -68155,8 +68155,23 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/linux/sql-server-linux-release-notes.md",
-      "redirect_url": "/sql/linux/sql-server-linux-release-notes-2017",
+      "source_path": "docs/linux/sql-server-linux-release-notes-2017.md",
+      "redirect_url": "/sql/linux/sql-server-linux-release-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-notes-2019.md",
+      "redirect_url": "/sql/linux/sql-server-linux-release-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-notes-2022.md",
+      "redirect_url": "/sql/linux/sql-server-linux-release-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-notes-2025.md",
+      "redirect_url": "/sql/linux/sql-server-linux-release-notes",
       "redirect_document_id": false
     },
     {

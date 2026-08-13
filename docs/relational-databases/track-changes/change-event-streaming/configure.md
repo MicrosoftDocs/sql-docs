@@ -4,7 +4,7 @@ description: Describes how to configure change event streaming.
 author: nzagorac-ms
 ms.author: nzagorac
 ms.reviewer: mathoma, randolphwest
-ms.date: 08/11/2026
+ms.date: 08/15/2026
 ms.service: sql
 ms.topic: how-to
 ai-usage: ai-assisted
@@ -62,45 +62,16 @@ Configure access control for your SQL resource to Azure Event Hubs. Microsoft En
 
 [Shared access policies](/azure/event-hubs/authorize-access-shared-access-signature#shared-access-authorization-policies) provide authentication and authorization to Azure Event Hubs. Each shared access policy needs a name, an access level (`Manage`, `Send`, or `Listen`), and a resource binding (Event Hubs namespace or a specific Event Hub instance). Instance level policies offer more security by following the principle of least privilege. While SQL Database Engine products support shared access policies, use Microsoft Entra authentication whenever possible, as it provides better security.
 
-If you use a shared access policy for authentication and authorization, clients sending data to an Event Hubs instance need to provide the name of the policy they want to use, along with either a **SAS token** generated from the policy or the policy's **Service key**.
+If you use a shared access policy for authentication and authorization, clients sending data to an Event Hubs instance need to provide the name of the policy they want to use, along with the policy's **service key**.
 
-SAS tokens have a security advantage over service keys: If the client is compromised, the SAS token is only valid until it expires, and the compromised client can't create new SAS tokens. In contrast, service keys don't automatically expire. A compromised client with a service key can generate new SAS tokens by using the key.
-
-To configure streaming to Azure Event Hubs with the AMQP protocol, create or reuse a shared access policy with **Send** permission and generate a SAS token. You can generate the token programmatically with any programming or scripting language. The example in this article shows how to generate a SAS token from a new or existing policy by using a PowerShell script.
+To configure streaming to Azure Event Hubs, create or reuse a shared access policy with **Send** permission. You can authenticate using a **service key** (primary or secondary key value).
 
 > [!NOTE]  
-> For improved security, use Microsoft Entra based access control whenever possible. If Microsoft Entra based access control isn't possible and you're using shared access policies, use SAS token authentication instead of service key-based authentication whenever possible. Best practices for SAS tokens include defining an appropriate minimally required access scope, setting a short expiration date, and rotating the SAS key regularly. For key-based authentication, rotate keys periodically. Store all secrets securely by using Azure Key Vault or a similar service.
-
-### Install required modules
-
-To manage Azure Event Hubs resources with PowerShell scripts, you need the following modules:
-
-- Az PowerShell module
-- Az.EventHub PowerShell module
-
-The following script installs the required modules:
-
-```powershell
-Install-Module -Name Az -AllowClobber -Scope CurrentUser -Repository PSGallery -Force
-Install-Module -Name Az.EventHub -Scope CurrentUser -Force
-```
-
-If you already have the required modules and want to update them to the latest version, run the following script:
-
-```powershell
-Update-Module -Name Az -Force
-Update-Module -Name Az.EventHub -Force
-```
-
-### Connect to Azure
-
-You can either use Azure Cloud Shell or sign in and set your subscription context.
-
-To run with Azure Cloud Shell, review [Sign in to Azure](/powershell/azure/get-started-azureps#sign-in-to-azure).
+> For improved security, use Microsoft Entra based access control whenever possible. If Microsoft Entra based access control isn't possible and you're using shared access policies, the best practice is to rotate the service key periodically. Store all secrets securely by using Azure Key Vault or a similar service.
 
 ### Define a policy
 
-To create the SAS token, you need a policy with **Send** rights. You can either:
+You need a shared access policy with **Send** rights. You can either:
 
 - Create a new policy
 
@@ -111,122 +82,7 @@ To create the SAS token, you need a policy with **Send** rights. You can either:
 > [!NOTE]  
 > The policy must have **Send** rights.
 
-### Create SAS token for a new or existing policy
-
-When you create a new policy, make sure it has the **Send** right. If you use an existing policy, check that it has the **Send** right.
-
-The following script creates a new policy or gets an existing one, then generates a full SAS token in an HTTP authorization header format.
-
-Replace values in angle brackets (`<value>`) with values for your environment.
-
-```powershell
-function Generate-SasToken {
-$subscriptionId = "<Azure-Subscription-ID>"
-$resourceGroupName = "<Resource-group-name>"
-$namespaceName = "<Azure-Event-Hub-Namespace-name>"
-$eventHubName = "<Azure-Event-Hubs-instance-name>"
-$policyName = "<Policy-name>"
-$tokenExpireInDays = "<number-of-days-token-will-be-valid>"
-
-# Modifying the rest of the script is not necessary.
-
-# Login to Azure and set Azure Subscription.
-Connect-AzAccount
-
-# Get current context and check subscription
-$currentContext = Get-AzContext
-if ($currentContext.Subscription.Id -ne $subscriptionId) {
-    Write-Host "Current subscription is $($currentContext.Subscription.Id), switching to $subscriptionId..."
-    Set-AzContext -SubscriptionId $subscriptionId | Out-Null
-} else {
-    Write-Host "Already using subscription $subscriptionId."
-}
-
-# Try to get the authorization policy (it should have Send rights)
-$rights = @("Send")
-$policy = Get-AzEventHubAuthorizationRule -ResourceGroupName $resourceGroupName -NamespaceName $namespaceName -EventHubName $eventHubName -AuthorizationRuleName $policyName -ErrorAction SilentlyContinue
-
-# If the policy does not exist, create it
-if (-not $policy) {
-    Write-Output "Policy '$policyName' does not exist. Creating it now..."
-
-    # Create a new policy with the Manage, Send and Listen rights
-    $policy = New-AzEventHubAuthorizationRule -ResourceGroupName $resourceGroupName -NamespaceName $namespaceName -EventHubName $eventHubName -AuthorizationRuleName $policyName -Rights $rights
-    if (-not $policy) {
-        throw "Error. Policy was not created."
-    }
-    Write-Output "Policy '$policyName' created successfully."
-} else {
-    Write-Output "Policy '$policyName' already exists."
-}
-
-if ("Send" -in $policy.Rights) {
-    Write-Host "Authorization rule has required right: Send."
-} else {
-    throw "Authorization rule is missing Send right."
-}
-
-$keys = Get-AzEventHubKey -ResourceGroupName $resourceGroupName -NamespaceName $namespaceName -EventHubName $eventHubName -AuthorizationRuleName $policyName
-
-if (-not $keys) {
-    throw "Could not obtain Azure Event Hub Key. Script failed and will end now."
-}
-if (-not $keys.PrimaryKey) {
-    throw "Could not obtain Primary Key. Script failed and will end now."
-}
-
-# Get the Primary Key of the Shared Access Policy
-$primaryKey = ($keys.PrimaryKey)
-Write-Host $primaryKey
-
-## Check that the primary key is not empty.
-
-# Define a function to create a SAS token (similar to the C# code provided)
-function Create-SasToken {
-    param (
-        [string]$resourceUri, [string]$keyName, [string]$key
-    )
-
-$sinceEpoch = [datetime]::UtcNow - [datetime]"1970-01-01"
-    $expiry = [int]$sinceEpoch.TotalSeconds + ((60 * 60 * 24) * [int]$tokenExpireInDays) # seconds since Unix epoch
-    $stringToSign = [System.Web.HttpUtility]::UrlEncode($resourceUri) + "`n" + $expiry
-    $hmac = New-Object System.Security.Cryptography.HMACSHA256
-    $hmac.Key = [Text.Encoding]::UTF8.GetBytes($key)
-    $signature = [Convert]::ToBase64String($hmac.ComputeHash([Text.Encoding]::UTF8.GetBytes($stringToSign)))
-    $sasToken = "SharedAccessSignature sr=$([System.Web.HttpUtility]::UrlEncode($resourceUri))&sig=$([System.Web.HttpUtility]::UrlEncode($signature))&se=$expiry&skn=$keyName"
-    return $sasToken
-}
-
-# Construct the resource URI for the SAS token
-$resourceUri = "https://$namespaceName.servicebus.windows.net/$eventHubName"
-
-# Generate the SAS token using the primary key from the new policy
-$sasToken = Create-SasToken -resourceUri $resourceUri -keyName $policyName -key $primaryKey
-
-# Output the SAS token
-Write-Output @"
--- Generated SAS Token --
-$sasToken
--- End of generated SAS Token --
-"@
-}
-
-Generate-SasToken
-```
-
-The output of the previous command should look like the following text:
-
-```text
--- Generated SAS Token --
-SharedAccessSignature sr=https%3a%2f%YourEventHubNamespace.servicebus.windows.net%2fYourEventHub&sig=xxxxxxxxxxxxxxxxxxxxxxx&se=2059133074&skn=SharedKeyNameIsHERE
--- End of generated SAS Token --
-```
-
-Copy the entire SAS token value (the line that starts with `SharedAccessSignature`) to use it later when you configure CES, such as the following example:
-
-```text
-SharedAccessSignature sr=https%3a%2f%YourEventHubNamespace.servicebus.windows.net%2fYourEventHub&sig=xxxxxxxxxxxxxxxxxxxxxxx&se=2059133074&skn=SharedKeyNameIsHERE
-```
+Once the policy is determined, note the service key value. You use it, along with the policy name, when creating the credential in SQL before configuring CES.
 
 ### [Microsoft Entra based access control](#tab/entra-access-1)
 
@@ -252,6 +108,8 @@ To follow the principle of least privilege, grant access to the specific Event H
 
 ## Enable and configure change event streaming
 
+[!INCLUDE [change-event-streaming-amqp-deprecation](../../../includes/change-event-streaming-amqp-deprecation.md)]
+
 To enable and configure change event streaming, change the database context to the user database and then follow these steps:
 
 1. If it's not already configured, set the database to the [full recovery model](../../backup-restore/recovery-models-sql-server.md#recovery-model-overview).
@@ -260,65 +118,34 @@ To enable and configure change event streaming, change the database context to t
 1. Create the stream group.
 1. Add one or more tables to the stream group.
 
-The examples in this section demonstrate how to enable CES for the AMQP protocol and the Apache Kafka protocol:
+The following examples demonstrate how to enable CES by platform:
 
-- [Stream to Azure Event Hubs via AMQP protocol](#example-stream-to-azure-event-hubs-via-amqp-protocol)
-- [Stream to Azure Event Hubs via Apache Kafka protocol](#example-stream-to-azure-event-hubs-via-apache-kafka-protocol)
+- [Stream to Azure Event Hubs from Azure SQL Database](#example-stream-to-azure-event-hubs-from-azure-sql-database)
+- [Stream to Azure Event Hubs from Azure SQL MI or SQL Server 2025](#example-stream-to-azure-event-hubs-from-azure-sql-mi-or-sql-server-2025)
 
 The following table lists sample parameter values for the examples in this section:
 
 | Parameter | Sample value | Notes |
 | --- | --- | --- |
 | `@stream_group_name` | `N'myStreamGroup'` | Name of the event stream group. |
-| `@destination_location` | `N'myEventHubsNamespace.servicebus.windows.net/myEventHubsInstance'` | For Azure Event Hubs, the FQDN of the specific Azure Event Hubs namespace and instance name. For Fabric Eventstream, use the Fabric Eventstream custom input endpoint. To find the endpoint, see [Stream SQL change events to Fabric Eventstream](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream#4-create-the-event-streaming-group). |
-| `@partition_key_scheme` | `N'None'` | (Default) Partitions are chosen round robin. Other options are `StreamGroup` (partitioning by the stream group), `Table` (partitioning by table), and `Column` (partitioning by columns). |
-| `@max_message_size_kb` | `256` | 256 KB is the default maximum message size. Align this value with the limits of the destination Azure Event Hubs. |
+| `@destination_location` | See Notes | The FQDN of the Azure Event Hubs namespace and instance name, including port 9093. Format: `<namespace>.servicebus.windows.net:9093/<instance>`. For Fabric Eventstream, use the [custom input endpoint](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream#4-create-the-event-streaming-group). |
+| `@partition_key_scheme` | `N'None'` | (Default) Partitions are chosen round robin. Other options are `StreamGroup`, `Table`, and `Column`. |
+| `@max_message_size_kb` | `256` | 256 KB is the default maximum message size. Align this value with your destination limits. |
 
 The examples also use the following values:
 
-- *[optional, if Shared Access policies via Service Key are used]* Primary or secondary key value taken from the Shared access policy: `Secret = 'BVFnT3baC/K6I8xNZzio4AeoFt6nHeK0i+ZErNGsxiw='`
+- *[optional, if shared access policies via service key are used]* Primary or secondary key value taken from the shared access policy: `Secret = 'BVFnT3baC/K6I8xNZzio4AeoFt6nHeK0i+ZErNGsxiw='`
 - `EXEC sys.sp_add_object_to_event_stream_group N'myStreamGroup', N'dbo.myTable'`
 
-### Example: Stream to Azure Event Hubs via AMQP protocol
+### Example: Stream to Azure Event Hubs from Azure SQL Database
 
-[!INCLUDE [change-event-streaming-amqp-deprecation](../../../includes/change-event-streaming-amqp-deprecation.md)]
+The following examples show how to stream change events to Azure Event Hubs from Azure SQL Database by using `AzureEventHubs` as the `destination_type`. This value is the only accepted value for Azure SQL Database and SQL database in Microsoft Fabric.
 
-The examples in this section show how to stream change events to Azure Event Hubs by using the AMQP protocol.
 
-#### [SAS token authentication](#tab/sas-token-auth-1)
-
-The example in this section uses a SAS token to authenticate to your Azure Event Hubs instance through the AMQP protocol. If Microsoft Entra authentication isn't available, use a SAS token instead of a service key value for improved security.
-
-Replace values in angle brackets (`<value>`) with values for your environment.
-
-```sql
-USE <database name>;
-
--- Create the Master Key with a password.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Password>';
-
-CREATE DATABASE SCOPED CREDENTIAL <CredentialName>
-    WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-    SECRET = '<Generated SAS Token>' -- Be sure to copy the entire token. The SAS token starts with "SharedAccessSignature sr="
-
-EXEC sys.sp_enable_event_stream
-
-EXEC sys.sp_create_event_stream_group
-    @stream_group_name =      N'<EventStreamGroupName>',
-    @destination_type =       N'AzureEventHubsAmqp',
-    @destination_location =   N'<AzureEventHubsHostName>/<EventHubsInstance>',
-    @destination_credential = <CredentialName>,
-    @max_message_size_kb =    <MaxMessageSize>,
-    @partition_key_scheme =   N'<PartitionKeyScheme>'
-
-EXEC sys.sp_add_object_to_event_stream_group
-    N'<EventStreamGroupName>',
-    N'<SchemaName>.<TableName>'
-```
 
 #### [Microsoft Entra authentication](#tab/entra-auth-1)
 
-The example in this section uses Microsoft Entra authentication to authenticate to your Azure Event Hubs instance through the AMQP protocol. This method is the most secure.
+The example in this section uses Microsoft Entra authentication. This method is the most secure.
 
 Replace the values in angle brackets (`<value>`) with values for your environment.
 
@@ -335,8 +162,8 @@ EXEC sys.sp_enable_event_stream
 
 EXEC sys.sp_create_event_stream_group
     @stream_group_name =      N'<EventStreamGroupName>',
-    @destination_type =       N'AzureEventHubsAmqp',
-    @destination_location =   N'<AzureEventHubsHostName>/<EventHubsInstance>',
+    @destination_type =       N'AzureEventHubs',
+    @destination_location =   N'<AzureEventHubsHostName>:9093/<EventHubsInstance>',
     @destination_credential = <CredentialName>,
     @max_message_size_kb =    <MaxMessageSize>,
     @partition_key_scheme =   N'<PartitionKeyScheme>'
@@ -348,7 +175,7 @@ EXEC sys.sp_add_object_to_event_stream_group
 
 #### [Service key authentication](#tab/key-value-auth-1)
 
-The example in this section uses a Shared Access policy key value to authenticate to your Azure Event Hubs instance through the AMQP protocol. If Microsoft Entra authentication isn't available, use a SAS token instead of a service key value for improved security.
+The example in this section uses a shared access policy key value. For improved security, use Microsoft Entra authentication whenever possible.
 
 Replace the values in angle brackets (`<value>`) with values for your environment.
 
@@ -366,8 +193,8 @@ EXEC sys.sp_enable_event_stream
 
 EXEC sys.sp_create_event_stream_group
     @stream_group_name =      N'<EventStreamGroupName>',
-    @destination_type =       N'AzureEventHubsAmqp',
-    @destination_location =   N'<AzureEventHubsHostName>/<EventHubsInstance>',
+    @destination_type =       N'AzureEventHubs',
+    @destination_location =   N'<AzureEventHubsHostName>:9093/<EventHubsInstance>',
     @destination_credential = <CredentialName>,
     @max_message_size_kb =    <MaxMessageSize>,
     @partition_key_scheme =   N'<PartitionKeyScheme>'
@@ -379,9 +206,11 @@ EXEC sys.sp_add_object_to_event_stream_group
 
 ---
 
-### Example: Stream to Azure Event Hubs via Apache Kafka protocol
+### Example: Stream to Azure Event Hubs from Azure SQL MI or SQL Server 2025
 
-The examples in this section show how to stream change events to Azure Event Hubs by using the Apache Kafka protocol.
+The following examples show how to stream change events to Azure Event Hubs from Azure SQL Managed Instance or SQL Server 2025 by using `AzureEventHubsApacheKafka` as the `destination_type`. 
+
+[!INCLUDE [change-event-streaming-amqp-deprecation](../../../includes/change-event-streaming-amqp-deprecation.md)]
 
 #### [Microsoft Entra authentication](#tab/entra-auth-2)
 
@@ -605,6 +434,7 @@ The following list describes table-level limitations:
 - A table can belong to only one streaming group. You can't stream the same table to multiple destinations.
 - You can only configure user tables for CES. CES doesn't support streaming system tables.
 - While CES is enabled on a table, you can't add or drop a primary key constraint on that table.
+- Table names that contain a period (`.`) are currently unsupported.
 - `ALTER TABLE SWITCH PARTITION` isn't supported on tables configured for CES.
 - `TRUNCATE TABLE` isn't supported on tables enabled for CES.
 - CES doesn't support tables that use any of the following features:
@@ -646,7 +476,7 @@ The following list describes permissions and data residency limitations:
 
 The following list describes a network and connectivity limitation:
 - Currently, CES can only stream to Azure Event Hubs public endpoints. Service endpoints and private endpoints aren't currently supported.
-- When using the AMQP protocol, set the Azure Event Hubs [Minimum TLS version](/azure/event-hubs/transport-layer-security-enforce-minimum-version) configuration option to 1.2. CES doesn't support AMQP when this option is set to 1.3.
+- When using the AMQP protocol on Azure SQL Managed Instance or SQL Server 2025 (for existing stream groups not yet migrated), set the Azure Event Hubs [Minimum TLS version](/azure/event-hubs/transport-layer-security-enforce-minimum-version) configuration option to 1.2. CES doesn't work with TLS 1.3 over the AMQP protocol.
 
 ## Related content
 

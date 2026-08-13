@@ -4,7 +4,7 @@ description: sys.sp_create_event_stream_group creates an event stream group for 
 author: nzagorac-ms
 ms.author: nzagorac
 ms.reviewer: mathoma,randolphwest
-ms.date: 06/19/2026
+ms.date: 08/15/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "sys_sp_create_event_stream_group"
 dev_langs:
   - "TSQL"
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.sp_create_event_stream_group (Transact-SQL)
 
-[!INCLUDE [sqlserver2025](../../includes/applies-to-version/sqlserver2025-asdb.md)]
+[!INCLUDE [sqlserver2025](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
 Creates an event group stream for the [change event streaming (CES)](../track-changes/change-event-streaming/overview.md) feature introduced in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
 
@@ -55,10 +55,17 @@ Specifies the name of the event stream group you want to create. *@stream_group_
 
 Specifies the streaming destination type. *@destination_type* is **sysname**, with no default, and can't be `NULL`.
 
+> [!IMPORTANT]
+> The AMQP protocol is deprecated. For new stream groups, use `AzureEventHubs` (Azure SQL Database) or `AzureEventHubsApacheKafka` (Azure SQL Managed Instance, SQL Server 2025). For details, see [AMQP protocol deprecation](../track-changes/change-event-streaming/amqp-deprecation.md).
+
 *@destination_type* can be one of the following values:
 
-- `AzureEventHubsAmqp`
-- `AzureEventHubsApacheKafka`
+| Value | Supported on | Notes |
+|---|---|---|
+| `AzureEventHubs` | Azure SQL Database, <br /> SQL database in Microsoft Fabric | The only accepted value on these platforms. Uses the Kafka protocol. |
+| `AzureEventHubsApacheKafka` | Azure SQL Managed Instance, <br />SQL Server 2025 | Recommended for new stream groups on these platforms. Uses the Kafka protocol.  |
+| `AzureEventHubsAmqp` | Azure SQL Managed Instance, <br />SQL Server 2025 | Deprecated. Uses the AMQP protocol. Avoid for new stream groups. |
+
 
 #### [ @destination_location = ] N'*destination_location*'
 
@@ -122,22 +129,22 @@ A user with `CONTROL` database permissions, **db_owner** database role membershi
 
 ## Examples
 
-### A. Create event stream group that streams into Azure Event Hubs with AMQP protocol
+### A. Create event stream group on Azure SQL Database
 
 ```sql
 EXECUTE sys.sp_create_event_stream_group
     @stream_group_name = N'myStreamGroup',
-    @destination_type = N'AzureEventHubsAmqp',
-    @destination_location = N'myEventHubsNamespace.servicebus.windows.net/myEventHubsInstance',
+    @destination_type = N'AzureEventHubs',
+    @destination_location = N'myEventHubsNamespace.servicebus.windows.net:9093/myEventHubsInstance',
     @destination_credential = MyDatabaseScopedCredentialForCes;
 ```
 
-### B. Create event stream group that streams into Azure Event Hubs with Kafka protocol
+### B. Create event stream group on Azure SQL Managed Instance or SQL Server 2025
 
 ```sql
 EXECUTE sys.sp_create_event_stream_group
     @stream_group_name = N'myStreamGroup',
-    @destination_type = N'AzureEventHubsAmqp',
+    @destination_type = N'AzureEventHubsApacheKafka',
     @destination_location = N'myEventHubsNamespace.servicebus.windows.net:9093/myEventHubsInstance',
     @destination_credential = MyDatabaseScopedCredentialForCes;
 ```

@@ -52995,11 +52995,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/linux/sql-server-linux-polybase-ees-encryption.md",
-      "redirect_url": "/sql/linux/sql-server-linux-polybase",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/lp/sql-server/install-sql-and-services.md",
       "redirect_url": "/sql/sql-server/",
       "redirect_document_id": false

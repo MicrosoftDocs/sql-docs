@@ -156,3 +156,4 @@ You can find this message in PolyBase's log file, located at: `/var/opt/mssql-po
 ## Related content
 
 - [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md)
+- [PolyBase EES encryption (SQL Server on Linux)](sql-server-linux-polybase-ees-encryption.md)

@@ -1,20 +1,20 @@
 ---
-title: "sp_add_job (Transact-SQL)"
-description: "sp_add_job creates a new job to be executed by the SQL Server Agent service."
+title: sp_add_job (Transact-SQL)
+description: sp_add_job creates a new job to be executed by the SQL Server Agent service.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/19/2026
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords:
   - "sp_add_job_TSQL"
   - "sp_add_job"
 helpviewer_keywords:
   - "sp_add_job"
 dev_langs:
-  - "TSQL"
+  - TSQL
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_add_job (Transact-SQL)
@@ -80,7 +80,9 @@ A language-independent mechanism for specifying a job category. *@category_id* i
 
 #### [ @owner_login_name = ] N'*owner_login_name*'
 
-The name of the login that owns the job. *@owner_login_name* is **sysname**, with a default of `NULL`, which is interpreted as the current login name. Only members of the **sysadmin** fixed server role can set or change the value for *@owner_login_name*. If users who aren't members of the **sysadmin** role set or change the value of *@owner_login_name*, execution of this stored procedure fails and an error is returned.
+The name of the login that owns the job. *@owner_login_name* is **sysname**, with a default of `NULL`, which is interpreted as the current login name. Only members of the **sysadmin** fixed server role can set or change the value for *@owner_login_name*. If users who aren't members of the **sysadmin** fixed server role set or change the value of *@owner_login_name*, execution of this stored procedure fails and an error is returned.
+
+[!INCLUDE [sql-server-agent-ownership](../includes/sql-server-agent-ownership.md)]
 
 #### [ @notify_level_eventlog = ] *notify_level_eventlog*
 
@@ -164,7 +166,9 @@ Other users must be granted one of the following [!INCLUDE [ssNoVersion](../../i
 
 For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](/ssms/agent/sql-server-agent-fixed-database-roles).
 
-Only members of the **sysadmin** fixed server role can set or change the value for *@owner_login_name*. If users who aren't members of the **sysadmin** role set or change the value of *@owner_login_name*, execution of this stored procedure fails and an error is returned.
+Only members of the **sysadmin** fixed server role can set or change the value for *@owner_login_name*. If users who aren't members of the **sysadmin** fixed server role set or change the value of *@owner_login_name*, execution of this stored procedure fails and an error is returned.
+
+[!INCLUDE [sql-server-agent-ownership](../includes/sql-server-agent-ownership.md)]
 
 ## Examples
 

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about the architecture of Azure SQL Database that achieves availability through local redundancy, and high availability through zone redundancy.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: rsetlem, mathoma, randolphwest, peskount, mahyon
+ms.reviewer: mathoma, randolphwest, peskount, mahyon
 ms.date: 10/21/2025
 ms.service: azure-sql-database
 ms.subservice: high-availability

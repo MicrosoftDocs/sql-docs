@@ -1,9 +1,9 @@
 ---
 title: Disaster recovery guidance
 description: Learn how to recover a database from a regional data center outage or failure with various Azure SQL Managed Instance features capabilities.
-author: Stralle
-ms.author: strrodic
-ms.reviewer: mathoma, rsetlem
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: strrodic
 ms.date: 06/25/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability

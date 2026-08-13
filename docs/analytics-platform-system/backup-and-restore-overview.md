@@ -1,6 +1,6 @@
 ---
-title: Backup and restore
-description: Describes how data backup and restore works for Parallel Data Warehouse (PDW). Backup and restore operations are used for disaster recovery. Backup and restore can also be used to copy a database from one appliance to another appliance.
+title: Backup and Restore
+description: Backup and restore in Parallel Data Warehouse (PDW) protects your data and enables disaster recovery. Learn how full and differential backups work.
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
@@ -11,37 +11,37 @@ ms.topic: concept-article
 ---
 # Backup and restore
 
-Describes how data backup and restore works for Parallel Data Warehouse (PDW). Backup and restore operations are used for disaster recovery. Backup and restore can also be used to copy a database from one appliance to another appliance.  
+This article describes how data backup and restore works for Parallel Data Warehouse (PDW). Use backup and restore operations for disaster recovery. You can also use backup and restore to copy a database from one appliance to another appliance.  
     
 ## <a name="BackupRestoreBasics"></a>Backup and restore basics
 
-A PDW *database backup* is a copy of an appliance database, stored in a format so that it can be used to restore the original database to an appliance.  
+A PDW *database backup* is a copy of an appliance database, stored in a format so that you can use it to restore the original database to an appliance.  
   
-A PDW database backup is created with the [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true) t-sql statement and formatted for use with the [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
+Create a PDW database backup by using the [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true) T-SQL statement. The backup is formatted for use with the [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) statement. You can't use the backup for any other purpose. You can only restore the backup to an appliance with the same number or a greater number of Compute nodes.  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
 -->
   
-PDW uses SQL Server backup technology to backup and restore appliance databases. SQL Server backup options are preconfigured to use backup compression. You cannot set backup options such as compression, checksum, block size, and buffer count.  
+PDW uses SQL Server backup technology to backup and restore appliance databases. SQL Server backup options are preconfigured to use backup compression. You can't set backup options such as compression, checksum, block size, and buffer count.  
   
-Database backups are stored on one or more backup servers, which exist in your own customer network.  PDW writes a user database backup in parallel directly from the Compute nodes to one backup server and restores a user database backup in parallel directly from the backup server to the Compute nodes.  
+Store database backups on one or more backup servers, which exist in your own customer network.  PDW writes a user database backup in parallel directly from the Compute nodes to one backup server. It restores a user database backup in parallel directly from the backup server to the Compute nodes.  
   
-Backups are stored on the backup server as a set of files in the Windows file system. A PDW database backup can only be restored to PDW. However, you can archive database backups from the backup server to another location by using standard Windows file backup processes. For more information about backup servers, see [Acquire and configure a backup server](acquire-and-configure-backup-server.md).  
+Store backups on the backup server as a set of files in the Windows file system. You can only restore a PDW database backup to PDW. However, you can archive database backups from the backup server to another location by using standard Windows file backup processes. For more information about backup servers, see [Acquire and configure a backup server](acquire-and-configure-backup-server.md).  
   
 ## <a name="BackupTypes"></a>Database backup types
 
-There are two types of data that require a backup: user databases and system databases (e.g., the master database). PDW does not backup the transaction log.  
+You need to back up two types of data: user databases and system databases, such as the master database. PDW doesn't back up the transaction log.    
   
-A full database backup is a backup of an entire  PDW database. This is the default backup type. A full backup of a user database includes database users, and database roles. A backup of master includes logins.  
+A full database backup is a backup of an entire PDW database. This type is the default backup type. A full backup of a user database includes database users and database roles. A backup of the master database includes authentication information.  
   
 A differential backup contains all of the changes since the last full backup. A differential backup usually takes less time than a full backup and can be performed more frequently. When multiple differential backups are based on the same full backup, each differential includes all of the changes in the previous differential.  
   
-For example, you could create a full backup weekly and a differential backup daily. To restore the user database, the full backup plus the last differential (if one exists) needs to be restored.  
+For example, you could create a full backup weekly and a differential backup daily. To restore the user database, you need to restore the full backup plus the last differential, if one exists.  
   
-A differential backup is only supported for user databases. A backup of master is always a full backup.  
+A differential backup is only supported for user databases. A backup of the master database is always a full backup.  
   
-To backup the entire appliance, you need to perform a backup of all user databases and a backup of the master database.  
+To back up the entire appliance, you need to back up all user databases and back up the master database.  
   
 ## <a name="BackupProc"></a>Database backup process
 
@@ -51,41 +51,41 @@ The following diagram shows the flow of data during a database backup.
   
 The backup process works as follows:  
   
-1.  User submits a BACKUP DATABASE tsql statement to the Control node.  
+1.  You submit a BACKUP DATABASE T-SQL statement to the control node.  
   
     -   The backup is either a full or differential backup.  
   
-2.  For user databases, the Control node (MPP Engine) creates a distributed query plan to perform a parallel database backup.  
+1.  For user databases, the control node (MPP Engine) creates a distributed query plan to perform a parallel database backup.  
   
-3.  Each node involved in the backup copies its backup file to the backup server using SQL Server backup functionality.  
+1.  Each node involved in the backup uses SQL Server backup functionality to copy its backup file to the backup server.  
   
     -   Each node involved copies one backup file to the backup server.  
   
     -   The user database backup (full or differential) includes a backup of the portion of the database stored on each Compute node, and a backup of the database users and database roles.  
   
-4.  The appliance performs the backup in parallel using the InfiniBand network.  
+1.  The appliance performs the backup in parallel by using the InfiniBand network.  
   
-    -   PDW performs each full and differential backup in parallel. However, multiple database backups do not run concurrently. Each backup request must wait for previously submitted backups to finish.  
+    -   PDW performs each full and differential backup in parallel. However, multiple database backups don't run concurrently. Each backup request must wait for previously submitted backups to finish.  
   
-    -   A backup of the master database only backs up data from the Control node. This backup type is performed serially.  
+    -   A backup of the master database only backs up data from the control node. This backup type is performed serially.  
   
-5.  A PDW database backup is a group of files stored in a directory that resides off the appliance. The directory name is specified as a network path and directory name. The directory cannot be a local path, and it cannot be on the appliance.  
+1.  A PDW database backup is a group of files stored in a directory that resides off the appliance. You specify the directory name as a network path and directory name. The directory can't be a local path, and it can't be on the appliance.  
   
-6.  After the backup is finished, you can use the Windows file system to copy the backup directory to another location, if desired.  
+1.  After the backup finishes, you can use the Windows file system to copy the backup directory to another location, if desired.  
   
     -   A backup can only be restored to a PDW appliance that has an equal or greater number of Compute nodes.  
   
-    -   You cannot change the name of the backup before performing a restore. The name of the backup directory must match the name of the original name of the backup. The original name of the backup is located in the backup.xml file within the backup directory. To restore a database to a different name, you can specify the new name in the restore command. For example: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
+    -   You can't change the name of the backup before performing a restore. The name of the backup directory must match the original name of the backup. The original name of the backup is located in the backup.xml file within the backup directory. To restore a database to a different name, you can specify the new name in the restore command. For example: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
 ## <a name="RestoreModes"></a>Database restore modes
 
-A full database restore re-creates the PDW database by using the data in the database backup. The database restore is performed by first restoring a full backup, and then optionally restoring one differential backup. The database restore includes the database users and database roles.  
+A full database restore re-creates the PDW database by using the data in the database backup. The database restore process first restores a full backup, and then optionally restores one differential backup. The database restore process includes the database users and database roles.  
   
-A header only restore returns the header information for a database. It does not restore data to the appliance.  
+A header-only restore returns the header information for a database. It doesn't restore data to the appliance.  
   
-An appliance restore is a restore of the entire appliance. This includes restoring all user databases and the master database.  
+An appliance restore is a restore of the entire appliance. This restore operation includes restoring all user databases and the master database.  
   
-## <a name="RestoreProc"></a>Restore Process
+## <a name="RestoreProc"></a>Restore process
 
 The following diagram shows the flow of data during a database restore.  
   
@@ -121,9 +121,9 @@ For example, when restoring a 60 GB database from a 2-node appliance (30 GB per 
   
 After the redistribution, each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) to shrink the database file sizes.  
   
-## Related Tasks  
+## Related tasks  
   
-|Backup and Restore Task|Description|  
+| Backup and restore task | Description |  
 |---------------------------|---------------|  
 |Prepare a server as a backup server.|[Acquire and configure a backup server](acquire-and-configure-backup-server.md)|  
 |Backup a database.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|  

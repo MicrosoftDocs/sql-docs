@@ -9097,27 +9097,11 @@ items:
       - name: SQL Server 2017
         href: linux/sql-server-linux-editions-and-components-2017.md
     - name: Release notes
-      items:
-      - name: SQL Server 2025
-        href: linux/sql-server-linux-release-notes-2025.md
-      - name: SQL Server 2022
-        href: linux/sql-server-linux-release-notes-2022.md
-      - name: SQL Server 2019
-        href: linux/sql-server-linux-release-notes-2019.md
-      - name: SQL Server 2017
-        href: linux/sql-server-linux-release-notes-2017.md
-      - name: Known issues
-        href: linux/sql-server-linux-known-issues.md
+      href: linux/sql-server-linux-release-notes.md
+    - name: Known issues
+      href: linux/sql-server-linux-known-issues.md
     - name: Release history
-      items:
-      - name: SQL Server 2025 >
-        href: /troubleshoot/sql/releases/linux/release-history-2025?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
-      - name: SQL Server 2022 >
-        href: /troubleshoot/sql/releases/linux/release-history-2022?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
-      - name: SQL Server 2019 >
-        href: /troubleshoot/sql/releases/linux/release-history-2019?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
-      - name: SQL Server 2017 >
-        href: /troubleshoot/sql/releases/linux/release-history-2017?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
+      href: /troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
     - name: Linux FAQ
       href: linux/sql-server-linux-faq.yml
   - name: Getting started and deployment

@@ -1,5 +1,5 @@
 ---
-title: "Access external data: Hadoop - PolyBase"
+title: "Access External Data: Hadoop - PolyBase"
 description: The article uses PolyBase on a SQL Server instance with Hadoop. PolyBase is suited for ad hoc queries of external tables and data import/export.
 author: markingmyname
 ms.author: maghan
@@ -14,14 +14,14 @@ monikerRange: "=sql-server-2017 || =sql-server-ver15"
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-The article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
+This article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
 
 > [!NOTE]  
 > Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Hadoop is no longer supported in PolyBase.
 
 ## Prerequisites
 
-- If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
+- If PolyBase isn't installed, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 
 <!--SQL Server 2019-->
 ::: moniker range=">=sql-server-ver15"
@@ -30,10 +30,10 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 ::: moniker-end
 
-- PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). Hadoop follows the "Major.Minor.Version" pattern for its new releases, and all versions within a supported Major and Minor release are supported. For information on Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH) versions supported, see [PolyBase Connectivity Configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+- PolyBase supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). Hadoop follows the "Major.Minor.Version" pattern for its new releases, and all versions within a supported major and minor release are supported. For information on supported versions of Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH), see [PolyBase Connectivity Configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
 > [!NOTE]
-> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you are using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Hadoop encryption zones.
+> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you're using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Hadoop encryption zones.
 
 ### Configure Hadoop connectivity
 
@@ -52,7 +52,7 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
    GO
    ```  
 
-1. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
+1. Restart SQL Server by using **services.msc**. Restarting SQL Server also restarts these services:  
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
@@ -69,14 +69,14 @@ To improve query performance, enable pushdown computation to your Hadoop cluster
    C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf\  
    ```  
 
-1. On the Hadoop machine, find the analogous file in the Hadoop configuration directory. In the file, find and copy the value of the configuration key yarn.application.classpath.  
+1. On the Hadoop machine, find the analogous file in the Hadoop configuration directory. In the file, find and copy the value of the configuration key `yarn.application.classpath`.  
   
 1. On the SQL Server machine, in the **yarn-site.xml file,** find the **yarn.application.classpath** property. Paste the value from the Hadoop machine into the value element.  
   
-1. For all CDH 5.X versions, you will need to add the mapreduce.application.classpath configuration parameters either to the end of your yarn-site.xml file or into the mapred-site.xml file. HortonWorks includes these configurations within the yarn.application.classpath configurations. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md) for examples.
+1. For all CDH 5.X versions, add the `mapreduce.application.classpath` configuration parameters either to the end of your `yarn-site.xml` file or into the `mapred-site.xml` file. HortonWorks includes these configurations within the `yarn.application.classpath` configurations. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md) for examples.
 
 >[!IMPORTANT]
->To use the computation pushdown functionality with Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
+>To use the computation pushdown functionality with Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN, and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
 
 ## Configure an external table
 
@@ -90,7 +90,8 @@ To query the data in your Hadoop data source, you must define an external table 
     ## Arguments
     PASSWORD ='password'
 
-    Is the password that is used to encrypt the master key in the database. password must meet the Windows password policy requirements of the computer that is hosting the instance of SQL Server.
+    Use this password to encrypt the master key in the database. The password must meet the Windows password policy requirements of the computer that hosts the instance of SQL Server.
+
 1. Create a database scoped credential for Kerberos-secured Hadoop clusters.
 
    ```sql
@@ -100,7 +101,7 @@ To query the data in your Hadoop data source, you must define an external table 
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-2. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -114,7 +115,7 @@ To query the data in your Hadoop data source, you must define an external table 
    );  
    ```
 
-3. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+1. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -124,7 +125,7 @@ To query the data in your Hadoop data source, you must define an external table 
                USE_TYPE_DEFAULT = TRUE))
    ```
 
-4. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data.
+1. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -141,7 +142,7 @@ To query the data in your Hadoop data source, you must define an external table 
    );  
    ```
 
-5. Create statistics on an external table.
+1. Create statistics on an external table.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -149,17 +150,17 @@ To query the data in your Hadoop data source, you must define an external table 
 
 ## PolyBase queries
 
-There are three functions that PolyBase is suited for:  
+PolyBase works well in the following scenarios:  
   
-- Ad hoc queries against external tables.  
+- Running ad hoc queries against external tables.  
 - Importing data.  
 - Exporting data.  
 
-The following queries provide example with fictional car sensor data.
+The following examples use fictional car sensor data.
 
 ### Ad hoc queries  
 
-The following ad hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph, joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
+The following ad hoc query joins relational data with Hadoop data. It selects customers who drive faster than 35 mph by joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -172,7 +173,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)
 
 ### Importing data  
 
-The following query imports external data into SQL Server. This example imports data for fast drivers into SQL Server to do more in-depth analysis. To improve performance, the sample uses a columnstore index.  
+The following query imports external data into SQL Server. This example imports data for fast drivers into SQL Server so you can do more in-depth analysis. To improve performance, the sample uses a columnstore index.  
 
 ```sql
 SELECT DISTINCT
@@ -190,7 +191,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### Exporting data  
 
-The following query exports data from SQL Server to Hadoop. To do this, you first have to enable PolyBase export. Then, create an external table for the destination before exporting data to it.
+The following query exports data from SQL Server to Hadoop. First, enable PolyBase export. Then, create an external table for the destination before exporting data to it.
 
 ```sql
 -- Enable INSERT into external table  
@@ -221,7 +222,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## View PolyBase objects in SSMS  
 
-In SSMS, external tables are displayed in a separate folder **External Tables**. External data sources and external file formats are in subfolders under **External Resources**.  
+In SSMS, external tables appear in a separate folder named **External Tables**. External data sources and external file formats are located in subfolders under **External Resources**.  
   
 ![PolyBase objects in SSMS](media/polybase-management.png)  
 
@@ -229,7 +230,7 @@ In SSMS, external tables are displayed in a separate folder **External Tables**.
 
 For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
 
-Explore more ways to use and monitor PolyBase in the following articles:
+To explore more ways to use and monitor PolyBase, see the following articles:
 
  - [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  
  - [PolyBase troubleshooting](polybase-troubleshooting.md).  

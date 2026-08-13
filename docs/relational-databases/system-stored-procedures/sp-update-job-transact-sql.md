@@ -1,20 +1,20 @@
 ---
-title: "sp_update_job (Transact-SQL)"
-description: "sp_update_job (Transact-SQL) update the attributes of an existing job created in the SQL Server Agent service."
+title: sp_update_job (Transact-SQL)
+description: sp_update_job (Transact-SQL) update the attributes of an existing job created in the SQL Server Agent service.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf
-ms.date: 06/19/2026
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords:
   - "sp_update_job"
   - "sp_update_job_TSQL"
 helpviewer_keywords:
   - "sp_update_job"
 dev_langs:
-  - "TSQL"
+  - TSQL
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_update_job (Transact-SQL)
@@ -87,6 +87,8 @@ The category of the job. *@category_name* is **sysname**, with a default of `NUL
 
 The name of the login that owns the job. *@owner_login_name* is **sysname**, with a default of `NULL`. Only members of the **sysadmin** fixed server role can change job ownership.
 
+[!INCLUDE [sql-server-agent-ownership](../includes/sql-server-agent-ownership.md)]
+
 #### [ @notify_level_eventlog = ] *notify_level_eventlog*
 
 Specifies when to place an entry in the Microsoft Windows application log for this job. *@notify_level_eventlog* is **int**, and can be one of these values.
@@ -155,6 +157,8 @@ Other users must be granted one of the following [!INCLUDE [ssNoVersion](../../i
 For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](/ssms/agent/sql-server-agent-fixed-database-roles).
 
 Only members of **sysadmin** can use this stored procedure to edit the attributes of jobs that are owned by other users.
+
+[!INCLUDE [sql-server-agent-ownership](../includes/sql-server-agent-ownership.md)]
 
 ## Examples
 

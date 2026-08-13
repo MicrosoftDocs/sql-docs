@@ -3,7 +3,7 @@ title: Disaster recovery guidance
 description: Learn how to recover a database from a regional data center outage or failure with various Azure SQL Database features capabilities.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, rsetlem
+ms.reviewer: mathoma
 ms.date: 05/07/2024
 ms.service: azure-sql-database
 ms.subservice: high-availability

@@ -3,7 +3,7 @@ title: Failover Groups Overview & Best Practices
 description: Failover groups let you manage geo-replication and automatic / coordinated failover of a group of databases on a server for both single and pooled database in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: rsetlem, mathoma, mahyon, randolphwest
+ms.reviewer: mathoma, mahyon, randolphwest
 ms.date: 01/29/2026
 ms.service: azure-sql-database
 ms.subservice: high-availability

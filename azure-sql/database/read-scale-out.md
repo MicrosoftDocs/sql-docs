@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Azure SQL provides the ability to use the capacity of read-only replicas for read workloads, called Read Scale-Out.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: rsetlem, mathoma, randolphwest
+ms.reviewer: mathoma, randolphwest
 ms.date: 01/27/2026
 ms.service: azure-sql
 ms.subservice: scale-out

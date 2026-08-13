@@ -1,5 +1,5 @@
 ---
-title: "PolyBase configuration and security for Hadoop"
+title: PolyBase Configuration and Security for Hadoop
 description: Use these settings for PolyBase connectivity to Hadoop, including Hadoop.RPC.Protection, example XML files for CDH 5.X cluster, and Kerberos configuration.
 author: markingmyname
 ms.author: maghan
@@ -18,11 +18,11 @@ monikerRange: "=sql-server-2017 || =sql-server-ver15 || =azuresqldb-mi-current"
 This article provides a reference for various configuration settings that affect PolyBase connectivity to Hadoop. For a walkthrough on how to use PolyBase with Hadoop, see [Configure PolyBase to access external data in Hadoop](polybase-configure-hadoop.md).
 
 > [!NOTE]  
-> Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Hadoop is no longer supported in PolyBase.
+> Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Hadoop isn't supported in PolyBase.
 
 ## <a id="rpcprotection"></a> Hadoop.RPC.Protection setting
 
-A common way to secure communication in a hadoop cluster is by changing the `hadoop.rpc.protection` configuration to 'Privacy' or 'Integrity'. By default, PolyBase assumes the configuration is set to 'Authenticate'. To override this default, add the following property to the `core-site.xml` file. Changing this configuration will enable secure data transfer among the hadoop nodes and TLS connection to SQL Server.
+A common way to secure communication in a Hadoop cluster is to change the `hadoop.rpc.protection` configuration to `Privacy` or `Integrity`. By default, PolyBase assumes the configuration is set to `Authenticate`. To override this default, add the following property to the `core-site.xml` file. Changing this configuration enables secure data transfer among the Hadoop nodes and TLS connection to SQL Server.
 
 ```xml
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
@@ -36,7 +36,7 @@ To use 'Privacy' or 'Integrity' for `hadoop.rpc.protection`, the SQL Server inst
 
 ## Example XML files for CDH 5.X cluster
 
-`Yarn-site.xml` with `yarn.application.classpath` and `mapreduce.application.classpath` configuration.
+`yarn-site.xml` with `yarn.application.classpath` and `mapreduce.application.classpath` configuration.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -106,7 +106,7 @@ For `yarn-site.xml`:
 
 For `mapred-site.xml`:
 
-Note the property `mapreduce.application.classpath`. In CDH 5.x you will find the configuration values under the same naming convention in Ambari.
+Note the property `mapreduce.application.classpath`. In CDH 5.x, you find the configuration values under the same naming convention in Ambari.
 
 ```xml
 <?xml version="1.0"?>
@@ -148,14 +148,14 @@ To connect to a Kerberos-secured Hadoop cluster using MIT KDC:
 
 1. Find the Hadoop configuration directory in the installation path of SQL Server. Typically, the path is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-1. Find the Hadoop side configuration value of the configuration keys listed in the table. (On the Hadoop machine, find the files in the Hadoop configuration directory.)
+1. Find the Hadoop side configuration value of the configuration keys listed in the following table. On the Hadoop machine, find the files in the Hadoop configuration directory.
 
 1. Copy the configuration values into the value property in the corresponding files on the SQL Server machine.
 
    |**#**|**Configuration file**|**Configuration key**|**Action**|
    |------------|----------------|---------------------|----------|
    |1|`core-site.xml`|`polybase.kerberos.kdchost`|Specify the KDC hostname. For example: `kerberos.your-realm.com`.|
-   |2|`core-site.xml`|`polybase.kerberos.realm`|Specify the Kerberos realm. For example: YOUR-REALM.COM<br /><br />**Configuration note**: Realm name must be written in upper case.<br /><br />Multi-realm is not supported.|
+   |2|`core-site.xml`|`polybase.kerberos.realm`|Specify the Kerberos realm. For example: YOUR-REALM.COM<br /><br />**Configuration note**: Realm name must be written in uppercase.<br /><br />Multi-realm isn't supported.|
    |3|`core-site.xml`|`hadoop.security.authentication`|Find the Hadoop side configuration and copy to SQL Server machine. For example: `KERBEROS`<br /><br />**Security note:** `KERBEROS` must be written in upper case.|
    |4|`hdfs-site.xml`|`dfs.namenode.kerberos.principal`|Find the Hadoop side configuration and copy to SQL Server machine. For example: `hdfs/_HOST@YOUR-REALM.COM`|
    |5|`mapred-site.xml`|`mapreduce.jobhistory.principal`|Find the Hadoop side configuration and copy to SQL Server machine. For example: `mapred/_HOST@YOUR-REALM.COM`|

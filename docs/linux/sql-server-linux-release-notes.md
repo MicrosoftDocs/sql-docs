@@ -176,11 +176,11 @@ If you update existing SQL Server packages, run the appropriate update command f
 
 ## Release history
 
-For the full release history, see [Latest updates and version history for SQL Server on Linux]().
+For the full release history, see [Latest updates and version history for SQL Server on Linux](/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux).
 
 ## Known issues
 
-For more information, see [SQL Server on Linux: Known issues](/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux).
+For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md).
 
 ## Related content
 

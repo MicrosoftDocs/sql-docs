@@ -4,7 +4,7 @@ description: Microsoft.Data.SqlClient is the .NET data provider for connecting a
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 07/29/2026
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -53,7 +53,7 @@ public static void QuerySalesWithResilience(IConfiguration config, ILogger logge
         // This is separate from the initial-connect retry provider defined next.
         ConnectRetryCount = 3,
         ConnectRetryInterval = 10,
-        MultiSubnetFailover = true,                  // recommended for any target; enables parallel connect
+        MultiSubnetFailover = true,                  // recommended for TCP endpoints; enables parallel connect
         // ApplicationIntent = ApplicationIntent.ReadOnly, // uncomment to route to a readable secondary
     };
 
@@ -131,7 +131,7 @@ public static void QuerySalesWithResilience(IConfiguration config, ILogger logge
 }
 ```
 
-This snippet is tuned for Azure SQL Database failover groups and Azure SQL Managed Instance.
+This snippet targets any [SQL Database Engine](/sql/database-engine/sql-database-engine) endpoint configured for Microsoft Entra authentication: Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, and SQL Server 2022 and later versions on Azure Virtual Machines or enabled by Azure Arc.
 
 `Encrypt = SqlConnectionEncryptOption.Strict` selects TDS 8.0 encryption. It requires Microsoft.Data.SqlClient 5.0 and later versions and a server that supports TDS 8.0 (SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric). Fall back to `SqlConnectionEncryptOption.Mandatory` when you connect to older servers.
 
@@ -139,9 +139,9 @@ This snippet is tuned for Azure SQL Database failover groups and Azure SQL Manag
 
 The <xref:Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider.Retrying> event on each provider fires before each retry attempt and carries the retry count, the delay before the next attempt, and the exceptions observed so far. Route it to <xref:Microsoft.Extensions.Logging.ILogger> or your telemetry pipeline to keep the retry loop visible in production.
 
-Set `MultiSubnetFailover = true` for any SQL Server target. It selects a parallel-connect code path that completes login with the first responsive endpoint, avoiding the slow sequential per-IP walk that can otherwise stall connects to Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, availability group listeners, and failover cluster instances. On single-IP targets, the setting is safe. For more information, see [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md) and [Disabling Transparent Network IP Resolution](appcontext-switches.md#disabling-transparent-network-ip-resolution).
+Set `MultiSubnetFailover = true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. It selects a parallel-connect code path that attempts TCP connections to all resolved IP addresses in parallel and uses the first connection that succeeds, avoiding the slow sequential per-IP walk that can otherwise stall those connects. On single-IP targets, the setting is safe. `MultiSubnetFailover` isn't supported when you connect to a named instance, over a protocol other than TCP, or to an instance configured with more than 64 IP addresses. You also can't use it with database mirroring, which is deprecated in all supported versions of SQL Server. Use Always On availability groups instead. For more information, see [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md) and [Disabling Transparent Network IP Resolution](appcontext-switches.md#disabling-transparent-network-ip-resolution).
 
-If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, raise `ConnectTimeout` to at least 60 seconds. An auto-paused database resumes on the first `Open()`, and the resume can take 30 to 60 seconds or more. Client-side timeouts surface as error `-2`, which isn't in the built-in transient error list, so `openRetry` won't rescue an `Open()` that times out mid-resume. The individual connect attempt must be long enough to cover the resume.
+If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, raise `ConnectTimeout` to at least 60 seconds. An auto-paused database resumes on the first `Open()`, and that first `Open()` can fail with error `40613` while the database resumes. Error `40613` is in the built-in transient error list, so `openRetry` retries it. Client-side timeouts surface as error `-2`, which isn't in that list, so `openRetry` won't rescue an `Open()` that times out mid-resume. The individual connect attempt must be long enough to cover the resume. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
 
 Command-level retry is the caller's decision, per command. Attach `commandRetry` to <xref:Microsoft.Data.SqlClient.SqlCommand.RetryLogicProvider%2A?displayProperty=nameWithType> only when replaying the command is safe: reads, `MERGE` guarded by a natural key, upserts through a stored procedure, and other idempotent operations. The built-in command provider skips retry when a transaction is active, so multi-statement transactions must be retried by application code that can reopen the transaction. Setting `TransientErrors` replaces the driver's built-in error list; to extend the built-in baseline instead, use <xref:Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.BaselineTransientErrors%2A?displayProperty=nameWithType> (Microsoft.Data.SqlClient 7.0 and later).
 

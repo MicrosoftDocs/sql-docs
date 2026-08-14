@@ -4,7 +4,7 @@ description: The bulk copy program (bcp) utility bulk copies data between an ins
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: davidengel
-ms.date: 06/30/2026
+ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: article
@@ -29,15 +29,33 @@ helpviewer_keywords:
   - "importing data, bcp utility"
   - "file importing [SQL Server]"
   - "column exporting [SQL Server]"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric || =fabric-sqldb"
 ---
 # bcp utility
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
-The bulk copy program utility (**`bcp`**) bulk copies data between an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and a data file in a user-specified format.
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
 
-Use the **`bcp`** utility to import large numbers of new rows into [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] tables or to export data out of tables into data files. Except when used with the `queryout` option, the utility requires no knowledge of [!INCLUDE [tsql](../../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table, or understand the structure of the table and the types of data that are valid for its columns.
+The bulk copy program utility (**`bcp`**) bulk copies data between an instance of the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)] and a data file in a user-specified format.
+
+> [!NOTE]  
+> To view the **`bcp`** article for **Microsoft Fabric Data Warehouse**, see [bcp utility (Fabric Data Warehouse)](?view=fabric&preserve-view=true).
+
+::: moniker-end
+
+::: moniker range="=fabric"
+
+[!INCLUDE [fabric-dw](../../includes/applies-to-version/fabric-dw.md)]
+
+The bulk copy program utility (**`bcp`**) bulk copies data between [!INCLUDE [fabric-dw-full](../../includes/fabric-dw-full.md)] and a data file in a user-specified format.
+
+> [!NOTE]  
+> You're viewing the **`bcp`** article for **Microsoft Fabric Data Warehouse**. To view the article for other platforms, see [bcp utility](?view=sql-server-ver17&preserve-view=true).
+
+::: moniker-end
+
+Use the **`bcp`** utility to import large numbers of new rows into [!INCLUDE [ssde-md](../../includes/ssde-md.md)] tables or to export data out of tables into data files. Except when used with the `queryout` option, the utility requires no knowledge of [!INCLUDE [tsql](../../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table, or understand the structure of the table and the types of data that are valid for its columns.
 
 For more information about which version of **`bcp`** is installed on your system, system requirements, and how to get **`bcp`**, see [Download and install the bcp utility](bcp-download-install.md).
 
@@ -73,6 +91,11 @@ For information on how to install the command-line tools on macOS and Linux, see
 [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] introduces TDS 8.0 support for the **`bcp`** utility.
 
 ## Syntax
+
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+
+> [!NOTE]  
+> To view supported **`bcp`** syntax for **Microsoft Fabric Data Warehouse**, see [Syntax for Fabric Data Warehouse](?view=fabric&preserve-view=true#syntax).
 
 ```console
 bcp [ database_name. ] schema. { table_name | view_name | "query" }
@@ -118,61 +141,110 @@ bcp [ database_name. ] schema. { table_name | view_name | "query" }
     [ -z[0|1] ]
 ```
 
+::: moniker-end
+
+::: moniker range="=fabric"
+
+> [!NOTE]  
+> You're viewing the **`bcp`** syntax for **Microsoft Fabric Data Warehouse**. To view supported syntax for other platforms, see [Syntax for bcp utility](?view=sql-server-ver17&preserve-view=true#syntax).
+
+```console
+bcp [ database_name. ] schema. { table_name | view_name | "query" }
+    { in data_file | out data_file | queryout data_file | format nul }
+
+    [ -a packet_size ]
+    [ -b batch_size ]
+    [ -c ]
+    [ -C { ACP | OEM | RAW | code_page } ]
+    [ -d database_name ]
+    [ -D ]
+    [ -e err_file ]
+    [ -E ]
+    [ -f format_file ]
+    [ -F first_row ]
+    [ -G Microsoft Entra authentication ]
+    [ -H hostname_in_certificate ]
+    [ -h"hint [ , ...n ] " ]
+    [ -i input_file ]
+    [ -J server_certificate ]
+    [ -k ]
+    [ -l login_timeout ]
+    [ -L last_row ]
+    [ -m max_errors ]
+    [ -n ]
+    [ -N ]
+    [ -o output_file ]
+    [ -q ]
+    [ -r row_term ]
+    [ -R ]
+    [ -S [ sql_endpoint_name ] ]
+    [ -t field_term ]
+    [ -T ]
+    [ -u ]
+    [ -v ]
+    [ -V (80 | 90 | 100 | 110 | 120 | 130 | 140 | 150 | 160 | 170) ]
+    [ -w ]
+    [ -x ]
+    [ -Y [ s | m | o ] ]
+```
+
+::: moniker-end
+
 ## Command-line options
 
 The following table lists the command-line options available in **`bcp`**, and which operating systems they support.
 
-| Command-line option | Supported on Windows | Supported on Linux and macOS |
-| --- | --- | --- |
-| [**Object and transfer mode**](#object-and-transfer-mode) | | |
-| [\[*database_name*.\]](#database_name) [*schema*](#schema).{[*table_name*](#table_name) \| [*view_name*](#view_name) \| ["*query*"](#query)} | Yes | Yes |
-| {[in](#in) [*data_file*](#data_file) \| [out](#out) [*data_file*](#data_file) \| [queryout](#queryout) [*data_file*](#data_file) \| [format](#format) nul} | Yes | Yes |
-| [-q](#-q) | Yes | Yes |
-| [**Connection and authentication**](#connection-and-authentication) | | |
-| [-S \[*server_name*\[\\*instance_name*\]\]](#-s-server_nameinstance_name) | Yes | Yes |
-| [-d *database_name*](#-d-database_name) | Yes | Yes |
-| [-U *login_id*](#-u-login_id) | Yes | Yes |
-| [-P *password*](#-p-password) | Yes | Yes |
-| [-G Microsoft Entra authentication](#-g) | Yes | Yes |
-| [-D](#-d) | Yes | Yes |
-| [-K *application_intent*](#-k-application_intent) | Yes | Yes |
-| [-l *login_timeout*](#-l-login_timeout) | Yes | Yes |
-| [-H *hostname_in_certificate*](#-h-hostname_in_certificate) | Yes | Yes |
-| [-J *server_certificate*](#-j-server_certificate) | Yes | Yes |
-| [-T](#-t) | Yes | Yes |
-| [-Y\[s\| m\| o\]](#-ysmo) | Yes <sup>1</sup> | Yes <sup>1</sup> |
-| [**Data representation**](#data-representation) | | |
-| [-c](#-c) | Yes | Yes |
-| [-C { ACP \| OEM \| RAW \| *code_page* }](#-c--acp--oem--raw--code_page-) | Yes | No |
-| [-n](#-n-native) | Yes | Yes |
-| [-N](#-n-unicode) | Yes | No |
-| [-w](#-w) | Yes | Yes |
-| [-z[0\|1]](#-z) | No | Yes <sup>2</sup> |
-| [**Format files**](#format-files) | | |
-| [-f *format_file*](#-f-format_file) | Yes | Yes |
-| [-x](#-x) | Yes | No |
-| [**Batching and performance**](#batching-and-performance) | | |
-| [-a *packet_size*](#-a-packet_size) | Yes | Yes |
-| [-b *batch_size*](#-b-batch_size) | Yes | Yes |
-| [-h"*hint* \[,...*n*\]"](#-h-hints---n) | Yes | No |
-| [-m *max_errors*](#-m-max_errors) | Yes | Yes |
-| [-F *first_row*](#-f-first_row) | Yes | Yes |
-| [-L *last_row*](#-l-last_row) | Yes | Yes |
-| [-r *row_term*](#-r-row_term) | Yes | Yes |
-| [-t *field_term*](#-t-field_term) | Yes | Yes |
-| [**Value handling**](#value-handling) | | |
-| [-k](#-k) | Yes | Yes |
-| [-E](#-e) | Yes | Yes |
-| [**File I/O and logging**](#file-io-and-logging) | | |
-| [-i *input_file*](#-i-input_file) | Yes | No |
-| [-o *output_file*](#-o-output_file) | Yes | No |
-| [-e *err_file*](#-e-err_file) | Yes | Yes |
-| [**Compatibility and versioning**](#compatibility-and-versioning) | | |
-| [-V (80 \| 90 \| 100 \| 110 \| 120 \| 130 \| 140 \| 150 \| 160 \| 170 )](#-v--80--90--100--110--120--130--140--150--160--170-) | Yes | No |
-| [-u](#-u) | Yes <sup>1</sup> | Yes <sup>1</sup> |
-| [**Miscellaneous options**](#miscellaneous-options) | | |
-| [-R](#-r) | Yes | Yes |
-| [-v](#-v) | Yes | Yes |
+| Command-line option | Supported on Windows | Supported on Linux and macOS | Supported in Fabric |
+| --- | --- | --- | --- |
+| [**Object and transfer mode**](#object-and-transfer-mode) | | | |
+| [\[*database_name*.\]](#database_name) [*schema*](#schema).{[*table_name*](#table_name) \| [*view_name*](#view_name) \| ["*query*"](#query)} | Yes | Yes | Yes |
+| {[in](#in) [*data_file*](#data_file) \| [out](#out) [*data_file*](#data_file) \| [queryout](#queryout) [*data_file*](#data_file) \| [format](#format) nul} | Yes | Yes | Yes |
+| [-q](#-q) | Yes | Yes | Yes |
+| [**Connection and authentication**](#connection-and-authentication) | | | |
+| [-S \[*server_name*\[\\*instance_name*\]\]](#-s-server_nameinstance_name) | Yes | Yes | Yes |
+| [-d *database_name*](#-d-database_name) | Yes | Yes | Yes |
+| [-U *login_id*](#-u-login_id) | Yes | Yes | No |
+| [-P *password*](#-p-password) | Yes | Yes | No |
+| [-G Microsoft Entra authentication](#-g) | Yes | Yes | Yes |
+| [-D](#-d) | Yes | Yes | Yes |
+| [-K *application_intent*](#-k-application_intent) | Yes | Yes | No |
+| [-l *login_timeout*](#-l-login_timeout) | Yes | Yes | Yes |
+| [-H *hostname_in_certificate*](#-h-hostname_in_certificate) | Yes | Yes | No |
+| [-J *server_certificate*](#-j-server_certificate) | Yes | Yes | No |
+| [-T](#-t) | Yes | Yes | Yes |
+| [-Y\[s\| m\| o\]](#-ysmo) | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes |
+| [**Data representation**](#data-representation) | | | |
+| [-c](#-c) | Yes | Yes | Yes |
+| [-C { ACP \| OEM \| RAW \| *code_page* }](#-c--acp--oem--raw--code_page-) | Yes | No | Yes |
+| [-n](#-n-native) | Yes | Yes | Yes |
+| [-N](#-n-unicode) | Yes | No | Yes |
+| [-w](#-w) | Yes | Yes | Yes |
+| [-z[0\|1]](#-z) | No | Yes <sup>2</sup> | No |
+| [**Format files**](#format-files) | | | |
+| [-f *format_file*](#-f-format_file) | Yes | Yes | Yes |
+| [-x](#-x) | Yes | No | Yes |
+| [**Batching and performance**](#batching-and-performance) | | | |
+| [-a *packet_size*](#-a-packet_size) | Yes | Yes | Yes |
+| [-b *batch_size*](#-b-batch_size) | Yes | Yes | Yes |
+| [-h"*hint* \[,...*n*\]"](#-h-hints---n) | Yes | No | No |
+| [-m *max_errors*](#-m-max_errors) | Yes | Yes | Yes |
+| [-F *first_row*](#-f-first_row) | Yes | Yes | Yes |
+| [-L *last_row*](#-l-last_row) | Yes | Yes | Yes |
+| [-r *row_term*](#-r-row_term) | Yes | Yes | Yes |
+| [-t *field_term*](#-t-field_term) | Yes | Yes | Yes |
+| [**Value handling**](#value-handling) | | | |
+| [-k](#-k) | Yes | Yes | Yes |
+| [-E](#-e) | Yes | Yes | No |
+| [**File I/O and logging**](#file-io-and-logging) | | | |
+| [-i *input_file*](#-i-input_file) | Yes | No | Yes |
+| [-o *output_file*](#-o-output_file) | Yes | No | Yes |
+| [-e *err_file*](#-e-err_file) | Yes | Yes | Yes |
+| [**Compatibility and versioning**](#compatibility-and-versioning) | | | |
+| [-V (80 \| 90 \| 100 \| 110 \| 120 \| 130 \| 140 \| 150 \| 160 \| 170 )](#-v--80--90--100--110--120--130--140--150--160--170-) | Yes | No | Yes |
+| [-u](#-u) | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes |
+| [**Miscellaneous options**](#miscellaneous-options) | | | |
+| [-R](#-r) | Yes | Yes | Yes |
+| [-v](#-v) | Yes | Yes | Yes |
 
 <sup>1</sup> Requires **`bcp`** version 18 or later, which ships with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].  
 <sup>2</sup> ODBC 18.6.1.1 and later versions.
@@ -187,15 +259,15 @@ You can also explicitly specify the database name with `-d`.
 
 #### *schema*
 
-The name of the owner of the table or view. *schema* is optional if the user performing the operation owns the specified table or view. If you don't specify *schema*, and the user performing the operation doesn't own the specified table or view, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message, and the operation is canceled.
+The name of the owner of the table or view. *schema* is optional if the user performing the operation owns the specified table or view. If you don't specify *schema*, and the user performing the operation doesn't own the specified table or view, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] returns an error message, and the operation is canceled.
 
 #### *table_name*
 
-The name of the destination table when importing data into [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (`in`), and the source table when exporting data from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (`out`).
+The name of the destination table when importing data into the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] (`in`), and the source table when exporting data from the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] (`out`).
 
 #### *view_name*
 
-The name of the destination view when copying data into [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (`in`), and the source view when copying data from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (`out`). When used as a destination (`in`), a view is only supported if all of its columns refer to the same table. This restriction doesn't apply when the view is used as a source (`out`). For more information on the restrictions for copying data into views, see [INSERT](../../t-sql/statements/insert-transact-sql.md).
+The name of the destination view when copying data into the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] (`in`), and the source view when copying data from the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] (`out`). When used as a destination (`in`), a view is only supported if all of its columns refer to the same table. This restriction doesn't apply when the view is used as a source (`out`). For more information on the restrictions for copying data into views, see [INSERT](../../t-sql/statements/insert-transact-sql.md).
 
 #### "*query*"
 
@@ -215,7 +287,7 @@ If you specify an existing file, the file is overwritten. When the **`bcp`** uti
 
 #### *data_file*
 
-The full path of the data file. When you bulk import data into [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], the data file contains the data to copy into the specified table or view. When you bulk export data from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], the data file contains the data copied from the table or view. The path can have from 1 through 255 characters. The data file can contain a maximum of 2^63 - 1 rows.
+The full path of the data file. When you bulk import data into the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], the data file contains the data to copy into the specified table or view. When you bulk export data from the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], the data file contains the data copied from the table or view. The path can have from 1 through 255 characters. The data file can contain a maximum of 2^63 - 1 rows.
 
 #### queryout
 
@@ -227,7 +299,7 @@ Creates a format file based on the option specified (`-n`, `-c`, `-w`, or `-N`) 
 
 #### -q
 
-Executes the `SET QUOTED_IDENTIFIER ON` statement in the connection between the **`bcp`** utility and an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Use this option to specify a database, owner, table, or view name that contains a space or a single quotation mark. Enclose the entire three-part table or view name in quotation marks (`""`).
+Executes the `SET QUOTED_IDENTIFIER ON` statement in the connection between the **`bcp`** utility and an instance of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)]. Use this option to specify a database, owner, table, or view name that contains a space or a single quotation mark. Enclose the entire three-part table or view name in quotation marks (`""`).
 
 To specify a database name that contains a space or single quotation mark, you must use the `-q` option.
 
@@ -239,7 +311,7 @@ For more information, see the [Remarks](#remarks) section in this article.
 
 #### -S \[*server_name*\[\\*instance_name*\]\]
 
-Specifies the name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance to connect to, or if you use `-D`, a DSN.
+Specifies the name of the [!INCLUDE [ssnoversion-md](../../includes/ssNoVersion-md.md)] instance to connect to, or if you use `-D`, a DSN.
 
 If you don't specify a server, the **`bcp`** utility connects to the default instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer. You need this option when running a **`bcp`** command from a remote computer on the network or a local named instance. To connect to the default instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on a server, specify only *server_name*. To connect to a named instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], specify `<server_name>\<instance_name>`.
 
@@ -247,9 +319,11 @@ If you don't specify a server, the **`bcp`** utility connects to the default ins
 
 Specifies the database to connect to. By default, **`bcp`** connects to your default database. If you specify `-d <database_name>` and a three-part name (database_name.schema.table, passed as the first parameter to **`bcp`**), an error occurs because you can't specify the database name twice. If *database_name* begins with a hyphen (`-`) or a forward slash (`/`), don't add a space between `-d` and the database name.
 
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+
 #### -U *login_id*
 
-Specifies the login ID used to connect to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+Specifies the login ID used to connect to the [!INCLUDE [ssde-md](../../includes/ssde-md.md)].
 
 #### -P *password*
 
@@ -263,6 +337,7 @@ To mask your password, don't specify the `-P` option along with the `-U` option.
 If *password* begins with a hyphen (`-`) or a forward slash (`/`), don't add a space between `-P` and the *password* value.
 
 On Linux and macOS, when used with the `-G` option without `-U`, `-P` specifies a file that contains a Microsoft Entra access token (v17.8 and later versions). The token file should be in UTF-16LE (no BOM) format. For more information, see [Authenticate with Microsoft Entra ID in bcp](bcp-authentication.md).
+::: moniker-end
 
 #### -G
 
@@ -374,6 +449,8 @@ Performs the bulk copy operation by using Unicode characters. This option doesn'
 
 For more information, see [Use Unicode character format to import or export data (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
 
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+
 #### -z
 
 **Applies to**: **`bcp`** (ODBC), Linux and macOS only. Windows isn't supported.
@@ -381,6 +458,7 @@ For more information, see [Use Unicode character format to import or export data
 Enables **vector** data type support in the **`bcp`** utility. This feature is currently disabled by default. When disabled, vector data is imported or exported as JSON float array strings. When enabled, and when connecting to [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions, vector data is imported or exported in native **vector** binary.
 
 Use `-z0` for `float32` vector support and `-z1` for `float16` vector support. Currently, ODBC doesn't support `-z1`.
+::: moniker-end
 
 ### Format files
 
@@ -417,6 +495,8 @@ Specifies the number of rows per batch of imported data. Each batch is imported 
 
 The `-b` and the `-h "ROWS_PER_BATCH=<bb>"` hint are mutually exclusive. Use `-b` when you want **`bcp`** to control batching explicitly, or use `ROWS_PER_BATCH` to hint the server optimizer when sending the data as a single transaction.
 
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+
 #### -h "*hints* [, ... *n*]"
 
 **Applies to**: Windows only. Not supported on Linux and macOS.
@@ -425,7 +505,7 @@ Specifies the hint or hints to use during a bulk import of data into a table or 
 
 - **ORDER (*column* [ASC | DESC] [, ...*n*])**
 
-  The sort order of the data in the data file. Bulk import performance improves if the data being imported is sorted according to the clustered index on the table, if any. If the data file is sorted in a different order, that is, other than the order of a clustered index key, or if there's no clustered index on the table, the `ORDER` clause is ignored. The column names you supply must be valid column names in the destination table. By default, **`bcp`** assumes the data file is unordered. For optimized bulk import, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] also validates that the imported data is sorted.
+  The sort order of the data in the data file. Bulk import performance improves if the data being imported is sorted according to the clustered index on the table, if any. If the data file is sorted in a different order, that is, other than the order of a clustered index key, or if there's no clustered index on the table, the `ORDER` clause is ignored. The column names you supply must be valid column names in the destination table. By default, **`bcp`** assumes the data file is unordered. For optimized bulk import, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] also validates that the imported data is sorted.
 
 - **ROWS_PER_BATCH = *bb***
 
@@ -459,6 +539,8 @@ Specifies the hint or hints to use during a bulk import of data into a table or 
 - **FIRE_TRIGGERS**
 
   When you specify this option with the *in* argument, any insert triggers defined on the destination table run during the bulk-copy operation. If you don't specify `FIRE_TRIGGERS`, no insert triggers run. `FIRE_TRIGGERS` is ignored for the `out`, `queryout`, and `format` arguments.
+
+::: moniker-end
 
 #### -m *max_errors*
 
@@ -505,11 +587,11 @@ Specifies that empty columns keep a null value during the operation, rather than
 
 #### -E
 
-Specifies that the operation uses identity values in the imported data file for the identity column. If you don't specify `-E`, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ignores the identity values for this column in the data file being imported and automatically assigns unique values based on the seed and increment values specified during table creation. For more information, see [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
+Specifies that the operation uses identity values in the imported data file for the identity column. If you don't specify `-E`, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] ignores the identity values for this column in the data file being imported and automatically assigns unique values based on the seed and increment values specified during table creation. For more information, see [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
 
-If the data file doesn't contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view should be skipped when importing data. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns unique values for the column.
+If the data file doesn't contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view should be skipped when importing data. The [!INCLUDE [ssde-md](../../includes/ssde-md.md)] automatically assigns unique values for the column.
 
-The `-E` option has a special permissions requirement. For more information, see "[Remarks](#remarks)" later in this article.
+The `-E` option has a special permissions requirement. For more information, see [Remarks](#remarks) later in this article.
 
 ### File I/O and logging
 
@@ -562,7 +644,7 @@ For more information, see [Import native and character format data from earlier 
 
 #### -R
 
-Specifies that the **`bcp`** utility bulk copies currency, date, and time data into [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] using the regional format defined for the locale setting of the client computer. By default, **`bcp`** ignores regional settings.
+Specifies that the **`bcp`** utility bulk copies currency, date, and time data into the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] using the regional format defined for the locale setting of the client computer. By default, **`bcp`** ignores regional settings.
 
 #### -v
 
@@ -571,7 +653,7 @@ Reports the **`bcp`** utility version number and copyright.
 ## Remarks
 
 - The **`bcp`** utility displays only the first 512 bytes of an error message.
-- The **`bcp`** utility supports native data files that are compatible with all supported versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+- The **`bcp`** utility supports native data files that are compatible with all supported versions of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)].
 - **`bcp`** is currently in preview in [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)].
 - **`bcp`** can't import data in [!INCLUDE [fabric-se](../../includes/fabric-se.md)].
 

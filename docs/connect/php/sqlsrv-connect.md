@@ -29,7 +29,7 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ```  
   
 #### Parameters  
-*$serverName*: A string specifying the name of the server to which a connection is being established. An instance name (for example, `<server>\instanceName`) or port number (for example, `<server>, 1521`) can be included as part of this string. For a complete description of the options available for this parameter, see the Server keyword in the ODBC Driver Connection String Keywords section of [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+*$serverName*: A string specifying the name of the server to which a connection is being established. An instance name (for example, `<server>\instanceName`) or port number (for example, `<server>, 1521`) can be included as part of this string. For a complete description of the options available for this parameter, see the `Server` keyword in [DSN and Connection String Keywords and Attributes](../odbc/dsn-connection-string-attribute.md).  
   
 Beginning in version 3.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can also specify a LocalDB instance with `"(localdb)\instancename"`. For more information, see [Support for LocalDB](php-driver-for-sql-server-support-for-localdb.md).  
   

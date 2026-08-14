@@ -41,7 +41,7 @@ If the next result was successfully made active, the Boolean value **true** is r
 The following example creates and executes a stored procedure that inserts a product review into the *Production.ProductReview* table, and then selects all reviews for the specified product. After execution of the stored procedure, the first result (the number of rows affected by the INSERT query in the stored procedure) is consumed without calling **sqlsrv_next_result**. The next result (the rows returned by the SELECT query in the stored procedure) is made available by calling **sqlsrv_next_result** and consumed using [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
-> Calling stored procedures using canonical syntax is the recommended practice. For more information about canonical syntax, see [Calling a Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> Calling stored procedures by using canonical syntax is the recommended practice. For more information about canonical syntax, see [Procedure Calls](../../odbc/reference/develop-app/procedure-calls.md).  
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   

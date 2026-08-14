@@ -131,7 +131,7 @@ public static void QuerySalesWithResilience(IConfiguration config, ILogger logge
 }
 ```
 
-This snippet targets any Microsoft SQL family endpoint configured for Microsoft Entra authentication: Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, and SQL Server 2022 and later on Azure Virtual Machines or enabled by Azure Arc.
+This snippet targets any [SQL Database Engine](/sql/database-engine/sql-database-engine) endpoint configured for Microsoft Entra authentication: Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, and SQL Server 2022 and later versions on Azure Virtual Machines or enabled by Azure Arc.
 
 `Encrypt = SqlConnectionEncryptOption.Strict` selects TDS 8.0 encryption. It requires Microsoft.Data.SqlClient 5.0 and later versions and a server that supports TDS 8.0 (SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric). Fall back to `SqlConnectionEncryptOption.Mandatory` when you connect to older servers.
 

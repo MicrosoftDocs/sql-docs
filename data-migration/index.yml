@@ -7,7 +7,7 @@ metadata:
   description: Step-by-step guidance for modernizing your data assets by migrating to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, Azure Cosmos DB, SQL Server on Azure VMs and Azure Synapse Analytics.
   author: rwestMSFT
   ms.author: randolphwest
-  ms.date: 08/19/2025
+  ms.date: 08/12/2026
   ms.service: sql
   ms.subservice: migration-guide
   ms.topic: hub-page
@@ -141,6 +141,9 @@ conceptualContent:
       links:
         - text: Relational to Azure Cosmos DB
           url: /azure/cosmos-db/migrate-relational-to-cosmos-db-sql-api
+          itemType: how-to-guide
+        - text: MongoDB to Azure DocumentDB
+          url: /azure/documentdb/how-to-migrate-vs-code-extension
           itemType: how-to-guide
         - text: MongoDB to Azure Cosmos DB
           url: /azure/dms/tutorial-mongodb-cosmos-db-online?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json

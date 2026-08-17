@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/10/2026
+ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.topic: include
 ms.custom:
@@ -26,7 +26,7 @@ Because the Next-gen General Purpose service tier is an upgrade to the existing 
 
 The Next-gen General Purpose service tier is an upgrade to the existing General Purpose service tier that uses an upgraded remote storage layer to store instance data and log files on Elastic SAN instead of page blobs. This upgrade offers faster storage latency, IOPS, and throughput than the existing General Purpose service tier, with increased limits to storage, the number of vCores, and the max number of databases. Additionally, since the performance quotas are shared by the whole instance, you no longer have to resize individual files to improve their performance. The baseline cost of the Next-gen General Purpose service tier is the same as the General Purpose service tier, but you can use sliders to increase your IO performance and memory to vCore ratio, which is then billed separately. 
 
-The Next-gen General Purpose service tier supports [flexible memory](../../managed-instance/resource-limits.md#flexible-memory), which allows you to choose the amount of memory you want to allocate to your instance. This is a significant improvement over the General Purpose service tier, which has a fixed memory allocation based on the number of selected vCores. Flexible memory is currently available to locally redundant instances on premium-series hardware. 
+The Next-gen General Purpose service tier supports [flexible memory](../../managed-instance/resource-limits.md#flexible-memory), which allows you to choose the amount of memory you want to allocate to your instance. This feature is a significant improvement over the General Purpose service tier, which has a fixed memory allocation based on the number of selected vCores. Flexible memory is generally available for locally redundant instances on Premium-series hardware. Flexible memory for zone-redundant Next-gen General Purpose instances on Premium-series hardware is currently in preview.
 
 The Next-gen General Purpose service tier helps reduce cost by offering free IOPS at three IOPS for every GB of reserved storage. The price of the storage includes the minimum IOPS. If you go above the minimum, you're charged as follows: 1 IOPS = storage price (by region) divided by three. 
 

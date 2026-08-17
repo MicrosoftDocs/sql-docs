@@ -63,7 +63,7 @@ This topic lists the options that are permitted in the associative array (when u
 
 4. The `UID` and `PWD` attributes must both be set when connecting with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
 
-Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
+Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [DSN and Connection String Keywords and Attributes](../odbc/dsn-connection-string-attribute.md).
 
 ## See Also  
 

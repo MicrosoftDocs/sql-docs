@@ -28,7 +28,7 @@ The following example calls a stored procedure that subtracts used vacation hour
 Because the stored procedure returns two results, [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) must be called after the stored procedure has been executed to make the value of the output parameter available. After calling **sqlsrv_next_result**, *$vacationHrs* contains the value of the output parameter returned by the stored procedure.  
   
 > [!NOTE]  
-> Calling stored procedures using canonical syntax is the recommended practice. For more information about canonical syntax, see [Calling a Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> Calling stored procedures by using canonical syntax is the recommended practice. For more information about canonical syntax, see [Procedure Calls](../../odbc/reference/develop-app/procedure-calls.md).  
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   

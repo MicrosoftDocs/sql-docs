@@ -5,7 +5,7 @@ description: This article provides an overview of the resource limits for Azure 
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, sachinp, wiassaf, randolphwest
-ms.date: 05/06/2026
+ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -307,7 +307,7 @@ By default, the amount of memory allocated to Azure SQL Managed Instance is a st
 
 The flexible memory feature is available in the following service tiers and deployment configurations on [Premium-series](#hardware-configuration-characteristics) hardware:
 
-- **[Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) instances. Flexible memory for the Next-gen General purpose tier is generally available (GA).
+- **[Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is generally available (GA) for locally redundant instances and is currently in preview for zone-redundant instances.
 - **[Business Critical](../database/service-tiers-sql-database-vcore.md#business-critical)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is currently in preview for the Business Critical service tier.
 
 You can change the amount of memory allocated to your SQL managed instance at any time for new and existing instances by using the Azure portal, or the REST API. The memory allocation change is applied to all databases in the instance and performs a failover of the instance as the final operation step. Check [management operations duration](management-operations-duration.md#management-operation-duration) to determine the estimated time for the operation to complete.

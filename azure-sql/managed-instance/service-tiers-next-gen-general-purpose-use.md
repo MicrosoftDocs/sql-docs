@@ -4,7 +4,7 @@ description: Learn how to use the Next-gen General Purpose service tier in Azure
 author: urosmil
 ms.author: urmilano
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/21/2026
+ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
@@ -105,7 +105,7 @@ az sql mi create \
 
 ## Remarks
 
-- Zone redundancy isn't available for the Next-gen General Purpose service tier upgrade.
+- Zone redundancy for the Next-gen General Purpose service tier is currently in preview. The preview also supports flexible memory for zone-redundant instances on Premium-series hardware. For more information, see [availability through local and zone redundancy](high-availability-sla-local-zone-redundancy.md) and [flexible memory](resource-limits.md#flexible-memory).
 
 ## Related content
 

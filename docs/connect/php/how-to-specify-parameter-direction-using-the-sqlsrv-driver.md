@@ -25,7 +25,7 @@ This topic describes how to use the SQLSRV driver to specify parameter direction
     ```  
   
     > [!NOTE]  
-    > Calling stored procedures using canonical syntax is the recommended practice. For more information about canonical syntax, see [Calling a Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+    > Calling stored procedures by using canonical syntax is the recommended practice. For more information about canonical syntax, see [Procedure Calls](../../odbc/reference/develop-app/procedure-calls.md).  
   
 2.  Initialize or update PHP variables that correspond to the placeholders in the Transact-SQL query. For example, the following code initializes the two parameters for the UpdateVacationHours stored procedure:  
   

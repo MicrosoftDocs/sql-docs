@@ -1,9 +1,9 @@
 ---
 title: "Server Configuration: SMO and DMO XPs"
-description: "Learn how to enable SQL Server Management Object (SMO) extended stored procedures on a server. View information on the SMO and DMO XPs configuration option."
+description: Learn how to enable SQL Server Management Object (SMO) extended stored procedures on a server. View information on the SMO and DMO XPs configuration option.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/26/2025
+ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: configuration
 ms.topic: how-to
@@ -12,16 +12,16 @@ ms.topic: how-to
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Use the SMO and DMO XPs option to enable [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) extended stored procedures on this server.
+Use the `SMO and DMO XPs` option to enable [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) extended stored procedures on this server.
 
-Note than beginning in [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], DMO has been removed from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+Starting in [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], DMO is removed from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-The possible values are described in the following table:
+The following table describes the possible values:
 
-| Value | Meaning |
+| Value | Description |
 | --- | --- |
 | `0` | SMO XPs aren't available. |
-| `1` | SMO XPs are available. This is the default. |
+| `1` (default) | SMO XPs are available. |
 
 The setting takes effect immediately.
 

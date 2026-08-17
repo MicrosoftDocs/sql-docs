@@ -6,7 +6,7 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.reviewer: urmilano, danil, nnikolic, wiassaf, mathoma
-  ms.date: 05/12/2026
+  ms.date: 08/10/2026
   ms.service: azure-sql-managed-instance
   ms.subservice: service-overview
   ms.topic: faq
@@ -616,10 +616,10 @@ sections:
   - name: Next-gen General Purpose service tier upgrade
     questions:
 
-      - question: Why can't I enable zone redundancy for my Next-gen General Purpose SQL Managed Instance?
+      - question: Can I enable zone redundancy for my Next-gen General Purpose SQL managed instance?
         answer: |
-          Zone redundancy isn't currently supported for the Next-gen General Purpose service tier. 
+          Yes. Zone redundancy for the Next-gen General Purpose service tier is currently in preview. The preview also supports [flexible memory](resource-limits.md#flexible-memory) for zone-redundant instances on Premium-series hardware. For more information, see [Configure zone redundancy](instance-zone-redundancy-configure.md).
 
-      - question: Can I enable the Next-gen General Purpose upgrade for my for Instance Pool?
+      - question: Can I enable the Next-gen General Purpose upgrade for my instance pool?
         answer: |
-          No, the Next-gen General Purpose service tier upgrade isn't currently supported for [Instance Pools](instance-pools-overview.md), or instances inside a pool. 
+          No, the Next-gen General Purpose service tier upgrade isn't currently supported for [instance pools](instance-pools-overview.md), or instances inside a pool. 

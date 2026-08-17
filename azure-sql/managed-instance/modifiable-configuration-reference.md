@@ -4,7 +4,7 @@ description: Learn which configuration settings you can modify after you create 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mlandzic, vladiv, urmilano
-ms.date: 06/30/2026
+ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -74,7 +74,7 @@ This article identifies which [Azure SQL Managed Instance](sql-managed-instance-
 
 | Configuration | Values | Can modify after deployment |
 | --- | --- | --- |
-| **Zone redundancy** | Enabled, Disabled | **Yes**.<br /><br />Available for General Purpose and Business Critical service tiers. Not available for the Next-gen General Purpose service tier. Enabling or disabling is an online operation similar to a service tier change. See [Configure zone redundancy](instance-zone-redundancy-configure.md). |
+| **Zone redundancy** | Enabled, Disabled | **Yes**.<br /><br />Available for General Purpose and Business Critical service tiers. Zone redundancy for the Next-gen General Purpose service tier is currently in preview. Enabling or disabling is an online operation similar to a service tier change. See [Configure zone redundancy](instance-zone-redundancy-configure.md). |
 | **Failover groups** | Auto-failover groups with geo-replication | **Yes**.<br /><br />See [Failover groups overview](failover-group-sql-mi.md) and [Configure failover groups](failover-group-configure-sql-mi.md). |
 | **Managed Instance link** | Enabled, Disabled | **Yes**.<br /><br />See [Managed Instance link overview](managed-instance-link-feature-overview.md). |
 | **Stop/start instance** | Stopped, Running | **Yes (with limits)**.<br /><br />Only available for the General Purpose service tier. Not supported for instances in [failover groups](failover-group-sql-mi.md), [instance pools](instance-pools-overview.md), with [Managed Instance link](managed-instance-link-feature-overview.md), or with [zone redundancy](instance-zone-redundancy-configure.md) enabled. See [Stop and start an instance](instance-stop-start-how-to.md). |

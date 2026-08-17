@@ -5,7 +5,7 @@ description: Learn about the architecture of Azure SQL Managed Instance that ach
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/12/2026
+ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability
 ms.topic: concept-article
@@ -76,9 +76,9 @@ Whenever the database engine or the operating system is upgraded, or a failure i
 
 ### Next-gen General Purpose service tier
 
-Next-gen General Purpose is an architectural upgrade to the existing General Purpose service tier that uses an upgraded remote storage layer that stores instance data and log files on [Elastic SAN](/azure/storage/elastic-san/elastic-san-introduction) instead of page blobs and maintains it locally.
+Next-gen General Purpose is an architectural upgrade to the existing General Purpose service tier that uses an upgraded remote storage layer to store instance data and log files on [Elastic SAN](/azure/storage/elastic-san/elastic-san-introduction) instead of page blobs.
 
-Zone redundancy isn't available for the Next-gen General Purpose service tier upgrade.
+Zone redundancy for the Next-gen General Purpose service tier is currently in preview. The preview also supports [flexible memory](resource-limits.md#flexible-memory) for zone-redundant instances on Premium-series hardware.
 
 ### Business Critical service tier
 
@@ -98,7 +98,7 @@ Zone-redundant availability is based on placing replicas across three Azure avai
 
 By default, the cluster of nodes for the local storage availability model is created in the same datacenter. With the introduction of [Azure Availability Zones](/azure/reliability/availability-zones-overview), SQL Managed Instance places different replicas in different availability zones in the same region. To eliminate a single point of failure, the control ring is also duplicated across multiple zones. The control plane traffic is then routed to a load balancer that is also deployed across availability zones. Traffic routing from the control plane to the load balancer is controlled by [Azure Traffic Manager (ATM)](/azure/traffic-manager/traffic-manager-overview).
 
-By using a zone-redundant configuration, you can make your Business Critical or General Purpose instances resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can convert any existing Business Critical or General Purpose instances to the zone-redundant configuration. Zone redundancy isn't available for the [Next-gen General Purpose service tier](service-tiers-next-gen-general-purpose-use.md).
+By using a zone-redundant configuration, you can make your Business Critical, General Purpose, or Next-gen General Purpose instances resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can convert existing instances to the zone-redundant configuration. Zone redundancy for the [Next-gen General Purpose service tier](service-tiers-next-gen-general-purpose-use.md) is currently in preview.
 
 Because zone-redundant instances have replicas in different datacenters with some distance between them, the increased network latency might increase the transaction commit time, and thus impact the performance of some OLTP workloads. You can always return to the single-zone configuration by disabling the zone-redundancy setting. This process is an online operation similar to the regular service tier objective upgrade. At the end of the process, the instance is migrated from a zone-redundant ring to a single-zone ring or vice versa.
 
@@ -111,6 +111,10 @@ In the General Purpose service tier, zone redundancy is achieved by placing stat
 The following diagram demonstrates the zone redundancy architecture for the General Purpose service tier:
 
 :::image type="content" source="media/high-availability-sla-local-zone-redundancy/zone-redundant-general-purpose-service-tier.png" alt-text="Diagram of the zone redundancy architecture in the General Purpose service tier.":::
+
+### Next-gen General Purpose service tier
+
+Zone redundancy for the Next-gen General Purpose service tier is currently in preview. A zone-redundant configuration distributes service components across availability zones and uses the upgraded Elastic SAN remote storage layer. The preview supports flexible memory on Premium-series hardware, so you can adjust memory independently from the number of vCores.
 
 ### Business Critical service tier
 

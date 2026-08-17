@@ -4,7 +4,7 @@ description: Configure zone redundancy for your Azure SQL Managed Instance by us
 author: Stralle
 ms.author: strrodic
 ms.reviewer: urmilano, mathoma, randolphwest
-ms.date: 03/18/2026
+ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
@@ -18,14 +18,14 @@ ms.custom:
 
 This article teaches you how to configure [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) for Azure SQL Managed Instance by using the Azure portal, PowerShell, Azure CLI, and REST API.
 
-By using a zone-redundant configuration, you can make your Business Critical or General Purpose instances highly available and resilient to a larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can convert any existing Business Critical or General Purpose instances to the zone-redundant configuration.
+By using a zone-redundant configuration, you can make your Business Critical, General Purpose, or Next-gen General Purpose instances highly available and resilient to a larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can convert existing instances to the zone-redundant configuration.
 
 ## Considerations
 
 Consider the following points when using zone redundancy for SQL Managed Instance:
 
 - Zone redundancy is available in [select regions](#supported-regions).
-- Zone redundancy isn't currently available for the Next-gen General Purpose service tier.
+- Zone redundancy for the [Next-gen General Purpose service tier](service-tiers-next-gen-general-purpose-use.md) is currently in preview. The preview also supports [flexible memory](resource-limits.md#flexible-memory) for zone-redundant instances on Premium-series hardware.
 - Zone redundancy can be enabled, and disabled. The operation to enable or disable zone redundancy is a fully online [scaling operation](../database/scale-resources.md) executed in the background.
 - To enable zone redundancy, your SQL managed instance **Backup storage redundancy** must use *Zone-redundant* or *Geo-zone-redundant* storage.
 

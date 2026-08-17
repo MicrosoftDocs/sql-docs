@@ -4,7 +4,7 @@ description: Learn about feature availability by region for Azure SQL Managed In
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: 
-ms.date: 07/30/2026
+ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.topic: concept-article
 ms.custom:
@@ -103,6 +103,9 @@ Choosing a [maintenance window](maintenance-window.md) for Azure SQL Managed Ins
 ## Zone redundancy
 
 [Zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) is supported in the following regions: 
+
+> [!NOTE]
+> Zone redundancy for the Next-gen General Purpose service tier is currently in preview. The preview also supports [flexible memory](resource-limits.md#flexible-memory) for zone-redundant instances on Premium-series hardware.
 
 #### [Americas](#tab/americas1)
 

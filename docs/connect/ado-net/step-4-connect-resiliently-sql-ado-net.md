@@ -1,66 +1,77 @@
 ---
 title: "Step 4: Connect Resiliently to SQL with ADO.NET"
-description: "Learn how to use retry logic to improve connection resiliency to a SQL database using ADO.NET."
+description: Learn how to use retry logic to improve connection resiliency to a SQL database using ADO.NET.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 09/18/2025
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra, randolphwest
+ms.date: 08/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
 ms.custom:
   - sfi-ropc-nochange
 dev_langs:
-  - "CSharp"
+  - CSharp
+ai-usage: ai-assisted
 ---
 # Step 4: Connect resiliently to SQL with ADO.NET
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-- Previous article:&nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-connect-sql-ado-net.md)
+- Previous article: [Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-connect-sql-ado-net.md)
 
-This article provides a C# code sample that demonstrates custom retry logic. The retry logic provides reliability. The retry logic is designed to gracefully process temporary errors or *transient faults* which tend to go away if the program waits several seconds and retries.
+This article provides a C# code sample that demonstrates manually implemented retry logic. The retry logic handles temporary errors, or *transient faults*, that might clear if the program waits and tries the operation again.
+
+> [!IMPORTANT]  
+> For new applications that use Microsoft.Data.SqlClient 3.0 and later versions, prefer the driver's configurable retry logic instead of implementing a retry loop. Start with [Configure retry logic in SqlClient](configurable-retry-logic-sqlclient-introduction.md).
 
 Sources of transient faults include:
 
-- A brief failure of the networking that supports the Internet.
-- A cloud system might be load balancing its resources at the moment your query was sent.
+- A brief failure of the network that supports the Internet.
+- A cloud system might be load balancing its resources when your query arrives.
 
-The ADO.NET classes for connecting to your local Microsoft SQL Server can also connect to Azure SQL Database. However, by themselves the ADO.NET classes can't provide all the robustness and reliability necessary in production use. Your client program can encounter transient faults from which it should silently and gracefully recover and continue on its own.
+The ADO.NET classes for connecting to SQL Server can also connect to Azure SQL Database. Your client program can encounter transient faults. It should recover by using a bounded retry policy that is appropriate for the operation.
 
 ## Step 1: Identify transient errors
 
-Your program must distinguish between transient errors versus persistent errors. Transient errors are error conditions that might clear up within a short period of time, such as transient network problems.  An example of a persistent error would be, if your program has a misspelling of the target database name - in this case, the "No such database found" error would persist, and has no chance of clearing up within a short period of time.
+Your program must distinguish between transient errors and persistent errors. Transient errors are error conditions that might clear up in a short time, such as transient network problems. An example of a persistent error is a misspelling of the target database name. In that case, the "No such database found" error persists and doesn't clear up quickly.
 
-The list of error numbers that are categorized as transient faults is available at [Error messages for SQL Database client applications](/azure/sql-database/sql-database-develop-error-messages/)
+The list of error numbers that are categorized as transient faults is available at [Error messages for SQL Database client applications](/azure/sql-database/sql-database-develop-error-messages/).
 
 ## Step 2: Create and run sample application
 
-This sample assumes .NET Framework 4.6.2 or later is installed.  The C# code sample consists of one file named Program.cs. Its code is provided in the next section.
+This sample assumes .NET Framework 4.6.2 or later is installed. The C# code sample consists of one file named `Program.cs`. Its code is provided in the next section.
 
 ### Step 2.a: Capture and compile the code sample
 
 You can compile the sample with the following steps:
 
-1. In the [free Visual Studio Community edition](https://www.visualstudio.com/products/visual-studio-community-vs), create a new project from the C# Console Application template.
-   - File > New > Project > Installed > Templates > Visual C# > Windows > Classic Desktop > Console Application
-   - Name the project **RetryAdo2**.
+1. In the [free Visual Studio Community edition](https://visualstudio.microsoft.com/vs/community), create a new project from the C# Console Application template.
+
+   - Select **File** > **New** > **Project** > **Installed** > **Templates** > **Visual C#** > **Windows** > **Classic Desktop** > **Console Application**.
+
+   - Name the project `RetryAdo2`.
+
 1. Open the Solution Explorer pane.
+
    - See the name of your project.
    - On your project, [add a NuGet dependency](/nuget/quickstart/install-and-use-a-package-in-visual-studio) on the Microsoft.Data.SqlClient package.
-   - See the name of the Program.cs file.
-1. Open the Program.cs file.
-1. Entirely replace the contents of the Program.cs file with the code in the following code block.
-1. Select the menu Build > Build Solution.
+   - View the name of the `Program.cs` file.
+
+1. Open the `Program.cs` file.
+
+1. Replace the entire contents of the `Program.cs` file with the code in the following code block.
+
+1. Select the menu **Build** > **Build Solution**.
 
 ### Step 2.b: Copy and paste sample code
 
-Paste this code into your **Program.cs** file.
+Paste this code into your `Program.cs` file.
 
-Then you must edit the strings for server name, password, and so on. You can find these strings in the method named **GetSqlConnectionString**.
+Then, edit the strings for the server name and password. You can find these strings in the method named `GetSqlConnectionString`.
 
 > [!NOTE]  
-> The connection string for server name is geared toward Azure SQL Database, because it includes the four character prefix of **tcp:**. But you can adjust the server string to connect to your Microsoft SQL Server.
+> The connection string is geared toward Azure SQL Database, because it includes the four-character prefix `tcp:`. But you can adjust the server string to connect to your SQL Server instance.
 
 ```csharp
 using System;
@@ -142,15 +153,14 @@ public class Program
 
         using var dbCommand = sqlConnection.CreateCommand();
 
-        dbCommand.CommandText =
-            @"
-SELECT TOP 3
-    ob.name,
-    CAST(ob.object_id as nvarchar(32)) as [object_id]
-  FROM sys.objects as ob
-  WHERE ob.type='IT'
-  ORDER BY ob.name;";
-
+        dbCommand.CommandText = @"
+        SELECT TOP 3
+            ob.name,
+            CAST(ob.object_id as NVARCHAR(32)) AS [object_id]
+        FROM sys.objects AS ob
+        WHERE ob.type='IT'
+        ORDER BY ob.name;";
+        
         sqlConnection.Open();
         var dataReader = dbCommand.ExecuteReader();
 
@@ -216,10 +226,10 @@ internal class TestSqlException : ApplicationException
 
 ### Step 2.c: Run the program
 
-The **RetryAdo2.exe** executable inputs no parameters. To run the .exe:
+The `RetryAdo2.exe` executable doesn't take parameters. To run the `.exe`:
 
-1. Open a console window to where you have compiled the RetryAdo2.exe binary.
-1. Run RetryAdo2.exe, with no input parameters.
+1. Open a console window in the folder where you compiled the `RetryAdo2.exe` binary.
+1. Run `RetryAdo2.exe` with no input parameters.
 
 ```output
 database_firewall_rules_table   245575913
@@ -229,16 +239,16 @@ filetable_updates_2105058535    2105058535
 
 ## Step 3: Ways to test your retry logic
 
-There are a variety of ways you can simulate a transient error to test your retry logic.
+You can simulate a transient error to test your retry logic in several ways.
 
 ### Step 3.a: Throw a test exception
 
 The code sample includes:
 
-- A small second class named **TestSqlException**, with a property named **Number**.
+- A small second class named `TestSqlException` with a property named `Number`.
 - `//throw new TestSqlException(4060);` , which you can uncomment.
 
-If you uncomment the throw statement, and recompile, the next run of **RetryAdo2.exe** outputs something similar to the following.
+If you uncomment the throw statement and recompile, the next run of `RetryAdo2.exe` outputs something similar to the following.
 
 ```output
 [C:\VS15\RetryAdo2\RetryAdo2\bin\Debug\]
@@ -258,20 +268,20 @@ ERROR: Unable to access the database!
 
 ### Step 3.b: Retest with a persistent error
 
-To prove the code handles persistent errors correctly, rerun the preceding test except don't use the number of a real transient error like 4060. Instead use the nonsense number 7654321. The program should treat this as a persistent error, and should bypass any retry.
+To prove the code handles persistent errors correctly, rerun the preceding test. Instead of using a real transient error number like 4060, use the fictional number 7654321. The program treats this number as a persistent error and bypasses any retry.
 
 ### Step 3.c: Disconnect from the network
 
 1. Disconnect your client computer from the network.
    - For a desktop, unplug the network cable.
    - For a laptop, press the function combination of keys to turn off the network adapter.
-1. Start RetryAdo2.exe, and wait for the console to display the first transient error, probably 11001.
-1. Reconnect to the network, while RetryAdo2.exe continues to run.
+1. Start `RetryAdo2.exe`, and wait for the console to display the first transient error, probably 11001.
+1. Reconnect to the network, while `RetryAdo2.exe` continues to run.
 1. Watch the console report success on a subsequent retry.
 
 ### Step 3.d: Temporarily misspell the server name
 
-1. Temporarily add 40615 as another error number to **TransientErrorNumbers**, and recompile.
+1. Temporarily add 40615 as another error number to `TransientErrorNumbers`, and recompile.
 1. Set a breakpoint on the line: `new QC.SqlConnectionStringBuilder()`.
 1. Use the *Edit and Continue* feature to purposely misspell the server name, a couple of lines below.
    - Let the program run and come back to your breakpoint.
@@ -283,4 +293,4 @@ To prove the code handles persistent errors correctly, rerun the preceding test 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Connecting to SQL Database: Links, Best Practices and Design Guidelines](/azure/azure-sql/database/develop-overview)
+> [Application development overview - Azure SQL Database & Azure SQL Managed Instance](/azure/azure-sql/database/develop-overview)

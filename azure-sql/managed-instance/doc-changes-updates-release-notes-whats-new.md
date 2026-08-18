@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, randolphwest
-ms.date: 08/10/2026
+ms.date: 08/17/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -79,6 +79,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | --- | --- |
 | **Automatic backup immutability GA** |  Automatic backup immutability protects up to the most recent seven days of point-in-time restore backups in Azure SQL Managed Instance. This feature is now generally available (GA). To learn more, see [Automatic backup immutability](../automatic-backup-immutability.md). |
 | **Next-gen General Purpose zone redundancy preview** | Zone redundancy for the Next-gen General Purpose service tier is now in preview. The preview also supports flexible memory for zone-redundant instances on Premium-series hardware. To learn more, see [Availability through local and zone redundancy](high-availability-sla-local-zone-redundancy.md) and [Flexible memory](resource-limits.md#flexible-memory). |
+| **Changes to quota request types** | SQL Managed Instance quota request types changed. Subnet quotas no longer apply, and vCore quotas are now scoped per hardware generation (Standard-series, Premium-series, and Memory optimized premium-series). Existing regional vCore allowances are carried forward for each hardware generation. To learn more, see [SQL Managed Instance quota request types](../database/quota-increase-request.md#sql-managed-instance-quota-request-types). |
 
 ### July 2026
 

@@ -372,44 +372,46 @@ SQL Managed Instance currently supports deployment only on the following types o
 > [!NOTE]  
 > For the latest information on region availability for subscriptions, first check [select a region](../capacity-errors-troubleshoot.md).
 
-Supported subscription types can contain a limited number of resources per region. SQL Managed Instance has two default limits per Azure region (that can be increased on-demand by creating a special [support request in the Azure portal](../database/quota-increase-request.md)) depending on a type of subscription type:
+Supported subscription types can contain a limited number of resources per region. SQL Managed Instance has one default limit per Azure region (that can be increased on-demand by creating a special [support request in the Azure portal](../database/quota-increase-request.md)) depending on a type of subscription type:
 
-- **Subnet limit**: The maximum number of subnets where instances of SQL Managed Instance are deployed in a single region.
-- **vCore unit limit**: The maximum number of vCore units that can be deployed across all instances in a single region. One GP vCore uses one vCore unit and one BC vCore takes four vCore units. The total number of instances isn't limited as long as it's within the vCore unit limit.
+- **vCore unit limit**: The maximum number of vCore units per hardware generation that can be deployed across all instances in a single region. One GP vCore uses one vCore unit and one BC vCore takes four vCore units. The total number of instances isn't limited as long as it's within the vCore unit limit.
 
 > [!NOTE]  
 > These limits are default settings and not technical limitations. The limits can be increased on-demand by creating a special [support request in the Azure portal](../database/quota-increase-request.md) if you need more instances in the current region. As an alternative, you can create new instances of SQL Managed Instance in another Azure region without sending support requests.
 
 The following table shows the **default regional limits** for supported subscription types (default limits can be extended using [a support request](#request-a-quota-increase)):
 
-| Subscription type | Default limit for SQL Managed Instance subnets | Default limit for vCore units <sup>1</sup> |
-| --- | --- | --- |
-| CSP | 16 (30 in some regions<sup>2</sup>) | 960 (1440 in some regions<sup>2</sup>) |
-| EA | 16 (30 in some regions<sup>2</sup>) | 960 (1440 in some regions<sup>2</sup>) |
-| Enterprise Dev/Test | 6 | 320 |
-| Pay-as-you-go | 6 | 320 |
-| Pay-as-you-go Dev/Test | 6 | 320 |
-| Azure Pass | 3 | 64 |
-| BizSpark | 3 | 64 |
-| BizSpark Plus | 3 | 64 |
-| Microsoft Azure Sponsorship | 3 | 64 |
-| Microsoft Partner Network | 3 | 64 |
-| Visual Studio Enterprise (MPN) | 3 | 64 |
-| Visual Studio Enterprise | 3 | 32 |
-| Visual Studio Enterprise (BizSpark) | 3 | 32 |
-| Visual Studio Professional | 3 | 32 |
-| MSDN Platforms | 3 | 32 |
+| Subscription type | Default limit for vCore units <sup>1</sup> |
+| --- | --- |
+| CSP | 960 (1440 in some regions<sup>2</sup>) |
+| EA | 960 (1440 in some regions<sup>2</sup>) |
+| Enterprise Dev/Test | 320 |
+| Pay-as-you-go | 320 |
+| Pay-as-you-go Dev/Test | 320 |
+| Azure Pass | 64 |
+| BizSpark | 64 |
+| BizSpark Plus | 64 |
+| Microsoft Azure Sponsorship | 64 |
+| Microsoft Partner Network | 64 |
+| Visual Studio Enterprise (MPN) | 64 |
+| Visual Studio Enterprise | 32 |
+| Visual Studio Enterprise (BizSpark) | 32 |
+| Visual Studio Professional | 32 |
+| MSDN Platforms | 32 |
 
-<sup>1</sup> In planning deployments, please take into consideration that Business Critical (BC) service tier requires four (4) times more vCore capacity than General Purpose (GP) service tier. For example: 1 GP vCore = 1 vCore unit and 1 BC vCore = 4 vCore. To simplify your consumption analysis against the default limits, summarize the vCore units across all subnets in the region where SQL Managed Instance is deployed and compare the results with the instance unit limits for your subscription type. **Max number of vCore units** limit applies to each subscription in a region. There's no limit per individual subnets except that the sum of all vCores deployed across multiple subnets must be lower or equal to **max number of vCore units**.
+<sup>1</sup> In planning deployments, please take into consideration that Business Critical (BC) service tier requires four (4) times more vCore capacity than General Purpose (GP) service tier. For example: 1 GP vCore = 1 vCore unit and 1 BC vCore = 4 vCore. To simplify your consumption analysis against the default limits, summarize the vCore units per hardware generation across all instances in the region where SQL Managed Instance is deployed and compare the results with the vCore unit limits for your subscription type. The **max number of vCore units** limit applies to each subscription per hardware generation in a region.
 
-<sup>2</sup> Larger subnet and vCore limits are available in the following regions: Australia East, East US, East US 2, North Europe, South Central US, Southeast Asia, UK South, West Europe, West US 2.
+<sup>2</sup> Larger vCore limits are available in the following regions: Australia East, East US, East US 2, North Europe, South Central US, Southeast Asia, UK South, West Europe, West US 2.
 
 > [!IMPORTANT]  
-> In case your vCore and subnet limit is 0, it means that default regional limit for your subscription type isn't set. You can also use quota increase request for getting subscription access in specific region following the same procedure - providing required vCore and subnet values.
+> In case your vCore limit is 0, it means that default regional limit for your subscription type isn't set. You can also use quota increase request for getting subscription access in specific region following the same procedure - providing required vCore values.
 
 ## Request a quota increase
 
 If you need more instances in your current regions, send a support request to extend the quota using the Azure portal. For more information, see [Request quota increases for Azure SQL Database and SQL Managed Instance](../database/quota-increase-request.md).
+
+> [!NOTE]
+> Starting August 2026, SQL Managed Instance quota request types changed. Subnet quotas no longer apply, and vCore quotas are now scoped per hardware generation. For more information, see [SQL Managed Instance quota request types](../database/quota-increase-request.md#sql-managed-instance-quota-request-types).
 
 ## Related content
 

@@ -54476,7 +54476,7 @@
     },
     {
       "source_path": "docs/connect/odbc/linux/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md",
-      "redirect_url": "/sql/connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery",
+      "redirect_url": "/sql/connect/odbc/odbc-driver-support-for-high-availability-disaster-recovery",
       "redirect_document_id": false
     },
     {
@@ -71336,6 +71336,11 @@
     {
       "source_path": "docs/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md",
       "redirect_url": "/previous-versions/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md",
+      "redirect_url": "/sql/connect/odbc/odbc-driver-support-for-high-availability-disaster-recovery",
       "redirect_document_id": false
     }
   ]

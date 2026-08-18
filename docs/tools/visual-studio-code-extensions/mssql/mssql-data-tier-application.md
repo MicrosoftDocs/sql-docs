@@ -33,7 +33,7 @@ To use the Data-tier Application features, install the MSSQL extension for Visua
 
 1. In Visual Studio Code, select the **Extensions** icon to view available extensions.
 
-   :::image type="content" source="media/mssql-data-tier-application/data-tier-application-install.png" alt-text="Screenshot of installing the MSSQL extension in Visual Studio Code.":::
+   :::image type="content" source="media/mssql-data-tier-application/data-tier-application-install.png" alt-text="Screenshot of installing the MSSQL extension for Visual Studio Code.":::
 
 1. Search for the **SQL Server (mssql)** extension and select it to view its details. Select **Install** to add the extension.
 

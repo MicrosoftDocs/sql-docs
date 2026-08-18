@@ -58,7 +58,7 @@ To use database watcher, the following prerequisites are required.
 
 - The user who configures the watcher must have administrator access to the Azure SQL targets. An administrator grants the watcher limited, specific access to SQL monitoring targets. For more information, see [Grant access to targets](#grant-access-to-sql-targets).
 
-- To grant a watcher access to a SQL target, an administrator needs to execute T-SQL scripts using [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms), Visual Studio Code with the [SQL server mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension, or other SQL client tools.
+- To grant a watcher access to a SQL target, an administrator needs to execute T-SQL scripts using [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms), Visual Studio Code with the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code), or other SQL client tools.
 
 - To use [Azure Private Link](/azure/private-link/private-link-overview) for private connectivity to Azure resources, the user who approves the private endpoint must be a member of the **Owner** RBAC role, or must have the required RBAC permissions. For more information, see [Approval RBAC for private endpoint](/azure/private-link/rbac-permissions#approval-rbac-for-private-endpoint).
 

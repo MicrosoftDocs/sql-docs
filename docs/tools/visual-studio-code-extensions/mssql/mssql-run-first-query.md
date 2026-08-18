@@ -119,6 +119,6 @@ This query returns all records in the `Authors` table, showing the data you inse
 ## Related content
 
 - [Connect to a database with the MSSQL extension for Visual Studio Code](mssql-database-connections.md)
-- [What is the MSSQL extension for Visual Studio Code?](mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md)
 - [Tutorial: Write Transact-SQL statements](../../../t-sql/tutorial-writing-transact-sql-statements.md)
 - [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)

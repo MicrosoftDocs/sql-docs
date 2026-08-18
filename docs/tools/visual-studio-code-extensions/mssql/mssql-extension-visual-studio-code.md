@@ -17,13 +17,15 @@ ms.custom:
 ai-usage: ai-assisted
 ---
 
-# What is the MSSQL extension for Visual Studio Code?
+# MSSQL extension for Visual Studio Code
 
 The [MSSQL extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) supports developers building applications that use Azure SQL (including Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure Virtual Machines), SQL database in Microsoft Fabric, and SQL Server. It provides tools for connecting to databases, managing and designing schemas, exploring database objects, executing Transact-SQL (T-SQL) queries, and viewing query execution plans within Visual Studio Code.
 
 The extension includes IntelliSense, T-SQL script execution, and customizable options for local and cloud-based databases.
 
-## Install the MSSQL extension in Visual Studio Code
+<a id="install-the-mssql-extension-in-visual-studio-code"></a>
+
+## Install the MSSQL extension for Visual Studio Code
 
 To get started with SQL development in Visual Studio Code, install the **MSSQL extension**:
 
@@ -33,7 +35,7 @@ To get started with SQL development in Visual Studio Code, install the **MSSQL e
 1. Find **SQL Server (mssql)** in the results and select it.
 1. Select the **Install** button.
 
-:::image type="content" source="media/mssql-extension-visual-studio-code/mssql-extension-vscode.png" alt-text="Screenshot of the MSSQL extension in Visual Studio Code." lightbox="media/mssql-extension-visual-studio-code/mssql-extension-vscode.png":::
+:::image type="content" source="media/mssql-extension-visual-studio-code/mssql-extension-vscode.png" alt-text="Screenshot of the MSSQL extension for Visual Studio Code." lightbox="media/mssql-extension-visual-studio-code/mssql-extension-vscode.png":::
 
 > [!TIP]  
 > You know the extension is installed correctly when the **MSSQL** icon appears in the Activity Bar and the **Connections** view becomes available.

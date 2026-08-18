@@ -31,7 +31,7 @@ Custom instructions teach GitHub Copilot your team's standards so every response
 
 ## Prerequisites
 
-- Visual Studio Code with the [MSSQL extension](https://aka.ms/vscode-mssql-marketplace) installed.
+- Visual Studio Code with the [MSSQL extension](../mssql/mssql-extension-visual-studio-code.md) installed.
 - An active GitHub Copilot subscription.
 - A workspace folder. This quickstart creates new files in `.github/instructions/`.
 

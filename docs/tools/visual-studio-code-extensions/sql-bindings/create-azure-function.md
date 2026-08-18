@@ -18,7 +18,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-Azure Functions support for [SQL bindings](/azure/azure-functions/functions-bindings-azure-sql) is available in preview for input and output bindings. SQL bindings make it easier to connect an Azure SQL database or SQL Server database to Azure Functions. The SQL Bindings extension for Visual Studio Code facilitates the process of developing Azure Functions with SQL bindings, and is automatically installed with the [MSSQL extension for Visual Studio Code](https://aka.ms/mssql-marketplace) extension pack.
+Azure Functions support for [SQL bindings](/azure/azure-functions/functions-bindings-azure-sql) is available in preview for input and output bindings. SQL bindings make it easier to connect an Azure SQL database or SQL Server database to Azure Functions. The SQL Bindings extension for Visual Studio Code facilitates the process of developing Azure Functions with SQL bindings, and is automatically installed with the [MSSQL extension for Visual Studio Code](../mssql/mssql-extension-visual-studio-code.md).
 
 This article shows how the [SQL Bindings extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode) for Visual Studio Code can be used to create Azure Functions with SQL bindings.
 

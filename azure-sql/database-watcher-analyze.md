@@ -771,7 +771,7 @@ wait_type_sample
 
 If you are already familiar with T-SQL, you can start querying and analyzing SQL monitoring data right away without having to learn KQL. However, [KQL](#use-kql-to-analyze-monitoring-data) is the recommended language for querying data in Azure Data Explorer or Real-Time Analytics because it provides unparalleled support for querying telemetry data.
 
-You can connect to your Azure Data Explorer or Real-Time Analytics database from [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms), Visual Studio Code with the [SQL server mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension, and other [common tools](/azure/data-explorer/connect-common-apps). You can query an Azure Data Explorer or a KQL database as if it were a SQL Server or an Azure SQL database. For more information, see [Query data in Azure Data Explorer using SQL Server emulation](/azure/data-explorer/sql-server-emulation-overview).
+You can connect to your Azure Data Explorer or Real-Time Analytics database from [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms), the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code), and other [common tools](/azure/data-explorer/connect-common-apps). You can query an Azure Data Explorer or a KQL database as if it were a SQL Server or an Azure SQL database. For more information, see [Query data in Azure Data Explorer using SQL Server emulation](/azure/data-explorer/sql-server-emulation-overview).
 
 > [!NOTE]
 > Not every T-SQL construct is supported in Azure Data Explorer and Real-Time Analytics. For details, see [Query data using T-SQL](/azure/data-explorer/t-sql).

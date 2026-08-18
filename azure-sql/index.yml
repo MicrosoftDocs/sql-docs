@@ -178,8 +178,8 @@ landingContent:
             url: database/connect-query-content-reference-guide.md 
           - text: SQL Server Management Studio (SSMS)
             url: database/connect-query-ssms.md
-          - text: Visual Studio Code with the MSSQL extension
-            url: https://aka.ms/mssql-marketplace
+          - text: MSSQL extension for Visual Studio Code
+            url: /sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code
           - text: Azure portal
             url: database/connect-query-portal.md 
           - text: Visual Studio (.NET)

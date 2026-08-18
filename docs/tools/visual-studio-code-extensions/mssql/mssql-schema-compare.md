@@ -16,7 +16,7 @@ ai-usage: ai-assisted
 
 # Schema Compare
 
-This article provides an overview of the Schema Compare feature for the MSSQL extension in Visual Studio Code. Schema Compare compares two database definitions, and applies the differences from the source to the target, including active database connections, `.dacpac` files, and SQL projects.
+This article provides an overview of the Schema Compare feature in the [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md). Schema Compare compares two database definitions, and applies the differences from the source to the target, including active database connections, `.dacpac` files, and SQL projects.
 
 Schema Compare simplifies the process of comparing databases, and gives you full control when synchronizing them, even across different database versions. You can selectively filter specific differences, and categories of differences, before applying any changes.
 
@@ -39,7 +39,7 @@ To use the Schema Compare features, install the MSSQL extension for Visual Studi
 
 1. In Visual Studio Code, select the **Extensions** icon to view available extensions.
 
-   :::image type="content" source="media/mssql-schema-compare/schema-compare-install.png" alt-text="Screenshot of installing the MSSQL extension in Visual Studio Code.":::
+   :::image type="content" source="media/mssql-schema-compare/schema-compare-install.png" alt-text="Screenshot of installing the MSSQL extension for Visual Studio Code.":::
 
 1. Search for the **SQL Server (mssql)** extension and select it to view its details. Select **Install** to add the extension.
 

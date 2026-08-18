@@ -18,9 +18,10 @@ Visual Studio Code is a code editor for Windows, macOS, and Linux that supports 
 
 ## Prerequisites
 
-Before you start, make sure you have installed the latest version of Visual Studio Code and loaded the `mssql` extension. To download these tools, see the following pages:
--   [Download Visual Studio Code](https://code.visualstudio.com/Download)
--   [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+Before you start, make sure you have installed the latest version of Visual Studio Code and loaded the [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md). To download these tools, see the following pages:
+
+- [Download Visual Studio Code](https://code.visualstudio.com/Download)
+- [MSSQL extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## Supported platforms
 

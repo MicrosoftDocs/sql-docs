@@ -20,7 +20,7 @@ For more information about Windows PowerShell, see [What is Windows PowerShell?]
 
 ## Cross-platform editor options
 
-All of the following steps for PowerShell work in a regular terminal, or you can run them from a terminal within Visual Studio Code. Visual Studio Code is available on macOS and Linux. For more information on the MSSQL extension, see [What is the MSSQL extension for Visual Studio Code?](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)
+All of the following steps for PowerShell work in a regular terminal, or you can run them from a terminal within Visual Studio Code. Visual Studio Code is available on macOS and Linux. For more information on the MSSQL extension, see [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md).
 
 ## Install PowerShell
 

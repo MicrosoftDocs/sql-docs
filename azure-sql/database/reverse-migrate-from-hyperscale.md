@@ -210,7 +210,7 @@ ALTER DATABASE [mySampleDatabase]
 GO
 ```
 
-To monitor operations for a Hyperscale database, connect to the `master` database of your [logical server](logical-servers.md) using [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms), [the mssql extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code), or the client of your choice to run Transact-SQL commands.
+To monitor operations for a Hyperscale database, connect to the `master` database of your [logical server](logical-servers.md) using [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms), the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code), or the client of your choice to run Transact-SQL commands.
 
 Query the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database?view=azuresqldb-current&preserve-view=true) Dynamic Management View to review information about recent operations performed on databases on your logical server.
 

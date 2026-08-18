@@ -197,7 +197,7 @@ Set-AzSqlDatabase -ResourceGroupName $resourceGroupName `
 
 # [Transact-SQL](#tab/t-sql)
 
-To convert an existing Azure SQL Database to Hyperscale with Transact-SQL, first connect to the `master` database on your [logical SQL server](logical-servers.md) by using [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms) or [the mssql extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code).
+To convert an existing Azure SQL Database to Hyperscale with Transact-SQL, first connect to the `master` database on your [logical SQL server](logical-servers.md) by using [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms) or the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code).
 
 You must specify both the edition and service objective in the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true) statement.
 

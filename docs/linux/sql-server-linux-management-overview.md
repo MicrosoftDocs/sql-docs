@@ -27,7 +27,7 @@ Almost everything you can do in a client tool can also be accomplished with Tran
 
 ## MSSQL extension for Visual Studio Code
 
-Visual Studio Code is a cross-platform tool, and you can install the MSSQL extension to manage SQL Server. For more information, see [What is the MSSQL extension for Visual Studio Code?](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)
+Visual Studio Code is a cross-platform tool, and you can install the MSSQL extension to manage SQL Server. For more information, see [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md).
 
 ## Named Pipes
 

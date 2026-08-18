@@ -108,10 +108,14 @@ Specifies the host name from the Distributor's certificate, when it's different 
 
 #### [ @multi_subnet_failover = ] *multi_subnet_failover*
 
-**Applies to:** [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 8 and later versions
+**Applies to**: [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 8 and later versions.
 
-Used to pass information for the creation of the dynamic linked server between publisher and remote distributor. Set the parameter value to 1 in replication topologies with remote distributor that is accessed through an Always On availability group listener or multi-subnet failover cluster instance. It helps replication agents reconnect faster after failover and prevents connection timeouts. For more information, review [Connecting with MultiSubnetFailover parameter](../../connect/oledb/features/oledb-driver-for-sql-server-support-disaster-recovery.md#connecting-with-multisubnetfailover) in OLE DB documentation.
-If `0`, the dynamic linked server isn't created with the `MultiSubnetFailover` parameter. If `1`, the dynamic linked server is created with the `MultiSubnetFailover` parameter as `1`. *@multi_subnet_failover* is **bit**, with a default of `0`.
+Used to pass information for the creation of the dynamic linked server between publisher and remote distributor. *@multi_subnet_failover* is **bit**, with a default of `0`.
+
+Set the parameter value to `1` in replication topologies with a remote distributor accessed through an Always On availability group listener, or a multi-subnet failover cluster instance. This setting helps replication agents reconnect faster after failover and prevents connection timeouts. For more information, see  [Connecting with MultiSubnetFailover parameter](../../connect/oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover).
+
+- If `0`, the dynamic linked server isn't created with the `MultiSubnetFailover` parameter.
+- If `1`, the dynamic linked server is created with the `MultiSubnetFailover` parameter as `1`.
 
 ## Return code values
 

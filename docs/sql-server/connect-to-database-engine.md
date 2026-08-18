@@ -205,6 +205,6 @@ For more information about running T-SQL queries in client tools, see:
 
 - [Sign in to SQL Server](../database-engine/configure-windows/logging-in-to-sql-server.md)
 - [What is SQL Server Management Studio (SSMS)?](/ssms/sql-server-management-studio-ssms)
-- [What is the MSSQL extension for Visual Studio Code?](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)
 - [Configure Database Engine instances (SQL Server)](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)
 - [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md)

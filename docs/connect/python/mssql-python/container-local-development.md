@@ -82,7 +82,7 @@ sqlcmd delete
 
 ## Local SQL Server from VS Code
 
-The [SQL Server extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) (ms-mssql.mssql) can create local SQL Server containers directly from the editor:
+The [MSSQL extension for Visual Studio Code](../../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) (ms-mssql.mssql) can create local SQL Server containers directly from the editor:
 
 1. Open the **SQL Server** view in the Activity Bar.
 1. Select **Add Connection** > **Create Local SQL Server** (or use the Command Palette: **MS SQL: Create Local SQL Server**).

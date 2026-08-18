@@ -31,7 +31,7 @@ Plan mode is a Visual Studio Code feature that lets GitHub Copilot reason throug
 
 ## Prerequisites
 
-- Visual Studio Code with the [MSSQL extension](https://aka.ms/vscode-mssql-marketplace) installed.
+- Visual Studio Code with the [MSSQL extension](../mssql/mssql-extension-visual-studio-code.md) installed.
 - An active GitHub Copilot subscription with plan mode available in the chat mode dropdown list.
 - A workspace folder where you can author a `requirements.md` file.
 - Optional: a target database connection for agent mode handoff.

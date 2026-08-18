@@ -18,24 +18,25 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 This article explains how to request a quota increase for Azure SQL Database and Azure SQL Managed Instance, as well as how to request subscription access and zone redundancy for Azure SQL Database. 
 
-<a id="newquota"></a> 
+<a id="newquota"></a>
 
 ## Create quota increase request
 
-To request a quota increase, follow these steps: 
+To request a quota increase, follow these steps:
 
-1. Go to the **New support request** page in the Azure portal by following the steps to [Open a support request](/azure/azure-portal/supportability/how-to-create-azure-support-request). 
-1. In the **Support + troubleshooting** pane, search for `quota`. Under **Which service are you having an issue with?**, select **Service and subscription limits (quotas)**.
+1. Go to the [New support request](https://portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview) page in the Azure portal by following the steps to [Open a support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+1. Select **Create a support request** to open the **Support + troubleshooting** pane.
+1. In the **Support + troubleshooting** pane, search for `quota`. Under **Which service are you having an issue with?**, select **None of the above** and then choose **Service and subscription limits (quotas)** from the **Select a service** drop-down menu. Select **Next**.
 
-   :::image type="content" source="media/quota-increase-request/support-troubleshooting-quota-search.png" alt-text="Screenshot from the Azure portal showing the Support + troubleshooting pane. Search for Quota and choose 'Service and subscription limits (quotas)'.":::
+   :::image type="content" source="media/quota-increase-request/support-troubleshooting-quota-search.png" alt-text="Screenshot from the Azure portal showing the Support + troubleshooting pane. Search for quota, select None of the above, and then choose Databases / SQL Database or Databases / SQL Managed Instance.":::
 
 1. Select your subscription. Select **Next**.
-1. From the list of services, select **SQL Database** for single database and elastic pool quotas, or **SQL Database Managed Instance** for SQL managed instances.
-1. In the **Service and Subscription Limits (Quotas)** page, select **Create a support request**.
-1. Select **Next: Select support method**.
+1. For the **Problem type**, select **SQL Database** for single database and elastic pool quotas, or **SQL Database Managed Instance** for SQL managed instances. Select **Next**.
+1. Select **Create a support request**.
+1. Review details and then select **Next: Support method**.
 1. For **Support Method**, select the desired severity, options, and contact method. Select **Next: Add additional details**.
 1. For **Provide details for this request**, select **Enter details**.
-1. On the **Quota details** page, select the desired quota type and **Location**. 
+1. On the **Quota details** page, select a **Region** from the drop-down menu and then provide the new desired quota limit.
 1. Provide the requested **New quota** information. For more information, see [Azure quotas](https://aka.ms/quotalimits).
 1. Select **Save and continue**.
 1. In the **Support + troubleshooting** pane, select **Next: add contact details**.
@@ -46,7 +47,7 @@ For more information about quota requests, see the following sections.
 
 <a id="sqldbquota"></a>
 
-##  SQL Database quota request types
+## SQL Database quota request types
 
 The following sections describe the quota increase options for the **SQL Database** quota types:
 
@@ -110,14 +111,18 @@ To request zone redundant access, follow these steps:
 > [!NOTE]
 > Not all regions support availability zones. Review [Availability zones region support](/azure/reliability/availability-zones-region-support) for more information. 
 
-## SQL Managed Instance quota request types 
+## SQL Managed Instance quota request types
 
-With Azure SQL Managed Instance, use the **Quota details** window to request increased limits for:
+With Azure SQL Managed Instance, use the **Quota details** window to request increased limits for compute capacity in a region for Standard-Series, Premium-Series, and Memory Optimized Premium-Series hardware generations, calculated by vCores.
 
-- The number of available subnets in a region 
-- Compute capacity in a region, calculated by vCores
+Specify your new limits on the **Quota details** window, and then use **Save and continue** to apply your new limits and return to the **New support request** page.
 
-Specify your new limits on the **Quota details** window, and then use **Save and continue** to apply your new limits and go back to the **New support request** page. 
+Starting August 2026, quota request types for SQL Managed Instance changed:
+
+- **Subnets**: Subnet quotas no longer apply. There's no limit on the number of subnets where you can deploy SQL Managed Instance.
+- **vCores**: vCore quotas are now scoped per hardware generation (Standard-Series, Premium-Series, and Memory Optimized Premium-Series) rather than a single regional limit across all hardware.
+
+If you previously requested a regional vCore quota increase, your existing allowance is carried forward as the same amount for each hardware generation (Standard-series, Premium-series, and Memory optimized premium-series) in that region.
 
 ## Next step
 

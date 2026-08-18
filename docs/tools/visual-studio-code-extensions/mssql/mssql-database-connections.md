@@ -201,7 +201,7 @@ You can change these settings from the Visual Studio Code settings UI by searchi
 ## Related content
 
 - [Quickstart: Run your first query with the MSSQL extension for Visual Studio Code](mssql-run-first-query.md)
-- [What is the MSSQL extension for Visual Studio Code?](mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md)
 - [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)
 - [Tutorial: Write Transact-SQL statements](../../../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Visual Studio Code documentation](https://code.visualstudio.com/docs)

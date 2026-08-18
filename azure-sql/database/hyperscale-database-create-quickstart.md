@@ -396,7 +396,7 @@ GO
 [Connect and query](connect-query-content-reference-guide.md) your database using different tools and languages:
 
 - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
-- The [mssql extension](https://aka.ms/mssql-marketplace) for [Visual Studio Code](https://code.visualstudio.com/docs)
+- The [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code)
 - [sqlcmd](/sql/tools/sqlcmd/sqlcmd-utility)
 - [Azure portal query editor for Azure SQL Database](query-editor.md)
 

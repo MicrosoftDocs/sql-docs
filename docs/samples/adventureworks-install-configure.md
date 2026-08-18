@@ -186,4 +186,4 @@ You can find additional information about using the scripts on [GitHub](https://
 
 - [Database Engine Tutorials](../relational-databases/database-engine-tutorials.md)
 - [Quickstart: Connect and query a SQL Server instance using SSMS](/ssms/quickstarts/ssms-connect-query-sql-server)
-- [What is the MSSQL extension for Visual Studio Code?](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)

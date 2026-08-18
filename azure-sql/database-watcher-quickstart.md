@@ -66,7 +66,7 @@ Once the deployment completes, select **Go to resource** to open the new watcher
 
     :::image type="content" source="media/database-watcher-quickstart/database-watcher-grant-access-sql-managed-instance.png" alt-text="Screenshot of the targets page of a watcher, showing the T-SQL script that grants access to a watcher on a SQL managed instance, and a button that copies it to the clipboard." lightbox="media/database-watcher-quickstart/database-watcher-grant-access-sql-managed-instance.png":::
 
-1. Open a new query window in SQL Server Management Studio or Visual Studio Code with the [SQL server mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension. Connect to the `master` database on the Azure SQL logical server or SQL managed instance you selected. Paste the T-SQL script, and select **Execute**.
+1. Open a new query window in SQL Server Management Studio or the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code). Connect to the `master` database on the Azure SQL logical server or SQL managed instance you selected. Paste the T-SQL script, and select **Execute**.
 
     The following screenshot shows the T-SQL script for Azure SQL databases and elastic pools.
 

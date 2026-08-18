@@ -33,9 +33,9 @@ This integration is designed for developers, with a focus on the following perso
 
 ## What is the MSSQL extension for Visual Studio Code?
 
-The [MSSQL extension in Visual Studio Code](https://aka.ms/vscode-mssql-marketplace) supports SQL database in Fabric, Azure SQL, and SQL Server.
+The MSSQL extension for Visual Studio Code supports SQL database in Fabric, Azure SQL Database, Azure SQL Managed Instance, and SQL Server.
 
-For more information about the extension, visit the [GitHub repository](https://github.com/microsoft/vscode-mssql).
+For more information about the extension, see [MSSQL extension for Visual Studio Code](../mssql/mssql-extension-visual-studio-code.md).
 
 ## What is GitHub Copilot for the MSSQL extension for Visual Studio Code?
 
@@ -150,9 +150,9 @@ Inline completions (ghost text in `.sql` files) **don't see your connected datab
 1. Download [Visual Studio Code](https://code.visualstudio.com/download).
 1. Complete the installation by following the wizard.
 
-## Install the MSSQL extension in Visual Studio Code
+## Install the MSSQL extension for Visual Studio Code
 
-To get started with SQL development in Visual Studio Code, install the **MSSQL extension**:
+To get started with SQL development in Visual Studio Code, install the **[MSSQL extension](../mssql/mssql-extension-visual-studio-code.md)**:
 
 1. Open **Visual Studio Code**.
 
@@ -164,7 +164,7 @@ To get started with SQL development in Visual Studio Code, install the **MSSQL e
 
 1. Select the **Install** button.
 
-   :::image type="content" source="media/overview/mssql-extension-vscode.png" alt-text="Screenshot of the MSSQL extension in Visual Studio Code." lightbox="media/overview/mssql-extension-vscode.png":::
+   :::image type="content" source="media/overview/mssql-extension-vscode.png" alt-text="Screenshot of the MSSQL extension for Visual Studio Code." lightbox="media/overview/mssql-extension-vscode.png":::
 
 > [!TIP]  
 > If you're unfamiliar with the MSSQL extension for Visual Studio Code, see the [MSSQL extension for Visual Studio Code](../mssql/mssql-extension-visual-studio-code.md).

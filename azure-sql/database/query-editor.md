@@ -32,7 +32,7 @@ monikerRange: "=azuresql||=azuresql-db"
 The Query editor (preview) is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database.
 
 - For a quickstart on the Azure portal query editor, see [Quickstart: Use the Azure portal query editor](connect-query-portal.md).
-- For more advanced object explorer capabilities and management functions, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md) or the [mssql extension for Visual Studio Code](/sql/tools/visual-studio-code/mssql-extensions).
+- For more advanced object explorer capabilities and management functions, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md) or the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code).
 - If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
 
 ## Query your Azure SQL Database from the Azure portal
@@ -87,11 +87,11 @@ The following considerations and limitations apply when connecting to and queryi
 ### Query editor limitations
 
 - If your query has multiple statements, the **Results** tab shows only the results of the last statement.
-- The query editor doesn't support connecting to the logical server's `master` database. To connect to the `master` database, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md) or the [mssql extension for Visual Studio Code](/sql/tools/visual-studio-code/mssql-extensions).
+- The query editor doesn't support connecting to the logical server's `master` database. To connect to the `master` database, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md) or the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code).
 - The query editor can't connect to a [replica database](read-scale-out.md) by using `ApplicationIntent=ReadOnly`. To connect in this way, use SSMS and specify `ApplicationIntent=ReadOnly` on the **Additional Connection Parameters** tab in connection options. For more information, see [Connect to a read-only replica](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#ConnectToSecondary).
-- The query editor has a five-minute timeout for query execution. To run longer queries, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md) or the [mssql extension for Visual Studio Code](/sql/tools/visual-studio-code/mssql-extensions).
+- The query editor has a five-minute timeout for query execution. To run longer queries, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md) or the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code).
 - The query editor only supports cylindrical projection for geography data types.
-- The query editor doesn't support IntelliSense for columns, but it does support tables and views. For full IntelliSense support, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md) or the [mssql extension for Visual Studio Code](/sql/tools/visual-studio-code/mssql-extensions).
+- The query editor doesn't support IntelliSense for columns, but it does support tables and views. For full IntelliSense support, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md) or the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code).
 - While in same browser session, you can freely navigate through the Azure portal and your queries will be persisted. If you refresh the page (by pressing **F5**) or close your browser, you will lose your queries.
 
 ## Connection considerations

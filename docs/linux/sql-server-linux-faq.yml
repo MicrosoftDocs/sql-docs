@@ -104,7 +104,7 @@ sections:
 
              1. **Is there a tool like SSMS that runs on Linux?**
 
-                Visual Studio Code is a cross-platform tool, and you can install the MSSQL extension to manage SQL Server. For more information, see [What is the MSSQL extension for Visual Studio Code?](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)
+                Visual Studio Code is a cross-platform tool, and you can install the MSSQL extension to manage SQL Server. For more information, see [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md).
 
              1. **Are commands like sqlcmd and bcp available on Linux?**
 

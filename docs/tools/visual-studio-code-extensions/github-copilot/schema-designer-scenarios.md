@@ -31,7 +31,7 @@ The MSSQL extension's Schema Designer has GitHub Copilot embedded directly in it
 
 ## Prerequisites
 
-- Visual Studio Code with the [MSSQL extension](https://aka.ms/vscode-mssql-marketplace) installed (version 1.41 or later).
+- Visual Studio Code with the [MSSQL extension](../mssql/mssql-extension-visual-studio-code.md) installed (version 1.41 or later).
 - An active GitHub Copilot subscription.
 - A database connection in Object Explorer (local SQL Server, Azure SQL Database, or SQL database in Microsoft Fabric).
 

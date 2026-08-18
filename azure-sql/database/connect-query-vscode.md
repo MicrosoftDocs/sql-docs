@@ -20,7 +20,7 @@ ms.custom:
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-[Visual Studio Code](https://code.visualstudio.com/docs) is a graphical code editor for Linux, macOS, and Windows. It supports extensions, including the [mssql extension](https://aka.ms/mssql-marketplace) for querying SQL Server, Azure SQL Database, Azure SQL Managed Instance, [SQL database in Microsoft Fabric](/fabric/database/sql/connect), and other platforms. In this quickstart, you use Visual Studio Code to connect to Azure SQL Database or Azure SQL Managed Instance and then run Transact-SQL statements to query, insert, update, and delete data.
+[Visual Studio Code](https://code.visualstudio.com/docs) is a graphical code editor for Linux, macOS, and Windows. It supports extensions, including the [MSSQL extension](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code) for querying SQL Server, Azure SQL Database, Azure SQL Managed Instance, [SQL database in Microsoft Fabric](/fabric/database/sql/connect), and other platforms. In this quickstart, you use Visual Studio Code to connect to Azure SQL Database or Azure SQL Managed Instance and then run Transact-SQL statements to query, insert, update, and delete data.
 
 ## Prerequisites
 
@@ -49,17 +49,17 @@ To configure Visual Studio Code for connecting to Azure SQL Database or Azure SQ
 
 ### Windows
 
-Load the [mssql extension](https://aka.ms/mssql-marketplace) by following these steps:
+Load the [MSSQL extension](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code) by following these steps:
 
 1. Open Visual Studio Code.
 1. Open the Extensions pane (or **Ctrl + Shift + X**).
 1. Search for `sql` and then install the **SQL Server (mssql)** extension.
 
-For additional installation guidance, see [mssql for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+For additional installation guidance, see [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code).
 
 ### macOS
 
-For macOS, you need to install OpenSSL, which is a prerequisite for .NET Core that mssql extension uses. Open your terminal and enter the following commands to install **brew** and **OpenSSL**.
+For macOS, you need to install OpenSSL, which is a prerequisite for .NET Core that the MSSQL extension uses. Open your terminal and enter the following commands to install **brew** and **OpenSSL**.
 
 ```sql
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -72,13 +72,13 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 ### Linux (Ubuntu)
 
-Load the [mssql extension](https://aka.ms/mssql-marketplace) by following these steps:
+Load the [MSSQL extension](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code) by following these steps:
 
 1. Open Visual Studio Code.
 1. Open the Extensions pane (or **Ctrl + Shift + X**).
 1. Search for `sql` and then install the **SQL Server (mssql)** extension.
 
-For additional installation guidance, see [mssql for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+For additional installation guidance, see [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code).
 
 ## Get server connection information
 

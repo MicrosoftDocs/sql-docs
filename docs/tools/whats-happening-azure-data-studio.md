@@ -26,7 +26,7 @@ The following replacement options are available for Azure Data Studio.
 
 ### [App / SQL developer](#tab/dev)
 
-Use Visual Studio Code with the [MSSQL extension for Visual Studio Code](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) for daily work. Queries, scripts, and SQL database projects work without requiring conversion.
+Use the [MSSQL extension for Visual Studio Code](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) for daily work. Queries, scripts, and SQL database projects work without requiring conversion.
 
 - Visual Studio Code includes schema design tools, IntelliSense, built-in Git integration, and CI/CD workflows.
 
@@ -145,7 +145,7 @@ Here are answers to questions about the Azure Data Studio deprecation and migrat
 
 ### What happens to Azure Data Studio after retirement?
 
-Azure Data Studio retired on **February 28, 2026** and is no longer supported. It no longer receives updates, security patches, or maintenance. Migrate to Visual Studio Code with the [MSSQL extension for Visual Studio Code](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) for continued support.
+Azure Data Studio retired on **February 28, 2026** and is no longer supported. It no longer receives updates, security patches, or maintenance. Migrate to Visual Studio Code with the [MSSQL extension](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) for continued support.
 
 <a id="can-my-queries-and-scripts-work-in-visual-studio-code"></a>
 <a id="what-happens-to-existing-database-projects-in-azure-data-studio"></a>
@@ -168,6 +168,6 @@ Install it from the [Visual Studio Code Marketplace](https://marketplace.visuals
 
 ## Related content
 
-- [What is the MSSQL extension for Visual Studio Code?](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)
 - [Download Visual Studio Code](https://code.visualstudio.com/download)
 - [Visual Studio Code extensions](https://marketplace.visualstudio.com/VSCode)

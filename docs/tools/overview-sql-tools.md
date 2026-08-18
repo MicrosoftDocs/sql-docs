@@ -69,7 +69,7 @@ These tools are available for Windows only.
 - [Feedback: SQL Server](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0)
 - [Feedback: SqlPackage and DacFx](https://github.com/microsoft/dacfx)
 - [Feedback: sql-action GitHub action](https://github.com/azure/sql-action)
-- [Roadmap: MSSQL extension in Visual Studio Code](https://github.com/microsoft/vscode-mssql/wiki/roadmap)
+- [Roadmap: MSSQL extension for Visual Studio Code](https://github.com/microsoft/vscode-mssql/wiki/roadmap)
 - [Roadmap: SQL Server Management Studio](/ssms/roadmap)
 - [What's happening with Azure Data Studio](whats-happening-azure-data-studio.md)
 

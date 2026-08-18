@@ -16,7 +16,7 @@ ai-usage: ai-assisted
 
 # Create an Azure SQL Database (Preview)
 
-This article shows you how to quickly provision an Azure SQL Database (free tier) using the MSSQL extension in Visual Studio Code.
+This article shows you how to quickly provision an Azure SQL Database (free tier) using the [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md).
 
 This experience provides free tier provisioning only that you can't customize. You can't change compute, storage, or pricing options.
 
@@ -102,5 +102,5 @@ Together, these experiences give you an end-to-end path from a provisioned Azure
 - [GitHub Copilot integration in Schema Designer](mssql-schema-designer-copilot.md)
 - [Data API builder](mssql-data-api-builder.md)
 - [SQL Notebooks](mssql-sql-notebooks.md)
-- [What is the MSSQL extension for Visual Studio Code?](mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md)
 - [Deploy Azure SQL Database for free](/azure/azure-sql/database/free-offer)

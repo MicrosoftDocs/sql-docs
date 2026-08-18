@@ -230,7 +230,7 @@ For example, `ctrlcmd+c` maps to <kbd>Ctrl</kbd>+<kbd>C</kbd> on Windows and Lin
 
 ## Related content
 
-- [What is the MSSQL extension for Visual Studio Code?](mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md)
 - [Connect to a database with the MSSQL extension for Visual Studio Code](mssql-database-connections.md)
 - [Transition from Azure Data Studio](mssql-azure-data-studio-transition.md)
 - [Quickstart: Run your first query with the MSSQL extension for Visual Studio Code](mssql-run-first-query.md)

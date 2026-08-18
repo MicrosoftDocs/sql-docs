@@ -443,6 +443,9 @@ The following examples create [!INCLUDE [ssNoVersion](../../includes/ssnoversion
            WITH IDENTITY = '<mystorageaccountname>', SECRET = '<mystorageaccountaccesskey>';
    ```
 
+> [!NOTE]
+> The credential is case sensitive and must match the storage account name, which requires a lowercase name.
+
 <a id="complete"></a>
 
 ### Perform a full database backup

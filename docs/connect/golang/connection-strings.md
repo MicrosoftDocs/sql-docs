@@ -3,7 +3,7 @@ title: "go-mssqldb Connection Strings"
 description: "Connection string formats for the go-mssqldb driver, including URL, ADO, and ODBC styles."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 07/31/2026
+ms.date: 08/12/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -122,15 +122,15 @@ odbc:password={my}}password}
 
 ## Common parameters
 
-The following parameters are shared across all three formats:
+The following parameters are shared across all three formats. The driver resolves the aliases only in [ADO format](#ado-format) connection strings. URL and ODBC format connection strings match parameter names exactly, apart from casing.
 
 | Parameter | Aliases | Description |
 | --- | --- | --- |
 | `user id` | `user` | SQL Server login name. |
 | `password` | - | Password for the SQL Server login. |
 | `database` | - | Target database name. |
-| `connection timeout` | - | Login timeout in seconds. The driver default is `0`, which waits indefinitely. Prefer using Go contexts to control connection and query timeouts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, the first connection to a paused database fails with error 40613 while the database resumes. Add retry logic rather than a longer timeout. Databases generally resume in less than one minute. See [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume). |
-| `dial timeout` | - | Network dial timeout in seconds. The driver default is based on the registered protocols. Set `0` to wait indefinitely. |
+| `connection timeout` | - | Timeout in seconds for the login exchange. The driver default is `0`, which applies no timeout to the login exchange. The initial network connection is bounded separately by `dial timeout`. Prefer using Go contexts to control connection and query timeouts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, the first connection to a paused database fails with error 40613 while the database resumes. Add retry logic rather than a longer timeout. Databases generally resume in less than one minute. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume). |
+| `dial timeout` | - | Network dial timeout in seconds. The driver default is 15 seconds per registered protocol. Setting `0` applies that same default rather than waiting indefinitely. |
 | `encrypt` | - | Encryption mode: `strict`, `true`/`mandatory`, `false`/`optional`, `disable`. When omitted, the default is `false`/`optional`. For Azure SQL and production connections, set `encrypt=true` explicitly. |
 | `TrustServerCertificate` | - | Skip certificate validation. When `encrypt` is specified, the default is `false`. When `encrypt` is omitted, the default is `true`. Use `false` for production and Azure SQL connections. |
 | `app name` | - | Application name passed to the server. |

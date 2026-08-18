@@ -158,7 +158,7 @@ All subsequent cell executions use the newly selected database.
 - [Quickstart: Run your first query with the MSSQL extension for Visual Studio Code](mssql-run-first-query.md)
 - [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)
 - [Transition from Azure Data Studio](mssql-azure-data-studio-transition.md)
-- [What is the MSSQL extension for Visual Studio Code?](mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md)
 - [Visual Studio Code Jupyter notebooks documentation](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 - [Visual Studio Code documentation](https://code.visualstudio.com/docs)
 - [MSSQL extension for Visual Studio Code repository on GitHub](https://github.com/Microsoft/vscode-mssql)

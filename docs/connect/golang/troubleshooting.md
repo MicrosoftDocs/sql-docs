@@ -3,7 +3,7 @@ title: "go-mssqldb Troubleshooting"
 description: "Troubleshoot common errors, connection failures, and certificate issues with the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 07/31/2026
+ms.date: 08/12/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -201,7 +201,7 @@ For retry implementation patterns, see [Error handling and retry patterns](error
 - Azure SQL is reconfiguring the database (failover, update, or scaling operation). This condition is a transient error.
 - An [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) database with auto-pause enabled is resuming. The first connection to a paused database fails with this error while the database resumes.
 
-**Solution**: Retry the operation. A reconfigured database typically becomes available within seconds, and an auto-paused database generally resumes in less than one minute. Add retry logic rather than a longer timeout. For more information, see [Error handling and retry patterns](error-handling.md) and [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
+**Solution**: Retry the operation. Most reconfiguration events finish in less than 60 seconds, and an auto-paused database generally resumes in less than one minute. Add retry logic rather than a longer timeout. For more information, see [Error handling and retry patterns](error-handling.md), [Working with transient errors](/azure/azure-sql/database/troubleshoot-common-connectivity-issues), and [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
 
 ## Bad connection errors
 

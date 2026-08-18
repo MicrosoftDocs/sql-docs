@@ -88,4 +88,4 @@ The project is deployed to the selected target database.
 - [What are SQL database projects?](../../sql-database-projects/sql-database-projects.md)
 - [Get started with the SQL Database Projects extension](getting-started-sql-database-projects-extension.md)
 - [Tutorial: Create and deploy a SQL project](../../sql-database-projects/tutorials/create-deploy-sql-project.md)
-- [What is the MSSQL extension for Visual Studio Code?](../mssql/mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](../mssql/mssql-extension-visual-studio-code.md)

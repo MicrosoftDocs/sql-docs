@@ -1,6 +1,101 @@
 {
   "redirections": [
     {
+      "source_path": "docs/relational-databases/tables/temporal-tables.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/creating-a-system-versioned-temporal-table.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/create",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/modify-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/query-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/change-schema",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/stop-system-versioning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/temporal-table-usage-scenarios.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/usage-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/temporal-table-system-consistency-checks.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/consistency-checks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/partitioning-with-temporal-tables.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/partitioning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/temporal-table-considerations-and-limitations.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/considerations-limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/manage-retention",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/temporal-table-metadata-views-and-functions.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/metadata-views-functions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/temporal-table-security.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/memory-optimized",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/create-memory-optimized",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/work-with-memory-optimized",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/monitor-memory-optimized",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/memory-optimized-performance",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "azure-sql/managed-instance/managed-instance-link-preparation-wsfc.md",
       "redirect_url": "/previous-versions/azure/azure-sql/managed-instance/managed-instance-link-preparation-wsfc",
       "redirect_document_id": false,

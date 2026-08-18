@@ -112,7 +112,7 @@ The following list shows SQL Server features that are compatible with Azure SQL 
 :::row:::
     :::column:::
     **Programmability**
-    - [Global temporal tables](../temporal-tables.md)
+    - [Global temporal tables](/sql/relational-databases/tables/temporal-tables)
     - [Cross-database queries and transactions](distributed-transaction-coordinator-dtc.md)
     - [Linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine)
     - [CLR modules](/sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts)

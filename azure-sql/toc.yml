@@ -24,8 +24,6 @@
       href: database/features-comparison.md
     - name: Multi-model features
       href: multi-model-features.md
-    - name: Temporal tables
-      href: temporal-tables.md
     - name: Scale up / down
       href: database/scale-resources.md
     - name: Read Scale-Out

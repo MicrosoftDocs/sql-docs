@@ -1,9 +1,9 @@
 ---
-title: Modify data in a system-versioned temporal table
+title: Modify Data in a System-Versioned Temporal Table
 description: Data in a system-versioned temporal table is modified using regular DML statements, excluding period column data.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/29/2024
+ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: how-to
@@ -13,9 +13,9 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # Modify data in a system-versioned temporal table
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-fabricsqldb](../../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
 
-Data in a system-versioned temporal table is modified using regular data manipulation language (DML) statements, with one important difference: period column data can't be directly modified. When data is updated, it is versioned, and the previous version of each updated row is inserted into the history table. When data is deleted, the delete is logical, and the row moved into the history table from the current table; the data isn't permanently deleted.
+Data in a system-versioned temporal table is modified using regular data manipulation language (DML) statements, with one important difference: period column data can't be directly modified. When data is updated, it's versioned, and the previous version of each updated row is inserted into the history table. When data is deleted, the delete is logical, and the row is moved into the history table from the current table; the data isn't permanently deleted.
 
 ## Insert data
 
@@ -23,17 +23,18 @@ When you insert new data, you need to account for the `PERIOD` columns if they a
 
 ### Insert new data with visible period columns
 
-You can construct your `INSERT` statement when you have visible `PERIOD` columns as follows, to account for the `PERIOD` columns:
+Construct your `INSERT` statement to account for the visible `PERIOD` columns as follows:
 
 If you specify the column list in your `INSERT` statement, you can omit the `PERIOD` columns because the system generates values for these columns automatically.
 
 ```sql
 -- Insert with column list and without period columns
-INSERT INTO [dbo].[Department] (
-      [DeptID],
-      [DeptName],
-      [ManagerID],
-      [ParentDeptID]
+INSERT INTO [dbo].[Department]
+(
+    [DeptID],
+    [DeptName],
+    [ManagerID],
+    [ParentDeptID]
 )
 VALUES (10, 'Marketing', 101, 1);
 ```
@@ -41,13 +42,14 @@ VALUES (10, 'Marketing', 101, 1);
 If you do specify the `PERIOD` columns in the column list in your `INSERT` statement, then you need to specify `DEFAULT` as their value.
 
 ```sql
-INSERT INTO [dbo].[Department] (
-   DeptID,
-   DeptName,
-   ManagerID,
-   ParentDeptID,
-   ValidFrom,
-   ValidTo
+INSERT INTO [dbo].[Department]
+(
+    DeptID,
+    DeptName,
+    ManagerID,
+    ParentDeptID,
+    ValidFrom,
+    ValidTo
 )
 VALUES (11, 'Sales', 101, 1, DEFAULT, DEFAULT);
 ```
@@ -57,7 +59,14 @@ If you don't specify the column list in your `INSERT` statement, specify `DEFAUL
 ```sql
 -- Insert without a column list and DEFAULT values for period columns
 INSERT INTO [dbo].[Department]
-VALUES(12, 'Production', 101, 1, DEFAULT, DEFAULT);
+VALUES (
+    12,
+    'Production',
+    101,
+    1,
+    DEFAULT,
+    DEFAULT
+);
 ```
 
 ### Insert data into a table with HIDDEN period columns
@@ -65,13 +74,14 @@ VALUES(12, 'Production', 101, 1, DEFAULT, DEFAULT);
 If `PERIOD` columns are specified as `HIDDEN`, you don't need to account for the `PERIOD` columns in your `INSERT` statement. This behavior guarantees that your legacy applications continue to work when you enable system-versioning on tables that benefit from versioning.
 
 ```sql
-CREATE TABLE [dbo].[CompanyLocation] (
-    [LocID] [int] IDENTITY(1, 1) NOT NULL PRIMARY KEY,
-    [LocName] [varchar](50) NOT NULL,
-    [City] [varchar](50) NOT NULL,
-    [ValidFrom] [datetime2] GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    [ValidTo] [datetime2] GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME([ValidFrom], [ValidTo])
+CREATE TABLE [dbo].[CompanyLocation]
+(
+    [LocID] INT IDENTITY (1, 1) NOT NULL PRIMARY KEY,
+    [LocName] VARCHAR (50) NOT NULL,
+    [City] VARCHAR (50) NOT NULL,
+    [ValidFrom] DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    [ValidTo] DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])
 )
 WITH (SYSTEM_VERSIONING = ON);
 GO
@@ -82,39 +92,38 @@ VALUES ('Headquarters', 'New York');
 
 ### Insert data using PARTITION SWITCH
 
-If the current table is partitioned, you can use `PARTITION SWITCH` as an efficient mechanism to load data into an empty partition, or to load into multiple partitions in parallel.
+If the current table is partitioned, you can use `PARTITION SWITCH` to efficiently load data into an empty partition, or to load into multiple partitions in parallel.
 
-The staging table that is used in the `PARTITION SWITCH IN` statement with a temporal table must have `SYSTEM_TIME PERIOD` defined, but it doesn't need to be a temporal table. This ensures that temporal consistency checks are performed during the data insert into a staging table or when `SYSTEM_TIME` period is added to a prepopulated staging table.
+The staging table used in the `PARTITION SWITCH IN` statement with a temporal table must have `SYSTEM_TIME PERIOD` defined, but it doesn't need to be a temporal table. This ensures that temporal consistency checks are performed during the data insert into a staging table or when `SYSTEM_TIME` period is added to a prepopulated staging table.
 
 ```sql
 /* Create staging table with period definition for SWITCH IN temporal table */
-CREATE TABLE [dbo].[Staging_Department_Partition2] (
-    [DeptID] [int] NOT NULL,
-    [DeptName] [varchar](50) NOT NULL,
-    [ManagerID] [int] NULL,
-    [ParentDeptID] [int] NULL,
-    [ValidFrom] [datetime2] GENERATED ALWAYS AS ROW START NOT NULL,
-    [ValidTo] [datetime2] GENERATED ALWAYS AS ROW END NOT NULL,
-    PERIOD FOR SYSTEM_TIME([ValidFrom], [ValidTo])
-) ON [PRIMARY]
+CREATE TABLE [dbo].[Staging_Department_Partition2]
+(
+    [DeptID] INT NOT NULL,
+    [DeptName] VARCHAR (50) NOT NULL,
+    [ManagerID] INT NULL,
+    [ParentDeptID] INT NULL,
+    [ValidFrom] DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL,
+    [ValidTo] DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL,
+    PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])
+) ON [PRIMARY];
 
 /* Create aligned primary key */
 ALTER TABLE [dbo].[Staging_Department_Partition2]
-ADD CONSTRAINT [Staging_Department_Partition2_PK]
-PRIMARY KEY CLUSTERED ([DeptID] ASC) ON [PRIMARY];
+    ADD CONSTRAINT [Staging_Department_Partition2_PK]
+        PRIMARY KEY CLUSTERED ([DeptID] ASC) ON [PRIMARY];
 
 /*
 Create and enforce constraints for partition boundaries.
 Partition 2 contains rows with DeptID > 100 and DeptID <=200
 */
-ALTER TABLE [dbo].[Staging_Department_Partition2]
-WITH CHECK ADD CONSTRAINT [chk_staging_Department_partition_2] CHECK (
-   [DeptID] > N'100'
-   AND [DeptID] <= N'200'
-);
+ALTER TABLE [dbo].[Staging_Department_Partition2] WITH CHECK
+    ADD CONSTRAINT [chk_staging_Department_partition_2]
+            CHECK ([DeptID] > N'100' AND [DeptID] <= N'200');
 
 ALTER TABLE [dbo].[Staging_Department_Partition2]
-CHECK CONSTRAINT [chk_staging_Department_partition_2];
+    CHECK CONSTRAINT [chk_staging_Department_partition_2];
 
 /*Load data into staging table*/
 INSERT INTO [dbo].[staging_Department] (
@@ -122,12 +131,12 @@ INSERT INTO [dbo].[staging_Department] (
     [DeptName],
     [ManagerID],
     [ParentDeptID]
-    )
+)
 VALUES (101, 'D101', 1, NULL);
 
 /*Use PARTITION SWITCH IN to efficiently add data to current table */
 ALTER TABLE [Staging_Department]
-SWITCH TO [dbo].[Department] PARTITION 2;
+    SWITCH TO [dbo].[Department] PARTITION 2;
 ```
 
 If you try to perform `PARTITION SWITCH` from a table without a period definition, you get an error message:
@@ -156,7 +165,7 @@ However, you can't update a `PERIOD` column, and you can't update the history ta
 
 ```sql
 UPDATE [dbo].[Department]
-SET ValidFrom = '2015-09-23 23:48:31.2990175'
+    SET ValidFrom = '2015-09-23 23:48:31.2990175'
 WHERE DeptID = 10;
 ```
 
@@ -174,8 +183,8 @@ You can use `UPDATE` on the current table to revert the actual row state to a va
 ```sql
 UPDATE Department
 SET DeptName = History.DeptName
-FROM Department
-FOR SYSTEM_TIME AS OF '2015-04-25' AS History
+FROM Department FOR SYSTEM_TIME
+    AS OF '2015-04-25' AS History
 WHERE History.DeptID = 10
     AND Department.DeptID = 10;
 ```
@@ -195,9 +204,10 @@ The following statements aren't supported while `SYSTEM_VERSIONING = ON`:
 The `MERGE` operation is supported with the same limitations that `INSERT` and `UPDATE` statements have, regarding `PERIOD` columns.
 
 ```sql
-CREATE TABLE DepartmentStaging (
+CREATE TABLE DepartmentStaging
+(
     DeptId INT,
-    DeptName VARCHAR(50)
+    DeptName VARCHAR (50)
 );
 GO
 
@@ -210,7 +220,7 @@ VALUES (10, 'Science & Research');
 INSERT INTO DepartmentStaging
 VALUES (15, 'Process Management');
 
-MERGE dbo.Department AS target
+MERGE INTO dbo.Department AS target
 USING (
     SELECT DeptId, DeptName
     FROM DepartmentStaging
@@ -226,8 +236,8 @@ WHEN NOT MATCHED
 
 ## Related content
 
-- [Temporal tables](temporal-tables.md)
-- [Create a system-versioned temporal table](creating-a-system-versioned-temporal-table.md)
-- [Query data in a system-versioned temporal table](querying-data-in-a-system-versioned-temporal-table.md)
-- [Change the schema of a system-versioned temporal table](changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [Stop system-versioning on a system-versioned temporal table](stopping-system-versioning-on-a-system-versioned-temporal-table.md)
+- [Temporal tables](overview.md)
+- [Create a system-versioned temporal table](create.md)
+- [Query data in a system-versioned temporal table](query-data.md)
+- [Change the schema of a system-versioned temporal table](change-schema.md)
+- [Stop system-versioning on a system-versioned temporal table](stop-system-versioning.md)

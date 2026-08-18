@@ -1841,47 +1841,47 @@ items:
       - name: Disable constraints with INSERT & UPDATE
         href: relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md
     - name: Temporal tables
-      href: relational-databases/tables/temporal-tables.md
+      href: relational-databases/tables/temporal/overview.md
       items:
       - name: Create and manage
         items:
         - name: Getting started
-          href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
+          href: relational-databases/tables/temporal/get-started.md
         - name: Create
-          href: relational-databases/tables/creating-a-system-versioned-temporal-table.md
+          href: relational-databases/tables/temporal/create.md
         - name: Modify data
-          href: relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
+          href: relational-databases/tables/temporal/modify-data.md
         - name: Query data
-          href: relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
+          href: relational-databases/tables/temporal/query-data.md
         - name: Security
-          href: relational-databases/tables/temporal-table-security.md
+          href: relational-databases/tables/temporal/security.md
         - name: Change the schema
-          href: relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
+          href: relational-databases/tables/temporal/change-schema.md
         - name: Stop system-versioning
-          href: relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md
+          href: relational-databases/tables/temporal/stop-system-versioning.md
         - name: Usage scenarios
-          href: relational-databases/tables/temporal-table-usage-scenarios.md
+          href: relational-databases/tables/temporal/usage-scenarios.md
         - name: Consistency checks
-          href: relational-databases/tables/temporal-table-system-consistency-checks.md
+          href: relational-databases/tables/temporal/consistency-checks.md
         - name: Partitioning
-          href: relational-databases/tables/partitioning-with-temporal-tables.md
+          href: relational-databases/tables/temporal/partitioning.md
         - name: Considerations & limitations
-          href: relational-databases/tables/temporal-table-considerations-and-limitations.md
+          href: relational-databases/tables/temporal/considerations-limitations.md
         - name: Retention of historical data
-          href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
+          href: relational-databases/tables/temporal/manage-retention.md
         - name: Metadata views & functions
-          href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
+          href: relational-databases/tables/temporal/metadata-views-functions.md
       - name: Memory-optimized temporal tables
-        href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+        href: relational-databases/tables/temporal/memory-optimized.md
         items:
         - name: Create
-          href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+          href: relational-databases/tables/temporal/create-memory-optimized.md
         - name: Work with
-          href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+          href: relational-databases/tables/temporal/work-with-memory-optimized.md
         - name: Monitor
-          href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+          href: relational-databases/tables/temporal/monitor-memory-optimized.md
         - name: Performance considerations
-          href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+          href: relational-databases/tables/temporal/memory-optimized-performance.md
     - name: Tutorials
       items:
       - name: Using hierarchyid data type

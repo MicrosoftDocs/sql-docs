@@ -182,5 +182,5 @@ SET TEMPORAL_HISTORY_RETENTION  ON
 
 ## Related content
 
-- [Getting started with temporal tables](../temporal-tables.md)
+- [Get started with system-versioned temporal tables](/sql/relational-databases/tables/getting-started-with-system-versioned-temporal-tables)
 - [Temporal tables](/sql/relational-databases/tables/temporal-tables)

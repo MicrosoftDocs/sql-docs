@@ -807,7 +807,7 @@ Specifies that one or more column definitions, computed column definitions, or t
 
 Specifies the names of the columns that the system uses to record the period of time for which a record is valid. You can specify existing columns or create new columns as part of the `ADD PERIOD FOR SYSTEM_TIME` argument. Set up the columns with the data type of **datetime2** and define them as `NOT NULL`. If you define a period column as `NULL`, an error results. You can define a [column_constraint](alter-table-column-constraint-transact-sql.md) and/or [Specify default values for columns](../../relational-databases/tables/specify-default-values-for-columns.md) for the system_start_time and system_end_time columns. See Example A in the following [System Versioning](#system_versioning) examples that demonstrates using a default value for the system_end_time column.
 
-Use this argument with the `SET SYSTEM_VERSIONING` argument to make an existing table a temporal table. For more information, see [Temporal tables](../../relational-databases/tables/temporal-tables.md) and [Getting started with temporal tables](/azure/azure-sql/temporal-tables).
+Use this argument with the `SET SYSTEM_VERSIONING` argument to make an existing table a temporal table. For more information, see [Temporal tables](../../relational-databases/tables/temporal-tables.md).
 
 As of [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)], users can mark one or both period columns with `HIDDEN` flag to implicitly hide these columns such that `SELECT * FROM <table_name>` doesn't return a value for the columns. By default, period columns aren't hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.
 

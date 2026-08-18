@@ -48,6 +48,9 @@ The `WITH IDENTITY = 'Managed Identity'` clause requires a primary managed ident
 
 For more information about error messages that can occur if the primary managed identity isn't assigned or given proper permissions, see the [Error messages](#error-messages) section.
 
+> [!NOTE]
+> The credential is case sensitive and must match the storage account name, which requires a lowercase name.
+
 ## BACKUP to URL by using a managed identity
 
 After you create the credential, you can use it to back up and restore databases to Azure Blob storage. Make sure that the primary managed identity for the SQL Server on Azure VM has the `Storage Blob Data Contributor` role assigned to the storage account.

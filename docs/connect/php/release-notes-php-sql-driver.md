@@ -4,7 +4,7 @@ description: This page discusses what was changed in each version of the Microso
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/29/2026
+ms.date: 08/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -15,6 +15,20 @@ helpviewer_keywords:
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## 5.13.3
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?LinkId=2375152)**  
+[GitHub Release Tag v5.13.3 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.13.3)
+
+- Release number: 5.13.3
+- Released: August 7, 2026
+
+### What's new in 5.13.3
+
+| New item | Details |
+| :------- | :------ |
+| Added Windows support for installing the drivers with PIE (PHP Installer for Extensions). | PIE-based installation, introduced for Linux and macOS in 5.13.2, is now also available on Windows. Install with `pie install microsoft/sqlsrv` and `pie install microsoft/pdo_sqlsrv`. |
 
 ## 5.13.2
 

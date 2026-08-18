@@ -3,7 +3,7 @@ title: "go-mssqldb Connection Options"
 description: "Reference for all connection options in the go-mssqldb driver, including timeouts, failover, packet size, and session initialization."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 07/31/2026
+ms.date: 08/12/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -13,6 +13,8 @@ ai-usage: ai-assisted
 
 This article provides a complete reference for all connection parameters accepted by the `go-mssqldb` driver. For connection string format syntax, see [Connection strings](connection-strings.md).
 
+The driver resolves the aliases in the following tables only in [ADO format](connection-strings.md#ado-format) connection strings. URL and ODBC format connection strings match parameter names exactly, apart from casing.
+
 ## Common parameters
 
 | Parameter | Aliases | Default | Description |
@@ -20,8 +22,8 @@ This article provides a complete reference for all connection parameters accepte
 | `user id` | `user` | - | SQL Server login name. |
 | `password` | - | - | Password for the SQL Server login. |
 | `database` | - | - | Target database. |
-| `connection timeout` | - | `0` | Login timeout in seconds. `0` waits indefinitely. Prefer Go contexts for connection and query timeouts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, the first connection to a paused database fails with error 40613 while the database resumes. Add retry logic rather than a longer timeout. Databases generally resume in less than one minute. See [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume). |
-| `dial timeout` | - | `15 x protocol count` | Network dial timeout in seconds. `0` waits indefinitely. The driver defaults to 15 seconds per registered protocol. |
+| `connection timeout` | - | `0` | Timeout in seconds for the login exchange. `0` applies no timeout to the login exchange, but the initial network connection is bounded separately by `dial timeout`. Prefer Go contexts for connection and query timeouts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, the first connection to a paused database fails with error 40613 while the database resumes. Add retry logic rather than a longer timeout. Databases generally resume in less than one minute. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume). |
+| `dial timeout` | - | `15 x protocol count` | Network dial timeout in seconds. `0` applies the default of 15 seconds per registered protocol rather than waiting indefinitely. |
 | `encrypt` | - | `false` | Encryption mode. Azure SQL always requires encryption server-side. See [Encryption and certificates](encryption-certificates.md). |
 | `app name` | - | - | Application name sent in the login record. |
 | `authenticator` | - | - | Custom authenticator registered by external packages such as `azuread`. |
@@ -52,7 +54,7 @@ When the primary server is unreachable, the driver attempts to connect to the fa
 | Parameter | Aliases | Default | Description |
 | --- | --- | --- | --- |
 | `packet size` | - | `4096` | TDS packet size in bytes. Valid range: 512-32767. |
-| `keepAlive` | - | `30` | Keep-alive interval in seconds. `0` uses the OS default. |
+| `keepAlive` | - | `30` | Keep-alive interval in seconds. A value of `0` applies the 30-second default rather than deferring to the operating system. |
 | `TrustServerCertificate` | - | Depends on `encrypt` | When `true`, skip server certificate validation. The default is `false` when `encrypt` is specified and `true` when `encrypt` is omitted. Ignored when `encrypt=strict`. Not recommended for production. |
 | `multisubnetfailover` | `multi subnet failover` | `true` | Dial behavior when DNS resolves the host to multiple IP addresses. When `true` and DNS returns multiple addresses, the driver dials all resolved endpoints in parallel and uses the first successful connection. When DNS returns a single address, the driver dials it sequentially, so `true` is safe on single-IP targets. Keep the default for availability group listeners, failover cluster instances, and Azure SQL failover group listeners. This driver defaults to `true` for backward compatibility; other Microsoft SQL drivers default to `false`. |
 

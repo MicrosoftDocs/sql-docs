@@ -4,7 +4,7 @@ description: The @@IDENTITY function returns the last-inserted identity value.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, randolphwest, procha
-ms.date: 02/23/2026
+ms.date: 08/19/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -19,19 +19,20 @@ helpviewer_keywords:
   - "@@IDENTITY function"
 dev_langs:
   - TSQL
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # &#x40;&#x40;IDENTITY (Transact-SQL)
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
-  `@@IDENTITY` is a system function that returns the last-inserted identity value.  
+  `@@IDENTITY` is a system function that returns the last-inserted identity value.
 
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
 ```syntaxsql
-@@IDENTITY  
+@@IDENTITY
 ```  
 
 ## Return types
@@ -61,6 +62,8 @@ dev_langs:
 
 > [!NOTE]  
 > The calling stored procedure or [!INCLUDE[tsql](../../includes/tsql-md.md)] statement must be rewritten to use the `SCOPE_IDENTITY()` function, which returns the latest identity used within the scope of that user statement, and not the identity within the scope of the nested trigger used by replication.  
+
+ The `@@IDENTITY` function is not available for [identity columns in Fabric Data Warehouse](/fabric/data-warehouse/identity).
 
 ## Examples
 

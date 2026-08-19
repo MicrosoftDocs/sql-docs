@@ -69,5 +69,5 @@ SELECT @rowcnt;
 
 ## Related content
 
-- [Temporal tables retention policy](/azure/sql-database/sql-database-temporal-tables-retention-policy)
+- [Temporal tables retention policy](../tables/temporal/manage-retention.md)
 

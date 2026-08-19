@@ -51,7 +51,7 @@ In this article, you can find content references to various guides, scripts, and
 - [Configure conditional access](../database/conditional-access-configure.md?view=azuresql-mi&preserve-view=true)
 - [Microsoft Entra multifactor authentication](../database/authentication-mfa-ssms-overview.md?view=azuresql-mi&preserve-view=true)
 - [Configure failover group](failover-group-configure-sql-mi.md) to automatically fail over all databases on an instance to a secondary instance in another region. 
-- [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md?view=azuresql-mi&preserve-view=true)
+- [Configure a temporal retention policy](/sql/relational-databases/tables/temporal/manage-retention)
 - [Configure In-Memory OLTP](in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
 - [Configure Azure Automation](automation-manage.md?view=azuresql-mi&preserve-view=true)
 - [Transactional replication](replication-between-two-instances-configure-tutorial.md) enables you to replicate your data between managed instances, or from SQL Server on-premises to SQL Managed Instance, and vice versa.

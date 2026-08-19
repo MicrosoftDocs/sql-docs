@@ -24,7 +24,7 @@ The MSSQL extension supports two mechanisms for keyboard shortcuts:
 ## Choose a configuration method
 
 - Use the [MSSQL Database Management Keymap extension](#install-the-mssql-database-management-keymap-extension) if you want familiar Azure Data Studio or SSMS-style shortcuts.
-- Use [Shortcuts Configuration (Preview)](#use-shortcuts-configuration-preview) for day-to-day shortcut changes.
+- Use [Shortcuts Configuration](#use-shortcuts-configuration) for day-to-day shortcut changes.
 - Use [Advanced: Manually customize Visual Studio Code keybindings](#advanced-manually-customize-visual-studio-code-keybindings) for direct control of `keybindings.json`.
 - Use [Advanced: Manually customize result view shortcuts](#advanced-manually-customize-result-view-shortcuts) for direct control of `mssql.shortcuts` in `settings.json`.
 
@@ -52,9 +52,9 @@ The extension provides the following key bindings:
 
 You can install this extension from the Azure Data Studio migration dialog, or directly from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql-database-management-keymap).
 
-## Use Shortcuts Configuration (Preview)
+## Use Shortcuts Configuration
 
-The MSSQL extension includes a **Shortcuts Configuration (Preview)** UI to view and configure keyboard shortcuts.
+The MSSQL extension includes a **Shortcuts Configuration** UI to view and configure keyboard shortcuts.
 
 You can use this UI to work with both shortcut systems:
 
@@ -70,11 +70,11 @@ Open the **Extension Shortcuts** tab to view two keyboard shortcut sections:
 - **Query Editor**: Shows the most commonly used [Visual Studio Code keybindings](#advanced-manually-customize-visual-studio-code-keybindings) for MSSQL commands, organized into groups such as **Query Execution**, **Connection**, and **Others**.
 - **Result View**: Shows [Result view shortcuts](#advanced-manually-customize-result-view-shortcuts) for the query results pane, including groups such as **Navigation** and **Results**.
 
-:::image type="content" source="media/mssql-keyboard-shortcuts/shortcuts-configuration-extension.png" alt-text="Screenshot of Shortcuts Configuration (Preview) in the MSSQL extension showing Query Editor and Result View shortcut groups." lightbox="media/mssql-keyboard-shortcuts/shortcuts-configuration-extension.png":::
+:::image type="content" source="media/mssql-keyboard-shortcuts/shortcuts-configuration-extension.png" alt-text="Screenshot of Shortcuts Configuration in the MSSQL extension showing Query Editor and Result View shortcut groups." lightbox="media/mssql-keyboard-shortcuts/shortcuts-configuration-extension.png":::
 
 ## Advanced: Manually customize Visual Studio Code keybindings
 
-For most shortcut changes, use [Shortcuts Configuration (Preview)](#use-shortcuts-configuration-preview).
+For most shortcut changes, use [Shortcuts Configuration](#use-shortcuts-configuration).
 
 Use this section for advanced, manual control of Visual Studio Code keybindings in `keybindings.json`.
 
@@ -136,7 +136,7 @@ The following table lists commonly used commands and default shortcuts:
 
 ## Advanced: Manually customize result view shortcuts
 
-For most shortcut changes, use [Shortcuts Configuration (Preview)](#use-shortcuts-configuration-preview).
+For most shortcut changes, use [Shortcuts Configuration](#use-shortcuts-configuration).
 
 Use this section for advanced, manual configuration of result view shortcuts in `mssql.shortcuts` (`settings.json`). These shortcuts apply only to the query results pane.
 

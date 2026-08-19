@@ -4,7 +4,7 @@ description: Adds an entry in the sys.servers and marks the server entry as a Di
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/19/2026
+ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
@@ -38,6 +38,7 @@ sys.sp_adddistributor
     [ , [ @encrypt_distributor_connection = ] N'encrypt_distributor_connection' ]
     [ , [ @trust_distributor_certificate = ] N'trust_distributor_certificate' ]
     [ , [ @host_name_in_distributor_certificate = ] N'host_name_in_distributor_certificate' ]
+    [ , [ @multi_subnet_failover = ] multi_subnet_failover ]
 [ ; ]
 ```
 
@@ -104,6 +105,17 @@ Indicates whether the distributor's TLS certificate should be trusted without va
 **Applies to:** [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions.
 
 Specifies the host name from the Distributor's certificate, when it's different from the Distributor name, such as when the IP address or DNS alias is used as the Distributor name. Leave the *@host_name_in_distributor_certificate* parameter empty if the host name in the certificate matches the Distributor name. *@host_name_in_distributor_certificate* is **nvarchar(255)** of any string value, with a default of `NULL`.
+
+#### [ @multi_subnet_failover = ] *multi_subnet_failover*
+
+**Applies to**: [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 8 and later versions.
+
+Used to pass information for the creation of the dynamic linked server between publisher and remote distributor. *@multi_subnet_failover* is **bit**, with a default of `0`.
+
+Set the parameter value to `1` in replication topologies with a remote distributor accessed through an Always On availability group listener, or a multi-subnet failover cluster instance. This setting helps replication agents reconnect faster after failover and prevents connection timeouts. For more information, see [Connecting with MultiSubnetFailover parameter](../../connect/oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover).
+
+- If `0`, the dynamic linked server isn't created with the `MultiSubnetFailover` parameter.
+- If `1`, the dynamic linked server is created with the `MultiSubnetFailover` parameter as `1`.
 
 ## Return code values
 

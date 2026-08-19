@@ -6,6 +6,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/database/temporal-tables-retention-policy.md",
+      "redirect_url": "/sql/relational-databases/tables/temporal/manage-retention",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/virtual-machines/windows/managed-identity-extensible-key-management.md",
       "redirect_url": "/sql/relational-databases/security/encryption/set-up-transparent-data-encryption-with-azure-key-vault-for-sql-server",
       "redirect_document_id": false

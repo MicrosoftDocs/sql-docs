@@ -154,7 +154,7 @@
     - name: Business continuity
       items:
       - name: Configure temporal retention policy
-        href: database/temporal-tables-retention-policy.md
+        href: /sql/relational-databases/tables/temporal/manage-retention
       - name: Configure long-term backup retention
         href: database/long-term-backup-retention-configure.md
     - name: Security

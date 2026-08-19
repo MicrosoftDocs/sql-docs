@@ -4,7 +4,7 @@ description: "OPENROWSET BULK function reads data from an external data source."
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest, hudequei, wiassaf, jovanpop, fresantos
-ms.date: 05/11/2026
+ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -18,17 +18,17 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || =azuresqldb-curren
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabric SE DW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
 
-The `OPENROWSET` function reads data from one or many files and returns the content as a rowset. Depending on a service, the file might be stored in Azure Blob Storage, Azure Data Lake storage, on-premises disk, network shares, etc. You can read various file formats such as text/CSV, Parquet, or JSON-lines.
+The `OPENROWSET` function reads data from one or many files and returns the content as a rowset. Depending on the service, the file might be stored in Azure Blob Storage, Azure Data Lake storage, on-premises disk, network shares, and more. You can read various file formats such as text/CSV, Parquet, or JSON-lines.
 
-The `OPENROWSET` function can be referenced in the `FROM` clause of a query as if it were a table name. It can be used to read data in `SELECT` statement, or to update target data in the `UPDATE`, `INSERT`, `DELETE`, `MERGE`, `CTAS`, or `CETAS` statements.
+You can reference the `OPENROWSET` function in the `FROM` clause of a query as if it were a table name. Use it to read data in a `SELECT` statement, or to update target data in the `UPDATE`, `INSERT`, `DELETE`, `MERGE`, `CTAS`, or `CETAS` statements.
 
-- `OPENROWSET(BULK)` is designed for reading data from external data files. 
-- `OPENROWSET` without `BULK` is designed for reading from another database engine. For more information, see [OPENROWSET (Transact-SQL)](openrowset-transact-sql.md).
+- Use `OPENROWSET(BULK)` to read data from external data files. 
+- Use `OPENROWSET` without `BULK` to read from another database engine. For more information, see [OPENROWSET (Transact-SQL)](openrowset-transact-sql.md).
 
-This article and the argument set in the `OPENROWSET(BULK)` varies between the platforms.
-
-- For Microsoft Fabric syntax, [select Fabric in the version dropdown list](openrowset-bulk-transact-sql.md?view=fabric&preserve-view=true).
-- For SQL Server, Azure SQL Database, and Azure SQL Managed Instance syntax, [select your platform in the version dropdown list](openrowset-bulk-transact-sql.md?view=sql-server-ver17&preserve-view=true).
+> [!TIP]
+> This article and the `OPENROWSET(BULK)` syntax differ on different platforms of the [SQL Database Engine](../../database-engine/sql-database-engine.md).
+> 
+> For Microsoft Fabric Data Warehouse syntax, [select Fabric Data Warehouse in the version dropdown list](openrowset-bulk-transact-sql.md?view=fabric&preserve-view=true).
 
 Details and links to similar examples on other platforms:
 
@@ -129,7 +129,7 @@ OPENROWSET( BULK 'data_file_path',
 
 ::: moniker-end
 
-Some `OPENROWSET` options are format‑specific, while others are universal. For example, row and field delimiters are meaningful only for delimited text (CSV/TSV), whereas options like DATA_SOURCE and MAXERRORS apply to all formats. The table below summarizes which options are supported for the most common formats.
+Some `OPENROWSET` options are format‑specific, while others are universal. For example, row and field delimiters are meaningful only for delimited text (CSV/TSV), whereas options like DATA_SOURCE and MAXERRORS apply to all formats. The following table summarizes which options are supported for the most common formats.
 
 | Options | CSV(1.0) | CSV(2.0) | PARQUET | JSONL |
 |---|---|---|---|---|
@@ -147,7 +147,7 @@ Some `OPENROWSET` options are format‑specific, while others are universal. For
 
 The arguments of the `BULK` option allow for significant control over where to start and end reading data, how to deal with errors, and how data is interpreted. For example, you can specify that the data file is read as a single-row, single-column rowset of type **varbinary**, **varchar**, or **nvarchar**. The default behavior is described in the argument descriptions that follow.
 
-For information about how to use the `BULK` option, see the [Remarks](#remarks) section later in this article. For information about the permissions that the `BULK` option requires, see the [Permissions](#permissions) section, later in this article.
+For information about how to use the `BULK` option, see the [Remarks](#remarks) section later in this article. For information about the permissions that the `BULK` option requires, see the [Permissions](#permissions) section later in this article.
 
 For information on preparing data for bulk import, see [Prepare data for bulk export or import](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
@@ -155,7 +155,7 @@ For information on preparing data for bulk import, see [Prepare data for bulk ex
 
 ### BULK
 
-The path or URI of the data file(s) whose data is to be read and returned as row set.
+The path or URI of the data files that `OPENROWSET` reads and returns as a row set.
 
 The URI can reference Azure Data Lake storage or Azure Blob storage. The URI of the data file(s) whose data is to be read and returned as row set. 
 
@@ -170,7 +170,7 @@ The supported path formats are:
 - `s3://<ip-address>:<port>/<file path>` to access s3-compatible storage
 
 > [!NOTE]
-> This article and the supported URI patterns differ on different platforms. For the URI patterns that are available in Microsoft Fabric Data Warehouse, [select Fabric in the version dropdown list](openrowset-bulk-transact-sql.md?view=fabric&preserve-view=true#bulk-data_file_path).
+> This article and the supported URI patterns differ on different platforms. For the URI patterns that are available in Microsoft Fabric Data Warehouse, [select Fabric Data Warehouse in the version dropdown list](openrowset-bulk-transact-sql.md?view=fabric&preserve-view=true#bulk-data_file_path).
 
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *data_file* can be in Azure Blob Storage. For examples, see [Examples of bulk access to data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
@@ -192,7 +192,7 @@ In contrast, the `blob` endpoint does not expose hierarchical namespace features
 
 ::: moniker-end
 
-The URI can include the `*` character to match any sequence of characters, allowing `OPENROWSET` to pattern-match against the URI. Additionally, it can end with `/**` to enable recursive traversal through all subfolders. In SQL Server, this behavior is available beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+The URI can include the `*` character to match any sequence of characters, so `OPENROWSET` can pattern-match against the URI. Also, the URI can end with `/**` to enable recursive traversal through all subfolders. In SQL Server, this behavior is available beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 For example:
 
@@ -203,7 +203,7 @@ FROM OPENROWSET(
 );
 ```
 
-The storage types that can be referenced by the URI are shown in the following table:
+The following table shows the storage types that the URI can reference:
 
 | Version | On-premises | Azure storage | OneLake in Fabric | S3 | Google Cloud (GCS) |
 |---|---|---|---|---|---|
@@ -217,21 +217,21 @@ The storage types that can be referenced by the URI are shown in the following t
 
 ::: moniker range="=fabric"
 
-You can use `OPENROWSET(BULK)` to read data directly from files stored in the OneLake in Microsoft Fabric, specifically from the **Files folder** of a Fabric Lakehouse. This eliminates the need for external staging accounts (such as ADLS Gen2 or Blob Storage) and enables workspace-governed, SaaS-native ingestion using Fabric permissions. This functionality supports:
+You can use `OPENROWSET(BULK)` to read data directly from files stored in the OneLake in Microsoft Fabric, specifically from the **Files** folder of a Fabric Lakehouse. This capability eliminates the need for external staging accounts (such as ADLS Gen2 or Blob Storage) and enables workspace-governed, SaaS-native ingestion by using Fabric permissions. This functionality supports:
 
 - Reading from `Files` folders in Lakehouses
 - Workspace-to-warehouse loads within the same tenant
 - Native identity enforcement using Microsoft Entra ID
 
-See the [limitations](../statements/copy-into-transact-sql.md?view=fabric&preserve-view=true#limitations-for-onelake-as-source) that are applicable both to `COPY INTO` and `OPENROWSET(BULK)`.
+See the [limitations](../statements/copy-into-transact-sql.md?view=fabric&preserve-view=true#limitations-for-onelake-as-source) that apply to both `COPY INTO` and `OPENROWSET(BULK)`.
 
 ::: moniker-end
 
 #### DATA_SOURCE 
 
-`DATA_SOURCE` defines the root location of the data file path. It enables you use relative paths in BULK path. The data source is created with [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md?view=sql-server-ver17&preserve-view=true).
+`DATA_SOURCE` defines the root location of the data file path. It enables you to use relative paths in the `BULK` path. Create the data source with [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md?view=sql-server-ver17&preserve-view=true).
 
-In addition to the root location, it can define custom credential that can be used to access the files on that location.
+In addition to the root location, it can define a custom credential to access the files in that location.
 
 For example:
 
@@ -250,14 +250,14 @@ FROM OPENROWSET(
 
 #### CODEPAGE
 
-Specifies the code page of the data in the data file. `CODEPAGE` is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32. The valid values are 'ACP', 'OEM', 'RAW' or '*code_page*':
+Specifies the code page of the data in the data file. `CODEPAGE` is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32. The valid values are `ACP`, `OEM`, `RAW`, or a specific code page:
 
 | CODEPAGE value | Description |
 | --- | --- |
 | `ACP` | Converts columns of **char**, **varchar**, or **text** data type from the ANSI/[!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] code page. |
 | `OEM` (default) | Converts columns of **char**, **varchar**, or **text** data type from the system OEM code page to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] code page. |
 | `RAW` | No conversion occurs from one code page to another. This is the fastest option. |
-| `code_page` | Indicates the source code page on which the character data in the data file is encoded; for example, 850. |
+| Integer | Indicates the source code page on which the character data in the data file is encoded; for example, 850. |
 
 ::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
@@ -272,12 +272,12 @@ Specifies the code page of the data in the data file. `CODEPAGE` is relevant onl
 
 #### DATAFILETYPE
 
-Specifies that `OPENROWSET(BULK)` should read single-byte (ASCII, UTF8) or multi-byte (UTF16) file content. The valid values are **char** and **widechar**:
+Specifies that `OPENROWSET(BULK)` should read single-byte (ASCII, UTF8) or multibyte (UTF16) file content. The valid values are **char** and **widechar**:
 
-|DATAFILETYPE value|All data represented in:|
+| `DATAFILETYPE` value | All data represented in: |
 |------------------------|------------------------------|
-| **char** (default) |Character format.<br /><br />For more information, see [Use Character Format to Import or Export Data](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).|
-| **widechar** |Unicode characters.<br /><br />For more information, see [Use Unicode Character Format to Import or Export Data](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).|
+| **char** (default) | Character format.<br /><br />For more information, see [Use Character Format to Import or Export Data](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).|
+| **widechar** | Unicode characters.<br /><br />For more information, see [Use Unicode Character Format to Import or Export Data](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).|
 
 #### FORMAT
 
@@ -305,9 +305,9 @@ The valid values are  'CSV' (comma separated values file compliant to the [RFC 4
 
 > [!IMPORTANT]
 > The `OPENROWSET` function can read only **newline-delimited** JSON format.
-> The newline character must be used as a separator between JSON documents, and cannot be placed in the middle of a JSON document.
+> The newline character must be used as a separator between JSON documents, and can't be placed in the middle of a JSON document.
 
-The `FORMAT` option doesn't need to be specified if the file extension in the path ends with `.csv`, `.tsv`, `.parquet`, `.parq`, `.jsonl`, `.ldjson`, or `.ndjson`. For example, the `OPENROWSET(BULK)` function knows that the format is parquet based on extension in the following example:
+You don't need to specify the `FORMAT` option if the file extension in the path ends with `.csv`, `.tsv`, `.parquet`, `.parq`, `.jsonl`, `.ldjson`, or `.ndjson`. For example, the `OPENROWSET(BULK)` function knows that the format is parquet based on the extension in the following example:
 
 ```sql
 SELECT *
@@ -341,15 +341,15 @@ FROM OPENROWSET(
 )
 ```
 
-A format file is required to define column types in the result set. The only exception is when `SINGLE_CLOB`, `SINGLE_BLOB`, or `SINGLE_NCLOB` is specified; in which case, the format file isn't required.
+You need a format file to define column types in the result set. The only exception is when you specify `SINGLE_CLOB`, `SINGLE_BLOB`, or `SINGLE_NCLOB`; in this case, you don't need a format file.
 
-For information about format files, see [Use a format file to bulk import data (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
+For more information about format files, see [Use a format file to bulk import data (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the format_file_path can be in Azure Blob Storage. For examples, see [Examples of bulk access to data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the `format_file_path` can be in Azure Blob Storage. For examples, see [Examples of bulk access to data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 #### FORMATFILE_DATA_SOURCE 
 
-`FORMATFILE_DATA_SOURCE` defines the root location of the format file path. It enables you to use relative paths in FORMATFILE option.
+`FORMATFILE_DATA_SOURCE` defines the root location of the format file path. By using this data source, you can use relative paths in the `FORMATFILE` option.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE root
@@ -363,8 +363,8 @@ FROM OPENROWSET(
 );
 ```
 
-The format file data source is created with [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md).
-In addition to the root location, it can define custom credential that can be used to access the files on that location.
+Create the format file data source with [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md).
+In addition to the root location, it can define a custom credential to access the files in that location.
 
 ::: moniker-end
 
@@ -521,7 +521,7 @@ FROM OPENROWSET(
 );
 ```
 
-The error file is created at the start of the command execution. An error is raised if the file already exists. Additionally, a control file that has the extension .ERROR.txt is created. This file references each row in the error file and provides error diagnostics. After the errors are corrected, the data can be loaded.
+The error file is created at the start of the command execution. An error is raised if the file already exists. Additionally, a control file that has the extension `.ERROR.txt` is created. This file references each row in the error file and provides error diagnostics. After the errors are corrected, the data can be loaded.
 
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the `error_file_path` can be in Azure Blob Storage.
 
@@ -566,11 +566,11 @@ The default for *maximum_errors* is 10.
 
 #### FIRSTROW
 
-Specifies the number of the first row to load. The default is 1. This indicates the first row in the specified data file. The row numbers are determined by counting the row terminators. `FIRSTROW` is 1-based.
+Specifies the number of the first row to load. The default is 1. This value indicates the first row in the specified data file. The row numbers are determined by counting the row terminators. `FIRSTROW` is 1-based.
 
 #### LASTROW
 
-Specifies the number of the last row to load. The default is 0. This indicates the last row in the specified data file.
+Specifies the number of the last row to load. The default is 0. This value indicates the last row in the specified data file.
 
 #### ROWS_PER_BATCH
 
@@ -599,9 +599,9 @@ An optional hint that specifies how the data in the data file is sorted. By defa
 
 Specifies that the data file doesn't have duplicate entries.
 
-If the actual rows in the data file aren't sorted according to the order that is specified, or if the `UNIQUE` hint is specified and duplicates keys are present, an error is returned.
+If the actual rows in the data file aren't sorted according to the order that you specify, or if you specify the `UNIQUE` hint and duplicate keys are present, an error is returned.
 
-Column aliases are required when `ORDER` is used. The column alias list must reference the derived table that is being accessed by the `BULK` clause. The column names that are specified in the `ORDER` clause refer to this column alias list. Large value types (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml**) and large object (LOB) types (**text**, **ntext**, and **image**) columns can't be specified.
+Column aliases are required when you use `ORDER`. The column alias list must reference the derived table that the `BULK` clause accesses. The column names that you specify in the `ORDER` clause refer to this column alias list. You can't specify large value types (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml**) and large object (LOB) types (**text**, **ntext**, and **image**) columns.
 
 ### Content options
 
@@ -610,15 +610,15 @@ Column aliases are required when `ORDER` is used. The column alias list must ref
 Returns the contents of *data_file* as a single-row, single-column rowset of type **varbinary(max)**.
 
 > [!IMPORTANT]  
-> We recommend that you import XML data only using the `SINGLE_BLOB` option, rather than `SINGLE_CLOB` and `SINGLE_NCLOB`, because only `SINGLE_BLOB` supports all Windows encoding conversions.
+> Import XML data only by using the `SINGLE_BLOB` option, rather than `SINGLE_CLOB` and `SINGLE_NCLOB`, because only `SINGLE_BLOB` supports all Windows encoding conversions.
 
 #### SINGLE_CLOB
 
-By reading *data_file* as ASCII, returns the contents as a single-row, single-column rowset of type **varchar(max)**, using the collation of the current database.
+Reads *data_file* as ASCII and returns the contents as a single-row, single-column rowset of type **varchar(max)**, using the collation of the current database.
 
 #### SINGLE_NCLOB
 
-By reading *data_file* as Unicode, returns the contents as a single-row, single-column rowset of type **nvarchar(max)**, using the collation of the current database.
+Reads *data_file* as Unicode and returns the contents as a single-row, single-column rowset of type **nvarchar(max)**, using the collation of the current database.
 
 ```sql
 SELECT * FROM OPENROWSET(
@@ -630,16 +630,18 @@ SELECT * FROM OPENROWSET(
 
 ::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || =fabric"
 
-### WITH Schema
+### WITH schema
 
-The `WITH` schema specifies the columns that define the result set of the `OPENROWSET` function. It includes column definitions for every column that will be returned as a result and outlines the mapping rules that bind the underlying file columns to the columns in the result set.
+The `WITH` schema specifies the columns that define the result set of the `OPENROWSET` function. It includes column definitions for every column that `OPENROWSET` returns and outlines the mapping rules that bind the underlying file columns to the columns in the result set.
+
+
 
 In the following example:
 
-- The `country_region` column has **varchar(50)** type and referencing the underlying column with the same name
-- The `date` column is referencing a CSV/Parquet column or JSONL property with a different physical name
-- The `cases` column is referencing the third column in the file
-- The `fatal_cases` column is referencing a nested Parquet property or JSONL sub-object
+- The `country_region` column has **varchar(50)** type and references the underlying column with the same name.
+- The `date` column references a CSV or Parquet column or JSONL property with a different physical name.
+- The `cases` column references the third column in the file.
+- The `fatal_cases` column references a nested Parquet property or JSONL sub-object.
 
 ```sql
 SELECT *
@@ -654,11 +656,11 @@ WITH (
 
 #### <column_name>
 
-The name of the column that will be returned in the result rowset. The data for this column is read from the underlying file column with the same name, unless overridden by `<column_path>` or `<column_ordinal>`. The name of the column must follow the [rules for column name identifiers](../../relational-databases/databases/database-identifiers.md#rules-for-regular-identifiers).
+The name of the column that `OPENROWSET` returns in the result rowset. `OPENROWSET` reads data for this column from the underlying file column with the same name, unless you override it by using `<column_path>` or `<column_ordinal>`. The column name must follow the [rules for column name identifiers](../../relational-databases/databases/database-identifiers.md#rules-for-regular-identifiers).
 
 #### <column_type>
 
-The T-SQL type of the column in the result set. The values from the underlying file are converted to this type when `OPENROWSET` returns the results. For more information, see [Data types in Fabric Warehouse](/fabric/data-warehouse/data-types#data-types-in-warehouse).
+The T-SQL type of the column in the result set. `OPENROWSET` converts values from the underlying file to this type when it returns the results. For more information, see [Data types in Fabric Warehouse](/fabric/data-warehouse/data-types#data-types-in-warehouse).
 
 #### <column_path>
 
@@ -666,13 +668,13 @@ A dot-separated path (for example `$.description.location.lat`) used to referenc
 
 #### <column_ordinal>
 
-A number representing the physical index of the column that will be mapped to the column in the `WITH` clause.
+A number representing the physical index of the column that maps to the column in the `WITH` clause.
 
 ::: moniker-end
 
 ## Permissions
 
-`OPENROWSET` with external data sources, requires the following permissions:
+To use `OPENROWSET` with external data sources, you need the following permissions:
 
 - `ADMINISTER DATABASE BULK OPERATIONS`
   or
@@ -684,26 +686,26 @@ The following T-SQL example grants `ADMINISTER DATABASE BULK OPERATIONS` to a pr
 GRANT ADMINISTER DATABASE BULK OPERATIONS TO [<principal_name>];
 ```
 
-If the target storage account is private, the principal must also have the **Storage Blob Data Reader** role (or higher) assigned at the container or storage account level.
+If the target storage account is private, you must also assign membership in the **Storage Blob Data Reader** role (or higher) to the principal at the container or storage account level.
 
 ## Remarks
 
-- A `FROM` clause that is used with `SELECT` can call `OPENROWSET(BULK...)` instead of a table name, with full `SELECT` functionality.
-- `OPENROWSET` with the `BULK` option requires a correlation name, also known as a range variable or alias, in the `FROM` clause. Failure to add the `AS <table_alias>` results in the error Msg 491: "A correlation name must be specified for the bulk rowset in the from clause." 
-- Column aliases can be specified. If a column alias list isn't specified, the format file must have column names. Specifying column aliases overrides the column names in the format file, such as:
+- A `FROM` clause that you use with `SELECT` can call `OPENROWSET(BULK...)` instead of a table name, with full `SELECT` functionality.
+- `OPENROWSET` with the `BULK` option requires a correlation name, also known as a range variable or alias, in the `FROM` clause. If you don't add the `AS <table_alias>`, you get error Message 491: "A correlation name must be specified for the bulk rowset in the from clause."  
+- You can specify column aliases. If you don't specify a column alias list, the format file must have column names. Specifying column aliases overrides the column names in the format file. For example:
 
   - `FROM OPENROWSET(BULK...) AS table_alias`
   - `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`
 
 - A `SELECT...FROM OPENROWSET(BULK...)` statement queries the data in a file directly, without importing the data into a table. 
-- A `SELECT...FROM OPENROWSET(BULK...)` statement can list bulk-column aliases by using a format file to specify column names, and also data types.
+- A `SELECT...FROM OPENROWSET(BULK...)` statement can list bulk-column aliases by using a format file to specify column names and data types.
 
 ::: moniker range="=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017"
 
-- Using `OPENROWSET(BULK...)` as a source table in an `INSERT` or `MERGE` statement bulk imports data from a data file into a table. For more information, see [Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
-- When the `OPENROWSET BULK` option is used with an `INSERT` statement, the `BULK` clause supports table hints. In addition to the regular table hints, such as `TABLOCK`, the `BULK` clause can accept the following specialized table hints: `IGNORE_CONSTRAINTS` (ignores only the `CHECK` and `FOREIGN KEY` constraints), `IGNORE_TRIGGERS`, `KEEPDEFAULTS`, and `KEEPIDENTITY`. For more information, see [Table Hints (Transact-SQL)](../queries/hints-transact-sql-table.md).
-- For information about how to use `INSERT...SELECT * FROM OPENROWSET(BULK...)` statements, see [Bulk Import and Export of Data (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). For information about when row-insert operations that are performed by bulk import are logged in the transaction log, see [Prerequisites for minimal logging in bulk import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
-- When used to import data with the full recovery model, `OPENROWSET (BULK ...)` doesn't optimize logging.
+- By using `OPENROWSET(BULK...)` as a source table in an `INSERT` or `MERGE` statement, you bulk import data from a data file into a table. For more information, see [Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+- When you use the `OPENROWSET BULK` option with an `INSERT` statement, the `BULK` clause supports table hints. In addition to the regular table hints, such as `TABLOCK`, the `BULK` clause can accept the following specialized table hints: `IGNORE_CONSTRAINTS` (ignores only the `CHECK` and `FOREIGN KEY` constraints), `IGNORE_TRIGGERS`, `KEEPDEFAULTS`, and `KEEPIDENTITY`. For more information, see [Table Hints (Transact-SQL)](../queries/hints-transact-sql-table.md).
+- For information about how to use `INSERT...SELECT * FROM OPENROWSET(BULK...)` statements, see [Bulk Import and Export of Data (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). For information about when row-insert operations that bulk import performs are logged in the transaction log, see [Prerequisites for minimal logging in bulk import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
+- When you use `OPENROWSET (BULK ...)` to import data with the full recovery model, it doesn't optimize logging.
 
 > [!NOTE]
 > When you use `OPENROWSET`, it's important to understand how [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] handles impersonation. For information about security considerations, see [Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
@@ -712,12 +714,12 @@ If the target storage account is private, the principal must also have the **Sto
 
 ::: moniker range="=fabric"
 
-In Microsoft Fabric Data Warehouse, supported features are summarized in the table:
+In Microsoft Fabric Data Warehouse, the following table summarizes supported features:
 
 | Feature           | Supported | Not available |
 |-------------------|-----------|----------------------|
 | **File formats**  | Parquet, CSV, JSONL | Delta, Azure Cosmos DB, JSON, relational databases |
-| **Authentication**| EntraID/SPN passthrough, public storage | SAS/SAK, SPN, Managed access |
+| **Authentication**| Entra ID/SPN passthrough, public storage | SAS/SAK, SPN, Managed access |
 | **Storage**       | Azure Blob Storage, Azure Data Lake Storage, OneLake in Microsoft Fabric |  |
 | **Options**       | Only full/absolute URI in `OPENROWSET`  | Relative URI path in `OPENROWSET`, `DATA_SOURCE` |
 | **Partitioning**  | You can use the `filepath()` function in a query. |  |
@@ -728,7 +730,7 @@ In Microsoft Fabric Data Warehouse, supported features are summarized in the tab
 
 ### Bulk importing SQLCHAR, SQLNCHAR, or SQLBINARY data
 
-`OPENROWSET(BULK...)` assumes that, if not specified, the maximum length of `SQLCHAR`, `SQLNCHAR`, or `SQLBINARY` data doesn't exceed 8,000 bytes. If the data being imported is in a LOB data field that contains any **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** objects that exceed 8,000 bytes, you must use an XML format file that defines the maximum length for the data field. To specify the maximum length, edit the format file and declare the MAX_LENGTH attribute.
+`OPENROWSET(BULK...)` assumes that, if you don't specify otherwise, the maximum length of `SQLCHAR`, `SQLNCHAR`, or `SQLBINARY` data doesn't exceed 8,000 bytes. If you're importing data in a LOB data field that contains any **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** objects that exceed 8,000 bytes, you must use an XML format file that defines the maximum length for the data field. To specify the maximum length, edit the format file and declare the `MAX_LENGTH` attribute.
 
 > [!NOTE]  
 > An automatically generated format file doesn't specify the length or maximum length for a LOB field. However, you can edit a format file and specify the length or maximum length manually.
@@ -749,15 +751,15 @@ To bulk export or import SQLXML data, use one of the following data types in you
 
 Sometimes, you might need to know which file or folder source correlates to a specific row in the result set.
 
-You can use functions `filepath` and `filename` to return file names and/or the path in the result set. Or you can use them to filter data based on the file name and/or folder path. In the following sections, you'll find short descriptions along samples.
+You can use functions `filepath` and `filename` to return file names and the path in the result set. Or you can use them to filter data based on the file name and folder path. In the following sections, you find short descriptions along with samples.
 
 ### Filename function
 
-This function returns the file name that the row originates from.
+This function returns the file name for the row.
 
-Return data type is **nvarchar(1024)**. For optimal performance, always cast result of filename function to appropriate data type. If you use character data type, make sure appropriate length is used.
+The return data type is **nvarchar(1024)**. For optimal performance, always cast the result of the filename function to an appropriate data type. If you use a character data type, ensure you use an appropriate length.
 
-The following sample reads the NYC Yellow Taxi data files for the last three months of 2017 and returns the number of rides per file. The `OPENROWSET` part of the query specifies which files will be read.
+The following sample reads the NYC Yellow Taxi data files for the last three months of 2017 and returns the number of rides per file. The `OPENROWSET` part of the query specifies which files to read.
 
 ```sql
 SELECT
@@ -772,9 +774,9 @@ FROM
 GROUP BY nyc.filename();
 ```
 
-The following example shows how `filename()` can be used in the `WHERE` clause to filter the files to be read. It accesses the entire folder in the `OPENROWSET` part of the query and filters files in the `WHERE` clause.
+The following example shows how to use `filename()` in the `WHERE` clause to filter the files to read. It accesses the entire folder in the `OPENROWSET` part of the query and filters files in the `WHERE` clause.
 
-Your results will be the same as the prior example.
+Your results are the same as the previous example.
 
 ```sql
 SELECT
@@ -796,14 +798,14 @@ ORDER BY
 
 ### Filepath function
 
-This function returns a full path or a part of path:
+This function returns a full path or a part of a path:
 
-- When called without parameter, returns the full file path that a row originates from.
-- When called with parameter, returns part of path that matches the wildcard on position specified in the parameter. For example, parameter value 1 would return part of path that matches the first wildcard.
+- When you call the `filepath` function without a parameter, it returns the full file path that a row originates from.
+- When you call the `filepath` function with a parameter, it returns the part of the path that matches the wildcard at the position specified in the parameter. For example, a parameter value of 1 returns the part of the path that matches the first wildcard.
 
-Return data type is **nvarchar(1024)**. For optimal performance, always cast result of `filepath` function to appropriate data type. If you use character data type, make sure appropriate length is used.
+The return data type of the `filepath` function is **nvarchar(1024)**. For optimal performance, always cast the result of the `filepath` function to the appropriate data type. If you use a character data type, ensure you use an appropriate length.
 
-The following sample reads NYC Yellow Taxi data files for the last three months of 2017. It returns the number of rides per file path. The `OPENROWSET` part of the query specifies which files will be read.
+The following sample reads NYC Yellow Taxi data files for the last three months of 2017. It returns the number of rides per file path. The `OPENROWSET` part of the query specifies which files to read.
 
 ```sql
 SELECT
@@ -824,9 +826,9 @@ ORDER BY
     filepath;
 ```
 
-The following example shows how `filepath()` can be used in the `WHERE` clause to filter the files to be read.
+The following example shows how to use `filepath()` in the `WHERE` clause to filter the files to read.
 
-You can use the wildcards in the `OPENROWSET` part of the query and filter the files in the `WHERE` clause. Your results will be the same as the prior example.
+You can use wildcards in the `OPENROWSET` part of the query and filter the files in the `WHERE` clause. Your results will be the same as the prior example.
 
 ```sql
 SELECT
@@ -967,7 +969,7 @@ FROM OPENROWSET('MSDASQL',
 ```
 
 > [!IMPORTANT]  
-> The ODBC driver should be 64-bit. Open the **Drivers** tab of the [Connect to an ODBC Data Source (SQL Server Import and Export Wizard)](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There's 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of `sqlservr.exe`.
+> The ODBC driver should be 64-bit. Open the **Drivers** tab of the [Connect to an ODBC Data Source (SQL Server Import and Export Wizard)](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There's 32-bit `Microsoft Text Driver (*.txt, *.csv)` that doesn't work with a 64-bit version of `sqlservr.exe`.
 
 ### F. Access data from a file stored on Azure Blob Storage
 
@@ -989,7 +991,7 @@ For complete `OPENROWSET` examples including configuring the credential and exte
 
 ### G. Import into a table from a file stored on Azure Blob Storage
 
-The following example shows how to use the `OPENROWSET` command to load data from a csv file in an Azure Blob storage location on which you created the SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
+The following example shows how to use the `OPENROWSET` command to load data from a CSV file in an Azure Blob storage location where you created the SAS key. You configure the Azure Blob storage location as an external data source. This process requires a database scoped credential that uses a shared access signature (SAS) encrypted by using a master key in the user database.
 
 ```sql
 -- Optional: a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -1030,7 +1032,7 @@ SELECT * FROM OPENROWSET(
 
 **Applies to:** [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
-The following example creates a credential by using a managed identity, creates an external source and then loads data from a CSV hosted on the external source.
+The following example creates a credential by using a managed identity, creates an external source, and then loads data from a CSV hosted on the external source.
 
 First, create the credential and specify blob storage as the external source:
 
@@ -1059,7 +1061,7 @@ SELECT * FROM OPENROWSET(
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions.
 
-The following example uses access several Parquet files from different location, all stored on S3-compatible object storage:
+The following example accesses several Parquet files from different locations, all stored on S3-compatible object storage:
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL s3_dsc
@@ -1150,7 +1152,7 @@ FROM OPENROWSET(
 
 ### B. Read a custom CSV file
 
-In the following example you can see how to read rows from a CSV file with a header row and explicitly specified terminator characters that are separating rows and fields:
+In the following example you can see how to read rows from a CSV file with a header row and explicitly specified terminator characters that separate rows and fields:
 
 ```sql
 SELECT *
@@ -1163,7 +1165,7 @@ BULK 'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/bin
 
 ### C. Specify the file column schema while reading a file
 
-In the following example you can see how to explicitly specify the schema of row that will be returned as a result of the `OPENROWSET` function:
+In the following example, you specify the schema of the row that the `OPENROWSET` function returns:
 
 ```sql
 SELECT *
@@ -1182,7 +1184,7 @@ WITH (
 
 ### D. Read partitioned data sets
 
-In the following example you can see how to use the `filepath()` function to read the parts of URI from the matched file path:
+In the following example, you use the `filepath()` function to read the parts of the URI from the matched file path:
 
 ```sql
 SELECT TOP 10 
@@ -1225,7 +1227,7 @@ If a column name doesn't match the physical name of a column in the properties i
 
 ### A. Use OPENROWSET to read a CSV file from a Fabric Lakehouse
 
-In this example, `OPENROWSET` will be used to read a CSV file available on Fabric Lakehouse, named `customer.csv`, stored under the `Files/Contoso/` folder. Since no Data Source and Database Scoped Credentials are provided, Fabric SQL database authenticates with the user's Entra ID context. 
+In this example, you use `OPENROWSET` to read a CSV file on a Fabric Lakehouse. The file is named `customer.csv` and is stored in the `Files/Contoso/` folder. Because you don't provide a data source or database scoped credentials, the Fabric SQL database uses your Entra ID context to authenticate. 
 
 ```sql
 SELECT * FROM OPENROWSET 
@@ -1259,10 +1261,12 @@ SELECT * FROM OPENROWSET
     Latitude DECIMAL(10,6),  
     Longitude DECIMAL(10,6) ) AS DATA 
 ```
- 
-### B. Use OPENROWSET to read file from Fabric Lakehouse and insert into a new table 
 
-In this example, `OPENROWSET` will first be used to read data from a parquet file named`store.parquet`. Then, `INSERT` the data into a new table called `Store`. The parquet file is located in Fabric Lakehouse, since no DATA_SOURCE and database-scoped credential are provided, SQL database in Fabric authenticates with the user's Entra ID context. 
+<a id="#b-use-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>
+
+### B. Use OPENROWSET to read a file from a Fabric Lakehouse and insert data into a new table 
+
+In this example, you use `OPENROWSET` to read data from a Parquet file named `store.parquet`. Then, you use `INSERT` to add the data into a new table named `Store`. The Parquet file is located in a Fabric Lakehouse. Because you don't provide a data source or database scoped credentials, the SQL database in Fabric uses your Entra ID context to authenticate. 
  
 ```sql
 SELECT * 

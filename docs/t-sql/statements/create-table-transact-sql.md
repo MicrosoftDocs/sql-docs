@@ -1026,7 +1026,7 @@ If the `HISTORY_TABLE` argument is used to create a link to and use an existing 
 
 Use this argument with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW { START | END }` arguments to enable system versioning on a table. For more information, see [Temporal tables](../../relational-databases/tables/temporal-tables.md). Use this argument with the `WITH LEDGER = ON` argument to create an updatable ledger table. Using existing history tables with ledger tables isn't allowed.
 
-For more information about `HISTORY_RETENTION_PERIOD`, see [Manage historical data in Temporal tables with retention policy](/azure/azure-sql/database/temporal-tables-retention-policy).
+For more information about `HISTORY_RETENTION_PERIOD`, see [Manage historical data in Temporal tables with retention policy](../../relational-databases/tables/temporal/manage-retention.md).
 
 For more information about `DATA_CONSISTENCY_CHECK`, see [Temporal table system consistency checks](../../relational-databases/tables/temporal-table-system-consistency-checks.md).
 

@@ -140,8 +140,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
   - Execute `DBCC FREESYSTEMCACHE('TokenAndPermUserStore')` to clear security caches on the database.
   - Execute `DBCC FLUSHAUTHCACHE` to clear the federated authentication context cache.
   - [Create the user](authentication-azure-ad-logins.md#create-user-from-login) based on the login.
-- In Azure SQL Database and Azure SQL Managed Instance, new users added to Microsoft Entra Groups can experience delays when they try to login or are granted roles and permissions. If you encounter this, use the following commands to address the issue:
-  - Execute `DBCC FLUSHAUTHCACHE` to clear the federated authentication context cache.
+- In Azure SQL Database, new users added to a Microsoft Entra group can experience delays when they try to sign in, or when they're granted roles and permissions. If you encounter this delay, execute `DBCC FLUSHAUTHCACHE` to clear the federated authentication context cache.
 
 ### Microsoft Entra group server principal limitations
 

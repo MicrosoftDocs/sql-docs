@@ -5,7 +5,7 @@ description: Learn about the MSSQL extension for Visual Studio Code, which provi
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: yoleichen
-ms.date: 07/15/2026
+ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -68,8 +68,9 @@ The following table provides an overview of the features available in the MSSQL 
 | [Schema designer with GitHub Copilot](mssql-schema-designer-copilot.md) | GA | Natural language schema design with visual change tracking and ORM script generation |
 | [Data API builder](mssql-data-api-builder.md) | GA | Create REST, GraphQL, and MCP endpoints for SQL databases |
 | [SQL notebooks](mssql-sql-notebooks.md) | GA | Jupyter-based SQL notebooks with rich results and multi-kernel support |
-| [Azure integration](mssql-azure-integration.md) | Preview | Provision Azure SQL databases directly from Visual Studio Code, starting with the free tier |
-| [Shortcuts configuration](#shortcuts-configuration-preview) | Preview | Manage keyboard shortcuts for frequently used queries and other editor commands |
+| [SQL Formatter](mssql-sql-formatter.md) | Preview | Format T-SQL on demand or on save with configurable formatting options |
+| [Azure integration](mssql-azure-integration.md) | GA | Provision Azure SQL databases directly from Visual Studio Code, starting with the free tier |
+| [Shortcuts configuration](#shortcuts-configuration) | GA | Manage keyboard shortcuts for frequently used queries and other editor commands |
 
 ### Connection dialog
 
@@ -180,7 +181,7 @@ Key features of the Query Results pane include:
 > [!TIP]  
 > You can customize the query results behavior using the `mssql.openQueryResultsInTabByDefault` setting. When set to `true`, query results open in a new tab by default, helping declutter your workspace.
 
-A new Results Grid experience is available in preview, which includes improvements in state management, performance, and column customization, such as freezing, showing, or hiding columns. To enable it, set `mssql.preview.betaResultsGrid` to `true` in Visual Studio Code settings.
+The new Results Grid experience is available in preview and includes improvements in state management, performance, and column customization, such as freezing, showing, or hiding columns. It's enabled by default. To change this setting, modify `mssql.preview.betaResultsGrid` in Visual Studio Code settings.
 
 ### Query Plan Visualizer
 
@@ -202,9 +203,9 @@ The right-hand sidebar provides quick access to more actions:
 
 :::image type="content" source="media/mssql-extension-visual-studio-code/query-plan-visualizer-vscode.png" alt-text="Screenshot of the query plan visualizer feature." lightbox="media/mssql-extension-visual-studio-code/query-plan-visualizer-vscode.png":::
 
-### Shortcuts Configuration (Preview)
+### Shortcuts Configuration
 
-Use Shortcuts Configuration (Preview) to manage and run common commands.
+Use Shortcuts Configuration to manage and run common commands.
 
 To use the feature, select **Open Shortcuts Configuration** from the MSSQL extension toolbar.
 
@@ -221,7 +222,7 @@ In the Quick Queries tab, you have the following options:
 - **Auto-execute control**: Choose whether a shortcut runs the query immediately or opens it in the editor first.
 - **Keybinding integration**: Customize keybindings with the Visual Studio Code Keyboard Shortcuts editor.
 
-:::image type="content" source="media/mssql-extension-visual-studio-code/shortcuts-configuration-queries.png" alt-text="Screenshot of the Shortcuts Configuration (Preview) page showing the Quick Queries tab with query slots, auto-execute options, and keybinding controls." lightbox="media/mssql-extension-visual-studio-code/shortcuts-configuration-queries.png":::
+:::image type="content" source="media/mssql-extension-visual-studio-code/shortcuts-configuration-queries.png" alt-text="Screenshot of the Shortcuts Configuration page showing the Quick Queries tab with query slots, auto-execute options, and keybinding controls." lightbox="media/mssql-extension-visual-studio-code/shortcuts-configuration-queries.png":::
 
 For detailed guidance on **Extension Shortcuts** and advanced shortcut configuration, see [Customize keyboard shortcuts](mssql-keyboard-shortcuts.md).
 
@@ -252,7 +253,7 @@ The extension can download and install a required `SqlToolsService` package duri
 - [GitHub Copilot integration in Schema Designer](mssql-schema-designer-copilot.md)
 - [Data API builder](mssql-data-api-builder.md)
 - [SQL Notebooks](mssql-sql-notebooks.md)
-- [Create an Azure SQL Database (Preview)](mssql-azure-integration.md)
+- [Create an Azure SQL Database](mssql-azure-integration.md)
 - [Schema Compare](mssql-schema-compare.md)
 - [Visual Studio Code documentation](https://code.visualstudio.com/docs)
 - [MSSQL extension for Visual Studio Code repository on GitHub](https://github.com/Microsoft/vscode-mssql)

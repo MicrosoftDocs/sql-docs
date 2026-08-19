@@ -4,7 +4,7 @@ description: Find information about SQL Server 2025 (17.x) limitations, known is
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
-ms.date: 11/18/2025
+ms.date: 08/19/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: release-notes
@@ -41,9 +41,7 @@ For more information, review [Opt in for preview features - FAQ](preview-feature
 
 ## Build number
 
-| Build | Version number | Date |
-| --- | --- | --- |
-| Generally available (GA) | 17.0.1000.7 | November 18, 2025 |
+For information about [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] build numbers, see [SQL Server 2025 build versions](/troubleshoot/sql/releases/sqlserver-2025/build-versions).
 
 ## Related content
 

@@ -252,7 +252,7 @@ We have identified a fix for a future release of [!INCLUDE [sssql25-md](../inclu
 
 <a id="windows-server-2025-lock-pages-in-memory"></a>
 
-## Access violations in Windows Server 2025 with lpim enabled
+## Access violations in Windows Server 2025 with LPIM enabled
 
 [!INCLUDE [windows-server-2025-disable-lpim](../includes/windows-server-2025-disable-lpim.md)]
 

@@ -137,7 +137,7 @@ To work around the issue, first drop the index, or the table with the index, fro
 > [!CAUTION]  
 > If you create a partitioned index on a table after dropping an index as described in this scenario, the table becomes inaccessible.
 
-### Access violations in Windows Server 2025 with lpim enabled
+### Access violations in Windows Server 2025 with LPIM enabled
 
 [!INCLUDE [windows-server-2025-disable-lpim](../includes/windows-server-2025-disable-lpim.md)]
 

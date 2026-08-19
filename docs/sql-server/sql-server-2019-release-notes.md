@@ -75,7 +75,7 @@ This section identifies known issues you might experience with this product.
 
 - **Applies to**: [!INCLUDE [SQL Server 2019](../includes/sssql19-md.md)] RTM
 
-### Access violations in Windows Server 2025 with lpim enabled
+### Access violations in Windows Server 2025 with LPIM enabled
 
 [!INCLUDE [windows-server-2025-disable-lpim](../includes/windows-server-2025-disable-lpim.md)]
 

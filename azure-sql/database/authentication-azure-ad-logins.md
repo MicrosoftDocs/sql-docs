@@ -131,7 +131,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
   - Impersonation of Microsoft Entra database principals (users) in a user database is supported on all Microsoft SQL products.
 - Microsoft Entra logins can't overlap with the Microsoft Entra administrator. The Microsoft Entra admin takes precedence over any login. If a Microsoft Entra account already has access to the server as a Microsoft Entra admin, individually or as part of a group, any login created for this account won't have any effect. However, the login creation isn't blocked through T-SQL. After the account authenticates to the server, the login will have the effective permissions of a Microsoft Entra admin, and not of a newly created login.
 - Changing permissions on specific Microsoft Entra login object isn't supported:
-  - `GRANT <PERMISSION> ON LOGIN :: <Microsoft Entra account> TO <Any other login> `
+  - `GRANT <PERMISSION> ON LOGIN :: <Microsoft Entra account> TO <Any other login>`
 - When you alter permissions for a Microsoft Entra login, by default the changes only take effect the next time the login connects to the Azure SQL Database. Any existing open connections with the login aren't affected. To force permissions changes to take immediate effect, you can manually clear the authentication and TokenAndPermUserStore, as described earlier in [disable or enable a login using ALTER LOGIN](#disable-or-enable-a-login-using-alter-login). This behavior also applies when making server role membership changes with [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql).
 - In SQL Server Management Studio, the scripting command to create a user doesn't check if there's already a Microsoft Entra login in `master` with the same name. It always generates the T-SQL for a contained database Microsoft Entra user.
 - An error might occur if you're trying to create a login or user from a service principal with a nonunique display name. For more information about mitigating this error, see [Microsoft Entra logins and users with nonunique display names](authentication-microsoft-entra-create-users-with-nonunique-names.md).
@@ -140,6 +140,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
   - Execute `DBCC FREESYSTEMCACHE('TokenAndPermUserStore')` to clear security caches on the database.
   - Execute `DBCC FLUSHAUTHCACHE` to clear the federated authentication context cache.
   - [Create the user](authentication-azure-ad-logins.md#create-user-from-login) based on the login.
+- In Azure SQL Database, new users added to a Microsoft Entra group can experience delays when they try to sign in, or when they're granted roles and permissions. If you encounter this delay, execute `DBCC FLUSHAUTHCACHE` to clear the federated authentication context cache.
 
 ### Microsoft Entra group server principal limitations
 

@@ -4,7 +4,7 @@ description: Describes how to configure a service account for SQL Server enabled
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: nikitatakru, randolphwest
-ms.date: 04/28/2026
+ms.date: 08/20/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 # customer intent: As a system engineer, compliance mandates that I configure services to run with least privilege.
@@ -16,9 +16,21 @@ ai-usage: ai-assisted
 
 The information security principle of least privilege asserts that accounts and applications only have access to the data and operations they require. With SQL Server enabled by Azure Arc, you can run the agent extension service with least privilege. This article explains how to run the agent extension service with least privilege.
 
-To optionally configure the service to run with least privilege, follow the steps in this article. Currently, the service doesn't automatically run with least privilege.
+Starting with Azure Extension for SQL Server version 1.1.3453.436, least privilege is enabled by default. If you're running an earlier version, follow the steps in this article to optionally configure the service to run with least privilege.
 
 [Configure Windows service accounts and permissions for Azure Extension for SQL Server](configure-windows-accounts-agent.md) describes the least privilege permissions for the agent extension service.
+
+## Least privilege enabled by default
+
+Azure Extension for SQL Server version 1.1.3453.436 and later automatically run with least privilege. This change is part of ongoing security hardening for SQL Server enabled by Azure Arc.
+
+After your extension automatically upgrades to version 1.1.3453.436 or later, you might notice a new SQL Server login named `NT SERVICE\SqlServerExtension`. This behavior is expected:
+
+- The Azure Extension for SQL Server creates and manages this login automatically.
+- The login is granted only the minimum permissions required, scoped to the features you have enabled.
+- No action is required on your part for this default behavior to take effect.
+
+If you're running a version earlier than 1.1.3453.436, least privilege isn't enabled by default. Follow the steps in this article to enable it manually.
 
 > [!NOTE]  
 > [!INCLUDE [least-privilege-default](includes/least-privilege-default.md)]
@@ -81,9 +93,12 @@ To complete the steps in this article, you need the following tools:
 
 - [Azure CLI](/cli/azure/)
 - [`arcdata` Azure CLI extension](/azure/azure-arc/data/install-arcdata-extension) version `1.5.9` or later
-- Azure Extension for SQL Server version `1.1.2859.223` or later versions
+- Azure Extension for SQL Server version `1.1.2859.223` or later versions to manually enable least privilege. Version `1.1.3453.436` or later enables least privilege by default.
 
 ## Enable least privilege
+
+> [!NOTE]  
+> These steps are required only for Azure Extension for SQL Server versions earlier than 1.1.3453.436. Later versions have least privilege enabled by default and don't require manual configuration.
 
 1. Sign in with Azure CLI.
 

@@ -25,7 +25,7 @@ This quickstart describes how to connect an application to a database in Azure S
 
 - An [Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - A SQL database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md).
-- [.NET 9.0](https://dotnet.microsoft.com/download) or later.
+- [.NET 10.0](https://dotnet.microsoft.com/download) or later.
 - [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 - The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 - The latest version of the Entity Framework Core tools:
@@ -48,7 +48,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
 
 1. For the **Project Name**, enter *DotNetSQL*. Leave the default values for the rest of the fields and select **Next**.
 
-1. For the **Framework**, select .NET 9.0 and uncheck **Use controllers**. This quickstart uses a Minimal API template to streamline endpoint creation and configuration.
+1. For the **Framework**, select .NET 10.0 and uncheck **Use controllers**. This quickstart uses a Minimal API template to streamline endpoint creation and configuration.
 
 1. Choose **Create**. The new project opens inside the Visual Studio environment.
 
@@ -78,7 +78,8 @@ To connect to Azure SQL Database by using .NET and Entity Framework Core, you ne
 - `Microsoft.EntityFrameworkCore.SqlServer`: Provides extra components to connect to the logical server
 - `Microsoft.EntityFrameworkCore.Design`: Provides support for running Entity Framework migrations
 - `Microsoft.EntityFrameworkCore.Tools`: Provides support for Visual Studio Package Manager Console tooling (PowerShell only)
-- `Swashbuckle.AspNetCore`: Optional - provides support for SwaggerUI interaction with the app endpoints
+- `Microsoft.AspNetCore.OpenApi`: Optional - provides support for OpenAPI documentation generation
+- `Swashbuckle.AspNetCore.SwaggerUI`: Optional - provides OpenAPI UI interaction with the app endpoints
 
 ## [.NET CLI](#tab/dotnet-cli)
 
@@ -88,7 +89,8 @@ Use the `dotnet add package` command to install the following packages:
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.Design
-dotnet add package Swashbuckle.AspNetCore
+dotnet add package Microsoft.AspNetCore.OpenApi
+dotnet add package Swashbuckle.AspNetCore.SwaggerUI
 ```
 
 ---
@@ -125,14 +127,13 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
 1. Replace the contents of the `Program.cs` file with the following code:
 
    ```csharp
-   using Microsoft.AspNetCore.Mvc;
    using Microsoft.EntityFrameworkCore;
-
+   
    var builder = WebApplication.CreateBuilder();
-
+   
    builder.Services.AddOpenApi();
-
-   var connection = String.Empty;
+   
+   var connection = string.Empty;
    if (builder.Environment.IsDevelopment())
    {
        builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.Development.json");
@@ -142,12 +143,12 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
    {
        connection = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
    }
-
+   
    builder.Services.AddDbContext<PersonDbContext>(options =>
        options.UseSqlServer(connection));
-
+   
    var app = builder.Build();
-
+   
    if (app.Environment.IsDevelopment())
    {
        app.MapOpenApi();
@@ -156,36 +157,28 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
            options.SwaggerEndpoint("/openapi/v1.json", "v1");
        });
    }
-
+   
    app.MapGet("/", () => "Hello world!");
-
-   app.MapGet("/Person", (PersonDbContext context) =>
-   {
-       return context.Person.ToList();
-   });
-
+   
+   app.MapGet("/Person", (PersonDbContext context) => context.Person.ToList());
+   
    app.MapPost("/Person", (Person person, PersonDbContext context) =>
    {
        context.Add(person);
        context.SaveChanges();
    });
-
+   
    app.Run();
-
+   
    public class Person
    {
        public int Id { get; set; }
        public string FirstName { get; set; }
        public string LastName { get; set; }
    }
-
-   public class PersonDbContext : DbContext
+   
+   public class PersonDbContext(DbContextOptions<PersonDbContext> options) : DbContext(options)
    {
-       public PersonDbContext(DbContextOptions<PersonDbContext> options)
-           : base(options)
-       {
-       }
-
        public DbSet<Person> Person { get; set; }
    }
    ```
@@ -194,7 +187,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
 
    - Retrieves the passwordless database connection string from the `appsettings.Development.json` file for local development, or from the environment variables for hosted production scenarios.
    - Registers the Entity Framework Core `DbContext` class with the .NET dependency injection container. You can read more about `DbContext` in the [Getting Started](/ef/core/get-started/overview/first-app) documentation for Entity Framework Core.
-   - Configures .NET 9.0 OpenAPI support with SwaggerUI to provide a UI you can use to interact with the app endpoints and database.
+   - Configures .NET 10.0 OpenAPI support with SwaggerUI to provide a UI you can use to interact with the app endpoints and database.
    - Adds endpoints to retrieve and add entities in the database.
    - Defines a `Person` class to represent a single record in the `Persons` database table, and the `PersonDbContext` class that was registered with the .NET dependency injection container.
 
@@ -241,7 +234,7 @@ The app is ready to be tested locally. Make sure you're signed in to Visual Stud
 
 1. Press the run button at the top of Visual Studio to launch the API project.
 
-1. On the Swagger UI page, expand the POST method and select **Try it**.
+1. On the Swagger UI page (for example `https://localhost:<port>/swagger`), expand the POST method and select **Try it**.
 
 1. Modify the sample JSON to include values for the first name and family name. Select **Execute** to add a new record to the database. The API returns a successful response.
 

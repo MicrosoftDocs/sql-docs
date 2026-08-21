@@ -3,7 +3,7 @@ title: Connect to SQL Server with sqlcmd
 description: "Learn how to select which protocol sqlcmd uses to communicate with SQL Server. The choices are: TCP/IP, named pipes, and shared memory."
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: dlevy, maghan, mathoma
+ms.reviewer: mahyon
 ms.date: 11/25/2024
 ms.service: sql
 ms.subservice: tools-other

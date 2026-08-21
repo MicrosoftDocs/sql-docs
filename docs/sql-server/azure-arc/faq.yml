@@ -3,7 +3,7 @@ metadata:
   title: Frequently asked questions
   description: Provides questions and answers frequently asked about SQL Server enabled by Azure Arc.
   ms.topic: faq
-  ms.date: 05/19/2026
+  ms.date: 08/21/2026
   ai-usage: ai-assisted
   ms.author: mathoma
   author: MashaMSFT
@@ -125,10 +125,10 @@ sections:
         answer: When the least privileges mode is enabled, then it runs as the NT Service\SQLServerExtension account. When it's disabled, it runs as Local System. To enable least privilege mode, review [Least privilege mode](configure-least-privilege.md).
 
       - question: Is least privilege mode supported for SQL Server enabled by Azure Arc?
-        answer: Yes, least privilege mode is supported for SQL Server enabled by Azure Arc. Existing servers with extension version `1.1.2859.223` or greater will eventually have the least privileged configuration applied. This extension was released in November, 2024. To prevent the automatic application of least privilege, block extension upgrades after `1.1.2859.223`. Learn more about the permission assigned at [Configure Windows service accounts and permissions for Azure extension for SQL Server](configure-windows-accounts-agent.md).
+        answer: Yes, least privilege mode is supported for SQL Server enabled by Azure Arc. [!INCLUDE [least-privilege-default](includes/least-privilege-default.md)] Learn more about the permission assigned at [Configure Windows service accounts and permissions for Azure extension for SQL Server](configure-windows-accounts-agent.md).
 
       - question: How do I set the minimum permissions to deploy SQL Server enabled by Azure Arc?
-        answer: Least privilege mode uses minimum permissions to deploy SQL Server enabled by Azure Arc. To enable least privilege mode, review [Operate SQL Server enabled by Azure Arc with least privilege](configure-least-privilege.md).
+        answer: Least privilege mode uses minimum permissions to deploy SQL Server enabled by Azure Arc. To enable least privilege mode, review [Operate SQL Server enabled by Azure Arc with least privilege](configure-least-privilege.md). For existing servers that use `1.1.2859.223` or later versions, when auto-upgrade is enabled, the least-privilege configuration is applied eventually as part of automatic upgrades.
 
   - name: Associated services
     questions:

@@ -92,7 +92,7 @@ The following table defines the SQL Server permissions and custom roles used by 
 | [Status reporting](manage-sql-vm-portal.md#access-the-resource) | Server:<br />- `VIEW ANY DEFINITION`<br />- `VIEW SERVER STATE`<br />- `ALTER ANY LOGIN`<br />- `CONNECT SQL` | `SqlIaaSExtension_StatusReporting` |
 
 > [!NOTE]
-> SQL Server VMs provisioned *before October 2022* use the older `sysadmin` model by default. You can enable least privilege mode manually for these VMs. If this option isn't visible in your environment, your SQL Server VM already has least privilege mode enabled by default.
+> SQL Server VMs provisioned *before October 2022* use the older `sysadmin` model by default. You can enable least privilege mode manually for these VMs. If this option isn't visible in your environment, your SQL Server VM already has least privilege mode enabled by default. 
 
 To enable the least privilege permissions model, go to your [SQL Server virtual machine resource](manage-sql-vm-portal.md), choose **Security Configuration** under **Security**, and then select the **Enable least privilege mode** checkbox:
 

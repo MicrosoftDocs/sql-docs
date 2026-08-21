@@ -3,6 +3,7 @@ title: "Specify File Storage Type with bcp"
 description: Use bcp to export data to a file as its database table type, in its character representation, or as a data type that supports implicit conversion.
 author: rwestMSFT
 ms.author: randolphwest
+ms.reviewer: mahyon
 ms.date: 02/10/2026
 ms.service: sql
 ms.subservice: data-movement

@@ -3,6 +3,7 @@ title: "Specify Prefix Length in Data Files with bcp"
 description: This article describes the prefix field, which encodes the length of a field to provide compact file storage for bulk export in native format to a data file.
 author: rwestMSFT
 ms.author: randolphwest
+ms.reviewer: mahyon
 ms.date: 02/10/2026
 ms.service: sql
 ms.subservice: data-movement

@@ -157,6 +157,8 @@ The Extension Service  collects inventory and database metadata (Windows Only) a
 
 You can configure the Extension Service to run with minimal privileges. For details on how to configure least privilege mode, review [Enable least privilege](configure-least-privilege.md).
 
+[!INCLUDE [least-privilege-default](includes/least-privilege-default.md)] 
+
 When configured for least privilege, the Extension Service runs as the `NT Service\SQLServerExtension` service account.
 
 The `NT Service\SQLServerExtension` account is a local Windows service account:

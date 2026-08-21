@@ -3,7 +3,7 @@ title: Download and Install the bcp Utility
 description: Learn how to download and install the bulk copy program (bcp) utility on Windows, Linux, and macOS.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: davidengel
+ms.reviewer: mahyon
 ms.date: 06/30/2026
 ms.service: sql
 ms.subservice: tools-other

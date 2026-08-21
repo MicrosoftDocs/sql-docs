@@ -3,6 +3,7 @@ title: "Specify Field Length by Using bcp (SQL Server)"
 description: In SQL Server, if necessary, bcp prompts for field length, default field lengths, and impact of field-length on data storage in files that contain char data.
 author: rwestMSFT
 ms.author: randolphwest
+ms.reviewer: mahyon
 ms.date: 02/10/2026
 ms.service: sql
 ms.subservice: data-movement

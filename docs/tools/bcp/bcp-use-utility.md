@@ -3,7 +3,7 @@ title: How to Use the bcp Utility
 description: Learn how to use the bulk copy program (bcp) to bulk copy data between an instance of SQL Server and a data file in a user-specified format.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: davidengel
+ms.reviewer: mahyon
 ms.date: 06/25/2026
 ms.service: sql
 ms.subservice: tools-other

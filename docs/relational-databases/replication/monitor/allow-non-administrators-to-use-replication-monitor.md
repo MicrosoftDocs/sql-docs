@@ -25,24 +25,13 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
      These users can monitor replication, but cannot change any replication properties.  
   
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Security](#Security)  
-  
--   **To allow non-administrators to use Replication Monitor, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- To allow non-administrators to use Replication Monitor, a member of the **sysadmin** fixed server role must add the user to the distribution database and assign that user to the **replmonitor** role.  
+<a id="BeforeYouBegin"></a>
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+To allow non-administrators to use Replication Monitor, a member of the **sysadmin** fixed server role must add the user to the distribution database and assign that user to the **replmonitor** role.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

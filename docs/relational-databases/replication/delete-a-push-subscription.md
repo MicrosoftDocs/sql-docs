@@ -20,21 +20,7 @@ monikerRange: "=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-201
 # Delete a Push Subscription
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to delete a push subscription in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
-  
- **In This Topic**  
-  
--   **To delete a push subscription, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
 
--   **Known issues:**
-
-     [Linked server port not updated when recreating subscription](#known-issue-port)
-  
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Delete a push subscription at the Publisher (from the **Local Publications** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) or the Subscriber (from the **Local Subscriptions** folder). Deleting a subscription does not remove objects or data from the subscription; they must be removed manually.  
   

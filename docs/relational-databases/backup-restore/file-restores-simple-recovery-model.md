@@ -41,12 +41,6 @@ helpviewer_keywords:
     > [!TIP]  
     >  If you want the database to be offline for a file restore, take the database offline before you start the restore sequence by executing the following [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement: ALTER DATABASE *database_name* SET OFFLINE.  
   
- **In this Topic:**  
-  
--   [Overview of File and Filegroup Restore Under the Simple Recovery Model](#Overview)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
 ##  <a name="Overview"></a> Overview of File and Filegroup Restore Under the Simple Recovery Model  
  A file restore scenario consists of a single restore sequence that copies, rolls forward, and recovers the appropriate data as follows:  
   

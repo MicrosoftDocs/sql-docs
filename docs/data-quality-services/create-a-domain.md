@@ -20,15 +20,19 @@ ms.custom:
   
  There are two ways to create a new domain. The first is during the Map step of the knowledge discovery activity, when you are in the process of analyzing a data sample to add knowledge to a new or existing knowledge base. The second is during the domain management activity, when instead of changing an existing domain, you create a new one.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To create a domain, you must have created and opened a knowledge base.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To create a domain, you must have created and opened a knowledge base.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN database to create a domain.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN database to create a domain.  
   
 ##  <a name="Discovery"></a> Create a Domain in the Knowledge Discovery Activity  
   

@@ -24,15 +24,19 @@ ms.custom:
   
  The Speller only works on single domains with a data type of string. All values in a single domain that are of a string data type are sent to the speller for validation. The Speller does not work for a composite domain, and it does not work for domains of types other than string, mixed values (such as letters and numbers with no space), Roman numerals, single characters, and values that consist only of upper-case letters.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To run the Speller, you must have a knowledge base and a domain opened in the Knowledge Discovery or Domain Management activity; the Speller must be enabled for the domain and in the page where you are going to run it; and the language property must be specified for the domain.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To run the Speller, you must have a knowledge base and a domain opened in the Knowledge Discovery or Domain Management activity; the Speller must be enabled for the domain and in the page where you are going to run it; and the language property must be specified for the domain.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to run the Speller.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to run the Speller.  
   
 ##  <a name="Enable"></a> Enable the Speller  
   

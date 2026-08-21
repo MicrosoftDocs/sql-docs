@@ -24,12 +24,9 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 You can create nonclustered indexes in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)]. A nonclustered index is an index structure separate from the data stored in a table that reorders one or more selected columns. Nonclustered indexes can often help you find data more quickly than searching the underlying table; queries can sometimes be answered entirely by the data in the nonclustered index, or the nonclustered index can point the [!INCLUDE [ssDE](../../includes/ssde-md.md)] to the rows in the underlying table. Generally, nonclustered indexes are created to improve the performance of frequently used queries not covered by the clustered index or to locate rows in a table without a clustered index (called a heap). You can create multiple nonclustered indexes on a table or indexed view.
 
 <a id="BeforeYouBegin"></a>
-
-## Before you begin
-
 <a id="Implementations"></a>
 
-### Typical implementations
+## Typical implementations
 
 Nonclustered indexes are implemented in the following ways:
 
@@ -46,12 +43,9 @@ Nonclustered indexes are implemented in the following ways:
   After a unique clustered index has been created on a view, nonclustered indexes can be created. For more information, see [Create indexed views](../views/create-indexed-views.md).
 
 <a id="Security"></a>
-
-### Security
-
 <a id="Permissions"></a>
 
-#### Permissions
+## Permissions
 
 Requires `ALTER` permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.
 

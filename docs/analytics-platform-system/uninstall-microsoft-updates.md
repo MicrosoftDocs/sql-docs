@@ -12,10 +12,11 @@ ms.topic: how-to
 
 # Uninstall Microsoft updates in Analytics Platform System
 This article describes how to uninstall a previously installed Microsoft update on the Analytics Platform System appliance.  
-  
-## Before You Begin
-  
-### Prerequisites
+
+<a id="before-you-begin"></a>
+
+## Prerequisites
+
 To perform these steps, you will need:  
   
 -   An Analytics Platform System login with permissions to access the Admin Console to monitor the appliance.  

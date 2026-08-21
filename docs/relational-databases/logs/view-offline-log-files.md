@@ -19,8 +19,11 @@ helpviewer_keywords:
   
 > [!NOTE]  
 >  You can also use these methods to connect to an instance that is online, but for some reason, you cannot connect through a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection.  
-  
-## Before you Begin  
+
+<a id="before-you-begin"></a>
+
+## Prerequisites
+
  To connect to offline log files, an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be installed on the computer that you are using to view the offline log files, and on the computer where the log files that you want to view are located. If an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on both computers, you can view offline files for instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and for instances that are running earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on either computer.  
   
  If you are using Registered Servers, the instance that you want to connect to must be registered under **Local Server Groups** or under **Central Management Servers**. (The instance can be registered on its own or be a member of a server group.) For more information about how to add an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to Registered Servers, see the following topics:  
@@ -37,8 +40,11 @@ helpviewer_keywords:
   
 -   [SqlErrorLogFile Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (This topic shows how to retrieve information about all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files on a specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
- To connect to an offline log file, you must have the following permissions on both the local and remote computers:  
+<a id="Permissions"></a>
+
+## Permissions
+
+To connect to an offline log file, you must have the following permissions on both the local and remote computers:  
   
 -   Read access to the **Root\Microsoft\SqlServer\ComputerManagement12** WMI namespace. By default, everyone has read access through the Enable Account permission. For more information, see the "To verify WMI permissions" procedure later in this section.  
   

@@ -29,10 +29,11 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=s
  1. We recommend that you drop the view and recreate it with a new name instead of renaming the view. By recreating the view, you update the dependency information for the objects that are referenced in the view.
      1. Dropping and re-creating a view will remove any granular SQL permissions assigned to the view. If any granular SQL permissions are assigned to the view, you will need to GRANT the permissions to the view again after it's re-created. To retrieve the granular permissions granted on an object before it's dropped, see the examples in [sys.database_permissions (Transact-SQL)](../system-catalog-views/sys-database-permissions-transact-sql.md). To grant permissions, see [Grant a Permission to a Principal](../security/authentication-access/grant-a-permission-to-a-principal.md).
   
+<a id="Permissions"></a>
 
-## <a id="Permissions"></a> Permissions
+## Permissions
 
- Requires ALTER permission on SCHEMA or CONTROL permission on OBJECT is required, and CREATE VIEW permission in the database.  
+Requires ALTER permission on SCHEMA or CONTROL permission on OBJECT is required, and CREATE VIEW permission in the database.  
   
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
   

@@ -20,24 +20,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 # Delete or Disable DML Triggers
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
   This topic describes how to delete or disable a DML trigger in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To delete or disable a DML trigger, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Recommendations"></a> Recommendations  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Recommendations"></a> Recommendations
   
 -   When a trigger is deleted, it is dropped from the current database. The table and the data upon which it is based are not affected. Deleting a table automatically deletes any triggers on the table.  
   
@@ -45,10 +31,13 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 -   Disabling a trigger does not drop it. The trigger still exists as an object in the current database. However, the trigger will not fire when any INSERT, UPDATE, or DELETE statement on which it was programmed is executed. Triggers that are disabled can be reenabled. Enabling a trigger does not re-create it. The trigger fires in the same manner as when it was originally created.  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- To delete a DML trigger requires ALTER permission on the table or view on which the trigger is defined.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+To delete a DML trigger requires ALTER permission on the table or view on which the trigger is defined.  
   
  To disable or enable a DML trigger, at a minimum, a user must have ALTER permission on the table or view on which the trigger was created.  
   

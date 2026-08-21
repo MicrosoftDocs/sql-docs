@@ -23,20 +23,23 @@ ms.custom:
   
  Data cleansing is performed in four stages: a *mapping* stage in which you identify the data source to be cleansed, and map it to required domains in a knowledge base, a *computer-assisted cleansing* stage where DQS applies the knowledge base to the data to be cleansed, and proposes/makes changes to the source data, an *interactive cleansing* stage where data stewards can analyze the data changes, and accept/reject the data changes, and finally the *export* stage that lets you export the cleansed data. Each of these processes is performed on a separate page of the cleansing activity wizard, enabling you to move back and forth to different pages, to re-run the process, and to close out of a specific cleansing process and then return to the same stage of the process. DQS provides you with statistics about the source data and the cleansing results that enable you to make informed decisions about data cleansing.  
   
-## Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
-  
+<a id="before-you-begin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 -   You must have specified appropriate threshold values for the cleansing activity. For information about doing so, see [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   A DQS knowledge base must be available on [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] against which you want to compare, and cleanse your source data. Additionally, the knowledge base must contain knowledge about the type of data that you want to cleanse. For example, if you want to cleanse your source data that contains US addresses, you must have a knowledge base that was created against a "high-quality" sample data for US addresses.  
   
 -   Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer if the source data to be cleansed is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to perform data cleansing.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to perform data cleansing.  
   
 ##  <a name="Create"></a> Create a Cleansing Data Quality Project  
  You must use a data quality project to perform data cleansing operation. To create a cleansing data quality project:  

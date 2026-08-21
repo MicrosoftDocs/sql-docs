@@ -16,22 +16,10 @@ helpviewer_keywords:
 # Create a Publication from an Oracle Database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to create a publication from an Oracle database in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
--   **To create a publication from an Oracle database, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Prerequisites"></a> Prerequisites
   
 -   Before creating a publication, you must install Oracle software on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, and you must configure the Oracle database. For more information, see [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   

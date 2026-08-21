@@ -19,22 +19,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 # Set the Expiration Period for Subscriptions
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to set the expiration period for subscriptions in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The expiration period for subscriptions determines the period of time before a subscription expires and is removed. For more information, see [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Recommendations](#Recommendations)  
-  
--   **To set the expiration period for subscriptions, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Recommendations"></a> Recommendations  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Recommendations"></a> Recommendations
   
 -   The subscription expiration period is also referred to as the *publication retention period*. Cleanup of merge replication metadata is dependent on this setting:  
   

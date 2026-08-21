@@ -23,8 +23,11 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
   
 > [!WARNING]  
 > Modifying the data type of a column that already contains data can result in the permanent loss of data when the existing data is converted to the new type. In addition, code and applications that depend on the modified column can fail. These include queries, views, stored procedures, user-defined functions, and client applications. These failures will cascade. For example, a stored procedure that calls a user-defined function that depends on the modified column can fail. Carefully consider any changes you want to make to a column before making it.  
-  
-## <a id="Security"></a> Permissions
+
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
 
 Requires ALTER permission on the table.  
   

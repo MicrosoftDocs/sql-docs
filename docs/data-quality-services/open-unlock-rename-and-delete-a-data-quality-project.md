@@ -22,10 +22,10 @@ ms.custom:
 [!INCLUDE [support-notice](includes/support-notice.md)]
 
   This topic describes how to manage a data quality project by using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] such as open, unlock, rename, and delete a data quality project.  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
   
 -   You cannot open a locked project that is created by another user.  
   
@@ -34,14 +34,19 @@ ms.custom:
 -   You cannot delete a locked data quality project. You must first unlock it to delete.  
   
 -   You can only unlock a data quality project that is created by you.  
+
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+You must have at least one data quality project to manage.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- You must have at least one data quality project to manage.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to manage a data quality project.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to manage a data quality project.  
   
 ##  <a name="Open"></a> Open a Data Quality Project  
   

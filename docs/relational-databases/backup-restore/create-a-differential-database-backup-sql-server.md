@@ -16,43 +16,28 @@ helpviewer_keywords:
 # Create a Differential Database Backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Create a differential database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
- **Sections in this topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To create a differential database backup, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before you begin  
-  
-###  <a name="Restrictions"></a> Limitations and restrictions  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Restrictions"></a> Limitations and restrictions
   
 -   The BACKUP statement is not allowed in an explicit or implicit transaction.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites
   
 -   Creating a differential database backup requires a previous full database backup. If your database has never been backed up, run a full database backup before creating any differential backups. For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations
   
 -   As the differential backups increase in size, restoring a differential backup will significantly increase the time  required to restore a database. We recommend that you take a new full backup at set intervals to establish a new differential base for the data. For example, you might take a weekly full backup of the whole database (that is, a full database backup) followed by a regular series of differential database backups during the week.  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Check your permissions first!  
- BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role, the **db_owner** and **db_backupoperator** fixed database roles.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role, the **db_owner** and **db_backupoperator** fixed database roles.  
   
  Ownership and permission problems on the backup device's physical file will interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] needs to be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does **not** check file access permissions. Permissions problems on the backup device's physical file will not be obvious until the physical resource is accessed when you attempt the backup or restore.  
   

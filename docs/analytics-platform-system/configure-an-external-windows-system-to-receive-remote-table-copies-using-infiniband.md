@@ -16,8 +16,11 @@ Describes how to purchase and configure a non-appliance Windows system connected
 > Connecting through the InfiniBand network is not required for using remote table copy. Connecting through the Ethernet network can be done if the Ethernet bandwidth meets your needs.  
   
 This article describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md)  
-  
-## Before you begin
+
+<a id="before-you-begin"></a>
+
+## Prerequisites
+
 Before you configure the external Windows system, you must:  
   
 1. Purchase or provide a Windows system that will receive the remote copies.  

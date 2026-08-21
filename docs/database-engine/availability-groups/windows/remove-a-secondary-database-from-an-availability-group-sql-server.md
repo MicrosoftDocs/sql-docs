@@ -24,8 +24,11 @@ helpviewer_keywords:
 -   This task is supported only on secondary replicas. You must be connected to the server instance that hosts the secondary replica from which the database is to be removed.  
   
  
-##  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the database.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the database.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To remove a secondary database from an availability group**  

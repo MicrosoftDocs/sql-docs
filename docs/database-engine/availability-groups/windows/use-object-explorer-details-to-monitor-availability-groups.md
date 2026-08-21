@@ -20,10 +20,12 @@ helpviewer_keywords:
   
 > [!NOTE]  
 >  For information about using the Object Explorer Details pane, see [Object Explorer Details Pane](/ssms/object/object-explorer-details-pane).  
-  
-  
-##  <a name="Prerequisites"></a> Prerequisites  
- You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica.  
+
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To monitor availability groups, availability replicas, and availability databases**  

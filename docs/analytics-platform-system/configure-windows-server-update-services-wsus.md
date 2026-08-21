@@ -18,8 +18,11 @@ For more information about configuring WSUS, see the [WSUS Step-by-Step Installa
   
 > [!WARNING]  
 > If you encounter any errors during this configuration process, stop and contact support for assistance. Do not ignore errors or continue in the process after errors are received.  
-  
-## Before You Begin  
+
+<a id="before-you-begin"></a>
+
+## Prerequisites
+
 To configure WSUS, you need to:  
   
 -   Have the Analytics Platform System appliance domain administrator account login information.  

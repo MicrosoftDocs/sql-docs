@@ -33,7 +33,9 @@ Contains one row per configuration.
 |**value_for_secondary**|**sqlvariant**|The value set for this configuration option for the secondary replicas.|
 |**is_value_default**|**bit** |Specifies whether the value set is the default value. Added in SQL Server 2017.|
 
-## <a name="Permissions"></a> Permissions
+<a id="Permissions"></a>
+
+## Permissions
 
 Requires membership in the **public** role.
 

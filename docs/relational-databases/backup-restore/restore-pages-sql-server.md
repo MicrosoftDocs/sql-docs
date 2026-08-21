@@ -21,33 +21,15 @@ helpviewer_keywords:
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to restore pages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The goal of a page restore is to restore one or more damaged pages without restoring the whole database. Typically, pages that are candidates for restore have been marked as "suspect" because of an error that is encountered when accessing the page. Suspect pages are identified in the [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) table in the **msdb** database.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [When is a Page Restore Useful?](#WhenUseful)  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To restore pages, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="WhenUseful"></a> When is a Page Restore Useful?  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="WhenUseful"></a> When is a Page Restore Useful?
  A page restore is intended for repairing isolated damaged pages. Restoring and recovering a few individual pages might be faster than a file restore, reducing the amount of data that is offline during a restore operation. However, if you have to restore more than a few pages in a file, it is generally more efficient to restore the whole file. For example, if lots of pages on a device indicate a pending device failure, consider restoring the file, possibly to another location, and repairing the device.  
   
  Furthermore, not all page errors require a restore. A problem can occur in cached data, such as a secondary index, that can be resolved by recalculating the data. For example, if the database administrator drops a secondary index and rebuilds it, the corrupted data, although fixed, is not indicated as such in the [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) table.  
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and Restrictions
   
 -   Page restore applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models. Page restore is supported only for read/write filegroups.  
   
@@ -73,7 +55,7 @@ helpviewer_keywords:
   
          A best practice for performing page restore is to set the database to the full recovery model, and try a log backup. If the log backup works, you can continue with the page restore. If the log backup fails, you either have to lose work since the previous log backup or you have to try running DBCC must be run with the REPAIR_ALLOW_DATA_LOSS option.  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations
   
 -   Page restore scenarios:  
   
@@ -90,10 +72,13 @@ helpviewer_keywords:
   
      When you restore the subsequent log backups, they are applied only to database files that contain at least one page that is being recovered. An unbroken chain of log backups must be applied to the last full or differential restore to bring the filegroup that contains the page forward to the current log file. As in a file restore, the roll forward set is advanced with a single log redo pass. For a page restore to succeed, the restored pages must be recovered to a state consistent with the database.  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- If the database being restored does not exist, the user must have CREATE DATABASE permissions to be able to execute RESTORE. If the database exists, RESTORE permissions default to members of the **sysadmin** and **dbcreator** fixed server roles and the owner (**dbo**) of the database (for the FROM DATABASE_SNAPSHOT option, the database always exists).  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+If the database being restored does not exist, the user must have CREATE DATABASE permissions to be able to execute RESTORE. If the database exists, RESTORE permissions default to members of the **sysadmin** and **dbcreator** fixed server roles and the owner (**dbo**) of the database (for the FROM DATABASE_SNAPSHOT option, the database always exists).  
   
  RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the **db_owner** fixed database role do not have RESTORE permissions.  
   

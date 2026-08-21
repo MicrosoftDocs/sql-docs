@@ -27,7 +27,9 @@ A *recovery model* is a database property that controls how transactions are log
 
 For an in-depth explanation, see [recovery models](recovery-models-sql-server.md).
 
-## <a id="BeforeYouBegin"></a> Before you begin
+<a id="BeforeYouBegin"></a>
+
+## Prerequisites
 
 - [Back up the transaction log](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).
 

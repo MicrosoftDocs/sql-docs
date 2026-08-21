@@ -176,13 +176,13 @@ SELECT
     O.NAME AS table_name,
     C.NAME AS column_name,
     information_type,
-	label,
-	rank,
-	rank_desc
+    label,
+    rank,
+    rank_desc
 FROM sys.sensitivity_classifications sc
     JOIN sys.objects O
     ON  sc.major_id = O.object_id
-	JOIN sys.columns C 
+    JOIN sys.columns C 
     ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
 ```
 
@@ -233,7 +233,9 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-## <a id="Permissions"></a>Permissions
+<a id="Permissions"></a>
+
+## Permissions
 
 On SQL Server 2019 instances, viewing classification requires **VIEW ANY SENSITIVITY CLASSIFICATION** permission. For more information, see [Metadata Visibility Configuration](./metadata-visibility-configuration.md).
 

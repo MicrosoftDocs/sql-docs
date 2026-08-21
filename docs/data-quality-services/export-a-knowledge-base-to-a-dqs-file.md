@@ -20,15 +20,19 @@ ms.custom:
   
  The .dqs data file created by the export process is encrypted, so the contents cannot be viewed.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To export a knowledge base to a .dqs data file, you must have created and opened a knowledge base. You do not need to have a .dqs file to export into; one will be created for you.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To export a knowledge base to a .dqs data file, you must have created and opened a knowledge base. You do not need to have a .dqs file to export into; one will be created for you.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to export a knowledge base to a .dqs data file.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to export a knowledge base to a .dqs data file.  
   
 ##  <a name="Export"></a> Export a knowledge base to a .dqs file  
   

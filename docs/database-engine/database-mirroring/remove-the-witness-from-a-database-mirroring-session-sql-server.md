@@ -15,27 +15,14 @@ helpviewer_keywords:
 # Remove the Witness from a Database Mirroring Session (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to remove a witness from a database mirroring session in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. At any time during a database mirroring session, the database owner can turn off the witness for a database mirroring session.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Security](#Security)  
-  
--   **To Replace remove the witness, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   **Follow Up:**  [After Removing the Witness](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the database.  
+
+<a id="BeforeYouBegin"></a>
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the database.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

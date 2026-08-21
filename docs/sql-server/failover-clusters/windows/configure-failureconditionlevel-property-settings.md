@@ -12,19 +12,17 @@ ms.topic: how-to
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart. Changes to this property are applied immediately without requiring a restart of the Windows Server Failover Cluster (WSFC) service or the FCI resource.  
   
--   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
-  
--   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> FailureConditionLevel Property Settings  
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Restrictions"></a> FailureConditionLevel Property Settings  
  The failure conditions are set on an increasing scale. For levels 1-5, each level includes all the conditions from the previous levels in addition to its own conditions. This means that with each level, there is an increased probability of a failover or restart.  For more information, see the "Determining Failures" section of the [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md) topic.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- Requires ALTER SETTINGS and VIEW SERVER STATE permissions.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER SETTINGS and VIEW SERVER STATE permissions.  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
   

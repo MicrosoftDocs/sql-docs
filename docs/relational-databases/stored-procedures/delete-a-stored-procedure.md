@@ -26,9 +26,11 @@ This article describes how to delete a stored procedure in [!INCLUDE [ssnoversio
 
  Deleting a procedure can cause dependent objects and scripts to fail when the objects and scripts are not updated to reflect the removal of the procedure. However, if a new procedure of the same name and the same parameters is created to replace the one that was deleted, other objects that reference it will still process successfully. For more information, see [View the Dependencies of a Stored Procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).
 
-## <a id="Permissions"></a> Permissions
+<a id="Permissions"></a>
 
- Requires ALTER permission on the schema to which the procedure belongs, or CONTROL permission on the procedure.
+## Permissions
+
+Requires ALTER permission on the schema to which the procedure belongs, or CONTROL permission on the procedure.
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 

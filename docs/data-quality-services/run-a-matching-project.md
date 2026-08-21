@@ -24,18 +24,21 @@ ms.custom:
   
  You must prepare for matching by creating a matching policy with one or more matching rules, and running the policy on sample data. The matching project process is separate from the matching policy process, and a knowledge base is not populated with matching knowledge gained from the matching project. For more information about creating a matching policy, see [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
-  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 -   You must have created a knowledge base with a matching policy consisting of one or more matching rules.  
   
 -   Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer if the source data to be matched is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to run a matching project.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to run a matching project.  
   
 ##  <a name="StartingaMatchingProject"></a> First Step: Starting a Matching Project  
  You perform the matching activity in a data quality project that you create in the DQS client application.  

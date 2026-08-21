@@ -25,16 +25,6 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
   This topic describes the table properties that are displayed in the Table Properties dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about how to display these properties, see [View the Table Definition](../../relational-databases/tables/view-the-table-definition.md).  
   
- **In This Topic**  
-  
-1.  [General Page](#GeneralPage)  
-  
-2.  [Change Tracking Page](#ChangeTracking)  
-  
-3.  [File Table Page](#FileTable)  
-  
-4.  [Storage Page](#Storage)  
-
 ##  <a name="GeneralPage"></a> General Page  
  **Database**  
  The name of the database containing this table.  

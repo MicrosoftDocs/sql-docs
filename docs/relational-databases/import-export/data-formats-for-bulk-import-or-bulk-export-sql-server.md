@@ -17,12 +17,6 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can accept data in character data format or native binary data format. Use character format when you move data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and another application (such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) or another database server (such as Oracle or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). You can use native format only when you transfer data between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **In this Topic:**  
-  
--   [Data Formats for Bulk Import or Export](#ComponentsAndConcepts)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
 ##  <a name="ComponentsAndConcepts"></a> Data Formats for Bulk Import or Export  
  The following table indicates what data format is generally appropriate to use depending on how the data is represented and the source or target of the operation.  
   

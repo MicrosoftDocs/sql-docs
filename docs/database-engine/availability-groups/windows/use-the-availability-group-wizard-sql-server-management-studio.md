@@ -25,7 +25,7 @@ helpviewer_keywords:
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  We strongly recommend that you read this section before attempting to create your first availability group.  
   
-###  <a name="Prerequisites"></a> Prerequisites, Restrictions, and Recommendations  
+##  <a name="Prerequisites"></a> Prerequisites, Restrictions, and Recommendations  
 
 In most cases, you can use the New Availability Group Wizard to complete all of the tasks require to create and configure an availability group. However, you might need to complete some of the tasks manually.  
   
@@ -54,10 +54,12 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
      If you are unable to use the wizard to perform full initial data synchronization, you need to prepare your secondary databases manually. You can do this before or after running the wizard. For more information, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
  Also requires CONTROL ON ENDPOINT permission if you want to allow Availability Group Wizard to manage the database mirroring endpoint.  
   

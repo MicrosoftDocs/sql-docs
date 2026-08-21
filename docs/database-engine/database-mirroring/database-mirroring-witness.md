@@ -23,16 +23,6 @@ helpviewer_keywords:
   
  ![Mirroring session with a witness](../../database-engine/database-mirroring/media/dbm-3-way-session-intro.gif "Mirroring session with a witness")  
   
- **In This Topic:**  
-  
--   [Using a Witness in Multiple Sessions](#InMultipleSessions)  
-  
--   [Software and Hardware Recommendations](#SwHwRecommendations)  
-  
--   [Role of the Witness in Automatic Failover](#InAutoFo)  
-  
--   [To Add or Remove a Witness](#AddRemoveWitness)  
-  
 ##  <a name="InMultipleSessions"></a> Using a Witness in Multiple Sessions  
  A specific server instance can act as a witness in concurrent database mirroring sessions, each for a different database. Different sessions can be with different partners. The following illustration shows a server instance that is a witness in two database mirroring sessions with different partners.  
   

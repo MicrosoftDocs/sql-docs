@@ -15,9 +15,10 @@ ms.custom: sfi-ropc-nochange
 
 The following steps describe how to uninstall a previously installed Analytics Platform System hotfix.  
   
-## Before You Begin
-  
-### Prerequisites
+<a id="before-you-begin"></a>
+
+## Prerequisites
+
 To perform these steps, you will need:  
   
 -   An Analytics Platform System login with permissions to access the Admin Console to monitor the appliance.  

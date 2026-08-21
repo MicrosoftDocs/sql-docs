@@ -22,10 +22,12 @@ helpviewer_keywords:
   
 -   [Related Content](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Before You Start  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
- This feature is supported only in [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] or later versions.  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+This feature is supported only in [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] or later versions.  
   
 > [!IMPORTANT]  
 >  In order to use NodeWeight settings, the following hotfix must be applied to all servers in the WSFC cluster:  
@@ -34,13 +36,16 @@ helpviewer_keywords:
   
 > [!TIP]  
 >  If this hotfix is not installed, the examples in this topic will return empty or NULL values for NodeWeight.  
-  
-###  <a name="Security"></a> Security  
- The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  
+
+<a id="Security"></a>
+
+## Security
+
+The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  
   
 ##  <a name="PowerShellProcedure"></a> Using Powershell  
   
-##### To configure NodeWeight settings  
+### To configure NodeWeight settings  
   
 1.  Start an elevated Windows PowerShell via **Run as Administrator**.  
   
@@ -70,7 +75,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  The cluster.exe utility is deprecated in the [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] release.  Please use PowerShell with Failover Clustering for future development.  The cluster.exe utility will be removed in the next release of Windows Server. For more information, see [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
-##### To configure NodeWeight settings  
+### To configure NodeWeight settings  
   
 1.  Start an elevated Command Prompt via **Run as Administrator**.  
   

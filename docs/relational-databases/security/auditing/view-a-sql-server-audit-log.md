@@ -19,7 +19,9 @@ helpviewer_keywords:
 
 This article describes how to view a SQL Server audit log in [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].
 
-## <a name="Permissions"></a> Permissions
+<a id="Permissions"></a>
+
+## Permissions
 
 Requires the **CONTROL SERVER** permission.
 

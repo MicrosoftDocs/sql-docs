@@ -17,13 +17,9 @@ helpviewer_keywords:
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to add dependencies to an Always On failover cluster instance (FCI) resource by using the Failover Cluster Manager snap-in. The Failover Cluster Manager snap-in is the cluster management application for the Windows Server Failover Clustering (WSFC) service.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
-  
--   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Restrictions"></a> Limitations and Restrictions  
  It is important to note that if you add any other resources to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] group, those resources must always have their own unique SQL network name resources and their own SQL IP address resources.  
   
  Do not use the existing SQL network name resources and SQL IP address resources for anything other than [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resources are shared with other resources, the following problems may occur:  
@@ -46,8 +42,11 @@ helpviewer_keywords:
   
      If you install MS DTC in your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] group and you have other resources that are dependent on MS DTC, MS DTC will not be available if this group is offline or during a failover. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you put MS DTC in its own group with its own physical disk resource, if it is possible.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] into a WSFC resource group with multiple disk drives and choose to place your data on one of the drives, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource will be set to be dependent only on that drive. To put data or logs on another disk, you must first add a dependency to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource for the additional disk.  
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] into a WSFC resource group with multiple disk drives and choose to place your data on one of the drives, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource will be set to be dependent only on that drive. To put data or logs on another disk, you must first add a dependency to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource for the additional disk.  
   
 ##  <a name="WinClusManager"></a> Using the Failover Cluster Manager Snap-in  
  **To add a dependency to a SQL Server resource**  

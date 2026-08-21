@@ -16,10 +16,12 @@ helpviewer_keywords:
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dropping a database snapshot deletes the database snapshot from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and deletes the sparse files that are used by the snapshot. When you drop a database snapshot, all user connections to it are terminated.  
   
-## Security  
-  
-###  <a name="Permissions"></a> Permissions  
- Any user with DROP DATABASE permissions can drop a database snapshot.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Any user with DROP DATABASE permissions can drop a database snapshot.  
   
 ##  <a name="TsqlProcedure"></a> How to Drop a Database Snapshot (Using Transact-SQL)  
  **To drop a database snapshot**  

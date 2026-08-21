@@ -22,15 +22,19 @@ ms.custom:
   
  The .dqs data file created by the export process is encrypted, so the contents cannot be viewed.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To export a domain to a .dqs data file, you must have created and selected a single domain or a composite domain containing multiple single domains. You do not need to have a .dqs file to export into; one will be created for you.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To export a domain to a .dqs data file, you must have created and selected a single domain or a composite domain containing multiple single domains. You do not need to have a .dqs file to export into; one will be created for you.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to export a domain to a .dqs data file.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to export a domain to a .dqs data file.  
   
 ##  <a name="Export"></a> Export a domain to a .dqs file  
  You can export from any Domain Management page. The export command is available from both a control in the user interface and from a command in the context menu of the Domain List pane.  

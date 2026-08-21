@@ -20,8 +20,11 @@ helpviewer_keywords:
   
   
   
-##  <a name="Permissions"></a> Permissions  
- Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
   
 ##  <a name="SSMSProcedure"></a> Using the Always On Dashboard  
  **To open the Always On Dashboard**  

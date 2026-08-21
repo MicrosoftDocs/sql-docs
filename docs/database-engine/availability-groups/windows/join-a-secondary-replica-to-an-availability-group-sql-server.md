@@ -18,9 +18,10 @@ helpviewer_keywords:
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to join a secondary replica to an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. After a secondary replica is added to an Always On availability group, the secondary replica must be joined to the availability group. 
 
-  
-##  <a name="Prerequisites"></a> Prerequisites  
-  
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 - The primary replica of the availability group must currently be online.    
 - The instance that you intend on joining to the availability group has already been [added as a secondary replica](add-a-secondary-replica-to-an-availability-group-sql-server.md).
 - To use SQL Server Management Studio (SSMS), you must be connected to the server instance that hosts a primary replica. To use Transact-SQL or PowerShell, you must be connected to, and execute the commands from, the secondary replica.
@@ -29,8 +30,11 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 >  If any prerequisite is not met, the join operation fails. After a failed join attempt, you might need to connect to the server instance that hosts the primary replica to remove and re-add the secondary replica before you can join it to the availability group. For more information, see [Remove a Secondary Replica from an Availability Group](remove-a-secondary-replica-from-an-availability-group-sql-server.md) and [Add a Secondary Replica to an Availability Group](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="Permissions"></a> Permissions  
- Requires **ALTER AVAILABILITY GROUP** permission on the availability group, **CONTROL AVAILABILITY GROUP** permission, **ALTER ANY AVAILABILITY GROUP** permission, or **CONTROL SERVER** permission.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires **ALTER AVAILABILITY GROUP** permission on the availability group, **CONTROL AVAILABILITY GROUP** permission, **ALTER ANY AVAILABILITY GROUP** permission, or **CONTROL SERVER** permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To join an availability replica to an availability group**  

@@ -21,11 +21,12 @@ helpviewer_keywords:
 > [!NOTE]  
 > [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
+<a id="BeforeYouBegin"></a>
+<a id="Security"></a>
 
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
- When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
+## Security
+
+When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Enable updating subscriptions for transactional publications on the **Publication Type** page of the New Publication Wizard.  

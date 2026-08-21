@@ -16,15 +16,19 @@ ms.custom:
 
   This topic describes how to perform management functions on a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). You can delete a knowledge base, unlock it, discard your work on it, rename it, and display its properties.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To manage a knowledge base, the knowledge base must have already been created, and either published (if another person created it) or have been closed (if you created it).  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To manage a knowledge base, the knowledge base must have already been created, and either published (if another person created it) or have been closed (if you created it).  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN database to open a knowledge base.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN database to open a knowledge base.  
   
 ##  <a name="Manage"></a> Manage a Knowledge Base  
   

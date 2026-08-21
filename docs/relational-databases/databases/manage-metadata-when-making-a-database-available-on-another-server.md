@@ -263,8 +263,11 @@ Some applications depend on information, entities, and/or objects that are outsi
 > For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or Always On Availability Groups (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
-##  <a name="permissions"></a> Permissions  
- The following types of permissions might be affected when a database is made available on another server instance.  
+<a id="Permissions"></a>
+
+## Permissions
+
+The following types of permissions might be affected when a database is made available on another server instance.  
   
 -   GRANT, REVOKE, or DENY permissions on system objects  
   

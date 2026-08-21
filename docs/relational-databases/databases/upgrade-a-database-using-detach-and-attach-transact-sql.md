@@ -17,26 +17,10 @@ helpviewer_keywords:
 # Upgrade a database using detach and attach (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This topic describes how to use detach and attach operations to upgrade a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. After being attached to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the database is available immediately and is automatically upgraded. This prevents the database from being used with an older version of the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]. However, metadata upgrade does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) setting of a database. See more information in [Database Compatibility Level After Upgrade](#dbcompat) later in this topic.  
-  
- **In this topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Recommendations](#Recommendations)  
-  
--   **To Upgrade a SQL Server Database:**  
-  
-     [Using detach and attach operations](#SSMSProcedure)  
-  
--   **Follow Up:**    
 
-     [After Upgrading a SQL Server Database](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Restrictions"></a> Limitations and Restrictions
   
 -   The system databases cannot be attached.  
   
@@ -48,7 +32,7 @@ This topic describes how to use detach and attach operations to upgrade a databa
   
     -   If you attach the database to a different server instance (regardless of version), you must execute **sp_removedbreplication** to remove replication after the attach operation finishes. For more information, see [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations
 We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
 ##  <a name="SSMSProcedure"></a> To Upgrade a Database by Using Detach and Attach  

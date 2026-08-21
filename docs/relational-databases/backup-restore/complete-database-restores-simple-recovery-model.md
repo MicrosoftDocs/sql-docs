@@ -24,14 +24,7 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 >  We recommend that you do not attach or restore databases from unknown or untrusted sources. These databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
- **In this Topic:**  
-  
--   [Overview of Database Restore Under the Simple Recovery Model](#Overview)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
-> [!NOTE]  
->  For information about support for backups from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the "Compatibility Support" section of [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+For information about support for backups from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the "Compatibility Support" section of [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="Overview"></a> Overview of Database Restore Under the Simple Recovery Model  
  A full database restore under the simple recovery model involves one or two [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statements, depending on whether you want to restore a differential database backup. If you are using only a full database backup, just restore the most recent backup, as shown in the following illustration.  

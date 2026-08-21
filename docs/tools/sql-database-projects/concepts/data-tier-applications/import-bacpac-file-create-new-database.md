@@ -48,7 +48,7 @@ Import a `.bacpac` file - to create a copy of the original database, with the da
 1. the **Deploy Database to Microsoft Azure SQL Database** Wizard in SQL Server Management Studio to deploy a database between an instance of the [!INCLUDE [ssDE](../../../../includes/ssde-md.md)] and a [!INCLUDE [ssazure-sqldb](../../../../includes/ssazure-sqldb.md)] server, or between two [!INCLUDE [ssazure-sqldb](../../../../includes/ssazure-sqldb.md)] servers
 1. the **SqlPackage** command-line utility
 
-## Before You Begin
+## Before you begin
 
 The import process builds a new database in two stages.
 

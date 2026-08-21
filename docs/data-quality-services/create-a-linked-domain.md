@@ -29,15 +29,19 @@ ms.custom:
   
  An example is a record that contains the following fields: Customer First Name, Customer Last Name, and Father's First Name. Suppose you map both customer first name and father's first name to a First Name domain, and make the First Name domain and the Last Name domain a part of a Full Name composite domain. The problem is that the father's first name will be added to the composite domain without a last name. If, however, you link each of the two first name fields to a domain, and link the two domains, then you can add the Customer First Name domain to the Full Name composite domain, and not add the Father's First Name field to the composite domain, thereby preventing the Father's First Name from being added to the composite domain.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To create a linked domain, you must have a knowledge base and an existing domain that you want to link to.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To create a linked domain, you must have a knowledge base and an existing domain that you want to link to.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create a linked domain.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create a linked domain.  
   
 ##  <a name="Create"></a> Create a Linked Domain  
   

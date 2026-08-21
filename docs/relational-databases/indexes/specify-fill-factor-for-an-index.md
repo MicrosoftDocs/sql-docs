@@ -28,25 +28,11 @@ The fill factor value is a percentage from 1 to 100, and the server-wide default
 > [!NOTE]  
 > Fill factor values 0 and 100 are the same in all respects.
 
-**In This Topic**  
+<a id="BeforeYouBegin"></a>
 
-- **Before you begin:**  
+## <a name="Performance"></a> Performance Considerations
 
-  [Performance Considerations](#Performance)
-
-  [Security](#Security)
-
-- **To specify a fill factor in an index, using:**
-
-  [SQL Server Management Studio](#SSMSProcedure)
-
-  [Transact-SQL](#TsqlProcedure)
-
-## <a name="BeforeYouBegin"></a> Before You Begin
-
-### <a name="Performance"></a> Performance Considerations
-
-#### Page splits
+### Page splits
 
 When a new row is added to a full index page, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] moves approximately half the rows to a new page to make room for the new row. This reorganization is known as a page split. A page split makes room for new rows, but if it occurs in the middle of the index, it can take time to perform and is a resource intensive operation. Also, it can cause fragmentation that reduces the effectiveness of [page read-ahead](../reading-pages.md#read-ahead) during large index scans.
 
@@ -56,13 +42,14 @@ Most workloads perform optimally with the default fill factor (100 percent). Wit
 
 For example, a fill factor value of 50 doubles the disk I/O and memory required to read and cache the same amount of data.
 
-#### Data added to the end of the table
+### Data added to the end of the table
 
 A lower fill factor might reduce page splits and improve performance if the new data is evenly distributed throughout the index. However, if new data is added to the end of the index, the empty space in the index pages might not be filled. For example, if the index key column is an `IDENTITY` column, the key for new rows is always increasing and the index rows are logically added to the end of the index.
 
-### <a name="Security"></a> Security
+<a id="Security"></a>
+<a id="Permissions"></a>
 
-#### <a name="Permissions"></a> Permissions
+## Permissions
 
 Requires the `ALTER` permission on the table or view. User must be a member of the `sysadmin` fixed server role or the `db_ddladmin` and `db_owner` fixed database roles.
 

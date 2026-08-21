@@ -22,9 +22,12 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 You can delete a foreign key constraint in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)]. Deleting a foreign key constraint removes the requirement to enforce referential integrity.
 
 Foreign keys reference keys in other tables, for more information, see [Primary and Foreign Key Constraints](primary-and-foreign-key-constraints.md).
-  
-## <a id="Permissions"></a> Permissions
- Requires ALTER permission on the table.  
+
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the table.  
   
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
   

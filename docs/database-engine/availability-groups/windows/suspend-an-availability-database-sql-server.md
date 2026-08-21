@@ -28,44 +28,27 @@ helpviewer_keywords:
   
 > [!NOTE]  
 >  Suspending an Always On secondary database does not directly affect the availability of the primary database. However, suspending a secondary database can impact redundancy and failover capabilities for the primary database. This is in contrast to database mirroring, where the mirroring state is suspended on both the mirror database and the principal database. Suspending an Always On primary database suspends data movement on all the corresponding secondary databases, and redundancy and failover capabilities cease for that database until the primary database is resumed.  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To suspend a database, using:**  
-  
--   [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow up:** [Avoiding a Full Transaction Log](#FollowUp)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Restrictions"></a> Limitations and Restrictions  
  A SUSPEND command returns as soon as it has been accepted by the replica that hosts the target database, but actually suspending the database occurs asynchronously.  
+
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+You must be connected to the server instance that hosts the database that you want to suspend. To suspend a primary database and the corresponding secondary databases, connect to the server instance that hosts the primary replica. To suspend a secondary database while leaving the primary database available, connect to the secondary replica.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- You must be connected to the server instance that hosts the database that you want to suspend. To suspend a primary database and the corresponding secondary databases, connect to the server instance that hosts the primary replica. To suspend a secondary database while leaving the primary database available, connect to the secondary replica.  
-  
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations  
  During bottlenecks, suspending one or more secondary databases briefly might be useful to improve performance temporarily on the primary replica. As long as a secondary database remains suspended, the transaction log of the corresponding primary database cannot be truncated. This causes log records to accumulate on the primary database. Therefore, we recommend that you resume, or remove, a suspended secondary database quickly. For more information, see [Follow up: Avoiding a Full Transaction Log](#FollowUp), later in this topic.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the database.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the database.  
   
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   

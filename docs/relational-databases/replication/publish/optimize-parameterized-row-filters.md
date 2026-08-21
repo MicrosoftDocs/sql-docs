@@ -18,22 +18,10 @@ helpviewer_keywords:
 # Optimize Parameterized Row Filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to optimize parameterized row filters in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Recommendations](#Recommendations)  
-  
--   **To optimize parameterized row filters, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Recommendations"></a> Recommendations  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Recommendations"></a> Recommendations
   
 -   When you use parameterized filters, you can control how the filters are processed by merge replication by specifying either the **use partition groups** option or the **keep partition changes** option when you create a publication. These options improve the synchronization performance for publications with filtered articles by storing additional metadata in the publication database. You can control how the data is shared among Subscribers by setting **partition options** when you create an article. For more information about these requirements, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   

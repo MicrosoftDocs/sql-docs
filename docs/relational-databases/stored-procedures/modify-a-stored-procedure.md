@@ -27,8 +27,12 @@ This article describes how to modify a stored procedure in [!INCLUDE [ssnoversio
   
  If the previous procedure definition was created using `WITH ENCRYPTION` or `WITH RECOMPILE`, these options are enabled only if they are included in the `ALTER PROCEDURE` statement.  
   
-## <a id="Security"></a> Permissions
- Requires ALTER PROCEDURE permission on the procedure.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER PROCEDURE permission on the procedure.  
     
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 

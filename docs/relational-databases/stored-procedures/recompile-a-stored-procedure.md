@@ -21,9 +21,9 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=s
 
 This article describes how to recompile a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. There are three ways to do this: `WITH RECOMPILE` option in the procedure definition or when the procedure is called, the RECOMPILE query hint on individual statements, or by using the `sp_recompile` system stored procedure. 
 
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Recommendations"></a> Recommendations  
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Recommendations"></a> Recommendations
   
 -   When a procedure is compiled for the first time or recompiled, the procedure's query plan is optimized for the current state of the database and its objects. If a database undergoes significant changes to its data or structure, recompiling a procedure updates and optimizes the procedure's query plan for those changes. This can improve the procedure's processing performance.  
   
@@ -38,21 +38,22 @@ This article describes how to recompile a stored procedure in [!INCLUDE[ssnovers
 > [!NOTE]
 > In Azure Synapse Analytics dedicated and serverless pools, stored procedures are not pre-compiled code, and so cannot be recompiled. For more information, see [Using stored procedures for dedicated SQL pools in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-develop-stored-procedures).
 
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+<a id="Security"></a>
+<a id="Permissions"></a>
 
-#### WITH RECOMPILE option  
+## Permissions
+
+### WITH RECOMPILE option
 
 If this option is used when the procedure definition is created, it requires CREATE PROCEDURE permission in the database and ALTER permission on the schema in which the procedure is being created.  
   
 If this option is used in an EXECUTE statement, it requires EXECUTE permissions on the procedure. Permissions are not required on the EXECUTE statement itself but execute permissions are required on the procedure referenced in the EXECUTE statement. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
-#### RECOMPILE query hint  
+### RECOMPILE query hint
 
  This feature is used when the procedure is created and the hint is included in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the procedure. Therefore, it requires CREATE PROCEDURE permission in the database and ALTER permission on the schema in which the procedure is being created.  
   
-#### sp_recompile system stored procedure  
+### sp_recompile system stored procedure
 
  Requires ALTER permission on the specified procedure.  
   

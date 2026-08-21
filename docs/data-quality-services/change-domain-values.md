@@ -28,15 +28,19 @@ ms.custom:
   
 -   Import domain values from an Excel file  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To change a domain value, you must have a knowledge base and a domain opened in the Domain Management activity.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To change a domain value, you must have a knowledge base and a domain opened in the Domain Management activity.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to change domain values.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to change domain values.  
   
 ##  <a name="Change"></a> Change Domain Values  
  The **Value** table displays knowledge added to the knowledge base for a single domain. You can select a different domain in the domain list at any time to display the values for that domain. The columns in the field are the following:  

@@ -21,15 +21,16 @@ ms.custom:
 
   This topic describes how to centrally monitor the following activities in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): knowledge discovery, domain management, matching policy, data cleansing, data matching, and SSIS cleansing.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
+<a id="BeforeYouBegin"></a>
+
+##  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  Only users with the dqs_administrator role on the DQS_Main database can terminate an activity or stop a process within an activity.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
-  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
 -   You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to view the DQS activities.  
   
 -   You must have the dqs_administrator role on the DQS_MAIN database to terminate an activity or stop a process within an activity in addition to viewing the DQS activities.  

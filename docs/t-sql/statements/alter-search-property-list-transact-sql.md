@@ -161,8 +161,11 @@ GO
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
- Requires CONTROL permission on the property list.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires CONTROL permission on the property list.  
   
 ## Examples  
   

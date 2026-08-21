@@ -16,8 +16,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabric SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   After you create an Extended Events session, you can alter it according to your needs using the **SQL Server Extended Events Wizard**.  
-  
-## Before you Begin  
+
+<a id="before-you-begin"></a>
+
+## Remarks
+
  You cannot alter a target for active and inactive sessions, and you cannot change the advanced properties configurations for an active session.  
   
  You can make the following alterations to both active and inactive event sessions:  

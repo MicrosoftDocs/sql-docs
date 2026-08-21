@@ -15,21 +15,23 @@ ms.custom:
 [!INCLUDE [support-notice](includes/support-notice.md)]
 
   This topic describes how to back up and restore the DQS databases.  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
-  
+
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 -   You must know or remember the password for the database master key that you provided during the DQS server installation.  
   
 -   Ensure that there are no running activities or processes in DQS. This can be verified using the **Activity Monitoring** screen. For detailed information about working in this screen, see [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
 -   Ensure that there are no users logged on the DQS server.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
-  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
 -   Your Windows user account must be a member of the sysadmin fixed server role in the SQL Server instance to perform the backup and restore operations.  
   
 -   You must have the dqs_administrator role on the DQS_MAIN database to terminate any running activities or stop any running processes in DQS.  

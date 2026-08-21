@@ -21,8 +21,11 @@ helpviewer_keywords:
   
  This topic describes how to copy the state of a facet to an XML file.  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
- The procedures in this topic require membership in the PolicyAdministratorRole role in the msdb database.  
+<a id="Permissions"></a>
+
+## Permissions
+
+The procedures in this topic require membership in the PolicyAdministratorRole role in the msdb database.  
   
 ## Viewing and Copying Facet States  
  [View the Policy-Based Management Facets on a SQL Server Object](../../relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)  

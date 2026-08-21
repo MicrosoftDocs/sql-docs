@@ -15,10 +15,10 @@ ms.custom:
 [!INCLUDE [support-notice](includes/support-notice.md)]
 
   The DQS Cleansing component in Integration Services enables you to run a cleansing project in batch mode. However, at times you might want to review the cleansing results in an Integration Services package similar to how you can review the cleansing results in the **Manage and View Results** tab of a cleansing activity in a data quality project in DQS. DQS enables you to open Integration Services projects in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] just like any other data quality project from the **Open project** screen, and have an interactive cleansing experience of the cleansing results in an Integration Services project.  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
   
 -   Only completed Integration Services projects are available in the **Open project** screen in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Failed or running projects are not available in the **Open project** screen.  
   
@@ -26,14 +26,18 @@ ms.custom:
   
 -   You cannot delete a locked Integration Services project from [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. You must first unlock it to delete.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- You must have successfully completed running an Integration Services project containing a package with a DQS Cleansing component to see and open it in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+You must have successfully completed running an Integration Services project containing a package with a DQS Cleansing component to see and open it in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to open an Integration Services project.  
-  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to open an Integration Services project.  
   
 ##  <a name="Open"></a> Open an Integration Services Project  
   

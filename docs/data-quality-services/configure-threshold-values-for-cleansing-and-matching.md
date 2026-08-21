@@ -21,13 +21,14 @@ ms.custom:
 [!INCLUDE [support-notice](includes/support-notice.md)]
 
   This topic describes how to configure threshold values that will be used during the computer-assisted cleansing and matching activities in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_administrator role on the DQS_MAIN database to configure these threshold values.  
+
+<a id="BeforeYouBegin"></a>
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_administrator role on the DQS_MAIN database to configure these threshold values.  
   
 ##  <a name="Configure"></a> Configuring the Threshold Values  
   

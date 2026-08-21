@@ -21,17 +21,16 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 You can change resource pool settings by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 <a id="BeforeYouBegin"></a>
-
 <a id="LimitationsRestrictions"></a>
 
-### Limitations
+## Limitations
 
 - The maximum CPU percentage must be equal to or higher than the minimum CPU percentage. The maximum memory percentage must be equal to or higher than the minimum memory percentage.
 - The sums of the minimum CPU percentages and minimum memory percentages for all resource pools must not exceed 100.
 
 <a id="Permissions"></a>
 
-### Permissions
+## Permissions
 
 Changing resource pool settings requires the `CONTROL SERVER` permission.
 

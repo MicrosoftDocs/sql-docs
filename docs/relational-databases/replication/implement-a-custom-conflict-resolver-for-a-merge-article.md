@@ -20,14 +20,6 @@ dev_langs:
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to implement a custom conflict resolver for a Merge article in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or a [COM-based custom resolver](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
- **In this topic**  
-  
--   **Implement a custom conflict resolver for a Merge article, using:**  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [A COM-based resolver](#COM)  
-  
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  You can write your own custom conflict resolver as a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure at each Publisher. During synchronization, this stored procedure is invoked when conflicts are encountered in an article that the resolver was registered to. Information about the conflict row is passed by the Merge Agent to the required parameters of the procedure. Stored procedure-based custom conflict resolvers are always created at the Publisher.  
   

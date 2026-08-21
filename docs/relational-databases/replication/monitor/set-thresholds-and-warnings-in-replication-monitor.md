@@ -42,14 +42,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
  For more information on the warnings **Performance critical** and **Long-running merge**, see [Monitor Performance with Replication Monitor](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
   
- **In This Topic**  
-  
--   [Set thresholds and warnings for a transactional publication](#Transactional)  
-  
--   [Set thresholds and warnings for a merge publication](#Merge)  
-  
--   [Set thresholds and warnings for a snapshot publication](#Snapshot)  
-  
 ##  <a name="Transactional"></a> To set thresholds and warnings for a transactional publication  
   
 1.  Expand a Publisher group in the left pane, expand a Publisher, and then select a publication.  

@@ -15,23 +15,18 @@ ms.topic: how-to
 
 All critical errors and warning events for the SQL Server Resource DLL are written to the Windows event log. A running log of the diagnostic information specific to SQL Server is captured by the [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure and is written to the SQL Server failover cluster diagnostics (also known as the *SQLDIAG* logs) log files.
 
-- **Before you begin:**  [File name, location and format](#file-name-location-format), [Security](#Security)
+<a id="BeforeYouBegin"></a>
 
-- **To View the Diagnostic Log, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)
-
-- **To Configure Diagnostic Log settings, using:** [Transact-SQL](#TsqlConfigure)
-
-## <a id="BeforeYouBegin"></a> Before You Begin
-
-### <a id="file-name-location-format"></a> File name, location and format
+## <a id="file-name-location-format"></a> File name, location and format
 
  By default, the SQLDIAG are stored under a local LOG folder of the SQL Server instance directory, for example, 'C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG' of the owning node of the Always On Failover Cluster Instance (FCI). The maximum size of each SQLDIAG log file is fixed at 100 MB. Ten such log files are stored on the computer before they are recycled for new logs.  The file name is of the following format `MACHINE_SQLINSTANCE_SQLDIAG_0_xxxxxxxxxxxxxxxxx.xel` where the last part 'xxxxxxxx' is an auto-generated number. For example for a default instance the file name would be `NODE1_MSSQLSERVER_SQLDIAG_0_133177967257760000.xel` and for a named instance the name would be `NODE1_SQL2019INST_SQLDIAG_0_133177967257760000.xel`
 
  The logs use the extended events file format. The `sys.fn_xe_file_target_read_file` system function can be used to read the files that are created by Extended Events and display them as a result-set. One event, in XML format, is returned per row. For more information, see [sys.fn_xe_file_target_read_file (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).
 
-### <a id="Security"></a> Security
+<a id="Security"></a>
+<a id="Permissions"></a>
 
-#### <a id="Permissions"></a> Permissions
+## Permissions
 
  VIEW SERVER STATE permission is needed to run **fn_xe_file_target_read_file**.
 
@@ -94,13 +89,15 @@ ORDER BY Time;
 
  Using the Data Definition Language (DDL) statement, **ALTER SERVER CONFIGURATION**, you can start or stop logging diagnostic data captured by the [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) procedure, and set SQLDIAG log configuration parameters such as the log file rollover count, log file size, and file location. For syntax details, see [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).
 
-### <a id="ConfigTsqlExample"></a> Examples (Transact-SQL)
+<a id="ConfigTsqlExample"></a>
 
-#### <a id="TsqlExample"></a> Set diagnostic log options
+<a id="TsqlExample"></a>
 
- The examples in this section show how to set the values for the diagnostic log option.
+## Examples
 
-##### A. Start diagnostic logging
+The examples in this section show how to set the values for the diagnostic log option.
+
+### A. Start diagnostic logging
 
  The following example starts the logging of diagnostic data.
 
@@ -108,7 +105,7 @@ ORDER BY Time;
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;
 ```
 
-##### B. Stop diagnostic logging
+### B. Stop diagnostic logging
 
  The following example stops the logging of diagnostic data.
 
@@ -116,7 +113,7 @@ ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;
 ```
 
-##### C. Specify the location of the diagnostic logs
+### C. Specify the location of the diagnostic logs
 
  The following example sets the location of the diagnostic logs to the specified file path.
 
@@ -125,7 +122,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';
 ```
 
-##### D. Specify the maximum size of each diagnostic log
+### D. Specify the maximum size of each diagnostic log
 
  The following example set the maximum size of each diagnostic log to 10 megabytes.
 
@@ -134,7 +131,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```
 
-##### E. Check whether Failover Cluster Instance Diagnostics Log is enabled and current configuration.
+### E. Check whether Failover Cluster Instance Diagnostics Log is enabled and current configuration.
 
  The following example uses the dmv sys.dm_os_server_diagnostics_log_configurations to check current configuration
 

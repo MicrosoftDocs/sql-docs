@@ -26,18 +26,23 @@ helpviewer_keywords:
   
 -   [Related Content](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Before You Start  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
- The Forced Quorum Procedure assumes that a healthy quorum existed before the quorum failure.  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+The Forced Quorum Procedure assumes that a healthy quorum existed before the quorum failure.  
   
 > [!WARNING]  
 >  The user should be well-informed on the concepts and interactions of Windows Server Failover Clustering, WSFC Quorum Models, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and the environment's specific deployment configuration.  
 >   
 >  For more information, see:  [Windows Server Failover Clustering (WSFC) with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md), [WSFC Quorum Modes and Voting Configuration (SQL Server)](wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
-  
-###  <a name="Security"></a> Security  
- The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  
+
+<a id="Security"></a>
+
+## Security
+
+The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  
   
 ##  <a name="Main"></a> WSFC Disaster Recovery through the Forced Quorum Procedure  
  Remember that quorum failure will cause all clustered services, SQL Server instances, and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], in the WSFC cluster to be set offline, because the cluster, as configured, cannot ensure node-level fault tolerance.  A quorum failure means that healthy voting nodes in the WSFC cluster no longer satisfy the quorum model. Some nodes may have failed completely, and some may have just shut down the WSFC service and are otherwise healthy, except for the loss of the ability to communicate with a quorum.  

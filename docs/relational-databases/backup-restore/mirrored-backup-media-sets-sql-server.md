@@ -27,14 +27,6 @@ helpviewer_keywords:
 > [!NOTE]  
 >  For information about media sets in general, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- **In this Topic:**  
-  
--   [Overview of Mirrored Media Sets](#OverviewofMirroredMediaSets)  
-  
--   [Hardware Requirements for Backup Mirrors](#HardwareReqs)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
 ##  <a name="OverviewofMirroredMediaSets"></a> Overview of Mirrored Media Sets  
  Media mirroring is a property of the media set. A *mirrored media set* consists of multiple copies (*mirrors*) of the media set. A media set contains one or more media families, each of which corresponds to a backup device. For example, if the TO clause of a BACKUP DATABASE statement lists three devices, BACKUP spreads the data among three media families, one per device. The number of media families and mirrors is defined when the media set is created (by a BACKUP DATABASE statement that specifies WITH FORMAT).  
   

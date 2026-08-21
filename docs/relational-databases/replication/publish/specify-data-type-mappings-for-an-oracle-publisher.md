@@ -17,15 +17,7 @@ helpviewer_keywords:
 # Specify Data Type Mappings for an Oracle Publisher
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to specify data type mappings for an Oracle Publisher in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Although a set of default data type mappings are provided for Oracle Publishers, it might be necessary to specify different mappings for a given publication.  
-  
- **In This Topic**  
-  
--   **To specify data type mappings for an Oracle Publisher, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Specify data type mappings on the **Data Mapping** tab of the **Article Properties - \<Article>** dialog box. This is available from the **Articles** page of the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) and [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   

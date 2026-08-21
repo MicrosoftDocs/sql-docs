@@ -23,15 +23,19 @@ ms.custom:
   
  After creating a composite domain, you can change the properties of the composite domain, attach a reference data service to the domain, create cross-domain rules, or create value relations. To do so, select the composite domain in the **Domain** list of the **Domain Management** page, and select the appropriate tab.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To create a composite domain, you must have created and opened a knowledge base, and you must have created at least two single domains to add to the composite domain.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To create a composite domain, you must have created and opened a knowledge base, and you must have created at least two single domains to add to the composite domain.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create a composite domain.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create a composite domain.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Create a Composite Domain in the Knowledge Discovery Activity  
   

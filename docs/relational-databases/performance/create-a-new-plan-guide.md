@@ -28,8 +28,11 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
   
 -   Trying to drop or modify a function, stored procedure, or DML trigger that is referenced by a plan guide, either enabled or disabled, causes an error. Trying to drop a table that has a trigger defined on it that is referenced by a plan guide also causes an error.  
 
-##  <a name="Permissions"></a> Permissions  
- To create a plan guide of type OBJECT, you need ALTER permission on the referenced object. To create a plan guide of type SQL or TEMPLATE, you need ALTER permission on the current database.  
+<a id="Permissions"></a>
+
+## Permissions
+
+To create a plan guide of type OBJECT, you need ALTER permission on the referenced object. To create a plan guide of type SQL or TEMPLATE, you need ALTER permission on the current database.  
   
 ##  <a name="SSMSProcedure"></a> Create a plan guide using SSMS  
 1.  Click the plus sign to expand the database in which you want to create a plan guide, and then click the plus sign to expand the **Programmability** folder.  

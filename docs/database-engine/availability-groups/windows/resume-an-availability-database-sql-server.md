@@ -27,15 +27,20 @@ helpviewer_keywords:
 ## Limitations and Restrictions  
  A RESUME command returns as soon as it has been accepted by the replica that hosts the target database, but actually resuming the database occurs asynchronously.  
   
-##  <a name="Prerequisites"></a> Prerequisites  
-  
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 -   You must be connected to the server instance that hosts the database to be resumed.    
 -   The availability group must be online.    
 -   The primary database must be online and available.  
   
   
-##  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the database.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the database.  
   
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   

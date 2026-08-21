@@ -38,8 +38,11 @@ helpviewer_keywords:
   
  For information about these configuration tasks, see [Follow Up: After Creating an Availability Group](#FollowUp), later in this topic.  
   
-##  <a name="Permissions"></a> Permissions  
- Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using the New Availability Group Dialog Box (SQL Server Management Studio)  
  **To create an availability group**  

@@ -13,16 +13,17 @@ ms.custom: sfi-ropc-nochange
 
 # Apply Analytics Platform System hotfixes
 This article explains how to apply hotfixes to the Analytics Platform System software.  
-  
-## Before you begin
-  
+
+<a id="before-you-begin"></a>
+
 > [!WARNING]  
 > Don't attempt to apply an Analytics Platform System hotfix if your appliance or any appliance component is down or in a failed state. In that case, contact support for assistance.  
   
 > [!WARNING]  
 > Don't apply an Analytics Platform System hotfix while the appliance is in use. Applying a hotfix can cause appliance nodes to restart. Apply the hotfix during a maintenance window when the appliance isn't being used.  
   
-### Prerequisites
+## Prerequisites
+
 To perform these steps, you need:  
   
 -   An Analytics Platform System login with permissions to access the Admin Console to monitor the appliance state. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console (SQL Server PDW)](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

@@ -22,15 +22,19 @@ ms.custom:
   
  Matching policy creation is performed in three stages: a mapping process in which you identify the data source and map domains to columns, a matching policy process in which you create one or more matching rules and test each matching rule separately, and a matching results process in which you run all matching rules together, and if satisfied with them, add the policy to the knowledge base. Each of these processes is performed on a separate page of the Matching Policy activity wizard, enabling you to move back and forth to different pages, to re-run the process, and to close out of a specific matching policy process and return to the same stage of the process. After testing all rules together, if desired you can return to the **Matching Policy** page, tweak an individual rule, test it again separately, and then return to the **Matching Results** page to run all rules together once again. DQS provides you with statistics about the source data, the matching rules, and the matching results that enable you to make informed decisions about the matching policy, so you can refine it.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer if the source data is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer if the source data is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create a matching policy.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create a matching policy.  
   
 ##  <a name="MatchingRules"></a> How to Set Matching Rule Parameters  
  Creating a matching rule is an iterative process in which you enter the factors used to determine if one record is a match for another. You can enter conditions for any domain in a table. When DQS performs matching on two records, it will compare the values in the fields mapped to the domains that are included in the matching rule. DQS analyzes the values in each field in the rule, and then uses the factors entered in the rule for each domain to calculate a final matching score. If the matching score for the two records compared is greater than the minimum matching score, then the two fields are considered matches.  

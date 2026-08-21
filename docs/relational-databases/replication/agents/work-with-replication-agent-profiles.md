@@ -19,45 +19,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 # Work with Replication Agent Profiles
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to work with Replication Agent Profiles in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO). The behavior of each replication agent is controlled by a set of parameters that can be set through agent profiles. Each agent has a default profile, and some have additional predefined profiles; at a given time, only one profile is active for an agent.  
-  
- **In This Topic**  
-  
--   **To work with Replication Agent Profiles, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-    -   Access the Agent Profiles dialog box  
-  
-    -   Specify a profile for an agent  
-  
-    -   Create a profile  
-  
-    -   Modify a profile  
-  
-    -   Delete a profile  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-    -   Create a profile  
-  
-    -   Modify a profile  
-  
-    -   Delete a profile  
-  
-    -   Use agent profiles during synchronization  
-  
-    -   Transact-SQL example  
-  
-     [Replication Management Objects](#RMOProcedure)  
-  
-    -   Create a profile  
-  
-    -   Modify a profile  
-  
-    -   Delete a profile  
-  
--   **Follow Up:**  [After Changing Agent Parameters](#FollowUp)  
-  
+
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 ###  <a name="Access_SSMS"></a> To access the Agent Profiles dialog box from SQL Server Management Studio  

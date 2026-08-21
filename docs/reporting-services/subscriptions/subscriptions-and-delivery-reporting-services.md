@@ -28,22 +28,6 @@ helpviewer_keywords:
    
  Subscriptions aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
   
- **In this topic:**  
-  
--   [Subscription and delivery scenarios](#bkmk_subscription_scenarios)  
-  
--   [Standard and data-driven subscriptions](#bkmk_standard_and_datadriven)  
-  
--   [Subscription requirements](#bkmk_subscription_requirements)  
-  
--   [Delivery extensions](#bkmk_delivery_extensions)  
-  
--   [Parts of a subscription](#bkmk_parts_of_subscription)  
-  
--   [How subscriptions are processed](#bkmk_subscription_processing)  
-  
--   [Programmatic control of subscriptions](#bkmk_code)  
-  
  **Topics in this section:**  
   
 -   [E-Mail delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md) Describes report server e-mail delivery operation and configuration.  

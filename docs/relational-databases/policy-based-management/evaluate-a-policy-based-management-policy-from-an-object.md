@@ -13,31 +13,21 @@ helpviewer_keywords:
 # Evaluate a Policy-Based Management Policy from an Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to evaluate a policy from a server instance, database, or database object in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To evaluate a policy from an object, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Restrictions"></a> Limitations and Restrictions
   
 -   The execution mode is defined as part of the policy and cannot be changed in the **Evaluate Policies** dialog box.  
   
 -   The **Evaluate Policies** dialog box only shows policies appropriate for the database object.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- Requires membership in the PolicyAdministratorRole role in the msdb database.  
+
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires membership in the PolicyAdministratorRole role in the msdb database.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

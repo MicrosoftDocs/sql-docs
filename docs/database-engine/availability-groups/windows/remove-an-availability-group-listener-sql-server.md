@@ -15,18 +15,22 @@ helpviewer_keywords:
 # Remove an availability group listener (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to remove an availability group listener from an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
-  
-  
-##  <a name="Prerequisites"></a> Prerequisites  
-  
+
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 -   You must be connected to the server instance that hosts the primary replica.  
   
 ##  <a name="Recommendations"></a> Recommendations  
  Before you delete an availability group listener, we recommend that you ensure that no applications are using it.  
  
   
-##  <a name="Permissions"></a> Permissions  
- Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To remove an availability group listener**  

@@ -25,8 +25,10 @@ helpviewer_keywords:
   
 -   To configure different connection access, you must be connected to the server instance that hosts the primary replica.  
   
-##  <a name="Permissions"></a> Permissions  
-  
+<a id="Permissions"></a>
+
+## Permissions
+
 |Task|Permissions|  
 |----------|-----------------|  
 |To configure replicas when creating an availability group|Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.|  

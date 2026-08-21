@@ -15,22 +15,25 @@ ms.custom:
 [!INCLUDE [support-notice](includes/support-notice.md)]
 
   This topic describes how to detach and attach the DQS databases.  
+
+<a id="BeforeYouBegin"></a>
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Limitations"></a> Limitations and Restrictions  
+##  <a name="Limitations"></a> Limitations and Restrictions  
  For a list of limitations and restrictions, see [Database Detach and Attach &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-###  <a name="Prerequisites"></a> Prerequisites  
-  
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 -   Ensure that there are no running activities or processes in DQS. This can be verified using the **Activity Monitoring** screen. For detailed information about working in this screen, see [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
 -   Ensure that there are no users logged on the [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
-  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
 -   Your Windows user account must be a member of the db_owner fixed server role in the SQL Server instance to detach DQS databases.  
   
 -   Your Windows user account must have CREATE DATABASE, CREATE ANY DATABASE, or ALTER ANY DATABASE permission to attach a database.  

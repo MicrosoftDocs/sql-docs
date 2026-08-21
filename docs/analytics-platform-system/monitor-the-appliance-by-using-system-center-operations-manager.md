@@ -12,10 +12,10 @@ ms.topic: how-to
 
 # Monitor with System Center Operations Manager - Analytics Platform System
 Use System Center Operations Manager (SCOM) to monitor the Analytics Platform System (APS) appliance.
-  
-## Before You Begin
-  
-### Prerequisites
+
+<a id="before-you-begin"></a>
+
+## Prerequisites
   
 1. System Center Operations Manager 2007 R2, 2012, or 2012 SP1 must be installed and running.  
   

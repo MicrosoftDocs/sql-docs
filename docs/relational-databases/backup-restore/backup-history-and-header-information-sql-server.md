@@ -37,25 +37,7 @@ helpviewer_keywords:
   
 > [!IMPORTANT]  
 >  To manage the risk of losing recent changes to your backup and restore history, back up **msdb** frequently. For information about which of the system databases you must back up, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
-  
- **In This Topic:**  
-  
--   [Backup and Restore History Tables](#BnRHistoryTables)  
-  
--   [Transact-SQL Statements for Accessing Backup History](#TsqlStatementsForBackupHistory)  
-  
--   [Database and Transaction Log Files](#ListDbTlogFiles)  
-  
--   [Media-Header Information](#MediaHeader)  
-  
--   [Backup-Header Information](#BackupHeader)  
-  
--   [Comparison of Media-Header and Backup-Header Information](#CompareMediaHeaderBackupHeader)  
-  
--   [Backup Verification](#Verification)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
+
 ##  <a name="BnRHistoryTables"></a> Backup and Restore History Tables  
  This section introduces the history tables that store backup and restore metadata in the **msdb** system database.  
   

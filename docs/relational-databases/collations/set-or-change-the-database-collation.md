@@ -37,7 +37,9 @@ When you change the database collation, you change:
 
 You can change the collation of any new objects that are created in a user database by using the `COLLATE` clause of the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement. This statement **does not change** the collation of the columns in any existing user-defined tables. These can be changed by using the `COLLATE` clause of [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).
 
-## <a id="Permissions"></a> Permissions
+<a id="Permissions"></a>
+
+## Permissions
 
 To create a new database, you need the `CREATE DATABASE` permission in the `master` database, or the `CREATE ANY DATABASE`, or `ALTER ANY DATABASE` permission.
 

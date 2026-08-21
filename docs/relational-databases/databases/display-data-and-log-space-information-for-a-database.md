@@ -25,8 +25,9 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
   This article describes how to display the data and log space information for a database in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)].  
 
-  
-## <a id="BeforeYouBegin"></a> Before you begin
+<a id="BeforeYouBegin"></a>
+
+## Prerequisites
   
 Permission to run **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **\@updateusage** parameter.  
   

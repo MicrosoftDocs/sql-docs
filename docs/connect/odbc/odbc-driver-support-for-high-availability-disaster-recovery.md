@@ -4,7 +4,7 @@ description: Learn about how the Microsoft ODBC Driver for SQL Server supports A
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, randolphwest
-ms.date: 08/17/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -61,7 +61,7 @@ When you connect to a highly available or multi-endpoint target (Azure SQL Datab
 
 - Use both [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or Kerberos Authentication with `MultiSubnetFailover=Yes` without affecting the behavior of the application.
 
-- Increase `loginTimeout` to accommodate for failover time and reduce the application's connection retry attempts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, use at least 60 seconds. An auto-paused database resumes on the first connect attempt, and that attempt can fail with error 40613 while the database resumes, so the application must retry. For more information, see [Auto-pause and auto-resume in the serverless compute tier for Azure SQL Database](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
+- Increase the login timeout to accommodate for failover time and reduce the application's connection retry attempts. The driver has no connection string keyword for this setting. Set it before you connect by calling [SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md) with the `SQL_ATTR_LOGIN_TIMEOUT` attribute. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, use at least 60 seconds. An auto-paused database resumes on the first connect attempt, and that attempt can fail with error 40613 while the database resumes, so the application must retry. For more information, see [Auto-pause and auto-resume in the serverless compute tier for Azure SQL Database](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
 
 - Distributed transactions aren't supported.
 

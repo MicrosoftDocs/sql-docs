@@ -21,7 +21,7 @@ This page provides instructions for loading the [!INCLUDE[ssDriverPHP](../../inc
   
 You can download the prebuilt drivers for your platform from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page. Each installation package contains SQLSRV and PDO_SQLSRV driver files in threaded and non threaded variants. On Windows, they're also available in 32-bit and 64-bit variants. See [System Requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md) for a list of the driver files that are contained in each package. The driver file must match the PHP version, architecture, and threadedness of your PHP environment.
 
-On Linux and macOS, the drivers can alternatively be installed with PIE or PECL, as found in the [installation tutorial](installation-tutorial-linux-mac.md).
+On Linux and macOS, you can alternatively install the drivers with PIE or PECL, as described in the [installation tutorial](installation-tutorial-linux-mac.md).
 
 On Windows, you can install the drivers with [PIE](https://github.com/php/pie), the PHP Installer for Extensions, in version 5.13.3 and later versions. PIE replaces the deprecated PECL package system, and it enables the extension for you, so you don't download a driver file or edit **php.ini** by hand. Windows needs no build toolchain, because the extensions are distributed as precompiled DLLs. PIE itself requires PHP 8.1 and later versions to run, though it can install an extension into any other PHP installation on the machine.
 

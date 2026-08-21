@@ -14,7 +14,7 @@ ms.custom: intro-installation, linux-related-content
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
 
-The following instructions assume a clean environment and show how to install PHP 8.3, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu, Red Hat, Debian, SUSE, Alpine, and macOS. You can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we don't add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+The following instructions assume a clean environment and show how to install PHP 8.3, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu, Red Hat, Debian, SUSE, Alpine, and macOS. You can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them by following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why the extensions aren't added to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 Install the drivers with PIE, the PHP Installer for Extensions. PIE is the official installer for PHP extensions and replaces PECL, which is deprecated. For the commands, see [Install the drivers with PIE](#install-the-drivers-with-pie). The per-platform sections in this article use PECL, which still works.
 
@@ -33,11 +33,11 @@ For the latest supported operating systems versions, see [Support Matrix](micros
 
 [PIE](https://github.com/php/pie), the PHP Installer for Extensions, is the official installer for PHP extensions and replaces PECL, which is deprecated. The Microsoft Drivers for PHP for SQL Server support PIE in version 5.13.2 and later versions on Linux and macOS.
 
-PIE installs the drivers only. Complete Step 1 and Step 2 for your platform first, so that PHP and the Microsoft ODBC driver are already in place.
+PIE installs only the drivers. Complete Step 1 and Step 2 for your platform first, so that PHP and the Microsoft ODBC driver are already in place.
 
 ### Install PIE
 
-PIE requires PHP 8.1 and later versions to run, but it can install an extension into any other PHP installation on the machine. PIE is distributed as a PHAR archive, in the same way as Composer.
+PIE requires PHP 8.1 or later to run, but it can install an extension into any other PHP installation on the machine. PIE is distributed as a PHAR archive, in the same way as Composer.
 
 The following commands install PIE to `/usr/local/bin/pie`:
 

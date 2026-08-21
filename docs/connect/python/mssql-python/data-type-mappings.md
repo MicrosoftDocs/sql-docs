@@ -3,7 +3,7 @@ title: Data Type Mappings for mssql-python
 description: Reference for how Python data types map to SQL Server types when using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -123,7 +123,7 @@ The driver exports constants that correspond to ODBC SQL type identifiers. You t
 | `SQL_DATETIMEOFFSET` | -155 | SQL Server datetimeoffset. |
 
 > [!NOTE]
-> `SQL_SS_TIME2` and `SQL_DATETIMEOFFSET` are internal constants not exported as module-level attributes. Use the integer values (`-154`, `-155`) directly when calling `add_output_converter()`.
+> `SQL_SS_TIME2` and `SQL_DATETIMEOFFSET` are internal constants not exported as module-level attributes. Use the integer values (`-154`, `-155`) directly when calling `add_output_converter()`. Converters registered by integer SQL type code require mssql-python 1.13.0 and later versions.
 
 ### Binary types
 
@@ -143,7 +143,7 @@ The driver exports constants that correspond to ODBC SQL type identifiers. You t
 | `SQL_SS_VARIANT` | -150 | sql_variant data. |
 
 > [!NOTE]
-> `SQL_SS_UDT` and `SQL_SS_VARIANT` are internal constants not exported as module-level attributes. Use the integer values (`-151`, `-150`) directly when calling `add_output_converter()`.
+> `SQL_SS_UDT` and `SQL_SS_VARIANT` are internal constants not exported as module-level attributes. Use the integer values (`-151`, `-150`) directly when calling `add_output_converter()`. Converters registered by integer SQL type code require mssql-python 1.13.0 and later versions.
 
 ## Use setinputsizes()
 

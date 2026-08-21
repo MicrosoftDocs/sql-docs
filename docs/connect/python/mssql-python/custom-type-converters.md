@@ -3,7 +3,7 @@ title: Custom Type Converters with mssql-python
 description: Learn how to register custom functions to convert SQL data types to Python objects using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -20,7 +20,7 @@ By default, the mssql-python driver converts Microsoft SQL data types to appropr
 
 ## Register output converters
 
-Use `add_output_converter()` to register a converter function. The key is a **Python type** that matches the `type_code` in `cursor.description`:
+Use `add_output_converter()` to register a converter function. The key is either a Python type that matches the `type_code` in `cursor.description`, or an integer ODBC SQL type code such as `mssql_python.SQL_DECIMAL`:
 
 ```python
 import mssql_python
@@ -40,9 +40,48 @@ cursor.execute("SELECT CAST('2026-07-16T10:30:00' AS DATETIME2)")
 print(cursor.fetchval())  # July 16, 2026 at 10:30 AM
 ```
 
+### Choose between a Python type key and a SQL type code key
+
+The two key forms differ in how precisely they select columns:
+
+- A **Python type** key applies to every SQL type that maps to that Python type. Registering a converter for `Decimal` transforms **decimal**, **numeric**, **money**, and **smallmoney** columns.
+
+- An **integer SQL type code** key matches the exact ODBC type of the column. `SQL_DECIMAL` transforms **decimal** columns without touching **numeric** columns, and `SQL_NUMERIC` does the reverse.
+
+Use an integer key when you need that precision, or when you're porting code from pyodbc, which uses integer keys. Use a Python type key when you want one converter to cover a whole family of SQL types.
+
+```python
+import mssql_python
+
+def decimal_only(value):
+    return f"D:{value}"
+
+conn.add_output_converter(mssql_python.SQL_DECIMAL, decimal_only)
+
+cursor.execute("""
+    SELECT CAST(12.34 AS decimal(10,2)), CAST(56.78 AS numeric(10,2))
+""")
+print(cursor.fetchone())  # ('D:12.34', 56.78)
+```
+
+> [!IMPORTANT]
+> Integer SQL type code keys require mssql-python 1.13.0 and later versions. In earlier versions, the driver accepted these registrations and stored them but never invoked them, so the converters silently did nothing. If you registered converters this way against an earlier version, they begin transforming values when you upgrade. Review them before you deploy.
+
+### Converter resolution order
+
+For each column, the driver selects at most one converter, in this order:
+
+1. The converter registered for the column's integer ODBC SQL type code.
+
+1. The converter registered for the Python type in `cursor.description`.
+
+1. The converter registered for `SQL_WVARCHAR`, but only when the column's Python type is `str` or `bytes`.
+
+The third step is a compatibility fallback. In mssql-python 1.12.0 and earlier versions, it wasn't restricted to string columns, so a single `SQL_WVARCHAR` converter also received **int**, **decimal**, and **date** values.
+
 ### Converter function signature
 
-The driver looks up converters by matching the Python type from `cursor.description` for each column. The type you pass to `add_output_converter()` must match one of these Python types:
+When you register a converter with a Python type key, the type you pass to `add_output_converter()` must match one of the following Python types. The **Converter receives** column shows what the driver passes to your function:
 
 | `cursor.description` type_code | Converter receives | Microsoft SQL types |
 | --- | --- | --- |

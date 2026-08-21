@@ -4,7 +4,7 @@ description: The connection string properties for the Microsoft JDBC Driver for 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, machavan, sunilbs
-ms.date: 05/06/2026
+ms.date: 08/21/2026
 ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: connectivity
@@ -273,7 +273,7 @@ For details, see [Client Certificate Authentication for Loopback Scenarios](clie
 For more information about Always Encrypted, see [Use Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md).
 
 > [!NOTE]  
-> Always Encrypted is available with SQL Server 2016 or later and Azure SQL Database.
+> Always Encrypted is available with SQL Server 2016 and later versions, and Azure SQL Database.
 
 ### `concatNullYieldsNull`
 
@@ -314,7 +314,7 @@ If you don't specify a database name, the connection uses the default database.
 
 (Version 12.2+) The SQL data type to use for Java date and timestamp parameters.
 
-When you connect to SQL Server 2016 or later versions and interact with legacy `datetime` values, set this property to `datetime`. This setting mitigates server-side conversion problems between `datetime` and `datetime2` values.
+When you connect to SQL Server 2016 and later versions and interact with legacy `datetime` values, set this property to `datetime`. This setting mitigates server-side conversion problems between `datetime` and `datetime2` values.
 
 For more information, see [Addressing datetime to datetime2 conversion behavior change starting from SQL Server 2016](https://github.com/microsoft/mssql-jdbc/wiki/Addressing-datetime-to-datetime2-conversion-behavior-change-starting-from-SQL-Server-2016).
 
@@ -552,6 +552,8 @@ The number of seconds the driver should wait before timing out a failed connecti
 
 If you specify a Virtual Network Name in the `Server` connection property, specify a timeout value of three minutes or more to allow sufficient time for a failover connection to succeed.
 
+For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, `loginTimeout` bounds the driver's connection retries, not just a single attempt. The driver abandons the retry when the elapsed time plus `connectRetryInterval` reaches `loginTimeout`, so size it to hold the retries you want. For more information, see [Connect to an auto-paused serverless database](connection-resiliency.md#connect-to-an-auto-paused-serverless-database).
+
 For more information about disaster recovery, see [JDBC driver support for High Availability, disaster recovery](jdbc-driver-support-for-high-availability-disaster-recovery.md).
 
 ### `maxResultBuffer`
@@ -576,7 +578,7 @@ For more information about disaster recovery, see [JDBC driver support for High 
 - **Type**: `Boolean` [`true` | `false`]
 - **Default**: `false`
 
-Always specify `multiSubnetFailover=true` to connect to the availability group listener of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] availability group or an [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance. `multiSubnetFailover=true` configures the driver to provide faster detection of and connection to the active server.
+Always specify `multiSubnetFailover=true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] availability group, or a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance. The driver attempts TCP connections to all resolved IP addresses in parallel and uses the first connection that succeeds. When DNS resolves to one address, the driver does a single connect attempt and doesn't start any parallel connection threads.
 
 Possible values are `true` and `false`.
 
@@ -849,7 +851,7 @@ Before Microsoft JDBC Driver 6.0 for SQL Server, an application had to set the c
 > [!NOTE]  
 > When you use federated authentication or specify `multisubnetfailover`, the driver disables `transparentNetworkIPResolution` by default. To enable this feature, explicitly set `transparentNetworkIPResolution` to `true`.
 
-When `transparentNetworkIPResolution=true`, the first connection attempt uses 500 ms as the timeout. Any later attempts use the same timeout logic as used by the `multiSubnetFailover` property.
+When `transparentNetworkIPResolution=true`, the first connection attempt uses 500 milliseconds as the timeout. Any later attempts use the same timeout logic as used by the `multiSubnetFailover` property.
 
 ### `trustManagerClass`
 

@@ -4,10 +4,11 @@ description: This article discusses issues when you use the Microsoft JDBC Drive
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 10/24/2025
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 # Connect to an Azure SQL database
 
@@ -24,15 +25,15 @@ This article discusses issues when you use the [!INCLUDE[jdbcNoVersion](../../in
 ## Details
 
 To connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
+[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the `sys.databases` view to get the catalogs. To understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see the discussion of permissions in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
   
 ## Login timeout
 
-When connecting to Azure SQL databases, the recommended default `loginTimeout` is 30 seconds. If you're connecting to a serverless instance, it's recommended to use an even longer `loginTimeout` of 60 seconds or more. If the serverless instance has been idle, it can take some time to wake up on an initial connection. For more information on how to set the `loginTimeout`, see [Setting the connection properties](setting-the-connection-properties.md).
+When connecting to Azure SQL databases, the `loginTimeout` default of 30 seconds is a reasonable starting point. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, raise it so it can hold the driver's connection retries while the database resumes. For more information, see [Connect to an auto-paused serverless database](connection-resiliency.md#connect-to-an-auto-paused-serverless-database). To set `loginTimeout`, see [Setting the connection properties](setting-the-connection-properties.md).
 
 ## Connections dropped
 
-When you connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
+When you connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], a network component (such as a firewall) might terminate idle connections after a period of inactivity. In this context, there are two types of idle connections:
 
 - Idle at the TCP layer, where connections can be dropped by any number of network devices.  
 

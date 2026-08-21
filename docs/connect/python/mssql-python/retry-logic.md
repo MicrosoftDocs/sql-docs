@@ -3,7 +3,7 @@ title: Retry Logic and Connection Resiliency with mssql-python
 description: Learn how to implement robust retry logic and handle transient failures when connecting to SQL Server and Azure SQL using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -373,7 +373,7 @@ def execute_with_failover_retry(connect, query: str, params: dict,
 # Usage
 connection_string = (
     "Server=tcp:<server>.database.windows.net,1433;"
-    "Database=AdventureWorks2022;"
+    "Database=AdventureWorks2025;"
     "Authentication=ActiveDirectoryDefault;"
     "Encrypt=yes;TrustServerCertificate=no"
 )

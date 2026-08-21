@@ -3,7 +3,7 @@ title: Use Spatial Data with mssql-python
 description: Learn how to work with Microsoft SQL geography and geometry data types using the mssql-python driver for location-based applications.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -30,7 +30,7 @@ Insert geographic points using the Point constructor with latitude, longitude, a
 ```python
 import mssql_python
 
-connection_string = "Server=<server>.database.windows.net;Database=AdventureWorks2022;Authentication=ActiveDirectoryDefault;Encrypt=yes"
+connection_string = "Server=<server>.database.windows.net;Database=AdventureWorks2025;Authentication=ActiveDirectoryDefault;Encrypt=yes"
 
 conn = mssql_python.connect(connection_string)
 cursor = conn.cursor()

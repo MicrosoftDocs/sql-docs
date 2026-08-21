@@ -4,7 +4,7 @@ description: Learn about the support lifecycle, version compatibility, and how t
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 07/24/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -21,7 +21,7 @@ Always use the latest release to gain new features, performance improvements, an
 
 ### Current version
 
-Version 1.7.4 is the current general availability (GA) release.
+Version 1.8.0 is the current general availability (GA) release.
 
 ### Support status definitions
 
@@ -36,7 +36,8 @@ Use these status values in the version table:
 
 | Version | Release date | Status | Django versions | Key features |
 | --- | --- | --- | --- | --- |
-| 1.7.4 | July 2026 | **Current** | 3.2 - 6.0 | `GROUP BY` fixes for escaped `%%` literals with real params and for `IntegerChoices` params in raw queries |
+| 1.8.0 | August 2026 | **Current** | 3.2 - 6.1 | Django 6.1 support, `quote_name` query compiler change, foreign key introspection returns the ON DELETE rule |
+| 1.7.4 | July 2026 | Previous | 3.2 - 6.0 | `GROUP BY` fixes for escaped `%%` literals with real params and for `IntegerChoices` params in raw queries |
 | 1.7.3 | June 2026 | Previous | 3.2 - 6.0 | `FA001` fix for `Authentication=` modes other than `ActiveDirectoryMsi`, subclassed `DatabaseWrapper` `KeyError` fix (regression from 1.7.1) |
 | 1.7.2 | May 2026 | Previous | 3.2 - 6.0 | **datetimeoffset** time zone fix, `Now()` time zone fix, `.explain()` compatibility fix |
 | 1.7.1 | April 2026 | Previous | 3.2 - 6.0 | SQL database in Fabric fix, descending index AlterField fix |

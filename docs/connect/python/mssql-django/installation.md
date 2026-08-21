@@ -4,7 +4,7 @@ description: Learn how to install the mssql-django Django database backend for S
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 07/24/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,7 +17,7 @@ The `mssql-django` package is the official Microsoft-supported Django database b
 
 ## Prerequisites
 
-- **Python 3.8 or later**. Django 6.0 requires Python 3.12 and later versions.
+- **Python 3.8 and later versions**. Django 6.0 and later versions require Python 3.12 and later versions.
 - **pip** package manager (included with Python 3.4 and later versions)
 - **Microsoft ODBC Driver 17 or 18 for SQL Server**. See [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md).
 
@@ -41,17 +41,17 @@ pip install --upgrade mssql-django
 To install a specific version:
 
 ```bash
-pip install mssql-django==1.7.4
+pip install mssql-django==1.8.0
 ```
 
 ## Dependency and version compatibility
 
-For `mssql-django` 1.7.4, the package metadata includes these dependency constraints:
+For `mssql-django` 1.8.0, the package metadata includes these dependency constraints:
 
 | Component | Version guidance |
 | --- | --- |
-| Python | 3.8 or later versions |
-| Django | `>=3.2` and `<6.1` |
+| Python | 3.8 and later versions |
+| Django | `>=3.2` and `<6.2` |
 | pyodbc | `>=3.0` |
 | pytz | Installed as a dependency |
 
@@ -70,7 +70,7 @@ Expected output:
 
 ```output
 Name: mssql-django
-Version: 1.7.4
+Version: 1.8.0
 Summary: Django backend for Microsoft SQL Server
 ```
 

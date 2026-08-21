@@ -4,7 +4,7 @@ description: Learn about new features and changes in each version of the mssql-d
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 07/24/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -14,6 +14,27 @@ ai-usage: ai-assisted
 # What's new in mssql-django
 
 This article describes new features, improvements, and changes in each version of the `mssql-django` Django database backend.
+
+## Version 1.8.0
+
+**Release date**: August 2026
+
+Version 1.8.0 adds support for Django 6.1 while continuing to support Django 3.2 through 6.0. Moving a project from Django 6.0 to 6.1 requires no code changes unless you use one of the two Django 6.1 features described in this section.
+
+### Highlights
+
+- **Django 6.1 support**: Validated against Django 6.1 across the supported SQL Server and Azure SQL matrix. The dependency constraint widens from `django>=3.2,<6.1` to `django>=3.2,<6.2`.
+- **Query compiler uses `quote_name` on Django 6.1**: Django 6.1 deprecated `quote_name_unless_alias`. The backend now calls `SQLCompiler.quote_name` on Django 6.1 and later versions, gated by version so earlier Django versions are unchanged. Sliced and offset queries, such as `qs[a:b]` and `OFFSET ... FETCH`, compile without deprecation warnings.
+- **Foreign key introspection returns the ON DELETE rule**: Django 6.1 expanded `get_relations()` to include the database-level ON DELETE rule. The backend returns the expected three-part shape and maps SQL Server `NO ACTION` foreign keys accordingly, so `inspectdb` and foreign key introspection produce correct models.
+
+### Django 6.1 features that aren't supported
+
+Two Django 6.1 additions are unavailable on this backend, for different reasons:
+
+- **Database-level referential actions** (`DB_CASCADE`, `DB_SET_NULL`, `DB_SET_DEFAULT`): SQL Server rejects foreign key graphs with multiple cascade paths to the same table (error 1785), so there's no native path for this feature on any SQL Server version. Using one of these values raises the Django system check `fields.E324`, which points you to the standard Django-level `on_delete`.
+- **Bitwise aggregates** (`BitAnd`, `BitOr`, `BitXor`): SQL Server has no native bitwise aggregate function, and the backend doesn't emulate them, so these aggregates raise `NotSupportedError`.
+
+For more information, see [Limitations and unsupported features in mssql-django](limitations.md).
 
 ## Version 1.7.4
 

@@ -267,6 +267,8 @@ The `token_provider` parameter is the only token source for a connection that us
 
 Passing an object without a `get_token()` method also raises `InterfaceError`.
 
+If the connection string carries `UID` or `PWD`, the driver ignores them and issues a `UserWarning` that names the ignored keywords. Remove them from the connection string to silence the warning.
+
 > [!NOTE]
 > Connections that authenticate with a credential object are pooled per identity. For more information, see [Connection pooling](connection-pooling.md).
 

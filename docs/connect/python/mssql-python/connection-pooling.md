@@ -102,7 +102,7 @@ The pool key depends on the authentication method:
 | Interactive and device code authentication | Connection string, plus the signed-in account |
 | `DefaultAzureCredential`, a custom `token_provider`, and raw access tokens | Connection string, plus a hash of the token |
 
-Because the token hash is part of the key for the last group, each distinct token gets its own pool. A long-lived credential that returns a cached token continues to reuse one pool. Idle identity pools are reclaimed in the background.
+Because the token hash is part of the key for the last group, each distinct token gets its own pool. A long-lived credential that returns a cached token continues to reuse one pool. Idle identity pools are reclaimed lazily, as later pool operations run, rather than by a background thread.
 
 The driver also acquires tokens only when it needs to open a new connection. In earlier versions, every `connect()` call acquired a token even when the pool returned an existing connection.
 

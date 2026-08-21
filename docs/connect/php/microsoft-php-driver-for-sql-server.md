@@ -4,7 +4,7 @@ description: The Microsoft Drivers for PHP for SQL Server are PHP extensions for
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/22/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -32,31 +32,6 @@ Both drivers connect to Azure SQL Database, SQL database in Microsoft Fabric, Az
 | Decide between SQLSRV and PDO_SQLSRV | [Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md) and [Comparing execution functions](comparing-execution-functions.md). |
 | Diagnose an install, connection, or query problem | [Troubleshooting](troubleshooting-php-sql-driver.md), [Handling errors and warnings](handling-errors-and-warnings.md), and [Logging activity](logging-activity.md). |
 | Make an existing app faster | [Performance tuning](performance-tuning-php-sql-driver.md). |
-
-## Quick connect
-
-The following snippet is the shortest end-to-end connection that a working PHP install can run against SQL Server or Azure SQL. Use it to confirm your driver, ODBC dependencies, and network path are wired up before you move on to the production baseline in the next section.
-
-```php
-<?php
-$server   = getenv('SQL_SERVER')   ?: 'localhost';
-$database = getenv('SQL_DATABASE') ?: 'master';
-$user     = getenv('SQL_USER');
-$password = getenv('SQL_PASSWORD');
-
-$dsn = "sqlsrv:Driver={ODBC Driver 18 for SQL Server};Server=$server;Database=$database;Encrypt=true";
-$pdo = new PDO($dsn, $user, $password, [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-]);
-
-foreach ($pdo->query('SELECT @@VERSION AS version') as $row) {
-    echo $row['version'], PHP_EOL;
-}
-```
-
-For a passwordless connection against Azure SQL, add `Authentication=ActiveDirectoryMsi` (managed identity) or another `Authentication` value to the DSN and drop the `$user`/`$password` arguments. The production baseline that follows expands the same pattern with retries, timeouts, and diagnostics.
-
-For a local SQL Server that uses a self-signed certificate, `Encrypt=true` fails validation. Add `TrustServerCertificate=true` for local development only. See [TLS certificate errors](troubleshooting-php-sql-driver.md#tls-certificate-errors) for the production alternatives.
 
 ## Production baseline for Azure SQL
 

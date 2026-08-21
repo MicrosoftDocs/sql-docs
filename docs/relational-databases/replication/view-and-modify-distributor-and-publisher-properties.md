@@ -19,31 +19,18 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 # View and Modify Distributor and Publisher Properties
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to view and modify Distributor and Publisher properties in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To view and modify Distributor and Publisher properties, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Recommendations"></a> Recommendations  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Recommendations"></a> Recommendations
   
 -   For Publishers running versions prior to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a user in the **sysadmin** fixed server role can register Subscribers on the **Subscribers** page. Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], it is no longer necessary to explicitly register Subscribers for replication.  
-  
-###  <a name="Security"></a> Security  
- When possible, prompt users to enter security credentials at runtime.  
+
+<a id="Security"></a>
+
+## Security
+
+When possible, prompt users to enter security credentials at runtime.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

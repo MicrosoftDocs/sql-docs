@@ -55,8 +55,11 @@ SELECT name FROM sys.registered_search_property_lists;
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
- Requires CONTROL permission on the search property list.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires CONTROL permission on the search property list.  
   
 > [!NOTE]  
 >  The property list owner can grant CONTROL permissions on the list. By default, the user who creates a search property list is its owner. The owner can be changed by using the [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  

@@ -35,24 +35,10 @@ helpviewer_keywords:
 -   During a backup operation.  
   
  The **suspect_pages** table is also updated as necessary during a restore operation, a DBCC repair operation, or a drop database operation.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To manage the suspect_pages table, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Recommendations"></a> Recommendations  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Recommendations"></a> Recommendations
   
 -   **Errors Recorded in suspect_pages Table**  
   
@@ -107,10 +93,13 @@ helpviewer_keywords:
   
      A database administrator can also insert or update records. For example, updating a row might useful when the database administrator knows that a particular suspect page is actually intact, but wants to preserve the record for a while.  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- Anyone with access to **msdb** can read the data in the **suspect_pages** table. Anyone with UPDATE permission on the suspect_pages table can update its records. Members the **db_owner** fixed database role on **msdb** or the **sysadmin** fixed server role can insert, update, and delete records.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Anyone with access to **msdb** can read the data in the **suspect_pages** table. Anyone with UPDATE permission on the suspect_pages table can update its records. Members the **db_owner** fixed database role on **msdb** or the **sysadmin** fixed server role can insert, update, and delete records.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

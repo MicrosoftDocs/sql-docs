@@ -14,8 +14,11 @@ ms.topic: how-to
 Describes how to configure SQL Server PDW to use the remote table copy feature to copy tables to SMP SQL Server databases on non-appliance servers.  
   
 This article describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md).  
-  
-## Before you begin
+
+<a id="before-you-begin"></a>
+
+## Prerequisites
+
 In order to configure SQL Server PDW to use remote table copy, you must:  
   
 -   Have an Analytics Platform System administrator account with the ability to log directly into the ***appliance_domain*-AD01** and ***appliance_domain*-AD02** nodes.  

@@ -22,15 +22,19 @@ ms.custom:
   
  When you import a knowledge base, you can use the same name, unless the knowledge base name already exists in the client application, in which case you must rename it.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To import a knowledge base from a .dqs file, you must have already exported the knowledge base into the .dqs file.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To import a knowledge base from a .dqs file, you must have already exported the knowledge base into the .dqs file.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to import a knowledge base from a .dqs data file.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to import a knowledge base from a .dqs data file.  
   
 ##  <a name="Import"></a> Import a knowledge base from a .dqs file  
   

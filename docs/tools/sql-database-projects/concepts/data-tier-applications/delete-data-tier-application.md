@@ -30,10 +30,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 You can delete a registered data-tier application by using the Delete Data-tier Application wizard in SQL Server Management Studio. You can specify whether the associated database is retained, detached, or dropped.
 
-- **Before you begin:** [Limitations and Restrictions](#limitations-and-restrictions), [Permissions](#permissions)
-- **To delete a DAC :** [The Register Data-tier Application Wizard](#using-the-delete-data-tier-application-wizard)
-
-## Before You Begin
+## Before you begin
 
 When you delete a registered data-tier application (DAC) instance, you choose one of three options specifying what is to be done with the database associated with the data-tier application. All three options delete the DAC definition metadata from the database. The options differ in what they do with the database associated with the data-tier application. The wizard doesn't delete any of the instance-level objects associated with the DAC or database, such as logins.
 
@@ -43,7 +40,7 @@ When you delete a registered data-tier application (DAC) instance, you choose on
 | Detach database | The associated database is detached. The instance of the Database Engine can't reference the database, but the data and log files are intact. |
 | Delete database | The associated database is dropped. The data and log files are deleted. |
 
-### Limitations and Restrictions
+## Limitations and Restrictions
 
 There's no automatic mechanism to restore the DAC definition metadata or the database after you delete a DAC. How you can manually rebuild the DAC instance depends on the delete option.
 
@@ -56,7 +53,7 @@ There's no automatic mechanism to restore the DAC definition metadata or the dat
 > [!WARNING]  
 > Rebuilding a DAC instance by registering a DAC from a restored or reattached database doesn't recreate some parts of the original DAC, such as the server selection policy.
 
-### Permissions
+## Permissions
 
 A DAC can only be deleted by members of the **sysadmin** or **serveradmin** fixed server roles, or by the database owner. The built-in [!INCLUDE [ssNoVersion](../../../../includes/ssnoversion-md.md)] system administrator account named **sa** can also launch the wizard.
 

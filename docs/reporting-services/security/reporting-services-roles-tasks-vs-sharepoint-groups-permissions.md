@@ -30,17 +30,6 @@ helpviewer_keywords:
         [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode  
     :::column-end:::
 :::row-end:::
-
-
-
-  
- **In this topic:**  
-  
--   [Compare permission tools and terminology](#bkmk_compare_tools_terms)  
-  
--   [Compare native mode Roles and SharePoint groups](#bkmk_compare_roles_groups)  
-  
--   [Compare native mode tasks and SharePoint permissions](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> Compare permission tools and terminology  
  **Native mode:** The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode permission objects (roles and tasks) are created in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and configured for individual users in Report Manager.  

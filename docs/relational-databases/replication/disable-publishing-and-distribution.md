@@ -30,24 +30,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 -   Disable all Publishers that use the Distributor and delete all publications on those Publishers.  
   
 -   Delete all subscriptions to the publications. Data in the publication and subscription databases will not be deleted; however, it loses its synchronization relationship to any publication databases. If you want the data at the Subscriber to be deleted, you must delete it manually.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
--   **To disable publishing and distribution, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Prerequisites"></a> Prerequisites
   
 -   To disable publishing and distribution, all distribution and publication databases must be online. If any *database snapshots* exist for distribution or publication databases, they must be dropped before disabling publishing and distribution. A database snapshot is a read-only offline copy of a database and is not related to a replication snapshot. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   

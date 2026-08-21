@@ -17,15 +17,18 @@ helpviewer_keywords:
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to change the IP address resource in an Always On Failover Cluster Instance (FCI) by using the Failover Cluster Manager snap-in. The Failover Cluster Manager snap-in is the cluster management application for the Windows Server Failover Clustering (WSFC) service.  
   
--   **Before you begin:**  [Security](#Security)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+
+## Prerequisites
+
  Before you begin, review the following [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online topic: [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- To maintain or update an FCI, you must be a local administrator with permission to logon as a service on all nodes of the FCI.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+To maintain or update an FCI, you must be a local administrator with permission to logon as a service on all nodes of the FCI.  
   
 ##  <a name="WSFC"></a> Using the Failover Cluster Manager Snap-in  
  **To change the IP address resource for an FCI**  

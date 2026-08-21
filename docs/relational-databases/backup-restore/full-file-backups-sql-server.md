@@ -29,17 +29,7 @@ helpviewer_keywords:
   
 > [!NOTE]  
 >  Full file backups are typically called *file backups*, except when they are being explicitly compared with *differential file backups*.  
-  
- **In This Topic:**  
-  
--   [Benefits of File Backups](#Benefits)  
-  
--   [Disadvantages of File Backups](#Disadvantages)  
-  
--   [Overview of File Backups](#Overview)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
+
 ##  <a name="Benefits"></a> Benefits of File Backups  
  File backups offer the following advantages over database backups:  
   

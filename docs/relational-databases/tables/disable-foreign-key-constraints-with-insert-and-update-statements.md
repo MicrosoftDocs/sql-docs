@@ -24,9 +24,13 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
   
 ##  <a name="Restrictions"></a> Limitations and restrictions  
  After you disable these constraints, future inserts or updates to the column will not be validated against the constraint conditions.  
-  
-##  <a name="Security"></a><a name="Permissions"></a> Permissions  
- Requires ALTER permission on the table.  
+
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the table.  
   
 ##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio
   

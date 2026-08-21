@@ -20,37 +20,21 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 # View and Modify Replication Security Settings
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to view and modify replication security settings in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO). For example, you might want to change the connection of the Log Reader Agent to the Publisher from SQL Server Authentication to Windows Integrated Authentication, or you might need to change the credentials used to run an agent job when the Windows account password has changed. For information about the permissions required by each agent, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To view and modify replication security settings, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
-  
--   **Follow Up:**  [After you modify replication security settings](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Restrictions"></a> Limitations and Restrictions
   
 -   The stored procedures that you use will depend on the type of agent and the type of server connection.  
   
 -   The RMO classes and properties you use depend on the type of agent and the type of server connection.  
   
-###  <a name="Security"></a> Security  
- For security reasons, the actual values of passwords are masked in result sets returned by replication stored procedures.  
-  
-####  <a name="Permissions"></a> Permissions  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Security
+
+For security reasons, the actual values of passwords are masked in result sets returned by replication stored procedures.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  View and modify security settings in the following dialog boxes:  

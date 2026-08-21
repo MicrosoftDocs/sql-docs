@@ -20,10 +20,12 @@ helpviewer_keywords:
   
 -   **To view quorum NodeWeight settings using:** [Using Transact-SQL](#TsqlProcedure), [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Before You Start  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
- This feature is supported only in [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] or later versions.  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+This feature is supported only in [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] or later versions.  
   
 > [!IMPORTANT]  
 >  In order to use NodeWeight settings, the following hotfix must be applied to all servers in the WSFC cluster:  
@@ -33,8 +35,12 @@ helpviewer_keywords:
 > [!TIP]  
 >  If this hotfix is not installed, the examples in this topic will return empty or NULL values for NodeWeight.  
   
-###  <a name="Security"></a> Security  
- The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

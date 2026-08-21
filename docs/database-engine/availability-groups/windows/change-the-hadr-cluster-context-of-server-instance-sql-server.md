@@ -31,8 +31,10 @@ monikerRange: ">=sql-server-2017"
   
 -   A remote HADR cluster context can be switched back to the local cluster at any time. However, the context cannot be switched again as long as the server instance is hosting any availability replicas.  
   
-##  <a name="Prerequisites"></a> Prerequisites  
-  
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 -   The server instance on which you change the HADR cluster context must be running [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] or above (Enterprise edition or above).  
   
 -   The server instance must be enabled for Always On. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
@@ -57,10 +59,11 @@ monikerRange: ">=sql-server-2017"
     ```  
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
-  
-  
-##  <a name="Permissions"></a> Permissions  
-  
+
+<a id="Permissions"></a>
+
+## Permissions
+
 -   **SQL Server login**  
   
      Requires CONTROL SERVER permission.  

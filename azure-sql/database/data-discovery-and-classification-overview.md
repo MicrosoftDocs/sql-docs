@@ -206,7 +206,7 @@ These are the activities that are actually auditable with sensitivity informatio
 
 Use [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) to return information from an audit file stored in an Azure Storage account.
 
-## <a id="permissions"></a>Permissions
+## Permissions
 
 These built-in roles can read the data classification of a database:
 

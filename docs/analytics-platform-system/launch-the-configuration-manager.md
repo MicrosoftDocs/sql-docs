@@ -13,10 +13,11 @@ ms.custom: sfi-image-nochange
 
 # Launch the Configuration Manager in Analytics Platform System
 This topic provides instructions for launching the **Configuration Manager** for the Analytics Platform System appliance.  
-  
-## Before You Begin  
-  
-### Prerequisites  
+
+<a id="before-you-begin"></a>
+
+## Prerequisites
+
 The Analytics Platform System **Configuration Manager** can only be run by the appliance domain administrator. To run this tool, you need the password for the appliance domain administrator. To create additional APS administrators, see [Create an APS Domain Administrator &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Launch the Configuration Manager Tool  

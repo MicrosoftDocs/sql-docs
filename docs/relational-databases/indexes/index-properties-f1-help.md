@@ -24,19 +24,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 
   The sections in this topic refer to various index properties that are available by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dialogs.  
-  
- **In This Topic:**  
-  
- [Index Properties General Page](#General)  
-  
- [Select (Index) Columns Dialog Box](#Columns)  
-  
- [Index Properties Storage Page](#Storage)  
-  
- [Index Properties Spatial Page](#Spatial)  
-  
- [Index Properties Filter Page](#Filter)  
-  
+
 ##  <a name="General"></a> Index Properties General Page  
  Use the General page to view or modify index properties for the selected table or view. The options for each page may change based on the type of index selected.  
   

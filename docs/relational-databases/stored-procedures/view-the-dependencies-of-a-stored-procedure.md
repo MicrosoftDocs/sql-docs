@@ -22,18 +22,14 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=s
   This topic describes how to view stored procedure dependencies in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##  <a name="Top"></a>   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **To view the dependencies of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- System Function: **sys.dm_sql_referencing_entities**  
+<a id="BeforeYouBegin"></a>
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+System Function: **sys.dm_sql_referencing_entities**  
  Requires CONTROL permission on the referenced entity and SELECT permission on sys.dm_sql_referencing_entities. When the referenced entity is a partition function, CONTROL permission on the database is required. By default, SELECT permission is granted to public.  
   
  System Function: **sys.dm_sql_referenced_entities**  

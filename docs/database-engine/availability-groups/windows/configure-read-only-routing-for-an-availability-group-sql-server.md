@@ -26,9 +26,10 @@ Read-only routing is available in [!INCLUDE[sssql16-md](../../../includes/sssql1
 > [!NOTE]  
 >  For information about how to configure a readable secondary replica, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
 
-  
-##  <a name="Prerequisites"></a> Prerequisites  
-  
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 -   The availability group must possess an availability group listener. For more information, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
 -   One or more availability replicas must be configured to accept read-only in the secondary role (that is, to be [readable secondary replicas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)). For more information, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
@@ -51,8 +52,10 @@ Read-only routing is available in [!INCLUDE[sssql16-md](../../../includes/sssql1
 > [!NOTE]  
 >  For information about availability group listeners and more information about read-only routing, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="Permissions"></a> Permissions  
-  
+<a id="Permissions"></a>
+
+## Permissions
+
 |Task|Permissions|  
 |----------|-----------------|  
 |To configure replicas when creating an availability group|Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.|  

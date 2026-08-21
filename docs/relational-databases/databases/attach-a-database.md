@@ -18,11 +18,13 @@ helpviewer_keywords:
 
 This article describes how to attach a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can use this feature to copy, move, or upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
-###  <a name="Restrictions"></a> Limitations and restrictions  
+##  <a name="Restrictions"></a> Limitations and restrictions  
  For a list of limitations and restrictions, see [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
 
-##  <a name="Prerequisites"></a> Prerequisites  
-  
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 Review all of the following prerequisites before proceeding:
 
 -   In the case where you are moving a database from one instance to another, the database must first be detached from any existing SQL instance. If you attempt to attach a database that has not been detached returns an error. For more information, see [Detach a Database](../../relational-databases/databases/detach-a-database.md).  
@@ -35,12 +37,14 @@ Review all of the following prerequisites before proceeding:
   
 - If MDF and LDF files are in different directories and one of the paths includes `\\?\GlobalRoot`, when you attach a database the operation will fail.  
   
-###  <a name="Recommendations"></a> Is Attach the best choice?  
+##  <a name="Recommendations"></a> Is Attach the best choice?  
 We recommend that you move databases within an instance with the `ALTER DATABASE` planned relocation procedure instead of detach and attach, when moving database files within the same instance. For more information, see [Move User Databases](../../relational-databases/databases/move-user-databases.md). 
  
 It is not recommended to use detach and attach for Backup and Recovery. There are no transaction log backups or point-in-time recovery available when detaching files to be backed up externally from SQL Server.
-  
-###  <a name="Security"></a> Security  
+
+<a id="Security"></a>
+
+## Security  
 
 File access permissions are set during many database operations, including when a database is detached and attached. When a database is detached or attached, the Database Engine tries to impersonate the Windows account of the connection performing the operation to guarantee that the account has permission to access the database and log files. For mixed security accounts that use SQL Server logins, the impersonation might fail.
 
@@ -58,7 +62,10 @@ For more information on file system permissions granted to the per-service SIDs 
 > [!CAUTION]  
 > We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database. For more information about attaching databases and information about changes that are made to metadata when you attach a database, see [Database Detach and Attach (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
 
-####  <a name="Permissions"></a> Permissions  
+<a id="Permissions"></a>
+
+## Permissions
+
 Requires `CREATE DATABASE`, `CREATE ANY DATABASE`, or `ALTER ANY DATABASE` permission.  
   
 ##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio (SSMS)

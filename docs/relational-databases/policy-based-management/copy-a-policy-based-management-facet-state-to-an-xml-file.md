@@ -14,22 +14,13 @@ helpviewer_keywords:
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to how to copy the state of a Policy-Based Management facet to an XML file in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Security](#Security)  
-  
--   **To copy a facet state to an XML file, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- The procedures in this topic require membership in the PolicyAdministratorRole role in the msdb database.  
+<a id="BeforeYouBegin"></a>
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+The procedures in this topic require membership in the PolicyAdministratorRole role in the msdb database.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

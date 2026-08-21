@@ -28,28 +28,10 @@ helpviewer_keywords:
   Before a database mirroring session can start, the database owner or system administrator must make sure that the mirror database has been created and is ready for mirroring. Creating a new mirror database minimally requires taking a full backup of the principal database and a subsequent log backup and restoring them both onto the mirror server instance, using WITH NORECOVERY.  
   
  This topic describes how to prepare a mirror database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
--   **Before you begin:**  
-  
-     [Requirements](#Requirements)  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   [To Prepare an Existing Mirror Database to Restart Mirroring](#PrepareToRestartMirroring)  
-  
--   [To Prepare a New Mirror Database](#CombinedProcedure)  
-  
--   **Follow Up:**  [After Preparing a Mirror Database](#FollowUp)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Requirements"></a> Requirements  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Requirements"></a> Requirements  
   
 -   The principal and mirror server instances must be running on the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. While it is possible for the mirror server to have a higher version of SQL Server, this configuration is only recommended during a carefully planned upgrade process. In such a configuration, you run the risk of an automatic failover, in which data movement is automatically suspended because data cannot move to a lower version of SQL Server. For more information, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
@@ -65,13 +47,13 @@ helpviewer_keywords:
   
 -   The system where you plan to create the mirror database must possess a disk drive with sufficient space to hold the mirror database.  
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   You cannot mirror the **master**, **msdb**, **temp**, or **model** system databases.  
   
 -   You cannot mirror a database that belongs to an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations  
   
 -   Use a very recent full database backup or a recent differential database backup of the principal database.  
   
@@ -87,14 +69,20 @@ helpviewer_keywords:
 -   If the principal database has any full-text catalogs, we recommend that you see [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md).  
   
 -   For a production database, always back up to a separate device.  
-  
-###  <a name="Security"></a> Security  
+
+<a id="Security"></a>
+
+## Security
+
  TRUSTWORTHY is set to OFF when a database is backed up. Therefore, TRUSTWORTHY is always OFF on a new mirror database. If the database needs to be trustworthy after a failover, additional setup steps are necessary. For more information, see [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
  For information about enabling automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
-####  <a name="Permissions"></a> Permissions  
- Database owner or system administrator.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Database owner or system administrator.  
   
 ##  <a name="PrepareToRestartMirroring"></a> To Prepare an Existing Mirror Database to Restart Mirroring  
  If mirroring has been removed and the mirror database is still in the RECOVERING state, you can restart mirroring.  

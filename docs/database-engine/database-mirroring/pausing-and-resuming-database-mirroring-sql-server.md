@@ -25,14 +25,6 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 >  Following a forced service, when the original principal server reconnects mirroring is suspended. Resuming mirroring in this situation could possibly cause data loss on the original principal server. For information about managing the potential data loss, see [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
- **In this Topic:**  
-  
--   [How Pausing and Resuming Affect Log Truncation](#EffectOnLogTrunc)  
-  
--   [Avoid a Full Transaction Log](#AvoidFullLog)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
 ##  <a name="EffectOnLogTrunc"></a> How Pausing and Resuming Affect Log Truncation  
  Normally, when an automatic checkpoint is performed on a database, its transaction log is truncated to that checkpoint after the next log backup. While a database mirroring session remains paused, all of the current log records remain active because the principal server is waiting to send them to the mirror server. The unsent log records accumulate in the transaction log of the principal database until the session resumes and the principal server has sent the log records to the mirror server.  
   

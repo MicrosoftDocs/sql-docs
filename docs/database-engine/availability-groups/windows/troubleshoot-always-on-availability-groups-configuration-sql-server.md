@@ -19,22 +19,7 @@ helpviewer_keywords:
   
 > [!NOTE]  
 >  Ensure that you're meeting the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prerequisites. For more information, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
-  
- **In This Topic:**  
-  
-|Section|Description|  
-|-------------|-----------------|  
-|[Always On Availability Groups Isn't Enabled](#IsHadrEnabled)|If an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] isn't enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the instance doesn't support availability group creation and can't host any availability replicas.|  
-|[Accounts](#Accounts)|Discusses requirements for correctly configuring the accounts under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running.|  
-|[Endpoints](#Endpoints)|Discusses how to diagnose issues with the database mirroring endpoint of a server instance.|  
-|[Network access](#NetworkAccess)|Documents the requirement that each server instance that's hosting an availability replica must be able to access the port of each of the other server instances over TCP.|  
-|[Listener](#Listener)|Documents how to establish the IP address and port of the listener and make sure it's running and listening for incoming connections|  
-|[Endpoint Access (SQL Server Error 1418)](#Msg1418)|Contains information about this [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error message.|  
-|[Join Database Fails (SQL Server Error 35250)](#JoinDbFails)|Discusses the possible causes and resolution of a failure to join secondary databases to an availability group because the connection to the primary replica isn't active.|  
-|[Read-Only Routing isn't Working Correctly](#ROR)||  
-|[Related Tasks](#RelatedTasks)|Contains a list of task-oriented articles in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] Books Online that are relevant to troubleshooting an availability group configuration.|  
-|[Related Content](#RelatedContent)|Contains a list of relevant resources that are external to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.|  
-  
+
 ##  <a name="IsHadrEnabled"></a> Always On Availability Groups Isn't Enabled  
 
 The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must be enabled on each of the instances of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. 

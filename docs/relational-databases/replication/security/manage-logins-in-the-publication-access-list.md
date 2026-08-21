@@ -20,22 +20,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 # Manage Logins in the Publication Access List
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to manage logins in the Publication Access List in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Access to a publication is controlled by the publication access list (PAL). Logins and groups can be added and removed from the PAL.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
--   **To manage logins in the Publication Access List, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Prerequisites"></a> Prerequisites
   
 -   You must associate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login with a database user in the publication database before you add the login to the PAL.  
   

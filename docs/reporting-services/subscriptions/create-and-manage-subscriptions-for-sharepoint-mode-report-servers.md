@@ -27,20 +27,6 @@ helpviewer_keywords:
   
 -   **E-mail:** If the report server is configured to use the Report Server E-mail delivery extension, you can create a subscription that sends a report or an exported report file (saved in an output format) to your in-box. To receive just the notification without the report or report URL, clear the **Include a link to this report** and the **Show report inside message** checkboxes.  
   
- **In this topic:**  
-  
--   [General requirements for subscriptions](#bkmk_subscription_requirements)  
-  
--   [Create a subscription to deliver a report to a SharePoint library](#bkmk_tosharepoint_library)  
-  
--   [Create a subscription to deliver a report to a SharePoint library](#bkmk_tosharepoint_library)  
-  
--   [Create a subscription for report server e-mail delivery](#bkmk_subscription_for_email)  
-  
--   [View or modify a subscription](#bkmk_to_modify_subscription)  
-  
--   [Delete a subscription](#bkmk_to_delete_subscription)  
-  
 ##  <a name="bkmk_subscription_requirements"></a> General requirements for subscriptions  
  To create a subscription, the report must use stored credentials and you must have permission to view the report and create alerts.  
   

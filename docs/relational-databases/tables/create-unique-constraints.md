@@ -25,8 +25,11 @@ You can create a unique constraint in [!INCLUDE [ssnoversion](../../includes/ssn
   
 > [!NOTE]
 > For information on unique constraints in Azure Synapse Analytics, see [Primary key, foreign key, and unique key in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints).
-  
-## <a id="Security"></a> <a name="Permissions"></a> Permissions
+
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
 
 Requires ALTER permission on the table.  
 

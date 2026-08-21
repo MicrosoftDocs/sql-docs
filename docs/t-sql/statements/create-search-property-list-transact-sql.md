@@ -79,8 +79,11 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
- Requires CREATE FULLTEXT CATALOG permissions in the current database and REFERENCES permissions on any database from which you copy a source property list.  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires CREATE FULLTEXT CATALOG permissions in the current database and REFERENCES permissions on any database from which you copy a source property list.  
   
 > [!NOTE]  
 >  REFERENCES permission is required to associate the list with a full-text index. CONTROL permission is required to add and remove properties or drop the list. The property list owner can grant REFERENCES or CONTROL permissions on the list. Users with CONTROL permission can also grant REFERENCES permission to other users.  

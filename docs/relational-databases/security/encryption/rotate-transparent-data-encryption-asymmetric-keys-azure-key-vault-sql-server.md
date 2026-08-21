@@ -30,7 +30,9 @@ Use this procedure after you configure TDE with Azure Key Vault. For initial set
 >
 > Don't delete previous key versions after rotation. Earlier versions might still be required to restore older backups, transaction logs, or other recovery artifacts.
 
-## Before you begin
+<a id="before-you-begin"></a>
+
+## Prerequisites
 
 - Complete the initial EKM and TDE setup.
 - Verify that SQL Server can currently access the key vault.

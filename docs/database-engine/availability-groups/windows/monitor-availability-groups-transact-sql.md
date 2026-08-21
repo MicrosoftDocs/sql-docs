@@ -25,8 +25,11 @@ helpviewer_keywords:
 >  Many of these views can be joined using their ID columns to return information from multiple views in a single query.  
   
   
-##  <a name="Permissions"></a> Permissions  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] catalog views require VIEW ANY DEFINITION permission on the server instance. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dynamic management views require VIEW SERVER STATE permission on the server.  
+<a id="Permissions"></a>
+
+## Permissions
+
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] catalog views require VIEW ANY DEFINITION permission on the server instance. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dynamic management views require VIEW SERVER STATE permission on the server.  
   
 ##  <a name="AoAgFeatureOnSI"></a> Monitoring the Always On Availability Groups Feature on a Server Instance  
  To monitor the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on a server instance, use the following built-in function:  

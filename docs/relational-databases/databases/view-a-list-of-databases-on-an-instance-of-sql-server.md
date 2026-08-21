@@ -26,7 +26,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 This article describes how to view a list of databases on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)].
 
-## <a name="Security"></a><a name="Permissions"></a> Permissions
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
 
 If the caller of `sys.databases` is not the owner of the database and the database is not `master` or `tempdb`, the minimum permissions required to see the corresponding row are ALTER ANY DATABASE or VIEW ANY DATABASE server-level permission, or CREATE DATABASE permission in the `master` database. The database to which the caller is connected can always be viewed in `sys.databases`.
 

@@ -29,7 +29,7 @@ A planned manual failover is supported only when the primary replica and the tar
 >[!IMPORTANT]
 >There are specific procedures to fail over a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over the primary replica on a read-scale availability group](#fail-over-the-primary-replica-on-a-read-scale-availability-group).
 
-###  <a name="Restrictions"></a> Limitations and restrictions 
+##  <a name="Restrictions"></a> Limitations and restrictions 
   
 - A failover command returns as soon as the target secondary replica has accepted the command. However, database recovery occurs asynchronously after the availability group has finished failing over. 
 - Cross-database consistency across databases within the availability group might not be maintained on failover. 
@@ -37,7 +37,7 @@ A planned manual failover is supported only when the primary replica and the tar
     > [!NOTE] 
     >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-database transactions and distributed transactions for Always On availability groups and database mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
   
-###  <a name="Prerequisites"></a> Prerequisites and restrictions 
+##  <a name="Prerequisites"></a> Prerequisites and restrictions 
   
 -   Both the target secondary replica and the primary replica must be running in synchronous-commit availability mode. 
 -   Currently, the target secondary replica must be synchronized with the primary replica. All the secondary databases on this secondary replica must be joined to the availability group. They also must be synchronized with their corresponding primary databases (that is, the local secondary databases must be SYNCHRONIZED). 
@@ -46,10 +46,12 @@ A planned manual failover is supported only when the primary replica and the tar
     >  To determine the failover readiness of a secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) dynamic management view. Or you can look at the **Failover Readiness** column of the [Always On group dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   This task is supported only on the target secondary replica. You must be connected to the server instance that hosts the target secondary replica. 
   
-###  <a name="Security"></a> Security 
-  
-####  <a name="Permissions"></a> Permissions 
- The ALTER AVAILABILITY GROUP permission is required on the availability group. The CONTROL AVAILABILITY GROUP permission, the ALTER ANY AVAILABILITY GROUP permission, or the CONTROL SERVER permission also is required. 
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+The ALTER AVAILABILITY GROUP permission is required on the availability group. The CONTROL AVAILABILITY GROUP permission, the ALTER ANY AVAILABILITY GROUP permission, or the CONTROL SERVER permission also is required. 
   
 ##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio 
  To manually fail over an availability group: 

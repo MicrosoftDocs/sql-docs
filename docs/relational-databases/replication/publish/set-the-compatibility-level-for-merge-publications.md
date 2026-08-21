@@ -18,14 +18,6 @@ helpviewer_keywords:
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to set the compatibility level for merge publications in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Merge replication uses the publication compatibility level to determine which features can be used by publications in a given database.  
   
- **In This Topic**  
-  
--   **To set the compatibility level for merge publications, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Set the compatibility level on the **Subscriber Types** page of the New Publication Wizard. For more information on accessing this wizard, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md). After a publication snapshot is created, the compatibility level can be increased but cannot be decreased. Increase the compatibility level on the **General** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). If you increase the publication compatibility level, any existing subscriptions at servers running versions prior to the compatibility level will no longer be able to synchronize.  
   

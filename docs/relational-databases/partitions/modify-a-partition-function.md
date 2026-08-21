@@ -39,8 +39,11 @@ Table partitioning is also available in dedicated SQL pools in Azure Synapse Ana
   
 -   All filegroups that are affected by ALTER PARTITION FUNCTION must be online.  
   
-##  <a name="Permissions"></a> Permissions  
- Any one of the following permissions can be used to execute ALTER PARTITION FUNCTION:  
+<a id="Permissions"></a>
+
+## Permissions
+
+Any one of the following permissions can be used to execute ALTER PARTITION FUNCTION:  
   
 -   ALTER ANY DATASPACE permission. This permission defaults to members of the **sysadmin** fixed server role and the **db_owner** and **db_ddladmin** fixed database roles.  
   

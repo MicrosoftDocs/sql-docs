@@ -20,9 +20,11 @@ ms.custom:
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  This topic describes how to configure publishing and distribution in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).
 
-##  <a name="BeforeYouBegin"></a> Before You Begin 
+<a id="BeforeYouBegin"></a>
+<a id="Security"></a>
 
-###  <a name="Security"></a> Security 
+## Security
+
 For more information, see [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio 

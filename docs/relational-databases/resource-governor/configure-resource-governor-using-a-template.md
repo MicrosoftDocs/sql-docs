@@ -25,7 +25,7 @@ Use the following steps to open and modify a template that creates a resource po
 
 <a id="Permissions"></a>
 
-### Permissions
+## Permissions
 
 The resource governor [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the template require the `CONTROL SERVER` permission.
 

@@ -14,16 +14,6 @@ helpviewer_keywords:
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic discusses how to prepare to change to the partially contained database model and then provides the migration steps.  
   
- **In this topic:**  
-  
--   [Preparing to Migrate a Database](#prepare)  
-  
--   [Enable Contained Databases](#enable)  
-  
--   [Converting a Database to Partially Contained](#convert)  
-  
--   [Migrating Users to Contained Database Users](#users)  
-  
 ##  <a name="prepare"></a> Preparing to Migrate a Database  
  Review the following items when considering migrating a database to the partially contained database model.  
   

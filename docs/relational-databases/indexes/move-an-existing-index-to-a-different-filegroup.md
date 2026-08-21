@@ -23,18 +23,21 @@ monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-mi-
 
 For design considerations including why you might want to place a nonclustered index on a different filegroup, see [Index Placement on Filegroups or Partitions Schemes](../sql-server-index-design-guide.md#Index_placement).
 
-##  <a name="BeforeYouBegin"></a> Before you begin  
-  
-###  <a name="Restrictions"></a> Limitations and restrictions  
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Restrictions"></a> Limitations and restrictions
   
 -   If a table has a clustered index, moving the clustered index to a new filegroup moves the table to that filegroup.  
   
 -   You cannot move indexes created using a UNIQUE or PRIMARY KEY constraint using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. To move these indexes use the [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) statement with the (DROP_EXISTING=ON) option in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
   
 ##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio  
   

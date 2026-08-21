@@ -19,10 +19,13 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 # Create Synonyms
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
   This article describes how to create a synonym in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
-###  <a name="Security"></a> Security  
- To create a synonym in a given schema, a user must have CREATE SYNONYM permission and either own the schema or have ALTER SCHEMA permission. The CREATE SYNONYM permission is a grantable permission.  
-   
+
+<a id="Security"></a>
+
+## Security
+
+To create a synonym in a given schema, a user must have CREATE SYNONYM permission and either own the schema or have ALTER SCHEMA permission. The CREATE SYNONYM permission is a grantable permission.  
+
 ##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio  
   
 ### Create a Synonym  

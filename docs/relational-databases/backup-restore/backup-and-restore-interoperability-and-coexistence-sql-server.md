@@ -19,20 +19,6 @@ helpviewer_keywords:
 
   This topic describes backup-and-restore considerations for several features in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. These features include: file restore and database startup, online restore and disabled indexes, database mirroring, and piecemeal restore and full-text indexes.  
   
- **In this Topic:**  
-  
--   [File Restore and Database Startup](#FileRestoreAndDbStartup)  
-  
--   [Online Restore and Disabled Indexes](#OnlineRestoreAndDisabledIndexes)  
-  
--   [Database Mirroring and Backup and Restore](#DbMandBnR)  
-  
--   [Piecemeal Restore and Full-Text Indexes](#PiecemealAndFTIndexes)  
-  
--   [File Backup and Restore and Compression](#FileBnRandCompression)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
 ##  <a name="FileRestoreAndDbStartup"></a> File Restore and Database Startup  
  This section is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that have multiple filegroups.  
   

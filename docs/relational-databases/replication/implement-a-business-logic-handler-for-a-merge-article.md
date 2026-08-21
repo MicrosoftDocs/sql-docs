@@ -36,14 +36,6 @@ dev_langs:
   
  The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can impact performance. For more information about business logic handlers, see [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
- **In This Topic**  
-  
--   **To implement a business logic handler for a merge article, using:**  
-  
-     [Replication Programming](#ReplProg)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
-  
 ##  <a name="ReplProg"></a> Using Replication Programming  
   
 #### To create and deploy a business logic handler  

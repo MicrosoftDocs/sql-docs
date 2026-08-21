@@ -21,7 +21,6 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 You can delete a resource pool by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 <a id="BeforeYouBegin"></a>
-
 <a id="LimitationsRestrictions"></a>
 
 ## Limitations
@@ -31,7 +30,7 @@ You can delete a resource pool by using either [!INCLUDE[ssManStudioFull](../../
 
 <a id="Permissions"></a>
 
-### Permissions
+## Permissions
 
 Deleting a resource pool requires `CONTROL SERVER` permission.
 

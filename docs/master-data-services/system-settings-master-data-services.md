@@ -116,8 +116,10 @@ helpviewer_keywords:
 ||**VersionStatusChangeHTML**|In HTML format, the text of the email users get when the status of a version changes. Only users with **Update** permission to the entire model receive this email.|  
   
  For more information, see [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
-  
-##  <a name="Security"></a> Security Settings  
+
+<a id="Security"></a>
+
+## Security settings
   
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  

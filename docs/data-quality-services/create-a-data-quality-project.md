@@ -21,15 +21,19 @@ ms.custom:
 
   This topic describes how to create a data quality project by using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. A data quality project is used to run the cleansing or matching activity in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
- You must have a relevant knowledge base to use in the data quality project for the cleansing or matching activity.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to create a data quality project.  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+You must have a relevant knowledge base to use in the data quality project for the cleansing or matching activity.  
+
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to create a data quality project.  
   
 ##  <a name="Create"></a> Create a Data Quality Project  
   

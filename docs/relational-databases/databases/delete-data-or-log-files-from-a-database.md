@@ -19,31 +19,19 @@ helpviewer_keywords:
 # Delete Data or Log Files from a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to delete data or log files in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To delete data or logs files from a database, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Prerequisites"></a> Prerequisites
   
 -   A file must be empty before it can be deleted. For more information, see [Shrink a File](../../relational-databases/databases/shrink-a-file.md).  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the database.  
+
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the database.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

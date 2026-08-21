@@ -27,7 +27,10 @@ A computed column is a virtual column that isn't physically stored in the table,
 - A computed column can't be the target of an INSERT or UPDATE statement.
 - `SET QUOTED_IDENTIFIER` must be `ON` when you're creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
-## <a id="Security"></a> Permissions
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
 
 Requires ALTER permission on the table.
 

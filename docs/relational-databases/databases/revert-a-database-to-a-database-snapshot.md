@@ -13,20 +13,10 @@ helpviewer_keywords:
 # Revert a Database to a Database Snapshot
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   If data in an online database becomes damaged, in some cases, reverting the database to a database snapshot that predates the damage might be an appropriate alternative to restoring the database from a backup. For example, reverting a database might be useful for reverse a recent serious user error, such as a dropped table. However, all changes made after the snapshot was created are lost.  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Restrictions"></a> Limitations and Restrictions
  Reverting is unsupported under the following conditions:  
   
 -   There are multiple snapshots for the database. For reverting, there must only be one snapshot for the database, to which you plan to revert.  
@@ -57,7 +47,7 @@ helpviewer_keywords:
   
 -   Reverting drops all the full-text catalogs.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites
  Ensure that the source database and database snapshot meet the following prerequisites:  
   
 -   Verify that the database has not become corrupted.  
@@ -69,10 +59,13 @@ helpviewer_keywords:
   
 -   Drop any other snapshots that currently exist on the database. For more information, see [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- Any user who has RESTORE DATABASE permissions on the source database can revert it to its state when a database snapshot was created.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Any user who has RESTORE DATABASE permissions on the source database can revert it to its state when a database snapshot was created.  
   
 ##  <a name="TsqlProcedure"></a> How to Revert a Database to a Database Snapshot (Using Transact-SQL)  
  **To revert a database to a database snapshot**  

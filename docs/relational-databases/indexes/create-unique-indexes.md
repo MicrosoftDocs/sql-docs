@@ -27,28 +27,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 > [!NOTE]  
 >  You cannot create a unique index on a single column if that column contains NULL in more than one row. Similarly, you cannot create a unique index on multiple columns if the combination of columns contains NULL in more than one row. These are treated as duplicate values for indexing purposes.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Benefits of a Unique Index](#Benefits)  
-  
-     [Typical Implementations](#Implementations)  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To create a unique index on a table, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Benefits"></a> Benefits of a Unique Index  
+
+<a id="BeforeYouBegin"></a>
+
+##  <a name="Benefits"></a> Benefits of a Unique Index
   
 -   Multicolumn unique indexes guarantee that each combination of values in the index key is unique. For example, if a unique index is created on a combination of **LastName**, **FirstName**, and **MiddleName** columns, no two rows in the table could have the same combination of values for these columns.  
   
@@ -58,7 +40,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 -   Unique indexes provide additional information helpful to the query optimizer that can produce more efficient execution plans.  
   
-###  <a name="Implementations"></a> Typical Implementations  
+##  <a name="Implementations"></a> Typical Implementations
  Unique indexes are implemented in the following ways:  
   
 -   **PRIMARY KEY or UNIQUE constraint**  
@@ -79,16 +61,19 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
      To create an indexed view, a unique clustered index is defined on one or more view columns. The view is executed and the result set is stored in the leaf level of the index in the same way table data is stored in a clustered index. For more information, see [Create Indexed Views](../../relational-databases/views/create-indexed-views.md).  
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and Restrictions
   
 -   A unique index, UNIQUE constraint, or PRIMARY KEY constraint cannot be created if duplicate key values exist in the data.  
   
 -   A unique nonclustered index can contain included nonkey columns. For more information, see [Create an index with included columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

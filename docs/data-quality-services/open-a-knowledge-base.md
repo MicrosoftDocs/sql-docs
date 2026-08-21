@@ -18,15 +18,19 @@ ms.custom:
 
   This topic describes how to open an existing knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), and prepare it for domain management, knowledge discovery, or adding a matching policy.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To open a knowledge base, the knowledge base must have already been created, and either published (if another person created it) or have been closed (if you created it).  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To open a knowledge base, the knowledge base must have already been created, and either published (if another person created it) or have been closed (if you created it).  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN database to open a knowledge base.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN database to open a knowledge base.  
   
 ##  <a name="Open"></a> Open a knowledge base  
   

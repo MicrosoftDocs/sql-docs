@@ -18,15 +18,19 @@ ms.custom:
 
   This topic describes how to set domain properties in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To set properties for a domain, you must have created a knowledge base and a domain.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To set properties for a domain, you must have created a knowledge base and a domain.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to set properties on a domain.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to set properties on a domain.  
   
 ##  <a name="Set"></a> Set Domain Properties  
   

@@ -25,8 +25,12 @@ This article describes how to set a user-defined database to single-user mode in
   
 -   Before you set the database to SINGLE_USER, verify that the AUTO_UPDATE_STATISTICS_ASYNC option is set to `OFF`. When this option is set to `ON`, the background thread that is used to update statistics takes a connection against the database, and you will be unable to access the database in single-user mode. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-## <a id="Security"></a> Permissions
- Requires ALTER permission on the database.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires ALTER permission on the database.  
   
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
   

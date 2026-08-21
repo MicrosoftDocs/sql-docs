@@ -27,15 +27,19 @@ ms.custom:
   
  Cross-domain rules are taken into consideration after all simple rules that affect only a single domain. Only if a value passes single domain rules (if they exist) is the cross-domain rule applied. The composite domain and the single domains that a rule is run on must all be defined before the rule can be executed.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To create a cross-domain rule, you must have created and opened a composite domain.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To create a cross-domain rule, you must have created and opened a composite domain.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create a cross-domain rule.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create a cross-domain rule.  
   
 ##  <a name="Create"></a> Create Cross-Domain Rules  
   

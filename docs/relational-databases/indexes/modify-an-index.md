@@ -22,15 +22,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 > [!IMPORTANT]  
 >  Indexes created as the result of a PRIMARY KEY or UNIQUE constraint cannot be modified by using this method. Instead, the constraint must be modified.  
-  
- **In This Topic**  
-  
--   **To modify an index, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To modify an index  

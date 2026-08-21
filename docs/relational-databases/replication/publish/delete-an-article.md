@@ -24,14 +24,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to delete an article in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] or Replication Management Objects (RMO). For information about the conditions under which articles can be dropped and whether dropping an article requires a new snapshot or the reinitialization of subscriptions, see [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- **In This Topic**  
-  
--   **To delete an article, using:**  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
-  
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  Articles can be deleted programmatically using replication stored procedures. The stored procedures that you use depend on the type of publication to which the article belongs.  
   

@@ -20,7 +20,9 @@ This article introduces [SQL Server PowerShell](/powershell/sql-server/sql-serve
 
 The [SQL Server PowerShell module](/powershell/sql-server/download-sql-server-ps-module) on Windows is maintained in the PowerShell Gallery. When working with SQL Server, you should always use the most recent version of the SqlServer PowerShell module.
 
-## Before you begin
+<a id="before-you-begin"></a>
+
+## Prerequisites
 
 Read the [Known issues](sql-server-linux-known-issues.md) for SQL Server on Linux.
 

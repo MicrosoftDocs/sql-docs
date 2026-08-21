@@ -13,8 +13,8 @@ ms.custom: sfi-image-nochange
 
 # Restore the master database in Analytics Platform System (APS)
 The **Restore Master** page of the SQL Server PDW Configuration Manager enables you to restore the `master` database from a backup.  
-  
-## Before you begin
+
+<a id="before-you-begin"></a>
   
 > [!IMPORTANT]  
 > To perform the restore, SQL Server PDW must delete the current `master` database, which contains user security information and the database catalog. We recommend making a backup of the current `master` database before performing the restore.  

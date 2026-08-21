@@ -20,23 +20,22 @@ helpviewer_keywords:
   
 > [!IMPORTANT]  
 >  If a database mirroring endpoint exists and is already in use, we recommend that you use that endpoint. Dropping an in-use endpoint disrupts existing sessions.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  [Security](#Security)  
-  
--   **To create a database mirroring endpoint, using:**  [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
+
+<a id="BeforeYouBegin"></a>
+<a id="Security"></a>
+
+## Security
+
  The authentication and encryption methods of the server instance are established by the system administrator.  
   
 > [!WARNING]  
 >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.  
   
-####  <a name="Permissions"></a> Permissions  
- Requires `CREATE ENDPOINT` permission, or membership in the `sysadmin` fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+<a id="Permissions"></a>
+
+## Permissions
+
+Requires `CREATE ENDPOINT` permission, or membership in the `sysadmin` fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

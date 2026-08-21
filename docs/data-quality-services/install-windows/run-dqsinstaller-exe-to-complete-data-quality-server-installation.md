@@ -16,8 +16,10 @@ ms.custom:
 
   To complete the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation, you must run the DQSInstaller.exe file after installing [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. This topic describes how to run the DQSInstaller.exe from the **Start** screen, **Start** menu, Windows Explorer, or Command Prompt; you can choose any of the ways to run the DQSInstaller.exe file.  
   
-##  <a name="Prerequisites"></a> Prerequisites  
-  
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
 -   You must have selected **Data Quality Services** under **Database Engine Services** on the Feature Selection page in the SQL Server setup while installing SQL Server, and must have completed the SQL Server installation. For more information, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
   
 -   Your Windows user account must be a member of the sysadmin fixed server role in the SQL Server database engine instance.  

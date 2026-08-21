@@ -46,15 +46,19 @@ ms.custom:
   
  If you import data quality knowledge gathered during the cleansing process into a domain, a value that is changed by a TBR will be imported as a correct value.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+<a id="BeforeYouBegin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
+To create term-based relations, you must have a domain opened in the Domain Management activity.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- To create term-based relations, you must have a domain opened in the Domain Management activity.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create term-based relations.  
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN database to create term-based relations.  
   
 ##  <a name="Create"></a> Create Term-Based Relations  
   

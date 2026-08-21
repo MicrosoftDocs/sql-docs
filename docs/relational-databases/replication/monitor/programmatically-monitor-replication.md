@@ -43,12 +43,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 -   Monitor the status of tracer tokens.  
   
- **In this topic:**  
-  
- [Transact-SQL](#Tsql)  
-  
- [Replication Management Objects (RMO)](#RMO)  
-  
 ##  <a name="Tsql"></a> Transact-SQL  
   
 #### To monitor Publishers, publications, and subscriptions from the Distributor  

@@ -19,14 +19,6 @@ helpviewer_keywords:
   
  A database mirroring monitoring job, **Database Mirroring Monitor Job**, operates in the background, independently of Database Mirroring Monitor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent calls **Database Mirroring Monitor Job** at regular intervals, the default is once a minute, and the job calls a stored procedure that updates mirroring status. If you use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to start a mirroring session, **Database Mirroring Monitor Job** is created automatically. However, if you only use ALTER DATABASE *<database_name>* SET PARTNER to start mirroring, you must create the job by running a stored procedure.  
   
- **In this Topic:**  
-  
--   [Monitoring Mirroring Status](#MonitoringStatus)  
-  
--   [Additional Sources of Information About a Mirrored Database](#AdditionalSources)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
 ##  <a name="MonitoringStatus"></a> Monitoring Mirroring Status  
  To set up and manage monitoring for one or more of the mirrored databases on a server instance, you can use either Database Mirroring Monitor or the **dbmmonitor** system stored procedures. You can monitor a mirrored database during a mirroring session to verify whether and how well data is flowing.  
   

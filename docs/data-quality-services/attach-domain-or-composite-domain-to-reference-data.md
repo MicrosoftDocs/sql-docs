@@ -29,15 +29,19 @@ ms.custom:
   
  In this topic, we will create four domains: **Address Line**, **City**, **State**, and **Zip**, under a composite domain, **Address Verification**, attach the composite domain to the **Melissa Data - Address Check** reference data service, and then map the individual domains within the composite domain to appropriate columns in the reference data service schema.  
   
-## Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
+<a id="before-you-begin"></a>
+<a id="Prerequisites"></a>
+
+## Prerequisites
+
  You must have configured [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) to use reference data services. See [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md).  
-  
-###  <a name="Security"></a> Security  
-  
-#### Permissions  
- You must have the dqs_kb_editor role on the DQS_MAIN database to map domains to reference data.  
+
+<a id="Security"></a>
+<a id="Permissions"></a>
+
+## Permissions
+
+You must have the dqs_kb_editor role on the DQS_MAIN database to map domains to reference data.  
   
 ##  <a name="Map"></a> Map domains to reference data from Melissa Data  
   

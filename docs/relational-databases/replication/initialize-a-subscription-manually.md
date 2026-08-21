@@ -19,10 +19,9 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to initialize a subscription manually in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. While the initial snapshot is normally used to initialize a subscription, subscriptions to publications can be initialized without using a snapshot, provided that the schema and initial data are already present at the subscriber.  
   
+<a id="BeforeYouBegin"></a>
 
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and Restrictions
   
 -   If there is activity on a database published using transactional replication between the time data and schema are copied to the Subscriber and the time at which the subscription is manually initialized, changes resulting from this activity might not be replicated to the Subscriber.  
   

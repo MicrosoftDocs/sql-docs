@@ -3,7 +3,7 @@ title: Connection Pooling with mssql-python
 description: Learn how to configure and use connection pooling to improve application performance with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -88,6 +88,28 @@ Each unique connection string maintains its own independent pool. Pools don't sh
 conn1 = mssql_python.connect("Server=<server1>;Database=<database1>;...")
 conn2 = mssql_python.connect("Server=<server2>;Database=<database2>;...")
 ```
+
+### Identity isolation
+
+Starting in mssql-python 1.13.0, pools for token-based authentication are also separated by the Microsoft Entra identity that opened the connection. Two callers that use the same connection string with different identities get separate pools, so a connection authenticated as one principal is never handed to another.
+
+The pool key depends on the authentication method:
+
+| Authentication | Pool key |
+| --- | --- |
+| SQL authentication, trusted connections, service principals, and Windows interactive authentication | Connection string only |
+| Managed identity | Connection string, plus the client ID or the system-assigned identity |
+| Interactive and device code authentication | Connection string, plus the signed-in account |
+| `DefaultAzureCredential`, a custom `token_provider`, and raw access tokens | Connection string, plus a hash of the token |
+
+Because the token hash is part of the key for the last group, each distinct token gets its own pool. A long-lived credential that returns a cached token continues to reuse one pool. Idle identity pools are reclaimed in the background.
+
+The driver also acquires tokens only when it needs to open a new connection. In earlier versions, every `connect()` call acquired a token even when the pool returned an existing connection.
+
+Pooled connections whose token is within 5 minutes of expiry are refreshed before the connection is handed out, so long-lived pools don't return connections that are about to fail.
+
+> [!IMPORTANT]
+> In mssql-python 1.12.0 and earlier versions, the pool keyed only on the connection string. If your application authenticates with more than one Microsoft Entra identity in the same process, upgrade to mssql-python 1.13.0.
 
 ### Connection lifecycle
 

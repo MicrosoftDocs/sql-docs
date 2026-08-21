@@ -4,18 +4,21 @@ description: "In these instructions, learn how to install the Microsoft Drivers 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 03/27/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.custom: intro-installation, linux-related-content
 ---
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
 
-The following instructions assume a clean environment and show how to install PHP 8.3, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu, Red Hat, Debian, SUSE, Alpine, and macOS. These instructions advise installing the drivers using PECL. You can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we don't add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+The following instructions assume a clean environment and show how to install PHP 8.3, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu, Red Hat, Debian, SUSE, Alpine, and macOS. You can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we don't add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-The following instructions install PHP 8.3 by default using `pecl install`, if the PHP 8.3 packages are available. You might need to run `pecl channel-update pecl.php.net` first. Some supported Linux distros default to old versions of PHP, which aren't supported for the latest version of the PHP drivers for SQL Server. To install PHP 8.4 or 8.5 instead, see the notes at the beginning of each section.
+Install the drivers with PIE, the PHP Installer for Extensions. PIE is the official installer for PHP extensions and replaces PECL, which is deprecated. For the commands, see [Install the drivers with PIE](#install-the-drivers-with-pie). The per-platform sections in this article use PECL, which still works.
+
+The following instructions install PHP 8.3 by default, if the PHP 8.3 packages are available. Some supported Linux distros default to old versions of PHP, which aren't supported for the latest version of the PHP drivers for SQL Server. To install PHP 8.4 or 8.5 instead, see the notes at the beginning of each section. If you install with PECL, you might need to run `pecl channel-update pecl.php.net` first.
 
 Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. PHP-FPM is needed if you're using the nginx web server instead of Apache.
 
@@ -25,6 +28,40 @@ For the latest supported operating systems versions, see [Support Matrix](micros
 
 > [!NOTE]
 > Make sure to install the latest ODBC driver version to ensure optimal performance and security. For installation instructions, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) or [Install the Microsoft ODBC driver for SQL Server (macOS)](../odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+
+## Install the drivers with PIE
+
+[PIE](https://github.com/php/pie), the PHP Installer for Extensions, is the official installer for PHP extensions and replaces PECL, which is deprecated. The Microsoft Drivers for PHP for SQL Server support PIE in version 5.13.2 and later versions on Linux and macOS.
+
+PIE installs the drivers only. Complete Step 1 and Step 2 for your platform first, so that PHP and the Microsoft ODBC driver are already in place.
+
+### Install PIE
+
+PIE requires PHP 8.1 and later versions to run, but it can install an extension into any other PHP installation on the machine. PIE is distributed as a PHAR archive, in the same way as Composer.
+
+The following commands install PIE to `/usr/local/bin/pie`:
+
+```bash
+curl -fL --output /tmp/pie.phar https://github.com/php/pie/releases/latest/download/pie.phar
+gh attestation verify --owner php /tmp/pie.phar
+sudo mv /tmp/pie.phar /usr/local/bin/pie
+sudo chmod +x /usr/local/bin/pie
+```
+
+The `gh attestation verify` command uses the [GitHub CLI](https://cli.github.com/) to confirm that the PHAR was published by the PIE project. For other ways to install PIE, see the [PIE documentation](https://github.com/php/pie).
+
+### Install the SQLSRV and PDO_SQLSRV drivers
+
+Install each driver with its own command:
+
+```bash
+pie install microsoft/sqlsrv
+pie install microsoft/pdo_sqlsrv
+```
+
+PIE might need elevated privileges and can prompt you for your password. On Linux and macOS, PIE offers to install any missing build tools before it compiles the extension.
+
+Install the two drivers separately rather than in a single command. They're independent of each other, and PIE fails when several extensions named in one command share configure options.
 
 ## Installing on Ubuntu
 
@@ -48,7 +85,7 @@ Install the ODBC driver for Ubuntu by following the instructions on the [Install
 sudo apt-get install unixodbc-dev
 ```
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Ubuntu)
+### Step 3. Install the PHP drivers for Microsoft SQL Server with PECL (Ubuntu)
 
 ```bash
 sudo pecl install sqlsrv
@@ -105,7 +142,7 @@ systemctl status php8.3-fpm
 
 Install the ODBC driver for Ubuntu by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Ubuntu with PHP-FPM)
+### Step 3. Install the PHP drivers for Microsoft SQL Server with PECL (Ubuntu with PHP-FPM)
 
 ```bash
 sudo pecl config-set php_ini /etc/php/8.3/fpm/php.ini
@@ -191,7 +228,7 @@ dnf install php-pdo php-pear php-devel
 
 Install the ODBC driver for Red Hat 8 by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Red Hat)
+### Step 3. Install the PHP drivers for Microsoft SQL Server with PECL (Red Hat)
 
 ```bash
 sudo pecl install sqlsrv
@@ -258,7 +295,7 @@ locale-gen
 
 You might need to add `/usr/sbin` to your `$PATH`, as the `locale-gen` executable is located there.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Debian)
+### Step 3. Install the PHP drivers for Microsoft SQL Server with PECL (Debian)
 
 ```bash
 sudo pecl install sqlsrv
@@ -308,7 +345,7 @@ zypper -n install php8 php8-pdo php8-devel php8-openssl
 
 Install the ODBC driver for SUSE by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (SUSE)
+### Step 3. Install the PHP drivers for Microsoft SQL Server with PECL (SUSE)
 
 ```bash
 sudo pecl install sqlsrv
@@ -370,7 +407,7 @@ ln -s /usr/bin/php-config8 /usr/bin/php-config
 
 Install the ODBC driver for Alpine by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package (`sudo apk add unixodbc-dev`). It's used by the `pecl` command to install the PHP drivers.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Alpine)
+### Step 3. Install the PHP drivers for Microsoft SQL Server with PECL (Alpine)
 
 ```bash
 sudo pecl install sqlsrv
@@ -439,7 +476,7 @@ In addition, you might need to install the GNU make tools:
 brew install autoconf automake libtool
 ```
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (macOS)
+### Step 3. Install the PHP drivers for Microsoft SQL Server with PECL (macOS)
 
 ```bash
 sudo pecl install sqlsrv

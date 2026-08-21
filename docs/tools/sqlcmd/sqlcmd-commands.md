@@ -3,7 +3,7 @@ title: Commands in the sqlcmd Utility
 description: Control sqlcmd with extra commands for editing, variables, output, and execution control.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: dlevy
+ms.reviewer: mahyon
 ms.date: 04/22/2026
 ms.service: sql
 ms.subservice: tools-other

@@ -3,7 +3,7 @@ title: Execute T-SQL from a Script File with sqlcmd
 description: Learn how to use sqlcmd to run a Transact-SQL script file. It can contain Transact-SQL statements, sqlcmd commands, and scripting variables.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: dlevy, maghan, mathoma
+ms.reviewer: mahyon
 ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: tools-other

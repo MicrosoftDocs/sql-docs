@@ -43,6 +43,7 @@ Use aggregate functions as expressions only in the following situations:
 - [GROUPING_ID](grouping-id-transact-sql.md)
 - [MAX](max-transact-sql.md)
 - [MIN](min-transact-sql.md)
+- [PRODUCT](product-aggregate-transact-sql.md)
 - [STDEV](stdev-transact-sql.md)
 - [STDEVP](stdevp-transact-sql.md)
 - [STRING_AGG](string-agg-transact-sql.md)

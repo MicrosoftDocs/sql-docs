@@ -46,7 +46,7 @@ f1_keywords:
  **Create new package ID**  
  When upgrading [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] packages, create new package IDs for the upgraded versions of the packages.  
   
-## See Also  
- [Security Overview &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
- [Extending Packages with Scripting](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
+## Related content
+
+- [Security Overview (Integration Services)](security/security-overview-integration-services.md)
+- [Extending Packages with Scripting](extending-packages-scripting/extending-packages-with-scripting.md)

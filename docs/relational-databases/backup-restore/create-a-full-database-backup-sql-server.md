@@ -436,7 +436,7 @@ Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $back
 - [Backup overview (SQL Server)](backup-overview-sql-server.md)
 - [Transaction log backups (SQL Server)](transaction-log-backups-sql-server.md)
 - [Media sets, media families, and backup sets (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)
-- [sp_addumpdevice (Transact-SQL)](../system-stored-procedures/sp-addumpdevice-transact-sql.md)
+- [sys.sp_addumpdevice (Transact-SQL)](../system-stored-procedures/sp-addumpdevice-transact-sql.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
 - [Back Up Database (General Page)](back-up-database-general-page.md)
 - [Back Up Database (Backup Options Page)](back-up-database-backup-options-page.md)

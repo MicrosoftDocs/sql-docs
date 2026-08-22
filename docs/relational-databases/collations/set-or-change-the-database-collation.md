@@ -156,10 +156,9 @@ When a database collation is changed, only new tables inherit the new database c
 - [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
 - [SQL Server Collation Name (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)
 - [Windows collation name (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)
-- [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)
+- [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)
 - [Collation precedence](../../t-sql/statements/collation-precedence-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-

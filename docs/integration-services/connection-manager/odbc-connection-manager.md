@@ -60,6 +60,6 @@ helpviewer_keywords:
   
  **Delete**  
  Select a connection, and then delete it by using the **Delete** button.  
-## See Also  
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Connections](integration-services-ssis-connections.md)

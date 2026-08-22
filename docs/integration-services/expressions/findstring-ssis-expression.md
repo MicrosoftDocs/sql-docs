@@ -69,8 +69,7 @@ FINDSTRING(Name, "n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## See Also  
- [REPLACE &#40;SSIS Expression&#41;](../../integration-services/expressions/replace-ssis-expression.md)   
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
-  
-  
+## Related content
+
+- [REPLACE (SSIS Expression)](replace-ssis-expression.md)
+- [Functions (SSIS Expression)](functions-ssis-expression.md)

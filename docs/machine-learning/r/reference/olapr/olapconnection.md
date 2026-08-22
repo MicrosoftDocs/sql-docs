@@ -65,11 +65,6 @@ ms.custom: sfi-ropc-nochange
 
 
 
-## See also
-
-[Query](Query.md), [executeMD](ExecuteMD.md), [execute2D](Execute2D.md), [explore](Explore.md)
-
-
 ## Examples
 
  ```
@@ -80,3 +75,9 @@ ms.custom: sfi-ropc-nochange
   olapCnn <- OlapConnection(cnnstr)
 ```
 
+## Related content
+
+- [Query: olapR Query Construction](Query.md)
+- [executeMD: olapR executeMD Methods](ExecuteMD.md)
+- [execute2D: olapR execute2D Methods](Execute2D.md)
+- [explore: olapR explore Method](Explore.md)

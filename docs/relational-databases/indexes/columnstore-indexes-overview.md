@@ -266,11 +266,11 @@ All of the columns in a columnstore index are stored in the metadata as included
 ## Related content
 
 - [What's new in columnstore indexes](columnstore-indexes-what-s-new.md)
-- [Columnstore indexes - Data loading guidance](columnstore-indexes-data-loading-guidance.md)
-- [Columnstore indexes - Query performance](columnstore-indexes-query-performance.md)
-- [Get started with Columnstore for real-time operational analytics](get-started-with-columnstore-for-real-time-operational-analytics.md)
+- [Columnstore indexes - data loading guidance](columnstore-indexes-data-loading-guidance.md)
+- [Columnstore indexes - query performance](columnstore-indexes-query-performance.md)
+- [Get started with columnstore indexes for real-time operational analytics](get-started-with-columnstore-for-real-time-operational-analytics.md)
 - [Columnstore indexes in data warehousing](columnstore-indexes-data-warehouse.md)
 - [Columnstore indexes defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)
-- [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
+- [Index architecture and design guide](../sql-server-index-design-guide.md)
 - [Columnstore index architecture](../sql-server-index-design-guide.md#columnstore_index)
 - [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)

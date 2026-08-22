@@ -99,6 +99,6 @@ The stored procedure object typically does not have any data or values associate
 > [!NOTE]
 > The *executeStoredProcedure* function requires an ODBC 3.8 provider, such as ODBC Driver 13 for SQL Server.  
 
-## See also
+## Related content
 
-[How to create a stored procedure using sqlrutils](reference/sqlrutils/how-to-create-stored-procedure-from-r.md)
+- [Convert R code to a stored procedure using sqlrutils](reference/sqlrutils/how-to-create-stored-procedure-from-r.md)

@@ -89,6 +89,6 @@ WHERE o.is_memory_optimized=1
   
  Creating natively compiled stored procedures after you load the data ensures that the optimizer has statistics available for the memory-optimized tables. This will ensure efficient query plans when the procedure is compiled.  
 
-## See Also  
- [Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)  
-  
+## Related content
+
+- [Sample database for in-memory OLTP](sample-database-for-in-memory-oltp.md)

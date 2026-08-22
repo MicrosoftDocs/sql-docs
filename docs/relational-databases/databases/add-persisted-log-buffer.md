@@ -133,8 +133,8 @@ When both persistent log buffer and [Hybrid Buffer Pool](../../database-engine/c
 
 Normal restore conditions apply. If persistent log buffer is restored to a DAX volume or mount, it continues to function. If the log is restored to a non-DAX disk volume, it can be safely removed using the `ALTER DATABASE REMOVE FILE` command.
 
-## Next steps
+## Related content
 
 - [How It Works (It Just Runs Faster): Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](https://techcommunity.microsoft.com/t5/sql-server-blog/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server/ba-p/3209699)
 - [Transaction Commit latency acceleration using Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](https://techcommunity.microsoft.com/t5/sql-server-blog/transaction-commit-latency-acceleration-using-storage-class/ba-p/384995)
-- [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md)
+- [Hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md)

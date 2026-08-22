@@ -14,8 +14,7 @@ f1_keywords:
 
   The **Finish** page summarizes the wizard process. Click **Finish** to close the wizard and generate all of the tables you defined in the Create CDC Instance wizard.  
   
-## See Also  
- [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
-  
-  
+## Related content
+
+- [How to Create the SQL Server Change Database Instance](how-to-create-the-sql-server-change-database-instance.md)
+- [Use the New Instance Wizard](use-the-new-instance-wizard.md)

@@ -30,10 +30,9 @@ helpviewer_keywords:
   
 5.  To add and enable additional nodes to the cluster at any time, you can repeat steps 2, 3, and 4.  
   
-## See Also  
- [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
- [Remove a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)   
- [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
-  
-  
+## Related content
+
+- [Server configuration options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+- [Create a New Always On Failover Cluster Instance (Setup)](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)
+- [Remove a failover cluster instance (Setup)](../../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)
+- [Add or remove nodes in a failover cluster instance (Setup)](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)

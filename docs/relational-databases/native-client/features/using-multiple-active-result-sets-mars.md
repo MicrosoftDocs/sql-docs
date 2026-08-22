@@ -227,8 +227,7 @@ SQLFetch(hstmt1);
 SQLFetch(hstmt2);  
 ```  
   
-## See Also  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Using SQL Server Default Result Sets](../../../relational-databases/native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Features](sql-server-native-client-features.md)
+- [Using SQL Server Default Result Sets](../../native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)

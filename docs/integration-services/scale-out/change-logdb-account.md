@@ -42,5 +42,6 @@ GO
 ## 4. Restart the Scale Out Worker service
 Restart the Scale Out Worker service to make the change effective.
 
-## Next steps
--   [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md)
+## Related content
+
+- [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md)

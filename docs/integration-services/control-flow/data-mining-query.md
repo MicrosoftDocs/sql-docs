@@ -57,7 +57,7 @@ f1_keywords:
  **Criteria/Argument**  
  Specify a condition or user expression that applies to the column. Columns can be dragged from the tables containing the mining model and input columns to the cell.  
   
-## See Also  
- [Data Mining Query Tools](/analysis-services/data-mining/data-mining-query-tools)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../../dmx/data-mining-extensions-dmx-statements.md)  
-  
+## Related content
+
+- [Data Mining Query Tools](/analysis-services/data-mining/data-mining-query-tools)
+- [Data Mining Extensions (DMX) Statements](../../dmx/data-mining-extensions-dmx-statements.md)

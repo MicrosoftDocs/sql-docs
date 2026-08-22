@@ -379,6 +379,7 @@ dev_langs:
     }  
     ```  
   
-## Related content  
- [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
- [Developing a Custom Source Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
+## Related content
+
+- [Creating a Destination with the Script Component](creating-a-destination-with-the-script-component.md)
+- [Developing a Custom Source Component](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)

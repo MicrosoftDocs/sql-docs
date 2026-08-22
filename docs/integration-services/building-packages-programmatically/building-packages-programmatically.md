@@ -68,23 +68,11 @@ ms.topic: "reference"
  [Saving a Package Programmatically](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  Describes how to save a package programmatically.  
   
-## Reference  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
-  
-## Related Sections  
- [Extending Packages with Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
- Discusses how to extend the control flow by using the Script task, and how to extend the data flow by using the Script component.  
-  
- [Extending Packages with Custom Objects](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
- Discusses how to create program custom tasks, data flow components, and other package objects for use in multiple packages.  
-  
- [Running and Managing Packages Programmatically](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
- Discusses how to enumerate, run, and manage packages and the folders in which they are stored.  
-  
-## External Resources  
-  
--   Blog entry, [Performance profiling your custom extensions](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-profiling-your-custom-extensions/ba-p/387490), on blogs.msdn.com.  
+## Related content
 
-## See Also  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
+- [Integration Services error and message reference](../integration-services-error-and-message-reference.md)
+- [Extending Packages with Scripting](../extending-packages-scripting/extending-packages-with-scripting.md)
+- [Extending Packages with Custom Objects](../extending-packages-custom-objects/extending-packages-with-custom-objects.md)
+- [Running and Managing Packages Programmatically](../run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)
+- [Performance profiling your custom extensions](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-profiling-your-custom-extensions/ba-p/387490)
+- [SQL Server Integration Services](../sql-server-integration-services.md)

@@ -41,6 +41,7 @@ ms.custom:
   
 6.  Click **Save**.  
   
-## See Also  
- [Automatic Code Creation &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [Automatically Generate Attribute Values Other Than Code &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)
+## Related content
+
+- [Automatic Code Creation (Master Data Services)](automatic-code-creation-master-data-services.md)
+- [Automatically Generate Attribute Values Other Than Code (Master Data Services)](automatically-generate-attribute-values-other-than-code-master-data-services.md)

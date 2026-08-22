@@ -20,7 +20,7 @@ apitype: "DLLExport"
   
  Improvements in the database engine starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] allow SQLNumResultCols to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by SQLNumResultCols in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
-## See Also  
- [SQLNumResultCols Function](../../odbc/reference/syntax/sqlnumresultcols-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLNumResultCols Function](../../odbc/reference/syntax/sqlnumresultcols-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

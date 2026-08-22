@@ -64,10 +64,8 @@ helpviewer_keywords:
   
 10. Repeat this procedure for all attributes you want to include in the group. Use the same change tracking group number for each attribute in the group.  
   
-## Next Steps  
-  
--   [Initiate Actions Based on Attribute Value Changes &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
-  
-## See Also  
- [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)
+## Related content
+
+- [Create a Text Attribute (Master Data Services)](create-a-text-attribute-master-data-services.md)
+- [Create a Domain-Based Attribute (Master Data Services)](create-a-domain-based-attribute-master-data-services.md)
+- [Initiate Actions Based on Attribute Value Changes (Master Data Services)](initiate-actions-based-on-attribute-value-changes-master-data-services.md)

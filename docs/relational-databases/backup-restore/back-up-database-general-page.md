@@ -122,11 +122,10 @@ If you selected **URL** as the backup destination, the following options are dis
   **New Container:**  
 Used to register an existing container that you do not have a shared access signature for.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## See Also  
- [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
- [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
- [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
-  
-  
+## Related content
+
+- [Back up a transaction log](back-up-a-transaction-log-sql-server.md)
+- [Back Up Files and Filegroups](back-up-files-and-filegroups-sql-server.md)
+- [Define a Logical Backup Device for a Disk File (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)
+- [Define a Logical Backup Device for a Tape Drive (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)
+- [Recovery models (SQL Server)](recovery-models-sql-server.md)

@@ -250,11 +250,10 @@ DBCC xp_hello(FREE);
 ## Related content
 
 - [Common language runtime (CLR) integration](../clr-integration/common-language-runtime-integration-overview.md)
-- [CLR Table-Valued Functions](../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)
-- [Database Engine Extended Stored Procedures - Programming](database-engine-extended-stored-procedures-programming.md)
-- [Querying Extended Stored Procedures Installed in SQL Server](database-engine-extended-stored-procedures-programming.md)
+- [CLR table-valued functions](../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)
+- [Programming Database Engine extended stored procedures](database-engine-extended-stored-procedures-programming.md)
 - [srv_got_attention (Extended Stored Procedure API)](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)
-- [sp_addextendedproc (Transact-SQL)](../system-stored-procedures/sp-addextendedproc-transact-sql.md)
-- [sp_dropextendedproc (Transact-SQL)](../system-stored-procedures/sp-dropextendedproc-transact-sql.md)
-- [sp_helpextendedproc (Transact-SQL)](../system-stored-procedures/sp-helpextendedproc-transact-sql.md)
+- [sys.sp_addextendedproc (Transact-SQL)](../system-stored-procedures/sp-addextendedproc-transact-sql.md)
+- [sys.sp_dropextendedproc (Transact-SQL)](../system-stored-procedures/sp-dropextendedproc-transact-sql.md)
+- [sys.sp_helpextendedproc (Transact-SQL)](../system-stored-procedures/sp-helpextendedproc-transact-sql.md)
 - [DBCC dllname (FREE) (Transact-SQL)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)

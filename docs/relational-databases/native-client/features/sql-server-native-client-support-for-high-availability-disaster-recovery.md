@@ -127,8 +127,7 @@ ms.topic: "reference"
   
  When implicit connections are established, the implicit connection will use the application intent setting of the parent connection. Similarly, multiple sessions created from the same data source will inherit the data source's application intent setting.  
   
-## See Also  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Features](sql-server-native-client-features.md)
+- [Using Connection String Keywords with SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md)

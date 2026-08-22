@@ -80,8 +80,8 @@ print(sys.version)
 print(sys.executable)'
 ```
 
-## Next steps
+## Related content
 
-+ [Install an R custom runtime for SQL Server](custom-runtime-r.md)
-+ [Extensibility framework in SQL Server](../concepts/extensibility-framework.md)
-+ [Language Extensions Overview](../../language-extensions/language-extensions-overview.md)
+- [Install an R custom runtime for SQL Server](custom-runtime-r.md)
+- [Extensibility architecture in SQL Server Machine Learning Services](../concepts/extensibility-framework.md)
+- [What is SQL Server Language Extensions?](../../language-extensions/language-extensions-overview.md)

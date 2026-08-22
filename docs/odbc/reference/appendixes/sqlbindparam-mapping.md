@@ -30,5 +30,6 @@ SQLBindParameter(   StatementHandle,    ParameterNumber,    SQL_PARAM_INPUT,    
   
  See [ODBC 64-Bit Information](../../../odbc/reference/odbc-64-bit-information.md), if your application will run on a 64-bit operating system.  
   
-## See Also  
- [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)
+## Related content
+
+- [Mapping Deprecated Functions](mapping-deprecated-functions.md)

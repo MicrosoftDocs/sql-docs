@@ -108,7 +108,7 @@ Permission to run **sp_spaceused** is granted to the **public** role. Only membe
 ## Related content
 
 - [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
-- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-- [Add data or log files to a database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)
-- [Delete data or log files from a database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)
+- [sys.database_files (Transact-SQL)](../system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../system-stored-procedures/sp-spaceused-transact-sql.md)
+- [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)
+- [Delete Data or Log Files from a Database](delete-data-or-log-files-from-a-database.md)

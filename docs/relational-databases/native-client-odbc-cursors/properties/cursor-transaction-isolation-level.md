@@ -33,7 +33,6 @@ helpviewer_keywords:
   
  Note that the ODBC API specifies additional transaction isolation levels, but these are not supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver.  
   
-## See Also  
- [Cursor Properties](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
-  
-  
+## Related content
+
+- [Cursor Properties](cursor-properties.md)

@@ -84,7 +84,7 @@ This task uses the `sp_notify_operator` stored procedure.
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [sp_notify_operator (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [sp_notify_operator (Transact-SQL)](../system-stored-procedures/sp-notify-operator-transact-sql.md)

@@ -107,7 +107,6 @@ public class ScriptMain
   
 ```  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](../../integration-services-ssis-variables.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Variables](../../integration-services-ssis-variables.md)

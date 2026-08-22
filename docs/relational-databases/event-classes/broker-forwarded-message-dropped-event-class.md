@@ -55,7 +55,6 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
   
  The TextData column of this event contains a description of the reason that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dropped the message.  
   
-## See Also  
- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
-  
-  
+## Related content
+
+- [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)

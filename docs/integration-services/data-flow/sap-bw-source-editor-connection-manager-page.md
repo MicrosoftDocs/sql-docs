@@ -116,9 +116,9 @@ f1_keywords:
  **Request ID**  
  Enter the Request ID that is associated with the extraction.  
   
-## See Also  
- [SAP BW Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [SAP BW Source Editor &#40;Advanced Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
- [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
+## Related content
+
+- [SAP BW Source Editor (Columns Page)](sap-bw-source-editor-columns-page.md)
+- [SAP BW Source Editor (Error Output Page)](sap-bw-source-editor-error-output-page.md)
+- [SAP BW Source Editor (Advanced Page)](sap-bw-source-editor-advanced-page.md)
+- [Microsoft Connector for SAP BW F1 Help](../microsoft-connector-for-sap-bw-f1-help.md)

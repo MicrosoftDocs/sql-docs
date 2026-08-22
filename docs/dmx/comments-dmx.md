@@ -28,15 +28,14 @@ ms.custom: dmx
   
 -   **/\* ... \*/ (forward slash-asterisk character pairs).** Use these comment characters to write a comment on the same line as the code that is to be executed, to write a comment on a line by itself, or even to write comments within executable code. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] evaluates everything from the open comment pair (/*) to the close comment pair (\*/) as part of the comment. To create a multiple-line comment, start the comment with the open-comment character pair (/\*), and end the comment with the close-comment character pair (\*/). No other comment characters should be included on any lines of the comment. For more information about this comment character, see [Slash Star &#40;Comment&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Understanding the DMX Select Statement](../dmx/understanding-the-dmx-select-statement.md)  
-  
-  
+## Related content
+
+- [Data Mining Extensions (DMX) Reference](data-mining-extensions-dmx-reference.md)
+- [Data Mining Extensions (DMX) Function Reference](data-mining-extensions-dmx-function-reference.md)
+- [Data Mining Extensions (DMX) Operator Reference](data-mining-extensions-dmx-operator-reference.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)
+- [Data Mining Extensions (DMX) Syntax Conventions](data-mining-extensions-dmx-syntax-conventions.md)
+- [Data Mining Extensions (DMX) Syntax Elements](data-mining-extensions-dmx-syntax-elements.md)
+- [General Prediction Functions (DMX)](general-prediction-functions-dmx.md)
+- [Structure and Usage of DMX Prediction Queries](structure-and-usage-of-dmx-prediction-queries.md)
+- [Understanding the DMX Select Statement](understanding-the-dmx-select-statement.md)

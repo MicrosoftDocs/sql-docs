@@ -98,11 +98,10 @@ helpviewer_keywords:
   
 -   [Remove Defunct Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## See Also  
- [File Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [File Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
- [Restore Pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
- [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
- [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)  
-  
-  
+## Related content
+
+- [File Restores (Full Recovery Model)](file-restores-full-recovery-model.md)
+- [File Restores (Simple Recovery Model)](file-restores-simple-recovery-model.md)
+- [Restore Pages (SQL Server)](restore-pages-sql-server.md)
+- [Piecemeal Restores (SQL Server)](piecemeal-restores-sql-server.md)
+- [Restore and recovery overview (SQL Server)](restore-and-recovery-overview-sql-server.md)

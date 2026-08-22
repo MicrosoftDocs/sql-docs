@@ -45,7 +45,8 @@ helpviewer_keywords:
   
 8.  Click **Save derived hierarchy**.  
   
-## See Also  
- [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
- [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Delete a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)
+## Related content
+
+- [Derived Hierarchies (Master Data Services)](derived-hierarchies-master-data-services.md)
+- [Create a Derived Hierarchy (Master Data Services)](create-a-derived-hierarchy-master-data-services.md)
+- [Delete a Derived Hierarchy (Master Data Services)](delete-a-derived-hierarchy-master-data-services.md)

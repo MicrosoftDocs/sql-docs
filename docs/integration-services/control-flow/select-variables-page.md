@@ -30,6 +30,6 @@ helpviewer_keywords:
  **Type**  
  Specifies the data type of a variable.  
   
-## See Also  
- [Script Task Editor &#40;Script Page&#41;](./script-task.md)  
-  
+## Related content
+
+- [Script Task](script-task.md)

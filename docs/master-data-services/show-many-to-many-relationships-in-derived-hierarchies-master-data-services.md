@@ -101,5 +101,6 @@ For instructions on deploying the Customer sample model, and other sample models
 ## Collections  
  Collections and Explicit Hierarchies are deprecated. The conversion stored procedure (udpConvertCollectionAndConsolidatedMembersToLeaf) converts collection members to leaf members and creates many-to-many Derived Hierarchies to capture collection membership info.  
   
-## See Also  
- [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)
+## Related content
+
+- [Derived Hierarchies (Master Data Services)](derived-hierarchies-master-data-services.md)

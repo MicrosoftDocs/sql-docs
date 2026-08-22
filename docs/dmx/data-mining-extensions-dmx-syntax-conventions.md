@@ -22,8 +22,6 @@ ms.custom: dmx
 |, ...|Indicates that the item before the comma can be repeated any number of times. The items are separated by commas.|  
 |\<label> ::=|The name for a block of syntax. This convention is used to group and label sections of lengthy syntax or a unit of syntax that can be used in more than one location within a statement. Each location in which the block of syntax can be used is indicated with the label enclosed in chevrons, such as \<label>.|  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)  
-  
-  
+## Related content
 
+- [Data Mining Extensions (DMX) Reference](data-mining-extensions-dmx-reference.md)

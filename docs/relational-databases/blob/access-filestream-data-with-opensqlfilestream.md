@@ -90,7 +90,8 @@ HANDLE OpenSqlFilestream (
 
 This sample was originally written for the SQL Server Native Client (sqlncli.h) but has been updated to use the Microsoft OLE DB Driver (msoledbsql.h) for SQL Server. [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
   
-## See Also  
- [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [Make Partial Updates to FILESTREAM Data](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)   
- [Avoid Conflicts with Database Operations in FILESTREAM Applications](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
+## Related content
+
+- [Binary Large Object (Blob) Data (SQL Server)](binary-large-object-blob-data-sql-server.md)
+- [Make Partial Updates to FILESTREAM Data](make-partial-updates-to-filestream-data.md)
+- [Avoid conflicts with database operations in FILESTREAM applications](avoid-conflicts-with-database-operations-in-filestream-applications.md)

@@ -225,9 +225,9 @@ To fix this issue, you need upgrade the database version:
 
 1. Select **Finish** after all tasks are complete.
 
-## See also
+## Related content
 
-- [Master Data Services Database](../master-data-services/master-data-services-database.md)
-- [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)
-- [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
-- [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [Master Data Services Database](master-data-services-database.md)
+- [Master Data Manager Web Application](master-data-manager-web-application.md)
+- [Database Configuration Page (Master Data Services Configuration Manager)](database-configuration-page-master-data-services-configuration-manager.md)
+- [What's New in Master Data Services (MDS)](what-s-new-in-master-data-services-mds.md)

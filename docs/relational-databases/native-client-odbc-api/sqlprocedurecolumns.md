@@ -66,7 +66,7 @@ apitype: "DLLExport"
 ## SQLProcedureColumns Support for Large CLR UDTs  
  **SQLProcedureColumns** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## See Also  
- [SQLProcedureColumns Function](../../odbc/reference/syntax/sqlprimarykeys-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLPrimaryKeys Function](../../odbc/reference/syntax/sqlprimarykeys-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

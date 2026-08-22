@@ -44,8 +44,8 @@ Hinge loss.
 Margin value (settings).
 
 
-## See also
+## Related content
 
-[`log_loss`](log-loss.md),
-[`smoothed_hinge_loss`](smoothed-hinge-loss.md),
-[`squared_loss`](squared-loss.md)
+- [*microsoftml.log_loss*: Log loss function](log-loss.md)
+- [*microsoftml.smoothed_hinge_loss*: Smoothed hinge loss function](smoothed-hinge-loss.md)
+- [*microsoftml.squared_loss*: Squared loss function](squared-loss.md)

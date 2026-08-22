@@ -38,6 +38,6 @@ In all cases including when errors are returned, Close releases all resources fo
 
 It is important to ensure that the completion agent has been terminated before the COM library is unloaded. If the library is unloaded before the completion agent returns to its caller, then the process could cause an instruction violation.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

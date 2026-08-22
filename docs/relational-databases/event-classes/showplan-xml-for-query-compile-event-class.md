@@ -54,8 +54,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |XactSequence|**bigint**|Token used to describe the current transaction.|50|Yes|  
 |GroupID|**int**|ID of the workload group where the SQL Trace event fires.|66|Yes|  
   
-## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
+## Related content
 
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [Logical and physical showplan operator reference](../showplan-logical-and-physical-operators-reference.md)

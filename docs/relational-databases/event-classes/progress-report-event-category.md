@@ -23,8 +23,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |-----------|-----------------|  
 |[Progress Report: Online Index Operation Event Class](../../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)|Indicates the progress of an online index build operation.|  
   
-## See Also  
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
-  
-  
+## Related content
 
+- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)

@@ -112,8 +112,7 @@ helpviewer_keywords:
  **MaxNumberOfViolations**  
  Specify the maximum number of functional dependency violations to report in the output. The default value of this property is 100. This option is disabled when **Exact** is selected as the **ThresholdSetting**.  
   
-## See Also  
- [Data Profiling Task Editor &#40;General Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
-  
-  
+## Related content
+
+- [Data Profiling Task Editor (General Page)](data-profiling-task-editor-general-page.md)
+- [Single Table Quick Profile Form (Data Profiling Task)](single-table-quick-profile-form-data-profiling-task.md)

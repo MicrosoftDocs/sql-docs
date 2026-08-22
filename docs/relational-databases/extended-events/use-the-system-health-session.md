@@ -81,6 +81,6 @@ There's no built-in `system_health` Extended Event session in [!INCLUDE [ssazure
 
 - [Extended Events overview](extended-events.md)
 - [Database Engine events and errors](../errors-events/database-engine-events-and-errors.md)
-- [Messages (for errors) Catalog Views - sys.messages](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
+- [Messages (for errors) catalog views - sys.messages](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
 - [Extended Events Tools](extended-events-tools.md)
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)

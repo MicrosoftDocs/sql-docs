@@ -53,7 +53,6 @@ EXEC create_execution_dump @execution_id = 88
   
 -   The package is currently creating a dump file.  
   
-## See Also  
- [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
-  
+## Related content
+
+- [Generating Dump Files for Package Execution](../troubleshooting/generating-dump-files-for-package-execution.md)

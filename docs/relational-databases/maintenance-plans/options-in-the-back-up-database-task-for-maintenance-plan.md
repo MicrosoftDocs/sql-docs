@@ -158,6 +158,6 @@ Use the **Back Up Database Task** dialog to add a backup task to the maintenance
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)

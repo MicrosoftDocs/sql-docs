@@ -47,7 +47,7 @@ apitype: "DLLExport"
 ## SQLBindParameter Support for Large CLR UDTs  
  **SQLBindParameter** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## See Also  
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SQLBindParameter Function](../../odbc/reference/syntax/sqlbindparameter-function.md)  
-  
+## Related content
+
+- [ODBC API implementation details](odbc-api-implementation-details.md)
+- [SQLBindParameter Function](../../odbc/reference/syntax/sqlbindparameter-function.md)

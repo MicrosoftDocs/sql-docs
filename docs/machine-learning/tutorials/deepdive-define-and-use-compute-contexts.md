@@ -135,7 +135,7 @@ Sometimes operations work on your local context, but have issues when running in
     rxSetComputeContext(sqlComputeTrace)
     ```
 
-## Next steps
+## Next step
 
 Learn how to switch compute contexts to run R code on the server or locally.
 

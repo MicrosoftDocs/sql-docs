@@ -112,7 +112,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## See also
+## Related content
 
-+ [Python tutorials](../tutorials/python-tutorials.md)
-+ [Python Reference](/machine-learning-server/python-reference/introducing-python-package-reference)
+- [Python tutorials for SQL machine learning](../tutorials/python-tutorials.md)
+- [Python Reference](/machine-learning-server/python-reference/introducing-python-package-reference)

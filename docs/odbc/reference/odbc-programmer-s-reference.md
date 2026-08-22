@@ -121,7 +121,7 @@ For more information about ODBC, many books are available, including:
 
 ## Related content
 
-- [ODBC API Reference](../../odbc/reference/syntax/odbc-reference.md)
-- [Developing Applications](../../odbc/reference/develop-app/developing-applications.md)
+- [ODBC Reference](syntax/odbc-reference.md)
+- [Developing Applications](develop-app/developing-applications.md)
 - [DSN and connection string keywords and attributes](../../connect/odbc/dsn-connection-string-attribute.md)
 - [Download ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)

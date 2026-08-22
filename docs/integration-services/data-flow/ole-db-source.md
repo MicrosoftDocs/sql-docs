@@ -103,9 +103,6 @@ helpviewer_keywords:
   
 -   [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## Related Content  
-[SSIS with Oracle Connectors](../../integration-services/data-flow/oracle-connector.md)
-  
 ## OLE DB Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **OLE DB Source Editor** dialog box to select the OLE DB connection manager for the source. This page also lets you select a table or view from the database.  
   
@@ -218,8 +215,9 @@ helpviewer_keywords:
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
- [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
+## Related content
+
+- [Microsoft Connector for Oracle](oracle-connector.md)
+- [OLE DB Destination](ole-db-destination.md)
+- [Integration Services (SSIS) Variables](../integration-services-ssis-variables.md)
+- [Data Flow](data-flow.md)

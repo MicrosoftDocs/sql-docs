@@ -342,7 +342,7 @@ public class ScriptMain:
 }  
 ```  
   
-## Related content  
- [Creating a Source with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
- [Developing a Custom Destination Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
-  
+## Related content
+
+- [Creating a Source with the Script Component](creating-a-source-with-the-script-component.md)
+- [Developing a Custom Destination Component](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)

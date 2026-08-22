@@ -59,6 +59,6 @@ helpviewer_keywords:
  **Test Connection**  
  Test the connection as configured.  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Connections](integration-services-ssis-connections.md)

@@ -41,7 +41,7 @@ helpviewer_keywords:
   
  For existing databases, you can use the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement to add a FILESTREAM filegroup.  
   
-## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
-  
+## Related content
+
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

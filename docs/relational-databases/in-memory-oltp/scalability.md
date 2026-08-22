@@ -43,6 +43,6 @@ The In-memory OLTP engine continues to use memory-optimized filegroup based on F
 
 ## Related content
 
-- [Creating and Managing Storage for Memory-Optimized Objects](creating-and-managing-storage-for-memory-optimized-objects.md)
+- [Create and manage storage for memory-optimized objects](creating-and-managing-storage-for-memory-optimized-objects.md)
 - [Database files and filegroups](../databases/database-files-and-filegroups.md)
 - [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)

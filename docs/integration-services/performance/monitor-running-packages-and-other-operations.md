@@ -197,6 +197,7 @@ f1_keywords:
   
     -   **All Connections**  
 
-## See Also  
- [Execution of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [Troubleshooting Reports for Package Execution](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+## Related content
+
+- [Deploy Integration Services (SSIS) Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)
+- [Troubleshooting Reports for Package Execution](../troubleshooting/troubleshooting-reports-for-package-execution.md)

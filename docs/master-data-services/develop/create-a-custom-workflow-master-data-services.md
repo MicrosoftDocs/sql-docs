@@ -147,6 +147,7 @@ ms.custom:
 ### View the Service Broker Queue  
  The Service Broker queue that contains the master data passed as part of the workflow is: mdm.microsoft/mdm/queue/externalaction. Queues can be found in the **Object Explorer** of SQL Management Studio under the Service Broker node of the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. Be aware that, if the service cleared the queue properly, this queue will be empty.  
   
-## See Also  
- [Custom Workflow Example &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
- [Custom Workflow XML Description &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)
+## Related content
+
+- [Create a Custom Workflow - Example](create-a-custom-workflow-example.md)
+- [Create a Custom Workflow - XML Description](create-a-custom-workflow-xml-description.md)

@@ -49,7 +49,8 @@ ms.custom:
 > [!NOTE]  
 >  When a business rule contains a condition that compares two values, and the rule is applied to a member for which both values are NULL, that member will fail validation.  
   
-## See Also  
- [Business Rule Actions &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Create and Publish a Business Rule &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)
+## Related content
+
+- [Business Rule Actions (Master Data Services)](business-rule-actions-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Create and Publish a Business Rule (Master Data Services)](create-and-publish-a-business-rule-master-data-services.md)

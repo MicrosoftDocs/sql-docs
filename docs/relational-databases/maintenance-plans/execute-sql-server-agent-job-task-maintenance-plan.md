@@ -76,8 +76,8 @@ This task uses the **.`sp_start_job` statement.
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
-- [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)
+- [sp_add_job (Transact-SQL)](../system-stored-procedures/sp-add-job-transact-sql.md)
 - [Create a Job](/ssms/agent/create-a-job)
-- [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)
+- [sp_start_job (Transact-SQL)](../system-stored-procedures/sp-start-job-transact-sql.md)

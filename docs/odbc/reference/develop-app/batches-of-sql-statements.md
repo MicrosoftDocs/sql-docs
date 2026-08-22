@@ -61,6 +61,6 @@ The different types of batches can't be mixed in an interoperable manner. That i
 
 ## Related content
 
-- [Result-Generating and Result-Free Statements](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)
-- [Executing Batches](../../../odbc/reference/develop-app/executing-batches.md)
-- [Errors and Batches](../../../odbc/reference/develop-app/errors-and-batches.md)
+- [Result-Generating and Result-Free Statements](result-generating-and-result-free-statements.md)
+- [Executing Batches](executing-batches.md)
+- [Errors and Batches](errors-and-batches.md)

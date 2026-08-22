@@ -25,6 +25,6 @@ ms.topic: "reference"
     [Microsoft][SQL Server Native Client 11.0][SQL Server]USE statement is not supported to switch between databases. Use a new connection to connect to a different Database.  
     ```  
   
-## See Also  
- [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
-  
+## Related content
+
+- [Building Applications with SQL Server Native Client](building-applications-with-sql-server-native-client.md)

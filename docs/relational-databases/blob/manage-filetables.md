@@ -222,6 +222,7 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC and FileTables  
  You can use DBCC CHECKCONSTRAINTS to validate the constraints on a FileTable including system-defined constraints.  
   
-## See Also  
- [FileTable Compatibility with Other SQL Server Features](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
- [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
+## Related content
+
+- [FileTable compatibility with other SQL Server features](filetable-compatibility-with-other-sql-server-features.md)
+- [FileTable DDL, functions, stored procedures, and views](filetable-ddl-functions-stored-procedures-and-views.md)

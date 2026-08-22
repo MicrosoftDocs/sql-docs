@@ -98,9 +98,6 @@ helpviewer_keywords:
 > 
 >  For more information, see [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) and [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
-## External Resources  
- Technical article, [Loading data to Azure SQL Database the fast way](https://techcommunity.microsoft.com/t5/datacat/loading-data-to-sql-azure-the-fast-way/ba-p/305066), on sqlcat.com  
-  
 ## ADO NET Destination Editor (Mappings Page)
   Use the **Mappings** page of the **ADO NET Destination Editor** dialog box to map input columns to destination columns.  
   
@@ -160,3 +157,6 @@ helpviewer_keywords:
  **Apply**  
  Apply the error handling option to the selected cells.  
   
+## Related content
+
+- [Loading data to Azure SQL Database the fast way](https://techcommunity.microsoft.com/t5/datacat/loading-data-to-sql-azure-the-fast-way/ba-p/305066)

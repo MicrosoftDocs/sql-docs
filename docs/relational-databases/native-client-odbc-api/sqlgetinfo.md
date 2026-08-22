@@ -199,7 +199,7 @@ apitype: "DLLExport"
 |SQL_UNION|SQL_U_UNION SQL_U_UNION_ALL|  
 |SQL_USER_NAME|The current username.|  
   
-## See Also  
- [SQLGetInfo Function](../../odbc/reference/syntax/sqlgetinfo-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLGetInfo Function](../../odbc/reference/syntax/sqlgetinfo-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

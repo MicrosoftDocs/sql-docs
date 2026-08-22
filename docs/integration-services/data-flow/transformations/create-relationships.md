@@ -41,9 +41,9 @@ f1_keywords:
  **Similarity Output Alias**  
  Specify the name for a new output column that contains the similarity scores for the selected column. If you leave this value empty, the output column is not created.  
   
-## See Also  
- [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Fuzzy Lookup Transformation Editor &#40;Columns Tab&#41;](./fuzzy-lookup-transformation.md)   
- [Lookup Transformation Editor &#40;Columns Page&#41;](./lookup-transformation.md)   
- [Term Lookup Transformation Editor &#40;Term Lookup Tab&#41;](./term-lookup-transformation.md)  
-  
+## Related content
+
+- [Integration Services error and message reference](../../integration-services-error-and-message-reference.md)
+- [Fuzzy Lookup Transformation](fuzzy-lookup-transformation.md)
+- [Lookup Transformation](lookup-transformation.md)
+- [Term Lookup Transformation](term-lookup-transformation.md)

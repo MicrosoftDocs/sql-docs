@@ -280,10 +280,10 @@ The `SqlWriterConfig.ini` file lists the following levels:
 
 `MINIMAL` and `VERBOSE` levels don't provide additional *error* details in case of failure, only additional *progress* details for each low level operation related to SQL Writer activities.
 
-## Next steps
+## Related content
 
-- [SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer](sql-server-vss-writer-backup-guide.md)
+- [SQL Server backup applications - Volume Shadow Copy Service (VSS) and SQL Writer](sql-server-vss-writer-backup-guide.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
-- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Back up and restore of SQL Server databases](back-up-and-restore-of-sql-server-databases.md)
+- [SQL Server transaction log architecture and management guide](../sql-server-transaction-log-architecture-and-management-guide.md)

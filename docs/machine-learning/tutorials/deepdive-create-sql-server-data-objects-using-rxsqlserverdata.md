@@ -187,7 +187,7 @@ Again, if the connection was successful, you should see a message indicating com
 
 Optionally, you can specify transformations on the data, by using R functions in the arguments to **rxDataStep**. Examples of these operations are provided later in this tutorial.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Query and modify the SQL Server data](../../machine-learning/tutorials/deepdive-query-and-modify-the-sql-server-data.md)

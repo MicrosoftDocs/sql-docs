@@ -64,7 +64,8 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### Asynchronous Execution (Notification Method)  
  ODBC 3.8 supports the notification method for asynchronous operations, available beginning on Windows 8. For more information, see [Asynchronous Execution (Notification Method)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
-## See Also  
- [Developing an ODBC Driver](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Microsoft-Supplied ODBC Drivers](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
- [What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
+## Related content
+
+- [Developing an ODBC Driver](developing-an-odbc-driver.md)
+- [Microsoft-Supplied ODBC Drivers](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)
+- [What's New in ODBC 3.8](../what-s-new-in-odbc-3-8.md)

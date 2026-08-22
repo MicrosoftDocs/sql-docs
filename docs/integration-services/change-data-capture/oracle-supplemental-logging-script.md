@@ -28,8 +28,7 @@ ms.topic: concept-article
  **Copy**  
  Copies the script to the clipboard. When ready you can paste the script in any location you need in case an Oracle database administrator (DBA) needs to examine and execute the supplemental logging script.  
   
-## See Also  
- [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [Manage a CDC Instance](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
-  
-  
+## Related content
+
+- [How to Manage a CDC Instance](how-to-manage-a-cdc-instance.md)
+- [Manage a CDC Instance](manage-a-cdc-instance.md)

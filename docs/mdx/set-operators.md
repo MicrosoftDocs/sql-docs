@@ -21,9 +21,8 @@ ms.custom: mdx
 |[: (Range)](../mdx/range-mdx.md)|Returns a naturally ordered set, with the two specified members as endpoints and all members between the two specified members included as members of the set.|  
 |[+ (Union)](../mdx/union-mdx-operator-reference.md)|Returns a union of two sets, excluding duplicate members.<br /><br /> This operator is functionally equivalent to the [Union  &#40;MDX&#41;](../mdx/union-mdx.md) function.|  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operators &#40;MDX Syntax&#41;](../mdx/operators-mdx-syntax.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)
+- [Operators (MDX Syntax)](operators-mdx-syntax.md)

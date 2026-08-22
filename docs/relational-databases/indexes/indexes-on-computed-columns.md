@@ -121,9 +121,8 @@ This option enables you to create an index on a computed column when [!INCLUDE[s
 > [!NOTE]  
 > You can't create a [filtered index](create-filtered-indexes.md) on a computed column.
 
-## Next steps
+## Related content
 
-- [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)  
-- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
+- [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
-

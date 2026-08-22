@@ -38,8 +38,7 @@ helpviewer_keywords:
 -@Counter + 50  
 ```  
   
-## See Also  
- [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
-  
-  
+## Related content
+
+- [Operator Precedence and Associativity](operator-precedence-and-associativity.md)
+- [Operators (SSIS Expression)](operators-ssis-expression.md)

@@ -150,6 +150,6 @@ Although this exercise is simplistic, it demonstrates an important mechanism for
 
 + Moving script from a development environment to a hardened production environment can introduce firewall and network restrictions. Test carefully to make sure your script is able to perform as expected.
 
-## Next steps
+## Related content
 
-For a more complex example of using **rxExec**, see this article: [Coarse grain parallelism with foreach and rxExec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+- [Coarse grain parallelism with foreach and rxExec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)

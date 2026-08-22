@@ -114,8 +114,8 @@ import cntk
 '
 ```
 
-## See also
+## Related content
 
-+ [Get Python package information](python-package-information.md)
-+ [Python tutorials for SQL Server Machine Learning Services](../tutorials/python-tutorials.md)
-+ [Python API for CNTK](https://github.com/microsoft/CNTK)
+- [Get Python package information](python-package-information.md)
+- [Python tutorials for SQL machine learning](../tutorials/python-tutorials.md)
+- [Python API for CNTK](https://github.com/microsoft/CNTK)

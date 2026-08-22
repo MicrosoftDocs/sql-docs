@@ -288,7 +288,7 @@ helpviewer_keywords:
  Create a new variable.  
   
  **Related Topics:** [Add Variable](../integration-services-ssis-variables.md)  
-## See Also  
- [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
+## Related content
+
+- [Integration Services Tasks](integration-services-tasks.md)
+- [Control Flow](control-flow.md)

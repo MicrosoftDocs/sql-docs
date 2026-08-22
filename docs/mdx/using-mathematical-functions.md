@@ -14,7 +14,6 @@ ms.custom: mdx
   
  By default, a number passed to a mathematical function will be interpreted as a double precision floating point number.  
   
-## See Also  
- [Functions &#40;MDX Syntax&#41;](../mdx/functions-mdx-syntax.md)  
-  
-  
+## Related content
+
+- [Functions (MDX Syntax)](functions-mdx-syntax.md)

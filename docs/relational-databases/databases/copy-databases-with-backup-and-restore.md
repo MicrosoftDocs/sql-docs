@@ -125,10 +125,9 @@ Some additional considerations that may affect this process:
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## See also  
- [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)   
- [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
-  
+## Related content
+
+- [Copy databases to other servers](copy-databases-to-other-servers.md)
+- [File locations for default and named instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)
+- [RESTORE Statements - FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

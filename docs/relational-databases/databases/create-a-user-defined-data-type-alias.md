@@ -106,9 +106,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## See Also  
- [Database Identifiers](../../relational-databases/databases/database-identifiers.md)   
- [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
-  
-  
+## Related content
 
+- [Database identifiers](database-identifiers.md)
+- [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)

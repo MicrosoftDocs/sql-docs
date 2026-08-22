@@ -108,10 +108,10 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id
 GO
 ```
 
-## Next steps
-- Consider other ways to run a package.
-    - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md)
-    - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
-    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 
+## Related content
+
+- [Run an SSIS package with SQL Server Management Studio (SSMS)](ssis-quickstart-run-ssms.md)
+- [Run an SSIS package from SSMS with Transact-SQL](ssis-quickstart-run-tsql-ssms.md)
+- [Run an SSIS package from the command prompt with DTExec.exe](ssis-quickstart-run-cmdline.md)
+- [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
+- [Run an SSIS package with C# code in a .NET app](ssis-quickstart-run-dotnet.md)

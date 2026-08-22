@@ -166,7 +166,7 @@ For the status of signatures used to sign packages, the **BlockedSignatureStates
  **Remove**  
  Click to remove the digital signature.  
 
-## See also  
- [Integration Services \(SSIS\) Packages](../../integration-services/integration-services-ssis-packages.md)   
- [Security Overview \(Integration Services\)](../../integration-services/security/security-overview-integration-services.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Packages](../integration-services-ssis-packages.md)
+- [Security Overview (Integration Services)](security-overview-integration-services.md)

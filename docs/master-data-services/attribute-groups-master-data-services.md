@@ -50,6 +50,6 @@ helpviewer_keywords:
 |Change the name of an existing attribute group.|[Change an Attribute Group Name &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)|  
 |Delete an existing attribute group.|[Delete an Attribute Group &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
-## Related Content  
-  
--   [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)
+## Related content
+
+- [Attributes (Master Data Services)](attributes-master-data-services.md)

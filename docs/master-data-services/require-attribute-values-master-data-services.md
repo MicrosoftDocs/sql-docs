@@ -63,14 +63,9 @@ helpviewer_keywords:
   
 15. On the confirmation dialog box, click **OK**. The value in the **Business Rule State** column is **Active**.  
   
-## Next Steps  
-  
--   Apply business rules to data by following one of these procedures:  
-  
-    -   [Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
-  
-    -   [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
-  
-## See Also  
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)
+## Related content
+
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Derived Hierarchies (Master Data Services)](derived-hierarchies-master-data-services.md)
+- [Validate Specific Members against Business Rules (Master Data Services)](validate-specific-members-against-business-rules-master-data-services.md)
+- [Validate a Version against Business Rules (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)

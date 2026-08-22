@@ -44,15 +44,12 @@ helpviewer_keywords:
 ## Related Tasks  
  For information about how to set the properties of the component, see [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Related Content  
-  
--   Blog entry, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), on sqlservercentral.com  
-  
 ## Raw File Source Editor (Connection Manager Page)
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing.   
 ## Raw File Source Editor (Columns Page)
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing.   
-## See Also  
- [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
+
+## Related content
+
+- [Raw File Destination](raw-file-destination.md)
+- [Data Flow](data-flow.md)

@@ -66,7 +66,8 @@ helpviewer_keywords:
   
  ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")  
   
-## See Also  
- [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Delete an Entity &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
- [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)
+## Related content
+
+- [Explicit Hierarchies (Master Data Services)](explicit-hierarchies-master-data-services.md)
+- [Delete an Entity (Master Data Services)](delete-an-entity-master-data-services.md)
+- [Entities (Master Data Services)](entities-master-data-services.md)

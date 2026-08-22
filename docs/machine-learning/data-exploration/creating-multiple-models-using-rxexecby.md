@@ -90,6 +90,6 @@ rxSetComputeContext(sqlServerCC)
 sqlServerCCResults <- rxExecBy(inData = sqlServerDataDS, keys = c("DayOfWeek"), func = .Count)
 ```
 
-## Next steps
+## Related content
 
-+ [What is SQL Server Machine Learning Services?](../sql-server-machine-learning-services.md)
+- [What is SQL Server Machine Learning Services with Python and R?](../sql-server-machine-learning-services.md)

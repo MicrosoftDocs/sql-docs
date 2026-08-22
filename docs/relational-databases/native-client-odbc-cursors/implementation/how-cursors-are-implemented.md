@@ -40,7 +40,6 @@ helpviewer_keywords:
   
 -   [ODBC Cursor Library](../../../relational-databases/native-client-odbc-cursors/implementation/odbc-cursor-library.md)  
   
-## See Also  
- [Using Cursors &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
-  
-  
+## Related content
+
+- [Using Cursors (ODBC)](../using-cursors-odbc.md)

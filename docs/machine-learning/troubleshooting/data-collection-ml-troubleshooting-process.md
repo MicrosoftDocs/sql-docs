@@ -293,6 +293,6 @@ Because it might not be possible to exclude all folders that are needed by the S
 
 2. Determine whether a firewall rule has been created for SQL Server. For security reasons, in a default installation, it might not be possible for remote R or Python client to connect to the instance. For more information, see [Troubleshooting connecting to SQL Server](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection).
 
-## See also
+## Related content
 
-[Troubleshoot machine learning in SQL Server](common-issues-external-script-execution.md)
+- [Troubleshoot issues with Launchpad service executing Python and R scripts in SQL Server Machine Learning Services](common-issues-external-script-execution.md)

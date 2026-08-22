@@ -109,7 +109,7 @@ Once data exists in the table, you can load it by using a simple SQL query.
     rxSummary(~., data = sqlServerAirDemo2)
     ```
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Perform chunking analysis using rxDataStep](../../machine-learning/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

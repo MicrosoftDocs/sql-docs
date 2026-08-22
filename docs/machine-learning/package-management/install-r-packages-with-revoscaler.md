@@ -199,9 +199,9 @@ exec sp_execute_external_script
   @database_name = @database_name;
 ```
 
-## See also
+## Related content
 
-+ [Enable remote R package management](r-package-how-to-enable-or-disable.md)
-+ [Synchronize R packages](package-install-uninstall-and-sync.md)
-+ [Tips for using R packages](tips-for-using-r-packages.md)
-+ [Get R package information](../package-management/r-package-information.md)
+- [Enable or disable remote package management for SQL Server](r-package-how-to-enable-or-disable.md)
+- [R package synchronization for SQL Server](package-install-uninstall-and-sync.md)
+- [Tips for using R packages](tips-for-using-r-packages.md)
+- [Get R package information](r-package-information.md)

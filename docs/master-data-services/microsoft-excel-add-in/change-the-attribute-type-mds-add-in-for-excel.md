@@ -54,6 +54,7 @@ ms.custom:
   
 -   Generates a copy of the attribute with the suffix "_old" that contains the previous values. This is called a deprecated attribute.  
   
-## See Also  
- [Attributes &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   
- [Building a Model &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)
+## Related content
+
+- [Attributes (Master Data Services)](../attributes-master-data-services.md)
+- [Building a Model (MDS Add-in for Excel)](building-a-model-mds-add-in-for-excel.md)

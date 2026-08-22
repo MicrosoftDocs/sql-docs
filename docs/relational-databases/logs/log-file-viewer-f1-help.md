@@ -69,9 +69,8 @@ helpviewer_keywords:
   
  To access log files for instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are offline, you must have read access to both the **Root\Microsoft\SqlServer\ComputerManagement10** WMI namespace, and to the folder where the log files are stored. For more information, see the Security section of the topic [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md).  
   
-## See Also  
- [Log File Viewer](../../relational-databases/logs/log-file-viewer.md)   
- [Open Log File Viewer](../../relational-databases/logs/open-log-file-viewer.md)   
- [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md)  
-  
-  
+## Related content
+
+- [Log File Viewer](log-file-viewer.md)
+- [Open Log File Viewer](open-log-file-viewer.md)
+- [View Offline Log Files](view-offline-log-files.md)

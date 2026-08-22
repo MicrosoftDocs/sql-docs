@@ -148,4 +148,4 @@ ms.custom: sfi-ropc-nochange
 
 ## Related content
 
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)
+- [Integration Services error and message reference](../integration-services-error-and-message-reference.md)

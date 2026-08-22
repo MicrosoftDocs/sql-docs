@@ -51,9 +51,8 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 > [!NOTE]  
 >  Only administrators can use the **CalculationPassValue** function within an MDX script. An error occurs if an MDX script that contains this function is run in the context of a role that does not have administrator privileges.  
   
-## See Also  
- [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
- [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [CalculationCurrentPass (MDX)](calculationcurrentpass-mdx.md)
+- [IIf (MDX)](iif-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

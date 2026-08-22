@@ -71,11 +71,11 @@ For a description of the **`bcp`** syntax, see [bcp Utility](../../tools/bcp/bcp
 
 ## Related content
 
-- [INSERT](../../t-sql/statements/insert-transact-sql.md)
-- [SELECT clause](../../t-sql/queries/select-clause-transact-sql.md)
+- [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+- [SELECT clause (Transact-SQL)](../../t-sql/queries/select-clause-transact-sql.md)
 - [bcp utility](../../tools/bcp/bcp-utility.md)
 - [Prepare to Bulk Import Data (SQL Server)](prepare-to-bulk-import-data-sql-server.md)
-- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
-- [Bulk Import and Export of Data (SQL Server)](bulk-import-and-export-of-data-sql-server.md)
-- [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
+- [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
+- [Bulk import and export of data (SQL Server)](bulk-import-and-export-of-data-sql-server.md)
+- [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
 - [Create a format file with bcp (SQL Server)](create-a-format-file-sql-server.md)

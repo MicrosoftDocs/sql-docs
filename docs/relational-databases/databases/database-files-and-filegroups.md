@@ -240,5 +240,5 @@ For more information on transaction log file management recommendations, see [Ma
 - [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 - [Database detach and attach (SQL Server)](database-detach-and-attach-sql-server.md)
 - [SQL Server transaction log architecture and management guide](../sql-server-transaction-log-architecture-and-management-guide.md)
-- [Pages and extents architecture guide](../pages-and-extents-architecture-guide.md)
+- [Page and extent architecture guide](../pages-and-extents-architecture-guide.md)
 - [Manage the size of the transaction log file](../logs/manage-the-size-of-the-transaction-log-file.md)

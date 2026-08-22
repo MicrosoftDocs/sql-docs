@@ -28,6 +28,6 @@ ms.custom: sfi-ropc-nochange
   
  For more information, see [Data Mining Model Training Destination](../../integration-services/data-flow/data-mining-model-training-destination.md).  
   
-## See Also  
- [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
-  
+## Related content
+
+- [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)

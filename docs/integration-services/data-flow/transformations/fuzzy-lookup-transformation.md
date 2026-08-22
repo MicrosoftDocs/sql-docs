@@ -206,8 +206,8 @@ helpviewer_keywords:
  **Token delimiters**  
  Specify the delimiters that the transformation uses to tokenize column values.  
   
-## See Also  
- [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Lookup Transformation](lookup-transformation.md)
+- [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)
+- [Integration Services Transformations](integration-services-transformations.md)

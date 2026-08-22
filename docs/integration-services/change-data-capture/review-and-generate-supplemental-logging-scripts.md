@@ -45,8 +45,7 @@ f1_keywords:
   
 2.  Give the file a name and click **Save** to save the file.  
   
-## See Also  
- [How to Edit the CDC Instance Properties](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
-  
-  
+## Related content
+
+- [How to Edit the CDC Instance Properties](how-to-edit-the-cdc-instance-properties.md)
+- [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)

@@ -96,7 +96,7 @@ The original logit scores are preserved, but a new column, *ccFraudProb*, has be
 
 Notice that the factor variables have been written to the table `ccScoreOutput2` as character data. To use them as factors in subsequent analyses, use the parameter *colInfo* to specify the levels.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Load data into memory using rxImport](../../machine-learning/tutorials/deepdive-load-data-into-memory-using-rximport.md)

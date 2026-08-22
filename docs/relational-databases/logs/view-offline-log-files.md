@@ -116,6 +116,6 @@ To connect to an offline log file, you must have the following permissions on bo
     > [!NOTE]  
     >  If the log files take too long to load, you can click **Stop** on the Log File Viewer toolbar.  
   
-## See Also  
- [Log File Viewer](../../relational-databases/logs/log-file-viewer.md)  
-  
+## Related content
+
+- [Log File Viewer](log-file-viewer.md)

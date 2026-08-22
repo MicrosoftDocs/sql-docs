@@ -72,6 +72,7 @@ ms.custom:
 |`<Name>`|The first attribute of the member that was changed. This example member contains only Name and Code attributes.|  
 |`<Code>`|The next attribute of the member that was changed. If this example member contained more attributes, they would follow this one.|  
   
-## See Also  
- [Create a Custom Workflow &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
- [Custom Workflow Example &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)
+## Related content
+
+- [Create a Custom Workflow (Master Data Services)](create-a-custom-workflow-master-data-services.md)
+- [Create a Custom Workflow - Example](create-a-custom-workflow-example.md)

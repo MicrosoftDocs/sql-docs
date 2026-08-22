@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**Success**|**int**|Indicates whether the assembly load succeeded (1) or failed (0).|23|Yes|  
 |**TextData**|**ntext**|"Assembly Load Succeeded" if the load succeeds; otherwise, "Assembly Load Failed".|1|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
+## Related content
 
+- [Extended Events overview](../extended-events/extended-events.md)
+- [Assemblies (Database Engine)](../clr-integration/assemblies-database-engine.md)

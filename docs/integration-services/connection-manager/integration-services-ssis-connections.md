@@ -329,13 +329,9 @@ All connection managers can be configured using the **Properties** window.
   
 5.  To save the updated package, click **Save Selected Items** on the **File** menu.  
 
-## Related Content  
-  
--   Video, [Leverage Microsoft Attunity Connector for Oracle to enhance Package Performance](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com  
-  
--   Blog entry, [Connecting to MySQL from SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400), on blogs.msdn.com.  
-  
--   Technical article, [Extracting and Loading SharePoint Data in SQL Server Integration Services](/previous-versions/sql/sql-server-2012/hh368261(v=msdn.10)), on msdn.microsoft.com.  
-  
--   Technical article, [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696), on support.microsoft.com.  
-  
+## Related content
+
+- [Leverage Microsoft Attunity Connector for Oracle to enhance Package Performance](/previous-versions/dn912438(v=msdn.10))
+- [Connecting to MySQL from SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400)
+- [Extracting and Loading SharePoint Data in SQL Server Integration Services](/previous-versions/sql/sql-server-2012/hh368261(v=msdn.10))
+- [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696)

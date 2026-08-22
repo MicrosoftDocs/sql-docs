@@ -56,5 +56,6 @@ ms.custom:
   
  If you no longer need [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a computer, you can uninstall [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] and determine whether to remove items that are not affected by the uninstall process. For more information, see [Uninstall and Remove Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md).  
   
-## See Also  
- [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md)
+## Related content
+
+- [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md)

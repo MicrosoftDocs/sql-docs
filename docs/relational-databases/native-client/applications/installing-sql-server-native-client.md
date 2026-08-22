@@ -63,7 +63,7 @@ You can also get sqlncli.msi from the SQL Server 2012 Feature Pack web page. To 
   
  The value passed to APPGUID is your specific product code. A product code must be created when using Microsoft Installer to bundle your application setup program.  
   
-## See Also  
- [Building Applications with SQL Server Native Client](#installing-sql-server-native-client)   
- [Installation How-to Topics](/previous-versions/sql/)  
-  
+## Related content
+
+- [Building Applications with SQL Server Native Client](#installing-sql-server-native-client)
+- [Installation How-to Topics](/previous-versions/sql/)

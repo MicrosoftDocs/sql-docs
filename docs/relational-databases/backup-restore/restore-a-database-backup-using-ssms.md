@@ -266,12 +266,12 @@ The S3 URL has the format `s3://<endpoint>:<port>/<bucket>/` and the backup file
 1. Select **OK** to return to the **General** page.
 1. Select **OK**.
 
-## See also
+## Related content
 
-- [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
-- [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
-- [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
-- [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)
-- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)
-- [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)
+- [Back up a transaction log](back-up-a-transaction-log-sql-server.md)
+- [Create a full database backup](create-a-full-database-backup-sql-server.md)
+- [Restore a database to a new location (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)
+- [Restore a Transaction Log Backup (SQL Server)](restore-a-transaction-log-backup-sql-server.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Restore Database (Options Page)](restore-database-options-page.md)
+- [Restore database (General page)](restore-database-general-page.md)

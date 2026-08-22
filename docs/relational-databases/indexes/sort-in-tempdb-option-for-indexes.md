@@ -72,11 +72,8 @@ When you create a clustered index on a table that has nonclustered indexes, you 
   
  [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
-## Related Content  
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
-  
- [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
-  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
-  
-  
+## Related content
+
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
+- [Server configuration: index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)
+- [Disk space requirements for index DDL operations](disk-space-requirements-for-index-ddl-operations.md)

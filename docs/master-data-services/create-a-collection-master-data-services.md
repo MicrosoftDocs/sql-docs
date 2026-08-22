@@ -48,11 +48,9 @@ helpviewer_keywords:
   
 9. Click **OK**.  
   
-## Next Steps  
-  
--   [Add Members to a Collection &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
-  
-## See Also  
- [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
- [Delete a Member or Collection &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [Create an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)
+## Related content
+
+- [Collections (Master Data Services)](collections-master-data-services.md)
+- [Delete a Member or Collection (Master Data Services)](delete-a-member-or-collection-master-data-services.md)
+- [Create an Explicit Hierarchy (Master Data Services)](create-an-explicit-hierarchy-master-data-services.md)
+- [Add Members to a Collection (Master Data Services)](add-members-to-a-collection-master-data-services.md)

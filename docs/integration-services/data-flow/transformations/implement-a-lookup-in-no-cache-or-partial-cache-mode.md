@@ -100,6 +100,6 @@ helpviewer_keywords:
   
 14. Click **OK** to save your changes to the Lookup transformation, and then run the package.  
   
-## See Also  
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Integration Services Transformations](integration-services-transformations.md)

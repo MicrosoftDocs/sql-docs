@@ -86,7 +86,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## See Also  
- [SQLGetData Function](../../odbc/reference/syntax/sqlgetdata-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLGetData Function](../../odbc/reference/syntax/sqlgetdata-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

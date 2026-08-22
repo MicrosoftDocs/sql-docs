@@ -71,14 +71,13 @@ FROM DISK = N'C:\AdventureWorks2022-FullBackup.bak' ;
 GO  
 ```  
   
-## See Also  
- [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
-  
-  
+## Related content
+
+- [backupfilegroup (Transact-SQL)](../system-tables/backupfilegroup-transact-sql.md)
+- [backupfile (Transact-SQL)](../system-tables/backupfile-transact-sql.md)
+- [backupset (Transact-SQL)](../system-tables/backupset-transact-sql.md)
+- [backupmediaset (Transact-SQL)](../system-tables/backupmediaset-transact-sql.md)
+- [backupmediafamily (Transact-SQL)](../system-tables/backupmediafamily-transact-sql.md)
+- [Backup Devices (SQL Server)](backup-devices-sql-server.md)
+- [Define a Logical Backup Device for a Disk File (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)
+- [Define a Logical Backup Device for a Tape Drive (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)

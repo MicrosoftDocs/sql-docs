@@ -141,9 +141,6 @@ End Module
   
  Call the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> method to initialize the columns in the outputs of a source component. Because components do not automatically connect to external data sources, call the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A> method before calling <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> to provide the component access to its external data source and the ability to populate its column metadata. Finally, call the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A> method to release the connection.  
   
-## Next Step  
- After adding and configuring the component, the next step is to create paths between components, which is discussed in the topic, [Creating a Path Between Two Components](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
-  
 ## Sample  
  The following code sample adds the OLE DB Source component to a data flow task, creates a design-time instance of the component, and configures the component's properties. This example requires an additional reference to the assembly Microsoft.SqlServer.DTSRuntimeWrap.  
   
@@ -272,11 +269,12 @@ Module Module1
   
 End Module  
 ```  
-  
-## External Resources  
- Blog entry, [EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042), on blogs.msdn.com.  
 
-## See Also  
- [Connecting Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
-  
-  
+## Next step
+
+> [!div class="nextstepaction"]
+> [Connecting Data Flow Components Programmatically](connecting-data-flow-components-programmatically.md)
+
+## Related content
+
+- [EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042)

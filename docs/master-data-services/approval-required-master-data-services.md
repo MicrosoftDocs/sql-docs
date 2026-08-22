@@ -44,5 +44,6 @@ ms.custom:
   
 4.  Click **Edit**, select **Approval Required**, and then click **Save**.  
   
-## See Also  
- [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)
+## Related content
+
+- [Changesets (Master Data Services)](changesets-master-data-services.md)

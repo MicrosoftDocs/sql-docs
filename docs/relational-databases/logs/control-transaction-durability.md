@@ -218,6 +218,6 @@ Starting with SQL Server 2022 CU 2 and SQL Server 2019 CU 20, you may see:
 
  For delayed durability, there is no difference between an unexpected shutdown and an expected shutdown/restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Like catastrophic events, you should plan for data loss. In a planned shutdown/restart, some transactions that have not been written to disk may be saved to disk before shutdown, but you should not plan on it. Plan as though a shutdown/restart, whether planned or unplanned, loses the data the same as a catastrophic event.
 
-## Next steps
+## Related content
 
-- [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
+- [Transactions with memory-optimized tables](../in-memory-oltp/transactions-with-memory-optimized-tables.md)

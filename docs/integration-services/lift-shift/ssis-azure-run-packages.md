@@ -70,6 +70,6 @@ For more info, see [Run an SSIS package using the Execute SSIS Package Activity 
 
 For more info, see [Run an SSIS package using stored procedure activity in Azure Data Factory](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
-## Next steps
+## Related content
 
-Learn about options for scheduling SSIS packages deployed to Azure. For more info, see [Schedule SSIS packages in Azure](ssis-azure-schedule-packages.md).
+- [Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure](ssis-azure-schedule-packages.md)

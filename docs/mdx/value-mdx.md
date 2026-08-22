@@ -44,10 +44,10 @@ SELECT {[Date].[Calendar].[July 1, 2001]} ON 0
 from [Adventure Works]  
 ```  
   
-## See Also  
- [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
+## Related content
+
+- [MemberValue (MDX)](membervalue-mdx.md)
+- [Properties (MDX)](properties-mdx.md)
+- [Name (MDX)](name-mdx.md)
+- [UniqueName (MDX)](uniquename-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

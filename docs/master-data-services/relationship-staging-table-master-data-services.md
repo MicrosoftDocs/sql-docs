@@ -37,7 +37,8 @@ helpviewer_keywords:
 |**Sort Order**|Optional<br /><br /> An integer that indicates the order of the member in relation to the other members under the parent. Each child member should have a unique identifier.||  
 |**ErrorCode**|Displays an error code. For all records with a **ImportStatus_ID** of **2**, see [Staging Process Errors &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).||  
   
-## See Also  
- [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
- [View Errors that Occur During Staging &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Staging Process Errors &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)
+## Related content
+
+- [Overview: Importing Data from Tables (Master Data Services)](overview-importing-data-from-tables-master-data-services.md)
+- [View Errors that Occur During Staging (Master Data Services)](view-errors-that-occur-during-staging-master-data-services.md)
+- [Staging Process Errors (Master Data Services)](staging-process-errors-master-data-services.md)

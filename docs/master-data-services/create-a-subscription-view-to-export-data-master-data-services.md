@@ -83,7 +83,8 @@ helpviewer_keywords:
   
 -   **On**: The date and time when the view was last updated.  
   
-## See Also  
- [Overview: Exporting Data &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [Delete a Subscription View &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [Create a Version Flag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)
+## Related content
+
+- [Overview: Exporting Data (Master Data Services)](overview-exporting-data-master-data-services.md)
+- [Delete a Subscription View (Master Data Services)](delete-a-subscription-view-master-data-services.md)
+- [Create a Version Flag (Master Data Services)](create-a-version-flag-master-data-services.md)

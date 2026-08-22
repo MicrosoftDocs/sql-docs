@@ -83,10 +83,8 @@ remove('name1', 'name2', ...)
 
 If there are multiple variables to delete, we suggest that you save the names of temporary variables to a list and then perform periodic garbage collections on the list.
 
-## Next steps
+## Related content
 
-[Data collection for troubleshooting SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)
-
-[Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-
-[Troubleshoot database engine connections](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)
+- [Collect data to troubleshoot Python and R scripts with SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)
+- [Install SQL Server Machine Learning Services (Python and R) on Windows](../install/sql-machine-learning-services-windows-install.md)
+- [Troubleshoot database engine connections](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)

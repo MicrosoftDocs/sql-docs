@@ -126,6 +126,6 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## See Also  
+## Related content
 
-[Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)
+- [Sample database for in-memory OLTP](sample-database-for-in-memory-oltp.md)

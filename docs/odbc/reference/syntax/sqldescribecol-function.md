@@ -129,6 +129,7 @@ SQLRETURN SQLDescribeCol(
 |Returning the number of result set columns|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Preparing a statement for execution|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

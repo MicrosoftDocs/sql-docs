@@ -73,8 +73,7 @@ helpviewer_keywords:
   
  The **FullySensitive** comparison flag displays in the **Advanced Editor** dialog box for the Fuzzy Grouping and Fuzzy Lookup transformations. Selecting the **FullySensitive** comparison flag means that all the comparison options apply.  
   
-## See Also  
- [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)   
- [Fast Parse](./parsing-data.md)   
- [Standard Parse](./parsing-data.md)  
-  
+## Related content
+
+- [Integration Services Data Types](integration-services-data-types.md)
+- [Parsing Data](parsing-data.md)

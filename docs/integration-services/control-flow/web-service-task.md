@@ -172,5 +172,6 @@ helpviewer_keywords:
   
  **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
   
-## Related Content  
- Video, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.
+## Related content
+
+- [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))

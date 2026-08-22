@@ -286,4 +286,4 @@ You can make your Transact-SQL scripts more robust against a possible transactio
 
 ## Related content
 
-- [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)
+- [In-Memory OLTP overview and usage scenarios](overview-and-usage-scenarios.md)

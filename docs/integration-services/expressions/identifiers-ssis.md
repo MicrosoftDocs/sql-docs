@@ -113,6 +113,6 @@ helpviewer_keywords:
 @Count > @Count  
 ```  
   
-## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis), on pragmaticworks.com  
-  
+## Related content
+
+- [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis)

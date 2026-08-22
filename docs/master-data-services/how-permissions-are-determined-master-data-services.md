@@ -73,6 +73,7 @@ helpviewer_keywords:
   
  In this case, overlapping user and group permissions must be resolved before model object and hierarchy member permissions can be compared. For more information, see [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
-## See Also  
- [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [Overlapping Model and Member Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)
+## Related content
+
+- [Overlapping User and Group Permissions (Master Data Services)](overlapping-user-and-group-permissions-master-data-services.md)
+- [Overlapping Model and Member Permissions (Master Data Services)](overlapping-model-and-member-permissions-master-data-services.md)

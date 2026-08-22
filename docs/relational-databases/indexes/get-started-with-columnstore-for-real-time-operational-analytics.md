@@ -230,8 +230,8 @@ If the number of deleted rows in compressed rowgroups > 20%, plateauing in older
 
 ## Related content
 
-- [Columnstore indexes: Overview](columnstore-indexes-overview.md)
-- [Columnstore indexes - Data loading guidance](columnstore-indexes-data-loading-guidance.md)
-- [Columnstore indexes - Query performance](columnstore-indexes-query-performance.md)
+- [Columnstore indexes: overview](columnstore-indexes-overview.md)
+- [Columnstore indexes - data loading guidance](columnstore-indexes-data-loading-guidance.md)
+- [Columnstore indexes - query performance](columnstore-indexes-query-performance.md)
 - [Columnstore indexes in data warehousing](columnstore-indexes-data-warehouse.md)
 - [Optimize index maintenance to improve query performance and reduce resource consumption](reorganize-and-rebuild-indexes.md)

@@ -50,5 +50,6 @@ ms.custom:
   
 7.  Click **Move Up** or **Move Down**.  
   
-## See Also  
- [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)
+## Related content
+
+- [Attributes (Master Data Services)](attributes-master-data-services.md)

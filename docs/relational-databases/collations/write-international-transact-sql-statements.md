@@ -55,8 +55,8 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-## See also
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)     
-[DATEPART &#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)        
-[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)      
+## Related content
 
+- [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
+- [DATEPART (Transact-SQL)](../../t-sql/functions/datepart-transact-sql.md)
+- [Collation and Unicode support](collation-and-unicode-support.md)

@@ -858,6 +858,6 @@ For compatibility with [!INCLUDE [rsql_productname](../../includes/rsql-productn
 
 Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisions 0.88-0.91 and 0.93 and later are known to be compatible.
 
-## Next steps
+## Related content
 
-- [Collect data to troubleshoot SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)
+- [Collect data to troubleshoot Python and R scripts with SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)

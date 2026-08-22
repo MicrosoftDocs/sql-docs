@@ -126,7 +126,7 @@ To monitor the Azure-SSIS Integration Runtime, see [Monitor the Azure-SSIS integ
 ## Schedule packages
 To schedule the execution of packages deployed in Azure, you can use a variety of tools. For more info, see [Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure](ssis-azure-schedule-packages.md).
 
-## Next steps
-To get started with SSIS workloads on Azure, see the following articles:
--   [Tutorial: Deploy and run a SQL Server Integration Services (SSIS) package in Azure](ssis-azure-deploy-run-monitor-tutorial.md)
--   [Provision the Azure-SSIS Integration Runtime in Azure Data Factory](/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+## Related content
+
+- [Tutorial: Deploy and run a SQL Server Integration Services (SSIS) package in Azure](ssis-azure-deploy-run-monitor-tutorial.md)
+- [Provision the Azure-SSIS Integration Runtime in Azure Data Factory](/azure/data-factory/tutorial-deploy-ssis-packages-azure)

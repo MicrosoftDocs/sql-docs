@@ -39,8 +39,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |[Sort Warnings Event Class](../../relational-databases/event-classes/sort-warnings-event-class.md)|Indicates that sort operations do not fit into memory.|  
 |[User Error Message Event Class](../../relational-databases/event-classes/user-error-message-event-class.md)|Displays error messages that are seen by the user.|  
   
-## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
-  
-  
+## Related content
 
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)

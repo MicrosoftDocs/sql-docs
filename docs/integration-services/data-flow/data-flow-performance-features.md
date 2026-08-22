@@ -160,38 +160,20 @@ helpviewer_keywords:
   
 -   [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## Related Content  
- **Articles and Blog Posts**  
-  
--   Technical article, [SQL Server 2005 Integration Services: A Strategy for Performance](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10)), on technet.microsoft.com  
-  
--   Technical article, [Integration Services: Performance Tuning Techniques](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10)), on technet.microsoft.com  
-  
--   Technical article, [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf), in _SQLCAT's Guide to BI and Analytics_
-  
--   Technical article, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), on msdn.microsoft.com.  
-  
--   Technical article, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100)), on msdn.microsoft.com.  
-  
--   Technical article, [Top 10 SQL Server Integration Services Best Practices](https://techcommunity.microsoft.com/t5/datacat/top-10-sql-server-integration-services-best-practices/ba-p/305163), on sqlcat.com.  
-  
--   Technical article and sample, [The "Balanced Data Distributor" for SSIS](https://www.sqlshack.com/ssis-balanced-data-distributor-overview/), on sqlcat.com.  
-  
--   Blog post, [Troubleshooting SSIS Package Performance Issues](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553), on blogs.msdn.com  
-  
- **Videos**  
-  
--   Video series, [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)  
-  
--   Video, [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](/previous-versions/ff686901(v=msdn.10)), on technet.microsoft.com  
-  
--   Video, [Understanding SSIS Data Flow Buffers (SQL Server Video)](/previous-versions/ff686905(v=msdn.10)), on technet.microsoft.com  
-  
--   Presentation, [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements), on sqlcat.com.  
-  
--   Video, [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  
-  
-## See Also  
- [Troubleshooting Tools for Package Development](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
+## Related content
+
+- [SQL Server 2005 Integration Services: A Strategy for Performance](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10))
+- [Integration Services: Performance Tuning Techniques](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10))
+- [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
+- [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))
+- [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100))
+- [Top 10 SQL Server Integration Services Best Practices](https://techcommunity.microsoft.com/t5/datacat/top-10-sql-server-integration-services-best-practices/ba-p/305163)
+- [The "Balanced Data Distributor" for SSIS](https://www.sqlshack.com/ssis-balanced-data-distributor-overview/)
+- [Troubleshooting SSIS Package Performance Issues](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553)
+- [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)
+- [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](/previous-versions/ff686901(v=msdn.10))
+- [Understanding SSIS Data Flow Buffers (SQL Server Video)](/previous-versions/ff686905(v=msdn.10))
+- [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements)
+- [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10))
+- [Troubleshooting Tools for Package Development](../troubleshooting/troubleshooting-tools-for-package-development.md)
+- [Troubleshooting Tools for Package Execution](../troubleshooting/troubleshooting-tools-for-package-execution.md)

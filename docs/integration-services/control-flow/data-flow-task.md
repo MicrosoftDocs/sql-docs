@@ -106,6 +106,6 @@ helpviewer_keywords:
 ## Related Tasks  
  [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
-## Related Content  
- Video, [Balanced Data Distributer](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  
-  
+## Related content
+
+- [Balanced Data Distributer](/previous-versions/dn912438(v=msdn.10))

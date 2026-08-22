@@ -243,8 +243,8 @@ OR [Model Region] = 'M200 North America'
 > [!NOTE]  
 >  The FLATTENED keyword was used in this example to make the results easier to present in a table; however, if your provider supports hierarchical rowsets you can omit the FLATTENED keyword. If you omit the FLATTENED keyword, the query returns two columns, the first column containing the value that identifies the `[Model Region]` data series, and the second column containing the nested table of statistics.  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Time Series Model Query Examples](/analysis-services/data-mining/time-series-model-query-examples)   
- [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
-  
+## Related content
+
+- [Data Mining Extensions (DMX) Function Reference](data-mining-extensions-dmx-function-reference.md)
+- [Time Series Model Query Examples](/analysis-services/data-mining/time-series-model-query-examples)
+- [Predict (DMX)](predict-dmx.md)

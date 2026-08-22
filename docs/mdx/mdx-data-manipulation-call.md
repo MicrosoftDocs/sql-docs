@@ -41,8 +41,7 @@ CALL SP_Name
 > [!NOTE]  
 >  If the stored procedure is not registered on the client, the **CALL** statement attempts to call the stored procedure from an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-## See Also  
- [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Using Stored Procedures &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Data Manipulation Statements (MDX)](mdx-data-manipulation-statements-mdx.md)
+- [Using Stored Procedures (MDX)](using-stored-procedures-mdx.md)

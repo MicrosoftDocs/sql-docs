@@ -53,7 +53,6 @@ helpviewer_keywords:
   
  However, if **queryout** is used for export and you reference sparse columns that are members of the sparse column set by name, you cannot perform a direct import into a similarly structured table. This is because BCP uses metadata consistent with a **select &#42;** operation for the import and is unable to match **column_set** member columns with this metadata. To import **column_set** member columns individually, you must define a view on the table that references the desired **column_set** columns, and you must perform the import operation using the view.  
   
-## See Also  
- [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Programming](../sql-server-native-client-programming.md)

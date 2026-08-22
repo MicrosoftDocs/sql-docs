@@ -37,10 +37,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |TargetUserName|**sysname**|The return value (workload group name) for the user-defined classifier function if the system can not find a corresponding active group. Otherwise, this column is set to NULL.|39|Yes|  
 |ObjectName|**nvarchar(256)**|The two-part name of the classifier user-defined function. For example, dbo.classifier.|34|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [PreConnect:Starting Event Class](../../relational-databases/event-classes/preconnect-starting-event-class.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
-  
-  
+## Related content
 
+- [Extended Events overview](../extended-events/extended-events.md)
+- [PreConnect:Starting Event Class](preconnect-starting-event-class.md)
+- [Resource governor](../resource-governor/resource-governor.md)

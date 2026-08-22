@@ -224,15 +224,6 @@ Additional arguments sent to compute engine.
 An object defining the transform.
 
 
-## See also
-
-[`n_gram`](n-gram.md),
-[`n_gram_hash`](n-gram-hash.md),
-[`n_gram`](custom.md),
-[`n_gram_hash`](predefined.md),
-[`get_sentiment`](get-sentiment.md).
-
-
 ## Example
 
 
@@ -332,3 +323,11 @@ Writing completed.
 * [*microsoftml.custom*: Removes custom stopwords](custom.md) 
 
 * [*microsoftml.predefined*: Removes predefined stopwords](predefined.md) 
+
+## Related content
+
+- [*microsoftml.n_gram*: Converts text into features using n-grams](n-gram.md)
+- [*microsoftml.n_gram_hash*: Converts text into features using hashed n-grams](n-gram-hash.md)
+- [*microsoftml.custom*: Removes custom stopwords](custom.md)
+- [*microsoftml.predefined*: Removes predefined stopwords](predefined.md)
+- [*microsoftml.get_sentiment*: Sentiment analysis](get-sentiment.md)

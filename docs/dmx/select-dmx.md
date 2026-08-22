@@ -118,10 +118,8 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
   
  [SELECT FROM &#60;structure&#62;.CASES](../dmx/select-from-structure-cases.md)  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)  
-  
-  
+## Related content
+
+- [DMX Statements - Data Definition](dmx-statements-data-definition.md)
+- [DMX Statements - Data Manipulation](dmx-statements-data-manipulation.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)

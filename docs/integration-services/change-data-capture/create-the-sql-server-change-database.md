@@ -42,8 +42,11 @@ f1_keywords:
   
      After you create the database, you can click **Next** to [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md).  
   
-## See Also  
- [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [The Oracle CDC Service](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
-  
-  
+## Next step
+
+> [!div class="nextstepaction"]
+> [How to Create the SQL Server Change Database Instance](how-to-create-the-sql-server-change-database-instance.md)
+
+## Related content
+
+- [The Oracle CDC Service](the-oracle-cdc-service.md)

@@ -78,5 +78,5 @@ FOR JSON PATH;
 ## Related content
 
 - [Format query results as JSON with FOR JSON](format-query-results-as-json-with-for-json-sql-server.md)
-- [SELECT - FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)
+- [SELECT - FOR clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)
 - [JSON as a bridge between NoSQL and relational worlds](/shows/datadriven-sqlserver2016/json-as-bridge-betwen-nosql-relational-worlds)

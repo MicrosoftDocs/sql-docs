@@ -68,6 +68,6 @@ The following other programming languages might not provide any support for dist
 - Linked server using Transact-SQL
 - JDBC drivers
 
-## See also
+## Related content
 
-[Performing Transactions (ODBC)](performing-transactions-in-odbc.md)
+- [Performing Transactions in ODBC](performing-transactions-in-odbc.md)

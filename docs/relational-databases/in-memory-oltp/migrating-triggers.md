@@ -26,6 +26,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  You cannot create natively compiled stored procedures if there are one or more DDL triggers on CREATE_PROCEDURE, DROP_PROCEDURE, or any event group that includes those events.  
   
-## See Also  
- [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
-  
+## Related content
+
+- [Plan your adoption of In-Memory OLTP Features in SQL Server](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

@@ -42,6 +42,6 @@ helpviewer_keywords:
 ## Related Tasks  
  For more information about how to set properties of this component, see [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## See Also  
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
+## Related content
+
+- [Data Flow](data-flow.md)

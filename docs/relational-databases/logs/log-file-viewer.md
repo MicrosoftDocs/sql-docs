@@ -43,8 +43,7 @@ helpviewer_keywords:
 |Describes how to view offline log files through registered servers and how to verify WMI permissions.|[View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md)|  
 |Provides Log File Viewer F1 Help.|[Log File Viewer F1 Help](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
-## See Also  
- [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
- [SQL Server Agent Error Log](/ssms/agent/sql-server-agent-error-log)  
-  
-  
+## Related content
+
+- [SQL Server Audit (Database Engine)](../security/auditing/sql-server-audit-database-engine.md)
+- [SQL Server Agent Error Log](/ssms/agent/sql-server-agent-error-log)

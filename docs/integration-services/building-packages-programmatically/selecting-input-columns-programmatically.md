@@ -204,7 +204,6 @@ Module Module1
 End Module  
 ```
   
-## See Also  
- [Saving a Package Programmatically](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
-  
-  
+## Related content
+
+- [Saving a Package Programmatically](saving-a-package-programmatically.md)

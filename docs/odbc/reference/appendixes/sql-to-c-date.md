@@ -42,6 +42,6 @@ SQL_TYPE_DATE
 
 ## Related content
 
-- [Converting Data from SQL to C Data Types](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)
-- [SQL to C: Timestamp](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)
-- [Data Type Identifiers and Descriptors](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)
+- [Convert data from SQL to C data types](converting-data-from-sql-to-c-data-types.md)
+- [SQL to C: Timestamp](sql-to-c-timestamp.md)
+- [Data Type Identifiers and Descriptors](data-type-identifiers-and-descriptors.md)

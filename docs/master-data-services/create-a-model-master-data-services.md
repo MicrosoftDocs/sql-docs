@@ -66,13 +66,11 @@ helpviewer_keywords:
   
 -   **Updated Date and Time**: The date and time when the model was last updated.  
   
-## Next Steps  
-  
--   [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
-  
-## See Also  
- [Models &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Delete a Model &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Edit Model &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
- [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)
+## Related content
+
+- [Models (Master Data Services)](models-master-data-services.md)
+- [Entities (Master Data Services)](entities-master-data-services.md)
+- [Delete a Model (Master Data Services)](delete-a-model-master-data-services.md)
+- [Edit Model (Master Data Services)](edit-model-master-data-services.md)
+- [Transactions (Master Data Services)](transactions-master-data-services.md)
+- [Create an Entity (Master Data Services)](create-an-entity-master-data-services.md)

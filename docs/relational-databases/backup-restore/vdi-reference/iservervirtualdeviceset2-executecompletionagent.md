@@ -34,6 +34,6 @@ Since SQL Server might have to perform special thread initialization, this inter
 
 This function will not return until IServerVirtualDeviceSet2::Close or SignalAbort is invoked.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

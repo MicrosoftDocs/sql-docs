@@ -102,9 +102,8 @@ helpviewer_keywords:
   
 -   **Expression**  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](./integration-services-ssis-variables.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Variables](integration-services-ssis-variables.md)
+- [Integration Services (SSIS) Expressions](expressions/integration-services-ssis-expressions.md)
+- [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md)

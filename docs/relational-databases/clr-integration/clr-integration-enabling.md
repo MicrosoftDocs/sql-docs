@@ -41,8 +41,8 @@ Computers configured with large amounts of memory and a large number of processo
 
 ## Related content
 
-- [sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md)
-- [clr enabled Server Configuration Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)
+- [sys.sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md)
+- [Server configuration: clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)
 - [Server-level roles](../security/authentication-access/server-level-roles.md)

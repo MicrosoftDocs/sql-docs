@@ -141,10 +141,10 @@ library(RevoScaleR);
 logisticRegression(args);
 ```
 
-## See also
+## Related content
 
-+ [R tutorials](../tutorials/r-tutorials.md)
-+ [Learn to use compute contexts](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [R for SQL developers: Train and operationalize a model](../tutorials/r-taxi-classification-introduction.md)
-+ [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
-+ [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)
+- [R tutorials for SQL machine learning](../tutorials/r-tutorials.md)
+- [Tutorial: Use RevoScaleR R functions with SQL Server data](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+- [R tutorial: Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)
+- [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
+- [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)

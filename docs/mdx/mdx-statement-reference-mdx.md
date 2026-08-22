@@ -20,7 +20,6 @@ ms.custom: mdx
 |[MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|Contains information about MDX data definition statements that create, drop, and manipulate multidimensional objects.|  
 |[MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Contains information about MDX data manipulation statements that retrieve and manipulate data from multidimensional objects.|  
   
-## See Also  
- [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Language Reference (MDX)](mdx-language-reference-mdx.md)

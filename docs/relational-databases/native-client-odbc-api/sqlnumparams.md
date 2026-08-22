@@ -15,7 +15,7 @@ ms.topic: "reference"
   
  For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
-## See Also  
- [SQLNumParams Function](../../odbc/reference/syntax/sqlnumparams-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLNumParams Function](../../odbc/reference/syntax/sqlnumparams-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

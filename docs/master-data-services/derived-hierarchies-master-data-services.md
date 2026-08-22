@@ -75,16 +75,11 @@ helpviewer_keywords:
 |Change the name of an existing derived hierarchy.|[Change a Derived Hierarchy Name &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Delete an existing derived hierarchy.|[Delete a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
-## Related Content  
-  
--   [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
-  
--   [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
-  
--   [Recursive Hierarchies &#40;Master Data Services&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
-  
--   [Derived Hierarchies with Explicit Caps &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
-  
--   [Show Many-to-Many Relationships in Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
-  
--   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)
+## Related content
+
+- [Domain-Based Attributes (Master Data Services)](domain-based-attributes-master-data-services.md)
+- [Explicit Hierarchies (Master Data Services)](explicit-hierarchies-master-data-services.md)
+- [Recursive Hierarchies (Master Data Services)](recursive-hierarchies-master-data-services.md)
+- [Derived Hierarchies with Explicit Caps (Master Data Services)](derived-hierarchies-with-explicit-caps-master-data-services.md)
+- [Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)](show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)
+- [Collections (Master Data Services)](collections-master-data-services.md)

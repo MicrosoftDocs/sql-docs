@@ -208,9 +208,6 @@ go
   
  For more information, see [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
-## Next Step  
- After you have created the table-valued function that queries for change data, the next step is to start designing the data flow in the package.  
-  
- **Next topic:** [Retrieve and Understand the Change Data](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
-  
-  
+## Related content
+
+- [Retrieve and Understand the Change Data](retrieve-and-understand-the-change-data.md)

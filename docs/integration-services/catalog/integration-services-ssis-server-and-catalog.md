@@ -48,7 +48,6 @@ helpviewer_keywords:
   
 -   [Run Integration Services (SSIS) Packages](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
-## Related Content  
- Blog entry, [SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091), at blogs.msdn.com.  
-  
-  
+## Related content
+
+- [SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091)

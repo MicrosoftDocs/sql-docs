@@ -135,4 +135,4 @@ To provide a consistent experience to users and applications, when you attach a 
 
 ## Related content
 
-- [Database Files and Filegroups](database-files-and-filegroups.md)
+- [Database files and filegroups](database-files-and-filegroups.md)

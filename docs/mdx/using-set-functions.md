@@ -146,9 +146,8 @@ ON Rows
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Functions &#40;MDX Syntax&#41;](../mdx/functions-mdx-syntax.md)   
- [Using Member Functions](../mdx/using-member-functions.md)   
- [Using Tuple Functions](../mdx/using-tuple-functions.md)  
-  
-  
+## Related content
+
+- [Functions (MDX Syntax)](functions-mdx-syntax.md)
+- [Using Member Functions](using-member-functions.md)
+- [Using Tuple Functions](using-tuple-functions.md)

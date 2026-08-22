@@ -24,5 +24,6 @@ monikerRange: ">=sql-server-ver16"
   
  The Metadata model is no longer available. You can also no longer view metadata in the Explorer functional area.  
   
-## See Also  
- [Deprecated Features of Master Data Services](../master-data-services/deprecated-master-data-services-features.md)
+## Related content
+
+- [Deprecated Features of Master Data Services](deprecated-master-data-services-features.md)

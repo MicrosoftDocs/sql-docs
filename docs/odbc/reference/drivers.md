@@ -22,5 +22,6 @@ helpviewer_keywords:
   
 -   [Driver Architecture](../../odbc/reference/driver-architecture.md)  
   
-## See Also  
- [Microsoft-Supplied ODBC Drivers](../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)
+## Related content
+
+- [Microsoft-Supplied ODBC Drivers](../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)

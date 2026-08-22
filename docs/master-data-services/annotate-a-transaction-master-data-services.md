@@ -61,6 +61,7 @@ helpviewer_keywords:
   
 5.  Click **OK**.  
   
-## See Also  
- [Annotations &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
- [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)
+## Related content
+
+- [Annotations (Master Data Services)](annotations-master-data-services.md)
+- [Transactions (Master Data Services)](transactions-master-data-services.md)

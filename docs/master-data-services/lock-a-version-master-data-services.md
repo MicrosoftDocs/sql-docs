@@ -43,12 +43,9 @@ helpviewer_keywords:
   
 4.  In the confirmation dialog box, click **OK**.  
   
-## Next Steps  
-  
--   [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
-  
--   [Commit a Version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)  
-  
-## See Also  
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [Unlock a Version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)
+## Related content
+
+- [Versions (Master Data Services)](versions-master-data-services.md)
+- [Unlock a Version (Master Data Services)](unlock-a-version-master-data-services.md)
+- [Validate a Version against Business Rules (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)
+- [Commit a Version (Master Data Services)](commit-a-version-master-data-services.md)

@@ -60,9 +60,8 @@ FROM
     [Adventure Works]  
 ```  
   
-## See Also  
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [AddCalculatedMembers (MDX)](addcalculatedmembers-mdx.md)
+- [Children (MDX)](children-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

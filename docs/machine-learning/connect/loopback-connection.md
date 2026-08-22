@@ -174,8 +174,8 @@ WITH RESULT SETS ((col1 int, col2 int))
 GO
 ```
 
-## Next steps
+## Related content
 
-+ [Microsoft ODBC driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)
-+ [revoscalepy](../python/ref-py-revoscalepy.md)
-+ [RevoScaleR](../r/ref-r-revoscaler.md)
+- [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)
+- [revoscalepy (Python package in SQL Server Machine Learning Services)](../python/ref-py-revoscalepy.md)
+- [RevoScaleR (R package in SQL Server Machine Learning Services)](../r/ref-r-revoscaler.md)

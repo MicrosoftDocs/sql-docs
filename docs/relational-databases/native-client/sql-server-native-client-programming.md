@@ -65,8 +65,8 @@ helpviewer_keywords:
  [SQL Server Native Client Errors](./sql-server-native-client-error-mssqlserver-50000.md)  
  Contains topics about runtime errors associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## See Also  
- [Updating an Application from SQL Server 2005 Native Client](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
- [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB How-to Topics](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
+## Related content
+
+- [Updating an Application from SQL Server 2005 Native Client](applications/updating-an-application-from-sql-server-2005-native-client.md)
+- [ODBC How-to Topics](../native-client-odbc-how-to/odbc-how-to-topics.md)
+- [OLE DB How-to Topics (Native Client OLE DB provider)](../native-client-ole-db-how-to/ole-db-how-to-topics.md)

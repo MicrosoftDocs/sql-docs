@@ -51,8 +51,6 @@ In this task, you add and configure an OLE DB destination to use the OLE DB conn
 ## Go to next task
 [Step 8: Annotate and format the Lesson 1 package](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## See also  
-[OLE DB destination](../integration-services/data-flow/ole-db-destination.md)  
-  
-  
-  
+## Related content
+
+- [OLE DB Destination](data-flow/ole-db-destination.md)

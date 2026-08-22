@@ -107,9 +107,7 @@ Results should be similar to those showing in the following screenshot.
 
   ![Table summary information](media/nyctaxidatatablesummary.png "Query results")
 
-## Next steps
+## Related content
 
-NYC Taxi sample data is now available for hands-on learning.
-
-+ [Learn in-database analytics using R in SQL Server](r-taxi-classification-introduction.md)
-+ [Learn in-database analytics using Python in SQL Server](python-taxi-classification-introduction.md)
+- [R tutorial: Predict NYC taxi fares with binary classification](r-taxi-classification-introduction.md)
+- [Python tutorial: Predict NYC taxi fares with binary classification](python-taxi-classification-introduction.md)

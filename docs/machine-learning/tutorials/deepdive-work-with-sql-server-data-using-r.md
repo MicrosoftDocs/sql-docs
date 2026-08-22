@@ -112,7 +112,7 @@ This section lists some common issues that you might run across in the course of
 
     Also, ask your administrator to grant you the permission, EXECUTE ANY EXTERNAL SCRIPT. It is needed for R script execution, whether remote or by using `sp_execute_external_script`.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Create SQL Server data objects using RxSqlServerData](../../machine-learning/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

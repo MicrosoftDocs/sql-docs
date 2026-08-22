@@ -102,8 +102,8 @@ Custom properties aren't listed in Oracle Connection Manager Editor. To set the 
 2. In the **Properties** pane, set the **OracleHome** or **OracleHome64** property with the full path to the Oracle home directory.
 
 
-## Next steps
+## Related content
 
-- Configure [Oracle Source](oracle-source.md).
-- Configure [Oracle Destination](oracle-destination.md).
-- If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).
+- [Oracle source](oracle-source.md)
+- [Oracle destination](oracle-destination.md)
+- [TechCommunity](https://aka.ms/AA5u35j)

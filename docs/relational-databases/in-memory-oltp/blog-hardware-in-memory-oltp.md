@@ -61,4 +61,4 @@ In terms of disk capacity, we recommend having 2 - 3 times the size of the memor
 
 ## Related content
 
-- [Sample Database for In-Memory OLTP](sample-database-for-in-memory-oltp.md)
+- [Sample database for in-memory OLTP](sample-database-for-in-memory-oltp.md)

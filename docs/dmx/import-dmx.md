@@ -35,10 +35,10 @@ IMPORT FROM <filename>
 IMPORT FROM 'C:\TEMP\Association_NEW.dmb'  
 ```  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
- [EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)   
- [Export and Import Data Mining Objects](/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+## Related content
+
+- [DMX Statements - Data Definition](dmx-statements-data-definition.md)
+- [DMX Statements - Data Manipulation](dmx-statements-data-manipulation.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)
+- [EXPORT (DMX)](export-dmx.md)
+- [Export and Import Data Mining Objects](/analysis-services/data-mining/export-and-import-data-mining-objects)

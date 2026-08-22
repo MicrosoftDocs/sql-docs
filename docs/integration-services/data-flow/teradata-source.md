@@ -160,7 +160,7 @@ Use the **Error Output** pane to select error-handling options. To open the pane
   * Redirect the row
   * Fail the component
 
-## Next steps
+## Related content
 
-- Configure the [Teradata destination](teradata-destination.md).
-- If you have questions, visit the [tech community](https://aka.ms/AA6iwdw).
+- [Teradata destination](teradata-destination.md)
+- [tech community](https://aka.ms/AA6iwdw)

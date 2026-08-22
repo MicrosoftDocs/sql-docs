@@ -30,5 +30,6 @@ The info on this page doesn't include the name of the missing mapping file. Sinc
 ## What's next?  
  After you click **Next** to continue without knowing whether data type conversions will succeed, the next page is **Save and Run Package**. On this page, you specify whether you want to run the copy operation immediately. Depending on your configuration, you may also be able to save the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package created by the wizard  to customize it and to reuse it later. For more info, see [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 
-## See also
-[Data Type Mapping in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
+## Related content
+
+- [Data Type Mapping in the SQL Server Import and Export Wizard](data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

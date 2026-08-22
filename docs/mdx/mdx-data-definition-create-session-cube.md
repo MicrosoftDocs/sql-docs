@@ -190,8 +190,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## See Also  
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE GLOBAL CUBE Statement  &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
-  
-  
+## Related content
+
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)
+- [MDX Data Definition - CREATE GLOBAL CUBE](mdx-data-definition-create-global-cube.md)

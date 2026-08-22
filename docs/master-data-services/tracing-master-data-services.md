@@ -283,6 +283,6 @@ You can use the following procedure to create a log file that can help troublesh
 
 1. Try again to create the database. Then, open the file *MdsConfigManagerTrace.log* that is saved to *C:\Program Files\Microsoft SQL Server\Master Data Services\Configuration* and review the same for other information regarding the failure.
 
-## External resources
+## Related content
 
-[Troubleshooting logging improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)
+- [Troubleshooting logging improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)

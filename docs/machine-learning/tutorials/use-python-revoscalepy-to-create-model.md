@@ -165,9 +165,7 @@ For SQL Server compute contexts, you can set the batch size, or provide hints ab
 + The sample was run on a computer with four processors, so the `num_tasks` parameter is set to 4 to allow maximum use of resources. 
 + If you set this value to 0, SQL Server uses the default, which is to run as many tasks in parallel as possible, under the current MAXDOP settings for the server. However, the exact number of tasks that might be allocated depends on many other factors, such as server settings, and other jobs that are running.
 
-## Next steps
+## Related content
 
-These additional Python samples and tutorials demonstrate end-to-end scenarios using more complex data sources, as well as the use of remote compute contexts.
-
-+ [In-Database Python for SQL developers](python-taxi-classification-introduction.md)
-+ [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
+- [Python tutorial: Predict NYC taxi fares with binary classification](python-taxi-classification-introduction.md)
+- [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)

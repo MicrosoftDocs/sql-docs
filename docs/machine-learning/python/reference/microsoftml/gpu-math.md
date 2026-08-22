@@ -56,9 +56,9 @@ Use cuDNN on GPU (settings).
 cuDNN optimization options (settings).
 
 
-## See also
+## Related content
 
-[`avx_math`](avx-math.md),
-[`clr_math`](clr-math.md),
-[`mkl_math`](mkl-math.md),
-[`sse_math`](sse-math.md)
+- [*microsoftml.avx_math*: Acceleration with AVX instructions](avx-math.md)
+- [*microsoftml.clr_math*: Acceleration with .NET math](clr-math.md)
+- [*microsoftml.mkl_math*: Acceleration with Intel MKL](mkl-math.md)
+- [*microsoftml.sse_math*: Acceleration with SSE instructions](sse-math.md)

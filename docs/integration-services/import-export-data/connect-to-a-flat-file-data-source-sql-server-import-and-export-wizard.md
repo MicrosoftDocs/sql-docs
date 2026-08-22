@@ -288,6 +288,7 @@ For a flat file destination, there's only a single page of options, as shown in 
 > [!NOTE] 
 > After you select a text qualifier, you can't reselect the **None** option. Type **None** to de-select the text qualifier.  
 
-## See also
-[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+## Related content
+
+- [Choose a Data Source (SQL Server Import and Export Wizard)](choose-a-data-source-sql-server-import-and-export-wizard.md)
+- [Choose a Destination (SQL Server Import and Export Wizard)](choose-a-destination-sql-server-import-and-export-wizard.md)

@@ -113,16 +113,15 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## See Also  
- [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [PeriodsToDate (MDX)](periodstodate-mdx.md)
+- [Children (MDX)](children-mdx.md)
+- [Hierarchize (MDX)](hierarchize-mdx.md)
+- [Count (Set) (MDX)](count-set-mdx.md)
+- [Filter (MDX)](filter-mdx.md)
+- [AddCalculatedMembers (MDX)](addcalculatedmembers-mdx.md)
+- [DrilldownLevel (MDX)](drilldownlevel-mdx.md)
+- [Properties (MDX)](properties-mdx.md)
+- [PrevMember (MDX)](prevmember-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

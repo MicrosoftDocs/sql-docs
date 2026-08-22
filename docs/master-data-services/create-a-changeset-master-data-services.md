@@ -50,9 +50,8 @@ ms.custom:
   
 6.  To use  an existing changeset, click **Existing** and choose the changeset from the list. Only changesets that are in an open or rejected state are available.  
   
-## Next Steps  
- [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
-  
-## See Also  
- [Commit or Submit a Changeset &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
- [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)
+## Related content
+
+- [Commit or Submit a Changeset (Master Data Services)](commit-or-submit-a-changeset-master-data-services.md)
+- [Approve or Reject a Changeset (Master Data Services)](approve-or-reject-a-changeset-master-data-services.md)
+- [Apply and Update a Changeset (Master Data Services)](apply-and-update-a-changeset-master-data-services.md)

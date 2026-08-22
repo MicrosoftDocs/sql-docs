@@ -52,12 +52,11 @@ helpviewer_keywords:
   
 12. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
- [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services Paths](../../../integration-services/data-flow/integration-services-paths.md)   
- [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)   
- [Data Flow Task](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
-  
-  
+## Related content
+
+- [Conditional Split Transformation](conditional-split-transformation.md)
+- [Integration Services Transformations](integration-services-transformations.md)
+- [Integration Services Paths](../integration-services-paths.md)
+- [Integration Services Data Types](../integration-services-data-types.md)
+- [Data Flow Task](../../control-flow/data-flow-task.md)
+- [Integration Services (SSIS) Expressions](../../expressions/integration-services-ssis-expressions.md)

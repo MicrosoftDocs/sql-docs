@@ -28,10 +28,9 @@ Wtd( [ Member_Expression ] )
   
  The **Wtd** function is a shortcut function for the [PeriodsToDate](../mdx/periodstodate-mdx.md) function where the level is set to *Weeks*. That is, `Wtd(Member_Expression)` is equivalent to `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
-## See Also  
- [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
- [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
- [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Qtd (MDX)](qtd-mdx.md)
+- [Mtd (MDX)](mtd-mdx.md)
+- [Ytd (MDX)](ytd-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

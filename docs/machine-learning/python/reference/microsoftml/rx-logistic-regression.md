@@ -364,11 +364,6 @@ This algorithm will attempt to load the entire dataset into memory
 when `train_threads > 1` (multi-threading).
 
 
-## See also
-
-[`rx_predict`](rx-predict.md)
-
-
 ## References
 
 [Wikipedia: L-BFGS](https://wikipedia.org/wiki/L-BFGS)
@@ -546,3 +541,7 @@ Rows Read: 5, Total Rows Processed: 5, Total Chunk Time: 0.001 seconds
 3      setosa  0.767652  0.211191  0.021157
 4  versicolor  0.116369  0.498615  0.385016
 ```
+
+## Related content
+
+- [*microsoftml.rx_predict*: Scores using a Microsoft machine learning model](rx-predict.md)

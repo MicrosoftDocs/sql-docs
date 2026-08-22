@@ -80,5 +80,6 @@ helpviewer_keywords:
 ##  <a name="SysSettings"></a> Configuring System Settings  
  There are system settings that you can configure to control behavior in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. You can adjust these settings in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] or if you have UPDATE access, you can adjust these settings directly in the mdm.tblSystemSetting database table. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## See Also  
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)
+## Related content
+
+- [Security (Master Data Services)](security-master-data-services.md)

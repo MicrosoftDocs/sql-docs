@@ -103,14 +103,6 @@ helpviewer_keywords:
   
 -   [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Related Content  
-  
--   Technical article, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](/troubleshoot/sql/integration-services/error-you-run-ssis-package), on support.microsoft.com.  
-  
--   Technical article, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), on msdn.microsoft.com.  
-  
--   Technical article, [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701), on simple-talk.com.  
-  
 ## SQL Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **SQL Destination Editor** dialog box to specify data source information, and to preview the results. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination loads data into tables or views in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
@@ -192,5 +184,9 @@ helpviewer_keywords:
  **Order columns**  
  Type the names of the sort columns. Each column can be sorted in ascending or descending order. If you use multiple sort columns, delimit the list with commas.  
   
-## See Also  
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
+## Related content
+
+- [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](/troubleshoot/sql/integration-services/error-you-run-ssis-package)
+- [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))
+- [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701)
+- [Data Flow](data-flow.md)

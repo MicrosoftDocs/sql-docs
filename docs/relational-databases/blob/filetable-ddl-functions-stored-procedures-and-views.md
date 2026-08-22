@@ -58,6 +58,6 @@ helpviewer_keywords:
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)|**Added**|[Manage FileTables](../../relational-databases/blob/manage-filetables.md)|  
   
-## See Also  
- [Manage FileTables](../../relational-databases/blob/manage-filetables.md)  
-  
+## Related content
+
+- [Manage FileTables](manage-filetables.md)

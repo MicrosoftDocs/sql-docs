@@ -34,7 +34,6 @@ helpviewer_keywords:
 |&#124;&#124;|Logical OR|Left to right|  
 |? :|Conditional expression|Right to left|  
   
-## See Also  
- [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
-  
-  
+## Related content
+
+- [Operators (SSIS Expression)](operators-ssis-expression.md)

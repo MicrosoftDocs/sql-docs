@@ -110,13 +110,6 @@ Additional arguments sent to compute engine.
 An object defining the transform.
 
 
-## See also
-
-[`load_image`](load-image.md),
-[`resize_image`](resize-image.md),
-[`featurize_image`](featurize-image.md).
-
-
 ## Example
 
 
@@ -249,3 +242,8 @@ Writing completed.
 0          False    0.0          0.5
 ```
 
+## Related content
+
+- [*microsoftml.load_image*: Loads an image](load-image.md)
+- [*microsoftml.resize_image*: Resizes an Image](resize-image.md)
+- [*microsoftml.featurize_image*: Converts an image into features](featurize-image.md)

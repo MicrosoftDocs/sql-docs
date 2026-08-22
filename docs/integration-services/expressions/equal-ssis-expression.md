@@ -95,9 +95,8 @@ ListPrice == 500
 @LPrice == 500  
 ```  
   
-## See Also  
- [!= &#40;Unequal&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
- [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
-  
-  
+## Related content
+
+- [!= (Unequal) (SSIS Expression)](unequal-ssis-expression.md)
+- [Operator Precedence and Associativity](operator-precedence-and-associativity.md)
+- [Operators (SSIS Expression)](operators-ssis-expression.md)

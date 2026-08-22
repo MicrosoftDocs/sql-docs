@@ -51,6 +51,7 @@ helpviewer_keywords:
   
 9. Click **Save**.  
   
-## See Also  
- [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)
+## Related content
+
+- [Model Object Permissions (Master Data Services)](model-object-permissions-master-data-services.md)
+- [Assign Model Object Permissions (Master Data Services)](assign-model-object-permissions-master-data-services.md)

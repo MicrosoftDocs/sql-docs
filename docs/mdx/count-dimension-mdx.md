@@ -32,10 +32,9 @@ SELECT Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Count &#40;Tuple&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [Count &#40;Hierarchy Levels&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Count (Tuple) (MDX)](count-tuple-mdx.md)
+- [Count (Hierarchy Levels) (MDX)](count-hierarchy-levels-mdx.md)
+- [Count (Set) (MDX)](count-set-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

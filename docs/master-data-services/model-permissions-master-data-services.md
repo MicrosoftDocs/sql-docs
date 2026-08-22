@@ -35,8 +35,9 @@ helpviewer_keywords:
   
  The Read, Create, Update, and Delete permissions can be combined with each other. When Create, Update and Delete permissions are assigned, the read permission will be assigned automatically.  
   
-## See Also  
- [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Entity Permissions &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)   
- [Collection Permissions &#40;Master Data Services&#41;](../master-data-services/collection-permissions-master-data-services.md)
+## Related content
+
+- [Assign Model Object Permissions (Master Data Services)](assign-model-object-permissions-master-data-services.md)
+- [Model Object Permissions (Master Data Services)](model-object-permissions-master-data-services.md)
+- [Entity Permissions (Master Data Services)](entity-permissions-master-data-services.md)
+- [Collection Permissions (Master Data Services)](collection-permissions-master-data-services.md)

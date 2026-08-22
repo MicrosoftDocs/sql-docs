@@ -65,8 +65,8 @@ FROM [TM Clustering]
 > [!NOTE]  
 >  Filters that are applied to the case table can be altered by using the SELECT INTO statement as shown in this example; however, if the original model contains a filter on a nested table, the nested table filter cannot be altered or removed by using this syntax, but is copied unchanged from the original model. To create a model with a different filter on a nested table, use the ALTER STRUCTURE...ADD MODEL syntax.  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
-  
+## Related content
+
+- [DMX Statements - Data Definition](dmx-statements-data-definition.md)
+- [DMX Statements - Data Manipulation](dmx-statements-data-manipulation.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)

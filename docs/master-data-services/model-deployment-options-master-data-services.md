@@ -36,7 +36,8 @@ ms.custom:
 |Clone|Create a new model that is an exact clone of the model in the package. This works only if the model does not exist (by name or identifier) in the target environment. Use "clone" when you want to have the same model in multiple environments and update the cloned model over time.|This is the default behavior of the wizard in the web application. If a model with the same name or ID already exists, you are prompted to create a new model instead.|  
 |Update|Update an existing model with the model in the package. The identifiers must be the same in both models. This is used to update a model that you previously cloned.|You can only update models that were previously cloned. (The names and IDs must match.)|  
   
-## See Also  
- [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
- [Deploy a Model Deployment Package by Using the Wizard](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)
+## Related content
+
+- [Deploy a Model Deployment Package by Using MDSModelDeploy](deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)
+- [Deploy a Model Deployment Package by Using the Wizard](deploy-a-model-deployment-package-by-using-the-wizard.md)
+- [Deploying Models (Master Data Services)](deploying-models-master-data-services.md)

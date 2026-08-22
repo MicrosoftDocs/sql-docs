@@ -68,11 +68,7 @@ ms.custom:
   
 12. Click **OK**. When the entity has been created successfully, a new header row is displayed, the cells are highlighted, and the sheet name is updated to match the entity name.  
   
-## Next Steps  
-  
--   To view errors that occurred, in the **Publish and Validate** group, click **Show Status**. ValidationStatus and InputStatus columns are displayed. For more information, see [Validating Data &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
-  
--   Confirm that the attributes were created as the data type you expected.  
-  
-## See Also  
- [Create a Domain-based Attribute &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)
+## Related content
+
+- [Create a Domain-based Attribute (MDS Add-in for Excel)](create-a-domain-based-attribute-mds-add-in-for-excel.md)
+- [Validating Data (MDS Add-in for Excel)](validating-data-mds-add-in-for-excel.md)

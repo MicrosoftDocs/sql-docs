@@ -248,8 +248,8 @@ As a consequence, TDE **is not** applied to any data that you use in external sc
 
 In the case of [Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md), external runtimes do not have access to the encryption keys. Therefore, data cannot be sent to the scripts.
 
-## Next steps
+## Related content
 
-In this article, you learned the components and interaction model of the security architecture built into the [extensibility framework](../../machine-learning/concepts/extensibility-framework.md). Key points covered in this article include the purpose of launchpad, SQLRUserGroup and worker accounts, process isolation of external scripts, and how user identities are mapped to worker accounts. 
-
-As a next step, review the instructions for [granting permissions](../../machine-learning/security/user-permission.md). For servers that use Windows authentication, you should also review [Add SQLRUserGroup to a database login](../../machine-learning/security/create-a-login-for-sqlrusergroup.md) to learn when additional configuration is required.
+- [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md)
+- [Grant database users permission to execute Python and R scripts with SQL Server Machine Learning Services](../security/user-permission.md)
+- [Create a login for SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md)

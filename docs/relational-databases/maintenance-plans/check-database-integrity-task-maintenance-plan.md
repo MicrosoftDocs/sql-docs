@@ -106,6 +106,6 @@ Use the **Check Database Integrity Task** dialog to check the allocation and str
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
 - [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)

@@ -60,7 +60,8 @@ helpviewer_keywords:
   
 8.  In the confirmation dialog box, click **OK**.  
   
-## See Also  
- [Reactivate a Member or Collection &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)
+## Related content
+
+- [Reactivate a Member or Collection (Master Data Services)](reactivate-a-member-or-collection-master-data-services.md)
+- [Members (Master Data Services)](members-master-data-services.md)
+- [Collections (Master Data Services)](collections-master-data-services.md)

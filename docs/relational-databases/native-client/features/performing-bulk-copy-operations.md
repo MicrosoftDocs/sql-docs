@@ -105,12 +105,11 @@ helpviewer_keywords:
 ## SQL Server Native Client ODBC Driver  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver maintains the same support for bulk copy operations that were part of previous versions of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC driver. For information about bulk copy operations using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver, see [Performing Bulk Copy Operations &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
-## See Also  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Data Source Properties &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
- [Bulk Import and Export of Data &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [IRowsetFastLoad &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
- [IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
- [Optimizing Bulk Import Performance](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Features](sql-server-native-client-features.md)
+- [SQL Server Native Client Data Source Properties (OLE DB)](../../native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)
+- [Bulk import and export of data (SQL Server)](../../import-export/bulk-import-and-export-of-data-sql-server.md)
+- [IRowsetFastLoad (Native Client OLE DB Provider)](../../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)
+- [IBCPSession (Native Client OLE DB Provider)](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md)
+- [Optimizing Bulk Import Performance](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)

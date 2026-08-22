@@ -31,7 +31,6 @@ ms.custom: mdx
 ## Uses of Functions  
  Functions can be used or included in any MDX expression. Functions can also be nested (one function used inside another function).  
   
-## See Also  
- [MDX Syntax Elements &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Syntax Elements (MDX)](mdx-syntax-elements-mdx.md)

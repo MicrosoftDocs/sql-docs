@@ -52,8 +52,7 @@ helpviewer_keywords:
 ### Stopping a Running Package  
  You can call the <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage.Stop%2A> method of a <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage> object to request that the package be stopped. There may be a delay between the time that a stop request is issued and the time that the package actually stops.  
   
-## See Also  
- [Package Management &#40;SSIS Service&#41;](../../integration-services/service/package-management-ssis-service.md)   
- [Enumerating Available Packages Programmatically](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
-  
-  
+## Related content
+
+- [Package Management (SSIS Service)](../service/package-management-ssis-service.md)
+- [Enumerating Available Packages Programmatically](enumerating-available-packages-programmatically.md)

@@ -40,11 +40,10 @@ f1_keywords:
  **Restore As**  
  Lists the file names that the restored files are to be saved as. Enter or search for the appropriate file name.  
   
-## See Also  
- [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)   
- [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)   
- [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
- [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
-  
+## Related content
+
+- [Restore database (General page)](restore-database-general-page.md)
+- [Restore Database (Options Page)](restore-database-options-page.md)
+- [RESTORE Statements - Arguments (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)
+- [Define a Logical Backup Device for a Tape Drive (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

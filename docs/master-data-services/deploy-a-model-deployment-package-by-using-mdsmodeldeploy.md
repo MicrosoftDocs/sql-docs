@@ -108,10 +108,7 @@ ms.custom:
   
      When updating a model, if the process fails during the first three steps, it does not proceed; however, changes that are already made are not rolled back. If the process fails in step 4, members that can be updated are updated.  
   
-## Next Steps  
- File attributes, and user and group permissions are not included in model deployment packages. After you deploy a model, you must update these manually. For more information, see:  
-  
--   [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
-  
-## See Also  
- [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)
+## Related content
+
+- [Deploying Models (Master Data Services)](deploying-models-master-data-services.md)
+- [Assign Model Object Permissions (Master Data Services)](assign-model-object-permissions-master-data-services.md)

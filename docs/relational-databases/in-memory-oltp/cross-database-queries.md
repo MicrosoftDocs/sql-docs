@@ -111,6 +111,6 @@ This example illustrates a method to transfer data from one database into a memo
     GO 
     ```
    
-## See Also  
- [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
-  
+## Related content
+
+- [Plan your adoption of In-Memory OLTP Features in SQL Server](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

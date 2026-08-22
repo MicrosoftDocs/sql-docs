@@ -368,7 +368,7 @@ If the memory-optimized table variable is accessed only with one exact key value
 
 ## Related content
 
-- [Sample Database for In-Memory OLTP](sample-database-for-in-memory-oltp.md)
+- [Sample database for in-memory OLTP](sample-database-for-in-memory-oltp.md)
 - [Defining Durability for Memory-Optimized Objects](defining-durability-for-memory-optimized-objects.md)
-- [Cumulative Update to eliminate chance of improper Out Of Memory errors, announced in blog September 2017.](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
+- [Cumulative Update to eliminate chance of improper Out Of Memory errors, announced in blog September 2017](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
 - [KB3177312 - SQL Server 2016 build versions](/troubleshoot/sql/releases/sqlserver-2016/build-versions)

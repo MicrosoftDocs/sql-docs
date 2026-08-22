@@ -30,7 +30,6 @@ helpviewer_keywords:
 ## Determining Which Roles Are Assigned  
  To determine which roles have already been assigned to a particular package, call the <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageRoles%2A> method. To assign roles to a package, call the <xref:Microsoft.SqlServer.Dts.Runtime.Application.SetPackageRoles%2A> method.  
   
-## See Also  
- [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)  
-  
-  
+## Related content
+
+- [Integration Services Roles (SSIS Service)](../security/integration-services-roles-ssis-service.md)

@@ -104,7 +104,7 @@ NATURAL PREDICTION JOIN
 > [!WARNING]  
 >  The MDX functions for TOPPERCENT and BOTTOMPERCENT can generate unexpected results when the values used to calculate the percentage include negative numbers. This behavior does not affect the DMX functions. For more information, see [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md).  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)  
-  
+## Related content
+
+- [Data Mining Extensions (DMX) Function Reference](data-mining-extensions-dmx-function-reference.md)
+- [Functions (DMX)](functions-dmx.md)

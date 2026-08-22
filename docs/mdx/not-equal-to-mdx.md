@@ -32,7 +32,6 @@ MDX_Expression <> MDX_Expression
   
 -   null if either or both parameters evaluate to a null value.  
   
-## See Also  
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)

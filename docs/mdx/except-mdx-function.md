@@ -48,8 +48,7 @@ WHERE
    ([Measures].[Order Quantity])  
 ```  
   
-## See Also  
- [- &#40;Except&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Except (MDX) Operator](except-mdx-operator.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

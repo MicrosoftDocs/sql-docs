@@ -64,8 +64,7 @@ bindtoken
 > [!IMPORTANT]  
 >  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## See Also  
- [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
- [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)  
-  
-  
+## Related content
+
+- [sp_bindsession (Transact-SQL)](../system-stored-procedures/sp-bindsession-transact-sql.md)
+- [sp_getbindtoken (Transact-SQL)](../system-stored-procedures/sp-getbindtoken-transact-sql.md)

@@ -135,10 +135,9 @@ helpviewer_keywords:
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## See Also  
- [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
-  
-  
+## Related content
+
+- [Operator Precedence and Associativity](operator-precedence-and-associativity.md)
+- [Operators (SSIS Expression)](operators-ssis-expression.md)
+- [Integration Services (SSIS) Expressions](integration-services-ssis-expressions.md)
+- [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)

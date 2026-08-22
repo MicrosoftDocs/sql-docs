@@ -58,7 +58,8 @@ Install the latest version of [SQL Server Management Studio (SSMS)](/ssms/instal
 
     ![Find the SSISDB database in Object Explorer in SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 
-## Next steps
-- Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
-- Run a package. For more info, see [Run an SSIS package with SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Schedule a package. For more info, see [Schedule SSIS packages in Azure](ssis-azure-schedule-packages.md)
+## Related content
+
+- [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md)
+- [Run an SSIS package with SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md)
+- [Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure](ssis-azure-schedule-packages.md)

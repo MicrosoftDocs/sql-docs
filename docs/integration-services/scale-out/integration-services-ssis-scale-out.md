@@ -35,7 +35,7 @@ After you set up Scale Out, you can do the following things:
 
 -   Manage the Scale Out topology in the Scale Out Manager app. For more info, see [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md).
 
-## Next steps
--   [Get started with Integration Services (SSIS) Scale Out on a single computer](get-started-with-ssis-scale-out-onebox.md)
+## Related content
 
--   [Walkthrough: Set up Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+- [Get started with Integration Services (SSIS) Scale Out on a single computer](get-started-with-ssis-scale-out-onebox.md)
+- [Walkthrough: Set up Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)

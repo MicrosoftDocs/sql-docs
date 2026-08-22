@@ -42,10 +42,6 @@ helpviewer_keywords:
   
 -   [Apply Data Quality Rules to Data Source](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
-## Related Content  
-  
--   [Open, Unlock, Rename, and Delete a Data Quality Project](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
-  
 ## DQS Cleansing Transformation Editor Dialog Box
 
   Use the **DQS Cleansing Transformation Editor** dialog box to correct data using Data Quality Services (DQS). For more information, see [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -153,3 +149,6 @@ helpviewer_keywords:
   
 3.  Click **Add**.  
   
+## Related content
+
+- [Open, unlock, rename, and delete a Data Quality Project - Data Quality Services (DQS)](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)

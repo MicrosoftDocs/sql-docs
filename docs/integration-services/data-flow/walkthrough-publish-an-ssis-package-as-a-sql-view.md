@@ -256,7 +256,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 -   Forward Slash (\\) - Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
   
-## See Also  
- [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configure Data Streaming Destination](./data-streaming-destination.md)  
-  
+## Related content
+
+- [Data Streaming Destination](data-streaming-destination.md)

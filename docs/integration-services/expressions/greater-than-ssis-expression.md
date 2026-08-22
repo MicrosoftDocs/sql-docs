@@ -92,12 +92,11 @@ ListPrice > 500
 @LPrice > 500  
 ```  
   
-## See Also  
- [&#60; &#40;Less Than&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#62;= &#40;Greater Than or Equal To&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
- [&#60;= &#40;Less Than or Equal To&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
- [== &#40;Equal&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
- [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
-  
-  
+## Related content
+
+- [&lt; (Less Than) (SSIS Expression)](less-than-ssis-expression.md)
+- [&gt;= (Greater Than or Equal To) (SSIS Expression)](greater-than-or-equal-to-ssis-expression.md)
+- [&lt;= (Less Than or Equal To) (SSIS Expression)](less-than-or-equal-to-ssis-expression.md)
+- [== (Equal) (SSIS Expression)](equal-ssis-expression.md)
+- [Operator Precedence and Associativity](operator-precedence-and-associativity.md)
+- [Operators (SSIS Expression)](operators-ssis-expression.md)

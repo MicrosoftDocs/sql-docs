@@ -31,7 +31,6 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
   
  The **VarP** function uses the biased population formula, while the [Var](../mdx/var-mdx.md) function uses the unbiased population formula.  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

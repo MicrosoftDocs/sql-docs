@@ -213,4 +213,5 @@ Get-AzDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName 
 ```
 
 ## Related content
-- Learn how to schedule package execution. For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedule-packages.md)
+
+- [Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure](ssis-azure-schedule-packages.md)

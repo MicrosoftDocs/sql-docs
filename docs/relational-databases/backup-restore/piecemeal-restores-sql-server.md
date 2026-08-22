@@ -164,11 +164,10 @@ helpviewer_keywords:
   
 4.  The differential backup followed by any other backups that were restored in the original piecemeal restore sequence to restore the data up to the original recovery point.  
 
-## See Also  
- [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Plan and Perform Restore Sequences &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
- [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
-  
+## Related content
+
+- [Apply Transaction Log Backups (SQL Server)](apply-transaction-log-backups-sql-server.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Restore a SQL Server Database to a Point in Time (Full Recovery Model)](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)
+- [Restore and recovery overview (SQL Server)](restore-and-recovery-overview-sql-server.md)
+- [Plan and Perform Restore Sequences (Full Recovery Model)](plan-and-perform-restore-sequences-full-recovery-model.md)

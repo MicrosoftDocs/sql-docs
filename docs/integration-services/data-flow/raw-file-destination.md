@@ -124,9 +124,6 @@ helpviewer_keywords:
 ## Related Tasks  
  For information about how to set properties of the component, see [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Related Content  
- Blog entry, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), on sqlservercentral.com.  
-  
 ## Raw File Destination Editor (Connection Manager Page)
   Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  
   
@@ -211,7 +208,7 @@ helpviewer_keywords:
  **Output Alias**  
  Specify an alternate name to use for the output column.  
   
-## See Also  
- [Raw File Source](../../integration-services/data-flow/raw-file-source.md)   
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
+## Related content
+
+- [Raw File Source](raw-file-source.md)
+- [Data Flow](data-flow.md)

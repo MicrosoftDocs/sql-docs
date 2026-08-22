@@ -192,9 +192,8 @@ C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
 C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
 ```
 
-## See also  
- [Hadoop Hive Task](../../integration-services/control-flow/hadoop-hive-task.md)   
- [Hadoop Pig Task](../../integration-services/control-flow/hadoop-pig-task.md)   
- [Hadoop File System Task](../../integration-services/control-flow/hadoop-file-system-task.md)  
-  
-  
+## Related content
+
+- [Hadoop Hive Task](../control-flow/hadoop-hive-task.md)
+- [Hadoop Pig Task](../control-flow/hadoop-pig-task.md)
+- [Hadoop File System Task](../control-flow/hadoop-file-system-task.md)

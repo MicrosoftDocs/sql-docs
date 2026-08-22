@@ -118,9 +118,8 @@ FROM [Adventure Works]
 |EMPTY|EMPTY|  
 |FALSE|TRUE|  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)
+- [Expressions (MDX)](expressions-mdx.md)

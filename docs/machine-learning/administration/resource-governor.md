@@ -57,7 +57,7 @@ For an introduction to terminology and general concepts, see [Resource Governor 
 > [!NOTE]
 > Direct management of the Launchpad service by using Resource Governor is not supported. Launchpad is a trusted service that can only host launchers provided by Microsoft. Trusted launchers are explicitly configured to avoid consuming excessive resources.
   
-## Next steps
+## Related content
 
-+ [Create a resource pool for machine learning](create-external-resource-pool.md)
-+ [Resource Governor resource pools](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
+- [Create a resource pool for SQL Server Machine Learning Services](create-external-resource-pool.md)
+- [Resource governor resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

@@ -66,7 +66,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |[Audit Server Starts and Stops Event Class](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|Indicates that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service state has been modified.|  
 |[Audit Statement Permission Event Class](../../relational-databases/event-classes/audit-statement-permission-event-class.md)|Indicates that a statement permission has been used.|  
   
-## Related Content  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Related content
+
+- [Extended Events overview](../extended-events/extended-events.md)

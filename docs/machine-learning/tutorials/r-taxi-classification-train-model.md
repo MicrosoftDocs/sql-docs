@@ -105,7 +105,7 @@ Because the stored procedure already includes a definition of the input data, yo
 
 In the next part of this tutorial you'll use the trained model to generate predictions.
 
-## Next steps
+## Next step
 
 In this article, you:
 

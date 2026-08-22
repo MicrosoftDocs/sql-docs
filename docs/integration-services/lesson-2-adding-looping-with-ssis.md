@@ -57,8 +57,6 @@ This lesson contains the following tasks:
 ## Start the lesson  
 [Step 1: Copy the Lesson 1 package](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## See also  
-[For Loop container](../integration-services/control-flow/for-loop-container.md)  
-  
-  
-  
+## Related content
+
+- [For Loop Container](control-flow/for-loop-container.md)

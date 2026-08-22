@@ -192,11 +192,11 @@ Table 'FactResellerSalesPartCategoryFull'. Segment reads 16, segment skipped 83.
 
 ## Related content
 
-- [Columnstore Index Design Guidelines](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)
-- [Columnstore indexes - Data loading guidance](columnstore-indexes-data-loading-guidance.md)
-- [Get started with Columnstore for real-time operational analytics](get-started-with-columnstore-for-real-time-operational-analytics.md)
+- [Columnstore Index Design Guidelines](../sql-server-index-design-guide.md#columnstore_index)
+- [Columnstore indexes - data loading guidance](columnstore-indexes-data-loading-guidance.md)
+- [Get started with columnstore indexes for real-time operational analytics](get-started-with-columnstore-for-real-time-operational-analytics.md)
 - [Columnstore indexes in data warehousing](columnstore-indexes-data-warehouse.md)
 - [Optimize index maintenance to improve query performance and reduce resource consumption](reorganize-and-rebuild-indexes.md)
-- [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)
+- [Columnstore Index Architecture](../sql-server-index-design-guide.md#columnstore_index)
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
 - [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)

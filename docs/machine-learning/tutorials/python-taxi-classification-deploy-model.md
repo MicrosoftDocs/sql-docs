@@ -364,12 +364,6 @@ The output from both procedures is a probability of a tip being paid for the tax
 
 In this tutorial series, you've learned how to work with Python code embedded in stored procedures. The integration with [!INCLUDE[tsql](../../includes/tsql-md.md)] makes it much easier to deploy Python models for prediction and to incorporate model retraining as part of an enterprise data workflow.
 
-## Next steps
+## Related content
 
-In this article, you:
-
-> [!div class="checklist"]
-> + Created and used stored procedures for batch scoring
-> + Created and used stored procedures for scoring a single row
-
-For more information about Python, see [Python extension in SQL Server](../concepts/extension-python.md).
+- [Python language extension in SQL Server Machine Learning Services](../concepts/extension-python.md)

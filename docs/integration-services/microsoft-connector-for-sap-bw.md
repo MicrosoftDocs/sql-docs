@@ -39,6 +39,6 @@ For a walkthrough that demonstrates how to configure and use the SAP BW connecti
 
 ## Related content
 
-- [Installing the Microsoft Connector for SAP BW](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)
-- [Microsoft Connector for SAP BW Components](../integration-services/microsoft-connector-for-sap-bw-components.md)
-- [Microsoft Connector for SAP BW F1 Help](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)
+- [Installing the Microsoft Connector for SAP BW](installing-the-microsoft-connector-for-sap-bw.md)
+- [Microsoft Connector for SAP BW Components](microsoft-connector-for-sap-bw-components.md)
+- [Microsoft Connector for SAP BW F1 Help](microsoft-connector-for-sap-bw-f1-help.md)

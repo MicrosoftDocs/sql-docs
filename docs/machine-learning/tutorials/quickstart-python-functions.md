@@ -106,7 +106,7 @@ elapsed_time = time.time() - start_time
     , @input_data_1 = N' ;';
 ```
 
-## Next steps
+## Next step
 
 To create a machine learning model using Python with SQL machine learning, follow this quickstart:
 

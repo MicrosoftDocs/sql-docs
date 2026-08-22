@@ -37,18 +37,9 @@ helpviewer_keywords:
  [Extending the Data Flow with the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
  Discusses how to create custom data flow sources, transformations, and destinations by using the Script component. A data flow component is typically called one time for each row of data that is processed.  
   
-## Reference  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
-  
-## Related Sections  
- [Extending Packages with Custom Objects](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
- Discusses how to create program custom tasks, data flow components, and other package objects for use in multiple packages.  
-  
- [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
- Describes how to create, configure, run, load, save, and manage [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages programmatically.  
-  
-## See Also  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  
+## Related content
+
+- [Integration Services error and message reference](../integration-services-error-and-message-reference.md)
+- [Extending Packages with Custom Objects](../extending-packages-custom-objects/extending-packages-with-custom-objects.md)
+- [Building Packages Programmatically](../building-packages-programmatically/building-packages-programmatically.md)
+- [SQL Server Integration Services](../sql-server-integration-services.md)

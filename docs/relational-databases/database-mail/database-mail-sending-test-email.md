@@ -53,6 +53,6 @@ You must be a member of the sysadmin fixed server role to use the Send Test E-Ma
 
 - [Database Mail Configuration Objects](database-mail-configuration-objects.md)
 - [Database Mail Messaging Objects](database-mail-messaging-objects.md)
-- [Database Mail External Program](database-mail-external-program.md)
-- [Database Mail Log and Audits](database-mail-log-and-audits.md)
+- [Database Mail external program](database-mail-external-program.md)
+- [Database Mail log and audits](database-mail-log-and-audits.md)
 - [Configure SQL Server Agent mail to use Database Mail](configure-sql-server-agent-mail-to-use-database-mail.md)

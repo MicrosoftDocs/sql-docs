@@ -74,7 +74,7 @@ The **rxImport** function assigns variable names to the columns during the impor
 
 By specifying additional operations in the *transforms* parameter, you can do elementary processing on each chunk of data that is read.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Create new SQL Server table using rxDataStep](../../machine-learning/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

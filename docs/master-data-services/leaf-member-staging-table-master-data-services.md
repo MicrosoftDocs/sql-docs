@@ -37,7 +37,8 @@ helpviewer_keywords:
 |**NewCode**|Use only if you are changing the member code.||  
 |\<Attribute name>|A column exists for each attribute in the entity. Use this with an **ImportType** of **0** or **2**. For free-form attributes, specify the new text or string value for the attribute. For domain-based attributes, specify the code for the member that will be the attribute. For link attributes, the URL must start with **https://**.<br /><br /> Note: You cannot stage file attributes.||  
   
-## See Also  
- [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
- [View Errors that Occur During Staging &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Staging Process Errors &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)
+## Related content
+
+- [Overview: Importing Data from Tables (Master Data Services)](overview-importing-data-from-tables-master-data-services.md)
+- [View Errors that Occur During Staging (Master Data Services)](view-errors-that-occur-during-staging-master-data-services.md)
+- [Staging Process Errors (Master Data Services)](staging-process-errors-master-data-services.md)

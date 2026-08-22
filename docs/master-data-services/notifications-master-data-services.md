@@ -45,8 +45,7 @@ helpviewer_keywords:
 |Configure [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to send email notifications.|[Configure Email Notifications &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)|  
 |Configure [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] to send notifications when attribute values change.|[Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
   
-## Related Content  
-  
-- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
-  
-- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)
+## Related content
+
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Versions (Master Data Services)](versions-master-data-services.md)

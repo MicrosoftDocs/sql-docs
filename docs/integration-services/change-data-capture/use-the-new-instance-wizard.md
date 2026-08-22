@@ -30,7 +30,6 @@ ms.topic: concept-article
   
 -   [Finish](../../integration-services/change-data-capture/finish.md)  
   
-## See Also  
- [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
-  
-  
+## Related content
+
+- [How to Create the SQL Server Change Database Instance](how-to-create-the-sql-server-change-database-instance.md)

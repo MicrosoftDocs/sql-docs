@@ -123,7 +123,7 @@ Mapping the column to abbreviations before using it as a factor actually improve
 
 Now the three variables you specified (*gender*, *state*, and *cardholder*) are  treated as factors.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Define and use compute contexts](../../machine-learning/tutorials/deepdive-define-and-use-compute-contexts.md)

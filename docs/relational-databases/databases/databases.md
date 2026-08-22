@@ -66,9 +66,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
     :::column-end:::
 :::row-end:::
 
-## Related Content  
- [Indexes](../../relational-databases/indexes/indexes.md)  
-  
- [Views](../../relational-databases/views/views.md)  
-  
- [Stored Procedures &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
+## Related content
+
+- [Indexes](../indexes/indexes.md)
+- [Views](../views/views.md)
+- [Stored procedures (Database Engine)](../stored-procedures/stored-procedures-database-engine.md)

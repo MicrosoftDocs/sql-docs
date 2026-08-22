@@ -121,7 +121,6 @@ helpviewer_keywords:
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## See Also  
- [Stored Procedures](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
-  
-  
+## Related content
+
+- [Stored Procedures in SQL Server Native Client](stored-procedures.md)

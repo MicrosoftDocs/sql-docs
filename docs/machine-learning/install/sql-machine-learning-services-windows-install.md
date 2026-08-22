@@ -405,8 +405,8 @@ To install and manage additional packages, you can set up user groups to share p
 
 ## Related content
 
-- [What is SQL Server Machine Learning Services?](../sql-server-machine-learning-services.md)
-- [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
+- [What is SQL Server Machine Learning Services with Python and R?](../sql-server-machine-learning-services.md)
+- [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
 - [Python Tutorial: Deploy a linear regression model with SQL machine learning](../tutorials/python-ski-rental-linear-regression-deploy-model.md)
 - [Python tutorial: Categorizing customers using k-means clustering with SQL machine learning](../tutorials/python-clustering-model.md)
 - [Quickstart: Run simple R scripts with SQL machine learning](../tutorials/quickstart-r-create-script.md)

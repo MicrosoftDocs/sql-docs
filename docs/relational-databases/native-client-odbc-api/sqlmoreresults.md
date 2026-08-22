@@ -152,7 +152,7 @@ EXIT:
     }  
 ```  
   
-## See Also  
- [SQLMoreResults Function](../../odbc/reference/syntax/sqlmoreresults-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLMoreResults Function](../../odbc/reference/syntax/sqlmoreresults-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

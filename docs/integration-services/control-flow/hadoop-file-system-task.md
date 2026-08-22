@@ -32,8 +32,7 @@ f1_keywords:
 |**Local File Connection**|Specify an existing File Connection Manager or create a new one. This connection manager indicates where the source files are hosted.|  
 |**Is Recursive**|Specify whether to copy all subfolders recursively.|  
   
-## See Also  
- [Hadoop Connection Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
-  
-  
+## Related content
+
+- [Hadoop Connection Manager](../connection-manager/hadoop-connection-manager.md)
+- [File Connection Manager](../connection-manager/file-connection-manager.md)

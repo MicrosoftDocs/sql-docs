@@ -172,7 +172,7 @@ After you have a local repository with the packages you need, move the package r
     installed.packages()
     ```
 
-## Next steps
+## Related content
 
-- [Get R package information](../package-management/r-package-information.md)
-- [R tutorials](../tutorials/r-tutorials.md)
+- [Get R package information](r-package-information.md)
+- [R tutorials for SQL machine learning](../tutorials/r-tutorials.md)

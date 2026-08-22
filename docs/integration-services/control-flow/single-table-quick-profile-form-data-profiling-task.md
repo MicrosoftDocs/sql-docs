@@ -44,8 +44,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  The Value Inclusion Profile type is not available from the **Single Table Quick Profile Form**.  
   
-## See Also  
- [Data Profiling Task Editor &#40;General Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Data Profiling Task Editor &#40;Profile Requests Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
-  
-  
+## Related content
+
+- [Data Profiling Task Editor (General Page)](data-profiling-task-editor-general-page.md)
+- [Data Profiling Task Editor (Profile Requests Page)](data-profiling-task-editor-profile-requests-page.md)

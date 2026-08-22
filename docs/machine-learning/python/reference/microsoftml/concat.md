@@ -70,12 +70,6 @@ Additional arguments sent to the compute engine.
 An object defining the concatenation transform.
 
 
-## See also
-
-[`drop_columns`](drop-columns.md),
-[`select_columns`](select-columns.md).
-
-
 ## Example
 
 
@@ -168,3 +162,7 @@ Writing completed.
 4  0.018770  0.290014  0.691216
 ```
 
+## Related content
+
+- [*microsoftml.drop_columns*: Drops columns from a dataset](drop-columns.md)
+- [*microsoftml.select_columns*: Retains columns of a dataset](select-columns.md)

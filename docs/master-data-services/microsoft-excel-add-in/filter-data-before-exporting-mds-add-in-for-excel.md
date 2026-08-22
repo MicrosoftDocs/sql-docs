@@ -46,10 +46,9 @@ ms.custom:
     >  -   Only the first one million members are loaded into Excel.  
     > -   In columns that are constrained lists (domain-based attributes), by default only the first 25000 values are loaded.  
   
-## Next Steps  
- [Import Data from Excel to Master Data Services &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
-  
-## See Also  
- [Overview: Exporting Data to Excel &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [Filter Dialog Box &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
- [Reorder Columns &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)
+## Related content
+
+- [Overview: Exporting Data to Excel (MDS Add-in for Excel)](overview-exporting-data-to-excel-mds-add-in-for-excel.md)
+- [Filter Dialog Box (MDS Add-in for Excel)](filter-dialog-box-mds-add-in-for-excel.md)
+- [Reorder Columns (MDS Add-in for Excel)](reorder-columns-mds-add-in-for-excel.md)
+- [Import Data from Excel to Master Data Services (MDS Add-in for Excel)](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)

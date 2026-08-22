@@ -74,12 +74,11 @@ RESTORE DATABASE AdventureWorks2022
 GO  
 ```  
   
-## See Also  
- [Complete Database Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
- [Complete Database Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
- [Full Database Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
- [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)  
-  
-  
+## Related content
+
+- [Complete Database Restores (Full Recovery Model)](complete-database-restores-full-recovery-model.md)
+- [Complete Database Restores (Simple Recovery Model)](complete-database-restores-simple-recovery-model.md)
+- [Full database backups (SQL Server)](full-database-backups-sql-server.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Backup History and Header Information (SQL Server)](backup-history-and-header-information-sql-server.md)
+- [Rebuild system databases](../databases/rebuild-system-databases.md)

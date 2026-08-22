@@ -37,5 +37,6 @@ In Object Explorer, right-click **SSISDB** and select **Manage Scale Out**.
 
 In the **Scale Out Manager** dialog box, switch to **Worker Manager**. Select **+** and follow the instructions in the **Connect Worker** dialog box. 
 
-## Next steps
-For more info, see [Scale Out Manager](integration-services-ssis-scale-out-manager.md).
+## Related content
+
+- [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md)

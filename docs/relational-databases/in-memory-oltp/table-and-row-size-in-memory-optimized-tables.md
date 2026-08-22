@@ -230,4 +230,4 @@ Certain limitations and caveats to using off-row columns in a memory-optimized t
 
 ## Related content
 
-- [Sample Database for In-Memory OLTP](sample-database-for-in-memory-oltp.md)
+- [Sample database for in-memory OLTP](sample-database-for-in-memory-oltp.md)

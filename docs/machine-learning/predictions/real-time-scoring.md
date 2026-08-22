@@ -119,8 +119,8 @@ EXEC sp_rxPredict
 >
 > For information about corresponding SQL types, see [SQL-CLR Type Mapping](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) or [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 
-## Next steps
+## Related content
 
-+ [Native scoring using the PREDICT T-SQL function with SQL machine learning](native-scoring-predict-transact-sql.md)
-+ [sp_rxPredict](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md)
-+ [SQL machine learning](../index.yml)
+- [Native scoring using the PREDICT T-SQL function with SQL machine learning](native-scoring-predict-transact-sql.md)
+- [sp_rxPredict](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md)
+- [SQL machine learning](../index.yml)

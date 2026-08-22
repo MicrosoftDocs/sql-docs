@@ -64,7 +64,7 @@ apitype: "DLLExport"
 |---------------------|  
 |Documented SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
-## See Also  
- [SQLBrowseConnect Function](../../odbc/reference/syntax/sqlbrowseconnect-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLBrowseConnect Function](../../odbc/reference/syntax/sqlbrowseconnect-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

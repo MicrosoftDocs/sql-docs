@@ -43,8 +43,7 @@ helpviewer_keywords:
   
 4.  Execute the query. Error details are displayed in the **ErrorDescription** field.  
   
-## Next Steps  
- For more details on error messages, see [Staging Process Errors &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).  
-  
-## See Also  
- [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)
+## Related content
+
+- [Overview: Importing Data from Tables (Master Data Services)](overview-importing-data-from-tables-master-data-services.md)
+- [Staging Process Errors (Master Data Services)](staging-process-errors-master-data-services.md)

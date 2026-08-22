@@ -31,8 +31,7 @@ SELECT [Date].[Fiscal].[Fiscal Quarter].[Q1 FY 2002].LastChild ON 0
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [FirstChild &#40;MDX&#41;](../mdx/firstchild-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [FirstChild (MDX)](firstchild-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

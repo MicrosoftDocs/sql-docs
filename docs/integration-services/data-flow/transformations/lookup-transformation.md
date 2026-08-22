@@ -121,15 +121,6 @@ helpviewer_keywords:
   
 -   [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Related Content  
-  
--   Video, [How to: Implement a Lookup Transformation in Full Cache Mode](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100)), on msdn.microsoft.com  
-  
--   Blog entry, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623), on blogs.msdn.com  
-  
--   Blog entry, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782), on blogs.msdn.com  
-      
-  
 ## Lookup Transformation Editor (General Page)
   Use the **General** page of the Lookup Transformation Editor dialog box to select the cache mode, select the connection type, and specify how to handle rows with no matching entries.  
   
@@ -269,8 +260,12 @@ helpviewer_keywords:
 ### External Resources  
  Blog entry, [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) on blogs.msdn.com  
   
-## See Also  
- [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
- [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+## Related content
+
+- [How to: Implement a Lookup Transformation in Full Cache Mode](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100))
+- [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)
+- [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782)
+- [Fuzzy Lookup Transformation](fuzzy-lookup-transformation.md)
+- [Term Lookup Transformation](term-lookup-transformation.md)
+- [Data Flow](../data-flow.md)
+- [Integration Services Transformations](integration-services-transformations.md)

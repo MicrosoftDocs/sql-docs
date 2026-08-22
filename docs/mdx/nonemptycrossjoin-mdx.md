@@ -37,7 +37,6 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
 > [!IMPORTANT]  
 >  This function is deprecated and you should not use it; it is retained only to maintain backwards compatibility. Instead, you should use the [Exists (MDX)](../mdx/exists-mdx.md) function with the measure group name argument or the [NonEmpty (MDX)](../mdx/nonempty-mdx.md) function.  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

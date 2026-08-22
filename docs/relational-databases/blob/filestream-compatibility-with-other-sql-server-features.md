@@ -112,6 +112,6 @@ helpviewer_keywords:
   
  You can set database containment to PARTIAL if you want to use certain features of contained databases, such as contained users. In this case, however, you must be aware that some of the database settings are not contained in the database and are not automatically moved when the database moves.  
   
-## See Also  
- [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-  
+## Related content
+
+- [Binary Large Object (Blob) Data (SQL Server)](binary-large-object-blob-data-sql-server.md)

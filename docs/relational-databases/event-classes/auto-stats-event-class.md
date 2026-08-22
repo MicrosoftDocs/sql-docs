@@ -51,9 +51,7 @@ helpviewer_keywords:
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
 |**Type**|**int**|Type of job.|57|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
-  
-  
+## Related content
 
+- [Extended Events overview](../extended-events/extended-events.md)
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)

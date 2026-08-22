@@ -115,5 +115,6 @@ ms.custom:
   
 -   **On**: The date and time when the sync was last updated.  
   
-## Next Steps  
- [Edit and Delete an Entity Sync Relationship &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)
+## Related content
+
+- [Edit and Delete an Entity Sync Relationship (Master Data Services)](edit-and-delete-an-entity-sync-relationship-master-data-services.md)

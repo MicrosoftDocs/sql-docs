@@ -206,8 +206,8 @@ Offline filegroups in the source database affect database snapshots when you try
 
 - [Database Mirroring and Database Snapshots (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)
 - [CREATE DATABASE - Database Snapshots](../../t-sql/statements/create-database-transact-sql.md#database-snapshots)
-- [Create a Database Snapshot (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)
-- [View a Database Snapshot (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)
-- [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)
-- [Revert a Database to a Database Snapshot](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)
-- [Drop a Database Snapshot (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)
+- [Create a database snapshot (Transact-SQL)](create-a-database-snapshot-transact-sql.md)
+- [View a Database Snapshot (SQL Server)](view-a-database-snapshot-sql-server.md)
+- [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)
+- [Revert a Database to a Database Snapshot](revert-a-database-to-a-database-snapshot.md)
+- [Drop a Database Snapshot (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)

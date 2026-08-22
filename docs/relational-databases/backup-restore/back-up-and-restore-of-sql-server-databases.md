@@ -326,7 +326,7 @@ GO
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
 - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
 - [Backup and Restore of Analysis Services Databases](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)
-- [Back Up and Restore Full-Text Catalogs and Indexes](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)
+- [Back up and restore full-text catalogs and indexes](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)
 - [Back Up and Restore Replicated Databases](../replication/administration/back-up-and-restore-replicated-databases.md)
 - [The transaction log](../logs/the-transaction-log-sql-server.md)
 - [Recovery models (SQL Server)](recovery-models-sql-server.md)

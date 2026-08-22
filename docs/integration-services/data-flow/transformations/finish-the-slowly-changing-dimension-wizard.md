@@ -21,7 +21,6 @@ f1_keywords:
  **The following outputs will be configured**  
  Confirm that the list of outputs is appropriate for your purposes.  
   
-## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
-  
-  
+## Related content
+
+- [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)

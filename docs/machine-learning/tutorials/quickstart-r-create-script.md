@@ -254,7 +254,7 @@ The output is from `installed.packages()` in R and is returned as a result set.
 
 ![Installed packages in R](./media/rsql-installed-packages.png) 
 
-## Next steps
+## Next step
 
 To learn how to use data structures when using R with SQL machine learning, follow this quickstart:
 

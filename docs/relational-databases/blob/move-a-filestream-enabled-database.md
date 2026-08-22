@@ -54,15 +54,12 @@ helpviewer_keywords:
     ```  
   
  
-## See also  
+## Related content
 
-- [Attach a database](../databases/attach-a-database.md)
-- [Detach a database](../databases/detach-a-database.md)  
-- [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)    
-- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 
-- [Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)  
-
-## Next steps
-
-- [Manage metadata when making a database available on another server](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
-- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
+- [Attach a Database](../databases/attach-a-database.md)
+- [Detach a database](../databases/detach-a-database.md)
+- [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [Configure file system permissions for Database Engine access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)
+- [Manage Metadata When Making a Database Available on Another Server](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)
+- [ALTER DATABASE (Transact-SQL) compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

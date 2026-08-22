@@ -87,7 +87,7 @@ helpviewer_keywords:
  **Configure error output**  
  Specify how to handle errors by using the [Configure Error Output](../error-handling-in-data.md) dialog box.  
   
-## See Also  
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Data Flow](../data-flow.md)
+- [Integration Services Transformations](integration-services-transformations.md)

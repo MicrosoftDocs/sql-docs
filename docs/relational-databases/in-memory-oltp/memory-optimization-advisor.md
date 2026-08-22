@@ -119,6 +119,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  After the process is finished, refresh **Object Explorer** to see the new memory-optimized table and the old disk-based table. You can keep the old table or delete it at your convenience.  
   
-## See Also  
- [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
-  
+## Related content
+
+- [Plan your adoption of In-Memory OLTP Features in SQL Server](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

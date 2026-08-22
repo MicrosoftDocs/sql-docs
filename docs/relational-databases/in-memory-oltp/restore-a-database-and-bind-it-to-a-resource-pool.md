@@ -64,10 +64,9 @@ RESTORE DATABASE IMOLTP_DB
 ###  <a name="bkmk_Monitor"></a> Monitor the resource pool performance  
  Once the database is bound to the named resource pool and restored with recovery, monitor the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Resource Pool Stats Object. For more information see [SQL Server, Resource Pool Stats Object](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md).  
   
-## See Also  
- [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
- [SQL Server, Resource Pool Stats Object](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
- [sys.dm_resource_governor_resource_pools](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
-  
-  
+## Related content
+
+- [Bind a Database with Memory-Optimized Tables to a Resource Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)
+- [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](../system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)
+- [SQL Server, Resource Pool Stats object](../performance-monitor/sql-server-resource-pool-stats-object.md)
+- [sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)](../system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)

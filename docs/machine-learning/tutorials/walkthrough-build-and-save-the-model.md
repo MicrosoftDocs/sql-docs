@@ -235,9 +235,9 @@ In this section, learn how to use a stored procedure to persist the model and ma
 
 Saving a model to a table requires only an INSERT statement. However, it's often easier when wrapped in a stored procedure, such as *PersistModel*.
 
-## Next steps
+## Next step
 
-In the next and final lesson, learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../includes/tsql-md.md)].
+- In the next and final lesson, learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 > [!div class="nextstepaction"]
 > [Deploy the R model and use in SQL](walkthrough-deploy-and-use-the-model.md)

@@ -111,7 +111,6 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  ![Query to group XML errors in Management Studio](../../integration-services/control-flow/media/query-for-xml-errors.png "Query to group XML errors in Management Studio")  
   
-## See Also  
- [XML Task](../../integration-services/control-flow/xml-task.md)   
- [XML Task Editor &#40;General Page&#41;](./xml-task.md)  
-  
+## Related content
+
+- [XML Task](xml-task.md)

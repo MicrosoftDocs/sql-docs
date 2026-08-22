@@ -66,17 +66,16 @@ RESTORE DATABASE AdventureWorks2022
   
 ```  
   
-## See Also  
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
- [Restore a Database Backup Under the Simple Recovery Model &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
- [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [Restore a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)   
- [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
- [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
- [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
- [Create a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
-  
-  
+## Related content
+
+- [RESTORE Statements - FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
+- [RESTORE statements - HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
+- [RESTORE Statements - LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)
+- [RESTORE Statements - VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
+- [Restore a database backup under the simple recovery model (Transact-SQL)](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)
+- [Restore a Database Backup Using SSMS](restore-a-database-backup-using-ssms.md)
+- [Restore a differential database backup (SQL Server)](restore-a-differential-database-backup-sql-server.md)
+- [Restore a database to a new location (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)
+- [Back Up Files and Filegroups](back-up-files-and-filegroups-sql-server.md)
+- [Back up a transaction log](back-up-a-transaction-log-sql-server.md)
+- [Create a Differential Database Backup (SQL Server)](create-a-differential-database-backup-sql-server.md)

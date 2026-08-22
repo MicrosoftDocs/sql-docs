@@ -57,12 +57,11 @@ helpviewer_keywords:
   
 -   If one hierarchy node is assigned any combination of **Create**/**Read**/**Update**/**Delete** permissions and another node is assigned **Deny** permissions, access to the members in the node is denied.  
   
-## External Resources  
- Blog post, [Security Improvements](/archive/blogs/e7/improvements-to-autoplay), on msdn.com.  
-  
-## See Also  
- [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
- [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)
+## Related content
+
+- [Security Improvements](/archive/blogs/e7/improvements-to-autoplay)
+- [Assign Hierarchy Member Permissions (Master Data Services)](assign-hierarchy-member-permissions-master-data-services.md)
+- [How Permissions Are Determined (Master Data Services)](how-permissions-are-determined-master-data-services.md)
+- [Members (Master Data Services)](members-master-data-services.md)
+- [Hierarchies (Master Data Services)](hierarchies-master-data-services.md)
+- [Immediately apply member permissions (Master Data Services)](immediately-apply-member-permissions-master-data-services.md)

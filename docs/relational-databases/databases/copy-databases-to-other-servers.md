@@ -39,4 +39,4 @@ There are several ways to copy a database:
 ## Related content
 
 - [Use the Copy Database Wizard](use-the-copy-database-wizard.md)
-- [Restore database](../backup-restore/restore-database-general-page.md)
+- [Restore database (General page)](../backup-restore/restore-database-general-page.md)

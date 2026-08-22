@@ -53,6 +53,6 @@ The GetConfiguration function can be used to wait until the devices can be opene
 
 If this function does not succeed, then a null value is returned through the ppVirtualDevice.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

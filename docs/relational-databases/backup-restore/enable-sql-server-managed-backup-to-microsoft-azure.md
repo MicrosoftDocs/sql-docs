@@ -201,5 +201,6 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
   
 The steps described in this section are specifically for configuring [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] for the first time on the database. You can modify the existing configurations using the same system stored procedures and provide the new values.  
   
-## See also  
- [SQL Server managed backup to Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)
+## Related content
+
+- [SQL Server managed backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)

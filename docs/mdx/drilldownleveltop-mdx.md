@@ -74,7 +74,7 @@ DRILLDOWNLEVELTOP(
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
+## Related content
+
+- [DrilldownLevel (MDX)](drilldownlevel-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

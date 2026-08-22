@@ -111,11 +111,6 @@ Additional arguments sent to the compute engine.
 an object defining the transform.
 
 
-## See also
-
-[`categorical`](categorical.md)
-
-
 ## Example
 
 
@@ -199,3 +194,6 @@ Writing completed.
 4       I hate it          False -0.580748     0.358761
 ```
 
+## Related content
+
+- [*microsoftml.categorical*: Converts a text column into categories](categorical.md)

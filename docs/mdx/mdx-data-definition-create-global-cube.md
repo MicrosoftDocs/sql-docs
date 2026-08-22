@@ -188,7 +188,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## See Also  
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE SESSION CUBE Statement  &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
-  
+## Related content
+
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)
+- [MDX Data Definition - CREATE SESSION CUBE](mdx-data-definition-create-session-cube.md)

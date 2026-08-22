@@ -42,10 +42,8 @@ helpviewer_keywords:
 |Create a new domain-based attribute that is sourced from an existing entity.|[Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |Create a new entity.|[Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
   
-## Related Content  
-  
--   [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
-  
--   [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
-  
--   [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)
+## Related content
+
+- [Derived Hierarchies (Master Data Services)](derived-hierarchies-master-data-services.md)
+- [Attributes (Master Data Services)](attributes-master-data-services.md)
+- [Entities (Master Data Services)](entities-master-data-services.md)

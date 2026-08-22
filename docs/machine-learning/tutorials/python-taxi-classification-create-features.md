@@ -120,7 +120,7 @@ As you can see, the distance reported by the meter doesn't always correspond to 
 
 In the next part, you'll learn how to use these data features to create and train a machine learning model using Python.
 
-## Next steps
+## Next step
 
 In this article, you:
 

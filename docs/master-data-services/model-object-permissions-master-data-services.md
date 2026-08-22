@@ -34,12 +34,11 @@ helpviewer_keywords:
 ## Best Practice  
  In general, you should assign **ALL** permission to the model object, and then explicitly assign permission to objects underneath.  
   
-## External Resources  
- Blog post, [Security Improvements](/archive/blogs/e7/improvements-to-autoplay), on msdn.com.  
-  
-## See Also  
- [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Model Permissions &#40;Master Data Services&#41;](../master-data-services/model-permissions-master-data-services.md)   
- [Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)
+## Related content
+
+- [Security Improvements](/archive/blogs/e7/improvements-to-autoplay)
+- [Assign Model Object Permissions (Master Data Services)](assign-model-object-permissions-master-data-services.md)
+- [Model Permissions (Master Data Services)](model-permissions-master-data-services.md)
+- [Functional Area Permissions (Master Data Services)](functional-area-permissions-master-data-services.md)
+- [Hierarchy Member Permissions (Master Data Services)](hierarchy-member-permissions-master-data-services.md)
+- [How Permissions Are Determined (Master Data Services)](how-permissions-are-determined-master-data-services.md)

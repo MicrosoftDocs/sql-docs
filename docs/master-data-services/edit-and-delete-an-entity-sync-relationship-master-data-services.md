@@ -79,6 +79,7 @@ ms.custom:
   
 5.  In the confirmation dialog, click **OK**.  
   
-## See Also  
- [Create and Execute an Entity Sync Relationship &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [Entity Sync Relationship &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)
+## Related content
+
+- [Create and Execute an Entity Sync Relationship (Master Data Services)](create-and-execute-an-entity-sync-relationship-master-data-services.md)
+- [Entity Sync Relationship (Master Data Services)](entity-sync-relationship-master-data-services.md)

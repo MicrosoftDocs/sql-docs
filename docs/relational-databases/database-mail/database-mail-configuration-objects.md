@@ -152,4 +152,4 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 
 ## Related content
 
- - [Database Mail Log and Audits](database-mail-log-and-audits.md)  
+- [Database Mail log and audits](database-mail-log-and-audits.md)

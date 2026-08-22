@@ -47,6 +47,6 @@ FROM [Adventure Works]
   
  For examples of functions that return sets, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
-## See Also  
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
-  
+## Related content
+
+- [Expressions (MDX)](expressions-mdx.md)

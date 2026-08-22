@@ -121,8 +121,7 @@ helpviewer_keywords:
  **Remove**  
  Select an address, and then remove it by clicking **Remove**.  
   
-## See Also  
- [Web Service Task](../../integration-services/control-flow/web-service-task.md)   
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
-  
+## Related content
+
+- [Web Service Task](../control-flow/web-service-task.md)
+- [Integration Services (SSIS) Connections](integration-services-ssis-connections.md)

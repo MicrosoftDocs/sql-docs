@@ -64,8 +64,7 @@ ms.topic: concept-article
   
 -   VARRAY  
   
-## See Also  
- [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [The Oracle CDC Instance](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
-  
-  
+## Related content
+
+- [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)
+- [The Oracle CDC Instance](the-oracle-cdc-instance.md)

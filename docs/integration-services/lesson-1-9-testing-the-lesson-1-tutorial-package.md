@@ -45,8 +45,6 @@ Before you test the package, verify that the control and data flows in the Lesso
 ## Go to next lesson
 [Lesson 2: Add looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## See also  
-[Execution of projects and packages](packages/run-integration-services-ssis-packages.md) 
-  
-  
-  
+## Related content
+
+- [Run Integration Services (SSIS) Packages](packages/run-integration-services-ssis-packages.md)

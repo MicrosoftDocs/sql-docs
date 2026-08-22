@@ -34,6 +34,7 @@ ms.custom:
   
 4.  Choose the revision to rollback, and then click **Rollback**.  
   
-## See Also  
- [Member Revision History &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)   
- [Change the Entity Transaction Log Type &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
+## Related content
+
+- [Member Revision History (Master Data Services)](member-revision-history-master-data-services.md)
+- [Change the Entity Transaction Log Type (Master Data Services)](change-the-entity-transaction-log-type-master-data-services.md)

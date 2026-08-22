@@ -62,13 +62,11 @@ helpviewer_keywords:
   
 12. Click **Save**.  
   
-## Next Steps  
-  
--   [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
-  
-## See Also  
- [Attribute Groups &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Change an Attribute Group Name &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [Delete an Attribute Group &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
- [Leaf Permissions &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
+## Related content
+
+- [Attribute Groups (Master Data Services)](attribute-groups-master-data-services.md)
+- [Attributes (Master Data Services)](attributes-master-data-services.md)
+- [Change an Attribute Group Name (Master Data Services)](change-an-attribute-group-name-master-data-services.md)
+- [Delete an Attribute Group (Master Data Services)](delete-an-attribute-group-master-data-services.md)
+- [Leaf Permissions (Master Data Services)](leaf-permissions-master-data-services.md)
+- [Make an Attribute Group Visible to Users (Master Data Services)](make-an-attribute-group-visible-to-users-master-data-services.md)

@@ -85,7 +85,6 @@ public class ScriptMain
   
  }  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Logging](../../../integration-services/performance/integration-services-ssis-logging.md)  
-  
-  
+## Related content
+
+- [Integration Services (SSIS) Logging](../../performance/integration-services-ssis-logging.md)

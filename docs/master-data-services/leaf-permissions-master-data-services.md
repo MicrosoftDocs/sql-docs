@@ -66,9 +66,9 @@ helpviewer_keywords:
 > [!NOTE]  
 >  In this example, Subcategory is a domain-based attribute, based on the SubcategoryList entity. You can select a different subcategory for Mountain-100 but you cannot add members to or delete members from the SubcategoryList entity.  
   
-## See Also  
- [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
-    
- [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)
+## Related content
+
+- [Assign Model Object Permissions (Master Data Services)](assign-model-object-permissions-master-data-services.md)
+- [Model Object Permissions (Master Data Services)](model-object-permissions-master-data-services.md)
+- [Members (Master Data Services)](members-master-data-services.md)
+- [Attributes (Master Data Services)](attributes-master-data-services.md)

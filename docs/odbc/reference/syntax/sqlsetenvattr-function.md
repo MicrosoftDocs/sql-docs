@@ -93,7 +93,8 @@ SQLRETURN SQLSetEnvAttr(
 |Allocating a handle|[SQLAllocHandle Function](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Returning the setting of an environment attribute|[SQLGetEnvAttr Function](../../../odbc/reference/syntax/sqlgetenvattr-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)   
- [What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)
+- [What's New in ODBC 3.8](../what-s-new-in-odbc-3-8.md)

@@ -148,9 +148,10 @@ If you follow the above practices for a database with memory-optimized tables, a
 ### Resolution
 To mitigate this, pre-allocate sufficient memory to the database to recover or restart the database, not a minimum value relying on dynamic memory to provide the additional memory when needed.
   
-## See Also  
- [Managing Memory for In-Memory OLTP](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))   
- [Monitor and Troubleshoot Memory Usage](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
- [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md)  
- [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
+## Related content
+
+- [Managing Memory for In-Memory OLTP](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))
+- [Monitor and troubleshoot memory usage with in-memory OLTP](monitor-and-troubleshoot-memory-usage.md)
+- [Bind a Database with Memory-Optimized Tables to a Resource Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)
+- [Memory management architecture guide](../memory-management-architecture-guide.md)
+- [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)

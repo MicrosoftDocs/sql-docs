@@ -187,7 +187,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
   
    ![Tip amount vs Fare amount](media/sqldev-python-sample-plot.png "Tip amount vs Fare amount") 
 
-## Next steps
+## Next step
 
 In this article, you:
 

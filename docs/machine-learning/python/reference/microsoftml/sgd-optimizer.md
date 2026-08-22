@@ -79,6 +79,6 @@ Learning rate reduction ratio (settings).
 Relative error reduction criterion for learning rate reduction (settings).
 
 
-## See also
+## Related content
 
-[`adadelta_optimizer`](adadelta-optimizer.md)
+- [*microsoftml.adadelta_optimizer*: Adaptive learning rate method](adadelta-optimizer.md)

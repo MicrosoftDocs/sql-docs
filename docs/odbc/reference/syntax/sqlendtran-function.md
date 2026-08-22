@@ -142,7 +142,8 @@ SQLRETURN SQLEndTran(
 |Freeing a handle|[SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Freeing a statement handle|[SQLFreeStmt Function](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)   
- [Asynchronous Execution (Polling Method)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)
+- [Asynchronous Execution (Polling Method)](../develop-app/asynchronous-execution-polling-method.md)

@@ -36,6 +36,6 @@ This is an address of a buffer.
 | TRUE | The buffer is a shared buffer. |
 | FALSE | The buffer is not part of the virtual device set. |
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

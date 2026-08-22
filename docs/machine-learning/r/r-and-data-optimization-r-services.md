@@ -163,8 +163,7 @@ We also recommend that you look into the new **MicrosoftML** package, which prov
 
 + [How to choose a MicrosoftML algorithm](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
-## Next steps
+## Related content
 
-+ For R functions you can use to improve the performance of your R code, see [Use R code profiling functions to improve performance](using-r-code-profiling-functions.md).
-
-+ For more complete information about performance tuning on SQL Server, see [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md).
+- [Use R code profiling functions to improve performance](using-r-code-profiling-functions.md)
+- [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

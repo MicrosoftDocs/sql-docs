@@ -683,10 +683,8 @@ A user can enable the delegation of credentials by granting the *Trust this user
 SSISDB doesn't support constrained delegation. In a double-hop environment, if the service account of the SQL Server that hosts the SSISDB catalog (machine B in our example) is set up for constrained delegation, ISServerExec.exe won't be able to delegate the credentials to the third machine (machine C). This is applicable to scenarios in which Windows Credential Guard is enabled, which mandatorily requires constrained delegation to be set up.
 
   
-## Related content  
-  
-- Blog entry, [SSIS and PowerShell in SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015), on blogs.msdn.com.  
-  
-- Blog entry, [SSIS Catalog Access Control Tips](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057), on blogs.msdn.com.  
-  
-- Blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892), on blogs.msdn.com.
+## Related content
+
+- [SSIS and PowerShell in SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)
+- [SSIS Catalog Access Control Tips](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057)
+- [A Glimpse of the SSIS Catalog Managed Object Model](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)

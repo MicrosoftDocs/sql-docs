@@ -234,5 +234,5 @@ Here's an example that demonstrates how the `FOR JSON` clause formats the JSON o
 - [How FOR JSON converts SQL Server data types to JSON data types](how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)
 - [How FOR JSON escapes special characters and control characters](how-for-json-escapes-special-characters-and-control-characters-sql-server.md)
 - [Video: JSON as a bridge between NoSQL and relational worlds](/shows/datadriven-sqlserver2016/json-as-bridge-betwen-nosql-relational-worlds)
-- [SELECT - FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)
+- [SELECT - FOR clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)
 - [Use FOR JSON output in the SQL Database Engine and in client apps](use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md)

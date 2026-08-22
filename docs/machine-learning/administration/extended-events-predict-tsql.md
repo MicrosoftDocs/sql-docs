@@ -70,11 +70,9 @@ FROM sys.dm_os_memory_objects
 WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 ```
 
-## Next steps
+## Related content
 
-For more information about extended events (sometimes called XEvents), and how to track events in a session, see these articles:
-
-+ [Monitor Python and R scripts with extended events in SQL Server Machine Learning Services](extended-events.md)
-+ [Extended Events concepts and architecture](../../relational-databases/extended-events/extended-events.md)
-+ [Set up event capture in SSMS](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-+ [Manage event sessions in the Object Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
+- [Monitor Python and R scripts with extended events in SQL Server Machine Learning Services](extended-events.md)
+- [Extended Events overview](../../relational-databases/extended-events/extended-events.md)
+- [Quickstart: Extended Events](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+- [Manage Event Sessions in the Object Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)

@@ -102,7 +102,7 @@ For this exercise, you use the credit card fraud data again. In this scenario, y
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-## Next steps
+## Next step
 
 This tutorial concludes the multi-part tutorial series on **RevoScaleR** and SQL Server. It introduced you to numerous data-related and computational concepts, giving you a foundation for moving forward with your own data and project requirements.
 

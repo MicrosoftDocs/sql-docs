@@ -47,7 +47,7 @@ WHERE [[Model] = 'Patch kit'
   
  Another way to view the same data that is returned by this query is to open the model in the Association viewer, right-click the itemset **Patch kit = Existing**, select the **Drill Through** option, and then select **Model Cases Only**.  
   
-## See Also  
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
-  
+## Related content
+
+- [Functions (DMX)](functions-dmx.md)
+- [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)

@@ -336,14 +336,15 @@ The TRUSTWORTHY database property is used to indicate whether this instance of S
  For more information about this feature, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
   
-## See Also  
- [Contained Databases](../../relational-databases/databases/contained-databases.md)   
- [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)   
- [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
- [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
- [Migrate to a new installation](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md#migrate-to-a-new-installation) 
- [Migration overview: SQL Server to SQL Server on Azure VMs](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview#server-objects) 
+## Related content
+
+- [Contained Databases](contained-databases.md)
+- [Copy databases to other servers](copy-databases-to-other-servers.md)
+- [Database detach and attach (SQL Server)](database-detach-and-attach-sql-server.md)
+- [Fail Over to a Log Shipping Secondary (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)
+- [Role Switching During a Database Mirroring Session (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)
+- [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)
+- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [Troubleshoot orphaned users (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)
+- [Migrate to a new installation](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md#migrate-to-a-new-installation)
+- [Migration overview: SQL Server to SQL Server on Azure VMs](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview#server-objects)

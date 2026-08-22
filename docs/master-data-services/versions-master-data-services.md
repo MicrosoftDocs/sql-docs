@@ -78,10 +78,8 @@ helpviewer_keywords:
 |Delete an existing version.|[Delete a Version &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
 |Purge soft-deleted members from a version|[Purge Version Members &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
-## Related Content  
-  
--   [Reverse a Transaction &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
-  
--   [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
-  
--   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)
+## Related content
+
+- [Reverse a Transaction (Master Data Services)](reverse-a-transaction-master-data-services.md)
+- [Notifications (Master Data Services)](notifications-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)

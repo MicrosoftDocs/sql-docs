@@ -31,8 +31,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |[CursorRecompile Event Class](../../relational-databases/event-classes/cursorrecompile-event-class.md)|Describes cursor recompile events that occur in API cursors.|  
 |[CursorUnprepare Event Class](../../relational-databases/event-classes/cursorunprepare-event-class.md)|Describes cursor unprepare events that occur in API cursors.|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Related content
 
+- [Extended Events overview](../extended-events/extended-events.md)

@@ -344,12 +344,6 @@ This algorithm is multi-threaded and will always attempt to load the entire data
 memory.
 
 
-## See also
-
-[`rx_fast_forest`](rx-fast-forest.md),
-[`rx_predict`](rx-predict.md)
-
-
 ## References
 
 [Wikipedia: Gradient boosting (Gradient tree boosting)](https://wikipedia.org/wiki/Gradient_boosting)
@@ -514,3 +508,7 @@ Writing completed.
 4     92.0  15.5  84.0  37.972855
 ```
 
+## Related content
+
+- [*microsoftml.rx_fast_forest*: Random Forest](rx-fast-forest.md)
+- [*microsoftml.rx_predict*: Scores using a Microsoft machine learning model](rx-predict.md)

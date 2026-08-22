@@ -87,9 +87,8 @@ helpviewer_keywords:
   
  Expression names are shown in uppercase characters, but expression names are not case-sensitive. For example, using "null" works as well as using "NULL".  
   
-## See Also  
- [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Examples of Advanced Integration Services Expressions](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)  
-  
-  
+## Related content
+
+- [Operators (SSIS Expression)](operators-ssis-expression.md)
+- [Examples of Advanced Integration Services Expressions](examples-of-advanced-integration-services-expressions.md)
+- [Integration Services (SSIS) Expressions](integration-services-ssis-expressions.md)

@@ -216,7 +216,7 @@ Requires ALTER permission on the table or index.
    GO
    ```
 
-## Next steps
+## Related content
 
-- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) and [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
-
+- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)

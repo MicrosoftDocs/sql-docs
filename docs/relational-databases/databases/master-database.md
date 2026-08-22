@@ -118,9 +118,10 @@ When you work with the **master** database, consider the following recommendatio
   > [!IMPORTANT]  
   >  Rebuilding **master** rebuilds all of the system databases.  
   
-## Related Content  
-- [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)  
-- [System Databases](../../relational-databases/databases/system-databases.md)  
-- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-- [Move Database Files](../../relational-databases/databases/move-database-files.md)
+## Related content
+
+- [Rebuild system databases](rebuild-system-databases.md)
+- [System Databases](system-databases.md)
+- [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../system-catalog-views/sys-master-files-transact-sql.md)
+- [Move database files](move-database-files.md)

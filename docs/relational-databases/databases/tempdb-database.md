@@ -540,7 +540,7 @@ ORDER BY session_id, request_id;
 ## Related content
 
 - [SORT_IN_TEMPDB Option For Indexes](../indexes/sort-in-tempdb-option-for-indexes.md)
-- [System databases](system-databases.md)
-- [sys.databases](../system-catalog-views/sys-databases-transact-sql.md)
-- [sys.master_files](../system-catalog-views/sys-master-files-transact-sql.md)
+- [System Databases](system-databases.md)
+- [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../system-catalog-views/sys-master-files-transact-sql.md)
 - [Move database files](move-database-files.md)

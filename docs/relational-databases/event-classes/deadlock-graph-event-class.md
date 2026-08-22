@@ -35,9 +35,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**TextData**|**ntext**|XML description of the deadlock.|1|Yes|  
 |**TransactionID**|**bigint**|Not used.|4|Yes|  
   
-## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Lock:Deadlock Event Class](../../relational-databases/event-classes/lock-deadlock-event-class.md)  
-  
-  
+## Related content
 
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [Lock:Deadlock Event Class](lock-deadlock-event-class.md)

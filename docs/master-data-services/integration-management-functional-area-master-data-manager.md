@@ -30,5 +30,6 @@ ms.custom:
   
  [Delete a Subscription View &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## See Also  
- [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)
+## Related content
+
+- [Master Data Manager Web Application](master-data-manager-web-application.md)

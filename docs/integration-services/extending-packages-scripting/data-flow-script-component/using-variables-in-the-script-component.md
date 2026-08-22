@@ -28,7 +28,6 @@ helpviewer_keywords:
   
  You can also use the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> property, accessed by calling `Me.VariableDispenser`, to work with variables in the Script component. In this case you are not using the typed and named accessor properties for variables, but accessing the variables directly. When using the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A>, you must handle both the locking semantics and the casting of data types for variable values in your own code. You have to use the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> property instead of the named and typed accessor properties if you want to work with a variable that is not available at design time but is created programmatically at run time.  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](../../integration-services-ssis-variables.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Variables](../../integration-services-ssis-variables.md)

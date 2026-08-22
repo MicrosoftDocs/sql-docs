@@ -133,4 +133,4 @@ Requires `ALTER` permission on the table or view. User must be a member of the *
 ## Related content
 
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
-- [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
+- [Index architecture and design guide](../sql-server-index-design-guide.md)

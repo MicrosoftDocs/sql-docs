@@ -77,7 +77,7 @@ Whether the position of each source column should be included in the hash (when 
 Limit the number of keys used to generate the slot name to this many. 0 means no invert hashing, -1 means no limit. (settings).
 
 
-## See also
+## Related content
 
-[n_gram](n-gram.md),
-[featurize_text](featurize-text.md)
+- [*microsoftml.n_gram*: Converts text into features using n-grams](n-gram.md)
+- [*microsoftml.featurize_text*: Converts text columns into numerical features](featurize-text.md)

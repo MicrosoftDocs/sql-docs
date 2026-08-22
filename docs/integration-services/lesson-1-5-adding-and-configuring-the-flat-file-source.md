@@ -38,9 +38,7 @@ For this task, you configure the Flat File source to use the **Sample Flat File 
 ## Go to next task
 [Step 6: Add and configure the Lookup transformations](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## See also  
-[Flat File source](../integration-services/data-flow/flat-file-source.md)  
-[Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md)  
-  
-  
-  
+## Related content
+
+- [Flat File Source](data-flow/flat-file-source.md)
+- [Flat File Connection Manager](connection-manager/flat-file-connection-manager.md)

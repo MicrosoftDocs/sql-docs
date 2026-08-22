@@ -145,7 +145,8 @@ helpviewer_keywords:
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
- [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
- [Excel Source](../../integration-services/data-flow/excel-source.md)   
-[Excel Connection Manager](../connection-manager/excel-connection-manager.md)
+## Related content
+
+- [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+- [Excel Source](excel-source.md)
+- [Excel Connection Manager](../connection-manager/excel-connection-manager.md)

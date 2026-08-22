@@ -143,7 +143,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## See Also  
- [SQLGetDescField Function](../../odbc/reference/syntax/sqlgetdescfield-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLGetDescField Function](../../odbc/reference/syntax/sqlgetdescfield-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

@@ -63,5 +63,6 @@ END
 GO    
 ```   
   
-## See Also  
- [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)
+## Related content
+
+- [A Guide to Query Processing for Memory-Optimized Tables](a-guide-to-query-processing-for-memory-optimized-tables.md)

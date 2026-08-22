@@ -57,10 +57,9 @@ f1_keywords:
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
- [SAP BW Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW Source Editor &#40;Advanced Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
- [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
-  
+## Related content
+
+- [SAP BW Source Editor (Connection Manager Page)](sap-bw-source-editor-connection-manager-page.md)
+- [SAP BW Source Editor (Columns Page)](sap-bw-source-editor-columns-page.md)
+- [SAP BW Source Editor (Advanced Page)](sap-bw-source-editor-advanced-page.md)
+- [Microsoft Connector for SAP BW F1 Help](../microsoft-connector-for-sap-bw-f1-help.md)

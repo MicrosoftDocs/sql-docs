@@ -43,8 +43,7 @@ ms.topic: how-to
   
 12. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
- [ODBC Destination Editor &#40;Connection Manager Page&#41;](./odbc-destination.md)   
- [ODBC Destination Editor &#40;Mappings Page&#41;](./odbc-destination.md)   
- [ODBC Source Editor &#40;Error Output Page&#41;](./odbc-source.md)  
-  
+## Related content
+
+- [ODBC Destination](odbc-destination.md)
+- [ODBC Source](odbc-source.md)

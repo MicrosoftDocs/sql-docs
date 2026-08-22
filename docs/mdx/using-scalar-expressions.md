@@ -50,7 +50,6 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
-  
-  
+## Related content
+
+- [Expressions (MDX)](expressions-mdx.md)

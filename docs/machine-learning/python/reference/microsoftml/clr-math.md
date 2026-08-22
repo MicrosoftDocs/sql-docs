@@ -37,9 +37,9 @@ microsoftml.clr_math()
 Default .NET math.
 
 
-## See also
+## Related content
 
-[`avx_math`](avx-math.md),
-[`gpu_math`](gpu-math.md),
-[`mkl_math`](mkl-math.md),
-[`sse_math`](sse-math.md)
+- [*microsoftml.avx_math*: Acceleration with AVX instructions](avx-math.md)
+- [*microsoftml.gpu_math*: Acceleration with NVidia CUDA](gpu-math.md)
+- [*microsoftml.mkl_math*: Acceleration with Intel MKL](mkl-math.md)
+- [*microsoftml.sse_math*: Acceleration with SSE instructions](sse-math.md)

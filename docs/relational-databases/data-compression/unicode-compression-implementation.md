@@ -56,11 +56,10 @@ The storage space that compression saves depends on the characteristics of the d
 | Vietnamese | 39% |
 | Japanese | 15% |
 
-## Next steps
+## Related content
 
 - [Data compression](data-compression.md)
-- [sp_estimate_data_compression_savings (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)
+- [sys.sp_estimate_data_compression_savings (Transact-SQL)](../system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)
 - [sys.dm_db_persisted_sku_features (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)
 - [Row compression implementation](row-compression-implementation.md)
 - [Page compression implementation](page-compression-implementation.md)
-

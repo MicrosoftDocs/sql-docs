@@ -40,6 +40,7 @@ helpviewer_keywords:
 |210047|The member cannot be a sibling of Unused.|This occurs when **RelationshipType** = **2** (sibling) and either the **ParentCode** or **ChildCode** is **Unused**. Members can only be children of the Unused node.|Relationship|  
 |210048|**ParentCode** and **ChildCode** cannot be the same.|The **ParentCode** value is the same as the **ChildCode** value. These values must be different.|Relationship|  
   
-## See Also  
- [View Errors that Occur During Staging &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)
+## Related content
+
+- [View Errors that Occur During Staging (Master Data Services)](view-errors-that-occur-during-staging-master-data-services.md)
+- [Overview: Importing Data from Tables (Master Data Services)](overview-importing-data-from-tables-master-data-services.md)

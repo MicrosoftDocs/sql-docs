@@ -110,8 +110,8 @@ WHERE Product.[select]
   
  In addition, the Measures identifier in the previous example was delimited to demonstrate delimiting more than one identifier.  
   
-## See Also  
- [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [MDX Syntax Elements &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
+## Related content
+
+- [MDX Language Reference (MDX)](mdx-language-reference-mdx.md)
+- [MDX Query Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)
+- [MDX Syntax Elements (MDX)](mdx-syntax-elements-mdx.md)

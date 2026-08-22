@@ -49,7 +49,8 @@ helpviewer_keywords:
   
 10. In the confirmation dialog box, click **OK**. The value in the **Business Rule Status** column is **Excluded** and the **Excluded** column is **Yes**.  
   
-## See Also  
- [Delete a Business Rule &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)   
- [Create and Publish a Business Rule &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)
+## Related content
+
+- [Delete a Business Rule (Master Data Services)](delete-a-business-rule-master-data-services.md)
+- [Create and Publish a Business Rule (Master Data Services)](create-and-publish-a-business-rule-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)

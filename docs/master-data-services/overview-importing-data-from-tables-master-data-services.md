@@ -101,8 +101,7 @@ helpviewer_keywords:
   
  In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], the **Log staging transactions** setting does not apply to this method of staging data.  
   
-## Related Content  
-  
--   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
-  
--   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)
+## Related content
+
+- [Validation (Master Data Services)](validation-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)

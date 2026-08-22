@@ -340,15 +340,6 @@ A [`FastLinear`](learners-object.md) object with the trained model.
 This algorithm is multi-threaded and will not attempt to load the entire dataset into memory.
 
 
-## See also
-
-[`hinge_loss`](hinge-loss.md),
-[`log_loss`](log-loss.md),
-[`smoothed_hinge_loss`](smoothed-hinge-loss.md),
-[`squared_loss`](squared-loss.md),
-[`rx_predict`](rx-predict.md)
-
-
 ## References
 
 [Scaling Up Stochastic Dual Coordinate Ascent](https://research.microsoft.com/en-us/um/people/mbilenko/papers/15-sasdca.pdf)
@@ -524,4 +515,12 @@ Rows Read: 5, Total Rows Processed: 5, Total Chunk Time: Less than .001 seconds
 
 * [*microsoftml.smoothed_hinge_loss*: Smoothed hinge loss function](smoothed-hinge-loss.md) 
 
-* [*microsoftml.squared_loss*: Squared loss function](squared-loss.md) 
+* [*microsoftml.squared_loss*: Squared loss function](squared-loss.md)
+
+## Related content
+
+- [*microsoftml.hinge_loss*: Hinge loss function](hinge-loss.md)
+- [*microsoftml.log_loss*: Log loss function](log-loss.md)
+- [*microsoftml.smoothed_hinge_loss*: Smoothed hinge loss function](smoothed-hinge-loss.md)
+- [*microsoftml.squared_loss*: Squared loss function](squared-loss.md)
+- [*microsoftml.rx_predict*: Scores using a Microsoft machine learning model](rx-predict.md)

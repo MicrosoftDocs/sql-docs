@@ -415,6 +415,6 @@ For example, if you attach a database that was compatibility level 90 before att
 
 ## Related content
 
-- [Upgrade a Database Using Detach and Attach (Transact-SQL)](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)
+- [Upgrade a database using detach and attach (Transact-SQL)](upgrade-a-database-using-detach-and-attach-transact-sql.md)
 - [Create a SQL Server Agent Proxy](/ssms/agent/create-a-sql-server-agent-proxy)
 - [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

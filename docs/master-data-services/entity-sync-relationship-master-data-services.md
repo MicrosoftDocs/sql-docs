@@ -24,6 +24,7 @@ ms.custom:
   
  Once a sync relationship has been established, the target entity can be modified only by the sync process. A sync relationship can be removed at any time to make the target entity editable.  
   
-## See Also  
- [Create and Execute an Entity Sync Relationship &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [Edit and Delete an Entity Sync Relationship &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)
+## Related content
+
+- [Create and Execute an Entity Sync Relationship (Master Data Services)](create-and-execute-an-entity-sync-relationship-master-data-services.md)
+- [Edit and Delete an Entity Sync Relationship (Master Data Services)](edit-and-delete-an-entity-sync-relationship-master-data-services.md)

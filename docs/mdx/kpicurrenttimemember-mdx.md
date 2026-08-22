@@ -26,7 +26,6 @@ KPICurrentTimeMember(KPI_Name)
 ## Remarks  
  A KPI can have a different time member from the default member of the time dimension.  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

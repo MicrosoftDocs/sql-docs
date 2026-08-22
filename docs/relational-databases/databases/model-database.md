@@ -92,10 +92,9 @@ For SQL Server 2014, see [model Database](/previous-versions/sql/2014/relational
 - Setting the primary filegroup to READ_ONLY.  
 - Creating procedures, views, or triggers using the WITH ENCRYPTION option. The encryption key is tied to the database in which the object is created. Encrypted objects created in the **model** database can only be used in **model**.  
   
-## Related Content  
-- [System Databases](../../relational-databases/databases/system-databases.md)  
-- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-- [Move Database Files](../../relational-databases/databases/move-database-files.md)  
-  
-  
+## Related content
+
+- [System Databases](system-databases.md)
+- [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../system-catalog-views/sys-master-files-transact-sql.md)
+- [Move database files](move-database-files.md)

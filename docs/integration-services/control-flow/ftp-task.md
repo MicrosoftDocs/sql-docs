@@ -161,7 +161,7 @@ helpviewer_keywords:
   
  **Related Topics**: [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
-## See Also  
- [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
+## Related content
+
+- [Integration Services Tasks](integration-services-tasks.md)
+- [Control Flow](control-flow.md)

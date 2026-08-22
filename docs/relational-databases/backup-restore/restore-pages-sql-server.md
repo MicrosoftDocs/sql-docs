@@ -197,10 +197,9 @@ RESTORE LOG [<database>] FROM [<new_log_backup>] WITH RECOVERY;
 GO
 ```  
   
-## See Also  
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
-  
-  
+## Related content
+
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Apply Transaction Log Backups (SQL Server)](apply-transaction-log-backups-sql-server.md)
+- [Manage the suspect_pages Table (SQL Server)](manage-the-suspect-pages-table-sql-server.md)
+- [Back up and restore of SQL Server databases](back-up-and-restore-of-sql-server-databases.md)

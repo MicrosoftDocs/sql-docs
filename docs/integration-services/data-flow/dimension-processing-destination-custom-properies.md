@@ -34,6 +34,6 @@ ms.custom: sfi-ropc-nochange
   
  For more information, see [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md).  
   
-## See Also  
- [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
-  
+## Related content
+
+- [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)

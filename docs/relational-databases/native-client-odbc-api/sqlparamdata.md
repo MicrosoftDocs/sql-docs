@@ -17,7 +17,7 @@ helpviewer_keywords:
   
  For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## See Also  
- [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLParamData Function](../../odbc/reference/syntax/sqlparamdata-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

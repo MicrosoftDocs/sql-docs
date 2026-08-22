@@ -54,7 +54,7 @@ Additional arguments sent to compute engine.
 An object defining the transform.
 
 
-## See also
+## Related content
 
-[`concat`](concat.md),
-[`select_columns`](select-columns.md).
+- [*microsoftml.concat*: Concatenates multiple columns into a single vector](concat.md)
+- [*microsoftml.select_columns*: Retains columns of a dataset](select-columns.md)

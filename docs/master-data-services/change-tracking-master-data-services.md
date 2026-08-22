@@ -33,10 +33,8 @@ helpviewer_keywords:
 |Add attributes to a change tracking group.|[Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Create a business rule that initiates actions based on attribute changes.|[Initiate Actions Based on Attribute Value Changes &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
-## Related Content  
-  
--   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
-  
--   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
-  
--   [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)
+## Related content
+
+- [Validation (Master Data Services)](validation-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Attributes (Master Data Services)](attributes-master-data-services.md)

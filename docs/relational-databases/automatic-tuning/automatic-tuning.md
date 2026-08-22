@@ -181,21 +181,21 @@ Without automatic index management, a user or DBA would need to manually query t
 
 [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] simplifies this process. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] analyzes your workload, identifies the queries that could be executed faster with a new index, and identifies unused or duplicated indexes. Find more information about identification of indexes that should be changed at [Find index recommendations in Azure portal](/azure/sql-database/sql-database-advisor-portal).
 
-## Next steps
+## Related content
 
 - [Automatic tuning in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]](/azure/azure-sql/database/automatic-tuning-overview)
-- [ALTER DATABASE SET AUTOMATIC_TUNING (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
-- [sys.database_automatic_tuning_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
+- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [sys.database_automatic_tuning_options (Transact-SQL)](../system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
 - [sys.dm_db_tuning_recommendations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)
 - [sys.dm_db_missing_index_details (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)
-- [sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+- [sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
 - [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
-- [sp_query_store_unforce_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)
-- [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [sp_query_store_unforce_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)
+- [sys.database_query_store_options (Transact-SQL)](../system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [sys.dm_os_sys_info  (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [JSON functions](../json/json-data-sql-server.md)
-- [Execution Plans](../../relational-databases/performance/execution-plans.md)
-- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
-- [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)
+- [JSON data in SQL Server](../json/json-data-sql-server.md)
+- [Execution plan overview](../performance/execution-plans.md)
+- [Monitor and Tune for Performance](../performance/monitor-and-tune-for-performance.md)
+- [Performance monitoring and tuning tools](../performance/performance-monitoring-and-tuning-tools.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [Upgrade databases using the Query Tuning Assistant](../performance/upgrade-dbcompat-using-qta.md)

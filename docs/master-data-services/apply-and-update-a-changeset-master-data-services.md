@@ -44,9 +44,8 @@ ms.custom:
   
 5.  To revert pending changes, in the **Changesets** pane, right-click in the  grid and then click **Revert**.  
   
-## Next Steps  
- [Commit or Submit a Changeset &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
-  
-## See Also  
- [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
- [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)
+## Related content
+
+- [Create a Changeset (Master Data Services)](create-a-changeset-master-data-services.md)
+- [Approve or Reject a Changeset (Master Data Services)](approve-or-reject-a-changeset-master-data-services.md)
+- [Commit or Submit a Changeset (Master Data Services)](commit-or-submit-a-changeset-master-data-services.md)

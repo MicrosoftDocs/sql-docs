@@ -70,14 +70,6 @@ f1_keywords:
 ## Related Tasks  
  [Define a State Variable](../../integration-services/data-flow/define-a-state-variable.md)  
   
-## Related Content  
-  
--   Technical article, [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), on social.technet.microsoft.com.  
-  
--   Technical article, [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), on social.technet.microsoft.com.  
-  
--   Technical article, [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), on social.technet.microsoft.com.  
-  
 ## CDC Control Task Editor
   Use the **CDC Control Task Editor** dialog box to configure the CDC Control task. The CDC Control task configuration includes defining a connection to the CDC database, the CDC task operation and the state management information.  
   
@@ -148,3 +140,8 @@ f1_keywords:
  **State name**  
  Type a name to associate with the persistent CDC state. The full load and CDC packages that work with the same CDC context will specify a common state name. This name is used for looking up the state row in the state table  
   
+## Related content
+
+- [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)
+- [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)
+- [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)

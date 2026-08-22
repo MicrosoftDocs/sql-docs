@@ -235,11 +235,8 @@ To open Help, press F1.
 > [!NOTE]  
 >  When you debug a package that contains multiple Script tasks, the debugger debugs one Script task. The system can debug another Script task if the debugger completes, as in the case of a Foreach Loop or For Loop container.  
   
-## External Resources  
-  
--   Blog entry, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations), on blogs.msdn.com.  
-  
-## See Also  
- [Referencing Other Assemblies in Scripting Solutions](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
- [Configuring the Script Task in the Script Task Editor](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
-  
+## Related content
+
+- [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations)
+- [Referencing Other Assemblies in Scripting Solutions](../referencing-other-assemblies-in-scripting-solutions.md)
+- [Configuring the Script Task in the Script Task Editor](configuring-the-script-task-in-the-script-task-editor.md)

@@ -78,14 +78,13 @@ helpviewer_keywords:
 > [!NOTE]  
 >  File backups are not supported by the Maintenance Plan Wizard.  
   
-## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Backup and Restore: Interoperability and Coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
- [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [File Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
- [File Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
- [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
-  
+## Related content
+
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [Backup overview (SQL Server)](backup-overview-sql-server.md)
+- [Backup and Restore: Interoperability and Coexistence (SQL Server)](backup-and-restore-interoperability-and-coexistence-sql-server.md)
+- [Differential backups (SQL Server)](differential-backups-sql-server.md)
+- [File Restores (Simple Recovery Model)](file-restores-simple-recovery-model.md)
+- [File Restores (Full Recovery Model)](file-restores-full-recovery-model.md)
+- [Online Restore (SQL Server)](online-restore-sql-server.md)
+- [Piecemeal Restores (SQL Server)](piecemeal-restores-sql-server.md)

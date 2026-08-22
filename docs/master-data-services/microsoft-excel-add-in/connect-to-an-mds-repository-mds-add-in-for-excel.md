@@ -45,11 +45,8 @@ ms.custom:
   
 8.  Click **Connect**. The **Master Data Services** pane is displayed.  
   
-## Next Steps  
-  
--   [Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)  
-  
--   [Filter Data before Exporting &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)  
-  
-## See Also  
- [Connections &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)
+## Related content
+
+- [Connections (MDS Add-in for Excel)](connections-mds-add-in-for-excel.md)
+- [Export Data to Excel from Master Data Services](export-data-to-excel-from-master-data-services.md)
+- [Filter Data before Exporting (MDS Add-in for Excel)](filter-data-before-exporting-mds-add-in-for-excel.md)

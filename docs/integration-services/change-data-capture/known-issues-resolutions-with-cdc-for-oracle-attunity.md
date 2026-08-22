@@ -123,10 +123,9 @@ You can set the user account by selecting the CDCInstance from the left pane and
 
 
   
-## See also  
- [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
- [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
-  
-  
+## Related content
+
+- [Track data changes (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)
+- [What is change data capture (CDC)?](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)
+- [Work with Change Data](../../relational-databases/track-changes/work-with-change-data-sql-server.md)
+- [Administer and monitor change data capture](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)

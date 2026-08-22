@@ -108,6 +108,6 @@ This procedure demonstrates how you can use the new functions to load a model fr
     infertLogit2 <- rxReadObject(ds, "logit.model")
    ```
 
-## Next steps
+## Related content
 
-+ [What is SQL Server Machine Learning Services?](../sql-server-machine-learning-services.md)
+- [What is SQL Server Machine Learning Services with Python and R?](../sql-server-machine-learning-services.md)

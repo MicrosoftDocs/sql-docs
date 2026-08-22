@@ -39,7 +39,6 @@ IF Measures.CurrentMember IS [Measures].[Internet Sales Amount] THEN this = 10 E
   
  `END SCOPE`;  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

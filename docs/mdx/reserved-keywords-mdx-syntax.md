@@ -20,7 +20,6 @@ ms.custom: mdx
   
 -   Use a naming convention that avoids using reserved keywords. Consonants or vowels can be removed if an object name must look like a reserved keyword.  
   
-## See Also  
- [MDX Syntax Elements &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Syntax Elements (MDX)](mdx-syntax-elements-mdx.md)

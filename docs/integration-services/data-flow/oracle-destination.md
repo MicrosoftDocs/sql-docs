@@ -198,9 +198,9 @@ Select how the Oracle source should handle errors in a flow: ignore the failure,
 
 Select how the Oracle source should handle truncation in a flow: ignore the failure, redirect the row, or fail the component.
 
-## Next steps
+## Related content
 
-- Configure [Oracle Connection Manager](oracle-connection-manager.md).
-- Configure [Oracle Source](oracle-source.md).
-- Configure [Oracle Destination](oracle-destination.md).
-- If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).
+- [Oracle Connection Manager](oracle-connection-manager.md)
+- [Oracle source](oracle-source.md)
+- [Oracle destination](oracle-destination.md)
+- [TechCommunity](https://aka.ms/AA5u35j)

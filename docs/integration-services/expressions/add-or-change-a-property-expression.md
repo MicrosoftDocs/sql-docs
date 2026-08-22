@@ -57,14 +57,13 @@ helpviewer_keywords:
   
 6.  Select **OK**.
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)   
- [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)   
- [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services &#40;SSIS&#41; Event Handlers](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md)  
-  
-  
+## Related content
+
+- [Integration Services (SSIS) Expressions](integration-services-ssis-expressions.md)
+- [Use Property Expressions in Packages](use-property-expressions-in-packages.md)
+- [Integration Services (SSIS) Packages](../integration-services-ssis-packages.md)
+- [Integration Services Containers](../control-flow/integration-services-containers.md)
+- [Integration Services Tasks](../control-flow/integration-services-tasks.md)
+- [Integration Services (SSIS) Event Handlers](../integration-services-ssis-event-handlers.md)
+- [Integration Services (SSIS) Connections](../connection-manager/integration-services-ssis-connections.md)
+- [Integration Services (SSIS) Logging](../performance/integration-services-ssis-logging.md)

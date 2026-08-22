@@ -104,10 +104,7 @@ f1_keywords:
   
     ```  
   
-## Next Steps  
- After configuring advanced options and custom schedules, you must enable [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] on the target database or SQL Server instance. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
-  
-## See Also  
- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
-  
-  
+## Related content
+
+- [SQL Server managed backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)
+- [Enable SQL Server managed backup to Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)

@@ -69,6 +69,7 @@ helpviewer_keywords:
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## See Also  
- [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)
+## Related content
+
+- [How Permissions Are Determined (Master Data Services)](how-permissions-are-determined-master-data-services.md)
+- [Overlapping User and Group Permissions (Master Data Services)](overlapping-user-and-group-permissions-master-data-services.md)

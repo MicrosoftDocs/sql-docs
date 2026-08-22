@@ -86,8 +86,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |Trend|Reversed status arrow|5|  
 |Trend|Faces|3|  
   
-## See Also  
- [DROP KPI Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Data Definition - DROP KPI](mdx-data-definition-drop-kpi.md)
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)

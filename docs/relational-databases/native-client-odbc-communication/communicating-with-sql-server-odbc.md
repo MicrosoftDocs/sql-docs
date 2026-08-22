@@ -33,7 +33,7 @@ helpviewer_keywords:
   
 -   [Disconnecting from a Data Source](../../relational-databases/native-client-odbc-communication/disconnecting-from-a-data-source.md)  
   
-## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)  
-  
+## Related content
+
+- [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)
+- [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)

@@ -37,7 +37,7 @@ PIE installs only the drivers. Complete Step 1 and Step 2 for your platform firs
 
 ### Install PIE
 
-PIE requires PHP 8.1 or later to run, but it can install an extension into any other PHP installation on the machine. PIE is distributed as a PHAR archive, in the same way as Composer.
+PIE requires PHP 8.1 and later versions to run, but it can install an extension into any other PHP installation on the machine. PIE is distributed as a PHAR archive, in the same way as Composer.
 
 The following commands install PIE to `/usr/local/bin/pie`:
 

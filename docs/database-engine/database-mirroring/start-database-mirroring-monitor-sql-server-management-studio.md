@@ -34,8 +34,7 @@ helpviewer_keywords:
   
  For more information about Database Mirroring Monitor, see [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md).  
   
-## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
-  
-  
+## Related content
+
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [Establish Database Mirroring Session - Windows Authentication](establish-database-mirroring-session-windows-authentication.md)

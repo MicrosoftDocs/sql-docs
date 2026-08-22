@@ -645,8 +645,8 @@ If the direct connection works but **SQLAlchemy** doesn't, check for URL encodin
 
 ## Related content
 
-- [mssql-python connection strings](connection-strings.md)
-- [mssql-python connection management](connection-management.md)
-- [FastAPI integration](fast-api-integration.md)
-- [Flask integration](flask-integration.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Manage connections with mssql-python](connection-management.md)
+- [Use mssql-python with FastAPI](fast-api-integration.md)
+- [Use mssql-python with Flask](flask-integration.md)
 - [SQLAlchemy MSSQL dialect documentation](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html)

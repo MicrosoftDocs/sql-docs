@@ -106,20 +106,13 @@ Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.
   
 -   [Get Help SQL Server PowerShell](/powershell/sql-server/sql-server-powershell)  
   
-##  <a name="RelatedContent"></a> Related Content  
- **SQL Server Always On Team Blogs-Monitoring Always On Health with PowerShell:**  
-  
--   [Part 1: Basic Cmdlet Overview](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
-  
--   [Part 2: Advanced Cmdlet Usage](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
-  
--   [Part 3: A Simple Monitoring Application](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
-  
--   [Part 4: Integration with SQL Server Agent](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
-  
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Administration of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
- [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
- [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
-  
+## Related content
+
+- [Part 1: Basic Cmdlet Overview](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)
+- [Part 2: Advanced Cmdlet Usage](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)
+- [Part 3: A Simple Monitoring Application](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)
+- [Part 4: Integration with SQL Server Agent](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Administration of an availability group](administration-of-an-availability-group-sql-server.md)
+- [Tools to monitor Always On availability groups](monitoring-of-availability-groups-sql-server.md)
+- [Policy based management for operational issues with Always On availability groups](always-on-policies-for-operational-issues-always-on-availability.md)

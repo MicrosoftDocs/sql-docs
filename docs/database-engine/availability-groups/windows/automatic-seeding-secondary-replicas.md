@@ -239,14 +239,8 @@ The following table lists extended events related to automatic seeding.
 |hadr_automatic_seeding_failure|Occurs when an automatic seeding operation fails.|
 |hadr_automatic_seeding_timeout|Occurs when an automatic seeding operation times out.|
 
-## See also
+## Related content
 
-[ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)
-
-[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
-
-[Always On Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))
-
-<!--Image references-->
-[1]: ./media/auto-seed-new-availability-group.png
-[2]: ./media/auto-seed-sql-server-log.png
+- [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)
+- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
+- [Always On Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))

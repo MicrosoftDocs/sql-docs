@@ -32,6 +32,6 @@ The classes for the connection pooling implementation are as follows.
 > [!NOTE]  
 > Not all third-party Java connection pooling libraries implement the above JDBC APIs for connection pooling. Those libraries must implement their own methods to return connections back to their original states when they're returned to the connection pool.  
   
-## See also
+## Related content
 
-[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -158,9 +158,9 @@ C:\pdwinst\media\setup.exe /action="MicrosoftUpdate" /DomainAdminPassword="<pass
 C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAdminPassword="<password>"  
 ```  
   
-## See Also  
-[Uninstall Microsoft Updates &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
-[Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
-[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Software Servicing &#40;Analytics Platform System&#41;](software-servicing.md)  
-  
+## Related content
+
+- [Uninstall Microsoft updates in Analytics Platform System](uninstall-microsoft-updates.md)
+- [Apply Analytics Platform System hotfixes](apply-analytics-platform-system-hotfixes.md)
+- [Uninstall Analytics Platform System hotfixes](uninstall-analytics-platform-system-hotfixes.md)
+- [Software servicing in Analytics Platform System](software-servicing.md)

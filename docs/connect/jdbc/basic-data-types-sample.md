@@ -154,6 +154,6 @@ public class DatatypesTest {
 }
 ```
 
-## See also
+## Related content
 
-[Working with data types &#40;JDBC&#41;](working-with-data-types-jdbc.md)
+- [Working with data types (JDBC)](working-with-data-types-jdbc.md)

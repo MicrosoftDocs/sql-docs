@@ -126,10 +126,10 @@ The administrator can now execute queries to diagnose the problem and possibly t
 ## Related content
 
 - [Use sqlcmd with scripting variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
-- [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)
+- [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md)
 - [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
-- [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
-- [sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)
+- [sys.sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+- [sys.sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)
 - [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 - [DBCC CHECKALLOC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)
 - [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)

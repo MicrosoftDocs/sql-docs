@@ -43,9 +43,9 @@ The following sample shows how to use the <xref:Microsoft.Data.SqlClient.SqlClie
 
 [!code-csharp[SqlClientFactory_Netcoreapp#1](~/../sqlclient/doc/samples/SqlClientFactory_Netcoreapp.cs#1)]
 
-## See also
+## Related content
 
 - [DbProviderFactories](dbproviderfactories.md)
-- [Connection strings](connection-strings.md)
+- [Connection strings in ADO.NET](connection-strings.md)
 - [Using the configuration classes](/previous-versions/aspnet/ms228063(v=vs.100))
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

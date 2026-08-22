@@ -165,4 +165,4 @@ For more information, see:
 
 - [Installing the Driver Manager](installing-the-driver-manager.md)
 - [Known issues for the ODBC driver on Linux and macOS](known-issues-in-this-version-of-the-driver.md)
-- [Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)
+- [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)

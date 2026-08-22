@@ -40,9 +40,8 @@ public java.lang.String getColumnLabel(int column)
   
  This method returns the alias name of the column. If that is not available, this method returns the column name.  
   
-## See Also  
- [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
- [SQLServerResultSetMetaData Members](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
- [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSetMetaData Methods](sqlserverresultsetmetadata-methods.md)
+- [SQLServerResultSetMetaData Members](sqlserverresultsetmetadata-members.md)
+- [SQLServerResultSetMetaData Class](sqlserverresultsetmetadata-class.md)

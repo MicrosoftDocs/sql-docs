@@ -167,7 +167,6 @@ _ExitInitialize:
 }
 ```
 
-## See Also
+## Related content
 
-[Creating an OLE DB Driver for SQL Server Application](creating-a-oledb-driver-for-sql-server-application.md)
-
+- [Creating an OLE DB Driver for SQL Server Application](creating-a-oledb-driver-for-sql-server-application.md)

@@ -24,9 +24,8 @@ apitype: "Assembly"
 |[getXAConnection ()](../../../connect/jdbc/reference/getxaconnection-method.md)|Tries to establish a physical database connection that can be used in a distributed transaction.|  
 |[getXAConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getxaconnection-method-java-lang-string-java-lang-string.md)|Tries to establish a physical database connection using the given user name and password.|  
   
-## See Also  
- [SQLServerXADataSource Methods](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
- [SQLServerXADataSource Members](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
- [SQLServerXADataSource Class](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerXADataSource Methods](sqlserverxadatasource-methods.md)
+- [SQLServerXADataSource Members](sqlserverxadatasource-members.md)
+- [SQLServerXADataSource Class](sqlserverxadatasource-class.md)

@@ -32,6 +32,6 @@ In this case, the number of result sets returned is known to be two. However, th
 > [!NOTE]  
 > When you make the call to the getMoreResults method of the SQLServerStatement class, the previously returned result set is implicitly closed.
 
-## See also
+## Related content
 
-[Using statements with the JDBC driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)
+- [Using statements with the JDBC driver](using-statements-with-the-jdbc-driver.md)

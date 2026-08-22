@@ -27,8 +27,6 @@ helpviewer_keywords:
 - Where the column isn't large enough to hold the data  
 - When `ICommandWithParameters::SetParameterInfo` hasn't been called  
   
-## See Also  
- [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server (OLE DB) Interfaces](oledb-driver-for-sql-server-ole-db-interfaces.md)

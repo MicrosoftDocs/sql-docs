@@ -154,15 +154,15 @@ helpviewer_keywords:
   
     -   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## See Also  
- [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Install SQL Server 2016 from the Command Prompt](../install-windows/install-sql-server-from-the-command-prompt.md)   
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [View the State of a Mirrored Database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
- [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
-  
+## Related content
+
+- [Upgrade SQL Server Using the Installation Wizard (Setup)](../install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](../install-windows/install-sql-server-from-the-command-prompt.md)
+- [ALTER DATABASE (Transact-SQL) Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [View the State of a Mirrored Database (SQL Server Management Studio)](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [Role Switching During a Database Mirroring Session (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)
+- [Force Service in a Database Mirroring Session (Transact-SQL)](force-service-in-a-database-mirroring-session-transact-sql.md)
+- [Start Database Mirroring Monitor (SQL Server Management Studio)](start-database-mirroring-monitor-sql-server-management-studio.md)
+- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)

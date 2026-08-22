@@ -104,6 +104,7 @@ class Class1
 }  
 ```  
   
-## Next steps
+## Related content
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [XML data in SQL Server](xml-data-sql-server.md)

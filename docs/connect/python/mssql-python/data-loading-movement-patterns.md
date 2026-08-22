@@ -372,9 +372,9 @@ except Exception:
 
 ## Related content
 
-- [Bulk copy operations](bulk-copy.md)
-- [pandas integration](pandas-integration.md)
-- [Polars integration](polars-integration.md)
-- [Performance tuning](performance-tuning.md)
-- [Transaction management](transaction-management.md)
-- [Data access and analytics patterns](data-access-analytics-patterns.md)
+- [Use bulk copy with mssql-python](bulk-copy.md)
+- [Use mssql-python with pandas](pandas-integration.md)
+- [Use mssql-python with Polars](polars-integration.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)
+- [Transaction management with mssql-python](transaction-management.md)
+- [Choose a data access and analytics pattern with mssql-python](data-access-analytics-patterns.md)

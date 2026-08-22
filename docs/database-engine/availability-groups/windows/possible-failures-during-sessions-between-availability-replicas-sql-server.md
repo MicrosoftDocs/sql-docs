@@ -81,11 +81,8 @@ If no ping is received from the other replica within the session-timeout period,
 
 Regardless of the type of error, a server instance that detects an error responds appropriately based on the role of the instance, the availability mode of the session, and the state of any other connection in the session. For information about what occurs on the loss of a partner, see [Availability Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).
 
-## See also
+## Related content
 
-- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-
-## Next steps
-
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
 - [Modify the session-timeout period for an availability group replica](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)
-- Query `session_timeout` in [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)
+- [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)

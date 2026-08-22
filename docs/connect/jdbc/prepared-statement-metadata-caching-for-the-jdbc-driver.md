@@ -87,7 +87,7 @@ For example:
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Specifies the size of the prepared statement cache for this connection. A value < 1 means no cache.|
 |int getStatementPoolingCacheSize()|Returns the size of the prepared statement cache for this connection. A value < 1 means no cache.|
 
-## See also
+## Related content
 
-[Improving performance and reliability with the JDBC driver](improving-performance-and-reliability-with-the-jdbc-driver.md)
-[Prepared statement parameter performance](prepared-statement-parameter-performance.md)
+- [Improving performance and reliability (JDBC)](improving-performance-and-reliability-with-the-jdbc-driver.md)
+- [Prepared statement parameter performance for the JDBC driver](prepared-statement-parameter-performance.md)

@@ -97,7 +97,6 @@ ms.custom:
   
  You can also attach DQS databases using the Transact-SQL statements. For more information about attaching databases using Transact-SQL statements, see [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) in [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## See Also  
- [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
-  
-  
+## Related content
+
+- [Manage DQS Databases](manage-dqs-databases.md)

@@ -34,7 +34,6 @@ public interface ISQLServerPreparedStatement
 |------------|-------------------------------|  
 |public void setDateTimeOffset(int, microsoft.sql.DateTimeOffset)|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|  
   
-## See Also  
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

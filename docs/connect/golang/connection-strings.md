@@ -189,7 +189,7 @@ If you still depend on the deprecated `mssql` driver name behavior that rewrites
 
 ## Related content
 
-- [Connection options](connection-options.md)
-- [Encryption and certificates](encryption-certificates.md)
-- [SQL Server and Windows authentication](authentication.md)
-- [Microsoft Entra ID authentication](entra-authentication.md)
+- [go-mssqldb connection options](connection-options.md)
+- [go-mssqldb encryption and certificates](encryption-certificates.md)
+- [SQL Server and Windows authentication with go-mssqldb](authentication.md)
+- [Microsoft Entra ID authentication with go-mssqldb](entra-authentication.md)

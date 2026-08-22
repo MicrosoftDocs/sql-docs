@@ -24,8 +24,6 @@ helpviewer_keywords:
   
  For information about table-valued parameters and OLE DB, see [Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
-## See Also  
- [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md) 
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)

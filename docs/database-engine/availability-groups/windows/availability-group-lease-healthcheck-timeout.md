@@ -183,5 +183,5 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
 ## Related content
 
-- [Active Secondaries: Backup on Secondary Replicas (Always On Availability Groups)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+- [Offload supported backups to secondary replicas of an availability group](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 - [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)

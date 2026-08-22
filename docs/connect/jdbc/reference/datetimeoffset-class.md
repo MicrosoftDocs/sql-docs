@@ -30,8 +30,7 @@ public final class DateTimeOffset
 ## Remarks  
  For more information about data types, see [Understanding the JDBC Driver Data Types](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
   
-## See Also  
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   
- [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md)  
-  
-  
+## Related content
+
+- [JDBC driver API reference](jdbc-driver-api-reference.md)
+- [DateTimeOffset Members](datetimeoffset-members.md)

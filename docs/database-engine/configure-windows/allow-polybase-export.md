@@ -50,5 +50,5 @@ GO
 ## Related content
 
 - [Exporting data](../../relational-databases/polybase/polybase-configure-hadoop.md#exporting-data)
-- [Data virtualization with PolyBase in SQL Server](../../relational-databases/polybase/overview.md)
+- [PolyBase overview](../../relational-databases/polybase/overview.md)
 - [CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)

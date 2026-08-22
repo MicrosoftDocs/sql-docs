@@ -70,8 +70,6 @@ HRESULT Abort(
   
  Calling `ISSAsynchStatus::Abort` and passing a value for *eOperation* other than DBASYNCHOP_OPEN returns S_OK. This value doesn't imply that the operation completed or was canceled.  
   
-## See Also  
- [Performing Asynchronous Operations](../../oledb/features/performing-asynchronous-operations.md)  
-  
-  
+## Related content
 
+- [Performing Asynchronous Operations](../features/performing-asynchronous-operations.md)

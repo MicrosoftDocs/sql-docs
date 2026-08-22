@@ -41,8 +41,7 @@ public int getConcurrency()
   
  This method can be used to determine the actual concurrency. If the application selected CONCUR_READ_ONLY or CONCUR_UPDATABLE, these will be returned. If the application used default concurrency, CONCUR_READ_ONLY will be returned.  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

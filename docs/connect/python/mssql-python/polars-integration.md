@@ -370,8 +370,8 @@ df = pl.from_arrow(cursor.arrow())
 
 ## Related content
 
-- [Apache Arrow integration](arrow-integration.md)
-- [pandas integration](pandas-integration.md)
-- [Bulk copy operations](bulk-copy.md)
-- [Retrieving data](retrieving-data.md)
-- [Performance tuning](performance-tuning.md)
+- [Use mssql-python with Apache Arrow](arrow-integration.md)
+- [Use mssql-python with pandas](pandas-integration.md)
+- [Use bulk copy with mssql-python](bulk-copy.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)

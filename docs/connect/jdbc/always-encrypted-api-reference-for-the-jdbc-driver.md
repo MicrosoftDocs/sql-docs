@@ -189,6 +189,6 @@ The statement level setting for AE is added to the SQLServerConnection class and
 >
 > If Always Encrypted is disabled for a query and the query returns results from encrypted columns, the query will return encrypted values. The encrypted values will have the varbinary datatype.
 
-## See also
+## Related content
 
-[Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md)
+- [Use Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md)

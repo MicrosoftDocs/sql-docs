@@ -75,10 +75,9 @@ Requires ALTER permission on the database.
   
 -   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## See Also  
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
- [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
- [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
- [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
-  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL) Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
+- [Change Transaction Safety in a Database Mirroring Session (Transact-SQL)](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)
+- [Add a Database Mirroring Witness Using Windows Authentication (Transact-SQL)](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)
+- [Database Mirroring Witness](database-mirroring-witness.md)

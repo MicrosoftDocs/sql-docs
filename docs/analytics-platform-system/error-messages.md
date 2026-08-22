@@ -34,5 +34,5 @@ These example values would be presented to the user like this:
   
 ## Related content
 
-- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)  
-- [Understanding Admin Console Alerts](understanding-admin-console-alerts.md)
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)
+- [Admin Console alerts in Analytics Platform System](understanding-admin-console-alerts.md)

@@ -78,6 +78,6 @@ public class ConnectDataSource {
 }
 ```
 
-## See also
+## Related content
 
-[Connecting and retrieving data](connecting-and-retrieving-data.md)
+- [Connecting and retrieving data](connecting-and-retrieving-data.md)

@@ -33,8 +33,7 @@ public class SQLServerXAConnection
 > [!NOTE]  
 >  Application programmers typically do not use this interface directly. It is primarily used by a transaction manager working in the middle tier server.  
   
-## See Also  
- [SQLServerXAConnection Members](../../../connect/jdbc/reference/sqlserverxaconnection-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerXAConnection Members](sqlserverxaconnection-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

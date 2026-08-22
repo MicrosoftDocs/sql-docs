@@ -104,6 +104,6 @@ Starting a subscription doesn't guarantee that future messages will be successfu
 
 For more information about the `DBPROPSET_SQLSERVERROWSET` property set, see [Rowset Properties and Behaviors](../ole-db-rowsets/rowset-properties-and-behaviors.md).
 
-## See also
+## Related content
 
-[OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)
+- [OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)

@@ -50,9 +50,8 @@ public SQLServerException(java.lang.Object obj,
   
  A boolean that indicates if the stack trace should be generated.
   
-## See Also  
- [SQLServerException Constructors](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
- [SQLServerException Members](../../../connect/jdbc/reference/sqlserverexception-members.md)   
- [SQLServerException Class](../../../connect/jdbc/reference/sqlserverexception-class.md)  
-  
-  
+## Related content
+
+- [SQLServerException Constructors](sqlserverexception-constructors.md)
+- [SQLServerException Members](sqlserverexception-members.md)
+- [SQLServerException Class](sqlserverexception-class.md)

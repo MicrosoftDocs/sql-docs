@@ -32,9 +32,9 @@ The following code example executes the stored procedure created by the sample c
 
 [!code-csharp[DataWorks SqlCommand.ExecuteNonQuery#2](~/../sqlclient/doc/samples/SqlCommand_ExecuteNonQuery_SP_DML.cs#2)]
 
-## See also
+## Related content
 
 - [Using commands to modify data](use-commands-to-modify-data.md)
 - [Update data sources with DataAdapters](update-data-sources-with-dataadapters.md)
 - [Commands and parameters](commands-parameters.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

@@ -660,11 +660,11 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |[SqlParameter.ForceColumnEncryption Property](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption)|Enforces encryption of a parameter. If SQL Server informs the driver that the parameter doesn't need to be encrypted, the query using the parameter will fail. This property provides extra protection against security attacks that involve a compromised SQL Server providing incorrect encryption metadata to the client, which may lead to data disclosure.|
 |[connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) keyword: `Column Encryption Setting=enabled`|Enables or disables Always Encrypted functionality for the connection.|
 
-## See also
+## Related content
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [SQL Database tutorial: Protect sensitive data with Always Encrypted](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)
-- [Example: Azure Key Vault working with Always Encrypted](azure-key-vault-example.md)
-- [Example: Azure Key Vault working with Always Encrypted with secure enclaves](azure-key-vault-enclave-example.md)
+- [Example demonstrating use of Azure Key Vault provider with Always Encrypted](azure-key-vault-example.md)
+- [Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with secure enclaves](azure-key-vault-enclave-example.md)

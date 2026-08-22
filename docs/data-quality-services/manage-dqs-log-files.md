@@ -69,7 +69,6 @@ ms.custom:
 |Describes how to configure log severity settings for DQS log files using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Configure Severity Levels for DQS Log Files](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |Describes how to manually configure advanced settings for DQS log files.|[Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
-## See Also  
- [DQS Administration](../data-quality-services/dqs-administration.md)  
-  
-  
+## Related content
+
+- [DQS Administration](dqs-administration.md)

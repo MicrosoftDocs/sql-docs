@@ -30,6 +30,6 @@ The topics in this section describe different ways that you can use a result set
 | [Modifying result set data sample](modifying-result-set-data-sample.md)   | Describes how to use a result set to insert, retrieve, and modify data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.                                                      |
 | [Caching result set data sample](caching-result-set-data-sample.md)       | Describes how to use a result set to retrieve large amounts of data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, and to control how that data is cached on the client. |
 
-## See also
+## Related content
 
-[Sample JDBC driver applications](sample-jdbc-driver-applications.md)
+- [Sample JDBC driver applications](sample-jdbc-driver-applications.md)

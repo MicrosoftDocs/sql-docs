@@ -63,6 +63,13 @@ In this lesson, you learn to build all the objects that enable a database to ini
   GO
   ```
 
+## Next step
+
+You've successfully configured the **InitiatorDB** and **TargetDB** to support a conversation between the two databases. Next, you complete a conversation that uses the configuration.
+
+> [!div class="nextstepaction"]
+> [Lesson 4: Begin a conversation and transmit messages](lesson-4-beginning-a-conversation-and-transmitting-messages.md)
+
 ## Related content
 
 - [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
@@ -71,10 +78,3 @@ In this lesson, you learn to build all the objects that enable a database to ini
 - [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
 - [Conversation architecture](conversation-architecture.md)
 - [Service architecture](service-architecture.md)
-
-## Next step
-
-You've successfully configured the **InitiatorDB** and **TargetDB** to support a conversation between the two databases. Next, you complete a conversation that uses the configuration.
-
-> [!div class="nextstepaction"]
-> [Lesson 4: Begin a conversation and transmit messages](lesson-4-beginning-a-conversation-and-transmitting-messages.md)

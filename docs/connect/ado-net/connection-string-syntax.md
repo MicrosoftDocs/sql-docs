@@ -135,9 +135,9 @@ The following table describes all cases.
 
 For more information, including behavior in previous versions, see [Encryption and certificate validation](encryption-and-certificate-validation.md).
 
-## See also
+## Related content
 
-[Connection strings](connection-strings.md)  
-[Encryption and certificate validation](encryption-and-certificate-validation.md)  
-[Connecting to a data source](connecting-to-data-source.md)  
-[Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)  
+- [Connection strings in ADO.NET](connection-strings.md)
+- [Encryption and certificate validation in Microsoft.Data.SqlClient](encryption-and-certificate-validation.md)
+- [Connecting to a data source in ADO.NET](connecting-to-data-source.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

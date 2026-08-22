@@ -36,6 +36,6 @@ The JDBC driver seamlessly integrates with [!INCLUDE[msCoName](../../includes/ms
 
 For more information about how to use distributed transactions, see [Understanding XA transactions](../../connect/jdbc/understanding-xa-transactions.md).
 
-## See also
+## Related content
 
-[Performing transactions with the JDBC driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)
+- [Performing transactions with the JDBC driver](performing-transactions-with-the-jdbc-driver.md)

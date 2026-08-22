@@ -40,9 +40,8 @@ public void updateInt(int index,
 ## Remarks  
  This updateInt method is specified by the updateInt method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateInt Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateInt Method (SQLServerResultSet)](updateint-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

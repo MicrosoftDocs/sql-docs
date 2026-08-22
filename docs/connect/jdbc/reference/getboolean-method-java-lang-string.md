@@ -38,9 +38,8 @@ public boolean getBoolean(java.lang.String sCol)
 ## Remarks  
  This getBoolean method is specified by the getBoolean method in the java.sql.CallableStatement interface.  
   
-## See Also  
- [getBoolean Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getboolean-method-sqlservercallablestatement.md)   
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [getBoolean Method (SQLServerCallableStatement)](getboolean-method-sqlservercallablestatement.md)
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

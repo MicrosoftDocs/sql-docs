@@ -26,14 +26,11 @@ To use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you must h
 |[Support Resources for the Microsoft Drivers for PHP for SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Provides links to resources that can be helpful when you are developing applications that use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)|Provides information that might be helpful when you run the code examples in this documentation.|  
 
-## Reference
+## Related content
 
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-
-## See Also
-
-[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)  
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md)
+- [Constants (Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
+- [Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [Example Application (SQLSRV Driver)](example-application-sqlsrv-driver.md)

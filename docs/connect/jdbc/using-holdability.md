@@ -28,6 +28,6 @@ In the following example, the result set holdability is set while performing a l
 
 [!code[JDBC#UsingHoldability1](../../connect/jdbc/codesnippet/Java/using-holdability_1.java)]
 
-## See also
+## Related content
 
-[Performing transactions with the JDBC driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)
+- [Performing transactions with the JDBC driver](performing-transactions-with-the-jdbc-driver.md)

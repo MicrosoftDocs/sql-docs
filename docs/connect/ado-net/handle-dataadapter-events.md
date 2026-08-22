@@ -67,8 +67,8 @@ The following code example adds an event handler for the `FillError` event of th
 
 [!code-csharp[SqlDataAdapter_Events#2](~/../sqlclient/doc/samples/SqlDataAdapter_Events.cs#2)]
 
-## See also
+## Related content
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Events](/dotnet/standard/events/index)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

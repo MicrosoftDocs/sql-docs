@@ -66,9 +66,8 @@ helpviewer_keywords:
   
  ![Error detection and failover time](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "Error detection and failover time")  
   
-## See Also  
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
-  
-  
+## Related content
+
+- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)
+- [Role Switching During a Database Mirroring Session (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)
+- [Monitoring Database Mirroring (SQL Server)](monitoring-database-mirroring-sql-server.md)

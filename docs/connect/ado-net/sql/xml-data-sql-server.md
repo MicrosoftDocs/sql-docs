@@ -22,5 +22,6 @@ Demonstrates how to retrieve and work with XML data retrieved from SQL Server.
 [Specifying XML values as parameters](specify-xml-values-parameters.md)  
 Demonstrates how to pass XML data as a parameter to a command.  
   
-## Next steps
+## Related content
+
 - [SQL Server and ADO.NET](index.md)

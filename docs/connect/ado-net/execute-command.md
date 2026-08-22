@@ -47,8 +47,8 @@ The following code example demonstrates how to create a <xref:Microsoft.Data.Sql
 
 The Microsoft SqlClient Data Provider for SQL Server adds **diagnostic counters** to enable you to detect intermittent problems related to failed command executions. For more information, see [Diagnostic counters in SqlClient](diagnostic-counters.md).
 
-## See also
+## Related content
 
 - [Commands and parameters](commands-parameters.md)
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

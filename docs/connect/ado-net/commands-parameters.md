@@ -36,8 +36,8 @@ Describes how to use the `ExecuteScalar` method of a `Command` object to return 
 [Using commands to modify data](use-commands-to-modify-data.md)  
 Describes how to use the Microsoft SqlClient data provider for SQL Server to execute stored procedures or data definition language (DDL) statements.
 
-## See also
+## Related content
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
-- [Connecting to a data source](connecting-to-data-source.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Connecting to a data source in ADO.NET](connecting-to-data-source.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

@@ -45,9 +45,8 @@ public java.lang.String getSubString(long pos,
   
  Trying to get zero characters from a null or zero-length CLOB returns an empty string. Trying to get any length of characters at any position other than position 1 in a zero-length CLOB will cause a position exception to be thrown.  
   
-## See Also  
- [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
- [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
- [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  
-  
-  
+## Related content
+
+- [SQLServerClob Methods](sqlserverclob-methods.md)
+- [SQLServerClob Members](sqlserverclob-members.md)
+- [SQLServerClob Class](sqlserverclob-class.md)

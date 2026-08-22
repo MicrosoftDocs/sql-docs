@@ -31,6 +31,6 @@ The following sections describe the different scenarios for working with data in
 | [Using a SQL statement to modify database objects](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | Describes how to use SQL statements to modify database objects.   |
 | [Using a SQL statement to modify data](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | Describes how to use SQL statements to modify data in a database. |
   
-## See also
+## Related content
 
-[Using Statements with the JDBC driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+- [Using statements with the JDBC driver](using-statements-with-the-jdbc-driver.md)

@@ -37,8 +37,7 @@ public boolean next()
   
  If an input stream is open for the current row, a call to the next method will implicitly close it. A warning chain for the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object is cleared when a new row is read.  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

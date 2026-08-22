@@ -342,7 +342,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 ```  
   
-## See Also  
- [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
-  
-  
+## Related content
+
+- [Microsoft ODBC Driver for SQL Server on Windows](microsoft-odbc-driver-for-sql-server-on-windows.md)

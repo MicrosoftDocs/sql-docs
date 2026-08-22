@@ -43,6 +43,6 @@ The default behavior of the driver is "**adaptive.**" However, for the forward-o
 
 [!code[JDBC#UsingAdaptiveBuffering3](codesnippet/Java/updating-large-data-sample_1.java)]
 
-## See also
+## Related content
 
-[Working with Large Data](working-with-large-data.md)
+- [Working with large data](working-with-large-data.md)

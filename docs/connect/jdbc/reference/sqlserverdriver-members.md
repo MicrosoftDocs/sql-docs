@@ -43,7 +43,6 @@ ms.topic: reference
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
- [SQLServerDriver Class](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDriver Class](sqlserverdriver-class.md)

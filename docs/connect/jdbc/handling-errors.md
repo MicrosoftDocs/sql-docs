@@ -79,6 +79,6 @@ Allows you to recognize, and change the severity of, specific error messages:
 
 Also with release 12.8.0, SQLExceptions can be chained together, so the final exception message automatically contains all exceptions that may have otherwise been lost. This feature is enabled by default.
 
-## See also
+## Related content
 
-[Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)
+- [Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)

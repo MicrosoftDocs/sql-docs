@@ -41,9 +41,8 @@ public <T> T unwrap(Class<T> iface)
   
  For more information, see [Wrappers and Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## See Also  
- [SQLServerConnectionPoolDataSource Methods](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   
- [SQLServerConnectionPoolDataSource Members](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   
- [SQLServerConnectionPoolDataSource Class](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnectionPoolDataSource Methods](sqlserverconnectionpooldatasource-methods.md)
+- [SQLServerConnectionPoolDataSource Members](sqlserverconnectionpooldatasource-members.md)
+- [SQLServerConnectionPoolDataSource Class](sqlserverconnectionpooldatasource-class.md)

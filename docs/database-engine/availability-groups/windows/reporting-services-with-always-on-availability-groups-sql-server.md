@@ -174,11 +174,10 @@ When report server databases failover and you have updated the report server env
 
 - After the database failover completes and after the report server service is restarted, SQL Server Agent jobs will be re-created automatically. Until the SQL agent jobs are recreated, any background executions associated with SQL Server Agent jobs won't be processed. This includes [!INCLUDE [ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscriptions, schedules, and snapshots.
 
-## See also
+## Related content
 
 - [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)
-- [Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-- [Getting Started with Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Getting Started with Always On Availability Groups](getting-started-with-always-on-availability-groups-sql-server.md)
 - [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)
-- [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)
-- [About Client Connection Access to Availability Replicas (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)
+- [Types of client connections to replicas within an Always On availability group](about-client-connection-access-to-availability-replicas-sql-server.md)

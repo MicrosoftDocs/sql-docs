@@ -320,8 +320,8 @@ if os.Getenv("APP_ENV") == "production" {
 
 ## Related content
 
-- [Troubleshooting](troubleshooting.md)
-- [Security best practices](security-best-practices.md)
-- [Connection options](connection-options.md)
-- [Connection strings](connection-strings.md)
-- [Performance tuning](performance-tuning.md)
+- [Troubleshoot the go-mssqldb driver](troubleshooting.md)
+- [Security best practices with go-mssqldb](security-best-practices.md)
+- [go-mssqldb connection options](connection-options.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [Performance tuning with go-mssqldb](performance-tuning.md)

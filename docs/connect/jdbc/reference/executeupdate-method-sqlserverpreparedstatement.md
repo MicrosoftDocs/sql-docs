@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[executeUpdate ()](../../../connect/jdbc/reference/executeupdate-method.md)|Runs the SQL statement in this [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) object, which must be a SQL INSERT, UPDATE, MERGE, or DELETE statement; or a SQL statement that returns nothing, such as a DDL statement.|  
 |[executeUpdate (java.lang.String)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string.md)|Runs the given SQL statement, which can be an INSERT, UPDATE, MERGE, or DELETE statement; or a SQL statement that returns nothing, such as a SQL DDL statement.|  
   
-## See Also  
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)
+- [SQLServerPreparedStatement Class](sqlserverpreparedstatement-class.md)

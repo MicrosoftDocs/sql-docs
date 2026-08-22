@@ -31,6 +31,6 @@ The following lines are example output from calls to the methods of the SQLServe
 
 `getDriverVersion` = 12.8.xxx.x (Where "xxx.x" is the final version number)
 
-## See also
+## Related content
 
-[Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)
+- [Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)

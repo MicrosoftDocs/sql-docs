@@ -50,6 +50,6 @@ ms.custom:
 |Describes how to back up and restore the DQS databases.|[Backing Up and Restoring DQS Databases](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Describes how to detach and attach the DQS databases.|[Detaching and Attaching DQS Databases](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## See Also  
- [DQS Administration](../data-quality-services/dqs-administration.md)  
-  
+## Related content
+
+- [DQS Administration](dqs-administration.md)

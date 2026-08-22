@@ -37,7 +37,6 @@ ms.topic: reference
 |java.lang.Throwable|fillInStackTrace, getCause, getLocalizedMessage, getMessage, getStackTrace, initCause, printStackTrace, printStackTrace, printStackTrace, setStackTrace, toString|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait|  
   
-## See Also  
- [SQLServerException Class](../../../connect/jdbc/reference/sqlserverexception-class.md)  
-  
-  
+## Related content
+
+- [SQLServerException Class](sqlserverexception-class.md)

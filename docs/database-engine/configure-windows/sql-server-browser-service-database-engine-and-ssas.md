@@ -152,6 +152,6 @@ To communicate with the SQL Server Browser service on a server behind a firewall
 
 ## Related content
 
-- [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)
-- [Connecting Using IPv6](../../tools/configuration-manager/connecting-using-ipv6.md)
+- [Network protocols and network libraries](../../sql-server/install/network-protocols-and-network-libraries.md)
+- [Connect using IPv6](../../tools/configuration-manager/connecting-using-ipv6.md)
 - [Enable or disable a server network protocol](enable-or-disable-a-server-network-protocol.md)

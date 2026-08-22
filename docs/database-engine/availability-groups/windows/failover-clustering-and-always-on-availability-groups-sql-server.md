@@ -115,7 +115,7 @@ For more information about [!INCLUDE [ssNoVersion](../../../includes/ssnoversion
 ## Related content
 
 - [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
-- [Enable or disable Always On availability group feature](enable-and-disable-always-on-availability-groups-sql-server.md)
+- [Enable or disable the Always On availability group feature](enable-and-disable-always-on-availability-groups-sql-server.md)
 - [Monitor Availability Groups (Transact-SQL)](monitor-availability-groups-transact-sql.md)
 - [Always On failover cluster instances (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 - [Configure Windows Failover Clustering for SQL Server (Availability Group or FCI) with Limited Security](/archive/blogs/sqlalwayson/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security)

@@ -470,7 +470,7 @@ The following table compares bulk copy with other data insertion methods.
 
 ## Related content
 
-- [Executing queries](executing-queries.md)
-- [Data type mappings](data-type-mappings.md)
-- [Transaction management](transaction-management.md)
-- [Performance tuning](performance-tuning.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Transaction management with mssql-python](transaction-management.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)

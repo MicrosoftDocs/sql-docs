@@ -26,8 +26,7 @@ apitype: "Assembly"
 |[getBigDecimal (java.lang.String)](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string.md)|Retrieves the value of the designated parameter as java.math.BigDecimal with full precision given the parameter name.|  
 |[getBigDecimal (java.lang.String, int)](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int.md)|(Deprecated) Retrieves the value of the designated parameter as java.math.BigDecimal given the parameter name and scale.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

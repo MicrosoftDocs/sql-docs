@@ -76,8 +76,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
   
  Large data can be bound or retrieved by using the **ISequentialStream** interface. For bound columns, the status flag indicates if the data is truncated by setting DBSTATUS_S_TRUNCATED.  
   
-## See Also  
- [Fetching BLOB Data Using IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
-  
-  
+## Related content
 
+- [Fetching a Single Row with IRow (OLE DB Driver)](fetching-a-single-row-with-irow.md)

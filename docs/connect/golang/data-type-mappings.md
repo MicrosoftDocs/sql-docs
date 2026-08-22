@@ -322,8 +322,8 @@ _, err := db.ExecContext(ctx,
 
 ## Related content
 
-- [Queries and statements](queries-statements.md)
-- [JSON and XML data](json-xml-data.md)
-- [Table-valued parameters](table-valued-parameters.md)
-- [Limitations](known-limitations.md)
-- [Stored procedures](stored-procedures.md)
+- [Queries and statements with go-mssqldb](queries-statements.md)
+- [JSON and XML data with go-mssqldb](json-xml-data.md)
+- [Table-valued parameters with go-mssqldb](table-valued-parameters.md)
+- [go-mssqldb Limitations](known-limitations.md)
+- [Stored procedures with go-mssqldb](stored-procedures.md)

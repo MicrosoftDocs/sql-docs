@@ -30,8 +30,7 @@ public class SQLServerParameterMetaData
 ## Remarks  
  To retrieve parameter metadata, prepared statements are run with SET FMT ONLY. Callable statements call sp_sproc_columns to retrieve names and metadata for the procedure parameters.  
   
-## See Also  
- [SQLServerParameterMetaData Members](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerParameterMetaData Members](sqlserverparametermetadata-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

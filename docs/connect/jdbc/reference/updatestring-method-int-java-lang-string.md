@@ -40,9 +40,8 @@ public void updateString(int index,
 ## Remarks  
  This updateString method is specified by the updateString method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateString Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateString Method (SQLServerResultSet)](updatestring-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

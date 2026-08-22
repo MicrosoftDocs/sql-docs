@@ -236,8 +236,8 @@ public class AKV {
 }
 ```
 
-## See also
+## Related content
 
-[Azure Key vault sample version 9.2](azure-key-vault-sample-version-9.2.md)  
-[Azure Key vault sample version 6.2.2](azure-key-vault-sample-version-6.2.2.md)  
-[Azure Key vault sample version 6.0.0](azure-key-vault-sample-version-6.0.0.md)  
+- [Azure Key Vault sample version 9.2](azure-key-vault-sample-version-9.2.md)
+- [Azure Key Vault sample version 6.2.2](azure-key-vault-sample-version-6.2.2.md)
+- [Azure Key Vault sample version 6.0.0](azure-key-vault-sample-version-6.0.0.md)

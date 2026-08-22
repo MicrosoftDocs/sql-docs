@@ -21,8 +21,7 @@ ms.topic: reference
 |[getNCharacterStream Method &#40;int&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int.md)|Retrieves the value of the designated parameter as a java.io.Reader object given the parameter index.|  
 |[getNCharacterStream Method &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string.md)|Retrieves the value of the designated parameter as a java.io.Reader object given the parameter name.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

@@ -239,10 +239,8 @@ If the results returned by this query are retrieved with **sqlsrv_fetch_object**
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## See Also  
-[Retrieving Data](../../connect/php/retrieving-data.md)  
+## Related content
 
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-  
+- [Retrieving Data](retrieving-data.md)
+- [About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)

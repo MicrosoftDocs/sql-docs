@@ -126,6 +126,6 @@ If you have to retrieve parameters back from a stored procedure, you must first 
 
 For more information about how to use the JDBC driver with stored procedures and output parameters, see [Using a stored procedure with output parameters](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).
 
-## See also
+## Related content
 
-[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

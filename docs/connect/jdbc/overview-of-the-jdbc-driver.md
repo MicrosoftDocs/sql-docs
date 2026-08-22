@@ -40,7 +40,7 @@ The articles in this section provide a general overview of the JDBC driver, incl
 |[Frequently asked questions &#40;FAQ&#41; for JDBC driver](frequently-asked-questions-faq-for-jdbc-driver.yml)|Frequently asked questions about the Microsoft JDBC driver.|
 |[Feature dependencies of Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Feature dependencies of Microsoft JDBC Driver for SQL Server.|
 
-## See also
+## Related content
 
-[JDBC driver GitHub repository](https://github.com/microsoft/mssql-jdbc)  
-[JDBC driver API reference](reference/jdbc-driver-api-reference.md)  
+- [JDBC driver GitHub repository](https://github.com/microsoft/mssql-jdbc)
+- [JDBC driver API reference](reference/jdbc-driver-api-reference.md)

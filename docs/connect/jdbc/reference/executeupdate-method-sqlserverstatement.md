@@ -26,8 +26,7 @@ apitype: "Assembly"
 |[executeUpdate (java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string.md)|Runs the given SQL statement and signals the JDBC driver that the auto-generated keys that are indicated in the given array should be made available for retrieval.|  
 |[executeUpdate (java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-java-lang-string.md)|Runs the given SQL statement and signals the JDBC driver that the auto-generated keys that are indicated in the given array should be made available for retrieval.|  
   
-## See Also  
- [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
- [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerStatement Members](sqlserverstatement-members.md)
+- [SQLServerStatement Class](sqlserverstatement-class.md)

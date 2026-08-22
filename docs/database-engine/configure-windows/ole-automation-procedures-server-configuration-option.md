@@ -52,7 +52,7 @@ GO
 
 ## Related content
 
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Surface area configuration](../../relational-databases/security/surface-area-configuration.md)
 - [Server configuration options](server-configuration-options-sql-server.md)

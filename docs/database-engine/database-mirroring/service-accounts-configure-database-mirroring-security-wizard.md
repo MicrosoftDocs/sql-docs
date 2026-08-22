@@ -41,10 +41,9 @@ f1_keywords:
   
  *DOMAINNAME*\\*username*  
   
-## See Also  
- [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Set Up Login Accounts for Database Mirroring or Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
-  
-  
+## Related content
+
+- [Database Properties (Mirroring Page)](../../relational-databases/databases/database-properties-mirroring-page.md)
+- [Start Database Mirroring Monitor (SQL Server Management Studio)](start-database-mirroring-monitor-sql-server-management-studio.md)
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [Set Up Login Accounts - Database Mirroring Always On Availability](set-up-login-accounts-database-mirroring-always-on-availability.md)

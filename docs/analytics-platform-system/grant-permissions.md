@@ -239,8 +239,9 @@ GO
   
 To create admin logins, see [Fixed Server Roles](pdw-permissions.md#fixed-server-roles).  
   
-## See also
-[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
-[CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
-[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
-[Load](load-overview.md)  
+## Related content
+
+- [CREATE LOGIN (Transact-SQL)](../t-sql/statements/create-login-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../t-sql/statements/create-user-transact-sql.md)
+- [CREATE ROLE (Transact-SQL)](../t-sql/statements/create-role-transact-sql.md)
+- [Loading data into Parallel Data Warehouse](load-overview.md)

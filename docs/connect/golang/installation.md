@@ -128,6 +128,6 @@ After upgrading, run `go mod tidy` to remove unused indirect dependencies.
 
 ## Related content
 
-- [Quickstart: Connect and query](quickstart.md)
-- [Connection strings](connection-strings.md)
-- [What's new](whats-new.md)
+- [Quickstart: Connect and query with go-mssqldb](quickstart.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [What's new in go-mssqldb](whats-new.md)

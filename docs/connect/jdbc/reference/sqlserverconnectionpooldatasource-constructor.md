@@ -24,9 +24,8 @@ apitype: "Assembly"
 public SQLServerConnectionPoolDataSource()  
 ```  
   
-## See Also  
- [SQLServerConnectionPoolDataSource Constructors](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-constructors.md)   
- [SQLServerConnectionPoolDataSource Members](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   
- [SQLServerConnectionPoolDataSource Class](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnectionPoolDataSource Constructors](sqlserverconnectionpooldatasource-constructors.md)
+- [SQLServerConnectionPoolDataSource Members](sqlserverconnectionpooldatasource-members.md)
+- [SQLServerConnectionPoolDataSource Class](sqlserverconnectionpooldatasource-class.md)

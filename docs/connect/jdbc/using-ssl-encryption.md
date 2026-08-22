@@ -34,6 +34,6 @@ The articles in this section describe how the [!INCLUDE[jdbcNoVersion](../../inc
 | [Connecting with encryption](connecting-with-ssl-encryption.md) | Describes how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using the new TLS-specific connection properties. |
 | [Configuring the client for encryption](configuring-the-client-for-ssl-encryption.md) | Describes how to configure the default trust store at the client-side and how to import a private certificate to the client computer's trust store. |
 
-## See also
+## Related content
 
-[Securing JDBC driver applications](securing-jdbc-driver-applications.md)
+- [Securing JDBC driver applications](securing-jdbc-driver-applications.md)

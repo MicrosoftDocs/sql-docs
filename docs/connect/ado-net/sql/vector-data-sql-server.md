@@ -37,6 +37,6 @@ The following code sample demonstrates the following scenarios for a vector colu
 
 [!code-csharp[SqlVectorExample#1](~/../sqlclient/doc/samples/SqlVectorExample.cs#1)]
 
-## Next steps
+## Related content
 
 - [SQL Server and ADO.NET](index.md)

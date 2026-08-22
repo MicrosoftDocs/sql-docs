@@ -684,7 +684,7 @@ async def resilient_query(pool: AsyncDatabasePool, query: str,
 
 ## Related content
 
-- [Connection pooling](connection-pooling.md)
-- [FastAPI integration](fast-api-integration.md)
-- [Performance tuning](performance-tuning.md)
-- [Error handling](error-handling.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
+- [Use mssql-python with FastAPI](fast-api-integration.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)

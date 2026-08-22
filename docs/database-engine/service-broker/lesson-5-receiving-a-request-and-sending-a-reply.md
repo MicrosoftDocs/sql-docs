@@ -60,6 +60,13 @@ In this lesson, you learn how to receive a request message from the target queue
   GO
   ```
 
+## Next step
+
+You've successfully received the request message and sent a reply message to the initiator service. Next, you receive the reply message from the initiator queue and end the conversation.
+
+> [!div class="nextstepaction"]
+> [Lesson 6: Receive the reply and end the conversation](lesson-6-receiving-the-reply-and-ending-the-conversation.md)
+
 ## Related content
 
 - [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
@@ -67,10 +74,3 @@ In this lesson, you learn how to receive a request message from the target queue
 - [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
 - [WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
 - [Service Broker applications](service-broker-applications.md)
-
-## Next step
-
-You've successfully received the request message and sent a reply message to the initiator service. Next, you receive the reply message from the initiator queue and end the conversation.
-
-> [!div class="nextstepaction"]
-> [Lesson 6: Receive the reply and end the conversation](lesson-6-receiving-the-reply-and-ending-the-conversation.md)

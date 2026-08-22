@@ -101,5 +101,6 @@ reader.close
 }  
 ```  
   
-## Next steps
+## Related content
+
 - [SQL Server binary and large-value data](sql-server-binary-large-value-data.md)

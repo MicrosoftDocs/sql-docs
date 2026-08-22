@@ -89,14 +89,10 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
 
 For more information about **php.ini** directives, see [Description of core php.ini directives](https://php.net/manual/en/ini.core.php).
 
-## See also
+## Related content
 
-[Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
-
-[System Requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md)
-
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
-
-[SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
-
-[PDO_SQLSRV Driver API Reference](pdo-sqlsrv-driver-reference.md)
+- [Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
+- [System requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md)

@@ -38,5 +38,5 @@ sqlcmd [/E] /S servername\instancename
 
 ## Related content
 
-- [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)
+- [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md)
 - [osql Utility](../../tools/osql-utility.md)

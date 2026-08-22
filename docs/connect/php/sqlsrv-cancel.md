@@ -85,15 +85,10 @@ sqlsrv_cancel( $stmt);
 ## Comments  
 A statement that is prepared and executed using the combination of [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) and [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) can be re-executed with **sqlsrv_execute** after calling **sqlsrv_cancel**. A statement that is executed with [sqlsrv_query](../../connect/php/sqlsrv-query.md) cannot be re-executed after calling **sqlsrv_cancel**.  
   
-## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+## Related content
 
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)
-
-[Retrieving Data](../../connect/php/retrieving-data.md)
-
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
-
-[sqlsrv_free_stmt](../../connect/php/sqlsrv-free-stmt.md)
-
-  
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [Connecting to the Server](connecting-to-the-server.md)
+- [Retrieving Data](retrieving-data.md)
+- [About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)
+- [sqlsrv_free_stmt](sqlsrv-free-stmt.md)

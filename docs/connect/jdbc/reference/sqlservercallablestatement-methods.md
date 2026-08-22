@@ -14,8 +14,7 @@ ms.topic: reference
 
   For information about the members of SQLServerCallableStatement, see [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md).  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

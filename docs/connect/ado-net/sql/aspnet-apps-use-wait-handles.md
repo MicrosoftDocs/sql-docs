@@ -330,5 +330,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## Next steps
+## Related content
+
 - [Asynchronous operations](asynchronous-operations.md)

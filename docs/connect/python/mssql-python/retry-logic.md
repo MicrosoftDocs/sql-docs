@@ -572,13 +572,6 @@ def execute_with_circuit_breaker(cursor, query: str, params: dict):
         raise
 ```
 
-## Related content
-
-- [Error handling](error-handling.md)
-- [Connection pooling](connection-pooling.md)
-- [Troubleshooting](troubleshooting.md)
-- [Azure SQL connection resiliency](/azure/azure-sql/database/troubleshoot-common-connectivity-issues)
-
 ## Don't retry configuration errors
 
 Not every error is transient. Retrying a configuration or coding error wastes time and can mask the real problem. Only retry errors that might resolve on their own. Because mssql-python doesn't expose the engine error number as an attribute, classify by exception subclass plus the `driver_error` text.
@@ -608,3 +601,10 @@ Not every error is transient. Retrying a configuration or coding error wastes ti
 | Deadlock victim (engine 1205) | `OperationalError` | `Serialization failure` |
 | Indeterminate transaction state | `OperationalError` | `Statement completion unknown` |
 | Azure SQL throttling (40197, 40501, 40613, 49918&ndash;49920) | `ProgrammingError` | `Syntax error or access violation` (engine number is only in `ddbc_error`; use `is_azure_throttling`) |
+
+## Related content
+
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
+- [Troubleshoot mssql-python](troubleshooting.md)
+- [Azure SQL connection resiliency](/azure/azure-sql/database/troubleshoot-common-connectivity-issues)

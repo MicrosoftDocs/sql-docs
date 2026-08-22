@@ -29,7 +29,7 @@ The steps for using the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)
 |[How to: Send Data as a Stream](how-to-send-data-as-a-stream.md)|Describes how to stream data to the server.|
 |[How to: Perform Transactions](how-to-perform-transactions.md)|Describes how to use **sqlsrv** functions with transactions.|
 
-## See also
+## Related content
 
-[Example Application &#40;SQLSRV Driver&#41;](example-application-sqlsrv-driver.md)  
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)  
+- [Example Application (SQLSRV Driver)](example-application-sqlsrv-driver.md)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)

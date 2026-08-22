@@ -29,8 +29,8 @@ apitype: "COM"
 |------------|-----------------|  
 |[ISSDataClassification::GetSensitivityClassification](../../oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md)|Returns a pointer to a SENSITIVITYCLASSIFICATION structure that contains sensitivity classification information.|  
 
-## See Also  
- [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)   
- [Rowsets](../ole-db-rowsets/rowsets.md)   
- [Using data classification](../features/using-data-classification.md)
+## Related content
 
+- [OLE DB Driver for SQL Server (OLE DB) Interfaces](oledb-driver-for-sql-server-ole-db-interfaces.md)
+- [Rowsets](../ole-db-rowsets/rowsets.md)
+- [Using data classification](../features/using-data-classification.md)

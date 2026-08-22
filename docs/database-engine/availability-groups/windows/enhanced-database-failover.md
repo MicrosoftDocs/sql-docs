@@ -68,13 +68,13 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ### Dynamic management view
 To see whether an availability group has enhanced database failover enabled, query the dynamic management view `sys.availability_groups`. The column `db_failover` will have a zero if disabled or 1 if enabled. 
 
-## Next steps 
+## Next step
 
-- [Configure database health detection](sql-server-always-on-database-health-detection-failover-option.md)
+> [!div class="nextstepaction"]
+> [Configure database health detection](sql-server-always-on-database-health-detection-failover-option.md)
+
+## Related content
 
 - [Use the Availability Group Wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
-
 - [Use the New Availability Group Dialog Box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
- 
-- [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
-
+- [Create an Always On availability group using Transact-SQL (T-SQL)](create-an-availability-group-transact-sql.md)

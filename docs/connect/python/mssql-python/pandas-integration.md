@@ -514,7 +514,7 @@ def batch_insert(cursor, conn, df: pd.DataFrame, table: str, batch_size: int = 1
 
 ## Related content
 
-- [Bulk copy operations](bulk-copy.md)
-- [Retrieving data](retrieving-data.md)
-- [Data type mappings](data-type-mappings.md)
-- [Performance tuning](performance-tuning.md)
+- [Use bulk copy with mssql-python](bulk-copy.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)

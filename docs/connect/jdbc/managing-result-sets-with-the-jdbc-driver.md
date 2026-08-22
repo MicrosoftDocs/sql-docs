@@ -31,6 +31,6 @@ The articles in this section describe various aspects of result set usage, inclu
 |[Understanding concurrency control](understanding-concurrency-control.md)|Describes how the JDBC driver supports concurrency control.|  
 |[Understanding row locking](understanding-row-locking.md)|Describes how the JDBC driver supports row locking.|  
   
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

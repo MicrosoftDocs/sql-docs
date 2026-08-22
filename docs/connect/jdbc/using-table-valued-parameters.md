@@ -328,6 +328,6 @@ The following methods have been added to this class to support passing of table-
 | public final void setStructured(String parameterName, String tvpName, ResultSet tvpResultSet)             | Populates a table-valued parameter passed to a stored procedure with a ResultSet retrieved from another table. parameterName is the name of the parameter, tvpName is the name of the type TVP, and tvpResultSet is the source result set object.                                                                              |
 | public final void setStructured(String parameterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | Populates a table-valued parameter passed to a stored procedure with an ISQLServerDataRecord object. ISQLServerDataRecord is used for streaming data and the user decides how to use it. parameterName is the name of the parameter, tvpName is the name of the type TVP, and tvpDataRecord is an ISQLServerDataRecord object. |
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

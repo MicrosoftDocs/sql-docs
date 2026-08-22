@@ -47,7 +47,7 @@ public static void executeSprocInParams(Connection con) throws SQLException {
 }
 ```
 
-## See also
+## Related content
 
-[Using statements with stored procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)
-[Prepared statement parameter performance](prepared-statement-parameter-performance.md)
+- [Using statements with stored procedures](using-statements-with-stored-procedures.md)
+- [Prepared statement parameter performance for the JDBC driver](prepared-statement-parameter-performance.md)

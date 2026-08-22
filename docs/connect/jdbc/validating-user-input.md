@@ -20,6 +20,6 @@ Validating user input in client code is important so that you don't waste round 
 
 For more information about SQL injection and how to avoid it, see [SQL injection](../../relational-databases/security/sql-injection.md). For more information about validating stored procedure parameters, see [Stored procedures](../../relational-databases/stored-procedures/stored-procedures-database-engine.md) and related articles.
 
-## See also
+## Related content
 
-[Securing JDBC driver applications](securing-jdbc-driver-applications.md)
+- [Securing JDBC driver applications](securing-jdbc-driver-applications.md)

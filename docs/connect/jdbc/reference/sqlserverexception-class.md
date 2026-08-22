@@ -30,8 +30,7 @@ public final class SQLServerException
 ## Remarks  
  The SQLServerException class handles both SQL 92 and XOPEN state codes. They are switchable by using a user-specified connection property. Exceptions are written to any open log files that have been specified.  
   
-## See Also  
- [SQLServerException Members](../../../connect/jdbc/reference/sqlserverexception-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerException Members](sqlserverexception-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

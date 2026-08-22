@@ -143,7 +143,7 @@ typedef struct tagSENSITIVITYPROPERTY
 |*pInformationType*|A pointer to an INFORMATIONTYPE structure.|  
 |*eSensitivityRank*|A relative ranking of the sensitivity of a column that is part of per-column data.|  
 
-## See Also  
- [ISSDataClassification](../../oledb/ole-db-interfaces/issdataclassification-ole-db.md)  
- [Rowsets](../ole-db-rowsets/rowsets.md)  
+## Related content
 
+- [ISSDataClassification](issdataclassification-ole-db.md)
+- [Rowsets](../ole-db-rowsets/rowsets.md)

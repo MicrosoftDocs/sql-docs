@@ -29,8 +29,6 @@ helpviewer_keywords:
   
 -   [Commands Generating Multiple-Rowset Results](../../oledb/ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)

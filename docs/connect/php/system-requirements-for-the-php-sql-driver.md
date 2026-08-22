@@ -388,9 +388,9 @@ On Windows, the following versions of the driver are included:
 |php_sqlsrv_56_nts.dll<br />php_pdo_sqlsrv_56_nts.dll|5.6|no|php5.dll|
 |php_sqlsrv_56_ts.dll<br />php_pdo_sqlsrv_56_ts.dll|5.6|yes|php5ts.dll|
 
-## See also
+## Related content
 
 - [Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
 - [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
 - [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
-- [PDO_SQLSRV Driver API Reference](pdo-sqlsrv-driver-reference.md)
+- [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md)

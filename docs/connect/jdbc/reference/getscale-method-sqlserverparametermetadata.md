@@ -40,9 +40,8 @@ public int getScale(int param)
   
  This method gets column digits to the right of the decimal point. For types that do not have a decimal point, this method returns "0".  
   
-## See Also  
- [SQLServerParameterMetaData Methods](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
- [SQLServerParameterMetaData Members](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
- [SQLServerParameterMetaData Class](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerParameterMetaData Methods](sqlserverparametermetadata-methods.md)
+- [SQLServerParameterMetaData Members](sqlserverparametermetadata-members.md)
+- [SQLServerParameterMetaData Class](sqlserverparametermetadata-class.md)

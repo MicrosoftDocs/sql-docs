@@ -43,4 +43,3 @@ To use the OLE DB Driver for SQL Server, you have to understand how to make a co
 ## Related content
 
 - [Microsoft OLE DB Driver for SQL Server](../oledb-driver-for-sql-server.md)
-

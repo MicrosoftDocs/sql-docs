@@ -41,9 +41,8 @@ public <T> T unwrap(Class<T> iface)
   
  For more information, see [Wrappers and Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## See Also  
- [SQLServerXADataSource Methods](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
- [SQLServerXADataSource Members](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
- [SQLServerXADataSource Class](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerXADataSource Methods](sqlserverxadatasource-methods.md)
+- [SQLServerXADataSource Members](sqlserverxadatasource-members.md)
+- [SQLServerXADataSource Class](sqlserverxadatasource-class.md)

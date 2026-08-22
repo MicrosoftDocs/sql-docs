@@ -226,5 +226,6 @@ private static string GetConnectionString()
 }  
 ```  
   
-## Next steps
+## Related content
+
 - [Multiple Active Result Sets (MARS)](multiple-active-result-sets-mars.md)

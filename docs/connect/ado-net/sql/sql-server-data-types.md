@@ -38,19 +38,11 @@ Demonstrates how to retrieve data from large value UDTs introduced in SQL Server
 [XML data in SQL Server](xml-data-sql-server.md)  
 Describes how to work with XML data retrieved from SQL Server.  
   
-## Reference  
-<xref:System.Data.DataSet>  
-Describes the `DataSet` class and all of its members.  
-  
-<xref:System.Data.SqlTypes>  
-Describes the `SqlTypes` namespace and all of its members.  
-  
-<xref:System.Data.SqlDbType>  
-Describes the `SqlDbType` enumeration and all of its members.  
-  
-<xref:System.Data.DbType>  
-Describes the `DbType` enumeration and all of its members.  
-  
-## Next steps
+## Related content
+
+- <xref:System.Data.DataSet>
+- <xref:System.Data.SqlTypes>
+- <xref:System.Data.SqlDbType>
+- <xref:System.Data.DbType>
 - [Table-valued parameters](table-valued-parameters.md)
 - [SQL Server binary and large-value data](sql-server-binary-large-value-data.md)

@@ -81,6 +81,6 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
 > [!NOTE]  
 >  Using Database Mirroring with DTC or using availability groups with DTC in ways not approved in this article is not supported.  This does not imply that aspects of the product unrelated to DTC are unsupported; however, any issues arising from the improper use of distributed transactions are not supported.  
   
-## Next steps  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
+## Related content
+
+- [Always On availability groups: interoperability (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)

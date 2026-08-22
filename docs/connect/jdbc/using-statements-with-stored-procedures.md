@@ -48,6 +48,6 @@ The topics in this section describe the ways that you can call [!INCLUDE[ssNoVer
 |[Using a stored procedure with a return status](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Describes how to use the JDBC driver to run stored procedures that contain return status values.|  
 |[Using a stored procedure with an update count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Describes how to use the JDBC driver to run stored procedures that return update counts.|  
   
-## See also
+## Related content
 
-[Using statements with the JDBC driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+- [Using statements with the JDBC driver](using-statements-with-the-jdbc-driver.md)

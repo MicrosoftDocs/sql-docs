@@ -85,7 +85,7 @@ For options that were removed from previous releases, see [sqlservr Application]
 ## Related content
 
 - [CHECKPOINT (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)
-- [sqlservr Application](../../tools/sqlservr-application.md)
+- [sqlservr application](../../tools/sqlservr-application.md)
 - [Server configuration: scan for startup procs](configure-the-scan-for-startup-procs-server-configuration-option.md)
 - [Start, stop, pause, resume, and restart SQL Server services](start-stop-pause-resume-restart-sql-server-services.md)
 - [SQL Server Configuration Manager: Configure server startup options](scm-services-configure-server-startup-options.md)

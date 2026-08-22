@@ -80,6 +80,6 @@ Another difference is that specifying both `-h` and `-y0` now produces an error 
 
 `-y0` can cause performance issues on both the server and the network, depending on the size of the data returned.
 
-## See also
+## Related content
 
-[Microsoft ODBC Driver for SQL Server on Windows](microsoft-odbc-driver-for-sql-server-on-windows.md)
+- [Microsoft ODBC Driver for SQL Server on Windows](microsoft-odbc-driver-for-sql-server-on-windows.md)

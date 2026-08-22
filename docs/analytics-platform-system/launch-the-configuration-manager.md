@@ -43,6 +43,6 @@ To close and exit **Configuration Manager**, click **Exit** in the lower-right c
   
 ![Screenshot of the Microsoft Analytics Platform System Configuration Manager dialog box showing the Appliance Topology.](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## See Also  
-[Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-  
+## Related content
+
+- [Monitor the appliance with the Admin Console - Analytics Platform System](monitor-the-appliance-by-using-the-admin-console.md)

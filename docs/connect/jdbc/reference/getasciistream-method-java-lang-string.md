@@ -38,9 +38,8 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
 ## Remarks  
  This getAsciiStream method is specified by the getAsciiStream method in the java.sql.ResultSet interface.  
   
-## See Also  
- [getAsciiStream Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [getAsciiStream Method (SQLServerResultSet)](getasciistream-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

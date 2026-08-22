@@ -79,8 +79,8 @@ You can connect to read-only secondary replicas in either of two ways:
 
 Note that if you are using a listener to connect, you will need to re-create the listener after performing the failover.
 
-## Next steps
+## Related content
 
-* [Configure a distributed availability group](./distributed-availability-groups.md)
-* [Learn more about availability groups](overview-of-always-on-availability-groups-sql-server.md)
-* [Perform a forced manual failover](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
+- [Distributed availability groups](distributed-availability-groups.md)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Perform a forced manual failover of an Always On availability group (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

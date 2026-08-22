@@ -266,7 +266,7 @@ for _, r := range results {
 
 ## Related content
 
-- [Queries and statements](queries-statements.md) for raw `database/sql` patterns.
-- [GORM with go-mssqldb](use-go-orm-library-with-go-mssqldb.md) for full ORM usage.
-- [Connection pooling](connection-pooling.md) for pool configuration.
-- [Error handling and retry patterns](error-handling.md)
+- [Queries and statements with go-mssqldb](queries-statements.md)
+- [Use GORM with go-mssqldb](use-go-orm-library-with-go-mssqldb.md)
+- [Connection pooling with go-mssqldb](connection-pooling.md)
+- [Error handling and retry patterns with go-mssqldb](error-handling.md)

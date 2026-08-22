@@ -40,9 +40,8 @@ public void updateArray(java.lang.String columnName,
 ## Remarks  
  This updateArray method is specified by the updateArray method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateArray Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateArray Method (SQLServerResultSet)](updatearray-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

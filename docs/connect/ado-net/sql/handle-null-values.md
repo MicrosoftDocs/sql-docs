@@ -141,5 +141,6 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## Next steps
+## Related content
+
 - [SQL Server data types and ADO.NET](sql-server-data-types.md)

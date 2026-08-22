@@ -24,7 +24,7 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingSQLWithParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_1_1.java)]
 
-## See also
+## Related content
 
-[Using statements with SQL](../../connect/jdbc/using-statements-with-sql.md)
-[Prepared statement parameter performance](prepared-statement-parameter-performance.md)
+- [Using statements with SQL](using-statements-with-sql.md)
+- [Prepared statement parameter performance for the JDBC driver](prepared-statement-parameter-performance.md)

@@ -46,11 +46,10 @@ helpviewer_keywords:
   
      The dialog box closes automatically.  
   
-## See Also  
- [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)   
- [Pause or Resume a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
- [Remove Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
-  
-  
+## Related content
+
+- [Database Properties (Mirroring Page)](../../relational-databases/databases/database-properties-mirroring-page.md)
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [Manually Fail Over a Database Mirroring Session (Transact-SQL)](manually-fail-over-a-database-mirroring-session-transact-sql.md)
+- [Pause or Resume a Database Mirroring Session (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)
+- [Remove Database Mirroring (SQL Server)](remove-database-mirroring-sql-server.md)

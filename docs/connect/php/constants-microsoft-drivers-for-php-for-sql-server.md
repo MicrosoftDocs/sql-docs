@@ -260,6 +260,6 @@ The following constants specify which row to select in the result set:
   
 For information on using these constants, see [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-  
+## Related content
+
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)

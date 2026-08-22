@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Updates the designated column with a **float** value given the column index.|  
 |[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Updates the designated column with a **float** value given the column name.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

@@ -401,7 +401,7 @@ If you run `CREATE DATABASE` with `autocommit=False`, you get an error: `CREATE 
 
 ## Related content
 
-- [Connection management](connection-management.md)
-- [Execute queries](executing-queries.md)
-- [Error handling](error-handling.md)
-- [Cursor management](cursor-management.md)
+- [Manage connections with mssql-python](connection-management.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
+- [Manage cursors and result sets](cursor-management.md)

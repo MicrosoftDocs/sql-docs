@@ -208,5 +208,6 @@ namespace CS_Stats_Console_GetAll
 }  
 ```  
   
-## Next steps
+## Related content
+
 - [SQL Server and ADO.NET](index.md)

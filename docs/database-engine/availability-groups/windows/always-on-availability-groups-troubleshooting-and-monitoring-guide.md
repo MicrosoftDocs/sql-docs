@@ -66,7 +66,7 @@ ms.topic: reference
 | [Monitoring Always On health with PowerShell, part 3: A simple monitoring application](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application) | Shows how to automatically monitor an availability group with an application. |
 | [Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent) | Provides information on how to integrate availability group monitoring with SQL Server Agent and configure notification to the appropriate parties when problems arise. |
 
-## Next steps
+## Related content
 
 - [SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)
 - [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)

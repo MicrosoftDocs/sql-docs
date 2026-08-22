@@ -44,8 +44,8 @@ The following code example shows how to add schema information to a **DataSet** 
 
 If the **DataAdapter** meets multiple result sets returned from the <xref:Microsoft.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, it will create multiple tables in the **DataSet**. The tables will be given a zero-based incremental default name of **Table** *N*, starting with **Table** instead of "Table0". The tables will be given a zero-based incremental name of **TableName** *N*, starting with **TableName** instead of "TableName0" if a table name is passed as an argument to the <xref:System.Data.Common.DbDataAdapter.FillSchema%2A> method.
 
-## See also
+## Related content
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

@@ -103,8 +103,8 @@ This schema collection exposes information about the words that are reserved by 
 |----------------|--------------|-----------------|
 |ReservedWord|`string`|Provider specific reserved word.|
 
-## See also
+## Related content
 
 - [Retrieving database schema information](retrieving-database-schema-information.md)
-- [GetSchema and schema collections](getschema-and-schema-collections.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Get schema and schema collections](getschema-and-schema-collections.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

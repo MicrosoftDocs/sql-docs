@@ -33,9 +33,8 @@ public java.lang.String getSavepointName()
 ## Remarks  
  This getSavepointName method is specified by the getSavepointName method in the java.sql.Savepoint interface.  
   
-## See Also  
- [SQLServerSavepoint Methods](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   
- [SQLServerSavepoint Members](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
- [SQLServerSavepoint Class](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
-  
-  
+## Related content
+
+- [SQLServerSavepoint Methods](sqlserversavepoint-methods.md)
+- [SQLServerSavepoint Members](sqlserversavepoint-members.md)
+- [SQLServerSavepoint Class](sqlserversavepoint-class.md)

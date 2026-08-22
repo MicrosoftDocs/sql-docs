@@ -258,6 +258,6 @@ For more information about logging flags and programmatic log capture, see [Logg
 
 ## Related content
 
-- [Queries and statements](queries-statements.md)
-- [Data type mappings](data-type-mappings.md)
-- [Table-valued parameters](table-valued-parameters.md)
+- [Queries and statements with go-mssqldb](queries-statements.md)
+- [go-mssqldb data type mappings](data-type-mappings.md)
+- [Table-valued parameters with go-mssqldb](table-valued-parameters.md)

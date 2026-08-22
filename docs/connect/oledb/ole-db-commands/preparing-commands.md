@@ -49,8 +49,6 @@ helpviewer_keywords:
   
  A command object has at most one temporary stored procedure in **tempdb**. Any existing temporary stored procedure represents the current command text of a specific command object.  
   
-## See Also  
- [Commands](../../oledb/ole-db-commands/commands.md)  
-  
-  
+## Related content
 
+- [Commands](commands.md)

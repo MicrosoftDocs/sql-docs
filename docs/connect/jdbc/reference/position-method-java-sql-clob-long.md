@@ -43,10 +43,9 @@ public long position(java.sql.Clob searchstr,
 ## Remarks  
  This position method is specified by the position method in the java.sql.Clob interface.  
   
-## See Also  
- [position Method &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
- [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
- [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
- [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  
-  
-  
+## Related content
+
+- [position Method (SQLServerClob)](position-method-sqlserverclob.md)
+- [SQLServerClob Methods](sqlserverclob-methods.md)
+- [SQLServerClob Members](sqlserverclob-members.md)
+- [SQLServerClob Class](sqlserverclob-class.md)

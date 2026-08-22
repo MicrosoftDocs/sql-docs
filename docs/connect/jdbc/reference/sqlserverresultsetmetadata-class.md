@@ -27,8 +27,7 @@ ms.topic: reference
 public final class SQLServerResultSetMetaData  
 ```  
   
-## See Also  
- [SQLServerResultSetMetaData Members](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSetMetaData Members](sqlserverresultsetmetadata-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

@@ -628,6 +628,6 @@ FoundProv:
 
 ```
 
-## See Also
+## Related content
 
-[Using Always Encrypted with the ODBC Driver](using-always-encrypted-with-the-odbc-driver.md)
+- [Using Always Encrypted with the ODBC Driver for SQL Server](using-always-encrypted-with-the-odbc-driver.md)

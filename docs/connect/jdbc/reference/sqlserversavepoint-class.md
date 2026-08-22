@@ -27,8 +27,7 @@ ms.topic: reference
 public class SQLServerSavepoint  
 ```  
   
-## See Also  
- [SQLServerSavepoint Members](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerSavepoint Members](sqlserversavepoint-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

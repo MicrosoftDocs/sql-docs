@@ -130,9 +130,8 @@ pdo_sqlsrv.log_severity = 1
 
 In this case, the log file will not contain any warning message(s). Please check how [logging](./logging-activity.md#logging-activity-using-the-pdo_sqlsrv-driver) works for pdo_sqlsrv users.
 
-## See Also  
-[PDO Class](../../connect/php/pdo-class.md)
+## Related content
 
-[PDO](https://php.net/manual/book.pdo.php)  
-
-[PDOStatement::errorInfo](../../connect/php/pdostatement-errorinfo.md)
+- [PDO Class](pdo-class.md)
+- [PDO](https://php.net/manual/book.pdo.php)
+- [PDOStatement::errorInfo](pdostatement-errorinfo.md)

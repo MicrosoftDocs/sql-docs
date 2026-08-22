@@ -117,7 +117,6 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  Make the required changes, and save the file to apply the new logging changes.  
   
-## See Also  
- [Configure Severity Levels for DQS Log Files](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
-  
-  
+## Related content
+
+- [Configure Severity Levels for DQS Log Files](configure-severity-levels-for-dqs-log-files.md)

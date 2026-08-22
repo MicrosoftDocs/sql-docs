@@ -528,6 +528,6 @@ print(subtotal / 3)  # 6855.206866666666666666666667 (28 significant digits)
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
-- [Custom type converters](custom-type-converters.md)
-- [Transaction management](transaction-management.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Custom type converters with mssql-python](custom-type-converters.md)
+- [Transaction management with mssql-python](transaction-management.md)

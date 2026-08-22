@@ -92,6 +92,6 @@ Connection c = ds.getConnection("user", "pwd");
 
 For more information about the data source properties, see [Setting the data source properties](setting-the-data-source-properties.md).
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

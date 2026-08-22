@@ -154,8 +154,8 @@ Beginning with ODBC Driver 17.8, `KeepAlive` and `KeepAliveInterval` keywords ca
 
 - `KeepAliveInterval=<integer>` determines the interval separating keep-alive retransmissions until a response is received.  The default is **1** second.
 
-## See Also
+## Related content
 
-- [Installing the Microsoft ODBC Driver for SQL Server on Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Installing the Microsoft ODBC Driver for SQL Server on macOS](install-microsoft-odbc-driver-sql-server-macos.md)
+- [Install the Microsoft ODBC driver for SQL Server (Linux)](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Install the Microsoft ODBC driver for SQL Server (macOS)](install-microsoft-odbc-driver-sql-server-macos.md)
 - [Programming Guidelines](programming-guidelines.md)

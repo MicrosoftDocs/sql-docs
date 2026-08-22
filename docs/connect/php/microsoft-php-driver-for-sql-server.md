@@ -300,7 +300,7 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | [Performance tuning](performance-tuning-php-sql-driver.md) | Connection management, batching, prepared statements, cursors, memory, and server-side monitoring. |
 | [Troubleshooting](troubleshooting-php-sql-driver.md) | Diagnose common install, connection, query, data type, transaction, and container problems. |
 
-## Reference
+## Reference content
 
 | Article | Description |
 | --- | --- |
@@ -321,4 +321,4 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 
 - [Microsoft Drivers for PHP for SQL Server on GitHub](https://github.com/microsoft/msphpsql)
 - [Microsoft ODBC Driver for SQL Server](../odbc/microsoft-odbc-driver-for-sql-server.md)
-- [SQL Server drivers](../sql-connection-libraries.md)
+- [Connection modules for Microsoft SQL Database](../sql-connection-libraries.md)

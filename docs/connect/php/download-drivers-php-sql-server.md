@@ -40,11 +40,11 @@ For details about what has changed in this release, see [the release notes](rele
 
 This page is for the latest version of the Microsoft Drivers for PHP only. To download previous versions, see [Previous Microsoft Drivers for PHP for SQL Server Releases](release-notes-php-sql-driver.md#previous-releases).
 
-## See also
+## Related content
 
-[Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)  
-[System Requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md)  
-[Microsoft PHP Drivers for SQL Server Support Matrix](microsoft-php-drivers-for-sql-server-support-matrix.md)  
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)  
-[SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV Driver API Reference](pdo-sqlsrv-driver-reference.md)  
+- [Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
+- [System requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md)
+- [Microsoft PHP Drivers for SQL Server Support Matrix](microsoft-php-drivers-for-sql-server-support-matrix.md)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md)

@@ -102,6 +102,6 @@ You can use the `xp_msver` extended stored procedure to review server attributes
 
 ## Related content
 
-- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Server configuration: remote access](configure-the-remote-access-server-configuration-option.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)

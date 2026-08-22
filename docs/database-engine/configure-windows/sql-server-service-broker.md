@@ -153,7 +153,7 @@ For more information, see [Service Broker with Always On Availability Groups (SQ
 
 ## Related content
 
-- [event notifications](../../relational-databases/service-broker/event-notifications.md)
-- [implement event notifications](../../relational-databases/service-broker/implement-event-notifications.md)
-- [configure dialog security](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)
-- [get more information](../../relational-databases/service-broker/get-information-about-event-notifications.md)
+- [Event notifications](../../relational-databases/service-broker/event-notifications.md)
+- [Implement Event Notifications](../../relational-databases/service-broker/implement-event-notifications.md)
+- [Configure Dialog Security for Event Notifications](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)
+- [Get Information About Event Notifications](../../relational-databases/service-broker/get-information-about-event-notifications.md)

@@ -181,6 +181,6 @@ public class DataDiscoveryAndClassification {
 }
 ```
 
-## See also
+## Related content
 
-[Sample JDBC driver applications](sample-jdbc-driver-applications.md)
+- [Sample JDBC driver applications](sample-jdbc-driver-applications.md)

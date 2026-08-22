@@ -80,6 +80,6 @@ Also, <xref:Microsoft.Data.SqlClient.SqlDependency> automatically launches a wor
 
 In contrast, <xref:Microsoft.Data.Sql.SqlNotificationRequest> requires you to implement the entire listening infrastructure yourself. Also, all the supporting Service Broker objects such as the queue, service, and message types that are supported by the queue must be defined. This manual approach is useful if your application requires special notification messages or notification behaviors, or if your application is part of a larger Service Broker application.
 
-## Next steps
+## Related content
 
 - [Query notifications in SQL Server](query-notifications-sql-server.md)

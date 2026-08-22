@@ -68,9 +68,7 @@ helpviewer_keywords:
   
  At the time of execution, OLE DB Driver for SQL Server will call back to the rowset object to fetch rows and read column data.  
   
-## See Also  
- [Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Use Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
-  
-  
+## Related content
 
+- [Table-Valued Parameters (OLE DB)](table-valued-parameters-ole-db.md)
+- [Use Table-Valued Parameters (OLE DB)](../ole-db-how-to/use-table-valued-parameters-ole-db.md)

@@ -53,13 +53,8 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 6.  A completion message is displayed after successful upgrade of the DQS databases schema.  
   
-## Next Steps  
- Log on to the upgraded Data Quality Server from a Data Quality Client application.  
-  
- For more information about upgrading DQS databases schema after installing SQL Server updates and associated troubleshooting steps, see [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
-  
-## See Also  
- [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Upgrade SQLCLR Assemblies After .NET Framework Update](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
-  
-  
+## Related content
+
+- [Install Data Quality Services](install-data-quality-services.md)
+- [Upgrade SQLCLR assemblies after .NET framework update](upgrade-sqlclr-assemblies-after-net-framework-update.md)
+- [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)

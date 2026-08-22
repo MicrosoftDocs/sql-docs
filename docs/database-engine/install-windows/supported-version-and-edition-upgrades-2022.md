@@ -162,4 +162,4 @@ Additionally you can also perform an edition upgrade between [!INCLUDE [sssql22-
 - [Hardware and software requirements for SQL Server 2022](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022.md)
 - [Upgrade SQL Server](upgrade-sql-server.md)
 - [Upgrade the Database Engine](upgrade-database-engine.md)
-- [Upgrade to a different edition of SQL Server (Setup)](upgrade-downgrade-sql-server-edition-setup.md)
+- [In-place change of a SQL Server edition (Setup)](upgrade-downgrade-sql-server-edition-setup.md)

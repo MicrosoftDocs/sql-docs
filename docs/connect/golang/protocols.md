@@ -127,6 +127,6 @@ sqlserver://<user>:<password>@<server>\myinstance?database=AdventureWorks2025
 
 ## Related content
 
-- [Connection strings](connection-strings.md)
-- [Connection options](connection-options.md)
-- [Troubleshooting](troubleshooting.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [go-mssqldb connection options](connection-options.md)
+- [Troubleshoot the go-mssqldb driver](troubleshooting.md)

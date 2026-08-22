@@ -290,7 +290,7 @@ with mssql_python.connect(connection_string) as conn:
 
 ## Related content
 
-- [Execute queries](executing-queries.md)
-- [Data type mappings](data-type-mappings.md)
-- [Custom type converters](custom-type-converters.md)
-- [Cursor management](cursor-management.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Custom type converters with mssql-python](custom-type-converters.md)
+- [Manage cursors and result sets](cursor-management.md)

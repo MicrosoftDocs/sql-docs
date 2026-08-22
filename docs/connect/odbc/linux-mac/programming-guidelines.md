@@ -152,8 +152,8 @@ At the time of this writing the default stack size in MUSL is 128K, which is eno
 * When using the driver with highly multithreaded applications, unixODBC's handle validation may become a performance bottleneck. In such scenarios, higher performance may be obtained by compiling unixODBC with the `--enable-fastvalidate` option. However, beware that this option may cause applications that pass invalid handles to ODBC APIs to crash instead of returning `SQL_INVALID_HANDLE` errors.
 
 
-## See Also
+## Related content
 
-[Frequently Asked Questions](frequently-asked-questions-faq-for-odbc-linux.yml)  
-[Known Issues in this Version of the Driver](known-issues-in-this-version-of-the-driver.md)  
-[Release Notes](release-notes-odbc-sql-server-linux-mac.md)  
+- [Frequently Asked Questions](frequently-asked-questions-faq-for-odbc-linux.yml)
+- [Known issues for the ODBC driver on Linux and macOS](known-issues-in-this-version-of-the-driver.md)
+- [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)

@@ -23,13 +23,9 @@ Topics in this section provide information about handling errors and warnings wi
 |[How to: Configure Error and Warning Handling Using the SQLSRV Driver](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Demonstrates how to change configuration settings for handling errors and warnings.|  
 |[How to: Handle Errors and Warnings Using the SQLSRV Driver](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Demonstrates how to handle errors and warnings separately.|  
   
-## Reference  
-[sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
-  
-[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
-  
-[sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
-  
-## See Also  
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-  
+## Related content
+
+- [sqlsrv_errors](sqlsrv-errors.md)
+- [sqlsrv_configure](sqlsrv-configure.md)
+- [sqlsrv_get_config](sqlsrv-get-config.md)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)

@@ -86,7 +86,6 @@ ms.topic: reference
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.lang.Wrapper|isWrapperFor, unwrap|  
   
-## See Also  
- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnection Class](sqlserverconnection-class.md)

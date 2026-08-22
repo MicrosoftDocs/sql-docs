@@ -163,6 +163,6 @@ The following Linux and macOS operating system versions (64-bit only) are suppor
 
 ## Related content
 
-- [Release notes for the Microsoft PHP Drivers for SQL Server](release-notes-php-sql-driver.md)
-- [Support resources for the PHP SQL driver](support-resources-for-the-php-sql-driver.md)
-- [System requirements for the Microsoft PHP Drivers for SQL Server](system-requirements-for-the-php-sql-driver.md)
+- [Release Notes for the Microsoft Drivers for PHP for SQL Server](release-notes-php-sql-driver.md)
+- [Support resources for the Microsoft Drivers for PHP for SQL Server](support-resources-for-the-php-sql-driver.md)
+- [System requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md)

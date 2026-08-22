@@ -416,8 +416,8 @@ The structural changes are:
 
 ## Related content
 
-- [Migrate from pyodbc](migrate-from-pyodbc.md)
-- [Installation](installation.md)
-- [Connection strings](connection-strings.md)
-- [Executing queries](executing-queries.md)
-- [Stored procedures](stored-procedures.md)
+- [Migrate from pyodbc to mssql-python](migrate-from-pyodbc.md)
+- [Install mssql-python](installation.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Call stored procedures with mssql-python](stored-procedures.md)

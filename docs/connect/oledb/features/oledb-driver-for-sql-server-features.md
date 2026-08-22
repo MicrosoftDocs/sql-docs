@@ -104,10 +104,8 @@ Discusses new authentication methods introduced in OLE DB driver 18.2.1 that hav
  [Idle Connection Resiliency](idle-connection-resiliency.md)  
  Discusses how OLE DB Driver for SQL Server supports idle connection resiliency.  
   
-## See Also  
- [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
- [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
- [Installing OLE DB Driver for SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
-  
-  
+## Related content
 
+- [Microsoft OLE DB Driver for SQL Server](../oledb-driver-for-sql-server.md)
+- [OLE DB How-to articles](../ole-db-how-to/ole-db-how-to-topics.md)
+- [Installing OLE DB Driver for SQL Server](../applications/installing-oledb-driver-for-sql-server.md)

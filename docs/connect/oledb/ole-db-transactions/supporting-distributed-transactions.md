@@ -134,7 +134,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## See Also  
- [Transactions](../../oledb/ole-db-transactions/transactions.md)  
-  
-  
+## Related content
+
+- [Transactions](transactions.md)

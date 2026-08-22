@@ -503,6 +503,6 @@ for category in [1, 2, 3, 4, 5]:
 
 ## Related content
 
-- [Executing queries](executing-queries.md)
-- [Error handling](error-handling.md)
-- [Stored procedures](stored-procedures.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
+- [Call stored procedures with mssql-python](stored-procedures.md)

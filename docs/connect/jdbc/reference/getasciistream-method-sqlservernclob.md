@@ -30,9 +30,8 @@ public java.sql.InputStream getAsciiStream()
 ## Remarks  
  This getAsciiStream method is specified by the getAsciiStream method in the java.sql.SQLServerNClob interface.  
   
-## See Also  
- [SQLServerNClob Methods](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
- [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
- [SQLServerNClob Class](../../../connect/jdbc/reference/sqlservernclob-class.md)  
-  
-  
+## Related content
+
+- [SQLServerNClob Methods](sqlservernclob-methods.md)
+- [SQLServerNClob Members](sqlservernclob-members.md)
+- [SQLServerNClob Class](sqlservernclob-class.md)

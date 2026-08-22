@@ -48,8 +48,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 4.  Rest of the steps are same as steps 2-6 in the [Run DQSInstaller.exe from Start Screen, Start Menu or Windows Explorer](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer) section in [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
-## See Also  
- [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Upgrade DQS Databases Schema After Installing SQL Server Update](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
-  
-  
+## Related content
+
+- [Install Data Quality Services](install-data-quality-services.md)
+- [Upgrade DQS databases schema after installing SQL Server update](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)

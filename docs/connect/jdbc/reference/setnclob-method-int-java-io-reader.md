@@ -37,8 +37,7 @@ public final void setNClob(int parameterIndex,
 ## Remarks  
  This setNClob method is specified by the setNClob method in the java.sql.PreparedStatement interface.  
   
-## See Also  
- [setNClob Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
-  
-  
+## Related content
+
+- [setNClob Method (SQLServerPreparedStatement)](setnclob-method-sqlserverpreparedstatement.md)
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)

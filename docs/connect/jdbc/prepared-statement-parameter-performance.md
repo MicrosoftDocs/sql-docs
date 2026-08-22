@@ -289,8 +289,8 @@ To optimize prepared statement performance for parameters:
 
 By following these practices, you minimize server-side repreparation and get the most performance benefits from prepared statements.
 
-## See also
+## Related content
 
-[Prepared statement metadata caching for the JDBC driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md)  
-[Improving performance and reliability with the JDBC driver](improving-performance-and-reliability-with-the-jdbc-driver.md)  
-[Setting the connection properties](setting-the-connection-properties.md)
+- [Prepared statement metadata caching for the JDBC driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
+- [Improving performance and reliability (JDBC)](improving-performance-and-reliability-with-the-jdbc-driver.md)
+- [Set the connection properties](setting-the-connection-properties.md)

@@ -109,8 +109,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
 -   You can import values from a project only when the knowledge base has a state of in-work and the knowledge base is locked by the user who is importing.  
   
-## See Also  
- [Data Cleansing](../data-quality-services/data-cleansing.md)   
- [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
-  
-  
+## Related content
+
+- [Data Cleansing](data-cleansing.md)
+- [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)

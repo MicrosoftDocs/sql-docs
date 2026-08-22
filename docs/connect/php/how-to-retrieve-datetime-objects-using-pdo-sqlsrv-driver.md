@@ -120,7 +120,7 @@ unset($conn);
 ?>
 ```
 
-## See Also
-[Retrieving Data](../../connect/php/retrieving-data.md)
+## Related content
 
-[Retrieve Date and Time Types as Strings Using the SQLSRV Driver](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)
+- [Retrieving Data](retrieving-data.md)
+- [How to: Retrieve Date and Time Types as Strings Using the SQLSRV Driver](how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)

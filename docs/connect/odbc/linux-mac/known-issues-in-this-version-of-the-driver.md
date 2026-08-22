@@ -104,4 +104,4 @@ For more information about resolving connection failures, see:
 - [Install the Microsoft ODBC driver for SQL Server (Linux)](installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [Install the Microsoft ODBC driver for SQL Server (macOS)](install-microsoft-odbc-driver-sql-server-macos.md)
 - [Programming Guidelines](programming-guidelines.md)
-- [Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)
+- [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)

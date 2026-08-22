@@ -126,14 +126,10 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## See Also  
-[Retrieving Data](../../connect/php/retrieving-data.md)
+## Related content
 
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
-
-[How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)
-
-[Converting Data Types](../../connect/php/converting-data-types.md)
-
-[How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
-  
+- [Retrieving Data](retrieving-data.md)
+- [About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)
+- [How to: Specify PHP Data Types](how-to-specify-php-data-types.md)
+- [Converting Data Types](converting-data-types.md)
+- [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)

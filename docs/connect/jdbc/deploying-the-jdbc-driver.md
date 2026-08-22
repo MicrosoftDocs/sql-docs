@@ -47,6 +47,6 @@ All versions of the JDBC Driver versions 6.0 and up are redistributable. Review 
 
 The JDBC Driver versions 4.x are old and obsolete. Support for 4.x expired before 2018.
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

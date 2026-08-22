@@ -79,8 +79,7 @@ helpviewer_keywords:
   
     -   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## See Also  
- [TRUSTWORTHY Database Property](../../relational-databases/security/trustworthy-database-property.md)   
- [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
-  
-  
+## Related content
+
+- [TRUSTWORTHY database property](../../relational-databases/security/trustworthy-database-property.md)
+- [Set Up an Encrypted Mirror Database](set-up-an-encrypted-mirror-database.md)

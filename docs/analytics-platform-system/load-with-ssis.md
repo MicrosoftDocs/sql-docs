@@ -240,19 +240,14 @@ Run the package on your computer Integration Services.
   
 2.  The package will run and the progress plus any errors will be shown on the **Progress** pane. Use a SQL client to confirm the load, or monitor the load via the SQL Server PDW Admin Console.  
   
-## See Also  
-[Create a script task that uses the SSIS PDW destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-[Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Tutorial: Creating a Basic Package Using a Wizard](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[Getting Started (Integration Services)](../integration-services/sql-server-integration-services.md)  
-[Dynamic Package Generation Sample](https://apexandbeyond.wordpress.com/2017/03/15/dynamic-package-xml-generation/)  
-[Designing Your SSIS Packages for Parallelism (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
-[Improving Incremental Loads with Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
-[Slowly Changing Dimension Transformation](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
-[Bulk Insert Task](../integration-services/control-flow/bulk-insert-task.md)  
-  
-<!-- MISSING LINKS
-[Grant permissions to load data](grant-permissions-to-load-data.md)  
-[Common metadata query examples](metadata-query-examples.md)
--->
+## Related content
+
+- [Create a script task that uses SSIS Parallel Data Warehouse destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)
+- [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
+- [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)
+- [Tutorial: Creating a Basic Package Using a Wizard](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)
+- [Dynamic Package Generation Sample](https://apexandbeyond.wordpress.com/2017/03/15/dynamic-package-xml-generation/)
+- [Designing Your SSIS Packages for Parallelism (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))
+- [Change Data Capture (SSIS)](../integration-services/change-data-capture/change-data-capture-ssis.md)
+- [Slowly Changing Dimension Transformation](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)
+- [Bulk Insert Task](../integration-services/control-flow/bulk-insert-task.md)

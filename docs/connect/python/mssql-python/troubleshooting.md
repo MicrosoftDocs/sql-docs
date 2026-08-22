@@ -783,7 +783,7 @@ except mssql_python.Error:
 
 ## Related content
 
-- [Error handling and SQLSTATE codes](error-handling.md)
-- [Connection strings](connection-strings.md)
-- [Connection pooling](connection-pooling.md)
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
 - [GitHub issues](https://github.com/microsoft/mssql-python/issues)

@@ -14,7 +14,6 @@ ms.topic: reference
 
   For information about the members of DateTimeOffset, see [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md).  
   
-## See Also  
- [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)  
-  
-  
+## Related content
+
+- [DateTimeOffset Class](datetimeoffset-class.md)

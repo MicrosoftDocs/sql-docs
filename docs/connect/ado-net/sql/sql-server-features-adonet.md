@@ -51,6 +51,7 @@ Describes SqlClient support for the Always Encrypted feature.
 [SqlClient support for Data Discovery and Classification](data-classification.md)  
 Describes how to access Data Discovery and Classification information through SqlClient.
 
-## Next steps
+## Related content
+
 - [SQL Server data operations in ADO.NET](sql-server-data-operations.md)
 - [SQL Server and ADO.NET](index.md)

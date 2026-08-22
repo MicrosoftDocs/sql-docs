@@ -49,6 +49,6 @@ public static void executeBatchUpdate(Connection con) {
 }
 ```
 
-## See also
+## Related content
 
-[Using statements with the JDBC driver](using-statements-with-the-jdbc-driver.md)
+- [Using statements with the JDBC driver](using-statements-with-the-jdbc-driver.md)

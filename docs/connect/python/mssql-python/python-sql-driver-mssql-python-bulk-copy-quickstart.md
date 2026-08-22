@@ -492,13 +492,12 @@ The application performs a full round-trip data transfer in three phases:
 1. **Enrich** (optional): Provides a hook (`enrich_parquet`) where you can add transformations, derived columns, or joins before uploading.
 1. **Upload**: Reads each Parquet file in batches, recreates the table in the destination database using DDL generated from Arrow schema metadata, then uses `cursor.bulkcopy()` for high-performance bulk insert.
 
-## Next steps
-
-Use these articles to keep building:
-
-- [Bulk copy](bulk-copy.md) for advanced bulk copy patterns including column mappings, batch sizing, and error handling.
-- [Data loading and movement patterns](data-loading-movement-patterns.md) for strategies to load data from files, APIs, and other databases.
-- [Performance tuning](performance-tuning.md) to optimize throughput for large data operations.
+## Next step
 
 > [!div class="nextstepaction"]
 > [Bulk copy](bulk-copy.md)
+
+## Related content
+
+- [Choose a data loading and movement pattern with mssql-python](data-loading-movement-patterns.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)

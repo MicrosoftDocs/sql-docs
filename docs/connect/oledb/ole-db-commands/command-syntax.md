@@ -52,7 +52,6 @@ When executing a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] st
     EXECUTE SalesByCategory 'Produce', '1995'
     ```
 
-## See Also
+## Related content
 
-[Commands](commands.md)
-
+- [Commands](commands.md)

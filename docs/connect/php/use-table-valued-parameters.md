@@ -209,9 +209,10 @@ $stmt->bindParam(1, $tvpInput, PDO::PARAM_LOB);
 $result = $stmt->execute();
 ```
 
-## See also
+## Related content
+
 - [PDO](https://php.net/manual/book.pdo.php)
-- [PDOStatement Class](../../connect/php/pdostatement-class.md)
-- [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
-- [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)
-- [How to: Send Data as a Stream](../../connect/php/how-to-send-data-as-a-stream.md)
+- [PDOStatement Class](pdostatement-class.md)
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [How to: Perform Parameterized Queries](how-to-perform-parameterized-queries.md)
+- [How to: Send Data as a Stream](how-to-send-data-as-a-stream.md)

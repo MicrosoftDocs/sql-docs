@@ -69,5 +69,6 @@ command.ExecuteNonQuery();
 }  
 ```  
   
-## Next steps
+## Related content
+
 - [Bulk copy operations in SQL Server](bulk-copy-operations-sql-server.md)

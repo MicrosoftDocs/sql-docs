@@ -27,6 +27,6 @@ The articles in this section discuss many techniques for diagnosing these and ot
 |[Troubleshooting connectivity](troubleshooting-connectivity.md)|Describes how to troubleshoot database connectivity.|
 |[Accessing diagnostic information in the extended events log](accessing-diagnostic-information-in-the-extended-events-log.md)|Describes how to use information in the server's extended events log to understand connection failures.|
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

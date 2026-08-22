@@ -103,7 +103,7 @@ unset($conn);
 ?>
 ```
 
-## See Also
-[Formatting Decimal Strings and Money Values (SQLSRV Driver)](../../connect/php/formatting-decimals-sqlsrv-driver.md)
+## Related content
 
-[Retrieving Data](../../connect/php/retrieving-data.md)
+- [Formatting Decimal Strings and Money Values (SQLSRV Driver)](formatting-decimals-sqlsrv-driver.md)
+- [Retrieving Data](retrieving-data.md)

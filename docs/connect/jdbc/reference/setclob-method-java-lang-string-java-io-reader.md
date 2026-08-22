@@ -37,8 +37,7 @@ public final void setClob(java.lang.String parameterName,
 ## Remarks  
  This setClob method is specified by the setClob method in the java.sql.CallableStatement interface.  
   
-## See Also  
- [setClob Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)   
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
-  
-  
+## Related content
+
+- [setClob Method (SQLServerCallableStatement)](setclob-method-sqlservercallablestatement.md)
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)

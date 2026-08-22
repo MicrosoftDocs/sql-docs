@@ -39,9 +39,8 @@ public void updateNCharacterStream(int columnIndex,
   
  This method passes Unicode characters from a Reader object to selected **nchar**, **nvarchar(max)**, **ntext** and **xml** columns. Using this method on other data type columns will throw an exception.  
   
-## See Also  
- [updateNCharacterStream Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateNCharacterStream Method (SQLServerResultSet)](updatencharacterstream-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

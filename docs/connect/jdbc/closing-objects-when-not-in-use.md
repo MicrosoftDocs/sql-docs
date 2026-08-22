@@ -17,6 +17,6 @@ When you work with closable objects of [!INCLUDE[jdbcNoVersion](../../includes/j
 
 Closing objects is crucial to maintaining good concurrency on the server when you're using scroll locks. Scroll locks in the last accessed fetch buffer are held until the result set is closed. Similarly, statement prepared handles are held until the statement is closed. If you're reusing a connection for multiple statements, closing statements before they go out of scope allows the server to clean up the prepared handles earlier.
 
-## See also
+## Related content
 
-[Improving performance and reliability with the JDBC driver](improving-performance-and-reliability-with-the-jdbc-driver.md)
+- [Improving performance and reliability (JDBC)](improving-performance-and-reliability-with-the-jdbc-driver.md)

@@ -47,9 +47,8 @@ public byte[] getBytes(long pos,
   
  If you have a null or zero length BLOB, and try to get any length of bytes at a position other than 1, a position exception will be thrown.  
   
-## See Also  
- [SQLServerBlob Methods](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
- [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   
- [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  
-  
-  
+## Related content
+
+- [SQLServerBlob Methods](sqlserverblob-methods.md)
+- [SQLServerBlob Members](sqlserverblob-members.md)
+- [SQLServerBlob Class](sqlserverblob-class.md)

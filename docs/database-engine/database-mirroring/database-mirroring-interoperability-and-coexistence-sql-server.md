@@ -35,7 +35,6 @@ helpviewer_keywords:
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
-## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
-  
-  
+## Related content
+
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)

@@ -51,9 +51,9 @@ The following code example demonstrates transactional logic using the Microsoft 
 
 [!code-csharp[SqlTransactionLocal#1](~/../sqlclient/doc/samples/SqlTransactionLocal.cs#1)]
 
-## See also
+## Related content
 
 - [Transactions and concurrency](transactions-and-concurrency.md)
 - [Distributed transactions](distributed-transactions.md)
 - [System.Transactions integration with SQL Server](system-transactions-integration-with-sql-server.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

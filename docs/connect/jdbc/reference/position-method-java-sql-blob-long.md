@@ -43,10 +43,9 @@ public long position(java.sql.Blob pattern,
 ## Remarks  
  This position method is specified by the position method in the java.sql.Blob interface.  
   
-## See Also  
- [position Method &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
- [SQLServerBlob Methods](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
- [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   
- [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  
-  
-  
+## Related content
+
+- [position Method (SQLServerBlob)](position-method-sqlserverblob.md)
+- [SQLServerBlob Methods](sqlserverblob-methods.md)
+- [SQLServerBlob Members](sqlserverblob-members.md)
+- [SQLServerBlob Class](sqlserverblob-class.md)

@@ -205,5 +205,6 @@ For more information about working with date and time values in SQL Server 2008,
 |[Using Date and Time Data](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Provides information about the date and time data types and functions, and examples of using them.|  
 |[Data Types (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100))|Describes system data types in SQL Server 2008.|  
   
-## Next steps
+## Related content
+
 - [SQL Server data types and ADO.NET](sql-server-data-types.md)

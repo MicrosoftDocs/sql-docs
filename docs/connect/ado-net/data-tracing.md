@@ -60,5 +60,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)
 ```
 
-## See also
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+## Related content
+
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

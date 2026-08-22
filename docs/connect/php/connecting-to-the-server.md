@@ -32,7 +32,7 @@ The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] can connect to [!I
 |[Connecting to Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Discusses how to connect to an Azure SQL Database.|  
 |[Connection Resiliency](../../connect/php/connection-resiliency.md)|Discusses the connection resiliency feature that reestablishes broken connections.|  
 
-## See Also  
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+## Related content
 
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [Example Application (SQLSRV Driver)](example-application-sqlsrv-driver.md)

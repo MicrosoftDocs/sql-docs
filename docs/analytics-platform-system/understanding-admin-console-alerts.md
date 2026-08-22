@@ -152,6 +152,6 @@ The following table lists alerts alphabetically by name. The list doesn't includ
 |Volume free space status is NON-CRITICAL.|Optional|Operational|Warning|The current volume's used disk space is between 70% and 90% full. Review disk space used on this volume and clean up unnecessary files/data to ensure normal appliance operation.|The Admin Console reports allocated space and not necessarily used space. You can use [DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-transact-sql.md) to investigate used versus allocated space. You can also use [DBCC SHRINKLOG](../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md). There are also DMVs to provide more customizable queries for table size. For more information, see [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries).|  
 |Volume free space status is NORMAL.|No|Operational|Informational|There's enough free disk space on this volume. The current volume's used disk space is below 70%.|The component previously reported a different status but has since returned to normal. To identify space and rows that a table consumes, see [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries).|  
   
-## Next steps
+## Related content
 
 - [Error messages in Parallel Data Warehouse](error-messages.md)

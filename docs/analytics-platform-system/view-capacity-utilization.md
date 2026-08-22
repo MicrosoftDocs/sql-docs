@@ -103,5 +103,5 @@ ORDER BY [db_name], [pdw_node_id];
   
 ## Related content
 
-- [Appliance Monitoring](appliance-monitoring.md)  
+- [Appliance monitoring for Analytics Platform System](appliance-monitoring.md)
 - [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

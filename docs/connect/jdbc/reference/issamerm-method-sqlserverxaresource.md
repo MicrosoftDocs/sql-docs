@@ -38,9 +38,8 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
 ## Remarks  
  This commit method is specified by the commit method in the javax.transaction.xa.XAResource interface.  
   
-## See Also  
- [SQLServerXAResource Methods](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
- [SQLServerXAResource Members](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
- [SQLServerXAResource Class](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerXAResource Methods](sqlserverxaresource-methods.md)
+- [SQLServerXAResource Members](sqlserverxaresource-members.md)
+- [SQLServerXAResource Class](sqlserverxaresource-class.md)

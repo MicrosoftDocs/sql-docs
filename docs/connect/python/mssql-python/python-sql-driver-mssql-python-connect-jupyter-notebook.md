@@ -301,13 +301,12 @@ code .
 
 1. Review the results. Make this notebook your own.
 
-## Next steps
-
-Use these articles to keep building:
-
-- [Build connection strings](build-connection-strings.md) to configure connections for different SQL database types and authentication methods.
-- [pandas integration](pandas-integration.md) to load query results directly into DataFrames for analysis in notebooks.
-- [Arrow integration](arrow-integration.md) to work with columnar data using Apache Arrow for high-performance analytics.
+## Next step
 
 > [!div class="nextstepaction"]
 > [Build connection strings](build-connection-strings.md)
+
+## Related content
+
+- [Use mssql-python with pandas](pandas-integration.md)
+- [Use mssql-python with Apache Arrow](arrow-integration.md)

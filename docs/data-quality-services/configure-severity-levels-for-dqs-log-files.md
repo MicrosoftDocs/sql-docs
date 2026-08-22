@@ -85,7 +85,6 @@ You must have the dqs_administrator role on the DQS_MAIN database to configure l
   
 5.  Click **Close**.  
   
-## See Also  
- [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
-  
-  
+## Related content
+
+- [Configure Advanced Settings for DQS Log Files](configure-advanced-settings-for-dqs-log-files.md)

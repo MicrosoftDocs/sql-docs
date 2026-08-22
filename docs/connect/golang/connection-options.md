@@ -146,7 +146,7 @@ The SQL statement runs immediately after each new connection is established, bef
 
 ## Related content
 
-- [Connection strings](connection-strings.md)
-- [Encryption and certificates](encryption-certificates.md)
-- [Protocols](protocols.md)
-- [Logging and diagnostics](logging-diagnostics.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [go-mssqldb encryption and certificates](encryption-certificates.md)
+- [go-mssqldb protocols](protocols.md)
+- [Logging and diagnostics with go-mssqldb](logging-diagnostics.md)

@@ -67,7 +67,6 @@ HRESULT InsertRow(
   
  Bulk copied rows are formatted on the server for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The row format is affected by any options that may have been set for the connection or session such as ANSI_PADDING. This option is set on by default for any connection made through the OLE DB Driver for SQL Server.  
   
-## See Also  
- [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
-  
+## Related content
 
+- [IRowsetFastLoad (OLE DB)](irowsetfastload-ole-db.md)

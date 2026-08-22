@@ -98,5 +98,5 @@ For more information, see [Server configuration options](server-configuration-op
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Backup overview (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)

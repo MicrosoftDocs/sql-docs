@@ -40,9 +40,8 @@ public void updateBoolean(int index,
 ## Remarks  
  This updateBoolean method is specified by the updateBoolean method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateBoolean Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateBoolean Method (SQLServerResultSet)](updateboolean-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

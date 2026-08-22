@@ -21,6 +21,6 @@ Keep the size of your transactions small to improve concurrency. For example, if
 
 Additionally, be sure to use the lock time-out setting if your application expects some blocking issues. You can set the time-out by using the [setLockTimeout](reference/setlocktimeout-method-sqlserverdatasource.md) method. The default for the lock time-out is -1, which means that it will block indefinitely while waiting for the lock. You can set the lock time-out to 30 seconds, which will cause the blocked connection to time out in 30 seconds if blocked by another connection.
 
-## See also
+## Related content
 
-[Improving performance and reliability with the JDBC driver](improving-performance-and-reliability-with-the-jdbc-driver.md)
+- [Improving performance and reliability (JDBC)](improving-performance-and-reliability-with-the-jdbc-driver.md)

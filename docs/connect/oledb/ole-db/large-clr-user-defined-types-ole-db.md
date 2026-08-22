@@ -167,9 +167,6 @@ helpviewer_keywords:
   
  When **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) is set to "80", large UDT types appear to clients in the same way that they appear for down-level clients.  
   
-## See Also  
- [Large CLR User-Defined Types](../../oledb/features/large-clr-user-defined-types.md)  
-  
-  
+## Related content
 
-
+- [Large CLR User-Defined Types](../features/large-clr-user-defined-types.md)

@@ -60,7 +60,6 @@ ms.topic: reference
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## See Also  
- [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSetMetaData Class](sqlserverresultsetmetadata-class.md)

@@ -54,15 +54,9 @@ Demonstrates how to detect when query results will be different from those origi
 [SqlCommand execution with a SqlNotificationRequest](sqlcommand-execution-sqlnotificationrequest.md)  
 Demonstrates configuring a <xref:Microsoft.Data.SqlClient.SqlCommand> object to work with a query notification.  
   
-## Reference  
-<xref:Microsoft.Data.Sql.SqlNotificationRequest>  
-Describes the <xref:Microsoft.Data.Sql.SqlNotificationRequest> class and all of its members.  
-  
-<xref:Microsoft.Data.SqlClient.SqlDependency>  
-Describes the <xref:Microsoft.Data.SqlClient.SqlDependency> class and all of its members.  
-  
-<xref:System.Web.Caching.SqlCacheDependency>  
-Describes the <xref:System.Web.Caching.SqlCacheDependency> class and all of its members.  
-  
-## Next steps
+## Related content
+
+- <xref:Microsoft.Data.Sql.SqlNotificationRequest>
+- <xref:Microsoft.Data.SqlClient.SqlDependency>
+- <xref:System.Web.Caching.SqlCacheDependency>
 - [SQL Server and ADO.NET](index.md)

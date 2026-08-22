@@ -266,6 +266,6 @@ mssql_python.pooling(idle_timeout=120)
 
 ## Related content
 
-- [Connection management](connection-management.md)
-- [Connection strings](connection-strings.md)
-- [Performance tuning](performance-tuning.md)
+- [Manage connections with mssql-python](connection-management.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)

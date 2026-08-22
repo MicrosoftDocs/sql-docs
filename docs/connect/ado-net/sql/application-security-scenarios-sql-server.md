@@ -42,5 +42,6 @@ Always assign a strong password to the `sa` account, even when using Windows Aut
 [Writing secure dynamic SQL in SQL Server](writing-secure-dynamic-sql.md)  
 Describes techniques for writing secure dynamic SQL using stored procedures.  
 
-## Next steps
+## Related content
+
 - [SQL Server security](sql-server-security.md)

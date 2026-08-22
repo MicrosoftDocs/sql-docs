@@ -33,9 +33,8 @@ public java.sql.Connection getConnection()
 ## Remarks  
  This getConnection method is specified by the getConnection method in the javax.sql.PooledConnection interface.  
   
-## See Also  
- [SQLServerPooledConnection Methods](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   
- [SQLServerPooledConnection Members](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   
- [SQLServerPooledConnection Class](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerPooledConnection Methods](sqlserverpooledconnection-methods.md)
+- [SQLServerPooledConnection Members](sqlserverpooledconnection-members.md)
+- [SQLServerPooledConnection Class](sqlserverpooledconnection-class.md)

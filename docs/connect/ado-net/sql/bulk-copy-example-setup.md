@@ -75,5 +75,6 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 ) ON [PRIMARY]) ON [PRIMARY]  
 ```  
   
-## Next steps
+## Related content
+
 - [Bulk copy operations in SQL Server](bulk-copy-operations-sql-server.md)

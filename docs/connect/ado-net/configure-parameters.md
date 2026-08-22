@@ -123,9 +123,9 @@ This example demonstrates how to call a SQL Server stored procedure in the `Nort
 
 [!code-csharp[DataWorks SqlClient.StoredProcedure#1](~/../sqlclient/doc/samples/SqlCommand_StoredProcedure.cs#1)]
 
-## See also
+## Related content
 
 - [Commands and parameters](commands-parameters.md)
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

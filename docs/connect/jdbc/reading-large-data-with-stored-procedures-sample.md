@@ -42,6 +42,6 @@ Finally, the sample code displays the data returned with the OUT parameters and 
 
 :::code language="java" source="codesnippet/Java/reading-large-data-with-_1_1.java":::
 
-## See also
+## Related content
 
-[Working with large data](working-with-large-data.md)
+- [Working with large data](working-with-large-data.md)

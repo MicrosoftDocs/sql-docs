@@ -225,4 +225,4 @@ The following tables list the members that are exposed by the [SQLServerDatabase
   
 ## Related content
 
-- [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)
+- [SQLServerDatabaseMetaData Class](sqlserverdatabasemetadata-class.md)

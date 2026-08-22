@@ -33,6 +33,6 @@ The articles in this section describe how to configure and run the sample applic
 | [Working with Large Data](working-with-large-data.md) | These sample applications demonstrate how to use adaptive buffering to retrieve large-value data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database without the overhead of server cursors. |
 | [SQL Data Discovery and Classification](data-discovery-classification-sample.md) | This sample application demonstrates how to retrieve Data Discovery and Classification information contained in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database from a ResultSet object using JDBC Driver. |
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

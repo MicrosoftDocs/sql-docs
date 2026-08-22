@@ -30,15 +30,10 @@ ms.topic: concept-article
   
 -   Use an availability group listener. For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="RelatedContent"></a> Related Content  
-  
--   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)] Books Online)  
-  
--   [Running RBS Maintainer](/archive/blogs/sqlrbs/running-rbs-maintainer) (blog)  
-  
--   [Configure Remote BLOB Storage (RBS) with the FILESTREAM provider (SharePoint 2010)](/archive/blogs/mvpawardprogram/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010) (blog)  
-  
-## See Also  
- [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
- [Remote Blob Store &#40;RBS&#41; &#40;SQL Server&#41;](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
-  
+## Related content
+
+- [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx)
+- [Running RBS Maintainer](/archive/blogs/sqlrbs/running-rbs-maintainer)
+- [Configure Remote BLOB Storage (RBS) with the FILESTREAM provider (SharePoint 2010)](/archive/blogs/mvpawardprogram/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010)
+- [Driver and client connectivity support for availability groups](always-on-client-connectivity-sql-server.md)
+- [Remote Blob Store (RBS) (SQL Server)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)

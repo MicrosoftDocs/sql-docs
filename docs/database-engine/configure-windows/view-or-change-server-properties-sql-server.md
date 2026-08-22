@@ -163,7 +163,7 @@ For some properties, you might need to restart the server before the change can 
 - [Connect to the Database Engine](../../sql-server/connect-to-database-engine.md)
 - [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
 - [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
 - [Configure WMI to Show Server Status in SQL Server Tools](/ssms/configure-wmi-to-show-server-status-in-sql-server-tools)

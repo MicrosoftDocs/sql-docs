@@ -52,9 +52,7 @@ helpviewer_keywords:
   
  [LINKEDSERVERS Rowset &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [Using User-Defined Types](../../oledb/features/using-user-defined-types.md)  
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Programming](oledb-driver-for-sql-server-programming.md)
+- [Using User-Defined Types](../features/using-user-defined-types.md)

@@ -28,8 +28,7 @@ apitype: "Assembly"
 |[registerOutParameter (java.lang.String, int, int)](../../../connect/jdbc/reference/registeroutparameter-method-java-lang-string-int-int.md)|Registers the OUT parameter with the specified name to the given JDBC type and scale.|  
 |[registerOutParameter (java.lang.String, int, java.lang.String)](../../../connect/jdbc/reference/registeroutparameter-method-java-lang-string-int-java-lang-string.md)|Registers the OUT parameter with the specified name to the given JDBC type and type name.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

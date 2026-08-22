@@ -60,9 +60,9 @@ By default, the `DataSet` stores data by using .NET data types. For most applica
 
 ADO.NET also includes enhanced support for <xref:System.Data.SqlTypes> in the `DataSet`. For more information, see [SqlTypes and the DataSet](./sql/sqltypes-dataset.md).
 
-## See also
+## Related content
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
-- [Multiple Active Result Sets (MARS)](./sql/multiple-active-result-sets-mars.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Multiple Active Result Sets (MARS)](sql/multiple-active-result-sets-mars.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

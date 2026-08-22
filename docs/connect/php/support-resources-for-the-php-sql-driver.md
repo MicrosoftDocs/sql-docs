@@ -51,6 +51,6 @@ For PHP documentation, see the [PHP Manual](https://www.php.net/docs.php).
 
 For support questions related to the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can contact [Microsoft Support](https://support.microsoft.com/contactus/), or ask on the [GitHub project page](https://github.com/Microsoft/msphpsql/issues).
 
-## See also
+## Related content
 
-[Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)
+- [Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)

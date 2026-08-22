@@ -18,6 +18,6 @@ User-defined types (UDTs) were introduced in [!INCLUDE[ssVersion2005](../../incl
 
 There is no behavior change for UDTs that are less than or equal to 8,000 bytes, but larger UDTs are supported and report their size as "unlimited".
 
-## See also
+## Related content
 
-[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

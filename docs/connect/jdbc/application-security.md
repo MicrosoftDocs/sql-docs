@@ -58,6 +58,6 @@ When you use the JDBC driver to communicate with a [!INCLUDE[ssNoVersion](../../
 
 TLS support can be used to provide an extra level of protection besides IPSEC. For more information about using TLS, see [Using encryption](using-ssl-encryption.md).
 
-## See also
+## Related content
 
-[Securing JDBC driver applications](securing-jdbc-driver-applications.md)
+- [Securing JDBC driver applications](securing-jdbc-driver-applications.md)

@@ -60,8 +60,7 @@ Microsoft OLE DB Driver for SQL Server ensures data is exposed to the server in 
 > [!NOTE]  
 > Using the [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) interface for inserting UTF-8 encoded data into a legacy text column is only limited to servers that support UTF-8. For details, see [BLOBs and OLE Objects](../ole-db-blobs/blobs-and-ole-objects.md).
 
-## See Also  
+## Related content
 
-[OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)  
-[UTF-16 Support in OLE DB Driver for SQL Server](utf-16-support-in-oledb-driver-for-sql-server.md)  
-
+- [OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)
+- [UTF-16 Support in OLE DB Driver for SQL Server](utf-16-support-in-oledb-driver-for-sql-server.md)

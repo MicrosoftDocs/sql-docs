@@ -112,6 +112,6 @@ Documentation for JDBC driver version 6.0, and some later versions, is also here
 |[SQLServerXADataSource](sqlserverxadatasource-class.md)|Represents a factory for [SQLServerXAConnection](sqlserverxaconnection-class.md) objects that is used internally.|
 |[SQLServerXAResource](sqlserverxaresource-class.md)|Represents an XAResource for XA distributed transaction management.|
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](../overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](../overview-of-the-jdbc-driver.md)

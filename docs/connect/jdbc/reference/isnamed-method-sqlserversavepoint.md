@@ -27,9 +27,8 @@ public boolean isNamed()
 ## Return Value  
  **true** is the savepoint is named. Otherwise, **false**.  
   
-## See Also  
- [SQLServerSavepoint Methods](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   
- [SQLServerSavepoint Members](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
- [SQLServerSavepoint Class](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
-  
-  
+## Related content
+
+- [SQLServerSavepoint Methods](sqlserversavepoint-methods.md)
+- [SQLServerSavepoint Members](sqlserversavepoint-members.md)
+- [SQLServerSavepoint Class](sqlserversavepoint-class.md)

@@ -78,6 +78,6 @@ helpviewer_keywords:
   
  **Note** Column-wise and row-wise binding are more typically used in conjunction with [SQLPrepare Function](../../../odbc/reference/syntax/sqlprepare-function.md) and [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) than with [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md).  
   
-## See Also  
- [Executing Queries How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
+## Related content
+
+- [Executing Queries How-to Topics (ODBC)](executing-queries-how-to-topics-odbc.md)

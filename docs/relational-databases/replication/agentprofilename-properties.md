@@ -50,6 +50,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)
-- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
-- [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)
+- [Work with Replication Agent Profiles](agents/work-with-replication-agent-profiles.md)
+- [Replication Agents Overview](agents/replication-agents-overview.md)
+- [Replication Agent Profiles](agents/replication-agent-profiles.md)

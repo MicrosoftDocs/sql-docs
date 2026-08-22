@@ -51,7 +51,6 @@ helpviewer_keywords:
 > [!NOTE]  
 >  To expose support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML and user-defined types (UDT), the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider implements a new [ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) interface.  
   
-## See Also  
- [Commands](../../relational-databases/native-client-ole-db-commands/commands.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Commands](commands.md)

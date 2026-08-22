@@ -178,6 +178,6 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp3')
 GO  
 ```  
   
-## See Also  
- [Managing text and image Columns How-to Topics &#40;ODBC&#41;](./odbc-how-to-topics.md)  
-  
+## Related content
+
+- [ODBC How-to Topics](odbc-how-to-topics.md)

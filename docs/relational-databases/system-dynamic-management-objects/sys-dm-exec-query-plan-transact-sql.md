@@ -160,11 +160,12 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](sys-dm-exec-query-stats-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](sys-dm-exec-requests-transact-sql.md)   
- [sp_who &#40;Transact-SQL&#41;](../system-stored-procedures/sp-who-transact-sql.md)   
- [Showplan Logical and Physical Operators Reference](../showplan-logical-and-physical-operators-reference.md)   
- [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](sys-dm-exec-text-query-plan-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [sys.dm_exec_cached_plans (Transact-SQL)](sys-dm-exec-cached-plans-transact-sql.md)
+- [sys.dm_exec_query_stats (Transact-SQL)](sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_requests (Transact-SQL)](sys-dm-exec-requests-transact-sql.md)
+- [sys.sp_who (Transact-SQL)](../system-stored-procedures/sp-who-transact-sql.md)
+- [Logical and physical showplan operator reference](../showplan-logical-and-physical-operators-reference.md)
+- [sys.dm_exec_text_query_plan (Transact-SQL)](sys-dm-exec-text-query-plan-transact-sql.md)

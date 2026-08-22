@@ -32,7 +32,7 @@ For more information on database ledger, see [Ledger](/azure/azure-sql/database/
 
 Requires the **VIEW LEDGER CONTENT** permission.
 
-## See also
+## Related content
 
 - [What is the database ledger?](../security/ledger/ledger-database-ledger.md)
 - [Ledger overview](../security/ledger/ledger-overview.md)

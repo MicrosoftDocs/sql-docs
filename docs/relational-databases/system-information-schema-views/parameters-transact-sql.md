@@ -58,11 +58,10 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 |**SCOPE_SCHEMA**|**nvarchar(**128**)**|NULL. Reserved for future use.|  
 |**SCOPE_NAME**|**nvarchar(**128**)**|NULL. Reserved for future use.|  
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
-  
+## Related content
 
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [sys.columns (Transact-SQL)](../system-catalog-views/sys-columns-transact-sql.md)
+- [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)
+- [sys.parameters (Transact-SQL)](../system-catalog-views/sys-parameters-transact-sql.md)

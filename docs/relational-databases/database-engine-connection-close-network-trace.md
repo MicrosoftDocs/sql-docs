@@ -127,6 +127,6 @@ This closure is benign.
 ## Related content
 
 - [Enabling Multiple Active Result Sets](../connect/ado-net/sql/enable-multiple-active-result-sets.md)
-- [Using MARS in ADO.NET](../connect/ado-net/sql/multiple-active-result-sets-mars.md)
-- [Using MARS in OLE DB](../connect/oledb/features/using-multiple-active-result-sets-mars.md)
+- [Multiple Active Result Sets (MARS)](../connect/ado-net/sql/multiple-active-result-sets-mars.md)
+- [Using Multiple Active Result Sets (MARS)](../connect/oledb/features/using-multiple-active-result-sets-mars.md)
 - [Trace the network authentication process to the Database Engine](database-engine-connection-open-network-trace.md)

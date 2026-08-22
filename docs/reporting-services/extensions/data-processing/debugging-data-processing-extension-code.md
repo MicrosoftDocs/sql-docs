@@ -37,7 +37,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Deploy a data processing extension](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
-- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)
+- [Deploy a data processing extension](deploying-a-data-processing-extension.md)
+- [Reporting Services extensions](../reporting-services-extensions.md)
+- [Implement a data processing extension](implementing-a-data-processing-extension.md)
+- [Reporting Services extension library](../reporting-services-extension-library.md)

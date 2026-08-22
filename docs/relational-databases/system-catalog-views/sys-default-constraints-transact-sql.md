@@ -50,9 +50,8 @@ WHERE d.parent_object_id = OBJECT_ID(N'HumanResources.Employee', N'U')
 AND c.name = 'VacationHours';  
 ```  
   
-## See Also  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
-  
-  
+## Related content
+
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)

@@ -36,6 +36,6 @@ helpviewer_keywords:
   
 6.  Optionally, execute a positioned UPDATE or DELETE statement, specifying the cursor name (available from [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)) and using a different statement handle on the same connection.  
   
-## See Also  
- [Using Cursors How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
-  
+## Related content
+
+- [Using Cursors How-to Topics (ODBC)](using-cursors-how-to-topics-odbc.md)

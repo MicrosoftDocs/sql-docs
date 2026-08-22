@@ -282,5 +282,5 @@ For the purposes of this example, the fixed limit on the `tempdb` space consumpt
 - [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)
 - [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)
 - [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)
-- [sys.resource_governor_workload_groups](../system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)
+- [sys.resource_governor_workload_groups (Transact-SQL)](../system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)
 - [sys.dm_resource_governor_workload_groups](../system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)

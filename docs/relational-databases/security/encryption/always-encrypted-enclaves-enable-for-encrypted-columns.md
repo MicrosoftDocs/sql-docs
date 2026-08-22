@@ -65,6 +65,7 @@ This method involves re-encrypting a column with an enclave-enabled column encry
 
 For more information on how to rotate a column encryption via a client-side tool, see [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) and [Rotate Always Encrypted keys using PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 
-## Next steps
+## Related content
+
 - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)

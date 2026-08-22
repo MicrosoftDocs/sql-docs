@@ -120,8 +120,7 @@ For a list of the predefined groups of DDL statements that are available for DDL
 
 ## Related content
 
-- [DML Triggers](dml-triggers.md)
+- [DML triggers](dml-triggers.md)
 - [Logon triggers](logon-triggers.md)
 - [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
-

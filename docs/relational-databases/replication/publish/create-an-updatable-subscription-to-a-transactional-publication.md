@@ -304,6 +304,6 @@ GO
 
 ## Related content
 
-- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
-- [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
+- [Updatable Subscriptions - For Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)
+- [Create a publication](create-a-publication.md)
+- [Use sqlcmd with scripting variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

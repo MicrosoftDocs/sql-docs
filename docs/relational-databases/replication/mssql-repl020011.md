@@ -37,6 +37,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
-- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)
-- [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)
+- [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)
+- [sp_replcmds (Transact-SQL)](../system-stored-procedures/sp-replcmds-transact-sql.md)
+- [sp_repldone (Transact-SQL)](../system-stored-procedures/sp-repldone-transact-sql.md)

@@ -85,7 +85,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)
-- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)
-- [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)
-- [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)
+- [Merge replication](merge-replication.md)
+- [Subscribe to Publications](../subscribe-to-publications.md)
+- [Synchronize Data](../synchronize-data.md)
+- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)

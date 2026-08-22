@@ -87,14 +87,12 @@ WHERE migs.group_handle = 24;
   
  This query provides the name of the database, schema, and table where an index is missing. It also provides the names of the columns that should be used for the index key. When writing the CREATE INDEX DDL statement to implement missing indexes, list equality columns first and then inequality columns in the ON \<*table_name*> clause of the CREATE INDEX statement. Included columns should be listed in the INCLUDE clause of the CREATE INDEX statement. To determine an effective order for the equality columns, order them based on their selectivity, listing the most selective columns first (leftmost in the column list). Learn how to [apply missing index suggestions](../indexes/tune-nonclustered-missing-index-suggestions.md#apply-missing-index-suggestions).
   
-## Next steps
-
-Learn more about the missing index feature in the following articles:
+## Related content
 
 - [Tune nonclustered indexes with missing index suggestions](../indexes/tune-nonclustered-missing-index-suggestions.md)
-- [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](sys-dm-db-missing-index-columns-transact-sql.md)
-- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](sys-dm-db-missing-index-details-transact-sql.md)
-- [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](sys-dm-db-missing-index-groups-transact-sql.md)
-- [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](sys-dm-db-missing-index-group-stats-query-transact-sql.md)   
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) 
-- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_db_missing_index_columns (Transact-SQL)](sys-dm-db-missing-index-columns-transact-sql.md)
+- [sys.dm_db_missing_index_details (Transact-SQL)](sys-dm-db-missing-index-details-transact-sql.md)
+- [sys.dm_db_missing_index_groups (Transact-SQL)](sys-dm-db-missing-index-groups-transact-sql.md)
+- [sys.dm_db_missing_index_group_stats_query (Transact-SQL)](sys-dm-db-missing-index-group-stats-query-transact-sql.md)
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)

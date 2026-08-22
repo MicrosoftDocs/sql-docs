@@ -117,4 +117,6 @@ Run the Transact-SQL statement [DROP FULLTEXT CATALOG](
 4.  In the **Delete Objects** dialog box, click **OK**.  
 
 ## Next step
-[Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)
+
+> [!div class="nextstepaction"]
+> [Create and manage full-text indexes](create-and-manage-full-text-indexes.md)

@@ -77,5 +77,4 @@ Bulk copy operations allow high‑volume ingestion and extraction of enhanced da
 
 ## Related content
 
-- [Date and Time Improvements (ODBC)](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)
-``
+- [Date and Time Improvements (ODBC)](date-and-time-improvements-odbc.md)

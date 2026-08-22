@@ -62,4 +62,4 @@ For use scenarios, see [Use SQL Server Connector with SQL Encryption Features](u
 
 ## Related content
 
-- [SQL Server Connector Maintenance & Troubleshooting](sql-server-connector-maintenance-troubleshooting.md)
+- [SQL Server Connector maintenance and troubleshooting](sql-server-connector-maintenance-troubleshooting.md)

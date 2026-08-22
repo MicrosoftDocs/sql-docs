@@ -52,5 +52,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)
-- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)
+- [Configure Web Synchronization](configure-web-synchronization.md)
+- [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)

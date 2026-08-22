@@ -65,18 +65,18 @@ This page provides links to help you locate the information that you need about 
 | :::image type="icon" source="media/security-center-both.png"::: **[In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)** | [Memory-Optimized Tables](../in-memory-oltp/sample-database-for-in-memory-oltp.md)<br />[Natively Compiled Stored Procedures](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)<br />[Create and Access Tables in TempDB from Stored Procedures](../in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](/previous-versions/sql/sql-server-2016/dn589805(v=sql.130))<br />[Demonstration: Performance Improvement of In-Memory OLTP](../in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) |
 | :::image type="icon" source="media/security-center-both.png"::: **[Intelligent query processing](intelligent-query-processing.md)** | [Intelligent query processing](intelligent-query-processing.md) |
 
-## See also
+## Related content
 
 - [Monitor and Tune for Performance](monitor-and-tune-for-performance.md)
-- [Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)
+- [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
 - [Azure SQL Database performance guidance for single databases](/azure/azure-sql/database/performance-guidance)
 - [Optimizing Azure SQL Database Performance using Elastic Pools](/azure/azure-sql/database/elastic-pool-overview)
 - [Query Performance Insight for Azure SQL Database](/azure/azure-sql/database/query-performance-insight-use)
-- [Index Design Guide](../sql-server-index-design-guide.md)
-- [Memory Management Architecture Guide](../memory-management-architecture-guide.md)
-- [Pages and Extents Architecture Guide](../pages-and-extents-architecture-guide.md)
-- [Post-migration Validation and Optimization Guide](../post-migration-validation-and-optimization-guide.md)
-- [Query Processing Architecture Guide](../query-processing-architecture-guide.md)
-- [SQL Server Transaction Locking and Row Versioning Guide](../sql-server-transaction-locking-and-row-versioning-guide.md)
-- [SQL Server Transaction Log Architecture and Management Guide](../sql-server-transaction-log-architecture-and-management-guide.md)
-- [Thread and Task Architecture Guide](../thread-and-task-architecture-guide.md)
+- [Index architecture and design guide](../sql-server-index-design-guide.md)
+- [Memory management architecture guide](../memory-management-architecture-guide.md)
+- [Page and extent architecture guide](../pages-and-extents-architecture-guide.md)
+- [Post-migration validation and optimization guide](../post-migration-validation-and-optimization-guide.md)
+- [Query processing architecture guide](../query-processing-architecture-guide.md)
+- [Transaction locking and row versioning guide](../sql-server-transaction-locking-and-row-versioning-guide.md)
+- [SQL Server transaction log architecture and management guide](../sql-server-transaction-log-architecture-and-management-guide.md)
+- [Thread and task architecture guide](../thread-and-task-architecture-guide.md)

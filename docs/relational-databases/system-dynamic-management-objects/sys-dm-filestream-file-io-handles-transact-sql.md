@@ -44,4 +44,4 @@ For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, re
 
 ## Related content
 
-- [FILESTREAM and FileTable Dynamic Management Views (Transact-SQL)](filestream-and-filetable-dynamic-management-views-transact-sql.md)
+- [FILESTREAM and FileTable dynamic management views (Transact-SQL)](filestream-and-filetable-dynamic-management-views-transact-sql.md)

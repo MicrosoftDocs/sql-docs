@@ -88,8 +88,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
      As an alternative, in Windows Explorer, double-click a file with extension **.sqlplan**. The plan opens in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-## See Also  
- [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
- [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
-  
-  
+## Related content
+
+- [SET SHOWPLAN_XML (Transact-SQL)](../../t-sql/statements/set-showplan-xml-transact-sql.md)
+- [SET STATISTICS XML (Transact-SQL)](../../t-sql/statements/set-statistics-xml-transact-sql.md)

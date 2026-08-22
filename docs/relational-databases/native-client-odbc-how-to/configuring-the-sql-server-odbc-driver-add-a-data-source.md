@@ -37,6 +37,4 @@ helpviewer_keywords:
   
 ## Related content
 
-[Delete a Data Source &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
-  
-  
+- [Configuring the SQL Server ODBC Driver - Delete a Data Source](configuring-the-sql-server-odbc-driver-delete-a-data-source.md)

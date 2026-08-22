@@ -695,19 +695,18 @@ Remove-SqlColumnEncryptionKey -Name $OldCekName -InputObject $database
 Write-Host '[AE] Completed successfully'
 ```
 
-## Next Steps
-- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
-  
-## See Also
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+## Related content
+
+- [Always Encrypted](always-encrypted-database-engine.md)
+- [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
 - [Configure Always Encrypted using PowerShell](configure-always-encrypted-using-powershell.md)
 - [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
 - [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)
 - [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 - [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md)
-- [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 
-- [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-- [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)
+- [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md)
+- [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md)
+- [sys.column_encryption_keys  (Transact-SQL)](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md)
+- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)

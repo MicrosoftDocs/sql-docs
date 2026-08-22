@@ -187,11 +187,11 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
-- [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)
-- [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)
-- [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
-- [MSSQL_ENG021797](../../../relational-databases/replication/mssql-eng021797.md)
-- [MSSQL_ENG021798](../../../relational-databases/replication/mssql-eng021798.md)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Upgrade Replicated Databases](../../../database-engine/install-windows/upgrade-replicated-databases.md)
+- [Create a publication](../publish/create-a-publication.md)
+- [Create a push subscription](../create-a-push-subscription.md)
+- [Create a Pull Subscription](../create-a-pull-subscription.md)
+- [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md)
+- [MSSQL_ENG021797](../mssql-eng021797.md)
+- [MSSQL_ENG021798](../mssql-eng021798.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)
+- [Upgrade or patch replicated databases](../../../database-engine/install-windows/upgrade-replicated-databases.md)

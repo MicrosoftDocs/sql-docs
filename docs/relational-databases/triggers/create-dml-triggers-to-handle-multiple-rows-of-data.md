@@ -100,8 +100,6 @@ BEGIN
 END;  
 ```  
   
-## See Also  
- [DML Triggers](../../relational-databases/triggers/dml-triggers.md)  
-  
-  
+## Related content
 
+- [DML triggers](dml-triggers.md)

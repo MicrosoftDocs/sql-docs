@@ -225,7 +225,7 @@ dev_langs:
   
 ## Related content
 
-- [Implement a Custom Conflict Resolver for a Merge Article](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)
-- [Debug a Business Logic Handler &#40;Replication Programming&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
-- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
+- [Implement a custom conflict resolver for a Merge article](implement-a-custom-conflict-resolver-for-a-merge-article.md)
+- [Debug a Business Logic Handler (Replication Programming)](debug-a-business-logic-handler-replication-programming.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)
+- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)

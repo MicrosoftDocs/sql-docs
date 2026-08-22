@@ -39,7 +39,5 @@ Returns a row per linked-server-login mapping, for use by RPC and distributed qu
 
 ## Related content
 
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Linked Servers Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)  
-  
-  
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Linked Servers Catalog Views (Transact-SQL)](linked-servers-catalog-views-transact-sql.md)

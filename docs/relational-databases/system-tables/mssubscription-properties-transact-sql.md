@@ -55,11 +55,10 @@ dev_langs:
 |**internet_timeout**|**int**|The length of time, in seconds, before a Web synchronization request expires.|  
 |**hostname**|**sysname**|Specifies the value for **HOST_NAME** when this function is used in the **WHERE** clause of a join filter or logical record relationship.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
+- [sys.sp_helppullsubscription (Transact-SQL)](../system-stored-procedures/sp-helppullsubscription-transact-sql.md)
+- [sys.sp_helpsubscription (Transact-SQL)](../system-stored-procedures/sp-helpsubscription-transact-sql.md)
+- [sys.sp_helpsubscription_properties (Transact-SQL)](../system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)

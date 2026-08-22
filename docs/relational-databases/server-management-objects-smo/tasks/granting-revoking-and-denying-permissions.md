@@ -246,7 +246,6 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## See Also  
- [Permissions Hierarchy &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
-  
-  
+## Related content
+
+- [Permissions Hierarchy (Database Engine)](../../security/permissions-hierarchy-database-engine.md)

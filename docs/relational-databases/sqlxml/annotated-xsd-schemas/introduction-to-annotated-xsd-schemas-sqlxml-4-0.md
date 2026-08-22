@@ -121,8 +121,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 -   XSL Transformations (XSLT) (https://www.w3.org/TR/xslt)  
   
-## See Also  
- [Annotated Schema Security Considerations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Annotated XDR Schemas &#40;Deprecated in SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Annotated Schema Security Considerations (SQLXML 4.0)](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)
+- [Annotated XDR Schemas (Deprecated in SQLXML 4.0)](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)

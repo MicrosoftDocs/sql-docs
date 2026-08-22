@@ -85,6 +85,6 @@ helpviewer_keywords:
 |SQL_DESC_TYPE_NAME|**date**|**time**|**smalldatetime**|**datetime**|**datetime2**|datetimeoffset|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
-## See Also  
- [Metadata &#40;ODBC&#41;](./date-and-time-improvements-odbc.md)  
-  
+## Related content
+
+- [Date and Time Improvements (ODBC)](date-and-time-improvements-odbc.md)

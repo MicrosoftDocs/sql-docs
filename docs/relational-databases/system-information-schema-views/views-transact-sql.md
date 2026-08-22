@@ -37,10 +37,9 @@ To retrieve information from these views, specify the fully qualified name of **
 |**CHECK_OPTION**|**varchar(7)**|Type of WITH CHECK OPTION. Is CASCADE if the original view was created by using the WITH CHECK OPTION. Otherwise, NONE is returned.|
 |**IS_UPDATABLE**|**varchar(2)**|Specifies whether the view is updatable. Always returns NO.|
 
-## See also
+## Related content
 
-- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)
-- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
-- [sys.views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)
-
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [sys.sql_modules (Transact-SQL)](../system-catalog-views/sys-sql-modules-transact-sql.md)
+- [sys.views (Transact-SQL)](../system-catalog-views/sys-views-transact-sql.md)

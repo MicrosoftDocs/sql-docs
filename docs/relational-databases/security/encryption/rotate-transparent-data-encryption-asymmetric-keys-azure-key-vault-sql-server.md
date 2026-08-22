@@ -208,4 +208,4 @@ Choose your authentication model and follow the matching steps.
 
 - [Set up Transparent Data Encryption with Azure Key Vault for SQL Server](set-up-transparent-data-encryption-with-azure-key-vault-for-sql-server.md)
 - [Use SQL Server Connector with SQL Encryption Features](use-sql-server-connector-with-sql-encryption-features.md)
-- [SQL Server Connector Maintenance & Troubleshooting](sql-server-connector-maintenance-troubleshooting.md)
+- [SQL Server Connector maintenance and troubleshooting](sql-server-connector-maintenance-troubleshooting.md)

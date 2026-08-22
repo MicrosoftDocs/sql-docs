@@ -266,6 +266,6 @@ In this section, you start the Merge Agent to initialize the subscription by usi
   
 ## Related content
 
-- [Initialize a subscription with a snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
-- [Synchronize data](../../relational-databases/replication/synchronize-data.md)
-- [Synchronize a pull subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)
+- [Initialize a Subscription with a Snapshot for a New Publication](initialize-a-subscription-with-a-snapshot.md)
+- [Synchronize Data](synchronize-data.md)
+- [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)

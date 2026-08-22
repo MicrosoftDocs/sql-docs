@@ -45,4 +45,4 @@ The following tools can be used to monitor replication:
 
 ## Related content
 
-- [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)
+- [Best practices for replication administration](../administration/best-practices-for-replication-administration.md)

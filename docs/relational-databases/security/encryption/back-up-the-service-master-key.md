@@ -61,6 +61,6 @@ Requires `CONTROL SERVER` permission on the server.
 
 ## Related content
 
-- [Restore the service master key](restore-the-service-master-key.md)
+- [Restore a service master key](restore-the-service-master-key.md)
 - [BACKUP SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/backup-service-master-key-transact-sql.md)
 - [Back up a database master key](back-up-a-database-master-key.md)

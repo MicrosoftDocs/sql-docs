@@ -61,8 +61,9 @@ SELECT * FROM sys.dm_io_cluster_shared_drives;
   
  n  
   
-## See also  
- [sys.dm_io_cluster_valid_path_names &#40;Transact-SQL&#41;](sys-dm-io-cluster-valid-path-names-transact-sql.md)   
- [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.fn_servershareddrives &#40;Transact-SQL&#41;](../system-functions/sys-fn-servershareddrives-transact-sql.md)   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)
+## Related content
+
+- [sys.dm_io_cluster_valid_path_names (Transact-SQL)](sys-dm-io-cluster-valid-path-names-transact-sql.md)
+- [sys.dm_os_cluster_nodes (Transact-SQL)](sys-dm-os-cluster-nodes-transact-sql.md)
+- [sys.fn_servershareddrives (Transact-SQL)](../system-functions/sys-fn-servershareddrives-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)

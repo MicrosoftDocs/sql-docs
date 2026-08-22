@@ -153,7 +153,7 @@ In addition, the `MSsnapshotdeliveryprogress` table is created in each subscript
 ## Related content
 
 - [Merge replication](merge-replication.md)
-- [sp_addmergearticle (Transact-SQL)](../../system-stored-procedures/sp-addmergearticle-transact-sql.md)
-- [sp_addmergepublication (Transact-SQL)](../../system-stored-procedures/sp-addmergepublication-transact-sql.md)
-- [sp_addpublication_snapshot (Transact-SQL)](../../system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)
-- [sp_replicationdboption (Transact-SQL)](../../system-stored-procedures/sp-replicationdboption-transact-sql.md)
+- [sys.sp_addmergearticle (Transact-SQL)](../../system-stored-procedures/sp-addmergearticle-transact-sql.md)
+- [sys.sp_addmergepublication (Transact-SQL)](../../system-stored-procedures/sp-addmergepublication-transact-sql.md)
+- [sys.sp_addpublication_snapshot (Transact-SQL)](../../system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)
+- [sys.sp_replicationdboption (Transact-SQL)](../../system-stored-procedures/sp-replicationdboption-transact-sql.md)

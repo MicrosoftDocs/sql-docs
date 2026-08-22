@@ -73,7 +73,6 @@ WHERE query_id = 39;
 ## Related content
 
 - [Query Store hints](../performance/query-store-hints.md)
-- [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)
-- [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md)
+- [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)
+- [sp_query_store_clear_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md)
 - [sys.query_store_query (Transact-SQL)](sys-query-store-query-transact-sql.md)
-

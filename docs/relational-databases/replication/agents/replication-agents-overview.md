@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)
-- [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)
-- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)
-- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
+- [Start and Stop a Replication Agent (SQL Server Management Studio)](start-and-stop-a-replication-agent-sql-server-management-studio.md)
+- [Run Replication Maintenance Jobs (SQL Server Management Studio)](../administration/run-replication-maintenance-jobs-sql-server-management-studio.md)
+- [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)
+- [Replication Agent Administration](replication-agent-administration.md)

@@ -72,7 +72,7 @@ An `actual_state_desc` value of `READ_CAPTURE_SECONDARY` is the expected state w
 - [sys.query_store_runtime_stats (Transact-SQL)](sys-query-store-runtime-stats-transact-sql.md)
 - [sys.query_store_wait_stats (Transact-SQL)](sys-query-store-wait-stats-transact-sql.md)
 - [sys.query_store_runtime_stats_interval (Transact-SQL)](sys-query-store-runtime-stats-interval-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)
 - [Query Store stored procedures (Transact-SQL)](../system-stored-procedures/query-store-stored-procedures-transact-sql.md)

@@ -28,6 +28,6 @@ f1_keywords:
   
 ## Related content
 
-- [Create a Subscription for a Non-SQL Server Subscriber](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)
-- [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Create a Subscription for a Non-SQL Server Subscriber](create-a-subscription-for-a-non-sql-server-subscriber.md)
+- [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)
+- [Subscribe to Publications](subscribe-to-publications.md)

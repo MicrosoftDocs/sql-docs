@@ -51,8 +51,8 @@ This article describes how to generate graphical estimated execution plans by us
 > [!NOTE] 
 > Alternatively, use [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) to return execution plan information for each statement without executing it. If used in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the *Results* tab will have a link to open the execution plan in graphical format.   
 
-## Next steps
+## Related content
 
-- [Execution Plans](../../relational-databases/performance/execution-plans.md)
-- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
-- [Display an Actual Execution Plan](display-an-actual-execution-plan.md)
+- [Execution plan overview](execution-plans.md)
+- [Query processing architecture guide](../query-processing-architecture-guide.md)
+- [Display an actual execution plan](display-an-actual-execution-plan.md)

@@ -64,5 +64,5 @@ By default, Windows Authentication is the authentication type supported on the U
 
 ## Related content
 
-- [URLs in configuration files (Report Server Configuration Manager)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)
-- [URL reservations for multi-instance report server deployments (Report Server Configuration Manager)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)
+- [URLs in Configuration Files  (Report Server Configuration Manager)](urls-in-configuration-files-ssrs-configuration-manager.md)
+- [URL Reservations for Multi-Instance Report Server Deployments](url-reservations-for-multi-instance-report-server-deployments.md)

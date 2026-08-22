@@ -161,6 +161,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Administrative Considerations for Oracle Publishers](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)
-- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
-- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)
+- [Administrative Considerations for Oracle Publishers](administrative-considerations-for-oracle-publishers.md)
+- [Configure an Oracle Publisher](configure-an-oracle-publisher.md)
+- [Oracle Publishing Overview](oracle-publishing-overview.md)

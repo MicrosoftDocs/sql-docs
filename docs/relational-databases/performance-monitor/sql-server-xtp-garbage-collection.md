@@ -48,4 +48,4 @@ WHERE object_name LIKE '%XTP Garbage Collection%';
 ## Related content
 
 - [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
-- [SQL Server XTP (In-Memory OLTP) Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md)
+- [SQL Server XTP (In-memory OLTP) Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md)

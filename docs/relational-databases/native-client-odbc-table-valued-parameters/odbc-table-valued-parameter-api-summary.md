@@ -73,4 +73,4 @@ Use these functions to help your applications detect errors, warnings, or status
 
 ## Related content
 
-- [Table-Valued Parameters (ODBC)](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)
+- [Table-Valued Parameters (ODBC)](table-valued-parameters-odbc.md)

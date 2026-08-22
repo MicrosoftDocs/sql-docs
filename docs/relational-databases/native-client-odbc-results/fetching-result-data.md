@@ -53,7 +53,6 @@ helpviewer_keywords:
   
  This optimization can be applied to applications so that no **text**, **ntext**, or **image** data is displayed while a user is scrolling up and down a cursor. After the user selects a row, the application can call **SQLGetData** to retrieve the **text**, **ntext**, or **image** data. This saves transmitting the **text**, **ntext**, or **image** data for any of the rows the user does not select and can save the transmission of very large amounts of data.  
   
-## See Also  
- [Processing Results &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
-  
-  
+## Related content
+
+- [Processing Results (ODBC)](processing-results-odbc.md)

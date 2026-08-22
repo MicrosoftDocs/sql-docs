@@ -57,12 +57,10 @@ WHERE end_time > DATEADD(dd,-2,SYSDATETIME());
 GO
 ```
   
-## Next steps
-
-Learn more about Azure SQL Database in the following articles:
+## Related content
 
 - [sys.resource_stats (Azure SQL Database)](sys-resource-stats-azure-sql-database.md)
-- [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
+- [Azure SQL Database and SQL database in Fabric catalog views](azure-sql-database-catalog-views.md)
 - [sys.event_log (Azure SQL Database)](sys-event-log-azure-sql-database.md)
 - [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
 - [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)

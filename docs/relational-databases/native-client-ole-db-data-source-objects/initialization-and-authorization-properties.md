@@ -80,7 +80,6 @@ Server=MyServer;UID=MyUserName;
   
  For a list of the keywords available in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, see [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-## See Also  
- [Data Source Objects &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Data Source Objects (OLE DB)](data-source-objects-ole-db.md)

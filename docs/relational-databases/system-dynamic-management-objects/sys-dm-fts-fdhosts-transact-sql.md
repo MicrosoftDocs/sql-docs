@@ -54,6 +54,7 @@ SELECT fdhost_name, batch_count, max_thread FROM sys.dm_fts_fdhosts;
 GO  
 ```  
   
-## See Also  
- [Full-Text Search and Semantic Search Dynamic Management Views and Functions &#40;Transact-SQL&#41;](full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Full-Text Search](../search/full-text-search.md)
+## Related content
+
+- [Full-text and semantic search dynamic management views and functions](full-text-and-semantic-search-dynamic-management-views-functions.md)
+- [Full-Text Search](../search/full-text-search.md)

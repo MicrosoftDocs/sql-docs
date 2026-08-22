@@ -301,5 +301,5 @@ Beginning with [!INCLUDE [sql-server-2022](../includes/sssql22-md.md)], notable 
 - [Accelerated database recovery](accelerated-database-recovery-concepts.md)
 - [Manage accelerated database recovery](accelerated-database-recovery-management.md)
 - [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md)
-- [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md)
+- [sys.sp_persistent_version_cleanup (Transact-SQL)](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md)
 - [sys.dm_tran_aborted_transactions](system-dynamic-management-views/sys-dm-tran-aborted-transactions.md)

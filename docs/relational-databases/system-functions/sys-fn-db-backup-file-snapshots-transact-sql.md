@@ -48,4 +48,4 @@ Requires `VIEW DATABASE STATE` permission on the database.
 ## Related content
 
 - [sp_delete_backup_file_snapshot (Transact-SQL)](../system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)
-- [sp_delete_backup (Transact-SQL)](../system-stored-procedures/snapshot-backup-sp-delete-backup.md)
+- [sys.sp_delete_backup (Transact-SQL)](../system-stored-procedures/snapshot-backup-sp-delete-backup.md)

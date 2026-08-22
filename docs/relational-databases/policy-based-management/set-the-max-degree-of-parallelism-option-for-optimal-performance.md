@@ -25,5 +25,5 @@ Recommendations to configure MAXDOP depend on the version of [!INCLUDE [ssNoVers
 
 ## Related content
 
-- [Configure the max degree of parallelism (server configuration option)](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
-- [sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md)
+- [Server configuration: max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
+- [sys.sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md)

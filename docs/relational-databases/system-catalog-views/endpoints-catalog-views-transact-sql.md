@@ -37,7 +37,7 @@ dev_langs:
     :::column-end:::
 :::row-end:::
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
+## Related content
+
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)

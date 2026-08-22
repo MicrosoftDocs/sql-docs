@@ -37,9 +37,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [Change Tracking Catalog Views &#40;Transact-SQL&#41;](./catalog-views-transact-sql.md)   
- [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
+## Related content
 
+- [CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)](../system-functions/change-tracking-min-valid-version-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Track data changes (SQL Server)](../track-changes/track-data-changes-sql-server.md)

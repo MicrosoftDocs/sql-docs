@@ -28,5 +28,6 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |is_passive|**int**|Indicates whether the virtual machine running the node is running on the assigned server or has failed over to the spare server.|0 - node VM is running on the original server.<br /><br /> 1 - node VM is running on the spare server.|  
 |region|**nvarchar(32)**|The region where the node is running.|'PDW', 'HDINSIGHT'|  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+## Related content
+
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)

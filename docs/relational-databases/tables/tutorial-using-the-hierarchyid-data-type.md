@@ -38,11 +38,9 @@ Your system must have the following installed:
   
 -   Internet Explorer 6 or a later version.  
   
-## See Also  
-[Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
-[Tutorial: Writing Transact-SQL Statements](../../t-sql/tutorial-writing-transact-sql-statements.md)  
-[hierarchyid Data Type Method Reference](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-[Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
-[hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
-  
+## Related content
+
+- [Tutorial: Get started with the Database Engine](../tutorial-getting-started-with-the-database-engine.md)
+- [Tutorial: Write Transact-SQL statements](../../t-sql/tutorial-writing-transact-sql-statements.md)
+- [hierarchyid data type method reference](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
+- [Hierarchical data (SQL Server)](../hierarchical-data-sql-server.md)

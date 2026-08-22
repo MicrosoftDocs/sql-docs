@@ -81,6 +81,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md)
-- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)
+- [Publish Data and Database Objects](publish-data-and-database-objects.md)
+- [Reinitialize Subscriptions](../reinitialize-subscriptions.md)
+- [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)

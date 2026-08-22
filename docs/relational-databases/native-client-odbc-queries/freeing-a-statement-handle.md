@@ -22,7 +22,6 @@ helpviewer_keywords:
   
  When the application has finished using the statement, it calls [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) to free the statement. Note that **SQLDisconnect** automatically frees all statements on a connection.  
   
-## See Also  
- [Executing Queries &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
-  
-  
+## Related content
+
+- [Executing Queries (ODBC)](executing-queries-odbc.md)

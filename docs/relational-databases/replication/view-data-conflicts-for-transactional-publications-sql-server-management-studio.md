@@ -58,5 +58,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)
-- [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)
+- [Peer-to-Peer - Transactional Replication](transactional/peer-to-peer-transactional-replication.md)
+- [Updatable Subscriptions - Queued Updating Conflict Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)

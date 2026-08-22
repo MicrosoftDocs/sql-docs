@@ -401,9 +401,8 @@ This can happen because there is a `QUERYTRACEON` query hint that can be added t
 **Possible Solution:**  
 If this occurs, you can resolve the issue by globally enabling trace flag 14073 and this will prevent the query hint from being added.
 
-## See also
+## Related content
 
- - [Monitor and troubleshoot PolyBase](polybase-troubleshooting.md)  
- - [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)  
- - [PolyBase Frequently Asked Questions](polybase-faq.yml)
-
+- [Monitor and troubleshoot PolyBase](polybase-troubleshooting.md)
+- [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)
+- [PolyBase Frequently Asked Questions](polybase-faq.yml)

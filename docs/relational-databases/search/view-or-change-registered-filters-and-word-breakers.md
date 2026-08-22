@@ -305,6 +305,6 @@ If you don't want to rely on the `HKCR` fallback, add instance-specific `MSSearc
 - [Full-text filter binaries](full-text-filter-binaries.md)
 - [Full-text word breaker and stemmer binaries](full-text-word-breaker-and-stemmer-binaries.md)
 - [Full-text index version upgrade](full-text-index-version-upgrade.md)
-- [sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
+- [sys.sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
 - [sys.fulltext_indexes (Transact-SQL)](../system-catalog-views/sys-fulltext-indexes-transact-sql.md)
 - [ALTER DATABASE SCOPED CONFIGURATION - FULLTEXT_INDEX_VERSION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#fulltext_index_version)

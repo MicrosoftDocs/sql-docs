@@ -40,12 +40,10 @@ Query Store for secondary replicas is supported starting in [!INCLUDE [sssql25-m
 
  For information on configured replicas for Query Store, see [sys.query_store_replicas (Transact-SQL)](sys-query-store-replicas.md).
 
-## Next steps
-
-Learn more about Query Store and related concepts in the following articles:
+## Related content
 
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
-- [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md)
+- [Query Store for readable secondary replicas (preview)](../performance/query-store-for-secondary-replicas.md)
 - [sp_query_store_clear_message_queues (Transact-SQL)](../system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md)
 - [sys.query_store_wait_stats (Transact-SQL)](sys-query-store-wait-stats-transact-sql.md)
 - [sys.query_store_runtime_stats (Transact-SQL)](sys-query-store-runtime-stats-transact-sql.md)

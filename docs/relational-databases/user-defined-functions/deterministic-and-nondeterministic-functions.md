@@ -143,6 +143,6 @@ Similar to invocations from a batch or stored procedure, the extended stored pro
 ## Related content
 
 - [Cursor Functions (Transact-SQL)](../../t-sql/functions/cursor-functions-transact-sql.md)
-- [Metadata Functions (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)
+- [Metadata functions (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)
 - [Security Functions (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)
 - [System Statistical Functions (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)

@@ -130,6 +130,6 @@ For more information about configuration, see [Configure Web Synchronization](..
   
 ## Related content
 
-- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)
-- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)
+- [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)
+- [Subscribe to Publications](subscribe-to-publications.md)

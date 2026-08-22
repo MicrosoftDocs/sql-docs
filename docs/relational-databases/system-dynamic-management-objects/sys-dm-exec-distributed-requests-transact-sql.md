@@ -37,7 +37,8 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 |end_time|**datetime**|Time at which the engine completed compiling the request.|NULL for queued or active requests; otherwise, a valid datetime smaller or equal to current time.|  
 |total_elapsed_time|**int**|Time elapsed in execution since the request was started, in milliseconds.|Between 0 and the difference between start_time and end_time.If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning "The maximum value has been exceeded." The maximum value in milliseconds is equivalent to 24.8 days.|  
   
-## See Also  
- [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](database-related-dynamic-management-views-transact-sql.md)
+## Related content
+
+- [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)

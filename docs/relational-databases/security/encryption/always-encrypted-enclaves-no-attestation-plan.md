@@ -100,6 +100,9 @@ After changing the registry, restart the [!INCLUDE [ssnoversion-md](../../../inc
 
 If the computer is managed by your company, Group Policy or Microsoft Endpoint Manager may override any changes you make to these registry keys after restarting. Contact your IT help desk to see if they deploy policies that manage your VBS configuration.
 
-## Next steps
+## Next step
 
-- Once you've made sure your environment meets the above prerequisites, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
+Once you've made sure your environment meets the above prerequisites, see:
+
+> [!div class="nextstepaction"]
+> [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md)

@@ -1124,8 +1124,8 @@ End Try
   
 ## Related content
 
-- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)
-- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)
+- [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)
+- [Configure Web Synchronization](configure-web-synchronization.md)
+- [Subscribe to Publications](subscribe-to-publications.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)

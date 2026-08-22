@@ -74,7 +74,8 @@ JOIN sys.server_permissions AS pe
 > The permissions of fixed server roles (other than public) do not appear in sys.server_permissions. Therefore, server principals may have additional permissions not listed here.
 
 ## Related content
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Principals (Database Engine)](../security/authentication-access/principals-database-engine.md)
+- [Permissions Hierarchy (Database Engine)](../security/permissions-hierarchy-database-engine.md)

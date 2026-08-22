@@ -29,7 +29,6 @@ dev_langs:
 |**object_type**|**char(2)**|The object type:<br /><br /> **u** = Table.<br /><br /> **t** = Trigger.<br /><br /> **p** = Stored Procedure.|  
 |**article**|**sysname**|The name of the article with which the object is associated.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)

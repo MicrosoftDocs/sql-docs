@@ -45,4 +45,4 @@ Any user with `CONNECT` permissions can access this system catalog view.
 - [GETUTCDATE (Transact-SQL)](../../t-sql/functions/getutcdate-transact-sql.md)
 - [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)
 - [Date and time data types and functions (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)
-- [Server-wide Configuration Catalog Views (Transact-SQL)](server-wide-configuration-catalog-views-transact-sql.md)
+- [Server-wide configuration catalog views (Transact-SQL)](server-wide-configuration-catalog-views-transact-sql.md)

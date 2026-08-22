@@ -60,11 +60,10 @@ For the complete list of filter binaries and the file extensions they handle in 
 > Even with the latest Office Filter Pack version that provides `.xlsx` support, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't support Strict Open XML Spreadsheets. No error is returned; [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] simply fails to index the contents of any Strict Open XML Spreadsheets.
 
 ## Related content
-- [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) 
+
+- [sys.fulltext_index_columns (Transact-SQL)](../system-catalog-views/sys-fulltext-index-columns-transact-sql.md)
 - [Full-text filter binaries](full-text-filter-binaries.md)
 - [Customize filters and word breakers](view-or-change-registered-filters-and-word-breakers.md)
 - [sys.fulltext_document_types (Transact-SQL)](../system-catalog-views/sys-fulltext-document-types-transact-sql.md)
-- [sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
-- [FILESTREAM compatibility with other SQL Server features](../blob/filestream-compatibility-with-other-sql-server-features.md)  
-  
-  
+- [sys.sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
+- [FILESTREAM compatibility with other SQL Server features](../blob/filestream-compatibility-with-other-sql-server-features.md)

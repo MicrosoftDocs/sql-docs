@@ -48,12 +48,11 @@ dev_langs:
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## See Also  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
-  
+## Related content
+
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [Spatial Indexes Overview](../spatial/spatial-indexes-overview.md)
+- [sys.objects (Transact-SQL)](sys-objects-transact-sql.md)
+- [sys.spatial_indexes (Transact-SQL)](sys-spatial-indexes-transact-sql.md)
+- [sys.indexes (Transact-SQL)](sys-indexes-transact-sql.md)
+- [sys.index_columns (Transact-SQL)](sys-index-columns-transact-sql.md)

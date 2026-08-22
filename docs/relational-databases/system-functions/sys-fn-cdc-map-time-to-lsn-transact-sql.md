@@ -101,9 +101,9 @@ BEGIN
 END
 ```
 
-## See also
+## Related content
 
-- [cdc.lsn_time_mapping &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)
-- [sys.fn_cdc_map_lsn_to_time &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)
-- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)
-- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)
+- [cdc.lsn_time_mapping (Transact-SQL)](../system-tables/cdc-lsn-time-mapping-transact-sql.md)
+- [sys.fn_cdc_map_lsn_to_time (Transact-SQL)](sys-fn-cdc-map-lsn-to-time-transact-sql.md)
+- [cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)](cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)
+- [cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)](cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)

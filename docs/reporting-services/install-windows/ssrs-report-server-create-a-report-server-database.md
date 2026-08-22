@@ -76,5 +76,5 @@ If you create the report server database on a remote computer, configure the con
 
 ## Related content
 
-- [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md)
+- [What is the Report Server configuration manager (native mode)?](reporting-services-configuration-manager-native-mode.md)
 - [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

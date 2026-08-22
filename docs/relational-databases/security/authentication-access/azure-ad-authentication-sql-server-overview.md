@@ -114,7 +114,7 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 - [Microsoft Entra authentication](/azure/active-directory/authentication/overview-authentication)
 - [Linked server for SQL Server with Microsoft Entra authentication](azure-ad-authentication-sql-server-linked-server.md)
 - [Tutorial: Using automation to set up the Microsoft Entra admin for SQL Server](azure-ad-authentication-sql-server-automation-setup-tutorial.md)
-- [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Tutorial: Set up Microsoft Entra authentication for SQL Server with app registration](azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Tutorial: Enable Microsoft Entra authentication for SQL Server on Windows without Azure Arc](microsoft-entra-authentication-sql-server-enable-without-arc.md)
 - [Rotate certificates](../../../sql-server/azure-arc/rotate-certificates.md)
 - [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md)

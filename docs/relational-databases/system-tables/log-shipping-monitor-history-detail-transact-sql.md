@@ -38,13 +38,12 @@ dev_langs:
   
  In addition to being stored on the remote monitor server, the information related to the primary server is stored on the primary server in its **log_shipping_monitor_history_detail** table, and information related to a secondary server is also stored on the secondary server in its **log_shipping_monitor_history_detail** table.  
   
-## See Also  
- [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
- [log_shipping_monitor_error_detail &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
-  
-  
+## Related content
+
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [sys.sp_delete_log_shipping_primary_database (Transact-SQL)](../system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)
+- [sys.sp_cleanup_log_shipping_history (Transact-SQL)](../system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)
+- [sys.sp_refresh_log_shipping_monitor (Transact-SQL)](../system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)
+- [sys.sp_delete_log_shipping_secondary_database (Transact-SQL)](../system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)
+- [System Tables (Transact-SQL)](system-tables-transact-sql.md)
+- [log_shipping_monitor_error_detail (Transact-SQL)](log-shipping-monitor-error-detail-transact-sql.md)

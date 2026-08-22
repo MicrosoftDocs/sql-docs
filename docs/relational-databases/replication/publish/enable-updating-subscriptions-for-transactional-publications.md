@@ -100,9 +100,8 @@ When possible, prompt users to enter security credentials at runtime. If you mus
   
 ## Related content
 
-- [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
-- [Transactional Replication](../../../relational-databases/replication/transactional/transactional-replication.md)
-- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
 - [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md)
-- [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
+- [Transactional Replication](../transactional/transactional-replication.md)
+- [Updatable Subscriptions - For Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)
+- [Create a publication](create-a-publication.md)
+- [Use sqlcmd with scripting variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

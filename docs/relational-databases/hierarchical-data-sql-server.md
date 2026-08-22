@@ -565,6 +565,5 @@ GO
 
 ## Related content
 
-- [hierarchyid Data Type Method Reference](../t-sql/data-types/hierarchyid-data-type-method-reference.md)
+- [hierarchyid data type method reference](../t-sql/data-types/hierarchyid-data-type-method-reference.md)
 - [Tutorial: Using the hierarchyid Data Type](tables/tutorial-using-the-hierarchyid-data-type.md)
-- [hierarchyid (Transact-SQL)](../t-sql/data-types/hierarchyid-data-type-method-reference.md)

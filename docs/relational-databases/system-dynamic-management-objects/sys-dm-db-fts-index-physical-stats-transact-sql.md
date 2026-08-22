@@ -60,5 +60,6 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats;
 GO  
 ```  
   
-## See Also  
- [Manage and Monitor Semantic Search](../search/manage-and-monitor-semantic-search.md)
+## Related content
+
+- [Manage and monitor Semantic Search](../search/manage-and-monitor-semantic-search.md)

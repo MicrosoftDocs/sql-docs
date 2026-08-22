@@ -31,9 +31,9 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
-- [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
-- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
-- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
-- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Create a publication](publish/create-a-publication.md)
+- [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)
+- [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)
+- [Initialize a Subscription with a Snapshot for a New Publication](initialize-a-subscription-with-a-snapshot.md)
+- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)
+- [Replication Agents Overview](agents/replication-agents-overview.md)

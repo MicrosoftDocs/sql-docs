@@ -56,14 +56,14 @@ In Fabric SQL database, a user must be granted VIEW DATABASE STATE in the databa
 
 Requires VIEW SERVER SECURITY STATE permission on the server.
 
-## See also  
+## Related content
 
- [Security-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](security-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Transparent Data Encryption &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md)   
- [SQL Server Encryption](../security/encryption/sql-server-encryption.md)   
- [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)
+- [Security-Related Dynamic Management Views and Functions (Transact-SQL)](security-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Transparent data encryption (TDE)](../security/encryption/transparent-data-encryption.md)
+- [SQL Server encryption](../security/encryption/sql-server-encryption.md)
+- [SQL Server and Database Encryption Keys (Database Engine)](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)
+- [Encryption hierarchy](../security/encryption/encryption-hierarchy.md)
+- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-database-encryption-key-transact-sql.md)
+- [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)
+- [DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)

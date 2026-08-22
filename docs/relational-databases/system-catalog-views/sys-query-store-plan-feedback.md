@@ -64,4 +64,3 @@ Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 - [sys.query_store_query (Transact-SQL)](sys-query-store-query-transact-sql.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [Best practices for monitoring workloads with Query Store](../performance/best-practice-with-the-query-store.md)
-

@@ -48,4 +48,4 @@ Publishing data from non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
   
 ## Related content
 
-- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)
+- [Heterogeneous Database Replication](heterogeneous-database-replication.md)

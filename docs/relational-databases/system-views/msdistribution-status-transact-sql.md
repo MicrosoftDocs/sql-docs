@@ -27,8 +27,7 @@ dev_langs:
 |**UndelivCmdsInDistDB**|**int**|The number of commands pending delivery to Subscribers.|  
 |**DelivCmdsInDistDB**|**int**|The number of commands delivered to Subscribers.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](../system-tables/replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](replication-views-transact-sql.md)

@@ -267,6 +267,6 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## Next steps
+## Related content
 
-- [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md)
+- [Use sparse columns](use-sparse-columns.md)

@@ -32,6 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |state|**nvarchar(50)**|State of the wait state.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|Priority of the waiting item.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [sys.dm_pdw_wait_stats &#40;Transact-SQL&#41;](sys-dm-pdw-wait-stats-transact-sql.md)
+## Related content
+
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [sys.dm_pdw_wait_stats (Transact-SQL)](sys-dm-pdw-wait-stats-transact-sql.md)

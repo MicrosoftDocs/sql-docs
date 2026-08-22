@@ -65,6 +65,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  [Guidelines and Limitations of SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)  
  Lists issues to remember when working with SQLXML 4.0.  
   
-## See Also  
- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
-  
+## Related content
+
+- [XML data (SQL Server)](../xml/xml-data-sql-server.md)

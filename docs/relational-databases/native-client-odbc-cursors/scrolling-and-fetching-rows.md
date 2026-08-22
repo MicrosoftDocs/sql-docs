@@ -51,7 +51,6 @@ helpviewer_keywords:
   
 -   [Bookmarking Rows in ODBC](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
-## See Also  
- [Using Cursors &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
-  
-  
+## Related content
+
+- [Using Cursors (ODBC)](using-cursors-odbc.md)

@@ -22,6 +22,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)
-- [Use the RenderedOutputFile class for a delivery extension](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)
+- [Implement a delivery extension](implementing-a-delivery-extension.md)
+- [Reporting Services extension library](../reporting-services-extension-library.md)
+- [Use the RenderedOutputFile class for a delivery extension](using-the-renderedoutputfile-class-for-a-delivery-extension.md)

@@ -98,7 +98,7 @@ In T-SQL, you can use one of the following three commands:
   
 ## Related content
 
-- [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)
-- [Modify a Stored Procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)
-- [Delete a Stored Procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)
-- [Rename a Stored Procedure](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)
+- [Create a stored procedure](create-a-stored-procedure.md)
+- [Modify a stored procedure](modify-a-stored-procedure.md)
+- [Delete a stored procedure](delete-a-stored-procedure.md)
+- [Rename a Stored Procedure](rename-a-stored-procedure.md)

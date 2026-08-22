@@ -110,8 +110,8 @@ For example, as the database administrator, you may want to ensure that certain 
  - [Work with Policy-Based Management Facets](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)
  - [Monitor and Enforce Best Practices Using Policy-Based Management](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
-## See also  
- 
- - [Tutorial: Create and apply an off-by-default policy](lesson-1-create-and-apply-an-off-by-default-policy.md)
- - [Tutorial: Create and apply naming standards policy](lesson-2-create-and-apply-a-naming-standards-policy.md)
- - [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)
+## Related content
+
+- [Lesson 1: Create and Apply an Off By Default Policy](lesson-1-create-and-apply-an-off-by-default-policy.md)
+- [Lesson 2: Create and Apply a Naming Standards Policy](lesson-2-create-and-apply-a-naming-standards-policy.md)
+- [Policy-Based Management Views (Transact-SQL)](../system-catalog-views/policy-based-management-views-transact-sql.md)

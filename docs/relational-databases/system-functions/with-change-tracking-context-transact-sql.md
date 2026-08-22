@@ -46,10 +46,8 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
 WITH CHANGE_TRACKING_CONTEXT ( context )  
 ```  
   
-## See Also  
- [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
- [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
-  
+## Related content
 
+- [Change Tracking Functions (Transact-SQL)](change-tracking-functions-transact-sql.md)
+- [CHANGETABLE (Transact-SQL)](changetable-transact-sql.md)
+- [Track data changes (SQL Server)](../track-changes/track-data-changes-sql-server.md)

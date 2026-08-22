@@ -51,5 +51,5 @@ Without advanced scanning, each user would have to compete for buffer space and 
 
 ## Related content
 
-- [Pages and extents architecture guide](pages-and-extents-architecture-guide.md)
+- [Page and extent architecture guide](pages-and-extents-architecture-guide.md)
 - [Write pages in the Database Engine](writing-pages.md)

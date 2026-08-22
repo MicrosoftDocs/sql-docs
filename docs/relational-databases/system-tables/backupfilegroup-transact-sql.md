@@ -49,9 +49,9 @@ To reduce the number of rows in this table and in other backup and history table
 
 ## Related content
 
-- [Backup and restore tables (Transact-SQL)](backup-and-restore-tables-transact-sql.md)
+- [Backup and Restore Tables (Transact-SQL)](backup-and-restore-tables-transact-sql.md)
 - [backupfile (Transact-SQL)](backupfile-transact-sql.md)
 - [backupmediafamily (Transact-SQL)](backupmediafamily-transact-sql.md)
 - [backupmediaset (Transact-SQL)](backupmediaset-transact-sql.md)
 - [backupset (Transact-SQL)](backupset-transact-sql.md)
-- [System tables (Transact-SQL)](system-tables-transact-sql.md)
+- [System Tables (Transact-SQL)](system-tables-transact-sql.md)

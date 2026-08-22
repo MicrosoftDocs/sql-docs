@@ -40,8 +40,7 @@ helpviewer_keywords:
 ## Sensitivity  
  When SQL_ATTR_CURSOR_SENSITIVITY is set to SQL_SENSITIVE, the cursor reflects data modifications made by the current user or committed by other users. When SQL_ATTR_CURSOR_SENSITIVITY is set to SQL_INSENSITIVE, the cursor does not reflect data modifications.  
   
-## See Also  
- [Using Cursors (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) 
- [Cursor Properties](properties/cursor-properties.md) 
-  
-  
+## Related content
+
+- [Using Cursors (ODBC)](using-cursors-odbc.md)
+- [Cursor Properties](properties/cursor-properties.md)

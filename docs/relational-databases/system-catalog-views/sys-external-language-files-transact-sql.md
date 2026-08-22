@@ -41,7 +41,7 @@ The catalog view sys.external_language_files lists a row for each external langu
 |parameters|sysname|External language parameters|
 |environment_variables|sysname|External language environment variables|
 
-## See also  
+## Related content
 
-+ [sys.external_languages](sys-external-languages-transact-sql.md)  
-+ [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)  
+- [sys.external_languages (Transact-SQL)](sys-external-languages-transact-sql.md)
+- [CREATE EXTERNAL LANGUAGE (Transact-SQL)](../../t-sql/statements/create-external-language-transact-sql.md)

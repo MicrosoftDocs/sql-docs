@@ -118,10 +118,8 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 
  The wrapper functions `sys.fn_all_changes_<capture_instance>` and `sys.fn_net_changes_<capture_instance>` are dependent on the system functions `cdc.fn_cdc_get_all_changes_<capture_instance>` and `cdc.fn_cdc_get_net_changes_<capture_instance>`. Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the `lsn_value` parameter is beyond the time of lowest LSN or highest LSN, then execution of these functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
   
-## See Also  
+## Related content
 
- - [sys.fn_all_changes_<capture_instance>](sys-fn-all-changes-capture-instance-transact-sql.md)
- - [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- - [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
-  
-  
+- [sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)](sys-fn-all-changes-capture-instance-transact-sql.md)
+- [sys.sp_cdc_generate_wrapper_function (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)
+- [cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)](cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)

@@ -143,7 +143,6 @@ $sp.Alter()
 $sp.Drop()  
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>

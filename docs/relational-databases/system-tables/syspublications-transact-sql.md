@@ -64,11 +64,10 @@ dev_langs:
 |**options**|**int**|A bitmap that specifies additional publishing options, where the bitwise option values are as follows:<br /><br /> **0x1** - Enabled for peer-to-peer replication.<br /><br /> **0x2** - Publish only local changes for peer-to-peer replication.<br /><br /> **0x4** - Enabled for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subscribers.<br /><br /> **0x8** - Enabled for peer-to-peer conflict detection. <br /><br /> **0x100** - Starting with SQL Server 2019 CU13, enabled for last writer conflict detection.|  
 |**originator_id**|**smallint**|Identifies each node in a peer-to-peer replication topology for the purposes of conflict detection. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
+- [sys.sp_addpublication (Transact-SQL)](../system-stored-procedures/sp-addpublication-transact-sql.md)
+- [sys.sp_changepublication (Transact-SQL)](../system-stored-procedures/sp-changepublication-transact-sql.md)
+- [sys.sp_helppublication (Transact-SQL)](../system-stored-procedures/sp-helppublication-transact-sql.md)

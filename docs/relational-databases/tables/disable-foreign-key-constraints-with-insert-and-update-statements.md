@@ -98,7 +98,7 @@ Requires ALTER permission on the table.
     GO
     ```
   
-## Next steps
+## Related content
 
-- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
-- [View Foreign Key Properties](view-foreign-key-properties.md)
+- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
+- [View foreign key properties](view-foreign-key-properties.md)

@@ -113,4 +113,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)
+- [Advanced Merge Replication Conflict - Interactive Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)

@@ -28,8 +28,7 @@ dev_langs:
 |**shouldalert**|**bit**|A value of **1** indicates that an alert should be generated when the metric exceeds the defined threshold.|  
 |**isenabled**|**bit**|A value of **1** indicates that monitoring is enabled for this replication performance metric.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

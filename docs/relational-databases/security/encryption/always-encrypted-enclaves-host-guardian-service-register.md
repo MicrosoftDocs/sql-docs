@@ -336,6 +336,6 @@ The table below explains the most common values and how to remediate the errors.
 | SecureBoot | Secure Boot isn't enabled on this computer. Enable Secure Boot in the UEFI configuration menu to resolve this error. |
 | VirtualSecureMode | Virtualization-based security isn't running on this computer. Follow the guidance in [Step 2: Verify VBS is running on the computer](#step-2-verify-virtualization-based-security-is-running). |
 
-## Next steps
+## Related content
 
 - [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md)

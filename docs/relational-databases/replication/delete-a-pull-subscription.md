@@ -125,5 +125,5 @@ monikerRange: "=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-201
 
 ## Related content
 
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Subscribe to Publications](subscribe-to-publications.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)

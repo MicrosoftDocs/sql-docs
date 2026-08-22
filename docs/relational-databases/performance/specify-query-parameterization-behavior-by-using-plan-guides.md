@@ -81,4 +81,4 @@ If forced parameterization is already enabled on the database, you can override 
 ## Related content
 
 - [Query processing architecture guide](../query-processing-architecture-guide.md)
-- [sp_create_plan_guide (Transact-SQL)](../system-stored-procedures/sp-create-plan-guide-transact-sql.md)
+- [sys.sp_create_plan_guide (Transact-SQL)](../system-stored-procedures/sp-create-plan-guide-transact-sql.md)

@@ -149,7 +149,7 @@ In this article, you verify the integrity of the data in your ledger tables. If 
 ## Related content
 
 - [Ledger overview](ledger-overview.md)
-- [sys.database_ledger_digest_locations](../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
-- [sp_verify_database_ledger_from_digest_storage](../../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
-- [sp_verify_database_ledger](../../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md)
-- [sp_generate_database_ledger_digest](../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)
+- [sys.database_ledger_digest_locations (Transact-SQL)](../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
+- [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](../../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
+- [sys.sp_verify_database_ledger (Transact-SQL)](../../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md)
+- [sys.sp_generate_database_ledger_digest (Transact-SQL)](../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)

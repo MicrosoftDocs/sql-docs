@@ -118,14 +118,13 @@ AS
 > [!NOTE]  
 >  If you execute an XML template in an ADO application that is using the SQLXMLOLEDB Provider, and you specify both the **client-side-xml** attribute in the template and the provider ClientSideXML property, the value specified in the template takes precedence.  
   
-## See Also  
- [Architecture of Client-side and Server-side XML Formatting &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
- [FOR XML Security Considerations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [xml Data Type Support in SQLXML 4.0](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)   
- [SQLXML Managed Classes](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
- [Client-side vs. Server-side XML Formatting &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
- [SqlXmlCommand Object &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [XML Data &#40;SQL Server&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
-  
-  
+## Related content
+
+- [Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)
+- [FOR XML (SQL Server)](../../xml/for-xml-sql-server.md)
+- [FOR XML Security Considerations (SQLXML 4.0)](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)
+- [xml Data Type Support in SQLXML 4.0](../xml-data-type-support-in-sqlxml-4-0.md)
+- [SQLXML 4.0 .NET Framework Support - Managed Classes](../../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)
+- [Client-side vs. Server-side XML Formatting (SQLXML 4.0)](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)
+- [SQLXML Managed Classes - SqlXmlCommand Object](../../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)
+- [XML data (SQL Server)](../../xml/xml-data-sql-server.md)

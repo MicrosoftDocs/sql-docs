@@ -351,10 +351,10 @@ Transactional replication includes using the **sync with backup** option, which 
   
 ## Related content
 
-- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)
-- [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)
-- [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)
+- [Back up and restore of SQL Server databases](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Back Up and Restore Replicated Databases](back-up-and-restore-replicated-databases.md)
+- [Configure Distribution](../configure-distribution.md)
+- [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)
+- [Subscribe to Publications](../subscribe-to-publications.md)
+- [Initialize a Subscription](../initialize-a-subscription.md)
+- [Synchronize Data](../synchronize-data.md)

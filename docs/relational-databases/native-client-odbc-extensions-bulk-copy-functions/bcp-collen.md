@@ -48,7 +48,6 @@ RETCODE bcp_collen (
   
  You must call **bcp_collen** once for each column in the table whose data length you want to modify.  
   
-## See Also  
- [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
-  
-  
+## Related content
+
+- [SQL Server Driver Extensions - Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)

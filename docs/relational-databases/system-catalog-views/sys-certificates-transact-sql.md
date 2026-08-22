@@ -51,9 +51,9 @@ Returns a row for each certificate in the database.
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
 
-## See also
+## Related content
 
-- [Security Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Encryption hierarchy](../security/encryption/encryption-hierarchy.md)
 - [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)

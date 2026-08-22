@@ -54,6 +54,6 @@ f1_keywords:
   
 ## Related content
 
-- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
-- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)
-- [View Information and Perform Tasks with Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Start the Replication Monitor](monitor/start-the-replication-monitor.md)
+- [Monitoring (Replication)](monitor/monitoring-replication.md)
+- [View information and perform tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)

@@ -144,6 +144,6 @@ You also need key store permissions to be able to access column master keys for 
 - [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md)
 - [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md)
 - [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md)
-- [sys.column_encryption_keys (Transact-SQL)](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md)
+- [sys.column_encryption_keys  (Transact-SQL)](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md)
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)

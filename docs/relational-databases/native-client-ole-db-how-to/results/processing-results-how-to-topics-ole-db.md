@@ -25,7 +25,6 @@ helpviewer_keywords:
   
 -   [Fetch Rows from a Result Set &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
-## See Also  
- [OLE DB How-to Topics](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
-  
+## Related content
+
+- [OLE DB How-to Topics (Native Client OLE DB provider)](../ole-db-how-to-topics.md)

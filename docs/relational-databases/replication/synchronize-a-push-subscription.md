@@ -270,6 +270,6 @@ REM -- The following command must be supplied without line breaks.
   
 ## Related content
 
-- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)
+- [Synchronize Data](synchronize-data.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)

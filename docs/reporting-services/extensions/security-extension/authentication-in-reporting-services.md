@@ -140,4 +140,4 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 ## Related content
 
-- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)
+- [Implement a security extension](implementing-a-security-extension.md)

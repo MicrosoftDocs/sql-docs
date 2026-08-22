@@ -123,7 +123,7 @@ WHERE database_name = 'tempdb'
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [I/O Related Dynamic Management Views and Functions (Transact-SQL)](i-o-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)
-- [sys.master_files](../system-catalog-views/sys-master-files-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../system-catalog-views/sys-master-files-transact-sql.md)

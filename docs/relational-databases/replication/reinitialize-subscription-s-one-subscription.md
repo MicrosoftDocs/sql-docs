@@ -38,4 +38,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)
+- [Reinitialize Subscriptions](reinitialize-subscriptions.md)

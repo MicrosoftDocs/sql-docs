@@ -257,7 +257,6 @@ This is a list of the catalog views that are visible to the **public** role.
 - [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)
 - [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)
 - [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)
-- [EXECUTE AS Clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)
+- [EXECUTE AS clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)
 - [System catalog views (Transact-SQL)](../system-catalog-views/catalog-views-transact-sql.md)
 - [System Compatibility Views (Transact-SQL)](../system-compatibility-views/system-compatibility-views-transact-sql.md)
-

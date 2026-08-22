@@ -62,5 +62,6 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population;
 GO  
 ```  
 
-## See also  
- [Manage and Monitor Semantic Search](../search/manage-and-monitor-semantic-search.md)
+## Related content
+
+- [Manage and monitor Semantic Search](../search/manage-and-monitor-semantic-search.md)

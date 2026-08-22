@@ -54,12 +54,10 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 |sys.dm_xe_session_events.event_session_address|sys.dm_xe_sessions.address|Many-to-one|  
 |sys.dm_xe_session_events.event_package_guid,<br /><br /> sys.dm_xe_session_events.event_name|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Many-to-one|  
   
-## Next steps
+## Related content
 
-Learn more about related concepts in the following articles:
-
-- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [sys.dm_xe_sessions (Transact-SQL)](sys-dm-xe-sessions-transact-sql.md)
 - [sys.dm_xe_session_event_actions (Transact-SQL)](sys-dm-xe-session-event-actions-transact-sql.md)
-- [Extended events overview](../extended-events/extended-events.md)
-- [Quickstart: Extended events](../extended-events/quick-start-extended-events-in-sql-server.md)
+- [Extended Events overview](../extended-events/extended-events.md)
+- [Quickstart: Extended Events](../extended-events/quick-start-extended-events-in-sql-server.md)

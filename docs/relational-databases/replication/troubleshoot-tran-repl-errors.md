@@ -317,7 +317,7 @@ You can use verbose logging to see more detailed information about errors occurr
 
 ## Related content
 
-- [Transactional replication](transactional/transactional-replication.md)
+- [Transactional Replication](transactional/transactional-replication.md)
 - [Replication tutorials](replication-tutorials.md)
 
 [!INCLUDE [get-help-options](../../includes/paragraph-content/get-help-options.md)]

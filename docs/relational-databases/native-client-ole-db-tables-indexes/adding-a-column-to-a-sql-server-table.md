@@ -30,8 +30,7 @@ helpviewer_keywords:
   
  The new column name is specified as a Unicode character string in the *pwszName* member of the *uName* union in the *dbcid* member of the DBCOLUMNDESC parameter *pColumnDesc*. The *eKind* member must be DBKIND_NAME.  
   
-## See Also  
- [Tables and Indexes](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
-  
+## Related content
+
+- [Tables and Indexes in SQL Server Native Client](tables-and-indexes.md)
+- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)

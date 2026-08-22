@@ -35,7 +35,7 @@ helpviewer_keywords:
 
 ## Related content
 
-- [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)
-- [Creating a custom report item design-dime component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
-- [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)
-- [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)
+- [Creating a custom report item run-time component](creating-a-custom-report-item-run-time-component.md)
+- [Creating a custom report item design-time component](creating-a-custom-report-item-design-time-component.md)
+- [How to deploy a custom report item](how-to-deploy-a-custom-report-item.md)
+- [Custom report item class libraries](custom-report-item-class-libraries.md)

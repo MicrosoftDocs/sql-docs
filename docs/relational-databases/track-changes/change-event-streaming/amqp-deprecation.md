@@ -156,9 +156,9 @@ For more information, see [Azure Event Hubs firewall configuration per protocol]
 
 ## Related content
 
-- [Change event streaming overview](overview.md)
-- [Configure change event streaming](configure.md)
-- [Change event streaming message format](message-format.md)
+- [What is change event streaming (preview)?](overview.md)
+- [Configure change event streaming (preview) to Azure Event Hubs](configure.md)
+- [JSON message format - change event streaming](message-format.md)
 - [Change event streaming FAQ](frequently-asked-questions-faq.yml)
-- [sys.dm_change_feed_log_scan_sessions](../../system-dynamic-management-objects/sys-dm-change-feed-log-scan-sessions.md)
+- [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../../system-dynamic-management-objects/sys-dm-change-feed-log-scan-sessions.md)
 - [Azure Event Hubs firewall configuration per protocol](/azure/event-hubs/event-hubs-faq#what-ports-do-i-need-to-open-on-the-firewall)

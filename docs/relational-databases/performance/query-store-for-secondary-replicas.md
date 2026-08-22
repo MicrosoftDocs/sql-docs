@@ -246,9 +246,9 @@ Once a query is designated as captured, its runtime/wait statistics and plan can
 ## Related content
 
 - [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
-- [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md)
+- [sys.query_store_replicas (Transact-SQL)](../system-catalog-views/sys-query-store-replicas.md)
 - [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
-- [sys.sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+- [sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
 - [Query Store hints](query-store-hints.md)
 - [Query Store Usage Scenarios](query-store-usage-scenarios.md)
 - [sys.database_query_store_options (Transact-SQL)](../system-catalog-views/sys-database-query-store-options-transact-sql.md)

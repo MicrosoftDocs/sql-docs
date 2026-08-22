@@ -40,9 +40,8 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-## See Also  
- [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
-  
-  
+## Related content
+
+- [Database Mail](../database-mail/database-mail.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
+- [Database Mail stored procedures (Transact-SQL)](../system-stored-procedures/database-mail-stored-procedures-transact-sql.md)

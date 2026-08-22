@@ -117,7 +117,6 @@ You can take the following measures to prevent trigger code from executing under
 ## Related content
 
 - [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)
-- [DML Triggers](../../relational-databases/triggers/dml-triggers.md)
-- [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)
-- [Logon Triggers](../../relational-databases/triggers/logon-triggers.md)
-
+- [DML triggers](dml-triggers.md)
+- [DDL triggers](ddl-triggers.md)
+- [Logon triggers](logon-triggers.md)

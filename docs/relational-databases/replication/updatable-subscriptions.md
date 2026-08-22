@@ -31,7 +31,7 @@ f1_keywords:
   
 ## Related content
 
-- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
-- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
-- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
+- [Create a Pull Subscription](create-a-pull-subscription.md)
+- [Create a push subscription](create-a-push-subscription.md)
+- [Subscribe to Publications](subscribe-to-publications.md)
+- [Updatable Subscriptions - For Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)

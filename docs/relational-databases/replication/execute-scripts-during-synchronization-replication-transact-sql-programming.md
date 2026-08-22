@@ -37,4 +37,4 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 ## Related content
 
-- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)
+- [Synchronize Data](synchronize-data.md)

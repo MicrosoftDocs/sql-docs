@@ -67,12 +67,11 @@ WHERE __$operation = 4;
 GO  
 ```  
   
-## See Also  
- [Change Data Capture Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
- [sys.fn_cdc_get_column_ordinal &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
- [sys.fn_cdc_has_column_changed &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
-  
-  
+## Related content
+
+- [Change Data Capture Functions (Transact-SQL)](change-data-capture-functions-transact-sql.md)
+- [sys.fn_cdc_get_column_ordinal (Transact-SQL)](sys-fn-cdc-get-column-ordinal-transact-sql.md)
+- [sys.fn_cdc_has_column_changed (Transact-SQL)](sys-fn-cdc-has-column-changed-transact-sql.md)
+- [cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)](cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)
+- [cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)](cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)
+- [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)

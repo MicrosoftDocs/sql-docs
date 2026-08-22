@@ -74,9 +74,9 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
-## See also
+## Related content
 
-+ [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)
-+ [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-+ [sys.dm_external_script_execution_stats](sys-dm-external-script-execution-stats.md)
-+ [sp_execute_external_script](../system-stored-procedures/sp-execute-external-script-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_external_script_execution_stats](sys-dm-external-script-execution-stats.md)
+- [sp_execute_external_script (Transact-SQL)](../system-stored-procedures/sp-execute-external-script-transact-sql.md)

@@ -45,6 +45,6 @@ When NULL is returned as the value for **value_for_secondary**, this means that 
  
 Database scoped configuration settings will be carried over with the database. This means that when a given database is restored or attached, the existing configuration settings remain.
 
-## See Also
+## Related content
 
-[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+- [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

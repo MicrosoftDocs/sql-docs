@@ -119,7 +119,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)
-- [Transactional Replication](../../../relational-databases/replication/transactional/transactional-replication.md)
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)
+- [Peer-to-Peer - Transactional Replication](peer-to-peer-transactional-replication.md)
+- [Transactional Replication](transactional-replication.md)
+- [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)
+- [Subscribe to Publications](../subscribe-to-publications.md)

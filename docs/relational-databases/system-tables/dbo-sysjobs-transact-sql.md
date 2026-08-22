@@ -54,4 +54,4 @@ The `owner_sid` column shows which login runs Transact-SQL job steps. Grant `SEL
 
 - [SQL Server Agent overview](/ssms/agent/sql-server-agent)
 - [Select an account for the SQL Server Agent service](/ssms/agent/select-an-account-for-the-sql-server-agent-service)
-- [SQL Server Agent Tables (Transact-SQL)](sql-server-agent-tables-transact-sql.md)
+- [SQL Server Agent tables (Transact-SQL)](sql-server-agent-tables-transact-sql.md)

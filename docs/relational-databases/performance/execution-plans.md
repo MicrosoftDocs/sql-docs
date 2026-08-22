@@ -49,7 +49,7 @@ A query execution plan is the definition of:
 - [Monitor and Tune for Performance](monitor-and-tune-for-performance.md)
 - [Performance monitoring and tuning tools](performance-monitoring-and-tuning-tools.md)
 - [Query processing architecture guide](../query-processing-architecture-guide.md)
-- [Live Query Statistics](live-query-statistics.md)
+- [Live query statistics](live-query-statistics.md)
 - [Activity Monitor](../performance-monitor/activity-monitor.md)
 - [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
 - [sys.dm_exec_query_statistics_xml](../system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)

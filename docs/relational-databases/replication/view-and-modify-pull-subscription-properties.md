@@ -145,6 +145,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [View information and perform tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [View information and perform tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)
+- [Subscribe to Publications](subscribe-to-publications.md)

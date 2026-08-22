@@ -71,5 +71,5 @@ You can use encryption in [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-
 - [sys.key_encryptions (Transact-SQL)](../../system-catalog-views/sys-key-encryptions-transact-sql.md)
 - [SQL Server and Database Encryption Keys (Database Engine)](sql-server-and-database-encryption-keys-database-engine.md)
 - [Back up and restore SQL Server Reporting Services (SSRS) encryption keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
-- [Configure SQL Server Database Engine for encrypting connections](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
+- [Encrypt connections to SQL Server by importing a certificate](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
 - [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 Security and Protection](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)

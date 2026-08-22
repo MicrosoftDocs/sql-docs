@@ -91,5 +91,5 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
 ## Related content
 
-- [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)
-- [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+- [File share delivery in Reporting Services](../subscriptions/file-share-delivery-in-reporting-services.md)
+- [Create and manage subscriptions for native mode report servers](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)

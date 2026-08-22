@@ -28,6 +28,9 @@ monikerRange: "=azure-sqldw-latest"
 
 Requires VIEW SERVER STATE permission.
 
-## Next steps
-  
-For a list of all the catalog views for Azure Synapse Analytics and Parallel Data Warehouse, see [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload classifier, see [CREATE WORKLOAD CLASSIFIER](../../t-sql/statements/create-workload-classifier-transact-sql.md). For more information on workload classification, see Azure Synapse Analytics [Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) and [Workload Importance](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [CREATE WORKLOAD CLASSIFIER (Transact-SQL)](../../t-sql/statements/create-workload-classifier-transact-sql.md)
+- [Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+- [Workload Importance](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

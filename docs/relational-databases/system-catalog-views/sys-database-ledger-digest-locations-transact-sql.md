@@ -29,8 +29,8 @@ For more information on database ledger, see [Ledger](/azure/azure-sql/database/
 
 Requires the **VIEW LEDGER CONTENT** permission.
 
-## See also
+## Related content
 
-- [Digest Management](../security/ledger/ledger-digest-management.md)
-- [Configure automatic database digests](../security/ledger/ledger-how-to-enable-automatic-digest-storage.md)
-- [Ledger Overview](../security/ledger/ledger-overview.md)
+- [Digest management](../security/ledger/ledger-digest-management.md)
+- [Enable automatic digest storage](../security/ledger/ledger-how-to-enable-automatic-digest-storage.md)
+- [Ledger overview](../security/ledger/ledger-overview.md)

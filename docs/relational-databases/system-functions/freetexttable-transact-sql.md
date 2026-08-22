@@ -152,19 +152,20 @@ GO
 > [!NOTE]
 >  The LANGUAGE *language_term* parameter is not required to use the *top_n_by_rank* parameter.  
   
-## See Also  
- [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
- [Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
- [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](/ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools)   
- [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
- [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [precompute rank Server Configuration Option](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
- [Compare features in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)
+## Related content
+
+- [Get Started with Full-Text Search](../search/get-started-with-full-text-search.md)
+- [Create and Manage Full-Text Catalogs](../search/create-and-manage-full-text-catalogs.md)
+- [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)
+- [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)
+- [Create and manage full-text indexes](../search/create-and-manage-full-text-indexes.md)
+- [Query with Full-Text Search](../search/query-with-full-text-search.md)
+- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](/ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools)
+- [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)
+- [CONTAINSTABLE (Transact-SQL)](containstable-transact-sql.md)
+- [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)
+- [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)
+- [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
+- [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)
+- [Discontinued Database Engine functionality in SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)
+- [Compare features in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)

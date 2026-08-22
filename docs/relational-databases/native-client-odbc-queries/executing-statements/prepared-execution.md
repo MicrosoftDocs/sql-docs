@@ -36,6 +36,6 @@ helpviewer_keywords:
   
  Some early ODBC applications used **SQLPrepare** any time [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) was used. **SQLBindParameter** does not require the use of **SQLPrepare**, it can be used with **SQLExecDirect**. For example, use **SQLExecDirect** with **SQLBindParameter** to retrieve the return code or output parameters from a stored procedure that is only executed one time. Do not use **SQLPrepare** with **SQLBindParameter** unless the same statement will be executed multiple times.  
   
-## See Also  
- [Executing Statements &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
-  
+## Related content
+
+- [Executing Statements (ODBC)](executing-statements-odbc.md)

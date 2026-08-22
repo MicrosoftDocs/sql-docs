@@ -55,11 +55,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |User connections|Too many users may be accessing the server simultaneously causing performance degradation.|  
 |Blocking locks|Incorrectly designed applications can cause locks and hamper concurrency, thus causing longer response times and lower transaction throughput rates.|  
   
-## See Also  
- [Monitor CPU Usage](../../relational-databases/performance-monitor/monitor-cpu-usage.md)   
- [Monitor Disk Usage](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
- [Monitor Memory Usage](../../relational-databases/performance-monitor/monitor-memory-usage.md)   
- [SQL Server, General Statistics Object](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)   
- [SQL Server, Locks Object](../../relational-databases/performance-monitor/sql-server-locks-object.md)  
-  
-  
+## Related content
+
+- [Monitor CPU Usage](../performance-monitor/monitor-cpu-usage.md)
+- [Monitor Disk Usage](../performance-monitor/monitor-disk-usage.md)
+- [Monitor memory usage](../performance-monitor/monitor-memory-usage.md)
+- [SQL Server, General Statistics object](../performance-monitor/sql-server-general-statistics-object.md)
+- [SQL Server, Locks object](../performance-monitor/sql-server-locks-object.md)

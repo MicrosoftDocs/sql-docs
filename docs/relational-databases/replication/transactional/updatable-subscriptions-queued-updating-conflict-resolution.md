@@ -73,4 +73,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
+- [Updatable Subscriptions - For Transactional Replication](updatable-subscriptions-for-transactional-replication.md)

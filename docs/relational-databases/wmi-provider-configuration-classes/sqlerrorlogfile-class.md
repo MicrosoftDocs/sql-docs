@@ -92,7 +92,7 @@ To connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log fi
 
 If you're connecting through a firewall, ensure that an exception is set in the firewall for WMI on remote target computers. For more information, see [Connecting to WMI Remotely Starting with Windows Vista](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista).
 
-## See also
+## Related content
 
-- [SqlErrorLogEvent Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)
-- [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md)
+- [SqlErrorLogEvent class](sqlerrorlogevent-class.md)
+- [View Offline Log Files](../logs/view-offline-log-files.md)

@@ -337,7 +337,7 @@ For more tutorials on various external data sources, review:
 
 ## Related content
 
-- [Data virtualization with PolyBase in SQL Server](overview.md)
+- [PolyBase overview](overview.md)
 - [Frequently asked questions in PolyBase](polybase-faq.yml)
 - [Performance considerations in PolyBase for SQL Server](polybase-performance.md)
 - [PolyBase configuration and security for Hadoop](polybase-configuration.md)

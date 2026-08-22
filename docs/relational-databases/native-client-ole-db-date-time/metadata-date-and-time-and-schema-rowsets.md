@@ -82,6 +82,6 @@ helpviewer_keywords:
   
  OLE DB only defines MINIMUM_SCALE and MAXIMUM_SCALE for numeric and decimal types, so [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client's use of these columns for time, datetime2 and datetimeoffset is non-standard.  
   
-## See Also  
- [Metadata &#40;OLE DB&#41;](./data-type-support-for-ole-db-date-and-time-improvements.md)  
-  
+## Related content
+
+- [SQL Server Native Client Data Type Support for OLE DB Date and Time Improvements](data-type-support-for-ole-db-date-and-time-improvements.md)

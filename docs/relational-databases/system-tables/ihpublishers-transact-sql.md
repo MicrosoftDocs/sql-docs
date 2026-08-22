@@ -30,12 +30,11 @@ dev_langs:
 |**flush_request_time**|**datetime**|Indicates the date and time when the last change occurred to article metadata that required the Log Reader Agent to update its metadata cache.|  
 |**version**|**sysname**|A text string that characterizes the version of the non-SQL Server Publisher.|  
   
-## See Also  
- [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)  
-  
-  
+## Related content
+
+- [Heterogeneous Database Replication](../replication/non-sql/heterogeneous-database-replication.md)
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
+- [sys.sp_adddistpublisher (Transact-SQL)](../system-stored-procedures/sp-adddistpublisher-transact-sql.md)
+- [sys.sp_changedistpublisher (Transact-SQL)](../system-stored-procedures/sp-changedistpublisher-transact-sql.md)
+- [sys.sp_helpdistpublisher (Transact-SQL)](../system-stored-procedures/sp-helpdistpublisher-transact-sql.md)

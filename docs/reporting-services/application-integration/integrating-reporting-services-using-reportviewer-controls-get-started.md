@@ -268,4 +268,4 @@ Let the team know about issues on the [Reporting Services forums](/answers/topic
 
 ## Related content
 
-- [Data collection in the Report Viewer control](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
+- [Integrate Reporting Services by using ReportViewer controls - data collection](integrating-reporting-services-using-reportviewer-controls-data-collection.md)

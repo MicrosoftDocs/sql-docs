@@ -48,6 +48,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)
-- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
-- [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)
+- [Configure Publishing and Distribution](configure-publishing-and-distribution.md)
+- [Configure Distribution](configure-distribution.md)
+- [Secure the Distributor](security/secure-the-distributor.md)

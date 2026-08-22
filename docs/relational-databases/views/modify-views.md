@@ -86,7 +86,6 @@ To execute ALTER VIEW, at a minimum, ALTER permission on OBJECT is required.
    GO
    ```
 
-## Next steps
+## Related content
 
 - [ALTER VIEW (Transact-SQL)](../../t-sql/statements/alter-view-transact-sql.md)
-

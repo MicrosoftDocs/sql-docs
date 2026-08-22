@@ -63,5 +63,6 @@ SELECT * FROM sys.dm_cryptographic_provider_keys(1234567);
 GO  
 ```  
   
-## See Also  
- [Extensible Key Management &#40;EKM&#41;](../security/encryption/extensible-key-management-ekm.md)
+## Related content
+
+- [Extensible Key Management (EKM)](../security/encryption/extensible-key-management-ekm.md)

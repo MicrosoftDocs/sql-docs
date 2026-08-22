@@ -31,8 +31,8 @@ For Azure SQL Managed Instance, the snapshot folder must be an Azure file share.
   
 ## Related content
 
-- [Modify snapshot options](../../relational-databases/replication/snapshot-options.md)
-- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
-- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)
-- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
-- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
+- [Modify Snapshot Initialization Options for SQL Replication](snapshot-options.md)
+- [Configure Distribution](configure-distribution.md)
+- [Configure Publishing and Distribution](configure-publishing-and-distribution.md)
+- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)
+- [Initialize a Subscription with a Snapshot for a New Publication](initialize-a-subscription-with-a-snapshot.md)

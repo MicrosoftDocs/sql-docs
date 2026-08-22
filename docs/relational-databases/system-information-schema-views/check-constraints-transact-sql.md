@@ -35,10 +35,9 @@ To retrieve information from these views, specify the fully qualified name of **
 |**CONSTRAINT_NAME**|**sysname**|Constraint name.|  
 |**CHECK_CLAUSE**|**nvarchar(**4000**)**|Actual text of the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition statement.|  
   
-## See Also
+## Related content
 
-- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
-- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-- [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)
-- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)
-
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [sys.check_constraints (Transact-SQL)](../system-catalog-views/sys-check-constraints-transact-sql.md)
+- [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)

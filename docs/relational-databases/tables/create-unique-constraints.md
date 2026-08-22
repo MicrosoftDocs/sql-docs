@@ -125,4 +125,4 @@ Requires ALTER permission on the table.
 
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
-- [table_constraint (Transact-SQL)](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)
+- [ALTER TABLE table_constraint (Transact-SQL)](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)

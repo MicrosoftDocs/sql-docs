@@ -134,8 +134,8 @@ When possible, prompt users to enter security credentials at runtime. If you mus
   
 ## Related content
 
-- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)
-- [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Create a publication](create-a-publication.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)
+- [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md)
+- [Filter Published Data](filter-published-data.md)
+- [Publish Data and Database Objects](publish-data-and-database-objects.md)

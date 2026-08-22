@@ -70,7 +70,6 @@ Requires ALTER permission on the table.
  For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>   
-## See Also  
- [Specify Schema Options](../../relational-databases/replication/publish/specify-schema-options.md)  
-  
-  
+## Related content
+
+- [Specify Schema Options for SQL Server replication](../replication/publish/specify-schema-options.md)

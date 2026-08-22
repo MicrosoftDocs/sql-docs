@@ -54,4 +54,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)
+- [Implement a security extension](implementing-a-security-extension.md)

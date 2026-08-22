@@ -24,6 +24,6 @@ apitype: "MOFDef"
   
  **Note:** The [SqlServerAlias Class](#sqlserveralias-class) inherits the **Put** method from the Provider class. However, it does not return any results as indicated by the **Provider::Put** method. For more information, see the WMI documentation.  
   
-## See Also  
- [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
-  
+## Related content
+
+- [Configure client protocols](../../../database-engine/configure-windows/configure-client-protocols.md)

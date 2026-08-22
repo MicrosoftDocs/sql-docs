@@ -47,8 +47,8 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)
-- [Initialize a Subscription with a Snapshot](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
-- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
-- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
-- [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)
+- [Modify Snapshot Initialization Options for SQL Replication](../snapshot-options.md)
+- [Initialize a Subscription with a Snapshot for a New Publication](../initialize-a-subscription-with-a-snapshot.md)
+- [Replication Security Best Practices](replication-security-best-practices.md)
+- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [Deliver a Snapshot Through FTP](../publish/deliver-a-snapshot-through-ftp.md)

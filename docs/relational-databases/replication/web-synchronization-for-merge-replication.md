@@ -76,5 +76,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)
-- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)
+- [Configure Web Synchronization](configure-web-synchronization.md)
+- [Topologies for Web Synchronization](topologies-for-web-synchronization.md)

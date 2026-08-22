@@ -89,6 +89,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
   
  The output shows that all versions are created by `database_id``9` and that the versions generate from two tables.  
   
-## See also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](transaction-related-dynamic-management-views-and-functions-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)

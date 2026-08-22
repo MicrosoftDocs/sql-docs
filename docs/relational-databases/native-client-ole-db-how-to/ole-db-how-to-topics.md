@@ -49,7 +49,6 @@ helpviewer_keywords:
   
 -   [Use Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
-## See Also  
- [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Programming](../native-client/sql-server-native-client-programming.md)

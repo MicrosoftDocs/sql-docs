@@ -58,4 +58,4 @@ Runs the policy in evaluation mode. This generates a compliance report for the t
 ## Related content
 
 - [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)
-- [Evaluate policies dialog box, evaluation results page](evaluate-policies-dialog-box-evaluation-results-page.md)
+- [Evaluate Policies dialog box, Evaluation Results page](evaluate-policies-dialog-box-evaluation-results-page.md)

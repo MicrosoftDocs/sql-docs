@@ -179,8 +179,8 @@ When you apply cumulatives updates or service packs to an instance, at restart, 
 
 ## Related content
 
-* [CDC with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview)
-* [Track Data Changes (SQL Server)](track-data-changes-sql-server.md)
-* [About change data capture (SQL Server)](about-change-data-capture-sql-server.md)
-* [Enable and Disable change data capture (SQL Server)](enable-and-disable-change-data-capture-sql-server.md)
-* [Work with Change Data (SQL Server)](work-with-change-data-sql-server.md)
+- [CDC with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview)
+- [Track data changes (SQL Server)](track-data-changes-sql-server.md)
+- [What is change data capture (CDC)?](about-change-data-capture-sql-server.md)
+- [Enable and disable change data capture](enable-and-disable-change-data-capture-sql-server.md)
+- [Work with Change Data](work-with-change-data-sql-server.md)

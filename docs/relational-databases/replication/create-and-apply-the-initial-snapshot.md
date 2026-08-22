@@ -269,12 +269,12 @@ To work around this issue, specify a different subscriber database for each publ
 
 ## Related content
 
-- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
-- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
-- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
-- [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)
-- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
-- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
-- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Use sqlcmd with Scripting Variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
+- [Create a publication](publish/create-a-publication.md)
+- [Create a Pull Subscription](create-a-pull-subscription.md)
+- [Create a push subscription](create-a-push-subscription.md)
+- [Specify Synchronization Schedules](specify-synchronization-schedules.md)
+- [Initialize a Subscription with a Snapshot for a New Publication](initialize-a-subscription-with-a-snapshot.md)
+- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)
+- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)
+- [Use sqlcmd with scripting variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

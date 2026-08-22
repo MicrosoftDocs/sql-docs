@@ -66,11 +66,10 @@ FROM cdc.fn_cdc_get_net_changes_HumanResources_Employee
 GO  
 ```  
   
-## See Also  
- [Change Data Capture Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
- [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.fn_cdc_is_bit_set &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
-  
-  
+## Related content
+
+- [Change Data Capture Functions (Transact-SQL)](change-data-capture-functions-transact-sql.md)
+- [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)
+- [sys.sp_cdc_help_change_data_capture (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)
+- [sys.sp_cdc_get_captured_columns (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)
+- [sys.fn_cdc_is_bit_set (Transact-SQL)](sys-fn-cdc-is-bit-set-transact-sql.md)

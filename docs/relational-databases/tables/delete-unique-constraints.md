@@ -82,4 +82,4 @@ Requires ALTER permission on the table.
 
 ## Related content
 
-- [Check constraints](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md)
+- [DBCC CHECKCONSTRAINTS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md)

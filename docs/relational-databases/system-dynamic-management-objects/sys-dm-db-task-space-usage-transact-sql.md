@@ -98,11 +98,12 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 |`dm_db_task_space_usage.request_id`|`dm_exec_requests.request_id`|One-to-one|  
 |`dm_db_task_space_usage.session_id`|`dm_exec_requests.session_id`|One-to-one|  
   
-## Next steps
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](database-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_os_tasks &#40;Transact-SQL&#41;](sys-dm-os-tasks-transact-sql.md)   
- [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](sys-dm-db-session-space-usage-transact-sql.md)   
- [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](sys-dm-db-file-space-usage-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
+- [sys.dm_exec_sessions (Transact-SQL)](sys-dm-exec-sessions-transact-sql.md)
+- [sys.dm_exec_requests (Transact-SQL)](sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_os_tasks (Transact-SQL)](sys-dm-os-tasks-transact-sql.md)
+- [sys.dm_db_session_space_usage (Transact-SQL)](sys-dm-db-session-space-usage-transact-sql.md)
+- [sys.dm_db_file_space_usage (Transact-SQL)](sys-dm-db-file-space-usage-transact-sql.md)

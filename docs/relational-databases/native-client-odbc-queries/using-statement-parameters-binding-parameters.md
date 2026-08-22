@@ -51,6 +51,6 @@ helpviewer_keywords:
   
  If **SQL_DESC_NAME** is set for a stored procedure parameter, all stored procedure parameters in the query should also set **SQL_DESC_NAME**.  If literals are used in stored procedure calls, where parameters have **SQL_DESC_NAME** set, the literals should use the format *'name*=*value*', where *name* is the stored procedure parameter name (for example, @p1). For more information, see [Binding Parameters by Name (Named Parameters)](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md).  
   
-## See Also  
- [Using Statement Parameters](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
-  
+## Related content
+
+- [Using Statement Parameters](using-statement-parameters.md)

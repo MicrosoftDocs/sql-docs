@@ -118,4 +118,4 @@ Use stored procedures to configure last write wins. See [Configure last writer c
 
 ## Related content
 
-- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)
+- [Peer-to-Peer - Transactional Replication](peer-to-peer-transactional-replication.md)

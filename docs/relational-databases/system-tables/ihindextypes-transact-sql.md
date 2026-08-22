@@ -24,9 +24,8 @@ dev_langs:
 |-----------------|---------------|-----------------|  
 |**type**|**nvarchar(255)**|The name of a supported non-SQL Server index type.|  
   
-## See Also  
- [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Heterogeneous Database Replication](../replication/non-sql/heterogeneous-database-replication.md)
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

@@ -47,7 +47,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*bClass*|Severity of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message.|  
 |*wLineNumber*|When applicable, the line number of a stored procedure on which the error occurred.|  
   
-## See Also  
- [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
+## Related content
+
+- [SQL Server Native Client Errors](errors.md)
+- [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)

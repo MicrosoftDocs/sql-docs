@@ -54,17 +54,15 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## See Also
+## Related content
 
-- [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
-- [Catalog views](catalog-views-transact-sql.md)
-- [Object catalog views](object-catalog-views-transact-sql.md)
-- [sys.indexes](sys-xml-indexes-transact-sql.md)
-- [sys.index_columns](sys-index-columns-transact-sql.md)
-- [sys.xml_indexes](sys-xml-indexes-transact-sql.md)
-- [sys.objects](sys-index-columns-transact-sql.md)
-- [sys.key_constraints](sys-key-constraints-transact-sql.md)
-- [sys.filegroups](sys-filegroups-transact-sql.md)
-- [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [sys.xml_indexes (Transact-SQL)](sys-xml-indexes-transact-sql.md)
+- [sys.index_columns (Transact-SQL)](sys-index-columns-transact-sql.md)
+- [sys.key_constraints (Transact-SQL)](sys-key-constraints-transact-sql.md)
+- [sys.filegroups (Transact-SQL)](sys-filegroups-transact-sql.md)
+- [sys.partition_schemes (Transact-SQL)](sys-partition-schemes-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)

@@ -39,5 +39,5 @@ A link to information if an error occurs.
 ## Related content
 
 - [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)
-- [Evaluate policies dialog box, policy selection page](evaluate-policies-dialog-box-policy-selection-page.md)
-- [Results detailed view dialog box](results-detailed-view-dialog-box.md)
+- [Evaluate Policies dialog box, Policy Selection page](evaluate-policies-dialog-box-policy-selection-page.md)
+- [Results Detailed View dialog box](results-detailed-view-dialog-box.md)

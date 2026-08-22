@@ -123,9 +123,7 @@ GO
   
  A similar DDL trigger example is provided with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To obtain the example, locate the Database Triggers folder by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This folder is located under the **Programmability** folder of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Right-click **ddlDatabaseTriggerLog** and select **Script Database Trigger as**. By default, DDL trigger **ddlDatabaseTriggerLog** is disabled.  
   
-## See Also  
- [DDL Events](../../relational-databases/triggers/ddl-events.md)   
- [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md)  
-  
-  
+## Related content
 
+- [DDL Events](ddl-events.md)
+- [DDL Event Groups](ddl-event-groups.md)

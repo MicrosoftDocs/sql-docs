@@ -50,10 +50,9 @@ Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Related content
 
-- [Query Store for readable secondaries](../performance/query-store-for-secondary-replicas.md)
+- [Query Store for readable secondary replicas (preview)](../performance/query-store-for-secondary-replicas.md)
 - [sys.database_query_store_internal_state (Transact-SQL)](sys-database-query-store-internal-state-transact-sql.md)
 - [sys.query_store_plan (Transact-SQL)](sys-query-store-plan-transact-sql.md)
 - [sys.query_store_query (Transact-SQL)](sys-query-store-query-transact-sql.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [Best practices for monitoring workloads with Query Store](../performance/best-practice-with-the-query-store.md)
-

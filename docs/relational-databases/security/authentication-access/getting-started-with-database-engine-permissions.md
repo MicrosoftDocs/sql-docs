@@ -269,7 +269,7 @@ FROM sys.database_role_members AS dRo
 - [Security Catalog Views (Transact-SQL)](../../system-catalog-views/security-catalog-views-transact-sql.md)
 - [sys.fn_builtin_permissions (Transact-SQL)](../../system-functions/sys-fn-builtin-permissions-transact-sql.md)
 - [Determine effective Database Engine permissions](determining-effective-database-engine-permissions.md)
-- [Tutorial: Getting Started with the Database Engine](../../tutorial-getting-started-with-the-database-engine.md)
+- [Tutorial: Get started with the Database Engine](../../tutorial-getting-started-with-the-database-engine.md)
 - [Lesson 1: Create and query database objects](../../../t-sql/lesson-1-creating-database-objects.md)
 - [Tutorial: SQL Server Management Studio](/ssms/quickstarts/ssms-connect-query-sql-server)
 - [Tutorial: Write Transact-SQL statements](../../../t-sql/tutorial-writing-transact-sql-statements.md)

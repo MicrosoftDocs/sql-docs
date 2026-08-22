@@ -72,5 +72,5 @@ GO
 - [sys.database_audit_specifications (Transact-SQL)](../system-catalog-views/sys-database-audit-specifications-transact-sql.md)
 - [sys.database_audit_specification_details (Transact-SQL)](../system-catalog-views/sys-database-audit-specification-details-transact-sql.md)
 - [sys.dm_server_audit_status (Transact-SQL)](sys-dm-server-audit-status-transact-sql.md)
-- [sys.dm_audit_class_type_map](sys-dm-audit-class-type-map-transact-sql.md)
+- [sys.dm_audit_class_type_map (Transact-SQL)](sys-dm-audit-class-type-map-transact-sql.md)
 - [Create a Server Audit and Server Audit Specification](../security/auditing/create-a-server-audit-and-server-audit-specification.md)

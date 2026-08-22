@@ -81,7 +81,6 @@ helpviewer_keywords:
   
 -   **N/A**: Existing [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and earlier behavior is maintained.  
   
-## See Also  
- [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+## Related content
+
+- [Date and Time Improvements (ODBC)](date-and-time-improvements-odbc.md)

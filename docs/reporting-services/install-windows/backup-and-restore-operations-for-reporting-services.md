@@ -63,10 +63,10 @@ ms.custom:
 
 ## Related content
 
-- [Report server database](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [rskeymgmt utility](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)
-- [Copy databases with backup and restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)
-- [Administer a report server database](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
-- [Configure and manage encryption keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+- [Report server database (SSRS native mode)](../report-server/report-server-database-ssrs-native-mode.md)
+- [Reporting Services configuration files](../report-server/reporting-services-configuration-files.md)
+- [rskeymgmt utility (SSRS)](../tools/rskeymgmt-utility-ssrs.md)
+- [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)
+- [Administer a report server database (SSRS native mode)](../report-server/administer-a-report-server-database-ssrs-native-mode.md)
+- [Configure and Manage Encryption Keys (Report Server Configuration Manager)](ssrs-encryption-keys-manage-encryption-keys.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

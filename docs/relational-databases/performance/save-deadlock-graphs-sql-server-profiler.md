@@ -55,7 +55,6 @@ helpviewer_keywords:
   
  After you save the deadlock file, you can open the file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Open, view, and print a deadlock file &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   
-## See also  
- [Analyze deadlocks with SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
-  
-  
+## Related content
+
+- [Analyze deadlocks with SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)

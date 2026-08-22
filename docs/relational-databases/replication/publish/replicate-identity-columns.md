@@ -119,8 +119,8 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)
-- [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)
-- [IDENT_CURRENT &#40;Transact-SQL&#41;](../../../t-sql/functions/ident-current-transact-sql.md)
-- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)
-- [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md)
+- [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)
+- [DBCC CHECKIDENT (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)
+- [IDENT_CURRENT (Transact-SQL)](../../../t-sql/functions/ident-current-transact-sql.md)
+- [CREATE TABLE (Transact-SQL) IDENTITY (Property)](../../../t-sql/statements/create-table-transact-sql-identity-property.md)
+- [sys.sp_adjustpublisheridentityrange (Transact-SQL)](../../system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md)

@@ -47,7 +47,6 @@ managed_backup.fn_is_master_switch_on ()
 ### Permissions  
  Requires SELECT permissions on the function.  
   
-## See Also  
- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
-  
-  
+## Related content
+
+- [SQL Server managed backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

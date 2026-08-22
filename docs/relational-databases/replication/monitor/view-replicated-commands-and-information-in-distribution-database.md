@@ -34,4 +34,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Programmatically Monitor Replication](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)
+- [Programmatically Monitor Replication](programmatically-monitor-replication.md)

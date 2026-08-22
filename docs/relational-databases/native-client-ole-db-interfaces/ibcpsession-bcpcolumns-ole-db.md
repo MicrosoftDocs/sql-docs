@@ -55,7 +55,7 @@ HRESULT BCPColumns(
  E_OUTOFMEMORY  
  Out-of-memory error.  
   
-## See Also  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
- [Performing Bulk Copy Operations](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
-  
+## Related content
+
+- [IBCPSession (Native Client OLE DB Provider)](ibcpsession-ole-db.md)
+- [Performing Bulk Copy Operations in SQL Server Native Client](../native-client/features/performing-bulk-copy-operations.md)

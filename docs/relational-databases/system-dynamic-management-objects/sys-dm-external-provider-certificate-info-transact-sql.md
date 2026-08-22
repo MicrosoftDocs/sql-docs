@@ -30,9 +30,8 @@ Principals must have the **VIEW SERVER SECURITY STATE** permission.
   
 The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).
   
-## See also
+## Related content
 
-- [Set up Microsoft Entra authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Tutorial: Set up Microsoft Entra authentication for SQL Server with app registration](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Microsoft Entra authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-overview.md)
 - [Linked server for SQL Server with Microsoft Entra authentication](../security/authentication-access/azure-ad-authentication-sql-server-linked-server.md)
-- [Tutorial: Using automation to set up the Microsoft Entra admin for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)

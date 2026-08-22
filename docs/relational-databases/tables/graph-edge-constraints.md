@@ -376,9 +376,9 @@ FROM sys.edge_constraints EC
 WHERE EC.parent_object_id = object_id('bought');
 ```
 
-## Next steps
+## Related content
 
-- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)
-- [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
+- [SQL Graph Architecture](../graphs/sql-graph-architecture.md)
+- [Create a graph database and run some pattern matching queries using T-SQL](../graphs/sql-graph-sample.md)
 - [CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)
-- [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)
+- [ALTER TABLE table_constraint (Transact-SQL)](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)

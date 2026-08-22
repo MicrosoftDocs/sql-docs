@@ -46,6 +46,6 @@ Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[
   
 ## Related content
 
-- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
-- [Glossary of Terms for Oracle Publishing](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)
-- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)
+- [Configure an Oracle Publisher](configure-an-oracle-publisher.md)
+- [Glossary of Terms for Oracle Publishing](glossary-of-terms-for-oracle-publishing.md)
+- [Heterogeneous Database Replication](heterogeneous-database-replication.md)

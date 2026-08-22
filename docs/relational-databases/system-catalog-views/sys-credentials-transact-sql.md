@@ -40,11 +40,10 @@ For database-level credentials, see [sys.database_scoped_credentials](../../rela
 ## Permissions  
  Requires either `VIEW ANY DEFINITION` permission or `ALTER ANY CREDENTIAL` permission. In addition, the principal must not be denied `VIEW ANY DEFINITION` permission.  
   
-## See Also  
- [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
- [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.database_scoped_credentials (Transact-SQL)](sys-database-scoped-credentials-transact-sql.md)
+- [Credentials (Database Engine)](../security/authentication-access/credentials-database-engine.md)
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [Principals (Database Engine)](../security/authentication-access/principals-database-engine.md)
+- [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)

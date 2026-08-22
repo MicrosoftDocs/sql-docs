@@ -76,7 +76,7 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
 
 ## Related content
 
-- [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-- [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
-- [Install Reporting Services native mode report server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)
+- [Configure report server URLs (Report Server Configuration Manager)](configure-report-server-urls-ssrs-configuration-manager.md)
+- [Configure a URL (Report Server Configuration Manager)](configure-a-url-ssrs-configuration-manager.md)
+- [Install a Reporting Services 2016 native mode report server](install-reporting-services-native-mode-report-server.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -141,12 +141,9 @@ ORDER BY PartitionFunction, PartitionScheme, SchemaName, PartitionedTable;
   
 1. In the **Delete Object** dialog box, ensure that the correct partition function is selected, and then select **OK**. 
 
-## Next steps
-
-Learn more about related concepts in the following articles:
+## Related content
 
 - [Partitioned tables and indexes](partitioned-tables-and-indexes.md)
 - [Create partitioned tables and indexes](create-partitioned-tables-and-indexes.md)
-- [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)
+- [ALTER PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/alter-partition-function-transact-sql.md)
 - [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition)
-

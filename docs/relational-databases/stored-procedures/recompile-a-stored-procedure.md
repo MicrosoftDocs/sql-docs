@@ -106,13 +106,11 @@ EXEC sp_recompile N'dbo.uspProductByVendor';
 GO
 ```  
   
-## Next steps
+## Related content
 
- [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [Modify a Stored Procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
- [Rename a Stored Procedure](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   
- [View the Definition of a Stored Procedure](../../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md)   
- [View the Dependencies of a Stored Procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)  
-  
-  
+- [Create a stored procedure](create-a-stored-procedure.md)
+- [Modify a stored procedure](modify-a-stored-procedure.md)
+- [Rename a Stored Procedure](rename-a-stored-procedure.md)
+- [View the definition of a stored procedure](view-the-definition-of-a-stored-procedure.md)
+- [View the Dependencies of a Stored Procedure](view-the-dependencies-of-a-stored-procedure.md)
+- [DROP PROCEDURE (Transact-SQL)](../../t-sql/statements/drop-procedure-transact-sql.md)

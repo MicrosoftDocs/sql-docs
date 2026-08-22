@@ -199,7 +199,7 @@ FROM sys.databases AS a;
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL) compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-- [sys.database_mirroring_witnesses (Transact-SQL)](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
 - [sys.database_recovery_status (Transact-SQL)](sys-database-recovery-status-transact-sql.md)
 - [Databases and Files Catalog Views (Transact-SQL)](databases-and-files-catalog-views-transact-sql.md)
 - [sys.dm_database_copies (Azure SQL Database)](../system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)

@@ -84,5 +84,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
-- [Create Identical Symmetric Keys on Two Servers](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)
+- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [Create identical symmetric keys on two servers](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)

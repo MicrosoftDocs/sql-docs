@@ -43,12 +43,12 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
 
 Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
-## See also  
-  
- [Index Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](sys-dm-db-index-physical-stats-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../system-catalog-views/sys-objects-transact-sql.md)   
- [Monitor and Tune for Performance](../performance/monitor-and-tune-for-performance.md)  
- [Columnstore indexes: Overview](../indexes/columnstore-indexes-overview.md)
+## Related content
+
+- [Index Related Dynamic Management Views and Functions (Transact-SQL)](index-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_db_index_physical_stats (Transact-SQL)](sys-dm-db-index-physical-stats-transact-sql.md)
+- [sys.dm_db_index_operational_stats (Transact-SQL)](sys-dm-db-index-operational-stats-transact-sql.md)
+- [sys.indexes (Transact-SQL)](../system-catalog-views/sys-indexes-transact-sql.md)
+- [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)
+- [Monitor and Tune for Performance](../performance/monitor-and-tune-for-performance.md)
+- [Columnstore indexes: overview](../indexes/columnstore-indexes-overview.md)

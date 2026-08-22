@@ -24,7 +24,6 @@ helpviewer_keywords:
   
 -   [Commands Generating Multiple-Rowset Results](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)

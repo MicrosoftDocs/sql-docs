@@ -48,8 +48,8 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)
-- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
-- [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)
-- [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)
-- [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)
+- [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)
+- [Identity and Access Control (Replication)](security/identity-and-access-control-replication.md)
+- [Replication Agent Security Model](security/replication-agent-security-model.md)
+- [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md)

@@ -117,7 +117,6 @@ $ru.UnbindFromColumn("Product", "SellEndDate", "Production")
 $ru.Drop()  
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.Rule>  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.Rule>

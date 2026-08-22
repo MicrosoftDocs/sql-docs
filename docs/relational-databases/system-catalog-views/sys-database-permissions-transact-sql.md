@@ -226,12 +226,9 @@ principal_id    name    type_desc    authentication_type_desc    state_desc    p
 
 ## Related content
 
-- [Securables](../../relational-databases/security/securables.md)
-- [Permissions Hierarchy (Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)
-- [Security Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-
-## Next steps
-
+- [Securables](../security/securables.md)
+- [Permissions Hierarchy (Database Engine)](../security/permissions-hierarchy-database-engine.md)
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [Grant a Permission to a Principal](../security/authentication-access/grant-a-permission-to-a-principal.md)
 - [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)

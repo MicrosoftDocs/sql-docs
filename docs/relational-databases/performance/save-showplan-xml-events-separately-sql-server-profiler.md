@@ -56,7 +56,6 @@ helpviewer_keywords:
   
 11. To view the **Showplan XML** event file in SQL Server Management Studio, on the **File** menu, point to **Open**, and select **File**. Browse to the directory where you saved the **Showplan XML** event file or files to select one and open it. **Showplan XML** event files have a .SQLPlan file extension.  
 
-## See also  
- [Analyze queries with Showplan results in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
-  
-  
+## Related content
+
+- [Analyze queries with SHOWPLAN results in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)

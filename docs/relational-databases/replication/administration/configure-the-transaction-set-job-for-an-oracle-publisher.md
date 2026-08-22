@@ -52,5 +52,5 @@ dev_langs:
   
 ## Related content
 
-- [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Performance Tuning for Oracle Publishers](../non-sql/performance-tuning-for-oracle-publishers.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)

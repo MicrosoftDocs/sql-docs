@@ -48,7 +48,6 @@ SELECT * FROM sys.fulltext_semantic_languages;
 GO  
 ```  
   
-## See Also  
- [Install and Configure Semantic Search](../../relational-databases/search/install-and-configure-semantic-search.md)  
-  
-  
+## Related content
+
+- [Install and Configure Semantic Search](../search/install-and-configure-semantic-search.md)

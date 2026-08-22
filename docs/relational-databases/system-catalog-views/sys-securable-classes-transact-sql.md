@@ -40,8 +40,6 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 SELECT * FROM sys.securable_classes ORDER BY class;  
 ```  
   
-## See Also  
- [Securables](../../relational-databases/security/securables.md)  
-  
-  
+## Related content
 
+- [Securables](../security/securables.md)

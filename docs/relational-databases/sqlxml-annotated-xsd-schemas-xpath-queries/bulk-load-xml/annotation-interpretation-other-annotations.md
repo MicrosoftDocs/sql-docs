@@ -33,7 +33,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  **sql:key-fields**  
  XML Bulk Load always ignores this annotation.  
   
-## See Also  
- [Annotation Interpretation &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Annotation Interpretation (SQLXML 4.0)](annotation-interpretation-sqlxml-4-0.md)

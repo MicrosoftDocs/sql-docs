@@ -30,10 +30,9 @@ dev_langs:
 ## Remarks  
  This table contains entries for SQL Server data types because an instance of SQL Server can both subscribe to a non-SQL Server database and publish to a non-SQL Server Subscriber.  
   
-## See Also  
- [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Specify Data Type Mappings for an Oracle Publisher](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Heterogeneous Database Replication](../replication/non-sql/heterogeneous-database-replication.md)
+- [Specify Data Type Mappings for an Oracle Publisher](../replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

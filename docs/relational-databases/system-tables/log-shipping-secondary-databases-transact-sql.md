@@ -34,12 +34,11 @@ dev_langs:
 |**last_restored_file**|**nvarchar(500)**|The filename of the last backup file restored to the secondary database.|  
 |**last_restored_date**|**datetime**|The time and date of the last restore operation on the secondary database.|  
   
-## See Also  
- [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_add_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
- [log_shipping_secondary &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [sys.sp_add_log_shipping_secondary_database (Transact-SQL)](../system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)
+- [sys.sp_delete_log_shipping_secondary_database (Transact-SQL)](../system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)
+- [sys.sp_help_log_shipping_secondary_database (Transact-SQL)](../system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)
+- [log_shipping_secondary (Transact-SQL)](log-shipping-secondary-transact-sql.md)
+- [System Tables (Transact-SQL)](system-tables-transact-sql.md)

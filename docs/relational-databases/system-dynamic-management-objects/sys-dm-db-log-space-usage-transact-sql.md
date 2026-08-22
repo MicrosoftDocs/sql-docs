@@ -62,9 +62,9 @@ FROM sys.dm_db_log_space_usage;
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
-- [sys.dm_db_file_space_usage](sys-dm-db-file-space-usage-transact-sql.md)
+- [sys.dm_db_file_space_usage (Transact-SQL)](sys-dm-db-file-space-usage-transact-sql.md)
 - [sys.dm_db_task_space_usage (Transact-SQL)](sys-dm-db-task-space-usage-transact-sql.md)
 - [sys.dm_db_session_space_usage (Transact-SQL)](sys-dm-db-session-space-usage-transact-sql.md)
 - [sys.dm_db_log_info (Transact-SQL)](sys-dm-db-log-info-transact-sql.md)

@@ -109,5 +109,5 @@ Changing the service identity initiates a series of events that include restarti
 
 ## Related content
 
-- [Configure report server URLs (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-- [Report Server Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Configure report server URLs (Report Server Configuration Manager)](configure-report-server-urls-ssrs-configuration-manager.md)
+- [What is the Report Server configuration manager (native mode)?](reporting-services-configuration-manager-native-mode.md)

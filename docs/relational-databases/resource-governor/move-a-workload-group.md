@@ -79,5 +79,5 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 - [Enable resource governor](enable-resource-governor.md)
 - [Create a resource pool](create-a-resource-pool.md)
 - [Create a workload group](create-a-workload-group.md)
-- [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)
-- [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md)
+- [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)
+- [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)

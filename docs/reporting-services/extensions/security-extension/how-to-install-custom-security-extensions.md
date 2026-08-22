@@ -103,6 +103,6 @@ The new portal and the reportserver communicate using internal soap APIs for som
 
 ## Related content
 
-- [Configure Custom or Forms authentication on the Report Server](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)
+- [Configure custom or forms authentication on the report server](../../security/configure-custom-or-forms-authentication-on-the-report-server.md)
 - [Configure the web portal to pass custom authentication cookies](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

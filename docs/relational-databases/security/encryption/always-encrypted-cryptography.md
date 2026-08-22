@@ -167,5 +167,5 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
   
 ## Related content
 
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Develop applications using Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+- [Always Encrypted](always-encrypted-database-engine.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)

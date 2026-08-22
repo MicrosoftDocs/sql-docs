@@ -34,10 +34,9 @@ dev_langs:
 |**retention**|**bigint**|The number of minutes that change rows are to be retained in change tables.<br /><br /> **retention** is valid only for cleanup jobs.|  
 |**threshold**|**bigint**|The maximum number of delete entries that can be deleted using a single statement on cleanup.|  
   
-## See Also  
- [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)   
- [sys.sp_cdc_change_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)   
- [sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)   
- [sys.sp_cdc_drop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-drop-job-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.sp_cdc_add_job (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)
+- [sys.sp_cdc_change_job (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)
+- [sys.sp_cdc_help_jobs (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)
+- [sys.sp_cdc_drop_job (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-drop-job-transact-sql.md)

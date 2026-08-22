@@ -33,7 +33,6 @@ object.GetNextOrderValue()
   
 ## Remarks  
   
-## See Also  
- [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)   
- [Configuring Client Network Protocols and Net-Libraries](../../../database-engine/configure-windows/configure-client-protocols.md)  
-  
+## Related content
+
+- [Configure client protocols](../../../database-engine/configure-windows/configure-client-protocols.md)

@@ -30,6 +30,5 @@ The following actions might help you discover and resolve the underlying hardwar
 
 ## Related content
 
-[MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)
-
-[SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))
+- [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)
+- [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))

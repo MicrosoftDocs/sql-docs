@@ -38,11 +38,10 @@ dev_langs:
 ## Permissions  
  Granted to the **sysadmin** fixed server role and the **DatabaseMailUserRole** database role. When executed by a member of the **sysadmin** fixed server role, this view shows all attachments. All other users only see the attachments for messages that they submitted.  
   
-## See Also  
- [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
- [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
- [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
- [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
-  
-  
+## Related content
+
+- [sysmail_allitems (Transact-SQL)](sysmail-allitems-transact-sql.md)
+- [sysmail_faileditems (Transact-SQL)](sysmail-faileditems-transact-sql.md)
+- [sysmail_sentitems (Transact-SQL)](sysmail-sentitems-transact-sql.md)
+- [sysmail_unsentitems (Transact-SQL)](sysmail-unsentitems-transact-sql.md)
+- [sysmail_event_log (Transact-SQL)](sysmail-event-log-transact-sql.md)

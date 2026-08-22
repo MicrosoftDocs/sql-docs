@@ -210,4 +210,4 @@ go
   
 ## Related content
 
-- [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+- [Article Options for Transactional Replication](article-options-for-transactional-replication.md)

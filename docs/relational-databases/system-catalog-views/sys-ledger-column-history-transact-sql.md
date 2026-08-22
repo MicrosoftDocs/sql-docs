@@ -81,7 +81,7 @@ ON h.transaction_id = t.transaction_id
 ORDER BY t.[commit_time];
 ```
 
-## See also
+## Related content
 
 - [Ledger considerations and limitations](../security/ledger/ledger-limits.md)
 - [Ledger overview](../security/ledger/ledger-overview.md)

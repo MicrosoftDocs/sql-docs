@@ -133,6 +133,6 @@ helpviewer_keywords:
   
  A new flag DBCOLUMNFLAGS_SS_ISVARIABLESCALE is provided in *dwFlags* to allow an application to determine the server type of columns, where *wType* is DBTYPE_DBTIMESTAMP. *bScale* must also be used to identify the server type.  
   
-## See Also  
- [Metadata &#40;OLE DB&#41;](./data-type-support-for-ole-db-date-and-time-improvements.md)  
-  
+## Related content
+
+- [SQL Server Native Client Data Type Support for OLE DB Date and Time Improvements](data-type-support-for-ole-db-date-and-time-improvements.md)

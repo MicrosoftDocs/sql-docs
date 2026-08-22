@@ -325,6 +325,7 @@ SELECT
  Employee      Gender              0           1          0
  ```
   
-## See Also  
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](sys-dm-sql-referencing-entities-transact-sql.md)   
- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
+## Related content
+
+- [sys.dm_sql_referencing_entities (Transact-SQL)](sys-dm-sql-referencing-entities-transact-sql.md)
+- [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)

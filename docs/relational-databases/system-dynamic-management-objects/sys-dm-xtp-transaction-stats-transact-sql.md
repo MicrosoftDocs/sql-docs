@@ -66,5 +66,6 @@ dev_langs:
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## See also  
- [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](memory-optimized-table-dynamic-management-views-transact-sql.md)
+## Related content
+
+- [In-Memory OLTP System Views (Transact-SQL)](memory-optimized-table-dynamic-management-views-transact-sql.md)

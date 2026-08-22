@@ -500,7 +500,6 @@ _Exit:
 }  
 ```  
   
-## See Also  
- [BLOBs and OLE Objects](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
-  
-  
+## Related content
+
+- [BLOBs and OLE Objects in SQL Server Native Client](blobs-and-ole-objects.md)

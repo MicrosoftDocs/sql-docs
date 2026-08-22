@@ -185,6 +185,6 @@ The following configuration settings determine the connection between the report
 
 ## Related content
 
-- [Reporting Services Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-- [Modify a Reporting Services configuration file (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
-- [Rsreportserver.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [What is the Report Server configuration manager (native mode)?](reporting-services-configuration-manager-native-mode.md)
+- [Modify a Reporting Services configuration file (RSreportserver.config)](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md)

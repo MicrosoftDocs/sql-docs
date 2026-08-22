@@ -108,11 +108,11 @@ This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)
 
 ## Related content
 
-- Blog: [Smarter Parallelism: Degree of parallelism feedback in SQL Server 2025](https://techcommunity.microsoft.com/blog/sqlserver/smarter-parallelism-degree-of-parallelism-feedback-in-sql-server-2025/4431318)
-- Blog: [Intelligent Query Processing: degree of parallelism feedback](https://cloudblogs.microsoft.com/sqlserver/2022/10/20/intelligent-query-processing-degree-of-parallelism-feedback/)
+- [Smarter Parallelism: Degree of parallelism feedback in SQL Server 2025](https://techcommunity.microsoft.com/blog/sqlserver/smarter-parallelism-degree-of-parallelism-feedback-in-sql-server-2025/4431318)
+- [Intelligent Query Processing: degree of parallelism feedback](https://cloudblogs.microsoft.com/sqlserver/2022/10/20/intelligent-query-processing-degree-of-parallelism-feedback/)
 - [Intelligent query processing in SQL databases](intelligent-query-processing.md)
-- [Configure the max degree of parallelism (server configuration option)](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
+- [Server configuration: max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
 - [Cardinality Estimation (SQL Server)](cardinality-estimation-sql-server.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
-- [Configure Parallel Index Operations](../indexes/configure-parallel-index-operations.md)
+- [Configure parallel index operations](../indexes/configure-parallel-index-operations.md)
 - [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

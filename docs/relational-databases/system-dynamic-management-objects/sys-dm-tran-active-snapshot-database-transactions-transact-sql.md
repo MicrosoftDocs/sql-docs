@@ -151,7 +151,8 @@ elapsed_time_seconds
   
 -   XSN-60: This is the second transaction running under snapshot isolation. The output shows the same information as XSN-59.  
   
-## See Also  
- [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](transaction-related-dynamic-management-views-and-functions-transact-sql.md)
+## Related content
+
+- [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)

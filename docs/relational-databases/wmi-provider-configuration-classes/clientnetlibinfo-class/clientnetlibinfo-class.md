@@ -18,6 +18,6 @@ apiname: "ClientNetLibInfo Class"
   
  The client network library file lets the client instance communicate over a network with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using a specific network protocol.  
   
-## See Also  
- [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
-  
+## Related content
+
+- [Configure client protocols](../../../database-engine/configure-windows/configure-client-protocols.md)

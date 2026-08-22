@@ -36,7 +36,6 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-## See Also  
- [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
-  
+## Related content
+
+- [Administer Servers by Using Policy-Based Management](../policy-based-management/administer-servers-by-using-policy-based-management.md)

@@ -107,7 +107,7 @@ FROM sys.databases AS s
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
-- [sys.dm_db_log_space_usage](sys-dm-db-log-space-usage-transact-sql.md)
-- [sys.dm_db_log_info](sys-dm-db-log-info-transact-sql.md)
+- [sys.dm_db_log_space_usage (Transact-SQL)](sys-dm-db-log-space-usage-transact-sql.md)
+- [sys.dm_db_log_info (Transact-SQL)](sys-dm-db-log-info-transact-sql.md)

@@ -35,6 +35,6 @@ helpviewer_keywords:
   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
-## See Also  
- [Automated Administration Tasks &#40;SQL Server Agent&#41;](/ssms/agent/automated-administration-tasks-sql-server-agent)  
-  
+## Related content
+
+- [Automated Administration Tasks &#40;SQL Server Agent&#41;](/ssms/agent/automated-administration-tasks-sql-server-agent)

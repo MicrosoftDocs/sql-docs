@@ -94,10 +94,9 @@ EXEC sp_trace_setstatus @TraceID, 2
 ### D. Examine the trace file
  To examine the trace file, open the SampleTrace.trc file using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-## See Also  
- [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
- [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)  
-  
-  
+## Related content
+
+- [SQL Server Profiler stored procedures (Transact-SQL)](../system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)
+- [sp_trace_create (Transact-SQL)](../system-stored-procedures/sp-trace-create-transact-sql.md)
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [sp_trace_setfilter (Transact-SQL)](../system-stored-procedures/sp-trace-setfilter-transact-sql.md)

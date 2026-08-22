@@ -522,5 +522,3 @@ At each secondary replica host, make sure the push subscribers of the database p
 EXEC sys.sp_addlinkedserver   
     @server = 'MySubscriber';
 ```
-
-## Next steps

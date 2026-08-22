@@ -51,8 +51,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!NOTE]  
 >  During development, it is recommended that you do not cache the schemas, because the changes to the schemas are not reflected in the cache for about two minutes.  
   
-## See Also  
- [Template Caching &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [XSL Caching &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Template Caching (SQLXML 4.0)](template-caching-sqlxml-4-0.md)
+- [XSL Caching (SQLXML 4.0)](xsl-caching-sqlxml-4-0.md)

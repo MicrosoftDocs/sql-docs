@@ -45,6 +45,6 @@ This view has the following relationship cardinalities.
 
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
 - [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)
-- [sys.database_event_sessions (Azure SQL Database and Azure SQL Managed Instance)](sys-database-event-sessions-azure-sql-database.md)
-- [sys.database_event_session_events (Azure SQL Database and Azure SQL Managed Instance)](sys-database-event-session-events-azure-sql-database.md)
+- [sys.database_event_sessions](sys-database-event-sessions-azure-sql-database.md)
+- [sys.database_event_session_events](sys-database-event-session-events-azure-sql-database.md)
 - [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)

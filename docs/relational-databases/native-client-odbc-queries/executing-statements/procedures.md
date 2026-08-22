@@ -25,6 +25,6 @@ helpviewer_keywords:
   
  For more information, see [Running Stored Procedures](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md).  
   
-## See Also  
- [Executing Statements &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
-  
+## Related content
+
+- [Executing Statements (ODBC)](executing-statements-odbc.md)

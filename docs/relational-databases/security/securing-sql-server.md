@@ -157,4 +157,4 @@ The [!INCLUDE [ssDE](../../includes/ssde-md.md)] exposes security information in
 - [SQL Server Security Blog](/archive/blogs/sqlsecurity/)
 - [Security Best Practice and Label Security Whitepapers](/archive/blogs/sqlsecurity/security-best-practice-and-label-security-whitepapers)
 - [Row-level security](row-level-security.md)
-- [Protecting Your SQL Server Intellectual Property](protecting-your-sql-server-intellectual-property.md)
+- [Protecting your SQL Server intellectual property](protecting-your-sql-server-intellectual-property.md)

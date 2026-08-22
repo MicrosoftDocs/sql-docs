@@ -102,6 +102,6 @@ To learn more, review [limitations with the CES feature](configure.md#limitation
 
 ## Related content
 
-- [Configure change event streaming](configure.md)
+- [Configure change event streaming (preview) to Azure Event Hubs](configure.md)
 - [CES frequently asked questions](frequently-asked-questions-faq.yml)
-- [Message format for change event streaming](message-format.md)
+- [JSON message format - change event streaming](message-format.md)

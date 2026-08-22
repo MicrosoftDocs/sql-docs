@@ -103,5 +103,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+- [Publish Data and Database Objects](publish-data-and-database-objects.md)
+- [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)

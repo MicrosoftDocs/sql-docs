@@ -53,6 +53,6 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## See also  
+## Related content
 
-  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)

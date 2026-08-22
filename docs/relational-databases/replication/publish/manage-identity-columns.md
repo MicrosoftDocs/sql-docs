@@ -132,6 +132,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md)
+- [Peer-to-Peer - Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)
+- [Replicate Identity Columns](replicate-identity-columns.md)

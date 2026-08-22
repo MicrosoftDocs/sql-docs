@@ -74,7 +74,7 @@ INNER JOIN sys.dm_os_hosts AS h
 GROUP BY h.type;  
 ```  
   
-## See also  
+## Related content
 
- [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](sys-dm-os-memory-clerks-transact-sql.md)   
- [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [sys.dm_os_memory_clerks (Transact-SQL)](sys-dm-os-memory-clerks-transact-sql.md)
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)

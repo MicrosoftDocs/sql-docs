@@ -32,7 +32,8 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 |status|`nvarchar(32)`|Current status of the DMS service||
 |compute_pool_id|`int`|Unique identifier for the pool.|
 
-## See Also  
- [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](database-related-dynamic-management-views-transact-sql.md)
+## Related content
+
+- [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)

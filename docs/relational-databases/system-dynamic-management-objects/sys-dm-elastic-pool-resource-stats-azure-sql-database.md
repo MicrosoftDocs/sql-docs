@@ -74,9 +74,7 @@ FROM sys.dm_elastic_pool_resource_stats
 ORDER BY end_time DESC;  
 ```
 
-## Next steps
-
-Learn more about elastic pools and related concepts in the following articles:
+## Related content
 
 - [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
 - [Elastic pools help you manage and scale multiple databases in Azure SQL Database](/azure/azure-sql/database/elastic-pool-overview)

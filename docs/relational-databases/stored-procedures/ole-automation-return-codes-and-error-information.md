@@ -28,6 +28,6 @@ You can use `CONVERT(binary(4), @hresult)` to convert an **int** HRESULT to a **
 
 For examples of supported conversion, see [H. Using CONVERT with binary and character data](../../t-sql/functions/cast-and-convert-transact-sql.md#h-use-convert-with-binary-and-character-data).
 
-## Next steps
+## Related content
 
-- [sp_OAGetErrorInfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)
+- [sp_OAGetErrorInfo (Transact-SQL)](../system-stored-procedures/sp-oageterrorinfo-transact-sql.md)

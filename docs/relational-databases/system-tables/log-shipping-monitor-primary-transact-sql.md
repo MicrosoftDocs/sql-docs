@@ -38,15 +38,14 @@ dev_langs:
 ## Remarks  
  In addition to being stored on the remote monitor server, the information related to the primary server is stored on the primary server in its **log_shipping_monitor_primary** table.  
   
-## See Also  
- [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
- [sp_change_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md)   
- [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [sp_help_log_shipping_monitor_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)   
- [sp_delete_log_shipping_alert_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [sys.sp_add_log_shipping_primary_database (Transact-SQL)](../system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)
+- [sys.sp_change_log_shipping_primary_database (Transact-SQL)](../system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md)
+- [sys.sp_delete_log_shipping_primary_database (Transact-SQL)](../system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)
+- [sys.sp_help_log_shipping_primary_database (Transact-SQL)](../system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)
+- [sys.sp_refresh_log_shipping_monitor (Transact-SQL)](../system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)
+- [sys.sp_help_log_shipping_monitor_primary (Transact-SQL)](../system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)
+- [sp_delete_log_shipping_alert_job (Transact-SQL)](../system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)
+- [System Tables (Transact-SQL)](system-tables-transact-sql.md)

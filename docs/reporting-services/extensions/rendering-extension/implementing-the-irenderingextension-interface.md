@@ -67,5 +67,5 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
   
 ## Related content
 
-- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)
-- [Rendering extensions overview](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)
+- [Implement a rendering extension](implementing-a-rendering-extension.md)
+- [Rendering extensions overview](rendering-extensions-overview.md)

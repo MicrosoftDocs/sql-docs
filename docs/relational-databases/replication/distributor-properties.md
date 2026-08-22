@@ -81,5 +81,5 @@ The **Publishers** page of the **Distributor Properties** dialog box allows you 
   
 ## Related content
 
-- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
-- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
+- [Configure Distribution](configure-distribution.md)
+- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)

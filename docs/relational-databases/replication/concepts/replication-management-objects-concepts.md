@@ -186,5 +186,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md)
+- [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)
+- [Replication Programming Concepts](replication-programming-concepts.md)

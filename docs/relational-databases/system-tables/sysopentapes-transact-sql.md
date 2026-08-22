@@ -46,6 +46,6 @@ Requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
 - [sys.dm_io_backup_tapes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
-- [RESTORE statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Mapping system tables to system views (Transact-SQL)](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)
-- [System tables (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Mapping System Tables to System Views (Transact-SQL)](mapping-system-tables-to-system-views-transact-sql.md)
+- [System Tables (Transact-SQL)](system-tables-transact-sql.md)

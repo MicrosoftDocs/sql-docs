@@ -63,6 +63,6 @@ monikerRange: ">=sql-server-2017"
   
 ## Related content
 
-- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)
-- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)
-- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Monitoring (Replication)](../monitor/monitoring-replication.md)
+- [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)
+- [Replication Agents Overview](replication-agents-overview.md)

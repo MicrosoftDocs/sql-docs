@@ -40,5 +40,6 @@ dev_langs:
 |databytes|**image**|An optional byte array that contains additional information.|  
 |message|**nvarchar**|A description of the event and the information associated with the event.|  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md)
+## Related content
+
+- [Integration Services (SSIS) Logging](../../integration-services/performance/integration-services-ssis-logging.md)

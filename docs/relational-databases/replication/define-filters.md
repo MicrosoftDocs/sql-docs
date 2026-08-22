@@ -30,5 +30,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)
-- [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)
+- [Microsoft Replication Conflict Viewer (Merge Replication)](microsoft-replication-conflict-viewer-merge-replication.md)
+- [Replication Conflict Viewer (Transactional Replication)](microsoft-replication-conflict-viewer-transactional-replication.md)

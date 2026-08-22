@@ -111,6 +111,6 @@ The catalog views in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 
 
 ## Related content
 
-- [System Information Schema Views (Transact-SQL)](../system-information-schema-views/system-information-schema-views-transact-sql.md)
+- [System information schema views (Transact-SQL)](../system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [System Tables (Transact-SQL)](../system-tables/system-tables-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)

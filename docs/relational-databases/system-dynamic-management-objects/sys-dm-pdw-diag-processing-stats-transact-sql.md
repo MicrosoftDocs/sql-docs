@@ -24,5 +24,6 @@ monikerRange: ">=aps-pdw-2016"
 |**queue_size**|**int**|The number of items in the process queue. The queue size is usually 0. A positive number indicates that the system is under stress and is building backlog of events. A positive count in the other columns means system has become corrupted for that particular queue and any related DMVs.|  
 |**lost_events_count**|**bigint**|The number of events lost.|  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+## Related content
+
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)

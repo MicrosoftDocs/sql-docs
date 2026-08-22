@@ -21,7 +21,6 @@ helpviewer_keywords:
   
  You cannot obtain table-valued parameter metadata for prepared statements that are not stored procedure calls. If you try to do this, the application returns SQL_ERROR with SQLSTATE 42000 and the message "Syntax error or access violation".  
   
-## See Also  
- [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
-  
-  
+## Related content
+
+- [Table-Valued Parameters (ODBC)](table-valued-parameters-odbc.md)

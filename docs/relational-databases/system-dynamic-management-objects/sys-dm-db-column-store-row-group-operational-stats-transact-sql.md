@@ -69,7 +69,7 @@ For more information, see [System dynamic management views](system-dynamic-manag
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Index Related Dynamic Management Views and Functions (Transact-SQL)](index-related-dynamic-management-views-and-functions-transact-sql.md)
 - [Monitor and Tune for Performance](../performance/monitor-and-tune-for-performance.md)
 - [sys.dm_db_index_physical_stats (Transact-SQL)](sys-dm-db-index-physical-stats-transact-sql.md)

@@ -28,7 +28,6 @@ helpviewer_keywords:
   
  The result set of **IOpenRowset::OpenRowset** contains a single rowset. Result sets that contain a single rowset can be supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursors. Cursor support allows the developer to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concurrency mechanisms.  
   
-## See Also  
- [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
-  
-  
+## Related content
+
+- [Rowsets (Native Client OLE DB provider)](rowsets.md)

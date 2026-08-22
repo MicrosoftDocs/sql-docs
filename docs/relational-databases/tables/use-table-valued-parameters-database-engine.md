@@ -106,10 +106,10 @@ The expected resultset is:
 
 ## Related content
 
-- [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
-- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
-- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)
-- [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)
-- [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)
-- [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)
+- [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [sys.types (Transact-SQL)](../system-catalog-views/sys-types-transact-sql.md)
+- [sys.parameters (Transact-SQL)](../system-catalog-views/sys-parameters-transact-sql.md)
+- [sys.parameter_type_usages (Transact-SQL)](../system-catalog-views/sys-parameter-type-usages-transact-sql.md)
+- [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
+- [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)

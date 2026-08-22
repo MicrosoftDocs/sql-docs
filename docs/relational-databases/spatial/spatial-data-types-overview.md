@@ -209,8 +209,8 @@ In [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], **geography** and 
 ## Related content
 
 - [Spatial Data](spatial-data-sql-server.md)
-- [geometry Data Type Method Reference](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
-- [geography Data Type Method Reference](../../t-sql/spatial-geography/spatial-types-geography.md)
+- [Spatial Types - geometry (Transact-SQL)](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [Spatial Types - geography](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves (geometry Data Type)](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves (geography Data Type)](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText (geometry Data Type)](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)

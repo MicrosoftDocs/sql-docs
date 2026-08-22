@@ -42,4 +42,4 @@ Provides access to the system stoplist.
 - [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [sys.fulltext_stoplists (Transact-SQL)](sys-fulltext-stoplists-transact-sql.md)
 - [sys.fulltext_stopwords (Transact-SQL)](sys-fulltext-stopwords-transact-sql.md)
-- [Configure and Manage Stopwords and Stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
+- [Configure and manage stopwords and stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)

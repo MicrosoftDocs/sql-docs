@@ -63,8 +63,8 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
-- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
-- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)
-- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)
+- [Configure Distribution](configure-distribution.md)
+- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)
+- [Subscribe to Publications](subscribe-to-publications.md)
+- [Initialize a Subscription](initialize-a-subscription.md)
+- [Synchronize Data](synchronize-data.md)

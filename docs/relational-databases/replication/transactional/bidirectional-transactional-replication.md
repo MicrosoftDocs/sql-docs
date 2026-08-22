@@ -26,4 +26,4 @@ If you want to add a subscription to a bi-directional publication by using the  
   
 ## Related content
 
-- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)
+- [Peer-to-Peer - Transactional Replication](peer-to-peer-transactional-replication.md)

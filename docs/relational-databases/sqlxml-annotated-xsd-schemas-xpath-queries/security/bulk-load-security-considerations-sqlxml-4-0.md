@@ -46,7 +46,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 -   If the user sets an error Log file for SQLXML to write errors into, then each time Bulk Load is executed the file will be overwritten with data from the last Bulk Load process.  
   
-## See Also  
- [Performing Bulk Load of XML Data &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Performing Bulk Load of XML Data (SQLXML 4.0)](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)

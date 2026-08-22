@@ -149,7 +149,7 @@ The following PowerShell cmdlets are available for Always Encrypted:
 
 ## Related content
 
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+- [Always Encrypted](always-encrypted-database-engine.md)
+- [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
+- [Configure Always Encrypted using SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)

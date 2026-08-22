@@ -55,8 +55,8 @@ WHERE
 
 ## Related content
 
-- [Object Catalog Views (Transact-SQL)](object-catalog-views-transact-sql.md)
-- [Catalog Views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [sys.indexes (Transact-SQL)](sys-indexes-transact-sql.md)
-- [CREATE VECTOR INDEX (Transact-SQL)](../../t-sql/statements/create-vector-index-transact-sql.md)
+- [CREATE VECTOR INDEX (Transact-SQL) (Preview)](../../t-sql/statements/create-vector-index-transact-sql.md)
 - [sys.dm_db_vector_indexes (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-vector-indexes-transact-sql.md)

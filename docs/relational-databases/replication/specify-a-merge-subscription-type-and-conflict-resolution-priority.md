@@ -33,5 +33,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Subscribe to Publications](subscribe-to-publications.md)

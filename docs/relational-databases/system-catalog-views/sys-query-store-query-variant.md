@@ -112,12 +112,11 @@ GO
 
 ## Related content
 
-- [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
-- [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
-- [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)
-- [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
-- [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
-- [Monitoring performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Catalog views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Query Store stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-
+- [sys.query_store_plan (Transact-SQL)](sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query (Transact-SQL)](sys-query-store-query-transact-sql.md)
+- [sys.query_store_runtime_stats (Transact-SQL)](sys-query-store-runtime-stats-transact-sql.md)
+- [sys.query_store_wait_stats (Transact-SQL)](sys-query-store-wait-stats-transact-sql.md)
+- [sys.query_store_runtime_stats_interval (Transact-SQL)](sys-query-store-runtime-stats-interval-transact-sql.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Query Store stored procedures (Transact-SQL)](../system-stored-procedures/query-store-stored-procedures-transact-sql.md)

@@ -380,7 +380,7 @@ helpviewer_keywords:
  **Select Report**  
  See the details of the selected report. The columns in the grid vary with each report.  
   
-## See Also  
- [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
-  
+## Related content
+
+- [Start and use the Database Engine Tuning Advisor](start-and-use-the-database-engine-tuning-advisor.md)
+- [dta utility](../../tools/dta/dta-utility.md)

@@ -90,6 +90,6 @@ To ensure Always Encrypted is effective in preventing these types of attacks, yo
 - [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
 - [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Provision Always Encrypted keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](always-encrypted-database-engine.md)
 - [Always Encrypted Wizard tutorial (Azure Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
 - [Always Encrypted Wizard tutorial (Windows Certificate Store)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

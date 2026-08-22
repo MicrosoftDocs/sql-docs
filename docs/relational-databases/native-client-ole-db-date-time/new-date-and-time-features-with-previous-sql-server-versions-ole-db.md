@@ -155,7 +155,6 @@ ms.topic: "reference"
 ## Comparability for IRowsetFind  
  All comparison operators are allowed for the new date/time types, because they appear as string types rather than date/time types.  
   
-## See Also  
- [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Date and Time Improvements (OLE DB)](date-and-time-improvements-ole-db.md)

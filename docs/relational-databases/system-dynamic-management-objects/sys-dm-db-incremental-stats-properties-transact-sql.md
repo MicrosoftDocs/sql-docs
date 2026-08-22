@@ -77,10 +77,11 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 
 For additional usage suggestions, see  [sys.dm_db_stats_properties](sys-dm-db-stats-properties-transact-sql.md).
   
-## See Also  
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.stats &#40;Transact-SQL&#41;](../system-catalog-views/sys-stats-transact-sql.md)   
- [Object Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](object-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)  
- [sys.dm_db_stats_properties](sys-dm-db-stats-properties-transact-sql.md)   
- [sys.dm_db_stats_histogram (Transact-SQL)](sys-dm-db-stats-histogram-transact-sql.md)
+## Related content
+
+- [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+- [sys.stats (Transact-SQL)](../system-catalog-views/sys-stats-transact-sql.md)
+- [Object Related Dynamic Management Views and Functions (Transact-SQL)](object-related-dynamic-management-views-and-functions-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [sys.dm_db_stats_properties (Transact-SQL)](sys-dm-db-stats-properties-transact-sql.md)
+- [sys.dm_db_stats_histogram (Transact-SQL)](sys-dm-db-stats-histogram-transact-sql.md)

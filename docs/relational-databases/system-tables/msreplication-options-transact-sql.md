@@ -29,7 +29,6 @@ dev_langs:
 |**revision**|**int**|Internal use only.|  
 |**install_failures**|**int**|Internal use only.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)

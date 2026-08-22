@@ -113,4 +113,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Replication Agents Overview](../agents/replication-agents-overview.md)

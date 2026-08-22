@@ -44,13 +44,13 @@ To return information about the server-level firewall settings associated with y
 
  This view is available in the `master` database and in each user database. Read-only access to this view is available to all users with permission to connect to the database.
 
-## See also
+## Related content
 
-- [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)
-- [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)
-- [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)
-- [sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)
-- [sys.firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)
-- [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
-- [Configure a Firewall for FILESTREAM Access](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)
-- [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)
+- [sp_set_database_firewall_rule (Azure SQL Database)](../system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)
+- [sp_delete_database_firewall_rule (Azure SQL Database)](../system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)
+- [sp_set_firewall_rule (Azure SQL Database)](../system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)
+- [sp_delete_firewall_rule (Azure SQL Database)](../system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)
+- [sys.firewall_rules (Azure SQL Database)](sys-firewall-rules-azure-sql-database.md)
+- [Configure Windows Firewall for Database Engine access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+- [Configure a Firewall for FILESTREAM Access](../blob/configure-a-firewall-for-filestream-access.md)
+- [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)

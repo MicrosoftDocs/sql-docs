@@ -180,6 +180,6 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 ## Related content
 
-- [Best Practices for Time-Based Row Filters](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)
-- [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)
-- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)
+- [Best Practices for Time-Based Row Filters](best-practices-for-time-based-row-filters.md)
+- [Filter Published Data](../publish/filter-published-data.md)
+- [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md)

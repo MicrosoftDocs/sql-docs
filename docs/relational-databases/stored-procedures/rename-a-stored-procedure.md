@@ -79,13 +79,12 @@ GO
 EXEC sp_rename 'HumanResources.uspGetAllEmployeesTest', 'uspEveryEmployeeTest'; 
 ```  
   
-## See Also  
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [Modify a Stored Procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
- [Delete a Stored Procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)   
- [View the Definition of a Stored Procedure](../../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md)   
- [View the Dependencies of a Stored Procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
-  
-  
+## Related content
+
+- [ALTER PROCEDURE (Transact-SQL)](../../t-sql/statements/alter-procedure-transact-sql.md)
+- [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
+- [Create a stored procedure](create-a-stored-procedure.md)
+- [Modify a stored procedure](modify-a-stored-procedure.md)
+- [Delete a stored procedure](delete-a-stored-procedure.md)
+- [View the definition of a stored procedure](view-the-definition-of-a-stored-procedure.md)
+- [View the Dependencies of a Stored Procedure](view-the-dependencies-of-a-stored-procedure.md)

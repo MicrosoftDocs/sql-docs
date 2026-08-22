@@ -223,7 +223,6 @@ HRESULT InitFromPersistedDS
   
  The **IPersistFile::Save** method can be called before or after calling **IDBInitialize::Initialize**. Calling the method after a successful return from **IDBInitialize::Initialize** ensures a valid data source specification is persisted.  
   
-## See Also  
- [Data Source Objects &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Data Source Objects (OLE DB)](data-source-objects-ole-db.md)

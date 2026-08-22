@@ -1362,5 +1362,5 @@ Microsoft Entra authentication is now set up for your SQL Server that is connect
 
 - [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md)
 - [Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-overview.md)
-- [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Tutorial: Set up Microsoft Entra authentication for SQL Server with app registration](azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Linked server for SQL Server with Microsoft Entra authentication](azure-ad-authentication-sql-server-linked-server.md)

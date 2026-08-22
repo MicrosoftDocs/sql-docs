@@ -127,4 +127,4 @@ However, any operations that might affect the format of existing data, such as c
 - [Ledger overview](ledger-overview.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
-- [Database ledger](ledger-database-ledger.md)
+- [What is the database ledger?](ledger-database-ledger.md)

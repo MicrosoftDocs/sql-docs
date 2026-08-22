@@ -75,5 +75,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Join Filters](../../../relational-databases/replication/merge/join-filters.md)
-- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)
+- [Join Filters](../merge/join-filters.md)
+- [Parameterized Filters - Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)

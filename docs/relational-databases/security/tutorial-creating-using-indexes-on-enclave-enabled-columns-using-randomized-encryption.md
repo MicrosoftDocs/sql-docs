@@ -148,11 +148,8 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
 
    1. In the **Live Query Statistics**, observe that the query uses the index.
 
-## Next steps
-
-- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
-- [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
-
-## See also
+## Related content
 
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves-create-use-indexes.md)
+- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
+- [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)

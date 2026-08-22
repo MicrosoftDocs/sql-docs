@@ -165,6 +165,6 @@ ORDER BY
 
 ## Related content
 
-- [Data virtualization with PolyBase in SQL Server](overview.md)
+- [PolyBase overview](overview.md)
 - [Get started with PolyBase in SQL Server 2022](polybase-get-started.md)
 - [Performance considerations in PolyBase for SQL Server](polybase-performance.md)

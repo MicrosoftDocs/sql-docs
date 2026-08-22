@@ -94,9 +94,10 @@ FROM sys.dm_exec_trigger_stats AS d
 ORDER BY [total_worker_time] DESC;  
 ```  
   
-## See Also  
-[Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](sys-dm-exec-sql-text-transact-sql.md)   
-[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](sys-dm-exec-query-stats-transact-sql.md)   
-[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](sys-dm-exec-procedure-stats-transact-sql.md)   
-[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](sys-dm-exec-cached-plans-transact-sql.md)
+## Related content
+
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_exec_sql_text (Transact-SQL)](sys-dm-exec-sql-text-transact-sql.md)
+- [sys.dm_exec_query_stats (Transact-SQL)](sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_procedure_stats (Transact-SQL)](sys-dm-exec-procedure-stats-transact-sql.md)
+- [sys.dm_exec_cached_plans (Transact-SQL)](sys-dm-exec-cached-plans-transact-sql.md)

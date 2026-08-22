@@ -39,8 +39,7 @@ helpviewer_keywords:
   
 -   Data will be sent to the server for columns with DBPROP_COL_AUTOINCREMENT or SSPROP_COL_COMPUTED, unless SSPROP_PARAM_TABLE_DEFAULT is also set.  
   
-## See Also  
- [Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Use Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
-  
-  
+## Related content
+
+- [Table-Valued Parameters  in SQL Server Native Client (OLE DB)](table-valued-parameters-ole-db.md)
+- [Use Table-Valued Parameters in SQL Server Native Client (OLE DB)](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)

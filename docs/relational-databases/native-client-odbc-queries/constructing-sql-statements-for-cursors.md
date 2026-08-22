@@ -92,7 +92,6 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
   
  ODBC applications receiving these errors must reset all the cursor statement attributes to their defaults before attempting to execute the statement.  
   
-## See Also  
- [Executing Queries &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
-  
-  
+## Related content
+
+- [Executing Queries (ODBC)](executing-queries-odbc.md)

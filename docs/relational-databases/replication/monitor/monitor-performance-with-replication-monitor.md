@@ -93,5 +93,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)
-- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)
+- [Monitoring (Replication)](monitoring-replication.md)
+- [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)

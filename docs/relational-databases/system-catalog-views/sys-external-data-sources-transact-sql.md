@@ -50,10 +50,9 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 ## Related content
 
-- [sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)
-- [sys.external_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)
+- [sys.external_file_formats (Transact-SQL)](sys-external-file-formats-transact-sql.md)
+- [sys.external_tables (Transact-SQL)](sys-external-tables-transact-sql.md)
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](../../t-sql/statements/create-external-data-source-connection-options.md)
 - [Pushdown computations in PolyBase](../polybase/polybase-pushdown-computation.md)
-- [Introducing data virtualization with PolyBase](../polybase/overview.md)
-
+- [PolyBase overview](../polybase/overview.md)

@@ -85,8 +85,7 @@ ELSE
 GO  
 ```  
   
-## See Also  
- [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
- [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
-  
-  
+## Related content
+
+- [sys.fn_cdc_get_max_lsn (Transact-SQL)](sys-fn-cdc-get-max-lsn-transact-sql.md)
+- [The transaction log](../logs/the-transaction-log-sql-server.md)

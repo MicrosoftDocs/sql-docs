@@ -550,9 +550,9 @@ For security reasons, the actual values of passwords are masked in result sets r
   
 ## Related content
 
-- [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)
-- [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md)
-- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)
-- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)
+- [Upgrade Replication Scripts (Replication Transact-SQL Programming)](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)
+- [Identity and Access Control (Replication)](identity-and-access-control-replication.md)
+- [Replication Agent Security Model](replication-agent-security-model.md)
+- [Replication Security Best Practices](replication-security-best-practices.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)

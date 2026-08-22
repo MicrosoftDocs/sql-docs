@@ -91,7 +91,6 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
 - [sys.dm_db_stats_histogram (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)
 - [sys.stats_columns (Transact-SQL)](sys-stats-columns-transact-sql.md)
 - [Statistics](../statistics/statistics.md)
-- [sp_updatestats (Transact-SQL)](../system-stored-procedures/sp-updatestats-transact-sql.md)
+- [sys.sp_updatestats (Transact-SQL)](../system-stored-procedures/sp-updatestats-transact-sql.md)
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 - [Create statistics](../statistics/create-statistics.md)
-

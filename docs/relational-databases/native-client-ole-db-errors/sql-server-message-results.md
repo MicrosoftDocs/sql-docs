@@ -33,7 +33,6 @@ helpviewer_keywords:
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumer allowing dynamic specification of query text should check error interfaces after every member function execution regardless of the value of the return code, the presence or absence of a returned **IRowset** or **IMultipleResults** interface reference, or a count of affected rows.  
   
-## See Also  
- [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Errors](errors.md)

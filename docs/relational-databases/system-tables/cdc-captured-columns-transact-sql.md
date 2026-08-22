@@ -31,7 +31,6 @@ dev_langs:
 |**column_ordinal**|**int**|Column ordinal (one-based) in the change table. The metadata columns in the change table are excluded. Ordinal 1 is assigned to the first captured column.|  
 |**is_computed**|**bit**|Indicates that the captured column is a computed column in the source table.|  
   
-## See Also  
- [cdc.change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [cdc.change_tables (Transact-SQL)](cdc-change-tables-transact-sql.md)

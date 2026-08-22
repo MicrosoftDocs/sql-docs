@@ -76,8 +76,7 @@ Requires VIEW SERVER SECURITY STATE permission on the server.
 
 ## Related content
 
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Linked Servers Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)
-- [sp_addlinkedsrvlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
-- [sp_addremotelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
-  
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Linked Servers Catalog Views (Transact-SQL)](linked-servers-catalog-views-transact-sql.md)
+- [sys.sp_addlinkedsrvlogin (Transact-SQL)](../system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
+- [sys.sp_addremotelogin (Transact-SQL)](../system-stored-procedures/sp-addremotelogin-transact-sql.md)

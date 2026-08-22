@@ -74,4 +74,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Understand security policies](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)
+- [Understand security policies](understanding-security-policies.md)

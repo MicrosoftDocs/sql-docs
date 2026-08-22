@@ -149,17 +149,16 @@ ORDER BY bs.database_name ASC,
     bs.Backup_Start_Date DESC;
 ```
 
-## Next steps
+## Related content
 
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
 - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Backup and Restore Tables (Transact-SQL)](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)
-- [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)
-- [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)
-- [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)
-- [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)
-- [Possible Media Errors During Backup and Restore (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
-- [Media Sets, Media Families, and Backup Sets (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [Recovery Models (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)
-- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [Backup and Restore Tables (Transact-SQL)](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)
+- [Backup and Restore Tables (Transact-SQL)](backup-and-restore-tables-transact-sql.md)
+- [backupfile (Transact-SQL)](backupfile-transact-sql.md)
+- [backupfilegroup (Transact-SQL)](backupfilegroup-transact-sql.md)
+- [backupmediafamily (Transact-SQL)](backupmediafamily-transact-sql.md)
+- [backupmediaset (Transact-SQL)](backupmediaset-transact-sql.md)
+- [Possible Media Errors During Backup and Restore (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
+- [Media sets, media families, and backup sets (SQL Server)](../backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
+- [Recovery models (SQL Server)](../backup-restore/recovery-models-sql-server.md)
+- [RESTORE statements - HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)

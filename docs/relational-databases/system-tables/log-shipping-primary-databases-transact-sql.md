@@ -37,11 +37,10 @@ dev_langs:
 |**primary_connection_options**|**nvarchar(4000)**|Additional connection options for the connection made between the log shipping executable and the primary replica instance. <br /><br /> Available starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions. |
 |**monitor_connection_options**|**nvarchar(4000)**|Additional connection options for the connection made between the primary replica instance and the remote monitor. <br /><br /> Available starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions. |
   
-## See Also  
- [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
- [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [sys.sp_add_log_shipping_primary_database (Transact-SQL)](../system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)
+- [sys.sp_delete_log_shipping_primary_database (Transact-SQL)](../system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)
+- [sys.sp_help_log_shipping_primary_database (Transact-SQL)](../system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)
+- [System Tables (Transact-SQL)](system-tables-transact-sql.md)

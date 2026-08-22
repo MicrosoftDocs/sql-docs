@@ -78,12 +78,12 @@ GROUP BY i.name, p.object_id, p.index_id, i.type_desc;
 
 ## Related content
 
-- [Columnstore Indexes Guide](../indexes/columnstore-indexes-overview.md)
+- [Columnstore indexes: overview](../indexes/columnstore-indexes-overview.md)
 - [Performance tuning with ordered columnstore indexes](../indexes/ordered-columnstore-indexes.md)
-- [Object Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)
-- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)
-- [sys.all_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)
-- [sys.computed_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)
-- [sys.column_store_dictionaries (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
+- [sys.columns (Transact-SQL)](sys-columns-transact-sql.md)
+- [sys.all_columns (Transact-SQL)](sys-all-columns-transact-sql.md)
+- [sys.computed_columns (Transact-SQL)](sys-computed-columns-transact-sql.md)
+- [sys.column_store_dictionaries (Transact-SQL)](sys-column-store-dictionaries-transact-sql.md)

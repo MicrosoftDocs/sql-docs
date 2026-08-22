@@ -144,7 +144,7 @@ Creating updatable ledger tables requires the `ENABLE LEDGER` permission. For mo
 
 ## Related content
 
-- [Database ledger](ledger-database-ledger.md)
+- [What is the database ledger?](ledger-database-ledger.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
-- [How to migrate data from regular tables to ledger tables](ledger-how-to-migrate-data-to-ledger-tables.md)
+- [Migrate data from regular tables to ledger tables](ledger-how-to-migrate-data-to-ledger-tables.md)

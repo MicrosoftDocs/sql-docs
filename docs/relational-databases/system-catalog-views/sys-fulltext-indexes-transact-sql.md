@@ -68,9 +68,9 @@ WHERE object_id = object_id('HumanResources.JobCandidate');
 
 ## Related content
 
-- [sys.fulltext_index_fragments](sys-fulltext-index-fragments-transact-sql.md)
-- [sys.fulltext_index_columns](sys-fulltext-index-columns-transact-sql.md)
-- [sys.fulltext_index_catalog_usages](sys-fulltext-index-catalog-usages-transact-sql.md)
+- [sys.fulltext_index_fragments (Transact-SQL)](sys-fulltext-index-fragments-transact-sql.md)
+- [sys.fulltext_index_columns (Transact-SQL)](sys-fulltext-index-columns-transact-sql.md)
+- [sys.fulltext_index_catalog_usages (Transact-SQL)](sys-fulltext-index-catalog-usages-transact-sql.md)
 - [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [Create and manage full-text indexes](../search/create-and-manage-full-text-indexes.md)

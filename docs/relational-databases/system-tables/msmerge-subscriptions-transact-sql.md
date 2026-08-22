@@ -32,6 +32,7 @@ dev_langs:
 |**status**|**tinyint**|This column is no longer in use. To check the status of a merge subscription, review the status column in the [sysmergesubscriptions](sysmergesubscriptions-transact-sql.md) table in the publication or subscription database. |  
 |**subscription_time**|**datetime**|The time the subscription was added.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

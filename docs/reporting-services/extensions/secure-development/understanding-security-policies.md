@@ -68,5 +68,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Code access security in Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)
-- [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)
+- [Code access security in Reporting Services](code-access-security-in-reporting-services.md)
+- [Secure development (Reporting Services)](secure-development-reporting-services.md)

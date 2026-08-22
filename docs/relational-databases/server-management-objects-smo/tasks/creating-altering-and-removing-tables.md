@@ -167,7 +167,6 @@ $tb.Drop()
   
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.Table>  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.Table>

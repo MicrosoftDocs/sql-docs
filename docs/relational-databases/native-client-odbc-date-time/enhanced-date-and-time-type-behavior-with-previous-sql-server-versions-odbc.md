@@ -101,5 +101,6 @@ helpviewer_keywords:
 ## Down-Level Server Behavior  
  When connected to a server instance of an earlier version that [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], any attempt to use the new server types or associated metadata codes and descriptor fields will result in SQL_ERROR being returned. A diagnostic record will be generated with SQLSTATE HY004 and the message "Invalid SQL data type for server version on connection", or with 07006 and "Restricted data type attribute violation".  
   
-## See Also  
- [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## Related content
+
+- [Date and Time Improvements (ODBC)](date-and-time-improvements-odbc.md)

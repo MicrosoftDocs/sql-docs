@@ -65,9 +65,8 @@ dev_langs:
     :::column-end:::
 :::row-end:::
   
-## See Also  
- [Change Data Capture Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [Change Data Capture Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
-  
-  
+## Related content
+
+- [Change Data Capture Tables (Transact-SQL)](../system-tables/change-data-capture-tables-transact-sql.md)
+- [Change Data Capture stored procedures (Transact-SQL)](../system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)
+- [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)

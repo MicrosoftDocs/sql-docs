@@ -218,10 +218,11 @@ column_encryption_key_database_name = 'Clinic') are incompatible in the equal to
 > [!NOTE]
 > Without parameterization, the entire query, including type conversions, is processed inside SQL Server/Azure SQL Database. With parameterization enabled, some type conversions are performed by .NET Framework inside SQL Server Management Studio. Due to differences between the .NET Framework type system and the SQL Server type system (e.g. different precision of some types, such as float), a query executed with parameterization enabled can produce different results than the query executed without parameterization enabled.
 
-## Next steps
+## Next step
 
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+> [!div class="nextstepaction"]
+> [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
-## See also
+## Related content
 
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](always-encrypted-database-engine.md)

@@ -404,9 +404,9 @@ The following table contains brief descriptions of some of the most common spinl
 | XVB_CSN | Internal use only. |
 | XVB_LIST | Internal use only. |
 
-## See also
+## Related content
 
 - [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)
-- [SQL Server Operating System Related Dynamic Management Views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
 - [When is Spinlock a Significant Driver of CPU utilization in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
-- [Diagnosing and Resolving Spinlock Contention on SQL Server](../diagnose-resolve-spinlock-contention.md)
+- [Diagnose and resolve spinlock contention on SQL Server](../diagnose-resolve-spinlock-contention.md)

@@ -35,7 +35,6 @@ BOOL WINAPI IsFrameWindowVisible(IVsWindowFrame* frame)
 ## Property Value/Return Value  
  A Boolean value that specifies whether the window frame specified by *frame* is visible.  
   
-## See Also  
- [SqlToolsVSNativeHelpers](../relational-databases/sqltoolsvsnativehelpers.md)  
-  
-  
+## Related content
+
+- [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)

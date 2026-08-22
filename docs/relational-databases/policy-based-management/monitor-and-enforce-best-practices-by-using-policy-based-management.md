@@ -58,6 +58,6 @@ helpviewer_keywords:
 |Windows Event Log Storage System I_O Timeout Error|[Storage System Input-Output Time-out](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Windows Event Log System Failure Error|[Unexpected System Failures](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## See Also  
- [Working with Policy-Based Management Facets](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
+## Related content
+
+- [Working with Policy-Based Management Facets](working-with-policy-based-management-facets.md)

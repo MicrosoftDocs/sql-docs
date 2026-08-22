@@ -63,13 +63,12 @@ dev_langs:
 |**replicate_ddl**|**int**|Indicates if schema replication is supported for the publication. **1** indicates that DDL statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md). *Not supported for non-SQL Publishers.*|  
 |**options**|**int**|Bitmap that specifies additional publishing options, where the bitwise option values are:<br /><br /> **0x1** - enabled for peer-to-peer replication.<br /><br /> **0x2** - publish only local changes.<br /><br /> **0x4** - enabled for non-SQL Server subscribers.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [syspublications &#40;System View&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
- [syspublications &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syspublications-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
+- [sys.sp_addpublication (Transact-SQL)](../system-stored-procedures/sp-addpublication-transact-sql.md)
+- [sys.sp_changepublication (Transact-SQL)](../system-stored-procedures/sp-changepublication-transact-sql.md)
+- [sys.sp_helppublication (Transact-SQL)](../system-stored-procedures/sp-helppublication-transact-sql.md)
+- [syspublications (System View) (Transact-SQL)](../system-views/syspublications-system-view-transact-sql.md)
+- [syspublications (Transact-SQL)](syspublications-transact-sql.md)

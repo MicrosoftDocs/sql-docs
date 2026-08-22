@@ -122,11 +122,10 @@ SET @to_lsn = sys.fn_cdc_map_time_to_lsn('largest less than or equal', @end_time
 SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all');  
 ```  
   
-## See Also  
- - [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- - [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- - [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- - [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- - [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
-  
-  
+## Related content
+
+- [cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)](cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)
+- [sys.fn_cdc_map_time_to_lsn (Transact-SQL)](sys-fn-cdc-map-time-to-lsn-transact-sql.md)
+- [sys.sp_cdc_enable_table (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)
+- [sys.sp_cdc_help_change_data_capture (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)
+- [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)

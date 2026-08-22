@@ -24,7 +24,6 @@ monikerRange: ">=aps-pdw-2016"
 |physical_name|**nvarchar(32)**|Property name as defined by the manufacturer.|NOT NULL|  
 |is_key|**bit**|Determines whether the device instance is unique or not unique.|NOT NULL<br /><br /> 0 - Device instance is unique.<br /><br /> 1 - Device instance is not unique.|  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)

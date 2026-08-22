@@ -156,9 +156,9 @@ GO
 ```
 
 
-## See also
+## Related content
 
-- [Track Data Changes (SQL Server)](track-data-changes-sql-server.md)
-- [About change data capture (SQL Server)](about-change-data-capture-sql-server.md)
-- [Work with Change Data (SQL Server)](work-with-change-data-sql-server.md)
-- [Administer and Monitor change data capture (SQL Server)](administer-and-monitor-change-data-capture-sql-server.md)
+- [Track data changes (SQL Server)](track-data-changes-sql-server.md)
+- [What is change data capture (CDC)?](about-change-data-capture-sql-server.md)
+- [Work with Change Data](work-with-change-data-sql-server.md)
+- [Administer and monitor change data capture](administer-and-monitor-change-data-capture-sql-server.md)

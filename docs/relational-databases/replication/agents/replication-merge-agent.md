@@ -413,4 +413,4 @@ In addition, if you have to write statistics to the \<Distribution server\>..msm
   
 ## Related content
 
-- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
+- [Replication Agent Administration](replication-agent-administration.md)

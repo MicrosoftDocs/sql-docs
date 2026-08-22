@@ -49,7 +49,7 @@ The DMV `sys.dm_cdc_errors` contains error information for the previous 32 sessi
 
 Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
-## Next steps
- 
- - [sys.dm_cdc_log_scan_sessions &#40;Transact-SQL&#41;](change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
- - [sys.dm_repl_traninfo &#40;Transact-SQL&#41;](sys-dm-repl-traninfo-transact-sql.md)
+## Related content
+
+- [Change Data Capture - sys.dm_cdc_log_scan_sessions](change-data-capture-sys-dm-cdc-log-scan-sessions.md)
+- [sys.dm_repl_traninfo (Transact-SQL)](sys-dm-repl-traninfo-transact-sql.md)

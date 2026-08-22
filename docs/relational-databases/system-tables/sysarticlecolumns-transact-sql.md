@@ -30,8 +30,7 @@ The **sysarticlecolumns** table contains one row for each table column that is p
 |**is_xml**|**bit**|Indicates whether the column is an **xml** column. A value of **1** indicates an xml column.|  
 |**is_max**|**bit**|Indicates whether the column is a Large Value data type column, **varchar(max)**, **nvarchar(max)**, and **varbinary(max)**. A value of **1** indicates a Large Value column.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

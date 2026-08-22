@@ -18,5 +18,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
-- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
+- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [Replication Security Best Practices](replication-security-best-practices.md)

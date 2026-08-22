@@ -72,6 +72,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
   
 ## Related content
 
-- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
-- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
-- [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [Encrypt connections to SQL Server by importing a certificate](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
+- [Replication Security Best Practices](replication-security-best-practices.md)
+- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)

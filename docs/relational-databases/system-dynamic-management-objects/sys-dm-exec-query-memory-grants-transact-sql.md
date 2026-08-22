@@ -132,11 +132,11 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
     GO
     ```
   
-## See also 
+## Related content
 
- - [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](sys-dm-exec-query-resource-semaphores-transact-sql.md)     
- - [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](sys-dm-os-wait-stats-transact-sql.md)     
- - [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](execution-related-dynamic-management-views-and-functions-transact-sql.md)    
- - [Thread and Task Architecture Guide](../thread-and-task-architecture-guide.md)   
- - [MSSQLSERVER_701](../errors-events/mssqlserver-701-database-engine-error.md)
- - [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues)
+- [sys.dm_exec_query_resource_semaphores (Transact-SQL)](sys-dm-exec-query-resource-semaphores-transact-sql.md)
+- [sys.dm_os_wait_stats (Transact-SQL)](sys-dm-os-wait-stats-transact-sql.md)
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Thread and task architecture guide](../thread-and-task-architecture-guide.md)
+- [MSSQLSERVER_701](../errors-events/mssqlserver-701-database-engine-error.md)
+- [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues)

@@ -166,8 +166,8 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Implement a Business Logic Handler for a Merge Article](../implement-a-business-logic-handler-for-a-merge-article.md)
+- [Publish Data and Database Objects](publish-data-and-database-objects.md)
+- [Change Publication and Article Properties](change-publication-and-article-properties.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)

@@ -55,7 +55,7 @@ System views expose catalog metadata. You can use system views to return informa
   
 ## Related content
 
-- [Create Views over XML Columns](../../relational-databases/xml/create-views-over-xml-columns.md)
+- [Create views over XML columns](../xml/create-views-over-xml-columns.md)
 - [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)
-- [GRANT Object Permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)
+- [GRANT object permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)
 - [Row-level security](../security/row-level-security.md)

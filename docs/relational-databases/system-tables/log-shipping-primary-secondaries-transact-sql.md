@@ -27,11 +27,10 @@ dev_langs:
 |**secondary_server**|**sysname**|The name of the secondary instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration.|  
 |**secondary_database**|**sysname**|The name of the secondary database in the log shipping configuration.|  
   
-## See Also  
- [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_add_log_shipping_primary_secondary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)   
- [sp_delete_log_shipping_primary_secondary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)   
- [sp_help_log_shipping_primary_secondary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [sys.sp_add_log_shipping_primary_secondary (Transact-SQL)](../system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)
+- [sys.sp_delete_log_shipping_primary_secondary (Transact-SQL)](../system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)
+- [sys.sp_help_log_shipping_primary_secondary (Transact-SQL)](../system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)
+- [System Tables (Transact-SQL)](system-tables-transact-sql.md)

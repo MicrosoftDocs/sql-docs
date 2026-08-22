@@ -189,4 +189,4 @@ WITH (
 ## Related content
 
 - [PolyBase Transact-SQL reference](polybase-t-sql-objects.md)
-- [Data virtualization with PolyBase in SQL Server](overview.md)
+- [PolyBase overview](overview.md)

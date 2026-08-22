@@ -50,10 +50,10 @@ WHERE DP1.type = 'R'
 ORDER BY DP1.name;  
 ```  
   
-## See Also  
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-[ALTER ROLE (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      
-[sys.server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
-  
+## Related content
+
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [Principals (Database Engine)](../security/authentication-access/principals-database-engine.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)
+- [sys.server_role_members (Transact-SQL)](sys-server-role-members-transact-sql.md)

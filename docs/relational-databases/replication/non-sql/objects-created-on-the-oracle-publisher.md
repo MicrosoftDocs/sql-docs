@@ -44,6 +44,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
-- [Glossary of Terms for Oracle Publishing](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)
-- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)
+- [Configure an Oracle Publisher](configure-an-oracle-publisher.md)
+- [Glossary of Terms for Oracle Publishing](glossary-of-terms-for-oracle-publishing.md)
+- [Oracle Publishing Overview](oracle-publishing-overview.md)

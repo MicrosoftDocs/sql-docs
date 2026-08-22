@@ -89,12 +89,10 @@ WHERE start_time>='2022-03-29 12:00:00' and end_time<='2022-03-30 12:00:00'
 ORDER BY start_time ASC; 
 ```  
 
-## Next steps
+## Related content
 
-Learn more about Azure SQL Database in the following articles:
-
-- [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
-- [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
+- [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)
+- [Azure SQL Database and SQL database in Fabric catalog views](azure-sql-database-catalog-views.md)
 - [sys.event_log (Azure SQL Database)](sys-event-log-azure-sql-database.md)
 - [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
 - [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)

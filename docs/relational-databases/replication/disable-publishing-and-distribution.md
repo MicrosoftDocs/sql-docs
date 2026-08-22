@@ -114,5 +114,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)
+- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)

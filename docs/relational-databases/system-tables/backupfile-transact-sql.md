@@ -55,12 +55,11 @@ dev_langs:
   
  To reduce the number of rows in this table and in other backup and history tables, execute the [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
   
-## See Also  
- [Backup and Restore Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [Backup and Restore Tables (Transact-SQL)](backup-and-restore-tables-transact-sql.md)
+- [backupfilegroup (Transact-SQL)](backupfilegroup-transact-sql.md)
+- [backupmediafamily (Transact-SQL)](backupmediafamily-transact-sql.md)
+- [backupmediaset (Transact-SQL)](backupmediaset-transact-sql.md)
+- [backupset (Transact-SQL)](backupset-transact-sql.md)
+- [System Tables (Transact-SQL)](system-tables-transact-sql.md)

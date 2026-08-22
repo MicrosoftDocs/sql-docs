@@ -28,5 +28,6 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |map_progress|**float**|The percentage of input data that has been consumed so far by the map job.|A floating point number between, and including, 0 and 100.|  
 |reduce_progress|**int**|The percentage of the reduce job that has completed..|A floating point number between, and including, 0 and 100.|  
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)
+## Related content
+
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)

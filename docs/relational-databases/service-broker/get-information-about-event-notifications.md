@@ -36,7 +36,6 @@ helpviewer_keywords:
 > [!NOTE]  
 >  This catalog view does not return event groups.  
   
-## See Also  
- [Event Notifications](../../relational-databases/service-broker/event-notifications.md)  
-  
-  
+## Related content
+
+- [Event notifications](event-notifications.md)

@@ -18,6 +18,6 @@ helpviewer_keywords:
 
 The IBCPSession2 interface is an extension to IBCPSession that provides a member function that is an alternative to calling IBCPSession::BCPColFmt for each column.  IBCPSession2 inherits from IBCPSession and adds one new method: [IBCPSession2::BCPSetBulkMode](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
   
-## See Also  
- [Interfaces &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB) Interfaces](sql-server-native-client-ole-db-interfaces.md)

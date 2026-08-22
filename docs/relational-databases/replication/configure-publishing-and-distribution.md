@@ -165,8 +165,8 @@ You can programmatically configure replication publishing and distribution by us
 
 ## Related content
 
-- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
-- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
-- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Configure Replication for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)
+- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)
+- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)
+- [Configure Distribution](configure-distribution.md)
+- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)
+- [Configure replication with Always On availability groups](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

@@ -27,6 +27,6 @@ helpviewer_keywords:
 
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
-## See also
+## Related content
 
-[IBCPSession::BCPColFmt (OLE DB)](../../connect/oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)
+- [IBCPSession::BCPColFmt (OLE DB)](../../connect/oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)

@@ -176,5 +176,6 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## See Also  
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](sys-dm-exec-query-plan-transact-sql.md)
+## Related content
+
+- [sys.dm_exec_query_plan (Transact-SQL)](sys-dm-exec-query-plan-transact-sql.md)

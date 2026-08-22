@@ -43,9 +43,10 @@ dev_langs:
 ## Permissions  
  The **sys.dm_cryptographic_provider_properties** view is visible to the public.  
   
-## See Also  
- [Security Catalog Views &#40;Transact-SQL&#41;](../system-catalog-views/security-catalog-views-transact-sql.md)   
- [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md)   
- [Extensible Key Management &#40;EKM&#41;](../security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
- [Security-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](security-related-dynamic-management-views-and-functions-transact-sql.md)
+## Related content
+
+- [Security Catalog Views (Transact-SQL)](../system-catalog-views/security-catalog-views-transact-sql.md)
+- [Encryption hierarchy](../security/encryption/encryption-hierarchy.md)
+- [Extensible Key Management (EKM)](../security/encryption/extensible-key-management-ekm.md)
+- [CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)
+- [Security-Related Dynamic Management Views and Functions (Transact-SQL)](security-related-dynamic-management-views-and-functions-transact-sql.md)

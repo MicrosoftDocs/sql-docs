@@ -229,7 +229,7 @@ public class A {
 }
 ```
 
-## See also
+## Related content
 
-<xref:Microsoft.SqlServer.Management.Smo.Server>
-<xref:Microsoft.SqlServer.Management.Common.ServerConnection>
+- <xref:Microsoft.SqlServer.Management.Smo.Server>
+- <xref:Microsoft.SqlServer.Management.Common.ServerConnection>

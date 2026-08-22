@@ -256,15 +256,10 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 
 3. Try the same query again in the SSMS instance that doesn't have Always Encrypted enabled, and note the failure that occurs.
 
-## Next steps
-
-After completing this tutorial, you can go to one of the following tutorials:
-
-- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
-- [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
-- [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
-
-## See also
+## Related content
 
 - [Configure and use Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)
 - [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
+- [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption](tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

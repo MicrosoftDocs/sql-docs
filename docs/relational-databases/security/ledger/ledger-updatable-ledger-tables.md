@@ -75,4 +75,4 @@ The ledger view's schema mirrors the columns defined in the updatable ledger and
 
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md)
 - [Create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md)
-- [How to migrate data from regular tables to ledger tables](ledger-how-to-migrate-data-to-ledger-tables.md)
+- [Migrate data from regular tables to ledger tables](ledger-how-to-migrate-data-to-ledger-tables.md)

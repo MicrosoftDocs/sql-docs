@@ -128,6 +128,6 @@ SELECT * FROM sys.external_tables;
 SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'
 ```
 
-## Next steps
+## Related content
 
-To learn more about troubleshooting, see [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md).
+- [Monitor and troubleshoot PolyBase](polybase-troubleshooting.md)

@@ -30,7 +30,6 @@ This view stores properties for the different alerts that can occur on the syste
 |status|**nvarchar(32)**|Alert status|NULL|
 |condition_value|**bit**|Indicates whether the alert is allowed to occur during system operation.|NULL<br /><br /> Possible values<br />0 - Alert is not generated.<br />1 - Alert is generated.|
 
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)

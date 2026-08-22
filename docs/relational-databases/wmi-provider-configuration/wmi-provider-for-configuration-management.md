@@ -46,9 +46,8 @@ helpviewer_keywords:
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager can also be used to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, client and server protocols, and server aliases  
   
-## See Also  
- [Understanding the WMI Provider for Configuration Management](../../relational-databases/wmi-provider-configuration/understanding-the-wmi-provider-for-configuration-management.md)   
- [Working with the WMI Provider for Configuration Management](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
- [Using WQL and Scripting Languages with the WMI Provider for Configuration Management](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
-  
-  
+## Related content
+
+- [Understanding the WMI Provider for Configuration Management](understanding-the-wmi-provider-for-configuration-management.md)
+- [Working with the WMI Provider for Configuration Management](working-with-the-wmi-provider-for-configuration-management.md)
+- [Using WQL and Scripting Languages with the WMI Provider](using-wql-and-scripting-languages-with-the-wmi-provider.md)

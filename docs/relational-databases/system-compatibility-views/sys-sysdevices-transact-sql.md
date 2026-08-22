@@ -36,8 +36,7 @@ dev_langs:
 |**cntrltype**|**smallint**|Controller type:<br /><br /> 0 = Non-CD-ROM database file<br /><br /> 2 = Disk backup file<br /><br /> 3 - 4 = Diskette backup file<br /><br /> 5 = Tape backup file<br /><br /> 6 = Named-pipe file|  
 |**phyname**|**nvarchar(260)**|Name of the physical file.|  
   
-## See Also  
- [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Mapping System Tables to System Views (Transact-SQL)](../system-tables/mapping-system-tables-to-system-views-transact-sql.md)
+- [System Compatibility Views (Transact-SQL)](system-compatibility-views-transact-sql.md)

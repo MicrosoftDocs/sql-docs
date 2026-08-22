@@ -71,5 +71,5 @@ WideWorldImporters        20                   160
 
 ## Related content
 
-- [Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)

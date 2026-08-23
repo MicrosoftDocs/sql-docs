@@ -35,7 +35,7 @@ Choose the scenario that matches your package configuration:
 - A `.dtsx` package built in Visual Studio (SSDT or SQL Server Integration Services Projects extension) that uses an OLE DB or ADO.NET connection manager pointing to Azure SQL Database.
 - In the Azure SQL Database logical server, the server firewall must be configured to allow connections from Fabric. 
    - Either maintain the server firewall to allow [Fabric IPs](/fabric/security/fabric-allow-list-urls) to access the server firewall. 
-   - Or, enable the **Allow Azure services and resources to access this server**](/azure/azure-sql/database/firewall-configure?view=azuresqldb-current&preserve-view=true) setting in the logical SQL server **Networking** page.
+   - Or, enable the **[Allow Azure services and resources to access this server](/azure/azure-sql/database/firewall-configure?view=azuresqldb-current&preserve-view=true)** setting in the logical SQL server **Networking** page.
 
 ## Scenario 1: Package password
 

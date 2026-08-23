@@ -240,9 +240,9 @@ SET IDENTITY_INSERT img OFF;
 
 ```sql
 CREATE TABLE dbo.Employees (
-    EmployeeID BIGINT IDENTITY,
-    FirstName VARCHAR(50),
-    LastName VARCHAR(50),
+    EmployeeID BIGINT IDENTITY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
     Retired BIT
 );
 ```

@@ -332,7 +332,7 @@ Specifies the subscription type for distribution. A value of `0` indicates a pus
 
 #### -TransactionsPerHistory [ 0 \| 1 \| ... 10000 ]
 
-Specifies the transaction interval for history logging. If the number of committed transactions after the last instance of history logging is greater than this option, a history message is logged. The default is 100. A value of `0` indicates infinite `TransactionsPerHistory`. See the preceding `–MessageInterval` parameter.
+Specifies the transaction interval for history logging. If the number of committed transactions after the last instance of history logging is greater than this option, a history message is logged. The default is 100. A value of `0` indicates infinite `TransactionsPerHistory`. See the preceding `-MessageInterval` parameter.
 
 #### -UseDTS
 

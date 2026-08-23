@@ -16,7 +16,7 @@ helpviewer_keywords:
 [!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Enhanced date and time types (such as `date`, `time`, `datetime2`, and `datetimeoffset`) require the ODBC driver to support richer metadata, extended precision, and more flexible binding semantics.  
-The following ODBC and bulk copy APIs are grouped according to how they contribute to discovery, binding, retrieval, descriptor management, and high‑volume ingestion of enhanced date and time values.
+The following ODBC and bulk copy APIs are grouped according to how they contribute to discovery, binding, retrieval, descriptor management, and high-volume ingestion of enhanced date and time values.
 
 ## Schema & Metadata Discovery (Date/Time Types)
 
@@ -40,7 +40,7 @@ These functions bind application variables and parameters to date and time value
 |----------|---------|
 | [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) | Binds application buffers to result columns containing date/time values |
 | [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) | Binds date/time parameters for prepared or direct statements |
-| [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) | Streams large or variable‑length date/time data during execution |
+| [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) | Streams large or variable-length date/time data during execution |
 
 ## Fetching & Retrieving Date/Time Values
 
@@ -65,7 +65,7 @@ Enhanced date/time values require accurate descriptor fields for precision, scal
 
 ## Bulk Copy (BCP) Support for Date/Time Types
 
-Bulk copy operations allow high‑volume ingestion and extraction of enhanced date/time values.
+Bulk copy operations allow high-volume ingestion and extraction of enhanced date/time values.
 
 | Function | Purpose |
 |----------|---------|

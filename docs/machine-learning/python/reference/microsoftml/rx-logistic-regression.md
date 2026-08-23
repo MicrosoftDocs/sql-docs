@@ -366,16 +366,10 @@ when `train_threads > 1` (multi-threading).
 
 ## References
 
-[Wikipedia: L-BFGS](https://wikipedia.org/wiki/L-BFGS)
-
-[Wikipedia: Logistic
-regression](https://wikipedia.org/wiki/Logistic_regression)
-
-[Scalable
-Training of L1-Regularized Log-Linear Models](https://research.microsoft.com/apps/pubs/default.aspx?id=78900)
-
-[Test Run - L1
-and L2 Regularization for Machine Learning](/archive/msdn-magazine/2015/february/test-run-l1-and-l2-regularization-for-machine-learning)
+- [Wikipedia: L-BFGS](https://wikipedia.org/wiki/L-BFGS)
+- [Wikipedia: Logistic regression](https://wikipedia.org/wiki/Logistic_regression)
+- [Scalable Training of L1-Regularized Log-Linear Models](https://research.microsoft.com/apps/pubs/default.aspx?id=78900)
+- [Test Run - L1 and L2 Regularization for Machine Learning](/archive/msdn-magazine/2015/february/test-run-l1-and-l2-regularization-for-machine-learning)
 
 
 ## Binary classification example

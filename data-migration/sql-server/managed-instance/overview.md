@@ -50,7 +50,7 @@ One of the key benefits of migrating your SQL Server databases to SQL Managed In
 - Instance-level objects required for your application, including logins, credentials, SQL Agent jobs and operators, and server-level triggers
 
 > [!NOTE]  
-> Azure SQL Managed Instance guarantees 99.99 percent availability, even in critical scenarios. Overhead caused by some features in SQL Managed Instance can't be disabled. For more information, see the [Key causes of performance differences between SQL Managed Instance and SQL Server](https://azure.microsoft.com/blog/key-causes-of-performance-differences-between-sql-managed-instance-and-sql-server/) blog entry.
+> Azure SQL Managed Instance guarantees 99.99 percent availability, even in critical scenarios. Overhead caused by some features in SQL Managed Instance can't be disabled. For more information, see the [Key causes of performance differences between SQL Managed Instance and SQL Server](https://azure.microsoft.com/blog/key-causes-of-performance-differences-between-sql-managed-instance-and-sql-server/) blog entry.
 
 ## Choose an appropriate target
 
@@ -64,7 +64,7 @@ The following general guidelines can help you choose the right service tier and 
 You can choose compute and storage resources during deployment and then [change them afterward by using the Azure portal](/azure/azure-sql/database/scale-resources), without incurring downtime for your application.
 
 > [!IMPORTANT]  
-> Any discrepancy in the [virtual network requirements for managed instances](/azure/azure-sql/managed-instance/connectivity-architecture-overview#network-requirements) can prevent you from creating new instances or using existing ones. Learn more about [creating new](/azure/azure-sql/managed-instance/virtual-network-subnet-create-arm-template) and [configuring existing](/azure/azure-sql/managed-instance/vnet-existing-add-subnet) networks.
+> Any discrepancy in the [virtual network requirements for managed instances](/azure/azure-sql/managed-instance/connectivity-architecture-overview#network-requirements) can prevent you from creating new instances or using existing ones. Learn more about [creating new](/azure/azure-sql/managed-instance/virtual-network-subnet-create-arm-template) and [configuring existing](/azure/azure-sql/managed-instance/vnet-existing-add-subnet) networks.
 
 Another key consideration in the selection of the target service tier in Azure SQL Managed Instance (General Purpose versus Business Critical) is the availability of certain features, like In-Memory OLTP, that are available only in the Business Critical tier.
 
@@ -138,7 +138,7 @@ Only SSIS packages in SSISDB starting with SQL Server 2012 are supported for mig
 
 ### SQL Server Reporting Services
 
-You can migrate SQL Server Reporting Services (SSRS) reports to paginated reports in Power BI. Use the [RDL Migration Tool](https://github.com/microsoft/RdlMigration) to help prepare and migrate your reports. Microsoft developed this tool to help customers migrate Report Definition Language (RDL) reports from their SSRS servers to Power BI. It's available on GitHub, and it documents an end-to-end walkthrough of the migration scenario.
+You can migrate SQL Server Reporting Services (SSRS) reports to paginated reports in Power BI. Use the [RDL Migration Tool](https://github.com/microsoft/RdlMigration) to help prepare and migrate your reports. Microsoft developed this tool to help customers migrate Report Definition Language (RDL) reports from their SSRS servers to Power BI. It's available on GitHub, and it documents an end-to-end walkthrough of the migration scenario.
 
 ### SQL Server Analysis Services
 
@@ -150,7 +150,7 @@ Alternatively, you can consider migrating your on-premises Analysis Services tab
 
 The SQL Server high-availability features Always On failover cluster instances and Always On availability groups become obsolete on the target SQL managed instance. High-availability architecture is already built into both [General Purpose (standard availability model)](/azure/azure-sql/database/high-availability-sla-local-zone-redundancy#locally-redundant-availability) and [Business Critical (premium availability model)](/azure/azure-sql/database/high-availability-sla-local-zone-redundancy#locally-redundant-availability) service tiers for SQL Managed Instance. The premium availability model also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes.
 
-Beyond the high-availability architecture that's included in SQL Managed Instance, the [failover groups](/azure/azure-sql/managed-instance/failover-group-sql-mi) feature allows you to manage the replication and failover of databases in a managed instance to another region.
+Beyond the high-availability architecture that's included in SQL Managed Instance, the [failover groups](/azure/azure-sql/managed-instance/failover-group-sql-mi) feature allows you to manage the replication and failover of databases in a managed instance to another region.
 
 ### SQL Agent jobs
 
@@ -176,7 +176,7 @@ The PowerShell utility automatically maps Windows Server Active Directory accoun
 
 ### Encryption
 
-When you're migrating databases protected by [transparent data encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview) to a managed instance by using the native restore option, [migrate the corresponding certificate](/azure/azure-sql/managed-instance/tde-certificate-migrate) from the source SQL Server instance to the target SQL managed instance *before* database restore.
+When you're migrating databases protected by [transparent data encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview) to a managed instance by using the native restore option, [migrate the corresponding certificate](/azure/azure-sql/managed-instance/tde-certificate-migrate) from the source SQL Server instance to the target SQL managed instance *before* database restore.
 
 ### System databases
 
@@ -207,11 +207,11 @@ To learn more about in-memory technologies, see [Optimize performance by using i
 
 ## Advanced features
 
-Be sure to take advantage of the advanced cloud-based features in SQL Managed Instance. For example, you don't need to worry about managing backups because the service does it for you. You can restore to any [point in time within the retention period](/azure/azure-sql/database/recovery-using-backups#point-in-time-restore). Additionally, you don't need to worry about setting up high availability, because [high availability is built in](/azure/azure-sql/database/high-availability-sla-local-zone-redundancy).
+Be sure to take advantage of the advanced cloud-based features in SQL Managed Instance. For example, you don't need to worry about managing backups because the service does it for you. You can restore to any [point in time within the retention period](/azure/azure-sql/database/recovery-using-backups#point-in-time-restore). Additionally, you don't need to worry about setting up high availability, because [high availability is built in](/azure/azure-sql/database/high-availability-sla-local-zone-redundancy).
 
-To strengthen security, consider using [Microsoft Entra authentication for Azure SQL](/azure/azure-sql/database/authentication-aad-overview), [auditing](/azure/azure-sql/managed-instance/auditing-configure), [threat detection](/azure/azure-sql/database/azure-defender-for-sql), [row-level security](/sql/relational-databases/security/row-level-security), and [dynamic data masking](/sql/relational-databases/security/dynamic-data-masking).
+To strengthen security, consider using [Microsoft Entra authentication for Azure SQL](/azure/azure-sql/database/authentication-aad-overview), [auditing](/azure/azure-sql/managed-instance/auditing-configure), [threat detection](/azure/azure-sql/database/azure-defender-for-sql), [row-level security](/sql/relational-databases/security/row-level-security), and [dynamic data masking](/sql/relational-databases/security/dynamic-data-masking).
 
-In addition to advanced management and security features, SQL Managed Instance provides advanced tools that can help you [monitor and tune your workload](/azure/azure-sql/database/monitor-tune-overview). [Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql) allows you to monitor a large set of managed instances in a centralized way. [Automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning#automatic-plan-correction) in managed instances continuously monitors performance of your SQL plan execution and automatically fixes the identified performance problems.
+In addition to advanced management and security features, SQL Managed Instance provides advanced tools that can help you [monitor and tune your workload](/azure/azure-sql/database/monitor-tune-overview). [Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql) allows you to monitor a large set of managed instances in a centralized way. [Automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning#automatic-plan-correction) in managed instances continuously monitors performance of your SQL plan execution and automatically fixes the identified performance problems.
 
 Some features are available only after the [database compatibility level](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) is changed to the latest compatibility level (150).
 

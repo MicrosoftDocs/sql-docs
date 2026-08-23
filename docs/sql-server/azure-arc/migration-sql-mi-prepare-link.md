@@ -406,7 +406,6 @@ To troubleshoot common issues when migrating to Azure SQL Managed Instance, see 
 > [!div class="nextstepaction"]
 > [Migrate to Azure SQL Managed Instance](migrate-to-azure-sql-managed-instance.md)
 
-
 ## Related content
 
 - [Managed Instance link best practices](/azure/azure-sql/managed-instance/managed-instance-link-best-practices)

@@ -32,18 +32,18 @@ The following data is collected for [!INCLUDE [ssazurearc](../../includes/ssazur
 
 | Description | Property name | Property type |
 | :-- | :-- | :-- |
-| SQL Server edition | `Edition` | `string` |
-| Resource ID of the hosting Azure Arc for Servers resource | `ContainerResourceId` | `string` |
-| Time when the resource was created | `CreateTime` | `string` |
-| The number of logical processors used by the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance | `VCore` | `string` |
-| Cloud connectivity status | `Status` | `string` |
-| SQL Server update level | `PatchLevel` | `string` |
-| SQL Server collation | `Collation` | `string` |
-| SQL Server current version | `CurrentVersion` | `string` |
-| SQL Server instance name | `InstanceName` | `string` |
-| Dynamic TCP ports used by SQL Server | `TcpDynamicPorts` | `string` |
-| Static TCP ports used by SQL Server | `TcpStaticPorts` | `string` |
-| SQL Server product ID | `ProductId` | `string` |
+| SQL Server edition | `Edition` | `string` |
+| Resource ID of the hosting Azure Arc for Servers resource | `ContainerResourceId` | `string` |
+| Time when the resource was created | `CreateTime` | `string` |
+| The number of logical processors used by the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance | `VCore` | `string` |
+| Cloud connectivity status | `Status` | `string` |
+| SQL Server update level | `PatchLevel` | `string` |
+| SQL Server collation | `Collation` | `string` |
+| SQL Server current version | `CurrentVersion` | `string` |
+| SQL Server instance name | `InstanceName` | `string` |
+| Dynamic TCP ports used by SQL Server | `TcpDynamicPorts` | `string` |
+| Static TCP ports used by SQL Server | `TcpStaticPorts` | `string` |
+| SQL Server product ID | `ProductId` | `string` |
 | [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] provisioning state | `ProvisioningState` | `string` |
 
 The following JSON document is an example of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] - Azure Arc resource

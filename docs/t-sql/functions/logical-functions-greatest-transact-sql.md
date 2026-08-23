@@ -37,7 +37,7 @@ GREATEST ( expression1 [ , ...expressionN ] )
 
 #### *expression1, expressionN*
 
-A list of comma-separated expressions of any comparable data type. The `GREATEST` function requires at least one argument and supports no more than 254 arguments.
+A list of comma-separated expressions of any comparable data type. The `GREATEST` function requires at least one argument and supports no more than 254 arguments.
 
 Each expression can be a constant, variable, column name or function, and any combination of arithmetic, bitwise, and string operators. Aggregate functions and scalar subqueries are permitted.
 
@@ -45,9 +45,9 @@ Each expression can be a constant, variable, column name or function, and any co
 
 Returns the data type with the highest precedence from the set of types passed to the function. For more information, see [Data Type Precedence (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).
 
-If all arguments have the same data type and the type is supported for comparison, `GREATEST` returns that type.
+If all arguments have the same data type and the type is supported for comparison, `GREATEST` returns that type.
 
-Otherwise, the function will implicitly convert all arguments to the data type of the highest precedence before comparison and use this type as the return type.
+Otherwise, the function will implicitly convert all arguments to the data type of the highest precedence before comparison and use this type as the return type.
 
 For numeric types, the scale of the return type will be the same as the highest precedence argument, or the largest scale if more than one argument is of the highest precedence data type.
 
@@ -80,7 +80,7 @@ The following example returns the maximum value from the list of constants that 
 The scale of the return type is determined by the scale of the argument with the highest precedence data type.
 
 ```sql
-SELECT GREATEST('6.62', 3.1415, N'7') AS GreatestVal;
+SELECT GREATEST('6.62', 3.1415, N'7') AS GreatestVal;
 GO
 ```
 
@@ -99,7 +99,7 @@ GreatestVal
  The following example returns the maximum value from the list of character constants that is provided.
 
 ```sql
-SELECT GREATEST('Glacier', N'Joshua Tree', 'Mount Rainier') AS GreatestString;
+SELECT GREATEST('Glacier', N'Joshua Tree', 'Mount Rainier') AS GreatestString;
 GO
 ```
 

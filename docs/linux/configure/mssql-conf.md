@@ -748,7 +748,7 @@ The following options are available to the memory settings.
 | --- | --- |
 | `memory.disablememorypressure` | [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] disable memory pressure. Values can be `true` or `false` (default). Disabling memory pressure inhibits the signals [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses to limit its physical memory usage to `memory.memorylimitmb`, which causes the usage to eventually go beyond that limit. |
 | `memory.memory_optimized` | Enable or disable [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] memory optimized features - persistent memory file enlightenment, memory protection. Values can be `true` or `false`. |
-| `memory.enablecontainersharedmemory` | Applicable for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers only. Use this setting to enable shared memory inside [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers. For more information, see ­[Enable VDI backup and restore in containers](../containers/configure.md#enable-vdi-backup-and-restore-in-containers). Values can be `true` or `false` (default). |
+| `memory.enablecontainersharedmemory` | Applicable for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers only. Use this setting to enable shared memory inside [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers. For more information, see [Enable VDI backup and restore in containers](../containers/configure.md#enable-vdi-backup-and-restore-in-containers). Values can be `true` or `false` (default). |
 
 <a id="msdtc"></a>
 

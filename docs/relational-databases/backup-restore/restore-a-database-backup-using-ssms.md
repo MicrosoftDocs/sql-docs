@@ -113,7 +113,7 @@ For information on SQL Server restore from Azure Blob Storage, see [SQL Server B
 
       - **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.
 
-   1. **Take tail-log backup before restore.** Not all restore scenarios require a tail-log backup.  For more information, see **Scenarios That Require a Tail-Log Backup** from [Tail-Log Backups (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
+   1. **Take tail-log backup before restore.** Not all restore scenarios require a tail-log backup. For more information, see **Scenarios That Require a Tail-Log Backup** from [Tail-Log Backups (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
   
    1. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before the restore operations, and sets the database to multi-user mode when complete.
   

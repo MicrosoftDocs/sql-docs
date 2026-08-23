@@ -166,7 +166,7 @@ The following constraints on virtual network features and traffic are in effect:
 
 ## Related content
 
-- For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md). To learn more, see:
+- For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md). To learn more, see:
   - [Virtual cluster architecture](virtual-cluster-architecture.md).
   - [Service-aided subnet configuration](subnet-service-aided-configuration-enable.md).
   - [Set up a new Azure virtual network](virtual-network-subnet-create-arm-template.md) or an [existing Azure virtual network](vnet-existing-add-subnet.md) where you can deploy SQL Managed Instance.

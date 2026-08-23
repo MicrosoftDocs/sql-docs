@@ -26,9 +26,9 @@ Returns information about the Azure cloud certificates used in SQL Server to set
   
 ## Permissions
 
-Principals must have the **VIEW SERVER SECURITY STATE** permission.
+Principals must have the **VIEW SERVER SECURITY STATE** permission.
   
-The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).
+The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).
   
 ## Related content
 

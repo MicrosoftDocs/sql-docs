@@ -711,11 +711,9 @@ Copy the following files:
 - `libssl-1_1-x64.dll`
 - `libcrypto-1_1-x64.dll`
 
-from the folder <br>
-`C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\Library\bin`
+from the folder: `C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\Library\bin`
 
-to the folder <br>
-`C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\DLLs`
+to the folder: `C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\DLLs`
 
 Then open a new DOS command shell prompt.
 

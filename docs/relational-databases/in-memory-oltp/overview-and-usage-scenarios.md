@@ -108,7 +108,7 @@ Memory-optimized table variables and non-durable tables typically reduce CPU and
 
 #### Implementation considerations
 
-To get started: [Improving temp table and table variable performance using memory optimization.](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+To get started: [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization).
 
 #### Customer case study
 

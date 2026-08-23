@@ -79,7 +79,7 @@ Data Sync isn't the preferred solution for the following scenarios:
 
 > [!CAUTION]
 > **SQL Data Sync requires SQL authentication** for connections to the hub and member databases. Microsoft Entra (Azure AD) authentication isn't supported by SQL Data Sync. 
-> Because SQL authentication relies on static passwords, it doesn't benefit from modern protections like multifactor authentication (MFA), Conditional Access, or managed identities. This can increase exposure for the entire SQL instance to credential theft, brute‑force attacks, and operational overhead for password rotation and policy enforcement. 
+> Because SQL authentication relies on static passwords, it doesn't benefit from modern protections like multifactor authentication (MFA), Conditional Access, or managed identities. This can increase exposure for the entire SQL instance to credential theft, brute-force attacks, and operational overhead for password rotation and policy enforcement. 
 > Where possible, prefer solutions that support Microsoft Entra authentication or managed identities. Since SQL Data Sync is scheduled for retirement, migrate to an alternative that aligns with your organization's security standards.
 
 ## Private link for Data Sync

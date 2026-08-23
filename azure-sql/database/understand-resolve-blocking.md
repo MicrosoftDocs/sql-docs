@@ -270,12 +270,12 @@ By examining the previous information, you can determine the cause of most block
 
 ## Analyze blocking data 
 
-* Examine the output of the DMVs `sys.dm_exec_requests` and `sys.dm_exec_sessions` to determine the heads of the blocking chains, using `blocking_these` and `session_id`. This most clearly identifies which requests are blocked and which are blocking. Look further into the sessions that are blocked and blocking. Is there a common or root to the blocking chain? They likely share a common table, and one or more of the sessions involved in a blocking chain is performing a write operation. 
+* Examine the output of the DMVs `sys.dm_exec_requests` and `sys.dm_exec_sessions` to determine the heads of the blocking chains, using `blocking_these` and `session_id`. This most clearly identifies which requests are blocked and which are blocking. Look further into the sessions that are blocked and blocking. Is there a common or root to the blocking chain? They likely share a common table, and one or more of the sessions involved in a blocking chain is performing a write operation. 
 
-* Examine the output of the DMVs `sys.dm_exec_requests` and `sys.dm_exec_sessions` for information on the session IDs at the head of the blocking chain. Look for the following fields: 
+* Examine the output of the DMVs `sys.dm_exec_requests` and `sys.dm_exec_sessions` for information on the session IDs at the head of the blocking chain. Look for the following fields: 
 
     -    `sys.dm_exec_requests.status`  
-    This column shows the status of a particular request. Typically, a sleeping status indicates that the session ID has completed execution and is waiting for the application to submit another query or batch. A runnable or running status indicates that the session ID is currently processing a query. The following table gives brief explanations of the various status values.
+    This column shows the status of a particular request. Typically, a sleeping status indicates that the session ID has completed execution and is waiting for the application to submit another query or batch. A runnable or running status indicates that the session ID is currently processing a query. The following table gives brief explanations of the various status values.
 
     | Status | Meaning |
     |:-|:-|
@@ -292,16 +292,16 @@ By examining the previous information, you can determine the cause of most block
     Similarly, this field tells you the number of open transactions in this request. If this value is greater than 0, the session ID is within an open transaction and might be holding locks acquired by any statement within the transaction.
 
     -   `sys.dm_exec_requests.wait_type`, `wait_time`, and `last_wait_type`  
-    If the `sys.dm_exec_requests.wait_type` is NULL, the request isn't currently waiting for anything and the `last_wait_type` value indicates the last `wait_type` that the request encountered. For more information about `sys.dm_os_wait_stats` and a description of the most common wait types, see [sys.dm_os_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). The `wait_time` value can be used to determine if the request is making progress. When a query against the `sys.dm_exec_requests` table returns a value in the `wait_time` column that is less than the `wait_time` value from a previous query of `sys.dm_exec_requests`, this indicates that the prior lock was acquired and released and is now waiting on a new lock (assuming nonzero `wait_time`). This can be verified by comparing the `wait_resource` between `sys.dm_exec_requests` output, which displays the resource for which the request is waiting.
+    If the `sys.dm_exec_requests.wait_type` is NULL, the request isn't currently waiting for anything and the `last_wait_type` value indicates the last `wait_type` that the request encountered. For more information about `sys.dm_os_wait_stats` and a description of the most common wait types, see [sys.dm_os_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). The `wait_time` value can be used to determine if the request is making progress. When a query against the `sys.dm_exec_requests` table returns a value in the `wait_time` column that is less than the `wait_time` value from a previous query of `sys.dm_exec_requests`, this indicates that the prior lock was acquired and released and is now waiting on a new lock (assuming nonzero `wait_time`). This can be verified by comparing the `wait_resource` between `sys.dm_exec_requests` output, which displays the resource for which the request is waiting.
 
     -   `sys.dm_exec_requests.wait_resource`
-    This field indicates the resource that a blocked request is waiting on. The following table lists common `wait_resource` formats and their meaning:
+    This field indicates the resource that a blocked request is waiting on. The following table lists common `wait_resource` formats and their meaning:
 
     | Resource | Format | Example | Explanation | 
     |:-|:-|:-|:-|
-    | Table | DatabaseID:ObjectID:IndexID | TAB: 5:261575970:1 | In this case, database ID 5 is the pubs sample database and object ID 261575970 is the titles table and 1 is the clustered index. |
-    | Page | DatabaseID:FileID:PageID | PAGE: 5:1:104 | In this case, database ID 5 `is pubs`, file ID 1 is the primary data file, and page 104 is a page belonging to the titles table. To identify the `object_id` the page belongs to, use the dynamic management function [sys.dm_db_page_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql), passing in the DatabaseID, FileId, PageId from the `wait_resource`. | 
-    | Key | DatabaseID:Hobt_id (Hash value for index key) | KEY: 5:72057594044284928 (3300a4f361aa) | In this case, database ID 5 is `pubs`, and `Hobt_ID` 72057594044284928 corresponds to `index_id` 2 for `object_id` 261575970 (titles table). Use the `sys.partitions` catalog view to associate the `hobt_id` to a particular `index_id` and `object_id`. There's no way to unhash the index key hash to a specific key value. |
+    | Table | DatabaseID:ObjectID:IndexID | TAB: 5:261575970:1 | In this case, database ID 5 is the pubs sample database and object ID 261575970 is the titles table and 1 is the clustered index. |
+    | Page | DatabaseID:FileID:PageID | PAGE: 5:1:104 | In this case, database ID 5 `is pubs`, file ID 1 is the primary data file, and page 104 is a page belonging to the titles table. To identify the `object_id` the page belongs to, use the dynamic management function [sys.dm_db_page_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql), passing in the DatabaseID, FileId, PageId from the `wait_resource`. | 
+    | Key | DatabaseID:Hobt_id (Hash value for index key) | KEY: 5:72057594044284928 (3300a4f361aa) | In this case, database ID 5 is `pubs`, and `Hobt_ID` 72057594044284928 corresponds to `index_id` 2 for `object_id` 261575970 (titles table). Use the `sys.partitions` catalog view to associate the `hobt_id` to a particular `index_id` and `object_id`. There's no way to unhash the index key hash to a specific key value. |
     | Row | DatabaseID:FileID:PageID:Slot(row) | RID: 5:1:104:3 | In this case, database ID 5 is `pubs`, file ID 1 is the primary data file, page 104 is a page belonging to the titles table, and slot 3 indicates the row's position on the page. |
     | Compile  | DatabaseID:FileID:PageID:Slot(row) | RID: 5:1:104:3 | In this case, database ID 5 is `pubs`, file ID 1 is the primary data file, page 104 is a page belonging to the titles table, and slot 3 indicates the row's position on the page. |
 
@@ -346,7 +346,7 @@ By examining the previous information, you can determine the cause of most block
 
     -   Other columns
 
-        The remaining columns in [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) and [sys.dm_exec_request](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) can provide insight into the root of a problem as well. Their usefulness varies depending on the circumstances of the problem. For example, you can determine if the problem happens only from certain clients (hostname), on certain network libraries (net_library), when the last batch submitted by a session ID was `last_request_start_time` in `sys.dm_exec_sessions`, how long a request had been running using `start_time` in `sys.dm_exec_requests`, and so on.
+        The remaining columns in [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) and [sys.dm_exec_request](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) can provide insight into the root of a problem as well. Their usefulness varies depending on the circumstances of the problem. For example, you can determine if the problem happens only from certain clients (hostname), on certain network libraries (net_library), when the last batch submitted by a session ID was `last_request_start_time` in `sys.dm_exec_sessions`, how long a request had been running using `start_time` in `sys.dm_exec_requests`, and so on.
 
 
 ## Common blocking scenarios

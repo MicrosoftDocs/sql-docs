@@ -52,7 +52,7 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 Resumes the materialized view.
 
 *DISABLE*   
-Suspends maintenance on the materialized view while maintaining metadata and permissions.  All queries against the materialized view while in a disabled state resolve against the underlying tables.
+Suspends maintenance on the materialized view while maintaining metadata and permissions.  All queries against the materialized view while in a disabled state resolve against the underlying tables.
   
 ## Permissions
 

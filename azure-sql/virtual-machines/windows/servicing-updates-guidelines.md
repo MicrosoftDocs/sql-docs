@@ -26,25 +26,25 @@ The rest of the article provides supported methods to keep your SQL Server VM up
 
 ## Azure Update Manager (Recommended)
 
-[Azure Update Manager](../azure-update-manager-sql-vm.md) is the recommended, first‑party, Azure‑wide service for patching Azure virtual machines, including SQL Server on Azure VMs. You can enable Azure Update Manager after you register your SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
+[Azure Update Manager](../azure-update-manager-sql-vm.md) is the recommended, first-party, Azure-wide service for patching Azure virtual machines, including SQL Server on Azure VMs. You can enable Azure Update Manager after you register your SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
 
 By using Azure Update Manager, you can:
 - Automatically install SQL Server Cumulative Updates (CUs)
 - Automatically install security and critical OS updates
 - Schedule updates within defined maintenance windows
 - Patch SQL Server instances at scale across multiple VMs
-- Perform on‑demand or scheduled updates
+- Perform on-demand or scheduled updates
 - Monitor update compliance centrally
 
 Azure Update Manager provides a consistent and scalable approach for keeping both the operating system and SQL Server instance current after deployment.
 
 ## Automated patching
 
-[Automated patching](automated-patching.md) is available through the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), but it's scheduled for retirement in September 2027. Don't use automated patching for new SQL Server VM deployments or in conjunction with Azure Update Manager. Use Azure Update Manager for a more robust, scalable, and long‑term servicing solution.
+[Automated patching](automated-patching.md) is available through the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), but it's scheduled for retirement in September 2027. Don't use automated patching for new SQL Server VM deployments or in conjunction with Azure Update Manager. Use Azure Update Manager for a more robust, scalable, and long-term servicing solution.
 
 Automated patching installs only Windows and SQL Server updates marked as **Important** or **Critical**. You must manually install other SQL Server updates that aren't marked as **Important** or **Critical**. To automatically install Cumulative Updates, use the integrated [Azure Update Manager](../azure-update-manager-sql-vm.md) experience.
 
-## Customer‑built or custom images
+## Customer-built or custom images
 
 If your environment requires specific patches, build and maintain custom VM images that include:
 

@@ -45,13 +45,13 @@ Use the following syntax to add a persistent log buffer to an existing database.
 ### Add persistent log buffer in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later
 
 ```sql
-ALTER DATABASE [DB] SET PERSISTENT_LOG_BUFFER = ON (DIRECTORY_NAME = 'path-to-directory-on-a-DAX-volume');
+ALTER DATABASE [DB] SET PERSISTENT_LOG_BUFFER = ON (DIRECTORY_NAME = 'path-to-directory-on-a-DAX-volume');
 ```
 
 For example:
 
 ```sql
-ALTER DATABASE WideWorldImporters SET PERSISTENT_LOG_BUFFER = ON (DIRECTORY_NAME = 'F:\SQLTLog');
+ALTER DATABASE WideWorldImporters SET PERSISTENT_LOG_BUFFER = ON (DIRECTORY_NAME = 'F:\SQLTLog');
 ```
 
 The name of the persistent log file buffer is generated automatically. The size of the file is always 20 megabytes.
@@ -91,13 +91,13 @@ The syntax differs depending on the version of [!INCLUDE[ssnoversion-md](../../i
 ### Remove persistent log buffer in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later
 
 ```sql
-ALTER DATABASE [DB] SET PERSISTENT_LOG_BUFFER = OFF;
+ALTER DATABASE [DB] SET PERSISTENT_LOG_BUFFER = OFF;
 ```
 
 For example:
 
 ```sql
-ALTER DATABASE WideWorldImporters SET PERSISTENT_LOG_BUFFER = OFF;
+ALTER DATABASE WideWorldImporters SET PERSISTENT_LOG_BUFFER = OFF;
 ```
 
 ### Remove persistent log buffer in [!INCLUDE[sqlv16](../../includes/sssql16-md.md)]

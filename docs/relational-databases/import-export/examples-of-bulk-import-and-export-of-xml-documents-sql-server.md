@@ -20,7 +20,7 @@ helpviewer_keywords:
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-## <a id="top"></a>
+<a id="top"></a>
 
 You can bulk import XML documents into a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database, or bulk export them from a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database. This article provides examples of both.
 

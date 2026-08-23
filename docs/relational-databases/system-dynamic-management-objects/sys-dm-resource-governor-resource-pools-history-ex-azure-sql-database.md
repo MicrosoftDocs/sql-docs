@@ -100,16 +100,16 @@ Requires the `VIEW SERVER PERFORMANCE STATE` permission.
 
 ## Remarks
 
-Users can access this dynamic management view to monitor near real time resource consumption for the user workload pool and the system internal pools in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
+Users can access this dynamic management view to monitor near real time resource consumption for the user workload pool and the system internal pools in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 When connected to a database in an elastic pool, a resource pool represents the resources available to the entire elastic pool. When connected to a single database, a resource pool represents the resources available to the database.
 
 > [!IMPORTANT]
-> Most of the data in this DMV is intended for internal consumption and is subject to change.
+> Most of the data in this DMV is intended for internal consumption and is subject to change.
 
 ## Examples
 
-The following example returns maximum log rate data and consumption at each snapshot by user pool:
+The following example returns maximum log rate data and consumption at each snapshot by user pool:
 
 ```sql
 SELECT snapshot_time,

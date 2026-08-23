@@ -17,7 +17,7 @@ The [!INCLUDE [msCoName](../includes/msconame-md.md)] Connector for SAP BW consi
 The [!INCLUDE [msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 is a component of the SQL Server 2016 Feature Pack. To install the Connector for SAP BW and its documentation, download and run the installer from the [SQL Server 2016 Feature Pack web page](https://www.microsoft.com/download/details.aspx?id=56833).
 
 > [!IMPORTANT]  
-> Microsoft doesn't anticipate providing an updated version of the Connector for SAP BW. Microsoft doesn't own the source code for the SAP BW components, which were developed by a third-party, and as a result can't update them. Consider purchasing the latest SAP connectivity components from a Microsoft ISV partner such as [Theobald Software](https://helpcenter.theobald-software.com/xtract-is/. Microsoft's ISV partners have adapted their SAP connectivity components for SSIS for installation in Azure.
+> Microsoft doesn't anticipate providing an updated version of the Connector for SAP BW. Microsoft doesn't own the source code for the SAP BW components, which were developed by a third-party, and as a result can't update them. Consider purchasing the latest SAP connectivity components from a Microsoft ISV partner such as [Theobald Software](https://helpcenter.theobald-software.com/xtract-is/). Microsoft's ISV partners have adapted their SAP connectivity components for SSIS for installation in Azure.
 
 > [!IMPORTANT]  
 > The documentation for the Microsoft Connector for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.

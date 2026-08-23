@@ -150,7 +150,7 @@ The table below gives a summary of the BACKUP DATABASE with COMPRESSION options 
 |`BACKUP DATABASE <database_name> TO DISK` | Backup with no compression or with compression depending on default setting.|
 |`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION`|Backup using the default setting in `sp_configure`.
 |`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = MS_XPRESS)` | Backup with compression using the MS_XPRESS algorithm.|
-|`BACKUP DATABASE <database_name> TO  DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE)`| Backup with compression using the QATzip library.|
+|`BACKUP DATABASE <database_name> TO  DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE)`| Backup with compression using the QATzip library.|
 
 > [!NOTE]
 > The examples in the table above specify DISK as destination. The actual destination may be DISK, TAPE, or URL.

@@ -112,11 +112,11 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction doesn't apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED VIEW with REBUILD.
+- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction doesn't apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED VIEW with REBUILD.
   
 ## Remarks
 
-A materialized view in Azure data warehouse is similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](../../relational-databases/views/create-indexed-views.md) for details) except that a materialized view supports aggregate functions.   
+A materialized view in Azure data warehouse is similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](../../relational-databases/views/create-indexed-views.md) for details) except that a materialized view supports aggregate functions.   
 
 >[!Note]
 >Although CREATE MATERIALIZED VIEW does not support COUNT, DISTINCT, COUNT(DISTINCT expression), or COUNT_BIG (DISTINCT expression), SELECT queries with these functions can still benefit from materialized views for faster performance as the Synapse SQL optimizer can automatically re-write those aggregations in the user query to match existing materialized views.  For details, check this article's example section. 
@@ -131,7 +131,7 @@ A materialized view can't be created on a table with dynamic data masking (DDM),
 
 A materialized view can't be created on a table with row level security enabled.
 
-Materialized Views can be created on partitioned tables.  Partition SPLIT/MERGE are supported on materialized views base tables, partition SWITCH isn't supported.  
+Materialized Views can be created on partitioned tables.  Partition SPLIT/MERGE are supported on materialized views base tables, partition SWITCH isn't supported.  
  
 ALTER TABLE SWITCH is not supported on tables that are referenced in materialized views. Disable or drop the materialized views before using ALTER TABLE SWITCH. In the following scenarios, the materialized view creation requires new columns to be added to the materialized view:
 

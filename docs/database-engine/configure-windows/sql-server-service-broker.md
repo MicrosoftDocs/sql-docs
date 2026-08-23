@@ -47,7 +47,7 @@ The messages in the queues can be fetched using the Transact-SQL `RECEIVE` comma
 
 ```sql
 /*
-In this example, the initiator must then use ON CONTRACT [DEFAULT] and a MESSAGE TYPE [DEFAULT]. [DEFAULT] is a delimited identifier for the built‑in contract and isn't a T‑SQL keyword, so it must be bracketed or quoted.
+In this example, the initiator must then use ON CONTRACT [DEFAULT] and a MESSAGE TYPE [DEFAULT]. [DEFAULT] is a delimited identifier for the built-in contract and isn't a T-SQL keyword, so it must be bracketed or quoted.
 */
 CREATE QUEUE dbo.ExpenseQueue;
 GO

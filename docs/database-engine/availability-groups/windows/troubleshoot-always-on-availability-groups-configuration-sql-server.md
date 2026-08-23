@@ -296,7 +296,7 @@ For **detailed** step-by-step instructions, refer to Engine error [MSSQLSERVER_3
 
    > [!NOTE]  
    > If you're using command line programs like SQLCMD, ensure that you specify the correct switches for server name. For instance, in SQLCMD you must use the upper case -S switch that specifies server name, not the lower case -s switch that is used for column separator.
-   > </br>Example: `sqlcmd -S AG_Listener,port -E -d AgDb1 -K ReadOnly -M`
+   > <br />Example: `sqlcmd -S AG_Listener,port -E -d AgDb1 -K ReadOnly -M`
 
 4. Ensure that the availability group listener is online. To ensure that the availability group listener is online run the following query on the primary replica: 
 

@@ -69,7 +69,7 @@ Vector indexes created with the latest version introduce significant enhancement
 **With latest version Vector Indexes:**
 
 > [!IMPORTANT]
-> When querying tables that use the latest vector index version, approximate vector search must use the TOP (N) APPROXIMATE syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest‑neighbor results.
+> When querying tables that use the latest vector index version, approximate vector search must use the TOP (N) APPROXIMATE syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest-neighbor results.
 
 ```syntaxsql
 SELECT TOP (N) WITH APPROXIMATE
@@ -186,7 +186,7 @@ ORDER BY r.distance;
 ### A. Basic vector similarity search
 
 > [!IMPORTANT]
-> When querying tables that use the latest vector index version, approximate vector search must use the `TOP (N) WITH APPROXIMATE` syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest‑neighbor results.
+> When querying tables that use the latest vector index version, approximate vector search must use the `TOP (N) WITH APPROXIMATE` syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest-neighbor results.
 
 The following example finds the 10 most similar articles to `Pink Floyd music style` in the `wikipedia_articles_embeddings` table.
 

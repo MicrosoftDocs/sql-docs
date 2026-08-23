@@ -134,7 +134,7 @@ You'll set the connection string as a GitHub secret, `AZURE_SQL_CONNECTION_STRIN
     ```yaml
     - uses: azure/sql-action@v2.3
       with:
-        connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
+        connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
         path: './Database.dacpac'
         action: 'publish'
     ```
@@ -164,7 +164,7 @@ You'll set the connection string as a GitHub secret, `AZURE_SQL_CONNECTION_STRIN
                     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
              - uses: azure/sql-action@v2.3
                with:
-                connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
+                connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
                 path: './Database.dacpac'
                 action: 'publish'
 
@@ -195,7 +195,7 @@ You'll set the connection string as a GitHub secret, `AZURE_SQL_CONNECTION_STRIN
                 creds: ${{ secrets.AZURE_CREDENTIALS }}
              - uses: azure/sql-action@v2.3
                with:
-                connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
+                connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
                 path: './Database.dacpac'
                 action: 'publish'
 

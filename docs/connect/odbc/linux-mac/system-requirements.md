@@ -112,7 +112,7 @@ All versions support the x64 architecture. The Arm64 architecture on macOS is su
 | Red Hat Enterprise Linux 8 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
 | Red Hat Enterprise Linux 9 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No |
 | Red Hat Enterprise Linux 10 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| SUSE Linux Enterprise Server 11 <sup>1</sup> | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| SUSE Linux Enterprise Server 11<sup>1</sup> | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | SUSE Linux Enterprise Server 12 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | SUSE Linux Enterprise Server 15 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No |
 | SUSE Linux Enterprise Server 16 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |

@@ -23,7 +23,7 @@ Complete [pre-migration](../pre-migration.md) steps before continuing.
 
 ## Migrate
 
-After you complete the steps for the [pre-migration stage](../pre-migration.md), you're ready to perform the schema and data migration. See [Migrate databases from Amazon Web Services to Azure](/azure/migration/migrate-databases-from-aws), which includes [example migration scenarios](/azure/migration/migrate-databases-from-aws#migration-scenarios) that might align to your use case.
+After you complete the steps for the [pre-migration stage](../pre-migration.md), you're ready to perform the schema and data migration. See [Migrate databases from Amazon Web Services to Azure](/azure/migration/migrate-databases-from-aws), which includes [example migration scenarios](/azure/migration/migrate-databases-from-aws#migration-scenarios) that might align to your use case.
 
 Migrate your data using your chosen [migration method](overview.md#compare-migration-options).
 
@@ -92,7 +92,7 @@ You can also consider these recommendations for best performance during the migr
 
 ## Post-migration
 
-After you have successfully completed the migration stage, go through the following post-migration tasks to ensure that everything is functioning smoothly and efficiently.
+After you have successfully completed the migration stage, go through the following post-migration tasks to ensure that everything is functioning smoothly and efficiently.
 
 The post-migration phase is crucial for reconciling any data accuracy issues and verifying completeness, as well as addressing performance issues with the workload.
 

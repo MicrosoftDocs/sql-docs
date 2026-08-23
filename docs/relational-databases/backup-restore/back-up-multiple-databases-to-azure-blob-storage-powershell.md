@@ -36,7 +36,7 @@ The following are considerations for the sample scripts:
 
   For more information, see [Navigate SQL Server PowerShell Paths](/powershell/sql-server/navigate-sql-server-powershell-paths).
 
-- **Get-ChildItem** cmdlet: The information returned by the **Get-ChildItem** depends on the location in a SQL Server PowerShell path. For example, if the location is at the computer level, this cmdlet returns all the SQL Server database engine instances installed on the computer. Or, if the location is at the object level such as databases, then it returns a list of database objects. By default the **Get-ChildItem** cmdlet does not return system objects. Use the `–Force` parameter to see the system objects.
+- **Get-ChildItem** cmdlet: The information returned by the **Get-ChildItem** depends on the location in a SQL Server PowerShell path. For example, if the location is at the computer level, this cmdlet returns all the SQL Server database engine instances installed on the computer. Or, if the location is at the object level such as databases, then it returns a list of database objects. By default the **Get-ChildItem** cmdlet does not return system objects. Use the `-Force` parameter to see the system objects.
 
 - An Azure storage account and SQL credential are required prerequisites and for all backup and restore operations to Azure Blob Storage.
   

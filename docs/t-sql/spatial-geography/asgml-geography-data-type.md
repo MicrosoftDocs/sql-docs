@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 Returns the Geography Markup Language (GML) representation of a **geography** instance.  
   
-For more information on Geography Markup Language, see the Open Geospatial Consortium Specification: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
+For more information on Geography Markup Language, see the Open Geospatial Consortium Specification: [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629).  
   
 ## Syntax  
   

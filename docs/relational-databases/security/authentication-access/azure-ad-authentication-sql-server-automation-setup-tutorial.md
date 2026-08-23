@@ -610,7 +610,7 @@ $certSubjectName="<certSubjectName>" # Your existing certificate name
 $applicationName="<applicationName>" # Your existing application name 
 $adminAccountName="<adminAccountName>"
 $adminAccountSid="<adminID>"  # Use object ID for the Azure AD user and group, or client ID for the Azure AD application 
-$adminAccountType= 0  # 0 – for Azure AD user and application, 1 for Azure AD group 
+$adminAccountType= 0  # 0 - for Azure AD user and application, 1 for Azure AD group 
 
 # Helper function
 #
@@ -1143,7 +1143,7 @@ $certSubjectName="<certSubjectName>" # Your existing certificate name
 $applicationName="<applicationName>" # Your existing application name 
 $adminAccountName="<adminAccountName>"
 $adminAccountSid="<adminID>"  # Use object ID for the Microsoft Entra user and group, or client ID for the Microsoft Entra application 
-$adminAccountType= 0  # 0 – for Microsoft Entra user and application, 1 for Microsoft Entra group 
+$adminAccountType= 0  # 0 - for Microsoft Entra user and application, 1 for Microsoft Entra group 
 
 $keyVault = Get-AzKeyVault -VaultName $keyVaultName
 if (!$keyVault)

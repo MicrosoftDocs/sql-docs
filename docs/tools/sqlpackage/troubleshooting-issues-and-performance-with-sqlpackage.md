@@ -199,7 +199,7 @@ Some of the most relevant articles include:
 - [Lesson Learned #51: Managed Instance - Import via Sqlpackage.exe doesn't allow autogrow](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-51-managed-instance-import-via-sqlpackage-exe/ba-p/369147)
 - [Lesson Learned #32: How to export multiple databases from SQL Server to Bacpac](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-32-how-to-export-multiple-databases-from-sql/ba-p/369017)
 - [Step By Step: How to use SQLPackage with Access Token](https://techcommunity.microsoft.com/t5/azure-database-support-blog/step-by-step-how-to-use-sqlpackage-with-access-token/ba-p/1407819)
-- [Collation conflict when moving Azure SQL DB to SQL server on-premises or Azure VM using SQLPackage.](https://techcommunity.microsoft.com/t5/azure-database-support-blog/collation-conflict-when-moving-azure-sql-db-to-sql-server-on/ba-p/1547319)
+- [Collation conflict when moving Azure SQL DB to SQL server on-premises or Azure VM using SQLPackage](https://techcommunity.microsoft.com/t5/azure-database-support-blog/collation-conflict-when-moving-azure-sql-db-to-sql-server-on/ba-p/1547319)
 
 ## Related content
 

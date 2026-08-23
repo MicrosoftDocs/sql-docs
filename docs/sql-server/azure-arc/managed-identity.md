@@ -35,7 +35,7 @@ When using managed identity with SQL Server enabled by Azure Arc, consider the f
   - `Inbound connections` are logins and users connecting to SQL Server. Inbound connections can also be achieved by using [App registration](entra-authentication-setup-tutorial.md), starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
   - `Outbound connections` are SQL Server connections to Azure resources, like backup to URL, or connecting to Azure Key Vault.
 - App Registration **can't** enable a SQL Server to make outbound connections. Outbound connections need a primary managed identity assigned to the SQL Server.
-- For SQL Server 2025 and later, we recommend that you use managed identity based Microsoft Entra setup, as detailed in this article. Alternatively, you can configure an [app registration for SQL Server 2025.](../../relational-databases/security/authentication-access/microsoft-entra-authentication-sql-server-enable-without-arc.md)
+- For SQL Server 2025 and later, we recommend that you use managed identity based Microsoft Entra setup, as detailed in this article. Alternatively, you can configure an [app registration for SQL Server 2025](../../relational-databases/security/authentication-access/microsoft-entra-authentication-sql-server-enable-without-arc.md).
 
 ## Prerequisites
 

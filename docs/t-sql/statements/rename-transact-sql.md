@@ -53,11 +53,13 @@ RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ]
 ## Arguments
 
 #### RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ] *table_name* TO *new_table_name*
+
 **Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Change the name of a user-defined table. Specify the table to be renamed with a one-, two-, or three-part name. Specify the new table *new_table_name* as a one-part name.
 
-#### RENAME DATABASE [::] [ *database_name* TO *new_database_name*
+#### RENAME DATABASE [::] [ *database_name* TO *new_database_name* ]
+
 **Applies to:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of the following [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] reserved database names:
@@ -74,6 +76,7 @@ Change the name of a user-defined database from *database_name* to *new_database
 
 
 #### RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
+
 **Applies to:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Change the name of a column in a table. 

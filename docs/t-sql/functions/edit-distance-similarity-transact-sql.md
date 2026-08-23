@@ -51,7 +51,7 @@ An alphanumeric expression of character data. *character_expression* can be a co
 
 ## Remarks
 
-This function implements the Damerau-Levenshtein algorithm. If any of the inputs is NULL then the function returns a NULL value. Otherwise, the function returns an integer value from 0 to 100. The similarity value is computed as `(1 – (edit_distance / greatest(len(string1), len(string2)))) * 100`.
+This function implements the Damerau-Levenshtein algorithm. If any of the inputs is NULL then the function returns a NULL value. Otherwise, the function returns an integer value from 0 to 100. The similarity value is computed as `(1 - (edit_distance / greatest(len(string1), len(string2)))) * 100`.
 
 ## Examples
 

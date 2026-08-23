@@ -40,7 +40,7 @@ You can add server-level principals ([!INCLUDE [ssNoVersion](../../../includes/s
 ## Fixed server-level roles
 
 > [!NOTE]  
-> These server-level roles introduced before [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], and aren't available in Azure SQL Database or Azure Synapse Analytics. There are special [Azure SQL Database server roles for permission management](/azure/azure-sql/database/security-server-roles) that are equivalent to the server-level roles introduced in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]. For more information about SQL Database, see [Controlling and granting database access.](/azure/sql-database/sql-database-manage-logins).
+> These server-level roles introduced before [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], and aren't available in Azure SQL Database or Azure Synapse Analytics. There are special [Azure SQL Database server roles for permission management](/azure/azure-sql/database/security-server-roles) that are equivalent to the server-level roles introduced in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]. For more information about SQL Database, see [Controlling and granting database access](/azure/sql-database/sql-database-manage-logins).
 
 The following table shows the fixed server-level roles and their capabilities.
 

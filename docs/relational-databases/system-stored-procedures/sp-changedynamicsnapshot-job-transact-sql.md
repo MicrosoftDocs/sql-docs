@@ -174,5 +174,5 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [View and Modify Replication Security Settings](../replication/security/view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](../replication/security/view-and-modify-replication-security-settings.md)
 - [Create a Snapshot for a Merge Publication with Parameterized Filters](../replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)

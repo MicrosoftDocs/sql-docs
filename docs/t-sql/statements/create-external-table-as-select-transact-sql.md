@@ -814,7 +814,7 @@ In order to enable CETAS on your SQL managed instance, adjust the following Azur
 # Enter your Azure subscription ID
 $SubscriptionID = "<YourSubscriptionIDHERE>"
 
-# Enter your managed instance name – for example, "sqlmi1"
+# Enter your managed instance name - for example, "sqlmi1"
 $ManagedInstanceName = "<YourManagedInstanceNameHere>"
 
 # ===============================================================================

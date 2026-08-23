@@ -23,7 +23,7 @@ dev_langs:
 
 Returns the Geography Markup Language (GML) representation of a **geometry** instance.
   
-For more information on Geography Markup Language, see the following Open Geospatial Consortium Specification:[OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)
+For more information on Geography Markup Language, see the following Open Geospatial Consortium Specification:[OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629).
   
 ## Syntax  
   

@@ -53,8 +53,7 @@ Don't use `PARSEONLY` in a stored procedure or a trigger. `SET PARSEONLY` return
 
 Requires membership in the **public** role.
 
-## See also
+## Related content
 
-- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET OFFSETS (Transact-SQL)](../../t-sql/statements/set-offsets-transact-sql.md)
-
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET OFFSETS (Transact-SQL)](set-offsets-transact-sql.md)

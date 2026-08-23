@@ -78,7 +78,6 @@ Specifies the workload to be used for a tuning session.
 </DTAXML>  
 ```  
   
-## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
-  
-  
+## Related content
+
+- [XML Input File Reference (Database Engine Tuning Advisor)](xml-input-file-reference-database-engine-tuning-advisor.md)

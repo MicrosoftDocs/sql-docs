@@ -58,10 +58,9 @@ To troubleshoot this message:
     > [!NOTE]  
     > Different time zones for the two server instances should not cause a problem.  
   
-## See Also  
-[log_shipping_monitor_secondary &#40;Transact-SQL&#41;](~/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)  
-[About Log Shipping &#40;SQL Server&#41;](~/database-engine/log-shipping/about-log-shipping-sql-server.md)  
-[sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)  
-[sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)  
-[About Log Shipping &#40;SQL Server&#41;](~/database-engine/log-shipping/about-log-shipping-sql-server.md)  
-  
+## Related content
+
+- [log_shipping_monitor_secondary (Transact-SQL)](../system-tables/log-shipping-monitor-secondary-transact-sql.md)
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [sys.sp_help_log_shipping_monitor_secondary (Transact-SQL)](../system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)
+- [sys.sp_help_log_shipping_monitor (Transact-SQL)](../system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)

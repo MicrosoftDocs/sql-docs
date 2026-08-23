@@ -64,9 +64,7 @@ SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
-## See Also  
- [View a Stored XML Schema Collection](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
- [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
-  
-  
+## Related content
 
+- [View a stored XML schema collection](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)
+- [XML schema collections (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)

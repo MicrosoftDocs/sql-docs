@@ -120,10 +120,10 @@ And P.ProductModelID = 19
 select @x  
 ```  
   
-## See Also  
- [Compare Typed XML to Untyped XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Create Instances of XML Data](../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml Data Type Methods](../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
+## Related content
+
+- [Compare typed XML to untyped XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
+- [XML data (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)
+- [Create instances of XML data](../relational-databases/xml/create-instances-of-xml-data.md)
+- [xml Data Type Methods](../t-sql/xml/xml-data-type-methods.md)
+- [XML Data Modification Language (XML DML)](../t-sql/xml/xml-data-modification-language-xml-dml.md)

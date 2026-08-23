@@ -105,12 +105,9 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume) KEY INDEX PK_JobCan
 GO  
 ```  
   
-## See Also
+## Related content
 
-- [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
-- [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
-- [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
-- [Full-Text Search](../../relational-databases/search/full-text-search.md)   
- 
-  
-  
+- [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)
+- [ALTER FULLTEXT CATALOG (Transact-SQL)](alter-fulltext-catalog-transact-sql.md)
+- [DROP FULLTEXT CATALOG (Transact-SQL)](drop-fulltext-catalog-transact-sql.md)
+- [Full-Text Search](../../relational-databases/search/full-text-search.md)

@@ -20,7 +20,7 @@ dev_langs:
   - "TSQL"
 ---
 
-# &#x40;&#x40;FETCH_STATUS (Transact-SQL)
+# @@FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 This function returns the status of the last cursor FETCH statement issued against any cursor currently opened by the connection.  

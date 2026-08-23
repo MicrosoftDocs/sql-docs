@@ -172,6 +172,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   Function import is not supported.  
   
-## See Also  
- [XML Construction &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)
- 
+## Related content
+
+- [XML construction (XQuery)](xml-construction-xquery.md)

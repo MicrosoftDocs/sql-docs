@@ -194,5 +194,5 @@ Python developers can learn how to use Python with SQL Server by following these
 
 ## Related content
 
-- [Quickstart: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
-- [Tutorial: In-database analytics for R developers](../tutorials/r-taxi-classification-introduction.md)
+- [Quickstart: Run simple R scripts with SQL machine learning](../tutorials/quickstart-r-create-script.md)
+- [R tutorial: Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)

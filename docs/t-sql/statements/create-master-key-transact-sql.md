@@ -86,12 +86,12 @@ GO
 
 ## Related content
 
-- [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
-- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
-- [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md)
-- [BACKUP SERVICE MASTER KEY](../../relational-databases/security/encryption/back-up-the-service-master-key.md)
-- [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)
-- [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)
-- [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)
-- [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)
+- [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [BACKUP MASTER KEY (Transact-SQL)](backup-master-key-transact-sql.md)
+- [Back up a service master key](../../relational-databases/security/encryption/back-up-the-service-master-key.md)
+- [OPEN MASTER KEY (Transact-SQL)](open-master-key-transact-sql.md)
+- [ALTER MASTER KEY (Transact-SQL)](alter-master-key-transact-sql.md)
+- [DROP MASTER KEY (Transact-SQL)](drop-master-key-transact-sql.md)
+- [CLOSE MASTER KEY (Transact-SQL)](close-master-key-transact-sql.md)

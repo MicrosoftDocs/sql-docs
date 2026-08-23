@@ -52,12 +52,11 @@ DROP CONTRACT contract_name
 DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-## See Also  
- [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
- [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER BROKER PRIORITY (Transact-SQL)](alter-broker-priority-transact-sql.md)
+- [ALTER SERVICE (Transact-SQL)](alter-service-transact-sql.md)
+- [CREATE CONTRACT (Transact-SQL)](create-contract-transact-sql.md)
+- [DROP BROKER PRIORITY (Transact-SQL)](drop-broker-priority-transact-sql.md)
+- [DROP SERVICE (Transact-SQL)](drop-service-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

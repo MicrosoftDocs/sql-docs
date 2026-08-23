@@ -89,5 +89,5 @@ The replication agent security model is a little bit different for Azure SQL Man
 ## Related content
 
 - [Replication Security Best Practices](replication-security-best-practices.md)
-- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](view-and-modify-replication-security-settings.md)
 - [Secure the Snapshot Folder](secure-the-snapshot-folder.md)

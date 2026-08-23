@@ -105,7 +105,7 @@ The [Always Encrypted Wizard](always-encrypted-wizard.md) is a tool for encrypti
 - [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md)
 - [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md)
 - [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md)
-- [sys.column_encryption_keys  (Transact-SQL)](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md)
+- [sys.column_encryption_keys (Transact-SQL)](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md)
 - [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
 - [Configure column encryption using Always Encrypted with a DAC package](configure-always-encrypted-using-dacpac.md)
 - [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)

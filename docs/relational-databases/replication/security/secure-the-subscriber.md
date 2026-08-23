@@ -74,4 +74,4 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
 
 - [Encrypt connections to SQL Server by importing a certificate](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
 - [Replication Security Best Practices](replication-security-best-practices.md)
-- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](view-and-modify-replication-security-settings.md)

@@ -52,6 +52,6 @@ monikerRange: "=azuresqldb-mi-current || =azuresqldb-current || >=sql-server-201
 ## Related content
 
 - [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)
-- [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](security/view-and-modify-replication-security-settings.md)
 - [Updatable Subscriptions - For Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)
 - [Subscribe to Publications](subscribe-to-publications.md)

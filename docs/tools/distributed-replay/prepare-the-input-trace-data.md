@@ -57,9 +57,8 @@ For more information about the preprocess stage, see [SQL Server Distributed Rep
 
 1. After the preprocess stage is complete, the intermediate file is stored in the controller working directory. To initiate the event replay stage, you must run the administration tool with the **replay** option. For more information, see [Replay Trace Data](../../tools/distributed-replay/replay-trace-data.md).
 
-## See also
+## Related content
 
-- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Distributed Replay Requirements](./sql-server-distributed-replay.md)
-- [Administration Tool Command-line Options (Distributed Replay Utility)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
-- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)
+- [SQL Server Distributed Replay overview](sql-server-distributed-replay.md)
+- [Administration Tool Command-line Options (Distributed Replay Utility)](administration-tool-command-line-options-distributed-replay-utility.md)
+- [Configure Distributed Replay](configure-distributed-replay.md)

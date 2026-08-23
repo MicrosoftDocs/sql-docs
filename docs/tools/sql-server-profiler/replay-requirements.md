@@ -90,5 +90,5 @@ For information about what permissions are required to replay a trace, see [Perm
 - [Replay a trace table (SQL Server Profiler)](replay-a-trace-table-sql-server-profiler.md)
 - [Replay a trace file (SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md)
 - [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)
-- [sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)
+- [sys.sp_defaultdb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)
 - [SQL Server Distributed Replay overview](../distributed-replay/sql-server-distributed-replay.md)

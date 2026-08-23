@@ -106,6 +106,6 @@ EXTERNAL NAME [StringUtilities].[Microsoft.Samples.SqlServer.Concatenate];
 GO  
 ```  
   
-## See Also  
- [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
+## Related content
+
+- [DROP AGGREGATE (Transact-SQL)](drop-aggregate-transact-sql.md)

@@ -97,9 +97,8 @@ SET DEADLOCK_PRIORITY NORMAL;
 GO
 ```
 
-## Next steps
+## Related content
 
-- [@@LOCK_TIMEOUT (Transact-SQL)](../../t-sql/functions/lock-timeout-transact-sql.md)
-- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET LOCK_TIMEOUT (Transact-SQL)](../../t-sql/statements/set-lock-timeout-transact-sql.md)
-
+- [@@LOCK_TIMEOUT (Transact-SQL)](../functions/lock-timeout-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET LOCK_TIMEOUT (Transact-SQL)](set-lock-timeout-transact-sql.md)

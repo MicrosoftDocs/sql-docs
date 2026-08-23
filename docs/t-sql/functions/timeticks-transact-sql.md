@@ -1,6 +1,6 @@
 ---
 title: "@@TIMETICKS (Transact-SQL)"
-description: "&#x40;&#x40;TIMETICKS (Transact-SQL)"
+description: "@@TIMETICKS (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/18/2017"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;TIMETICKS (Transact-SQL)
+# @@TIMETICKS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of microseconds per tick.  

@@ -38,12 +38,10 @@ The server did not respond to the client request. This error could occur because
 
 Make sure that the server is started.  
   
-## See Also  
-[Manage the Database Engine Services](~/database-engine/configure-windows/manage-the-database-engine-services.md)  
-[Configure Client Protocols](~/database-engine/configure-windows/configure-client-protocols.md)  
-[Network protocols and network libraries](../../sql-server/install/network-protocols-and-network-libraries.md)  
-[Client Network Configuration](~/database-engine/configure-windows/client-network-configuration.md)  
-[Configure Client Protocols](~/database-engine/configure-windows/configure-client-protocols.md)  
-[Enable or Disable a Server Network Protocol](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
-  
+## Related content
 
+- [Manage the Database Engine services](../../database-engine/configure-windows/manage-the-database-engine-services.md)
+- [Configure client protocols](../../database-engine/configure-windows/configure-client-protocols.md)
+- [Network protocols and network libraries](../../sql-server/install/network-protocols-and-network-libraries.md)
+- [Client network configuration](../../database-engine/configure-windows/client-network-configuration.md)
+- [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)

@@ -133,14 +133,12 @@ WHERE HireDate < CONVERT(DATETIME,'20020101',101) ;
 GO  
 ```  
   
-## See Also  
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
- [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
- [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
-  
-  
+## Related content
 
+- [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
+- [CREATE VIEW (Transact-SQL)](create-view-transact-sql.md)
+- [DROP VIEW (Transact-SQL)](drop-view-transact-sql.md)
+- [Create a stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)

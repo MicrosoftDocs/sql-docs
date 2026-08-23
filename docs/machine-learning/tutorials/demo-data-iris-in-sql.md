@@ -141,5 +141,5 @@ As a validation step, run a query to confirm the data was uploaded.
 
 In the following quickstart, you create a machine learning model and save it to a table, and then use the model to generate predicted outcomes.
 
-> [!div class="checklist"]
+> [!div class="nextstepaction"]
 > [Quickstart: Create and score a predictive model in Python with SQL machine learning](quickstart-python-train-score-model.md)

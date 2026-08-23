@@ -76,5 +76,5 @@ This will initiate a planned, manual failover on the AG replica.
 ## Related content
 
 - [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-- [View SQL Azure Arc inventory](view-inventory.md)
-- [Recovery Models (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)
+- [Manage inventory of SQL Server resources with Azure Arc](view-inventory.md)
+- [Recovery models (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)

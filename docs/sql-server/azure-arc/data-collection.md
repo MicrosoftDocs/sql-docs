@@ -141,5 +141,5 @@ The following lists reflect the monitoring data that is collected from DMV datas
 ## Related content
 
 - [Deployment options for SQL Server enabled by Azure Arc](deployment-options.md)
-- [Configure advanced data security for your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance](configure-advanced-data-security.md)
-- [Configure best practices assessment on an Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance](assess.md)
+- [Protect SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
+- [Configure best practices assessment for SQL Server enabled by Azure Arc](assess.md)

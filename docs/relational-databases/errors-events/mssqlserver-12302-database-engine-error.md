@@ -29,7 +29,6 @@ helpviewer_keywords:
 ## User Action  
 Do not update columns that are part of the primary key constraint.  
   
-## See Also  
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
+## Related content
 
+- [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)

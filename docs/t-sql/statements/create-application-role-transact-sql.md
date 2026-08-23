@@ -85,8 +85,8 @@ GO
 ## Related content
 
 - [Application Roles](../../relational-databases/security/authentication-access/application-roles.md)
-- [sp_setapprole](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)
+- [sys.sp_setapprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)
 - [ALTER APPLICATION ROLE (Transact-SQL)](alter-application-role-transact-sql.md)
 - [DROP APPLICATION ROLE (Transact-SQL)](drop-application-role-transact-sql.md)
-- [Password Policy](../../relational-databases/security/password-policy.md)
+- [Password policy](../../relational-databases/security/password-policy.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

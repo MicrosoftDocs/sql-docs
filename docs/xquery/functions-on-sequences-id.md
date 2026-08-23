@@ -171,6 +171,6 @@ select @x.query('declare namespace CustOrders="Customers";
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requires the argument type of **id()** to be a subtype of xs:IDREF*.  
   
-## See Also  
- [Functions on Sequences](./xquery-functions-against-the-xml-data-type.md)  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)

@@ -167,13 +167,13 @@ DROP TABLE IF EXISTS T1;
 
 ## Related content
 
-- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
-- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
-- [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
-- [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
-- [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
-- [TRUNCATE TABLE (Transact-SQL)](../../t-sql/statements/truncate-table-transact-sql.md)   
-- [DROP VIEW (Transact-SQL)](../../t-sql/statements/drop-view-transact-sql.md)   
-- [DROP PROCEDURE (Transact-SQL)](../../t-sql/statements/drop-procedure-transact-sql.md)   
-- [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
+- [DELETE (Transact-SQL)](delete-transact-sql.md)
+- [sys.sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
+- [TRUNCATE TABLE (Transact-SQL)](truncate-table-transact-sql.md)
+- [DROP VIEW (Transact-SQL)](drop-view-transact-sql.md)
+- [DROP PROCEDURE (Transact-SQL)](drop-procedure-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)

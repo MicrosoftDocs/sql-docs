@@ -32,7 +32,7 @@ The amount of unsent log is a performance metric that can help you evaluate the 
 ## User Action  
 Check the loads on the principal and mirror server instances and their network connection for the cause.  
   
-## See Also  
-[Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/database-mirroring-sql-server.md)  
-[Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](~/database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
-  
+## Related content
+
+- [Database Mirroring (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)
+- [Use Warning Thresholds and Alerts on Mirroring Performance Metrics (SQL Server)](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)

@@ -44,9 +44,8 @@ fn:floor ($arg as numeric?) as numeric?
   
 -   The **floor()** function maps all integer values to xs:decimal.  
   
-## See Also  
- [ceiling Function &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
- [round Function &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
- [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)  
-  
-  
+## Related content
+
+- [Numeric Values Functions - ceiling](numeric-values-functions-ceiling.md)
+- [Numeric Values Functions - round](numeric-values-functions-round.md)
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)

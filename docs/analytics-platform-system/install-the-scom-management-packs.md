@@ -78,7 +78,6 @@ For older versions of PDW without APS, download the [System Center Monitoring Pa
 > [!div class="nextstepaction"]
 > [Import the SCOM Management Pack - Analytics Platform System](import-the-scom-management-pack-for-pdw.md)
 
-
 ## Related content
 
 - [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

@@ -119,12 +119,11 @@ RESTORE FILELISTONLY FROM AdventureWorksBackups
 GO  
 ```  
   
-## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
-  
-  
+## Related content
+
+- [BACKUP (Transact-SQL)](backup-transact-sql.md)
+- [Media sets, media families, and backup sets (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
+- [RESTORE Statements - REWINDONLY (Transact-SQL)](restore-statements-rewindonly-transact-sql.md)
+- [RESTORE Statements - VERIFYONLY (Transact-SQL)](restore-statements-verifyonly-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](restore-statements-transact-sql.md)
+- [Backup History and Header Information (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)

@@ -32,9 +32,8 @@ The type specified in **\@type** requires a non-NULL value for the specified par
 ## User Action  
 Specify a non-NULL value for the parameter, or change the type to one that allows a NULL value for the parameter.  
   
-## See Also  
-[sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
-[Plan Guides](~/relational-databases/performance/plan-guides.md)  
-[sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
-  
+## Related content
 
+- [sys.sp_create_plan_guide (Transact-SQL)](../system-stored-procedures/sp-create-plan-guide-transact-sql.md)
+- [Plan Guides](../performance/plan-guides.md)
+- [sys.sp_create_plan_guide_from_handle (Transact-SQL)](../system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)

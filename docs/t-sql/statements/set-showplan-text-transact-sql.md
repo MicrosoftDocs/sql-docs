@@ -129,10 +129,8 @@ StmtText
 |--Clustered Index Scan(OBJECT:([AdventureWorks2022].[Production].[ProductCostHistory].[PK_ProductCostHistory_ProductCostID]), WHERE:([AdventureWorks2022].[Production].[ProductCostHistory].[StandardCost]<[@1]))  
 ```  
   
-## See Also  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)  
-  
-  
+## Related content
 
+- [Operators (Transact-SQL)](../language-elements/operators-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET SHOWPLAN_ALL (Transact-SQL)](set-showplan-all-transact-sql.md)

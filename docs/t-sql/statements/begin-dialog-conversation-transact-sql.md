@@ -200,10 +200,9 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    WITH ENCRYPTION = OFF ;  
 ```  
   
-## See Also  
- [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
-  
-  
+## Related content
+
+- [BEGIN CONVERSATION TIMER (Transact-SQL)](begin-conversation-timer-transact-sql.md)
+- [END CONVERSATION (Transact-SQL)](end-conversation-transact-sql.md)
+- [MOVE CONVERSATION (Transact-SQL)](move-conversation-transact-sql.md)
+- [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)

@@ -105,12 +105,10 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
 ```  
   
-## See Also  
- [Add Namespaces to Queries with WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
-  
+## Related content
 
+- [Add namespaces to queries using WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)
+- [Compare typed XML to untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
+- [Create instances of XML data](../../relational-databases/xml/create-instances-of-xml-data.md)
+- [xml Data Type Methods](xml-data-type-methods.md)
+- [XML Data Modification Language (XML DML)](xml-data-modification-language-xml-dml.md)

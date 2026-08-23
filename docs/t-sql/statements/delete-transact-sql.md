@@ -529,13 +529,12 @@ FROM dbo.Table2
     WHERE dbo.Table2.ColA = 1;  
 ```
 
-## See Also
+## Related content
 
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
- [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
-  
+- [CREATE TRIGGER (Transact-SQL)](create-trigger-transact-sql.md)
+- [INSERT (Transact-SQL)](insert-transact-sql.md)
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
+- [TRUNCATE TABLE (Transact-SQL)](truncate-table-transact-sql.md)
+- [UPDATE (Transact-SQL)](../queries/update-transact-sql.md)
+- [WITH common_table_expression (Transact-SQL)](../queries/with-common-table-expression-transact-sql.md)
+- [@@ROWCOUNT (Transact-SQL)](../functions/rowcount-transact-sql.md)

@@ -142,7 +142,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\Adve
 |**/p:**|TempDirectoryForTableData=(STRING)|Specifies the temporary directory used to buffer table data before being written to the package file.|
 |**/p:**|VerifyExtraction=(BOOLEAN 'False')|Specifies whether the extracted schema model should be verified.|
 
-## Next Steps
+## Related content
 
-- Learn more about [SqlPackage](sqlpackage.md)
-- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)
+- [SqlPackage](sqlpackage.md)
+- [Troubleshoot issues and performance with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)

@@ -19,7 +19,7 @@ dev_langs:
   - "TSQL"
 ---
 
-# &#x40;&#x40;DBTS (Transact-SQL)
+# @@DBTS (Transact-SQL)
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 

@@ -80,9 +80,8 @@ The following table describes the columns of the result trace data.
 |ReplayHostName|**nvarchar**|The name of the computer on which the client is running during replay.|16|  
 |ApplicationName|**nvarchar**|The name of the client application that created the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection during capture.|17|
 
-## See also
+## Related content
 
-- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Distributed Replay Requirements](./sql-server-distributed-replay.md)
-- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
-- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)
+- [SQL Server Distributed Replay overview](sql-server-distributed-replay.md)
+- [Administration Tool Command-line Options (Distributed Replay Utility)](administration-tool-command-line-options-distributed-replay-utility.md)
+- [Configure Distributed Replay](configure-distributed-replay.md)

@@ -87,4 +87,4 @@ If you create a new SQL project in Visual Studio or VS Code, you must update the
 
 - [Database references overview](database-references.md)
 - [SQL projects package references](package-references.md)
-- [SqlPackage CLI](../../sqlpackage/sqlpackage.md)
+- [SqlPackage](../../sqlpackage/sqlpackage.md)

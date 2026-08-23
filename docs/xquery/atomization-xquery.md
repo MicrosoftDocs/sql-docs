@@ -73,6 +73,6 @@ Atomization also occurs in comparison expression parameters passed to functions,
 
 ## Related content
 
-- [XQuery Basics](xquery-basics.md)
+- [XQuery basics](xquery-basics.md)
 - [Comparison Expressions (XQuery)](comparison-expressions-xquery.md)
 - [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)

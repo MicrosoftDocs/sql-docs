@@ -64,7 +64,6 @@ Requires membership in the **public** role.
 
 ## Related content
 
-- [&#x40;&#x40;TEXTSIZE (Transact-SQL)](../functions/textsize-transact-sql.md)
+- [@@TEXTSIZE (Transact-SQL)](../functions/textsize-transact-sql.md)
 - [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
 - [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
-

@@ -97,7 +97,6 @@ ProductModelID SmallPicturesStored
   
 -   Type assertion is not supported as part of binding the variable in the quantified expressions.  
   
-## See Also  
- [XQuery Expressions](../xquery/xquery-expressions.md)  
-  
-  
+## Related content
+
+- [XQuery Expressions](xquery-expressions.md)

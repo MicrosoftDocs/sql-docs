@@ -55,6 +55,6 @@ As such, disabling the **distributor_admin** login at a remote Distributor is no
   
 ## Related content
 
-- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](view-and-modify-replication-security-settings.md)
 - [Encrypt connections to SQL Server by importing a certificate](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
 - [Replication Security Best Practices](replication-security-best-practices.md)

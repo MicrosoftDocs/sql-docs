@@ -32,6 +32,6 @@ Describes the data type mappings between Microsoft SQL Server and Azure Synapse 
 [Snowflake data type mapping](data-type-mappings-snowflake.md)<br/>
 Describes the data type mappings between Snowflake and Azure Synapse SQL.
 
-## Next steps
+## Related content
 
-[Download Azure Synapse Pathway](synapse-pathway-download.md)
+- [Azure Synapse Pathway download](synapse-pathway-download.md)

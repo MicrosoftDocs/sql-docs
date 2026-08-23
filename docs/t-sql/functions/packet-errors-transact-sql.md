@@ -1,6 +1,6 @@
 ---
 title: "@@PACKET_ERRORS (Transact-SQL)"
-description: "&#x40;&#x40;PACKET_ERRORS (Transact-SQL)"
+description: "@@PACKET_ERRORS (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/18/2017"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;PACKET_ERRORS (Transact-SQL)
+# @@PACKET_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of network packet errors that have occurred on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.  

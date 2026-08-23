@@ -104,9 +104,8 @@ ALTER SERVICE MASTER KEY REGENERATE;
 GO  
 ```  
   
-## See Also  
- [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)   
- [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
+
+- [RESTORE SERVICE MASTER KEY (Transact-SQL)](restore-service-master-key-transact-sql.md)
+- [BACKUP SERVICE MASTER KEY (Transact-SQL)](backup-service-master-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

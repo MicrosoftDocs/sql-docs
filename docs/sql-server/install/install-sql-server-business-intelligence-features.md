@@ -43,10 +43,11 @@ ms.custom:
 > [!NOTE]
 > SQL Server Data Tools (SSDT) is not included with SQL Server 2016. [Download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
   
-## See Also  
- [What's New in Reporting Services &#40;SSRS&#41;](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)   
- [What's New in Analysis Services](/analysis-services/what-s-new-in-analysis-services)   
- [What's New in Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
- [What's New in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md)   
- [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)   
- [Upgrade to SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
+## Related content
+
+- [What's new in SQL Server Reporting Services (SSRS)](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
+- [What's New in Analysis Services](/analysis-services/what-s-new-in-analysis-services)
+- [What's New in Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
+- [What's New in Master Data Services (MDS)](../../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md)
+- [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

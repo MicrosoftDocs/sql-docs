@@ -188,6 +188,5 @@ The owner realized that the **bigint** data type uses 8 bytes each time it's use
 - [CREATE SEQUENCE (Transact-SQL)](create-sequence-transact-sql.md)
 - [DROP SEQUENCE (Transact-SQL)](drop-sequence-transact-sql.md)
 - [NEXT VALUE FOR (Transact-SQL)](../functions/next-value-for-transact-sql.md)
-- [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)
-- [sp_sequence_get_range (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)
-
+- [Sequence numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)
+- [sys.sp_sequence_get_range (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)

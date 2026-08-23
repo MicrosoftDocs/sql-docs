@@ -81,10 +81,7 @@ SET LOCK_TIMEOUT -1;
 SET LOCK_TIMEOUT 1800;  
 ```  
   
-## See Also  
- [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [@@LOCK_TIMEOUT (Transact-SQL)](../functions/lock-timeout-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)

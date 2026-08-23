@@ -190,7 +190,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 - [Create a publication](../publish/create-a-publication.md)
 - [Create a push subscription](../create-a-push-subscription.md)
 - [Create a Pull Subscription](../create-a-pull-subscription.md)
-- [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](../security/view-and-modify-replication-security-settings.md)
 - [MSSQL_ENG021797](../mssql-eng021797.md)
 - [MSSQL_ENG021798](../mssql-eng021798.md)
 - [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)

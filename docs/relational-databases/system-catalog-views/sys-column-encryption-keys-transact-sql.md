@@ -1,6 +1,6 @@
 ---
-title: "sys.column_encryption_keys  (Transact-SQL)"
-description: sys.column_encryption_keys  (Transact-SQL)
+title: "sys.column_encryption_keys (Transact-SQL)"
+description: sys.column_encryption_keys (Transact-SQL)
 author: jaszymas
 ms.author: jaszymas
 ms.date: "10/15/2019"
@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
-# sys.column_encryption_keys  (Transact-SQL)
+# sys.column_encryption_keys (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asa](../../includes/applies-to-version/sqlserver2016-asa.md)]
 

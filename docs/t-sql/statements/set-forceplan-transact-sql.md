@@ -93,11 +93,9 @@ SET FORCEPLAN OFF;
 GO  
 ```  
   
-## See Also  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
-  
-  
+## Related content
 
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET SHOWPLAN_ALL (Transact-SQL)](set-showplan-all-transact-sql.md)
+- [SET SHOWPLAN_TEXT (Transact-SQL)](set-showplan-text-transact-sql.md)

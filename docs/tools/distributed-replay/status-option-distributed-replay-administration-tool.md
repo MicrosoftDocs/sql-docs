@@ -58,7 +58,7 @@ You must run the administration tool as an interactive user, as either a local u
 
 For more information, see [Distributed Replay Security](distributed-replay-security.md).
 
-## See also
+## Related content
 
 - [SQL Server Distributed Replay overview](sql-server-distributed-replay.md)
 - [Transact-SQL debugger](../../ssdt/debugger/transact-sql-debugger.md)

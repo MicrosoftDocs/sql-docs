@@ -86,4 +86,4 @@ The query returns all the `<Location>` element children of the `<root>` element.
 ## Related content
 
 - [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)
-- [namespace-uri Function (XQuery)](functions-on-nodes-namespace-uri.md)
+- [Functions on Nodes - namespace-uri](functions-on-nodes-namespace-uri.md)

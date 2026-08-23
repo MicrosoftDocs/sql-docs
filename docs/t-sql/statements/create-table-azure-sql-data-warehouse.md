@@ -662,7 +662,7 @@ WITH
 ```  
   
 ## Related content
- 
+
 - [CREATE TABLE AS SELECT](create-table-as-select-azure-sql-data-warehouse.md)
 - [DROP TABLE (Transact-SQL)](drop-table-transact-sql.md)
 - [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)

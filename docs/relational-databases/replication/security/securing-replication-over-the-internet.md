@@ -35,4 +35,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ## Related content
 
 - [Replication Security Best Practices](replication-security-best-practices.md)
-- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](view-and-modify-replication-security-settings.md)

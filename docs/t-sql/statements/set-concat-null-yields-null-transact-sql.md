@@ -91,5 +91,5 @@ GO
   
 ## Related content
 
-- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
-- [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SESSIONPROPERTY (Transact-SQL)](../functions/sessionproperty-transact-sql.md)

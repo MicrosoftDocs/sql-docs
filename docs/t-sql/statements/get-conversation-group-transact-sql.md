@@ -124,8 +124,7 @@ GET CONVERSATION GROUP @conversation_group_id
 FROM AdventureWorks.dbo.ExpenseQueue ;  
 ```  
   
-## See Also  
- [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
-  
-  
+## Related content
+
+- [BEGIN DIALOG CONVERSATION (Transact-SQL)](begin-dialog-conversation-transact-sql.md)
+- [MOVE CONVERSATION (Transact-SQL)](move-conversation-transact-sql.md)

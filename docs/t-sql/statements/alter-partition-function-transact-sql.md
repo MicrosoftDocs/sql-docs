@@ -143,13 +143,10 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 MERGE RANGE (100);  
 ```  
   
-## Next steps
-
-Learn more about table partitioning and related concepts in the following articles:
+## Related content
 
 - [CREATE PARTITION FUNCTION (Transact-SQL)](create-partition-function-transact-sql.md)
 - [Partitioned tables and indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)
-- [Modify a Partition Function](../../relational-databases/partitions/modify-a-partition-function.md)
+- [Modify a partition function](../../relational-databases/partitions/modify-a-partition-function.md)
 - [CREATE PARTITION SCHEME (Transact-SQL)](create-partition-scheme-transact-sql.md)
-- [Modify a Partition Scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)
-
+- [Modify a partition scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)

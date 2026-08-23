@@ -98,4 +98,4 @@ Configuring transactional replication without a DMK can result in SQL Server war
 - [Secure the Subscriber](secure-the-subscriber.md)
 - [Secure the Distributor](secure-the-distributor.md)
 - [Secure the Publisher](secure-the-publisher.md)
-- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](view-and-modify-replication-security-settings.md)

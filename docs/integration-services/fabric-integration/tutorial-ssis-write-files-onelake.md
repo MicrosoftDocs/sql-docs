@@ -155,5 +155,5 @@ This pattern lets you manage all your data in OneLake while preserving your exis
 - [OneLake shortcuts](/fabric/onelake/onelake-shortcuts)
 - [Create an Azure Data Lake Storage Gen2 shortcut](/fabric/onelake/create-adls-shortcut)
 - [Azure Storage connection manager](../connection-manager/azure-storage-connection-manager.md)
-- [Tutorial: Integrate SSIS with SQL database in Microsoft Fabric](integrate-fabric-sql-database.md)
+- [Integrate SSIS with SQL database in Microsoft Fabric](integrate-fabric-sql-database.md)
 - [Data Factory in Microsoft Fabric overview](/fabric/data-factory/data-factory-overview)

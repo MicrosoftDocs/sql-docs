@@ -101,17 +101,17 @@ DROP STATISTICS Customer.CustomerStats1;
 DROP STATISTICS dbo.Customer.CustomerStats1;  
 ```  
   
-## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
- [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)
+## Related content
 
+- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md)
+- [CREATE INDEX (Transact-SQL)](create-index-transact-sql.md)
+- [CREATE STATISTICS (Transact-SQL)](create-statistics-transact-sql.md)
+- [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)
+- [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
+- [DBCC SHOW_STATISTICS (Transact-SQL)](../database-console-commands/dbcc-show-statistics-transact-sql.md)
+- [sys.sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)
+- [sys.sp_createstats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)
+- [UPDATE STATISTICS (Transact-SQL)](update-statistics-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [USE (Transact-SQL)](../language-elements/use-transact-sql.md)
+- [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)

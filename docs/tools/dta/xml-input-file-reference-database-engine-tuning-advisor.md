@@ -110,6 +110,6 @@ ms.collection:
   
 -   [Name Element for Table &#40;DTA&#41;](../../tools/dta/name-element-for-table-dta.md)  
   
-## See Also  
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
-  
+## Related content
+
+- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

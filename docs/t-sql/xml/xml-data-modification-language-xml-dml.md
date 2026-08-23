@@ -56,13 +56,11 @@ dev_langs:
   
  When you modify a typed XML instance, the final format must be a valid instance of that type. Otherwise, a validation error is returned.  
   
-## See Also  
- [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md)   
- [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md)   
- [replace value of &#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
- [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)  
-  
-  
+## Related content
 
+- [insert (XML DML)](insert-xml-dml.md)
+- [delete (XML DML)](delete-xml-dml.md)
+- [replace value of (XML DML)](replace-value-of-xml-dml.md)
+- [Compare typed XML to untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
+- [Create instances of XML data](../../relational-databases/xml/create-instances-of-xml-data.md)
+- [xml Data Type Methods](xml-data-type-methods.md)

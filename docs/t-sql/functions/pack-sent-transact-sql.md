@@ -1,6 +1,6 @@
 ---
 title: "@@PACK_SENT (Transact-SQL)"
-description: "&#x40;&#x40;PACK_SENT (Transact-SQL)"
+description: "@@PACK_SENT (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/18/2017"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;PACK_SENT (Transact-SQL)
+# @@PACK_SENT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of output packets written to the network by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since it was last started.  

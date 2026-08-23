@@ -42,4 +42,4 @@ You might need to derive a template from an existing trace file if you can't rem
 - [Create a trace (SQL Server Profiler)](create-a-trace-sql-server-profiler.md)
 - [Modify an Existing Trace (Transact-SQL)](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)
 - [Specify events and data columns for a trace file (SQL Server Profiler)](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)
-- [sp-trace-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)

@@ -90,6 +90,6 @@ GO
 ## Related content
 
 - [Transact-SQL syntax conventions (Transact-SQL)](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
-- [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
+- [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
 - [GRANT system object permissions (Transact-SQL)](grant-system-object-permissions-transact-sql.md)
 - [REVOKE System Object Permissions (Transact-SQL)](revoke-system-object-permissions-transact-sql.md)

@@ -160,13 +160,12 @@ CREATE ASYMMETRIC KEY EKM_askey1
 GO  
 ```  
   
-## See Also  
- [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
- [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
- [ASYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
- [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
- [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
- [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
-  
-  
+## Related content
+
+- [ALTER ASYMMETRIC KEY (Transact-SQL)](alter-asymmetric-key-transact-sql.md)
+- [DROP ASYMMETRIC KEY (Transact-SQL)](drop-asymmetric-key-transact-sql.md)
+- [ASYMKEYPROPERTY (Transact-SQL)](../functions/asymkeyproperty-transact-sql.md)
+- [ASYMKEY_ID (Transact-SQL)](../functions/asymkey-id-transact-sql.md)
+- [Choose an encryption algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [Extensible Key Management using Azure Key Vault (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)

@@ -46,6 +46,3 @@ Also set the following keys on your client machines where tools like APS SSIS de
 "SystemDefaultTlsVersions"=dword:00000001
 "SchUseStrongCrypto"=dword:00000001 
 ```
-
-
-

@@ -67,10 +67,9 @@ GO
 SETUSER;  
 ```  
   
-## See Also  
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
-  
-  
+## Related content
+
+- [DENY (Transact-SQL)](deny-transact-sql.md)
+- [GRANT (Transact-SQL)](grant-transact-sql.md)
+- [REVOKE (Transact-SQL)](revoke-transact-sql.md)
+- [USE (Transact-SQL)](../language-elements/use-transact-sql.md)

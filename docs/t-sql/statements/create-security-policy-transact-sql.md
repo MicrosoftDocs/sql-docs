@@ -167,7 +167,7 @@ CREATE SECURITY POLICY rls.SecPol
 ## Related content
 
 - [Row-level security](../../relational-databases/security/row-level-security.md)
-- [ALTER SECURITY POLICY (Transact-SQL)](../../t-sql/statements/alter-security-policy-transact-sql.md)   
-- [DROP SECURITY POLICY (Transact-SQL)](../../t-sql/statements/drop-security-policy-transact-sql.md)   
-- [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
+- [ALTER SECURITY POLICY (Transact-SQL)](alter-security-policy-transact-sql.md)
+- [DROP SECURITY POLICY (Transact-SQL)](drop-security-policy-transact-sql.md)
+- [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)
 - [sys.security_predicates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)

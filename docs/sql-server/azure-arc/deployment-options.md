@@ -42,4 +42,4 @@ Be sure to review the basic [prerequisites](prerequisites.md) before you deploy 
 
 ## Related content
 
-- [Prerequisites](prerequisites.md)
+- [Prerequisites - SQL Server enabled by Azure Arc](prerequisites.md)

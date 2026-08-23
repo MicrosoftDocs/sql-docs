@@ -38,8 +38,8 @@ dev_langs:
 | Functions Related to QNames (XQuery) | [expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)<br>[local-name-from-QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)<br>[namespace-uri-from-QName (XQuery)](../xquery/functions-related-to-qnames-namespace-uri-from-qname.md) |
 | SQL Server XQuery Extension Functions | [sql:column() function (XQuery)](../xquery/xquery-extension-functions-sql-column.md)<br>[sql:variable() function (XQuery)](../xquery/xquery-extension-functions-sql-variable.md) |
 
-## See Also  
- [xml Data Type Methods](../t-sql/xml/xml-data-type-methods.md)   
- [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
-  
+## Related content
+
+- [xml Data Type Methods](../t-sql/xml/xml-data-type-methods.md)
+- [XQuery Language Reference (SQL Server)](xquery-language-reference-sql-server.md)
+- [XML data (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)

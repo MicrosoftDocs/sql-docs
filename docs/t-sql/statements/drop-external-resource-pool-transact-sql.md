@@ -62,10 +62,10 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
 
-## See Also
+## Related content
 
-+ [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-+ [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
-+ [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
-+ [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)
-+ [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
+- [Server configuration: external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
+- [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](create-external-resource-pool-transact-sql.md)
+- [ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](alter-external-resource-pool-transact-sql.md)
+- [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
+- [DROP RESOURCE POOL (Transact-SQL)](drop-resource-pool-transact-sql.md)

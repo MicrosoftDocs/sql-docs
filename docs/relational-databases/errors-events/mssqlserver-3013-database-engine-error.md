@@ -157,6 +157,6 @@ RESTORE DATABASE is terminating abnormally.
 If you encounter errors such as 4303 together with 3013, find an alternative good backup to restore. Also check the stability of the storage media where backups are placed and repair as necessary.
 
 
-## See also
+## Related content
 
-- [Troubleshoot SQL Server backup and restore operations](/troubleshoot/sql/database-engine/backup-restore/backup-restore-operations).
+- [Troubleshoot SQL Server backup and restore operations](/troubleshoot/sql/database-engine/backup-restore/backup-restore-operations)

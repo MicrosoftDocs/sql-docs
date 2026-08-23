@@ -333,12 +333,12 @@ WAITFOR(
   
 ## Related content
 
-- [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
-- [BEGIN CONVERSATION TIMER (Transact-SQL)](../../t-sql/statements/begin-conversation-timer-transact-sql.md)
-- [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
-- [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
-- [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
-- [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
-- [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
-- [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
-- [DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
+- [BEGIN DIALOG CONVERSATION (Transact-SQL)](begin-dialog-conversation-transact-sql.md)
+- [BEGIN CONVERSATION TIMER (Transact-SQL)](begin-conversation-timer-transact-sql.md)
+- [END CONVERSATION (Transact-SQL)](end-conversation-transact-sql.md)
+- [CREATE CONTRACT (Transact-SQL)](create-contract-transact-sql.md)
+- [CREATE MESSAGE TYPE (Transact-SQL)](create-message-type-transact-sql.md)
+- [SEND (Transact-SQL)](send-transact-sql.md)
+- [CREATE QUEUE (Transact-SQL)](create-queue-transact-sql.md)
+- [ALTER QUEUE (Transact-SQL)](alter-queue-transact-sql.md)
+- [DROP QUEUE (Transact-SQL)](drop-queue-transact-sql.md)

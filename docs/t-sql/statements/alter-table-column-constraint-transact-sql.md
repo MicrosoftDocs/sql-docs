@@ -205,4 +205,4 @@ NOT ENFORCED
 ## Related content
 
 - [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
-- [column_definition (Transact-SQL)](alter-table-column-definition-transact-sql.md)
+- [ALTER TABLE column_definition (Transact-SQL)](alter-table-column-definition-transact-sql.md)

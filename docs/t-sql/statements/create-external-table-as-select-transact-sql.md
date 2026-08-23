@@ -521,16 +521,15 @@ SELECT * FROM [<myview>];
 GO
 ```
 
-## Next steps
+## Related content
 
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
-- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)
-- [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
-- [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)
-- [CREATE TABLE AS SELECT (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
-- [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)
-- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
-
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)
+- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](create-external-file-format-transact-sql.md)
+- [CREATE EXTERNAL TABLE (Transact-SQL)](create-external-table-transact-sql.md)
+- [CREATE TABLE](create-table-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT](create-table-as-select-azure-sql-data-warehouse.md)
+- [DROP TABLE (Transact-SQL)](drop-table-transact-sql.md)
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
 ::: moniker-end
 
 ::: moniker range="azuresqldb-mi-current"
@@ -1160,7 +1159,7 @@ GO
 SELECT COUNT (*) FROM SalesOrdersExternalPartitioned;
 ```
 
-## Next steps
+## Related content
 
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)

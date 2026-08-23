@@ -50,5 +50,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 - [Modify Snapshot Initialization Options for SQL Replication](../snapshot-options.md)
 - [Initialize a Subscription with a Snapshot for a New Publication](../initialize-a-subscription-with-a-snapshot.md)
 - [Replication Security Best Practices](replication-security-best-practices.md)
-- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](view-and-modify-replication-security-settings.md)
 - [Deliver a Snapshot Through FTP](../publish/deliver-a-snapshot-through-ftp.md)

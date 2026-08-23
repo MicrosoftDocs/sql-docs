@@ -283,7 +283,7 @@ SqlPackage .NET 10 Linux:
 
 - [SqlPackage](sqlpackage.md)
 - [SqlPackage in development pipelines](sqlpackage-pipelines.md)
-- [troubleshooting issues with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)
+- [Troubleshoot issues and performance with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)
 - [What are SQL database projects?](../sql-database-projects/sql-database-projects.md)
 - [DacFx GitHub repository](https://github.com/microsoft/DacFx)
 - [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)

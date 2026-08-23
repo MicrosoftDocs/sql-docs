@@ -403,5 +403,5 @@ library(packageA)';
 
 - [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)
 - [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)
-- [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)
-- [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)
+- [sys.external_library_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)
+- [sys.external_libraries (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

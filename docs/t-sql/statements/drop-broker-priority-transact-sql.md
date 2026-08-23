@@ -46,9 +46,8 @@ DROP BROKER PRIORITY ConversationPriorityName
 DROP BROKER PRIORITY InitiatorAToTargetPriority;
 ```  
   
-## See Also  
- [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER BROKER PRIORITY (Transact-SQL)](alter-broker-priority-transact-sql.md)
+- [CREATE BROKER PRIORITY (Transact-SQL)](create-broker-priority-transact-sql.md)
+- [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)

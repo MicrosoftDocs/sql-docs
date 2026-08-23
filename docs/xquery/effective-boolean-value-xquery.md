@@ -79,8 +79,7 @@ SELECT @x.query('if (data(/b[2])) then "true" else "false"')
 go  
 ```  
   
-## See Also  
- [XQuery Basics](../xquery/xquery-basics.md)   
- [FLWOR Statement and Iteration &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
-  
-  
+## Related content
+
+- [XQuery basics](xquery-basics.md)
+- [FLWOR statement and iteration (XQuery)](flwor-statement-and-iteration-xquery.md)

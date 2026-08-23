@@ -47,7 +47,6 @@ dev_langs:
  [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)  
  Describes the XQuery prolog.  
   
-## See Also  
- [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
-  
-  
+## Related content
+
+- [XQuery Language Reference (SQL Server)](xquery-language-reference-sql-server.md)

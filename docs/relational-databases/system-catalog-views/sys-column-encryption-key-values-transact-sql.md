@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 - [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)
 - [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
-- [sys.column_encryption_keys  (Transact-SQL)](sys-column-encryption-keys-transact-sql.md)
+- [sys.column_encryption_keys (Transact-SQL)](sys-column-encryption-keys-transact-sql.md)
 - [sys.column_master_keys (Transact-SQL)](sys-column-master-keys-transact-sql.md)
 - [sys.columns (Transact-SQL)](sys-columns-transact-sql.md)
 - [Always Encrypted](../security/encryption/always-encrypted-database-engine.md)

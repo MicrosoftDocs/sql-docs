@@ -30,7 +30,7 @@ The specified index is marked as offline or is disabled. Therefore, this index c
 ## User Action  
 Rebuild the index by using ALTER INDEX.  
   
-## See Also  
-[ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
-[Reorganize and Rebuild Indexes](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
-  
+## Related content
+
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
+- [Optimize index maintenance to improve query performance and reduce resource consumption](../indexes/reorganize-and-rebuild-indexes.md)

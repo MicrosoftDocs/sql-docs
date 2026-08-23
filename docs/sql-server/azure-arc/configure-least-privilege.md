@@ -177,6 +177,6 @@ For details about when these permissions are used, see [Configure Windows servic
 
 ## Related content
 
-- [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)
+- [Protect SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
+- [Configure best practices assessment for SQL Server enabled by Azure Arc](assess.md)
 - [Known issues: SQL Server enabled by Azure Arc](known-issues.md)

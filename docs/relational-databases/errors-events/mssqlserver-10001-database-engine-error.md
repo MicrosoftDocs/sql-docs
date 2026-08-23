@@ -32,8 +32,7 @@ Distributed query processing encountered a generic error while calling into the 
 ## User Action  
 Collect OLE DB trace events using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and  provide this data to product support for the OLE DB provider.  
   
-## See Also  
-[SQL Server Profiler Templates and Permissions](~/tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
-[SQL Server Native Client &#40;OLE DB&#41;](~/relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
+## Related content
 
+- [SQL Server Profiler templates and permissions](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)
+- [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)

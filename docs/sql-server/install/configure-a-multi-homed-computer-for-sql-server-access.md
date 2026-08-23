@@ -137,4 +137,4 @@ After you have created one or more rules, perform the following steps to configu
 ## Related content
 
 - [SQL Server Browser service (Database Engine and SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)
-- [Connect to SQL Server Through a Proxy Server (SQL Server Configuration Manager)](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)
+- [Connect to SQL Server through a proxy server (SQL Server Configuration Manager)](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)

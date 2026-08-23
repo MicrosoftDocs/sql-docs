@@ -399,6 +399,6 @@ UPDATE STATISTICS Customer (CustomerStats1) WITH AUTO_DROP = ON;
 - [CREATE STATISTICS (Transact-SQL)](create-statistics-transact-sql.md)
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../database-console-commands/dbcc-show-statistics-transact-sql.md)
 - [DROP STATISTICS (Transact-SQL)](drop-statistics-transact-sql.md)
-- [sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)
-- [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)
+- [sys.sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)
+- [sys.sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)
 - [STATS_DATE (Transact-SQL)](../functions/stats-date-transact-sql.md)

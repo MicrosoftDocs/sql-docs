@@ -232,6 +232,5 @@ To monitor, review [Use activity logs with SQL Server enabled by Azure Arc](acti
 
 ## Related content
 
-[Recurring billing for SQL Server enabled by Azure Arc FAQ](faq.yml#recurring-pay-as-you-go-billing)
-
-[Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md)
+- [Recurring billing for SQL Server enabled by Azure Arc FAQ](faq.yml#recurring-pay-as-you-go-billing)
+- [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md)

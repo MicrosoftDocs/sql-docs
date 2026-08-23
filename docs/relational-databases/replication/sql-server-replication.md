@@ -33,7 +33,7 @@ For backward compatibility information see, [Replication Backward Compatibility]
 
 ## Replication security
 
-- [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](security/view-and-modify-replication-security-settings.md)
 - [Manage Logins in the Publication Access List](security/manage-logins-in-the-publication-access-list.md)
 
 ## Publishing and Distribution

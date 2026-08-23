@@ -587,7 +587,7 @@ Or:
 
 ## Related content
 
-- [Command-line options in the SSMA Console (AccessToSQL)](../access/command-line-options-in-ssma-console-accesstosql.md)
+- [Command-line options in the SSMA Console](../access/command-line-options-in-ssma-console-accesstosql.md)
 - [Working with the sample console script files](working-with-the-sample-console-script-files-sybasetosql.md)
 - [Managing Passwords](managing-passwords-sybasetosql.md)
 - [Generating Reports](generating-reports-sybasetosql.md)

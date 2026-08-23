@@ -366,5 +366,6 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## See also
-[Local audit for SSMS usage and diagnostic data collection](/ssms/sql-server-management-studio-telemetry-ssms)
+## Related content
+
+- [Local audit for SSMS usage and diagnostic data collection](/ssms/sql-server-management-studio-telemetry-ssms)

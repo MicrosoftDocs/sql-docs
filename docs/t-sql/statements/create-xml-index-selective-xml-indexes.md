@@ -103,10 +103,7 @@ USING XML INDEX sxi_index
 FOR ( pathabc );  
 ```  
   
-## See Also  
- [Selective XML Indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [Create, Alter, and Drop Secondary Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)  
-  
-  
+## Related content
 
-
+- [Selective XML indexes (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)
+- [Create, alter, and drop secondary selective XML indexes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)

@@ -99,13 +99,13 @@ BACKUP MASTER KEY TO URL = 'https://mydocsteststorage.blob.core.windows.net/myte
 GO   
 ```  
 
-## See also
+## Related content
 
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
- [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
- [BACKUP SYMMETRIC KEY](backup-symmetric-key-transact-sql.md)
+- [CREATE MASTER KEY (Transact-SQL)](create-master-key-transact-sql.md)
+- [OPEN MASTER KEY (Transact-SQL)](open-master-key-transact-sql.md)
+- [CLOSE MASTER KEY (Transact-SQL)](close-master-key-transact-sql.md)
+- [RESTORE MASTER KEY (Transact-SQL)](restore-master-key-transact-sql.md)
+- [ALTER MASTER KEY (Transact-SQL)](alter-master-key-transact-sql.md)
+- [DROP MASTER KEY (Transact-SQL)](drop-master-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [BACKUP SYMMETRIC KEY (Transact-SQL)](backup-symmetric-key-transact-sql.md)

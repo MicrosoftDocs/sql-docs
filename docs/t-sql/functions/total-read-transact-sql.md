@@ -1,6 +1,6 @@
 ---
 title: "@@TOTAL_READ (Transact-SQL)"
-description: "&#x40;&#x40;TOTAL_READ (Transact-SQL)"
+description: "@@TOTAL_READ (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/17/2017"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;TOTAL_READ (Transact-SQL)
+# @@TOTAL_READ (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of disk reads, not cache reads, by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.  

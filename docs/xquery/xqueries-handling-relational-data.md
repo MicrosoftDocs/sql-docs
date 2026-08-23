@@ -30,9 +30,8 @@ dev_langs:
   
  For more information, see [sql:column() function (XQuery)](../xquery/xquery-extension-functions-sql-column.md) and [sql:variable() function (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
-## See Also  
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [XML Construction &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
-  
-  
+## Related content
+
+- [XML data (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)
+- [XQuery Language Reference (SQL Server)](xquery-language-reference-sql-server.md)
+- [XML construction (XQuery)](xml-construction-xquery.md)

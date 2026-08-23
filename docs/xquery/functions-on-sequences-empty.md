@@ -101,8 +101,7 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## See Also  
- [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [exist&#40;&#41; Method &#40;xml Data Type&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
-  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)
+- [exist() Method (xml Data Type)](../t-sql/xml/exist-method-xml-data-type.md)

@@ -66,9 +66,8 @@ CLOSE MASTER KEY;
 GO  
 ```  
   
-## See Also  
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
+
+- [CREATE MASTER KEY (Transact-SQL)](create-master-key-transact-sql.md)
+- [OPEN MASTER KEY (Transact-SQL)](open-master-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

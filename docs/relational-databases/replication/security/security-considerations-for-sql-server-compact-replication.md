@@ -18,5 +18,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](view-and-modify-replication-security-settings.md)
 - [Replication Security Best Practices](replication-security-best-practices.md)

@@ -59,7 +59,7 @@ Consider the following limitations when using a managed identity with SQL Server
 
 ## Related content
 
-- [Set up managed identity for SQL Server enabled by Azure Arc](microsoft-entra-authentication-with-managed-identity.md)
+- [Set up managed identity and Microsoft Entra authentication for SQL Server enabled by Azure Arc](microsoft-entra-authentication-with-managed-identity.md)
 - [Microsoft Entra authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)
 - [What is managed identities for Azure resources?](/entra/identity/managed-identities-azure-resources/overview)
 - [Enable Microsoft Entra authentication for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm)

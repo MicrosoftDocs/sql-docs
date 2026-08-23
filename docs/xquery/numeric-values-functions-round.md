@@ -56,8 +56,7 @@ fn:round ( $arg as numeric?) as numeric?
   
 -   The **round()** function of xs:double and xs:float values between -0.5e0 and -0e0 are mapped to 0e0 instead of -0e0.  
   
-## See Also  
- [floor Function &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
- [ceiling Function &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
-  
-  
+## Related content
+
+- [Numeric Values Functions - floor](numeric-values-functions-floor.md)
+- [Numeric Values Functions - ceiling](numeric-values-functions-ceiling.md)

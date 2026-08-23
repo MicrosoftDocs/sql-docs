@@ -56,4 +56,4 @@ For more information about XML namespaces, see [Namespaces in an XML Document](/
 
 ## Related content
 
-- [ssbdiagnose Utility (Service Broker)](ssbdiagnose-utility-service-broker.md)
+- [ssbdiagnose utility (Service Broker)](ssbdiagnose-utility-service-broker.md)

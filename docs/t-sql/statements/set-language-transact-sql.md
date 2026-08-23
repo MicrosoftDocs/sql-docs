@@ -72,7 +72,6 @@ GO
 ## Related content
 
 - [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
-- [syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)
-- [sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)
+- [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)
+- [sys.sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)
 - [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
-

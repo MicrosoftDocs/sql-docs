@@ -51,6 +51,6 @@ The following table provides the user action that is appropriate for the specifi
 |State 4|Contact CSS.|  
 |State 6|Run the command again. If the problem persists, contact CSS.|  
   
-## See Also  
-[DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  
-  
+## Related content
+
+- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)

@@ -89,6 +89,6 @@ SELECT @recommendation;
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor)

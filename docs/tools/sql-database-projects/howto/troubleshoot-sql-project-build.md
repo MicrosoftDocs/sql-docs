@@ -93,6 +93,6 @@ For other non-SQL error codes, refer to the following resources:
 
 ## Related content
 
-- [SQL projects overview](../sql-database-projects.md)
+- [What are SQL database projects?](../sql-database-projects.md)
 - [SQL projects tools](../sql-projects-tools.md)
-- [Troubleshooting SqlPackage](../../sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage.md)
+- [Troubleshoot issues and performance with SqlPackage](../../sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage.md)

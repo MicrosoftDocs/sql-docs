@@ -18,8 +18,7 @@ dev_langs:
 
   In this implementation, the **validate** expression is not supported. The results of XQuery construction expressions are always untyped. If the result of an XQuery expression should be typed, use the SQL CAST expression to cast the result to an **xml** data type with the preferred schema collection.  
   
-## See Also  
- [Path Expressions &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   
- [XQuery Expressions](../xquery/xquery-expressions.md)  
-  
-  
+## Related content
+
+- [Path Expressions (XQuery)](path-expressions-xquery.md)
+- [XQuery Expressions](xquery-expressions.md)

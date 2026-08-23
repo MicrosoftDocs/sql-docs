@@ -42,6 +42,6 @@ Learn how to configure merge replication to exchange data between a server and o
   
 ## Related content
 
-- [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](security/view-and-modify-replication-security-settings.md)
 - [Transactional Replication](transactional/transactional-replication.md)
 - [Merge replication](merge/merge-replication.md)

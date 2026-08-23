@@ -40,7 +40,7 @@ For example, use CTAS to:
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-<a name="syntax-bk"></a>
+<a id="syntax-bk"></a>
 
 ## Syntax
 
@@ -83,13 +83,13 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     }
 ```  
 
-<a name="arguments-bk"></a>
+<a id="arguments-bk"></a>
   
 ## Arguments
 
 For more information, see the [Arguments section](create-table-azure-sql-data-warehouse.md#arguments) in `CREATE TABLE`. 
 
-<a name="column-options-bk"></a>
+<a id="column-options-bk"></a>
 
 ### Column options
 
@@ -98,7 +98,7 @@ For more information, see the [Arguments section](create-table-azure-sql-data-wa
   
  You can't specify any other column options such as data types, collation, or nullability. Each of these attributes is derived from the results of the `SELECT` statement. However, you can use the SELECT statement to change the attributes. For an example, see [Use CTAS to change column attributes](#ctas-change-column-attributes-bk).   
 
-<a name="table-distribution-options-bk"></a>
+<a id="table-distribution-options-bk"></a>
 
 ### Table distribution options
 
@@ -126,7 +126,7 @@ For details and to understand how to choose the best distribution column, see th
 
 For recommendations on the best distribution do to use based on your workloads, see the [Synapse SQL Distribution Advisor (Preview)](/azure/synapse-analytics/sql/distribution-advisor).
 
-<a name="table-partition-options-bk"></a>
+<a id="table-partition-options-bk"></a>
 
 ### Table partition options
 
@@ -134,7 +134,7 @@ The CTAS statement creates a nonpartitioned table by default, even if the source
 
 For details, see the [Table partition options](create-table-azure-sql-data-warehouse.md#TablePartitionOptions) section in `CREATE TABLE`.
 
-<a name="select-options-bk"></a>
+<a id="select-options-bk"></a>
 
 ### SELECT statement
 
@@ -152,19 +152,19 @@ The SELECT statement is the fundamental difference between CTAS and CREATE TABLE
 Users can set MAXDOP to an integer value to control the maximum degree of parallelism.  When MAXDOP is set to 1, the query is executed by a single thread.
 
  
-<a name="permissions-bk"></a>  
+<a id="permissions-bk"></a>
   
 ## Permissions
 CTAS requires `SELECT` permission on any objects referenced in the *select_criteria*.
 
 For permissions to create a table, see [Permissions](create-table-azure-sql-data-warehouse.md#permissions) in `CREATE TABLE`. 
   
-<a name="general-remarks-bk"></a>
+<a id="general-remarks-bk"></a>
   
 ## Remarks
 For details, see [General Remarks](create-table-azure-sql-data-warehouse.md#GeneralRemarks) in `CREATE TABLE`.
 
-<a name="limitations-bk"></a>
+<a id="limitations-bk"></a>
 
 ## Limitations and restrictions
 
@@ -215,13 +215,13 @@ For more details on limitations and restrictions, see [Limitations and Restricti
   );
   ```
  
-<a name="locking-behavior-bk"></a>
+<a id="locking-behavior-bk"></a>
   
 ## Locking behavior
 
  For details, see [Locking Behavior](create-table-azure-sql-data-warehouse.md#LockingBehavior) in `CREATE TABLE`.
  
-<a name="performance-bk"></a>
+<a id="performance-bk"></a>
  
  ## Performance 
 
@@ -231,11 +231,11 @@ If you're using CTAS to create table and performance isn't a factor, you can spe
 
 To avoid data movement in subsequent queries, you can specify `REPLICATE` at the cost of increased storage for loading a full copy of the table on each Compute node.  
 
-<a name="examples-copy-table-bk"></a>
+<a id="examples-copy-table-bk"></a>
 
 ## Examples for copying a table
 
-<a name="ctas-copy-table-bk"></a>
+<a id="ctas-copy-table-bk"></a>
 
 ### A. Use CTAS to copy a table
 
@@ -308,11 +308,11 @@ RENAME OBJECT FactInternetSales_new TO FactInternetSales;
 DROP TABLE FactInternetSales_old;
 ```
 
-<a name="examples-column-bk"></a>
+<a id="examples-column-bk"></a>
 
 ## Examples for column options
 
-<a name="ctas-change-column-attributes-bk"></a>
+<a id="ctas-change-column-attributes-bk"></a>
 
 ### B. Use CTAS to change column attributes
 
@@ -370,11 +370,11 @@ RENAME OBJECT test TO DimCustomer2;
 DROP TABLE DimCustomer2_old;
 ```
 
-<a name="examples-table-distribution-bk"></a>
+<a id="examples-table-distribution-bk"></a>
 
 ## Examples for table distribution
 
-<a name="ctas-change-distribution-method-bk"></a>
+<a id="ctas-change-distribution-method-bk"></a>
 
 ### C. Use CTAS to change the distribution method for a table
 Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -426,7 +426,7 @@ RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
-<a name="ctas-change-to-replicated-bk"></a>
+<a id="ctas-change-to-replicated-bk"></a>
 
 ### D. Use CTAS to convert a table to a replicated table
 
@@ -469,11 +469,11 @@ AS SELECT CustomerKey AS c, LastName AS ln
     FROM dimCustomer; 
 ```  
 
-<a name="examples-query-hints-bk"></a>
+<a id="examples-query-hints-bk"></a>
 
 ## Examples for query hints
 
-<a name="ctas-query-hint-bk"></a>
+<a id="ctas-query-hint-bk"></a>
 
 ### F. Use a Query Hint with CREATE TABLE AS SELECT (CTAS)
 
@@ -493,11 +493,11 @@ ON ( T1.CustomerKey = T2.CustomerKey )
 OPTION ( HASH JOIN );  
 ```  
 
-<a name="examples-external-tables"></a>
+<a id="examples-external-tables"></a>
 
 ## Examples for external tables
 
-<a name="ctas-azure-blob-storage-bk"></a>
+<a id="ctas-azure-blob-storage-bk"></a>
 
 ### G. Use CTAS to import data from Azure Blob storage
 
@@ -533,7 +533,7 @@ AS SELECT * FROM ClickStreamExt
 ;  
 ```  
 
-<a name="ctas-import-Hadoop-bk"></a>
+<a id="ctas-import-Hadoop-bk"></a>
   
 ### H. Use CTAS to import Hadoop data from an external table
 
@@ -571,7 +571,7 @@ AS SELECT * FROM ClickStreamExt
 ;   
 ```  
  
-<a name="examples-workarounds-bk"></a>
+<a id="examples-workarounds-bk"></a>
  
 ## Examples using CTAS to replace SQL Server code
 
@@ -580,7 +580,7 @@ Use CTAS to work around some unsupported features. Besides being able to run you
 > [!NOTE]
 > Try to think "CTAS first". If you think you can solve a problem using `CTAS` then that is generally the best way to approach it - even if you are writing more data as a result.
 
-<a name="ctas-replace-select-into-bk"></a>
+<a id="ctas-replace-select-into-bk"></a>
 
 ### I. Use CTAS instead of SELECT..INTO
 
@@ -608,7 +608,7 @@ FROM    [dbo].[FactInternetSales]
 ;
 ```
 
-<a name="ctas-replace-implicit-joins-bk"></a>
+<a id="ctas-replace-implicit-joins-bk"></a>
 ### J. Use CTAS to simplify merge statements
 
 Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -647,7 +647,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 ```
 
-<a name="ctas-data-type-and-nullability-bk"></a>
+<a id="ctas-data-type-and-nullability-bk"></a>
 
 ### K. Explicitly state data type and nullability of output
 
@@ -815,15 +815,14 @@ OPTION (MAXDOP 1);
 
 ## Related content
 
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../statements/create-external-data-source-transact-sql.md)
-- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../statements/create-external-file-format-transact-sql.md)
-- [CREATE EXTERNAL TABLE (Transact-SQL)](../statements/create-external-table-transact-sql.md)
-- [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE (Azure Synapse Analytics)](../statements/create-table-azure-sql-data-warehouse.md)
-- [DROP TABLE (Transact-SQL)](../statements/drop-table-transact-sql.md)
-- [DROP EXTERNAL TABLE (Transact-SQL)](../statements/drop-external-table-transact-sql.md)
-- [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
-- [ALTER EXTERNAL TABLE (Transact-SQL)](create-external-table-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)
+- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](create-external-file-format-transact-sql.md)
+- [CREATE EXTERNAL TABLE (Transact-SQL)](create-external-table-transact-sql.md)
+- [CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)](create-external-table-as-select-transact-sql.md)
+- [CREATE TABLE](create-table-azure-sql-data-warehouse.md)
+- [DROP TABLE (Transact-SQL)](drop-table-transact-sql.md)
+- [DROP EXTERNAL TABLE (Transact-SQL)](drop-external-table-transact-sql.md)
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
 
 ::: moniker-end
 
@@ -844,7 +843,7 @@ For more information on using CTAS on your [!INCLUDE [fabricdw](../../includes/f
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-<a name="syntax-bk-fabric"></a>
+<a id="syntax-bk-fabric"></a>
 
 ## Syntax
 
@@ -858,7 +857,7 @@ AS <select_statement>
     SELECT select_criteria  
 ```  
 
-<a name="arguments-bk-fabric"></a>
+<a id="arguments-bk-fabric"></a>
   
 ## Arguments
 
@@ -870,7 +869,7 @@ The `CLUSTER BY` clause for data clustering in Fabric Data Warehouse requires at
 
 For more information, see [Data clustering in Fabric Data Warehouse](/fabric/data-warehouse/data-clustering).
 
-<a name="select-options-bk-fabric"></a>
+<a id="select-options-bk-fabric"></a>
 
 ### SELECT statement
 
@@ -880,7 +879,7 @@ The `SELECT` statement is the fundamental difference between CTAS and `CREATE TA
 
  Populates the new table with the results from a `SELECT` statement. *select_criteria* is the body of the `SELECT` statement that determines which data to copy to the new table. For information about `SELECT` statements, see [SELECT (Transact-SQL)](../queries/select-transact-sql.md?version=fabric&preserve-view=true).  
  
-<a name="permissions-bk-fabric"></a>  
+<a id="permissions-bk-fabric"></a>
 
 > [!NOTE]  
 > In Microsoft Fabric, the use of variables in CTAS is not allowed.
@@ -891,13 +890,13 @@ CTAS requires `SELECT` permission on any objects referenced in the *select_crite
 
 For permissions to create a table, see [Permissions](create-table-azure-sql-data-warehouse.md?version=fabric&preserve-view=true#permissions) in `CREATE TABLE`. 
   
-<a name="general-remarks-bk-fabric"></a>
+<a id="general-remarks-bk-fabric"></a>
   
 ## Remarks
 
 For details, see [General Remarks](create-table-azure-sql-data-warehouse.md?version=fabric&preserve-view=true#GeneralRemarks) in `CREATE TABLE`.
 
-<a name="limitations-bk-fabric"></a>
+<a id="limitations-bk-fabric"></a>
 
 ## Limitations and restrictions
 
@@ -907,19 +906,19 @@ When using CTAS, the data types of the target table are inferred from the result
  
 For more details and other limitations that apply to CTAS, see [Limitations and Restrictions](create-table-azure-sql-data-warehouse.md?version=fabric&preserve-view=true#LimitationsRestrictions) in `CREATE TABLE`.
 
-<a name="locking-behavior-bk-fabric"></a>
+<a id="locking-behavior-bk-fabric"></a>
 
 ## Locking behavior
 
  For details, see [Locking Behavior](create-table-azure-sql-data-warehouse.md?version=fabric&preserve-view=true#LockingBehavior) in `CREATE TABLE`.
  
-<a name="examples-copy-table-bk-fabric"></a>
+<a id="examples-copy-table-bk-fabric"></a>
 
 ## Examples for copying a table
 
 For more information on using CTAS on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using Transact-SQL](/fabric/data-warehouse/ingest-data-tsql).
 
-<a name="ctas-copy-table-bk"></a>
+<a id="ctas-copy-table-bk"></a>
 
 ### A. Use CTAS to change column attributes
  
@@ -972,7 +971,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
     FROM dimCustomer; 
 ```  
 
-<a name="ctas-replace-select-into-bk-fabric"></a>
+<a id="ctas-replace-select-into-bk-fabric"></a>
 
 ### C. Use CTAS instead of SELECT..INTO
 
@@ -994,7 +993,7 @@ FROM    [dbo].[FactInternetSales]
 ;
 ```
 
-<a name="ctas-replace-implicit-joins-bk-fabric"></a>
+<a id="ctas-replace-implicit-joins-bk-fabric"></a>
 
 ### D. Use CTAS to simplify merge statements
 
@@ -1041,5 +1040,4 @@ For more information, see [Data clustering in Fabric Data Warehouse](/fabric/dat
 - [Create tables in the Warehouse in Microsoft Fabric](/fabric/data-warehouse/create-table)
 - [What is data warehousing in Microsoft Fabric?](/fabric/data-warehouse/data-warehousing)
 - [Ingest data into your Warehouse using Transact-SQL](/fabric/data-warehouse/ingest-data-tsql)
-
 ::: moniker-end

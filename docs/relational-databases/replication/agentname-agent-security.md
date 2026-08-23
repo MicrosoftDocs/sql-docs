@@ -52,4 +52,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 - [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)
 - [Identity and Access Control (Replication)](security/identity-and-access-control-replication.md)
 - [Replication Agent Security Model](security/replication-agent-security-model.md)
-- [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](security/view-and-modify-replication-security-settings.md)

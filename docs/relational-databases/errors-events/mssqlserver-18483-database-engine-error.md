@@ -93,9 +93,9 @@ On the computer where you deployed [!INCLUDE[ssNoVersion](../../includes/ssnover
 10. In the **Wizard Actions** dialog box, click **Next**.
 11. In the **Complete the Wizard** dialog box, click **Finish**.
 
-## See also
+## Related content
 
-- [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)
+- [Rename a computer that hosts a stand-alone instance of SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)
 - [@@SERVERNAME (Transact-SQL)](../../t-sql/functions/servername-transact-sql.md)
 - [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)
-- [sp_addserver (Transact-SQL)](../system-stored-procedures/sp-addserver-transact-sql.md)
+- [sys.sp_addserver (Transact-SQL)](../system-stored-procedures/sp-addserver-transact-sql.md)

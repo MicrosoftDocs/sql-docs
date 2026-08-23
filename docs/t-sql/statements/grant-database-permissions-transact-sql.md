@@ -263,9 +263,9 @@ GO
 
 ## Related content
 
-- [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
-- [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-- [GRANT](../../t-sql/statements/grant-transact-sql.md)
-- [Permissions](../../relational-databases/security/permissions-database-engine.md)
-- [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
+- [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
+- [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
+- [CREATE DATABASE](create-database-transact-sql.md)
+- [GRANT (Transact-SQL)](grant-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)

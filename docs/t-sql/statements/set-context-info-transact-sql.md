@@ -88,11 +88,10 @@ GO
   
 ## Related content
 
-- [Row Level Security](../../relational-databases/security/row-level-security.md)
-- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
-- [CONTEXT_INFO (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)
-- [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md)
+- [Row-level security](../../relational-databases/security/row-level-security.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [CONTEXT_INFO (Transact-SQL)](../functions/context-info-transact-sql.md)
+- [SESSION_CONTEXT (Transact-SQL)](../functions/session-context-transact-sql.md)
 - [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)
-

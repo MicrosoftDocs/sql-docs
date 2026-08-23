@@ -204,13 +204,12 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 DROP 'Comments' ;  
 ```  
   
-## See Also  
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
- [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
- [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
- [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
-  
-  
+## Related content
+
+- [CREATE SEARCH PROPERTY LIST (Transact-SQL)](create-search-property-list-transact-sql.md)
+- [DROP SEARCH PROPERTY LIST (Transact-SQL)](drop-search-property-list-transact-sql.md)
+- [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)
+- [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)
+- [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)
+- [Search document properties with search property lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)
+- [Find property set GUIDs and property integer IDs for search properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)

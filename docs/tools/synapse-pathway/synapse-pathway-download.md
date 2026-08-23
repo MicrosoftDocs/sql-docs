@@ -47,9 +47,9 @@ Download the latest version of Azure Synapse Pathway from the [Microsoft Downloa
 1. Data Ingress: There's no cost associated with bringing your data into Azure. For more information, see the [Bandwidth pricing details](https://azure.microsoft.com/pricing/details/bandwidth/).
 1. See the [Azure Synapse pricing page](https://azure.microsoft.com/pricing/calculator/?service=synapse-analytics) to see the cost of provisioning Azure Synapse.
 
-## Next steps
+## Next step
 
-Advance to the tutorial to run your first translation
+Advance to the tutorial to run your first translation.
 
 > [!div class="nextstepaction"]
 > [Start code translation](synapse-pathway-assessment.md)

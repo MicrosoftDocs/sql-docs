@@ -113,8 +113,7 @@ CREATE CONTRACT
     ) ;  
 ```  
   
-## See Also  
- [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
+## Related content
+
+- [DROP CONTRACT (Transact-SQL)](drop-contract-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

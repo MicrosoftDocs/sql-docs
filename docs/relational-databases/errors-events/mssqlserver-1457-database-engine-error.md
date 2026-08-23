@@ -39,10 +39,10 @@ To resolve this error, you can take either of the following actions:
     > [!NOTE]  
     > You can drop the mirror database when mirroring is still enabled only after a failed SET PARTNER OFF statement.  
   
-## See Also  
-[Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/database-mirroring-sql-server.md)  
-[ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
-[Setting Up Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)  
-[Removing Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
-[Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
-  
+## Related content
+
+- [Database Mirroring (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)
+- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [Setting Up Database Mirroring (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)
+- [Removing Database Mirroring (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)
+- [Prepare a Mirror Database for Mirroring (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)

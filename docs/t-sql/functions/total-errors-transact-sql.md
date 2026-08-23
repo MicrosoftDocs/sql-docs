@@ -1,6 +1,6 @@
 ---
 title: "@@TOTAL_ERRORS (Transact-SQL)"
-description: "&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)"
+description: "@@TOTAL_ERRORS (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/18/2017"
@@ -21,7 +21,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
+# @@TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of disk write errors encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started.  

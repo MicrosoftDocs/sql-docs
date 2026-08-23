@@ -139,5 +139,5 @@ For more information, see [sp_change_users_login (Transact-SQL)](../../relationa
 - [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)
 - [sys.sql_logins (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)
-- [sp_change_users_login (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)
+- [sys.sp_change_users_login (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)
 - [Make your database portable by using contained databases](../../relational-databases/security/contained-database-users-making-your-database-portable.md)

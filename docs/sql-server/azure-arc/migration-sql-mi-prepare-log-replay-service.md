@@ -280,8 +280,7 @@ To troubleshoot common issues when migrating to Azure SQL Managed Instance, see 
 
 ## Related content
 
-- [SQL Server migration in Azure Arc](migration-overview.md)
-- [Prepare environment for a Managed Instance link migration](migration-sql-mi-prepare-link.md)
-- [SQL Server enabled by Azure Arc overview](overview.md)   
+- [SQL Server migration in Azure Arc Overview](migration-overview.md)
+- [Prepare environment for a Managed Instance link migration - SQL Server migration in Azure Arc](migration-sql-mi-prepare-link.md)
+- [SQL Server enabled by Azure Arc](overview.md)
 - [Migration experience feedback directly to the product group](https://aka.ms/arc-migrations-feedback)
-- [Migration to Azure SQL Managed Instance - SQL Server migration in Azure Arc](migrate-to-azure-sql-managed-instance.md)

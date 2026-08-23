@@ -262,4 +262,4 @@ Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.
 
 ## Related content
 
-- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)

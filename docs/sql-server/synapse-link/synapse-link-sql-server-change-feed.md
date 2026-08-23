@@ -81,7 +81,7 @@ For more information, see:
 ## Related content
 
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
-- [What's new in SQL Server 2022?](../what-s-new-in-sql-server-2022.md)
+- [What's new in SQL Server 2022](../what-s-new-in-sql-server-2022.md)
 - [Azure Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link)
 - [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link)
 - [Azure Synapse Link for Azure Cosmos DB](/azure/cosmos-db/synapse-link)

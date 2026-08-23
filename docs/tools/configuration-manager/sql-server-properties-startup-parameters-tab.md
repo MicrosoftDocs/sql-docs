@@ -80,5 +80,5 @@ Use of this page is restricted to users who can change the related entries in th
 ## Related content
 
 - [Database Engine Service startup options](../../database-engine/configure-windows/database-engine-service-startup-options.md)
-- [Set trace flags with DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+- [Set trace flags with DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [SQL Server Configuration Manager](sql-server-configuration-manager.md)

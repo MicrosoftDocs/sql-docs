@@ -137,8 +137,8 @@ For a full list of frequently asked questions, see the [SQL Server ESUs: Frequen
 
 - [SQL Server 2014 lifecycle page](/lifecycle/products/sql-server-2014)
 - [SQL Server 2016 lifecycle page](/lifecycle/products/sql-server-2016)
-- [SQL Server end of support page](sql-server-end-of-support-overview.md)
-- [SQL Server ESUs enabled by Azure Arc](../azure-arc/extended-security-updates.md)
+- [SQL Server end of support options](sql-server-end-of-support-overview.md)
+- [SQL Server Extended Security Updates enabled by Azure Arc](../azure-arc/extended-security-updates.md)
 - [Microsoft ESUs frequently asked questions (FAQ)](/lifecycle/faq/extended-security-updates)
 - [Microsoft Security Response Center (MSRC)](https://msrc.microsoft.com/security-guidance/summary)
 - [Microsoft Data Migration Guide](/data-migration/)

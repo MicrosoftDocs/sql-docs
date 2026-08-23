@@ -1,6 +1,6 @@
 ---
 title: "@@TOTAL_WRITE (Transact-SQL)"
-description: "&#x40;&#x40;TOTAL_WRITE (Transact-SQL)"
+description: "@@TOTAL_WRITE (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/18/2017"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;TOTAL_WRITE (Transact-SQL)
+# @@TOTAL_WRITE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of disk writes by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.  

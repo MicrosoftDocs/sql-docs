@@ -57,7 +57,7 @@ Azure Synapse Pathway supports code conversion of database, schemas, and tables 
 
 Review the [FAQ Page](pathway-faq.yml) for additional information on Azure Synapse Pathway
 
-## Next steps
+## Related content
 
-- [Run your first translation with Azure Synapse Pathway](synapse-pathway-assessment.md)
-- Announcement Blog - [Announcing Azure Synapse Pathway: Turbocharge your data warehouse migration - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/announcing-azure-synapse-pathway-turbocharge-your-data-warehouse/ba-p/2176630)
+- [Tutorial to perform your first code translation with Azure Synapse Pathway](synapse-pathway-assessment.md)
+- [Announcing Azure Synapse Pathway: Turbocharge your data warehouse migration - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/announcing-azure-synapse-pathway-turbocharge-your-data-warehouse/ba-p/2176630)

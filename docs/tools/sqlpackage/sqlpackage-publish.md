@@ -251,7 +251,7 @@ The following table describes the format of the option that you can use to overr
 |-------------|-----------|---------------|  
 |**/v:{PropertyName}={Value}**||Specifies a name value pair for an action-specific variable; {VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable.|  
 
-## Next Steps
+## Related content
 
-- Learn more about [SqlPackage](sqlpackage.md)
-- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)
+- [SqlPackage](sqlpackage.md)
+- [Troubleshoot issues and performance with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)

@@ -31,5 +31,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Build applications by using the Web service and the .NET framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
-- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)
+- [Building Applications Using the Web Service and the .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Technical reference (SSRS)](../technical-reference-ssrs.md)

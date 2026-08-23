@@ -132,10 +132,10 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 > [!NOTE]  
 >  To see this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement used in context, see [Create an Availability Group &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
-## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
- [Troubleshoot Always On Availability Groups Configuration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
-  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md)
+- [ALTER AVAILABILITY GROUP (Transact-SQL)](alter-availability-group-transact-sql.md)
+- [CREATE AVAILABILITY GROUP (Transact-SQL)](create-availability-group-transact-sql.md)
+- [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [Troubleshoot Always On Availability Groups Configuration (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)

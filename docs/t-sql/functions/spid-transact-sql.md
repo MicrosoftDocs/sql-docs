@@ -65,11 +65,7 @@ ID     Login Name                     User Name
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
-## See Also  
+## Related content
 
- [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-  
-  
-
-
+- [sys.sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)
+- [sys.sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)

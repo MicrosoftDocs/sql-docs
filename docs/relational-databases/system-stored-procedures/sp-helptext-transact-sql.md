@@ -107,7 +107,6 @@ Text
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)
-- [sp_help (Transact-SQL)](sp-help-transact-sql.md)
+- [sys.sp_help (Transact-SQL)](sp-help-transact-sql.md)
 - [sys.sql_modules (Transact-SQL)](../system-catalog-views/sys-sql-modules-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

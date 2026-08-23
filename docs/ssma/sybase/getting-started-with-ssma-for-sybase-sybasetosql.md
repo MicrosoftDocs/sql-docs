@@ -104,6 +104,7 @@ The **View** menu provides commands to toggle the visibility of the Output pane 
   
 -   The Error List pane shows error, warning, and informational messages in a list that you can sort.  
   
-## See also  
-[Migrating SAP ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-[User Interface Reference &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+## Related content
+
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [User Interface Reference](user-interface-reference-sybasetosql.md)

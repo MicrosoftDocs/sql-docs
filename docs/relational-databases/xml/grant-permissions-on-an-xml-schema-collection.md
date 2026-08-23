@@ -502,10 +502,9 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC');
 GO
 ```
 
-## See also
+## Related content
 
-- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)
-- [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
-- [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)
-- [Requirements and Limitations for XML Schema Collections on the Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)
-
+- [XML data (SQL Server)](xml-data-sql-server.md)
+- [Compare typed XML to untyped XML](compare-typed-xml-to-untyped-xml.md)
+- [XML schema collections (SQL Server)](xml-schema-collections-sql-server.md)
+- [Requirements and limitations for XML schema collections on the server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)

@@ -95,12 +95,9 @@ This example returns an error, because it requests the arcsine for a value outsi
 SELECT ASIN(1.1472738) AS asinCalc;  
 ```  
   
-## See also
-[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
-[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
-  
-  
+## Related content
 
-
+- [CEILING (Transact-SQL)](ceiling-transact-sql.md)
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
+- [SET ARITHIGNORE (Transact-SQL)](../statements/set-arithignore-transact-sql.md)
+- [SET ARITHABORT (Transact-SQL)](../statements/set-arithabort-transact-sql.md)

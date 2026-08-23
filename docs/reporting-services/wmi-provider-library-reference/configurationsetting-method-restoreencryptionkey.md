@@ -58,4 +58,4 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
   
 ## Related content
 
-- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)
+- [MSReportServer_ConfigurationSetting members](msreportserver-configurationsetting-members.md)

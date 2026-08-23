@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 |[nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)|Unicode character data types that are either fixed-size, **nchar**, or variable-size, **nvarchar**.<br /><br />Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when a Supplementary Character (SC) enabled collation is used, these data types store the full range of Unicode character data and use the UTF-16 character encoding.|
 |[ntext, text, and image](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)|Fixed and variable-length data types for storing large non-Unicode and Unicode character and binary data. Unicode data uses the Unicode UCS-2 character set.<br /><br />The **ntext**, **text**, and **image** data types will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them.|
 
-## See also
+## Related content
 
 - [Data types (Transact-SQL)](data-types-transact-sql.md)
 - [Numeric types](numeric-types.md)

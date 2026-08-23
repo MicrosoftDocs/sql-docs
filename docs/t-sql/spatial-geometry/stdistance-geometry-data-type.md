@@ -52,8 +52,7 @@ SET @h = geometry::STGeomFromText('POINT(10 10)', 0);
 SELECT @g.STDistance(@h);  
 ```  
   
-## See Also  
- [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

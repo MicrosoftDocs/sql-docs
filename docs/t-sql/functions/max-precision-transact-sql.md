@@ -46,10 +46,7 @@ dev_langs:
 SELECT @@MAX_PRECISION AS 'Max Precision'  
 ```  
   
-## See Also  
+## Related content
 
- [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
-  
-  
-
+- [decimal and numeric (Transact-SQL)](../data-types/decimal-and-numeric-transact-sql.md)
+- [Precision, scale, and length (Transact-SQL)](../data-types/precision-scale-and-length-transact-sql.md)

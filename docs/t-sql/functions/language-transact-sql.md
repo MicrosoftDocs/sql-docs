@@ -55,11 +55,7 @@ Language Name
 us_english                      
 ```  
   
-## See Also  
- 
- [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [SET LANGUAGE (Transact-SQL)](../statements/set-language-transact-sql.md)
+- [sys.sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)

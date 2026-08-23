@@ -117,7 +117,7 @@ helpviewer_keywords:
 
 - [Cancel report server jobs &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)
 - [Job properties &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)
-- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [Report manager &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md)
-- [Monitor report server performance](../../reporting-services/report-server/monitoring-report-server-performance.md)
+- [Modify a Reporting Services configuration file (RSreportserver.config)](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
+- [Monitor report server performance](../report-server/monitoring-report-server-performance.md)

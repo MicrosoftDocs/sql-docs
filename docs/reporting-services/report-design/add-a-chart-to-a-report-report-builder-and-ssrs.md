@@ -62,9 +62,9 @@ When you want to summarize data in a visual format in a paginated report, use a 
   
 ## Related content
 
-- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Chart types &#40;Report Builder&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)
-- [Empty and null data points in charts &#40;Report Builder&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Chart types in a paginated report (Report Builder)](chart-types-report-builder-and-ssrs.md)
+- [Empty and null data points in paginated report charts (Report Builder)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
 - [Tutorial: Add a bar chart to your report (Report Builder)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)
 - [Tutorial: Add a bar chart to a report (Report Designer)](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))
 - [Tutorial: Add a pie chart to your report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)

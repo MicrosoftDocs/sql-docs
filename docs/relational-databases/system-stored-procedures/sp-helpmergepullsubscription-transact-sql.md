@@ -117,7 +117,7 @@ Only members of the **sysadmin** fixed server role and the **db_owner** fixed da
 
 ## Related content
 
-- [sp_addmergepullsubscription (Transact-SQL)](sp-addmergepullsubscription-transact-sql.md)
-- [sp_changemergepullsubscription (Transact-SQL)](sp-changemergepullsubscription-transact-sql.md)
-- [sp_dropmergepullsubscription (Transact-SQL)](sp-dropmergepullsubscription-transact-sql.md)
+- [sys.sp_addmergepullsubscription (Transact-SQL)](sp-addmergepullsubscription-transact-sql.md)
+- [sys.sp_changemergepullsubscription (Transact-SQL)](sp-changemergepullsubscription-transact-sql.md)
+- [sys.sp_dropmergepullsubscription (Transact-SQL)](sp-dropmergepullsubscription-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

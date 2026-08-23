@@ -98,11 +98,11 @@ EXECUTE sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addlinkedsrvlogin (Transact-SQL)](sp-addlinkedsrvlogin-transact-sql.md)
-- [sp_addlogin (Transact-SQL)](sp-addlogin-transact-sql.md)
-- [sp_addremotelogin (Transact-SQL)](sp-addremotelogin-transact-sql.md)
-- [sp_addserver (Transact-SQL)](sp-addserver-transact-sql.md)
-- [sp_droplinkedsrvlogin (Transact-SQL)](sp-droplinkedsrvlogin-transact-sql.md)
-- [sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)
-- [sp_helpremotelogin (Transact-SQL)](sp-helpremotelogin-transact-sql.md)
+- [sys.sp_addlinkedsrvlogin (Transact-SQL)](sp-addlinkedsrvlogin-transact-sql.md)
+- [sys.sp_addlogin (Transact-SQL)](sp-addlogin-transact-sql.md)
+- [sys.sp_addremotelogin (Transact-SQL)](sp-addremotelogin-transact-sql.md)
+- [sys.sp_addserver (Transact-SQL)](sp-addserver-transact-sql.md)
+- [sys.sp_droplinkedsrvlogin (Transact-SQL)](sp-droplinkedsrvlogin-transact-sql.md)
+- [sys.sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)
+- [sys.sp_helpremotelogin (Transact-SQL)](sp-helpremotelogin-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

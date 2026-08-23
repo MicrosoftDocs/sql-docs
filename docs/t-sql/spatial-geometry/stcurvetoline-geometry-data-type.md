@@ -89,10 +89,9 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
  SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
  ```  
   
-## See Also  
- [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [STLength &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
- [STNumPoints &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   
- [STGeometryType &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)  
-  
-  
+## Related content
+
+- [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)
+- [STLength (geometry Data Type)](stlength-geometry-data-type.md)
+- [STNumPoints (geometry Data Type)](stnumpoints-geometry-data-type.md)
+- [STGeometryType (geometry Data Type)](stgeometrytype-geometry-data-type.md)

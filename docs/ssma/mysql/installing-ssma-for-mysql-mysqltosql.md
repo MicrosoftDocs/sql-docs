@@ -33,6 +33,6 @@ If you want to upgrade to a later version of SSMA for MySQL, you must first unin
 | [Installing SSMA Components on SQL Server (MySQL to SQL)](installing-ssma-components-on-sql-server-mysqltosql.md) | Provides information about and instructions for installing the extension pack on instances of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | [Removing the SSMA for MySQL Components (MySQLToSQL)](removing-the-ssma-for-mysql-components-mysqltosql.md) | Provides instructions for uninstalling the client program. |
 
-## See also
+## Related content
 
-- [Migrating MySQL Databases to SQL Server - Azure SQL Database (MySQLToSQL)](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

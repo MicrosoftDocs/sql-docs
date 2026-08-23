@@ -30,8 +30,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services concepts &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)
-- [Reporting Services reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)
-- [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)
+- [Reporting Services concepts (SSRS)](reporting-services-concepts-ssrs.md)
+- [Reporting Services Reports (SSRS)](reports/reporting-services-reports-ssrs.md)
+- [Report Datasets (SSRS)](report-data/report-datasets-ssrs.md)
 - [Getting started with Report Builder](https://www.databasejournal.com/features/mssql/sql-server-report-builder-3.0.html)
 - [Design and implement reports using Report Builder 1.0](/previous-versions/sql/sql-server-2008/ms159750(v=sql.100))

@@ -134,5 +134,5 @@ Report items such as tables, matrices, charts, and images can be published as *r
   
 ## Related content
 
-- [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)
-- [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)
+- [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md)
+- [Managing Report Parts](managing-report-parts.md)

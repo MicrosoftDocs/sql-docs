@@ -66,7 +66,6 @@ SELECT @g.STUnion(@h).ToString();
   
  `STUnion()` returns a result that contains a circular arc segment because the instance that invoked `STUnion()` contains a circular arc segment.  
   
-## See Also  
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

@@ -27,5 +27,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)
-- [SoapException Errors table](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)
+- [Introduction to exception management in Reporting Services](../introducing-exception-handling-in-reporting-services.md)
+- [SoapException Errors table](soapexception-errors-table.md)

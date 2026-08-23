@@ -57,6 +57,6 @@ Only members of the **sysadmin** fixed server role can execute `sp_drop_agent_pa
 
 ## Related content
 
-- [sp_add_agent_parameter (Transact-SQL)](sp-add-agent-parameter-transact-sql.md)
-- [sp_help_agent_parameter (Transact-SQL)](sp-help-agent-parameter-transact-sql.md)
+- [sys.sp_add_agent_parameter (Transact-SQL)](sp-add-agent-parameter-transact-sql.md)
+- [sys.sp_help_agent_parameter (Transact-SQL)](sp-help-agent-parameter-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

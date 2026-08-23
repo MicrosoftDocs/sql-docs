@@ -82,8 +82,7 @@ ms.custom:
   
 ## Related content
 
-- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
-- [Expression dialog &#40;Report Builder&#41;](./expressions-report-builder-and-ssrs.md)
-- [Data types in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)
-- [Format numbers and dates &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
-- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)
+- [Data types in expressions in a paginated report (Report Builder)](data-types-in-expressions-report-builder-and-ssrs.md)
+- [Format numbers and dates in Report Builder paginated reports](formatting-numbers-and-dates-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)

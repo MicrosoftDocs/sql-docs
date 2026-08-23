@@ -46,7 +46,7 @@ ms.custom:
   
 ## Related content
 
-- [Built-in collections in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)
-- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Pagination in Reporting Services &#40;Report Builder&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
-- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Built-in collections in expressions in a paginated report (Report Builder)](built-in-collections-in-expressions-report-builder.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [Pagination in paginated reports (Microsoft Report Builder)](pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Filter, group, and sort data in Report Builder paginated reports](filter-group-and-sort-data-report-builder-and-ssrs.md)

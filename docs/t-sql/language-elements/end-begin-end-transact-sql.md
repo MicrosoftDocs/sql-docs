@@ -58,13 +58,12 @@ SET @Iteration += 1
 END;  
 ```  
   
-## See Also  
- [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md)   
- [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER TRIGGER (Transact-SQL)](../statements/alter-trigger-transact-sql.md)
+- [BEGIN...END (Transact-SQL)](begin-end-transact-sql.md)
+- [Control-of-Flow](control-of-flow.md)
+- [CREATE TRIGGER (Transact-SQL)](../statements/create-trigger-transact-sql.md)
+- [ELSE (IF...ELSE) (Transact-SQL)](else-if-else-transact-sql.md)
+- [IF...ELSE (Transact-SQL)](if-else-transact-sql.md)
+- [WHILE (Transact-SQL)](while-transact-sql.md)

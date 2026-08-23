@@ -74,9 +74,8 @@ When you view the **Type Mapping** tab in SSMA, the background is color-coded to
   
     2.  Click **Remove**.  
   
-## Next Step  
-The next step in the migration process is to either [Create an assessment report](assessing-mysql-databases-for-conversion-mysqltosql.md) or [Convert MySQL database objects into SQL Server or SQL Azure syntax](converting-mysql-databases-mysqltosql.md). If you create a report, MySQL objects are automatically converted during the assessment.  
-  
-## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-  
+## Related content
+
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Assessing MySQL Databases for Conversion](assessing-mysql-databases-for-conversion-mysqltosql.md)
+- [Convert MySQL Databases](converting-mysql-databases-mysqltosql.md)

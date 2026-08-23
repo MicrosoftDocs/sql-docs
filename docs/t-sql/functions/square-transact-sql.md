@@ -82,8 +82,6 @@ Cylinder       15680.05
 Cube             575.04
 ```  
   
-## See Also  
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
+## Related content
 
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)

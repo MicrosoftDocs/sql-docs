@@ -80,4 +80,4 @@ Only members of the **sysadmin** fixed server role can execute `sp_changereplica
 
 ## Related content
 
-- [View and modify replication security settings](../replication/security/view-and-modify-replication-security-settings.md)
+- [View and Modify Replication Security Settings](../replication/security/view-and-modify-replication-security-settings.md)

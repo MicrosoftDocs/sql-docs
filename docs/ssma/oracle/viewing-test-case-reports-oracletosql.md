@@ -36,7 +36,7 @@ A comparison of results (success or failure) and the mismatches that SSMA Tester
 **Finalization**  
 Shows the status of execution as **Success** or **Failure**.  
   
-## See Also  
-[Running Test Cases &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Testing Migrated Database Objects &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  
+## Related content
+
+- [Running Test Cases](running-test-cases-oracletosql.md)
+- [Testing Migrated Database Objects](testing-migrated-database-objects-oracletosql.md)

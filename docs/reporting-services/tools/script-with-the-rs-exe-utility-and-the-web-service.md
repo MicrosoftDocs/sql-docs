@@ -27,7 +27,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)
-- [Report server web service](../../reporting-services/report-server-web-service/report-server-web-service.md)
-- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)
-- [RS.exe utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)
+- [Script deployment and administrative tasks](script-deployment-and-administrative-tasks.md)
+- [Report Server Web service](../report-server-web-service/report-server-web-service.md)
+- [Technical reference (SSRS)](../technical-reference-ssrs.md)
+- [RS.exe utility (SSRS)](rs-exe-utility-ssrs.md)

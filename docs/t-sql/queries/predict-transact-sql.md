@@ -296,10 +296,8 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score
 
 ## Related content
 
-Learn more about related concepts in the following articles:
-
-- [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)
+- [Native scoring using the PREDICT T-SQL function with SQL machine learning](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)
 - [RevoScaleR (R package in SQL Server Machine Learning Services)](../../machine-learning/r/ref-r-revoscaler.md)
-- [Revoscalepy (Python package in SQL Server Machine Learning Services)](../../machine-learning/python/ref-py-revoscalepy.md) 
+- [revoscalepy (Python package in SQL Server Machine Learning Services)](../../machine-learning/python/ref-py-revoscalepy.md)
 - [OPENXML (Transact-SQL)](../functions/openxml-transact-sql.md)
 - [STRING_SPLIT (Transact-SQL)](../functions/string-split-transact-sql.md)

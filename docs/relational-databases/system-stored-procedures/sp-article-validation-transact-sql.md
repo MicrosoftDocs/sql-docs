@@ -108,7 +108,7 @@ Only users with `SELECT ALL` permissions on the source table for the article bei
 ## Related content
 
 - [Validate Replicated Data](../replication/validate-data-at-the-subscriber.md)
-- [sp_marksubscriptionvalidation (Transact-SQL)](sp-marksubscriptionvalidation-transact-sql.md)
-- [sp_publication_validation (Transact-SQL)](sp-publication-validation-transact-sql.md)
-- [sp_table_validation (Transact-SQL)](sp-table-validation-transact-sql.md)
+- [sys.sp_marksubscriptionvalidation (Transact-SQL)](sp-marksubscriptionvalidation-transact-sql.md)
+- [sys.sp_publication_validation (Transact-SQL)](sp-publication-validation-transact-sql.md)
+- [sys.sp_table_validation (Transact-SQL)](sp-table-validation-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

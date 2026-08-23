@@ -161,17 +161,15 @@ GO
 ```  
 
   
-## See Also  
- [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
- [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
- [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
- [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
- [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)     
- [Errors and Events Reference &#40;Database Engine&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
-  
+## Related content
 
-
+- [TRY...CATCH (Transact-SQL)](../language-elements/try-catch-transact-sql.md)
+- [ERROR_LINE (Transact-SQL)](error-line-transact-sql.md)
+- [ERROR_MESSAGE (Transact-SQL)](error-message-transact-sql.md)
+- [ERROR_NUMBER (Transact-SQL)](error-number-transact-sql.md)
+- [ERROR_PROCEDURE (Transact-SQL)](error-procedure-transact-sql.md)
+- [ERROR_SEVERITY (Transact-SQL)](error-severity-transact-sql.md)
+- [ERROR_STATE (Transact-SQL)](error-state-transact-sql.md)
+- [@@ROWCOUNT (Transact-SQL)](rowcount-transact-sql.md)
+- [Messages (for errors) catalog views - sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
+- [Errors and events reference (Database Engine)](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)

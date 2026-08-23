@@ -44,7 +44,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
-- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
-- [Upload a file or report in the report server](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
+- [Grant permissions on a native mode report server](../security/granting-permissions-on-a-native-mode-report-server.md)
+- [Tasks and permissions](../security/tasks-and-permissions.md)
+- [Upload a File or Report in the report server](../reports/upload-a-file-or-report-report-manager.md)

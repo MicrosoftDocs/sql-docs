@@ -145,5 +145,5 @@ GO
 ## Related content
 
 - [OLE Automation stored procedures (Transact-SQL)](ole-automation-stored-procedures-transact-sql.md)
-- [Ole Automation Procedures (server configuration option)](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)
+- [Server configuration: Ole Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)
 - [OLE Automation Sample Script](../stored-procedures/ole-automation-sample-script.md)

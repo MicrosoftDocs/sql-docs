@@ -70,8 +70,6 @@ GO
 (1 row(s) affected)
  ```  
   
-## See Also  
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
-  
-  
+## Related content
 
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)

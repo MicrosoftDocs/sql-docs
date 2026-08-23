@@ -40,5 +40,5 @@ helpviewer_keywords:
 ## Related content
 
 - [Data Mining Solutions](/analysis-services/data-mining/data-mining-solutions)
-- [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)
-- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Query Design Tools (SSRS)](query-design-tools-ssrs.md)
+- [Create data connection strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

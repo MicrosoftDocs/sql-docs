@@ -113,11 +113,8 @@ SELECT EXP( LOG(20)), LOG( EXP(20));
 20                  20  
 ```  
   
-## See Also  
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)   
- [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
+- [LOG (Transact-SQL)](log-transact-sql.md)
+- [LOG10 (Transact-SQL)](log10-transact-sql.md)

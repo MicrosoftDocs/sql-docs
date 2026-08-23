@@ -147,6 +147,6 @@ ELSE
     SELECT 'INVALID';  
 ```  
   
-## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+## Related content
 
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)

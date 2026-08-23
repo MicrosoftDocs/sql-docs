@@ -62,7 +62,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  SELECT @g1.ShortestLineTo(@g2).ToString();
 ``` 
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
- [ShortestLineTo (geometry Data Type)](../../t-sql/spatial-geometry/shortestlineto-geometry-data-type.md)  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [ShortestLineTo (geometry Data Type)](../spatial-geometry/shortestlineto-geometry-data-type.md)

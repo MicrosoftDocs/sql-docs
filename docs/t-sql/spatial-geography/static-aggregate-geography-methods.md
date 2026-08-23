@@ -41,10 +41,9 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 -   [UnionAggregate &#40;geography Data Type&#41;](../../t-sql/spatial-geography/unionaggregate-geography-data-type.md)  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [Extended Static Geography Methods](extended-static-geography-methods.md)
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)
+- [OGC Static Geography Methods](ogc-static-geography-methods.md)

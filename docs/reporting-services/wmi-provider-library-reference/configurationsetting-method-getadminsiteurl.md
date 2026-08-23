@@ -39,4 +39,4 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
   
 ## Related content
 
-- [MSReportServer_ConfigurationSetting methods](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)
+- [MSReportServer_ConfigurationSetting methods](msreportserver-configurationsetting-methods.md)

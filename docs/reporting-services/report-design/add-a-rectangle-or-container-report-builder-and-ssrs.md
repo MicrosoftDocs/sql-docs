@@ -45,5 +45,5 @@ f1_keywords:
     
 ## Related content
 
-- [Rectangles and lines &#40;Report Builder&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)
-- [Renderer behaviors &#40;Report Builder&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
+- [Rectangles and lines in a paginated report (Report Builder)](rectangles-and-lines-report-builder-and-ssrs.md)
+- [Rendering behaviors in a paginated report (Report Builder)](rendering-behaviors-report-builder-and-ssrs.md)

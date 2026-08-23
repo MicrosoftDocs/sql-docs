@@ -35,6 +35,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)
-- [Secure shared data source items](../../reporting-services/security/secure-shared-data-source-items.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Secure reports and resources](secure-reports-and-resources.md)
+- [Secure shared data source items](secure-shared-data-source-items.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)

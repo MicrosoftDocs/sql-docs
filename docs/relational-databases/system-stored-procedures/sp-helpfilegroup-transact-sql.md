@@ -95,7 +95,7 @@ GO
 ## Related content
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [sp_helpfile (Transact-SQL)](sp-helpfile-transact-sql.md)
+- [sys.sp_helpfile (Transact-SQL)](sp-helpfile-transact-sql.md)
 - [sys.database_files (Transact-SQL)](../system-catalog-views/sys-database-files-transact-sql.md)
 - [sys.master_files (Transact-SQL)](../system-catalog-views/sys-master-files-transact-sql.md)
 - [sys.filegroups (Transact-SQL)](../system-catalog-views/sys-filegroups-transact-sql.md)

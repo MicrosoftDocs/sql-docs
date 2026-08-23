@@ -54,10 +54,8 @@ Key_GUID( 'Key_Name' )
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   
-## See Also  
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
-  
-  
+## Related content
 
+- [CREATE SYMMETRIC KEY (Transact-SQL)](../statements/create-symmetric-key-transact-sql.md)
+- [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
+- [sys.key_encryptions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)

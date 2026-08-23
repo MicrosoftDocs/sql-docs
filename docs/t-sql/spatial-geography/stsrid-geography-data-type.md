@@ -53,8 +53,7 @@ SET @g.STSrid = 4267;
 SELECT @g.STSrid;  
 ```  
   
-## See Also  
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Spatial Reference Identifiers &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
-  
-  
+## Related content
+
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)
+- [Spatial Reference Identifiers (SRIDs)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)

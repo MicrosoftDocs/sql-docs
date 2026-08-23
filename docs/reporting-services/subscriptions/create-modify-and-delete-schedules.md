@@ -137,7 +137,7 @@ Select **Cancel**.
 
 ## Related content
 
-- [Schedules](../../reporting-services/subscriptions/schedules.md)
-- [Pause and resume shared schedules](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)
-- [Caching reports (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)
+- [Schedules in Reporting Services](schedules.md)
+- [Pause and resume shared schedules](pause-and-resume-shared-schedules.md)
+- [Cache reports (SSRS)](../report-server/caching-reports-ssrs.md)
 - [Create, modify, and delete snapshots in report history](../report-server/create-modify-and-delete-snapshots-in-report-history.md)

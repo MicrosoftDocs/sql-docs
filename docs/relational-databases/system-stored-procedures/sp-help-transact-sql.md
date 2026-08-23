@@ -199,11 +199,10 @@ GO
 ## Related content
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [sp_helpindex (Transact-SQL)](sp-helpindex-transact-sql.md)
-- [sp_helprotect (Transact-SQL)](sp-helprotect-transact-sql.md)
-- [sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
-- [sp_helptrigger (Transact-SQL)](sp-helptrigger-transact-sql.md)
-- [sp_helpuser (Transact-SQL)](sp-helpuser-transact-sql.md)
+- [sys.sp_helpindex (Transact-SQL)](sp-helpindex-transact-sql.md)
+- [sys.sp_helprotect (Transact-SQL)](sp-helprotect-transact-sql.md)
+- [sys.sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
+- [sys.sp_helptrigger (Transact-SQL)](sp-helptrigger-transact-sql.md)
+- [sys.sp_helpuser (Transact-SQL)](sp-helpuser-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sys.sysobjects (Transact-SQL)](../system-compatibility-views/sys-sysobjects-transact-sql.md)
-

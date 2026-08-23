@@ -69,5 +69,4 @@ SELECT @rowcnt;
 
 ## Related content
 
-- [Temporal tables retention policy](../tables/temporal/manage-retention.md)
-
+- [Manage retention of historical data in system-versioned temporal tables](../tables/temporal/manage-retention.md)

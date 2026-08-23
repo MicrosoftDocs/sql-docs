@@ -64,6 +64,6 @@ EXECUTE sp_help_spatial_geometry_index
 ## Related content
 
 - [Spatial index stored procedures - arguments and properties](spatial-index-stored-procedures-arguments-and-properties.md)
-- [sp_help_spatial_geometry_index_xml (Transact-SQL)](sp-help-spatial-geometry-index-xml-transact-sql.md)
+- [sys.sp_help_spatial_geometry_index_xml (Transact-SQL)](sp-help-spatial-geometry-index-xml-transact-sql.md)
 - [Spatial Indexes Overview](../spatial/spatial-indexes-overview.md)
 - [Spatial Data](../spatial/spatial-data-sql-server.md)

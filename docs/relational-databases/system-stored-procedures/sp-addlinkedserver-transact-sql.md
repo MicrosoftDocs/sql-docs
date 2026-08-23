@@ -556,10 +556,10 @@ For complete configuration details including managed identity setup, Microsoft E
 ## Related content
 
 - [Distributed Queries stored procedures (Transact-SQL)](distributed-queries-stored-procedures-transact-sql.md)
-- [sp_addlinkedsrvlogin (Transact-SQL)](sp-addlinkedsrvlogin-transact-sql.md)
-- [sp_addserver (Transact-SQL)](sp-addserver-transact-sql.md)
-- [sp_dropserver (Transact-SQL)](sp-dropserver-transact-sql.md)
-- [sp_serveroption (Transact-SQL)](sp-serveroption-transact-sql.md)
-- [sp_setnetname (Transact-SQL)](sp-setnetname-transact-sql.md)
+- [sys.sp_addlinkedsrvlogin (Transact-SQL)](sp-addlinkedsrvlogin-transact-sql.md)
+- [sys.sp_addserver (Transact-SQL)](sp-addserver-transact-sql.md)
+- [sys.sp_dropserver (Transact-SQL)](sp-dropserver-transact-sql.md)
+- [sys.sp_serveroption (Transact-SQL)](sp-serveroption-transact-sql.md)
+- [sys.sp_setnetname (Transact-SQL)](sp-setnetname-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [System Tables (Transact-SQL)](../system-tables/system-tables-transact-sql.md)

@@ -108,4 +108,4 @@ Only members of the **sysadmin** fixed server role at the Distributor can execut
 
 ## Related content
 
-- [sp_addlogreader_agent (Transact-SQL)](sp-addlogreader-agent-transact-sql.md)
+- [sys.sp_addlogreader_agent (Transact-SQL)](sp-addlogreader-agent-transact-sql.md)

@@ -88,9 +88,9 @@ EXECUTE sp_audit_write 27, 0;
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](../system-catalog-views/sys-server-principals-transact-sql.md)
-- [sp_addrole (Transact-SQL)](sp-addrole-transact-sql.md)
+- [sys.sp_addrole (Transact-SQL)](sp-addrole-transact-sql.md)
 - [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-- [sp_dropuser (Transact-SQL)](sp-dropuser-transact-sql.md)
-- [sp_grantdbaccess (Transact-SQL)](sp-grantdbaccess-transact-sql.md)
-- [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
+- [sys.sp_dropuser (Transact-SQL)](sp-dropuser-transact-sql.md)
+- [sys.sp_grantdbaccess (Transact-SQL)](sp-grantdbaccess-transact-sql.md)
+- [sys.sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

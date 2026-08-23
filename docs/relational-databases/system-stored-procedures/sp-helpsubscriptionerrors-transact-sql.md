@@ -87,5 +87,5 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [sp_helpsubscription (Transact-SQL)](sp-helpsubscription-transact-sql.md)
-- [sp_helpsubscription_properties (Transact-SQL)](sp-helpsubscription-properties-transact-sql.md)
+- [sys.sp_helpsubscription (Transact-SQL)](sp-helpsubscription-transact-sql.md)
+- [sys.sp_helpsubscription_properties (Transact-SQL)](sp-helpsubscription-properties-transact-sql.md)

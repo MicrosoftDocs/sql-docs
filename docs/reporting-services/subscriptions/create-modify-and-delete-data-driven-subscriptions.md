@@ -93,9 +93,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
 - [Create and manage subscriptions for native mode report servers](create-and-manage-subscriptions-for-native-mode-report-servers.md)
-- [Work with subscriptions (web portal)](../../reporting-services/working-with-subscriptions-web-portal.md)
-- [Use my subscriptions (native mode report server)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
+- [Work with subscriptions (web portal)](../working-with-subscriptions-web-portal.md)
+- [Use My Subscriptions (native mode report server)](use-my-subscriptions-native-mode-report-server.md)

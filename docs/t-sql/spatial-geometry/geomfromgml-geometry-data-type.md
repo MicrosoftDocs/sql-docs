@@ -61,7 +61,6 @@ SET @g = geometry::GeomFromGml(@x, 0);
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [Extended Static Geometry Methods](extended-static-geometry-methods.md)

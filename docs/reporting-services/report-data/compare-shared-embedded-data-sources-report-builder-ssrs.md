@@ -42,8 +42,8 @@ You can connect to data with either a shared or an embedded data source. A *shar
 
 ## Related content
 
-- [Create and Manage Shared Data Sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
-- [Create and Modify Embedded Data Sources](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)
-- [Set Deployment Properties](../../reporting-services/tools/set-deployment-properties-reporting-services.md)
-- [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Create, Modify, and Delete Shared Data Sources (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)
+- [Create and Modify Embedded Data Sources](create-and-modify-embedded-data-sources.md)
+- [Set deployment properties (Reporting Services)](../tools/set-deployment-properties-reporting-services.md)
+- [Credentials and connections for report data sources](specify-credential-and-connection-information-for-report-data-sources.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

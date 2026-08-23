@@ -70,7 +70,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 ## Related content
 
-- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
-- [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)
-- [rsconfig utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)
-- [Start and stop the Report Server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)
+- [Reporting Services report server (native mode)](reporting-services-report-server-native-mode.md)
+- [Reporting Services extensions](../extensions/reporting-services-extensions.md)
+- [rsconfig utility (SSRS)](../tools/rsconfig-utility-ssrs.md)
+- [Start and stop the Report Server service](start-and-stop-the-report-server-service.md)

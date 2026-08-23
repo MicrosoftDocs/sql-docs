@@ -287,5 +287,5 @@ The `Sales.vSalesPersonSalesByFiscalYears` view in the [!INCLUDE [ssSampleDBobje
 
 ## Related content
 
-- [FROM clause (Transact-SQL)](from-transact-sql.md)
+- [FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)](from-transact-sql.md)
 - [CASE (Transact-SQL)](../language-elements/case-transact-sql.md)

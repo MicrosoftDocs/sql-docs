@@ -59,6 +59,6 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [sp_addmergearticle (Transact-SQL)](sp-addmergearticle-transact-sql.md)
-- [sp_changemergearticle (Transact-SQL)](sp-changemergearticle-transact-sql.md)
+- [sys.sp_addmergearticle (Transact-SQL)](sp-addmergearticle-transact-sql.md)
+- [sys.sp_changemergearticle (Transact-SQL)](sp-changemergearticle-transact-sql.md)
 - [Replicate Identity Columns](../replication/publish/replicate-identity-columns.md)

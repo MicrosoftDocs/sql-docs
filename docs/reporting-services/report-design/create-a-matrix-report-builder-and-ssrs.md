@@ -88,5 +88,5 @@ ms.custom:
   
 ## Related content
 
-- [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)
-- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Report Builder functions - aggregate functions reference in paginated reports (Report Builder)](report-builder-functions-aggregate-functions-reference.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)

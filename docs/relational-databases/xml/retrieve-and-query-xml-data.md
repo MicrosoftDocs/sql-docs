@@ -100,7 +100,6 @@ The namespace prefix in the result may be different. For example:
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>
 ```
 
-## See also
+## Related content
 
-- [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)
-
+- [Create instances of XML data](create-instances-of-xml-data.md)

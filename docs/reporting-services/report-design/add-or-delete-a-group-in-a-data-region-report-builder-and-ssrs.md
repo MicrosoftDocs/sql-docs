@@ -113,11 +113,11 @@ In paginated reports, add a group to a data region when you want to organize dat
   
 ## Related content
 
-- [Report and group variables collections references &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)
-- [Group expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)
-- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
-- [Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)
-- [Tables &#40;Report Builder&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)
-- [Matrices &#40;Report Builder&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
-- [Lists &#40;Report Builder&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
-- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Report and group variables references in a paginated report (Report Builder)](built-in-collections-report-and-group-variables-references-report-builder.md)
+- [Group expression examples in paginated reports (Report Builder)](group-expression-examples-report-builder-and-ssrs.md)
+- [Filter, group, and sort data in Report Builder paginated reports](filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Tablix data region in a paginated report (Report Builder)](tablix-data-region-report-builder-and-ssrs.md)
+- [Tables in paginated reports (Report Builder)](tables-report-builder-and-ssrs.md)
+- [Create a matrix in a paginated report (Report Builder)](create-a-matrix-report-builder-and-ssrs.md)
+- [Create invoices and forms with lists in a paginated report (Report Builder)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)

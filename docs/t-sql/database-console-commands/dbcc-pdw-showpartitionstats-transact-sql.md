@@ -66,7 +66,7 @@ DBCC PDW_SHOWPARTITIONSTATS ("dbo.FactInternetSales");
 DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 ```
 
-## See also
+## Related content
 
 - [DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)](dbcc-pdw-showexecutionplan-transact-sql.md)
 - [DBCC PDW_SHOWSPACEUSED (Transact-SQL)](dbcc-pdw-showspaceused-transact-sql.md)

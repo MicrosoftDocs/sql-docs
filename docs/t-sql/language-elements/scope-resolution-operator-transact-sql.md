@@ -29,6 +29,6 @@ PRINT @hid.ToString();
   
  `/`  
   
-## See Also  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
- 
+## Related content
+
+- [Operators (Transact-SQL)](operators-transact-sql.md)

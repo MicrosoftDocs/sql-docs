@@ -66,4 +66,4 @@ The following example computes the area of a `CurvePolygon` instance.
 
 ## Related content
 
-- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

@@ -1018,4 +1018,4 @@ FROM Sales.Customer TABLESAMPLE SYSTEM(10 PERCENT);
 - [OPENQUERY (Transact-SQL)](../functions/openquery-transact-sql.md)
 - [OPENROWSET (Transact-SQL)](../functions/openrowset-transact-sql.md)
 - [Operators (Transact-SQL)](../language-elements/operators-transact-sql.md)
-- [WHERE (Transact-SQL)](../queries/where-transact-sql.md)
+- [WHERE (Transact-SQL)](where-transact-sql.md)

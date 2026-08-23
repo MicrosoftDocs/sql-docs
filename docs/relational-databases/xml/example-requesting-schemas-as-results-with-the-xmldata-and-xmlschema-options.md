@@ -120,7 +120,6 @@ This is the result:
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />
 ```
 
-## See also
+## Related content
 
-- [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)
-
+- [Use RAW mode with FOR XML](use-raw-mode-with-for-xml.md)

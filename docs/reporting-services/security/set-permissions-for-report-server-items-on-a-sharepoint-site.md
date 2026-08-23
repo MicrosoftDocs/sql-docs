@@ -64,8 +64,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Use built-in security in Windows SharePoint Services for report server items](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)
-- [Set permissions for report server operations in a SharePoint web application](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)
-- [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)
-- [SharePoint site and list permission reference for report server items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)
-- [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)
+- [Use built-in security in Windows SharePoint services for report server items](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)
+- [Set permissions for report server operations in a SharePoint web application](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)
+- [Reporting Services roles-tasks vs. SharePoint groups-permissions](reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)
+- [SharePoint site and list permission reference for report server items](sharepoint-site-and-list-permission-reference-for-report-server-items.md)
+- [Grant permissions on report server items on a SharePoint site](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)

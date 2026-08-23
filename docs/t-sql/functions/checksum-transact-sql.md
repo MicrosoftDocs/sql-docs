@@ -143,10 +143,8 @@ GO
   
 Index creation on the computed column materializes the checksum column, and any changes to the `ProductName` value will propagate to the checksum column. Alternatively, we could build an index directly on the column we want to index. However, for long key values, a regular index will probably not perform as well as a checksum index.
   
-## See also
-[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
-[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
-  
-  
+## Related content
 
+- [CHECKSUM_AGG (Transact-SQL)](checksum-agg-transact-sql.md)
+- [HASHBYTES (Transact-SQL)](hashbytes-transact-sql.md)
+- [BINARY_CHECKSUM (Transact-SQL)](binary-checksum-transact-sql.md)

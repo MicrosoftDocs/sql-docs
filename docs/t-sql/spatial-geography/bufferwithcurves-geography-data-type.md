@@ -133,8 +133,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  Note that the previous two examples passed a string literal to the `BufferWithCurves()` method. The first example works because the string literal can be converted to a numeric value. However, the second example throws an `ArgumentException`.  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [BufferWithCurves &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [BufferWithCurves (geometry Data Type)](../spatial-geometry/bufferwithcurves-geometry-data-type.md)

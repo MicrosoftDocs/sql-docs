@@ -146,10 +146,9 @@ SELECT @CLEARTEXT AS ClearTextInTarget, @CIPHERTEXT AS CipherTextInTarget, @UNCI
 GO  
 ```  
   
-## See also
-[Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
-[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
-  
-  
+## Related content
+
+- [Security Functions (Transact-SQL)](security-functions-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../statements/create-certificate-transact-sql.md)
+- [CERTPRIVATEKEY (Transact-SQL)](certprivatekey-transact-sql.md)
+- [sys.certificates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)

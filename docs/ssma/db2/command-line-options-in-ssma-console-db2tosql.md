@@ -189,6 +189,6 @@ For a tabular display of the SSMA console command line options, see [Appendix 1:
 
 ## Related content
 
-- [Manage Passwords (Db2ToSQL)](managing-passwords-db2tosql.md)
-- [Generate reports (Db2ToSQL)](generating-reports-db2tosql.md)
-- [Troubleshoot (Db2ToSQL)](troubleshooting-db2tosql.md)
+- [Manage passwords](managing-passwords-db2tosql.md)
+- [Generate reports](generating-reports-db2tosql.md)
+- [Troubleshoot](troubleshooting-db2tosql.md)

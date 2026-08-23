@@ -90,9 +90,7 @@ SELECT CardNumber, CardNumber_EncryptedbyPassphrase
 GO  
 ```  
   
-## See Also  
- [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbypassphrase-transact-sql.md)  
-  
-  
+## Related content
 
+- [Choose an encryption algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
+- [ENCRYPTBYPASSPHRASE (Transact-SQL)](encryptbypassphrase-transact-sql.md)

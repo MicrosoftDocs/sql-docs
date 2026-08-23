@@ -31,6 +31,6 @@ If you want to upgrade to a later version of SSMA for Oracle, you must first uni
 | [Installing SSMA Components on SQL Server (OracleToSQL)](installing-ssma-components-on-sql-server-oracletosql.md) | Provides information about and instructions for installing the extension pack on instances of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | [Removing SSMA for Oracle Components (OracleToSQL)](removing-ssma-for-oracle-components-oracletosql.md) | Provides instructions for uninstalling the client program and extension pack. |
 
-## See also
+## Related content
 
-- [Migrating Oracle Databases to SQL Server (OracleToSQL)](migrating-oracle-databases-to-sql-server-oracletosql.md)
+- [Migrate Oracle Databases to SQL Server](migrating-oracle-databases-to-sql-server-oracletosql.md)

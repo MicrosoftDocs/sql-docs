@@ -149,7 +149,7 @@ GO
 
 ## Related content
 
-- [View or change registered filters and word breakers](../search/view-or-change-registered-filters-and-word-breakers.md)
-- [Configure and manage word breakers and stemmers for search (SQL Server)](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
-- [Configure and Manage Filters for Search](../search/configure-and-manage-filters-for-search.md)
+- [Customize filters and word breakers](../search/view-or-change-registered-filters-and-word-breakers.md)
+- [Configure and manage word breakers and stemmers](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
+- [Configure and manage filters](../search/configure-and-manage-filters-for-search.md)
 - [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](full-text-search-and-semantic-search-stored-procedures-transact-sql.md)

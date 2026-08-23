@@ -39,7 +39,7 @@ This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssno
 |[Project Settings &#40;Type Mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|Use the Type Mapping page of the **Project Settings** dialog box to specify the default type mappings for all databases and database objects in the SSMA for Sybase project.|  
 |[Save Metadata  &#40;SybaseToSQL&#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|The **Save Metadata** dialog box appears when you save a project that is missing metadata.|  
   
-## See Also  
-[Getting Started with SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
-[Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  
+## Related content
+
+- [Getting Started with SSMA for SAP ASE](getting-started-with-ssma-for-sybase-sybasetosql.md)
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

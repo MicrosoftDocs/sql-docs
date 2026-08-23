@@ -688,22 +688,21 @@ END;
 GO
 ```
 
-## See Also
+## Related content
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
-- [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
-- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
-- [Binary Large Objects](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
-- [DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)
-- [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
-- [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)
-
+- [CREATE DATABASE](create-database-transact-sql.md)
+- [DATABASEPROPERTYEX (Transact-SQL)](../functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
+- [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
+- [Binary Large Object (Blob) Data (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
+- [DBCC SHRINKFILE (Transact-SQL)](../database-console-commands/dbcc-shrinkfile-transact-sql.md)
+- [sys.sp_filestream_force_garbage_collection (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
+- [Database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current"
@@ -1094,18 +1093,17 @@ END;
 GO
 ```
 
-## See Also
+## Related content
 
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
-- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
-- [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
-- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
-- [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)
-- [The Memory-Optimized Filegroup](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)
-
+- [DATABASEPROPERTYEX (Transact-SQL)](../functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
+- [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
+- [DBCC SHRINKFILE (Transact-SQL)](../database-console-commands/dbcc-shrinkfile-transact-sql.md)
+- [The memory-optimized filegroup](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)
 ::: moniker-end

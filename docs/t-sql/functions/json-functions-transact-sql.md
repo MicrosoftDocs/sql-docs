@@ -39,6 +39,6 @@ For more info about the built-in support for JSON in [!INCLUDE [ssNoVersion](../
 
 ## Related content
 
-- [Validate, query, and change JSON data with built-in functions (SQL Server)](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
-- [JSON Path Expressions](../../relational-databases/json/json-path-expressions-sql-server.md)
+- [Validate, query, and change JSON data with built-in functions](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
+- [JSON path expressions in the SQL Database Engine](../../relational-databases/json/json-path-expressions-sql-server.md)
 - [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md)

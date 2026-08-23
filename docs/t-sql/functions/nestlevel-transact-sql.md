@@ -112,10 +112,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## See Also  
+## Related content
 
- [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
-  
-
+- [Create a stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)
+- [@@TRANCOUNT (Transact-SQL)](trancount-transact-sql.md)

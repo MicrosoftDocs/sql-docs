@@ -141,10 +141,7 @@ AWC Logo Cap             CA-1098        0000CA-1098
 BB Ball Bearing          BE-2349        0000BE-2349
  ```  
   
-## See Also  
- [SPACE &#40;Transact-SQL&#41;](../../t-sql/functions/space-transact-sql.md)  
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
-   
-  
+## Related content
 
-
+- [SPACE (Transact-SQL)](space-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)

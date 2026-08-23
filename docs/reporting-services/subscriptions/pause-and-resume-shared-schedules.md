@@ -55,7 +55,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Schedules](../../reporting-services/subscriptions/schedules.md)
-- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)
-- [Change time zones and clock settings on a report server](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)
-- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)
+- [Schedules in Reporting Services](schedules.md)
+- [Create, modify, and delete schedules](create-modify-and-delete-schedules.md)
+- [Change time zones and clock settings on a report server](change-time-zones-and-clock-settings-on-a-report-server.md)
+- [Manage a running process](manage-a-running-process.md)

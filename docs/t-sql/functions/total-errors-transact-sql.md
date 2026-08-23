@@ -55,8 +55,7 @@ Errors      As of
 0           3/28/2003 12:32:11 PM   
 ```  
   
-## See Also  
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

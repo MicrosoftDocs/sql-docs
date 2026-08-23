@@ -186,6 +186,6 @@ Select to change how security is defined for the current item.
 
 ## Related content
 
-- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)
-- [Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
+- [What is the report server web portal (Native mode)?](web-portal-ssrs-native-mode.md)
+- [Work with shared datasets - web portal](work-with-shared-datasets-web-portal.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

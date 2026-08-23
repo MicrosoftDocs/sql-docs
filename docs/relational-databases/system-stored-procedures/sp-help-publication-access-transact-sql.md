@@ -90,6 +90,6 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Related content
 
-- [sp_grant_publication_access (Transact-SQL)](sp-grant-publication-access-transact-sql.md)
-- [sp_revoke_publication_access (Transact-SQL)](sp-revoke-publication-access-transact-sql.md)
+- [sys.sp_grant_publication_access (Transact-SQL)](sp-grant-publication-access-transact-sql.md)
+- [sys.sp_revoke_publication_access (Transact-SQL)](sp-revoke-publication-access-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

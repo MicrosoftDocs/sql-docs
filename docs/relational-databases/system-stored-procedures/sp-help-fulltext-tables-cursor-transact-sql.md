@@ -106,6 +106,6 @@ GO
 
 - [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)
 - [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)
-- [sp_fulltext_table (Transact-SQL)](sp-fulltext-table-transact-sql.md)
-- [sp_help_fulltext_tables (Transact-SQL)](sp-help-fulltext-tables-transact-sql.md)
+- [sys.sp_fulltext_table (Transact-SQL)](sp-fulltext-table-transact-sql.md)
+- [sys.sp_help_fulltext_tables (Transact-SQL)](sp-help-fulltext-tables-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

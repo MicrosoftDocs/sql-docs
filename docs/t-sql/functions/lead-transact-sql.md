@@ -292,5 +292,4 @@ Year Quarter  SalesQuota  NextQuota  Diff
 - [LAG (Transact-SQL)](lag-transact-sql.md)
 - [FIRST_VALUE (Transact-SQL)](first-value-transact-sql.md)
 - [LAST_VALUE (Transact-SQL)](last-value-transact-sql.md)
-- [SELECT - OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)
-
+- [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

@@ -142,5 +142,5 @@ Since [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], the [!INCLUDE [ssde
 
 ## Related content
 
-- [Functions](functions.md)
+- [What are the SQL database functions?](functions.md)
 - [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)

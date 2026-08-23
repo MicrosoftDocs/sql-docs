@@ -50,7 +50,6 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## See Also  
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)

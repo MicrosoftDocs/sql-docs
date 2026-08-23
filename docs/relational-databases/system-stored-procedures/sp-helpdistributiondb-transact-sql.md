@@ -70,7 +70,7 @@ Members of the **db_owner** fixed database role or the **replmonitor** role in a
 ## Related content
 
 - [View and Modify Distributor and Publisher Properties](../replication/view-and-modify-distributor-and-publisher-properties.md)
-- [sp_adddistributiondb (Transact-SQL)](sp-adddistributiondb-transact-sql.md)
-- [sp_changedistributiondb (Transact-SQL)](sp-changedistributiondb-transact-sql.md)
-- [sp_dropdistributiondb (Transact-SQL)](sp-dropdistributiondb-transact-sql.md)
+- [sys.sp_adddistributiondb (Transact-SQL)](sp-adddistributiondb-transact-sql.md)
+- [sys.sp_changedistributiondb (Transact-SQL)](sp-changedistributiondb-transact-sql.md)
+- [sys.sp_dropdistributiondb (Transact-SQL)](sp-dropdistributiondb-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

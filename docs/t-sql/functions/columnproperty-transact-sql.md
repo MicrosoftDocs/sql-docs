@@ -99,9 +99,7 @@ Column Length
 50
 ```  
   
-## See also
-[Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
-  
-  
+## Related content
 
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [TYPEPROPERTY (Transact-SQL)](typeproperty-transact-sql.md)

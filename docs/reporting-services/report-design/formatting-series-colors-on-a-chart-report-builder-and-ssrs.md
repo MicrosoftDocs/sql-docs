@@ -50,7 +50,7 @@ Report Builder provides several built-in palettes for paginated report charts, o
   
 ## Related content
 
-- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
-- [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)
-- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
+- [Chart effects - add bevel, emboss, or texture to a paginated report chart (Report Builder)](chart-effects-add-bevel-emboss-or-texture-report-builder.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Chart legend - formatting the legend on a paginated report chart (Report Builder)](chart-legend-formatting-report-builder.md)

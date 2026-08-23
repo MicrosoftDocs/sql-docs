@@ -75,7 +75,6 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
-  
-  
+## Related content
+
+- [Extended Static Geography Methods](extended-static-geography-methods.md)

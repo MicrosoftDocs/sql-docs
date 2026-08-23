@@ -74,19 +74,15 @@ For a content model to be valid, it must be possible to validate any instance un
 
 For a document such as `<root><e1/><e3/></root>`, the sequence `<e1/><e3/>` unambiguously matches the second `<xsd:sequence>`. However, because the `<xsd:element>` to which `<e1/>` corresponds can't be determined without looking ahead to `<e3/>`, the content model violates the UPA constraint rule.
 
-## Next steps
+## Reference
 
 The following document is published by the World Wide Web Consortium (W3C) and contains the technical description of the unique particle attribution constraint:
 
-"XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":
+[XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation](https://go.microsoft.com/fwlink/?linkid=48881):
 
 - Section 3.8.6: Constraints on Model Group Schema Components
-
 - Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)
 
-To see the document, visit [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).
+## Related content
 
-## See also
-
-- [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)
-
+- [XML schema collections (SQL Server)](xml-schema-collections-sql-server.md)

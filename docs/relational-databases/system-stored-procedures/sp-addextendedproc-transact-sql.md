@@ -85,6 +85,6 @@ EXECUTE sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
 - [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
 - [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)
 - [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)
-- [sp_dropextendedproc (Transact-SQL)](sp-dropextendedproc-transact-sql.md)
-- [sp_helpextendedproc (Transact-SQL)](sp-helpextendedproc-transact-sql.md)
+- [sys.sp_dropextendedproc (Transact-SQL)](sp-dropextendedproc-transact-sql.md)
+- [sys.sp_helpextendedproc (Transact-SQL)](sp-helpextendedproc-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

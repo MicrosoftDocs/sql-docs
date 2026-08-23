@@ -88,7 +88,7 @@ O                                                                7387803
 P                                                                388036
 ```
     
-## See also
-[Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 
+## Related content
 
+- [Aggregate functions (Transact-SQL)](aggregate-functions-transact-sql.md)
+- [COUNT (Transact-SQL)](count-transact-sql.md)

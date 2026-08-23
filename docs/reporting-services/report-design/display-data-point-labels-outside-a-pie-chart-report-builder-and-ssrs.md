@@ -49,6 +49,6 @@ ms.custom:
   
 ## Related content
 
-- [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)
-- [Collect Small Slices on a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)
-- [Display Percentage Values on a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)
+- [Pie charts in a paginated report (Report Builder)](pie-charts-report-builder-and-ssrs.md)
+- [Collect small slices on a paginated report pie chart (Report Builder)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)
+- [Display percentage values on a pie chart in a Report Builder paginated report](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)

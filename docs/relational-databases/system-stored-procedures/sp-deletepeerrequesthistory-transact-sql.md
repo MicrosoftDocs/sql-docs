@@ -64,6 +64,6 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [sp_helppeerrequests (Transact-SQL)](sp-helppeerrequests-transact-sql.md)
-- [sp_helppeerresponses (Transact-SQL)](sp-helppeerresponses-transact-sql.md)
-- [sp_requestpeerresponse (Transact-SQL)](sp-requestpeerresponse-transact-sql.md)
+- [sys.sp_helppeerrequests (Transact-SQL)](sp-helppeerrequests-transact-sql.md)
+- [sys.sp_helppeerresponses (Transact-SQL)](sp-helppeerresponses-transact-sql.md)
+- [sys.sp_requestpeerresponse (Transact-SQL)](sp-requestpeerresponse-transact-sql.md)

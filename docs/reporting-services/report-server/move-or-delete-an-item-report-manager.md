@@ -66,4 +66,4 @@ helpviewer_keywords:
 ## Related content
 
 - [Contents page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))
-- [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

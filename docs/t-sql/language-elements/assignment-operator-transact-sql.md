@@ -41,9 +41,8 @@ FROM Production.Product;
 GO  
 ```  
   
-## See Also  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-  
-  
+## Related content
+
+- [Operators (Transact-SQL)](operators-transact-sql.md)
+- [Compound operators (Transact-SQL)](compound-operators-transact-sql.md)
+- [Expressions (Transact-SQL)](expressions-transact-sql.md)

@@ -53,4 +53,4 @@ P10:
 ## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [Ole Automation Procedures (server configuration option)](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)
+- [Server configuration: Ole Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)

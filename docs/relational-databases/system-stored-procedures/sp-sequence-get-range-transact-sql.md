@@ -201,5 +201,4 @@ Console.WriteLine(firstValueInRange.Value);
 - [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md)
 - [DROP SEQUENCE (Transact-SQL)](../../t-sql/statements/drop-sequence-transact-sql.md)
 - [NEXT VALUE FOR (Transact-SQL)](../../t-sql/functions/next-value-for-transact-sql.md)
-- [Sequence Numbers](../sequence-numbers/sequence-numbers.md)
-
+- [Sequence numbers](../sequence-numbers/sequence-numbers.md)

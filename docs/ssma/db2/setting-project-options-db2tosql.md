@@ -74,5 +74,5 @@ You can also customize settings for the current project. These settings are save
 
 ## Related content
 
-- [Map Db2 and SQL Server Data Types (Db2ToSQL)](mapping-db2-and-sql-server-data-types-db2tosql.md)
-- [Convert Db2 schemas (Db2ToSQL)](converting-db2-schemas-db2tosql.md)
+- [Map Db2 and SQL Server data types](mapping-db2-and-sql-server-data-types-db2tosql.md)
+- [Convert Db2 schemas](converting-db2-schemas-db2tosql.md)

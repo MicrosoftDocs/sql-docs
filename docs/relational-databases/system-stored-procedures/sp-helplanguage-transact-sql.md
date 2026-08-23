@@ -86,7 +86,7 @@ EXECUTE sp_helplanguage;
 ## Related content
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [&#x40;&#x40;LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)
+- [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)
 - [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 

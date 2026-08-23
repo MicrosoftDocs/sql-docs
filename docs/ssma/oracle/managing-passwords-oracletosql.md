@@ -123,5 +123,6 @@ The SSMA Console application allows you to export encrypted database passwords p
 
 8. Please confirm password: xxxxxxxx  
 
-## See Also  
-[Executing the SSMA Console (Oracle)](./executing-the-ssma-console-oracletosql.md)  
+## Related content
+
+- [Executing the SSMA console](executing-the-ssma-console-oracletosql.md)

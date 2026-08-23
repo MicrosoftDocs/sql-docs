@@ -141,4 +141,4 @@ In addition to the six predefined test conditions, you can write new test condit
 
 - [Create and define SQL Server unit tests](creating-and-defining-sql-server-unit-tests.md)
 - [Use Transact-SQL assertions in SQL Server unit tests](using-transact-sql-assertions-in-sql-server-unit-tests.md)
-- [Scripts in SQL Server Unit Tests](scripts-in-sql-server-unit-tests.md)
+- [Scripts in SQL Server unit tests](scripts-in-sql-server-unit-tests.md)

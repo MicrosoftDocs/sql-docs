@@ -76,7 +76,7 @@ Only members of the **sysadmin** fixed server role can execute `sp_droppublicati
 ## Related content
 
 - [Delete a Publication](../replication/publish/delete-a-publication.md)
-- [sp_addpublication (Transact-SQL)](sp-addpublication-transact-sql.md)
-- [sp_changepublication (Transact-SQL)](sp-changepublication-transact-sql.md)
-- [sp_helppublication (Transact-SQL)](sp-helppublication-transact-sql.md)
+- [sys.sp_addpublication (Transact-SQL)](sp-addpublication-transact-sql.md)
+- [sys.sp_changepublication (Transact-SQL)](sp-changepublication-transact-sql.md)
+- [sys.sp_helppublication (Transact-SQL)](sp-helppublication-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

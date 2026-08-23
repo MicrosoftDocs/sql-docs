@@ -66,6 +66,6 @@ ms.custom:
   
 ## Related content
 
-- [Text boxes &#40;Report Builder&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)
-- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
-- [Keyboard shortcuts &#40;Report Builder&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)
+- [Text boxes in paginated reports (Report Builder)](text-boxes-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)
+- [Keyboard shortcuts for accessibility in paginated reports in Report Builder](../report-builder/keyboard-shortcuts-report-builder.md)

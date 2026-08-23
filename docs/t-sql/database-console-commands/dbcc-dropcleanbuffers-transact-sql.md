@@ -93,7 +93,7 @@ Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 - Requires membership in the **db_owner** fixed server role
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [CHECKPOINT (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [CHECKPOINT (Transact-SQL)](../language-elements/checkpoint-transact-sql.md)

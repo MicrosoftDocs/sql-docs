@@ -44,7 +44,7 @@ ms.custom:
 
 ## Related content
 
-- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Formatting a chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
 - [Axis Properties dialog, axis options](/previous-versions/sql/)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

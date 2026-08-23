@@ -95,11 +95,9 @@ IF IS_MEMBER ('ADVWORKS\Shipping') = 1
 GO  
 ```  
   
-## See Also  
- [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
-  
+## Related content
 
+- [IS_SRVROLEMEMBER (Transact-SQL)](is-srvrolemember-transact-sql.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
+- [Security Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+- [Security Functions (Transact-SQL)](security-functions-transact-sql.md)

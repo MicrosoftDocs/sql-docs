@@ -66,7 +66,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STBuffer(1).ToString();  
 ```  
   
-## See Also  
- [BufferWithTolerance &#40;geography Data Type&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
+## Related content
+
+- [BufferWithTolerance (geography Data Type)](bufferwithtolerance-geography-data-type.md)
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)

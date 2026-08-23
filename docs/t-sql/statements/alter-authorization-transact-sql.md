@@ -380,7 +380,8 @@ ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];
 ```
 
 
-## See Also
- [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)
- [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+## Related content
+
+- [OBJECTPROPERTY (Transact-SQL)](../functions/objectproperty-transact-sql.md)
+- [TYPEPROPERTY (Transact-SQL)](../functions/typeproperty-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

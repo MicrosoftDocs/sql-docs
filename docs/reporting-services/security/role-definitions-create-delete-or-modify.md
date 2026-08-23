@@ -67,6 +67,6 @@ To create, modify, or delete roles, you can use [!INCLUDE[SQL Server Management 
 
 ## Related content
 
-- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
-- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
-- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
+- [Connect to a report server in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)
+- [Create and manage role assignments](create-and-manage-role-assignments.md)
+- [Reporting Services in SQL Server Management Studio (SSRS)](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)

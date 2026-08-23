@@ -126,9 +126,7 @@ GO
 --0x00000000000007E5  
 ```  
   
-## See Also  
- [@@DBTS &#40;Transact-SQL&#41;](../../t-sql/functions/dbts-transact-sql.md)   
- [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)  
-  
-  
+## Related content
 
+- [@@DBTS (Transact-SQL)](dbts-transact-sql.md)
+- [rowversion (Transact-SQL)](../data-types/rowversion-transact-sql.md)

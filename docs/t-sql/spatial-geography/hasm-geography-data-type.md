@@ -45,8 +45,7 @@ SELECT @p.HasM
 --Returns: 1 (true)  
 ```  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40;geography Data Type&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [M (geography Data Type)](m-geography-data-type.md)

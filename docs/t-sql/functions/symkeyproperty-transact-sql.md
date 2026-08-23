@@ -52,14 +52,13 @@ SELECT SYMKEYPROPERTY(256, 'algorithm_desc') AS Algorithm ;
 GO  
 ```  
   
-## See Also  
- [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [KEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/key-id-transact-sql.md)   
- [ASYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
-  
-  
+## Related content
+
+- [ASYMKEY_ID (Transact-SQL)](asymkey-id-transact-sql.md)
+- [ALTER SYMMETRIC KEY (Transact-SQL)](../statements/alter-symmetric-key-transact-sql.md)
+- [DROP SYMMETRIC KEY (Transact-SQL)](../statements/drop-symmetric-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
+- [Security Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+- [KEY_ID (Transact-SQL)](key-id-transact-sql.md)
+- [ASYMKEYPROPERTY (Transact-SQL)](asymkeyproperty-transact-sql.md)

@@ -55,6 +55,6 @@ Requires membership in the **public** role.
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [sp_tableoption (Transact-SQL)](sp-tableoption-transact-sql.md)
+- [sys.sp_tableoption (Transact-SQL)](sp-tableoption-transact-sql.md)
 - [Text and Image Functions - TEXTPTR (Transact-SQL)](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)
 - [Text and Image Functions - TEXTVALID (Transact-SQL)](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)

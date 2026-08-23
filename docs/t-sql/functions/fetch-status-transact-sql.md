@@ -70,9 +70,7 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## See Also  
- [Cursor Functions &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
-  
-  
+## Related content
 
+- [Cursor Functions (Transact-SQL)](cursor-functions-transact-sql.md)
+- [FETCH (Transact-SQL)](../language-elements/fetch-transact-sql.md)

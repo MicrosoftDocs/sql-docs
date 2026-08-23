@@ -965,14 +965,14 @@ GO
 
 ## Related content
 
-- [&#x40;&#x40;NESTLEVEL (Transact-SQL)](../functions/nestlevel-transact-sql.md)
+- [@@NESTLEVEL (Transact-SQL)](../functions/nestlevel-transact-sql.md)
 - [DECLARE @local_variable (Transact-SQL)](declare-local-variable-transact-sql.md)
 - [EXECUTE AS clause (Transact-SQL)](../statements/execute-as-clause-transact-sql.md)
 - [osql Utility](../../tools/osql-utility.md)
 - [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
 - [REVERT (Transact-SQL)](../statements/revert-transact-sql.md)
-- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
-- [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)
+- [sys.sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md)
 - [SUSER_NAME (Transact-SQL)](../functions/suser-name-transact-sql.md)
 - [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)

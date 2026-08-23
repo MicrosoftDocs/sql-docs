@@ -91,12 +91,11 @@ def AS [ColumnResult];
  0xABCDEF
  ```    
 
-## See Also  
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [&#40;Division&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)   
- [&#40;Division Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
-  
-  
+## Related content
+
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [What are the SQL database functions?](../functions/functions.md)
+- [Operators (Transact-SQL)](operators-transact-sql.md)
+- [/ (Division) (Transact-SQL)](divide-transact-sql.md)
+- [/= (Division assignment) (Transact-SQL)](divide-equals-transact-sql.md)
+- [Compound operators (Transact-SQL)](compound-operators-transact-sql.md)

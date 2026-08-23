@@ -101,7 +101,7 @@ ms.custom:
   
 ## Related content
 
-- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
-- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
-- [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
-- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Pagination in paginated reports (Microsoft Report Builder)](pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Rendering behaviors in a paginated report (Report Builder)](rendering-behaviors-report-builder-and-ssrs.md)
+- [Interactive functionality - different report rendering extensions](../report-builder/interactive-functionality-different-report-rendering-extensions.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)

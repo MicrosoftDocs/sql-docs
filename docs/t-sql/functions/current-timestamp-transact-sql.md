@@ -136,10 +136,9 @@ SELECT CURRENT_TIMESTAMP;
   
 ## Related content
 
-- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
 - [SYSDATETIME (Transact-SQL)](sysdatetime-transact-sql.md)
 - [SYSDATETIMEOFFSET (Transact-SQL)](sysdatetimeoffset-transact-sql.md)
 - [SYSUTCDATETIME (Transact-SQL)](sysutcdatetime-transact-sql.md)
 - [GETDATE (Transact-SQL)](getdate-transact-sql.md)
 - [GETUTCDATE (Transact-SQL)](getutcdate-transact-sql.md)
-

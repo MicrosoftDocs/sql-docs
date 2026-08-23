@@ -98,7 +98,7 @@ EXECUTE sp_attach_db
 ## Related content
 
 - [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
-- [sp_detach_db (Transact-SQL)](sp-detach-db-transact-sql.md)
-- [sp_helpfile (Transact-SQL)](sp-helpfile-transact-sql.md)
-- [sp_removedbreplication (Transact-SQL)](sp-removedbreplication-transact-sql.md)
+- [sys.sp_detach_db (Transact-SQL)](sp-detach-db-transact-sql.md)
+- [sys.sp_helpfile (Transact-SQL)](sp-helpfile-transact-sql.md)
+- [sys.sp_removedbreplication (Transact-SQL)](sp-removedbreplication-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

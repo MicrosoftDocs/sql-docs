@@ -363,7 +363,7 @@ WHERE SalesOrderID IN (43659, 43664)
 
 ## Related content
 
-- [Aggregate Functions (Transact-SQL)](../functions/aggregate-functions-transact-sql.md)
+- [Aggregate functions (Transact-SQL)](../functions/aggregate-functions-transact-sql.md)
 - [Analytic functions (Transact-SQL)](../functions/analytic-functions-transact-sql.md)
 - [SELECT - OVER clause (Transact-SQL)](select-over-clause-transact-sql.md)
 - [SELECT (Transact-SQL)](select-transact-sql.md)

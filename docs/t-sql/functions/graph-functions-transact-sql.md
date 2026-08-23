@@ -29,8 +29,7 @@ Use the functions described on the pages in this section to extract values from,
 | [OBJECT_ID_FROM_EDGE_ID](../../t-sql/functions/object-id-from-edge-id-transact-sql.md)    |Extract the `object_id` from an `edge_id`  |
 | [OBJECT_ID_FROM_NODE_ID](../../t-sql/functions/object-id-from-node-id-transact-sql.md)    |Extract the `object_id` from a `node_id`  |
 
-## Next steps
+## Related content
 
 - [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)
-- [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
-
+- [Create a graph database and run some pattern matching queries using T-SQL](../../relational-databases/graphs/sql-graph-sample.md)

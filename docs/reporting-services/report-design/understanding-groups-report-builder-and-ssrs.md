@@ -100,6 +100,6 @@ Cells in a row or column of a tablix data region can belong to multiple row and 
   
 ## Related content
 
-- [Add or delete a group in a data region in a paginated report (Report Builder)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)
-- [Add a total to a group or tablix in a paginated report (Report Builder)](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)
-- [Sort data in a data region in a paginated report (Report Builder)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)
+- [Add or delete a group in a data region in a paginated report (Report Builder)](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)
+- [Add a total to a group or tablix in a paginated report (Report Builder)](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)
+- [Sort data in a data region in a paginated report (Report Builder)](sort-data-in-a-data-region-report-builder-and-ssrs.md)

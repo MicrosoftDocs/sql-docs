@@ -162,10 +162,9 @@ You can convert DTDs to XML schema documents by using third-party tools, and loa
 
 You can still use a Transact-SQL SELECT statement to retrieve the whole **xml** data type, even if it contains negative years. It's recommended that you replace negative years with a year within the newly supported range or change the type of the element or attribute to **xs:string**.
 
-## See also
+## Related content
 
-- [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)
+- [Create instances of XML data](create-instances-of-xml-data.md)
 - [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)
-- [XML Data Modification Language &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)
-- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)
-
+- [XML Data Modification Language (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)
+- [XML data (SQL Server)](xml-data-sql-server.md)

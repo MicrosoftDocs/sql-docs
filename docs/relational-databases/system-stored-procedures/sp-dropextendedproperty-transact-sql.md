@@ -148,6 +148,6 @@ GO
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [sys.fn_listextendedproperty (Transact-SQL)](../system-functions/sys-fn-listextendedproperty-transact-sql.md)
-- [sp_addextendedproperty (Transact-SQL)](sp-addextendedproperty-transact-sql.md)
-- [sp_updateextendedproperty (Transact-SQL)](sp-updateextendedproperty-transact-sql.md)
+- [sys.sp_addextendedproperty (Transact-SQL)](sp-addextendedproperty-transact-sql.md)
+- [sys.sp_updateextendedproperty (Transact-SQL)](sp-updateextendedproperty-transact-sql.md)
 - [Extended properties catalog views - sys.extended_properties](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)

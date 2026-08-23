@@ -85,7 +85,7 @@ Only members of the **sysadmin** fixed server role can execute `sp_changedistpub
 ## Related content
 
 - [View and Modify Distributor and Publisher Properties](../replication/view-and-modify-distributor-and-publisher-properties.md)
-- [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)
-- [sp_dropdistpublisher (Transact-SQL)](sp-dropdistpublisher-transact-sql.md)
-- [sp_helpdistpublisher (Transact-SQL)](sp-helpdistpublisher-transact-sql.md)
+- [sys.sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)
+- [sys.sp_dropdistpublisher (Transact-SQL)](sp-dropdistpublisher-transact-sql.md)
+- [sys.sp_helpdistpublisher (Transact-SQL)](sp-helpdistpublisher-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

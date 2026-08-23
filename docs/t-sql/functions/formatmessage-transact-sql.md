@@ -104,19 +104,19 @@ SELECT FORMATMESSAGE('Hello %20s!', 'TEST');
 SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');  
 ```  
   
-## See Also  
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
- [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
+## Related content
 
+- [RAISERROR (Transact-SQL)](../language-elements/raiserror-transact-sql.md)
+- [THROW (Transact-SQL)](../language-elements/throw-transact-sql.md)
+- [sys.sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)
+- [Messages (for errors) catalog views - sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
+- [CONCAT (Transact-SQL)](concat-transact-sql.md)
+- [CONCAT_WS (Transact-SQL)](concat-ws-transact-sql.md)
+- [QUOTENAME (Transact-SQL)](quotename-transact-sql.md)
+- [REPLACE (Transact-SQL)](replace-transact-sql.md)
+- [REVERSE (Transact-SQL)](reverse-transact-sql.md)
+- [STRING_AGG (Transact-SQL)](string-agg-transact-sql.md)
+- [STRING_ESCAPE (Transact-SQL)](string-escape-transact-sql.md)
+- [STUFF (Transact-SQL)](stuff-transact-sql.md)
+- [TRANSLATE (Transact-SQL)](translate-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)

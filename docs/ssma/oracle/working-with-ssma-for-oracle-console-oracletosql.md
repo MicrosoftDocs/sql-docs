@@ -30,6 +30,6 @@ Topics covered in this section include:
 |[Generating Reports &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|Lists the commands to generate reports.|  
 |[Troubleshooting &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|Provides brief information about fixing migration issues.|  
   
-## See Also  
-[Getting Started with SSMA for Oracle Console](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
-  
+## Related content
+
+- [Getting Started with SSMA  for Oracle Console](getting-started-with-ssma-for-oracle-console-oracletosql.md)

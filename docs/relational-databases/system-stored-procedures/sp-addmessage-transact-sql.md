@@ -174,6 +174,6 @@ GO
 ## Related content
 
 - [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)
-- [sp_altermessage (Transact-SQL)](sp-altermessage-transact-sql.md)
-- [sp_dropmessage (Transact-SQL)](sp-dropmessage-transact-sql.md)
+- [sys.sp_altermessage (Transact-SQL)](sp-altermessage-transact-sql.md)
+- [sys.sp_dropmessage (Transact-SQL)](sp-dropmessage-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

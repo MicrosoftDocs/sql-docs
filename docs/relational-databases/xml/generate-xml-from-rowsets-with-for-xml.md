@@ -43,7 +43,6 @@ FROM   V;
 
 SQL view definitions are similar to XML views that are created by using annotated schemas. However, there are important differences. The SQL view definition is read-only and must be manipulated with embedded XQuery. The XML views are created by using annotated schema. Additionally, the SQL view materializes the XML result before applying the XQuery expression, while the XPath queries on XML views evaluate SQL queries on the underlying tables.
 
-## See also
+## Related content
 
-- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)
-
+- [FOR XML (SQL Server)](for-xml-sql-server.md)

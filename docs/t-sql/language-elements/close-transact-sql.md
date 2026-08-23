@@ -64,10 +64,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## See Also
+## Related content
 
-- [Cursors](../../relational-databases/cursors.md)
-- [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)
-- [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)
-- [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)
-- [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
+- [Cursors (SQL Server)](../../relational-databases/cursors.md)
+- [Cursors (Transact-SQL)](cursors-transact-sql.md)
+- [DEALLOCATE (Transact-SQL)](deallocate-transact-sql.md)
+- [FETCH (Transact-SQL)](fetch-transact-sql.md)
+- [OPEN (Transact-SQL)](open-transact-sql.md)

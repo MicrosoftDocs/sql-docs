@@ -77,6 +77,6 @@ Caller must either be a member of the **sysadmin** fixed server role, the **db_o
 ## Related content
 
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)
-- [sp_get_redirected_publisher (Transact-SQL)](sp-get-redirected-publisher-transact-sql.md)
-- [sp_redirect_publisher (Transact-SQL)](sp-redirect-publisher-transact-sql.md)
-- [sp_validate_redirected_publisher (Transact-SQL)](sp-validate-redirected-publisher-transact-sql.md)
+- [sys.sp_get_redirected_publisher (Transact-SQL)](sp-get-redirected-publisher-transact-sql.md)
+- [sys.sp_redirect_publisher (Transact-SQL)](sp-redirect-publisher-transact-sql.md)
+- [sys.sp_validate_redirected_publisher (Transact-SQL)](sp-validate-redirected-publisher-transact-sql.md)

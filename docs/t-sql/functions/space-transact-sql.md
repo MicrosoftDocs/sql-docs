@@ -69,12 +69,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## See Also  
- [REPLICATE &#40;Transact-SQL&#41;](../../t-sql/functions/replicate-transact-sql.md)   
-    
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  
-  
+## Related content
 
-
-
+- [REPLICATE (Transact-SQL)](replicate-transact-sql.md)
+- [What are the SQL database functions?](functions.md)

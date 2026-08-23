@@ -54,7 +54,6 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDisjoint(@h);  
 ```  
   
-## See Also  
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
-  
+## Related content
+
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)

@@ -242,6 +242,6 @@ f1_keywords:
   
 ## Related content
 
-- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)
-- [Plan a Map Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)
-- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
+- [Troubleshoot reports: map reports in a paginated report (Report Builder)](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)
+- [Plan a map paginated report (Report Builder)](plan-a-map-report-report-builder-and-ssrs.md)
+- [Maps in a paginated report (Report Builder)](maps-report-builder-and-ssrs.md)

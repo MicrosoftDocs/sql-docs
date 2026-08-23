@@ -59,9 +59,6 @@ Text Size
 2048
  ```  
   
-## See Also  
+## Related content
 
- [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)  
-  
-  
-
+- [SET TEXTSIZE (Transact-SQL)](../statements/set-textsize-transact-sql.md)

@@ -31,5 +31,5 @@ public Boolean IsSharePointIntegrated;
   
 ## Related content
 
-- [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)
-- [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)
+- [MSReportServer_Instance members](msreportserver-instance-members.md)
+- [MSReportServer_ConfigurationSetting class](msreportserver-configurationsetting-class.md)

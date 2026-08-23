@@ -176,6 +176,6 @@ WHERE s.is_linked = 1;
 ## Related content
 
 - [Linked Servers Catalog Views (Transact-SQL)](../system-catalog-views/linked-servers-catalog-views-transact-sql.md)
-- [sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)
-- [sp_droplinkedsrvlogin (Transact-SQL)](sp-droplinkedsrvlogin-transact-sql.md)
+- [sys.sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)
+- [sys.sp_droplinkedsrvlogin (Transact-SQL)](sp-droplinkedsrvlogin-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

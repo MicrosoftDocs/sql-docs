@@ -73,7 +73,7 @@ ms.custom:
   
 ## Related content
 
-- [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)
-- [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)
-- [Exploring the Flexibility of a Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)
-- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Linking multiple data regions to the same dataset in a paginated report (Report Builder)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)
+- [Control the tablix data region display on a paginated report page (Report Builder)](controlling-the-tablix-data-region-display-on-a-report-page.md)
+- [Exploring the flexibility of a tablix data region in a paginated report (Report Builder)](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)

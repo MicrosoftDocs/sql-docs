@@ -58,7 +58,6 @@ Returns the minimum database compatibility level that recognizes the **geometry*
  END
 ``` 
   
-## See Also  
- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
-  
-  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL) compatibility level](../statements/alter-database-transact-sql-compatibility-level.md)

@@ -92,10 +92,10 @@ ms.custom:
   
 ## Related content
 
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [ReportingServicesService configuration file](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)
-- [RSReportDesigner configuration file](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)
-- [Deploy a data processing extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)
-- [Deploy a delivery extension](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)
-- [Deploy a rendering extension](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
+- [RsReportServer.config configuration file](rsreportserver-config-configuration-file.md)
+- [ReportingServicesService configuration file](reportingservicesservice-configuration-file.md)
+- [RSReportDesigner configuration file](rsreportdesigner-configuration-file.md)
+- [Deploy a data processing extension](../extensions/data-processing/deploying-a-data-processing-extension.md)
+- [Deploy a delivery extension](../extensions/delivery-extension/deploying-a-delivery-extension.md)
+- [Deploy a rendering extension](../extensions/rendering-extension/deploying-a-rendering-extension.md)
+- [Reporting Services configuration files](reporting-services-configuration-files.md)

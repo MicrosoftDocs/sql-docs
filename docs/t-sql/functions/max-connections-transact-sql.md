@@ -55,8 +55,7 @@ Max Connections
 32767            
 ```  
   
-## See Also  
- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Configure the user connections Server Configuration Option](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  
-  
-  
+## Related content
+
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [Server configuration: user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)

@@ -58,8 +58,7 @@ Today's Date and Time  Login Attempts
 12/5/2006 10:32:45 AM  211023         
 ```  
   
-## See also
-[System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-[sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
-  
-  
+## Related content
+
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)

@@ -57,9 +57,9 @@ Only members of the **sysadmin** fixed server role can execute `sp_getagentparam
 
 ## Related content
 
-- [sp_add_agent_parameter (Transact-SQL)](sp-add-agent-parameter-transact-sql.md)
-- [sp_add_agent_profile (Transact-SQL)](sp-add-agent-profile-transact-sql.md)
-- [sp_drop_agent_parameter (Transact-SQL)](sp-drop-agent-parameter-transact-sql.md)
-- [sp_help_agent_parameter (Transact-SQL)](sp-help-agent-parameter-transact-sql.md)
+- [sys.sp_add_agent_parameter (Transact-SQL)](sp-add-agent-parameter-transact-sql.md)
+- [sys.sp_add_agent_profile (Transact-SQL)](sp-add-agent-profile-transact-sql.md)
+- [sys.sp_drop_agent_parameter (Transact-SQL)](sp-drop-agent-parameter-transact-sql.md)
+- [sys.sp_help_agent_parameter (Transact-SQL)](sp-help-agent-parameter-transact-sql.md)
 - [Replication Agent Profiles](../replication/agents/replication-agent-profiles.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

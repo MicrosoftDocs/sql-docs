@@ -37,5 +37,5 @@ The report server administrator must grant you the necessary permissions on the 
 
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Report Builder tutorials](report-builder-tutorials.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -931,6 +931,6 @@ The following operations can be used directly with `VECTOR_SEARCH` without requi
 
 - [Vector search and vector indexes in the SQL Database Engine](../../sql-server/ai/vectors.md)
 - [Vector data type](../data-types/vector-data-type.md)
-- [CREATE VECTOR INDEX (Transact-SQL)](../statements/create-vector-index-transact-sql.md)
+- [CREATE VECTOR INDEX (Transact-SQL) (Preview)](../statements/create-vector-index-transact-sql.md)
 - [sys.dm_db_vector_indexes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-vector-indexes-transact-sql.md)
 - [Azure SQL Database Vector Search Samples](https://github.com/Azure-Samples/azure-sql-db-vector-search)

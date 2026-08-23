@@ -122,7 +122,7 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
 
 ## Related content
 
-- [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
+- [Messages (for errors) catalog views - sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
 - [Database Engine error severities](../../relational-databases/errors-events/database-engine-error-severities.md)
 - [TRY...CATCH (Transact-SQL)](../language-elements/try-catch-transact-sql.md)
 - [ERROR_LINE (Transact-SQL)](error-line-transact-sql.md)
@@ -131,6 +131,5 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
 - [ERROR_PROCEDURE (Transact-SQL)](error-procedure-transact-sql.md)
 - [ERROR_STATE (Transact-SQL)](error-state-transact-sql.md)
 - [RAISERROR (Transact-SQL)](../language-elements/raiserror-transact-sql.md)
-- [&#x40;&#x40;ERROR (Transact-SQL)](error-transact-sql.md)
+- [@@ERROR (Transact-SQL)](error-transact-sql.md)
 - [Errors and events reference (Database Engine)](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
-

@@ -42,7 +42,7 @@ ms.custom:
   
 ## Related content
 
-- [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
-- [Print a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)
+- [Print reports](../report-builder/print-reports-report-builder-and-ssrs.md)
+- [Print a report (Report Builder)](../report-builder/print-a-report-report-builder-and-ssrs.md)
 - [Publish Reports](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))
-- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)
+- [Using custom assemblies with reports](../custom-assemblies/using-custom-assemblies-with-reports.md)

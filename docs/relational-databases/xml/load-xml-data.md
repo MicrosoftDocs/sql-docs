@@ -83,7 +83,6 @@ INSERT INTO T VALUES (N'...')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '
 ```
 
-## See also
+## Related content
 
-- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)
-
+- [XML data (SQL Server)](xml-data-sql-server.md)

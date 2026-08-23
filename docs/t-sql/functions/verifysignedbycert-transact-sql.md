@@ -81,14 +81,12 @@ AND Description = N'data signed by certificate ''Shipping04''';
 GO  
 ```  
   
-## See Also  
- [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
- [SIGNBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/signbycert-transact-sql.md)   
- [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
- [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
 
+- [CERT_ID (Transact-SQL)](cert-id-transact-sql.md)
+- [SIGNBYCERT (Transact-SQL)](signbycert-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../statements/create-certificate-transact-sql.md)
+- [ALTER CERTIFICATE (Transact-SQL)](../statements/alter-certificate-transact-sql.md)
+- [DROP CERTIFICATE (Transact-SQL)](../statements/drop-certificate-transact-sql.md)
+- [BACKUP CERTIFICATE (Transact-SQL)](../statements/backup-certificate-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

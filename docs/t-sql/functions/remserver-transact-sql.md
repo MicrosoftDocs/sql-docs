@@ -64,7 +64,5 @@ LONDON2
 ```  
   
 ## Related content
- 
-- [Remote Servers](../../database-engine/configure-windows/remote-servers.md)  
-  
-  
+
+- [Remote servers](../../database-engine/configure-windows/remote-servers.md)

@@ -44,7 +44,6 @@ dev_langs:
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   
-## See Also  
- [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

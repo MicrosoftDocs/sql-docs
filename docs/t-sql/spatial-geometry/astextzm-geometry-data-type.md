@@ -48,8 +48,8 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## See Also  
+## Related content
 
-- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)
-- [M &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)
-- [Z &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)
+- [M (geometry Data Type)](m-geometry-data-type.md)
+- [Z (geometry Data Type)](z-geometry-data-type.md)

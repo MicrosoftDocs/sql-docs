@@ -87,4 +87,4 @@ f1_keywords:
   
 ## Related content
 
-- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)
+- [Query Design Tools (SSRS)](query-design-tools-ssrs.md)

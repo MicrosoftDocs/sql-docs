@@ -38,6 +38,6 @@ For more information on how to configure the Windows Firewall, see [Configure a 
 
 ## Related content
 
-- [Configure basic authentication on the report server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)
-- [Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)
-- [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)
+- [Configure Windows authentication on the report server](../security/configure-windows-authentication-on-the-report-server.md)
+- [Configure TLS connections on a native mode report server](../security/configure-ssl-connections-on-a-native-mode-report-server.md)
+- [Configure a firewall for report server access](configure-a-firewall-for-report-server-access.md)

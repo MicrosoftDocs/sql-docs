@@ -151,6 +151,6 @@ This is a test message with one numeric parameter (`500`), one string parameter 
 - [FORMATMESSAGE (Transact-SQL)](../functions/formatmessage-transact-sql.md)
 - [ERROR_MESSAGE (Transact-SQL)](../functions/error-message-transact-sql.md)
 - [ERROR_NUMBER (Transact-SQL)](../functions/error-number-transact-sql.md)
-- [&#x40;&#x40;ERROR (Transact-SQL)](../functions/error-transact-sql.md)
+- [@@ERROR (Transact-SQL)](../functions/error-transact-sql.md)
 - [XACT_STATE (Transact-SQL)](../functions/xact-state-transact-sql.md)
 - [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md)

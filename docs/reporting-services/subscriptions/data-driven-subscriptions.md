@@ -61,5 +61,5 @@ The following articles provide more information about data-driven subscriptions.
   
 ## Related content
 
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [Preload the cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)
+- [Preload the cache](../report-server/preload-the-cache-report-manager.md)

@@ -72,9 +72,7 @@ DROP USER user1;
 GO  
 ```  
   
-## See Also  
- [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
-  
-  
+## Related content
 
+- [EXECUTE AS (Transact-SQL)](../statements/execute-as-transact-sql.md)
+- [REVERT (Transact-SQL)](../statements/revert-transact-sql.md)

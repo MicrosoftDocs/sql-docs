@@ -99,5 +99,5 @@ db_securityadmin
 - [LIKE (Transact-SQL)](like-transact-sql.md)
 - [PATINDEX (Transact-SQL)](../functions/patindex-transact-sql.md)
 - [Percent character (wildcard - characters to match) (Transact-SQL)](percent-character-wildcard-character-s-to-match-transact-sql.md)
-- [\&#91; \&#93; (Wildcard - Characters to Match) (Transact-SQL)](wildcard-character-s-to-match-transact-sql.md)
-- [\&#91;^\&#93; (Wildcard - Characters Not to Match) (Transact-SQL)](wildcard-character-s-not-to-match-transact-sql.md)
+- [\[\] (wildcard - characters to match) (Transact-SQL)](wildcard-character-s-to-match-transact-sql.md)
+- [\[^\] (Wildcard - characters not to match) (Transact-SQL)](wildcard-character-s-not-to-match-transact-sql.md)

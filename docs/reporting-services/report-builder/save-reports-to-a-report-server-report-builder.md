@@ -42,7 +42,7 @@ ms.custom:
 
 ## Related content
 
-- [Find, view, and manage reports (Report Builder)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Export reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
-- [Save reports (Report Builder)](../../reporting-services/report-builder/saving-reports-report-builder.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](export-reports-report-builder-and-ssrs.md)
+- [Save reports (Report Builder)](saving-reports-report-builder.md)
 - [Export a report as another file type (Report Builder)](/previous-versions/sql/)

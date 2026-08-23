@@ -77,4 +77,4 @@ The **Conversion Statistics** pane shows the conversion statistics. If the perce
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Convert Oracle schemas (OracleToSQL)](converting-oracle-schemas-oracletosql.md)
+> [Convert Oracle schemas](converting-oracle-schemas-oracletosql.md)

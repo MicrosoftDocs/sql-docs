@@ -93,5 +93,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
-- [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)
+- [Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
+- [RSReportDesigner configuration file](../report-server/rsreportdesigner-configuration-file.md)

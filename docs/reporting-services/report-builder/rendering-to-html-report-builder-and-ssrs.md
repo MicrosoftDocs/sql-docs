@@ -95,8 +95,8 @@ You can change some default settings for this renderer, including which mode to 
 
 ## Related content
 
-- [Pagination in Reporting Services (Report Builder)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
-- [Renderer behaviors (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
-- [Interactive functionality for different report rendering extensions (Report Builder)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
-- [Render report items (Report Builder)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)
-- [Tables, matrices, and lists (Report Builder)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Pagination in paginated reports (Microsoft Report Builder)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Rendering behaviors in a paginated report (Report Builder)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)
+- [Interactive functionality - different report rendering extensions](interactive-functionality-different-report-rendering-extensions.md)
+- [Rendering report items in paginated reports (Report Builder)](../report-design/rendering-report-items-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](../report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)

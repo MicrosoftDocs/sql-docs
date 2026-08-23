@@ -196,6 +196,6 @@ XMLLocalName :: =
   
 ## Related content
 
-- [XML Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)
-- [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)
-- [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)
+- [XML Connection Type (SSRS)](xml-connection-type-ssrs.md)
+- [Reporting Services tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)
+- [Add, Edit, Refresh Fields in the Report Data Pane (Report Builder and SSRS)](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)

@@ -53,9 +53,8 @@ SET @g.STSrid = 23;
 SELECT @g.STSrid;  
 ```  
   
-## See Also  
- [STX &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
- [STY &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [STX (geometry Data Type)](stx-geometry-data-type.md)
+- [STY (geometry Data Type)](sty-geometry-data-type.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

@@ -36,4 +36,4 @@ ms.custom:
   
 ## Related content
 
-- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)
+- [Manage Shared Datasets](../report-data/manage-shared-datasets.md)

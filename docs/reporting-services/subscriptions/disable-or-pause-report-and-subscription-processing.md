@@ -170,9 +170,9 @@ One way to make a report unavailable is to temporarily remove the role assignmen
   
 ## Related content
 
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [Configure the web portal](../../reporting-services/report-server/configure-web-portal.md)
-- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
-- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
-- [Securable items](../../reporting-services/security/securable-items.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)
+- [Reporting Services configuration files](../report-server/reporting-services-configuration-files.md)
+- [Configure the web portal](../report-server/configure-web-portal.md)
+- [Reporting Services report server (native mode)](../report-server/reporting-services-report-server-native-mode.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
+- [Securable items](../security/securable-items.md)

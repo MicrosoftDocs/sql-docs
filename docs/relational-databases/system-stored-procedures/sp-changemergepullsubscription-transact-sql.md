@@ -117,7 +117,7 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 ## Related content
 
 - [View and Modify Pull Subscription Properties](../replication/view-and-modify-pull-subscription-properties.md)
-- [sp_addmergepullsubscription (Transact-SQL)](sp-addmergepullsubscription-transact-sql.md)
-- [sp_dropmergepullsubscription (Transact-SQL)](sp-dropmergepullsubscription-transact-sql.md)
-- [sp_helpmergepullsubscription (Transact-SQL)](sp-helpmergepullsubscription-transact-sql.md)
+- [sys.sp_addmergepullsubscription (Transact-SQL)](sp-addmergepullsubscription-transact-sql.md)
+- [sys.sp_dropmergepullsubscription (Transact-SQL)](sp-dropmergepullsubscription-transact-sql.md)
+- [sys.sp_helpmergepullsubscription (Transact-SQL)](sp-helpmergepullsubscription-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

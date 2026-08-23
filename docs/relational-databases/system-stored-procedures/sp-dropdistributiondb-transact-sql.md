@@ -68,7 +68,7 @@ Only members of the **sysadmin** fixed server role can execute `sp_dropdistribut
 ## Related content
 
 - [Disable Publishing and Distribution](../replication/disable-publishing-and-distribution.md)
-- [sp_adddistributiondb (Transact-SQL)](sp-adddistributiondb-transact-sql.md)
-- [sp_changedistributiondb (Transact-SQL)](sp-changedistributiondb-transact-sql.md)
-- [sp_helpdistributiondb (Transact-SQL)](sp-helpdistributiondb-transact-sql.md)
+- [sys.sp_adddistributiondb (Transact-SQL)](sp-adddistributiondb-transact-sql.md)
+- [sys.sp_changedistributiondb (Transact-SQL)](sp-changedistributiondb-transact-sql.md)
+- [sys.sp_helpdistributiondb (Transact-SQL)](sp-helpdistributiondb-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

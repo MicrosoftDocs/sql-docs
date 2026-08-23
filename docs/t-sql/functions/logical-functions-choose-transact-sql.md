@@ -123,8 +123,7 @@ LL Touring Frame            2009-05-16 16:34:28.980 Spring
 (10 rows affected)
 ```  
   
-## Next steps
+## Related content
 
-- [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
-- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)
-
+- [Logical Functions - IIF (Transact-SQL)](logical-functions-iif-transact-sql.md)
+- [CASE (Transact-SQL)](../language-elements/case-transact-sql.md)

@@ -105,5 +105,5 @@ When you specify [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a
 
 ## Related content
 
-- [Configure a report server database connection &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
-- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
+- [Configure a report server database connection (Report Server Configuration Manager)](../install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Reporting Services in SQL Server Management Studio (SSRS)](reporting-services-in-sql-server-management-studio-ssrs.md)

@@ -53,9 +53,8 @@ Reads       Writes      As of
 7760        97263       12/5/2006 10:23:00 PM   
 ```  
   
-## See Also  
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
- [@@TOTAL_READ &#40;Transact-SQL&#41;](../../t-sql/functions/total-read-transact-sql.md)  
-  
-  
+## Related content
+
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)
+- [@@TOTAL_READ (Transact-SQL)](total-read-transact-sql.md)

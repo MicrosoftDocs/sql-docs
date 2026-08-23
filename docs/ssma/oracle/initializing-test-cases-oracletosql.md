@@ -26,9 +26,7 @@ Filled in automatically; should not be changed.
 **Test Case Description**  
 Enter any additional information to identify the purpose of the test case.  
   
-## Next Step  
-[Selecting and Configuring Objects to Test &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
-  
-## See Also  
-[Testing Migrated Database Objects &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  
+## Related content
+
+- [Testing Migrated Database Objects](testing-migrated-database-objects-oracletosql.md)
+- [Selecting and Configuring Objects to Test](selecting-and-configuring-objects-to-test-oracletosql.md)

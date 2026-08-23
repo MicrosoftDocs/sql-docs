@@ -80,9 +80,8 @@ EXECUTE sp_helpconstraint 'Production.Product';
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
-- [sp_help (Transact-SQL)](sp-help-transact-sql.md)
+- [sys.sp_help (Transact-SQL)](sp-help-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sys.key_constraints (Transact-SQL)](../system-catalog-views/sys-key-constraints-transact-sql.md)
 - [sys.check_constraints (Transact-SQL)](../system-catalog-views/sys-check-constraints-transact-sql.md)
 - [sys.default_constraints (Transact-SQL)](../system-catalog-views/sys-default-constraints-transact-sql.md)
-

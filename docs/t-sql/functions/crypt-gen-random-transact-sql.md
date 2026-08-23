@@ -58,8 +58,6 @@ This example generates a random number of length 4 bytes, using a 4-byte seed:
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  
 ```  
   
-## See also
-[RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
-  
-  
+## Related content
 
+- [RAND (Transact-SQL)](rand-transact-sql.md)

@@ -28,9 +28,7 @@ Filled in automatically; should not be changed.
 **Test Case Description**  
 Enter any additional information to identify the purpose of the test case.  
   
-## Next Step  
-[Selecting and Configuring Objects to Test &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
-  
-## See Also  
-[Testing Migrated Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
-  
+## Related content
+
+- [Testing Migrated Database Objects](testing-migrated-database-objects-sybasetosql.md)
+- [Selecting and Configuring Objects to Test](selecting-and-configuring-objects-to-test-sybasetosql.md)

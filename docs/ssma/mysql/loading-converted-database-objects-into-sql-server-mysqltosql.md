@@ -96,9 +96,7 @@ You can run a script, or individual statements, in SQL Server Management Studio.
 ## Securing Objects in SQL Server  
 After you have loaded the converted database objects into SQL Server, you can grant and deny permissions on these objects. It is a good idea to do this before migrating data to SQL Server. For information about how to help secure objects in SQL Server, see "Security Considerations for Databases and Database Applications" in SQL Server Books Online.  
   
-## Next Step  
-The next step in the migration process is [Migrating MySQL Data into SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
-  
-## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-  
+## Related content
+
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Migrating MySQL Data into SQL Server - Azure SQL Database](migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)

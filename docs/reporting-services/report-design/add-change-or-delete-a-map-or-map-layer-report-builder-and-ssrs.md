@@ -246,5 +246,5 @@ f1_keywords:
   
 ## Related content
 
-- [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
-- [Troubleshoot reports: Map reports &#40;Report Builder&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)
+- [Maps in a paginated report (Report Builder)](maps-report-builder-and-ssrs.md)
+- [Troubleshoot reports: map reports in a paginated report (Report Builder)](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)

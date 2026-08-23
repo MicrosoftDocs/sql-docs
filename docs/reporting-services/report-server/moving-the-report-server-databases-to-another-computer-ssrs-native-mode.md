@@ -314,6 +314,6 @@ GO
 
 ## Related content
 
-- [Report server database (SSRS native mode)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
-- [Configure a report server database connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
-- [Configure and manage encryption keys (Report Server Configuration Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+- [Report server database (SSRS native mode)](report-server-database-ssrs-native-mode.md)
+- [Configure a report server database connection (Report Server Configuration Manager)](../install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Configure and Manage Encryption Keys (Report Server Configuration Manager)](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

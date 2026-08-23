@@ -54,5 +54,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)
-- [Verify a report run](../../reporting-services/report-server/verifying-a-report-run.md)
+- [Manage a running process](../subscriptions/manage-a-running-process.md)
+- [Verify a report run](verifying-a-report-run.md)

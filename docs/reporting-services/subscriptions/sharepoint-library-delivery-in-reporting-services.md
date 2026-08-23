@@ -77,6 +77,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Create and manage subscriptions for SharePoint mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Create and manage subscriptions for SharePoint mode report servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)
+- [Credentials and connections for report data sources](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)

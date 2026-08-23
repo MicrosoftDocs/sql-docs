@@ -56,4 +56,4 @@ ms.custom:
 ## Related content
 
 - [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](/previous-versions/sql/)
-- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](../report-design/expressions-report-builder-and-ssrs.md)

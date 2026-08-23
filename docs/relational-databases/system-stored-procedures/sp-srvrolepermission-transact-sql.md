@@ -84,7 +84,7 @@ GO
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addsrvrolemember (Transact-SQL)](sp-addsrvrolemember-transact-sql.md)
-- [sp_dropsrvrolemember (Transact-SQL)](sp-dropsrvrolemember-transact-sql.md)
-- [sp_helpsrvrole (Transact-SQL)](sp-helpsrvrole-transact-sql.md)
+- [sys.sp_addsrvrolemember (Transact-SQL)](sp-addsrvrolemember-transact-sql.md)
+- [sys.sp_dropsrvrolemember (Transact-SQL)](sp-dropsrvrolemember-transact-sql.md)
+- [sys.sp_helpsrvrole (Transact-SQL)](sp-helpsrvrole-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

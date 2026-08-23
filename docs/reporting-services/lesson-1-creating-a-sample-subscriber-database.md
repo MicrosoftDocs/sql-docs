@@ -54,14 +54,14 @@ This lesson assumes you're using [!INCLUDE[ssManStudioFull_md](../includes/ssman
   
 8.  Use a SELECT statement to verify that you have three rows of data. For example: `select * from OrderInfo`  
   
-## Related content
-
-- [Create a data-driven subscription](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)
-- [Create a database](../relational-databases/databases/create-a-database.md)
-- [Create a basic table report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
-- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Lesson 2: Modify the report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)
+
+## Related content
+
+- [Create a data-driven subscription (SSRS Tutorial)](create-a-data-driven-subscription-ssrs-tutorial.md)
+- [Create a database](../relational-databases/databases/create-a-database.md)
+- [Create a basic table report (SSRS tutorial)](create-a-basic-table-report-ssrs-tutorial.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

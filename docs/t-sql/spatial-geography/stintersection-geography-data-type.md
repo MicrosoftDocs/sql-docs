@@ -79,7 +79,6 @@ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.6
 SELECT @g.STIntersection('FULLGLOBE').ToString();  
 ```  
   
-## See Also  
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
-  
+## Related content
+
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)

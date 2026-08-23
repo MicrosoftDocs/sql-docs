@@ -119,7 +119,7 @@ SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',
     'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
 ```  
   
-## Next steps
+## Related content
 
-- [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
-- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [OPENROWSET (Transact-SQL)](openrowset-transact-sql.md)
+- [sys.sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)

@@ -34,8 +34,7 @@ To write queries by using OPENXML, you must first create an internal representat
 
 The internal representation of an XML document can be removed from memory by calling the `sp_xml_removedocument` system stored procedure.
 
-## See also
+## Related content
 
-- [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)
-- [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)
-
+- [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+- [OPENXML (SQL Server)](openxml-sql-server.md)

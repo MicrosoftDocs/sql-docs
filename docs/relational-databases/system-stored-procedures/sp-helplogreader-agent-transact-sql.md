@@ -64,6 +64,6 @@ Only members of the **sysadmin** fixed server role at the Publisher or members o
 
 ## Related content
 
-- [View and modify replication security settings](../replication/security/view-and-modify-replication-security-settings.md)
-- [sp_addlogreader_agent (Transact-SQL)](sp-addlogreader-agent-transact-sql.md)
-- [sp_changelogreader_agent (Transact-SQL)](sp-changelogreader-agent-transact-sql.md)
+- [View and Modify Replication Security Settings](../replication/security/view-and-modify-replication-security-settings.md)
+- [sys.sp_addlogreader_agent (Transact-SQL)](sp-addlogreader-agent-transact-sql.md)
+- [sys.sp_changelogreader_agent (Transact-SQL)](sp-changelogreader-agent-transact-sql.md)

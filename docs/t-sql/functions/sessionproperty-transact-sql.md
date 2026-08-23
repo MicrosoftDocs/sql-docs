@@ -60,15 +60,13 @@ SESSIONPROPERTY (option)
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   
-## See Also  
- [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
- [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
- [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
-  
-  
+## Related content
 
+- [sql_variant (Transact-SQL)](../data-types/sql-variant-transact-sql.md)
+- [SET ANSI_NULLS (Transact-SQL)](../statements/set-ansi-nulls-transact-sql.md)
+- [SET ANSI_PADDING (Transact-SQL)](../statements/set-ansi-padding-transact-sql.md)
+- [SET ANSI_WARNINGS (Transact-SQL)](../statements/set-ansi-warnings-transact-sql.md)
+- [SET ARITHABORT (Transact-SQL)](../statements/set-arithabort-transact-sql.md)
+- [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../statements/set-concat-null-yields-null-transact-sql.md)
+- [SET NUMERIC_ROUNDABORT (Transact-SQL)](../statements/set-numeric-roundabort-transact-sql.md)
+- [SET QUOTED_IDENTIFIER (Transact-SQL)](../statements/set-quoted-identifier-transact-sql.md)

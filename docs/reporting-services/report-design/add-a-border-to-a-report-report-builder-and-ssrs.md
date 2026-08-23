@@ -29,4 +29,4 @@ You can add a border to a paginated report by adding borders to the headers, foo
     
 ## Related content
 
-- [Rectangles and lines &#40;Report Builder&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)
+- [Rectangles and lines in a paginated report (Report Builder)](rectangles-and-lines-report-builder-and-ssrs.md)

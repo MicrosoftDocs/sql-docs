@@ -95,8 +95,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)
-- [Set permissions for report server operations in a SharePoint web application](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)
-- [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)
-- [Role definitions](../../reporting-services/security/role-definitions.md)
-- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)
+- [Set permissions for report server items on a SharePoint site](set-permissions-for-report-server-items-on-a-sharepoint-site.md)
+- [Set permissions for report server operations in a SharePoint web application](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)
+- [Grant permissions on report server items on a SharePoint site](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)
+- [Role definitions](role-definitions.md)
+- [Predefined roles in Reporting Services](role-definitions-predefined-roles.md)

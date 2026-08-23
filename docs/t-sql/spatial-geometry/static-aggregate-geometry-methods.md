@@ -40,10 +40,9 @@ dev_langs:
   
 -   [UnionAggregate &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
   
-## See Also  
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)   
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
- [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)
+- [Extended Static Geometry Methods](extended-static-geometry-methods.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)
+- [OGC Static Geometry Methods](ogc-static-geometry-methods.md)

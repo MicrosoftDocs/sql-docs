@@ -39,7 +39,7 @@ helpviewer_keywords:
   
 4.  Select the options for your report and click **Apply**. For details about each option, see [Snapshot Options Properties Page](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).  
   
-## See Also  
--  [Add a Snapshot to Report History](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+## Related content
 
+- [Add a snapshot to report history](../report-server/add-a-snapshot-to-report-history-report-manager.md)
 ::: moniker-end

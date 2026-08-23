@@ -93,8 +93,7 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## See Also  
- [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
-  
-  
+## Related content
+
+- [-- (Comment) (Transact-SQL)](comment-transact-sql.md)
+- [Control-of-Flow](control-of-flow.md)

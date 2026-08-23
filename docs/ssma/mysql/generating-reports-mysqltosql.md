@@ -133,5 +133,6 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
   
 -   fail-script  
   
-## See Also  
-[Executing the SSMA Console (MySQL)](./executing-the-ssma-console-mysqltosql.md)  
+## Related content
+
+- [Executing the SSMA console](executing-the-ssma-console-mysqltosql.md)

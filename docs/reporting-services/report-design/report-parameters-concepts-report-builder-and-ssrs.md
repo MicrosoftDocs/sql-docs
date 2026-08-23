@@ -39,6 +39,6 @@ ms.custom:
   
 ## Related content
 
-- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
-- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
-- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)
+- [Reporting Services concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Tutorial: Add parameters to your report (Report Builder)](../tutorial-add-a-parameter-to-your-report-report-builder.md)

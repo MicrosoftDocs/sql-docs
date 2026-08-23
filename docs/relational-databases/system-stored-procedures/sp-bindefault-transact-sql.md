@@ -132,6 +132,5 @@ EXECUTE sp_bindefault 'default1', '[t.1].c1';
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)
 - [DROP DEFAULT (Transact-SQL)](../../t-sql/statements/drop-default-transact-sql.md)
-- [sp_unbindefault (Transact-SQL)](sp-unbindefault-transact-sql.md)
+- [sys.sp_unbindefault (Transact-SQL)](sp-unbindefault-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

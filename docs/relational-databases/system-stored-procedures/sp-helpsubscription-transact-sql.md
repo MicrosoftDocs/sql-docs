@@ -115,7 +115,7 @@ Execute permissions default to the **public** role. Users are only returned info
 
 ## Related content
 
-- [sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)
-- [sp_changesubstatus (Transact-SQL)](sp-changesubstatus-transact-sql.md)
-- [sp_dropsubscription (Transact-SQL)](sp-dropsubscription-transact-sql.md)
+- [sys.sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)
+- [sys.sp_changesubstatus (Transact-SQL)](sp-changesubstatus-transact-sql.md)
+- [sys.sp_dropsubscription (Transact-SQL)](sp-dropsubscription-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

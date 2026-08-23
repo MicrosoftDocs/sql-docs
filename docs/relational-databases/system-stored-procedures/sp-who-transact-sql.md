@@ -127,6 +127,6 @@ GO
 
 ## Related content
 
-- [sp_lock (Transact-SQL)](sp-lock-transact-sql.md)
+- [sys.sp_lock (Transact-SQL)](sp-lock-transact-sql.md)
 - [sys.sysprocesses (Transact-SQL)](../system-compatibility-views/sys-sysprocesses-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

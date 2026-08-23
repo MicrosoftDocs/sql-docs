@@ -78,4 +78,4 @@ For more information, see [RAISERROR](../t-sql/language-elements/raiserror-trans
 - [Create and define SQL Server unit tests](creating-and-defining-sql-server-unit-tests.md)
 - [Use test conditions in SQL Server unit tests](using-test-conditions-in-sql-server-unit-tests.md)
 - [Verify database code by using SQL Server unit tests](verifying-database-code-by-using-sql-server-unit-tests.md)
-- [How to: Open a SQL Server Unit Test to Edit](how-to-open-a-sql-server-unit-test-to-edit.md)
+- [How to: Open a SQL Server unit test to edit](how-to-open-a-sql-server-unit-test-to-edit.md)

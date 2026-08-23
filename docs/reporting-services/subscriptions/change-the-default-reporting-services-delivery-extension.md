@@ -104,6 +104,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [File share delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)
-- [E-Mail delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)
+- [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md)
+- [File share delivery in Reporting Services](file-share-delivery-in-reporting-services.md)
+- [Email delivery in Reporting Services](e-mail-delivery-in-reporting-services.md)

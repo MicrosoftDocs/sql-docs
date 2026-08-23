@@ -96,10 +96,10 @@ Only members of the **sysadmin** fixed server role, the **db_owner** fixed datab
 
 ## Related content
 
-- [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)
-- [sp_addpullsubscription (Transact-SQL)](sp-addpullsubscription-transact-sql.md)
-- [sp_changesubscriber (Transact-SQL)](sp-changesubscriber-transact-sql.md)
-- [sp_dropsubscriber (Transact-SQL)](sp-dropsubscriber-transact-sql.md)
-- [sp_helpdistributor (Transact-SQL)](sp-helpdistributor-transact-sql.md)
-- [sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
+- [sys.sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)
+- [sys.sp_addpullsubscription (Transact-SQL)](sp-addpullsubscription-transact-sql.md)
+- [sys.sp_changesubscriber (Transact-SQL)](sp-changesubscriber-transact-sql.md)
+- [sys.sp_dropsubscriber (Transact-SQL)](sp-dropsubscriber-transact-sql.md)
+- [sys.sp_helpdistributor (Transact-SQL)](sp-helpdistributor-transact-sql.md)
+- [sys.sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

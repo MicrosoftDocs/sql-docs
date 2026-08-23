@@ -63,4 +63,4 @@ EXECUTE sys.sp_pdw_database_encryption 1;
 ## Related content
 
 - [sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)](sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)
-- [sp_pdw_log_user_data_masking (Azure Synapse Analytics)](sp-pdw-log-user-data-masking-sql-data-warehouse.md)
+- [sp_pdw_log_user_data_mask (Azure Synapse Analytics)](sp-pdw-log-user-data-masking-sql-data-warehouse.md)

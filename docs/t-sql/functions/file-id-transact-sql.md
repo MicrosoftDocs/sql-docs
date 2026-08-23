@@ -69,11 +69,10 @@ File ID
 (1 row(s) affected)  
 ```  
   
-## See Also  
- [Deprecated Database Engine features in SQL Server 2025 (17.x)](../../database-engine/deprecated-database-engine-features-in-sql-server-2025.md)   
- [FILE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/file-name-transact-sql.md)   
- [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
-  
+## Related content
+
+- [Deprecated Database Engine features in SQL Server 2025 (17.x)](../../database-engine/deprecated-database-engine-features-in-sql-server-2025.md)
+- [FILE_NAME (Transact-SQL)](file-name-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)

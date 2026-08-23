@@ -166,6 +166,6 @@ If you install IIS on your computer before you install SSRS, it's a good practic
   
 ## Related content
 
-- [Authentication in a report server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [Configure report server URLs (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+- [Authentication in a report server](authentication-with-the-report-server.md)
+- [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md)
+- [Configure report server URLs (Report Server Configuration Manager)](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)

@@ -65,6 +65,6 @@ You can add a page break to rectangles, data regions, or groups within data regi
 
 ## Related content
 
-- [Pagination in paginated reports (Microsoft Report Builder)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
-- [Rendering behaviors in a paginated report (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
-- [Page headers and footers in a paginated report (Report Builder)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
+- [Pagination in paginated reports (Microsoft Report Builder)](pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Rendering behaviors in a paginated report (Report Builder)](rendering-behaviors-report-builder-and-ssrs.md)
+- [Page headers and footers in a paginated report (Report Builder)](page-headers-and-footers-report-builder-and-ssrs.md)

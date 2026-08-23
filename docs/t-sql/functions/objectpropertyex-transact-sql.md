@@ -267,7 +267,7 @@ U
 ## Related content
 
 - [CREATE SYNONYM (Transact-SQL)](../statements/create-synonym-transact-sql.md)
-- [Metadata Functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
 - [OBJECT_DEFINITION (Transact-SQL)](object-definition-transact-sql.md)
 - [OBJECT_ID (Transact-SQL)](object-id-transact-sql.md)
 - [OBJECT_NAME (Transact-SQL)](object-name-transact-sql.md)

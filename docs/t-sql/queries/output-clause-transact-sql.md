@@ -774,4 +774,4 @@ GO
 - [UPDATE (Transact-SQL)](update-transact-sql.md)
 - [table (Transact-SQL)](../data-types/table-transact-sql.md)
 - [CREATE TRIGGER (Transact-SQL)](../statements/create-trigger-transact-sql.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

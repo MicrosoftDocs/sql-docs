@@ -135,5 +135,4 @@ EXECUTE sp_fkeys @pktable_name = N'DimDate';
 
 - [Catalog stored procedures (Transact-SQL)](catalog-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [sp_pkeys (Transact-SQL)](sp-pkeys-transact-sql.md)
-
+- [sys.sp_pkeys (Transact-SQL)](sp-pkeys-transact-sql.md)

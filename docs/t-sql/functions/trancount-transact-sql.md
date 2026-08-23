@@ -94,11 +94,9 @@ PRINT @@TRANCOUNT
 --0  
 ```  
   
-## See Also  
- [BEGIN TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [COMMIT TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [ROLLBACK TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [System Functions \(Transact-SQL\)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
-  
-  
+## Related content
 
+- [BEGIN TRANSACTION (Transact-SQL)](../language-elements/begin-transaction-transact-sql.md)
+- [COMMIT TRANSACTION (Transact-SQL)](../language-elements/commit-transaction-transact-sql.md)
+- [ROLLBACK TRANSACTION (Transact-SQL)](../language-elements/rollback-transaction-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)

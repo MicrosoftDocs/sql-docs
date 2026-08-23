@@ -137,7 +137,6 @@ EXECUTE sp_columns
 
 ## Related content
 
-- [sp_tables (Transact-SQL)](sp-tables-transact-sql.md)
+- [sys.sp_tables (Transact-SQL)](sp-tables-transact-sql.md)
 - [Catalog stored procedures (Transact-SQL)](catalog-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

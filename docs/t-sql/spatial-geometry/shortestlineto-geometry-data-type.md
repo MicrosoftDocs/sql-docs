@@ -58,7 +58,6 @@ Returns a **LineString** instance with two points that represent the shortest di
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## See Also  
- [ShortestLineTo &#40;geography Data Type&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
-  
-  
+## Related content
+
+- [ShortestLineTo (geography Data Type)](../spatial-geography/shortestlineto-geography-data-type.md)

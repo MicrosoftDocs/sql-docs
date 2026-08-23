@@ -60,8 +60,8 @@ You can also use the report history feature to create historical copies. You can
 
 ## Related content
 
-- [Reports, report parts, and report definitions (Report Builder)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)
-- [Install Report Builder](../install-windows/install-report-builder.md)
-- [Find, view, and manage reports (Report Builder)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Export reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
-- [Print reports (Report Builder)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
+- [Reports, Report Parts, and Report Definitions (Report Builder and SSRS)](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)
+- [Install Microsoft Report Builder](../install-windows/install-report-builder.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](export-reports-report-builder-and-ssrs.md)
+- [Print reports](print-reports-report-builder-and-ssrs.md)

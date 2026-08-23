@@ -153,8 +153,8 @@ GO
 ## Related content
 
 - [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)
-- [sp_fulltext_database (Transact-SQL)](sp-fulltext-database-transact-sql.md)
-- [sp_help_fulltext_catalogs (Transact-SQL)](sp-help-fulltext-catalogs-transact-sql.md)
-- [sp_help_fulltext_catalogs_cursor (Transact-SQL)](sp-help-fulltext-catalogs-cursor-transact-sql.md)
+- [sys.sp_fulltext_database (Transact-SQL)](sp-fulltext-database-transact-sql.md)
+- [sys.sp_help_fulltext_catalogs (Transact-SQL)](sp-help-fulltext-catalogs-transact-sql.md)
+- [sys.sp_help_fulltext_catalogs_cursor (Transact-SQL)](sp-help-fulltext-catalogs-cursor-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Full-Text Search](../search/full-text-search.md)

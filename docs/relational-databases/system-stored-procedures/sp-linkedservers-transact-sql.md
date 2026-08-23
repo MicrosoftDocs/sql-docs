@@ -57,13 +57,13 @@ Requires `SELECT` permission on the schema.
 
 ## Related content
 
-- [sp_catalogs (Transact-SQL)](sp-catalogs-transact-sql.md)
-- [sp_column_privileges (Transact-SQL)](sp-column-privileges-transact-sql.md)
-- [sp_columns_ex (Transact-SQL)](sp-columns-ex-transact-sql.md)
-- [sp_foreignkeys (Transact-SQL)](sp-foreignkeys-transact-sql.md)
-- [sp_indexes (Transact-SQL)](sp-indexes-transact-sql.md)
-- [sp_primarykeys (Transact-SQL)](sp-primarykeys-transact-sql.md)
-- [sp_table_privileges (Transact-SQL)](sp-table-privileges-transact-sql.md)
-- [sp_tables_ex (Transact-SQL)](sp-tables-ex-transact-sql.md)
+- [sys.sp_catalogs (Transact-SQL)](sp-catalogs-transact-sql.md)
+- [sys.sp_column_privileges (Transact-SQL)](sp-column-privileges-transact-sql.md)
+- [sys.sp_columns_ex (Transact-SQL)](sp-columns-ex-transact-sql.md)
+- [sys.sp_foreignkeys (Transact-SQL)](sp-foreignkeys-transact-sql.md)
+- [sys.sp_indexes (Transact-SQL)](sp-indexes-transact-sql.md)
+- [sys.sp_primarykeys (Transact-SQL)](sp-primarykeys-transact-sql.md)
+- [sys.sp_table_privileges (Transact-SQL)](sp-table-privileges-transact-sql.md)
+- [sys.sp_tables_ex (Transact-SQL)](sp-tables-ex-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Distributed Queries stored procedures (Transact-SQL)](distributed-queries-stored-procedures-transact-sql.md)

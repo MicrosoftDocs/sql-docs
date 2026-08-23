@@ -26,7 +26,7 @@ You can add multiple data regions to a paginated report to provide different vie
   
 ## Related content
 
-- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Tables, Matrices, and Lists](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Nested Data Regions](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Nested data regions in a paginated report (Report Builder)](nested-data-regions-report-builder-and-ssrs.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

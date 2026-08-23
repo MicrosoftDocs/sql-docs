@@ -118,5 +118,5 @@ The following instructions provide the basic installation steps for installing S
 
 ## Related content
 
-- [Install SSMA for Sybase client (SybaseToSQL)](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
-- [Migrating Sybase ASE Databases to SQL Server - Azure SQL Database (SybaseToSQL)](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Install SSMA for Sybase client](installing-ssma-for-sybase-client-sybasetosql.md)
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

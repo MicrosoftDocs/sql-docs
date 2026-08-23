@@ -50,5 +50,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)
-- [Use Reporting Services SOAP headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)
+- [Technical reference (SSRS)](../technical-reference-ssrs.md)
+- [Use Reporting Services SOAP headers](using-reporting-services-soap-headers.md)

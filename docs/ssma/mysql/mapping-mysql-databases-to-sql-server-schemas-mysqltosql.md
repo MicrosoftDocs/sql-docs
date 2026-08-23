@@ -62,12 +62,11 @@ If you customize the mapping between a MySQL schema and a SQL Server schema, you
   
 1.  Under the schema mapping tab, select any row and click **Reset to Default** to revert to the default database and schema.  
   
-## Next Steps  
-If you want to analyze the conversion of MySQL objects into SQL Server or SQL Azure objects, you can [create a conversion report](assessing-mysql-databases-for-conversion-mysqltosql.md) otherwise you can [Convert the MySQL database object definitions](converting-mysql-databases-mysqltosql.md) into SQL Server or SQL Azure schemas  
-  
-## See Also  
-[Project Settings &#40;Conversion&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
-[Connecting to Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-[Connecting to SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-  
+## Related content
+
+- [Project Settings (Conversion)](project-settings-conversion-mysqltosql.md)
+- [Connecting to Azure SQL Database](connecting-to-azure-sql-db-mysqltosql.md)
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Connecting to SQL Server](connecting-to-sql-server-mysqltosql.md)
+- [Assessing MySQL Databases for Conversion](assessing-mysql-databases-for-conversion-mysqltosql.md)
+- [Convert MySQL Databases](converting-mysql-databases-mysqltosql.md)

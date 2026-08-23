@@ -27,6 +27,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Connect to a report server in Management Studio](connect-to-a-report-server-in-management-studio.md)
 - [Delete catalog items &#40;Management Studio&#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)
-- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
+- [Reporting Services in SQL Server Management Studio (SSRS)](reporting-services-in-sql-server-management-studio-ssrs.md)

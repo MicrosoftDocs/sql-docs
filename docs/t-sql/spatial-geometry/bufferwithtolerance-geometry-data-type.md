@@ -84,7 +84,7 @@ SET @g = geometry::STGeomFromText('POINT(3 3)', 0);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## See Also  
- [STBuffer &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
-  
+## Related content
+
+- [STBuffer (geometry Data Type)](stbuffer-geometry-data-type.md)
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)

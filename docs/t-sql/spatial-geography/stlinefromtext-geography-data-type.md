@@ -55,7 +55,6 @@ SET @g = geography::STLineFromText('LINESTRING(-122.360 47.656, -122.343 47.656 
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
-  
-  
+## Related content
+
+- [OGC Static Geography Methods](ogc-static-geography-methods.md)

@@ -66,6 +66,6 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 ## Related content
 
 - [Delete a Push Subscription](../replication/delete-a-push-subscription.md)
-- [sp_expired_subscription_cleanup (Transact-SQL)](sp-expired-subscription-cleanup-transact-sql.md)
-- [sp_subscription_cleanup (Transact-SQL)](sp-subscription-cleanup-transact-sql.md)
+- [sys.sp_expired_subscription_cleanup (Transact-SQL)](sp-expired-subscription-cleanup-transact-sql.md)
+- [sys.sp_subscription_cleanup (Transact-SQL)](sp-subscription-cleanup-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

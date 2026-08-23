@@ -76,8 +76,6 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## See Also  
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-  
-  
+## Related content
 
+- [CREATE TRIGGER (Transact-SQL)](../statements/create-trigger-transact-sql.md)

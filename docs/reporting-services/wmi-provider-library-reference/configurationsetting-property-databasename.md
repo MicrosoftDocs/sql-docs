@@ -37,4 +37,4 @@ public string DatabaseName;
   
 ## Related content
 
-- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)
+- [MSReportServer_ConfigurationSetting members](msreportserver-configurationsetting-members.md)

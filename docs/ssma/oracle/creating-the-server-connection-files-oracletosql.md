@@ -96,9 +96,6 @@ Server information can be specified either in the servers section of the script 
 </sql-server>  
 ```  
   
-## Next Step  
-The next step in operating the console is [Executing the SSMA Console &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
-  
-## See Also  
-[Executing the SSMA Console](executing-the-ssma-console-oracletosql.md)  
-  
+## Related content
+
+- [Executing the SSMA console](executing-the-ssma-console-oracletosql.md)

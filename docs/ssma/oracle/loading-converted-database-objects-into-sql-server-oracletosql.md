@@ -103,4 +103,4 @@ After you load the converted database objects into SQL Server, you can grant and
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Migrate Oracle Data into SQL Server (OracleToSQL)](migrating-oracle-data-into-sql-server-oracletosql.md)
+> [Migrate Oracle Data into SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)

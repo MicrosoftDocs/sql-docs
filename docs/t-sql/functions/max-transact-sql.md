@@ -164,6 +164,6 @@ The last system database is `tempdb`.
 
 ## Related content
 
-- [Aggregate Functions (Transact-SQL)](aggregate-functions-transact-sql.md)
+- [Aggregate functions (Transact-SQL)](aggregate-functions-transact-sql.md)
 - [Logical functions - GREATEST (Transact-SQL)](logical-functions-greatest-transact-sql.md)
 - [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

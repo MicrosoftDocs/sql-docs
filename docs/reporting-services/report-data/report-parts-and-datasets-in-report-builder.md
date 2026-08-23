@@ -49,7 +49,7 @@ In Report Builder, the easiest way to include data in a report is to add report 
   
 ## Related content
 
-- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)
-- [Security &#40;Report Builder&#41;](../../reporting-services/report-builder/security-report-builder.md)
-- [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)
-- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Report design view in Report Builder](../report-builder/report-design-view-report-builder.md)
+- [Security (Report Builder)](../report-builder/security-report-builder.md)
+- [Report Parts (Report Builder and SSRS)](../report-design/report-parts-report-builder-and-ssrs.md)
+- [Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)

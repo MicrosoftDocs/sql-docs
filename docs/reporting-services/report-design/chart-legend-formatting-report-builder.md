@@ -74,9 +74,9 @@ f1_keywords:
   
 ## Related content
 
-- [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)
-- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
-- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)
-- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)
-- [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)
+- [Chart legend - change item text in a paginated report (Report Builder)](chart-legend-change-item-text-report-builder.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
+- [Formatting series colors on a paginated report chart (Report Builder)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Chart legend - hide items in a paginated report (Report Builder)](chart-legend-hide-items-report-builder.md)
+- [Define colors on a paginated report chart using a palette (Report Builder)](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)

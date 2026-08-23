@@ -58,5 +58,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure and administer a report server &#40;SSRS native mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)
+- [Configure and administer a report server (SSRS native mode)](configure-and-administer-a-report-server-ssrs-native-mode.md)
 - [Configuration and administration of a report server &#40;Reporting Services SharePoint mode&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)

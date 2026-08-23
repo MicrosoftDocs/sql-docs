@@ -55,7 +55,6 @@ SET @g = geometry::STMPointFromText('MULTIPOINT ((100 100), (200 200))', 0);
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [OGC Static Geometry Methods](ogc-static-geometry-methods.md)

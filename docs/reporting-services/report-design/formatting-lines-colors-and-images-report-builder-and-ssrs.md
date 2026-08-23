@@ -52,7 +52,7 @@ f1_keywords:
   
 ## Related content
 
-- [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)
-- [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
-- [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)
+- [Format text and placeholders in paginated reports (Report Builder)](formatting-text-and-placeholders-report-builder-and-ssrs.md)
+- [Format numbers and dates in Report Builder paginated reports](formatting-numbers-and-dates-report-builder-and-ssrs.md)
+- [Format text in a text box in paginated reports (Report Builder)](format-text-in-a-text-box-report-builder-and-ssrs.md)
 - [Fill Dialog Box &#40;Report Builder and SSRS&#41;](/previous-versions/sql/)

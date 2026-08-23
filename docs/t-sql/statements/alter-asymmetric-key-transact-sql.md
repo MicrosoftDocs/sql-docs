@@ -115,13 +115,12 @@ ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (
 GO  
 ```  
   
-## See Also  
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
- [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
-  
-  
+## Related content
+
+- [CREATE ASYMMETRIC KEY (Transact-SQL)](create-asymmetric-key-transact-sql.md)
+- [DROP ASYMMETRIC KEY (Transact-SQL)](drop-asymmetric-key-transact-sql.md)
+- [SQL Server and Database Encryption Keys (Database Engine)](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [CREATE MASTER KEY (Transact-SQL)](create-master-key-transact-sql.md)
+- [OPEN MASTER KEY (Transact-SQL)](open-master-key-transact-sql.md)
+- [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)

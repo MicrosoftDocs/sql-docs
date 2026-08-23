@@ -39,6 +39,6 @@ f1_keywords:
   
 ## Related content
 
-- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
-- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
-- [Change the Order of a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)
+- [Paginated report parameters in Report Builder](../report-design/report-parameters-report-builder-and-report-designer.md)
+- [Report Datasets (SSRS)](report-datasets-ssrs.md)
+- [Change the order of a paginated report parameter (Report Builder)](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)

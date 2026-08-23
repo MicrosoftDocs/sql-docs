@@ -194,7 +194,7 @@ y
 - [&#124;&#124;= (Compound assignment) (Transact-SQL)](compound-assignment-pipes-transact-sql.md)
 - [+ (String concatenation) (Transact-SQL)](string-concatenation-transact-sql.md)
 - [CONCAT (Transact-SQL)](../functions/concat-transact-sql.md)
-- [+= (String Concatenation Assignment) (Transact-SQL)](string-concatenation-equal-transact-sql.md)
+- [+= (String concatenation assignment) (Transact-SQL)](string-concatenation-equal-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL)](../statements/alter-database-transact-sql.md)
 - [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)
 - [Data type conversion (Database Engine)](../data-types/data-type-conversion-database-engine.md)

@@ -217,11 +217,10 @@ Var3       0.610                 0.610
 (3 rows affected)
 ```
 
-## Next steps
+## Related content
 
-- [LEAST (Transact-SQL)](../../t-sql/functions/logical-functions-least-transact-sql.md)
-- [MAX (Transact-SQL)](../../t-sql/functions/max-transact-sql.md)
-- [MIN (Transact-SQL)](../../t-sql/functions/min-transact-sql.md)
-- [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)
-- [CHOOSE (Transact-SQL)](../../t-sql/functions/logical-functions-choose-transact-sql.md)
-
+- [Logical functions - LEAST (Transact-SQL)](logical-functions-least-transact-sql.md)
+- [MAX (Transact-SQL)](max-transact-sql.md)
+- [MIN (Transact-SQL)](min-transact-sql.md)
+- [CASE (Transact-SQL)](../language-elements/case-transact-sql.md)
+- [Logical Functions - CHOOSE (Transact-SQL)](logical-functions-choose-transact-sql.md)

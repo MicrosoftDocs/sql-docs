@@ -50,9 +50,8 @@ SELECT @g1.AsBinaryZM();
 --Returns: 0x01B90B0000000000000000F03F000000000000F03F00000000000000400000000000000840  
 ```  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40;geography Data Type&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
- [Z &#40;geography Data Type&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [M (geography Data Type)](m-geography-data-type.md)
+- [Z (geography Data Type)](z-geography-data-type.md)

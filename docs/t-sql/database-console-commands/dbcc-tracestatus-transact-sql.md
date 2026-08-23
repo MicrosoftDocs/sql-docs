@@ -106,9 +106,9 @@ DBCC TRACESTATUS ();
 GO
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [DBCC TRACEOFF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)
-- [DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)
-- [Set trace flags with DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [DBCC TRACEOFF (Transact-SQL)](dbcc-traceoff-transact-sql.md)
+- [DBCC TRACEON (Transact-SQL)](dbcc-traceon-transact-sql.md)
+- [Set trace flags with DBCC TRACEON (Transact-SQL)](dbcc-traceon-trace-flags-transact-sql.md)

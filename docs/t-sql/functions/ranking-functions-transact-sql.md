@@ -81,8 +81,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Jae|Pak|12|6|2|4|5015682.3752|98055|  
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055|  
   
-## See Also  
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
+## Related content
 
+- [What are the SQL database functions?](functions.md)
+- [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

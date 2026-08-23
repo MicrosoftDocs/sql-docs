@@ -87,13 +87,8 @@ You can also customize settings for the current project. These settings are save
   
 3.  Click **OK** to save the settings.  
   
-## Next Steps  
-The next step in the migration depends on your project needs:  
-  
--   If you want to custom the mapping of source and target data types, see [Mapping Sybase ASE and SQL Server Data Types &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
-  
--   Otherwise, you can convert the Sybase database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure object definitions. For more information, see [Converting Sybase ASE Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
-  
-## See Also  
-[Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  
+## Related content
+
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Mapping Sybase ASE and SQL Server Data Types](mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)
+- [Converting SAP ASE database objects](converting-sybase-ase-database-objects-sybasetosql.md)

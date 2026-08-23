@@ -59,7 +59,6 @@ CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character
   
 `VarCharCol` is assigned an **nvarchar(10)** data type, and all following metadata functions will report the column as an **nvarchar(10)** column. The metadata functions will never report them as a **national character varying(10)** column.
   
-## See also
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
-  
-  
+## Related content
+
+- [Data types (Transact-SQL)](data-types-transact-sql.md)

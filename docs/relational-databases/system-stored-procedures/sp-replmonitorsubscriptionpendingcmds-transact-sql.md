@@ -100,4 +100,4 @@ Only members of the **sysadmin** fixed server role at the Distributor or members
 
 ## Related content
 
-- [Programmatically monitor replication](../replication/monitor/programmatically-monitor-replication.md)
+- [Programmatically Monitor Replication](../replication/monitor/programmatically-monitor-replication.md)

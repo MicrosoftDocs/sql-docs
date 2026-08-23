@@ -28,5 +28,5 @@ apiname: "Reporting Services WMI Provider Library"
   
 ## Related content
 
-- [Access the Reporting Services WMI provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)
-- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)
+- [Access the Reporting Services WMI provider](../tools/access-the-reporting-services-wmi-provider.md)
+- [Technical reference (SSRS)](../technical-reference-ssrs.md)

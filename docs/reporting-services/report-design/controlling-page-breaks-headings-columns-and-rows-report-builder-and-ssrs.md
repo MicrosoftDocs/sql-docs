@@ -26,7 +26,7 @@ ms.custom:
   
 ## Related content
 
-- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)
-- [Grouping Pane &#40;Report Builder&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)
-- [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Control the tablix data region display on a paginated report page (Report Builder)](controlling-the-tablix-data-region-display-on-a-report-page.md)
+- [Grouping pane in a paginated report (Report Builder)](grouping-pane-report-builder.md)
+- [Display headers and footers with a group in a paginated report (Report Builder)](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)

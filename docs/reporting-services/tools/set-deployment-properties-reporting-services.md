@@ -75,9 +75,9 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Publish data sources and reports](../../reporting-services/reports/publishing-data-sources-and-reports.md)
-- [Preview reports](../../reporting-services/reports/previewing-reports.md)
-- [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)
-- [URL examples for published report items on a report server in SharePoint mode &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)
-- [Project Property Pages dialog box](../../reporting-services/tools/project-property-pages-dialog-box.md)
-- [Publish reports to a report server](../../reporting-services/reports/publishing-reports-to-a-report-server.md)
+- [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md)
+- [Preview Reports in SQL Server Reporting Services (SSRS)](../reports/previewing-reports.md)
+- [Report Designer F1 Help](report-designer-f1-help.md)
+- [URL examples for items on a report server - SharePoint mode](url-examples-for-items-on-a-report-server-sharepoint-mode.md)
+- [Project Property Pages dialog box](project-property-pages-dialog-box.md)
+- [Publish reports to a report server](../reports/publishing-reports-to-a-report-server.md)

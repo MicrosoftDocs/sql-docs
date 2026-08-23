@@ -191,8 +191,7 @@ position
 - [CHARINDEX (Transact-SQL)](charindex-transact-sql.md)
 - [LEN (Transact-SQL)](len-transact-sql.md)
 - [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
-- [\&#91; \&#93; (Wildcard - characters to match) (Transact-SQL)](../language-elements/wildcard-character-s-to-match-transact-sql.md)
-- [\&#91;^\&#93; (Wildcard - characters not to match) (Transact-SQL)](../language-elements/wildcard-character-s-not-to-match-transact-sql.md)
+- [\[\] (wildcard - characters to match) (Transact-SQL)](../language-elements/wildcard-character-s-to-match-transact-sql.md)
+- [\[^\] (Wildcard - characters not to match) (Transact-SQL)](../language-elements/wildcard-character-s-not-to-match-transact-sql.md)
 - [_ (Wildcard - match one character) (Transact-SQL)](../language-elements/wildcard-match-one-character-transact-sql.md)
 - [Percent character (wildcard - characters to match) (Transact-SQL)](../language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)
-

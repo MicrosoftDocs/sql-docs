@@ -32,6 +32,6 @@ When you first insert a chart into a paginated report, the **Select Chart Type**
   
 ## Related content
 
-- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Gauges &#40;Report Builder&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
-- [Add a chart to a report &#40;Report Builder&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Gauges in a paginated report (Report Builder)](gauges-report-builder-and-ssrs.md)
+- [Add a chart to a paginated report (Report Builder)](add-a-chart-to-a-report-report-builder-and-ssrs.md)

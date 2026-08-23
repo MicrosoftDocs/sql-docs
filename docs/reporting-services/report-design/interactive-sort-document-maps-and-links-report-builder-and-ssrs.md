@@ -45,4 +45,4 @@ ms.custom:
   
 ## Related content
 
-- [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)
+- [Drillthrough, drilldown, subreports, and nested data regions in a paginated report (Report Builder)](drillthrough-drilldown-subreports-and-nested-data-regions.md)

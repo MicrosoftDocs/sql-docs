@@ -340,5 +340,5 @@ You can use keyboard shortcuts to:
 ## Related content
 
 - [Solution Explorer](/ssms/solution/solution-explorer)
-- [Reporting Services reports (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md)
-- [Report Definition Language (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)
+- [Reporting Services Reports (SSRS)](../reports/reporting-services-reports-ssrs.md)
+- [Report Definition Language (SSRS)](../reports/report-definition-language-ssrs.md)

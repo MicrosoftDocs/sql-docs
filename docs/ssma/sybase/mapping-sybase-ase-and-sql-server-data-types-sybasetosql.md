@@ -84,9 +84,8 @@ The following procedure shows how to map data types at the project, database, or
   
         You cannot remove inherited mappings. However, inherited mappings are overridden by custom mappings on a specific object or object category.  
   
-## Next Steps  
-The next step in the migration process is to either [Create an assessment report](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) or [Convert Sybase ASE database objects to SQL Server or SQL Azure syntax](converting-sybase-ase-database-objects-sybasetosql.md). If you create an assessment report, Sybase ASE objects are automatically converted during the assessment.  
-  
-## See Also  
-[Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  
+## Related content
+
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Assessing SAP ASE database objects for conversion](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md)
+- [Converting SAP ASE database objects](converting-sybase-ase-database-objects-sybasetosql.md)

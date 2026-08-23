@@ -51,4 +51,4 @@ You can also browse to and open a report from the report server directly from Re
 
 ## Related content
 
-- [Find, view, and manage reports (Report Builder and SSRS )](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

@@ -50,7 +50,7 @@ ms.custom:
   
 ## Related content
 
-- [Subreports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)
-- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
+- [Subreports in paginated reports (Report Builder)](../report-design/subreports-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](../report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](../report-design/charts-report-builder-and-ssrs.md)
+- [Maps in a paginated report (Report Builder)](../report-design/maps-report-builder-and-ssrs.md)

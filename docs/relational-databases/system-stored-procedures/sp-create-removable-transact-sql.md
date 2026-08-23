@@ -144,10 +144,10 @@ EXECUTE sp_create_removable
 ## Related content
 
 - [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
-- [sp_certify_removable (Transact-SQL)](sp-certify-removable-transact-sql.md)
+- [sys.sp_certify_removable (Transact-SQL)](sp-certify-removable-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-- [sp_dbremove (Transact-SQL)](sp-dbremove-transact-sql.md)
-- [sp_detach_db (Transact-SQL)](sp-detach-db-transact-sql.md)
-- [sp_helpfile (Transact-SQL)](sp-helpfile-transact-sql.md)
-- [sp_helpfilegroup (Transact-SQL)](sp-helpfilegroup-transact-sql.md)
+- [sys.sp_dbremove (Transact-SQL)](sp-dbremove-transact-sql.md)
+- [sys.sp_detach_db (Transact-SQL)](sp-detach-db-transact-sql.md)
+- [sys.sp_helpfile (Transact-SQL)](sp-helpfile-transact-sql.md)
+- [sys.sp_helpfilegroup (Transact-SQL)](sp-helpfilegroup-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

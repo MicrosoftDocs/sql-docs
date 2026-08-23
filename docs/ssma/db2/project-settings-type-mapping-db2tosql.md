@@ -276,4 +276,4 @@ The following table contains the default type mapping for local variables.
 
 ## Related content
 
-- [User interface reference (Db2ToSQL)](user-interface-reference-db2tosql.md)
+- [User interface reference](user-interface-reference-db2tosql.md)

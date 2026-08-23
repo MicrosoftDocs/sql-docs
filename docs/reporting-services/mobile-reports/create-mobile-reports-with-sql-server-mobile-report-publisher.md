@@ -42,7 +42,7 @@ These articles are to help you get started.
 
 ## Related content
 
-- [Create, modify, and delete shared data sources (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
-- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)
-- [Work with KPIs in Reporting Services](../../reporting-services/working-with-kpis-in-reporting-services.md)
-- [Enable a report server for Power BI mobile access](../../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)
+- [Create, Modify, and Delete Shared Data Sources (SSRS)](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+- [Manage Shared Datasets](../report-data/manage-shared-datasets.md)
+- [Work with KPIs in Reporting Services](../working-with-kpis-in-reporting-services.md)
+- [Enable a report server for Power BI Mobile access](../report-server/enable-a-report-server-for-power-bi-mobile-access.md)

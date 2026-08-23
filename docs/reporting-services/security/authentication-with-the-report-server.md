@@ -56,7 +56,7 @@ Background processing doesn't accept requests from end-users, but it does authen
 
 ## Related content
 
-- [Configure Windows authentication on the report server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)
-- [Configure Basic authentication on the report server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)
-- [Configure custom or forms authentication on the report server](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)
+- [Configure Windows authentication on the report server](configure-windows-authentication-on-the-report-server.md)
+- [Configure Basic authentication on the report server](configure-basic-authentication-on-the-report-server.md)
+- [Configure custom or forms authentication on the report server](configure-custom-or-forms-authentication-on-the-report-server.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

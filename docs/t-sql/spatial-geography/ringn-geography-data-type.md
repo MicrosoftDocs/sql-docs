@@ -50,8 +50,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.RingN(2).ToString();  
 ```  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [NumRings &#40;geography Data Type&#41;](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [NumRings (geography Data Type)](numrings-geography-data-type.md)

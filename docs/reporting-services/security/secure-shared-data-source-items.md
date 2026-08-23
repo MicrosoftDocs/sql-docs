@@ -32,8 +32,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Manage report data sources](../../reporting-services/report-data/manage-report-data-sources.md)
-- [Secure folders](../../reporting-services/security/secure-folders.md)
-- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
-- [Store credentials in a Reporting Services data source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)
+- [Manage Report Data Sources](../report-data/manage-report-data-sources.md)
+- [Secure folders](secure-folders.md)
+- [Secure reports and resources](secure-reports-and-resources.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)
+- [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)

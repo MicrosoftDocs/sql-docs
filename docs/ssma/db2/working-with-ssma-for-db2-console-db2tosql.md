@@ -32,4 +32,4 @@ This section explains the procedure to migrate the Db2 database using the SSMA c
 
 ## Related content
 
-- [Get Started with SSMA for Db2 Console](getting-started-with-ssma-for-db2-console-db2tosql.md)
+- [Get started with SSMA for Db2 console](getting-started-with-ssma-for-db2-console-db2tosql.md)

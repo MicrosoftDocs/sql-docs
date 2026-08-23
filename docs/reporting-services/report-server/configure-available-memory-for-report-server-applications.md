@@ -92,6 +92,6 @@ If you're hosting multiple applications on the same computer, this memory can be
   
 ## Related content
 
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
-- [Application domains for report server applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)
+- [RsReportServer.config configuration file](rsreportserver-config-configuration-file.md)
+- [Modify a Reporting Services configuration file (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [Application domains for report server applications](application-domains-for-report-server-applications.md)

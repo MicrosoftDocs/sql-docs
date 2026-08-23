@@ -49,7 +49,7 @@ To successfully migrate objects and data from MySQL databases to SQL Server or S
 > [!NOTE]  
 > You cannot migrate Information_schema and MySQL schemas.  
   
-## See Also  
-[Installing SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
-[Getting Started with SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
-  
+## Related content
+
+- [Install SSMA for MySQL](installing-ssma-for-mysql-mysqltosql.md)
+- [Getting Started with SSMA for MySQL](getting-started-with-ssma-for-mysql-mysqltosql.md)

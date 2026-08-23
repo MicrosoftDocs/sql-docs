@@ -41,6 +41,7 @@ The following table lists the SSMA dialog boxes:
 |[Refresh from database &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|Use the **Refresh from Database** dialog box to select objects to refresh from the MySQL database.|  
 |[Save Metadata  &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|The **Save Metadata** dialog box appears when you save a project that is missing metadata.|  
   
-## See Also  
-[Getting Started with SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## Related content
+
+- [Getting Started with SSMA for MySQL](getting-started-with-ssma-for-mysql-mysqltosql.md)
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

@@ -49,6 +49,6 @@ ms.custom:
   
 ## Related content
 
-- [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)
-- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)
-- [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)
+- [Chart legend - formatting the legend on a paginated report chart (Report Builder)](chart-legend-formatting-report-builder.md)
+- [Formatting series colors on a paginated report chart (Report Builder)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)
+- [Chart legend - hide items in a paginated report (Report Builder)](chart-legend-hide-items-report-builder.md)

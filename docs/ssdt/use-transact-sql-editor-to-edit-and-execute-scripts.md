@@ -33,4 +33,4 @@ The Transact-SQL Editor contains a main **T-SQL** pane where you can write and e
 
 ## Related content
 
-- [How to: Create New Database Objects Using Queries](how-to-create-new-database-objects-using-queries.md)
+- [How to: Create new database objects using queries](how-to-create-new-database-objects-using-queries.md)

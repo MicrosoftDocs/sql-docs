@@ -140,4 +140,4 @@ You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../inclu
   
 ## Related content
 
-- [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Credentials and connections for report data sources](specify-credential-and-connection-information-for-report-data-sources.md)

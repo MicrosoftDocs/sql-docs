@@ -106,8 +106,7 @@ GO
 
 ## Related content
 
-- [Aggregate Functions (Transact-SQL)](aggregate-functions-transact-sql.md)
+- [Aggregate functions (Transact-SQL)](aggregate-functions-transact-sql.md)
 - [CHECKSUM_AGG (Transact-SQL)](checksum-agg-transact-sql.md)
 - [CHECKSUM (Transact-SQL)](checksum-transact-sql.md)
 - [HASHBYTES (Transact-SQL)](hashbytes-transact-sql.md)
-

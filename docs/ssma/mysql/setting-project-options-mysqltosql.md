@@ -87,12 +87,7 @@ You can also customize the settings for the current project. The settings get sa
   
 3.  Click **OK** to save the settings.  
   
-## Next Step  
-The next step in the migration depends on your project needs:  
-  
--   To customize the mapping of source and target data types, see [Mapping MySQL and SQL Server Data Types &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
-  
--   Otherwise, you can convert the MySQL database object definitions into SQL Server or SQL Azure object definitions. For more information, see [Converting MySQL Databases &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
-  
-## See Also  
-[Mapping MySQL and SQL Server Data Types &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+## Related content
+
+- [Mapping MySQL and SQL Server Data Types](mapping-mysql-and-sql-server-data-types-mysqltosql.md)
+- [Convert MySQL Databases](converting-mysql-databases-mysqltosql.md)

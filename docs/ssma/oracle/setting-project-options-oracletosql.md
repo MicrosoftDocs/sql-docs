@@ -78,5 +78,5 @@ You can also customize settings for the current project. These settings are save
 
 ## Related content
 
-- [Map Oracle and SQL Server data types (OracleToSQL)](mapping-oracle-and-sql-server-data-types-oracletosql.md)
-- [Convert Oracle schemas (OracleToSQL)](converting-oracle-schemas-oracletosql.md)
+- [Map Oracle and SQL Server data types](mapping-oracle-and-sql-server-data-types-oracletosql.md)
+- [Convert Oracle schemas](converting-oracle-schemas-oracletosql.md)

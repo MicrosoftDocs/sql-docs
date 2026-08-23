@@ -57,7 +57,6 @@ This is the partial result:
 </row>
 ```
 
-## See also
+## Related content
 
-- [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)
-
+- [Use PATH mode with FOR XML](use-path-mode-with-for-xml.md)

@@ -135,8 +135,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [E-Mail delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)
-- [File share delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)
-- [SharePoint library delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)
-- [Configure a report server for e-Mail delivery (Report Server Configuration Manager)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)
+- [Email delivery in Reporting Services](e-mail-delivery-in-reporting-services.md)
+- [File share delivery in Reporting Services](file-share-delivery-in-reporting-services.md)
+- [SharePoint library delivery in Reporting Services](sharepoint-library-delivery-in-reporting-services.md)
+- [Configure the Report Server Service Account (Report Server Configuration Manager)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)

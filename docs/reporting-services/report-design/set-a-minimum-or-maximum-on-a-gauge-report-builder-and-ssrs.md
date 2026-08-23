@@ -32,6 +32,6 @@ ms.custom:
   
 ## Related content
 
-- [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)
-- [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)
-- [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
+- [Formatting scales on a gauge in a paginated report (Report Builder)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)
+- [Formatting pointers on a gauge in a paginated report (Report Builder)](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)
+- [Gauges in a paginated report (Report Builder)](gauges-report-builder-and-ssrs.md)

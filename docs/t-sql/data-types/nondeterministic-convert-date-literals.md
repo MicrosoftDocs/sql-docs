@@ -135,23 +135,9 @@ Conversion of non-Unicode character data between collations is also considered n
 
 
 
-## See also
+## Related content
 
 - [Set a Session Language](../../relational-databases/collations/set-a-session-language.md)
-- [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)
+- [Date and time data types and functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)
 - [FORMAT (Transact-SQL)](../functions/format-transact-sql.md)
 - [ISDATE (Transact-SQL)](../functions/isdate-transact-sql.md)
-
-
-
-<!--
-This new article is linked-to by the following articles (at least initially on 2018/11/19).....
-...
-* docs/relational-databases/views/create-indexed-views.md
-* docs/relational-databases/indexes/indexes-on-computed-columns.md
-* docs/t-sql/functions/cast-and-convert-transact-sql.md
-...
-As a reaction to public PR 1279, this approach of creating a new article to link to is a better alternative than a docs/includes/ approach.
-GeneMi (MightyPen), 2018/11/19
--->
-

@@ -148,7 +148,7 @@ EXECUTE sp_addlogin 'Michael', '<password>', 'AdventureWorks2022', 'us_english',
 ## Related content
 
 - [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
-- [sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)
-- [sp_helpuser (Transact-SQL)](sp-helpuser-transact-sql.md)
-- [sp_revokelogin (Transact-SQL)](sp-revokelogin-transact-sql.md)
-- [xp_logininfo (Transact-SQL)](xp-logininfo-transact-sql.md)
+- [sys.sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)
+- [sys.sp_helpuser (Transact-SQL)](sp-helpuser-transact-sql.md)
+- [sys.sp_revokelogin (Transact-SQL)](sp-revokelogin-transact-sql.md)
+- [sys.xp_logininfo (Transact-SQL)](xp-logininfo-transact-sql.md)

@@ -15,6 +15,6 @@ You can use keyboard shortcuts to navigate through SSMA application. For more in
   
 -   [Menu commands and other shortcut keys &#40;MySQLToSQL&#41;](../../ssma/mysql/menu-commands-and-other-shortcut-keys-mysqltosql.md)  
   
-## See Also  
-[Getting Started with SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
-  
+## Related content
+
+- [Getting Started with SSMA for MySQL](getting-started-with-ssma-for-mysql-mysqltosql.md)

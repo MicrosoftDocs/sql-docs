@@ -55,7 +55,6 @@ SET @g = geography::STPolyFromWKB(0x01030000000100000005000000F4FDD478E9965EC0DD
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
-  
-  
+## Related content
+
+- [OGC Static Geography Methods](ogc-static-geography-methods.md)

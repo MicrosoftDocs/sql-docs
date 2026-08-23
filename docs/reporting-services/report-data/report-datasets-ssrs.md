@@ -124,5 +124,5 @@ ms.custom:
   
 ## Related content
 
-- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)
-- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [Report design view in Report Builder](../report-builder/report-design-view-report-builder.md)
+- [Reporting Services concepts (SSRS)](../reporting-services-concepts-ssrs.md)

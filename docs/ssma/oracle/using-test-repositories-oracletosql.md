@@ -61,7 +61,7 @@ The following buttons are available on Test Result page:
 - Click the **View** button to open [Viewing Test Case Reports &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) of current Test Case Result.
 - Click the **Delete** button to delete the selected Test Result.
 
-## See Also
+## Related content
 
-[Running Test Cases &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)
-[Testing Migrated Database Objects &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)
+- [Running Test Cases](running-test-cases-oracletosql.md)
+- [Testing Migrated Database Objects](testing-migrated-database-objects-oracletosql.md)

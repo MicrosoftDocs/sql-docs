@@ -114,4 +114,4 @@ The order and naming of parameters in the output of `sp_get_query_template` can 
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [Specify Query Parameterization Behavior by Using Plan Guides](../performance/specify-query-parameterization-behavior-by-using-plan-guides.md)
+- [Specify query parameterization behavior by using plan guides](../performance/specify-query-parameterization-behavior-by-using-plan-guides.md)

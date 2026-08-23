@@ -16,5 +16,5 @@ helpviewer_keywords:
 ## Related content
 
 - [Install SQL Server data tools - Business Intelligence for Visual Studio](/previous-versions/sql/)
-- [Feature reference (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)
-- [Reporting Services reports (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md)
+- [Feature reference (Reporting Services)](../feature-reference-reporting-services.md)
+- [Reporting Services Reports (SSRS)](../reports/reporting-services-reports-ssrs.md)

@@ -157,8 +157,7 @@ SELECT
 GO
 ```
 
-## See also
+## Related content
 
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-- [Configure the user options Server Configuration Option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)
-
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [Server configuration: user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)

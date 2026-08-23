@@ -47,8 +47,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [STAsText &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [STAsText (geometry Data Type)](stastext-geometry-data-type.md)
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)

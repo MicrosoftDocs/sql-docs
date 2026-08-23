@@ -139,7 +139,7 @@ Members of the publication access list for a publication can execute `sp_helpmer
 ## Related content
 
 - [View and Modify Publication Properties](../replication/publish/view-and-modify-publication-properties.md)
-- [sp_addmergepublication (Transact-SQL)](sp-addmergepublication-transact-sql.md)
-- [sp_changemergepublication (Transact-SQL)](sp-changemergepublication-transact-sql.md)
-- [sp_dropmergepublication (Transact-SQL)](sp-dropmergepublication-transact-sql.md)
+- [sys.sp_addmergepublication (Transact-SQL)](sp-addmergepublication-transact-sql.md)
+- [sys.sp_changemergepublication (Transact-SQL)](sp-changemergepublication-transact-sql.md)
+- [sys.sp_dropmergepublication (Transact-SQL)](sp-dropmergepublication-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

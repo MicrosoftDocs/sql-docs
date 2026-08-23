@@ -76,7 +76,7 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 ## Related content
 
 - [Delete a Publication](../replication/publish/delete-a-publication.md)
-- [sp_addmergepublication (Transact-SQL)](sp-addmergepublication-transact-sql.md)
-- [sp_changemergepublication (Transact-SQL)](sp-changemergepublication-transact-sql.md)
-- [sp_helpmergepublication (Transact-SQL)](sp-helpmergepublication-transact-sql.md)
+- [sys.sp_addmergepublication (Transact-SQL)](sp-addmergepublication-transact-sql.md)
+- [sys.sp_changemergepublication (Transact-SQL)](sp-changemergepublication-transact-sql.md)
+- [sys.sp_helpmergepublication (Transact-SQL)](sp-helpmergepublication-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

@@ -51,9 +51,8 @@ Packets Received
 128  
 ```  
   
-## See Also  
- [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
- [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [System Statistical Functions](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [@@PACK_SENT (Transact-SQL)](pack-sent-transact-sql.md)
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

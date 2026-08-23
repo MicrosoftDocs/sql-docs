@@ -29,4 +29,4 @@ ms.custom:
   
 ## Related content
 
-- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)
+- [Customize rendering extension parameters in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)

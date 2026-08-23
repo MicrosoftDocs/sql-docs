@@ -78,7 +78,7 @@ helpviewer_keywords:
 ## Related content
 
 - [Publish reports](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))
-- [Publish a report to a SharePoint library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)
-- [Set deployment properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)
-- [Report Designer F1 help](../../reporting-services/tools/report-designer-f1-help.md)
+- [Publish a Report to a SharePoint Library](../reports/publish-a-report-to-a-sharepoint-library.md)
+- [Set deployment properties (Reporting Services)](set-deployment-properties-reporting-services.md)
+- [Report Designer F1 Help](report-designer-f1-help.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -140,11 +140,11 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 
 ## Related content
 
-- [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)
-- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [Report server database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
-- [Implementing a security extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)
-- [Implementing a data processing extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
-- [Data sources supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)
+- [Reporting Services extensions](../extensions/reporting-services-extensions.md)
+- [SQL Server Reporting Services tools](../tools/reporting-services-tools.md)
+- [Subscriptions and delivery (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Report server database (SSRS native mode)](../report-server/report-server-database-ssrs-native-mode.md)
+- [Implement a security extension](../extensions/security-extension/implementing-a-security-extension.md)
+- [Implement a data processing extension](../extensions/data-processing/implementing-a-data-processing-extension.md)
+- [Data Sources Supported by Reporting Services (SSRS)](../report-data/data-sources-supported-by-reporting-services-ssrs.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

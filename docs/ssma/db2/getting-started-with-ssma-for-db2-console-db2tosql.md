@@ -62,4 +62,4 @@ Color-interpretation of the console output in the following table:
 
 ## Related content
 
-- [Install SSMA for Db2 (Db2ToSQL)](installing-ssma-for-db2-client-db2tosql.md)
+- [Install SSMA for Db2 client](installing-ssma-for-db2-client-db2tosql.md)

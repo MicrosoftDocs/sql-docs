@@ -133,6 +133,6 @@ To filter data points in a chart, you can set a filter on a category group or a 
   
 ## Related content
 
-- [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
-- [Expression examples in paginated reports (Report Builder)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Gauges in a paginated report (Report Builder)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
+- [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](add-dataset-filters-data-region-filters-and-group-filters.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [Gauges in a paginated report (Report Builder)](gauges-report-builder-and-ssrs.md)

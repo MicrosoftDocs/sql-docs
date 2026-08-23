@@ -37,6 +37,6 @@ ms.custom:
   
 ## Related content
 
-- [Format numbers and dates &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
-- [Format lines, colors, and images &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)
-- [Placeholder Properties dialog, general &#40;Report Builder&#41;](./text-boxes-report-builder-and-ssrs.md)
+- [Format numbers and dates in Report Builder paginated reports](formatting-numbers-and-dates-report-builder-and-ssrs.md)
+- [Formatting lines, colors, and images in a paginated report (Report Builder)](formatting-lines-colors-and-images-report-builder-and-ssrs.md)
+- [Text boxes in paginated reports (Report Builder)](text-boxes-report-builder-and-ssrs.md)

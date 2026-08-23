@@ -245,6 +245,6 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## See Also  
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)
+## Related content
 
+- [What are the SQL database functions?](functions.md)

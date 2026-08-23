@@ -74,8 +74,7 @@ SELECT @g.ToString();
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   
-## See Also  
- [STIsValid &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
-  
+## Related content
+
+- [STIsValid (geometry Data Type)](../spatial-geometry/stisvalid-geometry-data-type.md)
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)

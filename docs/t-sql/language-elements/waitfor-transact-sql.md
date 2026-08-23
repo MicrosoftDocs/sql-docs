@@ -174,4 +174,4 @@ A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.
 
 - [Control-of-Flow](control-of-flow.md)
 - [datetime (Transact-SQL)](../data-types/datetime-transact-sql.md)
-- [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+- [sys.sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)

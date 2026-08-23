@@ -183,6 +183,6 @@ You can change some default settings for this renderer, including the encoding s
 
 ## Related content
 
-- [Export to a CSV file](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)
-- [Export reports](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
+- [Export a paginated report to a CSV file (Report Builder)](exporting-to-a-csv-file-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](export-reports-report-builder-and-ssrs.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -63,4 +63,4 @@ ms.custom:
   
 ## Related content
 
-- [Publish data sources and reports](../../reporting-services/reports/publishing-data-sources-and-reports.md)
+- [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md)

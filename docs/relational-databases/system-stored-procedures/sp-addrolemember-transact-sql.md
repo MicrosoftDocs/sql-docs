@@ -130,9 +130,8 @@ EXECUTE sp_addrolemember 'Production', 'UserMary';
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addsrvrolemember (Transact-SQL)](sp-addsrvrolemember-transact-sql.md)
-- [sp_droprolemember (Transact-SQL)](sp-droprolemember-transact-sql.md)
-- [sp_grantdbaccess (Transact-SQL)](sp-grantdbaccess-transact-sql.md)
+- [sys.sp_addsrvrolemember (Transact-SQL)](sp-addsrvrolemember-transact-sql.md)
+- [sys.sp_droprolemember (Transact-SQL)](sp-droprolemember-transact-sql.md)
+- [sys.sp_grantdbaccess (Transact-SQL)](sp-grantdbaccess-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Database-level roles](../security/authentication-access/database-level-roles.md)
-

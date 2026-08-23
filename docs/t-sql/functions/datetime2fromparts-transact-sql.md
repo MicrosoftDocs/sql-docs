@@ -119,9 +119,6 @@ GO
 (1 row(s) affected)  
 ```  
   
-## See also
-[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)
-  
-  
+## Related content
 
-
+- [datetime2 (Transact-SQL)](../data-types/datetime2-transact-sql.md)

@@ -103,8 +103,3 @@ SELECT @@DATEFIRST;
 ## Related content
 
 - [Date and time data types and functions (Transact-SQL)](date-and-time-data-types-and-functions-transact-sql.md)
-
-  
-  
-
-

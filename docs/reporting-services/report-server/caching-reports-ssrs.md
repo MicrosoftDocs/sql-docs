@@ -63,8 +63,8 @@ If a report can't be rendered from a cached instance for any reason, the report 
 ## Related content
 
 - [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)
-- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
-- [Reporting Services concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)
-- [Preload the cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)
-- [Schedules](../../reporting-services/subscriptions/schedules.md)
-- [Cache shared datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)
+- [Set report processing properties](set-report-processing-properties.md)
+- [Reporting Services concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [Preload the cache](preload-the-cache-report-manager.md)
+- [Schedules in Reporting Services](../subscriptions/schedules.md)
+- [Cache shared datasets (SSRS)](cache-shared-datasets-ssrs.md)

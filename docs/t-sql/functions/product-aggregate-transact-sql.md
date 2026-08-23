@@ -152,5 +152,5 @@ instrumentC   1.268900
 
 ## Related content
 
-- [Aggregate Functions (Transact-SQL)](aggregate-functions-transact-sql.md)
+- [Aggregate functions (Transact-SQL)](aggregate-functions-transact-sql.md)
 - [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

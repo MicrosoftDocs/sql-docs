@@ -31,5 +31,5 @@ ms.custom:
   
 ## Related content
 
-- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Add sparklines and data bars &#40;Report Builder&#41;](../../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Add sparklines and data bars in a paginated report (Report Builder)](add-sparklines-and-data-bars-report-builder-and-ssrs.md)

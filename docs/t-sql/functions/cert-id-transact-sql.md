@@ -56,9 +56,8 @@ SELECT Cert_ID('ABerglundCert3');
 GO  
 ```  
   
-## See also
-[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
-  
-  
+## Related content
+
+- [sys.certificates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../statements/create-certificate-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

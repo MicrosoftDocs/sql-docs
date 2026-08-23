@@ -71,9 +71,7 @@ NULL           44294026.1344         1
 (4 row(s) affected)
 ```  
   
-## See Also  
- [GROUPING_ID &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-id-transact-sql.md)   
- [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
-  
-  
+## Related content
 
+- [GROUPING_ID (Transact-SQL)](grouping-id-transact-sql.md)
+- [SELECT - GROUP BY clause (Transact-SQL)](../queries/select-group-by-transact-sql.md)

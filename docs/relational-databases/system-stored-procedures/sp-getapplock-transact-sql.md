@@ -212,4 +212,4 @@ GO
 
 - [APPLOCK_MODE (Transact-SQL)](../../t-sql/functions/applock-mode-transact-sql.md)
 - [APPLOCK_TEST (Transact-SQL)](../../t-sql/functions/applock-test-transact-sql.md)
-- [sp_releaseapplock (Transact-SQL)](sp-releaseapplock-transact-sql.md)
+- [sys.sp_releaseapplock (Transact-SQL)](sp-releaseapplock-transact-sql.md)

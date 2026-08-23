@@ -42,11 +42,11 @@ Install or configure the following components and permissions:
 
 ## Related content
 
-- [Step 1: Create a report server project &#40;Reporting Services&#41;](tutorial-step-01-create-report-server-project-reporting-services.md)
-- [Step 2: Specify connection information &#40;Reporting Services&#41;](tutorial-step-02-specify-connection-information-reporting-services.md)
-- [Step 3: Define a dataset for the table report &#40;Reporting Services&#41;](tutorial-step-03-define-dataset-table-report-reporting-services.md)
-- [Step 4: Add a table to the report &#40;Reporting Services&#41;](tutorial-step-04-add-table-report-reporting-services.md)
-- [Step 5: Format a report &#40;Reporting Services&#41;](tutorial-step-05-format-report-reporting-services.md)
-- [Step 6: Add grouping and totals &#40;Reporting Services&#41;](tutorial-step-06-add-grouping-totals-reporting-services.md)
-- [Reporting Services tutorials](reporting-services-tutorials-ssrs.md)
-- [Try asking the Reporting Services forum.](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&so.rt=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Tutorial: Create a report server project](tutorial-step-01-create-report-server-project-reporting-services.md)
+- [Tutorial: Specify connection information (Reporting Services)](tutorial-step-02-specify-connection-information-reporting-services.md)
+- [Tutorial: Define a dataset for the table report (Reporting Services)](tutorial-step-03-define-dataset-table-report-reporting-services.md)
+- [Tutorial: Add a table to the report (Reporting Services)](tutorial-step-04-add-table-report-reporting-services.md)
+- [Tutorial: Format a report (Reporting Services)](tutorial-step-05-format-report-reporting-services.md)
+- [Tutorial: Add grouping and totals (Reporting Services)](tutorial-step-06-add-grouping-totals-reporting-services.md)
+- [Reporting Services tutorials (SSRS)](reporting-services-tutorials-ssrs.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&so.rt=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

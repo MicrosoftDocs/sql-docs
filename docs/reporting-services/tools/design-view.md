@@ -49,5 +49,5 @@ Use the Toolbox to select items to place in any of these three sections. Use the
   
 ## Related content
 
-- [Page headers and footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
-- [Report design tips &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)
+- [Page headers and footers in a paginated report (Report Builder)](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)
+- [Report design tips for paginated reports (Report Builder)](../report-design/report-design-tips-report-builder-and-ssrs.md)

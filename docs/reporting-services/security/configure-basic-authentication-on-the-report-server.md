@@ -102,5 +102,5 @@ You can specify the following elements when you use a `RSWindowsBasic` section t
 
 ## Related content
 
-- [Application domains for report server applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)
-- [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)
+- [Application domains for report server applications](../report-server/application-domains-for-report-server-applications.md)
+- [Reporting Services security and protection](reporting-services-security-and-protection.md)

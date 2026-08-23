@@ -88,6 +88,6 @@ SQL Server 2016 Reporting Services includes the following performance objects:
   
 ## Related content
 
-- [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)
-- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
-- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
+- [Configure available memory for report server applications](configure-available-memory-for-report-server-applications.md)
+- [Reporting Services report server (native mode)](reporting-services-report-server-native-mode.md)
+- [SQL Server Reporting Services tools](../tools/reporting-services-tools.md)

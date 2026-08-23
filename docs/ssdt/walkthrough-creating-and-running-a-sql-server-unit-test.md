@@ -1169,5 +1169,5 @@ To create and verify a negative test, you must perform the following tasks:
 
 - [Create and define SQL Server unit tests](creating-and-defining-sql-server-unit-tests.md)
 - [Verify database code by using SQL Server unit tests](verifying-database-code-by-using-sql-server-unit-tests.md)
-- [How to: Create an Empty SQL Server Unit Test](how-to-create-an-empty-sql-server-unit-test.md)
+- [How to: Create an empty SQL Server unit test](how-to-create-an-empty-sql-server-unit-test.md)
 - [How to: Configure SQL Server unit test execution](how-to-configure-sql-server-unit-test-execution.md)

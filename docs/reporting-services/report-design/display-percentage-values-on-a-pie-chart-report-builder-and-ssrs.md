@@ -43,6 +43,6 @@ The [Tutorial: Add a pie chart to your report (Report Builder)](../tutorial-add-
 
 ## Related content
 
-- [Pie charts in a paginated report (Report Builder)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)
-- [Chart legend - format the legend on a paginated report chart (Report Builder)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)
-- [Display data point labels outside a pie chart in a paginated report (Report Builder)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)
+- [Pie charts in a paginated report (Report Builder)](pie-charts-report-builder-and-ssrs.md)
+- [Chart legend - formatting the legend on a paginated report chart (Report Builder)](chart-legend-formatting-report-builder.md)
+- [Display data point labels outside a pie chart in a paginated report (Report Builder)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)

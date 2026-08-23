@@ -59,7 +59,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
-- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server.md)
-- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
+- [Reporting Services concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [Microsoft Report Builder in SQL Server](../report-builder/report-builder-in-sql-server.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](../report-builder/export-reports-report-builder-and-ssrs.md)

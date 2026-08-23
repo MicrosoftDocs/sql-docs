@@ -136,10 +136,8 @@ FROM sys.objects
 WHERE name = OBJECT_NAME(274100017);  
 ```  
   
-## See Also  
- [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)  
-  
-  
+## Related content
 
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [OBJECT_DEFINITION (Transact-SQL)](object-definition-transact-sql.md)
+- [OBJECT_ID (Transact-SQL)](object-id-transact-sql.md)

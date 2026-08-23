@@ -63,9 +63,7 @@ W. Europe Standard Time
 */
 ```  
   
-## See also
+## Related content
 
-[SQL Managed Instance Time Zone](/azure/sql-database/sql-database-managed-instance-timezone)
-
-[CURRENT_TIMEZONE()](./current-timezone-transact-sql.md)
-
+- [SQL Managed Instance Time Zone](/azure/sql-database/sql-database-managed-instance-timezone)
+- [CURRENT_TIMEZONE (Transact-SQL)](current-timezone-transact-sql.md)

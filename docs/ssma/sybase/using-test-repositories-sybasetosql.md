@@ -60,7 +60,7 @@ The following buttons are available on **Test Result** page:
 - Click the **View** button to open [Viewing Test Case Reports &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) of current Test Case Result.
 - Click the **Delete** button to delete the selected Test Result.
 
-## See Also
+## Related content
 
-[Running Test Cases &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)
-[Testing Migrated Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)
+- [Running Test Cases](running-test-cases-sybasetosql.md)
+- [Testing Migrated Database Objects](testing-migrated-database-objects-sybasetosql.md)

@@ -100,5 +100,5 @@ total_read     total_write   total_errors    connections
 
 ## Related content
 
-- [sp_who (Transact-SQL)](sp-who-transact-sql.md)
+- [sys.sp_who (Transact-SQL)](sp-who-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

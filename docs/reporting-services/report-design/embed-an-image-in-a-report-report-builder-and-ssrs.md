@@ -54,6 +54,5 @@ You might want to embed an image in the report definition before adding the imag
   
 ## Related content
 
-- [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
-- [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)
-- [Image Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](./images-report-builder-and-ssrs.md)
+- [Images in paginated reports (Report Builder)](images-report-builder-and-ssrs.md)
+- [Add a data-bound image to a paginated report (Report Builder)](add-a-data-bound-image-report-builder-and-ssrs.md)

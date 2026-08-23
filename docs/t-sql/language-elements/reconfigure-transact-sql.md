@@ -61,8 +61,7 @@ RECONFIGURE WITH OVERRIDE;
 GO    
 ```    
     
-## See Also    
- [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
-    
-  
+## Related content
+
+- [Server configuration options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

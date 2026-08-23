@@ -142,11 +142,9 @@ DROP TABLE ddl_log;
 GO  
 ```  
   
-## See Also  
- [Use the EVENTDATA Function](../../relational-databases/triggers/use-the-eventdata-function.md)   
- [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)   
- [Event Notifications](../../relational-databases/service-broker/event-notifications.md)   
- [Logon Triggers](../../relational-databases/triggers/logon-triggers.md)  
-  
-  
+## Related content
 
+- [Use the EVENTDATA Function](../../relational-databases/triggers/use-the-eventdata-function.md)
+- [DDL triggers](../../relational-databases/triggers/ddl-triggers.md)
+- [Event notifications](../../relational-databases/service-broker/event-notifications.md)
+- [Logon triggers](../../relational-databases/triggers/logon-triggers.md)

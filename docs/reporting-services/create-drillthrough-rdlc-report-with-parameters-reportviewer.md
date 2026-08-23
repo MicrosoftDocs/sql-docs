@@ -32,5 +32,5 @@ Use Visual Studio 2015, and the ASP.NET Web Application, to create an ASP.NET we
   
 ## Related content
 
-- [Reporting Services tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)
-- [Design reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)
+- [Reporting Services tutorials (SSRS)](reporting-services-tutorials-ssrs.md)
+- [Design Reporting Services paginated reports with Report Designer (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)

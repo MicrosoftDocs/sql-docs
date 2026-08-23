@@ -51,4 +51,4 @@ Only members of the **sysadmin** fixed server role, members of the **db_owner** 
 
 ## Related content
 
-- [sp_changedistributor_property (Transact-SQL)](sp-changedistributor-property-transact-sql.md)
+- [sys.sp_changedistributor_property (Transact-SQL)](sp-changedistributor-property-transact-sql.md)

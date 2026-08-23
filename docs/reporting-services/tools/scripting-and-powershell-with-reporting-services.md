@@ -54,6 +54,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [RS.exe utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)
-- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)
-- [Script with the rs.exe utility and the web service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)
+- [RS.exe utility (SSRS)](rs-exe-utility-ssrs.md)
+- [Script deployment and administrative tasks](script-deployment-and-administrative-tasks.md)
+- [Script with the rs.exe utility and the web service](script-with-the-rs-exe-utility-and-the-web-service.md)

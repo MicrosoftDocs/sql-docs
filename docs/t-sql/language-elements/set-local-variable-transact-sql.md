@@ -438,7 +438,7 @@ FROM sys.tables;
 
 ## Related content
 
-- [Compound Operators (Transact-SQL)](compound-operators-transact-sql.md)
+- [Compound operators (Transact-SQL)](compound-operators-transact-sql.md)
 - [DECLARE @local_variable (Transact-SQL)](declare-local-variable-transact-sql.md)
 - [EXECUTE (Transact-SQL)](execute-transact-sql.md)
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)

@@ -59,4 +59,4 @@ EXECUTE sp_dbmmonitorhelpmonitoring;
 ## Related content
 
 - [Monitoring Database Mirroring (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)
-- [sp_dbmmonitorresults (Transact-SQL)](sp-dbmmonitorresults-transact-sql.md)
+- [sys.sp_dbmmonitorresults (Transact-SQL)](sp-dbmmonitorresults-transact-sql.md)

@@ -114,6 +114,6 @@ When you open a project, it's disconnected from Oracle and from [!INCLUDE [ssNoV
 
 ## Related content
 
-- [Migrate Oracle Databases to SQL Server (OracleToSQL)](migrating-oracle-databases-to-sql-server-oracletosql.md)
-- [Connecting to Oracle Database (OracleToSQL)](connecting-to-oracle-database-oracletosql.md)
-- [Connecting to SQL Server (OracleToSQL)](connecting-to-sql-server-oracletosql.md)
+- [Migrate Oracle Databases to SQL Server](migrating-oracle-databases-to-sql-server-oracletosql.md)
+- [Connecting to Oracle Database](connecting-to-oracle-database-oracletosql.md)
+- [Connecting to SQL Server](connecting-to-sql-server-oracletosql.md)

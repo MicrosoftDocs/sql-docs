@@ -85,6 +85,6 @@ The following procedure shows how to map data types at the project, database, or
 
 ## Related content
 
-- [Migrate Db2 Databases to SQL Server (Db2ToSQL)](migrating-db2-databases-to-sql-server-db2tosql.md)
-- [Assessment Report (Db2ToSQL)](assessment-report-db2tosql.md)
-- [Convert Db2 schemas (Db2ToSQL)](converting-db2-schemas-db2tosql.md)
+- [Migrate Db2 databases to SQL Server](migrating-db2-databases-to-sql-server-db2tosql.md)
+- [Assessment Report](assessment-report-db2tosql.md)
+- [Convert Db2 schemas](converting-db2-schemas-db2tosql.md)

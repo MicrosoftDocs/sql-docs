@@ -101,10 +101,7 @@ atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
 1.55       -1.57       0.00       0.15       1.57
 ```
   
-## See also
-[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
-  
-  
+## Related content
 
-
+- [CEILING (Transact-SQL)](ceiling-transact-sql.md)
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)

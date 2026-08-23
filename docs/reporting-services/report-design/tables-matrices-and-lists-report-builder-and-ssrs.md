@@ -141,6 +141,6 @@ You can add totals for a group or grand totals for the data region. You can hide
   
 ## Related content
 
-- [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
-- [Nested data regions in a paginated report (Report Builder)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)
-- [Link multiple data regions to the same dataset in a paginated report (Report Builder)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)
+- [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](add-dataset-filters-data-region-filters-and-group-filters.md)
+- [Nested data regions in a paginated report (Report Builder)](nested-data-regions-report-builder-and-ssrs.md)
+- [Linking multiple data regions to the same dataset in a paginated report (Report Builder)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)

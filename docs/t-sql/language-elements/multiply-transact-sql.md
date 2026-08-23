@@ -65,14 +65,13 @@ FROM DimEmployee
 ORDER BY lastName ASC;  
 ```  
   
-## See Also  
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [&#42;= &#40;Multiplication Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)   
- [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
-  
-  
+## Related content
+
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [Expressions (Transact-SQL)](expressions-transact-sql.md)
+- [What are the SQL database functions?](../functions/functions.md)
+- [Operators (Transact-SQL)](operators-transact-sql.md)
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
+- [WHERE (Transact-SQL)](../queries/where-transact-sql.md)
+- [*= (Multiplication assignment) (Transact-SQL)](multiply-equals-transact-sql.md)
+- [Compound operators (Transact-SQL)](compound-operators-transact-sql.md)

@@ -90,4 +90,4 @@ When you need to migrate a large amount of data at scale within a short duration
 
 ## Related content
 
-- [Migrate Db2 Data into SQL Server (Db2ToSQL)](migrating-db2-data-into-sql-server-db2tosql.md)
+- [Migrate Db2 Data into SQL Server](migrating-db2-data-into-sql-server-db2tosql.md)

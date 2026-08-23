@@ -91,11 +91,10 @@ ENABLE;
 GO  
 ```  
   
-## See Also  
- [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
- [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
-  
-  
+## Related content
+
+- [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
+- [CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)](create-cryptographic-provider-transact-sql.md)
+- [DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)](drop-cryptographic-provider-transact-sql.md)
+- [CREATE SYMMETRIC KEY (Transact-SQL)](create-symmetric-key-transact-sql.md)
+- [Extensible Key Management using Azure Key Vault (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)

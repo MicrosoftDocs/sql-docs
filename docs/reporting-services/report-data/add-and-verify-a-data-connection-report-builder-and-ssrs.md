@@ -60,6 +60,6 @@ The data source appears in the **Report Data** pane.
 
 ## Related content
 
-- [Report datasets (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)
-- [Report embedded datasets and shared datasets (Report Builder and SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
-- [Find, view, and manage reports (Report Builder and SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Report Datasets (SSRS)](report-datasets-ssrs.md)
+- [Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

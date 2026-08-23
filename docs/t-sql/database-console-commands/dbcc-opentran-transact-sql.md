@@ -138,8 +138,8 @@ GO
 ## Related content
 
 - [sys.dm_tran_database_transactions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)
-- [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)
-- [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [DB_ID (Transact-SQL)](../../t-sql/functions/db-id-transact-sql.md)
-- [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+- [BEGIN TRANSACTION (Transact-SQL)](../language-elements/begin-transaction-transact-sql.md)
+- [COMMIT TRANSACTION (Transact-SQL)](../language-elements/commit-transaction-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [DB_ID (Transact-SQL)](../functions/db-id-transact-sql.md)
+- [ROLLBACK TRANSACTION (Transact-SQL)](../language-elements/rollback-transaction-transact-sql.md)

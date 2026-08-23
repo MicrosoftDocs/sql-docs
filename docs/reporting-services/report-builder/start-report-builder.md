@@ -48,6 +48,6 @@ When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from t
 
 ## Related content
 
-- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server.md)
-- [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)
+- [Microsoft Report Builder in SQL Server](report-builder-in-sql-server.md)
+- [Set default options for Report Builder](set-default-options-for-report-builder.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

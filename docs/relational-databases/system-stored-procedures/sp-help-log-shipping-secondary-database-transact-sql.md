@@ -95,6 +95,6 @@ Only members of the **sysadmin** fixed server role can run this procedure.
 
 ## Related content
 
-- [sp_help_log_shipping_secondary_primary (Transact-SQL)](sp-help-log-shipping-secondary-primary-transact-sql.md)
+- [sys.sp_help_log_shipping_secondary_primary (Transact-SQL)](sp-help-log-shipping-secondary-primary-transact-sql.md)
 - [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

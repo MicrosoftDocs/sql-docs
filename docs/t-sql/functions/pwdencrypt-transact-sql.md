@@ -42,9 +42,7 @@ PWDENCRYPT ( 'password' )
 ## Permissions  
  PWDENCRYPT is available to public.  
   
-## See Also  
- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [PWDCOMPARE &#40;Transact-SQL&#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
-  
-  
+## Related content
 
+- [Security Functions (Transact-SQL)](security-functions-transact-sql.md)
+- [PWDCOMPARE (Transact-SQL)](pwdcompare-transact-sql.md)

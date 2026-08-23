@@ -64,4 +64,4 @@ ms.custom:
   
 ## Related content
 
-- [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](tablix-data-region-report-builder-and-ssrs.md)
+- [Tablix data region in a paginated report (Report Builder)](tablix-data-region-report-builder-and-ssrs.md)

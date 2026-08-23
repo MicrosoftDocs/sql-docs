@@ -55,7 +55,6 @@ SET @g = geography::STPointFromWKB(0x010100000017D9CEF753D347407593180456965EC0,
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
-  
-  
+## Related content
+
+- [OGC Static Geography Methods](ogc-static-geography-methods.md)

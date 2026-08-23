@@ -294,4 +294,4 @@ EXECUTE msdb.dbo.sp_send_dbmail
 - [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)
 - [Database Mail external program](../database-mail/database-mail-external-program.md)
-- [sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)
+- [sys.sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)

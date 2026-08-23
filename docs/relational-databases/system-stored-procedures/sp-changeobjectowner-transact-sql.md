@@ -76,5 +76,5 @@ GO
 - [ALTER SCHEMA (Transact-SQL)](../../t-sql/statements/alter-schema-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)
-- [sp_changedbowner (Transact-SQL)](sp-changedbowner-transact-sql.md)
+- [sys.sp_changedbowner (Transact-SQL)](sp-changedbowner-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -297,6 +297,5 @@ EXECUTE sys.sp_addextendedproperty
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [sys.fn_listextendedproperty (Transact-SQL)](../system-functions/sys-fn-listextendedproperty-transact-sql.md)
-- [sp_dropextendedproperty (Transact-SQL)](sp-dropextendedproperty-transact-sql.md)
-- [sp_updateextendedproperty (Transact-SQL)](sp-updateextendedproperty-transact-sql.md)
-
+- [sys.sp_dropextendedproperty (Transact-SQL)](sp-dropextendedproperty-transact-sql.md)
+- [sys.sp_updateextendedproperty (Transact-SQL)](sp-updateextendedproperty-transact-sql.md)

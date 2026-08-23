@@ -50,6 +50,4 @@ As long as the value is set to 1, only cached report data is used. Be sure to re
   
 ## Related content
 
-- [Errors and events (Reporting Services)](errors-and-events-reference-reporting-services.md)
-
-[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+- [Errors and events reference (Reporting Services)](errors-and-events-reference-reporting-services.md)

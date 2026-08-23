@@ -79,6 +79,6 @@ ms.custom:
   
 ## Related content
 
-- [3D, bevel, and other effects in a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)
-- [Format a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
-- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [3D, bevel, and others in a paginated report (Report Builder)](chart-effects-3d-bevel-and-other-report-builder.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)

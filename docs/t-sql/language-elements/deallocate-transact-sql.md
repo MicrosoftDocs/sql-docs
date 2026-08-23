@@ -133,11 +133,10 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-## See Also  
- [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [Cursors](../../relational-databases/cursors.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
-  
-  
+## Related content
+
+- [CLOSE (Transact-SQL)](close-transact-sql.md)
+- [Cursors (SQL Server)](../../relational-databases/cursors.md)
+- [DECLARE @local_variable (Transact-SQL)](declare-local-variable-transact-sql.md)
+- [FETCH (Transact-SQL)](fetch-transact-sql.md)
+- [OPEN (Transact-SQL)](open-transact-sql.md)

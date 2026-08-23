@@ -78,12 +78,11 @@ ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';
 GO  
 ```  
   
-## See Also  
- [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
-  
-  
+## Related content
+
+- [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md)
+- [DROP CREDENTIAL (Transact-SQL)](drop-credential-transact-sql.md)
+- [ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)](alter-database-scoped-credential-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

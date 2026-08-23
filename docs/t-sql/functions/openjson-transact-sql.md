@@ -433,7 +433,7 @@ CROSS APPLY OPENJSON ( root.value) AS TheValues
 
 ## Related content
 
-- [JSON Path Expressions](../../relational-databases/json/json-path-expressions-sql-server.md)
+- [JSON path expressions in the SQL Database Engine](../../relational-databases/json/json-path-expressions-sql-server.md)
 - [Parse and transform JSON data with OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
 - [Use OPENJSON with the Default Schema](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)
 - [Use OPENJSON with an Explicit Schema](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)

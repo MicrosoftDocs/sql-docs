@@ -55,6 +55,6 @@ ms.custom:
   
 ## Related content
 
-- [Action Properties dialog&#40;Report Builder&#41;](./add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)
-- [Format data points on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
-- [Show ToolTips on a series &#40;Report Builder&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
+- [Add a hyperlink to a URL in a paginated report (Report Builder)](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)
+- [Formatting data points on a paginated report chart (Report Builder)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
+- [Show ToolTips on a series in a paginated report (Report Builder)](show-tooltips-on-a-series-report-builder-and-ssrs.md)

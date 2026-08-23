@@ -190,9 +190,9 @@ NULL        hello
 NULL        NULL
 ```
 
-## See also
+## Related content
 
 - [Predicates](predicates.md)
 - [CONTAINS (Transact-SQL)](contains-transact-sql.md)
 - [FREETEXT (Transact-SQL)](freetext-transact-sql.md)
-- [IS &#91;NOT&#93; NULL (Transact-SQL)](is-null-transact-sql.md)
+- [IS \[NOT\] NULL (Transact-SQL)](is-null-transact-sql.md)

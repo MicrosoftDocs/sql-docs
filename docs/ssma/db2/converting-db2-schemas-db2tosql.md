@@ -150,5 +150,5 @@ For each item that couldn't be converted, you've to determine what you want to d
 
 ## Related content
 
-- [Migrate Db2 Data into SQL Server (Db2ToSQL)](migrating-db2-data-into-sql-server-db2tosql.md)
-- [Load converted database objects into SQL Server (Db2ToSQL)](loading-converted-database-objects-into-sql-server-db2tosql.md)
+- [Migrate Db2 Data into SQL Server](migrating-db2-data-into-sql-server-db2tosql.md)
+- [Load converted database objects into SQL Server](loading-converted-database-objects-into-sql-server-db2tosql.md)

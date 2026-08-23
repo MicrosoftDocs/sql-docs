@@ -66,5 +66,5 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Related content
 
-- [sp_deletepeerrequesthistory (Transact-SQL)](sp-deletepeerrequesthistory-transact-sql.md)
-- [sp_helppeerrequests (Transact-SQL)](sp-helppeerrequests-transact-sql.md)
+- [sys.sp_deletepeerrequesthistory (Transact-SQL)](sp-deletepeerrequesthistory-transact-sql.md)
+- [sys.sp_helppeerrequests (Transact-SQL)](sp-helppeerrequests-transact-sql.md)

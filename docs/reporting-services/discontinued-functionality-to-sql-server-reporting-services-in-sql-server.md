@@ -73,7 +73,7 @@ These features that are no longer available in SQL Server 2016 Reporting Service
 
 ## Related content
 
-- [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
+- [What's new in SQL Server Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)
 - [Behavior changes to SQL Server Reporting Services in SQL Server 2016](/previous-versions/sql/reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016)
 - [Deprecated features in SQL Server Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

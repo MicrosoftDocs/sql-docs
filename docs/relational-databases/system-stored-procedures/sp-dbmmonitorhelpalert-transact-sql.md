@@ -99,9 +99,9 @@ EXECUTE sp_dbmmonitorhelpalert AdventureWorks2022;
 ## Related content
 
 - [Monitoring Database Mirroring (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)
-- [sp_dbmmonitorchangealert (Transact-SQL)](sp-dbmmonitorchangealert-transact-sql.md)
-- [sp_dbmmonitorchangemonitoring (Transact-SQL)](sp-dbmmonitorchangemonitoring-transact-sql.md)
-- [sp_dbmmonitordropalert (Transact-SQL)](sp-dbmmonitordropalert-transact-sql.md)
-- [sp_dbmmonitorupdate (Transact-SQL)](sp-dbmmonitorupdate-transact-sql.md)
+- [sys.sp_dbmmonitorchangealert (Transact-SQL)](sp-dbmmonitorchangealert-transact-sql.md)
+- [sys.sp_dbmmonitorchangemonitoring (Transact-SQL)](sp-dbmmonitorchangemonitoring-transact-sql.md)
+- [sys.sp_dbmmonitordropalert (Transact-SQL)](sp-dbmmonitordropalert-transact-sql.md)
+- [sys.sp_dbmmonitorupdate (Transact-SQL)](sp-dbmmonitorupdate-transact-sql.md)
 - [sp_dbmmonitorhelpmonitoring (Transact-SQL)](sp-dbmmonitorhelpmonitoring-transact-sql.md)
-- [sp_dbmmonitorresults (Transact-SQL)](sp-dbmmonitorresults-transact-sql.md)
+- [sys.sp_dbmmonitorresults (Transact-SQL)](sp-dbmmonitorresults-transact-sql.md)

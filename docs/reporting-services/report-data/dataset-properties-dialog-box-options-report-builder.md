@@ -41,7 +41,7 @@ f1_keywords:
   
 ## Related content
 
-- [Aggregate Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)
-- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
-- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
-- [Dataset Properties Dialog Box, Query &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)
+- [Report Builder functions - Aggregate function in a paginated report (Report Builder)](../report-design/report-builder-functions-aggregate-function.md)
+- [Filter, group, and sort data in Report Builder paginated reports](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Dataset Properties Dialog Box, Query (Report Builder)](dataset-properties-dialog-box-query-report-builder.md)

@@ -350,6 +350,7 @@ FROM DimCustomer
 );  
 ```  
   
-## See Also  
-[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
-[SELECT Examples (Transact-SQL)](../../t-sql/queries/select-examples-transact-sql.md)  
+## Related content
+
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
+- [SELECT examples (Transact-SQL)](../queries/select-examples-transact-sql.md)

@@ -4,7 +4,7 @@ description: Learn about the AppContext switches available in SqlClient and how 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 08/11/2026
+ms.date: 08/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -21,6 +21,8 @@ ai-usage: ai-assisted
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 The AppContext class allows SqlClient to provide new functionality while continuing to support callers who depend on the previous behavior. Users can opt out of a change in behavior by setting specific AppContext switches.
+
+SqlClient reads each switch once and caches the value the first time the switch is consulted. Set switches at application startup, before the first use of any SqlClient type — a switch set later in the application's lifetime has no effect.
 
 ## Enable MultiSubnetFailover by default
 
@@ -206,6 +208,56 @@ Upon failover, failover partner information provided by the server is preferred 
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.IgnoreServerProvidedFailoverPartner", true);
+```
+
+## Enforce the connection idle timeout
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+Starting in version 7.1.0-preview2, the `Connection Idle Timeout` connection string keyword configures the maximum time, in seconds, that a pooled connection can sit unused before the pool discards it (default 300; a value of 0 disables idle expiration). The keyword is only enforced when the legacy idle-timeout behavior is disabled. With the switch at its default value of `true`, the pool preserves the historical behavior and the keyword has no effect.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseLegacyIdleTimeoutBehavior", false);
+```
+
+## Enable the V2 connection pool
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+Starting in version 6.1, SqlClient includes a new connection pool implementation (V2). The V1 pool remains the default. To opt in to the V2 pool, enable the AppContext switch **Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2** on application startup.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2", true);
+```
+
+## Count pool waits against the connect timeout
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+Starting in version 7.1.0-preview2, time spent waiting for a connection from the pool can be counted against the caller's `Connect Timeout` budget, so pool waits and the network connection attempt share one overall timeout. When the switch is at its default value of `false`, pool operations receive a full `Connect Timeout` and the network connection attempt receives a further full budget.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOverallConnectTimeoutForPoolWait", true);
+```
+
+## Revert to legacy failover alternation on login errors
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+Starting in version 7.1.0-preview2, when connecting with failover configured, SqlClient no longer alternates to the failover partner on login-phase SQL errors if the connection's parser state isn't closed. To revert to the legacy alternation behavior, enable the AppContext switch **Switch.Microsoft.Data.SqlClient.UseLegacyFailoverAlternationOnLoginSqlErrors** on application startup.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseLegacyFailoverAlternationOnLoginSqlErrors", true);
+```
+
+## Honor an explicit zero scale on vartime parameters
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+By default, when a parameter's scale is explicitly set to zero for the vartime data types (`datetime2`, `datetimeoffset`, and `time`), SqlClient sends the default scale of 7 instead. Starting in version 6.0, you can disable the legacy behavior, so that an explicitly set zero scale is honored, by disabling the AppContext switch **Switch.Microsoft.Data.SqlClient.LegacyVarTimeZeroScaleBehaviour** on application startup.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.LegacyVarTimeZeroScaleBehaviour", false);
 ```
 
 ## See also

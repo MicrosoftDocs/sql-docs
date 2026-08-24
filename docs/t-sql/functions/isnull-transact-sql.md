@@ -210,7 +210,7 @@ WHERE Weight IS NULL;
 ## Related content
 
 - [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
-- [IS NULL (Transact-SQL)](../queries/is-null-transact-sql.md)
+- [IS [NOT] NULL (Transact-SQL)](../queries/is-null-transact-sql.md)
 - [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [WHERE (Transact-SQL)](../queries/where-transact-sql.md)
 - [COALESCE (Transact-SQL)](../language-elements/coalesce-transact-sql.md)

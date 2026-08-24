@@ -195,4 +195,4 @@ NULL        NULL
 - [Predicates](predicates.md)
 - [CONTAINS (Transact-SQL)](contains-transact-sql.md)
 - [FREETEXT (Transact-SQL)](freetext-transact-sql.md)
-- [IS \[NOT\] NULL (Transact-SQL)](is-null-transact-sql.md)
+- [IS [NOT] NULL (Transact-SQL)](is-null-transact-sql.md)

@@ -101,7 +101,7 @@ The generated format file, `myDepartmentIdentical-f-c.fmt`, contains the followi
 
 ## Related content
 
-- [bcp utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [Create a format file with bcp (SQL Server)](create-a-format-file-sql-server.md)
 - [XML format files (SQL Server)](xml-format-files-sql-server.md)
 - [Format files to import or export data (SQL Server)](format-files-for-importing-or-exporting-data-sql-server.md)

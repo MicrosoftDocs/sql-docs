@@ -92,5 +92,5 @@ Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tiger
 - [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)
 - [sys.sp_autostats (Transact-SQL)](sp-autostats-transact-sql.md)
 - [sys.sp_createstats (Transact-SQL)](sp-createstats-transact-sql.md)
-- [sys.dm_db_stats_properties](../system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
+- [sys.dm_db_stats_properties (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md)
 - [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)

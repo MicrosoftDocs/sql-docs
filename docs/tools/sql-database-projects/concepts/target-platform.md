@@ -98,4 +98,4 @@ When you publish a SQL project, the target platform of the project must match th
 
 - [SqlPackage Publish parameters, properties, and SQLCMD variables](../../sqlpackage/sqlpackage-publish.md)
 - [Tutorial: Create and deploy a SQL project](../tutorials/create-deploy-sql-project.md)
-- [Database Project Settings](../../../ssdt/database-project-settings.md)
+- [SQL projects properties](project-properties.md)

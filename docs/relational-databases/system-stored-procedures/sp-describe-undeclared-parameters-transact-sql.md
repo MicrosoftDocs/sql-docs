@@ -270,6 +270,5 @@ WHERE object_id = @id OR NAME = @name', @params = N'@id int';
 ## Related content
 
 - [sp_describe_first_result_set (Transact-SQL)](sp-describe-first-result-set-transact-sql.md)
-- [sys.dm_exec_describe_first_result_set (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)
-- [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
-
+- [sys.dm_exec_describe_first_result_set (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-describe-first-result-set-transact-sql.md)
+- [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

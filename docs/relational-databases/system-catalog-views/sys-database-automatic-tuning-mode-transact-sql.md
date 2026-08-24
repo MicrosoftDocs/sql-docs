@@ -44,5 +44,5 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 - [Automatic tuning](../automatic-tuning/automatic-tuning.md)
 - [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
 - [sys.database_query_store_options (Transact-SQL)](sys-database-query-store-options-transact-sql.md)
-- [sys.dm_db_tuning_recommendations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)
+- [sys.dm_db_tuning_recommendations (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-tuning-recommendations-transact-sql.md)
 - [sys.database_automatic_tuning_options (Transact-SQL)](sys-database-automatic-tuning-options-transact-sql.md)

@@ -92,6 +92,6 @@ GO
 - [sys.server_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)
 - [sys.database_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)
 - [sys.database_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)
-- [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)
-- [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)
+- [sys.dm_server_audit_status (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-server-audit-status-transact-sql.md)
+- [sys.dm_audit_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-audit-actions-transact-sql.md)
 - [Create a Server Audit and Server Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)

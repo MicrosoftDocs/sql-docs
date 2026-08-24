@@ -32,7 +32,7 @@ For information about what permissions are required to replay a trace, see [Perm
 
 ## Related content
 
-- [bcp Utility](../bcp-utility.md)
+- [bcp utility](../bcp/bcp-utility.md)
 - [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)
 - [sp_getbindtoken (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)
 - [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)

@@ -282,7 +282,7 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
   
 ## Related content
 
-- [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)
+- [Set up Transparent Data Encryption with Azure Key Vault for SQL Server](set-up-transparent-data-encryption-with-azure-key-vault-for-sql-server.md)
 - [Extensible Key Management using Azure Key Vault (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md)
 - [Server configuration: EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)
 - [SQL Server Connector maintenance and troubleshooting](sql-server-connector-maintenance-troubleshooting.md)

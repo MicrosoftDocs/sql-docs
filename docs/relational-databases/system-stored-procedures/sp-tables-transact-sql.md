@@ -146,4 +146,3 @@ EXECUTE sp_tables
 
 - [sys.synonyms (Transact-SQL)](../system-catalog-views/sys-synonyms-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

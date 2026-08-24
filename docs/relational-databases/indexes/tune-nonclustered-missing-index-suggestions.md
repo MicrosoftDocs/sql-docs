@@ -260,5 +260,5 @@ One way to validate your index changes is to use [Query Store](#persist-missing-
 ## Related content
 
 - [Index architecture and design guide](../sql-server-index-design-guide.md)
-- [sys.dm_db_missing_index_details (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)
+- [sys.dm_db_missing_index_details (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-missing-index-details-transact-sql.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

@@ -698,9 +698,9 @@ SELECT json_query(@response, '$.result.data[0].embedding'); -- Assuming the call
 ## Related content
 
 - [Resource management in Azure SQL Database](/azure/azure-sql/database/resource-limits-logical-server)
-- [sys.dm_resource_governor_resource_pools_history_ex](../system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)
-- [sys.dm_resource_governor_workload_groups_history_ex](../system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md)
-- [sys.dm_user_db_resource_governance](../system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database.md)
+- [sys.dm_resource_governor_resource_pools_history_ex](../system-dynamic-management-objects/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)
+- [sys.dm_resource_governor_workload_groups_history_ex](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md)
+- [sys.dm_user_db_resource_governance (Transact-SQL)](../system-dynamic-management-objects/sys-dm-user-db-resource-governor-azure-sql-database.md)
 - [GRANT Database Permissions (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 - [API Management](/azure/api-management/)

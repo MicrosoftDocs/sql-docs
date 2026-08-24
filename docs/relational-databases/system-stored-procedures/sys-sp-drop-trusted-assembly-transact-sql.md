@@ -65,4 +65,4 @@ EXECUTE sp_drop_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873
 - [sys.trusted_assemblies (Transact-SQL)](../system-catalog-views/sys-trusted-assemblies-transact-sql.md)
 - [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)
 - [sys.assemblies (Transact-SQL)](../system-catalog-views/sys-assemblies-transact-sql.md)
-- [sys.dm_clr_loaded_assemblies (Transact-SQL)](../system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)
+- [sys.dm_clr_loaded_assemblies (Transact-SQL)](../system-dynamic-management-objects/sys-dm-clr-loaded-assemblies-transact-sql.md)

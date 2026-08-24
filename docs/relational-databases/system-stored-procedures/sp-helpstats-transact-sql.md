@@ -107,4 +107,3 @@ PK_Customer_CustomerID        CustomerID
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-

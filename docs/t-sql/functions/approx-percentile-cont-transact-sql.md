@@ -100,4 +100,3 @@ GROUP BY DeptId;
 ## Related content
 
 - [PERCENTILE_CONT (Transact-SQL)](percentile-cont-transact-sql.md)
-

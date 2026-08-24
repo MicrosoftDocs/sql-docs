@@ -178,7 +178,7 @@ For more information about change tracking and [!INCLUDE [sql_sync_long](../../i
 - [Change Data Capture Functions (Transact-SQL)](../system-functions/change-data-capture-functions-transact-sql.md)
 - [Change Data Capture stored procedures (Transact-SQL)](../system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)
 - [Change Data Capture Tables (Transact-SQL)](../system-tables/change-data-capture-tables-transact-sql.md)
-- [System dynamic management views](../system-dynamic-management-views/system-dynamic-management-views.md)
+- [System dynamic management views and functions](../system-dynamic-management-objects/system-dynamic-management-objects.md)
 - [What is change data capture (CDC)?](about-change-data-capture-sql-server.md)
 - [Enable and disable change data capture](enable-and-disable-change-data-capture-sql-server.md)
 - [Administer and monitor change data capture](administer-and-monitor-change-data-capture-sql-server.md)

@@ -180,7 +180,7 @@ FROM sys.fn_xe_file_target_read_file(
 
 ## Related content
 
-- [Extended Events Dynamic Management Views](../system-dynamic-management-views/extended-events-dynamic-management-views.md)
+- [Extended Events Dynamic Management Views](../system-dynamic-management-objects/extended-events-dynamic-management-views.md)
 - [Extended Events Catalog Views (Transact-SQL)](../system-catalog-views/extended-events-catalog-views-transact-sql.md)
 - [Extended Events overview](../extended-events/extended-events.md)
 - [Extended Events targets](../extended-events/targets-for-extended-events-in-sql-server.md)

@@ -196,4 +196,3 @@ GO
 - [DROP SYMMETRIC KEY (Transact-SQL)](../statements/drop-symmetric-key-transact-sql.md)
 - [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
 - [Choose an encryption algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
-

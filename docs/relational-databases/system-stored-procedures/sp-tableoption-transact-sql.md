@@ -143,4 +143,3 @@ EXECUTE sp_tableoption 'Production.WorkOrderRouting', 'vardecimal storage format
 - [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-

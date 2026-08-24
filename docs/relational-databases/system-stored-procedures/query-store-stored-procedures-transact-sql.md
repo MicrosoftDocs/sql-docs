@@ -39,4 +39,3 @@ This section contains the following stored procedures used to configure the Quer
 
 - [Query Store catalog views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
-

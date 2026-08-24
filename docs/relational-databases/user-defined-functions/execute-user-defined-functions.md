@@ -58,4 +58,3 @@ Order Status: Shipped
 
 - [User-defined functions](user-defined-functions.md)
 - [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)
-

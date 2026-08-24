@@ -244,4 +244,3 @@ Compression occurs in the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] and th
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
 - [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
-

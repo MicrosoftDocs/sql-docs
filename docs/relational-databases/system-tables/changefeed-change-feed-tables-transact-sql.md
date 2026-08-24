@@ -50,5 +50,5 @@ The `changefeed.change_feed_tables` system table isn't used in [Fabric mirrored 
 - [sys.sp_help_change_feed (Transact-SQL)](../system-stored-procedures/sp-help-change-feed.md)
 - [changefeed.change_feed_table_groups (Transact-SQL)](changefeed-change-feed-table-groups-transact-sql.md)
 - [changefeed.change_feed_settings (Transact-SQL)](changefeed-change-feed-settings.md)
-- [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
+- [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-objects/sys-dm-change-feed-errors.md)
 - [Troubleshoot: Azure Synapse Link for SQL initial snapshot issues](/azure/synapse-analytics/synapse-link/troubleshoot/troubleshoot-sql-snapshot-issues)

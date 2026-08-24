@@ -108,4 +108,3 @@ CROSS APPLY sys.fn_stmt_sql_handle_from_sql_stmt(qt.query_sql_text, NULL) AS fn_
 - [sp_query_store_remove_query (Transact-SQL)](../system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
 - [Query Store catalog views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
-

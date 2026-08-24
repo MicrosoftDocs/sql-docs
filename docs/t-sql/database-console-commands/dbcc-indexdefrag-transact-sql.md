@@ -238,7 +238,7 @@ GO
 ## Related content
 
 - [DBCC (Transact-SQL)](dbcc-transact-sql.md)
-- [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
+- [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
 - [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
 - [ALTER INDEX (Transact-SQL)](../statements/alter-index-transact-sql.md)

@@ -188,4 +188,4 @@ GO
 
 ## Related content
 
-- [Dynamic management views and functions](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [System dynamic management views and functions](../system-dynamic-management-objects/system-dynamic-management-objects.md)

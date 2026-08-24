@@ -99,7 +99,7 @@ The exception to the functionality coverage is support for SQLCLR objects, which
 
 ## Related content
 
-- [Project-Oriented Offline Database Development](../../ssdt/project-oriented-offline-database-development.md)
+- [What are SQL database projects?](sql-database-projects.md)
 - [SQL Database Projects extension](../visual-studio-code-extensions/sql-database-projects/sql-database-projects-extension.md)
 - [SqlPackage](../sqlpackage/sqlpackage.md)
 - [Sample CI/CD pipelines for SQL projects](https://github.com/Azure-Samples/sql-projects-devops-samples)

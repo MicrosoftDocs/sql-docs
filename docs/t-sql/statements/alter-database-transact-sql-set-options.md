@@ -4733,7 +4733,7 @@ SET QUERY_STORE = ON
 - [sys.database_automatic_tuning_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
 - [sys.database_automatic_tuning_mode (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL) compatibility level](alter-database-transact-sql-compatibility-level.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+- [CREATE DATABASE](create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 - [Enable and Disable Change Tracking (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md)

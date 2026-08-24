@@ -62,4 +62,3 @@ Note the following from the previous query:
 ## Related content
 
 - [FOR XML support for various SQL Server data types](for-xml-support-for-various-sql-server-data-types.md)
-

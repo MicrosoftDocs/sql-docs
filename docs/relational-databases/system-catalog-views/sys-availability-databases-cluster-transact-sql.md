@@ -47,6 +47,6 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 - [sys.availability_groups (Transact-SQL)](sys-availability-groups-transact-sql.md)
 - [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)
-- [sys.dm_hadr_database_replica_states (Transact-SQL)](../system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)
-- [sys.dm_hadr_database_replica_cluster_states (Transact-SQL)](../system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)
+- [sys.dm_hadr_database_replica_states (Transact-SQL)](../system-dynamic-management-objects/sys-dm-hadr-database-replica-states-transact-sql.md)
+- [sys.dm_hadr_database_replica_cluster_states (Transact-SQL)](../system-dynamic-management-objects/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)
 - [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

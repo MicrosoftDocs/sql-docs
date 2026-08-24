@@ -49,4 +49,3 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 - [sys.external_file_formats (Transact-SQL)](sys-external-file-formats-transact-sql.md)
 - [sys.external_data_sources (Transact-SQL)](sys-external-data-sources-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
-

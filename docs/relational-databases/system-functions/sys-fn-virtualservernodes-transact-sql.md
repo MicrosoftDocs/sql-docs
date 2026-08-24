@@ -69,5 +69,5 @@ SELECT * FROM fn_virtualservernodes();
   
 ## Related content
 
-- [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)
+- [sys.dm_os_cluster_nodes (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-cluster-nodes-transact-sql.md)
 - [sys.fn_servershareddrives (Transact-SQL)](sys-fn-servershareddrives-transact-sql.md)

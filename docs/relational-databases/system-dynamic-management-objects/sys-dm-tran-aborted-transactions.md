@@ -60,4 +60,3 @@ Row versions created by unresolved, aborted transactions are removed by persiste
 - [Accelerated database recovery](../accelerated-database-recovery-concepts.md)
 - [Manage accelerated database recovery](../accelerated-database-recovery-management.md)
 - [Monitor and troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshoot.md)
-

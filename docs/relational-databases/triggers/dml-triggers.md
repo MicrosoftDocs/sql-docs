@@ -91,4 +91,3 @@ A common language runtime (CLR) trigger can be either an `AFTER` or `INSTEAD OF`
 - [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)
 - [DISABLE TRIGGER (Transact-SQL)](../../t-sql/statements/disable-trigger-transact-sql.md)
 - [Trigger Functions (Transact-SQL)](../../t-sql/functions/trigger-functions-transact-sql.md)
-

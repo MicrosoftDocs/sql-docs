@@ -63,4 +63,4 @@ If your independent hardware vendor (IHV) isn't performing the hardware install,
 ## Related content
 
 - [Monitor the appliance with the Admin Console - Analytics Platform System](monitor-the-appliance-by-using-the-admin-console.md)
-- [Monitor Appliance Health State (Analytics Platform System)](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md)
+- [sys.dm_pdw_component_health_status (Transact-SQL)](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-status-transact-sql.md)

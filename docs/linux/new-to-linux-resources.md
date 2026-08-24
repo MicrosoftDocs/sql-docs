@@ -60,7 +60,7 @@ Introduce yourself to the [frequently used commands](https://www.linux.org/threa
 ## Related content
 
 - [Editions and supported features of SQL Server 2022 on Linux](sql-server-linux-editions-and-components-2022.md)
-- [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md)
+- [Release notes for SQL Server on Linux](sql-server-linux-release-notes.md)
 - [SQL Server on Linux Frequently Asked Questions (FAQ)](sql-server-linux-faq.yml)
 - [SQL Server help and feedback](../sql-server/sql-server-get-help.md)
 - [Other Linux tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/)

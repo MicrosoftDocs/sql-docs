@@ -588,5 +588,5 @@ The vector index is automatically updated to reflect all changes made by the `ME
 - [Vector data type](../data-types/vector-data-type.md)
 - [VECTOR_SEARCH (Transact-SQL) (Preview)](../functions/vector-search-transact-sql.md)
 - [sys.vector_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-vector-indexes-transact-sql.md)
-- [sys.dm_db_vector_indexes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-vector-indexes-transact-sql.md)
+- [sys.dm_db_vector_indexes (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-vector-indexes-transact-sql.md)
 - [Azure SQL Database Vector Search Samples](https://github.com/Azure-Samples/azure-sql-db-vector-search)

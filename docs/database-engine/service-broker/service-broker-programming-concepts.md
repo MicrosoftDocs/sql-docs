@@ -28,4 +28,4 @@ Service Broker introduces concepts that are unique to developing a Service Broke
 
 ## Related content
 
-- [Overview (Service Broker)](overview.md)
+- [Service Broker](../configure-windows/sql-server-service-broker.md)

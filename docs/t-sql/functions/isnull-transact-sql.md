@@ -214,4 +214,3 @@ WHERE Weight IS NULL;
 - [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [WHERE (Transact-SQL)](../queries/where-transact-sql.md)
 - [COALESCE (Transact-SQL)](../language-elements/coalesce-transact-sql.md)
-

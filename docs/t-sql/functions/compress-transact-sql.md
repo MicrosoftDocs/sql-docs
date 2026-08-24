@@ -110,4 +110,3 @@ WHERE datemodified < @startOfYear;
 ## Related content
 
 - [DECOMPRESS (Transact-SQL)](decompress-transact-sql.md)
-

@@ -58,4 +58,3 @@ The `RPC:Completed` event class indicates that a remote procedure call has been 
 ## Related content
 
 - [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
-

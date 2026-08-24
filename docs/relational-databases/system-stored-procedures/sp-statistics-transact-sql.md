@@ -126,4 +126,3 @@ EXECUTE sp_statistics DimEmployee;
 - [Statistics for Memory-Optimized Tables](../in-memory-oltp/statistics-for-memory-optimized-tables.md)
 - [Statistics](../statistics/statistics.md)
 - [Update statistics](../statistics/update-statistics.md)
-

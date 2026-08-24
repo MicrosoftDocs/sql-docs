@@ -78,7 +78,7 @@ In addition, bulk import of data from a data file into a table has the following
 ## Related content
 
 - [How to import data from Excel to SQL Server](https://support.microsoft.com/kb/321686)
-- [bcp Utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 - [Use character format to import or export data (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)

@@ -95,5 +95,5 @@ The setting takes effect immediately without restarting the server.
 - [Server configuration options](server-configuration-options-sql-server.md)
 - [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Server configuration: index create memory](configure-the-index-create-memory-server-configuration-option.md)
-- [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)
-- [sys.dm_exec_query_memory_grants (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md)
+- [sys.dm_exec_query_memory_grants (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md)

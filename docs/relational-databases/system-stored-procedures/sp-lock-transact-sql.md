@@ -111,11 +111,11 @@ GO
 
 ## Related content
 
-- [sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)
+- [sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md)
 - [DB_NAME (Transact-SQL)](../../t-sql/functions/db-name-transact-sql.md)
 - [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 - [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)
 - [sys.sp_who (Transact-SQL)](sp-who-transact-sql.md)
 - [sys.database_files (Transact-SQL)](../system-catalog-views/sys-database-files-transact-sql.md)
-- [sys.dm_os_tasks (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)
-- [sys.dm_os_threads (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)
+- [sys.dm_os_tasks (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-tasks-transact-sql.md)
+- [sys.dm_os_threads (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-threads-transact-sql.md)

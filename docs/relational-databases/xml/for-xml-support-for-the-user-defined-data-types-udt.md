@@ -25,4 +25,3 @@ To use `FOR XML` with CLR user-defined data types, make sure that the data type 
 ## Related content
 
 - [FOR XML support for various SQL Server data types](for-xml-support-for-various-sql-server-data-types.md)
-

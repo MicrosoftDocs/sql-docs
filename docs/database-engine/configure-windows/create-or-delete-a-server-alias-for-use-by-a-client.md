@@ -53,4 +53,4 @@ The connection strings described in SQL Server Configuration Manager Help can be
 
 ## Related content
 
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager.md)

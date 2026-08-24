@@ -277,4 +277,3 @@ DROP LOGIN Alice;
 
 - [sys.crypt_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
 - [DROP SIGNATURE (Transact-SQL)](drop-signature-transact-sql.md)
-

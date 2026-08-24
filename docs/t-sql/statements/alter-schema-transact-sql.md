@@ -168,4 +168,3 @@ GO
 - [CREATE SCHEMA (Transact-SQL)](create-schema-transact-sql.md)
 - [DROP SCHEMA (Transact-SQL)](drop-schema-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
-

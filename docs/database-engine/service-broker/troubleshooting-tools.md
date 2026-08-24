@@ -93,5 +93,5 @@ For a list of Service Broker dynamic management views, see [Service Broker Relat
 ## Related content
 
 - [Errors and events reference (Database Engine)](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
-- [Service Broker Related Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)
+- [Service Broker related dynamic management views (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/service-broker-related-dynamic-management-views-transact-sql.md)
 - [Service Broker Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)

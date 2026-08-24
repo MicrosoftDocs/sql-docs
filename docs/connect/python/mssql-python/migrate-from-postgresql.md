@@ -780,4 +780,4 @@ For local development and CI, see [Container and local development](container-lo
 - [Data type mappings for mssql-python](data-type-mappings.md)
 - [Transaction management with mssql-python](transaction-management.md)
 - [Container and local development with mssql-python](container-local-development.md)
-- [Migrate from SQLite](migrate-from-sqlite.md)
+- [Migrate from SQLite to Microsoft SQL with mssql-python](migrate-from-sql-lite.md)

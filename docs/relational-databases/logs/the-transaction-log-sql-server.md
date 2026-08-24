@@ -192,5 +192,5 @@ The following operations, which are fully logged under the full recovery model, 
 - [View or change the properties of a database](../databases/view-or-change-the-properties-of-a-database.md)
 - [Recovery models (SQL Server)](../backup-restore/recovery-models-sql-server.md)
 - [Transaction log backups (SQL Server)](../backup-restore/transaction-log-backups-sql-server.md)
-- [sys.dm_db_log_info (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)
-- [sys.dm_db_log_space_usage (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)
+- [sys.dm_db_log_info (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-log-info-transact-sql.md)
+- [sys.dm_db_log_space_usage (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-log-space-usage-transact-sql.md)

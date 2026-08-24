@@ -147,4 +147,4 @@ For known issues and errors associated with change data capture, review [Known i
 - [Track data changes (SQL Server)](track-data-changes-sql-server.md)
 - [Enable and disable change data capture](enable-and-disable-change-data-capture-sql-server.md)
 - [Administer and monitor change data capture](administer-and-monitor-change-data-capture-sql-server.md)
-- [Temporal Tables](../tables/temporal-tables.md)
+- [Temporal tables](../tables/temporal/overview.md)

@@ -125,4 +125,3 @@ WHERE qsr.replica_name = 'yourSecondaryReplicaName';
 - [sp_query_store_reset_exec_stats (Transact-SQL)](sp-query-store-reset-exec-stats-transact-sql.md)
 - [sp_query_store_flush_db (Transact-SQL)](sp-query-store-flush-db-transact-sql.md)
 - [Best Practice with the Query Store](../performance/best-practice-with-the-query-store.md#CheckForced)
-

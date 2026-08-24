@@ -46,6 +46,6 @@ The number of values in input and output buffers can't exceed `MAX_INT (2^31-1)`
 ## Related content
 
 - [Install SQL Server Java Language Extension on Windows](install/windows-java.md)
-- [Install SQL Server Java Language Extension on Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
+- [Install SQL Server Java Language Extension on Linux](../linux/install-upgrade/setup-language-extensions-java.md)
 - [Microsoft Extensibility SDK for Java for SQL Server](how-to/extensibility-sdk-java-sql-server.md)
 - [Security architecture for the extensibility framework in SQL Server Machine Learning Services](../machine-learning/concepts/security.md)

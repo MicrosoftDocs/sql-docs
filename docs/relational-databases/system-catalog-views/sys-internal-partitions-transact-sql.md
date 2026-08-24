@@ -67,4 +67,3 @@ WHERE p.object_id = OBJECT_ID('<table name>');
 - [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [Querying the SQL Server system catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
-

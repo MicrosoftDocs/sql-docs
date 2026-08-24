@@ -94,6 +94,6 @@ For information about the [!INCLUDE [tsql](../../includes/tsql-md.md)] syntax fo
 - [Manage Metadata When Making a Database Available on Another Server](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)
 - [The database mirroring endpoint (SQL Server)](the-database-mirroring-endpoint-sql-server.md)
 - [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)
-- [sys.dm_db_mirroring_connections (Transact-SQL)](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)
+- [sys.dm_db_mirroring_connections (Database mirroring)](../../relational-databases/system-dynamic-management-objects/database-mirroring-sys-dm-db-mirroring-connections.md)
 - [Troubleshoot Database Mirroring Configuration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)
 - [Troubleshoot Always On Availability Groups Configuration (SQL Server)](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)

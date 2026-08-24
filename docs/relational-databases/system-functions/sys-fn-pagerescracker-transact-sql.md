@@ -67,6 +67,6 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'DETAILED') AS pa
   
 ## Related content
 
-- [sys.dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)
+- [sys.dm_db_page_info (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-page-info-transact-sql.md)
 - [sys.sysprocesses (Transact-SQL)](../system-compatibility-views/sys-sysprocesses-transact-sql.md)
-- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_requests (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md)

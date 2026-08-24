@@ -111,4 +111,3 @@ Only a member of the **sysadmin** server role or **db_owner** database role can 
 - [Change Tracking Functions (Transact-SQL)](../system-functions/change-tracking-functions-transact-sql.md)
 - [Change Tracking tables (Transact-SQL)](../system-tables/change-tracking-tables-transact-sql.md)
 - [Change Tracking stored procedures (Transact-SQL)](change-tracking-stored-procedures-transact-sql.md)
-

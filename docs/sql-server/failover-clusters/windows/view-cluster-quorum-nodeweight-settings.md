@@ -104,5 +104,5 @@ cluster.exe Cluster001 node /status /properties
 
 - [WSFC Quorum Modes and Voting Configuration (SQL Server)](wsfc-quorum-modes-and-voting-configuration-sql-server.md)
 - [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)
-- [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)
+- [sys.dm_hadr_cluster_members (Transact-SQL)](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-cluster-members-transact-sql.md)
 - [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)

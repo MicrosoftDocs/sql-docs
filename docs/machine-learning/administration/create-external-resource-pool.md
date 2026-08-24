@@ -189,5 +189,5 @@ Check the server memory configuration and CPU for each of the workload groups. V
 ## Related content
 
 - [Resource governor](../../relational-databases/resource-governor/resource-governor.md)
-- [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
+- [Resource governor related dynamic management views (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/resource-governor-related-dynamic-management-views-transact-sql.md)
 - [Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services](resource-governor.md)

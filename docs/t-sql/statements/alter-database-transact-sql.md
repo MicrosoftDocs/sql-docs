@@ -740,7 +740,7 @@ ALTER DATABASE [mySampleDatabase] PERFORM_CUTOVER;
 
 ## Related content
 
-- [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+- [CREATE DATABASE](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
 - [DATABASEPROPERTYEX (Transact-SQL)](../functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md)
@@ -905,7 +905,7 @@ ALTER DATABASE WideWorldImporters
 
 ## Related content
 
-- [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+- [CREATE DATABASE](create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 - [DATABASEPROPERTYEX (Transact-SQL)](../functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md)
@@ -1110,7 +1110,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## Related content
 
-- [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [CREATE DATABASE](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [T-SQL language elements for dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
@@ -1358,7 +1358,7 @@ ALTER DATABASE
 
 ## Related content
 
-- [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+- [CREATE DATABASE](create-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 
 ::: moniker-end

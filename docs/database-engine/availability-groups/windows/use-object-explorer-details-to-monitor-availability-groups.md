@@ -125,7 +125,7 @@ You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../include
   
 ## Related content
 
-- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)
+- [sys.dm_os_performance_counters (Transact-SQL)](../../../relational-databases/system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md)
 - [Use the Always On Availability Group dashboard (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)
 - [View Availability Group Properties (SQL Server)](view-availability-group-properties-sql-server.md)
 - [View Availability Replica Properties (SQL Server)](view-availability-replica-properties-sql-server.md)

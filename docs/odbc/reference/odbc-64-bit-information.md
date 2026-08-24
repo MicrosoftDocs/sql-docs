@@ -490,4 +490,4 @@ typedef SQLULEN BOOKMARK;
   
 ## Related content
 
-- [Introduction to ODBC](../../odbc/reference/introduction-to-odbc.md)
+- [ODBC Overview](odbc-overview.md)

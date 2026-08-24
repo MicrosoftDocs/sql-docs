@@ -94,4 +94,3 @@ EXECUTE sp_table_privileges @table_name = 'Contact%';
 
 - [Catalog stored procedures (Transact-SQL)](catalog-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

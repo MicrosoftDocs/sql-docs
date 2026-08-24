@@ -112,4 +112,3 @@ Server Name
 - [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
 - [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
-

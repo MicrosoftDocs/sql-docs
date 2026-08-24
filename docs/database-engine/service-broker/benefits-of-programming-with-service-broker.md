@@ -35,5 +35,5 @@ Some of the benefits of programming with Service Broker are:
 ## Related content
 
 - [Create Service Broker objects](creating-service-broker-objects.md)
-- [Overview (Service Broker)](overview.md)
+- [Service Broker](../configure-windows/sql-server-service-broker.md)
 - [Create Service Broker applications](creating-service-broker-applications.md)

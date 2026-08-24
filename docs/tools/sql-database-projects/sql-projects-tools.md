@@ -107,12 +107,12 @@ Developers have shared their projects utilizing extensibility points around SQL 
 
 ## Related content
 
-- [Project-Oriented Offline Database Development](../../ssdt/project-oriented-offline-database-development.md)
+- [What are SQL database projects?](sql-database-projects.md)
 - [SQL Database Projects extension](../visual-studio-code-extensions/sql-database-projects/sql-database-projects-extension.md)
 - [SqlPackage](../sqlpackage/sqlpackage.md)
 - [GitHub sql-action](https://github.com/azure/sql-action)
 - [Azure DevOps SQL deployments](/azure/devops/pipelines/targets/azure-sqldb)
-- [Data-tier applications (DAC)](../../relational-databases/data-tier-applications/data-tier-applications.md)
+- [Data-tier applications (DAC) overview](concepts/data-tier-applications/overview.md)
 - [DacFx feedback repository](https://github.com/microsoft/dacfx)
 - [Get started with SQL database projects](get-started.md)
 - [Tutorial: Create and deploy a SQL project](tutorials/create-deploy-sql-project.md)

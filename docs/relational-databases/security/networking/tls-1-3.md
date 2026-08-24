@@ -116,4 +116,3 @@ SQL Server 2025 introduces secure-by-default configurations for several features
 - [TDS 8.0](tds-8.md)
 - [Connect to SQL Server with strict encryption](connect-with-strict-encryption.md)
 - [Configure TLS 1.3](connect-with-tls-1-3.md)
-

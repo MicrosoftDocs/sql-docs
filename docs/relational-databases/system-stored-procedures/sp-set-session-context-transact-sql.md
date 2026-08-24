@@ -122,4 +122,3 @@ The following example shows how to set and retrieve a session context key named 
 - [Row-level security](../security/row-level-security.md)
 - [CONTEXT_INFO (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)
 - [SET CONTEXT_INFO (Transact-SQL)](../../t-sql/statements/set-context-info-transact-sql.md)
-

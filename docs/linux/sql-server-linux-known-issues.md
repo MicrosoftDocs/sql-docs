@@ -277,6 +277,6 @@ If you want to use a Linux host operating system, you can work around the issue 
 
 ## Related content
 
-- [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md)
+- [Release notes for SQL Server on Linux](sql-server-linux-release-notes.md)
 - [Editions and supported features of SQL Server 2022 on Linux](sql-server-linux-editions-and-components-2022.md)
 - [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)

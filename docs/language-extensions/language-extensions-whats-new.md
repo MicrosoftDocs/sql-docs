@@ -72,4 +72,4 @@ The new capabilities for [SQL Server Language Extensions](language-extensions-ov
 ## Related content
 
 - [Install SQL Server Java Language Extension on Windows](install/windows-java.md)
-- [Install SQL Server Java Language Extension on Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
+- [Install SQL Server Java Language Extension on Linux](../linux/install-upgrade/setup-language-extensions-java.md)

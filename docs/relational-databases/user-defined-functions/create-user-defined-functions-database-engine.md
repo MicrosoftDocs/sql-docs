@@ -257,4 +257,3 @@ ANSI_WARNINGS isn't honored when you pass parameters in a stored procedure, user
 - [ALTER FUNCTION (Transact-SQL)](../../t-sql/statements/alter-function-transact-sql.md)
 - [DROP FUNCTION (Transact-SQL)](../../t-sql/statements/drop-function-transact-sql.md)
 - [DROP PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/drop-partition-function-transact-sql.md)
-

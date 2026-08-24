@@ -153,6 +153,6 @@ SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';
 
 - [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
 - [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)
-- [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)
+- [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md)
 - [OBJECT_DEFINITION (Transact-SQL)](object-definition-transact-sql.md)
 - [OBJECT_NAME (Transact-SQL)](object-name-transact-sql.md)

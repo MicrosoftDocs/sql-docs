@@ -195,5 +195,5 @@ ALTER RESOURCE GOVERNOR WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
 - [CREATE WORKLOAD GROUP (Transact-SQL)](create-workload-group-transact-sql.md)
 - [ALTER WORKLOAD GROUP (Transact-SQL)](alter-workload-group-transact-sql.md)
 - [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
-- [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)
-- [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
+- [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md)
+- [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-resource-pools-transact-sql.md)

@@ -353,5 +353,5 @@ For scoring, you can also use the native [PREDICT](../../t-sql/queries/predict-t
 - [Server configuration: external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 - [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)
 - [SQL Server, External Scripts object](../performance-monitor/sql-server-external-scripts-object.md)
-- [sys.dm_external_script_requests](../system-dynamic-management-views/sys-dm-external-script-requests.md)
-- [sys.dm_external_script_execution_stats](../system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
+- [sys.dm_external_script_requests](../system-dynamic-management-objects/sys-dm-external-script-requests.md)
+- [sys.dm_external_script_execution_stats](../system-dynamic-management-objects/sys-dm-external-script-execution-stats.md)

@@ -124,6 +124,6 @@ GO
 - [DROP SEARCH PROPERTY LIST (Transact-SQL)](drop-search-property-list-transact-sql.md)
 - [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)
 - [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)
-- [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)
+- [sys.dm_fts_index_keywords_by_property (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-fts-index-keywords-by-property-transact-sql.md)
 - [Search document properties with search property lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)
 - [Find property set GUIDs and property integer IDs for search properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)

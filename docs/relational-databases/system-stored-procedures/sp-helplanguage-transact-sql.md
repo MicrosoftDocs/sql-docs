@@ -89,4 +89,3 @@ EXECUTE sp_helplanguage;
 - [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)
 - [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

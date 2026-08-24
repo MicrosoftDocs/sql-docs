@@ -83,4 +83,4 @@ The following lists reflect the monitoring data that the Azure portal collects f
 
 - [Use activity logs with SQL Server enabled by Azure Arc](activity-logs.md)
 - [Data collection and reporting for SQL Server enabled by Azure Arc](data-collection.md)
-- [System dynamic management views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [System dynamic management views and functions](../../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md)

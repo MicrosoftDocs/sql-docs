@@ -57,4 +57,4 @@ After you disable Always On Availability Groups, remove any local availability r
 
 - [Getting Started with Always On Availability Groups](../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)
 - [Business continuity and database recovery - SQL Server](../../database-engine/sql-server-business-continuity-dr.md)
-- [Availability groups for SQL Server on Linux](../../linux/sql-server-linux-availability-group-overview.md)
+- [Availability groups for SQL Server on Linux](../../linux/business-continuity/availability-groups/overview.md)

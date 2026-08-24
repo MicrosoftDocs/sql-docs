@@ -26,4 +26,4 @@ The following system stored procedures are used for Microsoft Distributed Transa
 
 ## Related content
 
-- [sys.dm_tran_distributed_transaction_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md)
+- [sys.dm_tran_distributed_transaction_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-tran-distributed-transaction-stats.md)

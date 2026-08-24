@@ -99,7 +99,7 @@ GO
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)](sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)
-- [sys.dm_xtp_system_memory_consumers (Transact-SQL)](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)
+- [sys.dm_xtp_system_memory_consumers (Transact-SQL)](../system-dynamic-management-objects/sys-dm-xtp-system-memory-consumers-transact-sql.md)
 - [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Memory-optimized TempDB metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata)
 - [Memory-optimized tempdb metadata (HkTempDB) out of memory errors](/troubleshoot/sql/admin/memory-optimized-tempdb-out-of-memory)

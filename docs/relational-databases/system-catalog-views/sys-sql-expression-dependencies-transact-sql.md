@@ -187,5 +187,5 @@ DROP DATABASE db1;
 
 ## Related content
 
-- [sys.dm_sql_referenced_entities (Transact-SQL)](../system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
-- [sys.dm_sql_referencing_entities (Transact-SQL)](../system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
+- [sys.dm_sql_referenced_entities (Transact-SQL)](../system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md)
+- [sys.dm_sql_referencing_entities (Transact-SQL)](../system-dynamic-management-objects/sys-dm-sql-referencing-entities-transact-sql.md)

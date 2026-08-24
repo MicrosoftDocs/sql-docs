@@ -111,6 +111,6 @@ After the statements in the preceding Transact-SQL script finish, the **Results*
 
 - [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)
 - [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)
-- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)
-- [sys.dm_xe_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md)
+- [sys.dm_xe_session_targets (Transact-SQL)](../system-dynamic-management-objects/sys-dm-xe-session-targets-transact-sql.md)
+- [sys.dm_xe_sessions (Transact-SQL)](../system-dynamic-management-objects/sys-dm-xe-sessions-transact-sql.md)
 - [sys.server_event_sessions (Transact-SQL)](../system-catalog-views/sys-server-event-sessions-transact-sql.md)

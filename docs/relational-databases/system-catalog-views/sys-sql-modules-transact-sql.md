@@ -82,4 +82,3 @@ ORDER BY o.[type], ss.[name], o.[name];
 - [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
 - [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
-

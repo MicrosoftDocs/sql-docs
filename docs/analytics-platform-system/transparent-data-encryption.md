@@ -269,7 +269,7 @@ The performance impact of TDE varies with the type of data you have, how it is s
 
 ## Related content
 
-- [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
+- [ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 - [CREATE MASTER KEY (Transact-SQL)](../t-sql/statements/create-master-key-transact-sql.md)
 - [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../t-sql/statements/create-database-encryption-key-transact-sql.md)
 - [BACKUP CERTIFICATE (Transact-SQL)](../t-sql/statements/backup-certificate-transact-sql.md)
@@ -277,4 +277,4 @@ The performance impact of TDE varies with the type of data you have, how it is s
 - [sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)
 - [sp_pdw_log_user_data_mask (Azure Synapse Analytics)](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)
 - [sys.certificates (Transact-SQL)](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
-- [sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)
+- [sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)

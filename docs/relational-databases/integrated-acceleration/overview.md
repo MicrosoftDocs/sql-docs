@@ -46,7 +46,7 @@ Integrated acceleration and offloading are not available on Linux or containers.
 ## Related content
 
 - [Server configuration: hardware offload enabled](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
-- [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md)
+- [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-objects/sys-dm-server-accelerator-status-transact-sql.md)
 - [Configure integrated acceleration and offloading](use-integrated-acceleration-and-offloading.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
 - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

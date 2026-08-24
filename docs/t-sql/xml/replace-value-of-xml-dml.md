@@ -228,4 +228,3 @@ This example uses `cast` when replacing `LotSize` value. `cast` is required when
 - [Create instances of XML data](../../relational-databases/xml/create-instances-of-xml-data.md)
 - [xml Data Type Methods](xml-data-type-methods.md)
 - [XML Data Modification Language (XML DML)](xml-data-modification-language-xml-dml.md)
-

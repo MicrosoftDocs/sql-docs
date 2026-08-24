@@ -330,5 +330,5 @@ For more information, please see [Always On Availability Group latency reports](
   
 ## Related content
 
-- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)
+- [sys.dm_os_performance_counters (Transact-SQL)](../../../relational-databases/system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md)
 - [Tools to monitor Always On availability groups](monitoring-of-availability-groups-sql-server.md)

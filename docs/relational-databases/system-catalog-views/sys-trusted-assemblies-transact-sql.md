@@ -50,4 +50,4 @@ Use [sys.sp_add_trusted_assembly](../system-stored-procedures/sys-sp-add-trusted
 - [sys.sp_drop_trusted_assembly (Transact-SQL)](../system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
 - [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)
 - [sys.assemblies (Transact-SQL)](sys-assemblies-transact-sql.md)
-- [sys.dm_clr_loaded_assemblies](../system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)
+- [sys.dm_clr_loaded_assemblies (Transact-SQL)](../system-dynamic-management-objects/sys-dm-clr-loaded-assemblies-transact-sql.md)

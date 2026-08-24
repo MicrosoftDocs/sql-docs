@@ -245,4 +245,4 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
 - [CREATE QUEUE (Transact-SQL)](create-queue-transact-sql.md)
 - [DROP QUEUE (Transact-SQL)](drop-queue-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
-- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
+- [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md)

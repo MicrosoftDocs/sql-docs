@@ -189,4 +189,3 @@ abc
 - [RTRIM (Transact-SQL)](rtrim-transact-sql.md)
 - [STRING_SPLIT (Transact-SQL)](string-split-transact-sql.md)
 - [SUBSTRING (Transact-SQL)](substring-transact-sql.md)
-

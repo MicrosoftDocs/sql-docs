@@ -179,5 +179,5 @@ EXECUTE sys.sp_change_feed_configure_parameters
 - [sys.sp_help_change_feed_table (Transact-SQL)](sp-help-change-feed-table.md)
 - [sys.sp_help_change_feed_table_groups (Transact-SQL)](sp-help-change-feed-table-groups.md)
 - [sys.sp_help_change_feed_settings (Transact-SQL)](sp-help-change-feed-settings.md)
-- [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
-- [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
+- [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-objects/sys-dm-change-feed-log-scan-sessions.md)
+- [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-objects/sys-dm-change-feed-errors.md)

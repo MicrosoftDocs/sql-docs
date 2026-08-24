@@ -519,14 +519,13 @@ For more information on obtaining the Object ID of a service principal, see [ser
 
 ## Related content
 
-- [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md?view=azuresql-db&preserve-view=true)
-- [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md?view=azuresql-db&preserve-view=true)
+- [Get started with Database Engine permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md?view=azuresql-db&preserve-view=true)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md?view=azuresql-db&preserve-view=true)
 - [Password policy](../../relational-databases/security/password-policy.md)
-- [ALTER LOGIN](alter-login-transact-sql.md?view=azuresql-db&preserve-view=true)
-- [DROP LOGIN](drop-login-transact-sql.md?view=azuresql-db&preserve-view=true)
-- [EVENTDATA](../functions/eventdata-transact-sql.md?view=azuresql-db&preserve-view=true)
-- [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md?view=azuresql-db&preserve-view=true)
-
+- [ALTER LOGIN (Transact-SQL)](alter-login-transact-sql.md?view=azuresql-db&preserve-view=true)
+- [DROP LOGIN (Transact-SQL)](drop-login-transact-sql.md?view=azuresql-db&preserve-view=true)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md?view=azuresql-db&preserve-view=true)
+- [Create a login](../../relational-databases/security/authentication-access/create-a-login.md?view=azuresql-db&preserve-view=true)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current"

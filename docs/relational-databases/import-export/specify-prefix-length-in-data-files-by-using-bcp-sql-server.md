@@ -96,7 +96,7 @@ When data is bulk imported, the prefix length is the value that was specified wh
 
 ## Related content
 
-- [bcp utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 - [Specify field length by using bcp (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)
 - [Specify field and row terminators (SQL Server)](specify-field-and-row-terminators-sql-server.md)

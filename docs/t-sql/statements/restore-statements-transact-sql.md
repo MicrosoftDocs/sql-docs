@@ -1102,6 +1102,5 @@ You can use the header information to check the contents of a backup, or to make
 
 ## Related content
 
-- [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-
+- [BACKUP (Transact-SQL)](backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 ::: moniker-end

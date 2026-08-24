@@ -272,5 +272,5 @@ GO
 - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
 - [RESTORE Statements - LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)
 - [sys.backup_devices (Transact-SQL)](../system-catalog-views/sys-backup-devices-transact-sql.md)
-- [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)
+- [sys.dm_io_backup_tapes (Transact-SQL)](../system-dynamic-management-objects/sys-dm-io-backup-tapes-transact-sql.md)
 - [Mirrored Backup Media Sets (SQL Server)](mirrored-backup-media-sets-sql-server.md)

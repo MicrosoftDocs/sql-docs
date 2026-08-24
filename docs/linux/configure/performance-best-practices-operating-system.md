@@ -483,6 +483,6 @@ For memory configuration options including `mssql-conf` memory limits, cgroup se
 ## Related content
 
 - [Performance best practices: SQL Server memory on Linux](performance-best-practices-sql-server-memory.md)
-- [Linux related dynamic management views and functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/linux-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Linux related dynamic management views and functions (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/linux-related-dynamic-management-views-and-functions-transact-sql.md)
 - [Walkthrough for the performance features of SQL Server on Linux](../sql-server-linux-performance-get-started.md)
 - [What is SQL Server on Linux?](../sql-server-linux-overview.md)

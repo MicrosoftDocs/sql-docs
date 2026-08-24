@@ -1161,10 +1161,9 @@ SELECT COUNT (*) FROM SalesOrdersExternalPartitioned;
 
 ## Related content
 
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
-- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
-- [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
-- [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
-- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
-
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
+- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](create-external-file-format-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
+- [CREATE EXTERNAL TABLE (Transact-SQL)](create-external-table-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
+- [DROP TABLE (Transact-SQL)](drop-table-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md?version=azuresqldb-mi-current&preserve-view=true)
 ::: moniker-end

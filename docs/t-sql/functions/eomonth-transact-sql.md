@@ -126,4 +126,3 @@ Last Month
 - [What are the SQL database functions?](functions.md)
 - [SYSDATETIME (Transact-SQL)](sysdatetime-transact-sql.md)
 - [SYSDATETIMEOFFSET (Transact-SQL)](sysdatetimeoffset-transact-sql.md)
-

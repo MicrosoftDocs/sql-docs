@@ -483,5 +483,5 @@ WHERE EXISTS (SELECT 1
 - [DROP EVENT SESSION (Transact-SQL)](drop-event-session-transact-sql.md)
 - [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))
 - [sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)
-- [sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)
-- [sys.dm_xe_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)
+- [sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-xe-objects-transact-sql.md)
+- [sys.dm_xe_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-xe-object-columns-transact-sql.md)

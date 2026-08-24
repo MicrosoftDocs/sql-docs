@@ -58,5 +58,4 @@ Requires **db_owner** permissions.
 
 ## Related content
 
-- [Memory-optimized system-versioned temporal table performance](../tables/memory-optimized-system-versioned-temporal-tables-performance.md)
-
+- [Memory-optimized system-versioned temporal table performance](../tables/temporal/memory-optimized-performance.md)

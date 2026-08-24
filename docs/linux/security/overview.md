@@ -90,7 +90,7 @@ For common security best practices on Windows and Linux, refer to [SQL Server se
 
 - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux deployments aren't FIPS compliant.
 
-## Secure SQL Server on Linux Container Deployments
+## Secure SQL Server on Linux container deployments
 
 For information about securing [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers, see [Secure SQL Server Linux containers](../containers/security.md).
 

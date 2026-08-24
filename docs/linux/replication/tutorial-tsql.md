@@ -12,7 +12,7 @@ ms.custom:
   - linux-related-content
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
-# Configure Replication with T-SQL
+# Configure replication with T-SQL
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 

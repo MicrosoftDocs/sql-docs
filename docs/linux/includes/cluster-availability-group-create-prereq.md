@@ -79,7 +79,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 sudo systemctl restart mssql-server
 ```
 
-## Enable an AlwaysOn_health Event session
+## Enable an AlwaysOn_health event session
 
 You can optionally enable Extended Events (XE) to help with root-cause diagnosis when you troubleshoot an availability group. Run the following command on each instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
 

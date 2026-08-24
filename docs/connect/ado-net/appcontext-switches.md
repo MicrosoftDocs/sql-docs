@@ -260,6 +260,6 @@ By default, SqlClient sends a scale of 7 when you explicitly set the scale to 0 
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.LegacyVarTimeZeroScaleBehaviour", false);
 ```
 
-## See also
+## Related content
 
-[AppContext Class](/dotnet/api/system.appcontext?view=netcore-3.1&preserve-view=true)
+- [AppContext Class](/dotnet/api/system.appcontext?view=netcore-3.1&preserve-view=true)

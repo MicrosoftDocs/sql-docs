@@ -69,4 +69,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Validate Data at the Subscriber](../../../relational-databases/replication/validate-data-at-the-subscriber.md)
+- [Validate Replicated Data](../validate-data-at-the-subscriber.md)

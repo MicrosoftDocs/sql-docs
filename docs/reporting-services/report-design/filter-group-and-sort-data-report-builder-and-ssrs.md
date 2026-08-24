@@ -217,8 +217,8 @@ You add interactive sort buttons to a text box in a tablix data region cell. By 
 
 ## Related content
 
-- [Group Expression Examples (Report Builder and SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)
-- [Filter Equation Examples (Report Builder and SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)
-- [Understand groups in a paginated report (Report Builder)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)
-- [Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)
-- [Report and Group Variables Collections References (Report Builder and SSRS)](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)
+- [Group expression examples in paginated reports (Report Builder)](group-expression-examples-report-builder-and-ssrs.md)
+- [Filter equation examples in a paginated report (Report Builder)](filter-equation-examples-report-builder-and-ssrs.md)
+- [Groups in a Report Builder paginated report](understanding-groups-report-builder-and-ssrs.md)
+- [Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)](expression-scope-for-totals-aggregates-and-built-in-collections.md)
+- [Report and group variables references in a paginated report (Report Builder)](built-in-collections-report-and-group-variables-references-report-builder.md)

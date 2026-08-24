@@ -155,7 +155,6 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## See Also  
- [XQuery Expressions](../xquery/xquery-expressions.md)  
-  
-  
+## Related content
+
+- [XQuery Expressions](xquery-expressions.md)

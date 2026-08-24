@@ -137,10 +137,8 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## See Also  
- [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md)   
- [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
-  
-  
+## Related content
 
+- [Set or change the server collation](set-or-change-the-server-collation.md)
+- [Set or change the database collation](set-or-change-the-database-collation.md)
+- [Collation and Unicode support](collation-and-unicode-support.md)

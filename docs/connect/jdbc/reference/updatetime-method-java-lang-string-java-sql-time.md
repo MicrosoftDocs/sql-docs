@@ -40,9 +40,8 @@ public void updateTime(java.lang.String columnName,
 ## Remarks  
  This updateTime method is specified by the updateTime method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateTime Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateTime Method (SQLServerResultSet)](updatetime-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

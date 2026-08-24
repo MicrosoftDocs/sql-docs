@@ -36,6 +36,8 @@ modify_time|**datetime**|Time the workload group was last modified. Is not nulla
 
 Requires VIEW SERVER STATE permission.
 
-## Next steps
+## Related content
 
- For a list of all the catalog views for Azure Synapse Analytics and Parallel Data Warehouse, see [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload group, see [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md). For more information on workload classification, see [Workload Isolation](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)
+- [Workload Isolation](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)

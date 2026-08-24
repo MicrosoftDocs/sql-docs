@@ -60,5 +60,4 @@ You can add a background image to a paginated report item such as a rectangle, t
   
 ## Related content
 
-- [Images &#40;Report Builder&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
-- [Image Properties dialog, General &#40;Report Builder&#41;](./images-report-builder-and-ssrs.md)
+- [Images in paginated reports (Report Builder)](images-report-builder-and-ssrs.md)

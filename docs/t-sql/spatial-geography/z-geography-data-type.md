@@ -50,9 +50,8 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.Z;  
 ```  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40;geography Data Type&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
- [AsTextZM &#40;geography Data Type&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [M (geography Data Type)](m-geography-data-type.md)
+- [AsTextZM (geography Data Type)](astextzm-geography-data-type.md)

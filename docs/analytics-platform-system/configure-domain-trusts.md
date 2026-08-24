@@ -130,6 +130,6 @@ Use this procedure to validate a trust.
 
    ![Screenshot that shows the Active Directory Domains Services dialog box which verifies that the trust has been validated.](./media/configure-domain-trusts/ad-domain-services.png "SQL_Server_PDW_ad_domain_trust")
 
-## Next steps
+## Related content
 
-[Appliance management tasks for Analytics Platform System](appliance-management-tasks.md)
+- [Appliance management tasks for Analytics Platform System](appliance-management-tasks.md)

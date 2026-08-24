@@ -38,8 +38,8 @@ ms.custom:
 
 ## Related content
 
-- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
-- [Add a Chart to a Report](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)
-- [Troubleshoot Charts](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
+- [Add a chart to a paginated report (Report Builder)](add-a-chart-to-a-report-report-builder-and-ssrs.md)
+- [Troubleshoot charts in a paginated report (Report Builder)](troubleshoot-charts-report-builder-and-ssrs.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

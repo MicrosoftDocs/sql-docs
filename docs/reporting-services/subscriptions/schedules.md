@@ -134,9 +134,9 @@ If you stop the Report Server service, SQL Server Agent continues to add report 
   
 ## Related content
 
-- [Create, modify, and delete snapshots in report history](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
-- [Cache reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)
-- [Report Server Content Management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
-- [Cache shared datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)
+- [Create, modify, and delete snapshots in report history](../report-server/create-modify-and-delete-snapshots-in-report-history.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)
+- [Data-driven subscriptions in Reporting Services](data-driven-subscriptions.md)
+- [Cache reports (SSRS)](../report-server/caching-reports-ssrs.md)
+- [Report server content management (SSRS native mode)](../report-server/report-server-content-management-ssrs-native-mode.md)
+- [Cache shared datasets (SSRS)](../report-server/cache-shared-datasets-ssrs.md)

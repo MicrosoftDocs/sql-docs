@@ -87,15 +87,10 @@ Metadata about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dat
 
 3. Right-click **Databases** or the individual database or database schema, and then select **Synchronize with Database**.
 
-## Next Step
+## Related content
 
-The next step in the migration depends on your project needs:
-
-- If you want to customize the mapping between ASE databases and schemas and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases and schemas, see [Mapping Sybase ASE Schemas to SQL Server Schemas &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md).
-- If you want to customize configuration options for the projects, see [Setting Project Options &#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md).
-- If you want to custom the mapping of source and target data types, see [Mapping Sybase ASE and SQL Server Data Types &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).
-- If you do not have to do any of these, you can convert the Sybase ASE database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object definitions. For more information, see [Converting Sybase ASE Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).
-
-## See Also
-
-[Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Mapping Sybase ASE Schemas to SQL Server Schemas](mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)
+- [Setting Project Options](setting-project-options-sybasetosql.md)
+- [Mapping Sybase ASE and SQL Server Data Types](mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)
+- [Converting SAP ASE database objects](converting-sybase-ase-database-objects-sybasetosql.md)

@@ -41,9 +41,8 @@ public java.io.InputStream getUnicodeStream(java.lang.String columnName)
 ## Remarks  
  This getUnicodeString method is specified by the getUnicodeString method in the java.sql.ResultSet interface.  
   
-## See Also  
- [getUnicodeStream Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [getUnicodeStream Method (SQLServerResultSet)](getunicodestream-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

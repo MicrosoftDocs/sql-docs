@@ -27,7 +27,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  When using SQLXML 4.0 SP1 with either SQLOLEDB or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], these types appear as strings to a developer. SQLXML 4.0 SP1 will enable these four new data types as built-in scalar types when used with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider 11.0 or later. Until you download SQLXML 4.0 SP1, mapping these types to non-string types might cause truncation of some data. For example, mapping **DateTime2** to **xsd:date** will cause data to be truncated to the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **DateTime** precision of 3.33 milliseconds.  
   
-## See Also  
- [SQLXML 4.0 Programming Concepts](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
-  
-  
+## Related content
+
+- [SQLXML 4.0 Programming Concepts](sqlxml-4-0-programming-concepts.md)

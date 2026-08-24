@@ -34,7 +34,6 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
   
  The **Drop** statement is used to remove an object and all its codependent child objects that were required to create the object initially.  
   
-## See Also  
- [SMO Object Model](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
-  
-  
+## Related content
+
+- [SMO Object Model](../smo-object-model.md)

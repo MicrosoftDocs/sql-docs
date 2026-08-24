@@ -244,7 +244,7 @@ Your times might vary significantly, depending on your network speed, and your h
 > [!TIP]
 > Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes fast windowing and ranking functions that can be applied to common data science calculations such as rolling moving averages and *n*-tiles. Choose the most efficient method based on your data and task.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Build an R model and save to SQL](walkthrough-build-and-save-the-model.md)

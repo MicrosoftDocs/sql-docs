@@ -96,7 +96,7 @@ Follow these steps for configuring the servers:
 
    `HKEY_LOCAL_MACHINE\Software\Microsoft\MSSQLServer`
 
-## Next steps
+## Related content
 
 - [Set up and troubleshoot a linked server to an Oracle database](/troubleshoot/sql/database-engine/linked-servers/set-up-troubleshoot-linked-server)
-- [Linked Servers (Database Engine)](../linked-servers/linked-servers-database-engine.md)
+- [Linked servers (Database Engine)](../linked-servers/linked-servers-database-engine.md)

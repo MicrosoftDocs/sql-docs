@@ -145,6 +145,6 @@ For the **Decimal** data type, the precision and scale are determined by the sou
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
- [OData Connection Manager](../../integration-services/connection-manager/odata-connection-manager.md)  
-  
+## Related content
+
+- [OData Connection Manager](../connection-manager/odata-connection-manager.md)

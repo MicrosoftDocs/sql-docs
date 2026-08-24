@@ -64,10 +64,9 @@ Here are the results:
 ...
 ```
 
-## See also  
+## Related content
 
-- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
-- [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
-- [GRAPH_ID_FROM_EDGE__ID](./graph-id-from-edge-id-transact-sql.md)
-- [EDGE_ID_FROM_PARTS](./edge-id-from-parts-transact-sql.md)
-
+- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)
+- [Create a graph database and run some pattern matching queries using T-SQL](../../relational-databases/graphs/sql-graph-sample.md)
+- [GRAPH_ID_FROM_EDGE_ID (Transact-SQL)](graph-id-from-edge-id-transact-sql.md)
+- [EDGE_ID_FROM_PARTS (Transact-SQL)](edge-id-from-parts-transact-sql.md)

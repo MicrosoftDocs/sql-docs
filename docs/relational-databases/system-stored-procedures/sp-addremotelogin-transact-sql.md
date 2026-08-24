@@ -93,13 +93,13 @@ EXECUTE sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 
 ## Related content
 
-- [sp_addlinkedsrvlogin (Transact-SQL)](sp-addlinkedsrvlogin-transact-sql.md)
-- [sp_addlogin (Transact-SQL)](sp-addlogin-transact-sql.md)
-- [sp_addserver (Transact-SQL)](sp-addserver-transact-sql.md)
-- [sp_dropremotelogin (Transact-SQL)](sp-dropremotelogin-transact-sql.md)
-- [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
-- [sp_helpremotelogin (Transact-SQL)](sp-helpremotelogin-transact-sql.md)
-- [sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
-- [sp_remoteoption (Transact-SQL)](sp-remoteoption-transact-sql.md)
-- [sp_revokelogin (Transact-SQL)](sp-revokelogin-transact-sql.md)
+- [sys.sp_addlinkedsrvlogin (Transact-SQL)](sp-addlinkedsrvlogin-transact-sql.md)
+- [sys.sp_addlogin (Transact-SQL)](sp-addlogin-transact-sql.md)
+- [sys.sp_addserver (Transact-SQL)](sp-addserver-transact-sql.md)
+- [sys.sp_dropremotelogin (Transact-SQL)](sp-dropremotelogin-transact-sql.md)
+- [sys.sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
+- [sys.sp_helpremotelogin (Transact-SQL)](sp-helpremotelogin-transact-sql.md)
+- [sys.sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
+- [sys.sp_remoteoption (Transact-SQL)](sp-remoteoption-transact-sql.md)
+- [sys.sp_revokelogin (Transact-SQL)](sp-revokelogin-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

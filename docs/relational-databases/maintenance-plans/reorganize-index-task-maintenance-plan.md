@@ -104,7 +104,7 @@ Use the **ReorganizeIndex Task** dialog to move index pages into a more efficien
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
 - [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
 - [DBCC INDEXDEFRAG (Transact-SQL)](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md)

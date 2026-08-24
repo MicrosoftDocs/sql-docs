@@ -58,10 +58,8 @@ When an exception occurs, the ODBC Driver may return more than one error to help
 
 Starting with 5.9.0, the default behavior of PDOStatement::errorInfo is to show additional ODBC errors, if they are available. See [PDO::errorInfo](../../connect/php/pdo-errorinfo.md) for more details.
   
-## See Also  
-[PDOStatement Class](../../connect/php/pdostatement-class.md)
+## Related content
 
-[PDO::errorInfo](../../connect/php/pdo-errorinfo.md)
-
-[PDO](https://php.net/manual/book.pdo.php)  
-  
+- [PDOStatement Class](pdostatement-class.md)
+- [PDO::errorInfo](pdo-errorinfo.md)
+- [PDO](https://php.net/manual/book.pdo.php)

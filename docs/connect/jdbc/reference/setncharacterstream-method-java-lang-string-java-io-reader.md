@@ -39,8 +39,7 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  This method should be used for **NCHAR**, **NVARCHAR**, **NTEXT**, and **XML** data types.  
   
-## See Also  
- [setNCharacterStream Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
-  
-  
+## Related content
+
+- [setNCharacterStream Method (SQLServerCallableStatement)](setncharacterstream-method-sqlservercallablestatement.md)
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)

@@ -143,6 +143,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)
-- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)
-- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)
+- [Automatically Generate Join Filters Between Merge Articles](automatically-generate-join-filters-between-merge-articles.md)
+- [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)
+- [Parameterized Filters - Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)

@@ -291,10 +291,8 @@ GO
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   
-## See Also  
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)  
-  
-  
+## Related content
 
+- [CREATE SEQUENCE (Transact-SQL)](../statements/create-sequence-transact-sql.md)
+- [ALTER SEQUENCE (Transact-SQL)](../statements/alter-sequence-transact-sql.md)
+- [Sequence numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)

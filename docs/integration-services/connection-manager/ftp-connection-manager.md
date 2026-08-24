@@ -88,7 +88,7 @@ helpviewer_keywords:
  **Test Connection**  
  After configuring the FTP Connection Manager, confirm that the connection is viable by clicking **Test Connection**.  
   
-## See Also  
- [FTP Task](../../integration-services/control-flow/ftp-task.md)   
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
+## Related content
+
+- [FTP Task](../control-flow/ftp-task.md)
+- [Integration Services (SSIS) Connections](integration-services-ssis-connections.md)

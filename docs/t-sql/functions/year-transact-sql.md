@@ -70,9 +70,6 @@ SELECT YEAR(0), MONTH(0), DAY(0);
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)

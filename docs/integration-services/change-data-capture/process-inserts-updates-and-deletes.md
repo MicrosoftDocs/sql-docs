@@ -57,13 +57,8 @@ select
   
     3.  Enter a line with the condition `CDC_OPERATION == "D"` to direct deleted rows to the output for deletes.  
   
-## Next Step  
- After you split the rows for processing, the next step is to apply the changes to the destination.  
-  
- **Next topic:** [Apply the Changes to the Destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
-  
-## See Also  
- [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [Split a Dataset by Using the Conditional Split Transformation](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
-  
-  
+## Related content
+
+- [Conditional Split Transformation](../data-flow/transformations/conditional-split-transformation.md)
+- [Split a Dataset by Using the Conditional Split Transformation](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)
+- [Apply the Changes to the Destination](apply-the-changes-to-the-destination.md)

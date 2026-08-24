@@ -835,6 +835,6 @@ Implementation Notes and Limitations:
 | `void setTimeWithTimezoneFormat(DateTimeFormatter dateTimeFormatter)` | Sets the format for parsing Time data from the file as `java.sql.Types.TIME_WITH_TIMEZONE`. |
 | `void setTimeWithTimezoneFormat(String timeFormat)` | Sets the format for parsing Time data from the file as `java.sql.Types.TIME_WITH_TIMEZONE`. |
   
-## See also  
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

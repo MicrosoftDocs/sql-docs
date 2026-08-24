@@ -141,10 +141,7 @@ You can also set up the web portal so that you can access and manage reports fro
 
 ## Related content
 
-- For information on how to install SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
-
-- With your report server installed, begin to create reports and deploy the reports to your report server. For information on how to start with Report Builder, see [Install Microsoft Report Builder](../../reporting-services/install-windows/install-report-builder.md).
-
-- For information on how to create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Install a Reporting Services 2016 native mode report server](install-reporting-services-native-mode-report-server.md)
+- [Install Microsoft Report Builder](install-report-builder.md)
+- [Install SQL Server Data Tools (SSDT) for Visual Studio](../../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

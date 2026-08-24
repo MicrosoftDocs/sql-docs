@@ -212,11 +212,9 @@ FROM fn_listextendedproperty (NULL, 'schema', 'Sales', 'table', default, NULL, N
 GO  
 ```  
   
-## See Also  
- [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
-  
-  
+## Related content
 
+- [sys.sp_addextendedproperty (Transact-SQL)](../system-stored-procedures/sp-addextendedproperty-transact-sql.md)
+- [sys.sp_dropextendedproperty (Transact-SQL)](../system-stored-procedures/sp-dropextendedproperty-transact-sql.md)
+- [sys.sp_updateextendedproperty (Transact-SQL)](../system-stored-procedures/sp-updateextendedproperty-transact-sql.md)
+- [Extended properties catalog views - sys.extended_properties](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)

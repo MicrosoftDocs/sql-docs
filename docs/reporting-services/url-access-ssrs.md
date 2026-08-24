@@ -109,7 +109,7 @@ https://myrshost/reportserver?/AdventureWorks2022/Employee_Sales_Summary_2022&rs
 
 ## Related content
 
-- [Integrate Reporting Services by using URL access](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)
-- [Find, view, and manage reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)
-- [Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md)
+- [Integrate Reporting Services by using URL access](application-integration/integrating-reporting-services-using-url-access.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Pass a report parameter within a URL](pass-a-report-parameter-within-a-url.md)
+- [Export a report by using URL access](export-a-report-using-url-access.md)

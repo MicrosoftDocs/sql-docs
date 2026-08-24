@@ -72,7 +72,7 @@ WHERE [Product].[Category].[Bikes]
 |[Using Scalar Expressions](../mdx/using-scalar-expressions.md)|Defines scalar expressions.|  
 |[Working with Empty Values](../mdx/working-with-empty-values.md)|Describes what an empty value is and how such values are handled.|  
   
-## See Also  
- [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
-  
+## Related content
+
+- [MDX Language Reference (MDX)](mdx-language-reference-mdx.md)
+- [MDX Query Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)

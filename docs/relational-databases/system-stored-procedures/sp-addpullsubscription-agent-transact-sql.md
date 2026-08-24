@@ -364,8 +364,8 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 - [Create a Pull Subscription](../replication/create-a-pull-subscription.md)
 - [Subscribe to Publications](../replication/subscribe-to-publications.md)
-- [sp_addpullsubscription (Transact-SQL)](sp-addpullsubscription-transact-sql.md)
-- [sp_change_subscription_properties (Transact-SQL)](sp-change-subscription-properties-transact-sql.md)
-- [sp_droppullsubscription (Transact-SQL)](sp-droppullsubscription-transact-sql.md)
-- [sp_helppullsubscription (Transact-SQL)](sp-helppullsubscription-transact-sql.md)
-- [sp_helpsubscription_properties (Transact-SQL)](sp-helpsubscription-properties-transact-sql.md)
+- [sys.sp_addpullsubscription (Transact-SQL)](sp-addpullsubscription-transact-sql.md)
+- [sys.sp_change_subscription_properties (Transact-SQL)](sp-change-subscription-properties-transact-sql.md)
+- [sys.sp_droppullsubscription (Transact-SQL)](sp-droppullsubscription-transact-sql.md)
+- [sys.sp_helppullsubscription (Transact-SQL)](sp-helppullsubscription-transact-sql.md)
+- [sys.sp_helpsubscription_properties (Transact-SQL)](sp-helpsubscription-properties-transact-sql.md)

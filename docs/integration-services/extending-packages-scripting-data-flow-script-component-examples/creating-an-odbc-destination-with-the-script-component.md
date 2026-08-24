@@ -159,7 +159,6 @@ ms.custom: sfi-ropc-nochange
     }  
     ```  
   
-## See Also  
- [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
-  
-  
+## Related content
+
+- [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)

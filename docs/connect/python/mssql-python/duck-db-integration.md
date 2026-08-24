@@ -313,8 +313,8 @@ For result sets larger than available memory, use `arrow_reader()` with a `batch
 
 ## Related content
 
-- [Apache Arrow integration](arrow-integration.md)
-- [pandas integration](pandas-integration.md)
-- [Polars integration](polars-integration.md)
-- [Bulk copy operations](bulk-copy.md)
-- [Performance tuning](performance-tuning.md)
+- [Use mssql-python with Apache Arrow](arrow-integration.md)
+- [Use mssql-python with pandas](pandas-integration.md)
+- [Use mssql-python with Polars](polars-integration.md)
+- [Use bulk copy with mssql-python](bulk-copy.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)

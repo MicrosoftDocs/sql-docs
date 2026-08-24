@@ -89,16 +89,15 @@ aijklmnef
 (1 row(s) affected)
 ```
 
-## See also
+## Related content
 
-- [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)
-- [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)
-- [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)
-- [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)
-- [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)
-- [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)
-- [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)
-- [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)
-- [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)
-- [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
-
+- [CONCAT (Transact-SQL)](concat-transact-sql.md)
+- [CONCAT_WS (Transact-SQL)](concat-ws-transact-sql.md)
+- [FORMATMESSAGE (Transact-SQL)](formatmessage-transact-sql.md)
+- [QUOTENAME (Transact-SQL)](quotename-transact-sql.md)
+- [REPLACE (Transact-SQL)](replace-transact-sql.md)
+- [REVERSE (Transact-SQL)](reverse-transact-sql.md)
+- [STRING_AGG (Transact-SQL)](string-agg-transact-sql.md)
+- [STRING_ESCAPE (Transact-SQL)](string-escape-transact-sql.md)
+- [TRANSLATE (Transact-SQL)](translate-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)

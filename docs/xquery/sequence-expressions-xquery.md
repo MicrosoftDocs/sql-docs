@@ -233,7 +233,6 @@ SELECT @x.query('
   
 -   Combining node sequences by using the union, intersect, or except operator is not supported.  
   
-## See Also  
- [XQuery Expressions](../xquery/xquery-expressions.md)  
-  
-  
+## Related content
+
+- [XQuery Expressions](xquery-expressions.md)

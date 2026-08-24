@@ -107,9 +107,9 @@ For documentation of the `SELECT... FOR XML` clause that also applies to Azure S
 
 ## Related content
 
-- [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)
-- [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)
-- [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)
-- [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)
-- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
-- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)
+- [Use RAW mode with FOR XML](use-raw-mode-with-for-xml.md)
+- [Use AUTO mode with FOR XML](use-auto-mode-with-for-xml.md)
+- [Use EXPLICIT mode with FOR XML](use-explicit-mode-with-for-xml.md)
+- [Use PATH mode with FOR XML](use-path-mode-with-for-xml.md)
+- [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
+- [FOR XML (SQL Server)](for-xml-sql-server.md)

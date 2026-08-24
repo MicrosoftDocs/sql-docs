@@ -107,5 +107,5 @@ Only members of the **sysadmin** fixed server role or members of the **db_owner*
 ## Related content
 
 - [sp_replcmds (Transact-SQL)](sp-replcmds-transact-sql.md)
-- [sp_replshowcmds (Transact-SQL)](sp-replshowcmds-transact-sql.md)
+- [sys.sp_replshowcmds (Transact-SQL)](sp-replshowcmds-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

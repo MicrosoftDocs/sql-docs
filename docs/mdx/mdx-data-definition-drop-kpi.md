@@ -26,8 +26,7 @@ DROP KPI CURRENTCUBE | Cube_Name.KPI_Name
  *KPI_Name*  
  A valid string that specifies the name of the KPI that is to be dropped.  
   
-## See Also  
- [CREATE KPI Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-kpi.md)   
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Data Definition - CREATE KPI](mdx-data-definition-create-kpi.md)
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)

@@ -30,4 +30,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Replication over the Internet](../../relational-databases/replication/replication-over-the-internet.md)
+- [Replication over the Internet](replication-over-the-internet.md)

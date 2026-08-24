@@ -77,7 +77,7 @@ Later, the <xref:System.Transactions.TransactionScope.Complete%2A> method is inv
 
 [!code-csharp[SqlTransactionScope#1](~/../sqlclient/doc/samples/SqlTransactionScope.cs#1)]
 
-## See also
+## Related content
 
 - [Transactions and concurrency](transactions-and-concurrency.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

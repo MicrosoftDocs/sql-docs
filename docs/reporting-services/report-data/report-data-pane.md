@@ -32,5 +32,5 @@ ms.custom:
   
 ## Related content
 
-- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
-- [Grouping Pane](../../reporting-services/tools/grouping-pane.md)
+- [Dataset Fields Collection (Report Builder and SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)
+- [Grouping pane](../tools/grouping-pane.md)

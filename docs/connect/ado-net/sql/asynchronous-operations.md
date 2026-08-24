@@ -32,6 +32,7 @@ Provides an example demonstrating how to execute multiple concurrent commands fr
 [Polling in console applications](poll-console-applications.md)  
 Provides an example demonstrating the use of polling to wait for the completion of an asynchronous command execution from a console application. This technique is also valid in a class library or other application without a user interface.  
   
-## Next steps
+## Related content
+
 - [SQL Server and ADO.NET](index.md)
 - [Calling Synchronous Methods Asynchronously](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)

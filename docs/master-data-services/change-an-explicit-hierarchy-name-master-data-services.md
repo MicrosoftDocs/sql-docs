@@ -43,7 +43,8 @@ helpviewer_keywords:
   
 7.  Click **Save**.  
   
-## See Also  
- [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Create an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Delete an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)
+## Related content
+
+- [Explicit Hierarchies (Master Data Services)](explicit-hierarchies-master-data-services.md)
+- [Create an Explicit Hierarchy (Master Data Services)](create-an-explicit-hierarchy-master-data-services.md)
+- [Delete an Explicit Hierarchy (Master Data Services)](delete-an-explicit-hierarchy-master-data-services.md)

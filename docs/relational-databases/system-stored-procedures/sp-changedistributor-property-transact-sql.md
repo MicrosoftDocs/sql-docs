@@ -90,7 +90,7 @@ Only members of the **sysadmin** fixed server role can execute `sp_changedistrib
 ## Related content
 
 - [View and Modify Distributor and Publisher Properties](../replication/view-and-modify-distributor-and-publisher-properties.md)
-- [sp_adddistributor (Transact-SQL)](sp-adddistributor-transact-sql.md)
-- [sp_dropdistributor (Transact-SQL)](sp-dropdistributor-transact-sql.md)
-- [sp_helpdistributor (Transact-SQL)](sp-helpdistributor-transact-sql.md)
+- [sys.sp_adddistributor (Transact-SQL)](sp-adddistributor-transact-sql.md)
+- [sys.sp_dropdistributor (Transact-SQL)](sp-dropdistributor-transact-sql.md)
+- [sys.sp_helpdistributor (Transact-SQL)](sp-helpdistributor-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

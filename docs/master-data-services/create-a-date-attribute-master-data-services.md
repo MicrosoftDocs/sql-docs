@@ -84,8 +84,9 @@ helpviewer_keywords:
   
  The Input Mask is a custom .NET DateTime format string. For more information, see [Custom Date and Time Format Strings](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## See Also  
- [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Change an Attribute Name and Data Type &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Create a File Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)
+## Related content
+
+- [Attributes (Master Data Services)](attributes-master-data-services.md)
+- [Change an Attribute Name and Data Type (Master Data Services)](change-an-attribute-name-and-data-type-master-data-services.md)
+- [Create a Domain-Based Attribute (Master Data Services)](create-a-domain-based-attribute-master-data-services.md)
+- [Create a File Attribute (Master Data Services)](create-a-file-attribute-master-data-services.md)

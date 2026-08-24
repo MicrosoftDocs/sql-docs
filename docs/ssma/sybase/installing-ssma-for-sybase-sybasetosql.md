@@ -30,5 +30,6 @@ If you open a project from an earlier version of SSMA for SAP ASE, SSMA asks if 
 |[Installing SSMA Components on SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Provides information about and instructions for installing the extension pack on instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Removing SSMA for SAP ASE Components &#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|Provides instructions for uninstalling the client program and extension pack.|  
   
-## See also  
-[Migrating SAP ASE databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## Related content
+
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

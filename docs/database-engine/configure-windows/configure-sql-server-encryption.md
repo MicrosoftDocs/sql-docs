@@ -194,14 +194,13 @@ To learn more, see [Certificate requirements for SQL Server](certificate-require
 > [!NOTE]  
 > Starting with SQL Server 2022 CU22 and SQL Server 2025, the thumbprint of the certificate is no longer case sensitive. In versions prior to SQL Server 2022 CU22 and SQL Server 2025, SQL Server Configuration Manager only displays certificates imported through the registry if the thumbprint in the registry is an exact match for the thumbprint, including case sensitivity. If the thumbprint doesn't match the case exactly, the certificate isn't displayed in SQL Server Configuration Manager, but the certificate is still loaded and used by SQL Server. 
 
-
-
 ## Next step
 
-Connect to a SQL Server instance with [strict encryption](../../relational-databases/security/networking/connect-with-strict-encryption.md). 
+> [!div class="nextstepaction"]
+> [Connect to SQL Server with strict encryption](../../relational-databases/security/networking/connect-with-strict-encryption.md)
 
 ## Related content
 
 - [Certificate requirements for SQL Server](certificate-requirements.md)
 - [TDS 8.0](../../relational-databases/security/networking/tds-8.md)
-- [TLS 1.3](../../relational-databases/security/networking/tls-1-3.md)
+- [TLS 1.3 support](../../relational-databases/security/networking/tls-1-3.md)

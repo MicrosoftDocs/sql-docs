@@ -394,5 +394,4 @@ Here's a partial result set.
 ## Related content
 
 - [GROUPING (Transact-SQL)](grouping-transact-sql.md)
-- [SELECT - GROUP BY (Transact-SQL)](../queries/select-group-by-transact-sql.md)
-
+- [SELECT - GROUP BY clause (Transact-SQL)](../queries/select-group-by-transact-sql.md)

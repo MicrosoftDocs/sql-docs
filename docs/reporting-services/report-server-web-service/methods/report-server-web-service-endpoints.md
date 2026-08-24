@@ -77,4 +77,4 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthenticat
   
 ## Related content
 
-- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Building Applications Using the Web Service and the .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)

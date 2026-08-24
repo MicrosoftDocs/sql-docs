@@ -52,4 +52,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Scripting Replication](../../relational-databases/replication/scripting-replication.md)
+- [Scripting Replication](scripting-replication.md)

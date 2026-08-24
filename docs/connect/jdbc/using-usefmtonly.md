@@ -136,6 +136,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## See also
+## Related content
 
-[Setting the connection properties](setting-the-connection-properties.md)
+- [Set the connection properties](setting-the-connection-properties.md)

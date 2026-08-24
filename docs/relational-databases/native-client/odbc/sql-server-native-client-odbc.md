@@ -71,7 +71,7 @@ helpviewer_keywords:
   
 -   [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
-## See Also  
- [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
-  
+## Related content
+
+- [SQL Server Native Client Programming](../sql-server-native-client-programming.md)
+- [Installing SQL Server Native Client](../applications/installing-sql-server-native-client.md)

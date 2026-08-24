@@ -35,9 +35,7 @@ The **CPU threshold exceeded** event class indicates that resource governor dete
 
 ## Related content
 
-- [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)
-- [Resource governor](../../relational-databases/resource-governor/resource-governor.md)
-- [Resource governor workload group](../../relational-databases/resource-governor/resource-governor-workload-group.md)
-- [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)
-
-
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [Resource governor](../resource-governor/resource-governor.md)
+- [Resource governor workload group](../resource-governor/resource-governor-workload-group.md)
+- [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)

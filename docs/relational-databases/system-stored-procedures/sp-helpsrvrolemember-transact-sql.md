@@ -86,8 +86,8 @@ EXECUTE sp_helpsrvrolemember 'sysadmin';
 
 ## Related content
 
-- [sp_helprole (Transact-SQL)](sp-helprole-transact-sql.md)
-- [sp_helprolemember (Transact-SQL)](sp-helprolemember-transact-sql.md)
+- [sys.sp_helprole (Transact-SQL)](sp-helprole-transact-sql.md)
+- [sys.sp_helprolemember (Transact-SQL)](sp-helprolemember-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [Security Functions (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)

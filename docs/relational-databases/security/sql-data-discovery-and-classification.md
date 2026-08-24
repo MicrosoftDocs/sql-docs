@@ -261,14 +261,11 @@ You can use PowerShell Cmdlet to add or remove column classifications, as well a
 
 ---
 
-## <a id="Next-steps"></a>Next steps
+## Related content
 
-For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](/azure/azure-sql/database/data-discovery-and-classification-overview).
-
-Consider protecting your sensitive columns by applying column level security mechanisms:
-
-* [Dynamic Data Masking](./dynamic-data-masking.md) for obfuscating sensitive columns in use.
-* [Always Encrypted](./encryption/always-encrypted-database-engine.md) for encrypting sensitive columns at rest.
+- [Azure SQL Database data discovery and classification](/azure/azure-sql/database/data-discovery-and-classification-overview)
+- [Dynamic data masking](dynamic-data-masking.md)
+- [Always Encrypted](encryption/always-encrypted-database-engine.md)
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

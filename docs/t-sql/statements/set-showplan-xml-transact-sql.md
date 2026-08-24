@@ -104,8 +104,7 @@ GO
 SET SHOWPLAN_XML OFF;
 ```
 
-## Next steps
+## Related content
 
-- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
 - [Display the Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)
-

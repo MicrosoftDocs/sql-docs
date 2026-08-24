@@ -237,8 +237,7 @@ where ProductModelID=19
   
 -   The query returns True.  
   
-## See Also  
- [Type System &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
- [XQuery Expressions](../xquery/xquery-expressions.md)  
-  
-  
+## Related content
+
+- [Type System (XQuery)](type-system-xquery.md)
+- [XQuery Expressions](xquery-expressions.md)

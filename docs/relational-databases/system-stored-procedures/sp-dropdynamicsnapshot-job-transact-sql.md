@@ -71,4 +71,4 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [sp_adddynamicsnapshot_job (Transact-SQL)](sp-adddynamicsnapshot-job-transact-sql.md)
+- [sys.sp_adddynamicsnapshot_job (Transact-SQL)](sp-adddynamicsnapshot-job-transact-sql.md)

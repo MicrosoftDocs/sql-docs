@@ -270,7 +270,7 @@ Set trace flag 9567 on the primary replica to enable compression of the data str
 In some scenarios automatic seeding may not be optimal for initializing a secondary replica. During automatic seeding, SQL Server performs a backup over the network for initialization. This process can be slow if databases are very large, or the secondary replica is remote. The transaction log for these databases cannot be truncated during the backup process, so a prolonged initialization process on a busy database can result in significant transaction log growth.
 Before adding a database to an availability group with automatic seeding, evaluate the database size, load, and site distance between replicas.
 
-## See also
+## Related content
 
 - [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 - [Monitor and troubleshoot availability groups](always-on-availability-groups-troubleshooting-and-monitoring-guide.md)

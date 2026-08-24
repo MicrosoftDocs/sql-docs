@@ -282,9 +282,6 @@ Cleanup:
 
 ## Related content
 
-- [Authorize access to Microsoft Entra web applications using the OAuth 2.0 code grant flow](/azure/active-directory/azuread-dev/v1-protocols-oauth-code).
-
-- Learn about [Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview) to SQL Server.
-
-- Configure driver connections using [connection string keywords](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) the OLE DB driver supports.
-
+- [Authorize access to Microsoft Entra web applications using the OAuth 2.0 code grant flow](/azure/active-directory/azuread-dev/v1-protocols-oauth-code)
+- [Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Using connection string keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)

@@ -443,6 +443,6 @@ if validate_connection_string(conn_str):
 
 ## Related content
 
-- [Connection strings](connection-strings.md)
-- [Microsoft Entra authentication](entra-authentication.md)
-- [Connection management](connection-management.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Microsoft Entra authentication with mssql-python](entra-authentication.md)
+- [Manage connections with mssql-python](connection-management.md)

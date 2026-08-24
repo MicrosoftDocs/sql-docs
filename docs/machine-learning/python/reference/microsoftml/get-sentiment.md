@@ -65,11 +65,6 @@ Additional arguments sent to compute engine.
 An object defining the transform.
 
 
-## See also
-
-[`featurize_text`](featurize-text.md).
-
-
 ## Example
 
 
@@ -117,3 +112,6 @@ Writing completed.
 2  I will never ever ever go to that place again!!  0.310344         BLAH
 ```
 
+## Related content
+
+- [*microsoftml.featurize_text*: Converts text columns into numerical features](featurize-text.md)

@@ -77,8 +77,7 @@ helpviewer_keywords:
     
  [Back to top](#top)    
     
-## See Also    
- [Package Management &#40;SSIS Service&#41;](../../integration-services/service/package-management-ssis-service.md)     
- [Enumerating Available Packages Programmatically](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
-    
-  
+## Related content
+
+- [Package Management (SSIS Service)](../service/package-management-ssis-service.md)
+- [Enumerating Available Packages Programmatically](enumerating-available-packages-programmatically.md)

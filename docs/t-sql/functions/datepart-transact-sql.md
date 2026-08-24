@@ -250,8 +250,7 @@ SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;
 -- Returns: 1974
 ```  
   
-## See also
+## Related content
 
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-[DATETRUNC](../../t-sql/functions/datetrunc-transact-sql.md)
-
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [DATETRUNC (Transact-SQL)](datetrunc-transact-sql.md)

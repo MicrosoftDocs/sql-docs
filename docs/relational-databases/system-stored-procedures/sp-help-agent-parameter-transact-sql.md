@@ -60,6 +60,6 @@ Only members of the **sysadmin** fixed server role or the **replmonitor** fixed 
 ## Related content
 
 - [Work with Replication Agent Profiles](../replication/agents/work-with-replication-agent-profiles.md)
-- [sp_add_agent_parameter (Transact-SQL)](sp-add-agent-parameter-transact-sql.md)
-- [sp_drop_agent_parameter (Transact-SQL)](sp-drop-agent-parameter-transact-sql.md)
+- [sys.sp_add_agent_parameter (Transact-SQL)](sp-add-agent-parameter-transact-sql.md)
+- [sys.sp_drop_agent_parameter (Transact-SQL)](sp-drop-agent-parameter-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -67,8 +67,8 @@ Describes Microsoft SqlClient Data Provider for SQL Server support for asynchron
 [SqlClient streaming support](sqlclient-streaming-support.md)  
 Discusses how to write applications that stream data from SQL Server without having it fully loaded in memory.
 
-## See also
+## Related content
 
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
-- [SQL Server and ADO.NET](./sql/index.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [SQL Server and ADO.NET](sql/index.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

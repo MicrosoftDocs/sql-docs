@@ -41,5 +41,5 @@ Requires the **CONTROL SERVER** permission.
 
 ## Related content
 
-- [SQL Server Audit (Database Engine)](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)
-- [Write SQL Server Audit Events to the Security Log](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)
+- [SQL Server Audit (Database Engine)](sql-server-audit-database-engine.md)
+- [Write SQL Server Audit events to the Security log](write-sql-server-audit-events-to-the-security-log.md)

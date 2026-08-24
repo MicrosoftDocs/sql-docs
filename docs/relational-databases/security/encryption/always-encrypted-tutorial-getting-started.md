@@ -19,7 +19,6 @@ ms.custom:
 This tutorial shows you how to get started with [Always Encrypted](always-encrypted-database-engine.md). The tutorial covers:
 
 > [!div class="checklist"]
->
 > - How to encrypt selected columns in your database.
 > - How to query encrypted columns.
 
@@ -525,15 +524,16 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
 
 ---
 
-## Next steps
+## Next step
 
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+> [!div class="nextstepaction"]
+> [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
-## See also
+## Related content
 
 - [Always Encrypted documentation](/azure/azure-sql/database/always-encrypted-landing)
 - [Always Encrypted with secure enclaves documentation](/azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing)
 - [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Configure Always Encrypted using PowerShell](configure-always-encrypted-using-powershell.md)
-- [Always Encrypted wizard](./always-encrypted-wizard.md)
+- [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

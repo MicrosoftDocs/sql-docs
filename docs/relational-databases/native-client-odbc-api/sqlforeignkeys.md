@@ -22,7 +22,7 @@ apitype: "DLLExport"
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *FKCatalogName* and *PKCatalogName* parameters: *Linked_Server_Name.Catalog_Name*.  
   
-## See Also  
- [SQLForeignKeys Function](../../odbc/reference/syntax/sqlforeignkeys-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLForeignKeys Function](../../odbc/reference/syntax/sqlforeignkeys-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

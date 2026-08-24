@@ -22,9 +22,7 @@ Discusses how to use MARS with SQL Server.
 [Manipulating data](manipulate-data.md)  
 Provides examples of coding MARS applications.  
   
-## Related sections  
-[Asynchronous operations](asynchronous-operations.md)  
-Provides details on using the new asynchronous features in .NET.  
-  
-## Next steps
+## Related content
+
+- [Asynchronous operations](asynchronous-operations.md)
 - [SQL Server and ADO.NET](index.md)

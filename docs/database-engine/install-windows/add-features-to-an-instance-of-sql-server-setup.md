@@ -153,9 +153,9 @@ Install service packs (SPs), cumulative updates (CUs), and/or general distributi
 ## Related content
 
 - [View and read SQL Server Setup log files](view-and-read-sql-server-setup-log-files.md)
-- [Validate a SQL Server Installation](validate-a-sql-server-installation.md)
+- [Validate a SQL Server installation](validate-a-sql-server-installation.md)
 - [Repair a failed SQL Server installation](repair-a-failed-sql-server-installation.md)
 - [Upgrade SQL Server Using the Installation Wizard (Setup)](upgrade-sql-server-using-the-installation-wizard-setup.md)
-- [Install and configure SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
 - [Latest Updates for SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 - [Surface area configuration](../../relational-databases/security/surface-area-configuration.md)

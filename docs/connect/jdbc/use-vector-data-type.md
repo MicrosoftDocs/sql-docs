@@ -249,4 +249,4 @@ For detailed limitations, see [Vector data type limitations](../../t-sql/data-ty
 
 ## Related content
 
-[Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

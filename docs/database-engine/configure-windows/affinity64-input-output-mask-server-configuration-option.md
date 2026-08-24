@@ -23,5 +23,5 @@ The `affinity64 I/O mask` binds [!INCLUDE [ssNoVersion](../../includes/ssnoversi
 - [Server configuration: affinity I/O mask](affinity-input-output-mask-server-configuration-option.md)
 - [Monitor Resource Usage (Performance Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)

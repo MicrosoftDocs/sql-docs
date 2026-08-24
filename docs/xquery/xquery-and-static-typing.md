@@ -79,7 +79,6 @@ dev_langs:
 ### Example: Operator over Union Type  
  The addition operation ('+') requires precise types of the operands. As a result, the expression `(//r)[1] + 1` returns a static error that has the previously described type definition for element <`r`>. One solution is to rewrite it as `(//r)[1] cast as xs:int? +1`, where the "?" indicates 0 or 1 occurrences. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requires "cast as" with "?", because any cast can cause the empty sequence as a result of run-time errors.  
   
-## See Also  
- [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
-  
-  
+## Related content
+
+- [XQuery Language Reference (SQL Server)](xquery-language-reference-sql-server.md)

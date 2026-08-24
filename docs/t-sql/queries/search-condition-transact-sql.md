@@ -300,7 +300,7 @@ WHERE LastName LIKE N'%and%';
 
 ## Related content
 
-- [Aggregate Functions (Transact-SQL)](../functions/aggregate-functions-transact-sql.md)
+- [Aggregate functions (Transact-SQL)](../functions/aggregate-functions-transact-sql.md)
 - [CASE (Transact-SQL)](../language-elements/case-transact-sql.md)
 - [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)
 - [Cursors (Transact-SQL)](../language-elements/cursors-transact-sql.md)

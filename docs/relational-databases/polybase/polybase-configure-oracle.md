@@ -88,11 +88,8 @@ The following Transact-SQL commands are used in this section:
 >[!IMPORTANT] 
 >Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source. 
 
-## Next steps
+## Related content
 
-For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
-
-For more information and examples, see the following articles:
-
-- [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
-- [Overview of SQL Server PolyBase](overview.md).
+- [PolyBase Transact-SQL reference](polybase-t-sql-objects.md)
+- [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
+- [PolyBase overview](overview.md)

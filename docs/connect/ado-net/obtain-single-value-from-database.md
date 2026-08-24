@@ -25,8 +25,8 @@ The following code example inserts a new value in the database using a <xref:Mic
 
 [!code-csharp[DataWorks SqlCommand.ExecuteScalar#1](~/../sqlclient/doc/samples/SqlCommand_ExecuteScalar_Return_Id.cs#1)]
 
-## See also
+## Related content
 
 - [Commands and parameters](commands-parameters.md)
 - [Executing a command](execute-command.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

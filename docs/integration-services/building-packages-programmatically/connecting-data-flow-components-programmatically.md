@@ -26,9 +26,6 @@ dev_langs:
   
  Call the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> method to connect the path and to notify the components participating in the path that they have been connected. This method accepts an <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> of the upstream component and an <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> of the downstream component as parameters. By default, the call to the component's <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> method creates a single input for components that have inputs, and a single output for components that have outputs. The following example uses this default output of the source and input of the destination.  
   
-## Next Step  
- After you establish a path between two components, the next step is to map input columns in the downstream component, which is discussed in the next topic, [Selecting Input Columns Programmatically](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md).  
-  
 ## Sample  
  The following code sample shows how to establish a path between two components.  
   
@@ -112,8 +109,7 @@ Module Module1
   
 End Module  
 ```  
-  
-## See Also  
- [Selecting Input Columns Programmatically](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
-  
-  
+
+## Related content
+
+- [Selecting Input Columns Programmatically](selecting-input-columns-programmatically.md)

@@ -96,11 +96,8 @@ SELECT LOG10(145.175642);
 2.16
 ```  
   
-## See Also  
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [POWER &#40;Transact-SQL&#41;](../../t-sql/functions/power-transact-sql.md)   
- [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
+- [POWER (Transact-SQL)](power-transact-sql.md)
+- [LOG (Transact-SQL)](log-transact-sql.md)

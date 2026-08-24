@@ -41,7 +41,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux
 |[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Describes the RESTORE REWINDONLY Transact-SQL statement, which is used to rewind and close tape devices that were left open by BACKUP or RESTORE statements executed with the NOREWIND option.|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Describes the RESTORE VERIFYONLY Transact-SQL statement, which is used to verify the backup but does not restore it, and checks to see that the backup set is complete and the entire backup is readable; does not attempt to verify the structure of the data.|  
   
-## See Also  
- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
-  
-  
+## Related content
+
+- [Back up and restore of SQL Server databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)

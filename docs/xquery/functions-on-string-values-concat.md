@@ -103,7 +103,6 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 -   The **concat()** function in SQL Server only accepts values of type xs:string. Other values have to be explicitly cast to xs:string or xdt:untypedAtomic.  
   
-## See Also  
- [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)  
-  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)

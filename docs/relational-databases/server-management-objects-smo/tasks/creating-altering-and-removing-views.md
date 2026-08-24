@@ -90,7 +90,6 @@ $myview.Create()
 $myview.Drop();  
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.View>  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.View>

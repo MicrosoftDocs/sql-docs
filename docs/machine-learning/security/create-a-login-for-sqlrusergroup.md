@@ -58,7 +58,7 @@ You can work around the connection error by creating a login for  **SQLRUserGrou
 
 7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
 
-## Next steps
+## Related content
 
-+ [Security overview](../concepts/security.md)
-+ [Extensibility framework](../concepts/extensibility-framework.md)
+- [Security architecture for the extensibility framework in SQL Server Machine Learning Services](../concepts/security.md)
+- [Extensibility architecture in SQL Server Machine Learning Services](../concepts/extensibility-framework.md)

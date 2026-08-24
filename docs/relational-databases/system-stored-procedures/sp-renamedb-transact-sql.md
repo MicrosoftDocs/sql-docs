@@ -84,7 +84,7 @@ GO
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-- [sp_changedbowner (Transact-SQL)](sp-changedbowner-transact-sql.md)
-- [sp_helpdb (Transact-SQL)](sp-helpdb-transact-sql.md)
+- [sys.sp_changedbowner (Transact-SQL)](sp-changedbowner-transact-sql.md)
+- [sys.sp_helpdb (Transact-SQL)](sp-helpdb-transact-sql.md)
 - [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

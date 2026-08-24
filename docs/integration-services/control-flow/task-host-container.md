@@ -31,6 +31,6 @@ helpviewer_keywords:
   
 -   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
-## See Also  
- [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)  
-  
+## Related content
+
+- [Integration Services Containers](integration-services-containers.md)

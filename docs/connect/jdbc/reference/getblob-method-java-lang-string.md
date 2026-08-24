@@ -38,9 +38,8 @@ public java.sql.Blob getBlob(java.lang.String sCol)
 ## Remarks  
  This getBlob method is specified by the getBlob method in the java.sql.CallableStatement interface.  
   
-## See Also  
- [getBlob Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)   
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [getBlob Method (SQLServerCallableStatement)](getblob-method-sqlservercallablestatement.md)
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

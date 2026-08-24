@@ -71,9 +71,7 @@ helpviewer_keywords:
 ## Related Tasks  
  [Use an Expression in a Data Flow Component](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
-## Related Content  
-  
--   Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis), on pragmaticworks.com  
-  
--   Technical article, [SSIS Expression Examples](../../integration-services/expressions/use-property-expressions-in-packages.md)
-  
+## Related content
+
+- [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis)
+- [Use Property Expressions in Packages](use-property-expressions-in-packages.md)

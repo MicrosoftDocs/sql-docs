@@ -38,7 +38,6 @@ ms.topic: reference
 |---------------------------|-------------|  
 |class java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait,|  
   
-## See Also  
- [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)  
-  
-  
+## Related content
+
+- [DateTimeOffset Class](datetimeoffset-class.md)

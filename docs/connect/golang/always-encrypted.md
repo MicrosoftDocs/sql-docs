@@ -170,6 +170,6 @@ For general parameter type guidance, see [Data type mappings](data-type-mappings
 
 ## Related content
 
-- [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Connection options](connection-options.md)
-- [Microsoft Entra ID authentication](entra-authentication.md)
+- [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [go-mssqldb connection options](connection-options.md)
+- [Microsoft Entra ID authentication with go-mssqldb](entra-authentication.md)

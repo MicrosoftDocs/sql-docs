@@ -40,10 +40,9 @@ public long position(java.lang.String searchstr,
 ## Remarks  
  This position method is specified by the position method in the java.sql.NClob interface.  
   
-## See Also  
- [position Method &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
- [SQLServerNClob Methods](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
- [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
- [SQLServerNClob Class](../../../connect/jdbc/reference/sqlservernclob-class.md)  
-  
-  
+## Related content
+
+- [position Method (SQLServerNClob)](position-method-sqlservernclob.md)
+- [SQLServerNClob Methods](sqlservernclob-methods.md)
+- [SQLServerNClob Members](sqlservernclob-members.md)
+- [SQLServerNClob Class](sqlservernclob-class.md)

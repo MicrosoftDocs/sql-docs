@@ -34,7 +34,6 @@ helpviewer_keywords:
  **Copy Data**  
  Copy data in the current buffer to the Clipboard.  
   
-## See Also  
- [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)  
-  
-  
+## Related content
+
+- [Debugging Data Flow](../troubleshooting/debugging-data-flow.md)

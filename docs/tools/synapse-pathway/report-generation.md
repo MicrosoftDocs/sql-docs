@@ -39,6 +39,6 @@ The migration savings are calculated based on the number  and complexity, simple
 
 ![Azure Synapse report2.](./media/report-generaration/migration-savings.png)
 
-## Next steps
+## Related content
 
-[Download Azure Synapse Pathway](synapse-pathway-download.md)
+- [Azure Synapse Pathway download](synapse-pathway-download.md)

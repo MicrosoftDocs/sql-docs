@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[updateTime (int, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-int-java-sql-time.md)|Updates the designated column with a time value given the column index.|  
 |[updateTime (java.lang.String, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-java-lang-string-java-sql-time.md)|Updates the designated column with a time value given the column name.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

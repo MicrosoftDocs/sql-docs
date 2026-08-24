@@ -117,6 +117,6 @@ This will release the database resources that the SQLServerConnection object is 
 > [!NOTE]  
 > Calling the close method will also roll back any pending transactions.
 
-## See also
+## Related content
 
-[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)
+- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -149,7 +149,7 @@ After the new table has been created, compute and display a histogram of the 10,
   
     ![complex histogram created by R](media/rsql-sue-complex-histogram.png "complex histogram created by R")
   
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Transform data using R](../../machine-learning/tutorials/deepdive-transform-data-using-r.md)

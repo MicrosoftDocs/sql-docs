@@ -43,8 +43,9 @@ helpviewer_keywords:
   
  A user or group must have permission to at least one functional area and one model on the **Models** tab in order to access [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## See Also  
- [Assign Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
- [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)
+## Related content
+
+- [Assign Functional Area Permissions (Master Data Services)](assign-functional-area-permissions-master-data-services.md)
+- [Model Object Permissions (Master Data Services)](model-object-permissions-master-data-services.md)
+- [Hierarchy Member Permissions (Master Data Services)](hierarchy-member-permissions-master-data-services.md)
+- [How Permissions Are Determined (Master Data Services)](how-permissions-are-determined-master-data-services.md)

@@ -416,9 +416,8 @@ FROM sys.stats;
 - [Statistics](../../relational-databases/statistics/statistics.md)
 - [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics)
 - [UPDATE STATISTICS (Transact-SQL)](update-statistics-transact-sql.md)
-- [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)
+- [sys.sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../database-console-commands/dbcc-show-statistics-transact-sql.md)
 - [DROP STATISTICS (Transact-SQL)](drop-statistics-transact-sql.md)
 - [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)
 - [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
-

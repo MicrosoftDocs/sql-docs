@@ -29,7 +29,6 @@ helpviewer_keywords:
 ## User Action  
 Do not use inline table variables.  
   
-## See Also  
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
+## Related content
 
+- [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)

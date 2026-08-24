@@ -30,7 +30,7 @@ Use Microsoft SqlClient Data Provider for SQL Server performance counters to mon
 [Event counters in SqlClient](event-counters.md)  
 Use Microsoft SqlClient Data Provider for SQL Server event counters to monitor your application status and its connection resources in `.NET Core` and `.NET Standard`.
 
-## See also
+## Related content
 
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

@@ -27,8 +27,7 @@ ms.topic: reference
 public class SQLServerNClob  
 ```  
   
-## See Also  
- [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerNClob Members](sqlservernclob-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

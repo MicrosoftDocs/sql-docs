@@ -125,9 +125,9 @@ The result set would include rows with different forms of `trabajar` (to work), 
 ## Related content
 
 - [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)
-- [sp_help_fulltext_columns (Transact-SQL)](sp-help-fulltext-columns-transact-sql.md)
-- [sp_help_fulltext_columns_cursor (Transact-SQL)](sp-help-fulltext-columns-cursor-transact-sql.md)
-- [sp_help_fulltext_tables (Transact-SQL)](sp-help-fulltext-tables-transact-sql.md)
-- [sp_help_fulltext_tables_cursor (Transact-SQL)](sp-help-fulltext-tables-cursor-transact-sql.md)
+- [sys.sp_help_fulltext_columns (Transact-SQL)](sp-help-fulltext-columns-transact-sql.md)
+- [sys.sp_help_fulltext_columns_cursor (Transact-SQL)](sp-help-fulltext-columns-cursor-transact-sql.md)
+- [sys.sp_help_fulltext_tables (Transact-SQL)](sp-help-fulltext-tables-transact-sql.md)
+- [sys.sp_help_fulltext_tables_cursor (Transact-SQL)](sp-help-fulltext-tables-cursor-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](full-text-search-and-semantic-search-stored-procedures-transact-sql.md)

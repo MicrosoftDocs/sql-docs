@@ -67,6 +67,6 @@ This article explains how to view a [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 - [Drop a Database Snapshot (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)
 
-## Next steps
+## Related content
 
-- [Database Snapshots (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)
+- [Database snapshots (SQL Server)](database-snapshots-sql-server.md)

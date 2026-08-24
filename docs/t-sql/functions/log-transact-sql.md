@@ -113,11 +113,8 @@ SELECT LOG(10);
  2.30
  ```  
   
-## See Also  
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [EXP &#40;Transact-SQL&#41;](../../t-sql/functions/exp-transact-sql.md)   
- [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
+- [EXP (Transact-SQL)](exp-transact-sql.md)
+- [LOG10 (Transact-SQL)](log10-transact-sql.md)

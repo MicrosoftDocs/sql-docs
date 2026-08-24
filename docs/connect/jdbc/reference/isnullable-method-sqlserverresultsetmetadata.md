@@ -38,9 +38,8 @@ public int isNullable(int column)
 ## Remarks  
  This isNullable method is specified by the isNullable method in the java.sql.ResultSetMetaData interface.  
   
-## See Also  
- [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
- [SQLServerResultSetMetaData Members](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
- [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSetMetaData Methods](sqlserverresultsetmetadata-methods.md)
+- [SQLServerResultSetMetaData Members](sqlserverresultsetmetadata-members.md)
+- [SQLServerResultSetMetaData Class](sqlserverresultsetmetadata-class.md)

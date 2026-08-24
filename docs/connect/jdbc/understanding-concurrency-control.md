@@ -37,7 +37,6 @@ ms.topic: concept-article
 |Statement is created by using TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates a static snapshot cursor. This is disconnected from the underlying table rows to help protect the cursor from row updates by other users.|Use TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC, or TYPE_FORWARD_ONLY with CONCUR_UPDATABLE to avoid creating a static cursor.|  
 |Table design precludes a KEYSET or DYNAMIC cursor|The underlying table does not have unique keys to enable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to uniquely identify a row.|Add unique keys to the table to provide unique identification of each row.|  
   
-## See also  
- [Managing result sets with the JDBC driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
-  
-  
+## Related content
+
+- [Managing result sets with the JDBC driver](managing-result-sets-with-the-jdbc-driver.md)

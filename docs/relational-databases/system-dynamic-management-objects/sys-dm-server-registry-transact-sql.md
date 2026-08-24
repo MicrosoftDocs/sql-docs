@@ -82,5 +82,6 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SuperSocketNetLib%';  
 ```  
   
-## See Also  
- [sys.dm_server_services &#40;Transact-SQL&#41;](sys-dm-server-services-transact-sql.md)
+## Related content
+
+- [sys.dm_server_services (Transact-SQL)](sys-dm-server-services-transact-sql.md)

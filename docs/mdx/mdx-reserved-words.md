@@ -237,6 +237,7 @@ ms.custom: mdx
     :::column-end:::
 :::row-end:::
 
-## See Also  
- [Reserved Keywords &#40;MDX Syntax&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+## Related content
+
+- [Reserved Keywords (MDX Syntax)](reserved-keywords-mdx-syntax.md)
+- [MDX Language Reference (MDX)](mdx-language-reference-mdx.md)

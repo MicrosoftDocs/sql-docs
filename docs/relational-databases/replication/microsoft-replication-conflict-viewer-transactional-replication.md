@@ -63,5 +63,5 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
   
 ## Related content
 
-- [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
-- [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)
+- [Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
+- [View Data Conflicts for Transactional Publications (SQL Server Management Studio)](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)

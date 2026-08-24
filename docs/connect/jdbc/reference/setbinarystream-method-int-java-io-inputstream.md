@@ -37,8 +37,7 @@ public final void setAsciiStream(int parameterIndex,
 ## Remarks  
  This setBinaryStream method is specified by the setBinaryStream method in the java.sql.PreparedStatement interface.  
   
-## See Also  
- [setBinaryStream Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
-  
-  
+## Related content
+
+- [setBinaryStream Method (SQLServerPreparedStatement)](setbinarystream-method-sqlserverpreparedstatement.md)
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)

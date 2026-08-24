@@ -22,7 +22,6 @@ ms.custom: mdx
 |[MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)|Describes the functions available in the MDX language.|  
 |[MDX Reserved Words](../mdx/mdx-reserved-words.md)|Provides a list of words reserved for use by the MDX language.|  
   
-## See Also  
- [Multidimensional Expressions &#40;MDX&#41; Reference](../mdx/multidimensional-expressions-mdx-reference.md)  
-  
-  
+## Related content
+
+- [Multidimensional Expressions (MDX) Reference](multidimensional-expressions-mdx-reference.md)

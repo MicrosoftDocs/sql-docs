@@ -96,8 +96,7 @@ The [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository uses severa
 
 ## Next step
 
-Explore the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs) on GitHub.
-
 Find an article, submit a change, and help the SQL Server community.
 
-Thank you.
+> [!div class="nextstepaction"]
+> [Explore the sql-docs repository on GitHub](https://github.com/MicrosoftDocs/sql-docs)

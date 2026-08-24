@@ -40,9 +40,8 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
   
  The *sName* argument is automatically escaped by the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
-## See Also  
- [setSavepoint Method &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   
- [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  
+## Related content
+
+- [setSavepoint Method (SQLServerConnection)](setsavepoint-method-sqlserverconnection.md)
+- [SQLServerConnection Members](sqlserverconnection-members.md)
+- [SQLServerConnection Class](sqlserverconnection-class.md)

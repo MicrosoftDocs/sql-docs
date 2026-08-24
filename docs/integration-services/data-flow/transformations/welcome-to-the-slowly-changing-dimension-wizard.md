@@ -21,7 +21,6 @@ f1_keywords:
  **Don't show this page again**  
  Skip the welcome page the next time you open the wizard.  
   
-## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
-  
-  
+## Related content
+
+- [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)

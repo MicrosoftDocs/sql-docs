@@ -44,9 +44,7 @@ ROWCOUNT_BIG ( )
   
  Following statements that do not return rows, such as an IF statement, this function returns 0.  
   
-## See Also  
- [COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-  
-  
+## Related content
 
+- [COUNT_BIG (Transact-SQL)](count-big-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)

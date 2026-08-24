@@ -31,4 +31,4 @@ public string MachineAccountIdentity;
   
 ## Related content
 
-- [MSReportServer_ConfigurationSetting properties](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)
+- [MSReportServer_ConfigurationSetting properties](msreportserver-configurationsetting-properties.md)

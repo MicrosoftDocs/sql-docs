@@ -119,7 +119,7 @@ GO
 
 ## Related content
 
-- [Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects.md)
-- [Database Related Dynamic Management Views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
 - [sys.dm_db_log_space_usage (Transact-SQL)](sys-dm-db-log-space-usage-transact-sql.md)
 - [sys.dm_db_log_stats (Transact-SQL)](sys-dm-db-log-stats-transact-sql.md)

@@ -160,4 +160,4 @@ You can also set thresholds, alerts, and warnings by using the built-in replicat
 
 ## Related content
 
-- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)
+- [Monitoring (Replication)](monitoring-replication.md)

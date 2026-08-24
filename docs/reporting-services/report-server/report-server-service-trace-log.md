@@ -101,6 +101,6 @@ In previous releases of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion
   
 ## Related content
 
-- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
-- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+- [Reporting Services log files and sources](reporting-services-log-files-and-sources.md)
+- [Errors and events reference (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)
 - [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

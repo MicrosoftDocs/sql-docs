@@ -59,5 +59,5 @@ GO
 
 ## Related content
 
-- [Databases and Files Catalog Views](../system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [sys.databases](../system-catalog-views/sys-databases-transact-sql.md)
+- [Databases and Files Catalog Views (Transact-SQL)](../system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
+- [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)

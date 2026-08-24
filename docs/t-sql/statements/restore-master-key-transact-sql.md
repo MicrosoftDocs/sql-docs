@@ -111,9 +111,9 @@ RESTORE MASTER KEY
 GO  
 ```  
 
-## See also
+## Related content
 
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
- [RESTORE SYMMETRIC KEY](restore-symmetric-key-transact-sql.md)
+- [CREATE MASTER KEY (Transact-SQL)](create-master-key-transact-sql.md)
+- [ALTER MASTER KEY (Transact-SQL)](alter-master-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [RESTORE SYMMETRIC KEY (Transact-SQL)](restore-symmetric-key-transact-sql.md)

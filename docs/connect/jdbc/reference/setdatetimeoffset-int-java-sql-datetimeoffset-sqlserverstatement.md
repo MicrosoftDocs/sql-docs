@@ -44,9 +44,8 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 |Date|May only insert: "YYYY-MM-DD"|  
 |DateTime2|May only insert: "YYYY-MM-DD hh:mm:ss[.nnnnnnn]"|  
   
-## See Also  
- [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   
- [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
- [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
-  
-  
+## Related content
+
+- [getDateTimeOffset (SQLServerResultSet)](getdatetimeoffset-sqlserverresultset.md)
+- [SQLServerStatement Members](sqlserverstatement-members.md)
+- [SQLServerStatement Class](sqlserverstatement-class.md)

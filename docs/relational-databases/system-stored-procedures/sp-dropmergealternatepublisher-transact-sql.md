@@ -77,4 +77,4 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Related content
 
-- [sp_addmergealternatepublisher (Transact-SQL)](sp-addmergealternatepublisher-transact-sql.md)
+- [sys.sp_addmergealternatepublisher (Transact-SQL)](sp-addmergealternatepublisher-transact-sql.md)

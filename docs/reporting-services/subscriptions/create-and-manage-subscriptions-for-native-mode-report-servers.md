@@ -159,9 +159,9 @@ To cancel a subscription that is currently processing on the report server, see 
   
 ## Related content
 
-- [Create and manage subscriptions for SharePoint mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)
-- [Use PowerShell to change and list Reporting Services subscription owners and run a subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)
-- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
-- [Use my subscriptions &#40;native mode report server&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)
+- [Create and manage subscriptions for SharePoint mode report servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)
+- [Manage subscription owners and run subscription - PowerShell](manage-subscription-owners-and-run-subscription-powershell.md)
+- [Data-driven subscriptions in Reporting Services](data-driven-subscriptions.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
+- [Use My Subscriptions (native mode report server)](use-my-subscriptions-native-mode-report-server.md)

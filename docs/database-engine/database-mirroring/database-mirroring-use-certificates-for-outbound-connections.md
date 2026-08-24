@@ -167,13 +167,12 @@ GO
   
  When copying a certificate to another system, use a secure copy method.  
   
-## See Also  
- [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [Example: Setting Up Database Mirroring Using Certificates &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
-  
-  
+## Related content
+
+- [Choose an encryption algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
+- [Prepare a Mirror Database for Mirroring (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)
+- [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
+- [Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)
+- [The database mirroring endpoint (SQL Server)](the-database-mirroring-endpoint-sql-server.md)
+- [Troubleshoot Database Mirroring Configuration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)
+- [Set Up an Encrypted Mirror Database](set-up-an-encrypted-mirror-database.md)

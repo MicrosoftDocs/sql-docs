@@ -645,7 +645,7 @@ For upcoming features and the development roadmap, see the [GitHub repository](h
 
 ## Related content
 
-- [mssql-python driver](python-sql-driver-mssql-python.md)
-- [Support lifecycle](support-lifecycle.md)
-- [Installation](installation.md)
+- [Microsoft Python Driver for SQL Server - mssql-python](python-sql-driver-mssql-python.md)
+- [Support lifecycle for mssql-python](support-lifecycle.md)
+- [Install mssql-python](installation.md)
 - [GitHub releases](https://github.com/microsoft/mssql-python/releases)

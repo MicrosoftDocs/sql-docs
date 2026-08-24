@@ -77,7 +77,6 @@ When an application uses BCP functions, it's important for the application to sp
 
 For more information, see Performing [Performing Bulk Copy Operations](../features/performing-bulk-copy-operations.md).
 
-## See also
+## Related content
 
-[Building applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)
-
+- [Building applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)

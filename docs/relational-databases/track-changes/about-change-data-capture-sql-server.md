@@ -140,11 +140,11 @@ Change data capture has some limitations when working with other SQL Server feat
 
 For known issues and errors associated with change data capture, review [Known issues with CDC](known-issues-and-errors-change-data-capture.md).
 
-## See also  
+## Related content
 
-* [Known issues and limitations](/sql/relational-databases/track-changes/known-issues-and-limitations)
-* [Work with Change Data](work-with-change-data-sql-server.md)
-* [Track Data Changes](track-data-changes-sql-server.md)
-* [Enable and Disable change data capture](enable-and-disable-change-data-capture-sql-server.md)
-* [Administer and Monitor change data capture](administer-and-monitor-change-data-capture-sql-server.md)
-* [Temporal Tables](../tables/temporal-tables.md)
+- [Known issues and limitations](/sql/relational-databases/track-changes/known-issues-and-limitations)
+- [Work with Change Data](work-with-change-data-sql-server.md)
+- [Track data changes (SQL Server)](track-data-changes-sql-server.md)
+- [Enable and disable change data capture](enable-and-disable-change-data-capture-sql-server.md)
+- [Administer and monitor change data capture](administer-and-monitor-change-data-capture-sql-server.md)
+- [Temporal Tables](../tables/temporal-tables.md)

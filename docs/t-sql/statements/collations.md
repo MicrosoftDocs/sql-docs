@@ -191,12 +191,11 @@ For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/
 
 ## Related content
 
-- [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
-- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
-- [Collation Precedence](../../t-sql/statements/collation-precedence-transact-sql.md)
-- [Constants](../../t-sql/data-types/constants-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-- [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [Table data type](../../t-sql/data-types/table-transact-sql.md)
-
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
+- [Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)
+- [Collation precedence](collation-precedence-transact-sql.md)
+- [Constants (Transact-SQL)](../data-types/constants-transact-sql.md)
+- [CREATE DATABASE](create-database-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../language-elements/declare-local-variable-transact-sql.md)
+- [table (Transact-SQL)](../data-types/table-transact-sql.md)

@@ -58,8 +58,7 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## See Also  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
-  
-  
+## Related content
+
+- [Expressions (Transact-SQL)](expressions-transact-sql.md)
+- [Operators (Transact-SQL)](operators-transact-sql.md)

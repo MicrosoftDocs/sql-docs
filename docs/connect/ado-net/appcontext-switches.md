@@ -208,6 +208,6 @@ Upon failover, failover partner information provided by the server is preferred 
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.IgnoreServerProvidedFailoverPartner", true);
 ```
 
-## See also
+## Related content
 
-[AppContext Class](/dotnet/api/system.appcontext?view=netcore-3.1&preserve-view=true)
+- [AppContext Class](/dotnet/api/system.appcontext?view=netcore-3.1&preserve-view=true)

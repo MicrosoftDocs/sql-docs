@@ -79,7 +79,7 @@ Only members of the **sysadmin** fixed server role or the user who created the p
 ## Related content
 
 - [Delete a Pull Subscription](../replication/delete-a-pull-subscription.md)
-- [sp_addpullsubscription (Transact-SQL)](sp-addpullsubscription-transact-sql.md)
-- [sp_change_subscription_properties (Transact-SQL)](sp-change-subscription-properties-transact-sql.md)
-- [sp_helppullsubscription (Transact-SQL)](sp-helppullsubscription-transact-sql.md)
-- [sp_dropsubscription (Transact-SQL)](sp-dropsubscription-transact-sql.md)
+- [sys.sp_addpullsubscription (Transact-SQL)](sp-addpullsubscription-transact-sql.md)
+- [sys.sp_change_subscription_properties (Transact-SQL)](sp-change-subscription-properties-transact-sql.md)
+- [sys.sp_helppullsubscription (Transact-SQL)](sp-helppullsubscription-transact-sql.md)
+- [sys.sp_dropsubscription (Transact-SQL)](sp-dropsubscription-transact-sql.md)

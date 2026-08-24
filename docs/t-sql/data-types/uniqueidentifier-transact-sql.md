@@ -69,14 +69,14 @@ String                                       TruncatedValue
 (1 row(s) affected)  
 ```  
   
-## See also
-[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
-[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-  
+## Related content
+
+- [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
+- [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
+- [Data types (Transact-SQL)](data-types-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../language-elements/declare-local-variable-transact-sql.md)
+- [NEWID (Transact-SQL)](../functions/newid-transact-sql.md)
+- [NEWSEQUENTIALID (Transact-SQL)](../functions/newsequentialid-transact-sql.md)
+- [SET @local_variable (Transact-SQL)](../language-elements/set-local-variable-transact-sql.md)
+- [Updatable Subscriptions - For Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)

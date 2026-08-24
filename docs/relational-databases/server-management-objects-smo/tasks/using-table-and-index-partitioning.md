@@ -124,7 +124,6 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## See Also  
- [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-  
-  
+## Related content
+
+- [Partitioned tables and indexes](../../partitions/partitioned-tables-and-indexes.md)

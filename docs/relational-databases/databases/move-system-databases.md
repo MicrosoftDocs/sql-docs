@@ -329,11 +329,11 @@ Because `tempdb` is recreated each time the instance of [!INCLUDE [ssNoVersion](
 
 ## Related content
 
-- [Resource database](resource-database.md)
+- [Resource Database](resource-database.md)
 - [tempdb database](tempdb-database.md)
-- [master database](master-database.md)
+- [master Database](master-database.md)
 - [msdb database](msdb-database.md)
-- [model database](model-database.md)
+- [model Database](model-database.md)
 - [Move user databases](move-user-databases.md)
 - [Move database files](move-database-files.md)
 - [Start, stop, pause, resume, and restart SQL Server services](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

@@ -41,5 +41,5 @@ This section contains the following dynamic management views for resource govern
 
 ## Related content
 
-- [Resource governor catalog views (Transact-SQL)](../system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+- [Resource governor catalog views (Transact-SQL)](../system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 - [Resource governor](../resource-governor/resource-governor.md)

@@ -55,21 +55,10 @@ ms.topic: "reference"
  [Managing Package Roles Programmatically &#40;SSIS Service&#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  Describes how to get or set information about the roles assigned to a package or a folder.  
   
-## Reference  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
-  
-## Related Sections  
- [Extending Packages with Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
- Discusses how to extend the control flow by using the Script task, and how to extend the data flow by using the Script component.  
-  
- [Extending Packages with Custom Objects](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
- Discusses how to create program custom tasks, data flow components, and other package objects for use in multiple packages.  
-  
- [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
- Discusses how to create, configure, and save [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages programmatically.  
-  
-## See Also  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  
+## Related content
+
+- [Integration Services error and message reference](../integration-services-error-and-message-reference.md)
+- [Extending Packages with Scripting](../extending-packages-scripting/extending-packages-with-scripting.md)
+- [Extending Packages with Custom Objects](../extending-packages-custom-objects/extending-packages-with-custom-objects.md)
+- [Building Packages Programmatically](../building-packages-programmatically/building-packages-programmatically.md)
+- [SQL Server Integration Services](../sql-server-integration-services.md)

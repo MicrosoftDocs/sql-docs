@@ -183,8 +183,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)
-- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)
-- [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)
-- [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)
-- [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)
+- [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)
+- [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)
+- [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)
+- [Group Changes to Related Rows with Logical Records](../merge/group-changes-to-related-rows-with-logical-records.md)
+- [Parameterized Filters - Optimize for Precomputed Partitions](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)

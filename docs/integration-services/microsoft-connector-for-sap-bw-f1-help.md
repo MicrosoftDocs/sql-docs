@@ -73,4 +73,4 @@ This section contains the F1 Help articles for the three components of the [!INC
 
 ## Related content
 
-- [Microsoft Connector for SAP BW Components](../integration-services/microsoft-connector-for-sap-bw-components.md)
+- [Microsoft Connector for SAP BW Components](microsoft-connector-for-sap-bw-components.md)

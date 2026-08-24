@@ -231,7 +231,6 @@ namespace EnumeratePackagesSql_CS
     
  [Back to top](#top)    
    
-## See Also    
- [Package Management &#40;SSIS Service&#41;](../../integration-services/service/package-management-ssis-service.md)    
-    
-  
+## Related content
+
+- [Package Management (SSIS Service)](../service/package-management-ssis-service.md)

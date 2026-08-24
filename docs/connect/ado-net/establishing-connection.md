@@ -46,8 +46,8 @@ SQL Server Integrated Security (also known as trusted connections) helps to prov
 
 The security identity for ASP.NET applications can be set to one of several different options. To better understand the security identity that an ASP.NET application uses when connecting to SQL Server, see [ASP.NET Impersonation](/previous-versions/aspnet/xh507fc5(v=vs.100)), [ASP.NET Authentication](/previous-versions/aspnet/eeyk640h(v=vs.100)), and [How to: Access SQL Server Using Windows Integrated Security](/previous-versions/aspnet/bsz5788z(v=vs.100)).
 
-## See also
+## Related content
 
-- [Connecting to a data source](connecting-to-data-source.md)
-- [Connection strings](connection-strings.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Connecting to a data source in ADO.NET](connecting-to-data-source.md)
+- [Connection strings in ADO.NET](connection-strings.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

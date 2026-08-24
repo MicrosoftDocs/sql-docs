@@ -64,5 +64,6 @@ ms.custom:
 13. Save and close the file. If you get an error, it could be because you have UAC enabled. Users should now be able to use HTTPS to access the site.  
 
   
-## See Also  
- [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)
+## Related content
+
+- [Create a master data manager web application (Master Data Services)](create-a-master-data-manager-web-application-master-data-services.md)

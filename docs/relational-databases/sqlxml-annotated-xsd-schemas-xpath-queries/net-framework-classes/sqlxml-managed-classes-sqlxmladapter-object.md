@@ -46,8 +46,7 @@ public SqlXmlAdapter(
                      )   
 ```  
   
-## See Also  
- [SqlXmlCommand Object &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [SqlXmlParameter Object &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
-  
-  
+## Related content
+
+- [SQLXML Managed Classes - SqlXmlCommand Object](sqlxml-managed-classes-sqlxmlcommand-object.md)
+- [SQLXML Managed Classes - SqlXmlParameter Object](sqlxml-managed-classes-sqlxmlparameter-object.md)

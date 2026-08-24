@@ -49,7 +49,6 @@ int main() {
 }  
 ```  
   
-## See Also  
- [Add a Data Source &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
-  
-  
+## Related content
+
+- [Configuring the SQL Server ODBC Driver - Add a Data Source](configuring-the-sql-server-odbc-driver-add-a-data-source.md)

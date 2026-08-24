@@ -89,8 +89,8 @@ print("Hello RExtension!");'
 [!INCLUDE [R custom runtime - Linux - RHEL known issues](includes/custom-runtime-r-linux-known-issues-rhel.md)]
 ::: zone-end
 
-## Next steps
+## Related content
 
-+ [Install a Python custom runtime for SQL Server](custom-runtime-python.md)
-+ [Extensibility framework in SQL Server](../concepts/extensibility-framework.md)
-+ [Language Extensions Overview](../../language-extensions/language-extensions-overview.md)
+- [Install a Python custom runtime for SQL Server](custom-runtime-python.md)
+- [Extensibility architecture in SQL Server Machine Learning Services](../concepts/extensibility-framework.md)
+- [What is SQL Server Language Extensions?](../../language-extensions/language-extensions-overview.md)

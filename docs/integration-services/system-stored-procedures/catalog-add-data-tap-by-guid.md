@@ -100,7 +100,6 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
 ## Requirements  
   
-## See Also  
- [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  
-  
-  
+## Related content
+
+- [catalog.add_data_tap](catalog-add-data-tap.md)

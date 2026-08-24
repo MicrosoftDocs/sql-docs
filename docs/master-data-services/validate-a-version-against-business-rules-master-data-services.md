@@ -54,13 +54,11 @@ helpviewer_keywords:
     > [!NOTE]  
     >  When the progress indicator is no longer displayed, the version has finished validation.  
   
-## Next Steps  
-  
--   [Lock a Version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
-  
-## See Also  
- [Validation Statuses &#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
- [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)
+## Related content
+
+- [Validation Statuses (Master Data Services)](validation-statuses-master-data-services.md)
+- [Validation Stored Procedure (Master Data Services)](validation-stored-procedure-master-data-services.md)
+- [Versions (Master Data Services)](versions-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Validate Specific Members against Business Rules (Master Data Services)](validate-specific-members-against-business-rules-master-data-services.md)
+- [Lock a Version (Master Data Services)](lock-a-version-master-data-services.md)

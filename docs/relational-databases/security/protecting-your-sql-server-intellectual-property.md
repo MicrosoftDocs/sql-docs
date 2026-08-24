@@ -33,5 +33,5 @@ You can also host a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]
 
 ## Related content
 
-- [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
-- [Securing SQL Server](../../relational-databases/security/securing-sql-server.md)
+- [Security for SQL Server Database Engine and Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+- [Securing SQL Server](securing-sql-server.md)

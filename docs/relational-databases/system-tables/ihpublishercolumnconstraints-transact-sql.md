@@ -28,9 +28,8 @@ dev_langs:
 |**publisherconstraint_id**|**int**|Identifies a constraint from [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) associated with the column.|  
 |**indid**|**int**|Indicates position of the column in the published table.|  
   
-## See Also  
- [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Heterogeneous Database Replication](../replication/non-sql/heterogeneous-database-replication.md)
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

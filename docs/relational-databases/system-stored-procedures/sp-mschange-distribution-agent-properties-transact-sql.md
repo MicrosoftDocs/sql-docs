@@ -111,5 +111,5 @@ Only members of the **sysadmin** fixed server role at the Distributor can execut
 
 ## Related content
 
-- [sp_addpushsubscription_agent (Transact-SQL)](sp-addpushsubscription-agent-transact-sql.md)
-- [sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)
+- [sys.sp_addpushsubscription_agent (Transact-SQL)](sp-addpushsubscription-agent-transact-sql.md)
+- [sys.sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)

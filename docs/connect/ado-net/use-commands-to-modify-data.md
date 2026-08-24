@@ -29,8 +29,8 @@ Describes how to execute commands or stored procedures that modify data in a dat
 [Performing catalog operations](perform-catalog-operations.md)  
 Describes how to execute commands that modify database schema.
 
-## See also
+## Related content
 
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
 - [Commands and parameters](commands-parameters.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

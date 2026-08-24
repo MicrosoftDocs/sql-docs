@@ -235,5 +235,5 @@ NA            3162.3564     1360.6185
 
 ## Related content
 
-- [Aggregate Functions (Transact-SQL)](aggregate-functions-transact-sql.md)
+- [Aggregate functions (Transact-SQL)](aggregate-functions-transact-sql.md)
 - [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

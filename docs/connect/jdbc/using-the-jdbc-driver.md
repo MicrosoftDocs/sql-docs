@@ -559,7 +559,7 @@ For more information about how to connect with data sources and use a connection
 
 ## Related content
 
-- [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
-- [Building the connection URL](../../connect/jdbc/building-the-connection-url.md)
-- [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Building the connection URL](building-the-connection-url.md)
+- [Set the connection properties](setting-the-connection-properties.md)
 - [Connecting and retrieving data](connecting-and-retrieving-data.md)

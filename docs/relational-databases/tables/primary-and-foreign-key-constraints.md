@@ -115,12 +115,12 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 ## Related content
 
-- [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)
-- [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md)
-- [Modify Primary Keys](../../relational-databases/tables/modify-primary-keys.md)
-- [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)
-- [Modify Foreign Key Relationships](../../relational-databases/tables/modify-foreign-key-relationships.md)
-- [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md)
-- [View Foreign Key Properties](../../relational-databases/tables/view-foreign-key-properties.md)
-- [Disable Foreign Key Constraints for Replication](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)
-- [Disable Foreign Key Constraints with INSERT and UPDATE Statements](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)
+- [Create primary keys](create-primary-keys.md)
+- [Delete primary keys](delete-primary-keys.md)
+- [Modify Primary Keys](modify-primary-keys.md)
+- [Create foreign key relationships](create-foreign-key-relationships.md)
+- [Modify Foreign Key Relationships](modify-foreign-key-relationships.md)
+- [Delete foreign key relationships](delete-foreign-key-relationships.md)
+- [View foreign key properties](view-foreign-key-properties.md)
+- [Disable foreign key constraints for replication](disable-foreign-key-constraints-for-replication.md)
+- [Disable foreign key constraints with INSERT and UPDATE statements](disable-foreign-key-constraints-with-insert-and-update-statements.md)

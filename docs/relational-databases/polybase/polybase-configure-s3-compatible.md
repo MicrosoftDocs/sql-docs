@@ -233,7 +233,7 @@ For PolyBase on SQL Server on Linux, more configuration is needed.
 
 ## Related content
 
-- [Data virtualization with PolyBase in SQL Server](overview.md)
+- [PolyBase overview](overview.md)
 - [Configure PolyBase to access external data in S3-compatible object storage](polybase-configure-s3-compatible.md)
 - [Virtualize parquet file in a S3-compatible object storage with PolyBase](polybase-virtualize-parquet-file.md)
 - [PolyBase Transact-SQL reference](polybase-t-sql-objects.md)

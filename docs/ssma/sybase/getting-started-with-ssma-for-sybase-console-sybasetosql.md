@@ -61,5 +61,6 @@ Color-interpretation of the console output appears in the following table:
 |Green|Prompt for user-input|  
 |Cyan|Start, Finish, and Result of an operation|  
   
-## See also  
-[Installing SSMA for SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+## Related content
+
+- [Installing SSMA for SAP ASE](installing-ssma-for-sybase-sybasetosql.md)

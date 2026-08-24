@@ -45,10 +45,9 @@ dev_langs:
 |**dataloss**|**bit**|Indicates if data loss occurs when mapping between the data type at the source and destination DBMS.|  
 |**is_default**|**bit**|Indicates if the data type mapping is used by default.|  
   
-## See Also  
- [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
-  
-  
+## Related content
+
+- [Heterogeneous Database Replication](../replication/non-sql/heterogeneous-database-replication.md)
+- [Replication Tables (Transact-SQL)](../system-tables/replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](replication-views-transact-sql.md)
+- [sys.sp_helpdatatypemap (Transact-SQL)](../system-stored-procedures/sp-helpdatatypemap-transact-sql.md)

@@ -50,7 +50,6 @@ WHERE xe.trace_event_id IS NULL
   
  In the previous query, most of the returned event classes are audit-related. We recommend that you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit for auditing. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit uses Extended Events to help create an audit. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-## See Also  
- [trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)  
-  
-  
+## Related content
+
+- [Extended Events Tables - trace_xe_action_map](extended-events-tables-trace-xe-action-map.md)

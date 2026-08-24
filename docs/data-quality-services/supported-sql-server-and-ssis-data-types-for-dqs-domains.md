@@ -43,7 +43,6 @@ ms.custom:
   
  Rest of the SSIS data types are not supported in DQS. For information about all the SSIS data types, see [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md).  
   
-## See Also  
- [Managing a Domain](../data-quality-services/managing-a-domain.md)  
-  
-  
+## Related content
+
+- [Managing a Domain](managing-a-domain.md)

@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[getArray Method (int)](../../../connect/jdbc/reference/getarray-method-int-sqlserverresultset.md)|Retrieves the value of the designated column index in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as an Array object.|  
 |[getArray Method (java.lang.String)](../../../connect/jdbc/reference/getarray-method-java-lang-string-sqlserverresultset.md)|Retrieves the value of the designated column name in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as an Array object.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

@@ -49,6 +49,6 @@ ms.custom:
   
 ## Related content
 
-- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Displaying a Series with Multiple Data Ranges on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)
-- [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Displaying a series with multiple data ranges on a paginated report chart (Report Builder)](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)
+- [Chart types in a paginated report (Report Builder)](chart-types-report-builder-and-ssrs.md)

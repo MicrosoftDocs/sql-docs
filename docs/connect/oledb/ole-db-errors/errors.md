@@ -44,7 +44,6 @@ helpviewer_keywords:
   
 -   [SQL Server Message Results](../../oledb/ole-db-errors/sql-server-message-results.md)  
   
-## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)

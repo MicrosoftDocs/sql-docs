@@ -53,11 +53,9 @@ helpviewer_keywords:
   
 10. Click **Save**.  
   
-## Next Steps  
-  
--   (Optional) [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
-  
-## See Also  
- [Delete Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/delete-model-object-permissions-master-data-services.md)   
- [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)
+## Related content
+
+- [Delete Model Object Permissions (Master Data Services)](delete-model-object-permissions-master-data-services.md)
+- [Model Object Permissions (Master Data Services)](model-object-permissions-master-data-services.md)
+- [Create a Model Administrator (Master Data Services)](create-a-model-administrator-master-data-services.md)
+- [Assign Hierarchy Member Permissions (Master Data Services)](assign-hierarchy-member-permissions-master-data-services.md)

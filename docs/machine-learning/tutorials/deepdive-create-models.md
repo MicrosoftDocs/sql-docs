@@ -121,7 +121,7 @@ Condition number of final variance-covariance matrix: 3997.308
 Number of iterations: 15
 ```
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Score new data](../../machine-learning/tutorials/deepdive-score-new-data.md)

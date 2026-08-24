@@ -110,5 +110,5 @@ After items are published to a report server, the report server administrator ca
 
 ## Related content
 
-- [Install Report Builder](../install-windows/install-report-builder.md)
-- [Report parameters (Report Builder and Report Designer)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
+- [Install Microsoft Report Builder](../install-windows/install-report-builder.md)
+- [Paginated report parameters in Report Builder](../report-design/report-parameters-report-builder-and-report-designer.md)

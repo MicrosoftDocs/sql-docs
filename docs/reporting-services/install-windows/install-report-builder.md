@@ -114,5 +114,5 @@ Running Microsoft Report Builder as a virtualized application (for example, as a
 
 ## Related content
 
-- [Start Microsoft Report Builder](../../reporting-services/report-builder/start-report-builder.md)
-- [Uninstall Report Builder](../../reporting-services/install-windows/uninstall-report-builder.md)
+- [Start Microsoft Report Builder](../report-builder/start-report-builder.md)
+- [Uninstall Report Builder](uninstall-report-builder.md)

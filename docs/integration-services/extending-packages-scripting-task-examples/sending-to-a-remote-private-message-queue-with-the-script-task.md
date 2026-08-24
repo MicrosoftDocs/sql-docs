@@ -95,7 +95,6 @@ public class ScriptMain
 }  
 ```  
   
-## See Also  
- [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)  
-  
-  
+## Related content
+
+- [Message Queue Task](../control-flow/message-queue-task.md)

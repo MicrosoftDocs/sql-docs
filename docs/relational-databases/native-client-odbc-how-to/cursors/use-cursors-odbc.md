@@ -64,6 +64,6 @@ helpviewer_keywords:
   
      You can control the type of cursor used by setting either SQL_ATTR_CURSOR_TYPE and SQL_ATTR_CONCURRENCY, or by setting SQL_ATTR_CURSOR_SENSITIVITY and SQL_ATTR_CURSOR_SCROLLABLE. You should not mix the two methods of specifying cursor behavior.  
   
-## See Also  
- [Using Cursors How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
-  
+## Related content
+
+- [Using Cursors How-to Topics (ODBC)](using-cursors-how-to-topics-odbc.md)

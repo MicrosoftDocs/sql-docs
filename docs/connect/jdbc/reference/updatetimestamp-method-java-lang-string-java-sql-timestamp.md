@@ -40,9 +40,8 @@ public void updateTimestamp(java.lang.String columnName,
 ## Remarks  
  This updateTimestamp method is specified by the updateTimestamp method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateTimestamp Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateTimestamp Method (SQLServerResultSet)](updatetimestamp-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

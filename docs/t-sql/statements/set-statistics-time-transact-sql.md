@@ -85,9 +85,7 @@ SQL Server parse and compile time:
   
 ```  
   
-## See Also  
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
-  
-  
+## Related content
 
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET STATISTICS IO (Transact-SQL)](set-statistics-io-transact-sql.md)

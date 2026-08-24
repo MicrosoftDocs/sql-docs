@@ -219,4 +219,4 @@ DROP TABLE TestTable;
 - [SET @local_variable (Transact-SQL)](set-local-variable-transact-sql.md)
 - [SELECT @local_variable (Transact-SQL)](select-local-variable-transact-sql.md)
 - [Expressions (Transact-SQL)](expressions-transact-sql.md)
-- [Compound Operators (Transact-SQL)](compound-operators-transact-sql.md)
+- [Compound operators (Transact-SQL)](compound-operators-transact-sql.md)

@@ -32,7 +32,6 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
 ## Remarks  
  Alternate result on divide by 0 must be a constant.  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

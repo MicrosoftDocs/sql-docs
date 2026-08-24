@@ -78,5 +78,6 @@ helpviewer_keywords:
 
  For members, you cannot use **MDMMemberStatus**, **MDMUnused**, or **ROOT** for the **Code** attribute value.  
   
-## See also  
- [Master Data Services Overview &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)
+## Related content
+
+- [Master Data Services Overview (MDS)](master-data-services-overview-mds.md)

@@ -234,6 +234,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
   
 ## Related content
 
-- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)
-- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Reinitialize Subscriptions](reinitialize-subscriptions.md)
+- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)

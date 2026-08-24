@@ -55,6 +55,6 @@ The CreateEx (and Create) calls will modify the security DACL on the process han
 
 The CreateEx method supersedes the Create method defined in the original IClientVirtualDeviceSet. The original Create method is deprecated and should not be used in future development. The original Create method implements a form of instance name support with the _VIRTUAL_SERVER_NAME_ environment variable. If that variable is set in the environment, then the Create method internally calls CreateEx, passing the value of _VIRTUAL_SERVER_NAME_ as the instance name.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

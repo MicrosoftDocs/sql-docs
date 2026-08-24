@@ -84,7 +84,7 @@ Only members of the **sysadmin** fixed server role at the Publisher or members o
 ## Related content
 
 - [View and Modify Publication Properties](../replication/publish/view-and-modify-publication-properties.md)
-- [sp_addpublication_snapshot (Transact-SQL)](sp-addpublication-snapshot-transact-sql.md)
-- [sp_changepublication_snapshot (Transact-SQL)](sp-changepublication-snapshot-transact-sql.md)
-- [sp_dropmergepublication (Transact-SQL)](sp-dropmergepublication-transact-sql.md)
-- [sp_droppublication (Transact-SQL)](sp-droppublication-transact-sql.md)
+- [sys.sp_addpublication_snapshot (Transact-SQL)](sp-addpublication-snapshot-transact-sql.md)
+- [sys.sp_changepublication_snapshot (Transact-SQL)](sp-changepublication-snapshot-transact-sql.md)
+- [sys.sp_dropmergepublication (Transact-SQL)](sp-dropmergepublication-transact-sql.md)
+- [sys.sp_droppublication (Transact-SQL)](sp-droppublication-transact-sql.md)

@@ -38,8 +38,7 @@ helpviewer_keywords:
  [Finish the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
  Displays the configuration options selected by the user.  
   
-## See Also  
- [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)   
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
-  
-  
+## Related content
+
+- [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)
+- [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)

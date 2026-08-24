@@ -112,13 +112,13 @@ SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;
 ab  
 ```  
   
-## See Also  
- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+## Related content
 
+- [LTRIM (Transact-SQL)](ltrim-transact-sql.md)
+- [RIGHT (Transact-SQL)](right-transact-sql.md)
+- [RTRIM (Transact-SQL)](rtrim-transact-sql.md)
+- [STRING_SPLIT (Transact-SQL)](string-split-transact-sql.md)
+- [SUBSTRING (Transact-SQL)](substring-transact-sql.md)
+- [TRIM (Transact-SQL)](trim-transact-sql.md)
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)

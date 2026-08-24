@@ -60,4 +60,4 @@ The following procedures utilize entities created in previous procedures in the 
 
 ## Related content
 
-- [How to: Fix Errors](how-to-fix-errors.md)
+- [How to: Fix errors](how-to-fix-errors.md)

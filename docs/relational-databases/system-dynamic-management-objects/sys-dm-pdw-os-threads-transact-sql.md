@@ -30,5 +30,6 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |total_processor_elapsed_time|**bigint**|Total kernel time used by the thread.||  
 |total_user_elapsed_time|**bigint**|Total user time used by the thread||  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+## Related content
+
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)

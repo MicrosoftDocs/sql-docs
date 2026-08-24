@@ -246,9 +246,9 @@ Agent parameter changes take effect the next time the agent is started. If the a
   
 ## Related content
 
-- [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)
-- [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)
-- [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)
-- [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)
-- [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)
-- [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)
+- [Replication Agent Profiles](replication-agent-profiles.md)
+- [Replication Snapshot Agent](replication-snapshot-agent.md)
+- [Replication Log Reader Agent](replication-log-reader-agent.md)
+- [Replication Distribution Agent](replication-distribution-agent.md)
+- [Replication Merge Agent](replication-merge-agent.md)
+- [Replication Queue Reader Agent](replication-queue-reader-agent.md)

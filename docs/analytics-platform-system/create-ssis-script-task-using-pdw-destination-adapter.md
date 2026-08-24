@@ -258,10 +258,6 @@ This SSIS package script code is a code example for using the SSIS PDW destinati
     }  
     ```  
   
-## See Also  
-[Load Data With Integration Services](load-with-ssis.md)  
+## Related content
 
-<!-- MISSING LINK
-[Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)
--->
-  
+- [Load data with Integration Services to Parallel Data Warehouse](load-with-ssis.md)

@@ -122,9 +122,9 @@ SET (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-## See also
+## Related content
 
-[CREATE EXTERNAL LANGUAGE (Transact-SQL)](create-external-language-transact-sql.md)  
-[DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
-[sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)
+- [CREATE EXTERNAL LANGUAGE (Transact-SQL)](create-external-language-transact-sql.md)
+- [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)
+- [sys.external_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)
+- [sys.external_language_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

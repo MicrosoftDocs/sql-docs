@@ -70,13 +70,11 @@ WHERE Description
 GO  
 ```  
   
-## See Also  
- [ENCRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
- [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
- [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
 
+- [ENCRYPTBYCERT (Transact-SQL)](encryptbycert-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../statements/create-certificate-transact-sql.md)
+- [ALTER CERTIFICATE (Transact-SQL)](../statements/alter-certificate-transact-sql.md)
+- [DROP CERTIFICATE (Transact-SQL)](../statements/drop-certificate-transact-sql.md)
+- [BACKUP CERTIFICATE (Transact-SQL)](../statements/backup-certificate-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

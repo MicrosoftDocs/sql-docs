@@ -54,8 +54,6 @@ helpviewer_keywords:
   
  However, if **queryout** is used for export and you reference sparse columns that are members of the sparse column set by name, you cannot perform a direct import into a similarly structured table. This is because BCP uses metadata consistent with a **select \*** operation for the import and is unable to match **column_set** member columns with this metadata. To import **column_set** member columns individually, you must define a view on the table that references the desired **column_set** columns, and you must perform the import operation using the view.  
   
-## See Also  
- [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
-  
-  
+## Related content
 
+- [Microsoft OLE DB Driver for SQL Server](../oledb-driver-for-sql-server.md)

@@ -93,17 +93,16 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     @operation_id = @operation_id out
 ```
 
-## Next steps
-- Consider other ways to deploy a package.
-    - [Deploy an SSIS package with SSMS](./ssis-quickstart-deploy-ssms.md)
-    - [Deploy an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Deploy an SSIS package from the command prompt](./ssis-quickstart-deploy-cmdline.md)
-    - [Deploy an SSIS package with PowerShell](ssis-quickstart-deploy-powershell.md)
-    - [Deploy an SSIS package with C#](./ssis-quickstart-deploy-dotnet.md) 
-- Run a deployed package. To run a package, you can choose from several tools and languages. For more info, see the following articles:
-    - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md)
-    - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
-    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 
+## Related content
+
+- [Deploy an SSIS project with SQL Server Management Studio (SSMS)](ssis-quickstart-deploy-ssms.md)
+- [Deploy an SSIS project from SSMS with Transact-SQL](ssis-quickstart-deploy-tsql-ssms.md)
+- [Deploy an SSIS project from the command prompt with ISDeploymentWizard.exe](ssis-quickstart-deploy-cmdline.md)
+- [Deploy an SSIS project with PowerShell](ssis-quickstart-deploy-powershell.md)
+- [Deploy an SSIS project with C# code in a .NET app](ssis-quickstart-deploy-dotnet.md)
+- [Run an SSIS package with SQL Server Management Studio (SSMS)](ssis-quickstart-run-ssms.md)
+- [Run an SSIS package from SSMS with Transact-SQL](ssis-quickstart-run-tsql-ssms.md)
+- [Run an SSIS package from Visual Studio Code with Transact-SQL](ssis-quickstart-run-tsql-vscode.md)
+- [Run an SSIS package from the command prompt with DTExec.exe](ssis-quickstart-run-cmdline.md)
+- [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
+- [Run an SSIS package with C# code in a .NET app](ssis-quickstart-run-dotnet.md)

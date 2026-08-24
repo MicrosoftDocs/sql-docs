@@ -70,4 +70,4 @@ GO
 ## Related content
 
 - [Broker system messages](broker-system-messages.md)
-- [XQuery Basics](../../xquery/xquery-basics.md)
+- [XQuery basics](../../xquery/xquery-basics.md)

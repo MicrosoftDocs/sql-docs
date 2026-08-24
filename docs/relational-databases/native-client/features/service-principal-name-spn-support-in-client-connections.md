@@ -102,6 +102,7 @@ helpviewer_keywords:
   
 -   [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
-## See Also  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-[Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
+## Related content
+
+- [SQL Server Native Client Features](sql-server-native-client-features.md)
+- [Register a Service Principal Name for Kerberos connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)

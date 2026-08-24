@@ -93,6 +93,6 @@ Go's `float64` type provides approximately 15-16 significant decimal digits. SQL
 
 ## Related content
 
-- [Support and lifecycle](support-lifecycle.md)
-- [What's new](whats-new.md)
-- [Troubleshooting](troubleshooting.md)
+- [go-mssqldb support and lifecycle](support-lifecycle.md)
+- [What's new in go-mssqldb](whats-new.md)
+- [Troubleshoot the go-mssqldb driver](troubleshooting.md)

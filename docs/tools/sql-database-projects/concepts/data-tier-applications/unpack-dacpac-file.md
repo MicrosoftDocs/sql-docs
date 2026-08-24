@@ -119,5 +119,5 @@ namespace DacUnpack
 
 - [Data-tier applications (DAC) overview](overview.md)
 - [SqlPackage Publish parameters, properties, and SQLCMD variables](../../../sqlpackage/sqlpackage-publish.md)
-- [Data-tier Application (Preview)](../../../visual-studio-code-extensions/mssql/mssql-data-tier-application.md)
+- [Data-tier Application (DACPAC and BACPAC) import and export](../../../visual-studio-code-extensions/mssql/mssql-data-tier-application.md)
 - [Install SQL Server Data Tools (SSDT) for Visual Studio](../../../../ssdt/download-sql-server-data-tools-ssdt.md)

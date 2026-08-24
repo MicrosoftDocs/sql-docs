@@ -61,10 +61,9 @@ helpviewer_keywords:
   
 15. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
- [Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services Paths](../../../integration-services/data-flow/integration-services-paths.md)   
- [Data Flow Task](../../../integration-services/control-flow/data-flow-task.md)  
-  
-  
+## Related content
+
+- [Aggregate Transformation](aggregate-transformation.md)
+- [Integration Services Transformations](integration-services-transformations.md)
+- [Integration Services Paths](../integration-services-paths.md)
+- [Data Flow Task](../../control-flow/data-flow-task.md)

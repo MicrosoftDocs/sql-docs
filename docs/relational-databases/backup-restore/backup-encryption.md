@@ -146,6 +146,6 @@ If the database is TDE enabled, choose different certificates or asymmetric keys
 
 ## Related content
 
-- [Create an Encrypted Backup](create-an-encrypted-backup.md)
-- [Extensible Key Management Using Azure Key Vault (SQL Server)](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)
+- [Create an encrypted backup](create-an-encrypted-backup.md)
+- [Extensible Key Management using Azure Key Vault (SQL Server)](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)
 - [Backup overview (SQL Server)](backup-overview-sql-server.md)

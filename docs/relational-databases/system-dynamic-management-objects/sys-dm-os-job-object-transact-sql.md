@@ -53,7 +53,6 @@ On SQL Database, requires the `VIEW DATABASE STATE` permission in the database.
 
 On SQL Server 2022 and later, and SQL Managed Instance, requires `VIEW SERVER PERFORMANCE STATE` permission on the server. On Azure SQL Database, requires `VIEW DATABASE PERFORMANCE STATE` permission on the database.
  
-## See Also  
+## Related content
 
-For information on Managed Instances, see [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance).
-
+- [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)

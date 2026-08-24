@@ -65,5 +65,6 @@ SQLRETURN SQLCompleteAsync(
 ## Comments  
  In polling based asynchronous processing mode, *AsyncRetCodePtr* might be SQL_STILL_EXECUTING when **SQLCompleteAsync** returns SQL_SUCCESS. Application should keep polling until *AsyncRetCodePtr* is not SQL_STILL_EXECUTING. In notification based asynchronous processing mode, *AsyncRetCodePtr* will never be SQL_STILL_EXECUTING.  
   
-## See Also  
- [Asynchronous Execution (Polling Method)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+## Related content
+
+- [Asynchronous Execution (Polling Method)](../develop-app/asynchronous-execution-polling-method.md)

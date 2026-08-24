@@ -258,8 +258,8 @@ GO
 
 ## Related content
 
-- [Move the report server databases to another computer &#40;SSRS native mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)
-- [Create a native mode report server database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)
-- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-- [Back up and restore Reporting Services encryption keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
+- [Move report server databases to another computer (SSRS native mode)](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)
+- [Create a Native Mode Report Server Database (Report Server Configuration Manager)](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Back up and restore SQL Server Reporting Services (SSRS) encryption keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -37,6 +37,6 @@ szSqlState = "01S02", pfNativeError = 0
 szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type changed."  
 ```  
   
-## See Also  
- [Executing Statements &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
-  
+## Related content
+
+- [Executing Statements (ODBC)](executing-statements-odbc.md)

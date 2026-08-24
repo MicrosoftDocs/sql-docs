@@ -60,7 +60,6 @@ ORDER BY median_total_elapsed_time_ms DESC;
 
 ## Related content
 
-- [Query insights in Fabric data warehousing](/fabric/data-warehouse/query-insights)
 - [Monitor connections, sessions, and requests using DMVs](/fabric/data-warehouse/monitor-using-dmv)
 - [queryinsights.exec_sessions_history (Transact-SQL)](queryinsights-exec-sessions-history-transact-sql.md)
 - [queryinsights.exec_requests_history (Transact-SQL)](queryinsights-exec-requests-history-transact-sql.md)

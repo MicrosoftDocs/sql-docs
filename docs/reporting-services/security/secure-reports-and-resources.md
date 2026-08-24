@@ -75,7 +75,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
-- [Secure shared data source items](../../reporting-services/security/secure-shared-data-source-items.md)
-- [Store credentials in a Reporting Services data source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)
+- [Create and manage role assignments](create-and-manage-role-assignments.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)
+- [Secure shared data source items](secure-shared-data-source-items.md)
+- [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)

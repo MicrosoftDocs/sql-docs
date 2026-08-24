@@ -114,7 +114,6 @@ The second row has the `Tag` value `2`. Therefore, the column group that has the
 
 This process is repeated for rest of the rows in the rowset. Note the importance of ordering the rows in the universal table so that FOR XML EXPLICIT can process the rowset in order and generate the XML you want.
 
-## See also
+## Related content
 
-- [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)
-
+- [Use EXPLICIT mode with FOR XML](use-explicit-mode-with-for-xml.md)

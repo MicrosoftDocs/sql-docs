@@ -14,7 +14,6 @@ ms.topic: reference
 
   For information about the members of [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md), see [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md).  
   
-## See Also  
- [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  
-  
-  
+## Related content
+
+- [SQLServerBlob Class](sqlserverblob-class.md)

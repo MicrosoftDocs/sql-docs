@@ -16,6 +16,6 @@ ms.topic: "reference"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds the DBCOLUMN_BASETABLEINSTANCE column to IColumnsRowset::GetColumnRowset. This column returns DBTYPE_I2 and is reserved for use by Microsoft. The information in this column is subject to change in future releases.  
   
-## See Also  
- [Interfaces &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB) Interfaces](sql-server-native-client-ole-db-interfaces.md)

@@ -27,8 +27,7 @@ ms.topic: reference
 public final class SQLServerDriver  
 ```  
   
-## See Also  
- [SQLServerDriver Members](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerDriver Members](sqlserverdriver-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

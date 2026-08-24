@@ -52,7 +52,6 @@ retcode = SQLSetStmtAttr(hstmt1, SQL_ATTR_CURSOR_SENSITIVITY, SQLPOINTER)SQL_INS
 retcode = SQLExecDirect(hstmt1, select au_lname from authors", SQL_NTS);  
 ```  
   
-## See Also  
- [Executing Queries How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
-  
+## Related content
+
+- [Executing Queries How-to Topics (ODBC)](executing-queries-how-to-topics-odbc.md)

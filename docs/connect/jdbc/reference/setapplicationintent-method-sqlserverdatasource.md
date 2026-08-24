@@ -28,9 +28,8 @@ public void setApplicationIntent(java.lang.String applicationIntent);
 ## Remarks  
  For more information about the **applicationIntent** connection property, see [Setting the Connection Properties](../../../connect/jdbc/setting-the-connection-properties.md).  
   
-## See Also  
- [SQLServerDataSource.getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)   
- [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [getApplicationIntent Method (SQLServerDataSource)](getapplicationintent-method-sqlserverdatasource.md)
+- [SQLServerDataSource Members](sqlserverdatasource-members.md)
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

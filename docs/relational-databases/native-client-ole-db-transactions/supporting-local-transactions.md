@@ -118,8 +118,7 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## See Also  
- [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
- [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
-  
-  
+## Related content
+
+- [Transactions in SQL Server Native Client](transactions.md)
+- [Working with Snapshot Isolation in SQL Server Native Client](../native-client/features/working-with-snapshot-isolation.md)

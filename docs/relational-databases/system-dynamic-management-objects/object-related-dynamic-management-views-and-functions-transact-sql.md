@@ -32,6 +32,7 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)

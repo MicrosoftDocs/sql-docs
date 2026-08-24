@@ -146,11 +146,11 @@ The issue intermittenly occurs, because only the server that creates the SQL Age
 
 ## Related content
 
-- [Configure a service account](configure-the-report-server-service-account-ssrs-configuration-manager.md)
-- [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
-- [Create a Native mode report server database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)
-- [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-- [Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
-- [Add and remove encryption keys for scale-out deployment](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)
-- [Manage a Reporting Services Native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+- [Configure the Report Server Service Account (Report Server Configuration Manager)](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [Configure a URL (Report Server Configuration Manager)](configure-a-url-ssrs-configuration-manager.md)
+- [Create a Native Mode Report Server Database (Report Server Configuration Manager)](ssrs-report-server-create-a-native-mode-report-server-database.md)
+- [Configure report server URLs (Report Server Configuration Manager)](configure-report-server-urls-ssrs-configuration-manager.md)
+- [Configure a report server database connection (Report Server Configuration Manager)](configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Add and remove encryption keys for scale-out deployment](add-and-remove-encryption-keys-for-scale-out-deployment.md)
+- [Manage a Reporting Services native mode report server](../report-server/manage-a-reporting-services-native-mode-report-server.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

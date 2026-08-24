@@ -80,8 +80,6 @@ Variable Value File is an XML file comprising the parameter values of commands l
 </variables>  
 ```  
   
-## Next Step  
-The next step in operating the console is [Creating the Server Connection Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
-  
-## See Also  
-[Creating the Server Files (Oracle)](./creating-the-server-connection-files-oracletosql.md)  
+## Related content
+
+- [Creating the Server Connection Files](creating-the-server-connection-files-oracletosql.md)

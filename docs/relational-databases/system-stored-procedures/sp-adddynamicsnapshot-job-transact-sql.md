@@ -184,5 +184,5 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 - [Create a Snapshot for a Merge Publication with Parameterized Filters](../replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)
 - [Parameterized Filters - Parameterized Row Filters](../replication/merge/parameterized-filters-parameterized-row-filters.md)
-- [sp_dropdynamicsnapshot_job (Transact-SQL)](sp-dropdynamicsnapshot-job-transact-sql.md)
-- [sp_helpdynamicsnapshot_job (Transact-SQL)](sp-helpdynamicsnapshot-job-transact-sql.md)
+- [sys.sp_dropdynamicsnapshot_job (Transact-SQL)](sp-dropdynamicsnapshot-job-transact-sql.md)
+- [sys.sp_helpdynamicsnapshot_job (Transact-SQL)](sp-helpdynamicsnapshot-job-transact-sql.md)

@@ -230,39 +230,18 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 Starting with [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], you can specify `NONE` as the `READ_WRITE_ROUTING_URL` or the `READ_ONLY_ROUTING_URL ` destination to revert specified routing for the availability replica, and route traffic based on the default behavior. To learn more, review [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) Transact-SQL command.
 
 
-##  <a name="RelatedTasks"></a> Next Steps 
-**To view read-only routing configurations**  
-  
--   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  
-  
--   [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md) (**read_only_routing_url** column)  
-  
-**To configure client connection access**  
-  
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
-  
--   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
-  
-**To use connection strings in applications**  
-  
--   [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
-  
--   [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
-  
-**Blogs:**  
-  
--    [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)  
-  
--    [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
-  
--    [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
+## Related content
 
-**Additional content**
-
-- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
-
-- [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
-
-- [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- 
-- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)
+- [sys.availability_read_only_routing_lists (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)
+- [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)
+- [Configure a listener for an Always On availability group](create-or-configure-an-availability-group-listener-sql-server.md)
+- [Configure read-only access to a secondary replica of an Always On availability group](configure-read-only-access-on-an-availability-replica-sql-server.md)
+- [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)
+- [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)
+- [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)
+- [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)
+- [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Offload read-only workload to secondary replica of an Always On availability group](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
+- [Types of client connections to replicas within an Always On availability group](about-client-connection-access-to-availability-replicas-sql-server.md)
+- [Connect to an Always On availability group listener](listeners-client-connectivity-application-failover.md)

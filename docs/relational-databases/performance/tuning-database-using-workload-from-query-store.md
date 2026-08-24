@@ -39,9 +39,9 @@ See [dta Utility](../../tools/dta/dta-utility.md) for more information.
 
 The difference between the Query Store and Plan Cache options is that the former contains a longer history of queries that have executed against the database, persisted across server restarts. On the other hand, the Plan Cache only contains a subset of recently executed queries whose plans are cached in memory. When the server restarts, the entries in the Plan Cache are discarded.
 
-## Next steps
+## Related content
 
-- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-- [Tutorial: Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
-- [How Query Store Collects Data](../../relational-databases/performance/how-query-store-collects-data.md)     
-- [Query Store Best Practices](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [Database Engine Tuning Advisor](database-engine-tuning-advisor.md)
+- [Tutorial: Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
+- [How Query Store collects data](how-query-store-collects-data.md)
+- [Best practices for monitoring workloads with Query Store](best-practice-with-the-query-store.md)

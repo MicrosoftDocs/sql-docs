@@ -27,8 +27,6 @@ helpviewer_keywords:
   
  Scrollable OLE DB Driver for SQL Server rowsets are supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursors. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] imposes limitations on cursors that are sensitive to changes made by other users of the database. Specifically, the rows in some cursors cannot be ordered, and trying to create a rowset by using a command that contains a SQL ORDER BY clause can fail. For more information, see [Rowsets and SQL Server Cursors](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## See Also  
- [Rowsets](../../oledb/ole-db-rowsets/rowsets.md)  
-  
-  
+## Related content
 
+- [Rowsets](rowsets.md)

@@ -70,10 +70,10 @@ Additionally, you can use Forms authentication or a custom authentication extens
 
 ## Related content
 
-- [Implement a security extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)
+- [Implement a security extension](../extensions/security-extension/implementing-a-security-extension.md)
 - [Reporting Services custom security sample (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)
-- [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [Configure Basic authentication on the report server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)
-- [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)
+- [Authentication in a report server](authentication-with-the-report-server.md)
+- [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md)
+- [Configure Basic authentication on the report server](configure-basic-authentication-on-the-report-server.md)
+- [Configure Windows authentication on the report server](configure-windows-authentication-on-the-report-server.md)
 - [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

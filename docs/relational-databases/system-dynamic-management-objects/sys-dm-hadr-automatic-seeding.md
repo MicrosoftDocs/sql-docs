@@ -48,9 +48,7 @@ Requires VIEW SERVER STATE permission on the server.
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## Next steps
-
-Learn more about related concepts in the following articles:
+## Related content
 
 - [sys.dm_hadr_availability_group_states (Transact-SQL)](sys-dm-hadr-availability-group-states-transact-sql.md)
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)

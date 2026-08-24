@@ -200,10 +200,9 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-## See Also  
- [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
-  
-  
+## Related content
+
+- [CLOSE (Transact-SQL)](close-transact-sql.md)
+- [DEALLOCATE (Transact-SQL)](deallocate-transact-sql.md)
+- [DECLARE CURSOR (Transact-SQL)](declare-cursor-transact-sql.md)
+- [OPEN (Transact-SQL)](open-transact-sql.md)

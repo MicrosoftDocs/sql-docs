@@ -113,9 +113,9 @@ where [Measures].[Reseller Sales Amount]
   
  The [All Products] and [All Resellers], column and row respectively, contains totals for all members not only those visible ones.  
   
-## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT Statement &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
-  
+## Related content
+
+- [Key Concepts in MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)
+- [MDX Scripting Statements (MDX)](mdx-scripting-statements-mdx.md)
+- [MDX Data Definition - DROP SUBCUBE](mdx-data-definition-drop-subcube.md)
+- [MDX Data Manipulation - SELECT](mdx-data-manipulation-select.md)

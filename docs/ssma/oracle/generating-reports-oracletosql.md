@@ -131,5 +131,6 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
   
 -   fail-script  
   
-## See Also  
-[Executing the SSMA Console (Oracle)](./executing-the-ssma-console-oracletosql.md)  
+## Related content
+
+- [Executing the SSMA console](executing-the-ssma-console-oracletosql.md)

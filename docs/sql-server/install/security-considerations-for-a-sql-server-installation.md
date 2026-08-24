@@ -175,5 +175,5 @@ After installation, enhance the security of the [!INCLUDE [ssNoVersion](../../in
 ## Related content
 
 - [Hardware and software requirements for SQL Server 2022](hardware-and-software-requirements-for-installing-sql-server-2022.md)
-- [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)
+- [Network protocols and network libraries](network-protocols-and-network-libraries.md)
 - [Register a Service Principal Name for Kerberos connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)

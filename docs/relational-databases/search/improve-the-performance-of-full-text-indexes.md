@@ -240,7 +240,7 @@ To work around this issue, mark the filter for the container document (the Word 
 ## Related content
 
 - [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
-- [max full-text crawl range Server Configuration Option](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)
+- [Server configuration: max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)
 - [Populate Full-Text Indexes](populate-full-text-indexes.md)
 - [Create and manage full-text indexes](create-and-manage-full-text-indexes.md)
 - [sys.dm_fts_memory_buffers (Transact-SQL)](../system-dynamic-management-objects/sys-dm-fts-memory-buffers-transact-sql.md)

@@ -257,7 +257,7 @@ END
 
 ## Related content
 
-- [EDIT_DISTANCE (Transact-SQL)](../../t-sql/functions/edit-distance-transact-sql.md)
-- [EDIT_DISTANCE_SIMILARITY (Transact-SQL)](../../t-sql/functions/edit-distance-similarity-transact-sql.md)
-- [JARO_WINKLER_DISTANCE (Transact-SQL)](../../t-sql/functions/jaro-winkler-distance-transact-sql.md)
-- [JARO_WINKLER_SIMILARITY (Transact-SQL)](../../t-sql/functions/jaro-winkler-similarity-transact-sql.md)
+- [EDIT_DISTANCE (Transact-SQL) preview](../../t-sql/functions/edit-distance-transact-sql.md)
+- [EDIT_DISTANCE_SIMILARITY (Transact-SQL) preview](../../t-sql/functions/edit-distance-similarity-transact-sql.md)
+- [JARO_WINKLER_DISTANCE (Transact-SQL) preview](../../t-sql/functions/jaro-winkler-distance-transact-sql.md)
+- [JARO_WINKLER_SIMILARITY (Transact-SQL) preview](../../t-sql/functions/jaro-winkler-similarity-transact-sql.md)

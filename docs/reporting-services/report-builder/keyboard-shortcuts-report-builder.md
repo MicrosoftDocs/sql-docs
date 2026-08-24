@@ -87,6 +87,6 @@ Report Builder provides many right-click menus for quick access to frequently us
 
 ## Related content
 
-- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server.md)
+- [Microsoft Report Builder in SQL Server](report-builder-in-sql-server.md)
 - [Power BI Report Builder](/power-bi/paginated-reports/report-builder-power-bi)
-- [Report Design View (Report Builder)](../../reporting-services/report-builder/report-design-view-report-builder.md)
+- [Report design view in Report Builder](report-design-view-report-builder.md)

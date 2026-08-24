@@ -49,11 +49,9 @@ If a geo-replication link, also known as a continuous-copy relationship, is term
   
 Like the **sys.dm_database_copies** view, **sys.dm_continuous_copy_status** reflects the state of the continuous copy relationship in which the database is either a primary or active secondary database. Unlike **sys.dm_database_copies**, **sys.dm_continuous_copy_status** contains several columns that provide details about operations and performance. These columns include **last_replication**, and **replication_lag_sec**..  
   
-## Next steps
+## Related content
 
-Learn more about related concepts in the following articles:
-
-- [sys.dm_geo_replication_link_status](sys-dm-geo-replication-link-status-azure-sql-database.md)
-- [Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
-- [sys.dm_database_copies &#40;Azure SQL Database&#41;](sys-dm-database-copies-azure-sql-database.md)
-- [Active Geo-Replication Stored Procedures &#40;Transact-SQL&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)
+- [sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)](sys-dm-geo-replication-link-status-azure-sql-database.md)
+- [Geo-replication dynamic management views and functions](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
+- [sys.dm_database_copies (Azure SQL Database)](sys-dm-database-copies-azure-sql-database.md)
+- [System stored procedures (Transact-SQL)](../system-stored-procedures/system-stored-procedures-transact-sql.md)

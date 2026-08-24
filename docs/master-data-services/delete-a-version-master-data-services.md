@@ -50,6 +50,7 @@ helpviewer_keywords:
     > [!NOTE]  
     >  You may have to wait a few minutes before the Web application reflects the change.  
   
-## See Also  
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [Copy a Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)
+## Related content
+
+- [Versions (Master Data Services)](versions-master-data-services.md)
+- [Copy a Version (Master Data Services)](copy-a-version-master-data-services.md)

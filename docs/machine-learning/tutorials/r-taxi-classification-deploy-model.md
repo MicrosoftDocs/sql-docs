@@ -198,12 +198,6 @@ If you call the stored procedure from an external application, make sure that th
 
 Now that you have learned to embed R code in stored procedures, you can extend these practices to build models of your own. The integration with [!INCLUDE[tsql](../../includes/tsql-md.md)] makes it much easier to deploy R models for prediction and to incorporate model retraining as part of an enterprise data workflow.
 
-## Next steps
+## Related content
 
-In this article, you:
-
-> [!div class="checklist"]
-> + Created and used stored procedures for batch scoring
-> + Created and used stored procedures for scoring a single row
-
-For more information about R, see [R extension in SQL Server](../concepts/extension-r.md).
+- [R language extension in SQL Server Machine Learning Services](../concepts/extension-r.md)

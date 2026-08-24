@@ -85,6 +85,6 @@ However, since log shipping is rarely configured as a high availability solution
 
 ## Related content
 
-- [Configure Log Shipping (SQL Server)](configure-log-shipping-sql-server.md)
+- [Configure log shipping (SQL Server)](configure-log-shipping-sql-server.md)
 - [Monitor Log Shipping (Transact-SQL)](monitor-log-shipping-transact-sql.md)
 - [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)

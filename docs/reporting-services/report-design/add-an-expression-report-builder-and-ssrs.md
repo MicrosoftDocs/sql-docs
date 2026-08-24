@@ -31,11 +31,11 @@ ms.custom:
   
 ## Related content
 
-- [Format text and placeholders &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)
-- [Text boxes &#40;Report Builder&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)
-- [Expression uses in reports &#40;Report Builder&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
-- [Filter equation examples &#40;Report Builder&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)
-- [Group expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)
-- [Expression dialog &#40;Report Builder&#41;](./expressions-report-builder-and-ssrs.md)
-- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Add code to a report](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)
+- [Format text and placeholders in paginated reports (Report Builder)](formatting-text-and-placeholders-report-builder-and-ssrs.md)
+- [Text boxes in paginated reports (Report Builder)](text-boxes-report-builder-and-ssrs.md)
+- [Expression uses in paginated reports (Report Builder)](expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Filter equation examples in a paginated report (Report Builder)](filter-equation-examples-report-builder-and-ssrs.md)
+- [Group expression examples in paginated reports (Report Builder)](group-expression-examples-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [Add code to a paginated report (Report Builder)](add-code-to-a-report-ssrs.md)

@@ -45,8 +45,8 @@ Smoothed Hinge loss.
 Smoothing constant (settings).
 
 
-## See also
+## Related content
 
-[`hinge_loss`](hinge-loss.md),
-[`log_loss`](log-loss.md),
-[`squared_loss`](squared-loss.md)
+- [*microsoftml.hinge_loss*: Hinge loss function](hinge-loss.md)
+- [*microsoftml.log_loss*: Log loss function](log-loss.md)
+- [*microsoftml.squared_loss*: Squared loss function](squared-loss.md)

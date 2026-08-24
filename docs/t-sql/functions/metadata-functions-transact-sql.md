@@ -51,7 +51,7 @@ Resolve IDs to names across objects and schemas, and parse multipart identifiers
 | [SCHEMA_ID](schema-id-transact-sql.md) | Returns a schema's ID. |
 | [SCHEMA_NAME](schema-name-transact-sql.md) | Returns a schema's name by ID. |
 | [PARSENAME](parsename-transact-sql.md) | Returns a part of a multipart object name (server, database, schema, object). |
-| [&#x40;&#x40;PROCID](procid-transact-sql.md) | Returns the ID of the currently executing stored procedure. |
+| [@@PROCID](procid-transact-sql.md) | Returns the ID of the currently executing stored procedure. |
 
 ## Object capabilities and programmability metadata
 

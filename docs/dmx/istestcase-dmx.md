@@ -43,8 +43,8 @@ WHERE IsTestCase()
   
  For more information about how to query cases used in data mining, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md) and [SELECT FROM &#60;structure&#62;.CASES](../dmx/select-from-structure-cases.md).  
   
-## See Also  
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Data Mining Queries](/analysis-services/data-mining/data-mining-queries)   
- [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets)  
-  
+## Related content
+
+- [Functions (DMX)](functions-dmx.md)
+- [Data Mining Queries](/analysis-services/data-mining/data-mining-queries)
+- [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets)

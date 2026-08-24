@@ -80,8 +80,6 @@ Creates a sequence object and specifies its properties. A sequence is a user-def
 ## Permissions  
  Requires **CREATE SEQUENCE**, **ALTER**, or **CONTROL** permission on the SCHEMA.  
   
-## See Also  
- [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
-  
-  
+## Related content
 
+- [sys.sequences (Transact-SQL)](../system-catalog-views/sys-sequences-transact-sql.md)

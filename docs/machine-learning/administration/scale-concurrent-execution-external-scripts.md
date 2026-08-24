@@ -58,7 +58,7 @@ The number of worker accounts that you can support, and the number of concurrent
 
 The resources that can be used by Python or R scripts are governed by SQL Server. We recommend that you monitor resource usage using SQL Server DMVs, or look at performance counters on the associated Windows job object, and adjust server memory use accordingly. If you have SQL Server Enterprise Edition, you can allocate resources used for running external scripts by configuring an [external resource pool](create-external-resource-pool.md).
 
-## Next steps
+## Related content
 
-- [Monitor Python and R script execution using custom reports in SQL Server Management Studio](../../machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
-- [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](../../machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
+- [Monitor Python and R script execution using custom reports in SQL Server Management Studio](monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

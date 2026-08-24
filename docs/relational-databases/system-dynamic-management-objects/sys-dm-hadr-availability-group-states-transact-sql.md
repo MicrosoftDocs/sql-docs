@@ -44,8 +44,8 @@ For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions, 
 
 For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## See also
+## Related content
 
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)
-- [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-- [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](always-on-availability-groups-dynamic-management-views-functions.md)
+- [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [Always On availability groups dynamic management views and functions](always-on-availability-groups-dynamic-management-views-functions.md)

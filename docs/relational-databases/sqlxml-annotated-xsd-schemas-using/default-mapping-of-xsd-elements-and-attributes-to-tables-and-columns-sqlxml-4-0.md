@@ -196,9 +196,8 @@ ctions">
 </ROOT>  
 ```  
   
-## See Also  
- [Annotated Schema Security Considerations &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
- [xml Data Type Support in SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Annotated Schema Security Considerations (SQLXML 4.0)](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)
+- [XML data (SQL Server)](../xml/xml-data-sql-server.md)
+- [xml Data Type Support in SQLXML 4.0](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)

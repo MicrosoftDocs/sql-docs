@@ -75,8 +75,8 @@ Similar to [sp_help_spatial_geometry_index](sp-help-spatial-geometry-index-trans
 ## Related content
 
 - [Spatial index stored procedures - arguments and properties](spatial-index-stored-procedures-arguments-and-properties.md)
-- [sp_help_spatial_geometry_index (Transact-SQL)](sp-help-spatial-geometry-index-transact-sql.md)
+- [sys.sp_help_spatial_geometry_index (Transact-SQL)](sp-help-spatial-geometry-index-transact-sql.md)
 - [Spatial Indexes Overview](../spatial/spatial-indexes-overview.md)
 - [Spatial Data](../spatial/spatial-data-sql-server.md)
-- [XQuery Basics](../../xquery/xquery-basics.md)
+- [XQuery basics](../../xquery/xquery-basics.md)
 - [XQuery Language Reference (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)

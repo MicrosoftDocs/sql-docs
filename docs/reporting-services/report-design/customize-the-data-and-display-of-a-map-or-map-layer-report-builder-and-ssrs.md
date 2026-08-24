@@ -156,5 +156,5 @@ f1_keywords:
   
 ## Related content
 
-- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)
-- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
+- [Map Wizard and Map Layer Wizard (Report Builder and SSRS)](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)
+- [Maps in a paginated report (Report Builder)](maps-report-builder-and-ssrs.md)

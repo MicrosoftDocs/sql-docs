@@ -118,8 +118,8 @@ GO
 ## Related content
 
 - [Distributed Queries stored procedures (Transact-SQL)](distributed-queries-stored-procedures-transact-sql.md)
-- [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)
-- [sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)
-- [sp_dropdistpublisher (Transact-SQL)](sp-dropdistpublisher-transact-sql.md)
-- [sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
+- [sys.sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)
+- [sys.sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)
+- [sys.sp_dropdistpublisher (Transact-SQL)](sp-dropdistpublisher-transact-sql.md)
+- [sys.sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

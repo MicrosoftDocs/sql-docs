@@ -40,6 +40,6 @@ Recompile just the INSERT EXEC statement to force it to go through the regular c
 
 For more information, see our [troubleshooting article on error 556](/troubleshoot/sql/database-design/error-556-insert-exec-failed).
   
-## See also
+## Related content
 
-[DBCC CHECKTABLE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
+- [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)

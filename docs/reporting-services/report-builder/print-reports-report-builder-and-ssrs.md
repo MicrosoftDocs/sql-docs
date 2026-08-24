@@ -43,7 +43,7 @@ Provides step-by-step instructions on how to print a report. Also provides instr
 
 ## Related content
 
-- [Export reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
-- [Page headers and footers (Report Builder)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
-- [Images (Report Builder)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
-- [Pagination in Reporting Services (Report Builder)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](export-reports-report-builder-and-ssrs.md)
+- [Page headers and footers in a paginated report (Report Builder)](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)
+- [Images in paginated reports (Report Builder)](../report-design/images-report-builder-and-ssrs.md)
+- [Pagination in paginated reports (Microsoft Report Builder)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)

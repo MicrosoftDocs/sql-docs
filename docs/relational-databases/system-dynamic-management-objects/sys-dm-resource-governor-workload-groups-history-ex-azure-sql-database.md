@@ -79,14 +79,14 @@ Requires the `VIEW SERVER PERFORMANCE STATE` permission.
 
 ## Remarks
 
-Users can access this dynamic management view to monitor near real time resource consumption for user workload group as well as system internal workload groups in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
+Users can access this dynamic management view to monitor near real time resource consumption for user workload group as well as system internal workload groups in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 > [!IMPORTANT]
-> Most of the data in this DMV is intended for internal consumption and is subject to change.
+> Most of the data in this DMV is intended for internal consumption and is subject to change.
 
 ## Examples
 
-The following example the returns maximum log rate data and consumption at each snapshot by the database, or by all databases in an elastic pool.
+The following example the returns maximum log rate data and consumption at each snapshot by the database, or by all databases in an elastic pool.
 
 ```sql
 SELECT snapshot_time,

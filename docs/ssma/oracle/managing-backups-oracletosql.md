@@ -87,6 +87,6 @@ The following buttons are available on the dialog:
   
 -   Click the **Close** button to close the dialog.  
   
-## See Also  
-[Testing Migrated Database Objects &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  
+## Related content
+
+- [Testing Migrated Database Objects](testing-migrated-database-objects-oracletosql.md)

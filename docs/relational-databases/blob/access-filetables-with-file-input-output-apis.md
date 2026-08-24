@@ -117,10 +117,9 @@ helpviewer_keywords:
 |**Security**|No|Windows share level security and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table and column level security are enforced.|  
 |**USN journal**|No|Metadata changes to files and directories in a FileTable are DML operations on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Therefore they are logged in the corresponding database log file. However they are not logged in the NTFS USN journal (except for changes in size).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change tracking capabilities can be used to capture similar information.|  
   
-## See Also  
- [Load Files into FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
- [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
- [Access FileTables with Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
- [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
-  
-  
+## Related content
+
+- [Load files into FileTables](load-files-into-filetables.md)
+- [Work with directories and paths in FileTables](work-with-directories-and-paths-in-filetables.md)
+- [Access FileTables with Transact-SQL](access-filetables-with-transact-sql.md)
+- [FileTable DDL, functions, stored procedures, and views](filetable-ddl-functions-stored-procedures-and-views.md)

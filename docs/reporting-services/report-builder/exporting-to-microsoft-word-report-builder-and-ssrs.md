@@ -217,9 +217,9 @@ You can change some default settings for this renderer, by changing the device i
 
 ## Related content
 
-- [Pagination in Reporting Services](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
-- [Renderer behaviors](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
-- [Interactive functionality for different report rendering extensions](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
-- [Render report items](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)
-- [Tables, matrices, and lists](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Pagination in paginated reports (Microsoft Report Builder)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Rendering behaviors in a paginated report (Report Builder)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)
+- [Interactive functionality - different report rendering extensions](interactive-functionality-different-report-rendering-extensions.md)
+- [Rendering report items in paginated reports (Report Builder)](../report-design/rendering-report-items-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](../report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -40,9 +40,8 @@ public int getPrecision(int param)
   
  For number types, this method gets the number of decimal digits. For character types, it gets the maximum length in characters. For binary types, it gets the maximum length in bytes. Where the number of digits is unknown, this method returns "0".  
   
-## See Also  
- [SQLServerParameterMetaData Methods](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
- [SQLServerParameterMetaData Members](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
- [SQLServerParameterMetaData Class](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerParameterMetaData Methods](sqlserverparametermetadata-methods.md)
+- [SQLServerParameterMetaData Members](sqlserverparametermetadata-members.md)
+- [SQLServerParameterMetaData Class](sqlserverparametermetadata-class.md)

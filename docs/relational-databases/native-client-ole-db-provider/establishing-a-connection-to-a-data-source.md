@@ -95,7 +95,6 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-## See Also  
- [Creating a SQL Server Native Client OLE DB Provider Application](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
-  
-  
+## Related content
+
+- [Creating a SQL Server Native Client OLE DB Provider Application](creating-a-sql-server-native-client-ole-db-provider-application.md)

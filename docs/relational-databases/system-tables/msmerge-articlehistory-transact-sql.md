@@ -37,7 +37,6 @@ dev_langs:
 |**estimated_changes**|**int**|An estimate of the number of row changes that must be applied to the article.|  
 |**relative_cost**|**decimal**|The time spent applying changes for this article versus the total time for the entire session.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)

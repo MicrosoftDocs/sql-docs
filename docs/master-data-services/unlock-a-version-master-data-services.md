@@ -42,9 +42,7 @@ helpviewer_keywords:
   
 4.  In the confirmation dialog box, click **OK**.  
   
-## Next Steps  
-  
--   [Lock a Version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
-  
-## See Also  
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)
+## Related content
+
+- [Versions (Master Data Services)](versions-master-data-services.md)
+- [Lock a Version (Master Data Services)](lock-a-version-master-data-services.md)

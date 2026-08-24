@@ -685,7 +685,6 @@ _ExitProcessResultSet:
 
 For more information about how the OLE DB Driver for SQL Server exposes large value data types, see [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).
 
-## See also
+## Related content
 
-[OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)
-
+- [OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)

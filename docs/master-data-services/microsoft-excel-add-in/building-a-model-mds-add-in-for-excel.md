@@ -43,28 +43,17 @@ ms.custom:
 |Create versions of data.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application or web service|[Lock a Version &#40;Master Data Services&#41;](../../master-data-services/lock-a-version-master-data-services.md)|  
 |Deploy models.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, web service, or MDSModelDeploy tool.|[Create a Model Deployment Package by Using MDSModelDeploy](../../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
-## Related Content  
-  
--   [Models &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)  
-  
--   [Entities &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)  
-  
--   [Attributes &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)  
-  
--   [Domain-Based Attributes &#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
-  
--   [Attribute Groups &#40;Master Data Services&#41;](../../master-data-services/attribute-groups-master-data-services.md)  
-  
--   [Business Rules &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md)  
-  
--   [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)  
-  
--   [Hierarchies &#40;Master Data Services&#41;](../../master-data-services/hierarchies-master-data-services.md)  
-  
--   [Collections &#40;Master Data Services&#41;](../../master-data-services/collections-master-data-services.md)  
-  
--   [Versions &#40;Master Data Services&#41;](../../master-data-services/versions-master-data-services.md)  
-  
--   [Security &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
-  
--   [Deploying Models &#40;Master Data Services&#41;](../../master-data-services/deploying-models-master-data-services.md)
+## Related content
+
+- [Models (Master Data Services)](../models-master-data-services.md)
+- [Entities (Master Data Services)](../entities-master-data-services.md)
+- [Attributes (Master Data Services)](../attributes-master-data-services.md)
+- [Domain-Based Attributes (Master Data Services)](../domain-based-attributes-master-data-services.md)
+- [Attribute Groups (Master Data Services)](../attribute-groups-master-data-services.md)
+- [Business Rules (Master Data Services)](../business-rules-master-data-services.md)
+- [Overview: Exporting Data (Master Data Services)](../overview-exporting-data-master-data-services.md)
+- [Hierarchies (Master Data Services)](../hierarchies-master-data-services.md)
+- [Collections (Master Data Services)](../collections-master-data-services.md)
+- [Versions (Master Data Services)](../versions-master-data-services.md)
+- [Security (Master Data Services)](../security-master-data-services.md)
+- [Deploying Models (Master Data Services)](../deploying-models-master-data-services.md)

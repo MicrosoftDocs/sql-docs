@@ -34,5 +34,6 @@ monikerRange: ">=aps-pdw-2016"
 |received_time|**datetime**|Last time a network package was received by this node.||  
 |error_id|**nvarchar(36)**|Unique identifier of the last error that occurred on this node.||  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+## Related content
+
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)

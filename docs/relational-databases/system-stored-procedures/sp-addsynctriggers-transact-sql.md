@@ -157,5 +157,5 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 ## Related content
 
 - [Updatable Subscriptions - For Transactional Replication](../replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-- [sp_script_synctran_commands (Transact-SQL)](sp-script-synctran-commands-transact-sql.md)
+- [sys.sp_script_synctran_commands (Transact-SQL)](sp-script-synctran-commands-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

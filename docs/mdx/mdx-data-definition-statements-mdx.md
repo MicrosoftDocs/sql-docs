@@ -31,9 +31,8 @@ ms.custom: mdx
 |[DROP SUBCUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)|Drops a specified subcube, reverting to the previously defined cube or subcube definition with the specified name.|  
 |[REFRESH CUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-refresh-cube.md)|Refreshes the client cache for a cube.|  
   
-## See Also  
- [MDX Statement Reference &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Statement Reference (MDX)](mdx-statement-reference-mdx.md)
+- [MDX Data Manipulation Statements (MDX)](mdx-data-manipulation-statements-mdx.md)
+- [MDX Scripting Statements (MDX)](mdx-scripting-statements-mdx.md)

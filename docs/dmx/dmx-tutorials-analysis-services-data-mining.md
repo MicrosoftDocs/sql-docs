@@ -21,19 +21,12 @@ ms.custom: dmx
   
  In this tutorial, you will learn how to create a mining model that predicts which products tend to be purchased at the same time. This tutorial also demonstrates the use of nested tables in data mining.  
   
-## Reference  
- [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
-  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)  
-  
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)  
-  
- [Understanding the DMX Select Statement](../dmx/understanding-the-dmx-select-statement.md)  
-  
-## Related Sections  
- [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
-  
-## See Also  
- [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Basic Data Mining Tutorial](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))  
-  
+## Related content
+
+- [Data Mining Extensions (DMX) Syntax Elements](data-mining-extensions-dmx-syntax-elements.md)
+- [DMX Statements - Data Definition](dmx-statements-data-definition.md)
+- [DMX Statements - Data Manipulation](dmx-statements-data-manipulation.md)
+- [Understanding the DMX Select Statement](understanding-the-dmx-select-statement.md)
+- [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)
+- [Structure and Usage of DMX Prediction Queries](structure-and-usage-of-dmx-prediction-queries.md)
+- [Basic Data Mining Tutorial](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))

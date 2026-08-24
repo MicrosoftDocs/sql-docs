@@ -73,5 +73,5 @@ For more information, see [Generate data feeds from reports (Report Builder and 
 
 ## Related content
 
-- [Export reports](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](export-reports-report-builder-and-ssrs.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

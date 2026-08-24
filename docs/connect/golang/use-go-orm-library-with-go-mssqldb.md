@@ -309,7 +309,7 @@ For production databases with managed schemas, prefer [migration tools](migratio
 
 ## Related content
 
-- [Connection strings](connection-strings.md)
-- [Bulk operations](bulk-operations.md) for high-throughput inserts outside GORM
-- [Error handling and retry patterns](error-handling.md)
-- [Performance tuning](performance-tuning.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [Bulk operations with go-mssqldb](bulk-operations.md)
+- [Error handling and retry patterns with go-mssqldb](error-handling.md)
+- [Performance tuning with go-mssqldb](performance-tuning.md)

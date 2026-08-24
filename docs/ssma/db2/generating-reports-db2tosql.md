@@ -122,4 +122,4 @@ The following example refreshes the entire schema with all attributes.
 
 ## Related content
 
-- [Execute the SSMA console (Db2ToSQL)](executing-the-ssma-console-db2tosql.md)
+- [Execute the SSMA console](executing-the-ssma-console-db2tosql.md)

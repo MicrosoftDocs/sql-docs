@@ -76,8 +76,7 @@ FROM
 WHERE([Date].[Calendar].[Calendar Year].&[2001])  
 ```  
   
-## See Also  
- [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
-  
-  
+## Related content
+
+- [IIf (MDX)](iif-mdx.md)
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)

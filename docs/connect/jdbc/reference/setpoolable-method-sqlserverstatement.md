@@ -40,8 +40,7 @@ public void setPoolable(boolean poolable) throws SQLException
   
  [isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md) returns a value indicating if the object is poolable.  
   
-## See Also  
- [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
- [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerStatement Members](sqlserverstatement-members.md)
+- [SQLServerStatement Class](sqlserverstatement-class.md)

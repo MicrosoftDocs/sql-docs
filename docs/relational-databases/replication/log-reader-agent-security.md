@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Identity and Access control in Replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)
-- [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)
-- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Identity and Access Control (Replication)](security/identity-and-access-control-replication.md)
+- [Replication Agent Security Model](security/replication-agent-security-model.md)
+- [Replication Agents Overview](agents/replication-agents-overview.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)

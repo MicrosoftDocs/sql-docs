@@ -44,4 +44,4 @@ Clear the current lists of recent sites and servers, shared datasets, shared dat
 
 ## Related content
 
-- [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)
+- [Start Microsoft Report Builder](start-report-builder.md)

@@ -4,7 +4,7 @@ description: The Microsoft Drivers for PHP for SQL Server are PHP extensions for
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/22/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -23,40 +23,13 @@ Both drivers connect to Azure SQL Database, SQL database in Microsoft Fabric, Az
 
 ## Choose your starting point
 
-| Goal | Start here |
-| --- | --- |
-| Set up a PHP development environment and run your first query | [Step 1: Configure development environment](step-1-configure-development-environment-for-php-development.md), then [Step 2: Create a SQL database](step-2-create-a-sql-database-for-php-development.md) and [Step 3: Proof of concept connecting to SQL using PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md). |
-| Install the driver on Linux or macOS | [Installation tutorial for Linux and macOS](installation-tutorial-linux-mac.md) and [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md). |
-| Connect to Azure SQL with passwordless authentication | [Connect using Microsoft Entra authentication](azure-active-directory.md) and [Connection options](connection-options.md). |
-| Make an existing app resilient to transient failures | [Idle connection resiliency](connection-resiliency.md) and [Step 4: Connect resiliently to SQL with PHP](step-4-connect-resiliently-to-sql-with-php.md). |
-| Decide between SQLSRV and PDO_SQLSRV | [Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md) and [Comparing execution functions](comparing-execution-functions.md). |
-| Diagnose an install, connection, or query problem | [Troubleshooting](troubleshooting-php-sql-driver.md), [Handling errors and warnings](handling-errors-and-warnings.md), and [Logging activity](logging-activity.md). |
-| Make an existing app faster | [Performance tuning](performance-tuning-php-sql-driver.md). |
-
-## Quick connect
-
-The following snippet is the shortest end-to-end connection that a working PHP install can run against SQL Server or Azure SQL. Use it to confirm your driver, ODBC dependencies, and network path are wired up before you move on to the production baseline in the next section.
-
-```php
-<?php
-$server   = getenv('SQL_SERVER')   ?: 'localhost';
-$database = getenv('SQL_DATABASE') ?: 'master';
-$user     = getenv('SQL_USER');
-$password = getenv('SQL_PASSWORD');
-
-$dsn = "sqlsrv:Driver={ODBC Driver 18 for SQL Server};Server=$server;Database=$database;Encrypt=true";
-$pdo = new PDO($dsn, $user, $password, [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-]);
-
-foreach ($pdo->query('SELECT @@VERSION AS version') as $row) {
-    echo $row['version'], PHP_EOL;
-}
-```
-
-For a passwordless connection against Azure SQL, add `Authentication=ActiveDirectoryMsi` (managed identity) or another `Authentication` value to the DSN and drop the `$user`/`$password` arguments. The production baseline that follows expands the same pattern with retries, timeouts, and diagnostics.
-
-For a local SQL Server that uses a self-signed certificate, `Encrypt=true` fails validation. Add `TrustServerCertificate=true` for local development only. See [TLS certificate errors](troubleshooting-php-sql-driver.md#tls-certificate-errors) for the production alternatives.
+- To set up a PHP development environment and run your first query, start with [Step 1: Configure development environment](step-1-configure-development-environment-for-php-development.md), then [Step 2: Create a SQL database](step-2-create-a-sql-database-for-php-development.md) and [Step 3: Proof of concept connecting to SQL using PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md).
+- To install the driver on Linux or macOS, start with the [Installation tutorial for Linux and macOS](installation-tutorial-linux-mac.md) and [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md).
+- To connect to Azure SQL with passwordless authentication, start with [Connect using Microsoft Entra authentication](azure-active-directory.md) and [Connection options](connection-options.md).
+- To make an existing app resilient to transient failures, go to [Idle connection resiliency](connection-resiliency.md) and [Step 4: Connect resiliently to SQL with PHP](step-4-connect-resiliently-to-sql-with-php.md).
+- To decide between SQLSRV and PDO_SQLSRV, go to [Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md) and [Comparing execution functions](comparing-execution-functions.md).
+- To diagnose an install, connection, or query problem, go to [Troubleshooting](troubleshooting-php-sql-driver.md), [Handling errors and warnings](handling-errors-and-warnings.md), and [Logging activity](logging-activity.md).
+- To make an existing app faster, go to [Performance tuning](performance-tuning-php-sql-driver.md).
 
 ## Production baseline for Azure SQL
 
@@ -300,7 +273,7 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | [Performance tuning](performance-tuning-php-sql-driver.md) | Connection management, batching, prepared statements, cursors, memory, and server-side monitoring. |
 | [Troubleshooting](troubleshooting-php-sql-driver.md) | Diagnose common install, connection, query, data type, transaction, and container problems. |
 
-## Reference
+## Reference content
 
 | Article | Description |
 | --- | --- |
@@ -321,4 +294,4 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 
 - [Microsoft Drivers for PHP for SQL Server on GitHub](https://github.com/microsoft/msphpsql)
 - [Microsoft ODBC Driver for SQL Server](../odbc/microsoft-odbc-driver-for-sql-server.md)
-- [SQL Server drivers](../sql-connection-libraries.md)
+- [Connection modules for Microsoft SQL Database](../sql-connection-libraries.md)

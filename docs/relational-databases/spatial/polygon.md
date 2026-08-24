@@ -192,7 +192,7 @@ The geometry instance returned previously is a `Point(1 3)`.  If the `Polygon` g
   
 ## Related content
 
-- [STArea (geometry Data Type)](../../t-sql/spatial-geometry/starea-geometry-data-type.md)
+- [STArea (geometry data type)](../../t-sql/spatial-geometry/starea-geometry-data-type.md)
 - [STExteriorRing (geometry Data Type)](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)
 - [STNumInteriorRing (geometry Data Type)](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)
 - [STInteriorRingN (geometry Data Type)](../../t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)

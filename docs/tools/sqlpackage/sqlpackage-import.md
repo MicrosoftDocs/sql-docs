@@ -111,8 +111,8 @@ SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" /UniversalAut
 |**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN 'False')|When true, rebuilds indexes offline after importing data into SQL Server.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies how elements are stored when building the database model. For performance reasons the default is InMemory. For large databases, File backed storage is required.|
 
-## Next Steps
+## Related content
 
-- Learn more about [SqlPackage](sqlpackage.md)
-- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)
-- [Import from Azure Blob Storage](sqlpackage-with-data-in-parquet-files.md)
+- [SqlPackage](sqlpackage.md)
+- [Troubleshoot issues and performance with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)
+- [SqlPackage with data in Parquet files (preview)](sqlpackage-with-data-in-parquet-files.md)

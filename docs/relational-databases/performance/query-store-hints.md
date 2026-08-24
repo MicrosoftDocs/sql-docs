@@ -213,7 +213,7 @@ EXEC sys.sp_query_store_clear_hints @query_id = 39;
 
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)
 - [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)
-- [sys.sp_query_store_clear_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md)
+- [sp_query_store_clear_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md)
 - [Save an Execution Plan in XML Format](save-an-execution-plan-in-xml-format.md)
 - [Display and save execution plans](display-and-save-execution-plans.md)
 - [Query hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)

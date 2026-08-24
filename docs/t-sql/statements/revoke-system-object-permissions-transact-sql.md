@@ -61,10 +61,9 @@ REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;
 GO  
 ```  
   
-## See Also  
- [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
- [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [GRANT System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
- [DENY System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.system_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)
+- [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
+- [GRANT system object permissions (Transact-SQL)](grant-system-object-permissions-transact-sql.md)
+- [DENY system object permissions (Transact-SQL)](deny-system-object-permissions-transact-sql.md)

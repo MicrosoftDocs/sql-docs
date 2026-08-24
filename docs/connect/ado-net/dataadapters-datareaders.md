@@ -50,9 +50,9 @@ Describes `DataAdapter` events and how to use them.
 [Batch operations using DataAdapters](batch-operations-using-dataadapters.md)  
 Describes enhancing application performance by reducing the number of round trips to SQL Server when applying updates from the `DataSet`.
 
-## See also
+## Related content
 
-- [Connecting to a data source](connecting-to-data-source.md)
+- [Connecting to a data source in ADO.NET](connecting-to-data-source.md)
 - [Commands and parameters](commands-parameters.md)
 - [Transactions and concurrency](transactions-and-concurrency.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

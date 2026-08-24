@@ -137,7 +137,6 @@ Requires ALTER permission on the function or on the schema. If the function spec
    END;
    ```
 
-## See also
+## Related content
 
-- [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)
-
+- [ALTER FUNCTION (Transact-SQL)](../../t-sql/statements/alter-function-transact-sql.md)

@@ -68,7 +68,8 @@ helpviewer_keywords:
     > [!TIP]  
     >  You can select multiple conditions and right-click to group them inside a logical operator, or to ungroup conditions inside a specific logical operator.  
   
-## See Also  
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Change a Business Rule Name &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)
+## Related content
+
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Change a Business Rule Name (Master Data Services)](change-a-business-rule-name-master-data-services.md)
+- [Configure Business Rules to Send Notifications (Master Data Services)](configure-business-rules-to-send-notifications-master-data-services.md)

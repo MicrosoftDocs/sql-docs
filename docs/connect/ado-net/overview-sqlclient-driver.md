@@ -29,7 +29,7 @@ The articles in this section provide a general overview of the SqlClient driver.
 |[SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md)|Page that contains product support lifecycle information.|
 |[Finding additional SqlClient driver information](find-additional-sqlclient-driver-information.md)|Page that contains useful information about the driver.|
 
-## Next steps
+## Related content
 
 - [SqlClient driver GitHub Repository](//github.com/dotnet/SqlClient)
 - [.NET API browser](/dotnet/api/)

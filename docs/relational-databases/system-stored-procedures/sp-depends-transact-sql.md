@@ -113,6 +113,6 @@ EXECUTE sp_depends @objname = N'AdventureWorks2022.Production.iWorkOrder';
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
-- [sp_help (Transact-SQL)](sp-help-transact-sql.md)
+- [sys.sp_help (Transact-SQL)](sp-help-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sys.sql_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-dependencies-transact-sql.md)

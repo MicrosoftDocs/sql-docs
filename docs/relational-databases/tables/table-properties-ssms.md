@@ -157,7 +157,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
   
  The FILESTREAM partition scheme must be symmetric to the scheme that is specified in the **Partition scheme** option.  
   
-## See Also  
- [View the Table Definition](../../relational-databases/tables/view-the-table-definition.md)   
- [Modify Columns &#40;Database Engine&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
-  
+## Related content
+
+- [View the Table Definition](view-the-table-definition.md)
+- [Modify columns](modify-columns-database-engine.md)

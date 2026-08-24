@@ -66,8 +66,8 @@ You can replay trace data in one of two sequencing modes: stress mode or synchro
 
 3. When the distributed replay has finished, the administration tool returns summary information. If you specified the **-o** option, the replay activity has been saved in result trace files on each client. For more information about the result trace files, see [Review the Replay Results](../../tools/distributed-replay/review-the-replay-results.md).
 
-## See also
+## Related content
 
-- [Distributed Replay Requirements](./sql-server-distributed-replay.md)
-- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
-- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)
+- [SQL Server Distributed Replay overview](sql-server-distributed-replay.md)
+- [Administration Tool Command-line Options (Distributed Replay Utility)](administration-tool-command-line-options-distributed-replay-utility.md)
+- [Configure Distributed Replay](configure-distributed-replay.md)

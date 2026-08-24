@@ -59,13 +59,12 @@ dev_langs:
     :::column-end:::
 :::row-end:::
  
-## See Also  
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Slash Star &#40;Block Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
- [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
-  
+## Related content
+
+- [CASE (Transact-SQL)](case-transact-sql.md)
+- [Slash Star (Block Comment) (Transact-SQL)](slash-star-comment-transact-sql.md)
+- [-- (Comment) (Transact-SQL)](comment-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](declare-local-variable-transact-sql.md)
+- [EXECUTE (Transact-SQL)](execute-transact-sql.md)
+- [PRINT (Transact-SQL)](print-transact-sql.md)
+- [RAISERROR (Transact-SQL)](raiserror-transact-sql.md)

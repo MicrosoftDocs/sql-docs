@@ -65,6 +65,6 @@ Only members of the **sysadmin** fixed server role and the **db_owner** fixed da
 
 - [Implement a Business Logic Handler for a Merge Article](../replication/implement-a-business-logic-handler-for-a-merge-article.md)
 - [Implement a custom conflict resolver for a Merge article](../replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)
-- [sp_lookupcustomresolver (Transact-SQL)](sp-lookupcustomresolver-transact-sql.md)
-- [sp_unregistercustomresolver (Transact-SQL)](sp-unregistercustomresolver-transact-sql.md)
+- [sys.sp_lookupcustomresolver (Transact-SQL)](sp-lookupcustomresolver-transact-sql.md)
+- [sys.sp_unregistercustomresolver (Transact-SQL)](sp-unregistercustomresolver-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

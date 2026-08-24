@@ -304,13 +304,12 @@ code .
 
 1. To deploy your script to another machine, copy the project files, including `pyproject.toml` and `uv.lock`, but not the `.venv` folder or any local `.env` file. Recreate the virtual environment on first run and supply secrets through the target environment.
 
-## Next steps
-
-Use these articles to keep building:
-
-- [Build connection strings](build-connection-strings.md) to configure connections for different SQL database types and authentication methods.
-- [Executing queries](executing-queries.md) to learn about query patterns, parameterized queries, and result handling.
-- [Connection management](connection-management.md) to use context managers, pooling, and connection settings.
+## Next step
 
 > [!div class="nextstepaction"]
 > [Build connection strings](build-connection-strings.md)
+
+## Related content
+
+- [Execute queries with mssql-python](executing-queries.md)
+- [Manage connections with mssql-python](connection-management.md)

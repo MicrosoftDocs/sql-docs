@@ -28,8 +28,7 @@ apitype: "Assembly"
 |[updateCharacterStream (java.lang.String, java.io.Reader, int)](../../../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader-int.md)|Updates the designated column with a character stream value, which will have the specified number of characters.|  
 |[updateCharacterStream Method &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader-long.md)|Updates the designated column with a character stream value, which will have the specified number of characters.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

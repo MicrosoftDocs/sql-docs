@@ -73,6 +73,7 @@ DepartmentID Name
   
 ```  
   
-## See Also  
-- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
-- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
+## Related content
+
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [Operators (Transact-SQL)](operators-transact-sql.md)

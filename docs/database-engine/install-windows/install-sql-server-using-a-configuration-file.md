@@ -180,6 +180,6 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 
 ## Related content
 
-- [Install and configure SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
-- [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
+- [Install a SQL Server failover cluster](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 - [Upgrade a failover cluster instance](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)

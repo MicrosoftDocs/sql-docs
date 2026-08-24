@@ -127,7 +127,7 @@ For example, when using the ADO.NET driver to connect to your managed instance `
 
 ### Transparent data encryption (encryption-at-rest) with service-managed keys
 
-[Transparent data encryption (TDE) for SQL Database, SQL Managed Instance, and Azure Synapse Analytics](transparent-data-encryption-tde-overview.md) adds a layer of security to help protect data at rest from unauthorized or offline access to raw files or backups. Common scenarios include data center theft or unsecured disposal of hardware or media such as disk drives and backup tapes. TDE encrypts the entire database by using an AES encryption algorithm, which doesn't require application developers to make any changes to existing applications.
+[Transparent data encryption (TDE) for SQL Database, SQL Managed Instance, and Azure Synapse Analytics](transparent-data-encryption-tde-overview.md) adds a layer of security to help protect data at rest from unauthorized or offline access to raw files or backups. Common scenarios include data center theft or unsecured disposal of hardware or media such as disk drives and backup tapes. TDE encrypts the entire database by using an AES encryption algorithm, which doesn't require application developers to make any changes to existing applications.
 
 In Azure, all newly created databases are encrypted by default and the database encryption key is protected by a built-in server certificate. The service manages certificate maintenance and rotation and requires no input from the user. If you prefer to take control of the encryption keys, you can manage the keys in [Azure Key Vault](/azure/key-vault/general/security-features).
 

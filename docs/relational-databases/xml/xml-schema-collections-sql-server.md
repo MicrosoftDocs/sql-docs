@@ -215,7 +215,7 @@ You can query XML schemas that you have loaded into XML schema collections in th
 
 ## Related content
 
-- [View a Stored XML Schema Collection](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)
-- [Preprocess a Schema to Merge Included Schemas](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)
-- [Requirements and Limitations for XML Schema Collections on the Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)
+- [View a stored XML schema collection](view-a-stored-xml-schema-collection.md)
+- [Preprocess a schema to merge included schemas](preprocess-a-schema-to-merge-included-schemas.md)
+- [Requirements and limitations for XML schema collections on the server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)
 - [XML schema collections in SQL projects](../../tools/sql-database-projects/concepts/xml-schema-collection.md)

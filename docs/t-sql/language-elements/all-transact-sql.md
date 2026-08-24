@@ -105,14 +105,14 @@ EXECUTE DaysToBuild 49080, 1 ;
 
 `Some items for this order can't be manufactured in specified number of days or less.`
 
-## See also
+## Related content
 
-- [CASE &#40;Transact-SQL&#41;](../language-elements/case-transact-sql.md)
-- [Expressions &#40;Transact-SQL&#41;](../language-elements/expressions-transact-sql.md)
+- [CASE (Transact-SQL)](case-transact-sql.md)
+- [Expressions (Transact-SQL)](expressions-transact-sql.md)
 - [What are the SQL database functions?](../functions/functions.md)
-- [LIKE &#40;Transact-SQL&#41;](../language-elements/like-transact-sql.md)
-- [Operators &#40;Transact-SQL&#41;](../language-elements/operators-transact-sql.md)
-- [SELECT &#40;Transact-SQL&#41;](../queries/select-transact-sql.md)
-- [WHERE &#40;Transact-SQL&#41;](../queries/where-transact-sql.md)
-- [IN &#40;Transact-SQL&#41;](../language-elements/in-transact-sql.md)
-- [IS [NOT] DISTINCT FROM (Transact-SQL)](../queries/is-distinct-from-transact-sql.md)
+- [LIKE (Transact-SQL)](like-transact-sql.md)
+- [Operators (Transact-SQL)](operators-transact-sql.md)
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
+- [WHERE (Transact-SQL)](../queries/where-transact-sql.md)
+- [IN (Transact-SQL)](in-transact-sql.md)
+- [IS \[NOT\] DISTINCT FROM (Transact-SQL)](../queries/is-distinct-from-transact-sql.md)

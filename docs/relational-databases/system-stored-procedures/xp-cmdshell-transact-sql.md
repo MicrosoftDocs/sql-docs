@@ -186,6 +186,6 @@ EXECUTE master..xp_cmdshell @cmd;
 ## Related content
 
 - [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)
-- [xp_cmdshell (server configuration option)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)
+- [Server configuration: xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)
 - [Surface area configuration](../security/surface-area-configuration.md)
 - [sp_xp_cmdshell_proxy_account (Transact-SQL)](sp-xp-cmdshell-proxy-account-transact-sql.md)

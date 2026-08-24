@@ -15,6 +15,6 @@ You can use keyboard shortcuts to navigate through SSMA application. For more in
   
 -   [Menu commands and other shortcut keys &#40;Sybase To SQL&#41;](../../ssma/sybase/menu-commands-and-other-shortcut-keys-sybase-to-sql.md)  
   
-## See Also  
-[Getting Started with SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
-  
+## Related content
+
+- [Getting Started with SSMA for SAP ASE](getting-started-with-ssma-for-sybase-sybasetosql.md)

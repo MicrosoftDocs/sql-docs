@@ -143,7 +143,6 @@ helpviewer_keywords:
   
  Regardless of the method used to populate the rowset and form the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor block, the cursor block is active until the next row-fetching method is executed on the rowset.  
   
-## See Also  
- [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
-  
-  
+## Related content
+
+- [Rowsets (Native Client OLE DB provider)](rowsets.md)

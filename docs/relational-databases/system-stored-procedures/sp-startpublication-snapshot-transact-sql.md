@@ -60,5 +60,5 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 ## Related content
 
 - [Create and Apply the Initial Snapshot](../replication/create-and-apply-the-initial-snapshot.md)
-- [sp_addpublication_snapshot (Transact-SQL)](sp-addpublication-snapshot-transact-sql.md)
-- [sp_changepublication_snapshot (Transact-SQL)](sp-changepublication-snapshot-transact-sql.md)
+- [sys.sp_addpublication_snapshot (Transact-SQL)](sp-addpublication-snapshot-transact-sql.md)
+- [sys.sp_changepublication_snapshot (Transact-SQL)](sp-changepublication-snapshot-transact-sql.md)

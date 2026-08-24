@@ -28,8 +28,7 @@ f1_keywords:
   
  Click **Next** to [Generate Mirror Tables and CDC Capture Instances](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md).  
   
-## See Also  
- [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
-  
-  
+## Related content
+
+- [How to Create the SQL Server Change Database Instance](how-to-create-the-sql-server-change-database-instance.md)
+- [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md)

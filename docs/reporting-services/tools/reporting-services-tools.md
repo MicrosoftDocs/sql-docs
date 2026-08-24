@@ -276,6 +276,6 @@ The rs.exe utility is installed when you install SSRS. You run this utility from
 
 ## Related content
 
-- [Comparing native and SharePoint Reporting Services report servers](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
-- [Reporting Services concepts (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)
-- [What is SQL Server Reporting Services (SSRS)?](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
+- [Comparing native and SharePoint Reporting Services report servers](../report-server-sharepoint/reporting-services-report-server.md)
+- [Reporting Services concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [What is SQL Server Reporting Services (SSRS)?](../create-deploy-and-manage-mobile-and-paginated-reports.md)

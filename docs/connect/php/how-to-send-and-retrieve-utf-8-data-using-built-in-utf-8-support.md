@@ -210,15 +210,11 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## See Also  
-[Retrieving Data](../../connect/php/retrieving-data.md)
+## Related content
 
-[Working with ASCII Data in non-Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
-
-[Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
-
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
-
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
-
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+- [Retrieving Data](retrieving-data.md)
+- [How to: Send and Retrieve ASCII Data in Linux and macOS](how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+- [Updating data (Microsoft Drivers for PHP for SQL Server)](updating-data-microsoft-drivers-for-php-for-sql-server.md)
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [Constants (Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
+- [Example Application (SQLSRV Driver)](example-application-sqlsrv-driver.md)

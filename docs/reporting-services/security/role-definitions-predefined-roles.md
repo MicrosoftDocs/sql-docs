@@ -239,6 +239,6 @@ The **System User** role can be used to supplement default security. You can inc
   
 ## Related content
 
-- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)
-- [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)
-- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
+- [Create, delete, or modify a role (Management Studio)](role-definitions-create-delete-or-modify.md)
+- [Grant users access to a report server](grant-user-access-to-a-report-server.md)
+- [Tasks and permissions](tasks-and-permissions.md)

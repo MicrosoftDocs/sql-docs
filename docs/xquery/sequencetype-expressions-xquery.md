@@ -397,8 +397,7 @@ select @x.query('xs:date("2000-01-01Z")')
     <a>2002-05-25Z</a>  
     ```  
   
-## See Also  
- [XQuery Expressions](../xquery/xquery-expressions.md)   
- [Type System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
-  
-  
+## Related content
+
+- [XQuery Expressions](xquery-expressions.md)
+- [Type System (XQuery)](type-system-xquery.md)

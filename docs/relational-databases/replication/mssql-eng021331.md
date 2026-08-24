@@ -35,6 +35,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Specify Snapshot Options](../../relational-databases/replication/snapshot-options.md)
-- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
-- [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)
+- [Modify Snapshot Initialization Options for SQL Replication](snapshot-options.md)
+- [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)
+- [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)

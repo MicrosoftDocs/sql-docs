@@ -97,7 +97,6 @@ FROM [Adventure Works]
 WHERE [Measures].x  
 ```  
   
-## See Also  
- [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Scripting Statements (MDX)](mdx-scripting-statements-mdx.md)

@@ -39,10 +39,9 @@ helpviewer_keywords:
 |**Evaluated value**|Lists the evaluation result of the expression.|  
 |**Evaluate Expression**|Click **Evaluate Expression** to view the evaluation result of the expression.|  
   
-## See Also  
- [Expressions Page](../../integration-services/expressions/expressions-page.md)   
- [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
- [System Variables](../../integration-services/system-variables.md)  
-  
-  
+## Related content
+
+- [Expressions Page](expressions-page.md)
+- [Property Expressions Editor](property-expressions-editor.md)
+- [Integration Services (SSIS) Variables](../integration-services-ssis-variables.md)
+- [System Variables](../system-variables.md)

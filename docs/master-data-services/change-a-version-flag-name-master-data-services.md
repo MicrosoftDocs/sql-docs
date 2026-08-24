@@ -43,6 +43,7 @@ helpviewer_keywords:
   
 6.  Press ENTER.  
   
-## See Also  
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [Assign a Flag to a Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)
+## Related content
+
+- [Versions (Master Data Services)](versions-master-data-services.md)
+- [Assign a Flag to a Version (Master Data Services)](assign-a-flag-to-a-version-master-data-services.md)

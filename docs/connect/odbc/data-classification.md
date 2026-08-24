@@ -83,7 +83,6 @@ s - index into the *`sensitivitylabels`* array, `FF FF` if not labeled
 
 t - index into the *`informationtypes`* array, `FF FF` if not labeled
 
-<br><br>
 The format of the data can be expressed as the following pseudo-structures:
 
 ```cpp

@@ -62,7 +62,6 @@ For info about how to connect to a destination that's not listed here, see [The 
 ## What's next?  
  After you provide info about the destination for your data and about how to connect to it, the next page is **Specify Table Copy or Query**. On this page, you specify whether you want to copy an entire table or only certain rows. For more info, see [Specify Table Copy or Query](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md).  
 
-## See also
-[Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+## Related content
 
-
+- [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

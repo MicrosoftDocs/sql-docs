@@ -154,7 +154,7 @@ These are the conversions from [!INCLUDE [visual-basic](../../includes/visual-ba
   
 ## Related content
 
-- [OLE Automation Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)
-- [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
-- [Data Types (Transact-SQL)](data-types-transact-sql.md)
+- [OLE Automation stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)
+- [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)
+- [Data types (Transact-SQL)](data-types-transact-sql.md)
 - [COLLATE (Transact-SQL)](../statements/collations.md)

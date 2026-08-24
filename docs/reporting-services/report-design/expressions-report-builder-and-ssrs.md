@@ -101,9 +101,9 @@ Simple expressions use symbols to indicate whether the reference is to a field, 
 
 ## Related content
 
-- [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
-- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)
-- [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)
-- [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md)
-- [Report Samples (Report Builder and SSRS)](../../reporting-services/tools/reporting-services-tools.md)
+- [Expression uses in paginated reports (Report Builder)](expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [Filter equation examples in a paginated report (Report Builder)](filter-equation-examples-report-builder-and-ssrs.md)
+- [Group expression examples in paginated reports (Report Builder)](group-expression-examples-report-builder-and-ssrs.md)
+- [Tutorial: Introduce expressions](../tutorial-introducing-expressions.md)
+- [SQL Server Reporting Services tools](../tools/reporting-services-tools.md)

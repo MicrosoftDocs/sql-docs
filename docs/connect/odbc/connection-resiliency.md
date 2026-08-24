@@ -169,6 +169,6 @@ int main() {
 }
 ```
 
-## See also
+## Related content
 
-[Microsoft ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md)
+- [Microsoft ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md)

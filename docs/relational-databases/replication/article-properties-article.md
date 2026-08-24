@@ -169,8 +169,8 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
-- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
-- [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
-- [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md)
-- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Create a publication](publish/create-a-publication.md)
+- [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)
+- [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)
+- [Reinitialize a Subscription](reinitialize-a-subscription.md)
+- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)

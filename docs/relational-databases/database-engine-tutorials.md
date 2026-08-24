@@ -45,8 +45,7 @@ This tutorial illustrates how to do a SQL Server backup and restore to Azure Blo
 [Tutorial: Use Azure Blob Storage with SQL Server databases](tutorial-use-azure-blob-storage-service-with-sql-server.md)  
 This tutorial helps you understand how to store SQL Server data files in Azure Blob Storage directly.  
   
-## Next steps
+## Related content
 
-[Tutorials for SQL Server](../sql-server/tutorials-for-sql-server.md)  
-[SQL Server Samples](../samples/sql-samples-where-are.md)  
-
+- [Tutorials for SQL Server](../sql-server/tutorials-for-sql-server.md)
+- [SQL samples](../samples/sql-samples-where-are.md)

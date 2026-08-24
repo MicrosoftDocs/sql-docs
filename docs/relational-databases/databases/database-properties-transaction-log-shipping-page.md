@@ -53,8 +53,7 @@ f1_keywords:
 > [!IMPORTANT]  
 >  Before scripting settings for a secondary database, you must invoke the **Secondary Database Settings** dialog box. Invoking this dialog box connects you to the secondary server and retrieves the current settings of the secondary database that are needed to generate the script.  
   
-## See Also  
- [Log Shipping Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)   
- [Log Shipping Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [Log Shipping stored procedures (Transact-SQL)](../system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)
+- [Log Shipping Tables (Transact-SQL)](../system-tables/log-shipping-tables-transact-sql.md)

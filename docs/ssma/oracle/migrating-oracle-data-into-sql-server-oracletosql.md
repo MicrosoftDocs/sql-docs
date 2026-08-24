@@ -121,4 +121,4 @@ When a large volume of data needs to be migrated within a short duration, at sca
 
 ## Related content
 
-- [Migrate Oracle Databases to SQL Server (OracleToSQL)](migrating-oracle-databases-to-sql-server-oracletosql.md)
+- [Migrate Oracle Databases to SQL Server](migrating-oracle-databases-to-sql-server-oracletosql.md)

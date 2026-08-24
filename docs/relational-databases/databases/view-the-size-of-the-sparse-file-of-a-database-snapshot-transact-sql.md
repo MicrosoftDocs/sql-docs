@@ -78,10 +78,9 @@ AND mf2.is_sparse = 0
 ORDER BY 1;
 ```
   
-## See Also  
- [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
-  
+## Related content
+
+- [Database snapshots (SQL Server)](database-snapshots-sql-server.md)
+- [sys.fn_virtualfilestats (Transact-SQL)](../system-functions/sys-fn-virtualfilestats-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../system-catalog-views/sys-master-files-transact-sql.md)

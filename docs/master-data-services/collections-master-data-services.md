@@ -45,8 +45,7 @@ helpviewer_keywords:
 |Create a new collection.|[Create a Collection &#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
 |Add members to an existing collection.|[Add Members to a Collection &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
-## Related Content  
-  
--   [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
-  
--   [Overview: Exporting Data &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)
+## Related content
+
+- [Explicit Hierarchies (Master Data Services)](explicit-hierarchies-master-data-services.md)
+- [Overview: Exporting Data (Master Data Services)](overview-exporting-data-master-data-services.md)

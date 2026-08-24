@@ -31,8 +31,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |[Log File Auto Grow Event Class](../../relational-databases/event-classes/log-file-auto-grow-event-class.md)|Indicates that the log file grew automatically. This event is not triggered if the log file is grown explicitly through ALTER DATABASE.|  
 |[Log File Auto Shrink Event Class](../../relational-databases/event-classes/log-file-auto-shrink-event-class.md)|Indicates that the log file grew automatically. This event is not triggered if the log file shrinks explicitly through ALTER DATABASE.|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Related content
 
+- [Extended Events overview](../extended-events/extended-events.md)

@@ -200,8 +200,7 @@ DROP TABLE T;
 GO
 ```
 
-## See also
+## Related content
 
-- [XML indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)
-- [XML data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)
-
+- [XML indexes (SQL Server)](xml-indexes-sql-server.md)
+- [XML data (SQL Server)](xml-data-sql-server.md)

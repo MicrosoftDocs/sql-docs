@@ -41,11 +41,9 @@ Requires VIEW SERVER SECURITY STATE permission on the server.
 
 ## Related content
 
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
-- [Backup Devices (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)
-- [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)
-- [Databases and Files Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
-  
-  
+- [Backup Devices (SQL Server)](../backup-restore/backup-devices-sql-server.md)
+- [sys.sp_addumpdevice (Transact-SQL)](../system-stored-procedures/sp-addumpdevice-transact-sql.md)
+- [Databases and Files Catalog Views (Transact-SQL)](databases-and-files-catalog-views-transact-sql.md)
+- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)

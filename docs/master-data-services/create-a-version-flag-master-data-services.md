@@ -49,10 +49,8 @@ helpviewer_keywords:
   
 8.  Click **Save**.  
   
-## Next Steps  
-  
--   [Assign a Flag to a Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
-  
-## See Also  
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [Change a Version Flag Name &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)
+## Related content
+
+- [Versions (Master Data Services)](versions-master-data-services.md)
+- [Change a Version Flag Name (Master Data Services)](change-a-version-flag-name-master-data-services.md)
+- [Assign a Flag to a Version (Master Data Services)](assign-a-flag-to-a-version-master-data-services.md)

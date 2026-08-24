@@ -25,8 +25,7 @@ This article contains a list of known issues and fixes for the Microsoft OLE DB 
 - Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). For more information, see [SQL Server 2025 and MSOLEDBSQL version 19](../../relational-databases/linked-servers/linked-servers-database-engine.md#sql-server-2025-and-msoledbsql-version-19).
 - Use of MSOLEDBSQL19 within a linked server is only supported on SQL Server 2022 or newer.
 
-## Next steps
+## Related content
 
 - [Installing OLE DB Driver for SQL Server](applications/installing-oledb-driver-for-sql-server.md)
 - [Support policies for OLE DB Driver for SQL Server](applications/support-policies-for-oledb-driver-for-sql-server.md)
-

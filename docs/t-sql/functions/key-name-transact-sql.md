@@ -99,10 +99,8 @@ AS VARCHAR(100) ) AS SecretText ;
 SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;  
 ```  
   
-## See Also  
- [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
-  
-  
+## Related content
 
+- [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
+- [ENCRYPTBYKEY (Transact-SQL)](encryptbykey-transact-sql.md)
+- [DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)](decryptbykeyautoasymkey-transact-sql.md)

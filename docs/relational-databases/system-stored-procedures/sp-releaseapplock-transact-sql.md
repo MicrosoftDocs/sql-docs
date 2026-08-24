@@ -95,5 +95,4 @@ GO
 
 - [APPLOCK_MODE (Transact-SQL)](../../t-sql/functions/applock-mode-transact-sql.md)
 - [APPLOCK_TEST (Transact-SQL)](../../t-sql/functions/applock-test-transact-sql.md)
-- [sp_getapplock (Transact-SQL)](sp-getapplock-transact-sql.md)
-
+- [sys.sp_getapplock (Transact-SQL)](sp-getapplock-transact-sql.md)

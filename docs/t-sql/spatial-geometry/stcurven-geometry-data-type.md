@@ -104,8 +104,7 @@ Returns the curve specified from a **geometry** instance that is a **LineString*
  END
  ```  
   
-## See Also  
- [STNumCurves &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [STNumCurves (geometry Data Type)](stnumcurves-geometry-data-type.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

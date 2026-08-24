@@ -56,11 +56,9 @@ SET STATISTICS PROFILE { ON | OFF }
   
  For [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that do not produce STATISTICS PROFILE result sets, only the appropriate permissions to execute the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are required. For [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that do produce STATISTICS PROFILE result sets, checks for both the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement execution permission and the SHOWPLAN permission must succeed, or the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement execution is aborted and no Showplan information is generated.  
   
-## See Also  
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)   
- [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
-  
-  
+## Related content
 
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET SHOWPLAN_ALL (Transact-SQL)](set-showplan-all-transact-sql.md)
+- [SET STATISTICS TIME (Transact-SQL)](set-statistics-time-transact-sql.md)
+- [SET STATISTICS IO (Transact-SQL)](set-statistics-io-transact-sql.md)

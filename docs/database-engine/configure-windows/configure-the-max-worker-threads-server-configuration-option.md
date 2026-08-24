@@ -158,5 +158,5 @@ The change will take effect immediately after executing [RECONFIGURE](../../t-sq
 
 - [Server configuration options](server-configuration-options-sql-server.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Diagnostic connection for database administrators](diagnostic-connection-for-database-administrators.md)

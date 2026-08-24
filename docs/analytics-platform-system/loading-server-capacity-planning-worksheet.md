@@ -34,7 +34,7 @@ Print this worksheet and fill it in with your own requirements.
 |CPU|Number of sockets.|![Pencil icon](media/pencil-icon.png "Pencil icon")|For loading uncompressed data, dwloader is not a CPU-intensive application.  As a minimum requirement, we recommend using a recently-manufactured 2-socket server.<br /><br />For loading compressed data, you need enough CPU power to uncompress the data before sending it to PDW. dwloader can run 10 active threads at once. If you plan to load 10 compressed files concurrently, we recommend the server has at least a 10-core CPU or two 6-core CPUs.|
 |RAM|GB of memory that allows Windows to cache files during loads.|![Pencil icon](media/pencil-icon.png "Pencil icon")|dwloader uses very little RAM on the loading server. For performance, Windows uses memory to cache the loading files after reading them from disk.<br /><br />To determine the RAM requirements, refer to your Windows Server installation and any 3rd party application requirements. We recommend a minimum of 32 GB if you do not have requirements from other sources.<br /><br />For compressed data, faster RAM is useful because it will speed up the decompression.|
 
-## See Also
-[Acquire and configure a loading server](acquire-and-configure-loading-server.md)
-[dwloader Command-Line Loader](dwloader.md)
+## Related content
 
+- [Acquire and configure a loading server for Parallel Data Warehouse](acquire-and-configure-loading-server.md)
+- [dwloader Command-Line Loader for Parallel Data Warehouse](dwloader.md)

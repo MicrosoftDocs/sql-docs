@@ -92,8 +92,6 @@ IS_OBJECTSIGNED(
 ) AS [Is the object signed?] ;  
 ```  
   
-## See Also  
- [sys.fn_check_object_signatures &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
-  
-  
+## Related content
 
+- [sys.fn_check_object_signatures (Transact-SQL)](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)

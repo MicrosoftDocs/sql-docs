@@ -84,6 +84,6 @@ helpviewer_keywords:
  For more information about the DBPROPSET_SQLSERVERDBINIT property set, see [Initialization and Authorization Properties](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
-## See Also  
- [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
+## Related content
+
+- [OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)

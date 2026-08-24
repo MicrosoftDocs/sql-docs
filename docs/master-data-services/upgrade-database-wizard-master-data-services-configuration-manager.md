@@ -32,7 +32,8 @@ ms.custom:
 ## Progress and Finish  
  Displays the progress of the upgrade process. After the database is upgraded, click the link to the log file to view detailed information about the upgrade or click **Finish** to close the database wizard and return to the **Databases** page. The upgraded database is selected and you can view and modify its system settings.  
   
-## See Also  
- [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md)  
- [Upgrade Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)
+## Related content
+
+- [Database Configuration Page (Master Data Services Configuration Manager)](database-configuration-page-master-data-services-configuration-manager.md)
+- [Master Data Services Installation and Configuration](master-data-services-installation-and-configuration.md)
+- [Upgrade Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)

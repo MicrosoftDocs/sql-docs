@@ -293,7 +293,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## See Also  
- [Bulk Copying with the SQL Server ODBC Driver How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
- [Bulk Copying from Program Variables](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
-  
+## Related content
+
+- [Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)
+- [Bulk Copying from Program Variables](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)

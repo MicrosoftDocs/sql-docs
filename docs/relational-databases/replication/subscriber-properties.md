@@ -38,5 +38,5 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
   
 ## Related content
 
-- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)
+- [Subscribe to Publications](subscribe-to-publications.md)

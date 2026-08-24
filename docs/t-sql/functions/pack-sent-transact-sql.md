@@ -1,6 +1,6 @@
 ---
 title: "@@PACK_SENT (Transact-SQL)"
-description: "&#x40;&#x40;PACK_SENT (Transact-SQL)"
+description: "@@PACK_SENT (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/18/2017"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;PACK_SENT (Transact-SQL)
+# @@PACK_SENT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of output packets written to the network by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since it was last started.  
@@ -54,9 +54,8 @@ Pack Sent
 291  
 ```  
   
-## See Also  
- [@@PACK_RECEIVED &#40;Transact-SQL&#41;](../../t-sql/functions/pack-received-transact-sql.md)   
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [@@PACK_RECEIVED (Transact-SQL)](pack-received-transact-sql.md)
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

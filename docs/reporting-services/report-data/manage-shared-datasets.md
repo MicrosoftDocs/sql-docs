@@ -109,5 +109,5 @@ ms.custom:
   
 ## Related content
 
-- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
-- [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Report server content management (SSRS native mode)](../report-server/report-server-content-management-ssrs-native-mode.md)
+- [Grant permissions on a native mode report server](../security/granting-permissions-on-a-native-mode-report-server.md)

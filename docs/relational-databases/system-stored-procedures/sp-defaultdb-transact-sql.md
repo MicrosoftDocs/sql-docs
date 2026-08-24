@@ -72,7 +72,7 @@ EXECUTE sp_defaultdb 'Victoria', 'AdventureWorks2022';
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)
-- [sp_addlogin (Transact-SQL)](sp-addlogin-transact-sql.md)
-- [sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)
-- [sp_grantdbaccess (Transact-SQL)](sp-grantdbaccess-transact-sql.md)
+- [sys.sp_addlogin (Transact-SQL)](sp-addlogin-transact-sql.md)
+- [sys.sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)
+- [sys.sp_grantdbaccess (Transact-SQL)](sp-grantdbaccess-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

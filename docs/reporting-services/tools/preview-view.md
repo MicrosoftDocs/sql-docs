@@ -79,5 +79,5 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Desig
   
 ## Related content
 
-- [Preview reports](../../reporting-services/reports/previewing-reports.md)
-- [Report designer F1 help](../../reporting-services/tools/report-designer-f1-help.md)
+- [Preview Reports in SQL Server Reporting Services (SSRS)](../reports/previewing-reports.md)
+- [Report Designer F1 Help](report-designer-f1-help.md)

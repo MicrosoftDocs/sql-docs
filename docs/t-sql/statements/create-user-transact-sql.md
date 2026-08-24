@@ -291,7 +291,7 @@ Specifies the type of a Microsoft Entra principal. `E` indicates the principal i
 > [!WARNING]  
 >  Improper use of this option can lead to data corruption. For more information, see [Migrate Sensitive Data Protected by Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
 
-#### FROM EXTERNAL PROVIDER </br>
+#### FROM EXTERNAL PROVIDER <br />
  **Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)], Azure SQL Managed Instance, [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]
 
 Specifies that the principal is for Microsoft Entra authentication. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically validates the provided principal name in Microsoft Entra. 
@@ -539,7 +539,7 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-<a name='i-create-an-azure-ad-user-from-an-azure-ad-login-in-azure-sql'></a>
+<a id="i-create-an-azure-ad-user-from-an-azure-ad-login-in-azure-sql"></a>
 
 ### I. Create a Microsoft Entra user from a Microsoft Entra login in Azure SQL
 
@@ -571,7 +571,7 @@ CREATE USER [bob@contoso.com] FROM LOGIN [MS Entra group];
 GO
 ```
 
-<a name='j-create-an-azure-ad-user-without-an-azure-ad-login-for-the-database'></a>
+<a id="j-create-an-azure-ad-user-without-an-azure-ad-login-for-the-database"></a>
 
 ### J. Create a contained database user from a Microsoft Entra principal
 
@@ -629,19 +629,18 @@ DECLARE @castObjectId NVARCHAR(MAX) = CONVERT(VARCHAR(MAX), CONVERT (VARBINARY(1
 DECLARE @cmd NVARCHAR(MAX) = N'CREATE USER [' + @principal_name + '] WITH SID = ' + @castObjectId + ', TYPE = X;'
 EXEC (@cmd);
 ```
-
-## Next steps
-
-After you create a user, consider adding the user to a database role by using the [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) statement. You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-object-permissions-transact-sql.md) to the role so they can access tables. For general information about the SQL Server security model, see [Permissions](../../relational-databases/security/permissions-database-engine.md).
   
 ## Related content
 
-- [Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md)   
-- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
-- [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
-- [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
-- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
-- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
-- [Contained Databases](../../relational-databases/databases/contained-databases.md)   
-- [Connecting to SQL Database By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)   
-- [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
+- [Create a database user](../../relational-databases/security/authentication-access/create-a-database-user.md)
+- [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
+- [ALTER USER (Transact-SQL)](alter-user-transact-sql.md)
+- [DROP USER (Transact-SQL)](drop-user-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [Contained Databases](../../relational-databases/databases/contained-databases.md)
+- [Connecting to SQL Database By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Get started with Database Engine permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
+- [ALTER ROLE (Transact-SQL)](alter-role-transact-sql.md)
+- [GRANT object permissions (Transact-SQL)](grant-object-permissions-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)

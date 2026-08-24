@@ -16,7 +16,7 @@ apitype: "DLLExport"
 
   **SQLStatistics** can be executed on a static cursor. An attempt to execute **SQLStatistics** on an updatable (keyset-driven or dynamic) returns SQL_SUCCESS_WITH_INFO indicating the cursor type is changed.  
   
-## See Also  
- [SQLStatistics Function](../../odbc/reference/syntax/sqlstatistics-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLStatistics function](../../odbc/reference/syntax/sqlstatistics-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

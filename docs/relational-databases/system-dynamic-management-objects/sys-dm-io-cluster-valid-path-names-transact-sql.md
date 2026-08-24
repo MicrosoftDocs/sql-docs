@@ -57,4 +57,4 @@ FROM sys.dm_io_cluster_valid_path_names;
 
 - [sys.dm_os_cluster_nodes (Transact-SQL)](sys-dm-os-cluster-nodes-transact-sql.md)
 - [sys.dm_io_cluster_shared_drives (Transact-SQL)](sys-dm-io-cluster-shared-drives-transact-sql.md)
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)

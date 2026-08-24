@@ -192,7 +192,6 @@ For more information about manual registration of an SPN for SQL Server, see [Re
 
 ## Related content
 
-- [Read-only workloads](overview-of-always-on-availability-groups-sql-server.md)
-- [Backups](configure-backup-on-availability-replicas-sql-server.md)
-- [Availability group monitoring strategies](monitoring-of-availability-groups-sql-server.md)
 - [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Configure backups on secondary replicas of an Always On availability group](configure-backup-on-availability-replicas-sql-server.md)
+- [Tools to monitor Always On availability groups](monitoring-of-availability-groups-sql-server.md)

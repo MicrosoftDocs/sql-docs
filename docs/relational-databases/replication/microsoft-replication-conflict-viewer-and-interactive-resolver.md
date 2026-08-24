@@ -27,8 +27,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)
-- [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)
-- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
-- [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
-- [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)
+- [Conflict resolution for Merge Replication](view-and-resolve-data-conflicts-for-merge-publications.md)
+- [View Data Conflicts for Transactional Publications (SQL Server Management Studio)](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
+- [Updatable Subscriptions - Queued Updating Conflict Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)

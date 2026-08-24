@@ -22,6 +22,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingResultSetMetaData1](../../connect/jdbc/codesnippet/Java/using-result-set-metadata_1.java)]
 
-## See also
+## Related content
 
-[Handling metadata with the JDBC driver](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)
+- [Handling metadata with the JDBC driver](handling-metadata-with-the-jdbc-driver.md)

@@ -51,7 +51,7 @@ For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, re
 
 ## Related content
 
-- [Failover Clustering and Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)
+- [Failover Clustering and Always On availability groups (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)
 - [sys.dm_os_cluster_nodes (Transact-SQL)](sys-dm-os-cluster-nodes-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](../system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)

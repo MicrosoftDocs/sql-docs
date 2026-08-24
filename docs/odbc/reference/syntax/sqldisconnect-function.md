@@ -83,6 +83,7 @@ SQLRETURN SQLDisconnect(
 |Executing a commit or rollback operation|[SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md)|  
 |Freeing a connection handle|[SQLFreeConnect Function](../../../odbc/reference/syntax/sqlfreeconnect-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

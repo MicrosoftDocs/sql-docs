@@ -42,9 +42,7 @@ FROM Table
 > [!NOTE]  
 >  The **xml** data type methods **query()**, **value()**, and **exist()** return NULL if executed against a NULL XML instance. Also, **modify()** does not return anything, but **nodes()** returns rowsets and an empty rowset with a NULL input.  
   
-## See Also  
- [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)  
-  
-  
+## Related content
 
+- [Compare typed XML to untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
+- [Create instances of XML data](../../relational-databases/xml/create-instances-of-xml-data.md)

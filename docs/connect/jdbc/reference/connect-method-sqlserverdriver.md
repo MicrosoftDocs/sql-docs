@@ -43,9 +43,8 @@ public java.sql.Connection connect(java.lang.String Url,
 ## Remarks  
  This connect method is specified by the connect method in the java.sql.Driver interface.  
   
-## See Also  
- [SQLServerDriver Methods](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
- [SQLServerDriver Members](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [SQLServerDriver Class](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDriver Methods](sqlserverdriver-methods.md)
+- [SQLServerDriver Members](sqlserverdriver-members.md)
+- [SQLServerDriver Class](sqlserverdriver-class.md)

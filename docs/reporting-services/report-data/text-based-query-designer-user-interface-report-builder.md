@@ -97,5 +97,5 @@ uspGetWhereUsedProductID
   
 ## Related content
 
-- [Relational Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)
-- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)
+- [Relational Query Designer User Interface (Report Builder)](relational-query-designer-user-interface-report-builder.md)
+- [Query Design Tools (SSRS)](query-design-tools-ssrs.md)

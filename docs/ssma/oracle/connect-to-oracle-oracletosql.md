@@ -82,4 +82,4 @@ For SSMA connection strings, always include the Provider parameter. Also, make s
 
 ## Related content
 
-- [Connect to SQL Server (OracleToSQL)](connect-to-sql-server-oracletosql.md)
+- [Connect to SQL Server](connect-to-sql-server-oracletosql.md)

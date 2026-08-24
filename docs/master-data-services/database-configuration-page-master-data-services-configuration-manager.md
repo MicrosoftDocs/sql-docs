@@ -38,6 +38,7 @@ f1_keywords:
   
  These settings are available in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] and are stored in the database in the System Settings table (mdm.tblSystemSetting). For a list of all settings, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## See Also  
-[Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md)
- [Database Requirements &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)
+## Related content
+
+- [Master Data Services Installation and Configuration](master-data-services-installation-and-configuration.md)
+- [Database Requirements (Master Data Services)](install-windows/database-requirements-master-data-services.md)

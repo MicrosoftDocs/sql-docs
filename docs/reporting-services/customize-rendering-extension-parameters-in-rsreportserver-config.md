@@ -121,12 +121,12 @@ helpviewer_keywords:
   
 ## Related content
 
-- [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [RSReportDesigner configuration file](../reporting-services/report-server/rsreportdesigner-configuration-file.md)
-- [CSV device information settings](../reporting-services/csv-device-information-settings.md)
-- [Excel device information settings](../reporting-services/excel-device-information-settings.md)
-- [HTML device information settings](../reporting-services/html-device-information-settings.md)
-- [Image device information settings](../reporting-services/image-device-information-settings.md)
-- [MHTML Device information settings](../reporting-services/mhtml-device-information-settings.md)
-- [PDF Device information settings](../reporting-services/pdf-device-information-settings.md)
-- [XML Device information settings](../reporting-services/xml-device-information-settings.md)
+- [RsReportServer.config configuration file](report-server/rsreportserver-config-configuration-file.md)
+- [RSReportDesigner configuration file](report-server/rsreportdesigner-configuration-file.md)
+- [CSV device information settings](csv-device-information-settings.md)
+- [Excel device information settings](excel-device-information-settings.md)
+- [HTML device information settings](html-device-information-settings.md)
+- [Image device information settings](image-device-information-settings.md)
+- [MHTML device information settings](mhtml-device-information-settings.md)
+- [PDF device information settings](pdf-device-information-settings.md)
+- [XML device information settings](xml-device-information-settings.md)

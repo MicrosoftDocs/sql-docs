@@ -14,7 +14,6 @@ ms.topic: reference
 
   For information about the members of SQLServerDataSource, see [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md).  
   
-## See Also  
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

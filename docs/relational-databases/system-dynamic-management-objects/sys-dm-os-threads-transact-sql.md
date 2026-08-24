@@ -87,6 +87,7 @@ SELECT *
   WHERE started_by_sqlservr = 0;  
 ```  
   
-## See also  
-  [sys.dm_os_workers &#40;Transact-SQL&#41;](sys-dm-os-workers-transact-sql.md)   
- [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+## Related content
+
+- [sys.dm_os_workers (Transact-SQL)](sys-dm-os-workers-transact-sql.md)
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)

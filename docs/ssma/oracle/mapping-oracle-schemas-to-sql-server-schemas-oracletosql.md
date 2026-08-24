@@ -55,5 +55,5 @@ To revert to the default database and schema, under the **Schema Mapping** tab, 
 
 ## Related content
 
-- [Assess Oracle schemas for conversion (OracleToSQL)](assessing-oracle-schemas-for-conversion-oracletosql.md)
-- [Convert Oracle schemas (OracleToSQL)](converting-oracle-schemas-oracletosql.md)
+- [Assess Oracle schemas for conversion](assessing-oracle-schemas-for-conversion-oracletosql.md)
+- [Convert Oracle schemas](converting-oracle-schemas-oracletosql.md)

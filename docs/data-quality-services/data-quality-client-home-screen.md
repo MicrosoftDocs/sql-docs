@@ -55,9 +55,8 @@ ms.custom:
  **Configuration**  
  Display the configuration properties for reference data service accounts (both through Azure Marketplace and directly to reference data services), general settings (interactive cleansing, matching, and profiling) and log severity settings.  
   
-## See Also  
- [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [Data Quality Projects &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
- [DQS Administration](../data-quality-services/dqs-administration.md)  
-  
-  
+## Related content
+
+- [DQS Knowledge Bases and Domains](dqs-knowledge-bases-and-domains.md)
+- [Data Quality Projects (DQS)](data-quality-projects-dqs.md)
+- [DQS Administration](dqs-administration.md)

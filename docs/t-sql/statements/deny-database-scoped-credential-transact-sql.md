@@ -101,12 +101,11 @@ DENY permission  [ ,...n ]
 ## Permissions  
  Requires CONTROL permission on the database scoped credential. If the AS clause is used, the specified principal must own the database scoped credential.  
   
-## See Also  
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [GRANT database scoped credential (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [REVOKE database scoped credential (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
+
+- [DENY (Transact-SQL)](deny-transact-sql.md)
+- [GRANT Database Scoped Credential permissions (Transact-SQL)](grant-database-scoped-credential-transact-sql.md)
+- [REVOKE Database Scoped Credential (Transact-SQL)](revoke-database-scoped-credential-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

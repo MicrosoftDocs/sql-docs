@@ -29,4 +29,4 @@ helpviewer_keywords:
 ## Related content
 
 - [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-- [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)
+- [URL access (SSRS)](../url-access-ssrs.md)

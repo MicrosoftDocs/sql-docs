@@ -98,6 +98,6 @@ object_id     object_name                          name    column_id
 
 - [LIKE (Transact-SQL)](like-transact-sql.md)
 - [PATINDEX (Transact-SQL)](../functions/patindex-transact-sql.md)
-- [Percent character (wildcard - characters to match) (Transact-SQL)](percent-character-wildcard-character-s-to-match-transact-sql.md)
+- [Percent character (wildcard - character(s) to match) (Transact-SQL)](percent-character-wildcard-character-s-to-match-transact-sql.md)
 - [\[^\] (Wildcard - characters not to match) (Transact-SQL)](wildcard-character-s-not-to-match-transact-sql.md)
-- [_ (Wildcard - Match One Character) (Transact-SQL)](wildcard-match-one-character-transact-sql.md)
+- [_ (Wildcard - match one character) (Transact-SQL)](wildcard-match-one-character-transact-sql.md)

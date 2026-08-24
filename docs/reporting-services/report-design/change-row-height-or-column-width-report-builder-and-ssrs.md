@@ -71,4 +71,4 @@ If a cell in a row or column contains a rectangle or data region, the height and
 
 - [Tablix data region in a paginated report (Report Builder)](tablix-data-region-report-builder-and-ssrs.md)
 - [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)
-- [Tables in paginated reports (Report Builder)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)
+- [Tables in paginated reports (Report Builder)](tables-report-builder-and-ssrs.md)

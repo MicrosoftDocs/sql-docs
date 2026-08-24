@@ -63,9 +63,9 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)
-- [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)
-- [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
-- [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)
-- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
+- [Predefined roles in Reporting Services](role-definitions-predefined-roles.md)
+- [Grant permissions on report server items on a SharePoint site](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)
+- [Authentication in a report server](authentication-with-the-report-server.md)
+- [Create and manage role assignments](create-and-manage-role-assignments.md)
+- [Reporting Services security and protection](reporting-services-security-and-protection.md)
+- [Report server content management (SSRS native mode)](../report-server/report-server-content-management-ssrs-native-mode.md)

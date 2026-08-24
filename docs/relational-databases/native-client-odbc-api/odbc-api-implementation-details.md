@@ -212,4 +212,4 @@ Use these functions to release handles and free resources.
 
 ## Related content
 
-- [SQL Server Native Client (ODBC) Reference](../native-client/odbc/sql-server-native-client-odbc.md)
+- [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)

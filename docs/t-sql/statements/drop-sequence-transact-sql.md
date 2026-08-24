@@ -78,9 +78,9 @@ DROP SEQUENCE CountBy1 ;
 GO  
 ```  
   
-## See Also  
- [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
- [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)  
+## Related content
 
+- [ALTER SEQUENCE (Transact-SQL)](alter-sequence-transact-sql.md)
+- [CREATE SEQUENCE (Transact-SQL)](create-sequence-transact-sql.md)
+- [NEXT VALUE FOR (Transact-SQL)](../functions/next-value-for-transact-sql.md)
+- [Sequence numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)

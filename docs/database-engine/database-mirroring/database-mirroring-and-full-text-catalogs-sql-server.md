@@ -47,11 +47,10 @@ helpviewer_keywords:
 ## After Forcing Service  
  After service is forced to the mirror server (with possible data loss), start a full crawl. The method to use for starting a full crawl depends on whether the full-text index is change tracked. For more information, see "Full-Text Indexes After Failover," earlier in this topic.  
   
-## See Also  
- [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
- [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Back Up and Restore Full-Text Catalogs and Indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
-  
-  
+## Related content
+
+- [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)
+- [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)
+- [DROP FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/drop-fulltext-index-transact-sql.md)
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [Back up and restore full-text catalogs and indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)

@@ -32,6 +32,6 @@ WHERE [Measures].[Reseller Freight Cost]
 > [!NOTE]  
 >  Microsoft Visual Basic for Applications (VBA) COM Assemblies are registered automatically.  
   
-## See Also  
- [Functions &#40;MDX Syntax&#41;](../mdx/functions-mdx-syntax.md)  
-  
+## Related content
+
+- [Functions (MDX Syntax)](functions-mdx-syntax.md)

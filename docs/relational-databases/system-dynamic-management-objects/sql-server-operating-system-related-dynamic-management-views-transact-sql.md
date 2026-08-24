@@ -126,4 +126,4 @@ The following [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] operati
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)

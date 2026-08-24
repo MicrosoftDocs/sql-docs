@@ -53,6 +53,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Report properties dialog, code](./expressions-report-builder-and-ssrs.md)
-- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Parameters collection references &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [Parameters collection references in a paginated report (Report Builder)](built-in-collections-parameters-collection-references-report-builder.md)

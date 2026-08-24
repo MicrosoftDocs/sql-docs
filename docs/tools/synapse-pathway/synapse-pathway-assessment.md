@@ -73,6 +73,6 @@ To complete this tutorial, make sure you install [Azure Synapse Pathway](synapse
 
  ![Azure Synapse assessment using command line.](./media/synapse-pathway-assessment/command-line-assessment.png)
 
-## Next steps
+## Related content
 
-[Learn how to save and load the assessment](tutorial-save-load-assessment.md)
+- [Save and load assessments with Azure Synapse Pathway](tutorial-save-load-assessment.md)

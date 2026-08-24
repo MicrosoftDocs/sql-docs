@@ -242,10 +242,9 @@ GO
 
 An explicit declaration in the XQuery prolog overrides the namespace prefix and the default element namespace that are defined in the WITH clause.
 
-## See also
+## Related content
 
 - [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)
-- [XQuery Language Reference &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)
-- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)
-- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)
-
+- [XQuery Language Reference (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)
+- [WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)
+- [FOR XML (SQL Server)](for-xml-sql-server.md)

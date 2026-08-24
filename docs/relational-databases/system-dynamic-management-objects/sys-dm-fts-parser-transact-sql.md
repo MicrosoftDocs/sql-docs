@@ -183,5 +183,5 @@ FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
 - [Securables](../security/securables.md)
 - [Configure and manage word breakers and stemmers](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
 - [Configure and Manage Thesaurus Files for Full-Text Search](../search/configure-and-manage-thesaurus-files-for-full-text-search.md)
-- [Configure and Manage Stopwords and Stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
+- [Configure and manage stopwords and stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
 - [Query with Full-Text Search](../search/query-with-full-text-search.md)

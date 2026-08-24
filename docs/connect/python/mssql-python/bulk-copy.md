@@ -71,17 +71,17 @@ print(f"Elapsed: {result['elapsed_time']}")
 
 ```python
 cursor.bulkcopy(
-    table_name,                    # str – target table (can include schema, e.g. "dbo.MyTable")
-    data,                          # Iterable[Tuple | Row] – rows to insert
-    batch_size=0,                  # int – rows per batch; 0 = server optimal
-    timeout=30,                    # int – operation timeout in seconds
+    table_name,                    # str - target table (can include schema, e.g. "dbo.MyTable")
+    data,                          # Iterable[Tuple | Row] - rows to insert
+    batch_size=0,                  # int - rows per batch; 0 = server optimal
+    timeout=30,                    # int - operation timeout in seconds
     column_mappings=None,          # List[str] | List[Tuple[int,str]] | None
-    keep_identity=False,           # bool – preserve identity values from source
-    check_constraints=False,       # bool – check constraints during load
-    table_lock=False,              # bool – use table-level lock
-    keep_nulls=False,              # bool – preserve NULLs instead of defaults
-    fire_triggers=False,           # bool – fire INSERT triggers on target
-    use_internal_transaction=False, # bool – use internal transaction per batch
+    keep_identity=False,           # bool - preserve identity values from source
+    check_constraints=False,       # bool - check constraints during load
+    table_lock=False,              # bool - use table-level lock
+    keep_nulls=False,              # bool - preserve NULLs instead of defaults
+    fire_triggers=False,           # bool - fire INSERT triggers on target
+    use_internal_transaction=False, # bool - use internal transaction per batch
 )
 ```
 
@@ -470,7 +470,7 @@ The following table compares bulk copy with other data insertion methods.
 
 ## Related content
 
-- [Executing queries](executing-queries.md)
-- [Data type mappings](data-type-mappings.md)
-- [Transaction management](transaction-management.md)
-- [Performance tuning](performance-tuning.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Transaction management with mssql-python](transaction-management.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)

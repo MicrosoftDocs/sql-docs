@@ -53,8 +53,7 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## See Also  
- [ISNULL &#40;SSIS Expression&#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
-  
-  
+## Related content
+
+- [ISNULL (SSIS Expression)](isnull-ssis-expression.md)
+- [Functions (SSIS Expression)](functions-ssis-expression.md)

@@ -40,6 +40,7 @@ To successfully migrate objects and data from SAP ASE databases to [!INCLUDE[ssN
   
 9. If necessary, update your database applications.  
   
-## See also  
-[Installing SSMA for SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
-[Getting Started with SSMA for SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
+## Related content
+
+- [Installing SSMA for SAP ASE](installing-ssma-for-sybase-sybasetosql.md)
+- [Getting Started with SSMA for SAP ASE](getting-started-with-ssma-for-sybase-sybasetosql.md)

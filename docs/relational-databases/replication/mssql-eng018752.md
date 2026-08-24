@@ -57,5 +57,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
-- [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)
+- [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)
+- [Replication Log Reader Agent](agents/replication-log-reader-agent.md)

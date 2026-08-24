@@ -170,7 +170,6 @@ xmlns:dt="urn:schemas-microsoft-com:datatypes">
 </overflow>
 ```
 
-## See also
+## Related content
 
-- [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)
-
+- [Use EXPLICIT mode with FOR XML](use-explicit-mode-with-for-xml.md)

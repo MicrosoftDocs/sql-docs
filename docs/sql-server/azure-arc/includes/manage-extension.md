@@ -82,18 +82,18 @@ Resource_Group="<ResourceGroup>"
 Machine_Name="<ArcEnabledServerName>" 
 Extension_Name="WindowsAgent.SqlServer" 
 Publisher="Microsoft.AzureData" 
-Target_Version="<LatestVersion>"  # Example: 1.1.3211.337 
+Target_Version="<LatestVersion>"  # Example: 1.1.3211.337 
 
 # Upgrade the extension 
 
 az account set --subscription $Subscription_Id 
 az connectedmachine extension update \ 
-    --resource-group $Resource_Group \ 
-    --machine-name $Machine_Name \ 
-    --name $Extension_Name \ 
-    --publisher $Publisher \ 
-    --type $Extension_Name \ 
-    --type-handler-version $Target_Version 
+    --resource-group $Resource_Group \ 
+    --machine-name $Machine_Name \ 
+    --name $Extension_Name \ 
+    --publisher $Publisher \ 
+    --type $Extension_Name \ 
+    --type-handler-version $Target_Version 
 ```
 
 ---

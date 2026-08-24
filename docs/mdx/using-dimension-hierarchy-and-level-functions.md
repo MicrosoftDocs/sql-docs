@@ -27,10 +27,9 @@ ON Rows
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Dimension &#40;MDX&#41;](../mdx/dimension-mdx.md)   
- [Functions &#40;MDX Syntax&#41;](../mdx/functions-mdx-syntax.md)   
- [Hierarchy &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
- [Level &#40;MDX&#41;](../mdx/level-mdx.md)  
-  
-  
+## Related content
+
+- [Dimension (MDX)](dimension-mdx.md)
+- [Functions (MDX Syntax)](functions-mdx-syntax.md)
+- [Hierarchy (MDX)](hierarchy-mdx.md)
+- [Level (MDX)](level-mdx.md)

@@ -170,8 +170,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [IBM Db2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)
-- [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)
-- [Other Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)
-- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [IBM Db2 Subscribers](non-sql/ibm-db2-subscribers.md)
+- [Oracle Subscribers](non-sql/oracle-subscribers.md)
+- [Other Non-SQL Server Subscribers](non-sql/other-non-sql-server-subscribers.md)
+- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)

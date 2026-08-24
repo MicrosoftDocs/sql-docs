@@ -94,16 +94,14 @@ ELSE IF IS_ROLEMEMBER ('db_datareader') IS NULL
    print 'ERROR: The database role specified is not valid.';  
 ```  
   
-## See Also  
- [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
- [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
- [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
- [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)   
- [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
- [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
- [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
-  
+## Related content
 
+- [CREATE ROLE (Transact-SQL)](../statements/create-role-transact-sql.md)
+- [ALTER ROLE (Transact-SQL)](../statements/alter-role-transact-sql.md)
+- [DROP ROLE (Transact-SQL)](../statements/drop-role-transact-sql.md)
+- [CREATE SERVER ROLE (Transact-SQL)](../statements/create-server-role-transact-sql.md)
+- [ALTER SERVER ROLE (Transact-SQL)](../statements/alter-server-role-transact-sql.md)
+- [DROP SERVER ROLE (Transact-SQL)](../statements/drop-server-role-transact-sql.md)
+- [IS_MEMBER (Transact-SQL)](is-member-transact-sql.md)
+- [IS_SRVROLEMEMBER (Transact-SQL)](is-srvrolemember-transact-sql.md)
+- [Security Functions (Transact-SQL)](security-functions-transact-sql.md)

@@ -89,6 +89,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
-- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)
-- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Replication Agent Administration](replication-agent-administration.md)
+- [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)
+- [Replication Agents Overview](replication-agents-overview.md)

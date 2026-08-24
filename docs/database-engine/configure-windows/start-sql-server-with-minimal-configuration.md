@@ -38,7 +38,7 @@ After the server has been started with minimal configuration, you should change 
 
 - [Start, Stop, or Pause the SQL Server Agent Service](/ssms/agent/start-stop-or-pause-the-sql-server-agent-service)
 - [Diagnostic connection for database administrators](diagnostic-connection-for-database-administrators.md)
-- [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)
+- [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
-- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Database Engine Service startup options](database-engine-service-startup-options.md)

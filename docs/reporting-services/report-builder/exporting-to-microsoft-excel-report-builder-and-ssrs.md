@@ -251,6 +251,6 @@ To get around this issue, you can give read permission to the execution account 
 
 ## Related content
 
-- [Rendering behaviors in a paginated report (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
-- [Interactive functionality - different report rendering extensions](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
-- [Rendering report items in paginated reports (Report Builder)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)
+- [Rendering behaviors in a paginated report (Report Builder)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)
+- [Interactive functionality - different report rendering extensions](interactive-functionality-different-report-rendering-extensions.md)
+- [Rendering report items in paginated reports (Report Builder)](../report-design/rendering-report-items-report-builder-and-ssrs.md)

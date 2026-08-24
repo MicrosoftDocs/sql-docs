@@ -34,8 +34,8 @@ For information about what permissions are required to replay a trace, see [Perm
 
 - [bcp Utility](../bcp-utility.md)
 - [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)
-- [sp_getbindtoken](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)
-- [sp_bindsession](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)
+- [sp_getbindtoken (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)
+- [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)
 - [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
 - [READTEXT (Transact-SQL)](../../t-sql/queries/readtext-transact-sql.md)
 - [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)

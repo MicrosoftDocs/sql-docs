@@ -255,15 +255,10 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+## Related content
 
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
-
-[Retrieving Data](../../connect/php/retrieving-data.md)
-
-[Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
-
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)
-
-  
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)
+- [Retrieving Data](retrieving-data.md)
+- [Updating data (Microsoft Drivers for PHP for SQL Server)](updating-data-microsoft-drivers-for-php-for-sql-server.md)
+- [Example Application (SQLSRV Driver)](example-application-sqlsrv-driver.md)

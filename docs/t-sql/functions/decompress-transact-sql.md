@@ -77,7 +77,6 @@ CREATE TABLE example_table (
 );
 ```
 
-## See also
+## Related content
 
-- [COMPRESS (Transact-SQL)](../../t-sql/functions/compress-transact-sql.md)
-
+- [COMPRESS (Transact-SQL)](compress-transact-sql.md)

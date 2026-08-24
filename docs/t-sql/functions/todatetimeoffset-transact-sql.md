@@ -82,11 +82,8 @@ SELECT TODATETIMEOFFSET(SYSDATETIME(), '+13:00')
 -- RETURNS: 2019-04-22 11:39:29.0339301 +13:00
 ```  
   
-## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [Date and time data types and functions (Transact-SQL)](date-and-time-data-types-and-functions-transact-sql.md)
+- [AT TIME ZONE (Transact-SQL)](../queries/at-time-zone-transact-sql.md)

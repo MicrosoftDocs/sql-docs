@@ -41,6 +41,6 @@ The SQLXML object becomes neither readable nor writable when the application cal
   
 The SQLXML object becomes neither writeable nor readable when the application calls any of the following setter methods: setResult, setCharacterStream, setBinaryStream, and setString.  
   
-## See also  
+## Related content
 
-[Supporting XML data](../../connect/jdbc/supporting-xml-data.md)  
+- [Supporting XML data](supporting-xml-data.md)

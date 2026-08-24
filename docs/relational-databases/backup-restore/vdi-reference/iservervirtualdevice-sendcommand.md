@@ -55,6 +55,6 @@ When an error occurs while attempting to send the command, the callback function
 | VD_E_PROTOCOL   | ERROR_INVALID_HANDLE |
 | VD_E_ABORT      | ERROR_OPERATION_ABORTED |
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

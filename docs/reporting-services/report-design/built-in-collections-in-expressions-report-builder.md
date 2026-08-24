@@ -46,5 +46,5 @@ ms.custom:
   
 ## Related content
 
-- [Add an expression &#40;Report Builder&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)
-- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Add an expression to a paginated report (Report Builder)](add-an-expression-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)

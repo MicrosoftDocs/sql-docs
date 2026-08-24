@@ -83,6 +83,6 @@ helpviewer_keywords:
   
 5.  Deploy the package to the file system. For more information, see [Deploy Packages by Using the Deployment Utility](../../packages/legacy-package-deployment-ssis.md).  
   
-## See Also  
- [Create a Deployment Utility](../../packages/legacy-package-deployment-ssis.md)  
-  
+## Related content
+
+- [Legacy Package Deployment (SSIS)](../../packages/legacy-package-deployment-ssis.md)

@@ -174,7 +174,7 @@ db, err := sql.Open("azuresql", "sqlserver://<server>.database.windows.net?datab
 
 ## Related content
 
-- [Installation and system requirements](installation.md)
-- [Connection strings](connection-strings.md)
+- [Install the go-mssqldb driver](installation.md)
+- [go-mssqldb connection strings](connection-strings.md)
 - [Use go-mssqldb with Azure SQL Database](azure-sql.md)
-- [Queries and statements](queries-statements.md)
+- [Queries and statements with go-mssqldb](queries-statements.md)

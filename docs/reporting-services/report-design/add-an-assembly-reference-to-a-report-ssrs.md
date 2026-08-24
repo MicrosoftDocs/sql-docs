@@ -37,5 +37,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Use custom assemblies with reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)
-- [Report properties dialog, references](./custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)
+- [Using custom assemblies with reports](../custom-assemblies/using-custom-assemblies-with-reports.md)
+- [Custom code and assembly references in expressions in a paginated report in Report Designer (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)

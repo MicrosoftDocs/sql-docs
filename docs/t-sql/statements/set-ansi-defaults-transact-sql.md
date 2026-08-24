@@ -131,15 +131,14 @@ SET ANSI_DEFAULTS OFF;
 GO  
 ```  
   
-## See Also  
- [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
- [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)   
- [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
-  
-  
+## Related content
+
+- [DBCC USEROPTIONS (Transact-SQL)](../database-console-commands/dbcc-useroptions-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET ANSI_NULL_DFLT_ON (Transact-SQL)](set-ansi-null-dflt-on-transact-sql.md)
+- [SET ANSI_NULLS (Transact-SQL)](set-ansi-nulls-transact-sql.md)
+- [SET ANSI_PADDING (Transact-SQL)](set-ansi-padding-transact-sql.md)
+- [SET ANSI_WARNINGS (Transact-SQL)](set-ansi-warnings-transact-sql.md)
+- [SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)](set-cursor-close-on-commit-transact-sql.md)
+- [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](set-implicit-transactions-transact-sql.md)
+- [SET QUOTED_IDENTIFIER (Transact-SQL)](set-quoted-identifier-transact-sql.md)

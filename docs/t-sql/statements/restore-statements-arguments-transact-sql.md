@@ -631,14 +631,14 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
-## Next steps
- 
- - [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- - [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- - [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
- - [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- - [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
- - [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
- - [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
- - [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- - [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
+## Related content
+
+- [BACKUP (Transact-SQL)](backup-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](restore-statements-transact-sql.md)
+- [RESTORE Statements - FILELISTONLY (Transact-SQL)](restore-statements-filelistonly-transact-sql.md)
+- [RESTORE statements - HEADERONLY (Transact-SQL)](restore-statements-headeronly-transact-sql.md)
+- [RESTORE Statements - LABELONLY (Transact-SQL)](restore-statements-labelonly-transact-sql.md)
+- [RESTORE Statements - REWINDONLY (Transact-SQL)](restore-statements-rewindonly-transact-sql.md)
+- [RESTORE Statements - VERIFYONLY (Transact-SQL)](restore-statements-verifyonly-transact-sql.md)
+- [Back up and restore of SQL Server databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)

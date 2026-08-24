@@ -56,4 +56,4 @@ The following table shows the results of applying an `OR` operator to two Boolea
 - [OR (Transact-SQL)](or-transact-sql.md)
 - [NOT (Transact-SQL)](not-transact-sql.md)
 - [IS NULL (Transact-SQL)](../queries/is-null-transact-sql.md)
-- [IS [NOT] DISTINCT FROM (Transact-SQL)](../queries/is-distinct-from-transact-sql.md)
+- [IS \[NOT\] DISTINCT FROM (Transact-SQL)](../queries/is-distinct-from-transact-sql.md)

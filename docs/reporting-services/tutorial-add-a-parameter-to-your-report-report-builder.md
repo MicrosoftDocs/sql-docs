@@ -618,6 +618,6 @@ The report is saved to the report server. The status bar at the bottom of the wi
 
 ## Related content
 
-- [Paginated report parameters (Report Builder)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
-- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server.md)
+- [Paginated report parameters in Report Builder](report-design/report-parameters-report-builder-and-report-designer.md)
+- [Report Builder tutorials](report-builder-tutorials.md)
+- [Microsoft Report Builder in SQL Server](report-builder/report-builder-in-sql-server.md)

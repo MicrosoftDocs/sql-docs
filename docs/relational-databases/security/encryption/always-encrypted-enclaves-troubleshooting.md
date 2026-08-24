@@ -93,13 +93,14 @@ This section lists common errors you may encounter when you run confidential DML
 - The string column you're querying uses a collation that isn't a BIN2 or UTF-8 collation. Change the collation to BIN2 or UTF-8. For more information, see [DML statements using secure enclaves](always-encrypted-enclaves-query-columns.md#dml-statements-using-secure-enclaves).
 - Your query triggers an unsupported operation. For the list of operations supported inside enclaves, see [DML statements using secure enclaves](always-encrypted-enclaves-query-columns.md#dml-statements-using-secure-enclaves).
 
-## Next steps
+## Next step
 
-- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
+> [!div class="nextstepaction"]
+> [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
-## See also
+## Related content
 
-- [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md).
+- [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
 - [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

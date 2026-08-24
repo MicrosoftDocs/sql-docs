@@ -34,5 +34,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Report Server content management (SSRS native mode)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
-- [Upload files to a folder](../../reporting-services/report-server/upload-files-to-a-folder.md)
+- [Report server content management (SSRS native mode)](report-server-content-management-ssrs-native-mode.md)
+- [Upload files to a folder](upload-files-to-a-folder.md)

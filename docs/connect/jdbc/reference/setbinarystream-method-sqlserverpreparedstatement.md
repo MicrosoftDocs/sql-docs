@@ -22,8 +22,7 @@ ms.topic: reference
 |[setBinaryStream Method &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-int.md)|Sets the designated parameter to the specified input stream, which will have the specified number of bytes.|  
 |[setBinaryStream Method &#40;int, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-long.md)|Sets the designated parameter to the specified input stream, which will have the specified number of bytes.|  
   
-## See Also  
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)
+- [SQLServerPreparedStatement Class](sqlserverpreparedstatement-class.md)

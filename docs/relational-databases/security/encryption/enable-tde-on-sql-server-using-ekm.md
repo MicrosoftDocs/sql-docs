@@ -134,7 +134,7 @@ You need the following permissions:
 ## Related content
 
 - [Transparent data encryption for SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
-- [sp_configure (Transact-SQL)](../../system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../system-stored-procedures/sp-configure-transact-sql.md)
 - [CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../../t-sql/statements/create-cryptographic-provider-transact-sql.md)
 - [CREATE CREDENTIAL (Transact-SQL)](../../../t-sql/statements/create-credential-transact-sql.md)
 - [CREATE ASYMMETRIC KEY (Transact-SQL)](../../../t-sql/statements/create-asymmetric-key-transact-sql.md)

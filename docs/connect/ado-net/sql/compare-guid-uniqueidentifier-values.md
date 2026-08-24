@@ -46,5 +46,6 @@ Sorted SqlGuids:
 1aaaaaaa-bbbb-cccc-dddd-3eeeeeeeeeee  
 ```  
   
-## Next steps
+## Related content
+
 - [SQL Server data types and ADO.NET](sql-server-data-types.md)

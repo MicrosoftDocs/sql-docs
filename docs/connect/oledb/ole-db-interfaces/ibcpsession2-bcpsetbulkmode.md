@@ -356,8 +356,6 @@ int main() {
 }  
 ```  
   
-## See Also  
- [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
-  
-  
+## Related content
 
+- [IBCPSession2 (OLE DB)](ibcpsession2-ole-db.md)

@@ -34,6 +34,6 @@ This routine signals that all operations should cease. The overall interface ent
 
 The server ensures that there is no further required use of the buffers or devices returned from the virtual device interface. The server then performs abnormal termination cleanup, which should include calling the IServerVirtualDeviceSet2::Close function.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

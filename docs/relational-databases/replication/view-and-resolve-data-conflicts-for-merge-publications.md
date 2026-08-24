@@ -115,5 +115,5 @@ When a conflict is resolved in merge replication, the data from the losing row i
   
 ## Related content
 
-- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
-- [Specify a Merge Article Resolver](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Specify a merge article resolver](publish/specify-a-merge-article-resolver.md)

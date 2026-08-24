@@ -144,7 +144,6 @@ SET @sqlvariant = @char collate <DBCollation>
 UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <FilterExpression>
 ```
 
-## See Also  
- [Data Types &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
-  
+## Related content
 
+- [Data Types (OLE DB)](data-types-ole-db.md)

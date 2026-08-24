@@ -48,8 +48,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 -   In the **Properties** dialog box, make the appropriate changes, and then click **OK**.  
   
-## See Also  
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [Create an Extended Events Session Using Query Editor](quick-start-extended-events-in-sql-server.md)  
-  
-  
+## Related content
+
+- [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)
+- [Quickstart: Extended Events](quick-start-extended-events-in-sql-server.md)

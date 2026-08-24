@@ -38,5 +38,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)
-- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)
+- [Initialize a Subscription](initialize-a-subscription.md)
+- [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)

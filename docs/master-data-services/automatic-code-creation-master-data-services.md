@@ -35,10 +35,8 @@ ms.custom:
 |Automatically generate values for the Code attribute.|[Automatically Generate Code Attribute Values &#40;Master Data Services&#41;](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
 |Automatically generate values for other attributes.|[Automatically Generate Attribute Values Other Than Code &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
-## Related Content  
-  
--   [Master Data Services Overview &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
-  
--   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
-  
--   [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)
+## Related content
+
+- [Master Data Services Overview (MDS)](master-data-services-overview-mds.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Entities (Master Data Services)](entities-master-data-services.md)

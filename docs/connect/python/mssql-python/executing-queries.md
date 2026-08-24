@@ -244,7 +244,7 @@ with mssql_python.connect(connection_string) as conn:
 
 ## Related content
 
-- [Retrieve data](retrieving-data.md)
-- [Data type mappings](data-type-mappings.md)
-- [Transaction management](transaction-management.md)
-- [Cursor management](cursor-management.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Transaction management with mssql-python](transaction-management.md)
+- [Manage cursors and result sets](cursor-management.md)

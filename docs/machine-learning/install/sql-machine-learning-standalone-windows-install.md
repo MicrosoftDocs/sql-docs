@@ -182,16 +182,17 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 A development IDE is not installed as part of setup. For more information about configuring a development environment, see [Set up R tools](../r/set-up-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
 
-## Next steps
-
-R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
-
-+ [Quickstart: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../tutorials/r-taxi-classification-introduction.md)
-
 ::: moniker range=">=sql-server-2017"
+
+## Related tasks
+
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../tutorials/python-ski-rental-linear-regression-deploy-model.md)
-+ [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../tutorials/python-clustering-model.md)
+- [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../tutorials/python-ski-rental-linear-regression-deploy-model.md)
+- [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../tutorials/python-clustering-model.md)
 ::: moniker-end
+
+## Related content
+
+- [Quickstart: Run simple R scripts with SQL machine learning](../tutorials/quickstart-r-create-script.md)
+- [R tutorial: Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)

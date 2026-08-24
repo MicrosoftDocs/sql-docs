@@ -71,4 +71,4 @@ Only members of the **db_owner** or **replmonitor** fixed database role on the d
 
 ## Related content
 
-- [Programmatically monitor replication](../replication/monitor/programmatically-monitor-replication.md)
+- [Programmatically Monitor Replication](../replication/monitor/programmatically-monitor-replication.md)

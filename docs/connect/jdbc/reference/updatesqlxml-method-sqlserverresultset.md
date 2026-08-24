@@ -21,8 +21,7 @@ ms.topic: reference
 |[updateSQLXML Method &#40;int, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-int-java-sql-sqlxml.md)|Updates the designated column with a **SQLXML** value.|  
 |[updateSQLXML Method &#40;java.lang.String, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-java-lang-string-java-sql-sqlxml.md)|Updates the designated column with a **SQLXML** value.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

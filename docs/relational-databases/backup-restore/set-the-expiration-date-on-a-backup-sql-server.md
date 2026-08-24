@@ -63,7 +63,7 @@ Ownership and permission problems on the backup device's physical file can inter
 
 ## Related content
 
-- [Create a Full Database Backup](create-a-full-database-backup-sql-server.md)
+- [Create a full database backup](create-a-full-database-backup-sql-server.md)
 - [Back Up Files and Filegroups](back-up-files-and-filegroups-sql-server.md)
 - [Back up a transaction log](back-up-a-transaction-log-sql-server.md)
 - [Create a Differential Database Backup (SQL Server)](create-a-differential-database-backup-sql-server.md)

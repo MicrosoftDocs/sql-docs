@@ -18,7 +18,7 @@ helpviewer_keywords:
 ## SQLConnect Support for High Availability, Disaster Recovery  
  For more information on using **SQLConnect** to connect to a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cluster, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
-## See Also  
- [SQLConnect Function](../../odbc/reference/syntax/sqlconnect-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLConnect Function](../../odbc/reference/syntax/sqlconnect-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

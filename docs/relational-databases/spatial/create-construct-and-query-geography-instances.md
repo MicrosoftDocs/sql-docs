@@ -112,7 +112,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ### Constructing a geography instance from GML text input
  The **geography** data type provides a method that generates a **geography** instance from GML, an XML representation of a **geography** instance. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports a subset of GML.  
   
- For more information on Geography Markup Language, see the OGC Specification: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ For more information on Geography Markup Language, see the OGC Specification: [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629).  
   
  **To construct any type of geography instance from GML input**  
  [GeomFromGML (geography Data Type)](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  

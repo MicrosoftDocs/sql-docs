@@ -150,9 +150,9 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
-- [Create a data-driven subscription &#40;SSRS tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)
-- [Performance, snapshots, caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)
-- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
-- [Cache reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)
-- [Work with shared datasets](../../reporting-services/work-with-shared-datasets-web-portal.md)
+- [Data-driven subscriptions in Reporting Services](../subscriptions/data-driven-subscriptions.md)
+- [Create a data-driven subscription (SSRS Tutorial)](../create-a-data-driven-subscription-ssrs-tutorial.md)
+- [Performance, snapshots, caching (Reporting Services)](performance-snapshots-caching-reporting-services.md)
+- [Set report processing properties](set-report-processing-properties.md)
+- [Cache reports (SSRS)](caching-reports-ssrs.md)
+- [Work with shared datasets - web portal](../work-with-shared-datasets-web-portal.md)

@@ -42,5 +42,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)
-- [Optimize Merge Replication Performance with Conditional Delete Tracking](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)
+- [Article Options for Merge Replication](article-options-for-merge-replication.md)
+- [Optimize Merge Replication Performance with Conditional Delete Tracking](optimize-merge-replication-performance-with-conditional-delete-tracking.md)

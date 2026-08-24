@@ -46,5 +46,6 @@ Driver writers must be aware that the driver architecture can affect whether an 
 |Enabling connection pooling|[ODBC Connection Pooling](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Connecting to a Data Source or Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), in the ODBC Programmer's Reference|  
 |Unicode/ANSI driver and connection issues|[Unicode Drivers](../../../odbc/reference/develop-app/unicode-drivers.md)|[Programming Considerations](../../../odbc/reference/develop-app/programming-considerations.md), in the ODBC Programmer's Reference|  
   
-## See Also  
- [Developing an ODBC Driver](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
+## Related content
+
+- [Developing an ODBC Driver](developing-an-odbc-driver.md)

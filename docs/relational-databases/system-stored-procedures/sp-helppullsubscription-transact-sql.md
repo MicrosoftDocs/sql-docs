@@ -112,6 +112,6 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Related content
 
-- [sp_addpullsubscription (Transact-SQL)](sp-addpullsubscription-transact-sql.md)
-- [sp_droppullsubscription (Transact-SQL)](sp-droppullsubscription-transact-sql.md)
+- [sys.sp_addpullsubscription (Transact-SQL)](sp-addpullsubscription-transact-sql.md)
+- [sys.sp_droppullsubscription (Transact-SQL)](sp-droppullsubscription-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

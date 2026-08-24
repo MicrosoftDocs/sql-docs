@@ -40,6 +40,6 @@ Current version of SSMA Tester does not support parallel execution by different 
 
 [Creating Test Cases &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)
 
-## See Also
+## Related content
 
-[Project Settings &#40;Conversion&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)
+- [Project Settings (Conversion)](project-settings-conversion-sybasetosql.md)

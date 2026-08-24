@@ -46,7 +46,7 @@ For a detailed tutorial, see [Use managed identity with import and export (previ
 
 In this model:
 
-- A **user‑assigned managed identity (UAMI)** is assigned to the logical server for Azure SQL Database.
+- A **user-assigned managed identity (UAMI)** is assigned to the logical server for Azure SQL Database.
 - The managed identity is configured as a **Microsoft Entra administrator** on the server.
 - The same or a different managed identity is granted **Azure RBAC data-plane access** to the target Azure Storage account.
 

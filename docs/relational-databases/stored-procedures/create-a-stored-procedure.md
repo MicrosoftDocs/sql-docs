@@ -171,7 +171,7 @@ To create a procedure in the SSMS **Query Editor**:
 
 ## Related content
 
-- [Stored Procedures (Database Engine)](stored-procedures-database-engine.md)
+- [Stored procedures (Database Engine)](stored-procedures-database-engine.md)
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
 - [Execute a stored procedure](execute-a-stored-procedure.md)
 - [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)

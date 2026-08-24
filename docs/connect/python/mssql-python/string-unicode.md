@@ -559,6 +559,6 @@ text_data = "Hello"            # str - use nvarchar
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
 - [Handle NULL values](null-handling.md)
-- [Binary data](binary-data.md)
+- [Work with binary data](binary-data.md)

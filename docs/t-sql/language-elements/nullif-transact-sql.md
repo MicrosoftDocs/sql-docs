@@ -139,9 +139,8 @@ FROM budgets;
  5      null
  ```  
   
-## See Also  
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
-  
-  
+## Related content
+
+- [CASE (Transact-SQL)](case-transact-sql.md)
+- [decimal and numeric (Transact-SQL)](../data-types/decimal-and-numeric-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)

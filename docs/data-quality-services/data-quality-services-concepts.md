@@ -85,7 +85,6 @@ ms.custom:
   
  For more information about DQS administration, see [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## See Also  
- [Data Quality Services](../data-quality-services/data-quality-services.md)  
-  
-  
+## Related content
+
+- [Data Quality Services](data-quality-services.md)

@@ -248,7 +248,7 @@ The ColumnSetColumns schema collection is used to support sparse columns. The Co
 |Create_Date|DateTime|The date the assembly was created/registered.|  
 |Permission_set_desc|String|The friendly name for the permission-set/security-level for the assembly.|  
 
-## See also
+## Related content
 
 - [Retrieving database schema information](retrieving-database-schema-information.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

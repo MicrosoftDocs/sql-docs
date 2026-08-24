@@ -23,7 +23,6 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
   
  In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\160\SDK\Assemblies\ folder.  
   
-## See Also  
- [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
-  
-  
+## Related content
+
+- [How to Create a Visual C# SMO Project in Visual Studio .NET](how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)

@@ -29,8 +29,7 @@ DROP MEMBER
  *Member_Identifier*  
  A valid string expression that provides a member name or member key.  
   
-## See Also  
- [CREATE MEMBER Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Data Definition - CREATE MEMBER](mdx-data-definition-create-member.md)
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)

@@ -52,7 +52,6 @@ f1_keywords:
   
 -   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right-click the CDC splitter and select **Show Advanced Editor**.  
   
-## See Also  
- [Direct the CDC Stream According to the Type of Change](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
-  
-  
+## Related content
+
+- [Direct the CDC Stream According to the Type of Change](direct-the-cdc-stream-according-to-the-type-of-change.md)

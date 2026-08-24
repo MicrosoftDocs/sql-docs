@@ -566,7 +566,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |[SqlParameter.ForceColumnEncryption Property](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption)|Enforces encryption of a parameter. If SQL Server informs the driver that the parameter doesn't need to be encrypted, the query using the parameter will fail. This property provides extra protection against security attacks that involve a compromised SQL Server providing incorrect encryption metadata to the client, which may lead to data disclosure.|4.6  
 |New [connection string](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) keyword: `Column Encryption Setting=enabled`|Enables or disables Always Encrypted functionality for the connection.| 4.6 
   
-## See also
+## Related content
 
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](always-encrypted-database-engine.md)
 - [Tutorial: Getting started with Always Encrypted](always-encrypted-tutorial-getting-started.md)

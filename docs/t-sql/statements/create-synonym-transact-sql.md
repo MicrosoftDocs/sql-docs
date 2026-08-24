@@ -212,14 +212,14 @@ SELECT
     dbo.CorrectOrder(@Amt) AS ModifiedOrder;
 ```
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create Synonyms](../../relational-databases/synonyms/create-synonyms.md)
+
 ## Related content
 
 - [DROP SYNONYM (Transact-SQL)](drop-synonym-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [GRANT (Transact-SQL)](grant-transact-sql.md)
 - [Synonyms (Database Engine)](../../relational-databases/synonyms/synonyms-database-engine.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create Synonyms](../../relational-databases/synonyms/create-synonyms.md)

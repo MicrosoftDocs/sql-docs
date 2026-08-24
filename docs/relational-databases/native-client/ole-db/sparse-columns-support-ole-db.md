@@ -53,7 +53,6 @@ ms.topic: "reference"
 |IOpenRowset::OpenRowset|IOpenRowset::OpenRowset returns a rowset with the same columns as ICommand::Execute, with a **select \*** query on the same table.|  
 |ITableDefinition|There is no change to this interface for sparse columns or for **column_set** columns. Applications that have to make schema modifications must execute the appropriate [!INCLUDE[tsql](../../../includes/tsql-md.md)] directly.|  
   
-## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB)](sql-server-native-client-ole-db.md)

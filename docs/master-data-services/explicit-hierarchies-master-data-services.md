@@ -86,8 +86,7 @@ helpviewer_keywords:
 |Change the name of an existing explicitly hierarchy.|[Change an Explicit Hierarchy Name &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
 |Delete an existing explicit hierarchy.|[Delete an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
   
-## Related Content  
-  
--   [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
-  
--   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)
+## Related content
+
+- [Derived Hierarchies (Master Data Services)](derived-hierarchies-master-data-services.md)
+- [Collections (Master Data Services)](collections-master-data-services.md)

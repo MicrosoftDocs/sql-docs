@@ -98,8 +98,8 @@ apitype: "DLLExport"
   
  For more information, see [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## See Also  
- [SQLColAttribute Function](../../odbc/reference/syntax/sqlcolattribute-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
-  
+## Related content
+
+- [SQLColAttribute Function](../../odbc/reference/syntax/sqlcolattribute-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)
+- [SQLSetStmtAttr](sqlsetstmtattr.md)

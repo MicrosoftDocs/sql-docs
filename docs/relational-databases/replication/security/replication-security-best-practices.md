@@ -93,9 +93,9 @@ Configuring transactional replication without a DMK can result in SQL Server war
 
 ## Related content
 
-- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
-- [Replication over the Internet](../../../relational-databases/replication/replication-over-the-internet.md)
-- [Secure the Subscriber](../../../relational-databases/replication/security/secure-the-subscriber.md)
-- [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)
-- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)
-- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [Encrypt connections to SQL Server by importing a certificate](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
+- [Replication over the Internet](../replication-over-the-internet.md)
+- [Secure the Subscriber](secure-the-subscriber.md)
+- [Secure the Distributor](secure-the-distributor.md)
+- [Secure the Publisher](secure-the-publisher.md)
+- [View and modify replication security settings](view-and-modify-replication-security-settings.md)

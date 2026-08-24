@@ -101,5 +101,5 @@ For info about how to connect to MySQL with a data provider that's not listed he
 
 ## Related content
 
-- [Choose a Data Source](choose-a-data-source-sql-server-import-and-export-wizard.md)
-- [Choose a Destination](choose-a-destination-sql-server-import-and-export-wizard.md)
+- [Choose a Data Source (SQL Server Import and Export Wizard)](choose-a-data-source-sql-server-import-and-export-wizard.md)
+- [Choose a Destination (SQL Server Import and Export Wizard)](choose-a-destination-sql-server-import-and-export-wizard.md)

@@ -137,8 +137,9 @@ As a validation step, run a query to confirm the data was uploaded.
     SELECT COUNT(*) FROM iris_data;
     ```
 
-## Next steps
+## Next step
 
-In the following quickstart, you will create a machine learning model and save it to a table, and then use the model to generate predicted outcomes.
+In the following quickstart, you create a machine learning model and save it to a table, and then use the model to generate predicted outcomes.
 
-+ [Quickstart:Create and score a predictive model in Python](quickstart-python-train-score-model.md)
+> [!div class="nextstepaction"]
+> [Quickstart: Create and score a predictive model in Python with SQL machine learning](quickstart-python-train-score-model.md)

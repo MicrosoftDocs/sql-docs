@@ -184,4 +184,4 @@ Using this table as an example, assume that you have a column named `lock_mode`,
 
 - [Extended Events sessions](sql-server-extended-events-sessions.md)
 - [Extended Events engine](sql-server-extended-events-engine.md)
-- [Targets for Extended Events](targets-for-extended-events-in-sql-server.md)
+- [Extended Events targets](targets-for-extended-events-in-sql-server.md)

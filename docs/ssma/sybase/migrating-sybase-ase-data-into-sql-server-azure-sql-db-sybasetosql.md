@@ -129,5 +129,6 @@ When large data size 100GB and above needs to be migrated within a short duratio
 
 1. For monitoring the data migration, click on the monitoring URL or go to the data factory monitoring page in Azure portal.
   
-## See Also  
-[Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## Related content
+
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

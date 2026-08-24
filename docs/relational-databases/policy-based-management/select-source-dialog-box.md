@@ -63,5 +63,5 @@ Enter the password for the login. This option is editable only if you have selec
 
 ## Related content
 
-- [Policy management node (object explorer)](policy-management-node-object-explorer.md)
+- [Policy management node (Object Explorer)](policy-management-node-object-explorer.md)
 - [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)

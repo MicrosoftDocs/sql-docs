@@ -492,9 +492,9 @@ The report now displays summary sales data in pie and column charts.
   
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
-- [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Create invoices and forms with lists in a paginated report (Report Builder)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
-- [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)
-- [Query design tools (SSRS)](report-data/query-design-tools-ssrs.md)
-- [Text-based query designer user interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)
+- [Report Builder tutorials](report-builder-tutorials.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Create invoices and forms with lists in a paginated report (Report Builder)](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
+- [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)
+- [Query Design Tools (SSRS)](report-data/query-design-tools-ssrs.md)
+- [Text-based Query Designer User Interface (Report Builder)](report-data/text-based-query-designer-user-interface-report-builder.md)

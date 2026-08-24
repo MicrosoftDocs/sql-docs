@@ -58,6 +58,6 @@ The following options are available for this setting:
   
 2.  No  
   
-## See Also  
-[Finishing Test Case Preparation &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
-  
+## Related content
+
+- [Finishing Test Case Preparation](finishing-test-case-preparation-sybasetosql.md)

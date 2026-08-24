@@ -48,8 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ## Permissions  
  Requires CONTROL SERVER permission.  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [sys.all_columns (Transact-SQL)](sys-all-columns-transact-sql.md)

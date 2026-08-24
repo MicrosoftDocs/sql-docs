@@ -64,6 +64,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)
-- [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Reinitialize Subscriptions](reinitialize-subscriptions.md)
+- [Replication Agent Administration](agents/replication-agent-administration.md)
+- [Subscribe to Publications](subscribe-to-publications.md)

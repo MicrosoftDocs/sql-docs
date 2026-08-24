@@ -343,18 +343,6 @@ This algorithm is single-threaded and will not attempt to load the entire datase
 memory.
 
 
-## See also
-
-[`adadelta_optimizer`](adadelta-optimizer.md),
-[`sgd_optimizer`](sgd-optimizer.md),
-[`avx_math`](avx-math.md),
-[`clr_math`](clr-math.md),
-[`gpu_math`](gpu-math.md),
-[`mkl_math`](mkl-math.md),
-[`sse_math`](sse-math.md),
-[`rx_predict`](rx-predict.md).
-
-
 ## References
 
 [Wikipedia: Artificial neural network](https://wikipedia.org/wiki/Artificial_neural_network)
@@ -982,3 +970,14 @@ Rows Read: 5, Total Rows Processed: 5, Total Chunk Time: 0.001 seconds
 * [*microsoftml.mkl_math*: Acceleration with Intel MKL](mkl-math.md) 
 
 * [*microsoftml.sse_math*: Acceleration with SSE instructions](sse-math.md) 
+
+## Related content
+
+- [*microsoftml.adadelta_optimizer*: Adaptive learning rate method](adadelta-optimizer.md)
+- [*microsoftml.sgd_optimizer*: Stochastic gradient descent](sgd-optimizer.md)
+- [*microsoftml.avx_math*: Acceleration with AVX instructions](avx-math.md)
+- [*microsoftml.clr_math*: Acceleration with .NET math](clr-math.md)
+- [*microsoftml.gpu_math*: Acceleration with NVidia CUDA](gpu-math.md)
+- [*microsoftml.mkl_math*: Acceleration with Intel MKL](mkl-math.md)
+- [*microsoftml.sse_math*: Acceleration with SSE instructions](sse-math.md)
+- [*microsoftml.rx_predict*: Scores using a Microsoft machine learning model](rx-predict.md)

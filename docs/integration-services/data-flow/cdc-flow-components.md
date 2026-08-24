@@ -195,16 +195,10 @@ A message is displayed after you install the components. Click **Yes** when prom
   
 -   [Define a State Variable](../../integration-services/data-flow/define-a-state-variable.md)  
   
-## Related Content  
-  
--   Technical article, [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), on social.technet.microsoft.com.  
-  
--   Technical article, [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), on social.technet.microsoft.com.  
-  
--   Technical article, [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), on social.technet.microsoft.com.  
-  
--   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  
-  
-## See Also  
- [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
-  
+## Related content
+
+- [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)
+- [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)
+- [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)
+- [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))
+- [CDC Control Task](../control-flow/cdc-control-task.md)

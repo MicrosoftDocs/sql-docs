@@ -43,4 +43,4 @@ Button will generate a stored access policy and shared access signature and then
   
 ## Related content
 
-- [SQL Server backup to URL for Microsoft Azure Blob Storage](sql-server-backup-to-url.md)
+- [SQL Server backup to URL for Azure Blob Storage](sql-server-backup-to-url.md)

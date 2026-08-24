@@ -73,6 +73,6 @@ The following table describes the columns of the result set.
 
 Requires membership in the **sysadmin** fixed server role or the **db_owner** fixed database role.
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)

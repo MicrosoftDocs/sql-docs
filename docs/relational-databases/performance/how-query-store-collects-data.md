@@ -69,9 +69,8 @@ SQL Server Query Store works much like a flight data recorder, constantly collec
   
  ![Query Store process plan information](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
-## See also
- [Monitoring performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [Best practice with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)  
- [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md) 
-  
-  
+## Related content
+
+- [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
+- [Best practices for monitoring workloads with Query Store](best-practice-with-the-query-store.md)
+- [Query Store catalog views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)

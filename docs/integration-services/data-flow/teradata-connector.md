@@ -161,9 +161,9 @@ You can uninstall wizard to remove **Microsoft connector for Teradata**.
 
 - When reading empty string data, Teradata Source would fail with the error message "An error occurred when converting string to target codepage."
 
-## Next steps
+## Related content
 
-- Configure [Teradata connection manager](teradata-connection-manager.md)
-- Configure [Teradata source](teradata-source.md)
-- Configure [Teradata destination](teradata-destination.md)
-- If you have questions, visit [Tech Community](https://aka.ms/AA6iwdw)
+- [Use the Teradata connection manager](teradata-connection-manager.md)
+- [Connect to the Teradata source](teradata-source.md)
+- [Teradata destination](teradata-destination.md)
+- [Tech Community](https://aka.ms/AA6iwdw)

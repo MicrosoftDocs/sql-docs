@@ -58,8 +58,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
 ## Permissions  
  Requires membership in the **public** role.  
   
-## See Also  
- [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
+## Related content
+
+- [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../language-elements/begin-distributed-transaction-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)

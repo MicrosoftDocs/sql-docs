@@ -64,5 +64,6 @@ The following console application is similar to the first (non-transacted) examp
   
 [!code-csharp[DataWorks SqlBulkCopy_ExternalTransaction#1](~/../sqlclient/doc/samples/SqlBulkCopy_ExternalTransaction.cs#1)]
   
-## Next steps
+## Related content
+
 - [Bulk copy operations in SQL Server](bulk-copy-operations-sql-server.md)

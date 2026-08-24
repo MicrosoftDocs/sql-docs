@@ -298,5 +298,4 @@ SqlConnection closed.
 
 ## Related content
 
-- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)
-
+- [FOR XML (SQL Server)](for-xml-sql-server.md)

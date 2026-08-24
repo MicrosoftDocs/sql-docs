@@ -104,6 +104,7 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## See Also  
- [sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](sys-dm-clr-loaded-assemblies-transact-sql.md)   
- [Common Language Runtime Related Dynamic Management Views &#40;Transact-SQL&#41;](common-language-runtime-related-dynamic-management-views-transact-sql.md)
+## Related content
+
+- [sys.dm_clr_loaded_assemblies (Transact-SQL)](sys-dm-clr-loaded-assemblies-transact-sql.md)
+- [Common Language Runtime Related Dynamic Management Views (Transact-SQL)](common-language-runtime-related-dynamic-management-views-transact-sql.md)

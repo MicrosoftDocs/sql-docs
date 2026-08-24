@@ -32,5 +32,5 @@ These objects provide detailed CPU statistics, real-time network interface activ
 
 - [Performance best practices: Storage, kernel, CPU, and network for SQL Server on Linux](../../linux/configure/performance-best-practices-operating-system.md)
 - [Performance best practices: SQL Server memory on Linux](../../linux/configure/performance-best-practices-sql-server-memory.md)
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)

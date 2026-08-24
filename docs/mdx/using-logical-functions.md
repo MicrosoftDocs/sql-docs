@@ -27,7 +27,6 @@ SELECT{MEASURES.[IsLeafDemo],MEASURES.[IsAncestorDemo] } ON 0,
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Functions &#40;MDX Syntax&#41;](../mdx/functions-mdx-syntax.md)  
-  
-  
+## Related content
+
+- [Functions (MDX Syntax)](functions-mdx-syntax.md)

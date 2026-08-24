@@ -348,7 +348,7 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 - [Create a publication](../replication/publish/create-a-publication.md)
 - [Publish Data and Database Objects](../replication/publish/publish-data-and-database-objects.md)
-- [sp_changemergepublication (Transact-SQL)](sp-changemergepublication-transact-sql.md)
-- [sp_dropmergepublication (Transact-SQL)](sp-dropmergepublication-transact-sql.md)
-- [sp_helpmergepublication (Transact-SQL)](sp-helpmergepublication-transact-sql.md)
+- [sys.sp_changemergepublication (Transact-SQL)](sp-changemergepublication-transact-sql.md)
+- [sys.sp_dropmergepublication (Transact-SQL)](sp-dropmergepublication-transact-sql.md)
+- [sys.sp_helpmergepublication (Transact-SQL)](sp-helpmergepublication-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

@@ -135,8 +135,7 @@ helpviewer_keywords:
   
  For more information, see "Understanding the Use of the Tag Table" earlier in this topic.  
   
-## See Also  
- [Data Profiling Task Editor &#40;General Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
-  
-  
+## Related content
+
+- [Data Profiling Task Editor (General Page)](data-profiling-task-editor-general-page.md)
+- [Single Table Quick Profile Form (Data Profiling Task)](single-table-quick-profile-form-data-profiling-task.md)

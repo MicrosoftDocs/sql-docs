@@ -30,8 +30,7 @@ dev_langs:
   
 -   [Handling Namespaces in XQuery](../xquery/handling-namespaces-in-xquery.md)  
   
-## See Also  
- [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [XQuery Operators Against the xml Data Type](../xquery/xquery-operators-against-the-xml-data-type.md)  
-  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)
+- [XQuery Operators Against the xml Data Type](xquery-operators-against-the-xml-data-type.md)

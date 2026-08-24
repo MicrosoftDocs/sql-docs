@@ -38,8 +38,7 @@ dev_langs:
     :::column-end:::
 :::row-end:::
   
-## See Also  
- [Data Collection](../../relational-databases/data-collection/data-collection.md)   
- [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
-  
-  
+## Related content
+
+- [Data collection](../data-collection/data-collection.md)
+- [Data collector stored procedures (Transact-SQL)](../system-stored-procedures/data-collector-stored-procedures-transact-sql.md)

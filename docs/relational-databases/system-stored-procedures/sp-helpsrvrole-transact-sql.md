@@ -105,7 +105,7 @@ EXECUTE sp_helpsrvrole 'diskadmin';
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [Server-level roles](../security/authentication-access/server-level-roles.md)
-- [sp_addsrvrolemember (Transact-SQL)](sp-addsrvrolemember-transact-sql.md)
-- [sp_dropsrvrolemember (Transact-SQL)](sp-dropsrvrolemember-transact-sql.md)
-- [sp_helpsrvrolemember (Transact-SQL)](sp-helpsrvrolemember-transact-sql.md)
+- [sys.sp_addsrvrolemember (Transact-SQL)](sp-addsrvrolemember-transact-sql.md)
+- [sys.sp_dropsrvrolemember (Transact-SQL)](sp-dropsrvrolemember-transact-sql.md)
+- [sys.sp_helpsrvrolemember (Transact-SQL)](sp-helpsrvrolemember-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -294,11 +294,11 @@ GO
 
 ## Related content
 
-- [Credentials](../../relational-databases/security/authentication-access/credentials-database-engine.md)
-- [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
-- [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
-- [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)
-- [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+- [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [DROP LOGIN (Transact-SQL)](drop-login-transact-sql.md)
+- [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
@@ -452,11 +452,11 @@ GO
 
 ## Related content
 
-- [Credentials](../../relational-databases/security/authentication-access/credentials-database-engine.md)
-- [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
-- [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
-- [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)
-- [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+- [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [DROP LOGIN (Transact-SQL)](drop-login-transact-sql.md)
+- [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
@@ -744,11 +744,11 @@ ALTER LOGIN [joe@contoso.com] DISABLE;
 
 ## Related content
 
-- [Credentials](../../relational-databases/security/authentication-access/credentials-database-engine.md)
-- [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
-- [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
-- [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)
-- [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+- [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [DROP LOGIN (Transact-SQL)](drop-login-transact-sql.md)
+- [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
@@ -913,11 +913,11 @@ GO
 
 ## Related content
 
-- [Credentials](../../relational-databases/security/authentication-access/credentials-database-engine.md)
-- [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
-- [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
-- [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)
-- [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+- [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [DROP LOGIN (Transact-SQL)](drop-login-transact-sql.md)
+- [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
@@ -1131,11 +1131,11 @@ GO
 
 ## Related content
 
-- [Credentials](../../relational-databases/security/authentication-access/credentials-database-engine.md)
-- [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
-- [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
-- [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)
-- [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+- [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [DROP LOGIN (Transact-SQL)](drop-login-transact-sql.md)
+- [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end

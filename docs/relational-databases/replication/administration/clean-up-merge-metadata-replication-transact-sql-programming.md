@@ -29,4 +29,4 @@ dev_langs:
   
 ## Related content
 
-- [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)
+- [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)

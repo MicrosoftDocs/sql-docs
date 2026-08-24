@@ -30,5 +30,5 @@ In paginated reports, you can replace only a noncontainer item, such as a text b
   
 ## Related content
 
-- [Images, text boxes, rectangles, and lines &#40;Report Builder&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)
-- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Images, text boxes, rectangles, and lines in a paginated report (Report Builder)](images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)

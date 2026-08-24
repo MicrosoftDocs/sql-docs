@@ -142,5 +142,5 @@ EXECUTE sys.sp_configure_automatic_tuning 'FORCE_LAST_GOOD_PLAN_EXTENDED_CHECK',
 - [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
 - [sys.database_query_store_options (Transact-SQL)](../system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [sys.dm_db_tuning_recommendations (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)
-- [sys.database_automatic_tuning_mode](../system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md)
+- [sys.database_automatic_tuning_mode (Transact-SQL)](../system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md)
 - [sys.database_automatic_tuning_configurations (Transact-SQL)](../system-catalog-views/sys-database-automatic-tuning-configurations-transact-sql.md)

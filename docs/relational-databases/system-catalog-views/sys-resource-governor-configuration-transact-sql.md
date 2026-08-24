@@ -58,8 +58,8 @@ FROM sys.dm_resource_governor_configuration;
 ```
 
 ## Related content
- 
-- [Resource governor catalog views (Transact-SQL)](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+
+- [Resource governor catalog views (Transact-SQL)](resource-governor-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [sys.dm_resource_governor_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)
-- [Resource governor](../../relational-databases/resource-governor/resource-governor.md)
+- [Resource governor](../resource-governor/resource-governor.md)

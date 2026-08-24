@@ -62,5 +62,6 @@ SELECT SUM(buffer_size * buffer_count) AS "total memory"
     FROM sys.dm_fts_memory_pools;  
 ```  
   
-## Next steps
- [Full-Text Search and Semantic Search Dynamic Management Views and Functions &#40;Transact-SQL&#41;](full-text-and-semantic-search-dynamic-management-views-functions.md)
+## Related content
+
+- [Full-text and semantic search dynamic management views and functions](full-text-and-semantic-search-dynamic-management-views-functions.md)

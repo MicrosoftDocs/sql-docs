@@ -21,9 +21,8 @@ ms.topic: reference
 |[getCharacterStream Method &#40;&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-braces-sqlservernclob.md)|Retrieves the **NCLOB** data as a **Reader** object or as a stream of characters.|  
 |[getCharacterStream Method &#40;long, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long-sqlservernclob.md)|Retrieves the **NCLOB** data as a **Reader** object or as a stream of characters with the specified position and length.|  
   
-## See Also  
- [SQLServerNClob Methods](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
- [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
- [SQLServerNClob Class](../../../connect/jdbc/reference/sqlservernclob-class.md)  
-  
-  
+## Related content
+
+- [SQLServerNClob Methods](sqlservernclob-methods.md)
+- [SQLServerNClob Members](sqlservernclob-members.md)
+- [SQLServerNClob Class](sqlservernclob-class.md)

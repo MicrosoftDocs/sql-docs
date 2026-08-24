@@ -73,4 +73,4 @@ ms.custom:
   
 ## Related content
 
-- [Rendering to HTML &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)
+- [Render to HTML (Report Builder)](../report-builder/rendering-to-html-report-builder-and-ssrs.md)

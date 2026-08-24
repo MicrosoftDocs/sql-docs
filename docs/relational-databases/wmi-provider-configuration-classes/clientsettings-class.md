@@ -17,6 +17,6 @@ apiname: "ClientSettings Class"
   
  This class enables programmatic management of the client.  
   
-## See Also  
- [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)  
-  
+## Related content
+
+- [Configure client protocols](../../database-engine/configure-windows/configure-client-protocols.md)

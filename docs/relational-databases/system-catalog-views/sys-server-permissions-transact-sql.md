@@ -102,9 +102,10 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## See Also  
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Securables](../../relational-databases/security/securables.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+## Related content
+
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [Securables](../security/securables.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Permissions (Database Engine)](../security/permissions-database-engine.md)
+- [Permissions Hierarchy (Database Engine)](../security/permissions-hierarchy-database-engine.md)

@@ -127,6 +127,6 @@ ms.custom:
   
 ## Related content
 
-- [Publish a report to a SharePoint library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)
-- [Publish a shared data source to a SharePoint library](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)
-- [Project Property Pages dialog box](../../reporting-services/tools/project-property-pages-dialog-box.md)
+- [Publish a Report to a SharePoint Library](../reports/publish-a-report-to-a-sharepoint-library.md)
+- [Publish a Shared Data Source to a SharePoint Library](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)
+- [Project Property Pages dialog box](project-property-pages-dialog-box.md)

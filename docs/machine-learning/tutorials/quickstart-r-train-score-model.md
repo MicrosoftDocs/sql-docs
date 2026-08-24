@@ -233,8 +233,6 @@ The script above performs the following steps:
 
 It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predict-transact-sql.md) statement to generate a predicted value or score based on a stored model.
 
-## Next steps
+## Related content
 
-For more information on tutorials for R with SQL machine learning, see:
-
-- [R tutorials](r-tutorials.md)
+- [R tutorials for SQL machine learning](r-tutorials.md)

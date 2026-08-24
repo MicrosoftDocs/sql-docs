@@ -214,7 +214,7 @@ f1_keywords:
   
 ## Related content
 
-- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
-- [Interactive sort &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)
-- [Sort data in a data region &#40;Report Builder&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)
-- [Explore the flexibility of a Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)
+- [Filter, group, and sort data in Report Builder paginated reports](filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Interactive sort in a paginated report (Report Builder)](interactive-sort-report-builder-and-ssrs.md)
+- [Sort data in a data region in a paginated report (Report Builder)](sort-data-in-a-data-region-report-builder-and-ssrs.md)
+- [Exploring the flexibility of a tablix data region in a paginated report (Report Builder)](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)

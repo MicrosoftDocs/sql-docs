@@ -128,10 +128,7 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000
 ```  
   
-## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [Date and time data types and functions (Transact-SQL)](date-and-time-data-types-and-functions-transact-sql.md)

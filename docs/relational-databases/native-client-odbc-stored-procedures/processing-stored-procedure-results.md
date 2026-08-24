@@ -29,7 +29,6 @@ helpviewer_keywords:
   
  ODBC does not support binding [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor parameters. Because all output parameters must be bound before executing a procedure, any [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure that contains an output cursor parameter cannot be called by ODBC applications.  
   
-## See Also  
- [Running Stored Procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
-  
-  
+## Related content
+
+- [Running Stored Procedures](running-stored-procedures.md)

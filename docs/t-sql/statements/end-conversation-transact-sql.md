@@ -120,9 +120,8 @@ ELSE
 END CONVERSATION @dialog_handle WITH CLEANUP;  
 ```  
   
-## See Also  
- [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
-  
-  
+## Related content
+
+- [BEGIN CONVERSATION TIMER (Transact-SQL)](begin-conversation-timer-transact-sql.md)
+- [BEGIN DIALOG CONVERSATION (Transact-SQL)](begin-dialog-conversation-transact-sql.md)
+- [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)

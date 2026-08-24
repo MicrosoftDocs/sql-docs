@@ -64,6 +64,6 @@ The query optimizer typically selects the most efficient method when executing q
 
 ## Related content
 
-- [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
+- [Index architecture and design guide](../sql-server-index-design-guide.md)
 - [Create a clustered index](create-clustered-indexes.md)
 - [Create nonclustered indexes](create-nonclustered-indexes.md)

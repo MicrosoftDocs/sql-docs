@@ -58,7 +58,7 @@ EXECUTE sp_query_store_clear_message_queues;
 ## Related content
 
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
-- [Query Store for readable secondaries](../performance/query-store-for-secondary-replicas.md)
+- [Query Store for readable secondary replicas (preview)](../performance/query-store-for-secondary-replicas.md)
 - [sys.database_query_store_internal_state (Transact-SQL)](../system-catalog-views/sys-database-query-store-internal-state-transact-sql.md)
 - [Query Store catalog views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
 - [Query Store stored procedures (Transact-SQL)](query-store-stored-procedures-transact-sql.md)

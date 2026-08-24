@@ -111,9 +111,9 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## See also  
- [sys.allocation_units &#40;Transact-SQL&#41;](../system-catalog-views/sys-allocation-units-transact-sql.md)   
- 
- [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [Resource Database](../databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)
+## Related content
+
+- [sys.allocation_units (Transact-SQL)](../system-catalog-views/sys-allocation-units-transact-sql.md)
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [Resource Database](../databases/resource-database.md)
+- [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)

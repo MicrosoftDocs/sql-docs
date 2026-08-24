@@ -54,9 +54,8 @@ helpviewer_keywords:
 |Describes the procedure used to recover from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster failure.|[Recover from Failover Cluster Instance Failure](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
 |Describe the procedure used to change the IP address resource for a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.|[Change the IP Address of a Failover Cluster Instance](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## See Also  
- [Configure HealthCheckTimeout Property Settings](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)   
- [Configure FailureConditionLevel Property Settings](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)   
- [View and Read Failover Cluster Instance Diagnostics Log](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
-  
-  
+## Related content
+
+- [Configure HealthCheckTimeout Property Settings](configure-healthchecktimeout-property-settings.md)
+- [Configure FailureConditionLevel property settings](configure-failureconditionlevel-property-settings.md)
+- [View and Read Failover Cluster Instance Diagnostics Log](view-and-read-failover-cluster-instance-diagnostics-log.md)

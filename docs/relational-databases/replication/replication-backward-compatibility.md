@@ -50,6 +50,6 @@ The general rules are:
 
 ## Related content
 
-- [Deprecated Features in SQL Server Replication](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)
-- [Breaking Changes in SQL Server Replication](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)
-- [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)
+- [Deprecated Features in SQL Server Replication](deprecated-features-in-sql-server-replication.md)
+- [Breaking Changes in SQL Server Replication](breaking-changes-in-sql-server-replication.md)
+- [Upgrade or patch replicated databases](../../database-engine/install-windows/upgrade-replicated-databases.md)

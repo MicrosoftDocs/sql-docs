@@ -123,11 +123,9 @@ helpviewer_keywords:
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Related Content  
- For information about how to set the properties of this component, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
-  
-## See Also  
- [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Set the Properties of a Data Flow Component](../set-the-properties-of-a-data-flow-component.md)
+- [Unpivot Transformation](unpivot-transformation.md)
+- [Data Flow](../data-flow.md)
+- [Integration Services Transformations](integration-services-transformations.md)

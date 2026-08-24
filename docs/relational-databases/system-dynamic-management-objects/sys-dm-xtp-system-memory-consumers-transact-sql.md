@@ -119,8 +119,8 @@ total_allocated_MB   total_used_MB
 
 ## Related content
 
-- [Memory-optimized table dynamic management views (Transact-SQL)](memory-optimized-table-dynamic-management-views-transact-sql.md)
+- [In-Memory OLTP System Views (Transact-SQL)](memory-optimized-table-dynamic-management-views-transact-sql.md)
 - [Memory-optimized tempdb metadata (HkTempDB) out of memory errors](/troubleshoot/sql/admin/memory-optimized-tempdb-out-of-memory)
 - [sys.sp_xtp_force_gc (Transact-SQL)](../system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md)
 - [sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)](../system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)
-- [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)

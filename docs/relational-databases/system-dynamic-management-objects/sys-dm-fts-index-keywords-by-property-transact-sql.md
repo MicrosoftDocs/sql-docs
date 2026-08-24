@@ -141,10 +141,10 @@ GO
 ## Related content
 
 - [Full-Text Search](../search/full-text-search.md)
-- [Improve the Performance of Full-Text Indexes](../search/improve-the-performance-of-full-text-indexes.md)
+- [Improve the performance of full-text indexes](../search/improve-the-performance-of-full-text-indexes.md)
 - [sp_fulltext_keymappings (Transact-SQL)](../system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)
 - [sys.dm_fts_index_keywords_by_document (Transact-SQL)](sys-dm-fts-index-keywords-by-document-transact-sql.md)
 - [sys.dm_fts_index_keywords (Transact-SQL)](sys-dm-fts-index-keywords-transact-sql.md)
 - [sys.registered_search_properties (Transact-SQL)](../system-catalog-views/sys-registered-search-properties-transact-sql.md)
 - [sys.registered_search_property_lists (Transact-SQL)](../system-catalog-views/sys-registered-search-property-lists-transact-sql.md)
-- [Search Document Properties with Search Property Lists](../search/search-document-properties-with-search-property-lists.md)
+- [Search document properties with search property lists](../search/search-document-properties-with-search-property-lists.md)

@@ -87,7 +87,6 @@ DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.65
 SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
 ```  
   
-## See Also  
-[Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)

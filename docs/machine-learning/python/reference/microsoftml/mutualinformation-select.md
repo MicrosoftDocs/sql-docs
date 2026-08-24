@@ -96,11 +96,11 @@ Additional arguments sent to compute engine.
 An object defining the transform.
 
 
-## See also
-
-[`count_select`](count-select.md)
-
-
 ## References
 
 [Wikipedia: Mutual Information](https://wikipedia.org/wiki/Mutual_information)
+
+
+## Related content
+
+- [*microsoftml.count_select*: Feature selection based on counts](count-select.md)

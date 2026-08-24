@@ -495,4 +495,4 @@ Visible only when the Convert Sequence Generator is set to **using column identi
 
 ## Related content
 
-- [User interface reference (Db2ToSQL)](user-interface-reference-db2tosql.md)
+- [User interface reference](user-interface-reference-db2tosql.md)

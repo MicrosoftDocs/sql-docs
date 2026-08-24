@@ -43,8 +43,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
   
 -   [Import Native and Character Format Data from Earlier Versions of SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
-## See Also  
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Specify Data Formats for Compatibility when Using bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)  
-  
-  
+## Related content
+
+- [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+- [Specify compatibility data formats when using bcp (SQL Server)](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)

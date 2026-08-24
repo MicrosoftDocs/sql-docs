@@ -87,8 +87,7 @@ The following Transact-SQL commands are used in this section:
 You can also utilize the SQL Server (sqlserver://) connector to access Azure SQL Database. To accomplish this task, follow the same steps listed previously. Make sure the database scoped credential, server address, port, and location string correlate to that of the Azure SQL Database data source you want to connect to.
 
 
-## Next steps
+## Related content
 
-For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
-
-To learn more about PolyBase, see [Overview of SQL Server PolyBase](overview.md).
+- [PolyBase Transact-SQL reference](polybase-t-sql-objects.md)
+- [PolyBase overview](overview.md)

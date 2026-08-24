@@ -33,7 +33,6 @@ helpviewer_keywords:
   
 -   [Resynchronizing Rows](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
-## See Also  
- [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
-  
-  
+## Related content
+
+- [Rowsets (Native Client OLE DB provider)](rowsets.md)

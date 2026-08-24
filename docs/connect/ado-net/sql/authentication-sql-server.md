@@ -75,12 +75,7 @@ If you must use mixed mode authentication, you must create SQL Server logins, wh
 > [!IMPORTANT]
 > Concatenating connection strings from user input can leave you vulnerable to a connection string injection attack. Use the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> to create syntactically valid connection strings at run time. 
   
-## External resources  
-For more information, see the following resources.  
-  
-|Resource|Description|  
-|--------------|-----------------|  
-|[Principals](../../../relational-databases/security/authentication-access/principals-database-engine.md)|Describes logins and other security principals in SQL Server.|  
-  
-## Next steps
+## Related content
+
+- [Principals (Database Engine)](../../../relational-databases/security/authentication-access/principals-database-engine.md)
 - [Application security scenarios in SQL Server](application-security-scenarios-sql-server.md)

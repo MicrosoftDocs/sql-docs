@@ -36,7 +36,6 @@ f1_keywords:
 |**End date column**|Select the column in the dimension table to contain the end date.|  
 |**Variable to set date values**|Select a date variable from the list.|  
   
-## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
-  
-  
+## Related content
+
+- [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)

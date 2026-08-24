@@ -54,5 +54,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)
-- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Manage Report Data Sources](manage-report-data-sources.md)
+- [Create data connection strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

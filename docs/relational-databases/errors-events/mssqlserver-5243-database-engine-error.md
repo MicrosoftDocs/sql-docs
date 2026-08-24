@@ -40,7 +40,7 @@ Run DBCC CHECKDBIf no clean backup is available, run DBCC CHECKDB without a REPA
 
 If running DBCC CHECKDB with one of the REPAIR clauses does not correct the problem, contact your primary support provider.
   
-## See Also  
-[DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
-[Database Files and Filegroups](~/relational-databases/databases/database-files-and-filegroups.md)  
-  
+## Related content
+
+- [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
+- [Database files and filegroups](../databases/database-files-and-filegroups.md)

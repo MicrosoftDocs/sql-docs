@@ -123,13 +123,11 @@ GO
 
 ## Related content
 
-- [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
-- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
-- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
-- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
-- [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
-- [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)  
-  
-  
+- [NEWSEQUENTIALID (Transact-SQL)](newsequentialid-transact-sql.md)
+- [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [uniqueidentifier (Transact-SQL)](../data-types/uniqueidentifier-transact-sql.md)
+- [Sequence numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)

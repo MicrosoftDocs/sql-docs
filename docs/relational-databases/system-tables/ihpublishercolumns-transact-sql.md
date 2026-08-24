@@ -36,11 +36,10 @@ dev_langs:
 |**isnullable**|**bit**|Indicates whether the column accepts NULL values, where **1** means that NULL values are accepted.|  
 |**iscaptured**|**bit**|Indicates whether a trigger exists on the column, which may exist even if the column in not published in an article. A value of **1** means that the trigger exists on the column.|  
   
-## See Also  
- [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sysarticlecolumns &#40;System View&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
- [sysarticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
-  
-  
+## Related content
+
+- [Heterogeneous Database Replication](../replication/non-sql/heterogeneous-database-replication.md)
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
+- [sysarticlecolumns (System View) (Transact-SQL)](../system-views/sysarticlecolumns-system-view-transact-sql.md)
+- [sysarticlecolumns (Transact-SQL)](sysarticlecolumns-transact-sql.md)

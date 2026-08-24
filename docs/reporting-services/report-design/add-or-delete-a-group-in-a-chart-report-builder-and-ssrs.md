@@ -51,4 +51,4 @@ In paginated reports, select the chart data region to display the **Chart Data**
   
 ## Related content
 
-- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)

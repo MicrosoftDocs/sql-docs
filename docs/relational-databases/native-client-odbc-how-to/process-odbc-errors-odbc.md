@@ -228,6 +228,6 @@ DROP PROCEDURE BadOne
 GO  
 ```  
   
-## See Also  
- [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
-  
+## Related content
+
+- [ODBC How-to Topics](odbc-how-to-topics.md)

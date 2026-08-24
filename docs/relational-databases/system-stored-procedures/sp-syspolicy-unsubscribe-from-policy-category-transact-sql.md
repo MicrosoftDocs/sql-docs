@@ -67,4 +67,4 @@ GO
 ## Related content
 
 - [Policy-Based Management stored procedures (Transact-SQL)](policy-based-management-stored-procedures-transact-sql.md)
-- [sp_syspolicy_subscribe_to_policy_category (Transact-SQL)](sp-syspolicy-subscribe-to-policy-category-transact-sql.md)
+- [sys.sp_syspolicy_subscribe_to_policy_category (Transact-SQL)](sp-syspolicy-subscribe-to-policy-category-transact-sql.md)

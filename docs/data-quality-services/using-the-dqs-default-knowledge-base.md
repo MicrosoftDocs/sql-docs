@@ -43,6 +43,6 @@ ms.custom:
   
 -   Use it in the [DQS Cleansing component in Integration Services](/previous-versions/sql/sql-server-2012/ee677619(v=sql.110)) and [Master Data Services Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
-## See Also  
- [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
-  
+## Related content
+
+- [DQS Knowledge Bases and Domains](dqs-knowledge-bases-and-domains.md)

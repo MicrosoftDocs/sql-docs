@@ -54,9 +54,8 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## See Also  
- [EXP &#40;SSIS Expression&#41;](../../integration-services/expressions/exp-ssis-expression.md)   
- [LN &#40;SSIS Expression&#41;](../../integration-services/expressions/ln-ssis-expression.md)   
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
-  
-  
+## Related content
+
+- [EXP (SSIS Expression)](exp-ssis-expression.md)
+- [LN (SSIS Expression)](ln-ssis-expression.md)
+- [Functions (SSIS Expression)](functions-ssis-expression.md)

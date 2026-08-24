@@ -100,6 +100,6 @@ EXECUTE AS CALLER has a small (approximately10%) performance hit caused by permi
 
 For a brief discussion of typical scenarios where [!INCLUDE[inmemory-md](../../includes/inmemory-md.md)] can improve performance, see [In-Memory OLTP](./overview-and-usage-scenarios.md).  
   
-## See Also
+## Related content
 
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](./overview-and-usage-scenarios.md)  
+- [In-Memory OLTP overview and usage scenarios](overview-and-usage-scenarios.md)

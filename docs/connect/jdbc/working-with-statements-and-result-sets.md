@@ -39,6 +39,6 @@ For read-only server cursors, the tradeoff is round trips to the server versus t
 
 Use streams or BLOBs and CLOBs that are incrementally materialized to handle updating large column values or sending large IN parameters. The JDBC driver "chunks" these types to the server in multiple round trips, allowing you to set and update values larger than what will fit in memory.
 
-## See also
+## Related content
 
-[Improving performance and reliability with the JDBC driver](improving-performance-and-reliability-with-the-jdbc-driver.md)
+- [Improving performance and reliability (JDBC)](improving-performance-and-reliability-with-the-jdbc-driver.md)

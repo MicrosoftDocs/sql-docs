@@ -29,6 +29,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 >
 > If you want the JDBC driver to return all update counts, including update counts returned by any triggers that may have fired, set the lastUpdateCount connection string property to "false". For more information about the lastUpdateCount property, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md).
 
-## See also
+## Related content
 
-[Using statements with SQL](../../connect/jdbc/using-statements-with-sql.md)
+- [Using statements with SQL](using-statements-with-sql.md)

@@ -109,7 +109,6 @@ helpviewer_keywords:
 ## Related Tasks  
  For information about how to create packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [Create Packages in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## See Also  
- [SSIS Designer](../integration-services/ssis-designer.md)  
-  
-  
+## Related content
+
+- [SSIS Designer](ssis-designer.md)

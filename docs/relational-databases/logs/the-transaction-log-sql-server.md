@@ -184,7 +184,7 @@ The following operations, which are fully logged under the full recovery model, 
 ## Related content
 
 - [SQL Server transaction log architecture and management guide](../sql-server-transaction-log-architecture-and-management-guide.md)
-- [Control transaction durability](control-transaction-durability.md)
+- [Control Transaction Durability](control-transaction-durability.md)
 - [Prerequisites for minimal logging in bulk import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)
 - [Back up and restore of SQL Server databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)
 - [Restore and recovery overview (SQL Server)](../backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)

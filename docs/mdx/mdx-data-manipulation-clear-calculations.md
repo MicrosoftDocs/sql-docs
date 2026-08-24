@@ -29,7 +29,6 @@ CLEAR CALCULATIONS [FROMCube_Expression]
 > [!NOTE]  
 >  This statement can only be executed by a server or database administrator, or a member of a role that has access to the source data in the cube (that is, ReadSourceData=true)  
   
-## See Also  
- [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Data Manipulation Statements (MDX)](mdx-data-manipulation-statements-mdx.md)

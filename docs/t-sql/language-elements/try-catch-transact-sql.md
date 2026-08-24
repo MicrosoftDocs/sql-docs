@@ -342,7 +342,7 @@ GO
 - [ERROR_SEVERITY (Transact-SQL)](../functions/error-severity-transact-sql.md)
 - [ERROR_STATE (Transact-SQL)](../functions/error-state-transact-sql.md)
 - [RAISERROR (Transact-SQL)](raiserror-transact-sql.md)
-- [&#x40;&#x40;ERROR (Transact-SQL)](../functions/error-transact-sql.md)
+- [@@ERROR (Transact-SQL)](../functions/error-transact-sql.md)
 - [GOTO (Transact-SQL)](goto-transact-sql.md)
 - [BEGIN...END (Transact-SQL)](begin-end-transact-sql.md)
 - [XACT_STATE (Transact-SQL)](../functions/xact-state-transact-sql.md)

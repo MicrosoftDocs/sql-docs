@@ -34,8 +34,7 @@ ms.topic: troubleshooting-general
   
 -   When you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, the JDBC driver requires that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, which is not the default. Make sure that this option is included when you install or configure your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## See also  
- [Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)   
- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)  
-  
-  
+## Related content
+
+- [Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)
+- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

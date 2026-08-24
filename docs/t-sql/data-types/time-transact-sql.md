@@ -274,7 +274,6 @@ SELECT CAST('2007-05-08 12:35:29. 1234567 +12:15' AS TIME(7)) AS 'time',
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|If the fractional seconds precision exceeds the value specified for the column, the string will be truncated without error.|  
 |'12:12:12.1234567'|**datetimeoffset(7)**|1900-01-01 12:12:12.1234567 +00:00|If the fractional seconds precision exceeds the value specified for the column, the string will be truncated without error.|  
   
-## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
+## Related content
+
+- [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)

@@ -35,8 +35,7 @@ f1_keywords:
  **Remove**  
  Select a table from the list and click **Remove** to remove the table from the CDC instance.  
   
-## See Also  
- [How to Edit the CDC Instance Properties](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
-  
-  
+## Related content
+
+- [How to Edit the CDC Instance Properties](how-to-edit-the-cdc-instance-properties.md)
+- [Select Oracle Tables and Columns](select-oracle-tables-and-columns.md)

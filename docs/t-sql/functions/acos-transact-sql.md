@@ -64,8 +64,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-## See also
+## Related content
 
-[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[Functions](../../t-sql/functions/functions.md)
-
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
+- [What are the SQL database functions?](functions.md)

@@ -1,6 +1,6 @@
 ---
 title: "@@PROCID (Transact-SQL)"
-description: "&#x40;&#x40;PROCID (Transact-SQL)"
+description: "@@PROCID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/18/2017"
@@ -24,7 +24,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;PROCID (Transact-SQL)
+# @@PROCID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   Returns the object identifier (ID) of the current [!INCLUDE[tsql](../../includes/tsql-md.md)] module. A [!INCLUDE[tsql](../../includes/tsql-md.md)] module can be a stored procedure, user-defined function, or trigger. @@PROCID cannot be specified in CLR modules or the in-process data access provider.  
@@ -65,14 +65,12 @@ GO
 EXECUTE dbo.usp_FindName 'P%', 'A%';  
 ```  
   
-## See Also  
- [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
-  
+## Related content
 
+- [CREATE FUNCTION (Transact-SQL)](../statements/create-function-transact-sql.md)
+- [CREATE PROCEDURE (Transact-SQL)](../statements/create-procedure-transact-sql.md)
+- [CREATE TRIGGER (Transact-SQL)](../statements/create-trigger-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)
+- [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
+- [RAISERROR (Transact-SQL)](../language-elements/raiserror-transact-sql.md)

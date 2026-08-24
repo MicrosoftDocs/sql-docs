@@ -313,8 +313,7 @@ helpviewer_keywords:
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
-  
-  
+## Related content
+
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [WMI Provider for Server Events concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)

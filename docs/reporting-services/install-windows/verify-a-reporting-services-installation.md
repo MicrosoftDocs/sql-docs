@@ -52,5 +52,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Troubleshoot a Reporting Services Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)
-- [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)
+- [Troubleshoot a Reporting Services installation](troubleshoot-a-reporting-services-installation.md)
+- [Cause and resolution of Reporting Services errors](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)

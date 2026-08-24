@@ -24,6 +24,7 @@ Describes how to work with the large-value data types.
 [FILESTREAM data](filestream-data.md)  
 Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute.  
   
-## Next steps
+## Related content
+
 - [SQL Server data types and ADO.NET](sql-server-data-types.md)
 - [SQL Server data operations in ADO.NET](sql-server-data-operations.md)

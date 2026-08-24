@@ -229,13 +229,13 @@ The memory-optimized [E-series](/azure/virtual-machines/sizes/memory-optimized/e
 | **Intended workload** | General OLTP, lighter production, cost-conscious deployments |
 | **Ephemeral storage for `tempdb`** | No |
 
-The [Easv7‑series VMs](/azure/virtual-machines/sizes/memory-optimized/easv7-series) work well for SQL Server workloads that need a balanced memory-to-vCore ratio and predictable compute performance. They're especially good when local temp storage isn't needed and overall storage demands are moderate. Built on AMD's 5th Generation EPYC™ 9005 (Turin) processors, this series offers modern CPU efficiency with stable remote storage behavior. It's a practical choice for SQL Server deployments that prioritize consistency, cost efficiency, and straightforward scalability.
+The [Easv7-series VMs](/azure/virtual-machines/sizes/memory-optimized/easv7-series) work well for SQL Server workloads that need a balanced memory-to-vCore ratio and predictable compute performance. They're especially good when local temp storage isn't needed and overall storage demands are moderate. Built on AMD's 5th Generation EPYC™ 9005 (Turin) processors, this series offers modern CPU efficiency with stable remote storage behavior. It's a practical choice for SQL Server deployments that prioritize consistency, cost efficiency, and straightforward scalability.
  
 With an 8:1 memory-to-vCore ratio, up to 160 vCores, and high storage throughput, the Easv7 VMs deliver performance without forcing you to overprovision CPU just to reach acceptable memory levels. Support for premium storage ensures compatibility with modern Azure storage options and enables predictable, scalable remote I/O performance for user databases. 
  
 Although the series doesn't include local ephemeral storage, it performs well for workloads where `tempdb` activity is moderate and can be efficiently handled on remote disks.
  
-The Easv7‑series is a good fit for general-purpose OLTP workloads and lighter production deployments where memory efficiency and compute predictability matter more than isolated `tempdb` performance. As workloads evolve - such as increased `tempdb` pressure or higher memory requirements - you can transition to VM families with local temp storage or higher memory density. But Easv7 VMs provide a solid and cost-conscious foundation for SQL Server workloads that don't require specialized I/O characteristics.
+The Easv7-series is a good fit for general-purpose OLTP workloads and lighter production deployments where memory efficiency and compute predictability matter more than isolated `tempdb` performance. As workloads evolve - such as increased `tempdb` pressure or higher memory requirements - you can transition to VM families with local temp storage or higher memory density. But Easv7 VMs provide a solid and cost-conscious foundation for SQL Server workloads that don't require specialized I/O characteristics.
 
 ### Ebdsv5 series
 
@@ -252,11 +252,11 @@ The Easv7‑series is a good fit for general-purpose OLTP workloads and lighter 
 | **Intended workload** | Production SQL Server (most workloads), [OLTP](/azure/architecture/data-guide/relational-data/online-transaction-processing), data warehouse |
 | **Ephemeral storage for `tempdb`** | Yes (75-3,800 GiB capacity) |
 
-The [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) is the recommended starting point for SQL Server workloads as it covers scenarios that benefit from local temp storage. This VM series is a balanced, memory‑optimized, and tuned option for SQL Server on Azure virtual machines. With an 8:1 memory-to-vCore ratio, predictable remote storage performance, and support for Premium SSD, Premium SSD v2, and Ultra Disk, this series aligns well with the core requirements of most production SQL Server OLTP workloads. These VMs run on the Intel® Xeon® Platinum 8370C (Ice Lake) processors.
+The [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) is the recommended starting point for SQL Server workloads as it covers scenarios that benefit from local temp storage. This VM series is a balanced, memory-optimized, and tuned option for SQL Server on Azure virtual machines. With an 8:1 memory-to-vCore ratio, predictable remote storage performance, and support for Premium SSD, Premium SSD v2, and Ultra Disk, this series aligns well with the core requirements of most production SQL Server OLTP workloads. These VMs run on the Intel® Xeon® Platinum 8370C (Ice Lake) processors.
 
 The Ebdsv5 VMs are one of the few VMs that offers both the [SCSI and NVMe interfaces](/azure/virtual-machines/ebdsv5-ebsv5-series?branch=main#ebdsv5-series-nvme). It's recommended to use the NVMe options for maximum performance for SQL Server VMs.
  
-Ebdsv5 VMs provide sufficient memory per core, strong and consistent storage throughput, and scalable I/O characteristics without requiring you to overprovision CPU simply to reach acceptable memory or storage levels. This balance makes it well‑suited for transactional workloads, mixed OLTP scenarios, and general‑purpose production databases where stability, efficiency, and cost control matter as much as peak scale. 
+Ebdsv5 VMs provide sufficient memory per core, strong and consistent storage throughput, and scalable I/O characteristics without requiring you to overprovision CPU simply to reach acceptable memory or storage levels. This balance makes it well-suited for transactional workloads, mixed OLTP scenarios, and general-purpose production databases where stability, efficiency, and cost control matter as much as peak scale. 
  
 The Ebdsv5 series offers performance that works for the majority of production deployments, while still allowing you to scale up or move to more specialized VM families as workload characteristics evolve.
 
@@ -310,11 +310,11 @@ The following list describes the capabilities of compute optimized VMs:
 | **Intended workload** | Dev/test, lighter OLTP, CPU-bound scenarios |
 | **Ephemeral storage for `tempdb`** | No |
 
-The [Fasv7‑series](/azure/virtual-machines/sizes/compute-optimized/fasv7-series) VMs are suited for SQL Server workloads that prioritize compute and storage performance but can operate with lower memory requirements. Built on AMD's 5th Generation EPYC™ 9005 (Turin) processors, this series delivers efficient, modern compute with stable remote storage behavior. It's a practical choice for SQL Server deployments where CPU‑bound operations dominate and memory requirements remain modest.
+The [Fasv7-series](/azure/virtual-machines/sizes/compute-optimized/fasv7-series) VMs are suited for SQL Server workloads that prioritize compute and storage performance but can operate with lower memory requirements. Built on AMD's 5th Generation EPYC™ 9005 (Turin) processors, this series delivers efficient, modern compute with stable remote storage behavior. It's a practical choice for SQL Server deployments where CPU-bound operations dominate and memory requirements remain modest.
  
-With a 4:1 memory‑to‑vCore ratio, Fasv7 VMs are optimized for scenarios where compute efficiency and storage performance matter more than a larger buffer pool capacity for SQL Server. Support for premium storage ensures compatibility with modern Azure storage options and provides consistent remote I/O performance for user databases. However, the absence of local ephemeral storage means `tempdb` activity relies entirely on remote disks. The lower memory position can put even more pressure on remote storage, making this series better suited for workloads with limited `tempdb` pressure or predictable, well‑understood I/O patterns.
+With a 4:1 memory-to-vCore ratio, Fasv7 VMs are optimized for scenarios where compute efficiency and storage performance matter more than a larger buffer pool capacity for SQL Server. Support for premium storage ensures compatibility with modern Azure storage options and provides consistent remote I/O performance for user databases. However, the absence of local ephemeral storage means `tempdb` activity relies entirely on remote disks. The lower memory position can put even more pressure on remote storage, making this series better suited for workloads with limited `tempdb` pressure or predictable, well-understood I/O patterns.
  
-This balance makes the Fasv7‑series a good fit for lighter OLTP workloads, departmental databases, development and test environments, and targeted production scenarios where CPU utilization is the primary driver and memory or `tempdb` demands are constrained. The Fasv7 series provides a cost‑conscious and compute‑efficient option where CPU performance, storage performance, and overall costs are the primary requirements.
+This balance makes the Fasv7-series a good fit for lighter OLTP workloads, departmental databases, development and test environments, and targeted production scenarios where CPU utilization is the primary driver and memory or `tempdb` demands are constrained. The Fasv7 series provides a cost-conscious and compute-efficient option where CPU performance, storage performance, and overall costs are the primary requirements.
 
 ### Famsv7-series
 
@@ -331,13 +331,13 @@ This balance makes the Fasv7‑series a good fit for lighter OLTP workloads, dep
 | **Intended workload** | Lighter to mid-range OLTP, dev/test, cost-conscious production |
 | **Ephemeral storage for `tempdb`** | No |
 
-The [Famsv7‑series VMs](/azure/virtual-machines/sizes/compute-optimized/famsv7-series) work well for SQL Server workloads that need a balanced memory-to-vCore ratio and efficient compute performance. They're a good choice when an 8:1 memory to core ratio up to 640 GiB is enough and local temp storage isn't a strict requirement. 
+The [Famsv7-series VMs](/azure/virtual-machines/sizes/compute-optimized/famsv7-series) work well for SQL Server workloads that need a balanced memory-to-vCore ratio and efficient compute performance. They're a good choice when an 8:1 memory to core ratio up to 640 GiB is enough and local temp storage isn't a strict requirement. 
  
 Built on AMD's 5th Generation EPYC™ 9005 (Turin) processors, this series delivers modern CPU efficiency with predictable remote storage behavior. It's a practical choice for SQL Server deployments that prioritize cost-effective OLTP performance over extreme scale or specialized I/O characteristics.
  
 Famsv7 VMs provide a solid memory position for SQL Server buffer pool utilization without you having to overprovision vCPUs simply to meet baseline memory requirements. Support for premium storage ensures compatibility with modern Azure storage options and enables consistent, scalable remote I/O performance for user databases. While the series doesn't include local ephemeral storage, its balanced memory profile and stable remote storage characteristics make it suitable for workloads where `tempdb` activity is moderate and doesn't dominate the performance profile.
 
-This balance makes the Famsv7‑series a good fit for lighter to mid‑range OLTP workloads, development and test environments, and targeted production scenarios where memory efficiency and compute predictability matter more than isolated `tempdb` performance. As workloads evolve, such as increased `tempdb` pressure or higher memory demand, you can transition to more specialized VM families with higher memory or local ephemeral storage, but Famsv7 provides a cost‑conscious and approachable solution for SQL Server deployments that need reliable performance without unnecessary complexity.
+This balance makes the Famsv7-series a good fit for lighter to mid-range OLTP workloads, development and test environments, and targeted production scenarios where memory efficiency and compute predictability matter more than isolated `tempdb` performance. As workloads evolve, such as increased `tempdb` pressure or higher memory demand, you can transition to more specialized VM families with higher memory or local ephemeral storage, but Famsv7 provides a cost-conscious and approachable solution for SQL Server deployments that need reliable performance without unnecessary complexity.
 
 ## General Purpose
 
@@ -383,7 +383,7 @@ For this reason, use the Standard_D8ds_v5 as the minimum recommended VM size in 
 | **Intended workload** | Confidential computing workloads requiring data-in-use protection and disk encryption for sensitive workloads |
 | **Ephemeral storage for `tempdb`** | Yes (75-3,600 GiB capacity) |
 
-The [DCadsv6-series](/azure/virtual-machines/sizes/general-purpose/dcadsv6-series) VMs are general purpose Azure confidential VMs with local temporary storage. These VMs use AMD EPYC™ 9004 (Genoa) processors and support Secure Encrypted Virtualization–Secure Nested Paging (SEV‑SNP) to provide hardware-isolated environments that help protect code and data during processing from the hypervisor, host management systems, and administrative users. The platform includes hardware-based VM memory encryption and supports confidential disk encryption, including OS disk encryption at boot using customer-managed keys (CMK) or platform-managed keys (PMK), integrated with Azure Key Vault and Azure Managed HSM.
+The [DCadsv6-series](/azure/virtual-machines/sizes/general-purpose/dcadsv6-series) VMs are general purpose Azure confidential VMs with local temporary storage. These VMs use AMD EPYC™ 9004 (Genoa) processors and support Secure Encrypted Virtualization–Secure Nested Paging (SEV-SNP) to provide hardware-isolated environments that help protect code and data during processing from the hypervisor, host management systems, and administrative users. The platform includes hardware-based VM memory encryption and supports confidential disk encryption, including OS disk encryption at boot using customer-managed keys (CMK) or platform-managed keys (PMK), integrated with Azure Key Vault and Azure Managed HSM.
 
 DCadsv6 configurations scale up to 96 vCores and 384 GiB of memory, and provide high remote storage performance. The series also includes local temporary storage (75–3,600 GiB) that can be used for transient I/O such as tempdb, staging, or other recreatable data. As with all confidential VM offerings, security features can introduce performance overhead. Benchmark your workload and select a VM size that meets your performance requirements. Because DCadsv6 has a 4:1 memory-to-vCore ratio, it may be a better fit for confidential computing scenarios that are not memory bound. For memory-intensive SQL Server production workloads, consider a higher memory-to-vCore ratio VM series where appropriate.
 
@@ -416,7 +416,7 @@ The benefit of the B-series is the compute savings you achieve compared to the o
 
 ## Storage optimized
 
-The [storage optimized VM sizes](/azure/virtual-machines/sizes-storage) are intended for I/O‑intensive workloads that benefit from high disk throughput and low‑latency I/O, including SQL Server scenarios where fast local storage is the most important. L‑series VMs provide directly mapped local NVMe storage that is ephemeral in nature and are optimized to achieve higher IOPS and throughput than relying primarily on durable data disks.  
+The [storage optimized VM sizes](/azure/virtual-machines/sizes-storage) are intended for I/O-intensive workloads that benefit from high disk throughput and low-latency I/O, including SQL Server scenarios where fast local storage is the most important. L-series VMs provide directly mapped local NVMe storage that is ephemeral in nature and are optimized to achieve higher IOPS and throughput than relying primarily on durable data disks.  
 
 These virtual machines are good options for big data, data warehouse, reporting, and ETL workloads. The high throughput and IOPS of the local NVMe storage is a good use case for processing files that you load into your database and other scenarios where the data can be recreated from the source system or other repositories such as Azure Blob storage or Azure Data Lake.
 
@@ -433,7 +433,7 @@ These virtual machines are good options for big data, data warehouse, reporting,
 | **Max throughput** | Up to 36,000 MBps (local NVMe); up to 5,088 MBps (remote storage) |
 | **Premium storage** | Yes |
 | **Premium storage caching** | Yes (not supported on the largest size) |
-| **Intended workload** | Big data, relational/NoSQL databases, data analytics, data warehousing; I/O‑intensive SQL Server scenarios (ETL/staging/tempdb-style workloads) |
+| **Intended workload** | Big data, relational/NoSQL databases, data analytics, data warehousing; I/O-intensive SQL Server scenarios (ETL/staging/tempdb-style workloads) |
 | **Ephemeral storage for `tempdb`** | Yes (local NVMe temp disk; 240 GB per vCore capacity, up to ~23 TB on the largest size) |
  
 The [Lsv4-series](/azure/virtual-machines/sizes/storage-optimized/lsv4-series) features high throughput, low latency, directly mapped local NVMe storage and is designed for scale-up or scale-out storage workloads that need a balance of SSD capacity, compute, and memory. These virtual machines range from 2 to 96 vCores with a consistent 8:1 memory-to-vCore ratio and include 240 GB of local NVMe temp disk capacity per vCore, scaling up to approximately 23 TB of local temp storage on the largest size.
@@ -455,7 +455,7 @@ The local NVMe temp disk is intended for high-performance, transient I/O (for ex
 | **Max throughput** | Up to 36,000 MBps (local NVMe); up to 4,320 MBps (remote storage) |
 | **Premium storage** | Yes |
 | **Premium storage caching** | Yes (except for the largest size) |
-| **Intended workload** | Big data, relational/NoSQL databases, data analytics, data warehousing; I/O‑intensive SQL Server scenarios (ETL/staging/tempdb-style workloads) |
+| **Intended workload** | Big data, relational/NoSQL databases, data analytics, data warehousing; I/O-intensive SQL Server scenarios (ETL/staging/tempdb-style workloads) |
 | **Ephemeral storage for `tempdb`** | Yes (local NVMe temp disk; ~240 GB per vCore, up to ~23 TB on the largest size) |
  
 The [Lasv4-series](/azure/virtual-machines/sizes/storage-optimized/lasv4-series) features high throughput, low latency, directly mapped local NVMe storage and is designed for scale-up or scale-out storage workloads that need a balance of SSD capacity, compute, and memory. These virtual machines range from 2 to 96 vCores with a consistent 8:1 memory-to-vCore ratio and include 240 GB of local NVMe temp disk capacity per vCore, scaling up to approximately 23 TB of local temp storage on the largest size.

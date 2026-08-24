@@ -73,7 +73,8 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 |----------|--------|--------|------------------|  
 |`dm_exec_cached_plan_dependent_objects`|`dm_os_memory_objects`|`memory_object_address`|One-to-one|  
   
-## Next steps
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [sys.syscacheobjects &#40;Transact-SQL&#41;](../system-compatibility-views/sys-syscacheobjects-transact-sql.md)
+## Related content
+
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [sys.syscacheobjects (Transact-SQL)](../system-compatibility-views/sys-syscacheobjects-transact-sql.md)

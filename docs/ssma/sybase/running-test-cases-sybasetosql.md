@@ -66,12 +66,9 @@ At this step, SSMA Tester invokes each object selected for the testing, compares
 
 During the finalization SSMA Tester cleans up the auxiliary objects created at the **Initialization** step.
 
-## Next Step
+## Related content
 
-[Viewing Test Case Reports &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)
-
-## See Also
-
-[Selecting and Configuring Objects to Test &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)
-[Selecting and Configuring Affected Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)
-[Testing Migrated Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)
+- [Selecting and Configuring Objects to Test](selecting-and-configuring-objects-to-test-sybasetosql.md)
+- [Selecting and Configuring Affected Objects](selecting-and-configuring-affected-objects-sybasetosql.md)
+- [Testing Migrated Database Objects](testing-migrated-database-objects-sybasetosql.md)
+- [Viewing Test Case Reports](viewing-test-case-reports-sybasetosql.md)

@@ -45,7 +45,7 @@ Azure SQL Database Hyperscale is only supported as a member database, not as a *
 
    :::image type="content" source="media/sql-data-sync-sql-server-configure/create-sync-group.png" alt-text="Screenshot from the Create Data Sync page of the Azure portal, creating a new Sync Metadata Database to use with Automatic Sync." lightbox="media/sql-data-sync-sql-server-configure/create-sync-group.png":::
 
-      | Setting                        | Description |
+      | Setting                        | Description |
    | ------------------------------ | ------------------------------------------------- |
    | **Sync Group Name** | Enter a name for the new sync group. This name is distinct from the name of the database itself. |
    | **Sync Metadata Database** | Choose to create a database (recommended) or to use an existing database to serve as the **Sync Metadata Database**.<br /><br />Microsoft recommends creating a new, empty database for use as the **Sync Metadata Database**. Data Sync creates tables in this database and runs a frequent workload. This database is shared as the **Sync Metadata Database** for all sync groups in a selected region and subscription. You can't change the database or its name without removing all sync groups and sync agents in the region.<br /><br/> If you choose to create a new database, select **New database**. Select **Configure database settings**. On the **SQL Database** page, name and configure a new Azure SQL Database and select **OK**.<br /><br />If you choose **Use existing database**, select the database from the **Sync Metadata Database** dropdown list. |
@@ -78,7 +78,7 @@ After the new sync group is created and deployed, open the sync group and access
 
 1. On the **Configure Azure SQL Database** page, change the following settings:
 
-   | Setting                       | Description |
+   | Setting                       | Description |
    | ----------------------------- | ------------------------------------------------- |
    | **Sync Member Name** | Provide a name for the new sync member. This name is distinct from the database name itself. |
    | **Subscription** | Select the associated Azure subscription for billing purposes. |

@@ -58,9 +58,8 @@ helpviewer_keywords:
 |WMI|WMI Connection Manager|**System.Management.ManagementScope**||  
 |SQLMOBILE|SQL Server Compact Connection Manager|**System.Data.SqlServerCe.SqlCeConnection**||  
   
-## See Also  
- [Connecting to Data Sources in the Script Task](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
- [Connecting to Data Sources in the Script Component](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
- [Connecting to Data Sources in a Custom Task](../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
-  
-  
+## Related content
+
+- [Connecting to Data Sources in the Script Task](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)
+- [Connecting to Data Sources in the Script Component](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)
+- [Connecting to Data Sources in a Custom Task](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)

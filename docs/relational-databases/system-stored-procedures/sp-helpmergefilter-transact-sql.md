@@ -89,7 +89,7 @@ Only members of the **sysadmin** fixed server role and the **db_owner** fixed da
 
 ## Related content
 
-- [sp_addmergefilter (Transact-SQL)](sp-addmergefilter-transact-sql.md)
-- [sp_changemergefilter (Transact-SQL)](sp-changemergefilter-transact-sql.md)
-- [sp_dropmergefilter (Transact-SQL)](sp-dropmergefilter-transact-sql.md)
+- [sys.sp_addmergefilter (Transact-SQL)](sp-addmergefilter-transact-sql.md)
+- [sys.sp_changemergefilter (Transact-SQL)](sp-changemergefilter-transact-sql.md)
+- [sys.sp_dropmergefilter (Transact-SQL)](sp-dropmergefilter-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

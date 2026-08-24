@@ -38,8 +38,6 @@ The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements don't ge
   
 The OLE DB Driver for SQL Server consumer is allowed dynamic specification of query text. The consumer should check error interfaces after _every_ member function execution. It should always perform these checks; whatever the value of the return code; whether or not an interface reference to an `IRowset` or `IMultipleResults` is returned; whatever the count of affected rows.
   
-## See Also  
- [Errors](../../oledb/ole-db-errors/errors.md)  
-  
-  
+## Related content
 
+- [Errors](errors.md)

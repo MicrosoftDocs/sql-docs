@@ -52,12 +52,9 @@ storage: Learn about SQL Server backup to and restore from Azure Blob Storage, i
 
  **Data Transfers:** Inbound data transfers to Microsoft Azure are free. Outbound transfers are charged for the bandwidth use and calculated based on a graduated region-specific scale. For more information, see the [Data Transfers](https://go.microsoft.com/fwlink/?LinkId=277061) section of the Pricing Details article.  
 
-## See also
+## Related content
 
-- [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
-
-## Next steps
-
-- [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server.md)
-- [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)
+- [SQL Server backup to URL for Microsoft Azure Blob Storage best practices and troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+- [Back up and restore: System databases (SQL Server)](back-up-and-restore-of-system-databases-sql-server.md)
+- [Tutorial: Use Azure Blob Storage with SQL Server](../tutorial-use-azure-blob-storage-service-with-sql-server.md)
+- [SQL Server backup to URL for Azure Blob Storage](sql-server-backup-to-url.md)

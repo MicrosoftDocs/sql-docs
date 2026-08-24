@@ -116,8 +116,8 @@ Only members of the **sysadmin** fixed server role, the **db_owner** fixed datab
 ## Related content
 
 - [View and Modify Article Properties](../replication/publish/view-and-modify-article-properties.md)
-- [sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md)
-- [sp_articlecolumn (Transact-SQL)](sp-articlecolumn-transact-sql.md)
-- [sp_changearticle (Transact-SQL)](sp-changearticle-transact-sql.md)
-- [sp_droparticle (Transact-SQL)](sp-droparticle-transact-sql.md)
+- [sys.sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md)
+- [sys.sp_articlecolumn (Transact-SQL)](sp-articlecolumn-transact-sql.md)
+- [sys.sp_changearticle (Transact-SQL)](sp-changearticle-transact-sql.md)
+- [sys.sp_droparticle (Transact-SQL)](sp-droparticle-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

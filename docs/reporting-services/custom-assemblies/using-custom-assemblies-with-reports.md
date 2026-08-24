@@ -39,4 +39,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)
+- [Report Definition Language (SSRS)](../reports/report-definition-language-ssrs.md)

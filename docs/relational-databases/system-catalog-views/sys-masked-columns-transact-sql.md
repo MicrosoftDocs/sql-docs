@@ -50,8 +50,7 @@ JOIN sys.tables AS tbl
 WHERE is_masked = 1;  
 ```  
   
-## See Also  
- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
-  
-  
+## Related content
+
+- [Dynamic data masking](../security/dynamic-data-masking.md)
+- [sys.columns (Transact-SQL)](sys-columns-transact-sql.md)

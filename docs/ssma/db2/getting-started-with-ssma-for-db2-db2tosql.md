@@ -114,5 +114,5 @@ The **View** menu provides commands to toggle the visibility of the Output pane 
 
 ## Related content
 
-- [Migrate Db2 Data into SQL Server (Db2ToSQL)](migrating-db2-data-into-sql-server-db2tosql.md)
-- [User interface reference (Db2ToSQL)](user-interface-reference-db2tosql.md)
+- [Migrate Db2 Data into SQL Server](migrating-db2-data-into-sql-server-db2tosql.md)
+- [User interface reference](user-interface-reference-db2tosql.md)

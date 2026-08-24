@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[getFloat (int)](../../../connect/jdbc/reference/getfloat-method-int.md)|Retrieves the value of the designated parameter as a **float** in the Java programming language given the parameter index.|  
 |[getFloat (java.lang.String)](../../../connect/jdbc/reference/getfloat-method-java-lang-string.md)|Retrieves the value of the designated parameter as a **float** in the Java programming language given the parameter name.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

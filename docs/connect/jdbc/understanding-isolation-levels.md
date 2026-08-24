@@ -71,7 +71,7 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isolation levels, see "Isolation Levels in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
 
-## See also
+## Related content
 
-[Performing transactions with the JDBC driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
-[SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)  
+- [Performing transactions with the JDBC driver](performing-transactions-with-the-jdbc-driver.md)
+- [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)

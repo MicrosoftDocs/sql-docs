@@ -271,7 +271,7 @@ unset($conn);
 ```
 
 
-## See Also
-[Using Microsoft Entra ID with the ODBC Driver](../odbc/using-azure-active-directory.md)
+## Related content
 
-[What is managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview)
+- [Using Microsoft Entra ID with the ODBC Driver](../odbc/using-azure-active-directory.md)
+- [What is managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview)

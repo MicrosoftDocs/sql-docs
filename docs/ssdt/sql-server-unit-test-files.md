@@ -27,4 +27,4 @@ A SQL Server unit test consists of multiple items that are contained in several 
 
 - [Create and define SQL Server unit tests](creating-and-defining-sql-server-unit-tests.md)
 - [Verify database code by using SQL Server unit tests](verifying-database-code-by-using-sql-server-unit-tests.md)
-- [Scripts in SQL Server Unit Tests](scripts-in-sql-server-unit-tests.md)
+- [Scripts in SQL Server unit tests](scripts-in-sql-server-unit-tests.md)

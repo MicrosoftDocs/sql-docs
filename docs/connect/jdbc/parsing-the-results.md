@@ -105,6 +105,6 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

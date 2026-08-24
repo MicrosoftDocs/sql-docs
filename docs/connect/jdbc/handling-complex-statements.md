@@ -23,6 +23,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 :::code language="java" source="codesnippet/Java/handling-complex-statements_1.java":::
 
-## See also
+## Related content
 
-[Using statements with the JDBC driver](using-statements-with-the-jdbc-driver.md)
+- [Using statements with the JDBC driver](using-statements-with-the-jdbc-driver.md)

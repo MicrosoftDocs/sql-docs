@@ -66,4 +66,4 @@ GO
 
 ## Related content
 
-- [Database Mail Log and Audits](database-mail-log-and-audits.md)
+- [Database Mail log and audits](database-mail-log-and-audits.md)

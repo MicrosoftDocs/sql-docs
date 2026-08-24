@@ -49,13 +49,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## Next steps
-
-Learn more about the missing index feature in the following articles:
+## Related content
 
 - [Tune nonclustered indexes with missing index suggestions](../indexes/tune-nonclustered-missing-index-suggestions.md)
-- [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](sys-dm-db-missing-index-columns-transact-sql.md)   
-- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](sys-dm-db-missing-index-details-transact-sql.md)   
-- [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](sys-dm-db-missing-index-group-stats-transact-sql.md)  
-- [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](sys-dm-db-missing-index-group-stats-query-transact-sql.md)    
-- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_db_missing_index_columns (Transact-SQL)](sys-dm-db-missing-index-columns-transact-sql.md)
+- [sys.dm_db_missing_index_details (Transact-SQL)](sys-dm-db-missing-index-details-transact-sql.md)
+- [sys.dm_db_missing_index_group_stats (Transact-SQL)](sys-dm-db-missing-index-group-stats-transact-sql.md)
+- [sys.dm_db_missing_index_group_stats_query (Transact-SQL)](sys-dm-db-missing-index-group-stats-query-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)

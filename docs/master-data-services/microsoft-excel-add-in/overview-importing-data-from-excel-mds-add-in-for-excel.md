@@ -56,8 +56,7 @@ ms.custom:
 |Combine data from two worksheets when you want to compare data before publishing.|[Combine Data &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md)|  
 
   
-## Related Content  
-  
--   [Refreshing Data &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
-  
--   [Master Data Services Add-in for Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)
+## Related content
+
+- [Refreshing Data (MDS Add-in for Excel)](refreshing-data-mds-add-in-for-excel.md)
+- [Master Data Services Add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)

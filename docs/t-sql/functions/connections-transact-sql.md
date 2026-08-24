@@ -1,6 +1,6 @@
 ---
 title: "@@CONNECTIONS (Transact-SQL)"
-description: "&#x40;&#x40;CONNECTIONS (Transact-SQL)"
+description: "@@CONNECTIONS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "09/18/2017"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;CONNECTIONS (Transact-SQL)
+# @@CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the number of attempted connections - both successful and unsuccessful - since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.
@@ -58,8 +58,7 @@ Today's Date and Time  Login Attempts
 12/5/2006 10:32:45 AM  211023         
 ```  
   
-## See also
-[System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-[sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
-  
-  
+## Related content
+
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)

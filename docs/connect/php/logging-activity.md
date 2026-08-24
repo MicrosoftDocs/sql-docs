@@ -106,14 +106,10 @@ By adding integer values together, you can specify more than one option at a tim
   
 `sqlsrv.LogSeverity = 3`  
   
-## See Also  
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+## Related content
 
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
-
-[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)
-
-[sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)
-
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-  
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [Constants (Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
+- [sqlsrv_configure](sqlsrv-configure.md)
+- [sqlsrv_get_config](sqlsrv-get-config.md)
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)

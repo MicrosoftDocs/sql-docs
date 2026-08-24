@@ -126,6 +126,6 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## See also
+## Related content
 
-[Connection resiliency in the ODBC driver](../odbc/connection-resiliency.md)
+- [Connection resiliency in the ODBC driver](../odbc/connection-resiliency.md)

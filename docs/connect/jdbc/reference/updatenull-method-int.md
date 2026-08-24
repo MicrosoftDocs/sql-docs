@@ -35,9 +35,8 @@ public void updateNull(int index)
 ## Remarks  
  This updateNull method is specified by the updateNull method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateNull Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateNull Method (SQLServerResultSet)](updatenull-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

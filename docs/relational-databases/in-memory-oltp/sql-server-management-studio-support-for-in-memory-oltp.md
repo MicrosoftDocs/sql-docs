@@ -148,6 +148,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  For more information on unsupported [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features, see [Unsupported SQL Server Features for In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## See Also  
- [SQL Server Support for In-Memory OLTP](./transact-sql-support-for-in-memory-oltp.md)  
-  
+## Related content
+
+- [Transact-SQL Support for In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)

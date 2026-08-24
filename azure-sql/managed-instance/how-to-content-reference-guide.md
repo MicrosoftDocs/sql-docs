@@ -55,7 +55,7 @@ In this article, you can find content references to various guides, scripts, and
 - [Configure In-Memory OLTP](in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
 - [Configure Azure Automation](automation-manage.md?view=azuresql-mi&preserve-view=true)
 - [Transactional replication](replication-between-two-instances-configure-tutorial.md) enables you to replicate your data between managed instances, or from SQL Server on-premises to SQL Managed Instance, and vice versa.
-- [Configure threat detection](threat-detection-configure.md) – [threat detection](../database/threat-detection-overview.md?view=azuresql-mi&preserve-view=true) is a built-in Azure SQL Managed Instance feature that detects various potential attacks such as SQL injection or access from suspicious locations. 
+- [Configure threat detection](threat-detection-configure.md) - [threat detection](../database/threat-detection-overview.md?view=azuresql-mi&preserve-view=true) is a built-in Azure SQL Managed Instance feature that detects various potential attacks such as SQL injection or access from suspicious locations. 
 - [Creating alerts](alerts-create.md) enables you to set up alerts on monitored metrics such as CPU utilization, storage space consumption, IOPS, and others for SQL Managed Instance. 
 
 ## Transparent Data Encryption

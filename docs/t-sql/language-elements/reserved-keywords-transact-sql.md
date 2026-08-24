@@ -2602,8 +2602,7 @@ The following table lists reserved keywords that are exclusive to **[!INCLUDE[ss
     :::column-end:::
 :::row-end:::
 
-## See Also  
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
-  
-  
+## Related content
+
+- [SET QUOTED_IDENTIFIER (Transact-SQL)](../statements/set-quoted-identifier-transact-sql.md)
+- [ALTER DATABASE (Transact-SQL) compatibility level](../statements/alter-database-transact-sql-compatibility-level.md)

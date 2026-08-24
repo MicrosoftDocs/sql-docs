@@ -31,6 +31,6 @@ HRESULT IServerVirtualDeviceSet2::EndConfiguration ();
 | VD_E_PROTOCOL | The set is not in the Configurable state. |
 | VD_E_MEMORY | The memory required via the 'RequestBuffers' calls could not be obtained. The set remains in the configurable state with no buffer space available. The server can either reduce its buffer requirements or abort the operation. |
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

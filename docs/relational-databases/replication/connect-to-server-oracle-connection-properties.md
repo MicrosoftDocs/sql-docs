@@ -27,5 +27,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Glossary of Terms for Oracle Publishing](../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)
-- [Performance Tuning for Oracle Publishers](../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)
+- [Glossary of Terms for Oracle Publishing](non-sql/glossary-of-terms-for-oracle-publishing.md)
+- [Performance Tuning for Oracle Publishers](non-sql/performance-tuning-for-oracle-publishers.md)

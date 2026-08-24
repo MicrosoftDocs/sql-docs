@@ -67,11 +67,11 @@ WHERE d.name = DB_NAME();
 
 ## Related content
 
-- [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
-- [sys.databases](sys-databases-transact-sql.md)
-- [sys.event_log](sys-event-log-azure-sql-database.md)
+- [Azure SQL Database and SQL database in Fabric catalog views](azure-sql-database-catalog-views.md)
+- [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)
+- [sys.event_log (Azure SQL Database)](sys-event-log-azure-sql-database.md)
 - [sys.dm_operation_status](../system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
 - [sys.dm_db_resource_stats](../system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)
-- [sys.database_connection_stats](sys-database-connection-stats-azure-sql-database.md)
+- [sys.database_connection_stats (Azure SQL Database)](sys-database-connection-stats-azure-sql-database.md)
 - [sys.database_service_objectives](sys-database-service-objectives-azure-sql-database.md)
 - [sys.dm_user_db_resource_governance](../system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database.md)

@@ -103,6 +103,6 @@ The persisted statistics for readable secondary replicas feature is enabled by d
 
 ## Related content
 
-- [Query Store for readable secondary replicas](query-store-for-secondary-replicas.md)
+- [Query Store for readable secondary replicas (preview)](query-store-for-secondary-replicas.md)
 - [Always On: Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot](/archive/blogs/sqlserverstorageengine/alwayson-making-latest-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot)
 - [Statistics for Read-Only Access Databases](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#Read-OnlyStats)

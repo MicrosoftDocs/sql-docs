@@ -154,6 +154,6 @@ The following examples demonstrate how to use the <xref:Microsoft.Data.SqlClient
 |Table|@Table|TABLE_NAME|3|  
 |Name|@Name|CONSTRAINT_NAME|4|  
   
-## See also
+## Related content
 
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

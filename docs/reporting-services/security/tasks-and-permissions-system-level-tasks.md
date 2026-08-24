@@ -33,4 +33,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)

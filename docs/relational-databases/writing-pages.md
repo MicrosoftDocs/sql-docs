@@ -74,6 +74,5 @@ For more information, see [Checkpoints and the active portion of the log](sql-se
 
 ## Related content
 
-- [Pages and extents architecture guide](pages-and-extents-architecture-guide.md)
+- [Page and extent architecture guide](pages-and-extents-architecture-guide.md)
 - [Read data pages in the Database Engine](reading-pages.md)
-

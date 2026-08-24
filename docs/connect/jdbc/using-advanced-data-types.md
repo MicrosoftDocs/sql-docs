@@ -179,6 +179,6 @@ For information about JSON data type, see [JSON data type](use-json-data-type.md
 
 For information about vector data type, see [Vector data type](use-vector-data-type.md).
 
-## See also
+## Related content
 
-[Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

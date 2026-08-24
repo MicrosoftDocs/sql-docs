@@ -66,9 +66,6 @@ Result
 (1 row(s) affected)  
 ```  
   
-## See also
-[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)
-  
-  
+## Related content
 
-
+- [date (Transact-SQL)](../data-types/date-transact-sql.md)

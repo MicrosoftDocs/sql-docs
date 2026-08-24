@@ -83,4 +83,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)
+- [Reporting Services security and protection](reporting-services-security-and-protection.md)

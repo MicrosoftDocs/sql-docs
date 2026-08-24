@@ -62,6 +62,6 @@ The bounding box of a **geography** instance is the whole earth.
 ## Related content
 
 - [Spatial index stored procedures - arguments and properties](spatial-index-stored-procedures-arguments-and-properties.md)
-- [sp_help_spatial_geography_index (Transact-SQL)](sp-help-spatial-geography-index-transact-sql.md)
+- [sys.sp_help_spatial_geography_index (Transact-SQL)](sp-help-spatial-geography-index-transact-sql.md)
 - [Spatial Indexes Overview](../spatial/spatial-indexes-overview.md)
 - [Spatial Data](../spatial/spatial-data-sql-server.md)

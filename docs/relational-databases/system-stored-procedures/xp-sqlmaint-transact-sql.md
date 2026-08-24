@@ -72,5 +72,5 @@ The command(s) executed successfully.
 
 ## Related content
 
-- [sqlmaint Utility](../../tools/sqlmaint-utility.md)
+- [sqlmaint utility](../../tools/sqlmaint-utility.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

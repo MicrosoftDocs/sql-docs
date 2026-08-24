@@ -32,7 +32,6 @@ helpviewer_keywords:
   
  The rowset is sorted on SRV_NAME and a single restriction is supported on SRV_NAME.  
   
-## See Also  
- [Schema Rowset Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
-  
-  
+## Related content
+
+- [Schema Rowset Support in SQL Server Native Client (OLE DB)](schema-rowset-support-ole-db.md)

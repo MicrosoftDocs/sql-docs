@@ -106,9 +106,8 @@ WHERE ContactID = 1
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## See also  
- [XQuery Basics](../xquery/xquery-basics.md)   
- [XML Construction &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
-  
-  
+## Related content
+
+- [XQuery basics](xquery-basics.md)
+- [XML construction (XQuery)](xml-construction-xquery.md)
+- [XML data (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)

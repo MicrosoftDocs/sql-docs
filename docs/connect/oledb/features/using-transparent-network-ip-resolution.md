@@ -34,6 +34,6 @@ TransparentNetworkIPResolution is enabled by default. MultiSubnetFailover is dis
 - [Using Connection String Keywords with OLE DB Driver for SQL Server](..\applications\using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [Initialization and Authorization Properties](..\ole-db-data-source-objects\initialization-and-authorization-properties.md)
 
-## See Also 
-[OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](./oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)
+## Related content
 
+- [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)

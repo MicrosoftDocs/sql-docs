@@ -85,10 +85,10 @@ A query designer helps you specify which data to retrieve from an external data 
   
 ## Related content
 
-- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
-- [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)
-- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)
-- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
-- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)
-- [Shared Dataset Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)
+- [Report Datasets (SSRS)](report-datasets-ssrs.md)
+- [Add Data from External Data Sources (SSRS)](add-data-from-external-data-sources-ssrs.md)
+- [Query Design Tools (SSRS)](query-design-tools-ssrs.md)
+- [Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
+- [Report design view in Report Builder](../report-builder/report-design-view-report-builder.md)
+- [Shared Dataset Design View (Report Builder)](../report-builder/shared-dataset-design-view-report-builder.md)
 - [Reporting Services Query Designers](/previous-versions/sql/)

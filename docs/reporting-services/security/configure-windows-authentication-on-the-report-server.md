@@ -208,13 +208,13 @@ You might encounter connection errors that you think are due to authentication f
 
 ## Additional information for Kerberos and report servers
 
-- For more information regarding Kerberos and report servers, see [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos.](https://www.kasperonbi.com/deploying-a-business-intelligence-solution-using-sharepoint-reporting-services-and-performancepoint-monitoring-server-with-kerberos/)
+- For more information regarding Kerberos and report servers, see [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](https://www.kasperonbi.com/deploying-a-business-intelligence-solution-using-sharepoint-reporting-services-and-performancepoint-monitoring-server-with-kerberos/).
 
 ## Related content
 
-- [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [Configure basic authentication on the report server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)
-- [Configure custom or forms authentication on the report server](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)
-- [Extended Protection for authentication with reporting services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
+- [Authentication in a report server](authentication-with-the-report-server.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)
+- [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md)
+- [Configure Basic authentication on the report server](configure-basic-authentication-on-the-report-server.md)
+- [Configure custom or forms authentication on the report server](configure-custom-or-forms-authentication-on-the-report-server.md)
+- [Extended protection for authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)

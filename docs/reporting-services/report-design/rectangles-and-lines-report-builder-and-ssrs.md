@@ -41,4 +41,4 @@ ms.custom:
   
 ## Related content
 
-- [Add a Rectangle or Container &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)
+- [Add a rectangle or container to a paginated report (Report Builder)](add-a-rectangle-or-container-report-builder-and-ssrs.md)

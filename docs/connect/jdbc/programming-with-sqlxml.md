@@ -96,6 +96,6 @@ Applications can use SQLXML objects to read and write the XML data from and to t
 
 The binary and character streams returned by the SQLXML object obey the adaptive or full buffering modes. On the other hand, if the XML parsers are not streams, they will not obey the adaptive or full settings. For more information about adaptive buffering, see [Using Adaptive Buffering](using-adaptive-buffering.md).
 
-## See also
+## Related content
 
-[Supporting XML data](supporting-xml-data.md)
+- [Supporting XML data](supporting-xml-data.md)

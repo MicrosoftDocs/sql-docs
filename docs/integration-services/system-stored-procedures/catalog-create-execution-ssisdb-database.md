@@ -126,8 +126,8 @@ GO
   
 -   The referenced environment variables cannot be found in the environment that the environment reference, *reference_id*, specifies.  
   
-## See Also  
- [catalog.start_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
- [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
- [catalog.add_execution_worker &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
-  
+## Related content
+
+- [catalog.start_execution (SSISDB Database)](catalog-start-execution-ssisdb-database.md)
+- [catalog.set_execution_parameter_value (SSISDB Database)](catalog-set-execution-parameter-value-ssisdb-database.md)
+- [catalog.add_execution_worker (SSISDB Database)](catalog-add-execution-worker-ssisdb-database.md)

@@ -58,5 +58,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)
+- [Reporting Services configuration files](../report-server/reporting-services-configuration-files.md)
+- [Custom report item class libraries](custom-report-item-class-libraries.md)

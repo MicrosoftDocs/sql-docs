@@ -60,6 +60,7 @@ SELECT database_id, table_id, COUNT(*) AS batch_count FROM sys.dm_fts_outstandin
 GO  
 ```  
   
-## See Also  
- [Full-Text Search and Semantic Search Dynamic Management Views and Functions &#40;Transact-SQL&#41;](full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Full-Text Search](../search/full-text-search.md)
+## Related content
+
+- [Full-text and semantic search dynamic management views and functions](full-text-and-semantic-search-dynamic-management-views-functions.md)
+- [Full-Text Search](../search/full-text-search.md)

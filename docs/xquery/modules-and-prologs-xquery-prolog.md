@@ -91,7 +91,6 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19   
 ```  
   
-## See Also  
- [Add Namespaces to Queries with WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
-  
-  
+## Related content
+
+- [Add namespaces to queries using WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)

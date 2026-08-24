@@ -63,7 +63,6 @@ If you want to retain an identical copy of the XML schemas, you should save your
 
 The [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) catalog view also returns information about XML schema collections. This information includes the name of the collection, the creation date, and the owner of the collection.
 
-## See also
+## Related content
 
-- [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)
-
+- [XML schema collections (SQL Server)](xml-schema-collections-sql-server.md)

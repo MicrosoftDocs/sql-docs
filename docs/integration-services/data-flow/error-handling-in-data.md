@@ -137,10 +137,9 @@ Use the **Configure Error Output** dialog box to configure error handling option
   
      You can add the Script component to the error segment of the data flow anywhere downstream from the data flow components whose errors you want to capture. Typically you place the Script component immediately before the error rows are written to a destination. This way, the script looks up descriptions only for error rows that are written. The error segment of the data flow may correct some errors and not write those rows to an error destination.  
 
-## See Also  
- [Data Flow](../../integration-services/data-flow/data-flow.md)   
- [Transform Data with Transformations](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [Connect Components with Paths](./connect-components-in-a-data-flow.md)   
- [Data Flow Task](../../integration-services/control-flow/data-flow-task.md)   
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
+## Related content
+
+- [Data Flow](data-flow.md)
+- [Transform Data with Transformations](transformations/transform-data-with-transformations.md)
+- [Connect Components in a Data Flow](connect-components-in-a-data-flow.md)
+- [Data Flow Task](../control-flow/data-flow-task.md)

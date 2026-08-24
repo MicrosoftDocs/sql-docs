@@ -250,8 +250,7 @@ foreach ( r in d.Rows) {
 }   
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.Server>   
- <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.Server>
+- <xref:Microsoft.SqlServer.Management.Common.ServerConnection>

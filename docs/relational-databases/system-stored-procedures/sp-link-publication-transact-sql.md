@@ -101,7 +101,7 @@ Only members of the **sysadmin** fixed server role can execute `sp_link_publicat
 
 ## Related content
 
-- [sp_droppullsubscription (Transact-SQL)](sp-droppullsubscription-transact-sql.md)
-- [sp_helpsubscription_properties (Transact-SQL)](sp-helpsubscription-properties-transact-sql.md)
-- [sp_subscription_cleanup (Transact-SQL)](sp-subscription-cleanup-transact-sql.md)
+- [sys.sp_droppullsubscription (Transact-SQL)](sp-droppullsubscription-transact-sql.md)
+- [sys.sp_helpsubscription_properties (Transact-SQL)](sp-helpsubscription-properties-transact-sql.md)
+- [sys.sp_subscription_cleanup (Transact-SQL)](sp-subscription-cleanup-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -44,6 +44,6 @@ This is provided from the first VIRTUAL_DEVICE= clause of the BACKUP or RESTORE 
 
 After this function is successfully invoked, the server may proceed to configure the virtual device set by using GetConfiguration and SetConfiguration.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

@@ -119,7 +119,7 @@ Only members of the **sysadmin** fixed server role, the **db_owner** fixed datab
 
 ## Related content
 
-- [sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)
-- [sp_changemergesubscription (Transact-SQL)](sp-changemergesubscription-transact-sql.md)
-- [sp_dropmergesubscription (Transact-SQL)](sp-dropmergesubscription-transact-sql.md)
+- [sys.sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)
+- [sys.sp_changemergesubscription (Transact-SQL)](sp-changemergesubscription-transact-sql.md)
+- [sys.sp_dropmergesubscription (Transact-SQL)](sp-dropmergesubscription-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

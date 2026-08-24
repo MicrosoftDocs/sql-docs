@@ -190,7 +190,6 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   Castable values are restricted by the target types implementation restrictions. For example, you cannot cast a date string with a negative year to **xs:date**. Such casts will result in the empty sequence if the value is provided at run time (instead of raising a run-time error).  
   
-## See Also  
- [Define the Serialization of XML Data](../relational-databases/xml/define-the-serialization-of-xml-data.md)  
-  
-  
+## Related content
+
+- [Define the serialization of XML data](../relational-databases/xml/define-the-serialization-of-xml-data.md)

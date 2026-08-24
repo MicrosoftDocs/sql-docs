@@ -24,4 +24,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)
+- [Configure TLS connections on a native mode report server](configure-ssl-connections-on-a-native-mode-report-server.md)

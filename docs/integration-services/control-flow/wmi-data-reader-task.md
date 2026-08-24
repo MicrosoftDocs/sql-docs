@@ -171,7 +171,7 @@ Select * FROM Win32_QuickFixEngineering
   
  **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
   
-## See Also  
- [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
+## Related content
+
+- [Integration Services Tasks](integration-services-tasks.md)
+- [Control Flow](control-flow.md)

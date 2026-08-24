@@ -63,7 +63,6 @@ ms.topic: "reference"
   
 -   sp_describe_undeclared_parameters  
   
-## See Also  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Features](sql-server-native-client-features.md)

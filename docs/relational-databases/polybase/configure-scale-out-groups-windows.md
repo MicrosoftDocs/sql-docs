@@ -112,4 +112,4 @@ After setup is complete, both machines can function as PolyBase Group head nodes
 ## Related content
 
 - [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))
-- [Introducing data virtualization with PolyBase](overview.md)
+- [PolyBase overview](overview.md)

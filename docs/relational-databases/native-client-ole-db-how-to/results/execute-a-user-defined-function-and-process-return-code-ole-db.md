@@ -356,6 +356,6 @@ drop function fn_RectangleArea
 go  
 ```  
   
-## See Also  
- [Processing Results How-to Topics &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
+## Related content
+
+- [Processing Results How-to Topics (Native Client OLE DB provider)](processing-results-how-to-topics-ole-db.md)

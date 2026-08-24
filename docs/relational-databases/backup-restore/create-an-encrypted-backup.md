@@ -124,5 +124,5 @@ GO
 ## Related content
 
 - [Restore a Database Backup Using SSMS](restore-a-database-backup-using-ssms.md)
-- [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md)
+- [Encryption hierarchy](../security/encryption/encryption-hierarchy.md)
 - [Backup overview (SQL Server)](backup-overview-sql-server.md)

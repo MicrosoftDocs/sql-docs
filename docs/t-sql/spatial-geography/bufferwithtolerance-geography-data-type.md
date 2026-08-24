@@ -77,7 +77,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## See Also  
-[STBuffer &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
-[Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+## Related content
+
+- [STBuffer (geography Data Type)](stbuffer-geography-data-type.md)
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)

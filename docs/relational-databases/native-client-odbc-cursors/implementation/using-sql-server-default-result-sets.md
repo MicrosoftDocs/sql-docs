@@ -38,7 +38,6 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]
                 Connection is busy with results for another hstmt."  
 ```  
   
-## See Also  
- [How Cursors Are Implemented](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
-  
-  
+## Related content
+
+- [How Cursors Are Implemented](how-cursors-are-implemented.md)

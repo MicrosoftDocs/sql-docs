@@ -39,8 +39,8 @@ helpviewer_keywords:
 ## Related Tasks  
  For information about how to set the properties of this component, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md)   
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Variables](../../integration-services-ssis-variables.md)
+- [Data Flow](../data-flow.md)
+- [Integration Services Transformations](integration-services-transformations.md)

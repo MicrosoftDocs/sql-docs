@@ -128,5 +128,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)
+- [Using custom assemblies with reports](using-custom-assemblies-with-reports.md)
 - [Working with Assemblies and the Global Assembly Cache](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac)

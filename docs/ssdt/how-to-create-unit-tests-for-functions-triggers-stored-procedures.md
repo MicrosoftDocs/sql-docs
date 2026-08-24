@@ -23,4 +23,4 @@ You can write unit tests that evaluate changes to any database object. However S
 ## Related content
 
 - [Create and define SQL Server unit tests](creating-and-defining-sql-server-unit-tests.md)
-- [How to: Create an Empty SQL Server Unit Test](how-to-create-an-empty-sql-server-unit-test.md)
+- [How to: Create an empty SQL Server unit test](how-to-create-an-empty-sql-server-unit-test.md)

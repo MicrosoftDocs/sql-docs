@@ -38,12 +38,11 @@ helpviewer_keywords:
  SINGLE_NCLOB  
  Reads the contents of the specified data file as Unicode, returns the contents as a single-row, single-column rowset of type **nvarchar(max)**, using the collation of the current database.  
   
-## See Also  
- [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Keep Nulls or Use Default Values During Bulk Import &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)  
-  
-  
+## Related content
+
+- [Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
+- [Keep nulls or default values during bulk import (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)
+- [bcp Utility](../../tools/bcp-utility.md)
+- [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)

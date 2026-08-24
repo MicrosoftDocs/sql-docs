@@ -120,5 +120,5 @@ f1_keywords:
   
 ## Related content
 
-- [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)
-- [Rectangles and Lines &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)
+- [Embed an image in a paginated report (Report Builder)](embed-an-image-in-a-report-report-builder-and-ssrs.md)
+- [Rectangles and lines in a paginated report (Report Builder)](rectangles-and-lines-report-builder-and-ssrs.md)

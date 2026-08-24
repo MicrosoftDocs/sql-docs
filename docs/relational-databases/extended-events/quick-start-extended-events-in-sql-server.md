@@ -470,5 +470,5 @@ SELECT HAS_PERMS_BY_NAME(NULL, NULL, 'ALTER ANY EVENT SESSION');
 
 - [Extended Events overview](extended-events.md)
 - [Extended Events sessions](sql-server-extended-events-sessions.md)
-- [Targets for Extended Events](targets-for-extended-events-in-sql-server.md)
+- [Extended Events targets](targets-for-extended-events-in-sql-server.md)
 - [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)

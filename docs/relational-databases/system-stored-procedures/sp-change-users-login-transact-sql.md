@@ -135,7 +135,7 @@ GO
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
-- [sp_adduser (Transact-SQL)](sp-adduser-transact-sql.md)
-- [sp_helplogins (Transact-SQL)](sp-helplogins-transact-sql.md)
+- [sys.sp_adduser (Transact-SQL)](sp-adduser-transact-sql.md)
+- [sys.sp_helplogins (Transact-SQL)](sp-helplogins-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sys.database_principals (Transact-SQL)](../system-catalog-views/sys-database-principals-transact-sql.md)

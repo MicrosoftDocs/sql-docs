@@ -64,5 +64,6 @@ An application can create a named instance and specify a database as follows:
   
 - Use the `AttachDBFilename` connection string keyword to specify the .MDF file.  
   
-## Next steps
+## Related content
+
 - [SQL Server features and ADO.NET](sql-server-features-adonet.md)

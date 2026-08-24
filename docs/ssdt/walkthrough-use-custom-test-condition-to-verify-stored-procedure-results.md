@@ -386,4 +386,4 @@ To view the new test condition:
 
 ## Related content
 
-- [Custom Test Conditions for SQL Server Unit Tests](custom-test-conditions-for-sql-server-unit-tests.md)
+- [Custom test conditions for SQL Server unit tests](custom-test-conditions-for-sql-server-unit-tests.md)

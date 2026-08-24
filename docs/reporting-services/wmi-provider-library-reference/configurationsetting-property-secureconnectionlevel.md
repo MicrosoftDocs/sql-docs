@@ -41,4 +41,4 @@ In SQL Server 2008 R2, *SecureConnectionLevel* is made an on/off switch. For mor
   
 ## Related content
 
-- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)
+- [MSReportServer_ConfigurationSetting members](msreportserver-configurationsetting-members.md)

@@ -90,7 +90,6 @@ helpviewer_keywords:
 ## Break Points  
  When you set a breakpoint on a container and the break condition is **Break when the container receives the OnVariableValueChanged event**, define the variable in the container scope.  
   
-## See Also  
- [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
-  
+## Related content
+
+- [Control Flow](control-flow.md)

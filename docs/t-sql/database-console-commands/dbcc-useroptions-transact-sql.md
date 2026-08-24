@@ -83,8 +83,8 @@ The following example returns the active SET options for the current connection.
 DBCC USEROPTIONS;
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [SET Statements (Transact-SQL)](../statements/set-statements-transact-sql.md)
+- [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../statements/set-transaction-isolation-level-transact-sql.md)

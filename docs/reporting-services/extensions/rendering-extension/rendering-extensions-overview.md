@@ -56,5 +56,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)
+- [Implement a rendering extension](implementing-a-rendering-extension.md)
+- [Reporting Services extension library](../reporting-services-extension-library.md)

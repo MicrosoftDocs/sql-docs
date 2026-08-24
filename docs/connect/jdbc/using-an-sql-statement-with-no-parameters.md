@@ -22,6 +22,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 For more information about using result sets, see [Managing result sets with the JDBC driver](managing-result-sets-with-the-jdbc-driver.md).
 
-## See also
+## Related content
 
-[Using statements with SQL](using-statements-with-sql.md)
+- [Using statements with SQL](using-statements-with-sql.md)

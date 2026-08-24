@@ -55,8 +55,7 @@ This method returns the number of curves in a **geometry** instance when the ins
  SELECT @g.STNumCurves();
  ```  
   
-## See Also  
- [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

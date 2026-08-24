@@ -63,5 +63,5 @@ In addition to the SSMA program files, you must also install the SSMA for Sybase
 
 ## Related content
 
-- [Installing SSMA Components on SQL Server](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)
-- [Migrating Sybase ASE Databases to SQL Server - Azure SQL Database](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Install SSMA components on SQL Server](installing-ssma-components-on-sql-server-sybasetosql.md)
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

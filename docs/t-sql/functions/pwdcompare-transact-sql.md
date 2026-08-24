@@ -83,7 +83,7 @@ WHERE PWDCOMPARE('password', password_hash) = 1 ;
 ```  
   
 ## Related content
- [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
- [sys.sql_logins &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)  
 
+- [PWDENCRYPT (Transact-SQL)](pwdencrypt-transact-sql.md)
+- [Security Functions (Transact-SQL)](security-functions-transact-sql.md)
+- [sys.sql_logins (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)

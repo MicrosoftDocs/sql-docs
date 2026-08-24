@@ -110,9 +110,9 @@ To update the list of languages registered with full-text search, use [sp_fullte
 
 ## Related content
 
-- [sp_fulltext_load_thesaurus_file (Transact-SQL)](../system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)
-- [sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
+- [sys.sp_fulltext_load_thesaurus_file (Transact-SQL)](../system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)
+- [sys.sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
 - [Configure and manage word breakers and stemmers](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
 - [Configure and Manage Thesaurus Files for Full-Text Search](../search/configure-and-manage-thesaurus-files-for-full-text-search.md)
-- [Configure and Manage Stopwords and Stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
+- [Configure and manage stopwords and stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
 - [Upgrade Full-Text Search (SQL Server Search)](../search/upgrade-full-text-search.md)

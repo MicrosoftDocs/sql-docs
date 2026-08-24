@@ -80,7 +80,7 @@ Primary File
 ## Related content
 
 - [FILEGROUPPROPERTY (Transact-SQL)](filegroupproperty-transact-sql.md)
-- [Metadata Functions (Transact-SQL)](metadata-functions-transact-sql.md)
-- [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)

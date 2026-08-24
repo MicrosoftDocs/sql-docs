@@ -118,6 +118,6 @@ public class CacheResultSet {
 }
 ```
 
-## See also
+## Related content
 
-[Working with result sets](working-with-result-sets.md)
+- [Working with result sets](working-with-result-sets.md)

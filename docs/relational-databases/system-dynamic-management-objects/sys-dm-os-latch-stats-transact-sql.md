@@ -195,7 +195,8 @@ GO
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
   
-## See Also  
-[DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[SQL Server, Latches Object](../performance-monitor/sql-server-latches-object.md)
+## Related content
+
+- [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [SQL Server, Latches object](../performance-monitor/sql-server-latches-object.md)

@@ -44,7 +44,7 @@ To complete this tutorial, make sure you install [Azure Synapse Pathway](synapse
 ![Azure Synapse Pathway assessment configuration showing translation type, input directory, and output directory.](./media/tutorial-save-load-assessment/load-assessment.png)
 1. Select **Translate** to run the code translation again.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Report Generation](report-generation.md)

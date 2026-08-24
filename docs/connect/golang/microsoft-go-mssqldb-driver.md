@@ -309,17 +309,12 @@ For more information about each part of this sample, see [Azure SQL Database](az
 | [Protocols](protocols.md) | TCP, named pipes, shared memory, DAC, and SQL Browser. |
 | [Logging and diagnostics](logging-diagnostics.md) | Log flags, `SetLogger`, and `SetContextLogger`. |
 
-## Reference
-
-| Article | Description |
-| --- | --- |
-| [Limitations](known-limitations.md) | Driver limitations, including `LastInsertId`, temporary tables, and Always Encrypted constraints. |
-| [What's new](whats-new.md) | Version history and release highlights for the Microsoft fork of the driver. |
-| [Support and lifecycle](support-lifecycle.md) | Go and SQL Server version compatibility matrix. |
-
 ## Related content
 
+- [go-mssqldb Limitations](known-limitations.md)
+- [What's new in go-mssqldb](whats-new.md)
+- [go-mssqldb support and lifecycle](support-lifecycle.md)
 - [go-mssqldb on GitHub](https://github.com/microsoft/go-mssqldb)
 - [go-mssqldb API reference on pkg.go.dev](https://pkg.go.dev/github.com/microsoft/go-mssqldb)
-- [SQL connection libraries](../sql-connection-libraries.md)
+- [Connection modules for Microsoft SQL Database](../sql-connection-libraries.md)
 - [Quickstart: Use Golang to query Azure SQL Database](/azure/azure-sql/database/connect-query-go)

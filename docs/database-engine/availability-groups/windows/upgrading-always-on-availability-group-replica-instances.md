@@ -249,4 +249,4 @@ For background information, see [CDC functionality might break after upgrading t
 ## Related content
 
 - [Upgrade SQL Server Using the Installation Wizard (Setup)](../../install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-- [Install and configure SQL Server on Windows from the command prompt](../../install-windows/install-sql-server-from-the-command-prompt.md)
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](../../install-windows/install-sql-server-from-the-command-prompt.md)

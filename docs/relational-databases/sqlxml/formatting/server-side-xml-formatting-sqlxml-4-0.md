@@ -45,9 +45,8 @@ FROM   Person.Contact
   
  For more information about the FOR XML clause, see [Constructing XML Using FOR XML](../../../relational-databases/xml/for-xml-sql-server.md).  
   
-## See Also  
- [Architecture of Client-side and Server-side XML Formatting &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [Client-side XML Formatting &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)  
-  
-  
+## Related content
+
+- [Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)
+- [Client-side XML Formatting (SQLXML 4.0)](client-side-xml-formatting-sqlxml-4-0.md)
+- [FOR XML (SQL Server)](../../xml/for-xml-sql-server.md)

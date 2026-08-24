@@ -36,5 +36,5 @@ For example, the `System.DirectoryServices` namespace isn't supported. You must 
 ## Related content
 
 - [Create an assembly](../assemblies/creating-an-assembly.md)
-- [CLR integration Code Access Security](../security/clr-integration-code-access-security.md)
+- [CLR integration code access security](../security/clr-integration-code-access-security.md)
 - [CLR integration programming model restrictions](clr-integration-programming-model-restrictions.md)

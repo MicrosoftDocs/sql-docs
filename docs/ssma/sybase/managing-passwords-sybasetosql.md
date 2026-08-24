@@ -124,5 +124,6 @@ The SSMA Console application allows you to export encrypted database passwords p
     
 8. Confirm password: xxxxxxxx  
   
-## See Also  
-[Executing the SSMA Console (Sybase)](./executing-the-ssma-console-sybasetosql.md)  
+## Related content
+
+- [Executing the SSMA console](executing-the-ssma-console-sybasetosql.md)

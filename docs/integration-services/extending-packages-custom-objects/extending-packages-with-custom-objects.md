@@ -42,19 +42,10 @@ ms.topic: "reference"
  [Developing a Custom Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Discusses how to program custom data flow sources, transformations, and destinations.  
   
-## Reference  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
-  
-## Related Sections  
- [Extending Packages with Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
- Discusses how to extend the control flow by using the Script task, or extend the data flow by using the Script component.  
-  
- [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
- Describes how to create, configure, run, load, save, and manage [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages programmatically.  
-  
-## See Also  
- [Comparing Scripting Solutions and Custom Objects](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  
+## Related content
+
+- [Integration Services error and message reference](../integration-services-error-and-message-reference.md)
+- [Extending Packages with Scripting](../extending-packages-scripting/extending-packages-with-scripting.md)
+- [Building Packages Programmatically](../building-packages-programmatically/building-packages-programmatically.md)
+- [Comparing Scripting Solutions and Custom Objects](../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)
+- [SQL Server Integration Services](../sql-server-integration-services.md)

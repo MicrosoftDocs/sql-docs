@@ -35,9 +35,8 @@ public java.io.Writer setCharacterStream(long pos)
 ## Remarks  
  This setCharacterStream method is specified by the setCharacterStream method in the java.sql.NClob interface.  
   
-## See Also  
- [SQLServerNClob Methods](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
- [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
- [SQLServerNClob Class](../../../connect/jdbc/reference/sqlservernclob-class.md)  
-  
-  
+## Related content
+
+- [SQLServerNClob Methods](sqlservernclob-methods.md)
+- [SQLServerNClob Members](sqlservernclob-members.md)
+- [SQLServerNClob Class](sqlservernclob-class.md)

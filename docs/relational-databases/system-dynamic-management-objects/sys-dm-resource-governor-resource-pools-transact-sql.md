@@ -102,7 +102,7 @@ Requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
 ## Related content
 
-- [Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [sys.dm_resource_governor_workload_groups (Transact-SQL)](sys-dm-resource-governor-workload-groups-transact-sql.md)
 - [sys.resource_governor_resource_pools (Transact-SQL)](../system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)
-- [ALTER resource governor  (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)
+- [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)

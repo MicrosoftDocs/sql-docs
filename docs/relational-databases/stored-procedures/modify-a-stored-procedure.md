@@ -134,4 +134,4 @@ To modify a procedure using T-SQL commands:
 ## Related content
 
 - [ALTER PROCEDURE (Transact-SQL)](../../t-sql/statements/alter-procedure-transact-sql.md)
-- [SQL Injection](../security/sql-injection.md)
+- [SQL injection](../security/sql-injection.md)

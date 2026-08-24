@@ -109,6 +109,6 @@ These functions handle SQL statement translation and row count retrieval.
 
 ## Related content
 
-- [The ODBC cursor library](../develop-app/the-odbc-cursor-library.md)
-- [Block cursors, scrollable cursors, and backward compatibility](block-cursors-scrollable-cursors-and-backward-compatibility.md)
-- [Scrollable cursors](../develop-app/scrollable-cursors.md)
+- [The ODBC Cursor Library](../develop-app/the-odbc-cursor-library.md)
+- [Block Cursors, Scrollable Cursors, and Backward Compatibility](block-cursors-scrollable-cursors-and-backward-compatibility.md)
+- [Scrollable Cursors](../develop-app/scrollable-cursors.md)

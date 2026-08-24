@@ -60,8 +60,7 @@ echo "Connection closed.\n";
 ?>  
 ```  
   
-## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+## Related content
 
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-  
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)

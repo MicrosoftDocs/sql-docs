@@ -111,7 +111,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 -   XPath can contain characters such as < or & that have special meanings in XML (and template is an XML document). You must escape these characters using XML &-encoding, or specify the XPath in the URL.  
   
-## See Also  
- [Using XPath Queries in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Using XPath Queries in SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)

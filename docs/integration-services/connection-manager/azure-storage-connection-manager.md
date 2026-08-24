@@ -66,5 +66,6 @@ To configure Microsoft Entra authentication with the managed identity of your AD
 ## Secure network traffic to your storage account
 When you use Microsoft Entra authentication with the managed identity of your ADF, it's possible to join your Azure-SSIS integration runtime to a virtual network, then secure your storage account by [limiting access to selected networks](/azure/storage/common/storage-network-security#change-the-default-network-access-rule) or private endpoint. Please refer to the [Managing exceptions](/azure/storage/common/storage-network-security#managing-exceptions) article for instructions.
 
-## See also
-- [Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)
+## Related content
+
+- [Integration Services (SSIS) Connections](integration-services-ssis-connections.md)

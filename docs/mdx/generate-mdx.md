@@ -118,7 +118,6 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  This form of the **Generate** function can be useful when debugging calculations, as it enables you to return a string displaying the names of all the members in a set. This might be easier to read than the strict MDX representation of a set that the [SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md) function returns.  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

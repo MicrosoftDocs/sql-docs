@@ -73,7 +73,7 @@ To enable this setting and force password refresh, open the **Properties** pane 
 
 To reset passwords at regular intervals, you can either set this flag manually or use a script.
 
-## Next steps
+## Related content
 
-+ [Extensibility framework](../concepts/extensibility-framework.md)
-+ [Security overview](../concepts/security.md)
+- [Extensibility architecture in SQL Server Machine Learning Services](../concepts/extensibility-framework.md)
+- [Security architecture for the extensibility framework in SQL Server Machine Learning Services](../concepts/security.md)

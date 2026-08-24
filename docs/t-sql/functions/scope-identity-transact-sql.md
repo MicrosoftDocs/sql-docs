@@ -168,8 +168,6 @@ GO
  89
  ```  
   
-## See Also  
- [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
-  
-  
+## Related content
 
+- [@@IDENTITY (Transact-SQL)](identity-transact-sql.md)

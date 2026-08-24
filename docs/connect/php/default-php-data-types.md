@@ -99,14 +99,10 @@ Data types that are new in SQL Server 2008 and that exist outside of columns (su
   
 Partial type support means that you cannot programmatically query for the type of the column.  
   
-## See Also  
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+## Related content
 
-[Converting Data Types](../../connect/php/converting-data-types.md)
-
-[PHP Types](https://php.net/manual/en/language.types.php)
-
-[Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
-
-[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
-  
+- [Constants (Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
+- [Converting Data Types](converting-data-types.md)
+- [PHP Types](https://php.net/manual/en/language.types.php)
+- [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+- [sqlsrv_field_metadata](sqlsrv-field-metadata.md)

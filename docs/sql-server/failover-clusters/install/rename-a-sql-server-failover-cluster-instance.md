@@ -73,6 +73,6 @@ helpviewer_keywords:
   
 -   Update the Jobsteps that depend on server name. For more information, see [Manage Job Steps](/ssms/agent/manage-job-steps).  
   
-## See Also  
- [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
-  
+## Related content
+
+- [Rename a computer that hosts a stand-alone instance of SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)

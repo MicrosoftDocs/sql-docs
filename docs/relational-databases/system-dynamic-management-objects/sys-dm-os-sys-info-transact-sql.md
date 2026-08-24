@@ -85,5 +85,5 @@ On Azure SQL Database **Basic**, **S0**, and **S1** service objectives, and for 
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
-- [SQL Server Operating System Related Dynamic Management Views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)

@@ -76,6 +76,6 @@ This sample enables you to perform an end to end migration from conversion to da
 
 ## Related content
 
-- [Create variable value files (Db2ToSQL)](creating-variable-value-files-db2tosql.md)
-- [Create the server connection files (Db2ToSQL)](creating-the-server-connection-files-db2tosql.md)
-- [Generate reports (Db2ToSQL)](generating-reports-db2tosql.md)
+- [Create variable value files](creating-variable-value-files-db2tosql.md)
+- [Create the server connection files](creating-the-server-connection-files-db2tosql.md)
+- [Generate reports](generating-reports-db2tosql.md)

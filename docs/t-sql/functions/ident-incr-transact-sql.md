@@ -103,7 +103,7 @@ Production          BillOfMaterials                    1
 ## Related content
 
 - [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
-- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [IDENT_CURRENT (Transact-SQL)](ident-current-transact-sql.md)
 - [IDENT_SEED (Transact-SQL)](ident-seed-transact-sql.md)
 - [DBCC CHECKIDENT (Transact-SQL)](../database-console-commands/dbcc-checkident-transact-sql.md)

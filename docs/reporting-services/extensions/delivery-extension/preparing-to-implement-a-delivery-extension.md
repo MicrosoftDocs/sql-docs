@@ -41,6 +41,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
-- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)
+- [Reporting Services extensions](../reporting-services-extensions.md)
+- [Implement a delivery extension](implementing-a-delivery-extension.md)
+- [Reporting Services extension library](../reporting-services-extension-library.md)

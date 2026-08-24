@@ -101,5 +101,5 @@ ORDER BY misq.avg_total_user_cost
 - [sys.dm_db_missing_index_group_stats (Transact-SQL)](sys-dm-db-missing-index-group-stats-transact-sql.md)
 - [sys.dm_exec_sql_text (Transact-SQL)](sys-dm-exec-sql-text-transact-sql.md)
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
-- [sys.dm_os_sys_info  (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

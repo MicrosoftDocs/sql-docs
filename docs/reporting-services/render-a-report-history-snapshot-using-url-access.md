@@ -28,5 +28,5 @@ https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-0
   
 ## Related content
 
-- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
-- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)
+- [URL access (SSRS)](url-access-ssrs.md)
+- [URL access parameter reference](url-access-parameter-reference.md)

@@ -76,5 +76,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)
-- [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
+- [Administer a Peer-to-Peer Topology (Replication Transact-SQL Programming)](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)
+- [Measure Latency and Validate Connections for Transactional Replication](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)

@@ -84,18 +84,15 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
-## Next steps
-
-Learn more about Query Store in the following articles:
+## Related content
 
 - [sys.query_store_replicas (Transact-SQL)](sys-query-store-replicas.md)
-- [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
-- [sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
-- [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
-- [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
-- [sys.query_store_query_text (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
-- [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-
+- [sys.database_query_store_options (Transact-SQL)](sys-database-query-store-options-transact-sql.md)
+- [sys.query_context_settings (Transact-SQL)](sys-query-context-settings-transact-sql.md)
+- [sys.query_store_plan (Transact-SQL)](sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query (Transact-SQL)](sys-query-store-query-transact-sql.md)
+- [sys.query_store_query_text (Transact-SQL)](sys-query-store-query-text-transact-sql.md)
+- [sys.query_store_runtime_stats_interval (Transact-SQL)](sys-query-store-runtime-stats-interval-transact-sql.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Query Store stored procedures (Transact-SQL)](../system-stored-procedures/query-store-stored-procedures-transact-sql.md)

@@ -40,8 +40,7 @@ Returns a row for each extended property in the current database.
 ## Related content
 
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
-- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [sys.fn_listextendedproperty (Transact-SQL)](../system-functions/sys-fn-listextendedproperty-transact-sql.md)
-- [sp_addextendedproperty (Transact-SQL)](../system-stored-procedures/sp-addextendedproperty-transact-sql.md)
-- [sp_dropextendedproperty (Transact-SQL)](../system-stored-procedures/sp-dropextendedproperty-transact-sql.md)
-- [sp_updateextendedproperty (Transact-SQL)](../system-stored-procedures/sp-updateextendedproperty-transact-sql.md)
+- [sys.sp_addextendedproperty (Transact-SQL)](../system-stored-procedures/sp-addextendedproperty-transact-sql.md)
+- [sys.sp_dropextendedproperty (Transact-SQL)](../system-stored-procedures/sp-dropextendedproperty-transact-sql.md)
+- [sys.sp_updateextendedproperty (Transact-SQL)](../system-stored-procedures/sp-updateextendedproperty-transact-sql.md)

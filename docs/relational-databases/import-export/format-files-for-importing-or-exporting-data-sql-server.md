@@ -125,6 +125,6 @@ Format files are usually required in the following circumstances:
 
 - [bcp Utility](../../tools/bcp-utility.md)
 - [Use a format file to bulk import data (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)
-- [Use a Format file to skip a table column (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)
+- [Use a format file to skip a table column (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [Use a format file to skip a data field (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)
 - [Use a format file to map table columns to data-file fields (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)

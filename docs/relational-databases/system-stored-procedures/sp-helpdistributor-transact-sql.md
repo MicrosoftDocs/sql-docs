@@ -170,5 +170,5 @@ The following result set columns are returned to all users.
 ## Related content
 
 - [View and Modify Distributor and Publisher Properties](../replication/view-and-modify-distributor-and-publisher-properties.md)
-- [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)
-- [sp_dropdistpublisher (Transact-SQL)](sp-dropdistpublisher-transact-sql.md)
+- [sys.sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)
+- [sys.sp_dropdistpublisher (Transact-SQL)](sp-dropdistpublisher-transact-sql.md)

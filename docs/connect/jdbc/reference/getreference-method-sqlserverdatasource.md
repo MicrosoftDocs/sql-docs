@@ -48,8 +48,7 @@ ds2.setTrustStorePassword("XXXXX");   // reset the truststore password
 con = ds2.getConnection("user", "XXXXXX");   // provide userid and password again  
 ```  
   
-## See Also  
- [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDataSource Members](sqlserverdatasource-members.md)
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

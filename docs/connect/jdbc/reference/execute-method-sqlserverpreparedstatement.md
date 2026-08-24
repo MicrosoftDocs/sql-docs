@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[execute ()](../../../connect/jdbc/reference/execute-method.md)|Runs the SQL statement in this [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) object, which can be any kind of SQL statement.|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|Runs the given SQL statement, which can return multiple results.|  
   
-## See Also  
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)
+- [SQLServerPreparedStatement Class](sqlserverpreparedstatement-class.md)

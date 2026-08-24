@@ -59,6 +59,6 @@ The lists in these articles were generated from the supported assemblies. For mo
 
 ## Related content
 
-- [CLR integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md)
+- [CLR integration code access security](../clr-integration/security/clr-integration-code-access-security.md)
 - [CLR integration programming model restrictions](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)
 - [Create an assembly](../clr-integration/assemblies/creating-an-assembly.md)

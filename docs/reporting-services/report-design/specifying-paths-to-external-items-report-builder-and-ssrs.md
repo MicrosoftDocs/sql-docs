@@ -39,6 +39,6 @@ ms.custom:
   
 ## Related content
 
-- [Add an External Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)
-- [Add a Subreport and Parameters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)
-- [Add a Drillthrough Action on a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)
+- [Add an external image to a paginated report (Report Builder)](add-an-external-image-report-builder-and-ssrs.md)
+- [Add a subreport and parameters to a Report Builder paginated report](add-a-subreport-and-parameters-report-builder-and-ssrs.md)
+- [Add a drillthrough action on a paginated report (Report Builder)](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)

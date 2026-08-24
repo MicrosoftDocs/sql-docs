@@ -14,7 +14,6 @@ ms.topic: reference
 
   For information about the members of [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), see [SQLServerConnectionPoolDataSource Members](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md).  
   
-## See Also  
- [SQLServerConnectionPoolDataSource Class](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnectionPoolDataSource Class](sqlserverconnectionpooldatasource-class.md)

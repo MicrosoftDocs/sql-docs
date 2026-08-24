@@ -43,7 +43,7 @@ Specifies location of the private key file. In case if private key file is passw
 
   This feature is only officially supported for loopback authentication scenarios against Linux SQL Server 2019 and up.
 
-## See also
+## Related content
 
-[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
-[sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
+- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)
+- [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)

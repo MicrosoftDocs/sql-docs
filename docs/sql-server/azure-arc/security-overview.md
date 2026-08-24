@@ -306,10 +306,10 @@ Implement the following configurations to comply with current best practices to 
 
 ## Related content
 
-* [Azure security fundamentals](/azure/security/fundamentals/)
-* [Security overview for Azure Arc-enabled servers](/azure/azure-arc/servers/security-overview)
-* [Azure Arc-enabled servers Run Command](/azure/azure-arc/servers/run-command)
-* [Tutorial: Send data to Azure Monitor Logs with Logs ingestion API](/azure/azure-monitor/logs/tutorial-logs-ingestion-api)
-* [Data Collection Rules in Azure Monitor](/azure/azure-monitor/essentials/data-collection-rule-overview)
-* [Azure Automation Runbooks](/azure/automation/automation-runbook-types)
-* [Overview | SQL Server enabled by Azure Arc](overview.md)
+- [Azure security fundamentals](/azure/security/fundamentals/)
+- [Security overview for Azure Arc-enabled servers](/azure/azure-arc/servers/security-overview)
+- [Azure Arc-enabled servers Run Command](/azure/azure-arc/servers/run-command)
+- [Tutorial: Send data to Azure Monitor Logs with Logs ingestion API](/azure/azure-monitor/logs/tutorial-logs-ingestion-api)
+- [Data Collection Rules in Azure Monitor](/azure/azure-monitor/essentials/data-collection-rule-overview)
+- [Azure Automation Runbooks](/azure/automation/automation-runbook-types)
+- [SQL Server enabled by Azure Arc](overview.md)

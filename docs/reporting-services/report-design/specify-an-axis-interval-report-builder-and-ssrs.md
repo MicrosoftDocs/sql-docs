@@ -80,9 +80,9 @@ By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sets t
   
 ## Related content
 
-- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
-- [Formatting Data Points on a Chart (Report Builder and SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
-- [Sort Data in a Data Region (Report Builder and SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
+- [Formatting data points on a paginated report chart (Report Builder)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
+- [Sort data in a data region in a paginated report (Report Builder)](sort-data-in-a-data-region-report-builder-and-ssrs.md)
 - [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](/previous-versions/sql/)
-- [Specify a Logarithmic Scale &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)
-- [Plot Data on a Secondary Axis &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)
+- [Specify a logarithmic scale in a paginated report (Report Builder)](specify-a-logarithmic-scale-report-builder-and-ssrs.md)
+- [Plot data on a secondary axis in a paginated report (Report Builder)](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)

@@ -324,9 +324,7 @@ helpviewer_keywords:
   
 8.  Close the script development environment and the **Script Task Editor**.  
   
-## Next Step  
- After you determine that change data is ready, the next step is to prepare to query for the change data.  
-  
- **Next topic:** [Prepare to Query for the Change Data](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
-  
-  
+## Next step
+
+> [!div class="nextstepaction"]
+> [Prepare to Query for the Change Data](prepare-to-query-for-the-change-data.md)

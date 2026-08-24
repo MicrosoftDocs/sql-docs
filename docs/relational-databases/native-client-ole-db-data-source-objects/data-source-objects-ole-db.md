@@ -83,7 +83,6 @@ else
   
 -   [Persisted Data Source Objects](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)

@@ -98,6 +98,6 @@ For example:
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=<password>;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## See also
+## Related content
 
-[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)
+- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -41,6 +41,6 @@ To have sufficient permissions to configure all APS nodes, the user running the 
   
     This adds the new user to the **Domain Admins** group and the **PdwControlNodeAccess** group. Click **OK**.  
   
-## See Also  
-[Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
-  
+## Related content
+
+- [Launch the Configuration Manager in Analytics Platform System](launch-the-configuration-manager.md)

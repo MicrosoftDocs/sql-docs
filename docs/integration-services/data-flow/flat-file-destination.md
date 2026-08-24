@@ -85,7 +85,7 @@ helpviewer_keywords:
  **Destination Column**  
  View each available destination column, whether it is mapped or not.  
   
-## See Also  
- [Flat File Source](../../integration-services/data-flow/flat-file-source.md)   
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
+## Related content
+
+- [Flat File Source](flat-file-source.md)
+- [Data Flow](data-flow.md)

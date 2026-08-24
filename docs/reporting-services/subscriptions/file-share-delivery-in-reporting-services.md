@@ -63,5 +63,5 @@ The following image is an example of the settings for a subscription configured 
   
 ## Related content
 
-- [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
-- [Subscription Settings and a File Share Account (Report Server Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)
+- [Create and manage subscriptions for native mode report servers](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+- [Subscription Settings and a File Share Account (Report Server Configuration Manager)](../install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)

@@ -172,7 +172,7 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
 - [Troubleshoot a full transaction log (SQL Server Error 9002)](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)
 
 ## Related content
-    
+
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
 - [Apply Transaction Log Backups (SQL Server)](apply-transaction-log-backups-sql-server.md)
 - [Maintenance plans](../maintenance-plans/maintenance-plans.md)

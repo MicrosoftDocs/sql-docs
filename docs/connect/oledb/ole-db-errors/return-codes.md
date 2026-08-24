@@ -43,7 +43,6 @@ OLE DB Driver for SQL Server consumers commonly encounter the DB_S_ERRORSOCCURRE
   
 The OLE DB Driver for SQL Server member functions don't return the success code S_FALSE. All OLE DB Driver for SQL Server member functions always return S_OK to indicate success.  
   
-## See Also
+## Related content
 
-[Errors](errors.md)  
-
+- [Errors](errors.md)

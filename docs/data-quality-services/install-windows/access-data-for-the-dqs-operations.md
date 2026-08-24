@@ -46,10 +46,6 @@ ms.custom:
   
 6.  In the **Login Properties** dialog box, click **OK** to apply the changes.  
   
-## Next Steps  
- Try performing DQS operations that accesses the database as data source for DQS operation, and then exports the processed data to the database.  
-  
-## See Also  
- [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
-  
-  
+## Related content
+
+- [Install Data Quality Services](install-data-quality-services.md)

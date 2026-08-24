@@ -179,5 +179,5 @@ To set the MSSQL extension as the default, select **Configure Default Formatter.
 ## Related content
 
 - [Quickstart: Run your first query with the MSSQL extension for Visual Studio Code](mssql-run-first-query.md)
-- [What is the MSSQL extension for Visual Studio Code?](mssql-extension-visual-studio-code.md)
+- [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md)
 - [ScriptDOM GitHub repository](https://github.com/microsoft/sqlscriptdom)

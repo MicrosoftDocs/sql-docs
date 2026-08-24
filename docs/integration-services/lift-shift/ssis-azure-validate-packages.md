@@ -73,6 +73,6 @@ Validation raises a warning if a package contains a script task or a script comp
 
 The Orc format isn't supported in the HDFS Destination and the Azure Data Lake Store Destination.
 
-## Next steps
+## Related content
 
-- [Schedule SSIS packages in Azure](ssis-azure-schedule-packages.md).
+- [Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure](ssis-azure-schedule-packages.md)

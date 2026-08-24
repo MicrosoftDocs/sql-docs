@@ -37,8 +37,7 @@ dev_langs:
  [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  Returns the configuration parameters for change data capture agent jobs.  
   
-## See Also  
- [Change Data Capture Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [Change Data Capture Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [Change Data Capture stored procedures (Transact-SQL)](../system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)
+- [Change Data Capture Functions (Transact-SQL)](../system-functions/change-data-capture-functions-transact-sql.md)

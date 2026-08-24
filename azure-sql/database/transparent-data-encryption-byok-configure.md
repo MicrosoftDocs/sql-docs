@@ -25,7 +25,7 @@ This article walks through how to use a key from Azure Key Vault for transparent
 This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics dedicated SQL pools. For documentation on Transparent Data Encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 
 > [!NOTE] 
-> Azure SQL Database supports both asymmetric (RSA) and symmetric (AES) keys for customer‑managed Transparent Data Encryption, depending on the configuration. Support for symmetric (AES) keys is currently in public preview and is limited to Azure SQL Database. You may see this capability appear over time depending on your region and service deployment status. For details, see [Transparent Data Encryption with customer‑managed keys (BYOK) – overview](transparent-data-encryption-byok-overview.md).
+> Azure SQL Database supports both asymmetric (RSA) and symmetric (AES) keys for customer-managed Transparent Data Encryption, depending on the configuration. Support for symmetric (AES) keys is currently in public preview and is limited to Azure SQL Database. You may see this capability appear over time depending on your region and service deployment status. For details, see [Transparent Data Encryption with customer-managed keys (BYOK) – overview](transparent-data-encryption-byok-overview.md).
 
 ## Prerequisites for PowerShell
 

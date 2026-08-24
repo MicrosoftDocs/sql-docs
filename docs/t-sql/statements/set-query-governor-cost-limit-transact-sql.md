@@ -55,6 +55,6 @@ SET QUERY_GOVERNOR_COST_LIMIT value
 ## Permissions  
  Requires membership in the **public** role.  
   
-## See Also  
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
+## Related content
 
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)

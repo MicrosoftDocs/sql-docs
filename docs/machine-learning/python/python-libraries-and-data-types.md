@@ -42,6 +42,6 @@ This table lists the implicit conversions that are provided. Other data types ar
 | **varchar(n)**       | `str`       |
 | **varchar(max)**     | `str`       |
 
-## See also
+## Related content
 
-+ [Data type mappings between R and SQL Server](../r/r-libraries-and-data-types.md)
+- [Data type mappings between R and SQL Server](../r/r-libraries-and-data-types.md)

@@ -44,7 +44,7 @@ It is important to choose an appropriate chart type for the type of data that yo
 
 ## Related content
 
-- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Empty and Null Data Points in Charts](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
-- [Add a Chart to a Report](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Empty and null data points in paginated report charts (Report Builder)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
+- [Add a chart to a paginated report (Report Builder)](add-a-chart-to-a-report-report-builder-and-ssrs.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

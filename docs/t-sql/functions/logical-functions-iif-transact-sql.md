@@ -93,8 +93,7 @@ Result
 NULL  
 ```  
   
-## Next steps
+## Related content
 
-- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
-- [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)
-
+- [CASE (Transact-SQL)](../language-elements/case-transact-sql.md)
+- [Logical Functions - CHOOSE (Transact-SQL)](logical-functions-choose-transact-sql.md)

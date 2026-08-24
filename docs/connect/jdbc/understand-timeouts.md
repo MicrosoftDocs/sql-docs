@@ -41,6 +41,6 @@ For a responsive application, `loginTimeout` and `queryTimeout` should be set to
 | `lockTimeout`        | The number of milliseconds to wait before the database returns a lock time-out error. | -1 [Infinite timeout]                         | Open connection    |
 | `socketTimeout`      | The number of milliseconds to wait on a socket read or write.                         | Zero [Infinite timeout]                       | Closed connection  |
 
-## See also
+## Related content
 
-[Setting the connection properties](setting-the-connection-properties.md)
+- [Set the connection properties](setting-the-connection-properties.md)

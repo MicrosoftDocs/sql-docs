@@ -496,11 +496,10 @@ FROM sys.dm_db_index_physical_stats(db_id(), object_id('ExpenseQueue'), DEFAULT,
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Index Related Dynamic Management Views and Functions (Transact-SQL)](index-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_db_index_operational_stats (Transact-SQL)](sys-dm-db-index-operational-stats-transact-sql.md)
 - [sys.dm_db_index_usage_stats (Transact-SQL)](sys-dm-db-index-usage-stats-transact-sql.md)
 - [sys.dm_db_partition_stats (Transact-SQL)](sys-dm-db-partition-stats-transact-sql.md)
 - [sys.allocation_units (Transact-SQL)](../system-catalog-views/sys-allocation-units-transact-sql.md)
 - [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
-

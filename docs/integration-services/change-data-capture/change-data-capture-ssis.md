@@ -103,5 +103,6 @@ helpviewer_keywords:
   
 -   [Perform an Incremental Load of Multiple Tables](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
-## Related Content  
- Blog entry, [SSIS Design Pattern - Incremental Load](https://andyleonard.blog/2007/07/ssis-design-pattern-incremental-loads), on sqlblog.com  
+## Related content
+
+- [SSIS Design Pattern - Incremental Load](https://andyleonard.blog/2007/07/ssis-design-pattern-incremental-loads)

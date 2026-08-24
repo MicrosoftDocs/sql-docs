@@ -57,39 +57,19 @@ The XML schema definition language (XSD) validation has some limitations regardi
 |Union types|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't support restrictions from union types.|
 |Variable precision decimals|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't support variable precision decimals. The **xs:decimal** type represents arbitrary precision decimal numbers. Minimally conforming XML processors must support decimal numbers with a minimum of `totalDigits=18`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports `totalDigits=38,` but limits the fractional digits to 10. All **xs:decimal** instanced values are represented internally by the server by using the SQL type numeric (38, 10).|
 
-## Next steps
+## Related content
 
-- [Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)  
-Explains canonical forms and pattern restrictions.
-
-- [Wildcard Components and Content Validation](../../relational-databases/xml/wildcard-components-and-content-validation.md)  
-Describes the limitations of using wildcard characters, lax validation, and anyType Elements with XML schema collections.
-
-- [The &#60;xsd:redefine&#62; Element](../../relational-databases/xml/the-xsd-redefine-element.md)  
-Explains the limitation of using the \<xsd:redefine> element and describes a workaround.
-
-- [The xs:QName Type](../../relational-databases/xml/the-xs-qname-type.md)  
-Describes the limitation regarding the `xs:QName` type.
-
-- [Values for &#60;xsd:simpleType&#62; Declarations](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)
-Describes the restrictions that are applied to `<xsd:simpleType>` declarations.
-
-- [Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)  
-Describes the limitation regarding enumeration facets.
-
-- [Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)
-Describes the limitation on restricting a mixed type to a simple content.
-
-- [Large XML Schema Collections and Out-of-Memory Conditions](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)  
-Provides solutions for the out-of-memory condition that sometimes occurs with large schema collections.
-
-- [Non-Deterministic Content Models](../../relational-databases/xml/non-deterministic-content-models.md)  Describes the limitations regarding non-deterministic content models.
-
-## See also
-
-- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)
-- [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
-- [Grant Permissions on an XML Schema Collection](../../relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md)
-- [Unique Particle Attribution Constraint](../../relational-databases/xml/unique-particle-attribution-constraint.md)
-- [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)
-
+- [XML data (SQL Server)](xml-data-sql-server.md)
+- [Compare typed XML to untyped XML](compare-typed-xml-to-untyped-xml.md)
+- [Grant permissions on an XML schema collection](grant-permissions-on-an-xml-schema-collection.md)
+- [Unique particle attribution constraint](unique-particle-attribution-constraint.md)
+- [XML schema collections (SQL Server)](xml-schema-collections-sql-server.md)
+- [Canonical forms and pattern restrictions](canonical-forms-and-pattern-restrictions.md)
+- [Wildcard components and content validation](wildcard-components-and-content-validation.md)
+- [The &lt;xsd:redefine&gt; element](the-xsd-redefine-element.md)
+- [The xs:QName type](the-xs-qname-type.md)
+- [Values for &lt;xsd:simpleType&gt; declarations](values-for-xsd-simpletype-declarations.md)
+- [Enumeration facets](enumeration-facets.md)
+- [Mixed type and simple content](mixed-type-and-simple-content.md)
+- [Large XML schema collections and out-of-memory conditions](large-xml-schema-collections-and-out-of-memory-conditions.md)
+- [Non-Deterministic content models](non-deterministic-content-models.md)

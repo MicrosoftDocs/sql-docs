@@ -89,7 +89,6 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');
 SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');  
 ```  
   
-## See Also  
- [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)  
-  
-  
+## Related content
+
+- [sql_variant (Transact-SQL)](../data-types/sql-variant-transact-sql.md)

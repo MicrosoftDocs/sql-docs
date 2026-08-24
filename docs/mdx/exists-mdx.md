@@ -84,10 +84,10 @@ EXISTS(
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
- [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)
+- [Crossjoin (MDX)](crossjoin-mdx.md)
+- [NonEmptyCrossjoin (MDX)](nonemptycrossjoin-mdx.md)
+- [NonEmpty (MDX)](nonempty-mdx.md)
+- [IsEmpty (MDX)](isempty-mdx.md)

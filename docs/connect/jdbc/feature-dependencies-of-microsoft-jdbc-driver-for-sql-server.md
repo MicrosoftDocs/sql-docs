@@ -196,7 +196,7 @@ https://go.microsoft.com/fwlink/?LinkID=513072
 
 You can get a [sample application](connecting-using-azure-active-directory-authentication.md) that uses this feature.
 
-## See also
+## Related content
 
-[JDBC Driver GitHub repository](https://github.com/microsoft/mssql-jdbc)  
-[JDBC Driver API reference](reference/jdbc-driver-api-reference.md)
+- [JDBC Driver GitHub repository](https://github.com/microsoft/mssql-jdbc)
+- [JDBC driver API reference](reference/jdbc-driver-api-reference.md)

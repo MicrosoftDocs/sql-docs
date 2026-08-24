@@ -18,7 +18,7 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 The maintenance window feature allows you to configure maintenance schedule for [Azure SQL Database](database/sql-database-paas-overview.md?view=azuresql-db&preserve-view=true) and [Azure SQL Managed Instance](managed-instance/sql-managed-instance-paas-overview.md?view=azuresql-mi&preserve-view=true) resources making impactful maintenance events predictable and less disruptive for your workload.
 
-The maintenance window is free of charge and can be configured on creation or for existing Azure SQL resources. It can be configured using the Azure portal, PowerShell, CLI, or Azure API.
+The maintenance window is free of charge and can be configured on creation or for existing Azure SQL resources. It can be configured using the Azure portal, PowerShell, CLI, or Azure API.
 
 ## Overview
 

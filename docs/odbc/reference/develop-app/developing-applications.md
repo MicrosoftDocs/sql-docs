@@ -46,5 +46,6 @@ This section contains information about developing applications that use the ODB
   
 -   [Programming Considerations](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## See Also  
- [ODBC Programmer's Reference](../../../odbc/reference/odbc-programmer-s-reference.md)
+## Related content
+
+- [ODBC Programmer's Reference](../odbc-programmer-s-reference.md)

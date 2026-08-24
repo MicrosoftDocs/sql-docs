@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
+# @@MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the maximum number of simultaneous user connections allowed on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The number returned is not necessarily the number currently configured.  
@@ -55,8 +55,7 @@ Max Connections
 32767            
 ```  
   
-## See Also  
- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Configure the user connections Server Configuration Option](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  
-  
-  
+## Related content
+
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [Server configuration: user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)

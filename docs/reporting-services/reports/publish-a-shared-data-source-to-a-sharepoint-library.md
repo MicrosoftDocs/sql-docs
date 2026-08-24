@@ -44,9 +44,9 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)
-- [URL Examples for Published Report Items on a Report Server in SharePoint Mode &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)
-- [Project Property Pages Dialog Box](../../reporting-services/tools/project-property-pages-dialog-box.md)
-- [Set Deployment Properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)
-- [Publishing Reports to a Report Server](../../reporting-services/reports/publishing-reports-to-a-report-server.md)
-- [Use an Office Data Connection &#40;.odc&#41; with Reports &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)
+- [Publish a Report to a SharePoint Library](publish-a-report-to-a-sharepoint-library.md)
+- [URL examples for items on a report server - SharePoint mode](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)
+- [Project Property Pages dialog box](../tools/project-property-pages-dialog-box.md)
+- [Set deployment properties (Reporting Services)](../tools/set-deployment-properties-reporting-services.md)
+- [Publish reports to a report server](publishing-reports-to-a-report-server.md)
+- [Use an Office Data Connection (.odc) with Reports](../report-data/use-an-office-data-connection-odc-with-reports.md)

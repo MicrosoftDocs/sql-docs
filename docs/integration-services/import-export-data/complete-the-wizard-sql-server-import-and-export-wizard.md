@@ -31,6 +31,6 @@ Review the summary and verify the following information:
 ## What's next?  
  After you review the choices that you made in the wizard and click **Finish**, the next page is **Performing Operation**. On this page, you see the progress and the result of the operation that you configured on the preceding pages. For more info, see [Performing Operation](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md).
  
-## See also
-[Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+## Related content
 
+- [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

@@ -44,7 +44,6 @@ WHERE
     {[Measures].[Resell Cost as Negative]}  
 ```  
   
-## See Also  
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)

@@ -97,6 +97,6 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
 |**Numeric Literals With Precision Exceeding 38**|Specifies how to convert numeric literals with precision exceeding 38.<br /><br />**Default Mode**:   Round if Possible<br /><br />**Optimistic Mode**:  Round if Possible<br /><br />**Full Mode**:   Round if Possible|  
 |**Zero-date in NOT NULL columns**|Specifies how to handle assignment to NOT NULL columns of Zero-date, Zero-in-date or invalid date/time values.<br /><br />**Default Mode**:   GETDATE()<br /><br />**Optimistic Mode**:  GETDATE()<br /><br />**Full Mode**:   GETDATE()|  
   
-## See Also  
-[User Interface Reference &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
-  
+## Related content
+
+- [User Interface Reference](user-interface-reference-mysqltosql.md)

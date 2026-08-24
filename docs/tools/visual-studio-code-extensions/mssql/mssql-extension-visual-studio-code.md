@@ -249,7 +249,7 @@ The extension can download and install a required `SqlToolsService` package duri
 - [Customize keyboard shortcuts](mssql-keyboard-shortcuts.md)
 - [GitHub Copilot for MSSQL extension for Visual Studio Code](../github-copilot/overview.md)
 - [Database operations](mssql-database-operations.md)
-- [Schema designer](mssql-schema-designer.md)
+- [Schema Designer](mssql-schema-designer.md)
 - [GitHub Copilot integration in Schema Designer](mssql-schema-designer-copilot.md)
 - [Data API builder](mssql-data-api-builder.md)
 - [SQL Notebooks](mssql-sql-notebooks.md)

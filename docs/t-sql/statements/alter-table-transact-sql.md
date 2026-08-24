@@ -974,6 +974,9 @@ A partitioned table with a clustered columnstore index behaves like a partitione
 
 For `SWITCH` restriction when using replication, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).
 
+> [!TIP]
+> To delete all rows from specific partitions without dropping or switching partitions, use [TRUNCATE TABLE](truncate-table-transact-sql.md) with the `WITH (PARTITIONS (...))` clause instead of `ALTER TABLE`.
+
 Nonclustered columnstore indexes were built in a read-only format before [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and for SQL Database before version V12. You must rebuild nonclustered columnstore indexes to the current format (which is updatable) before any `PARTITION` operations can be run.
 
 **Limitations**
@@ -2538,9 +2541,9 @@ After the split, the `OrdersHistory` table has the following partitions:
 
 ## Related content
 
-- [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)
-- [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
-- [sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+- [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)
+- [sys.sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+- [sys.sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
 - [DROP TABLE (Transact-SQL)](drop-table-transact-sql.md)

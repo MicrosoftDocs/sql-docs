@@ -61,8 +61,7 @@ dev_langs:
  SELECT @g.STNumCurves();
 ```  
   
-## See Also  
- [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
-  
+## Related content
+
+- [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)

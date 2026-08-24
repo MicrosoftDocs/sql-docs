@@ -138,7 +138,7 @@ From this quick analysis, you can see that the risk of fraud increases with both
 
 For more information about the **rxCube** function and crosstabs in general, see [Data summaries using RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Create R models using SQL Server data](../../machine-learning/tutorials/deepdive-create-models.md)

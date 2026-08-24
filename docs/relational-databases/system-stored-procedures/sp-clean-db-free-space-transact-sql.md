@@ -76,4 +76,4 @@ EXECUTE sp_clean_db_free_space @dbname = N'AdventureWorks2022';
 
 ## Related content
 
-- [sp_clean_db_file_free_space (Transact-SQL)](sp-clean-db-file-free-space-transact-sql.md)
+- [sys.sp_clean_db_file_free_space (Transact-SQL)](sp-clean-db-file-free-space-transact-sql.md)

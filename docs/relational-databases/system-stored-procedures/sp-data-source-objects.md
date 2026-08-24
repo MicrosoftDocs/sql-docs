@@ -262,8 +262,8 @@ EXECUTE sp_data_source_objects
 
 ## Related content
 
-- [sp_data_source_columns](sp-data-source-table-columns.md)
+- [sys.sp_data_source_table_columns (Transact-SQL)](sp-data-source-table-columns.md)
 - [CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
-- [Data virtualization with PolyBase in SQL Server](../polybase/overview.md)
+- [PolyBase overview](../polybase/overview.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

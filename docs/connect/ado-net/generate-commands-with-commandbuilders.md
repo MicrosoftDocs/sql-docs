@@ -88,8 +88,8 @@ The following example recreates the table in the dataset. The **RefreshSchema** 
 
 [!code-csharp[SqlCommandBuilder_Create#3](~/../sqlclient/doc/samples/SqlCommandBuilder_Create.cs#3)]
 
-## See also
+## Related content
 
 - [Commands and parameters](commands-parameters.md)
 - [Executing a command](execute-command.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

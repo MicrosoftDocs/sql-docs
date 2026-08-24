@@ -72,8 +72,8 @@ GO
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addrole (Transact-SQL)](sp-addrole-transact-sql.md)
+- [sys.sp_addrole (Transact-SQL)](sp-addrole-transact-sql.md)
 - [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)
 - [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)
-- [sp_dropapprole (Transact-SQL)](sp-dropapprole-transact-sql.md)
+- [sys.sp_dropapprole (Transact-SQL)](sp-dropapprole-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

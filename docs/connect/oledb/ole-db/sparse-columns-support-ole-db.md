@@ -55,8 +55,6 @@ ms.custom:
 |IOpenRowset::OpenRowset|IOpenRowset::OpenRowset returns a rowset with the same columns as ICommand::Execute, with a **select \*** query on the same table.|  
 |ITableDefinition|There is no change to this interface for sparse columns or for **column_set** columns. Applications that have to make schema modifications must execute the appropriate [!INCLUDE[tsql](../../../includes/tsql-md.md)] directly.|  
   
-## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Programming](oledb-driver-for-sql-server-programming.md)

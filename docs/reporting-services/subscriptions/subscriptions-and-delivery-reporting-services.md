@@ -157,7 +157,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Create a data-driven subscription &#40;SSRS tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)
-- [Schedules](../../reporting-services/subscriptions/schedules.md)
-- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
-- [Monitor Reporting Services subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+- [Create a data-driven subscription (SSRS Tutorial)](../create-a-data-driven-subscription-ssrs-tutorial.md)
+- [Schedules in Reporting Services](schedules.md)
+- [Reporting Services report server (native mode)](../report-server/reporting-services-report-server-native-mode.md)
+- [Monitor Reporting Services subscriptions](monitor-reporting-services-subscriptions.md)

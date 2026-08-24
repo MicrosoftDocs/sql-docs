@@ -67,8 +67,8 @@ To uninstall a Cumulative Update on Linux, you must roll back the package to the
 
 If the removal process fails, review the [SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) to determine the root cause.
 
-## Next steps
+## Related content
 
-- [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
+- [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Uninstall an existing instance of SQL Server (Setup)](uninstall-an-existing-instance-of-sql-server-setup.md)
 - [Uninstall SQL Server](uninstall-sql-server.md)

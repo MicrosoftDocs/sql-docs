@@ -33,4 +33,4 @@ f1_keywords:
   
 ## Related content
 
-- [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)
+- [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md)

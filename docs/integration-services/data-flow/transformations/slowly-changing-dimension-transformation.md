@@ -98,8 +98,7 @@ helpviewer_keywords:
 ## Related Tasks  
  [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Related Content  
-  
--   [Handling Slowly Changing Dimensions in SSIS](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)
--   [Optimizing the Slowly Changing Dimension Wizard](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)
-  
+## Related content
+
+- [Handling Slowly Changing Dimensions in SSIS](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)
+- [Optimizing the Slowly Changing Dimension Wizard](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)

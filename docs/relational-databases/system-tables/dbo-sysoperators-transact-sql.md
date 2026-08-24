@@ -45,7 +45,6 @@ dev_langs:
 |**last_netsend_time**|**int**|Time that the most recent network message was last sent to the specified operator ID.|  
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
-## See Also  
- [SQL Server Agent Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [SQL Server Agent tables (Transact-SQL)](sql-server-agent-tables-transact-sql.md)

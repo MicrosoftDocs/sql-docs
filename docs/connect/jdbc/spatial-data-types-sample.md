@@ -89,6 +89,6 @@ public class SpatialDataTypes {
 }
 ```
 
-## See also
+## Related content
 
-[Working with JDBC data types](working-with-data-types-jdbc.md)
+- [Working with data types (JDBC)](working-with-data-types-jdbc.md)

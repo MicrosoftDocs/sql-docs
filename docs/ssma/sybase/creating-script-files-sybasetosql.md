@@ -390,9 +390,6 @@ Complete list of script-commands can be found in [Executing the SSMA Console &#4
 ## Script File Validation  
 The user can easily validate their script file against the schema definition file **'S2SSConsoleScriptSchema.xsd'** available in the 'Schemas' folder  
   
-## Next Step  
-The next step in operating the console is [Creating Variable Value Files &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
-  
-## See Also  
-[Creating Variable Value Files &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
-  
+## Related content
+
+- [Creating Variable Value Files](creating-variable-value-files-sybasetosql.md)

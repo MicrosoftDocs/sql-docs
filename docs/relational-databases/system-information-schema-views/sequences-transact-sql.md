@@ -56,6 +56,5 @@ SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 
 ## Related content
 
-- [System Information Schema Views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
 - [sys.sequences (Transact-SQL)](../system-catalog-views/sys-sequences-transact-sql.md)
-

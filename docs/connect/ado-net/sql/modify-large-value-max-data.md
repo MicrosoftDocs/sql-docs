@@ -199,6 +199,7 @@ The ADO.NET code creates <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref
   
 [!code-csharp[DataWorks SqlParameter_Value#1](~/../sqlclient/doc/samples/SqlParameter_Value.cs#1)]
   
-## Next steps
+## Related content
+
 - [SQL Server binary and large-value data](sql-server-binary-large-value-data.md)
 - [SQL Server data operations in ADO.NET](sql-server-data-operations.md)

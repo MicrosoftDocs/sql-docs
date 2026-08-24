@@ -25,12 +25,11 @@ For detailed information about how to back up and restore a database, see:
 - [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [Restore a database to Azure SQL Managed Instance with SSMS](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)
 
-## Next steps
-- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) 
+## Related content
 
-## See also
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](always-encrypted-database-engine.md)
 - [Export and import databases using Always Encrypted](always-encrypted-migrate-using-bacpac.md)
 - [Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
 - [Bulk load encrypted data to columns using Always Encrypted](migrate-sensitive-data-protected-by-always-encrypted.md)
+- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)

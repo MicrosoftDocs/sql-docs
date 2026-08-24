@@ -130,14 +130,14 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
 | ---------|--------- |
 | bcddef | ddddef |
 
-## See also
+## Related content
 
-- [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
-- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
-- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
-- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
-- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
-- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
-- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
-- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
-- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+- [CONCAT (Transact-SQL)](concat-transact-sql.md)
+- [CONCAT_WS (Transact-SQL)](concat-ws-transact-sql.md)
+- [FORMATMESSAGE (Transact-SQL)](formatmessage-transact-sql.md)
+- [QUOTENAME (Transact-SQL)](quotename-transact-sql.md)
+- [REPLACE (Transact-SQL)](replace-transact-sql.md)
+- [REVERSE (Transact-SQL)](reverse-transact-sql.md)
+- [STRING_AGG (Transact-SQL)](string-agg-transact-sql.md)
+- [STRING_ESCAPE (Transact-SQL)](string-escape-transact-sql.md)
+- [STUFF (Transact-SQL)](stuff-transact-sql.md)

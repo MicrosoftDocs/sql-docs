@@ -52,7 +52,8 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 SELECT * FROM sys.dm_exec_query_parallel_workers;  
 ```  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_workers &#40;Transact-SQL&#41;](sys-dm-os-workers-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_os_workers (Transact-SQL)](sys-dm-os-workers-transact-sql.md)

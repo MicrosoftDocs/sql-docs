@@ -67,7 +67,6 @@ Now assume that the `Name` column is of **text** type. The AUTO mode heuristics 
 </T1>
 ```
 
-## See also
+## Related content
 
-- [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)
-
+- [Use AUTO mode with FOR XML](use-auto-mode-with-for-xml.md)

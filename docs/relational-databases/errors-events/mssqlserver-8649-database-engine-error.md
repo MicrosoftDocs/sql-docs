@@ -30,6 +30,6 @@ The query was canceled because the estimated cost of this query exceeds the conf
 ## User Action  
 Set the QUERY_GOVERNOR_COST_LIMIT option to a higher value.  
   
-## See Also  
-[SET QUERY_GOVERNOR_COST_LIMIT &#40;Transact-SQL&#41;](~/t-sql/statements/set-query-governor-cost-limit-transact-sql.md)  
-  
+## Related content
+
+- [SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)

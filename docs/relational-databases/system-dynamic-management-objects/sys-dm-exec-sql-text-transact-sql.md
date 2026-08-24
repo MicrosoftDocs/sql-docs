@@ -175,13 +175,14 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## See also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](sys-dm-exec-query-stats-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_cursors &#40;Transact-SQL&#41;](sys-dm-exec-cursors-transact-sql.md)   
- [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](sys-dm-exec-xml-handles-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](sys-dm-exec-query-memory-grants-transact-sql.md)   
- [Using APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   
- [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](sys-dm-exec-text-query-plan-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_exec_query_stats (Transact-SQL)](sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_requests (Transact-SQL)](sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_cursors (Transact-SQL)](sys-dm-exec-cursors-transact-sql.md)
+- [sys.dm_exec_xml_handles (Transact-SQL)](sys-dm-exec-xml-handles-transact-sql.md)
+- [sys.dm_exec_query_memory_grants (Transact-SQL)](sys-dm-exec-query-memory-grants-transact-sql.md)
+- [Using APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)
+- [sys.dm_exec_text_query_plan (Transact-SQL)](sys-dm-exec-text-query-plan-transact-sql.md)

@@ -119,9 +119,9 @@ Note that the parameter values passed to the WHERE clause of the UPDATE command 
 
 [!code-csharp[SqlDataAdapter_Concurrency#1](~/../sqlclient/doc/samples/SqlDataAdapter_Concurrency.cs#1)]
 
-## See also
+## Related content
 
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
-- [Updating Data Sources with DataAdapters](update-data-sources-with-dataadapters.md)
+- [Update data sources with DataAdapters](update-data-sources-with-dataadapters.md)
 - [Transactions and concurrency](transactions-and-concurrency.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

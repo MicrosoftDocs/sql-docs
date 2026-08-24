@@ -63,9 +63,9 @@ The following table shows the inferred .NET Framework type, the <xref:System.Dat
 
 For more information about SQL Server data types, see [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).
 
-## See also
+## Related content
 
-- [SQL Server data types and ADO.NET](./sql/sql-server-data-types.md)
-- [SQL Server binary and large-value data](./sql/sql-server-binary-large-value-data.md)
+- [SQL Server data types and ADO.NET](sql/sql-server-data-types.md)
+- [SQL Server binary and large-value data](sql/sql-server-binary-large-value-data.md)
 - [Configuring parameters](configure-parameters.md)
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)

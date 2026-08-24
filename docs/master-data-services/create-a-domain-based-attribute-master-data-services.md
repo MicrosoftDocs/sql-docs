@@ -94,8 +94,9 @@ helpviewer_keywords:
 
 13. Click **Save**.
 
-## See Also
- [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md) 
- [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md) 
- [Change an Attribute Name and Data Type &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md) 
- [Delete an Attribute &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)
+## Related content
+
+- [Domain-Based Attributes (Master Data Services)](domain-based-attributes-master-data-services.md)
+- [Create a Derived Hierarchy (Master Data Services)](create-a-derived-hierarchy-master-data-services.md)
+- [Change an Attribute Name and Data Type (Master Data Services)](change-an-attribute-name-and-data-type-master-data-services.md)
+- [Delete an Attribute (Master Data Services)](delete-an-attribute-master-data-services.md)

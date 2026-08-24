@@ -200,5 +200,5 @@ WITH (
 
 - [[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
 - [DROP WORKLOAD CLASSIFIER (Transact-SQL)](drop-workload-classifier-transact-sql.md)
-- [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
-- [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)
+- [sys.workload_management_workload_classifiers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
+- [sys.workload_management_workload_classifier_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)

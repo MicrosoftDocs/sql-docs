@@ -141,5 +141,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)
-- [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)
+- [Parameterized Filters - Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)
+- [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)

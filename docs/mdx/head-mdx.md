@@ -46,11 +46,10 @@ Head
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Tail &#40;MDX&#41;](../mdx/tail-mdx.md)   
- [Item &#40;Tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
- [Item &#40;Member&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
- [Rank &#40;MDX&#41;](../mdx/rank-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Tail (MDX)](tail-mdx.md)
+- [Item (Tuple) (MDX)](item-tuple-mdx.md)
+- [Item (Member) (MDX)](item-member-mdx.md)
+- [Rank (MDX)](rank-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

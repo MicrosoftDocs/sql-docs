@@ -533,5 +533,5 @@ The choice between `geography` and `geometry` determines how Microsoft SQL calcu
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
-- [Microsoft SQL spatial documentation](../../../relational-databases/spatial/spatial-data-sql-server.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Spatial Data](../../../relational-databases/spatial/spatial-data-sql-server.md)

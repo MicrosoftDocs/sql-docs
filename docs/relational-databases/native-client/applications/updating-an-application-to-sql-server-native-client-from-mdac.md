@@ -113,4 +113,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)
+- [Building Applications with SQL Server Native Client](building-applications-with-sql-server-native-client.md)

@@ -48,7 +48,5 @@ Returns one row for each endpoint in the server that carries a SOAP-type payload
 
 ## Related content
 
-- [Endpoints Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
-  
+- [Endpoints Catalog Views (Transact-SQL)](endpoints-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)

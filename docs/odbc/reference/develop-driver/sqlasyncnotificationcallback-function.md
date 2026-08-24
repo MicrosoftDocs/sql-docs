@@ -50,5 +50,6 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 |Connection or statement did not request notification.||  
 |Invalid *handle*|The driver passed in an invalid handle, which failed the internal Driver Manager validation tests.|  
   
-## See Also  
- [Asynchronous Execution (Polling Method)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+## Related content
+
+- [Asynchronous Execution (Polling Method)](../develop-app/asynchronous-execution-polling-method.md)

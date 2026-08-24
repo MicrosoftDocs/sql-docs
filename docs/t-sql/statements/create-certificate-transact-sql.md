@@ -268,15 +268,14 @@ CREATE CERTIFICATE Shipping04
 	);  
 ```
   
-## See Also  
- [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
- [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)   
- [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
- [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
- [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER CERTIFICATE (Transact-SQL)](alter-certificate-transact-sql.md)
+- [DROP CERTIFICATE (Transact-SQL)](drop-certificate-transact-sql.md)
+- [BACKUP CERTIFICATE (Transact-SQL)](backup-certificate-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [CERTENCODED (Transact-SQL)](../functions/certencoded-transact-sql.md)
+- [CERTPRIVATEKEY (Transact-SQL)](../functions/certprivatekey-transact-sql.md)
+- [CERT_ID (Transact-SQL)](../functions/cert-id-transact-sql.md)
+- [CERTPROPERTY (Transact-SQL)](../functions/certproperty-transact-sql.md)

@@ -28,4 +28,4 @@ Quick view of the SQL Server Migration Assistant (SSMA) Console command line opt
 
 ## Related content
 
-- [Execute the SSMA console (Db2ToSQL)](executing-the-ssma-console-db2tosql.md)
+- [Execute the SSMA console](executing-the-ssma-console-db2tosql.md)

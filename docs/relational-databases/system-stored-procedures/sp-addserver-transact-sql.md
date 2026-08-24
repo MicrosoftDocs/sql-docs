@@ -88,9 +88,9 @@ EXECUTE sp_addserver 'ACCOUNTS', 'local';
 ## Related content
 
 - [Rename a computer that hosts a stand-alone instance of SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)
-- [sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)
-- [sp_dropserver (Transact-SQL)](sp-dropserver-transact-sql.md)
-- [sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
+- [sys.sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)
+- [sys.sp_dropserver (Transact-SQL)](sp-dropserver-transact-sql.md)
+- [sys.sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [Connect to the Database Engine](../../sql-server/connect-to-database-engine.md)

@@ -62,7 +62,7 @@ When integrating deployment contributors with **SqlPackage** in automation pipel
 
 ## Related content
 
-- [Extending the Database Features](../../../ssdt/extending-the-database-features.md)
+- [Extending the database features](../../../ssdt/extending-the-database-features.md)
 - [Tutorial: Create and deploy a SQL project](../tutorials/create-deploy-sql-project.md)
 - [SqlPackage Publish parameters, properties, and SQLCMD variables](../../sqlpackage/sqlpackage-publish.md)
 - [Code analysis rules extensibility overview](code-analysis-extensibility.md)

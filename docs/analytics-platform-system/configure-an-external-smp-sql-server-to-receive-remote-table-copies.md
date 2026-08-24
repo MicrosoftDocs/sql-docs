@@ -57,6 +57,6 @@ When configuring the SMP SQL Server to receive remote table copies, use the foll
   
 ## Related content
 
-- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)  
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)
 - [Microsoft Analytics Platform System](home-analytics-platform-system-aps-pdw.md)
 - [What's new in Analytics Platform System, a scale-out MPP data warehouse](whats-new-analytics-platform-system.md)

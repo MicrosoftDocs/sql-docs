@@ -84,5 +84,5 @@ Members of the **sysadmin** fixed server role can execute `sp_helpreplicationdbo
 
 ## Related content
 
-- [sp_replicationdboption (Transact-SQL)](sp-replicationdboption-transact-sql.md)
+- [sys.sp_replicationdboption (Transact-SQL)](sp-replicationdboption-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

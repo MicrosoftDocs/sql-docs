@@ -30,5 +30,6 @@ Topics covered in this section include:
 |[Generating Reports &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|Lists the commands to generate reports.|  
 |[Troubleshooting &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Provides brief information about fixing migration issues.|  
   
-## See Also  
-[Getting Started with SSMA for Sybase Console(SybaseToSQL)](./getting-started-with-ssma-for-sybase-console-sybasetosql.md)  
+## Related content
+
+- [Getting Started with the SSMA for Sybase Console](getting-started-with-ssma-for-sybase-console-sybasetosql.md)

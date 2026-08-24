@@ -32,7 +32,6 @@ A query plan is not available in the plan cache for the statement with the speci
 ## User Action  
 Make sure that all necessary database objects exist, and execute the statement before creating the plan guide.  
   
-## See Also  
-[sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
-  
+## Related content
 
+- [sys.sp_create_plan_guide_from_handle (Transact-SQL)](../system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)

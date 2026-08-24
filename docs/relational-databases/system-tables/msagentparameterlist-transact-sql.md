@@ -33,6 +33,6 @@ The **MSagentparameterlist** table contains replication agent parameter informat
   
 ## Related content
 
-- [sp_change_agent_parameter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)
-- [Replication Tables (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)
-- [Replication Views (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [sys.sp_change_agent_parameter (Transact-SQL)](../system-stored-procedures/sp-change-agent-parameter-transact-sql.md)
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

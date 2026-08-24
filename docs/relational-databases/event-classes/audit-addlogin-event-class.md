@@ -50,12 +50,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
 |**XactSequence**|**bigint**|Token used to describe the current transaction.|50|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Audit Login Change Property Event Class](../../relational-databases/event-classes/audit-login-change-property-event-class.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [Audit Server Principal Management Event Class](../../relational-databases/event-classes/audit-server-principal-management-event-class.md)  
-  
-  
+## Related content
+
+- [Extended Events overview](../extended-events/extended-events.md)
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [Audit Login Change Property Event Class](audit-login-change-property-event-class.md)
+- [sys.sp_addlogin (Transact-SQL)](../system-stored-procedures/sp-addlogin-transact-sql.md)
+- [sys.sp_droplogin (Transact-SQL)](../system-stored-procedures/sp-droplogin-transact-sql.md)
+- [Audit Server Principal Management Event Class](audit-server-principal-management-event-class.md)

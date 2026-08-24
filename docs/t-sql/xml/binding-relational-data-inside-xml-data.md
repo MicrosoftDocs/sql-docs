@@ -52,7 +52,6 @@ WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1
   
 **sql:column()** can be used in a similar manner and provides additional benefits. Indexes over the column may be used for efficiency, as decided by the cost-based query optimizer. Also, the computed column may store a promoted property.
   
-## See Also
+## Related content
 
-- [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)
-
+- [xml Data Type Methods](xml-data-type-methods.md)

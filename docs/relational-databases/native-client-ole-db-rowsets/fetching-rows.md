@@ -56,7 +56,6 @@ helpviewer_keywords:
   
 -   [Next Fetch Position](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
-## See Also  
- [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
-  
-  
+## Related content
+
+- [Rowsets (Native Client OLE DB provider)](rowsets.md)

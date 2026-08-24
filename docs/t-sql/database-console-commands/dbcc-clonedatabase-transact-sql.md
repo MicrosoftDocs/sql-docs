@@ -295,7 +295,7 @@ DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone) WITH VERIFY_CLONED
 GO
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
 - [How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server](/troubleshoot/sql/database-engine/performance/stats-only-db-script)

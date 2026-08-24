@@ -59,6 +59,6 @@ The word "ran" in the document matches the search condition because of stemming.
 
 When XML is decomposed into relational columns by using AXSD that are full-text indexed, XPath queries that occur over the XML view don't perform full-text search on the underlying tables.
 
-## See also
+## Related content
 
-- [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)
+- [XML indexes (SQL Server)](xml-indexes-sql-server.md)

@@ -80,6 +80,6 @@ private void Page_Load(object sender, System.EventArgs e)
   
 ## Related content
 
-- [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Building Applications Using the Web Service and the .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
 - [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-- [Using the SOAP API in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)
+- [Integrate Reporting Services by using SOAP - Windows application](integrating-reporting-services-using-soap-windows-application.md)

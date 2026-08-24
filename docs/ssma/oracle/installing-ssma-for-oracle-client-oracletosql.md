@@ -60,5 +60,5 @@ In addition to the SSMA program files, you must also install the SSMA for Oracle
 
 ## Related content
 
-- [Installing SSMA Components on SQL Server](installing-ssma-components-on-sql-server-oracletosql.md)
-- [Migrating Oracle Databases to SQL Server](migrating-oracle-databases-to-sql-server-oracletosql.md)
+- [Install SSMA components on SQL Server](installing-ssma-components-on-sql-server-oracletosql.md)
+- [Migrate Oracle Databases to SQL Server](migrating-oracle-databases-to-sql-server-oracletosql.md)

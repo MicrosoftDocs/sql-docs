@@ -27,6 +27,6 @@ Transaction processing is a mandatory requirement of all applications that must 
 |[Using savepoints](using-savepoints.md)|Describes how to use the JDBC driver with transaction savepoints.|
 |[Using holdability](using-holdability.md)|Describes how to use the JDBC driver with result set holdability.|
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

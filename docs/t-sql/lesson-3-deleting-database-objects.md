@@ -98,8 +98,8 @@ You can't remove the `TestData` database while you are in the database; therefor
 
 This concludes the Writing [!INCLUDE[tsql](../includes/tsql-md.md)] Statements tutorial. Remember, this tutorial is a brief overview and it doesn't describe all the options to the statements that are used. Designing and creating an efficient database structure and configuring secure access to the data requires a more complex database than that shown in this tutorial.
 
-## Next steps
+## Related content
 
-- [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md)
-- [sp_configure (Transact-SQL)](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [Back up and restore of SQL Server databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Maintenance plans](../relational-databases/maintenance-plans/maintenance-plans.md)
+- [sys.sp_configure (Transact-SQL)](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

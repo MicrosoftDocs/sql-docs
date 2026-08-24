@@ -131,7 +131,7 @@ To add the computed values to a table that can be used for training the model, y
   
    As you can see, the distance reported by the meter doesn't always correspond to geographical distance. This is why feature engineering is so important. You can use these improved data features to train a machine learning model using R.
 
-## Next steps
+## Next step
 
 In this article, you:
 

@@ -202,12 +202,11 @@ DROP TABLE dbo.t1;
   
 ## Related content
 
-- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
-- [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)
-- [= (Equals) (Transact-SQL)](../../t-sql/language-elements/equals-transact-sql.md)
-- [IF...ELSE (Transact-SQL)](../../t-sql/language-elements/if-else-transact-sql.md)
-- [&#60;&#62; (Not Equal To) (Transact-SQL)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-- [SET ANSI_DEFAULTS (Transact-SQL)](../../t-sql/statements/set-ansi-defaults-transact-sql.md)
-- [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)
-- [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md)
-
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SESSIONPROPERTY (Transact-SQL)](../functions/sessionproperty-transact-sql.md)
+- [= (Equals) (Transact-SQL)](../language-elements/equals-transact-sql.md)
+- [IF...ELSE (Transact-SQL)](../language-elements/if-else-transact-sql.md)
+- [Not equal to (Transact-SQL) - traditional](../language-elements/not-equal-to-transact-sql-traditional.md)
+- [SET ANSI_DEFAULTS (Transact-SQL)](set-ansi-defaults-transact-sql.md)
+- [WHERE (Transact-SQL)](../queries/where-transact-sql.md)
+- [WHILE (Transact-SQL)](../language-elements/while-transact-sql.md)

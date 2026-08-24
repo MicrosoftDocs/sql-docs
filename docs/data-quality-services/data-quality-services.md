@@ -39,9 +39,9 @@ ms.custom:
   
  ![Small File Folder Icon](/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS Security](../data-quality-services/dqs-security.md)  
   
-## See Also  
- [Introduction to Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
- [Data Quality Services Concepts](../data-quality-services/data-quality-services-concepts.md)   
- [DQS Resources](../sql-server/index.yml)   
- [SQL Server Resource Center](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110))  
-  
+## Related content
+
+- [Introduction to Data Quality Services](introduction-to-data-quality-services.md)
+- [Data Quality Services Concepts](data-quality-services-concepts.md)
+- [DQS Resources](../sql-server/index.yml)
+- [SQL Server Resource Center](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110))

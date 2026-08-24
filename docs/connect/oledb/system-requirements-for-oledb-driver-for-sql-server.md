@@ -79,7 +79,7 @@ IDBInfo::GetKeywords always returns a keyword list that corresponds to the serve
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |time|varchar|time|time|Varchar|  
 
-## See also  
+## Related content
 
-[OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)  
-[Installing OLE DB Driver for SQL Server](../oledb/applications/installing-oledb-driver-for-sql-server.md)  
+- [Microsoft OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)
+- [Installing OLE DB Driver for SQL Server](applications/installing-oledb-driver-for-sql-server.md)

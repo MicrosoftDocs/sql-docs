@@ -77,6 +77,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
-## See Also  
- [Fetching BLOB Data Using IRow](./fetching-a-single-row-with-irow.md)  
-  
+## Related content
+
+- [Fetching a Single Row with IRow (Native Client OLE DB Provider)](fetching-a-single-row-with-irow.md)

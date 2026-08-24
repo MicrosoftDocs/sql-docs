@@ -27,9 +27,7 @@ ms.topic: troubleshooting-general
   
 -   **Activity - All Executions Report** - This report displays a summary of all [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] executions that have been performed on the server. The summary displays information for each execution such as status, start time, and end time. Each summary entry includes links to more information about the execution including messages generated during execution and performance data. As with the Integration Services Dashboard, you can apply a filter to the table to narrow down the information displayed.  
   
-## Related Content  
- [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)  
-  
- [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
-  
+## Related content
+
+- [Reports for the Integration Services Server](../performance/monitor-running-packages-and-other-operations.md#reports)
+- [Troubleshooting Tools for Package Execution](troubleshooting-tools-for-package-execution.md)

@@ -303,7 +303,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 ## Related content
 
 - [Deprecated Database Engine features in SQL Server 2025 (17.x)](../../database-engine/deprecated-database-engine-features-in-sql-server-2025.md)
-- [Deprecated Full-Text Search features in SQL Server](../search/deprecated-full-text-search-features-in-sql-server.md)
+- [Deprecated Full-Text Search features](../search/deprecated-full-text-search-features-in-sql-server.md)
 - [Deprecation Announcement Event Class](../event-classes/deprecation-announcement-event-class.md)
 - [Deprecation Final Support Event Class](../event-classes/deprecation-final-support-event-class.md)
 - [Discontinued Database Engine functionality in SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)

@@ -51,8 +51,7 @@ SET @g = geometry::Parse('LINESTRING (100 100, 20 180, 180 180)');
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [STGeomFromText](../../t-sql/spatial-geometry/parse-geometry-data-type.md)   
- [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [Parse (geometry Data Type)](parse-geometry-data-type.md)
+- [Extended Static Geometry Methods](extended-static-geometry-methods.md)

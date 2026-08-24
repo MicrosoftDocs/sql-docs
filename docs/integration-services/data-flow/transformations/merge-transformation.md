@@ -79,9 +79,9 @@ helpviewer_keywords:
  **Merge Input 2**  
  Select the column to merge as Merge Input 2.  
   
-## See Also  
- [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Merge Join Transformation](merge-join-transformation.md)
+- [Union All Transformation](union-all-transformation.md)
+- [Data Flow](../data-flow.md)
+- [Integration Services Transformations](integration-services-transformations.md)

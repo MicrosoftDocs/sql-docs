@@ -48,9 +48,8 @@ helpviewer_keywords:
   
  For information about the placement of each operator in the precedence hierarchy, see [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md).  
   
-## See Also  
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)   
- [Examples of Advanced Integration Services Expressions](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)  
-  
-  
+## Related content
+
+- [Functions (SSIS Expression)](functions-ssis-expression.md)
+- [Examples of Advanced Integration Services Expressions](examples-of-advanced-integration-services-expressions.md)
+- [Integration Services (SSIS) Expressions](integration-services-ssis-expressions.md)

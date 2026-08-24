@@ -29,5 +29,6 @@ Driver aware connection pooling is a new feature of the Driver Manager in Window
 ## How to Enable Driver-Aware Connection Pooling  
  An application can use a driver's connection-pooling awareness by setting the SQL_ATTR_CONNECTION_POOLING attribute to SQL_CP_DRIVER_AWARE with [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). If a driver does not support connection-pool awareness, Driver Manager connection pooling will be used (same as if SQL_CP_ONE_PER_HENV had been specified, instead of SQL_CP_DRIVER_AWARE). ODBC 2.x and 3.x applications can enable this feature.  
   
-## See Also  
- [Developing an ODBC Driver](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
+## Related content
+
+- [Developing an ODBC Driver](../develop-driver/developing-an-odbc-driver.md)

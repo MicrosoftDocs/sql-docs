@@ -117,7 +117,7 @@ Use Visual Studio Code to establish a connection to your server.
 
 1. Follow the prompts to specify the new profile's connection properties. After specifying each value, press **Enter** to continue.
 
-   | Property       | Suggested value | Description  |
+   | Property       | Suggested value | Description  |
    | --- | --- | --- |
    | **Server name** | The fully qualified server name | Something like: `<Contoso-server-name>.database.windows.net`. |
    | **Database name** | mySampleDatabase | The database to connect to. |

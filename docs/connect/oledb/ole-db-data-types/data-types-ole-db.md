@@ -31,8 +31,6 @@ helpviewer_keywords:
   
 -   [SSVARIANT Structure](../../oledb/ole-db-data-types/ssvariant-structure.md)  
   
-## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)

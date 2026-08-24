@@ -41,11 +41,11 @@ Principals must have the **VIEW SERVER SECURITY STATE** permission.
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).
 
-## See also
+## Related content
 
 - [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)
-- [ALTER SERVER AUDIT  (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)
-- [DROP SERVER AUDIT  (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)
+- [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)
+- [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)
 - [CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-server-audit-specification-transact-sql.md)
 - [ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)
 - [DROP SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)
@@ -53,9 +53,6 @@ Principals must have the **VIEW SERVER SECURITY STATE** permission.
 - [ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)
 - [DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)
 - [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)
-
-## Next steps
-
 - [sys.fn_get_audit_file (Transact-SQL)](../system-functions/sys-fn-get-audit-file-transact-sql.md)
 - [sys.server_audits (Transact-SQL)](../system-catalog-views/sys-server-audits-transact-sql.md)
 - [sys.server_file_audits (Transact-SQL)](../system-catalog-views/sys-server-file-audits-transact-sql.md)
@@ -63,7 +60,7 @@ Principals must have the **VIEW SERVER SECURITY STATE** permission.
 - [sys.server_audit_specification_details (Transact-SQL)](../system-catalog-views/sys-server-audit-specification-details-transact-sql.md)
 - [sys.database_audit_specifications (Transact-SQL)](../system-catalog-views/sys-database-audit-specifications-transact-sql.md)
 - [sys.database_audit_specification_details (Transact-SQL)](../system-catalog-views/sys-database-audit-specification-details-transact-sql.md)
-- [sys.dm_server_audit_status](sys-dm-server-audit-status-transact-sql.md)
+- [sys.dm_server_audit_status (Transact-SQL)](sys-dm-server-audit-status-transact-sql.md)
 - [sys.dm_audit_actions (Transact-SQL)](sys-dm-audit-actions-transact-sql.md)
 - [sys.dm_audit_class_type_map (Transact-SQL)](sys-dm-audit-class-type-map-transact-sql.md)
 - [Create a Server Audit and Server Audit Specification](../security/auditing/create-a-server-audit-and-server-audit-specification.md)

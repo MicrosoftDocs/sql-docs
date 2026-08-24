@@ -105,9 +105,5 @@ GO
   
 ## Related content
 
-- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-- [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
-   
-  
-
-
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [FORMAT (Transact-SQL)](format-transact-sql.md)

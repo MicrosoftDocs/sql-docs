@@ -277,7 +277,6 @@ Consider the following limitations when you migrate your SQL Server databases to
 
 ## Related content
 
-- [SQL Server migration in Azure Arc](migration-overview.md)
-- [SQL Server enabled by Azure Arc overview](overview.md)   
+- [SQL Server migration in Azure Arc Overview](migration-overview.md)
+- [SQL Server enabled by Azure Arc](overview.md)
 - [Migration experience feedback directly to the product group](https://aka.ms/arc-migrations-feedback)
-

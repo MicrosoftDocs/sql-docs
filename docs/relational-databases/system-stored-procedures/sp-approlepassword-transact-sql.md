@@ -73,6 +73,6 @@ EXECUTE sp_approlepassword 'PayrollAppRole', 'B3r12-36';
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [Application Roles](../security/authentication-access/application-roles.md)
-- [sp_addapprole (Transact-SQL)](sp-addapprole-transact-sql.md)
-- [sp_setapprole (Transact-SQL)](sp-setapprole-transact-sql.md)
+- [sys.sp_addapprole (Transact-SQL)](sp-addapprole-transact-sql.md)
+- [sys.sp_setapprole (Transact-SQL)](sp-setapprole-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

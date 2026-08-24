@@ -27,6 +27,6 @@ The articles in this section describe some common security concerns including co
 | [Using encryption](using-ssl-encryption.md) | Describes how to establish a secure communication channel with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). |
 | [FIPS mode](fips-mode.md) | Describes how to use JDBC driver in FIPS-compliant mode. |
   
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

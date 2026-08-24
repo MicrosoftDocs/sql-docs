@@ -44,5 +44,5 @@ The following table lists the SSMA dialog boxes:
 
 ## Related content
 
-- [Get Started with SSMA for Db2 (Db2ToSQL)](getting-started-with-ssma-for-db2-db2tosql.md)
-- [Migrate Db2 Databases to SQL Server (Db2ToSQL)](migrating-db2-databases-to-sql-server-db2tosql.md)
+- [Get started with SSMA for Db2](getting-started-with-ssma-for-db2-db2tosql.md)
+- [Migrate Db2 databases to SQL Server](migrating-db2-databases-to-sql-server-db2tosql.md)

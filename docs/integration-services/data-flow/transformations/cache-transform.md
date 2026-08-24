@@ -65,7 +65,7 @@ helpviewer_keywords:
  **Edit**  
  Modify an existing connection.  
   
-## See Also  
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Data Flow](../../../integration-services/data-flow/data-flow.md)  
-  
+## Related content
+
+- [Integration Services Transformations](integration-services-transformations.md)
+- [Data Flow](../data-flow.md)

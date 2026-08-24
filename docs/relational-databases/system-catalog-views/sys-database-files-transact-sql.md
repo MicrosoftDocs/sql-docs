@@ -89,8 +89,7 @@ Find example queries using [!INCLUDE [ssSDS_md](../../includes/sssds-md.md)], in
 - [File States](../databases/file-states.md)
 - [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)
 - [sys.master_files (Transact-SQL)](sys-master-files-transact-sql.md)
-- [Database Files and Filegroups](../databases/database-files-and-filegroups.md)
+- [Database files and filegroups](../databases/database-files-and-filegroups.md)
 - [sys.data_spaces (Transact-SQL)](sys-data-spaces-transact-sql.md)
 - [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage)
 - [Manage file space for databases in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/file-space-manage)
-

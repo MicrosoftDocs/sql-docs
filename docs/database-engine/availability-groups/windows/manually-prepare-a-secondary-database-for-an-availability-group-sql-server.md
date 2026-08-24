@@ -258,14 +258,16 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
   
 ```  
-  
-##  <a name="FollowUp"></a> Next steps  
- To complete configuration of the secondary database, join the newly restored database to the availability group. For more information, see [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
-  
-## See also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE Arguments &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)   
- [Troubleshoot a Failed Add-File Operation &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
-  
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Join a secondary database to an Always On availability group](join-a-secondary-database-to-an-availability-group-sql-server.md)
+
+## Related content
+
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)
+- [RESTORE Statements - Arguments (Transact-SQL)](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../../t-sql/statements/restore-statements-transact-sql.md)
+- [Troubleshoot a failed add-file operation (Always On availability groups)](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)

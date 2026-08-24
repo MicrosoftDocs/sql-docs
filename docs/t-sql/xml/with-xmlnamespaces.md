@@ -95,8 +95,6 @@ DEFAULT <xml_namespace_uri>
 ## Examples  
  For examples, see [Add Namespaces to Queries with WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## See Also  
- [XQuery Language Reference &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
-  
-  
+## Related content
 
+- [XQuery Language Reference (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)

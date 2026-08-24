@@ -80,15 +80,10 @@ Metadata about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databas
 
 3. Right-click **Databases**, or the individual database or database schema, and then select **Synchronize with Database**.
 
-## Next Step
+## Related content
 
-The next step in the migration depends on your project needs:
-
-- To customize the mapping between MySQL schemas and SQL Server databases and schemas, see [Mapping MySQL Databases to SQL Server Schemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md).
-- To customize configuration options for the projects, see [Setting Project Options &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md).
-- To customize the mapping of source and target data types, see [Mapping MySQL and SQL Server Data Types &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md).
-- If you do not have to perform any of these tasks, you can convert the MySQL database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object definitions. For more information, see [Converting MySQL Databases &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md).
-
-## See Also
-
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Mapping MySQL Databases to SQL Server Schemas](mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)
+- [Setting Project Options](setting-project-options-mysqltosql.md)
+- [Mapping MySQL and SQL Server Data Types](mapping-mysql-and-sql-server-data-types-mysqltosql.md)
+- [Convert MySQL Databases](converting-mysql-databases-mysqltosql.md)

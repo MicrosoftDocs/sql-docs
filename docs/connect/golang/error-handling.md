@@ -497,7 +497,7 @@ Using `%w` preserves the error chain so callers can still use `errors.As` and `e
 
 ## Related content
 
-- [Transactions](transactions.md)
-- [Connection pooling](connection-pooling.md)
-- [Troubleshooting](troubleshooting.md)
-- [Performance tuning](performance-tuning.md)
+- [Transactions with go-mssqldb](transactions.md)
+- [Connection pooling with go-mssqldb](connection-pooling.md)
+- [Troubleshoot the go-mssqldb driver](troubleshooting.md)
+- [Performance tuning with go-mssqldb](performance-tuning.md)

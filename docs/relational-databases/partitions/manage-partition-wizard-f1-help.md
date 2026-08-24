@@ -293,6 +293,6 @@ helpviewer_keywords:
   
  ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
-## See Also  
- [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-  
+## Related content
+
+- [Partitioned tables and indexes](partitioned-tables-and-indexes.md)

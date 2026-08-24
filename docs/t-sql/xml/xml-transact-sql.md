@@ -62,10 +62,9 @@ SELECT @DemographicData;
 GO  
 ```  
   
-## See Also
+## Related content
 
-- [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)
-- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
-- [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)
-- [XQuery Language Reference &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)
-
+- [Data type conversion (Database Engine)](../data-types/data-type-conversion-database-engine.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [xml Data Type Methods](xml-data-type-methods.md)
+- [XQuery Language Reference (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)

@@ -83,5 +83,5 @@ The **[update_time]** column shows the last time the component was polled by the
   
 ## Related content
 
-- [Appliance Monitoring](appliance-monitoring.md)  
+- [Appliance monitoring for Analytics Platform System](appliance-monitoring.md)
 - [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

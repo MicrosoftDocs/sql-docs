@@ -176,7 +176,7 @@ The following example shows the definition of an event trace for the BXLServer e
 + Place the *.xml* file in the same directory as the BXLServer executable.
 + This file must be named `bxlserver.xevents.xml`.
 
-## Next steps
+## Related content
 
-- [Monitor Python and R script execution using custom reports in SQL Server Management Studio](../../machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
-- [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](../../machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
+- [Monitor Python and R script execution using custom reports in SQL Server Management Studio](monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

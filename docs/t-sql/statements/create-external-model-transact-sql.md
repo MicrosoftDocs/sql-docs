@@ -527,7 +527,7 @@ Finally, delete the `C:/onnx_runtime` directory.
 - [DROP EXTERNAL MODEL (Transact-SQL)](drop-external-model-transact-sql.md)
 - [AI_GENERATE_EMBEDDINGS (Transact-SQL)](../functions/ai-generate-embeddings-transact-sql.md)
 - [AI_GENERATE_CHUNKS (Transact-SQL)](../functions/ai-generate-chunks-transact-sql.md)
-- [sys.external_models](../../relational-databases/system-catalog-views/sys-external-models-transact-sql.md)
+- [sys.external_models (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-models-transact-sql.md)
 - [Create and deploy an Azure OpenAI in Azure AI Foundry Models resource](/azure/ai-services/openai/how-to/create-resource)
 - [Server configuration options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
 - [Role-based access control for Azure OpenAI in Azure AI Foundry Models](/azure/ai-services/openai/how-to/role-based-access-control)

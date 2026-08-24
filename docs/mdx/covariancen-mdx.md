@@ -37,7 +37,6 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
 > [!NOTE]  
 >  The **CovarianceN** function ignores empty cells or cells that contain text or logical values. However, the function includes cells with values of zero.  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

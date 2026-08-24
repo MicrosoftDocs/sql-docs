@@ -846,10 +846,10 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
   
 ## Related content
 
-- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
-- [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [Initialize a report server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)
-- [Store encrypted report server Data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
-- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Modify a Reporting Services configuration file (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [Configure available memory for report server applications](configure-available-memory-for-report-server-applications.md)
+- [Reporting Services configuration files](reporting-services-configuration-files.md)
+- [SSRS Encryption Keys - Initialize a Report Server](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md)
+- [SSRS Encryption Keys - Store Encrypted Report Server Data](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)
 - [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

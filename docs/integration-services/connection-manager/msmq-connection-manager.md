@@ -70,7 +70,7 @@ helpviewer_keywords:
  **Test**  
  After configuring the MSMQ connection manager, confirm that the connection is viable by clicking **Test**.  
   
-## See Also  
- [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)   
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
+## Related content
+
+- [Message Queue Task](../control-flow/message-queue-task.md)
+- [Integration Services (SSIS) Connections](integration-services-ssis-connections.md)

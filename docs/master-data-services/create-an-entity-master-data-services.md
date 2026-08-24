@@ -80,16 +80,12 @@ helpviewer_keywords:
 |Updated By|The username of the user who last updated the entity.|  
 |Updated On|The date and time when the entity was last updated.|  
   
-## Next Steps  
-  
--   [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
-  
--   [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
-  
--   [Create a File Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
-  
-## See Also  
- [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Edit an Entity &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
- [Delete an Entity &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)
+## Related content
+
+- [Entities (Master Data Services)](entities-master-data-services.md)
+- [Explicit Hierarchies (Master Data Services)](explicit-hierarchies-master-data-services.md)
+- [Edit an Entity (Master Data Services)](edit-an-entity-master-data-services.md)
+- [Delete an Entity (Master Data Services)](delete-an-entity-master-data-services.md)
+- [Create a Text Attribute (Master Data Services)](create-a-text-attribute-master-data-services.md)
+- [Create a Domain-Based Attribute (Master Data Services)](create-a-domain-based-attribute-master-data-services.md)
+- [Create a File Attribute (Master Data Services)](create-a-file-attribute-master-data-services.md)

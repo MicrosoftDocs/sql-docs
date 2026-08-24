@@ -52,7 +52,7 @@ If running DBCC CHECKDB with one of the REPAIR clauses does not correct the prob
 ### Results of Running REPAIR Options  
 Running REPAIR will invalidate the differential bitmap. You cannot perform a differential backup until a full database backup is taken. The full database backup provides a baseline for the differential bitmap to be rebuilt.  
   
-## See Also  
-[Create a Full Database Backup &#40;SQL Server&#41;](~/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
-[MSSQLSERVER_2516](~/relational-databases/errors-events/mssqlserver-2516-database-engine-error.md)  
-  
+## Related content
+
+- [Create a full database backup](../backup-restore/create-a-full-database-backup-sql-server.md)
+- [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)

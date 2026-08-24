@@ -99,5 +99,5 @@ The final result is `57921`, not `123457`.
 ## Related content
 
 - [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)
-- [Data Type Conversion (Database Engine)](data-type-conversion-database-engine.md)
-- [Data Types (Transact-SQL)](data-types-transact-sql.md)
+- [Data type conversion (Database Engine)](data-type-conversion-database-engine.md)
+- [Data types (Transact-SQL)](data-types-transact-sql.md)

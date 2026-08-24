@@ -121,5 +121,6 @@ In a SQL Server Agent job, you can run an SSIS package as one step of the job. T
 > [!NOTE]
 > You can't stop Scale Out package execution by canceling the SQL Server Agent job. To stop Scale Out execution, we recommend that you use the catalog.stop_operation stored procedure or use the **Active Operations** pane. 
 
-## Next steps
--   [Troubleshoot Scale Out](troubleshooting-scale-out.md)
+## Related content
+
+- [Troubleshoot Scale Out](troubleshooting-scale-out.md)

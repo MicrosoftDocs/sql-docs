@@ -22,8 +22,7 @@ ms.topic: reference
 |[setNClob Method &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader.md)|Sets the designated parameter to the specified java.io.Reader object.|  
 |[setNClob Method &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader-long.md)|Sets the designated parameter to the specified java.io.Reader object, which is the specified number of characters long.|  
   
-## See Also  
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)
+- [SQLServerPreparedStatement Class](sqlserverpreparedstatement-class.md)

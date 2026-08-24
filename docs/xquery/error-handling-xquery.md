@@ -88,4 +88,4 @@ The **fn:error()** function isn't supported.
 ## Related content
 
 - [XQuery Language Reference (SQL Server)](xquery-language-reference-sql-server.md)
-- [XQuery Basics](xquery-basics.md)
+- [XQuery basics](xquery-basics.md)

@@ -25,8 +25,7 @@ apitype: "Assembly"
 |[createStatement (int, int)](../../../connect/jdbc/reference/createstatement-method-int-int.md)|Creates a SQLServerStatement object that generates SQLServerResultSet objects with the given type and concurrency.|  
 |[createStatement (int, int, int)](../../../connect/jdbc/reference/createstatement-method-int-int-int.md)|Creates a SQLServerStatement object that generates SQLServerResultSet objects with the given type, concurrency, and holdability.|  
   
-## See Also  
- [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnection Members](sqlserverconnection-members.md)
+- [SQLServerConnection Class](sqlserverconnection-class.md)

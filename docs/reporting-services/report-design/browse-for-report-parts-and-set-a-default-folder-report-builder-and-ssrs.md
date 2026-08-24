@@ -58,6 +58,6 @@ The easiest way to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversio
   
 ## Related content
 
-- [Report parts &#40;Report Builder&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)
-- [Report parts and datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)
-- [Publish and republish report parts &#40;Report Builder&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)
+- [Report Parts (Report Builder and SSRS)](report-parts-report-builder-and-ssrs.md)
+- [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md)
+- [Publish and Republish Report Parts (Report Builder and SSRS)](publish-and-republish-report-parts-report-builder-and-ssrs.md)

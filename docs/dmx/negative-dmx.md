@@ -26,9 +26,8 @@ ms.custom: dmx
 ## Return Value  
  A value that has the data type of the specified parameter.  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [Unary Operators &#40;DMX&#41;](../dmx/operators-unary.md)  
-  
-  
+## Related content
+
+- [Data Mining Extensions (DMX) Operator Reference](data-mining-extensions-dmx-operator-reference.md)
+- [Operators (DMX)](operators-dmx.md)
+- [Operators - Unary](operators-unary.md)

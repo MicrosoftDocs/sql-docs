@@ -120,6 +120,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
-- [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)
-- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)
+- [Change Publication and Article Properties](change-publication-and-article-properties.md)
+- [Filter Published Data](filter-published-data.md)
+- [Filter Published Data for Merge Replication](../merge/filter-published-data-for-merge-replication.md)

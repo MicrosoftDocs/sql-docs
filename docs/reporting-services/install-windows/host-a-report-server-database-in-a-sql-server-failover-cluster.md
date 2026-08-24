@@ -18,5 +18,5 @@ ms.custom:
   
 ## Related content
 
-- [Report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
-- [Create a report server database &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)
+- [Report server database (SSRS native mode)](../report-server/report-server-database-ssrs-native-mode.md)
+- [Create a report server database, Report Server Configuration Manager](ssrs-report-server-create-a-report-server-database.md)

@@ -195,6 +195,6 @@ tvpParam.SqlDbType = SqlDbType.Structured;
 insertCommand.ExecuteNonQuery();
 ```
 
-## Next steps
+## Related content
 
 - [SQL Server data operations in ADO.NET](sql-server-data-operations.md)

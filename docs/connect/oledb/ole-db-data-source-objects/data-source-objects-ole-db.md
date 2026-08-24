@@ -75,7 +75,6 @@ The OLE DB Driver for SQL Server makes its first connection to a specified insta
 - [Session Properties - OLE DB Driver for SQL Server](session-properties-oledb-driver-for-sql-server.md)
 - [Persisted Data Source Objects](persisted-data-source-objects.md)
 
-## See Also
+## Related content
 
-[OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)
-
+- [OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)

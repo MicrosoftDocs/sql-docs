@@ -68,9 +68,7 @@ You should not code [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that 
   
 - [Hide System Objects in Object Explorer](/ssms/object/hide-system-objects-in-object-explorer)  
   
-## Related Content  
+## Related content
 
-- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
-- [Databases](../../relational-databases/databases/databases.md)  
-  
+- [System catalog views (Transact-SQL)](../system-catalog-views/catalog-views-transact-sql.md)
+- [Databases](databases.md)

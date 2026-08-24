@@ -42,6 +42,6 @@ ms.custom:
   
 ## Related content
 
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
-- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)
+- [Reporting Services extensions](../reporting-services-extensions.md)
+- [Implement a data processing extension](implementing-a-data-processing-extension.md)
+- [Reporting Services extension library](../reporting-services-extension-library.md)

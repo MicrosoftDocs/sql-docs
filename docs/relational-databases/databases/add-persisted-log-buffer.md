@@ -45,13 +45,13 @@ Use the following syntax to add a persistent log buffer to an existing database.
 ### Add persistent log buffer in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later
 
 ```sql
-ALTER DATABASE [DB] SET PERSISTENT_LOG_BUFFER = ON (DIRECTORY_NAME = 'path-to-directory-on-a-DAX-volume');
+ALTER DATABASE [DB] SET PERSISTENT_LOG_BUFFER = ON (DIRECTORY_NAME = 'path-to-directory-on-a-DAX-volume');
 ```
 
 For example:
 
 ```sql
-ALTER DATABASE WideWorldImporters SET PERSISTENT_LOG_BUFFER = ON (DIRECTORY_NAME = 'F:\SQLTLog');
+ALTER DATABASE WideWorldImporters SET PERSISTENT_LOG_BUFFER = ON (DIRECTORY_NAME = 'F:\SQLTLog');
 ```
 
 The name of the persistent log file buffer is generated automatically. The size of the file is always 20 megabytes.
@@ -91,13 +91,13 @@ The syntax differs depending on the version of [!INCLUDE[ssnoversion-md](../../i
 ### Remove persistent log buffer in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later
 
 ```sql
-ALTER DATABASE [DB] SET PERSISTENT_LOG_BUFFER = OFF;
+ALTER DATABASE [DB] SET PERSISTENT_LOG_BUFFER = OFF;
 ```
 
 For example:
 
 ```sql
-ALTER DATABASE WideWorldImporters SET PERSISTENT_LOG_BUFFER = OFF;
+ALTER DATABASE WideWorldImporters SET PERSISTENT_LOG_BUFFER = OFF;
 ```
 
 ### Remove persistent log buffer in [!INCLUDE[sqlv16](../../includes/sssql16-md.md)]
@@ -133,8 +133,8 @@ When both persistent log buffer and [Hybrid Buffer Pool](../../database-engine/c
 
 Normal restore conditions apply. If persistent log buffer is restored to a DAX volume or mount, it continues to function. If the log is restored to a non-DAX disk volume, it can be safely removed using the `ALTER DATABASE REMOVE FILE` command.
 
-## Next steps
+## Related content
 
 - [How It Works (It Just Runs Faster): Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](https://techcommunity.microsoft.com/t5/sql-server-blog/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server/ba-p/3209699)
 - [Transaction Commit latency acceleration using Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](https://techcommunity.microsoft.com/t5/sql-server-blog/transaction-commit-latency-acceleration-using-storage-class/ba-p/384995)
-- [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md)
+- [Hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md)

@@ -121,22 +121,13 @@ This sample uses the PDO_SQLSRV driver to demonstrate how to connect with SQL Se
 ?>  
 ```  
   
-## See Also  
-[How to: Connect Using SQL Server Authentication](#how-to-connect-using-sql-server-authentication)
+## Related content
 
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
-
-[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
-
-[How to: Create a SQL Server Login](../../relational-databases/security/authentication-access/create-a-login.md)
-
-[How to: Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md)
-
-[Managing Users, Roles, and Logins](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
-
-[User-Schema Separation](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
-
-[Grant Object Permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
-  
+- [How to: Connect Using SQL Server Authentication](#how-to-connect-using-sql-server-authentication)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)
+- [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+- [Create a login](../../relational-databases/security/authentication-access/create-a-login.md)
+- [Create a database user](../../relational-databases/security/authentication-access/create-a-database-user.md)
+- [Managing Users, Roles, and Logins](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+- [GRANT object permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)

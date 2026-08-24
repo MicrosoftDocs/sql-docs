@@ -39,16 +39,13 @@ Requires `VIEW DEFINITION` permission on the table. The following columns return
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
- [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md)   
- [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md)   
- [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
-  
-  
+## Related content
 
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
+- [sys.columns (Transact-SQL)](sys-columns-transact-sql.md)
+- [sys.all_columns (Transact-SQL)](sys-all-columns-transact-sql.md)
+- [sys.computed_columns (Transact-SQL)](sys-computed-columns-transact-sql.md)
+- [Columnstore indexes: overview](../indexes/columnstore-indexes-overview.md)
+- [sys.column_store_segments (Transact-SQL)](sys-column-store-segments-transact-sql.md)

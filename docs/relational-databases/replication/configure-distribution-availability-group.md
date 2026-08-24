@@ -425,8 +425,8 @@ EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname = N'SQLNODE5', @useself = N'Tru
 
 ## Related content
 
-- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)
+- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)
+- [Secure the Distributor](security/secure-the-distributor.md)
 - [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)
 - [Disable Publishing and Distribution](disable-publishing-and-distribution.md)
 - [Enable a Database for Replication (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)

@@ -41,7 +41,7 @@ Requires the VIEW DATABASE PERFORMANCE STATE permission.
 
 ## Related content
 
-- [sys.server_event_sessions](sys-server-event-sessions-transact-sql.md)
+- [sys.server_event_sessions (Transact-SQL)](sys-server-event-sessions-transact-sql.md)
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
 - [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)
 - [sys.database_event_session_actions](sys-database-event-session-actions-azure-sql-database.md)

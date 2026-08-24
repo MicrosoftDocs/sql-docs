@@ -72,8 +72,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Order &#40;MDX&#41;](../mdx/order-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Order (MDX)](order-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

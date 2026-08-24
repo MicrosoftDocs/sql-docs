@@ -240,10 +240,9 @@ ALTER QUEUE ExpenseQueue REORGANIZE
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   
-## See Also  
- [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
-  
-  
+## Related content
+
+- [CREATE QUEUE (Transact-SQL)](create-queue-transact-sql.md)
+- [DROP QUEUE (Transact-SQL)](drop-queue-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)

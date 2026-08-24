@@ -566,7 +566,7 @@ def analyze_sparseness(cursor, table: str, column: str) -> float:
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
-- [XML data](xml-data.md)
-- [Bulk copy operations](bulk-copy.md)
-- [Microsoft SQL sparse columns](../../../relational-databases/tables/use-sparse-columns.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Use XML data with mssql-python](xml-data.md)
+- [Use bulk copy with mssql-python](bulk-copy.md)
+- [Use sparse columns](../../../relational-databases/tables/use-sparse-columns.md)

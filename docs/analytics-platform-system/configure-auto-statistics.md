@@ -69,5 +69,6 @@ FROM
 
 A return value of 1 means on the setting is on, and 0 means the setting is off. 
 
-## Next steps
-To see how your queries are performing, see [Monitoring Active Queries](monitoring-active-queries.md)
+## Related content
+
+- [Monitoring active queries - Parallel Data Warehouse](monitoring-active-queries.md)

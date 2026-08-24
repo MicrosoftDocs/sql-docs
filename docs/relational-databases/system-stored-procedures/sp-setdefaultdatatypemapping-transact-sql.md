@@ -156,5 +156,5 @@ Only members of the **sysadmin** fixed server role can execute `sp_setdefaultdat
 ## Related content
 
 - [Specify Data Type Mappings for an Oracle Publisher](../replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)
-- [sp_getdefaultdatatypemapping (Transact-SQL)](sp-getdefaultdatatypemapping-transact-sql.md)
-- [sp_helpdatatypemap (Transact-SQL)](sp-helpdatatypemap-transact-sql.md)
+- [sys.sp_getdefaultdatatypemapping (Transact-SQL)](sp-getdefaultdatatypemapping-transact-sql.md)
+- [sys.sp_helpdatatypemap (Transact-SQL)](sp-helpdatatypemap-transact-sql.md)

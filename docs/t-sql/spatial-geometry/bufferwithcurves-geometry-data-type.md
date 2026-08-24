@@ -148,6 +148,6 @@ SQL Server return type: **geometry**
   
  The first two **SELECT** statements return a `GeometryCollection` instance because the parameter *distance* is less than or equal to 1/2 the distance between the two points (1 1) and (1 4). The third **SELECT** statement returns a `CurvePolygon` instance because the buffered instances of the two points (1 1) and (1 4) overlap.  
   
-## See Also  
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
- 
+## Related content
+
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)

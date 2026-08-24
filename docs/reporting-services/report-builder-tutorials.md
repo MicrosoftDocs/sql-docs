@@ -35,6 +35,6 @@ The [Report Builder](../reporting-services/report-builder/report-builder-in-sql-
 
 ## Related content
 
-- [Report design view](../reporting-services/report-builder/report-design-view-report-builder.md)
-- [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)
+- [Report design view in Report Builder](report-builder/report-design-view-report-builder.md)
+- [Alternative ways to get a data connection (Report Builder)](alternative-ways-to-get-a-data-connection-report-builder.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -117,6 +117,6 @@ This article lists significant changes in each release of the `go-mssqldb` drive
 
 ## Related content
 
-- [Installation and system requirements](installation.md)
-- [Support and lifecycle](support-lifecycle.md)
+- [Install the go-mssqldb driver](installation.md)
+- [go-mssqldb support and lifecycle](support-lifecycle.md)
 - [go-mssqldb releases on GitHub](https://github.com/microsoft/go-mssqldb/releases)

@@ -22,6 +22,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingDBMetaData1](codesnippet/Java/using-database-metadata_1.java)]
 
-## See also
+## Related content
 
-[Handling metadata with the JDBC driver](handling-metadata-with-the-jdbc-driver.md)
+- [Handling metadata with the JDBC driver](handling-metadata-with-the-jdbc-driver.md)

@@ -37,7 +37,7 @@ apitype: "COM"
   
 -   **IMultipleResults::GetResult**  
   
-## See Also  
- [Interfaces &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)   
- [Performing Asynchronous Operations](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB) Interfaces](sql-server-native-client-ole-db-interfaces.md)
+- [Performing Asynchronous Operations in SQL Server Native Client](../native-client/features/performing-asynchronous-operations.md)

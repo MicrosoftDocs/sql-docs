@@ -76,7 +76,8 @@ FROM sys.dm_os_performance_counters
 WHERE cntr_type = 65792 OR cntr_type = 272696320 OR cntr_type = 537003264;  
 ```  
   
-## See also  
-  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.sysperfinfo &#40;Transact-SQL&#41;](../system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
+## Related content
+
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [sys.sysperfinfo (Transact-SQL)](../system-compatibility-views/sys-sysperfinfo-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)

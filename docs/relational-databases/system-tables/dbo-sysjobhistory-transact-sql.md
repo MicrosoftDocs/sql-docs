@@ -94,4 +94,4 @@ GO
 - [dbo.sysjobactivity (Transact-SQL)](dbo-sysjobactivity-transact-sql.md)
 - [dbo.sysjobs (Transact-SQL)](dbo-sysjobs-transact-sql.md)
 - [dbo.sysjobsteps (Transact-SQL)](dbo-sysjobsteps-transact-sql.md)
-- [SQL Server Agent Tables (Transact-SQL)](sql-server-agent-tables-transact-sql.md)
+- [SQL Server Agent tables (Transact-SQL)](sql-server-agent-tables-transact-sql.md)

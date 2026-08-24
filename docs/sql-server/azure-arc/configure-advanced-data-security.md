@@ -77,6 +77,8 @@ Explore security anomalies and threats in Azure Security Center.
 
    :::image type="content" source="media/configure-advanced-data-security/brute-force-alert-mitigation.png" alt-text="Screenshot showing alert mitigation.":::
 
-## Next steps
-- [SQL Server enabled by Azure Arc deployment options](deployment-options.md)
-- You can further investigate the security alerts and attacks using [Azure Sentinel](/azure/sentinel/overview). For details, see [on-board Azure Sentinel](/azure/sentinel/connect-data-sources).
+## Related content
+
+- [Deployment options for SQL Server enabled by Azure Arc](deployment-options.md)
+- [Azure Sentinel](/azure/sentinel/overview)
+- [on-board Azure Sentinel](/azure/sentinel/connect-data-sources)

@@ -267,6 +267,6 @@ For more information on connecting with encryption, see:
 
 - [Connecting with encryption](connecting-with-ssl-encryption.md)
 
-## See also
+## Related content
 
-[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

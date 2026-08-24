@@ -59,7 +59,7 @@ replmerg [-?]
 [-InternetLogin internet_login]  
 [-InternetPassword internet_password]  
 [-InternetProxyLogin internet_proxy_login]  
-[–InternetProxyPassword internet_proxy_password]  
+[-InternetProxyPassword internet_proxy_password]  
 [-InternetProxyServer internet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeout internet_timeout]  
@@ -413,4 +413,4 @@ In addition, if you have to write statistics to the \<Distribution server\>..msm
   
 ## Related content
 
-- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
+- [Replication Agent Administration](replication-agent-administration.md)

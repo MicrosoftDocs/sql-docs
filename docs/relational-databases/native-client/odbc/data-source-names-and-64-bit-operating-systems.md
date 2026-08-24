@@ -23,7 +23,6 @@ ms.topic: "reference"
   
 -   %SystemRoot%\SysWOW64\odbcad32.exe is used to create and maintain data source names for 32-bit applications, including 32-bit applications that run on 64-bit operating systems.  
   
-## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)

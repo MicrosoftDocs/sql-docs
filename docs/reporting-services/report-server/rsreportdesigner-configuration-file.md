@@ -64,5 +64,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [Query design tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)
+- [Reporting Services configuration files](reporting-services-configuration-files.md)
+- [Query Design Tools (SSRS)](../report-data/query-design-tools-ssrs.md)

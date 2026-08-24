@@ -260,6 +260,6 @@ The following table contains the default type mapping for local variables.
 |varchar2[8001..*]|varcha(max)|  
 |Xmltype|xml|  
   
-## See Also  
-[User Interface Reference &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
-  
+## Related content
+
+- [User Interface Reference](user-interface-reference-oracletosql.md)

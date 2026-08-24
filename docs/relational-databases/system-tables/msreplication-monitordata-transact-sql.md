@@ -55,15 +55,14 @@ dev_langs:
 |**mergelatestsessionconnectiontype**|**int**|Connection used for the most recent Merge Agent session, which can be one of the following values:<br /><br /> **1** = local area network (LAN)<br /><br /> **2** = dial-up network connection|  
 |**retention_period_unit**|**tinyint**|Defines the unit used when defining retention, which can be one of these values:<br /><br /> **1** = week<br /><br /> **2** = month<br /><br /> **3** = year|  
   
-## See Also  
- [Programmatically Monitor Replication](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_replmonitorhelpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
- [sp_replmonitorhelppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
- [sp_replmonitorhelppublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   
- [sp_replmonitorhelpmergesession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)   
- [sp_replmonitorhelppublicationthresholds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)   
- [sp_replmonitorhelpmergesessiondetail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)  
-  
-  
+## Related content
+
+- [Programmatically Monitor Replication](../replication/monitor/programmatically-monitor-replication.md)
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
+- [sys.sp_replmonitorhelpsubscription (Transact-SQL)](../system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)
+- [sys.sp_replmonitorhelppublication (Transact-SQL)](../system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)
+- [sys.sp_replmonitorhelppublisher (Transact-SQL)](../system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)
+- [sys.sp_replmonitorhelpmergesession (Transact-SQL)](../system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)
+- [sys.sp_replmonitorhelppublicationthresholds (Transact-SQL)](../system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)
+- [sys.sp_replmonitorhelpmergesessiondetail (Transact-SQL)](../system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)

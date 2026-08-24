@@ -204,6 +204,6 @@ You create Reporting Services mobile reports (.rsmobile files) in SQL Server Mob
   
 ## Related content
 
-- [Reporting Services features and tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)
-- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)
-- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
+- [Reporting Services features and tasks (SSRS)](reporting-services-features-and-tasks-ssrs.md)
+- [Technical reference (SSRS)](technical-reference-ssrs.md)
+- [What is SQL Server Reporting Services (SSRS)?](create-deploy-and-manage-mobile-and-paginated-reports.md)

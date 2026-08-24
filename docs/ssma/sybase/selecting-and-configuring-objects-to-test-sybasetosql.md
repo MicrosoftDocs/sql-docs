@@ -73,9 +73,7 @@ Controls how trailing spaces are treated during the comparison.
 ## Specify input values for procedures and functions (Call Values)  
 You can specify input parameter values on the **Call Values** page. The **Add Call** button adds a new call with empty parameter values. The **Remove Call** button removes the current call.  
   
-## Next Step  
-[Selecting and Configuring Affected Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
-  
-## See Also  
-[Testing Migrated Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
-  
+## Related content
+
+- [Testing Migrated Database Objects](testing-migrated-database-objects-sybasetosql.md)
+- [Selecting and Configuring Affected Objects](selecting-and-configuring-affected-objects-sybasetosql.md)

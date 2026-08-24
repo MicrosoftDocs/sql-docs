@@ -320,6 +320,6 @@ To remove the Managed Installer feature from the device, you need to remove the 
 - [Automatically allow apps deployed by a managed installer with App Control for Business](/windows/security/application-security/application-control/app-control-for-business/design/configure-authorized-apps-deployed-with-a-managed-installer)
 - [In-Memory OLTP overview and usage scenarios](overview-and-usage-scenarios.md)
 - [A Guide to Query Processing for Memory-Optimized Tables](a-guide-to-query-processing-for-memory-optimized-tables.md)
-- [Sample Database for In-Memory OLTP](sample-database-for-in-memory-oltp.md)
+- [Sample database for in-memory OLTP](sample-database-for-in-memory-oltp.md)
 - [AppLocker deployment guide](/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-policies-deployment-guide)
 - [Deploying App Control for Business policies](/windows/security/application-security/application-control/app-control-for-business/deployment/appcontrol-deployment-guide)

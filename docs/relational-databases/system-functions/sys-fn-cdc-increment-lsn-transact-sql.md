@@ -65,11 +65,10 @@ GO
 > [!NOTE] 
 > Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the `lsn_value` parameter is beyond the time of lowest LSN or highest LSN, then execution of these functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
 
-## See Also  
- - [sys.fn_cdc_decrement_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
- - [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- - [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- - [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- - [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
-  
-  
+## Related content
+
+- [sys.fn_cdc_decrement_lsn (Transact-SQL)](sys-fn-cdc-decrement-lsn-transact-sql.md)
+- [cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)](cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)
+- [cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)](cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)
+- [The transaction log](../logs/the-transaction-log-sql-server.md)
+- [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)

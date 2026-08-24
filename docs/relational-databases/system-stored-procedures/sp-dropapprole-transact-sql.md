@@ -65,8 +65,8 @@ EXECUTE sp_dropapprole 'SalesApp';
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addapprole (Transact-SQL)](sp-addapprole-transact-sql.md)
+- [sys.sp_addapprole (Transact-SQL)](sp-addapprole-transact-sql.md)
 - [DROP APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/drop-application-role-transact-sql.md)
-- [sp_changeobjectowner (Transact-SQL)](sp-changeobjectowner-transact-sql.md)
-- [sp_setapprole (Transact-SQL)](sp-setapprole-transact-sql.md)
+- [sys.sp_changeobjectowner (Transact-SQL)](sp-changeobjectowner-transact-sql.md)
+- [sys.sp_setapprole (Transact-SQL)](sp-setapprole-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

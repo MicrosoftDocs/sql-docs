@@ -96,7 +96,7 @@ FROM [Adventure Works]
   
 ```  
   
-## See Also  
- [Using Member Properties &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
+## Related content
+
+- [Using Member Properties &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

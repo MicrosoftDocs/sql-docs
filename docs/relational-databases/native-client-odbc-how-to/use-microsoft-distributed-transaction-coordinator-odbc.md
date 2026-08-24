@@ -37,6 +37,6 @@ helpviewer_keywords:
 > [!NOTE]  
 >  You can also call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) and [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) in turn for each SQL Server instead of calling them as suggested earlier in Steps 4 and 5.  
   
-## See Also  
- [Performing Transactions &#40;ODBC&#41;](../native-client/odbc/performing-transactions-in-odbc.md)  
-  
+## Related content
+
+- [Performing Transactions in ODBC](../native-client/odbc/performing-transactions-in-odbc.md)

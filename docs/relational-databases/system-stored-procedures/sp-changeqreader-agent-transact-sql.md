@@ -67,4 +67,4 @@ Only members of the **sysadmin** fixed server role can execute `sp_changeqreader
 ## Related content
 
 - [View and modify replication security settings](../replication/security/view-and-modify-replication-security-settings.md)
-- [sp_addqreader_agent (Transact-SQL)](sp-addqreader-agent-transact-sql.md)
+- [sys.sp_addqreader_agent (Transact-SQL)](sp-addqreader-agent-transact-sql.md)

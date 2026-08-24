@@ -42,8 +42,7 @@ public void setString(java.lang.String sCol,
   
  String to binary conversions are performed only when [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] knows the destination type is binary. In cases where the JDBC driver does not know the underlying type, it will pass the **String** literal and return a server error if the server cannot perform the conversion.  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

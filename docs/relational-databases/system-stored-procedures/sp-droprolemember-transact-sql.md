@@ -96,9 +96,8 @@ EXECUTE sp_droprolemember 'Sales', 'JonB';
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)
-- [sp_droprole (Transact-SQL)](sp-droprole-transact-sql.md)
-- [sp_dropsrvrolemember (Transact-SQL)](sp-dropsrvrolemember-transact-sql.md)
-- [sp_helpuser (Transact-SQL)](sp-helpuser-transact-sql.md)
+- [sys.sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)
+- [sys.sp_droprole (Transact-SQL)](sp-droprole-transact-sql.md)
+- [sys.sp_dropsrvrolemember (Transact-SQL)](sp-dropsrvrolemember-transact-sql.md)
+- [sys.sp_helpuser (Transact-SQL)](sp-helpuser-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

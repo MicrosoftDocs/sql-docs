@@ -198,6 +198,6 @@ You can get around this problem by changing the `ErrorLevel` value to 0 or 1. Th
 
 ## Related content
 
-- [Reporting Services reports (SSRS)](../reports/reporting-services-reports-ssrs.md)
+- [Reporting Services Reports (SSRS)](../reports/reporting-services-reports-ssrs.md)
 - [Install SQL Server Data Tools (SSDT) for Visual Studio](../../ssdt/download-sql-server-data-tools-ssdt.md)
-- [Query design tools (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)
+- [Query Design Tools (SSRS)](../report-data/query-design-tools-ssrs.md)

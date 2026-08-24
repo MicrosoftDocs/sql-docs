@@ -81,8 +81,8 @@ If the installation script is unable to complete, configure and build the proper
 You are now ready to install the driver. For more information, see the ODBC driver installation instructions for [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 or [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
   
-## See Also
+## Related content
 
-- [Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Install the Microsoft ODBC driver for SQL Server (Linux)](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Install the Microsoft ODBC driver for SQL Server (macOS)](install-microsoft-odbc-driver-sql-server-macos.md)
+- [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)

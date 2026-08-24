@@ -70,16 +70,15 @@ helpviewer_keywords:
     > [!NOTE]  
     >  To remove the witness, delete its server network address from the **Witness** field. If you switch from high-safety mode with automatic failover to high-performance mode, the **Witness** field is automatically cleared.  
   
-## See Also  
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Pause or Resume a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
- [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
- [Remove Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   
- [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
- [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
- [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
-  
-  
+## Related content
+
+- [Role Switching During a Database Mirroring Session (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)
+- [Prepare a Mirror Database for Mirroring (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)
+- [Database Properties (Mirroring Page)](../../relational-databases/databases/database-properties-mirroring-page.md)
+- [Pause or Resume a Database Mirroring Session (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)
+- [Set Up a Mirror Database to Use the Trustworthy Property (Transact-SQL)](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)
+- [Remove Database Mirroring (SQL Server)](remove-database-mirroring-sql-server.md)
+- [Management of Logins and Jobs After Role Switching (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)
+- [Setting Up Database Mirroring (SQL Server)](setting-up-database-mirroring-sql-server.md)
+- [Manage Metadata When Making a Database Available on Another Server](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)
+- [Add or Replace a Database Mirroring Witness (SQL Server Management Studio)](add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)

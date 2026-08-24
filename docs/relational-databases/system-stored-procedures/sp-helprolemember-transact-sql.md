@@ -72,8 +72,8 @@ EXECUTE sp_helprolemember 'Sales';
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)
-- [sp_droprolemember (Transact-SQL)](sp-droprolemember-transact-sql.md)
-- [sp_helprole (Transact-SQL)](sp-helprole-transact-sql.md)
-- [sp_helpsrvrolemember (Transact-SQL)](sp-helpsrvrolemember-transact-sql.md)
+- [sys.sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)
+- [sys.sp_droprolemember (Transact-SQL)](sp-droprolemember-transact-sql.md)
+- [sys.sp_helprole (Transact-SQL)](sp-helprole-transact-sql.md)
+- [sys.sp_helpsrvrolemember (Transact-SQL)](sp-helpsrvrolemember-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

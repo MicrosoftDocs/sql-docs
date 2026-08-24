@@ -315,7 +315,7 @@ DECLARE @publisher_security_mode smallint = 1
 EXEC [MyDBName].dbo.sp_addlogreader_agent @publisher_security_mode = @publisher_security_mode
 go
 
--- Note – Make sure that the value for @p2p_originator_id is different from Peer1.
+-- Make sure that the value for @p2p_originator_id is different from Peer1.
 DECLARE @allow_dts nvarchar(5) = N'false'
 DECLARE @allow_pull nvarchar(5) = N'true'
 DECLARE @allow_push nvarchar(5) = N'true'

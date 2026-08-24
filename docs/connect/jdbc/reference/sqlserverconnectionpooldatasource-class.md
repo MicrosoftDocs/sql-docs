@@ -30,8 +30,7 @@ public class SQLServerConnectionPoolDataSource
 ## Remarks  
  SQLServerConnectionPoolDataSource is typically used in Java Application Server environments that support built-in connection pooling and require a ConnectionPoolDataSource to provide physical connections, such as Java Platform, Enterprise Edition (Java EE) application servers that provide JDBC 3.0 API spec connection pooling.  
   
-## See Also  
- [SQLServerConnectionPoolDataSource Members](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerConnectionPoolDataSource Members](sqlserverconnectionpooldatasource-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

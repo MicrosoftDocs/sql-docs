@@ -36,8 +36,8 @@ microsoftml.log_loss()
 Log loss.
 
 
-## See also
+## Related content
 
-[`hinge_loss`](hinge-loss.md),
-[`smoothed_hinge_loss`](smoothed-hinge-loss.md),
-[`squared_loss`](squared-loss.md)
+- [*microsoftml.hinge_loss*: Hinge loss function](hinge-loss.md)
+- [*microsoftml.smoothed_hinge_loss*: Smoothed hinge loss function](smoothed-hinge-loss.md)
+- [*microsoftml.squared_loss*: Squared loss function](squared-loss.md)

@@ -50,6 +50,6 @@ SendTimeAsDatetime must be false for encrypted columns as encrypted columns don'
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
 
-## See also
+## Related content
 
-[Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

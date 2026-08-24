@@ -234,7 +234,6 @@ helpviewer_keywords:
 ### SQLSpecialColumns  
  The values returned for the columns DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH, and DECIMAL_DIGTS UDTs are as described in the "Metadata Returned by SQLColumns and SQLProcedureColumns (Catalog Metadata)" section, earlier in this topic.  
   
-## See Also  
- [Large CLR User-Defined Types](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
-  
-  
+## Related content
+
+- [Large CLR User-Defined Types in SQL Server Native Client](../features/large-clr-user-defined-types.md)

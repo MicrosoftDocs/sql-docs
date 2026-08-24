@@ -26,6 +26,6 @@ Error 824 indicates that a logical consistency error was detected during a read 
 
 - Implement the user actions that are defined in [MSSQLSERVER_824](/previous-versions/sql/sql-server-2016/aa337274(v=sql.130)).
 
-## For more information
+## Related content
 
-[Manage the suspect_pages Table (SQL Server).](../backup-restore/manage-the-suspect-pages-table-sql-server.md)
+- [Manage the suspect_pages Table (SQL Server)](../backup-restore/manage-the-suspect-pages-table-sql-server.md)

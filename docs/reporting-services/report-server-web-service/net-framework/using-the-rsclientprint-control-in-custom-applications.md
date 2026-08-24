@@ -133,6 +133,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Print Reports from a Browser with the Print Control &#40;Report Builder and SSRS&#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)
-- [Print Reports &#40;Report Builder and SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
-- [Image Device Information Settings](../../../reporting-services/image-device-information-settings.md)
+- [Print reports from a browser with the print control (Report Builder)](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)
+- [Print reports](../../report-builder/print-reports-report-builder-and-ssrs.md)
+- [Image device information settings](../../image-device-information-settings.md)

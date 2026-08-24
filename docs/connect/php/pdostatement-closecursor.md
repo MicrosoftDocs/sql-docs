@@ -56,8 +56,7 @@ print_r($result);
 ?>  
 ```  
   
-## See Also  
-[PDOStatement Class](../../connect/php/pdostatement-class.md)
+## Related content
 
-[PDO](https://php.net/manual/book.pdo.php)  
-  
+- [PDOStatement Class](pdostatement-class.md)
+- [PDO](https://php.net/manual/book.pdo.php)

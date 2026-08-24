@@ -154,11 +154,10 @@ GO
 ## .NET Framework Security  
  When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
   
-## See Also  
- [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
-  
-  
+## Related content
+
+- [Transport security in availability groups and database mirroring](transport-security-database-mirroring-always-on-availability.md)
+- [GRANT Endpoint Permissions (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)
+- [Set Up an Encrypted Mirror Database](set-up-an-encrypted-mirror-database.md)
+- [The database mirroring endpoint (SQL Server)](the-database-mirroring-endpoint-sql-server.md)
+- [Troubleshoot Database Mirroring Configuration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)

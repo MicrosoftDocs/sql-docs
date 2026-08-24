@@ -526,8 +526,8 @@ test_app.py ....                                       [100%]
 
 ## Related content
 
-- [Connection management](connection-management.md)
-- [Connection pooling](connection-pooling.md)
-- [Error handling](error-handling.md)
+- [Manage connections with mssql-python](connection-management.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
 - [FastAPI integration](fastapi-integration.md)
-- [Microsoft Entra authentication](entra-authentication.md)
+- [Microsoft Entra authentication with mssql-python](entra-authentication.md)

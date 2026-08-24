@@ -40,9 +40,8 @@ public void updateFloat(java.lang.String columnName,
 ## Remarks  
  This updateFloat method is specified by the updateFloat method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateFloat Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateFloat Method (SQLServerResultSet)](updatefloat-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

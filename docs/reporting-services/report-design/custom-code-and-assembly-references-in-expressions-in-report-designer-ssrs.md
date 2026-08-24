@@ -186,9 +186,9 @@ End Function
   
 ## Related content
 
-- [Add Code to a Report &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)
-- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)
-- [Add an Assembly Reference to a Report &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)
-- [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)
-- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Report Samples (Report Builder and SSRS)](../../reporting-services/tools/reporting-services-tools.md)
+- [Add code to a paginated report (Report Builder)](add-code-to-a-report-ssrs.md)
+- [Using custom assemblies with reports](../custom-assemblies/using-custom-assemblies-with-reports.md)
+- [Add an assembly reference to a paginated report (Report Builder)](add-an-assembly-reference-to-a-report-ssrs.md)
+- [Reporting Services tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [SQL Server Reporting Services tools](../tools/reporting-services-tools.md)

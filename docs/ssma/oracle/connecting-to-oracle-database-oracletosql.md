@@ -133,5 +133,5 @@ Metadata about the Oracle database isn't automatically refreshed. The metadata i
 
 ## Related content
 
-- [Migrate Oracle Databases to SQL Server (OracleToSQL)](migrating-oracle-databases-to-sql-server-oracletosql.md)
-- [Connecting to SQL Server (OracleToSQL)](connecting-to-sql-server-oracletosql.md)
+- [Migrate Oracle Databases to SQL Server](migrating-oracle-databases-to-sql-server-oracletosql.md)
+- [Connecting to SQL Server](connecting-to-sql-server-oracletosql.md)

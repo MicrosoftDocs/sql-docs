@@ -72,4 +72,4 @@ Only a member of the **sysadmin** fixed server role can execute `sp_helpxactsetj
 ## Related content
 
 - [Configure the Transaction Set Job for an Oracle Publisher](../replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)
-- [sp_publisherproperty (Transact-SQL)](sp-publisherproperty-transact-sql.md)
+- [sys.sp_publisherproperty (Transact-SQL)](sp-publisherproperty-transact-sql.md)

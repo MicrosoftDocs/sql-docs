@@ -80,7 +80,7 @@ apitype: "DLLExport"
   
  For more information about sparse columns in ODBC, see [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## See Also  
- [SQLColumns Function](../../odbc/reference/syntax/sqlcolumns-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLColumns Function](../../odbc/reference/syntax/sqlcolumns-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

@@ -122,6 +122,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
-- [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)
-- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)
+- [Replication Agent Administration](replication-agent-administration.md)
+- [View and Modify Replication Agent Command Prompt Parameters](view-and-modify-replication-agent-command-prompt-parameters.md)
+- [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)

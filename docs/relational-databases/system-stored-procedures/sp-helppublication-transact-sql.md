@@ -128,7 +128,7 @@ For a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, 
 ## Related content
 
 - [View and Modify Publication Properties](../replication/publish/view-and-modify-publication-properties.md)
-- [sp_addpublication (Transact-SQL)](sp-addpublication-transact-sql.md)
-- [sp_changepublication (Transact-SQL)](sp-changepublication-transact-sql.md)
-- [sp_droppublication (Transact-SQL)](sp-droppublication-transact-sql.md)
+- [sys.sp_addpublication (Transact-SQL)](sp-addpublication-transact-sql.md)
+- [sys.sp_changepublication (Transact-SQL)](sp-changepublication-transact-sql.md)
+- [sys.sp_droppublication (Transact-SQL)](sp-droppublication-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

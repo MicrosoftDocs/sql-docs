@@ -83,7 +83,7 @@ ms.custom: mdx
 |Tuple|Member|\<tuple>.item(0)|  
 |Tuple|Scalar|\<tuple>.value|  
   
-## See Also  
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [MDX Syntax Elements &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
+## Related content
+
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)
+- [MDX Syntax Elements (MDX)](mdx-syntax-elements-mdx.md)

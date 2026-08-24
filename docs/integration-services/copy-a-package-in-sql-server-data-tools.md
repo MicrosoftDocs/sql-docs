@@ -45,8 +45,8 @@ helpviewer_keywords:
   
 11. On the **File** menu, click **Save Selected Items** to save the new package.  
   
-## See Also  
- [Save a Copy of a Package](./save-packages.md)   
- [Create Packages in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)   
- [Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md)  
-  
+## Related content
+
+- [Save Packages](save-packages.md)
+- [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)
+- [Integration Services (SSIS) Packages](integration-services-ssis-packages.md)

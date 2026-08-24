@@ -76,8 +76,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## See Also  
- [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [TopCount (MDX)](topcount-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

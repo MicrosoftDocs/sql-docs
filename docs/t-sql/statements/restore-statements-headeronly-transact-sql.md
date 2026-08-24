@@ -173,14 +173,14 @@ FROM DISK = N'C:\AdventureWorks-FullBackup.bak';
 GO
 ```
 
-## See also
+## Related content
 
-- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [BACKUP (Transact-SQL)](backup-transact-sql.md)
 - [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)
-- [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [RESTORE Statements - REWINDONLY (Transact-SQL)](restore-statements-rewindonly-transact-sql.md)
+- [RESTORE Statements - VERIFYONLY (Transact-SQL)](restore-statements-verifyonly-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](restore-statements-transact-sql.md)
 - [Backup History and Header Information (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
-- [Enable or Disable Backup Checksums During Backup or Restore (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)
-- [Media Sets, Media Families, and Backup Sets (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [Recovery Models (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)
+- [Enable or disable backup checksums during backup or restore (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)
+- [Media sets, media families, and backup sets (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
+- [Recovery models (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)

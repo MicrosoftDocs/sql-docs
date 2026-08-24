@@ -212,12 +212,15 @@ for($i=0; $i -lt $tables.Count; $i++){
 Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory . -EnclaveAttestationProtocol "AAS" -EnclaveAttestationURL "https://<attestationURL>" -KeyVaultAccessToken $keyVaultAccessToken
 ```
  
-## Next steps
-- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
+## Next step
 
-## See also  
- - [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md)
- - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
- - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
- - [Configure column encryption in-place with a DAC package](always-encrypted-enclaves-configure-encryption-dacpac.md)
- - [Configure column encryption in-place with the Always Encrypted wizard in SSMS](always-encrypted-wizard.md)
+> [!div class="nextstepaction"]
+> [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
+
+## Related content
+
+- [Always Encrypted with secure enclaves](always-encrypted-enclaves.md)
+- [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
+- [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
+- [Configure column encryption in-place with DAC package](always-encrypted-enclaves-configure-encryption-dacpac.md)
+- [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)

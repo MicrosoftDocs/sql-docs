@@ -356,12 +356,12 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
     WHERE permission_name = 'SELECT';
 ```
 
-## See also
+## Related content
 
-- [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)
+- [Permissions Hierarchy (Database Engine)](../security/permissions-hierarchy-database-engine.md)
 - [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)
 - [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)
 - [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)
-- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)
-- [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
+- [Permissions (Database Engine)](../security/permissions-database-engine.md)
+- [sys.fn_my_permissions (Transact-SQL)](sys-fn-my-permissions-transact-sql.md)
 - [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)

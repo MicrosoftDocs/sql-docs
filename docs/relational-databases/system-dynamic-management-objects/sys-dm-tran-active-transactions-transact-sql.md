@@ -87,5 +87,5 @@ ORDER BY
 
 - [sys.dm_tran_session_transactions (Transact-SQL)](sys-dm-tran-session-transactions-transact-sql.md)
 - [sys.dm_tran_database_transactions (Transact-SQL)](sys-dm-tran-database-transactions-transact-sql.md)
-- [Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)

@@ -66,10 +66,9 @@ CLOSE ALL SYMMETRIC KEYS;
 GO  
 ```  
   
-## See Also  
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
-  
-  
+## Related content
+
+- [CREATE SYMMETRIC KEY (Transact-SQL)](create-symmetric-key-transact-sql.md)
+- [ALTER SYMMETRIC KEY (Transact-SQL)](alter-symmetric-key-transact-sql.md)
+- [OPEN SYMMETRIC KEY (Transact-SQL)](open-symmetric-key-transact-sql.md)
+- [DROP SYMMETRIC KEY (Transact-SQL)](drop-symmetric-key-transact-sql.md)

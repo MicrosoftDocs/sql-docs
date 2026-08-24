@@ -202,6 +202,6 @@ At the Publisher on the publication database, execute [sp_addmergearticle &#40;T
 
 ## Related content
 
-- [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)
-- [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)
-- [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)
+- [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md)
+- [Define an Article](../publish/define-an-article.md)
+- [View and Modify Article Properties](../publish/view-and-modify-article-properties.md)

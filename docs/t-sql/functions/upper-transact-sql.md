@@ -66,10 +66,7 @@ ABERCROMBIE, Kim
 ABOLROUS, Hazem
  ```  
   
-## See Also  
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
-  [LOWER &#40;Transact-SQL&#41;](../../t-sql/functions/lower-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [LOWER (Transact-SQL)](lower-transact-sql.md)

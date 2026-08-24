@@ -82,5 +82,5 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
 ## Related content
 
-- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)
-- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)
+- [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md)
+- [Parameterized Filters - Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)

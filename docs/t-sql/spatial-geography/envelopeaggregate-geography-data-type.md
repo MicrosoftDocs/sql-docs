@@ -60,7 +60,6 @@ EnvelopeAggregate ( geography_operand )
  GROUP BY City;
  ```  
   
-## See Also  
- [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
-  
-  
+## Related content
+
+- [Extended Static Geography Methods](extended-static-geography-methods.md)

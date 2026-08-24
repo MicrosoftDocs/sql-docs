@@ -740,6 +740,6 @@ for row in cursor:
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
-- [String and Unicode handling](string-unicode.md)
-- [Microsoft SQL JSON documentation](../../../relational-databases/json/json-data-sql-server.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Handle strings and Unicode](string-unicode.md)
+- [JSON data in SQL Server](../../../relational-databases/json/json-data-sql-server.md)

@@ -55,14 +55,12 @@ These packages can be dynamically loaded into a process address space. At the ti
 | ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|Many to one|  
   
-## Next steps
+## Related content
 
-Learn more about related concepts in the following articles:
-
-- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [sys.dm_xe_sessions (Transact-SQL)](sys-dm-xe-sessions-transact-sql.md)
 - [sys.dm_xe_session_events (Transact-SQL)](sys-dm-xe-session-events-transact-sql.md)
-- [Extended events overview](../extended-events/extended-events.md)
-- [Quickstart: Extended events](../extended-events/quick-start-extended-events-in-sql-server.md)
+- [Extended Events overview](../extended-events/extended-events.md)
+- [Quickstart: Extended Events](../extended-events/quick-start-extended-events-in-sql-server.md)
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
 - [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)

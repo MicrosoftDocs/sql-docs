@@ -30,7 +30,6 @@ f1_keywords:
  **Inferred member indicator**  
  If you have chosen to use a Boolean column to indicate inferred members as described above, select the column from the list.  
   
-## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
-  
-  
+## Related content
+
+- [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)

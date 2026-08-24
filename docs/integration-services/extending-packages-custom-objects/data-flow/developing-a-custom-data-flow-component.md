@@ -61,21 +61,6 @@ dev_langs:
  [Developing Specific Types of Data Flow Components](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  Contains information about developing the three types of data flow components: sources, transformations, and destinations.  
   
-## Reference  
- <xref:Microsoft.SqlServer.Dts.Pipeline>  
- Contains the classes and interfaces used to create custom data flow components.  
-  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>  
- Contains the classes and interfaces that make up the data flow task object model, and is used to create custom data flow components or build a data flow task.  
-  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design>  
- Contains the classes and interfaces used to create the user interface for data flow components.  
-  
- [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
-  
-## Related Sections  
-  
 ### Information Common to All Custom Objects  
  For information that is common to all the type of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], see the following topics:  
   
@@ -103,8 +88,11 @@ dev_langs:
  [Developing a Custom ForEach Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Discusses how to program custom enumerators.  
   
-## See Also  
- [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
- [Comparing Scripting Solutions and Custom Objects](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Dts.Pipeline>
+- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>
+- <xref:Microsoft.SqlServer.Dts.Pipeline.Design>
+- [Integration Services error and message reference](../../integration-services-error-and-message-reference.md)
+- [Extending the Data Flow with the Script Component](../../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)
+- [Comparing Scripting Solutions and Custom Objects](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)

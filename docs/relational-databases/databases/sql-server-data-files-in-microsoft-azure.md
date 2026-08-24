@@ -241,8 +241,8 @@ To resolve this issue, first determine if you need ServerA to access the databas
 
    This error indicates the storage system is unable to meet the demands of the SQL Server workload. Either decrease IO activity from the application layer, or increase throughput capability on the storage layer. To learn more, see [Error 833](../errors-events/mssqlserver-833-database-engine-error.md). If performance problems persist, consider moving files to a different storage tier such as Premium or UltraSSD. For SQL Server on Azure VMs, see [optimizing storage performance](/azure/virtual-machines/premium-storage-performance).
 
-## Next steps
+## Related content
 
-- **Get hands-on experience**: [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server.md)
+- [Tutorial: Use Azure Blob Storage with SQL Server](../tutorial-use-azure-blob-storage-service-with-sql-server.md)
 - [Create a database](create-a-database.md)
-- [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)
+- [File-snapshot backups for database files in Azure](../backup-restore/file-snapshot-backups-for-database-files-in-azure.md)

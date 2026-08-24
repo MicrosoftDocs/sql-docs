@@ -101,6 +101,6 @@ Connection parameters for various providers are as follows:
 
    This is an advanced mode option.
 
-## Next steps
+## Related content
 
-- The next step in the migration process is to [Connect to SQL Server](connect-to-sql-server-sybasetosql.md).
+- [Connect to SQL Server](connect-to-sql-server-sybasetosql.md)

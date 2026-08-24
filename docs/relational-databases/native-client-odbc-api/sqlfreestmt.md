@@ -25,4 +25,4 @@ In general, it's more efficient to reuse statements than to drop them and alloca
 ## Related content
 
 - [SQLFreeStmt Function](../../odbc/reference/syntax/sqlfreestmt-function.md)
-- [ODBC API Implementation Details](odbc-api-implementation-details.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

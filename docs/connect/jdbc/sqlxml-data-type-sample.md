@@ -53,6 +53,6 @@ The showTransformer method demonstrates how to get XML data from one table and i
 
 :::code language="java" source="codesnippet/Java/sqlxml-data-type-sample_1.java":::
 
-## See also
+## Related content
 
-[Working with data types &#40;JDBC&#41;](working-with-data-types-jdbc.md)
+- [Working with data types (JDBC)](working-with-data-types-jdbc.md)

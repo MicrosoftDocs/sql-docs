@@ -46,9 +46,9 @@ In paginated reports, to display data from a report dataset in a table or matrix
   
 ## Related content
 
-- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
-- [Report parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
-- [Interactive sort, document maps, and links &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
-- [Add dataset filters, data region filters, and group filters &#40;Report Builder&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
-- [Add, edit, refresh fields in the report data pane &#40;Report Builder&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)
-- [Add an expression &#40;Report Builder&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)
+- [Paginated report parameters in Report Builder](report-parameters-report-builder-and-report-designer.md)
+- [Interactive sort, document maps, and links in a paginated report (Report Builder)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
+- [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](add-dataset-filters-data-region-filters-and-group-filters.md)
+- [Add, Edit, Refresh Fields in the Report Data Pane (Report Builder and SSRS)](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)
+- [Add an expression to a paginated report (Report Builder)](add-an-expression-report-builder-and-ssrs.md)

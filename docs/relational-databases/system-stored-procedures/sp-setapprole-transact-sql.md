@@ -144,5 +144,4 @@ GO
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)
 - [DROP APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/drop-application-role-transact-sql.md)
-- [sp_unsetapprole (Transact-SQL)](sp-unsetapprole-transact-sql.md)
-
+- [sys.sp_unsetapprole (Transact-SQL)](sp-unsetapprole-transact-sql.md)

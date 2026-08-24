@@ -32,7 +32,8 @@ Traditionally, ODBC defined an application programming interface (API). The func
   
 -   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## See Also  
- [Developing an ODBC Driver](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Developing Connection-Pool Awareness in an ODBC Driver](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
- [Driver Manager Connection Pooling](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)
+## Related content
+
+- [Developing an ODBC Driver](../develop-driver/developing-an-odbc-driver.md)
+- [Developing Connection-Pool Awareness in an ODBC Driver](../develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+- [Driver Manager Connection Pooling](../develop-app/driver-manager-connection-pooling.md)

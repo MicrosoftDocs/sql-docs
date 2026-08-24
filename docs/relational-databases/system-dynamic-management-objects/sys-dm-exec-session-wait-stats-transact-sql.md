@@ -49,7 +49,6 @@ For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, yo
 
 ## Related content
 
-- [System Dynamic Management Views](system-dynamic-management-objects.md)
-- [SQL Server Operating System Related Dynamic Management Views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
 - [sys.dm_os_wait_stats (Transact-SQL)](sys-dm-os-wait-stats-transact-sql.md)
-

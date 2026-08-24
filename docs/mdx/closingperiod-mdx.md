@@ -71,9 +71,8 @@ SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[20
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
-  
-  
+## Related content
+
+- [OpeningPeriod (MDX)](openingperiod-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)
+- [LastSibling (MDX)](lastsibling-mdx.md)

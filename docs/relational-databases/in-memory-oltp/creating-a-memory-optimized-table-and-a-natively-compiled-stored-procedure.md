@@ -280,6 +280,6 @@ FROM dbo.SalesOrders so
 ORDER BY so.so_id, sod.lineitem_id  
 ```  
   
-## See Also  
- [In-Memory OLTP Code Samples](./sample-database-for-in-memory-oltp.md)  
-  
+## Related content
+
+- [Sample database for in-memory OLTP](sample-database-for-in-memory-oltp.md)

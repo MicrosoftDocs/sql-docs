@@ -285,6 +285,7 @@ int main() {
 |Returning driver descriptions and attributes|[SQLDrivers Function](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |Freeing a connection handle|[SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

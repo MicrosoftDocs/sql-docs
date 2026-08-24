@@ -59,7 +59,6 @@ dev_langs:
  [Validate Expressions &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
  The **validate** expression is not supported.  
   
-## See Also  
- [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
-  
-  
+## Related content
+
+- [XQuery Language Reference (SQL Server)](xquery-language-reference-sql-server.md)

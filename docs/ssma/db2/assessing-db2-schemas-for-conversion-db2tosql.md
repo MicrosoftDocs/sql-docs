@@ -75,5 +75,5 @@ The Conversion Statistics pane shows the conversion statistics. If the percentag
 
 ## Related content
 
-- [Migrate Db2 Databases to SQL Server (Db2ToSQL)](migrating-db2-databases-to-sql-server-db2tosql.md)
-- [Convert Db2 schemas (Db2ToSQL)](converting-db2-schemas-db2tosql.md)
+- [Migrate Db2 databases to SQL Server](migrating-db2-databases-to-sql-server-db2tosql.md)
+- [Convert Db2 schemas](converting-db2-schemas-db2tosql.md)

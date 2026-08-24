@@ -33,7 +33,6 @@ helpviewer_keywords:
   
 -   [Data-at-Execution and Text, ntext, or Image Columns](../../relational-databases/native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md)  
   
-## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)

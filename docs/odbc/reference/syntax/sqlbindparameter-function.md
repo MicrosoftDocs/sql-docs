@@ -601,8 +601,8 @@ int main() {
 |Specifying multiple parameter values|[SQLParamOptions Function](../../../odbc/reference/syntax/sqlparamoptions-function.md)|  
 |Sending parameter data at execution time|[SQLPutData Function](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## See Also
+## Related content
 
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)   
- [Retrieving Output Parameters Using SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)
+- [Retrieving Output Parameters Using SQLGetData](../develop-app/retrieving-output-parameters-using-sqlgetdata.md)

@@ -27,7 +27,7 @@ Get [Database Migration Assistant](../../dma/dma-overview.md), and [perform  pac
 
 Depending on the storage types of source SSIS packages and the migration destination of database workloads, the steps to migrate SSIS packages and SQL Server Agent jobs that schedule SSIS package executions may vary. For more information, see [this page](/azure/data-factory/scenario-ssis-migration-overview#migration).
 
-## Next steps
+## Related content
 
-- [Migrate SSIS packages to Azure SQL Managed Instance](/azure/dms/how-to-migrate-ssis-packages-managed-instance).
-- [Migrate SSIS jobs to Azure Data Factory (ADF) with SQL Server Management Studio (SSMS)](/azure/data-factory/how-to-migrate-ssis-job-ssms).
+- [Migrate SSIS packages to Azure SQL Managed Instance](/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Migrate SSIS jobs to Azure Data Factory (ADF) with SQL Server Management Studio (SSMS)](/azure/data-factory/how-to-migrate-ssis-job-ssms)

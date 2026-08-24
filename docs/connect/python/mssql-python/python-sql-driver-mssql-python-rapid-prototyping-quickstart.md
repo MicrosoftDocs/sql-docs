@@ -247,13 +247,12 @@ code .
 
 1. To share your prototype, copy all files except for the `.venv` folder to the other machine. The `.venv` folder is recreated with the first run.
 
-## Next steps
-
-Use these articles to keep building:
-
-- [Quickstart: Repeatable deployments](python-sql-driver-mssql-python-repeatable-deployments-quickstart.md) to set up a proper project with version-pinned dependencies.
-- [Build connection strings](build-connection-strings.md) to configure connections for different SQL database types and authentication methods.
-- [Executing queries](executing-queries.md) to learn about query patterns, parameterized queries, and result handling.
+## Next step
 
 > [!div class="nextstepaction"]
-> [Quickstart: Repeatable deployments](python-sql-driver-mssql-python-repeatable-deployments-quickstart.md)
+> [Quickstart: Repeatable deployments with the mssql-python driver for Python](python-sql-driver-mssql-python-repeatable-deployments-quickstart.md)
+
+## Related content
+
+- [Build connection strings programmatically](build-connection-strings.md)
+- [Execute queries with mssql-python](executing-queries.md)

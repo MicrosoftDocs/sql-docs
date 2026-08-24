@@ -353,7 +353,7 @@ These statements return the row.
 - [Quickstart: Run SQL Server Linux container images with Docker](../../linux/quickstart-install-connect-docker.md)
 - [Start the sqlcmd utility](sqlcmd-start-utility.md)
 - [Execute T-SQL from a script file with sqlcmd](sqlcmd-run-transact-sql-script-files.md)
-- [use the utility](sqlcmd-use-utility.md)
+- [Use sqlcmd](sqlcmd-use-utility.md)
 - [Use sqlcmd with scripting variables](sqlcmd-use-scripting-variables.md)
 - [Connect to SQL Server with sqlcmd](sqlcmd-connect-database-engine.md)
 - [Edit SQLCMD scripts with Query Editor](/ssms/scripting/sqlcmd-scripts-query-editor)

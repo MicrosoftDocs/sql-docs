@@ -32,6 +32,6 @@ helpviewer_keywords:
 -   [Using IRow::GetColumns](../../relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md)  
   
   
-## See Also  
- [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
-  
+## Related content
+
+- [Rowsets (Native Client OLE DB provider)](rowsets.md)

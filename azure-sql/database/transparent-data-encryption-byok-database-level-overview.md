@@ -96,7 +96,7 @@ Logical server is configured with serviced-managed key (SMK) for TDE. A differen
 >
 > Although the revert operation is only supported if the logical server is configured with service-managed key when using TDE, a database configured with database level CMK can be restored to a server configured with CMK, provided the server has access to all the keys being used by the source database with a valid identity.
 
-Transparent Data Encryption with customer‑managed keys uses an external key, referred to as the TDE protector, stored in Azure Key Vault or Azure Managed HSM to protect the database encryption key (DEK).
+Transparent Data Encryption with customer-managed keys uses an external key, referred to as the TDE protector, stored in Azure Key Vault or Azure Managed HSM to protect the database encryption key (DEK).
 
 ## Supported key types and sizes
 
@@ -104,19 +104,19 @@ Depending on the Azure SQL offering and TDE configuration, the TDE protector can
 
 - Asymmetric keys (RSA or RSA HSM)
   - Supported in Azure Key Vault and Azure Key Vault Managed HSM
-  - Supported key sizes: 2048‑bit and 3072‑bit
+  - Supported key sizes: 2048-bit and 3072-bit
   - Supported for Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics
 
 - Symmetric keys (AES)
   - Supported in Azure Key Vault Premium (preview) and Azure Key Vault Managed HSM
-  - Supported key sizes: 128‑bit, 192‑bit, and 256‑bit
+  - Supported key sizes: 128-bit, 192-bit, and 256-bit
   - Supported only for Azure SQL Database, currently in public preview. You may see this capability appear over time depending on your region and service deployment status. 
 
 > [!NOTE]
 > Transparent Data Encryption with symmetric keys (AES) are currently in preview. Preview features are released with limited capabilities, but are made available on a *preview* basis so customers can get early access and provide feedback. Preview features are subject to separate [supplemental preview terms](https://go.microsoft.com/fwlink/?linkid=2240967), and aren't subject to SLAs. Support is provided as best effort in certain cases. However, Microsoft Support is eager to get your feedback on the preview functionality, and might provide best effort support in certain cases. Preview features might have limited or restricted functionality, and might be available only in selected geographic areas.
 
 ### Limitations for symmetric (AES) keys
-When using symmetric (AES) keys as the TDE protector, only keys stored in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM are supported for ongoing key lifecycle operations. Customers can import a key from an on‑premises hardware security module (HSM) one time into Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM. After the initial import, all subsequent key lifecycle operations including point‑in‑time recovery, geo‑disaster recovery, and key revalidation must rely on the Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM infrastructure. Customers are responsible for maintaining local backups of imported keys to support recovery and revalidation scenarios. These limitations apply only to symmetric (AES) keys and do not apply to asymmetric (RSA) keys.
+When using symmetric (AES) keys as the TDE protector, only keys stored in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM are supported for ongoing key lifecycle operations. Customers can import a key from an on-premises hardware security module (HSM) one time into Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM. After the initial import, all subsequent key lifecycle operations including point-in-time recovery, geo-disaster recovery, and key revalidation must rely on the Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM infrastructure. Customers are responsible for maintaining local backups of imported keys to support recovery and revalidation scenarios. These limitations apply only to symmetric (AES) keys and do not apply to asymmetric (RSA) keys.
 
 ### Key state and validity requirements
 

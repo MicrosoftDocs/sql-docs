@@ -150,6 +150,6 @@ CASCADE
   
 ## Related content
 
-- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-- [Specify Computed Columns in a Table](../../relational-databases/tables/specify-computed-columns-in-a-table.md)
-- [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
+- [Specify computed columns in a table](../../relational-databases/tables/specify-computed-columns-in-a-table.md)
+- [Indexes on computed columns](../../relational-databases/indexes/indexes-on-computed-columns.md)

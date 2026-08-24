@@ -53,7 +53,7 @@ To return the next page of records without having the database server return the
 
 [!code-csharp[SqlDataAdapter_Paging#5](~/../sqlclient/doc/samples/SqlDataAdapter_Paging.cs#5)]
 
-## See also
+## Related content
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

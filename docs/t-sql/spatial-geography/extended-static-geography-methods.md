@@ -38,10 +38,9 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 -   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
-## See Also  
- [Static Aggregate Geography Methods](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
-  
-  
+## Related content
+
+- [Static Aggregate Geography Methods](static-aggregate-geography-methods.md)
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [OGC Static Geography Methods](ogc-static-geography-methods.md)

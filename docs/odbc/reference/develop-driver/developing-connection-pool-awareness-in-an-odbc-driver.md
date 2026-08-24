@@ -137,6 +137,7 @@ This topic discusses the details of developing an ODBC driver that contains info
   
  ![State Diagram](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
-## See Also  
- [Driver-Aware Connection Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [ODBC Service Provider Interface (SPI) Reference](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
+## Related content
+
+- [Driver-Aware Connection Pooling](../develop-app/driver-aware-connection-pooling.md)
+- [ODBC Service Provider Interface (SPI) Reference](../syntax/odbc-service-provider-interface-spi-reference.md)

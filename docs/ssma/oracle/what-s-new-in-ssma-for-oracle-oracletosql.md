@@ -27,7 +27,7 @@ The v10.5 release of SSMA for Oracle contains the following changes:
 
 - Important security, compliance, UX, and accessibility fixes.
 
-- Improved reliability of Oracle PL-SQL to T-SQL converted procedures on Azure SQL MI by addressing encryption‑related connection issues in SSMA for Oracle.
+- Improved reliability of Oracle PL-SQL to T-SQL converted procedures on Azure SQL MI by addressing encryption-related connection issues in SSMA for Oracle.
 
 ## SSMA v10.4
 

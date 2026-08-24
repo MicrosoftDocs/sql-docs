@@ -47,7 +47,7 @@ Requires the `VIEW ANY DEFINITION` permission.
 
 ## Related content
 
-- [Resource governor catalog views (Transact-SQL)](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+- [Resource governor catalog views (Transact-SQL)](resource-governor-catalog-views-transact-sql.md)
 - [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
-- [Resource governor](../../relational-databases/resource-governor/resource-governor.md)
-- [sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)
+- [Resource governor](../resource-governor/resource-governor.md)
+- [sys.resource_governor_external_resource_pools (Transact-SQL)](sys-resource-governor-external-resource-pools-transact-sql.md)

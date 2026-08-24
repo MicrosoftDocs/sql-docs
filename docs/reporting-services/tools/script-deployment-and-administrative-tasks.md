@@ -115,13 +115,13 @@ End Sub
 
 ## Related content
 
-- [GenerateDatabaseCreationScript method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)
-- [GenerateDatabaseRightsScript method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)
-- [GenerateDatabaseUpgradeScript method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)
-- [Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
-- [Install Reporting Services native mode report server](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)
-- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
-- [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)
-- [Browser support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
-- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
+- [ConfigurationSetting method - GenerateDatabaseCreationScript](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)
+- [ConfigurationSetting method - GenerateDatabaseRightsScript](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)
+- [ConfigurationSetting method - GenerateDatabaseUpgradeScript](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+- [Install a Reporting Services 2016 native mode report server](../install-windows/install-reporting-services-native-mode-report-server.md)
+- [Reporting Services report server (native mode)](../report-server/reporting-services-report-server-native-mode.md)
+- [Report Server command prompt utilities (SSRS)](report-server-command-prompt-utilities-ssrs.md)
+- [Browser support for Reporting Services and Power View](../browser-support-for-reporting-services-and-power-view.md)
+- [SQL Server Reporting Services tools](reporting-services-tools.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

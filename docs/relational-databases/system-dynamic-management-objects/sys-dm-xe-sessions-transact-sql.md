@@ -57,12 +57,10 @@ For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and previous versions,
 
 For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## Next steps
+## Related content
 
-Learn more about related concepts in the following articles:
-
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [sys.dm_xe_session_targets (Transact-SQL)](sys-dm-xe-session-targets-transact-sql.md)
 - [sys.dm_xe_session_events (Transact-SQL)](sys-dm-xe-session-events-transact-sql.md)
-- [Extended events overview](../extended-events/extended-events.md)
-- [Quickstart: Extended events](../extended-events/quick-start-extended-events-in-sql-server.md)
+- [Extended Events overview](../extended-events/extended-events.md)
+- [Quickstart: Extended Events](../extended-events/quick-start-extended-events-in-sql-server.md)

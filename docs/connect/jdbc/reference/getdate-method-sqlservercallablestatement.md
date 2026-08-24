@@ -26,8 +26,7 @@ apitype: "Assembly"
 |[getDate (java.lang.String)](../../../connect/jdbc/reference/getdate-method-java-lang-string.md)|Retrieves the value of the designated parameter as a java.sql.Date object in the Java programming language given the parameter name.|  
 |[getDate (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-java-lang-string-java-util-calendar.md)|Retrieves the value of the designated parameter as a java.sql.Date object in the Java programming language given the parameter name and Calendar object.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

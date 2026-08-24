@@ -32,7 +32,6 @@ dev_langs:
 |**next_run_date**|**int**|Next date on which the job is scheduled to run. The date is formatted YYYYMMDD.|  
 |**next_run_time**|**int**|Time at which the job is scheduled to run. The time is formatted HHMMSS, and uses a 24-hour clock.|  
   
-## See Also  
- [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
-  
-  
+## Related content
+
+- [dbo.sysschedules (Transact-SQL)](dbo-sysschedules-transact-sql.md)

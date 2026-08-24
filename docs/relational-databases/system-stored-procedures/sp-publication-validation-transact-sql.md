@@ -94,6 +94,6 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 ## Related content
 
 - [Validate Replicated Data](../replication/validate-data-at-the-subscriber.md)
-- [sp_article_validation (Transact-SQL)](sp-article-validation-transact-sql.md)
-- [sp_table_validation (Transact-SQL)](sp-table-validation-transact-sql.md)
+- [sys.sp_article_validation (Transact-SQL)](sp-article-validation-transact-sql.md)
+- [sys.sp_table_validation (Transact-SQL)](sp-table-validation-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -115,5 +115,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)
-- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)
+- [Configure Distribution](../configure-distribution.md)
+- [Monitoring (Replication)](monitoring-replication.md)

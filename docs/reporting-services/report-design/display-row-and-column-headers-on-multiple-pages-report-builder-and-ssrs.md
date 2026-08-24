@@ -61,8 +61,8 @@ For static members, you can display the top adjacent rows or the side adjacent c
 
 ## Related content
 
-- [Find, view, and manage reports (Report Builder and SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Export paginated reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
-- [Controlling page breaks, headings, columns, and rows in paginated reports (Report Builder)](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)
-- [Display headers and footers with a group in paginated reports (Report Builder)](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)
-- [Keep headers visible when scrolling through a paginated report (Report Builder)](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](../report-builder/export-reports-report-builder-and-ssrs.md)
+- [Controlling page breaks, headings, columns, and rows in paginated reports (Report Builder)](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)
+- [Display headers and footers with a group in a paginated report (Report Builder)](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)
+- [Keep headers visible when scrolling through a paginated report in Report Builder](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)

@@ -51,14 +51,14 @@ Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Related content
 
-- [sys.database_query_store_options](sys-database-query-store-options-transact-sql.md)
-- [sys.query_store_plan](sys-query-store-plan-transact-sql.md)
-- [sys.query_store_query](sys-query-store-query-transact-sql.md)
-- [sys.query_store_query_text](sys-query-store-query-text-transact-sql.md)
-- [sys.query_store_runtime_stats](sys-query-store-runtime-stats-transact-sql.md)
-- [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md)
-- [sys.query_store_runtime_stats_interval](sys-query-store-runtime-stats-interval-transact-sql.md)
+- [sys.database_query_store_options (Transact-SQL)](sys-database-query-store-options-transact-sql.md)
+- [sys.query_store_plan (Transact-SQL)](sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query (Transact-SQL)](sys-query-store-query-transact-sql.md)
+- [sys.query_store_query_text (Transact-SQL)](sys-query-store-query-text-transact-sql.md)
+- [sys.query_store_runtime_stats (Transact-SQL)](sys-query-store-runtime-stats-transact-sql.md)
+- [sys.query_store_wait_stats (Transact-SQL)](sys-query-store-wait-stats-transact-sql.md)
+- [sys.query_store_runtime_stats_interval (Transact-SQL)](sys-query-store-runtime-stats-interval-transact-sql.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [Query Store stored procedures (Transact-SQL)](../system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-- [sys.fn_stmt_sql_handle_from_sql_stmt](../system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)
+- [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)

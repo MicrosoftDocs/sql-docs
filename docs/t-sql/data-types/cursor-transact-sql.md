@@ -35,13 +35,12 @@ Any variables created with the **cursor** data type are nullable.
   
 The **cursor** data type cannot be used for a column in a CREATE TABLE statement.
   
-## See also
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
-[Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
-[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
-  
-  
+## Related content
+
+- [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)
+- [CURSOR_STATUS (Transact-SQL)](../functions/cursor-status-transact-sql.md)
+- [Data type conversion (Database Engine)](data-type-conversion-database-engine.md)
+- [Data types (Transact-SQL)](data-types-transact-sql.md)
+- [DECLARE CURSOR (Transact-SQL)](../language-elements/declare-cursor-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../language-elements/declare-local-variable-transact-sql.md)
+- [SET @local_variable (Transact-SQL)](../language-elements/set-local-variable-transact-sql.md)

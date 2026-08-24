@@ -150,6 +150,6 @@ EXECUTE sp_control_plan_guide N'DISABLE ALL';
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [sp_create_plan_guide (Transact-SQL)](sp-create-plan-guide-transact-sql.md)
+- [sys.sp_create_plan_guide (Transact-SQL)](sp-create-plan-guide-transact-sql.md)
 - [sys.plan_guides (Transact-SQL)](../system-catalog-views/sys-plan-guides-transact-sql.md)
 - [Plan Guides](../performance/plan-guides.md)

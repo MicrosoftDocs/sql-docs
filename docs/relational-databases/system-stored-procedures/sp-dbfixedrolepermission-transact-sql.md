@@ -87,8 +87,8 @@ GO
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)
-- [sp_droprolemember (Transact-SQL)](sp-droprolemember-transact-sql.md)
-- [sp_helpdbfixedrole (Transact-SQL)](sp-helpdbfixedrole-transact-sql.md)
-- [sp_srvrolepermission (Transact-SQL)](sp-srvrolepermission-transact-sql.md)
+- [sys.sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)
+- [sys.sp_droprolemember (Transact-SQL)](sp-droprolemember-transact-sql.md)
+- [sys.sp_helpdbfixedrole (Transact-SQL)](sp-helpdbfixedrole-transact-sql.md)
+- [sys.sp_srvrolepermission (Transact-SQL)](sp-srvrolepermission-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

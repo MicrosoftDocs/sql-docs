@@ -37,6 +37,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)
-- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
-- [Republish Data](../../../relational-databases/replication/republish-data.md)
+- [Advanced Merge Replication Conflict - Resolving in Logical Record](advanced-merge-replication-conflict-resolving-in-logical-record.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Republish Data](../republish-data.md)

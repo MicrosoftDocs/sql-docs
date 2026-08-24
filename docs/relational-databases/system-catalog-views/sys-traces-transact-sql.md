@@ -57,9 +57,9 @@ Requires ALTER TRACE permission on the server.
 
 ## Related content
 
-- [Object Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)
-- [sys.trace_categories (Transact-SQL)](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)
-- [sys.trace_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)
-- [sys.trace_events (Transact-SQL)](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)
-- [sys.trace_event_bindings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)
-- [sys.trace_subclass_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [sys.trace_categories (Transact-SQL)](sys-trace-categories-transact-sql.md)
+- [sys.trace_columns (Transact-SQL)](sys-trace-columns-transact-sql.md)
+- [sys.trace_events (Transact-SQL)](sys-trace-events-transact-sql.md)
+- [sys.trace_event_bindings (Transact-SQL)](sys-trace-event-bindings-transact-sql.md)
+- [sys.trace_subclass_values (Transact-SQL)](sys-trace-subclass-values-transact-sql.md)

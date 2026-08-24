@@ -57,18 +57,9 @@ helpviewer_keywords:
   
 10. On the confirmation dialog box, click **OK**. The value in the **Business Rule State** column changed to **Active** and the **Notification** column shows the selected user or group to send notification to.  
   
-## Next Steps  
-  
--   Apply business rules to data by following one of these procedures:  
-  
-    -   [Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
-  
-    -   [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
-  
--   Configure the email protocol as follows:  
-  
-    -   [Configure Email Notifications &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
-  
-## See Also  
- [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
- [Configure Email Notifications &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)
+## Related content
+
+- [Notifications (Master Data Services)](notifications-master-data-services.md)
+- [Configure Email Notifications (Master Data Services)](configure-email-notifications-master-data-services.md)
+- [Validate Specific Members against Business Rules (Master Data Services)](validate-specific-members-against-business-rules-master-data-services.md)
+- [Validate a Version against Business Rules (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)

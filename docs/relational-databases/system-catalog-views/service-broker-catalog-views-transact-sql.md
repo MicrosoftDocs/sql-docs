@@ -51,9 +51,9 @@ This section contains the following catalog views:
     :::column-end:::
 :::row-end:::
   
-## See Also  
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
- [sys.service_broker_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)   
- [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)  
-  
+## Related content
+
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [sys.service_broker_endpoints (Transact-SQL)](sys-service-broker-endpoints-transact-sql.md)
+- [sys.service_queues (Transact-SQL)](sys-service-queues-transact-sql.md)

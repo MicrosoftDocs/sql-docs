@@ -106,4 +106,4 @@ For each item that couldn't be converted, choose what you want to do with that o
 - You can exclude the object from migration. In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer and Oracle Metadata Explorer, clear the check box next to the item. Then load the objects into [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and migrate data from Oracle.
 
 > [!div class="nextstepaction"]
-> [Load converted database objects into SQL Server (OracleToSQL)](loading-converted-database-objects-into-sql-server-oracletosql.md)
+> [Load converted database objects into SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md)

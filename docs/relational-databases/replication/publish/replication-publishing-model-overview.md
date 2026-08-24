@@ -61,7 +61,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)
-- [Types of Replication](../../../relational-databases/replication/types-of-replication.md)
-- [Configure Replication for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)
-- [Maintaining an Always On Publication Database (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)
+- [Replication Agents Overview](../agents/replication-agents-overview.md)
+- [Types of Replication](../types-of-replication.md)
+- [Configure replication with Always On availability groups](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)
+- [Manage a replicated Publisher database as part of an Always On availability group](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)

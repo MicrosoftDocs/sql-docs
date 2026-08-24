@@ -64,5 +64,5 @@ GO
 
 ## Related content
 
-- [sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)
-- [sp_addlinkedsrvlogin (Transact-SQL)](sp-addlinkedsrvlogin-transact-sql.md)
+- [sys.sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)
+- [sys.sp_addlinkedsrvlogin (Transact-SQL)](sp-addlinkedsrvlogin-transact-sql.md)

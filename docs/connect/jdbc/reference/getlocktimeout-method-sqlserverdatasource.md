@@ -33,8 +33,7 @@ public int getLockTimeout()
 > [!NOTE]  
 >  A value of 0 means no wait. If the lockTimeout property is not set, the getLockTimeout method returns the default value of -1.  
   
-## See Also  
- [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDataSource Members](sqlserverdatasource-members.md)
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

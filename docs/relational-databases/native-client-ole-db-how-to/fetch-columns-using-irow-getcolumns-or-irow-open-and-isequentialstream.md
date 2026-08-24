@@ -662,6 +662,6 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## See Also  
- [OLE DB How-to Topics](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
+## Related content
+
+- [OLE DB How-to Topics (Native Client OLE DB provider)](ole-db-how-to-topics.md)

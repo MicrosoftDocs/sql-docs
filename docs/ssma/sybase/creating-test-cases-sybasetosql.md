@@ -35,6 +35,6 @@ The process of creating a test case consists of five steps:
   
 5.  [Finishing Test Case Preparation &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md).  
   
-## See Also  
-[Testing Migrated Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
-  
+## Related content
+
+- [Testing Migrated Database Objects](testing-migrated-database-objects-sybasetosql.md)

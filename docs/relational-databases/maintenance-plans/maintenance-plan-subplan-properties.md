@@ -32,6 +32,6 @@ Use the **Maintenance Plan (Subplan Properties)** dialog box to specify a name, 
 
   Select the schedule icon to specify when the subplan tasks should run, or select the schedule icon with a red x to remove the existing subplan schedule.
 
-## See also
+## Related content
 
-- [Maintenance Plans](maintenance-plans.md)
+- [Maintenance plans](maintenance-plans.md)

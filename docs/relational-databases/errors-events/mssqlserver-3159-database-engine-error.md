@@ -39,9 +39,9 @@ Take a tail-log backup, and retry the restore operation.
   
 If you cannot back up the tail of the log, use WITH STOPAT or WITH REPLACE in your RESTORE statements.  
   
-## See Also  
-[Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](~/relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
-[Back Up the Transaction Log When the Database Is Damaged &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
-[Back Up a Transaction Log &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
-[Tail-Log Backups &#40;SQL Server&#41;](~/relational-databases/backup-restore/tail-log-backups-sql-server.md)  
-  
+## Related content
+
+- [Restore a SQL Server Database to a Point in Time (Full Recovery Model)](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)
+- [Back up and restore: System databases (SQL Server)](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
+- [Back up a transaction log](../backup-restore/back-up-a-transaction-log-sql-server.md)
+- [Tail-log backups (SQL Server)](../backup-restore/tail-log-backups-sql-server.md)

@@ -44,9 +44,7 @@ helpviewer_keywords:
   
 -   [OLE DB Table-Valued Parameter Type Support &#40;Properties&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
   
-## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [Use Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)
+- [Use Table-Valued Parameters (OLE DB)](../ole-db-how-to/use-table-valued-parameters-ole-db.md)

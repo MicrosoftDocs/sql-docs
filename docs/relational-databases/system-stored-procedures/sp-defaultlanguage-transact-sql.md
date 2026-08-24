@@ -79,7 +79,7 @@ GO
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)
-- [&#x40;&#x40;LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)
+- [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)
 - [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
 - [sys.syslanguages (Transact-SQL)](../system-compatibility-views/sys-syslanguages-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

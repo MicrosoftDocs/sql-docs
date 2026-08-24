@@ -126,18 +126,10 @@ When a column in the SELECT clause can't be associated with any of the tables id
 
 If the asterisk (*) wildcard character is specified in the SELECT clause, the nesting is determined in the same way as previously described, based on the order that the rows are returned by the query engine.
 
-## Next steps
+## Related content
 
-The following articles provide more information about AUTO mode:
-
-- [Use the BINARY BASE64 Option](../../relational-databases/xml/use-the-binary-base64-option.md)
-
-- [AUTO Mode Heuristics in Shaping Returned XML](../../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md)
-
-- [Examples: Using AUTO Mode](../../relational-databases/xml/examples-using-auto-mode.md)
-
-## See also
-
-- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
-- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)
-
+- [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
+- [FOR XML (SQL Server)](for-xml-sql-server.md)
+- [Use the BINARY BASE64 option](use-the-binary-base64-option.md)
+- [AUTO mode heuristics in shaping returned XML](auto-mode-heuristics-in-shaping-returned-xml.md)
+- [Examples: Using AUTO mode](examples-using-auto-mode.md)

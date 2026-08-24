@@ -51,5 +51,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-- [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Configure report server URLs (Report Server Configuration Manager)](configure-report-server-urls-ssrs-configuration-manager.md)
+- [Configure a URL (Report Server Configuration Manager)](configure-a-url-ssrs-configuration-manager.md)

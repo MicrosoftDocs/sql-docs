@@ -108,7 +108,7 @@ Memory-optimized table variables and non-durable tables typically reduce CPU and
 
 #### Implementation considerations
 
-To get started: [Improving temp table and table variable performance using memory optimization.](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+To get started: [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization).
 
 #### Customer case study
 
@@ -224,15 +224,15 @@ GO
 
 ## Related content
 
-- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Technologies for Faster T-SQL Performance](survey-of-initial-areas-in-in-memory-oltp.md)
+- [Survey of Initial Areas in In-Memory OLTP](survey-of-initial-areas-in-in-memory-oltp.md)
 - [Performance and resource utilization benefits of [!INCLUDE[inmemory](../../includes/inmemory-md.md)] in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
 - [Demonstration: Performance Improvement of In-Memory OLTP](demonstration-performance-improvement-of-in-memory-oltp.md)
-- [Sample Database for In-Memory OLTP](sample-database-for-in-memory-oltp.md)
-- Perf demo using [!INCLUDE[inmemory](../../includes/inmemory-md.md)] can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+- [Sample database for in-memory OLTP](sample-database-for-in-memory-oltp.md)
+- [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [17-minute video explaining [!INCLUDE[inmemory](../../includes/inmemory-md.md)] and showing the demo](https://www.youtube.com/watch?v=UHhYhSCJil4)
-- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] overview and usage scenarios](overview-and-usage-scenarios.md)
+- [In-Memory OLTP overview and usage scenarios](overview-and-usage-scenarios.md)
 - [Optimize Performance using In-Memory Technologies in Azure SQL](/azure/sql-database/sql-database-in-memory)
 - [System-Versioned Temporal Tables with Memory-Optimized Tables](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
-- [The Memory Optimized Filegroup](the-memory-optimized-filegroup.md)
+- [The memory-optimized filegroup](the-memory-optimized-filegroup.md)
 - [Script to enable [!INCLUDE[inmemory](../../includes/inmemory-md.md)] and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)

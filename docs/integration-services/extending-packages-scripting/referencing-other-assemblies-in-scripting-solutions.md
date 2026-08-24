@@ -75,7 +75,6 @@ dev_langs:
   
  For more information about the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], see the MSDN Library.  
   
-## See Also  
- [Extending Packages with Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
-  
+## Related content
+
+- [Extending Packages with Scripting](extending-packages-with-scripting.md)

@@ -174,7 +174,7 @@ helpviewer_keywords:
  **UseDirectoryIfExists**  
  Indicates whether the **Create directory** operation uses an existing directory with the specified name instead of creating a new directory.  
   
-## See Also  
- [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
+## Related content
+
+- [Integration Services Tasks](integration-services-tasks.md)
+- [Control Flow](control-flow.md)

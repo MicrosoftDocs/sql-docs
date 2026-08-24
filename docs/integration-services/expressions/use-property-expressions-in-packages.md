@@ -159,10 +159,7 @@ ms.custom: sfi-ropc-nochange
 > [!NOTE]  
 >  Property expressions for log providers can be accessed only by using the Properties window. To view the properties of a log provider, you must select the log provider on the **Package Explorer** tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer when the Properties window is open, or right-click the log provider in Package Explorer and click **Properties**.  
   
-## External Resources  
-  
-  
--   Technical article, [SSIS Expression Examples](#use-property-expressions-in-packages)
-  
-## See Also  
- [Use Variables in Packages](../integration-services-ssis-variables.md)  
+## Related content
+
+- [SSIS Expression Examples](#use-property-expressions-in-packages)
+- [Integration Services (SSIS) Variables](../integration-services-ssis-variables.md)

@@ -32,4 +32,4 @@ When you're running the latest current branch version of Microsoft Report Builde
 
 ## Related content
 
-- [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)
+- [Install Microsoft Report Builder](../install-windows/install-report-builder.md)

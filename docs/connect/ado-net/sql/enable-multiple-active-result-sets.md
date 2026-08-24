@@ -102,5 +102,6 @@ There are three options for handling this scenario:
 ### Detecting MARS support  
 An application can check for MARS support by reading the `SqlConnection.ServerVersion` value. The major number should be 9 for SQL Server 2005 and 10 for SQL Server 2008.  
   
-## Next steps
+## Related content
+
 - [Multiple Active Result Sets (MARS)](multiple-active-result-sets-mars.md)

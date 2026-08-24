@@ -50,4 +50,4 @@ Returns a row containing dynamic-state information for each TCP listener.
 
 - [Querying the SQL Server System Catalog FAQ](../system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)
 - [Always On Availability Groups Catalog Views (Transact-SQL)](../system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)
-- [Always On Availability Groups Dynamic Management Views - Functions](always-on-availability-groups-dynamic-management-views-functions.md)
+- [Always On availability groups dynamic management views and functions](always-on-availability-groups-dynamic-management-views-functions.md)

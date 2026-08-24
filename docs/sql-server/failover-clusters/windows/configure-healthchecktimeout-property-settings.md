@@ -78,6 +78,6 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-## See Also  
- [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
-  
+## Related content
+
+- [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)

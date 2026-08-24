@@ -97,11 +97,10 @@ dev_langs:
 |**partition_options**|**tinyint**|Defines the way in which data in the article is partitioned, which enables performance optimizations when all rows belong in only one partition or in only one subscription. The *partition_options* can be one of the following values.<br /><br /> **0** = The filtering for the article either is static or does not yield a unique subset of data for each partition, that is, an "overlapping" partition.<br /><br /> **1** = The partitions are overlapping, and DML updates made at the Subscriber cannot change the partition to which a row belongs.<br /><br /> **2** = The filtering for the article yields non-overlapping partitions, but multiple Subscribers can receive the same partition.<br /><br /> **3** = The filtering for the article yields non-overlapping partitions that are unique for each subscription.|  
 |**name**|**sysname**|The name of a partition.|  
   
-## See Also  
- [Manage Partitions for a Merge Publication with Parameterized Filters](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
-  
-  
+## Related content
+
+- [Manage Partitions for a Merge Publication with Parameterized Filters](../replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)
+- [Replication Tables (Transact-SQL)](../system-tables/replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](replication-views-transact-sql.md)
+- [sys.sp_addmergepartition (Transact-SQL)](../system-stored-procedures/sp-addmergepartition-transact-sql.md)
+- [sys.sp_helpmergepartition (Transact-SQL)](../system-stored-procedures/sp-helpmergepartition-transact-sql.md)

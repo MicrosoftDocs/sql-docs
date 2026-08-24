@@ -117,7 +117,7 @@ The **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationInte
 
 An availability group consists of multiple physical servers. [!INCLUDE[jdbc-40](../../includes/jdbc-40-md.md)] added support for **Subject Alternate Name** in TLS/SSL certificates so multiple hosts can be associated with the same certificate. For more information on TLS, see [Understanding encryption support](understanding-ssl-support.md).
 
-## See also
+## Related content
 
-[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)  
-[Setting the connection properties](setting-the-connection-properties.md)  
+- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)
+- [Set the connection properties](setting-the-connection-properties.md)

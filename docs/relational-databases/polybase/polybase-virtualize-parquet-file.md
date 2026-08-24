@@ -156,7 +156,7 @@ For more information, see:
 5. The credential name created must contain the bucket name unless this credential is for a new external data source.
 6. Access Key ID and Secret Key ID must only contain alphanumeric values.
 
-## Next steps
+## Related content
 
- - To learn more about PolyBase, see [Overview of SQL Server PolyBase](overview.md)
+- [PolyBase overview](overview.md)
 - [Configure PolyBase to access external data in S3-compatible object storage](polybase-configure-s3-compatible.md)

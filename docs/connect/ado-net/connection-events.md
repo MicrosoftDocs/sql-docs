@@ -53,7 +53,7 @@ The following code example uses the **StateChange** event to write a message to 
 
 [!code-csharp[SqlConnection_._StateChange#2](~/../sqlclient/doc/samples/SqlConnection_InfoMessage_StateChange.cs#2)]
 
-## See also
+## Related content
 
-- [Connecting to a data source](connecting-to-data-source.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Connecting to a data source in ADO.NET](connecting-to-data-source.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

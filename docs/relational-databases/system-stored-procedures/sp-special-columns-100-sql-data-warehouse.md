@@ -115,4 +115,4 @@ EXECUTE sp_special_columns_100 @table_name = 'FactFinance';
 
 ## Related content
 
-- [System stored procedures](system-stored-procedures-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

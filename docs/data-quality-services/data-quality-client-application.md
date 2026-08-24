@@ -27,16 +27,10 @@ ms.custom:
 |----------------------|-----------|  
 |Describes how to use the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application.|[Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md)|  
   
-## Related Content  
-  
-|Content Description|Topic|  
-|-------------------------|-----------|  
-|Describes how to use knowledge bases and domains in DQS.|[DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Describes how to cleanse your data in DQS.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
-|Describes how to perform matching in DQS.|[Data Matching](../data-quality-services/data-matching.md)|  
-|Describes how to administer DQS.|[DQS Administration](../data-quality-services/dqs-administration.md)|  
-  
-## See Also  
- [Data Quality Client Home Screen](../data-quality-services/data-quality-client-home-screen.md)  
-  
-  
+## Related content
+
+- [DQS Knowledge Bases and Domains](dqs-knowledge-bases-and-domains.md)
+- [Data Cleansing](data-cleansing.md)
+- [Data Matching](data-matching.md)
+- [DQS Administration](dqs-administration.md)
+- [Data Quality Client Home Screen](data-quality-client-home-screen.md)

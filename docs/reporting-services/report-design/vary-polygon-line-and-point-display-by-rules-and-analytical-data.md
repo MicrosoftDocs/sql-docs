@@ -124,6 +124,6 @@ f1_keywords:
   
 ## Related content
 
-- [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)
-- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
-- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)
+- [Change map legends, color scale, and associated rules in a paginated report (Report Builder)](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)
+- [Maps in a paginated report (Report Builder)](maps-report-builder-and-ssrs.md)
+- [Map Wizard and Map Layer Wizard (Report Builder and SSRS)](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)

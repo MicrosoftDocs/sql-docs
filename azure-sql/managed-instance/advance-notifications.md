@@ -79,7 +79,7 @@ The following table shows the general information notifications you might receiv
 |Status|Description|
 |:---|:---|
 |**Planned**| Received 24 hours before the maintenance event. Maintenance is planned on DATE between 5pm - 8am<sup>1</sup> (local time) in region *region_name*. |
-|**InProgress** | Maintenance for databases in region *region_name* is starting. | 
+|**InProgress** | Maintenance for databases in region *region_name* is starting. | 
 |**Complete** | Maintenance of databases in region *region_name* is complete. |
 
 <sup>1</sup> Start and end time depend on the selected [maintenance window](maintenance-window.md).
@@ -122,7 +122,7 @@ In Azure Resource Graph (ARG) explorer, you might find values for the status of 
 |Status|Description|
 |:---|:---|
 |**Pending**|- Maintenance is planned on upcoming date.<br/> - Previously planned maintenance is rescheduled and is waiting to start in the next window.</br> - Maintenance started but didn't complete in previous window and will continue in the next one. |
-|**InProgress** | Maintenance for resource *region_name* is starting or is in progress. | 
+|**InProgress** | Maintenance for resource *region_name* is starting or is in progress. | 
 |**Completed** | Maintenance for resource *region_name* is complete. |
 |**NoUpdatesPending** | Previously planned maintenance for resource *region_name* is canceled and will be rescheduled for later. |
 |**RetryLater** | Planned maintenance for resource *region_name* has started but couldn't progress to the end and will continue in next maintenance window. |

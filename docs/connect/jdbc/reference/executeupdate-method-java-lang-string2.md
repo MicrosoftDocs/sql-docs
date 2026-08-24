@@ -38,10 +38,8 @@ This executeUpdate method is specified by the executeUpdate method in the java.s
 
 Calling this method will result in an exception since the SQL statement for the SQLServerPreparedStatement object is specified when the object is created.
 
-## See Also
+## Related content
 
-[executeUpdate Method &#40;SQLServerPreparedStatement&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
-
-[SQLServerPreparedStatement Members](./sqlserverpreparedstatement-members.md)
-
-[SQLServerPreparedStatement Class](./sqlserverpreparedstatement-class.md)
+- [executeUpdate Method (SQLServerPreparedStatement)](executeupdate-method-sqlserverpreparedstatement.md)
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)
+- [SQLServerPreparedStatement Class](sqlserverpreparedstatement-class.md)

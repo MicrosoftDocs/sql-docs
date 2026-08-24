@@ -71,4 +71,4 @@ EXECUTE sp_dbremove sales;
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [sp_detach_db (Transact-SQL)](sp-detach-db-transact-sql.md)
+- [sys.sp_detach_db (Transact-SQL)](sp-detach-db-transact-sql.md)

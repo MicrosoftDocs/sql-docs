@@ -43,7 +43,6 @@ ms.topic: "reference"
 ### Use Date/Time/Datetime/Datetimeoffset Data with Client-Side Conversions Consistent with Existing Conversions  
  The ODBC standard describes how conversions between existing date, time, and timestamp types work. These are extended in a consistent manner to include conversions between all date and time types introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)].  
   
-## See Also  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Features](sql-server-native-client-features.md)

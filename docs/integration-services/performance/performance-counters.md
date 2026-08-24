@@ -66,13 +66,6 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 > [!IMPORTANT]  
 > If you are a member of the **ssis_admin** database role, performance statistics for all running executions are returned.  If you are not a member of the **ssis_admin** database role, performance statistics for the running executions for which you have read permissions, are returned.  
   
-## Related Content  
-  
-  
--   Video, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100)), on msdn.microsoft.com.  
-  
--   Support article, [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](https://web.archive.org/web/20111112202346/http://support.microsoft.com:80/kb/955632), on support.microsoft.com.  
-
 ## Add a Log for Data Flow Performance Counters
   This procedure describes how to add a log for the performance counters that the data flow engine provides.  
   
@@ -114,6 +107,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     > [!NOTE]  
     >  You must start the Performance Logs and Alerts service using a local account or a domain account that is a member of the Administrators group.  
 
-## See Also  
- [Execution of Projects and Packages](../packages/run-integration-services-ssis-packages.md)
- [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)
+## Related content
+
+- [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100))
+- [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](https://web.archive.org/web/20111112202346/http://support.microsoft.com:80/kb/955632)
+- [Run Integration Services (SSIS) Packages](../packages/run-integration-services-ssis-packages.md)
+- [Events Logged by an Integration Services Package](events-logged-by-an-integration-services-package.md)

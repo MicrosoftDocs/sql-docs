@@ -83,6 +83,6 @@ helpviewer_keywords:
 { CALL [MyDB].[MyOwner].[My.Table] }  
 ```  
   
-## See Also  
- [Running Stored Procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
-  
+## Related content
+
+- [Running Stored Procedures](running-stored-procedures.md)

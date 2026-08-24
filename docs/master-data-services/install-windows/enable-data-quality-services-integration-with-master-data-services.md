@@ -36,7 +36,8 @@ ms.custom:
   
 5.  On the confirmation dialog box, click **OK**.  
   
-## See Also  
- [Data Quality Matching in the MDS Add-in for Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
- [Master Data Services Add-in for Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
- [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)
+## Related content
+
+- [Data Quality Matching in the MDS Add-in for Excel](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)
+- [Master Data Services Add-in for Microsoft Excel](../microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)
+- [Installation Tasks for Master Data Services](install-master-data-services.md)

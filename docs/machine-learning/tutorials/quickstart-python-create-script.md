@@ -234,7 +234,7 @@ GO
 
 The list is from `pkg_resources.working_set` in Python and returned to SQL as a data frame.
  
-## Next steps
+## Next step
 
 To learn how to use data structures when using Python in SQL machine learning, follow this quickstart:
 

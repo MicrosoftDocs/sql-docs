@@ -53,7 +53,8 @@ helpviewer_keywords:
   
 9. Click **Save**.  
   
-## See Also  
- [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Delete an Attribute &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
- [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)
+## Related content
+
+- [Create a Text Attribute (Master Data Services)](create-a-text-attribute-master-data-services.md)
+- [Delete an Attribute (Master Data Services)](delete-an-attribute-master-data-services.md)
+- [Attributes (Master Data Services)](attributes-master-data-services.md)

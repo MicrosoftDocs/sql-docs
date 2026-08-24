@@ -36,8 +36,8 @@ ms.custom:
 
 ## Related content
 
-- [Range Charts](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)
-- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Range charts in a paginated report (Report Builder)](range-charts-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
 - [Axis Properties Dialog Box, Axis Options](/previous-versions/sql/)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

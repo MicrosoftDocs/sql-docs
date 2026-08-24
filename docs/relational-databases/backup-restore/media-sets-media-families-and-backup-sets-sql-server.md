@@ -314,11 +314,11 @@ When you use multiple tape drives or disk files, the following considerations ap
 
 ## Related content
 
-- [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)
+- [Back up and restore of SQL Server databases](back-up-and-restore-of-sql-server-databases.md)
 - [Possible Media Errors During Backup and Restore (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)
 - [Backup History and Header Information (SQL Server)](backup-history-and-header-information-sql-server.md)
 - [Mirrored Backup Media Sets (SQL Server)](mirrored-backup-media-sets-sql-server.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
 - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
 - [RESTORE Statements - REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [sp_configure](../system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md)

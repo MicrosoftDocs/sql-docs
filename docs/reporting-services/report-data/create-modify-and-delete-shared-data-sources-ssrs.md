@@ -208,6 +208,6 @@ Deleting a shared data source deactivates any report, model, or data-driven subs
   
 ## Related content
 
-- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
-- [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)
-- [Configure Data Source Properties for a Paginated Report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)
+- [Create data connection strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Manage Report Data Sources](manage-report-data-sources.md)
+- [Configure Data Source Properties for a Paginated Report](configure-data-source-properties-for-a-report-report-manager.md)

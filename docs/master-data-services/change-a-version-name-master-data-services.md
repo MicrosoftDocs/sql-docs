@@ -39,8 +39,9 @@ helpviewer_keywords:
   
 4.  Press ENTER.  
   
-## See Also  
- [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [Lock a Version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
- [Commit a Version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)
+## Related content
+
+- [Validate a Version against Business Rules (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)
+- [Lock a Version (Master Data Services)](lock-a-version-master-data-services.md)
+- [Commit a Version (Master Data Services)](commit-a-version-master-data-services.md)
+- [Versions (Master Data Services)](versions-master-data-services.md)

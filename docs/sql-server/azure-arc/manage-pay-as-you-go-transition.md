@@ -94,8 +94,8 @@ If the machine reconnects within 30 days of being disconnected, pay-as-you-go bi
 
 If the machine remains disconnected for more than 30 days, the SQL Arc service switches to recurring billing based on the last known configuration. For example: edition, number of cores, high availability setup. Charges include:
 
-- Backfill charges for the previous 30 days.
-- Ongoing hourly charges until the machine reconnects.
+- Backfill charges for the previous 30 days.
+- Ongoing hourly charges until the machine reconnects.
 
 These charges use separate recurring pay-as-you-go (`PAYG`) meters to track usage during the disconnected state.
 
@@ -116,9 +116,9 @@ If you have an application that's infrequently used and can be offline longer th
 
 ### Solution overview
 
-Because the current Windows Server implementation enforces a fixed 30-day disconnection limit, the system automatically handles the re-onboarding of underlying servers without resetting SQL Server billing. This feature ensures that services like Extended Security Updates (ESU) aren't reset and that no new back-billing is triggered unnecessarily.
+Because the current Windows Server implementation enforces a fixed 30-day disconnection limit, the system automatically handles the re-onboarding of underlying servers without resetting SQL Server billing. This feature ensures that services like Extended Security Updates (ESU) aren't reset and that no new back-billing is triggered unnecessarily.
 
-The following timeline illustrates the billing behavior for both SQL Server and Windows Server, comparing scenarios where the machine reconnects within 30 days versus after 30 days.
+The following timeline illustrates the billing behavior for both SQL Server and Windows Server, comparing scenarios where the machine reconnects within 30 days versus after 30 days.
 
 | Timeline | Event | Service's actions |
 |----------|-------|-------------------|
@@ -129,7 +129,7 @@ The following timeline illustrates the billing behavior for both SQL Server 
 | Day 31+ | Continued disconnection. | Hourly billing continues indefinitely using the last known configuration. |
 | Day 40 | Connectivity is restored | Hourly billing switches to regular pay-as-you-go meters and continues. |
 
-If connectivity is restored within 30 days, pay-as-you-go billing resumes based on actual usage data collected by the Azure extension for SQL Server and reported through standard pay-as-you-go meters. If connectivity is restored after 30 days, billing continues based on the last known configuration of the SQL instance using recurring pay-as-you-go meters until the connection is re-established.
+If connectivity is restored within 30 days, pay-as-you-go billing resumes based on actual usage data collected by the Azure extension for SQL Server and reported through standard pay-as-you-go meters. If connectivity is restored after 30 days, billing continues based on the last known configuration of the SQL instance using recurring pay-as-you-go meters until the connection is re-established.
 
 ## Recurring billing consent
 
@@ -232,6 +232,5 @@ To monitor, review [Use activity logs with SQL Server enabled by Azure Arc](acti
 
 ## Related content
 
-[Recurring billing for SQL Server enabled by Azure Arc FAQ](faq.yml#recurring-pay-as-you-go-billing)
-
-[Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md)
+- [Recurring billing for SQL Server enabled by Azure Arc FAQ](faq.yml#recurring-pay-as-you-go-billing)
+- [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md)

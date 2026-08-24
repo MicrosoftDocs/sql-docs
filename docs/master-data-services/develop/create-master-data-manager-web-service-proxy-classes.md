@@ -56,5 +56,6 @@ svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc
   
 -   *proxy_name* is the name for the generated proxy file.  
   
-## See Also  
- [Categorized Web Service Operations &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)
+## Related content
+
+- [Categorized Web Service Operations (Master Data Services)](categorized-web-service-operations-master-data-services.md)

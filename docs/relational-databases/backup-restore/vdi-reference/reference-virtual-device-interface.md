@@ -30,9 +30,7 @@ Conventional online backups done through VDI can take advantage of the full rang
 
 Backup or restore operations that use the Microsoft SQL Server Virtual Device Interface (VDI) require that the server connection for SQL Server that is used to issue the `BACKUP` or `RESTORE` commands must be logged on as the sysadmin fixed server role. The VDI connection requires the Sysadmin permission because the connection itself is capable of executing more than simple backup operations and involves shared resources between the client and server. This may not be desirable in all environments and may cause third-party backup applications that use VDI to fail if the service accounts of the applications are configured to only have the `db_backupoperator` fixed database role.
 
-## Next steps
+## Related content
 
-Review the VDI reference documentation in this section.
-Download SQL Server 2005 VDI specification (Does not include VDC_Complete, but otherwise complete): [SQL Server 2005 Virtual Backup Device Interface Specification](https://www.microsoft.com/en-us/download/details.aspx?id=17282)
-
-Download supporting examples: [GitHub: sql-server-samples/samples/features/sqlvdi](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sqlvdi)
+- [SQL Server 2005 Virtual Backup Device Interface Specification](https://www.microsoft.com/en-us/download/details.aspx?id=17282)
+- [GitHub: sql-server-samples/samples/features/sqlvdi](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sqlvdi)

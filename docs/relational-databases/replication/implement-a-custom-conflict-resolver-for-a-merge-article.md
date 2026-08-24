@@ -109,6 +109,6 @@ dev_langs:
 
 ## Related content
 
-- [Advanced Merge replication conflict detection and resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
-- [COM-based custom resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)
-- [Replication security best practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Advanced Merge Replication Conflict - COM-Based Custom Resolvers](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)

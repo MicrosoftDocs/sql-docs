@@ -47,7 +47,7 @@ To uninstall the extension pack
   
 After uninstalling, you can confirm that the **sysdb.ssma_syb** schema, and possibly the whole **sysdb** database, has been removed by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. However, if you use other SSMA products, they also use the **sysdb** database. If the database exists and you are sure that no other databases reference objects in this database, you can detach the database.  
   
-## See Also  
-[Installing SSMA  for Sybase Client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[Installing SSMA Components on SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-  
+## Related content
+
+- [Install SSMA for Sybase client](installing-ssma-for-sybase-client-sybasetosql.md)
+- [Install SSMA components on SQL Server](installing-ssma-components-on-sql-server-sybasetosql.md)

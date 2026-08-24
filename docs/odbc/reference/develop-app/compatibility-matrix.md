@@ -60,5 +60,6 @@ The following table describes the compatibility of the types of applications and
 ## Using SQLCancelHandle in an Application Compatible with all Driver Managers  
  Because [SQLCancelHandle Function](../../../odbc/reference/syntax/sqlcancelhandle-function.md) is not supported in Driver Managers that were released before Windows 7, an application cannot be loaded in older versions of Windows if it calls **SQLCancelHandle** directly. To work with all versions of Driver Managers and use **SQLCancelHandle** on new versions of Windows, an application should call **SQLCancelHandle** indirectly by using **LoadLibrary** and **GetProcAddress.**  
   
-## See Also  
- [What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
+## Related content
+
+- [What's New in ODBC 3.8](../what-s-new-in-odbc-3-8.md)

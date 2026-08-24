@@ -202,7 +202,6 @@ End Class
 
 `Number of connections in package: 2`
 
-## See also
+## Related content
 
-- [Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)
-- [Create Connection Managers](../connection-manager/integration-services-ssis-connections.md)
+- [Integration Services (SSIS) Connections](../connection-manager/integration-services-ssis-connections.md)

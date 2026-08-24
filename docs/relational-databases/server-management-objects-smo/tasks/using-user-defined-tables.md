@@ -247,8 +247,7 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()           
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
- [Database Files and Filegroups](../../../relational-databases/databases/database-files-and-filegroups.md)   
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.FileGroup>
+- [Database files and filegroups](../../databases/database-files-and-filegroups.md)

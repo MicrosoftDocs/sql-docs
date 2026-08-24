@@ -67,13 +67,12 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  The **StrToMember** and **StrToSet** functions should be used with caution. They can lead to poor query performance if they are used within calculation definitions.  
   
-## See Also  
- [Generate &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
- [Functions &#40;MDX Syntax&#41;](../mdx/functions-mdx-syntax.md)   
- [Using Stored Procedures &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
-  
-  
+## Related content
+
+- [Generate (MDX)](generate-mdx.md)
+- [Name (MDX)](name-mdx.md)
+- [UniqueName (MDX)](uniquename-mdx.md)
+- [Functions (MDX Syntax)](functions-mdx-syntax.md)
+- [Using Stored Procedures (MDX)](using-stored-procedures-mdx.md)
+- [StrToMember (MDX)](strtomember-mdx.md)
+- [StrToSet (MDX)](strtoset-mdx.md)

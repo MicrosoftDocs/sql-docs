@@ -42,10 +42,8 @@ helpviewer_keywords:
   
 7.  When you are done, click **Save**.  
   
-## Next Steps  
-  
--   [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
-  
-## See Also  
- [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)
+## Related content
+
+- [Create a Model Administrator (Master Data Services)](create-a-model-administrator-master-data-services.md)
+- [Security (Master Data Services)](security-master-data-services.md)
+- [Assign Model Object Permissions (Master Data Services)](assign-model-object-permissions-master-data-services.md)

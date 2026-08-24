@@ -179,13 +179,12 @@ Here's the result set:
 |-----|-----|-----|
 |PK_Constraint|TestConstraint|PRIMARY KEY|
 
-## See also
+## Related content
 
-- [Guidelines for Online Index Operations](../indexes/guidelines-for-online-index-operations.md)
+- [Guidelines for online index operations](../indexes/guidelines-for-online-index-operations.md)
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
 - [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
-- [sys.index_resumable_operations](../system-catalog-views/sys-index-resumable-operations.md)
+- [sys.index_resumable_operations (Transact-SQL)](../system-catalog-views/sys-index-resumable-operations.md)
 - [WAIT_AT_LOW_PRIORITY](../../t-sql/statements/alter-index-transact-sql.md#wait-at-low-priority)
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
-- [ALTER TABLE index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md)
-
+- [ALTER TABLE index_option (Transact-SQL)](../../t-sql/statements/alter-table-index-option-transact-sql.md)

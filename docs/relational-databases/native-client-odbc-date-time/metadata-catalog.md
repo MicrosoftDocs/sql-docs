@@ -56,6 +56,6 @@ helpviewer_keywords:
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
   
-## See Also  
- [Metadata &#40;ODBC&#41;](./date-and-time-improvements-odbc.md)  
-  
+## Related content
+
+- [Date and Time Improvements (ODBC)](date-and-time-improvements-odbc.md)

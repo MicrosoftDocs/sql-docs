@@ -234,8 +234,7 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
 ---
 
 
-## See also 
-Following is some recommended reading to understand the concepts and best practices when using Azure Blob Storage for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups.  
-  
--   [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
--   [SQL Server Backup to URL Best Practices and Troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+## Related content
+
+- [SQL Server backup and restore with Azure Blob Storage](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
+- [SQL Server backup to URL for Microsoft Azure Blob Storage best practices and troubleshooting](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

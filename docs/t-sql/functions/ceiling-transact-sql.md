@@ -78,5 +78,5 @@ The result is the integer part of the calculated value in the same data type as 
 ## Related content
 
 - [FLOOR (Transact-SQL)](floor-transact-sql.md)
-- [System functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)

@@ -107,5 +107,5 @@ For information about creating subscriptions to Oracle and IBM Db2, see [Oracle 
   
 ## Related content
 
-- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)
-- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)
+- [Heterogeneous Database Replication](heterogeneous-database-replication.md)
+- [Subscribe to Publications](../subscribe-to-publications.md)

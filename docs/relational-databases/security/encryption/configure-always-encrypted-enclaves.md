@@ -78,6 +78,6 @@ For details, see the following articles:
 
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
-## See also
+## Related content
 
 - [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

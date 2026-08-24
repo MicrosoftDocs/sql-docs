@@ -64,10 +64,8 @@ helpviewer_keywords:
 |Delete an existing entity.|[Delete an Entity &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
 |Assign permission to entities.|[Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
-## Related Content  
-  
--   [Models &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
-  
--   [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
-  
--   [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)
+## Related content
+
+- [Models (Master Data Services)](models-master-data-services.md)
+- [Members (Master Data Services)](members-master-data-services.md)
+- [Attributes (Master Data Services)](attributes-master-data-services.md)

@@ -62,5 +62,5 @@ private void PublishReport()
   
 ## Related content
 
-- [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)
-- [Reporting Services SoapException class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)
+- [Introduction to exception management in Reporting Services](../introducing-exception-handling-in-reporting-services.md)
+- [Reporting Services SoapException class](../soapexception-class/reporting-services-soapexception-class.md)

@@ -37,8 +37,7 @@ dev_langs:
 ## Permissions  
  Requires membership in the sysadmin fixed server role.  
   
-## See Also  
- [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
-  
-  
+## Related content
+
+- [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)
+- [Data-tier Application Views - dbo.sysdac_instances](../system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)

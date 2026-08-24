@@ -480,7 +480,7 @@ The following list describes a network and connectivity limitation:
 
 ## Related content
 
-- [What is change event streaming?](overview.md)
+- [What is change event streaming (preview)?](overview.md)
 - [Frequently asked questions](frequently-asked-questions-faq.yml)
 - [JSON message format - change event streaming](message-format.md)
 - [Stream to Fabric Eventstream](/fabric/real-time-intelligence/event-streams/stream-sql-change-events-to-eventstream)

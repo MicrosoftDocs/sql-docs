@@ -99,9 +99,6 @@ Server information can be specified either in the servers section of the script 
 ## Server Connection File Validation  
 The user can easily validate their server connection file against the schema definition file **S2SSConsoleScriptServersSchema.xsd** available in the 'Schemas' folder.  
   
-## Next Step  
-The next step in operating the console is [Executing the SSMA Console &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
-  
-## See Also  
-[Executing the SSMA Console](executing-the-ssma-console-sybasetosql.md)  
-  
+## Related content
+
+- [Executing the SSMA console](executing-the-ssma-console-sybasetosql.md)

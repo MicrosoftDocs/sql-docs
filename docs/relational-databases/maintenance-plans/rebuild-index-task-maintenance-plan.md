@@ -149,12 +149,12 @@ The **Rebuild Index Task** uses the ALTER INDEX statement. For more info about t
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
 - [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
 - [DBCC DBREINDEX (Transact-SQL)](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
-- [SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)
-- [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
-- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)
-- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)
+- [SORT_IN_TEMPDB Option For Indexes](../indexes/sort-in-tempdb-option-for-indexes.md)
+- [Guidelines for online index operations](../indexes/guidelines-for-online-index-operations.md)
+- [How online index operations work](../indexes/how-online-index-operations-work.md)
+- [Perform index operations online](../indexes/perform-index-operations-online.md)

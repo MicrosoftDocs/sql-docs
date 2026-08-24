@@ -97,6 +97,6 @@ The **DataType** Enumeration defines the data type of an attribute, expression, 
 
 ## Related content
 
-- [Find the report definition schema version &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)
-- [Use custom assemblies with reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)
-- [Custom report items](../../reporting-services/custom-report-items/custom-report-items.md)
+- [Find the Report Definition Schema Version (SSRS)](find-the-report-definition-schema-version-ssrs.md)
+- [Using custom assemblies with reports](../custom-assemblies/using-custom-assemblies-with-reports.md)
+- [Custom report items](../custom-report-items/custom-report-items.md)

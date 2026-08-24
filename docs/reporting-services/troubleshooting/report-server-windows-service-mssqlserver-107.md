@@ -42,6 +42,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure the report server service account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
-- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)
+- [Configure the Report Server Service Account (Report Server Configuration Manager)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Start and stop the Report Server service](../report-server/start-and-stop-the-report-server-service.md)

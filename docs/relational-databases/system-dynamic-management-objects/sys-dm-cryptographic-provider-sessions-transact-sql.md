@@ -49,8 +49,9 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 ## Permissions  
  Members of the public server role can use **sys.dm_cryptographic_provider_sessions** to return information about the current connection. To view all cryptographic connections, the **CONTROL** server permission is required.  
   
-## See Also  
- [Security Catalog Views &#40;Transact-SQL&#41;](../system-catalog-views/security-catalog-views-transact-sql.md)   
- [Extensible Key Management &#40;EKM&#41;](../security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
- [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md)
+## Related content
+
+- [Security Catalog Views (Transact-SQL)](../system-catalog-views/security-catalog-views-transact-sql.md)
+- [Extensible Key Management (EKM)](../security/encryption/extensible-key-management-ekm.md)
+- [CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)
+- [Encryption hierarchy](../security/encryption/encryption-hierarchy.md)

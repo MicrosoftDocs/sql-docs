@@ -281,8 +281,8 @@ f1_keywords:
   
 ## Related content
 
-- [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
-- [Add, change, or delete a map or map layer &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)
-- [Customize the data and display of a map or map layer &#40;Report Builder&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)
-- [Troubleshoot reports: Map reports &#40;Report Builder&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)
-- [Map wizard and Map Layer wizard &#40;Report Builder&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)
+- [Maps in a paginated report (Report Builder)](maps-report-builder-and-ssrs.md)
+- [Add, change, or delete a map or map layer in a paginated report (Report Builder)](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)
+- [Customize the display of a map or map layer in a paginated report (Report Builder)](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)
+- [Troubleshoot reports: map reports in a paginated report (Report Builder)](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)
+- [Map Wizard and Map Layer Wizard (Report Builder and SSRS)](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)

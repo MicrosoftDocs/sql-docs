@@ -60,7 +60,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
-## See Also  
- [Cursors](../../relational-databases/cursors.md)  
-  
-  
+## Related content
+
+- [Cursors (SQL Server)](../../relational-databases/cursors.md)

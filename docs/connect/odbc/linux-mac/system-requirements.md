@@ -112,7 +112,7 @@ All versions support the x64 architecture. The Arm64 architecture on macOS is su
 | Red Hat Enterprise Linux 8 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
 | Red Hat Enterprise Linux 9 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No |
 | Red Hat Enterprise Linux 10 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| SUSE Linux Enterprise Server 11 <sup>1</sup> | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| SUSE Linux Enterprise Server 11<sup>1</sup> | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | SUSE Linux Enterprise Server 12 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | SUSE Linux Enterprise Server 15 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No |
 | SUSE Linux Enterprise Server 16 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
@@ -165,4 +165,4 @@ For more information, see:
 
 - [Installing the Driver Manager](installing-the-driver-manager.md)
 - [Known issues for the ODBC driver on Linux and macOS](known-issues-in-this-version-of-the-driver.md)
-- [Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)
+- [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)

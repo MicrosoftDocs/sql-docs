@@ -110,6 +110,6 @@ This task executes the `DBCC SHRINKDATABASE` statement.
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
 - [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)

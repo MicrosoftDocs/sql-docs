@@ -21,8 +21,7 @@ ms.topic: reference
 |[updateNString Method &#40;int, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|Updates the designated column with a **String** value using the specified column index.|  
 |[updateNString Method &#40;java.lang.String, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|Updates the designated column with a **String** value using the specified column label.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

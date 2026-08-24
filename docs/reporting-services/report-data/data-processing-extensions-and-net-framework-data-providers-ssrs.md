@@ -39,5 +39,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Data Processing Extensions Overview](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)
-- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Data processing extensions overview](../extensions/data-processing/data-processing-extensions-overview.md)
+- [Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)

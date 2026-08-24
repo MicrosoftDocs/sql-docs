@@ -316,9 +316,10 @@ helpviewer_keywords:
  **XmlSchemaCollectionsList**  
  Click to open the **Select XML Schema Collections** dialog box.  
   
-## See Also  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Expressions Page](../../integration-services/expressions/expressions-page.md)   
- [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
+## Related content
+
+- [Integration Services error and message reference](../integration-services-error-and-message-reference.md)
+- [Integration Services Tasks](integration-services-tasks.md)
+- [Expressions Page](../expressions/expressions-page.md)
+- [Data formats for bulk import or bulk export (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)
+- [Security considerations for a SQL Server installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)

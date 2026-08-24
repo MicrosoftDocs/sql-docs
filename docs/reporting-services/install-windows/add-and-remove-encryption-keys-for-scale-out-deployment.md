@@ -56,5 +56,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
-- [Initialize a report server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)
+- [Configure and Manage Encryption Keys (Report Server Configuration Manager)](ssrs-encryption-keys-manage-encryption-keys.md)
+- [SSRS Encryption Keys - Initialize a Report Server](ssrs-encryption-keys-initialize-a-report-server.md)

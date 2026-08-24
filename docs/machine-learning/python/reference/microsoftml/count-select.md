@@ -73,6 +73,6 @@ Additional arguments sent to compute engine.
 An object defining the transform.
 
 
-## See also
+## Related content
 
-[`mutualinformation_select`](mutualinformation-select.md)
+- [*microsoftml.mutualinformation_select*: Feature selection based on mutual information](mutualinformation-select.md)

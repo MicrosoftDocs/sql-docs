@@ -26,9 +26,8 @@ DMX_Expression >= DMX_Expression
 ## Return Value  
  A Boolean value that contains TRUE if both parameters are non-null and the value of the first parameter is greater than or equal to the value of the second parameter. The Boolean value contains FALSE if both parameters are non-null and the value of the first parameter is less than the value of the second parameter. The Boolean value contains a null value if either parameter or both parameters evaluate to a null value.  
   
-## See Also  
- [Comparison Operators &#40;DMX&#41;](../dmx/operators-comparison.md)   
- [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
-  
-  
+## Related content
+
+- [Operators - Comparison](operators-comparison.md)
+- [Data Mining Extensions (DMX) Operator Reference](data-mining-extensions-dmx-operator-reference.md)
+- [Operators (DMX)](operators-dmx.md)

@@ -17,7 +17,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;REMSERVER (Transact-SQL)
+# @@REMSERVER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 
@@ -64,7 +64,5 @@ LONDON2
 ```  
   
 ## Related content
- 
-- [Remote Servers](../../database-engine/configure-windows/remote-servers.md)  
-  
-  
+
+- [Remote servers](../../database-engine/configure-windows/remote-servers.md)

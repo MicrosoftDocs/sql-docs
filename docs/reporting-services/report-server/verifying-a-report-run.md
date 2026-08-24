@@ -37,6 +37,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
-- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
-- [Report Manager  &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md)
+- [Reporting Services log files and sources](reporting-services-log-files-and-sources.md)
+- [Set report processing properties](set-report-processing-properties.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)

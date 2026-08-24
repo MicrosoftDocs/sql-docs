@@ -45,6 +45,6 @@ ms.custom: intro-installation
 ### Uninstalling [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client Tools  
  They appear in Add or Remove programs in Control Panel as **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]**, and can be removed from there. When you use Remove Node to uninstall an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from the failover cluster, the client components are not uninstalled at the same time.  
   
-## See Also  
- [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
+## Related content
+
+- [View and read SQL Server Setup log files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)

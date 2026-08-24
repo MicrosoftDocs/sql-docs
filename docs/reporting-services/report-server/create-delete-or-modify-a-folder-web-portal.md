@@ -51,9 +51,9 @@ ms.custom:
   
 1. Optionally, you can move or delete the folder by selecting **Move** or **Delete** at the top of the **Properties** page. For more information, see the [Move or delete an item (web portal)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md).  
   
-## Related content 
--  [Create, delete, or modify a folder (web portal)](create-delete-or-modify-a-folder-web-portal.md#create-delete-or-modify-a-folder---reporting-services)   
--  [Report server content management (SSRS native mode)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
--  [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)    
-  
+## Related content
+
+- [Create, delete, or modify a folder (web portal)](create-delete-or-modify-a-folder-web-portal.md#create-delete-or-modify-a-folder---reporting-services)
+- [Report server content management (SSRS native mode)](report-server-content-management-ssrs-native-mode.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
 ::: moniker-end

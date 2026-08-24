@@ -179,9 +179,10 @@ When you CREATE or ALTER a selective XML index, it is rebuilt in a single-thread
 
 - Selective XML indexes and secondary selective XML indexes aren't supported in Database Tuning Advisor.
 
-## <a id="reltasks"></a> See also
+<a id="reltasks"></a>
 
-- [Specify paths and optimization hints for selective XML indexes](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).
-- [Create, alter, and drop selective XML indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)
-- [Create, alter, and drop secondary selective XML indexes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)
+## Related content
 
+- [Specify paths and optimization hints for selective XML indexes](specify-paths-and-optimization-hints-for-selective-xml-indexes.md)
+- [Create, alter, and drop selective XML indexes](create-alter-and-drop-selective-xml-indexes.md)
+- [Create, alter, and drop secondary selective XML indexes](create-alter-and-drop-secondary-selective-xml-indexes.md)

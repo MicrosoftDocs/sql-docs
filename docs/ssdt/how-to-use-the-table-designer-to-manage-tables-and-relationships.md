@@ -52,4 +52,4 @@ The designer consists of the Columns Grid, Script pane, and Context pane. The Co
 
 ## Related content
 
-- [How to: Create Database Objects Using Table Designer](how-to-create-database-objects-using-table-designer.md)
+- [How to: Create database objects using Table Designer](how-to-create-database-objects-using-table-designer.md)

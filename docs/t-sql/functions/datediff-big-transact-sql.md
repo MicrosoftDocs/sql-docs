@@ -203,9 +203,7 @@ SELECT @result
 
 See more closely related examples in [DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md).
   
-## See also
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md)
-  
-  
+## Related content
 
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [DATEDIFF (Transact-SQL)](datediff-transact-sql.md)

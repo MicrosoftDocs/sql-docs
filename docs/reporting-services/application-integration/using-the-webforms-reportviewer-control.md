@@ -475,5 +475,5 @@ End Class
   
 ## Related content
 
-- [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)
-- [Data collection in ReportViewer Control 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
+- [Integrate Reporting Services by using Report Viewer controls](integrating-reporting-services-using-reportviewer-controls.md)
+- [Integrate Reporting Services by using ReportViewer controls - data collection](integrating-reporting-services-using-reportviewer-controls-data-collection.md)

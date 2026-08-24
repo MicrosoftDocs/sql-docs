@@ -78,4 +78,4 @@ Only members of the **sysadmin** fixed server role, the **db_owner** fixed datab
 ## Related content
 
 - [Measure Latency and Validate Connections for Transactional Replication](../replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [sp_deletetracertokenhistory (Transact-SQL)](sp-deletetracertokenhistory-transact-sql.md)
+- [sys.sp_deletetracertokenhistory (Transact-SQL)](sp-deletetracertokenhistory-transact-sql.md)

@@ -37,8 +37,7 @@ public final void setCharacterStream(java.lang.String parameterName,
 ## Remarks  
  This setCharacterStream method is specified by the setCharacterStream method in the java.sql.CallableStatement interface.  
   
-## See Also  
- [setCharacterStream Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)   
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
-  
-  
+## Related content
+
+- [setCharacterStream Method (SQLServerCallableStatement)](setcharacterstream-method-sqlservercallablestatement.md)
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)

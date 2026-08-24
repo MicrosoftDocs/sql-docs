@@ -131,5 +131,6 @@ When large data size needs to be migrated within a short duration, at scale offl
 
 1. For monitoring the data migration, click on the monitoring URL or go to the data factory monitoring page in Azure portal.
   
-## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## Related content
+
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

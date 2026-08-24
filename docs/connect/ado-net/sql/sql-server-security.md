@@ -39,12 +39,8 @@ Contains topics discussing various application security scenarios for ADO.NET an
 [SQL Server Express security](sql-server-express-security.md)  
 Describes security considerations for SQL Server Express.  
   
-## Related sections  
-[Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-Describes security considerations for SQL Server and Azure SQL Database.
+## Related content
 
-[Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
-Describes security concerns to consider before installing SQL Server.
-
-## Next steps
+- [Security for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+- [Security considerations for a SQL Server installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
 - [SQL Server and ADO.NET](index.md)

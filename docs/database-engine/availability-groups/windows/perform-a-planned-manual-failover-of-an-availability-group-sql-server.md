@@ -111,9 +111,8 @@ The ALTER AVAILABILITY GROUP permission is required on the availability group. T
 
 [!INCLUDE[Force failover](../../../includes/ss-force-failover-read-scale-out.md)]
 
-## See also 
+## Related content
 
- * [Overview of Always On availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
- * [Failover and failover modes &#40;Always On availability groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
- * [Perform a forced manual failover of an availability group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
-  
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Failover and Failover Modes (Always On Availability Groups)](failover-and-failover-modes-always-on-availability-groups.md)
+- [Perform a forced manual failover of an Always On availability group (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

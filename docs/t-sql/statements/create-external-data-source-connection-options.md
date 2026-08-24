@@ -178,6 +178,6 @@ There are some valid key-value pairs in PolyBase that are available to all gener
 
 ## Related content
 
-- [Data virtualization with PolyBase in SQL Server](../../relational-databases/polybase/overview.md)
+- [PolyBase overview](../../relational-databases/polybase/overview.md)
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)
 - [PolyBase Frequently asked questions](../../relational-databases/polybase/polybase-faq.yml)

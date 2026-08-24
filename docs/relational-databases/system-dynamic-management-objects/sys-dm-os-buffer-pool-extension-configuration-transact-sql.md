@@ -60,6 +60,7 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## See also  
- [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](sys-dm-os-buffer-descriptors-transact-sql.md)
+## Related content
+
+- [Buffer pool extension](../../database-engine/configure-windows/buffer-pool-extension.md)
+- [sys.dm_os_buffer_descriptors (Transact-SQL)](sys-dm-os-buffer-descriptors-transact-sql.md)

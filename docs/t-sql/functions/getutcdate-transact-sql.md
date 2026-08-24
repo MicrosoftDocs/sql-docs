@@ -133,6 +133,5 @@ Result set:
   
 ## Related content
 
-- [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
-- [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)
-
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [AT TIME ZONE (Transact-SQL)](../queries/at-time-zone-transact-sql.md)

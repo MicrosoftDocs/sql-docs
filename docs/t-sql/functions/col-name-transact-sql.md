@@ -89,7 +89,6 @@ BusinessEntityID    PersonType
 ## Related content
 
 - [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
-- [Metadata Functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
 - [COLUMNPROPERTY (Transact-SQL)](columnproperty-transact-sql.md)
 - [COL_LENGTH (Transact-SQL)](col-length-transact-sql.md)
-

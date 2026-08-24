@@ -139,6 +139,5 @@ GO
 
 ## Related content
 
-- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](../statements/create-login-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)
-

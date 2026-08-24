@@ -123,14 +123,11 @@ The RADIANS of the angle is: 3.44022
 (1 row(s) affected)  
 ```  
   
-## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [float and real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [money and smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [decimal and numeric (Transact-SQL)](../data-types/decimal-and-numeric-transact-sql.md)
+- [float and real (Transact-SQL)](../data-types/float-and-real-transact-sql.md)
+- [int, bigint, smallint, and tinyint (Transact-SQL)](../data-types/int-bigint-smallint-and-tinyint-transact-sql.md)
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
+- [money and smallmoney (Transact-SQL)](../data-types/money-and-smallmoney-transact-sql.md)

@@ -89,7 +89,6 @@ ProductModelID   Result
   
 -   When values cannot be returned as a number, the **number()** function returns the empty sequence instead of NaN.  
   
-## See Also  
- [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)  
-  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)

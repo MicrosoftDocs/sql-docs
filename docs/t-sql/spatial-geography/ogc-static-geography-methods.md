@@ -58,9 +58,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 -   [STMPolyFromWKB](../../t-sql/spatial-geography/stmpolyfromwkb-geography-data-type.md)  
   
-## See Also  
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
-  
-  
+## Related content
+
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [Extended Static Geography Methods](extended-static-geography-methods.md)

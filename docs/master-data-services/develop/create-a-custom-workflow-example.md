@@ -68,4 +68,4 @@ namespace MDSWorkflowTestLib
   
 ## Related content
 
-- [Create a Custom Workflow &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)
+- [Create a Custom Workflow (Master Data Services)](create-a-custom-workflow-master-data-services.md)

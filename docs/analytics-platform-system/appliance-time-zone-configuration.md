@@ -28,6 +28,6 @@ The **Time Zone** page enables you to set the time zone for all nodes on your An
 
    ![Screenshot shows the Application Time Zone Configuration page.](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
   
-## Next steps
+## Related content
 
-[Launch the Configuration Manager](launch-the-configuration-manager.md)  
+- [Launch the Configuration Manager in Analytics Platform System](launch-the-configuration-manager.md)

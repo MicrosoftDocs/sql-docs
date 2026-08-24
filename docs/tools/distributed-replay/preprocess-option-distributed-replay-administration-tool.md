@@ -107,8 +107,8 @@ You must run the administration tool as an interactive user, as either a local u
 
 For more information, see [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).
 
-## See also
+## Related content
 
-- [Prepare the Input Trace Data](../../tools/distributed-replay/prepare-the-input-trace-data.md)
-- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)
+- [Prepare input trace data](prepare-the-input-trace-data.md)
+- [SQL Server Distributed Replay overview](sql-server-distributed-replay.md)
+- [Configure Distributed Replay](configure-distributed-replay.md)

@@ -43,8 +43,7 @@ helpviewer_keywords:
   
 7.  Calling a method to set properties and passing the count and the array of DBPROPSET structures.  
   
-## See Also  
- [Creating an OLE DB Driver for SQL Server Application](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
- [Properties (OLE DB)](/previous-versions/windows/desktop/ms722734(v=vs.85))  
-  
+## Related content
 
+- [Creating an OLE DB Driver for SQL Server Application](creating-a-oledb-driver-for-sql-server-application.md)
+- [Properties (OLE DB)](/previous-versions/windows/desktop/ms722734(v=vs.85))

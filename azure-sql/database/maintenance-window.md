@@ -35,7 +35,7 @@ Azure periodically performs [planned maintenance](planned-maintenance.md) of SQL
 
 Maintenance window is intended for production workloads that are not resilient to database reconfigurations and cannot absorb short connection interruptions caused by planned maintenance events. By choosing a maintenance window you prefer, you can minimize the impact of [planned maintenance](planned-maintenance.md) by scheduling it to occur outside of your peak business hours. Resilient workloads and nonproduction workloads can rely on Azure SQL's default maintenance policy.
 
-The maintenance window is free of charge and can be configured on creation or for existing resources. It can be configured using the Azure portal, PowerShell, CLI, or Azure API.
+The maintenance window is free of charge and can be configured on creation or for existing resources. It can be configured using the Azure portal, PowerShell, CLI, or Azure API.
 
 > [!Important]
 > Configuring maintenance window is a long running asynchronous operation, similar to changing the service tier of the Azure SQL resource. The resource is available during the operation, except a short reconfiguration that happens at the end of the operation and typically lasts up to 8 seconds even in case of interrupted long-running transactions. To minimize the impact of the reconfiguration you should perform the operation outside of the peak hours.

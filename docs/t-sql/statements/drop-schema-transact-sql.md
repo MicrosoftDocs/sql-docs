@@ -84,9 +84,9 @@ GO
 ```  
   
   
-## See Also  
- [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
- [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+## Related content
 
+- [CREATE SCHEMA (Transact-SQL)](create-schema-transact-sql.md)
+- [ALTER SCHEMA (Transact-SQL)](alter-schema-transact-sql.md)
+- [DROP SCHEMA (Transact-SQL)](drop-schema-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

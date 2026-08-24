@@ -53,6 +53,6 @@ SELECT @R.ReorientObject().STAsText();
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  
 ```  
   
-## See Also  
-[Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)

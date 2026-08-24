@@ -88,5 +88,5 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
   
 ## Related content
 
-- [Secure the Subscriber](../../relational-databases/replication/security/secure-the-subscriber.md)
-- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)
+- [Secure the Subscriber](security/secure-the-subscriber.md)
+- [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)

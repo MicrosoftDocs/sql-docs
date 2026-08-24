@@ -711,11 +711,9 @@ Copy the following files:
 - `libssl-1_1-x64.dll`
 - `libcrypto-1_1-x64.dll`
 
-from the folder <br>
-`C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\Library\bin`
+from the folder: `C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\Library\bin`
 
-to the folder <br>
-`C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\DLLs`
+to the folder: `C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\DLLs`
 
 Then open a new DOS command shell prompt.
 
@@ -858,6 +856,6 @@ For compatibility with [!INCLUDE [rsql_productname](../../includes/rsql-productn
 
 Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisions 0.88-0.91 and 0.93 and later are known to be compatible.
 
-## Next steps
+## Related content
 
-- [Collect data to troubleshoot SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)
+- [Collect data to troubleshoot Python and R scripts with SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)

@@ -45,5 +45,5 @@ Select the hyperlink to open a Web page that is related to this policy. The Addi
 
 ## Related content
 
-- [Policy management node (object explorer)](policy-management-node-object-explorer.md)
+- [Policy management node (Object Explorer)](policy-management-node-object-explorer.md)
 - [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)

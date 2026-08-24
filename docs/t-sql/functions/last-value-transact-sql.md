@@ -178,5 +178,4 @@ BusinessEntityID Quarter     SalesYear   QuotaThisQuarter      DifferenceFromFir
 ## Related content
 
 - [FIRST_VALUE (Transact-SQL)](first-value-transact-sql.md)
-- [SELECT - OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)
-
+- [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

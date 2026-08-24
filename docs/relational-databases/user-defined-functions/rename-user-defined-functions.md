@@ -50,8 +50,7 @@ This task can't be performed using Transact-SQL statements. To rename a user-def
 
 For more information, see [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) and [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md).
 
-## See also
+## Related content
 
-- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
-- [View user-defined functions](../../relational-databases/user-defined-functions/view-user-defined-functions.md)
-
+- [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
+- [View user-defined functions](view-user-defined-functions.md)

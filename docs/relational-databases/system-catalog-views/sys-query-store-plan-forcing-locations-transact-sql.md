@@ -59,9 +59,9 @@ WHERE qsr.replica_name = 'yourSecondaryReplicaName';
 ## Related content
 
 - [sys.query_store_replicas (Transact-SQL)](sys-query-store-replicas.md)
-- [sys.sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+- [sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
 - [sys.database_query_store_internal_state (Transact-SQL)](sys-database-query-store-internal-state-transact-sql.md)
-- [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
-- [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [sys.query_store_plan (Transact-SQL)](sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query (Transact-SQL)](sys-query-store-query-transact-sql.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [Best practices for monitoring workloads with Query Store](../performance/best-practice-with-the-query-store.md)

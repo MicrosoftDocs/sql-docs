@@ -198,5 +198,5 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 - [View and Modify Publication Properties](../replication/publish/view-and-modify-publication-properties.md)
 - [Change Publication and Article Properties](../replication/publish/change-publication-and-article-properties.md)
-- [sp_addpublication_snapshot (Transact-SQL)](sp-addpublication-snapshot-transact-sql.md)
+- [sys.sp_addpublication_snapshot (Transact-SQL)](sp-addpublication-snapshot-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

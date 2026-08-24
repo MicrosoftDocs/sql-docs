@@ -230,6 +230,6 @@ It might help to read about some of the concepts and terms before you get starte
 
 ## Related content
 
-- [Report Builder tutorials](../../reporting-services/report-builder-tutorials.md)
-- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server.md)
+- [Report Builder tutorials](../report-builder-tutorials.md)
+- [Microsoft Report Builder in SQL Server](report-builder-in-sql-server.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

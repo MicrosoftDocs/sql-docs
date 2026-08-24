@@ -38,7 +38,6 @@ A good starting point for sizing storage for this area is to reserve four times 
 
  Data in [non-durable](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) memory-optimized tables is not written to disk at any time. Therefore, TDE does not apply to such tables.
   
-## See Also  
- [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
-  
+## Related content
+
+- [Create and manage storage for memory-optimized objects](creating-and-managing-storage-for-memory-optimized-objects.md)

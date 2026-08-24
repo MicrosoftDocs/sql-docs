@@ -89,9 +89,9 @@ SELECT HASHBYTES('SHA2_256', c1) FROM dbo.Test1;
 (2 row(s) affected)  
 ```  
   
-## See Also  
-[Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
-[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)
-[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)
-[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
+## Related content
 
+- [Choose an encryption algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
+- [CHECKSUM_AGG (Transact-SQL)](checksum-agg-transact-sql.md)
+- [CHECKSUM (Transact-SQL)](checksum-transact-sql.md)
+- [BINARY_CHECKSUM (Transact-SQL)](binary-checksum-transact-sql.md)

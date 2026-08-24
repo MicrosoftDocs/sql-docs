@@ -58,12 +58,12 @@ To address issues that lead to this error:
 
 When this error condition is encountered, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may generate dump-related files in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG** folder. The SQLDump*nnnn*.mdmp and SQLDump*nnnn*.txt files contains advanced diagnostic information relating to the failures, including the details about the transaction and the page that encountered the problem. This information can be used by the Microsoft team to analyze the reason for the failure.
 
-## See also
+## Related content
 
-- [DBCC CHECKDB (Transact-SQL)](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
-- [Complete Database Restores (Simple Recovery Model)](~/relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)
-- [MSSQLSERVER_9001](~/relational-databases/errors-events/mssqlserver-9001-database-engine-error.md)
-- [MSSQLSERVER_824](~/relational-databases/errors-events/mssqlserver-824-database-engine-error.md)
-- [MSSQLSERVER_823](~/relational-databases/errors-events/mssqlserver-823-database-engine-error.md)
-- [sys.databases (Transact-SQL)](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [ALTER DATABASE (Transact-SQL)](~/t-sql/statements/alter-database-transact-sql-set-options.md)
+- [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
+- [Complete Database Restores (Simple Recovery Model)](../backup-restore/complete-database-restores-simple-recovery-model.md)
+- [MSSQLSERVER_9001](mssqlserver-9001-database-engine-error.md)
+- [MSSQLSERVER_824](mssqlserver-824-database-engine-error.md)
+- [MSSQLSERVER error 823](mssqlserver-823-database-engine-error.md)
+- [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
+- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)

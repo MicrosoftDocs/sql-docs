@@ -71,8 +71,8 @@ EXECUTE sp_dropserver 'ACCOUNTS', 'droplogins';
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addserver (Transact-SQL)](sp-addserver-transact-sql.md)
-- [sp_dropremotelogin (Transact-SQL)](sp-dropremotelogin-transact-sql.md)
-- [sp_helpremotelogin (Transact-SQL)](sp-helpremotelogin-transact-sql.md)
-- [sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
+- [sys.sp_addserver (Transact-SQL)](sp-addserver-transact-sql.md)
+- [sys.sp_dropremotelogin (Transact-SQL)](sp-dropremotelogin-transact-sql.md)
+- [sys.sp_helpremotelogin (Transact-SQL)](sp-helpremotelogin-transact-sql.md)
+- [sys.sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

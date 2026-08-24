@@ -280,15 +280,6 @@ A [`OneClassSvm`](learners-object.md) object with the trained model.
 This algorithm is single-threaded and will always attempt to load the entire dataset into memory.
 
 
-## See also
-
-`linear_kernel`,
-`polynomial_kernel`,
-`rbf_kernel`,
-`sigmoid_kernel`,
-[`rx_predict`](rx-predict.md).
-
-
 ## References
 
 [Wikipedia: Anomaly detection](https://wikipedia.org/wiki/Anomaly_detection)
@@ -381,3 +372,7 @@ Writing completed.
 38     0.0  0.635845
 39     0.0  0.555602
 ```
+
+## Related content
+
+- [*microsoftml.rx_predict*: Scores using a Microsoft machine learning model](rx-predict.md)

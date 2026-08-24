@@ -168,6 +168,6 @@ rskeymgmt -r <installationID>
 ## Related content
 
 - [Scale-out deployment  - Reporting Services native mode &#40;Configuration Manager&#41;](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))
-- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
-- [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)
-- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+- [Reporting Services report server (native mode)](../report-server/reporting-services-report-server-native-mode.md)
+- [Report Server command prompt utilities (SSRS)](report-server-command-prompt-utilities-ssrs.md)
+- [Configure and Manage Encryption Keys (Report Server Configuration Manager)](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

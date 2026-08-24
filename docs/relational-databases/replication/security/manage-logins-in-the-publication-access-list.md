@@ -55,6 +55,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)
-- [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
-- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)
+- [Replication Agent Security Model](replication-agent-security-model.md)
+- [View and modify replication security settings](view-and-modify-replication-security-settings.md)
+- [Secure the Publisher](secure-the-publisher.md)

@@ -146,13 +146,12 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## See Also  
- [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
- [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
- [Restore a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)   
- [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
- [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
-  
-  
+## Related content
+
+- [Differential backups (SQL Server)](differential-backups-sql-server.md)
+- [Create a full database backup](create-a-full-database-backup-sql-server.md)
+- [Back Up Files and Filegroups](back-up-files-and-filegroups-sql-server.md)
+- [Restore a differential database backup (SQL Server)](restore-a-differential-database-backup-sql-server.md)
+- [Restore a Transaction Log Backup (SQL Server)](restore-a-transaction-log-backup-sql-server.md)
+- [Maintenance plans](../maintenance-plans/maintenance-plans.md)
+- [Full File Backups (SQL Server)](full-file-backups-sql-server.md)

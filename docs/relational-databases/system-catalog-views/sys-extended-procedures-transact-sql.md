@@ -34,5 +34,5 @@ Contains a row for each object that is an extended stored procedure, with `sys.a
 
 ## Related content
 
-- [Object Catalog Views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)

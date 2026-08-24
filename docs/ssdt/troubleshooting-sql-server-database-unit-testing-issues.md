@@ -51,5 +51,5 @@ If your database unit tests are failing because of a timeout, you can increase t
 
 ## Related content
 
-- [How to: Create SQL Server Unit Tests for Functions, Triggers, and Stored Procedures](how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)
+- [How to: Create SQL Server unit tests for functions, triggers, and stored procedures](how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)
 - [How to: Configure SQL Server unit test execution](how-to-configure-sql-server-unit-test-execution.md)

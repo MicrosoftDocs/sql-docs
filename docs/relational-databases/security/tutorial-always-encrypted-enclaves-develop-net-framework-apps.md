@@ -191,7 +191,7 @@ Your application will connect to the **ContosoHR** database that was created in 
 
 2. Build and run the application.  
 
-## See also
+## Related content
 
 - [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)

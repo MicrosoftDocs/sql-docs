@@ -85,13 +85,6 @@ Additional arguments sent to compute engine.
 An object defining the transform.
 
 
-## See also
-
-[`load_image`](load-image.md),
-[`resize_image`](resize-image.md),
-[`extract_pixels`](extract-pixels.md).
-
-
 ## Example
 
 
@@ -224,3 +217,8 @@ Writing completed.
 0          False    0.0          0.5
 ```
 
+## Related content
+
+- [*microsoftml.load_image*: Loads an image](load-image.md)
+- [*microsoftml.resize_image*: Resizes an Image](resize-image.md)
+- [*microsoftml.extract_pixels*: Extracts pixels from an image](extract-pixels.md)

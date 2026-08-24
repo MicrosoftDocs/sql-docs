@@ -41,5 +41,5 @@ helpviewer_keywords:
 
 ## Related content
 
-- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)
-- [Schedules](../../reporting-services/subscriptions/schedules.md)
+- [Start and stop the Report Server service](../report-server/start-and-stop-the-report-server-service.md)
+- [Schedules in Reporting Services](schedules.md)

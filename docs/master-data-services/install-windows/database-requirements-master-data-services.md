@@ -72,5 +72,5 @@ As a best practice, back up the full database daily at a time of low activity an
 - [Installation Tasks for Master Data Services](install-master-data-services.md)
 - [Create a Master Data Services Database](create-a-master-data-services-database.md)
 - [Master Data Services Database](../master-data-services-database.md)
-- [Connect to a Master Data Services Database Dialog Box](../master-data-services-overview-mds.md)
+- [Master Data Services Overview (MDS)](../master-data-services-overview-mds.md)
 - [Create Database Wizard (Master Data Services Configuration Manager)](../create-database-wizard-master-data-services-configuration-manager.md)

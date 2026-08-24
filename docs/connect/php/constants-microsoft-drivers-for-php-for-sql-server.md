@@ -152,7 +152,7 @@ The following table lists the constants that are used to describe PHP data types
 For more information about these constants, see [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md), [How to: Retrieve Character Data as a Stream Using the SQLSRV Driver](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ### SQLTYPE Constants  
-The following table lists the constants that are used to describe SQL Server data types. Some constants are function-like and may take parameters that correspond to precision, scale, and/or length.  When binding parameters, the function-like constants should be used. For type comparisons, the standard (non function-like) constants are required. For information about SQL Server data types, see [Data Types (Transact-SQL).](../../t-sql/data-types/data-types-transact-sql.md) For information about precision, scale, and length, see [Precision, Scale, and Length (Transact-SQL).](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
+The following table lists the constants that are used to describe SQL Server data types. Some constants are function-like and may take parameters that correspond to precision, scale, and/or length.  When binding parameters, the function-like constants should be used. For type comparisons, the standard (non function-like) constants are required. For information about SQL Server data types, see [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). For information about precision, scale, and length, see [Precision, Scale, and Length (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 |SQLSRV constant|SQL Server data type|  
 |-------------------|------------------------|  
@@ -260,6 +260,6 @@ The following constants specify which row to select in the result set:
   
 For information on using these constants, see [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-  
+## Related content
+
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)

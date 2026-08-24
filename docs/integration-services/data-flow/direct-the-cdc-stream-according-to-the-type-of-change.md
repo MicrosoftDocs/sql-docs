@@ -47,6 +47,6 @@ ms.topic: how-to
   
      For more information about using the CDC splitter see CDC Components for Microsoft SQL Server Integration Services.  
   
-## See Also  
- [CDC Splitter](../../integration-services/data-flow/cdc-splitter.md)  
-  
+## Related content
+
+- [CDC Splitter](cdc-splitter.md)

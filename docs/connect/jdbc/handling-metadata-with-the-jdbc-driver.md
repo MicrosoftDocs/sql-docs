@@ -34,6 +34,6 @@ The articles in this section describe how you can use each of the three metadata
 |[Using result set metadata](using-result-set-metadata.md)|Describes how to retrieve metadata information about the current result set.|
 |[Using parameter metadata](using-parameter-metadata.md)|Describes how to retrieve metadata information about the parameters of prepared and callable statements.|
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

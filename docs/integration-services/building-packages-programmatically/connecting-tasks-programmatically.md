@@ -90,7 +90,6 @@ Module Module1
 End Module  
 ```
   
-## See Also  
- [Adding the Data Flow Task Programmatically](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
-  
-  
+## Related content
+
+- [Adding the Data Flow Task Programmatically](adding-the-data-flow-task-programmatically.md)

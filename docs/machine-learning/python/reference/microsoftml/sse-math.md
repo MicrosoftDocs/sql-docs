@@ -37,9 +37,9 @@ microsoftml.sse_math()
 Implementation accelerated with SSE instructions.
 
 
-## See also
+## Related content
 
-[`avx_math`](avx-math.md),
-[`clr_math`](clr-math.md),
-[`gpu_math`](gpu-math.md),
-[`mkl_math`](mkl-math.md)
+- [*microsoftml.avx_math*: Acceleration with AVX instructions](avx-math.md)
+- [*microsoftml.clr_math*: Acceleration with .NET math](clr-math.md)
+- [*microsoftml.gpu_math*: Acceleration with NVidia CUDA](gpu-math.md)
+- [*microsoftml.mkl_math*: Acceleration with Intel MKL](mkl-math.md)

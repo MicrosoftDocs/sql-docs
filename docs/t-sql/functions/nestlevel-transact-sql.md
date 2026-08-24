@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;NESTLEVEL (Transact-SQL)
+# @@NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   Returns the nesting level of the current stored procedure execution (initially 0) on the local server.  
@@ -112,10 +112,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## See Also  
+## Related content
 
- [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
-  
-
+- [Create a stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)
+- [@@TRANCOUNT (Transact-SQL)](trancount-transact-sql.md)

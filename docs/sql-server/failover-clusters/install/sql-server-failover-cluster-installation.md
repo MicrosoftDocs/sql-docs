@@ -94,5 +94,5 @@ You can set `OR` dependencies when the nodes on the cluster are on different sub
 
 - [Before Installing Failover Clustering](before-installing-failover-clustering.md)
 - [Create a New Always On Failover Cluster Instance (Setup)](create-a-new-sql-server-failover-cluster-setup.md)
-- [Install and configure SQL Server on Windows from the command prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 - [Upgrade a failover cluster instance](../windows/upgrade-a-sql-server-failover-cluster-instance.md)

@@ -38,7 +38,6 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  An error is generated if not all attributes have same granularity on measure groups in current scope.  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

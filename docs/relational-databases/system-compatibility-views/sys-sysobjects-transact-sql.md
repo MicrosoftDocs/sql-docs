@@ -57,7 +57,7 @@ Contains one row for each object that is created within a database, such as a co
 |category|**int**|Used for publication, constraints, and identity.|
 |cache|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|
 
-## See also
+## Related content
 
-- [Mapping System Tables to System Views (Transact-SQL)](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)
-- [Compatibility Views (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
+- [Mapping System Tables to System Views (Transact-SQL)](../system-tables/mapping-system-tables-to-system-views-transact-sql.md)
+- [System Compatibility Views (Transact-SQL)](system-compatibility-views-transact-sql.md)

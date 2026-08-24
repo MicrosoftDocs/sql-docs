@@ -64,8 +64,7 @@ helpviewer_keywords:
   
  For information about how snapshot isolation is supported in transactions, see [Cursor Transaction Isolation Level](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
-## See Also  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Rowset Properties and Behaviors](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Features](sql-server-native-client-features.md)
+- [Rowset Properties and Behaviors (Native Client OLE DB provider)](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)

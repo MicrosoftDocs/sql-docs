@@ -1,6 +1,6 @@
 ---
 title: "@@TOTAL_ERRORS (Transact-SQL)"
-description: "&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)"
+description: "@@TOTAL_ERRORS (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/18/2017"
@@ -21,7 +21,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
+# @@TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of disk write errors encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started.  
@@ -55,8 +55,7 @@ Errors      As of
 0           3/28/2003 12:32:11 PM   
 ```  
   
-## See Also  
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

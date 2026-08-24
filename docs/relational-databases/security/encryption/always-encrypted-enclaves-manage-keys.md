@@ -28,9 +28,12 @@ The following articles discuss the aspects specific to managing enclave-enabled 
 - [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md)
 - [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md)
 
-## Next steps
-- [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md)
+## Next step
 
-## See also  
+> [!div class="nextstepaction"]
+> [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md)
+
+## Related content
+
 - [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

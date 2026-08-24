@@ -273,16 +273,15 @@ CREATE BROKER PRIORITY BronzePriority
          PRIORITY_LEVEL = 2);  
 ```  
   
-## See Also  
- [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
- [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER BROKER PRIORITY (Transact-SQL)](alter-broker-priority-transact-sql.md)
+- [BEGIN DIALOG CONVERSATION (Transact-SQL)](begin-dialog-conversation-transact-sql.md)
+- [CREATE CONTRACT (Transact-SQL)](create-contract-transact-sql.md)
+- [CREATE QUEUE (Transact-SQL)](create-queue-transact-sql.md)
+- [CREATE SERVICE (Transact-SQL)](create-service-transact-sql.md)
+- [DROP BROKER PRIORITY (Transact-SQL)](drop-broker-priority-transact-sql.md)
+- [GET CONVERSATION GROUP (Transact-SQL)](get-conversation-group-transact-sql.md)
+- [RECEIVE (Transact-SQL)](receive-transact-sql.md)
+- [SEND (Transact-SQL)](send-transact-sql.md)
+- [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)

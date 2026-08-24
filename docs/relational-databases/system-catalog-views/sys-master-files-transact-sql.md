@@ -75,4 +75,4 @@ The minimum permissions that are required to see the corresponding row are `CREA
 - [File States](../databases/file-states.md)
 - [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)
 - [sys.database_files (Transact-SQL)](sys-database-files-transact-sql.md)
-- [Database Files and Filegroups](../databases/database-files-and-filegroups.md)
+- [Database files and filegroups](../databases/database-files-and-filegroups.md)

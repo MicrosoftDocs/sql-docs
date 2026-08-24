@@ -58,6 +58,6 @@ The following options are available for this setting:
   
 2.  No  
   
-## See Also  
-[Finishing Test Case Preparation &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-  
+## Related content
+
+- [Finishing Test Case Preparation](finishing-test-case-preparation-oracletosql.md)

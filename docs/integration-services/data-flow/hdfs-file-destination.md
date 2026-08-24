@@ -60,6 +60,7 @@ The following Java builds have been tested.
 
 ::: moniker-end
 
-## See Also
-[Hadoop Connection Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)  
-[HDFS File Source](../../integration-services/data-flow/hdfs-file-source.md)
+## Related content
+
+- [Hadoop Connection Manager](../connection-manager/hadoop-connection-manager.md)
+- [HDFS File Source](hdfs-file-source.md)

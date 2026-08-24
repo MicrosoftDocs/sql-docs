@@ -252,11 +252,11 @@ You can create push subscriptions programmatically by using replication stored p
 
 ## Related content
 
-- [View and modify push subscription properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
-- [Delete a push subscription](../../relational-databases/replication/delete-a-push-subscription.md)
-- [Replication security best practices](../../relational-databases/replication/security/replication-security-best-practices.md)
-- [Create a publication](../../relational-databases/replication/publish/create-a-publication.md)
-- [Replication management objects concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Synchronize a push subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)
-- [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)
+- [Delete a Push Subscription](delete-a-push-subscription.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)
+- [Create a publication](publish/create-a-publication.md)
+- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)
+- [Synchronize a Push Subscription](synchronize-a-push-subscription.md)
+- [Subscribe to Publications](subscribe-to-publications.md)
 - [Use sqlcmd with scripting variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

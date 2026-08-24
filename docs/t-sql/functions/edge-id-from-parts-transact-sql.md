@@ -69,12 +69,11 @@ FROM OPENROWSET (BULK 'person_likes_restaurant.csv',
 ;
 ```  
 
-## See also  
+## Related content
 
-- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
-- [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
-- [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md)
-- [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md)
-- [GRAPH_ID_FROM_EDGE_ID](./graph-id-from-edge-id-transact-sql.md)
-- [GRAPH_ID_FROM_NODE_ID](./graph-id-from-node-id-transact-sql.md)
-
+- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)
+- [Create a graph database and run some pattern matching queries using T-SQL](../../relational-databases/graphs/sql-graph-sample.md)
+- [Bulk import large-object data with OPENROWSET Bulk Rowset Provider (SQL Server)](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md)
+- [NODE_ID_FROM_PARTS (Transact-SQL)](node-id-from-parts-transact-sql.md)
+- [GRAPH_ID_FROM_EDGE_ID (Transact-SQL)](graph-id-from-edge-id-transact-sql.md)
+- [GRAPH_ID_FROM_NODE_ID (Transact-SQL)](graph-id-from-node-id-transact-sql.md)

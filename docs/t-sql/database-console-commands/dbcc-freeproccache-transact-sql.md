@@ -249,8 +249,8 @@ GRANT ALTER SERVER STATE TO David;
 GO
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
-- [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [Resource governor](../../relational-databases/resource-governor/resource-governor.md)
+- [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../statements/alter-database-scoped-configuration-transact-sql.md)

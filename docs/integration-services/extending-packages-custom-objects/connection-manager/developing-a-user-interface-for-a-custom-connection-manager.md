@@ -277,8 +277,7 @@ private void ConfigureControlsFromConnectionManager()
  }  
 ```
   
-## See Also  
- [Creating a Custom Connection Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
- [Coding a Custom Connection Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
-  
-  
+## Related content
+
+- [Creating a Custom Connection Manager](creating-a-custom-connection-manager.md)
+- [Coding a Custom Connection Manager](coding-a-custom-connection-manager.md)

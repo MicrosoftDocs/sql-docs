@@ -87,7 +87,7 @@ When connecting from a remote data science client that supports Microsoft R, you
 8. SQL Satellite manages communication with SQL Server and cleanup of related job objects.
 9. SQL Server passes results back to the client.
 
-## See also
+## Related content
 
-+ [Extensibility framework in SQL Server](extensibility-framework.md)
-+ [Python and machine learning extensions in SQL Server](extension-python.md)
+- [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md)
+- [Python language extension in SQL Server Machine Learning Services](extension-python.md)

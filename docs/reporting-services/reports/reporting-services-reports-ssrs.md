@@ -174,6 +174,6 @@ You can create data alerts for published reports on a SharePoint site. Data aler
   
 ## Related content
 
-- [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)
-- [Extensions &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)
-- [Comparing native and SharePoint Reporting Services report servers](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
+- [SQL Server Reporting Services tools](../tools/reporting-services-tools.md)
+- [Extensions for SQL Server Reporting Services (SSRS)](../extensions-ssrs.md)
+- [Comparing native and SharePoint Reporting Services report servers](../report-server-sharepoint/reporting-services-report-server.md)

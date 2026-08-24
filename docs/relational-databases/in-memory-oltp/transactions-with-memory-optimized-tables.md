@@ -277,6 +277,6 @@ COMMIT TRANSACTION;
 ## Related content
 
 - [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md)
-- [sp_getapplock (Transact-SQL)](../system-stored-procedures/sp-getapplock-transact-sql.md)
+- [sys.sp_getapplock (Transact-SQL)](../system-stored-procedures/sp-getapplock-transact-sql.md)
 - [Row Versioning-based Isolation Levels in the Database Engine](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))
 - [Control Transaction Durability](../logs/control-transaction-durability.md)

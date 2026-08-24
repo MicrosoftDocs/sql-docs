@@ -129,6 +129,6 @@ SELECT @OrdNo, @Items.ProdCode, @Items.Qty FROM @Items;
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## See Also  
- [ODBC Table-Valued Parameter Programming Examples](./table-valued-parameters-odbc.md)  
-  
+## Related content
+
+- [Table-Valued Parameters (ODBC)](table-valued-parameters-odbc.md)

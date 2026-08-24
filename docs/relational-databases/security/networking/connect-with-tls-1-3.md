@@ -156,7 +156,7 @@ The current version of Nmap, version 7.94, appears to not detect TLS 1.3 when us
 - [Connect to SQL Server with strict encryption](connect-with-strict-encryption.md)
 - [Transport Layer Security and digital certificates](../../../database-engine/configure-windows/certificate-overview.md)
 - [Certificate requirements for SQL Server](../../../database-engine/configure-windows/certificate-requirements.md)
-- [Configure SQL Server Database Engine for encrypting connections](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
+- [Encrypt connections to SQL Server by importing a certificate](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
 - [TLS 1.3 support](tls-1-3.md)
 - [TDS 8.0](tds-8.md)
 - [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman)

@@ -401,6 +401,6 @@ Use this table to map common symptoms to the exception type you should catch:
 
 ## Related content
 
-- [Troubleshooting guide](troubleshooting.md)
-- [Execute queries](executing-queries.md)
-- [Connection management](connection-management.md)
+- [Troubleshoot mssql-python](troubleshooting.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Manage connections with mssql-python](connection-management.md)

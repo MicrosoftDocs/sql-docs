@@ -73,11 +73,7 @@ The same remarks in [sys.dm_exec_query_profiles](sys-dm-exec-query-profiles-tran
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  
 
-## See also
+## Related content
 
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)  
-   
-
- ## Next steps 
-
-[Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)

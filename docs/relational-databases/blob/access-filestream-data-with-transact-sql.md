@@ -79,7 +79,7 @@ The following extended example shows the steps to create a new database, create 
 
 :::code language="sql" source="codesnippet/tsql/access-filestream-data-w_1_6.sql":::
 
-## See also
+## Related content
 
-- [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)
-- [Avoid Conflicts with Database Operations in FILESTREAM Applications](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)
+- [Enable and configure FILESTREAM](enable-and-configure-filestream.md)
+- [Avoid conflicts with database operations in FILESTREAM applications](avoid-conflicts-with-database-operations-in-filestream-applications.md)

@@ -76,6 +76,7 @@ helpviewer_keywords:
   
  Result: The user's effective permission is **Update** to the members.  
   
-## See Also  
- [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Overlapping Model and Member Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)
+## Related content
+
+- [How Permissions Are Determined (Master Data Services)](how-permissions-are-determined-master-data-services.md)
+- [Overlapping Model and Member Permissions (Master Data Services)](overlapping-model-and-member-permissions-master-data-services.md)

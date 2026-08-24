@@ -79,5 +79,5 @@ Only members of the **sysadmin** fixed server role can execute `sp_addqreader_ag
 - [Enable Updating Subscriptions for Transactional Publications](../replication/publish/enable-updating-subscriptions-for-transactional-publications.md)
 - [Upgrade Replication Scripts (Replication Transact-SQL Programming)](../replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)
 - [Updatable Subscriptions - For Transactional Replication](../replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-- [sp_changeqreader_agent (Transact-SQL)](sp-changeqreader-agent-transact-sql.md)
-- [sp_helpqreader_agent (Transact-SQL)](sp-helpqreader-agent-transact-sql.md)
+- [sys.sp_changeqreader_agent (Transact-SQL)](sp-changeqreader-agent-transact-sql.md)
+- [sys.sp_helpqreader_agent (Transact-SQL)](sp-helpqreader-agent-transact-sql.md)

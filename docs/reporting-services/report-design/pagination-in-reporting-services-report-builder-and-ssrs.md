@@ -82,4 +82,4 @@ ms.custom:
   
 ## Related content
 
-- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)
+- [Page layout and rendering in paginated reports (Report Builder)](page-layout-and-rendering-report-builder-and-ssrs.md)

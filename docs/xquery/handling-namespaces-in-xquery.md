@@ -136,9 +136,8 @@ where ProductModelID=19
   
  Note that by overriding the default element namespace or empty namespace, all the locally named elements in the constructed XML are subsequently bound to the overriding default namespace. Therefore, if you require flexibility in constructing XML to take advantage of the empty namespace, do not override the default element namespace.  
   
-## See Also  
- [Add Namespaces to Queries with WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
-  
-  
+## Related content
+
+- [Add namespaces to queries using WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)
+- [XML data (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)
+- [XQuery Language Reference (SQL Server)](xquery-language-reference-sql-server.md)

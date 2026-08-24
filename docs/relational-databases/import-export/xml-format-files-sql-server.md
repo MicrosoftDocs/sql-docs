@@ -536,7 +536,7 @@ For more examples of both non-XML format files and XML format files, see the fol
 
 ## Related content
 
-- [Bulk Import and Export of Data (SQL Server)](bulk-import-and-export-of-data-sql-server.md)
+- [Bulk import and export of data (SQL Server)](bulk-import-and-export-of-data-sql-server.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
-- [Use Non-XML format files (SQL Server)](non-xml-format-files-sql-server.md)
+- [Use non-XML format files (SQL Server)](non-xml-format-files-sql-server.md)
 - [Format files to import or export data (SQL Server)](format-files-for-importing-or-exporting-data-sql-server.md)

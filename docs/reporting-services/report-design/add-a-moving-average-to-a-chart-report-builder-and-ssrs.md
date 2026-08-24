@@ -42,6 +42,6 @@ A moving average is an average of the data in your series, calculated over a def
 ## Related content
 
 - [Tutorial: Add a column chart to your report (Report Builder)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
-- [Format a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
-- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Add empty points to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Add empty points to a chart in a paginated report (Report Builder)](add-empty-points-to-a-chart-report-builder-and-ssrs.md)

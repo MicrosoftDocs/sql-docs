@@ -75,10 +75,8 @@ SELECT SESSION_CONTEXT(N'user_id');
 
 ## Related content
 
-- [sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)
 - [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)
 - [CURRENT_TRANSACTION_ID (Transact-SQL)](current-transaction-id-transact-sql.md)
 - [Row-level security](../../relational-databases/security/row-level-security.md)
 - [CONTEXT_INFO (Transact-SQL)](context-info-transact-sql.md)
 - [SET CONTEXT_INFO (Transact-SQL)](../statements/set-context-info-transact-sql.md)
-

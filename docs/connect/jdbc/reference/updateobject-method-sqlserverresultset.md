@@ -26,8 +26,7 @@ apitype: "Assembly"
 |[updateObject (java.lang.String, java.lang.Object)](../../../connect/jdbc/reference/updateobject-method-java-lang-string-java-lang-object.md)|Updates the designated column with an **Object** value given the column name.|  
 |[updateObject (java.lang.String, java.lang.Object, int)](../../../connect/jdbc/reference/updateobject-method-java-lang-string-java-lang-object-int.md)|Updates the designated column with an **Object** value given the column name and scale.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

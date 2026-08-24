@@ -35,7 +35,7 @@ For more information, including how to specify a search condition, see [Search c
 
 - [CONTAINS (Transact-SQL)](contains-transact-sql.md)
 - [FREETEXT (Transact-SQL)](freetext-transact-sql.md)
-- [IS &#91;NOT&#93; DISTINCT FROM (Transact-SQL)](is-distinct-from-transact-sql.md)
+- [IS \[NOT\] DISTINCT FROM (Transact-SQL)](is-distinct-from-transact-sql.md)
 - [IS NULL (Transact-SQL)](is-null-transact-sql.md)
 
 ## Related content

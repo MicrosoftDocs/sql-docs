@@ -488,5 +488,6 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## See Also  
- [Introduction to ODBC](../../odbc/reference/introduction-to-odbc.md)
+## Related content
+
+- [Introduction to ODBC](../../odbc/reference/introduction-to-odbc.md)

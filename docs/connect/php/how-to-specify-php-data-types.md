@@ -96,12 +96,9 @@ Retrieving the fourth field (*Comments*) as a stream is for demonstration purpos
 > [!NOTE]  
 > The [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) function provides a way to obtain field information, including type information, before executing a query.  
   
-## See Also  
-[Retrieving Data](../../connect/php/retrieving-data.md)
+## Related content
 
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
-
-[How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
-
-[How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
-  
+- [Retrieving Data](retrieving-data.md)
+- [About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)
+- [How to: Retrieve Output Parameters Using the SQLSRV Driver](how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+- [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)

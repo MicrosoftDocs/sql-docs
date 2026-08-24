@@ -128,4 +128,4 @@ When your database is part of an Always On availability group or a Managed Insta
 
 - [Ledger overview](ledger-overview.md)
 - [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md)
-- [sys.sp_generate_database_ledger_digest](../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)
+- [sys.sp_generate_database_ledger_digest (Transact-SQL)](../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)

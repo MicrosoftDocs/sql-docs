@@ -49,7 +49,8 @@ Defines the saving mode for auxiliary tables created during test execution. See 
   
 Click the **Finish** button to save the prepared Test Case into [Using Test Repositories (OracleToSQL)](./using-test-repositories-oracletosql.md).  
   
-## See Also  
-[Using Test Repositories &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
-[Running Test Cases &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Testing Migrated Database Objects &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## Related content
+
+- [Using Test Repositories](using-test-repositories-oracletosql.md)
+- [Running Test Cases](running-test-cases-oracletosql.md)
+- [Testing Migrated Database Objects](testing-migrated-database-objects-oracletosql.md)

@@ -23,6 +23,6 @@ For more information about the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnover
 |[SQL Server Data Access Forum](https://go.microsoft.com/fwlink/?LinkId=70651)|This site serves as a community forum for data access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, OLE DB, ODBC, ADO, MDAC, JDBC, or SOAP/HTTP.|
 |[JDBC Blog](https://go.microsoft.com/fwlink/?LinkId=124746)|This blog is used to provide information about the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

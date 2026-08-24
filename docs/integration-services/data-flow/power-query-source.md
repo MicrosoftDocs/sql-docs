@@ -78,5 +78,6 @@ Finally, For **Authentication Kind**, you can select **Anonymous**/**Windows Aut
 
 -   **Web** data source can not currently be used on Azure-SSIS IR with custom setups, so please use it on Azure-SSIS IR without custom setups for now.
 
-## Next steps
-Learn how to run SSIS packages in the Azure-SSIS IR as first-class activities in ADF pipelines. See [Execute SSIS Package activity Runtime](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) article.
+## Related content
+
+- [Execute SSIS Package activity Runtime](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)

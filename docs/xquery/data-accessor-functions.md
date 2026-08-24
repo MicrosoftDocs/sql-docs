@@ -30,7 +30,6 @@ dev_langs:
   
 -   [data Function &#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
   
-## See Also  
- [Path Expressions &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
-  
-  
+## Related content
+
+- [Path Expressions (XQuery)](path-expressions-xquery.md)

@@ -157,6 +157,6 @@ GO
 ## Related content
 
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
-- [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
+- [Index architecture and design guide](../sql-server-index-design-guide.md)
 - [Display an actual execution plan](../performance/display-an-actual-execution-plan.md)
 - [Indexes](indexes.md)

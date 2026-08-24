@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[getBlob (int)](../../../connect/jdbc/reference/getblob-method-int.md)|Retrieves the value of the designated JDBC BLOB parameter as a Blob object in the Java programming language given the parameter index.|  
 |[getBlob (java.lang.String)](../../../connect/jdbc/reference/getblob-method-java-lang-string.md)|Retrieves the value of the designated JDBC BLOB parameter as a Blob object in the Java programming language given the parameter name.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

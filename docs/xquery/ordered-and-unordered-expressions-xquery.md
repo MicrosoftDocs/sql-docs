@@ -22,9 +22,8 @@ dev_langs:
   
  The additional **ordered** and **unordered** syntax described in the XQuery specification is not supported.  
   
-## See Also  
- [XQuery Expressions](../xquery/xquery-expressions.md)   
- [FLWOR Statement and Iteration &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
- [Path Expressions &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
-  
-  
+## Related content
+
+- [XQuery Expressions](xquery-expressions.md)
+- [FLWOR statement and iteration (XQuery)](flwor-statement-and-iteration-xquery.md)
+- [Path Expressions (XQuery)](path-expressions-xquery.md)

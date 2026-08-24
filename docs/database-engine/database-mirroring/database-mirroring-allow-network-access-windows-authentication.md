@@ -44,10 +44,9 @@ GRANT CONNECT on ENDPOINT::Mirroring_Endpoint TO [Adomain\Otheruser];
 GO  
 ```  
   
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
-  
-  
+## Related content
+
+- [What is an Always On availability group?](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [Transport security in availability groups and database mirroring](transport-security-database-mirroring-always-on-availability.md)
+- [The database mirroring endpoint (SQL Server)](the-database-mirroring-endpoint-sql-server.md)

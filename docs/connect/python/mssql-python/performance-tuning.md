@@ -644,6 +644,6 @@ The [Performance Dashboard Reports](../../../relational-databases/performance/pe
 
 ## Related content
 
-- [Connection pooling](connection-pooling.md)
-- [Bulk copy operations](bulk-copy.md)
-- [Retrieving data](retrieving-data.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
+- [Use bulk copy with mssql-python](bulk-copy.md)
+- [Retrieve data with mssql-python](retrieving-data.md)

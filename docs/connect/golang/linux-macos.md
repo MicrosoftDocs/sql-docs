@@ -160,7 +160,7 @@ sqlserver://<user>:<password>@<server>:1433?database=AdventureWorks2025&encrypt=
 
 ## Related content
 
-- [SQL Server and Windows authentication](authentication.md)
-- [Encryption and certificates](encryption-certificates.md)
-- [Protocols](protocols.md)
-- [Installation and system requirements](installation.md)
+- [SQL Server and Windows authentication with go-mssqldb](authentication.md)
+- [go-mssqldb encryption and certificates](encryption-certificates.md)
+- [go-mssqldb protocols](protocols.md)
+- [Install the go-mssqldb driver](installation.md)

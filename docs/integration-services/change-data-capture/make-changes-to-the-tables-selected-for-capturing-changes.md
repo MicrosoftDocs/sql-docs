@@ -41,8 +41,7 @@ f1_keywords:
   
  In the **Capture Instance** field enter a name for the capture instance.  
   
-## See Also  
- [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
-  
-  
+## Related content
+
+- [How to Create the SQL Server Change Database Instance](how-to-create-the-sql-server-change-database-instance.md)
+- [Select Oracle Tables and Columns](select-oracle-tables-and-columns.md)

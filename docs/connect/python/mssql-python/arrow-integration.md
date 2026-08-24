@@ -245,8 +245,8 @@ table = cursor.arrow(batch_size=1000)
 
 ## Related content
 
-- [Polars integration](polars-integration.md)
-- [pandas integration](pandas-integration.md)
-- [Retrieving data](retrieving-data.md)
-- [Data type mappings](data-type-mappings.md)
-- [Performance tuning](performance-tuning.md)
+- [Use mssql-python with Polars](polars-integration.md)
+- [Use mssql-python with pandas](pandas-integration.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Performance tuning for mssql-python applications](performance-tuning.md)

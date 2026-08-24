@@ -103,5 +103,5 @@ EXECUTE sp_dbmmonitorchangealert AdventureWorks2022, 5, 8, 1;
 ## Related content
 
 - [Monitoring Database Mirroring (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)
-- [sp_dbmmonitorhelpalert (Transact-SQL)](sp-dbmmonitorhelpalert-transact-sql.md)
-- [sp_dbmmonitordropalert (Transact-SQL)](sp-dbmmonitordropalert-transact-sql.md)
+- [sys.sp_dbmmonitorhelpalert (Transact-SQL)](sp-dbmmonitorhelpalert-transact-sql.md)
+- [sys.sp_dbmmonitordropalert (Transact-SQL)](sp-dbmmonitordropalert-transact-sql.md)

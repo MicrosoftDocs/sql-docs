@@ -151,6 +151,5 @@ WHERE [name] NOT LIKE N'SQL%';
 - [CREATE DATABASE](create-database-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
 - [DECLARE @local_variable (Transact-SQL)](../language-elements/declare-local-variable-transact-sql.md)
-- [Table (Transact-SQL)](../data-types/table-transact-sql.md)
-- [sys.fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
-
+- [table (Transact-SQL)](../data-types/table-transact-sql.md)
+- [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)

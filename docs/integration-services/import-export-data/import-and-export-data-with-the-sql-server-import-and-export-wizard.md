@@ -90,6 +90,7 @@ For more info about SSIS, see [SQL Server Integration Services](../../integratio
 ## What's next?  
  Start the wizard. For more info, see [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).  
 
-## See also
-[Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
-[Data Type Mapping in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
+## Related content
+
+- [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+- [Data Type Mapping in the SQL Server Import and Export Wizard](data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

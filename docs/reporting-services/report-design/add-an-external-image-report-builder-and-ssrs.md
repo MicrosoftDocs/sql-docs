@@ -38,6 +38,6 @@ External images can be on a report server in native mode or any other web site, 
   
 ## Related content
 
-- [Embed an image in a report &#40;Report Builder&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)
-- [Add a background image &#40;Report Builder&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)
-- [Image properties dialog, general &#40;Report Builder&#41;](./images-report-builder-and-ssrs.md)
+- [Embed an image in a paginated report (Report Builder)](embed-an-image-in-a-report-report-builder-and-ssrs.md)
+- [Add a background image to a paginated report (Report Builder)](add-a-background-image-report-builder-and-ssrs.md)
+- [Images in paginated reports (Report Builder)](images-report-builder-and-ssrs.md)

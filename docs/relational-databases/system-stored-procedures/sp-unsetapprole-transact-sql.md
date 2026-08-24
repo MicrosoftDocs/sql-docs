@@ -84,7 +84,7 @@ GO
 
 ## Related content
 
-- [sp_setapprole (Transact-SQL)](sp-setapprole-transact-sql.md)
+- [sys.sp_setapprole (Transact-SQL)](sp-setapprole-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)

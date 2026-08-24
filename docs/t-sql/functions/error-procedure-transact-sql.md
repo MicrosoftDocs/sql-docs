@@ -151,7 +151,7 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
 
 ## Related content
 
-- [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
+- [Messages (for errors) catalog views - sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
 - [TRY...CATCH (Transact-SQL)](../language-elements/try-catch-transact-sql.md)
 - [ERROR_LINE (Transact-SQL)](error-line-transact-sql.md)
 - [ERROR_MESSAGE (Transact-SQL)](error-message-transact-sql.md)
@@ -159,5 +159,4 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
 - [ERROR_SEVERITY (Transact-SQL)](error-severity-transact-sql.md)
 - [ERROR_STATE (Transact-SQL)](error-state-transact-sql.md)
 - [RAISERROR (Transact-SQL)](../language-elements/raiserror-transact-sql.md)
-- [&#x40;&#x40;ERROR (Transact-SQL)](error-transact-sql.md)
-
+- [@@ERROR (Transact-SQL)](error-transact-sql.md)

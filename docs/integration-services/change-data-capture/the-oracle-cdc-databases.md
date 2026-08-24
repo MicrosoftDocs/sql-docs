@@ -179,6 +179,6 @@ ms.topic: concept-article
 |data_end_cn|The change number (CN) for the last change in the data in this row.|  
 |data|The staged changes for the transaction in the form of a BLOB.|  
   
-## See Also  
- [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
-  
+## Related content
+
+- [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)

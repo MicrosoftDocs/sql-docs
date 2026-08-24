@@ -534,6 +534,6 @@ If autogrow is disabled, the database is online, and sufficient space is availab
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Manage the size of the transaction log file](manage-the-size-of-the-transaction-log-file.md)
 - [Transaction log backups (SQL Server)](../backup-restore/transaction-log-backups-sql-server.md)
-- [sp_add_log_file_recover_suspect_db (Transact-SQL)](../system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)
+- [sys.sp_add_log_file_recover_suspect_db (Transact-SQL)](../system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)
 - [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)
 - [How a log file structure can affect database recovery time - Microsoft Tech Community](https://techcommunity.microsoft.com/blog/sqlserversupport/how-a-log-file-structure-can-affect-database-recovery-time/315780)

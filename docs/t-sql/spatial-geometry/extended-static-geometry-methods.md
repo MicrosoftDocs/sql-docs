@@ -37,10 +37,9 @@ dev_langs:
   
 -   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
-## See Also  
- [Static Aggregate Geometry Methods](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
- [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [Static Aggregate Geometry Methods](static-aggregate-geometry-methods.md)
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)
+- [OGC Static Geometry Methods](ogc-static-geometry-methods.md)

@@ -34,6 +34,6 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW 
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## See also
+## Related content
 
-[What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md)?
+- [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md)

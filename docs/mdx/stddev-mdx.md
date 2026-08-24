@@ -12,7 +12,6 @@ ms.custom: mdx
 
   Alias for the [Stdev](../mdx/stdev-mdx.md) function.  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

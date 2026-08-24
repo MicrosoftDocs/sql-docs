@@ -57,8 +57,6 @@ When the data source is configured for a Microsoft SharePoint List connection ty
   
 ## Related content
 
-- [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
-- [Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)
-- [Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)
-
-[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+- [Errors and events reference (Reporting Services)](errors-and-events-reference-reporting-services.md)
+- [Troubleshoot data retrieval issues with Reporting Services reports](troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)
+- [Troubleshoot Reporting Services subscriptions and delivery](troubleshoot-reporting-services-subscriptions-and-delivery.md)

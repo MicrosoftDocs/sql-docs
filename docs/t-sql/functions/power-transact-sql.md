@@ -155,13 +155,10 @@ SELECT POWER(2.0, 3);
 8.0
 ```  
   
-## See Also  
- [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [float and real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [money and smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [decimal and numeric (Transact-SQL)](../data-types/decimal-and-numeric-transact-sql.md)
+- [float and real (Transact-SQL)](../data-types/float-and-real-transact-sql.md)
+- [int, bigint, smallint, and tinyint (Transact-SQL)](../data-types/int-bigint-smallint-and-tinyint-transact-sql.md)
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
+- [money and smallmoney (Transact-SQL)](../data-types/money-and-smallmoney-transact-sql.md)

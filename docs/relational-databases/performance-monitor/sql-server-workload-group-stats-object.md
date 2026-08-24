@@ -51,4 +51,4 @@ WHERE object_name LIKE '%Workload Group Stats%';
 
 - [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
 - [SQL Server, Resource Pool Stats object](sql-server-resource-pool-stats-object.md)
-- [Resource Governor](../resource-governor/resource-governor.md)
+- [Resource governor](../resource-governor/resource-governor.md)

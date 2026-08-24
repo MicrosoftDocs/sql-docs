@@ -88,6 +88,6 @@ RETURN
   ,[Reseller Sales].[Reseller Standard Product Cost]  
 ```  
   
-## See Also  
- [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
+## Related content
+
+- [MDX Data Manipulation Statements (MDX)](mdx-data-manipulation-statements-mdx.md)

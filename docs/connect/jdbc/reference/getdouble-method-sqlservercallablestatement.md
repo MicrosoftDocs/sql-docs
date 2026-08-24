@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[getDouble (int)](../../../connect/jdbc/reference/getdouble-method-int.md)|Retrieves the value of the designated parameter as a **double** in the Java programming language given the parameter index.|  
 |[getDouble (java.lang.String)](../../../connect/jdbc/reference/getdouble-method-java-lang-string.md)|Retrieves the value of the designated parameter as a **double** in the Java programming language given the parameter name.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

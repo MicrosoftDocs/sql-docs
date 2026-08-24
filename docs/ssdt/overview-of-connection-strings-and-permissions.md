@@ -44,5 +44,5 @@ Because of the higher-permission connection used for the post-test action script
 ## Related content
 
 - [Create and define SQL Server unit tests](creating-and-defining-sql-server-unit-tests.md)
-- [Scripts in SQL Server Unit Tests](scripts-in-sql-server-unit-tests.md)
-- [SQL Server Unit Test Files](sql-server-unit-test-files.md)
+- [Scripts in SQL Server unit tests](scripts-in-sql-server-unit-tests.md)
+- [SQL Server unit test files](sql-server-unit-test-files.md)

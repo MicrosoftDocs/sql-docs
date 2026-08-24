@@ -275,6 +275,6 @@ GO
 
  The formula to calculate a worst case maximum supported N in TOP N is: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
-## See Also  
- [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
- [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)
+## Related content
+
+- [A Guide to Query Processing for Memory-Optimized Tables](a-guide-to-query-processing-for-memory-optimized-tables.md)

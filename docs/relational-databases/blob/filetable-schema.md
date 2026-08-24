@@ -34,7 +34,6 @@ helpviewer_keywords:
 |**is_system**|**bit**<br /><br /> **not null**|1 byte|FALSE|System file attribute.|Calculated automatically. Can also be set by using Windows APIs.|  
 |**is_temporary**|**bit**<br /><br /> **not null**|1 byte|FALSE|Temporary file attribute.|Calculated automatically. Can also be set by using Windows APIs.|  
   
-## See Also  
- [Create, Alter, and Drop FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
-  
-  
+## Related content
+
+- [Create, alter, or drop a FileTable](create-alter-and-drop-filetables.md)

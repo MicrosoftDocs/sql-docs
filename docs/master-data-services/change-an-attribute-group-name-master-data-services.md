@@ -45,7 +45,8 @@ helpviewer_keywords:
   
 8.  Click **Save group**.  
   
-## See Also  
- [Attribute Groups &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Create an Attribute Group &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)   
- [Delete an Attribute Group &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)
+## Related content
+
+- [Attribute Groups (Master Data Services)](attribute-groups-master-data-services.md)
+- [Create an Attribute Group (Master Data Services)](create-an-attribute-group-master-data-services.md)
+- [Delete an Attribute Group (Master Data Services)](delete-an-attribute-group-master-data-services.md)

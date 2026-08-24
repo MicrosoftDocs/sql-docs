@@ -89,6 +89,6 @@ Only members of the **sysadmin** fixed server role, the **db_owner** fixed datab
 ## Related content
 
 - [Delete a Push Subscription](../replication/delete-a-push-subscription.md)
-- [sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)
-- [sp_changesubstatus (Transact-SQL)](sp-changesubstatus-transact-sql.md)
-- [sp_helpsubscription (Transact-SQL)](sp-helpsubscription-transact-sql.md)
+- [sys.sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)
+- [sys.sp_changesubstatus (Transact-SQL)](sp-changesubstatus-transact-sql.md)
+- [sys.sp_helpsubscription (Transact-SQL)](sp-helpsubscription-transact-sql.md)

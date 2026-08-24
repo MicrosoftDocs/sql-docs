@@ -643,9 +643,9 @@ ms.custom: sfi-ropc-nochange
   
  For more information, see [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## See Also  
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Common Properties](../set-the-properties-of-a-data-flow-component.md)   
- [Path Properties](../integration-services-paths.md)   
- [Data Flow Properties that Can Be Set by Using Expressions](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))  
-  
+## Related content
+
+- [Integration Services Transformations](integration-services-transformations.md)
+- [Set the Properties of a Data Flow Component](../set-the-properties-of-a-data-flow-component.md)
+- [Integration Services Paths](../integration-services-paths.md)
+- [Data Flow Properties that Can Be Set by Using Expressions](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))

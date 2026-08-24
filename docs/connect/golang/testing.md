@@ -485,8 +485,8 @@ func TestRetryOnTransientError(t *testing.T) {
 
 ## Related content
 
-- [Installation and system requirements](installation.md)
-- [Connection strings](connection-strings.md)
-- [Queries and statements](queries-statements.md)
-- [Error handling and retry patterns](error-handling.md)
-- [Troubleshooting](troubleshooting.md)
+- [Install the go-mssqldb driver](installation.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [Queries and statements with go-mssqldb](queries-statements.md)
+- [Error handling and retry patterns with go-mssqldb](error-handling.md)
+- [Troubleshoot the go-mssqldb driver](troubleshooting.md)

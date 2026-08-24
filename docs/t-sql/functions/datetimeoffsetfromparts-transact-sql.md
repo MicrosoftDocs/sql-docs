@@ -128,11 +128,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## See also
-[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
-  
-  
+## Related content
 
-
-
+- [datetimeoffset (Transact-SQL)](../data-types/datetimeoffset-transact-sql.md)
+- [AT TIME ZONE (Transact-SQL)](../queries/at-time-zone-transact-sql.md)

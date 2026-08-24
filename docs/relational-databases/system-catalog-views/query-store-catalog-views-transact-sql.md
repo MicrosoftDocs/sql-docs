@@ -43,10 +43,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || =azure-sqldw-latest |
 
 - [sys.database_query_store_internal_state (Transact-SQL)](sys-database-query-store-internal-state-transact-sql.md)
 
-## Next steps
+## Related content
 
-Learn more about Query Store in the following articles:
-
- - [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
- - [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md)
+- [Query Store stored procedures (Transact-SQL)](../system-stored-procedures/query-store-stored-procedures-transact-sql.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [Query Store for readable secondary replicas (preview)](../performance/query-store-for-secondary-replicas.md)

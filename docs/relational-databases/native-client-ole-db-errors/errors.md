@@ -39,6 +39,6 @@ helpviewer_keywords:
   
 -   [SQL Server Message Results](../../relational-databases/native-client-ole-db-errors/sql-server-message-results.md)  
   
-## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)

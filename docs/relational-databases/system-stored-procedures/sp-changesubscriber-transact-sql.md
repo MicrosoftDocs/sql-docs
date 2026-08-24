@@ -183,9 +183,9 @@ Only members of the **sysadmin** fixed server role can execute `sp_changesubscri
 
 ## Related content
 
-- [sp_addsubscriber (Transact-SQL)](sp-addsubscriber-transact-sql.md)
-- [sp_dropsubscriber (Transact-SQL)](sp-dropsubscriber-transact-sql.md)
-- [sp_helpdistributiondb (Transact-SQL)](sp-helpdistributiondb-transact-sql.md)
-- [sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
-- [sp_helpsubscriberinfo (Transact-SQL)](sp-helpsubscriberinfo-transact-sql.md)
+- [sys.sp_addsubscriber (Transact-SQL)](sp-addsubscriber-transact-sql.md)
+- [sys.sp_dropsubscriber (Transact-SQL)](sp-dropsubscriber-transact-sql.md)
+- [sys.sp_helpdistributiondb (Transact-SQL)](sp-helpdistributiondb-transact-sql.md)
+- [sys.sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
+- [sys.sp_helpsubscriberinfo (Transact-SQL)](sp-helpsubscriberinfo-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

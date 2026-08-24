@@ -41,6 +41,6 @@ For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions, 
 
 For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## See also
+## Related content
 
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)

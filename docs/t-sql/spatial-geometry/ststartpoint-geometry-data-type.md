@@ -49,8 +49,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STStartPoint().ToString();  
 ```  
   
-## See Also  
- [STPointN &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)   
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [STPointN (geometry Data Type)](stpointn-geometry-data-type.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

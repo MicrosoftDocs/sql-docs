@@ -116,6 +116,6 @@ if($lockedBlobs.Count -gt 0)
 } else { Write-Host " There are no blobs with locked lease status." }
 ```  
   
-## See also
+## Related content
 
-[SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+- [SQL Server backup to URL for Microsoft Azure Blob Storage best practices and troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)

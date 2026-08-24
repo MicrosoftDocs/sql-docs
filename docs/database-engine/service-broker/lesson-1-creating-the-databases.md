@@ -49,15 +49,15 @@ In this lesson, you learn to create the databases and enable the trustworthy opt
   GO
   ```
 
-## Related content
-
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-- [Service Broker dialog security](service-broker-dialog-security.md)
-
 ## Next step
 
 You've successfully created the databases for the tutorial. Next, you configure the `TargetDB` with the objects that are required to support the target end of a Service Broker conversation.
 
 > [!div class="nextstepaction"]
 > [Lesson 2: Create the target conversation objects](lesson-2-creating-the-target-conversation-objects.md)
+
+## Related content
+
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [Service Broker dialog security](service-broker-dialog-security.md)

@@ -114,10 +114,8 @@ For the purpose of focusing on transaction behavior, some recommended error hand
 > [!NOTE]  
 > Do not use embedded Transact-SQL to perform transactions. For example, do not execute a statement with "BEGIN TRANSACTION" as the Transact-SQL query to begin a transaction. The expected transactional behavior cannot be guaranteed when using embedded Transact-SQL to perform transactions.  
   
-## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+## Related content
 
-[How to: Perform Transactions](../../connect/php/how-to-perform-transactions.md)
-
-[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md) 
-  
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [How to: Perform Transactions](how-to-perform-transactions.md)
+- [Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)

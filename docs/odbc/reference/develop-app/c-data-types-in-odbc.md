@@ -42,5 +42,6 @@ ODBC defines the C data types that are used by application variables and their c
   
  For more information about ODBC 3.8, see [What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
   
-## See Also  
- [C Data Types](../../../odbc/reference/appendixes/c-data-types.md)
+## Related content
+
+- [C Data Types](../appendixes/c-data-types.md)

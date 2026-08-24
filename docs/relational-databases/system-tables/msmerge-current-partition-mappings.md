@@ -27,8 +27,7 @@ dev_langs:
 |**rowguid**|**uniqueidentifier**|The row identifier for the given row.|  
 |**partition_id**|**int**|The ID of the partition to which the row belongs. The value is -1 if the row change is relevant to all Subscribers.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

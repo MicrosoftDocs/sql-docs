@@ -32,5 +32,6 @@ In this example, you see the following things.
 ## What's next?  
  After you review the column conversion details and click **OK**, the **Column Conversion Details** dialog box returns you to the **Review Data Type Mapping** page. For more info, see [Review Data Type Mapping](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
 
-## See also
-[Data Type Mapping in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
+## Related content
+
+- [Data Type Mapping in the SQL Server Import and Export Wizard](data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

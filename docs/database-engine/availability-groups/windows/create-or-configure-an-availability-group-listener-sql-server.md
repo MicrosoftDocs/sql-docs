@@ -327,7 +327,7 @@ For more information, see [How to create multiple listeners for same availabilit
 
 ## Related content
 
-- [Connect to the listener](listeners-client-connectivity-application-failover.md)
-- [Availability group monitoring strategies](monitoring-of-availability-groups-sql-server.md)
-- [View the properties of a listener](view-availability-group-listener-properties-sql-server.md)
-- [Remove the listener](remove-an-availability-group-listener-sql-server.md)
+- [Connect to an Always On availability group listener](listeners-client-connectivity-application-failover.md)
+- [Tools to monitor Always On availability groups](monitoring-of-availability-groups-sql-server.md)
+- [View Availability Group Listener Properties (SQL Server)](view-availability-group-listener-properties-sql-server.md)
+- [Remove an availability group listener (SQL Server)](remove-an-availability-group-listener-sql-server.md)

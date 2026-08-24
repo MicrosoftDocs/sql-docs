@@ -27,5 +27,6 @@ helpviewer_keywords:
   
 -   [Driver Setup DLL](../../../odbc/reference/install/driver-setup-dll.md)  
   
-## See Also  
- [Installation Components](../../../odbc/reference/install/installation-components.md)
+## Related content
+
+- [Installation Components](installation-components.md)

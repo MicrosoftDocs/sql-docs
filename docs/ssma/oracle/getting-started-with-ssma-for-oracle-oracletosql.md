@@ -103,7 +103,7 @@ The **View** menu provides commands to toggle the visibility of the Output pane 
   
 -   The Error List pane shows error, warning, and informational messages in a sortable list.  
   
-## See Also  
-[Migrating Oracle Data into SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
-[User Interface Reference &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
-  
+## Related content
+
+- [Migrate Oracle Data into SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)
+- [User Interface Reference](user-interface-reference-oracletosql.md)

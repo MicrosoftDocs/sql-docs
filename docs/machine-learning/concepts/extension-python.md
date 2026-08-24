@@ -92,10 +92,10 @@ The following diagram summarizes the overall workflow when scripts are sent from
 8. SQL Satellite manages communication with SQL Server and cleanup of related job objects.
 9. SQL Server passes results back to the client.
 
-## Next steps
+## Related content
 
-+ [revoscalepy module in SQL Server](../python/ref-py-revoscalepy.md)
-+ [revoscalepy function reference](/r-server/python-reference/revoscalepy/revoscalepy-package) 
-+ [Extensibility framework in SQL Server](extensibility-framework.md)
-+ [R and machine learning extensions in SQL Server](extension-r.md)
-+ [Get Python package information](../package-management/python-package-information.md)
+- [revoscalepy (Python package in SQL Server Machine Learning Services)](../python/ref-py-revoscalepy.md)
+- [revoscalepy function reference](/r-server/python-reference/revoscalepy/revoscalepy-package)
+- [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md)
+- [R language extension in SQL Server Machine Learning Services](extension-r.md)
+- [Get Python package information](../package-management/python-package-information.md)

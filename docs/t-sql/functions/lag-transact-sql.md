@@ -270,10 +270,9 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## Next steps  
+## Related content
 
-- [LEAD (Transact-SQL)](../../t-sql/functions/lead-transact-sql.md)  
+- [LEAD (Transact-SQL)](lead-transact-sql.md)
 - [FIRST_VALUE (Transact-SQL)](first-value-transact-sql.md)
 - [LAST_VALUE (Transact-SQL)](last-value-transact-sql.md)
-- [SELECT - OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)
-
+- [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

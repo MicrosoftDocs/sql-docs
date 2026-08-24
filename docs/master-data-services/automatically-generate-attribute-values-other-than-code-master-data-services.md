@@ -64,13 +64,10 @@ ms.custom:
   
 17. On the confirmation dialog box, click **OK**. The rule's status changes to **Active**.  
   
-## Next Steps  
-  
--   [Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
-  
--   [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
-  
-## See Also  
- [Automatic Code Creation &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)
+## Related content
+
+- [Automatic Code Creation (Master Data Services)](automatic-code-creation-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Validation (Master Data Services)](validation-master-data-services.md)
+- [Validate Specific Members against Business Rules (Master Data Services)](validate-specific-members-against-business-rules-master-data-services.md)
+- [Validate a Version against Business Rules (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)

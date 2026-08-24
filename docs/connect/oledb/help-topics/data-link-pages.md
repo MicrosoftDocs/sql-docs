@@ -134,4 +134,4 @@ Type the full path to the certificate file in the text box labeled **Server cert
 ## Related content
 
 - [Use Microsoft Entra ID](../features/using-azure-active-directory.md)
-- [SQL Server Login dialog box](sql-server-login-dialog.md)
+- [SQL Server Login dialog box (OLE DB)](sql-server-login-dialog.md)

@@ -104,5 +104,5 @@ FROM sys.databases;
 ## Related content
 
 - [DB_ID (Transact-SQL)](db-id-transact-sql.md)
-- [Metadata Functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
 - [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

@@ -147,5 +147,6 @@ struct tagSQLGUID {
   
 -   [64-Bit Integer Structures](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
-## See Also  
- [C Data Types in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)
+## Related content
+
+- [C Data Types in ODBC](../develop-app/c-data-types-in-odbc.md)

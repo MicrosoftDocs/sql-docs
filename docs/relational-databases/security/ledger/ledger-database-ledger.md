@@ -71,5 +71,5 @@ Viewing the database ledger requires the `VIEW LEDGER CONTENT` permission. For d
 ## Related content
 
 - [Ledger overview](ledger-overview.md)
-- [Data Manipulation Language (DML)](../../../t-sql/queries/queries.md)
+- [Queries](../../../t-sql/queries/queries.md)
 - [Ledger views](../../system-catalog-views/security-catalog-views-transact-sql.md#ledger-views)

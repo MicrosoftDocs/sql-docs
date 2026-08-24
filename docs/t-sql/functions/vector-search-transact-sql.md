@@ -69,7 +69,7 @@ Vector indexes created with the latest version introduce significant enhancement
 **With latest version Vector Indexes:**
 
 > [!IMPORTANT]
-> When querying tables that use the latest vector index version, approximate vector search must use the TOP (N) APPROXIMATE syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest‑neighbor results.
+> When querying tables that use the latest vector index version, approximate vector search must use the TOP (N) APPROXIMATE syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest-neighbor results.
 
 ```syntaxsql
 SELECT TOP (N) WITH APPROXIMATE
@@ -186,7 +186,7 @@ ORDER BY r.distance;
 ### A. Basic vector similarity search
 
 > [!IMPORTANT]
-> When querying tables that use the latest vector index version, approximate vector search must use the `TOP (N) WITH APPROXIMATE` syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest‑neighbor results.
+> When querying tables that use the latest vector index version, approximate vector search must use the `TOP (N) WITH APPROXIMATE` syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest-neighbor results.
 
 The following example finds the 10 most similar articles to `Pink Floyd music style` in the `wikipedia_articles_embeddings` table.
 
@@ -931,6 +931,6 @@ The following operations can be used directly with `VECTOR_SEARCH` without requi
 
 - [Vector search and vector indexes in the SQL Database Engine](../../sql-server/ai/vectors.md)
 - [Vector data type](../data-types/vector-data-type.md)
-- [CREATE VECTOR INDEX (Transact-SQL)](../statements/create-vector-index-transact-sql.md)
+- [CREATE VECTOR INDEX (Transact-SQL) (Preview)](../statements/create-vector-index-transact-sql.md)
 - [sys.dm_db_vector_indexes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-vector-indexes-transact-sql.md)
 - [Azure SQL Database Vector Search Samples](https://github.com/Azure-Samples/azure-sql-db-vector-search)

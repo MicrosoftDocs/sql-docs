@@ -69,8 +69,8 @@ WHERE t.name = 'mytable' AND s.name = 'dbo';
 
 ## Related content
 
-- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)
-- [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)
-- [sys.schemas (Transact-SQL)](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)
+- [sys.columns (Transact-SQL)](../system-catalog-views/sys-columns-transact-sql.md)
+- [sys.tables (Transact-SQL)](../system-catalog-views/sys-tables-transact-sql.md)
+- [Schema catalog view - sys.schemas](../system-catalog-views/schemas-catalog-views-sys-schemas.md)
 - [Generate Scripts (SQL Server Management Studio)](/ssms/scripting/generate-scripts-sql-server-management-studio)
 - [SSMS keyboard shortcuts](/ssms/sql-server-management-studio-keyboard-shortcuts)

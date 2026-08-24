@@ -437,7 +437,7 @@ Here's what you can do with the scripts that are included in the file:
 
 ## Related content
 
-- [SELECT - FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)
+- [SELECT - FOR clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)
 - [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)
 - [JSON functions (Transact-SQL)](../../t-sql/functions/json-functions-transact-sql.md)
 - [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)

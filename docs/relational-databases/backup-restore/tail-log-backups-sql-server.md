@@ -69,9 +69,9 @@ To restore a transaction log backup, see [Restore a Transaction Log Backup (SQL 
 ## Related content
 
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
-- [RESTORE statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Back up and restore of SQL Server databases](back-up-and-restore-of-sql-server-databases.md)
 - [Copy-only backups](copy-only-backups-sql-server.md)
-- [Transaction Log Backups (SQL Server)](transaction-log-backups-sql-server.md)
+- [Transaction log backups (SQL Server)](transaction-log-backups-sql-server.md)
 - [Apply Transaction Log Backups (SQL Server)](apply-transaction-log-backups-sql-server.md)
 - [SQL Server transaction log architecture and management guide](../sql-server-transaction-log-architecture-and-management-guide.md)

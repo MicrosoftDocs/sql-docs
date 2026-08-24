@@ -45,8 +45,7 @@ ms.custom:
   
 7.  Click **Finish**.  
   
-## Next Steps  
-  
--   [Deploy a Model Deployment Package by Using the Wizard](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
-  
--   [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)
+## Related content
+
+- [Deploy a Model Deployment Package by Using the Wizard](deploy-a-model-deployment-package-by-using-the-wizard.md)
+- [Deploy a Model Deployment Package by Using MDSModelDeploy](deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)

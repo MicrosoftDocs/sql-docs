@@ -63,13 +63,9 @@ helpviewer_keywords:
 |Updated By|The username of the user who last updated the explicit hierarchy.|  
 |Updated On|The date and time when the explicit hierarchy was last updated.|  
   
-## Next Steps  
-  
--   [Create a Consolidated Member &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)  
-  
-  
-  
-## See Also  
- [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Derived Hierarchies with Explicit Caps &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Change an Explicit Hierarchy Name &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)
+## Related content
+
+- [Explicit Hierarchies (Master Data Services)](explicit-hierarchies-master-data-services.md)
+- [Derived Hierarchies with Explicit Caps (Master Data Services)](derived-hierarchies-with-explicit-caps-master-data-services.md)
+- [Change an Explicit Hierarchy Name (Master Data Services)](change-an-explicit-hierarchy-name-master-data-services.md)
+- [Create a Consolidated Member (Master Data Services)](create-a-consolidated-member-master-data-services.md)

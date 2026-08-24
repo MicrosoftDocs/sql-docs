@@ -67,8 +67,7 @@ SELECT * FROM fn_virtualservernodes();
   
  SS3-CLUSN2  
   
-## See Also  
- [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)
+- [sys.fn_servershareddrives (Transact-SQL)](sys-fn-servershareddrives-transact-sql.md)

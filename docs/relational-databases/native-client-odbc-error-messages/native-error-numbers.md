@@ -21,7 +21,6 @@ helpviewer_keywords:
   
  For information about the state error codes, see [SQLSTATE &#40;ODBC Error Codes&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md). For errors returned by the Net-Library, the native error number is from the underlying network software.  
   
-## See Also  
- [Handling Errors and Messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
-  
-  
+## Related content
+
+- [Handling Errors and Messages](handling-errors-and-messages.md)

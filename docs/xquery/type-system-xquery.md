@@ -139,8 +139,7 @@ WHERE ProductModelID=7
 > [!NOTE]  
 >  The explicit use of the **data()** function in this example is for illustration only. If it is not specified, **sum()** implicitly applies the **data()** function to extract the typed values of the nodes.  
   
-## See Also  
- [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [XQuery Basics](../xquery/xquery-basics.md)  
-  
-  
+## Related content
+
+- [SQL Server Profiler templates and permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)
+- [XQuery basics](xquery-basics.md)

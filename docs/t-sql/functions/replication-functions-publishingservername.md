@@ -39,6 +39,6 @@ PUBLISHINGSERVERNAME()
   
  This function must be executed within the context of a publication database. When PUBLISHINGSERVERNAME is executed on a publication database at the mirror server instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the name of the Publisher instance from which the published database originates is returned. When this function is executed on a database at the mirror server instance that is not published or that is published from the mirror server instance after a failover, the name of the mirror server instance is returned. When this function is executed at the original Publisher instance, the name of the Publisher is returned.  
   
-## See Also  
- [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
-  
+## Related content
+
+- [Database Mirroring and Replication (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)

@@ -61,8 +61,6 @@ helpviewer_keywords:
   
 -   [Next Fetch Position](../../oledb/ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
-## See Also  
- [Rowsets](../../oledb/ole-db-rowsets/rowsets.md)  
-  
-  
+## Related content
 
+- [Rowsets](rowsets.md)

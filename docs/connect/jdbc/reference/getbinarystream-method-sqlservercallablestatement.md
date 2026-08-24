@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[getBinaryStream &#40;int&#41;](../../../connect/jdbc/reference/getbinarystream-int.md)|Retrieves the value of the designated parameter as a binary stream of uninterrupted bytes given the parameter index.|  
 |[getBinaryStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getbinarystream-java-lang-string.md)|Retrieves the value of the designated parameter as a binary stream of uninterrupted bytes given the parameter name.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

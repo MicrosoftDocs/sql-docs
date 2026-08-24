@@ -202,6 +202,6 @@ If any columns are uninitialized when the insertRow method is called, the defaul
 >
 > SQL Server restricts server cursors to a single result set. If a batch or stored procedure contains multiple statements, then a forward-only read-only client cursor must be used.
 
-## See also
+## Related content
 
-[Managing result sets with the JDBC driver](managing-result-sets-with-the-jdbc-driver.md)  
+- [Managing result sets with the JDBC driver](managing-result-sets-with-the-jdbc-driver.md)

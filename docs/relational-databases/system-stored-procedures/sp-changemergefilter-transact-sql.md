@@ -108,7 +108,7 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 ## Related content
 
 - [Change Publication and Article Properties](../replication/publish/change-publication-and-article-properties.md)
-- [sp_addmergefilter (Transact-SQL)](sp-addmergefilter-transact-sql.md)
-- [sp_dropmergefilter (Transact-SQL)](sp-dropmergefilter-transact-sql.md)
-- [sp_helpmergefilter (Transact-SQL)](sp-helpmergefilter-transact-sql.md)
+- [sys.sp_addmergefilter (Transact-SQL)](sp-addmergefilter-transact-sql.md)
+- [sys.sp_dropmergefilter (Transact-SQL)](sp-dropmergefilter-transact-sql.md)
+- [sys.sp_helpmergefilter (Transact-SQL)](sp-helpmergefilter-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

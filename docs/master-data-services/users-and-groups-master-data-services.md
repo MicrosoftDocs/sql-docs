@@ -39,8 +39,9 @@ helpviewer_keywords:
   
  Do not assign additional permissions to an individual user, and do not include a user in multiple groups that have access to [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. In addition, do not use hierarchy member permissions unless you want a group to have limited access to specific members.  
   
-## See Also  
- [Add a User &#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)   
- [Add a Group &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)   
- [Delete Users or Groups &#40;Master Data Services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
- [Test a User's Permissions &#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)
+## Related content
+
+- [Add a User (Master Data Services)](add-a-user-master-data-services.md)
+- [Add a Group (Master Data Services)](add-a-group-master-data-services.md)
+- [Delete Users or Groups (Master Data Services)](delete-users-or-groups-master-data-services.md)
+- [Test a User's Permissions (Master Data Services)](test-a-user-s-permissions-master-data-services.md)

@@ -91,7 +91,7 @@ SELECT [Core Products] ON 0
 |CAPTION|A string that the client application uses as the caption for the set.|  
 |DISPLAY_FOLDER|A string that identifies the path of the display folder that the client application uses to show the set. The folder level separator is defined by the client application. For the tools and clients supplied by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the backslash (\\) is the level separator. To provide multiple display folders for a defined set, use a semicolon (;) to separate the folders.|  
   
-## See Also  
- [DROP SET Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
+## Related content
+
+- [MDX Data Definition - DROP SET](mdx-data-definition-drop-set.md)
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)

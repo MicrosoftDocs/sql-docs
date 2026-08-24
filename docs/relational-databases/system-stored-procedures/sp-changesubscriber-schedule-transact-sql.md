@@ -153,5 +153,5 @@ Only members of the **sysadmin** fixed server role can execute `sp_changesubscri
 
 ## Related content
 
-- [sp_addsubscriber_schedule (Transact-SQL)](sp-addsubscriber-schedule-transact-sql.md)
+- [sys.sp_addsubscriber_schedule (Transact-SQL)](sp-addsubscriber-schedule-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

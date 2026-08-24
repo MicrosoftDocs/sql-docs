@@ -127,12 +127,11 @@ ORDER BY event_time DESC, pool_allocations_mb DESC;
 
 ## Related content
 
-- [sys.resource_stats](../system-catalog-views/sys-resource-stats-azure-sql-database.md)
-- [sys.server_resource_stats](../system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
+- [sys.resource_stats (Azure SQL Database)](../system-catalog-views/sys-resource-stats-azure-sql-database.md)
+- [sys.server_resource_stats (Azure SQL Managed Instance)](../system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
 - [sys.dm_db_resource_stats (Azure SQL Database)](sys-dm-db-resource-stats-azure-sql-database.md?view=azuresqldb-current&preserve-view=true)
 - [Optimize performance by using in-memory technologies in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql-db&preserve-view=true)
 - [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true)
 - [Monitor In-Memory OLTP storage in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-monitor-space?view=azuresql-db&preserve-view=true)
 - [Monitor In-Memory OLTP storage in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-monitor-space?view=azuresql-mi&preserve-view=true)
 - [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues)
-

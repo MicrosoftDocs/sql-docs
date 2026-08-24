@@ -24,7 +24,7 @@ The applicable Azure services include:
 - Azure Arc-enabled Servers
 - Azure Arc-enabled VMware vSphere
 - Azure Arc-enabled Kubernetes
-- Azure Stack HCI  
+- Azure Stack HCI  
 
 Refer to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) for more information about privacy. 
 

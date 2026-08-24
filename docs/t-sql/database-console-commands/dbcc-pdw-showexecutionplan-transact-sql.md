@@ -122,7 +122,7 @@ Based on the results of the preceding query, use the `sql_spid` and `pdw_node_id
 DBCC PDW_SHOWEXECUTIONPLAN (201001, 375);
 ```
 
-## Next steps
+## Related content
 
 - [DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)](dbcc-pdw-showpartitionstats-transact-sql.md)
 - [DBCC PDW_SHOWSPACEUSED (Transact-SQL)](dbcc-pdw-showspaceused-transact-sql.md)

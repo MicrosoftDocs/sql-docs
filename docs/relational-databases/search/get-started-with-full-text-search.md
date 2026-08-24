@@ -126,5 +126,9 @@ Updating a full-text index immediately after each change in the base table is al
   
 For more info, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md). 
 
-## Next steps
-After you set up SQL Server Full-Text Search, you're ready to run full-text queries. For more info, see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).
+## Next step
+
+After you set up SQL Server Full-Text Search, you're ready to run full-text queries.
+
+> [!div class="nextstepaction"]
+> [Query with Full-Text Search](query-with-full-text-search.md)

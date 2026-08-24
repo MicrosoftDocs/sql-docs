@@ -72,10 +72,8 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
-## See Also  
+## Related content
 
-[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
-
-[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
-
-[Getting started with SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)
+- [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+- [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+- [Getting started with SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)

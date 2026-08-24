@@ -59,5 +59,6 @@ helpviewer_keywords:
   
  For more information about the contents of the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config file, see [Web Configuration Reference &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md).  
   
-## See Also  
- [Install Master Data Services](../master-data-services/install-windows/install-master-data-services.md)
+## Related content
+
+- [Installation Tasks for Master Data Services](install-windows/install-master-data-services.md)

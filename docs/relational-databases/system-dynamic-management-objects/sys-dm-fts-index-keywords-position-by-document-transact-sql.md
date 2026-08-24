@@ -93,9 +93,9 @@ WHERE document_id = 7
 ## Related content
 
 - [Full-Text Search](../search/full-text-search.md)
-- [Improve the Performance of Full-Text Indexes](../search/improve-the-performance-of-full-text-indexes.md)
+- [Improve the performance of full-text indexes](../search/improve-the-performance-of-full-text-indexes.md)
 - [Full-Text Search and semantic search functions (Transact-SQL)](../system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)
 - [Full-text and semantic search dynamic management views and functions](full-text-and-semantic-search-dynamic-management-views-functions.md)
 - [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](../system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)
-- [Search Document Properties with Search Property Lists](../search/search-document-properties-with-search-property-lists.md)
+- [Search document properties with search property lists](../search/search-document-properties-with-search-property-lists.md)
 - [sys.dm_fts_index_keywords_by_document (Transact-SQL)](sys-dm-fts-index-keywords-by-document-transact-sql.md)

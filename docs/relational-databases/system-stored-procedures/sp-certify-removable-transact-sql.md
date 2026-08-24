@@ -89,7 +89,7 @@ EXECUTE sp_certify_removable inventory, AUTO;
 ## Related content
 
 - [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
-- [sp_create_removable (Transact-SQL)](sp-create-removable-transact-sql.md)
+- [sys.sp_create_removable (Transact-SQL)](sp-create-removable-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-- [sp_dbremove (Transact-SQL)](sp-dbremove-transact-sql.md)
+- [sys.sp_dbremove (Transact-SQL)](sp-dbremove-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

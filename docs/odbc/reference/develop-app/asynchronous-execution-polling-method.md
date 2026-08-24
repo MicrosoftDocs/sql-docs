@@ -316,5 +316,6 @@ BOOL AsyncCommit ()
 }  
 ```  
   
-## See Also  
- [Executing Statements ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
+## Related content
+
+- [Executing Statements ODBC](executing-statements-odbc.md)

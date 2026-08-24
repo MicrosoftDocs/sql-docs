@@ -131,7 +131,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## See also
+## Related content
 
-+ [Python tutorials](../tutorials/python-tutorials.md)
-+ [Manage Python packages](../package-management/python-package-information.md)
+- [Python tutorials for SQL machine learning](../tutorials/python-tutorials.md)
+- [Get Python package information](../package-management/python-package-information.md)

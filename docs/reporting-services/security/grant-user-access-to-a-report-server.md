@@ -103,6 +103,6 @@ To delegate the task of assigning roles to other users, create role assignments 
 
 ## Related content
 
-- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
-- [Role assignments](../../reporting-services/security/role-assignments.md)
+- [Create and manage role assignments](create-and-manage-role-assignments.md)
+- [Role assignments](role-assignments.md)
 - [SSRS forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -163,6 +163,6 @@ GO
 - [Define a Logical Backup Device for a Disk File (SQL Server)](../backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)
 - [Define a Logical Backup Device for a Tape Drive (SQL Server)](../backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)
 - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-- [sp_dropdevice (Transact-SQL)](sp-dropdevice-transact-sql.md)
+- [sys.sp_dropdevice (Transact-SQL)](sp-dropdevice-transact-sql.md)
 - [sys.backup_devices (Transact-SQL)](../system-catalog-views/sys-backup-devices-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

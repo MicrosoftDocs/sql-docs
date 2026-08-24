@@ -54,9 +54,9 @@ helpviewer_keywords:
   
 6.  Right-click in the **Connection Managers** area and click **Paste**.  
   
-## See Also  
- [Control Flow](../integration-services/control-flow/control-flow.md)   
- [Data Flow](../integration-services/data-flow/data-flow.md)   
- [Integration Services &#40;SSIS&#41; Connections](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Copy Project Items](./integration-services-ssis-projects-and-solutions.md)  
-  
+## Related content
+
+- [Control Flow](control-flow/control-flow.md)
+- [Data Flow](data-flow/data-flow.md)
+- [Integration Services (SSIS) Connections](connection-manager/integration-services-ssis-connections.md)
+- [Integration Services (SSIS) Projects and Solutions](integration-services-ssis-projects-and-solutions.md)

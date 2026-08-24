@@ -71,10 +71,10 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
 
 4.  Click OK to run the package.
 
-## Next steps
-- Consider other ways to run a package.
-    - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
-    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md)
+## Related content
+
+- [Run an SSIS package from SSMS with Transact-SQL](ssis-quickstart-run-tsql-ssms.md)
+- [Run an SSIS package from Visual Studio Code with Transact-SQL](ssis-quickstart-run-tsql-vscode.md)
+- [Run an SSIS package from the command prompt with DTExec.exe](ssis-quickstart-run-cmdline.md)
+- [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
+- [Run an SSIS package with C# code in a .NET app](ssis-quickstart-run-dotnet.md)

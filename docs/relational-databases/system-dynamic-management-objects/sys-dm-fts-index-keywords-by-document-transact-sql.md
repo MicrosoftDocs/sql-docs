@@ -131,4 +131,4 @@ GO
 - [sys.dm_fts_index_keywords (Transact-SQL)](sys-dm-fts-index-keywords-transact-sql.md)
 - [sys.dm_fts_index_keywords_by_property (Transact-SQL)](sys-dm-fts-index-keywords-by-property-transact-sql.md)
 - [sp_fulltext_keymappings (Transact-SQL)](../system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)
-- [Improve the Performance of Full-Text Indexes](../search/improve-the-performance-of-full-text-indexes.md)
+- [Improve the performance of full-text indexes](../search/improve-the-performance-of-full-text-indexes.md)

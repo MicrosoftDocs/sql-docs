@@ -120,5 +120,5 @@ The default name for the format file is `bcp.fmt`, but you can specify a differe
 
 - [Bulk import and export of data (SQL Server)](bulk-import-and-export-of-data-sql-server.md)
 - [Data formats for bulk import or bulk export (SQL Server)](data-formats-for-bulk-import-or-bulk-export-sql-server.md)
-- [bcp Utility](../../tools/bcp/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

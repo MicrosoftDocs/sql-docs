@@ -16,7 +16,7 @@ apitype: "DLLExport"
 
   In manual-commit mode, calling **SQLFreeHandle** on a statement handle with an open transaction causes a rollback of pending changes to the database. Calling **SQLFreeHandle** on a statement handle always closes any open cursors and discards pending results, freeing all resources associated with the statement handle.  
   
-## See Also  
- [SQLFreeHandle Function](../../odbc/reference/syntax/sqlfreehandle-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLFreeHandle Function](../../odbc/reference/syntax/sqlfreehandle-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

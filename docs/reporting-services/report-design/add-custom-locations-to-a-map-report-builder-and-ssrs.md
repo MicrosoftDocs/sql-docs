@@ -52,5 +52,5 @@ f1_keywords:
   
 ## Related content
 
-- [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
-- [Vary polygon, line, and point display by rules and analytical data &#40;Report Builder&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)
+- [Maps in a paginated report (Report Builder)](maps-report-builder-and-ssrs.md)
+- [Vary polygon, line, and point display in a paginated report by rules and analytical data (Report Builder)](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)

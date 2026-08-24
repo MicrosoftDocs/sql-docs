@@ -161,8 +161,8 @@ GO
 
 [!code-csharp[SqlDataAdapter_Properties#1](~/../sqlclient/doc/samples/SqlDataAdapter_Properties.cs#1)]
 
-## See also
+## Related content
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

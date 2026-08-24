@@ -85,8 +85,8 @@ GO
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)
-- [sp_dropsrvrolemember (Transact-SQL)](sp-dropsrvrolemember-transact-sql.md)
+- [sys.sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)
+- [sys.sp_dropsrvrolemember (Transact-SQL)](sp-dropsrvrolemember-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Security Functions (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)
 - [CREATE SERVER ROLE (Transact-SQL)](../../t-sql/statements/create-server-role-transact-sql.md)

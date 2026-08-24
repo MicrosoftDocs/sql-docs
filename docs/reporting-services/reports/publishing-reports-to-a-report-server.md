@@ -79,6 +79,6 @@ After the target server URL of the report server is specified, you can change th
 
 ## Related content
 
-- [Project property pages dialog box](../../reporting-services/tools/project-property-pages-dialog-box.md)
-- [Report Server content management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
-- [Upgrade reports](../../reporting-services/install-windows/upgrade-reports.md)
+- [Project Property Pages dialog box](../tools/project-property-pages-dialog-box.md)
+- [Report server content management (SSRS native mode)](../report-server/report-server-content-management-ssrs-native-mode.md)
+- [Upgrade Reports (SSRS)](../install-windows/upgrade-reports.md)

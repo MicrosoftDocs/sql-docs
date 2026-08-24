@@ -75,4 +75,4 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)
 - [Validate Replicated Data](../replication/validate-data-at-the-subscriber.md)
-- [sp_validatemergepublication (Transact-SQL)](sp-validatemergepublication-transact-sql.md)
+- [sys.sp_validatemergepublication (Transact-SQL)](sp-validatemergepublication-transact-sql.md)

@@ -40,5 +40,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
-- [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)
+- [sys.sp_enumcustomresolvers (Transact-SQL)](../../system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)

@@ -112,7 +112,6 @@ FOR
  Set scope  
  The action applies to a set only. The name, **ActionParameterSet**, is reserved for use by the application inside the expression of the action.  
   
-## See Also  
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)

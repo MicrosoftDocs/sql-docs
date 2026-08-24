@@ -148,10 +148,9 @@ CASCADE
 ## Permissions  
  Requires CONTROL permission on the [!INCLUDE[ssSB](../../includes/sssb-md.md)] contract, message type, remote service binding, route, or service. If the AS clause is used, the specified principal must own the securable on which permissions are being denied.  
   
-## See Also  
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [REVOKE Service Broker Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)  
-  
-  
+## Related content
+
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
+- [REVOKE Service Broker Permissions (Transact-SQL)](revoke-service-broker-permissions-transact-sql.md)
+- [DENY (Transact-SQL)](deny-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)

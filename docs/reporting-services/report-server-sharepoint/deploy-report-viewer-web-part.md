@@ -175,5 +175,5 @@ The following languages are supported with the web part:
 
 ## Related content
 
-- [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md)
+- [Add SQL Server Reporting Services Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

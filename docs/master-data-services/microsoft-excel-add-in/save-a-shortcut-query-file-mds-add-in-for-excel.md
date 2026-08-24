@@ -30,11 +30,7 @@ ms.custom:
   
 2.  Optional. To rename the query, click the arrow under **Save Query** and click **Manage Queries**. Select the query and click **Rename**.  
   
-## Next Steps  
-  
--   Click the arrow under **Save Query** to view the shortcut query and open it.  
-  
--   [Email a Shortcut Query File &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)  
-  
-## See Also  
- [Shortcut Query Files &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)
+## Related content
+
+- [Shortcut Query Files (MDS Add-in for Excel)](shortcut-query-files-mds-add-in-for-excel.md)
+- [Email a Shortcut Query File (MDS Add-in for Excel)](email-a-shortcut-query-file-mds-add-in-for-excel.md)

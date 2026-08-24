@@ -28,10 +28,8 @@ If you are using the PDO_SQLSRV driver, you can execute a query with one of the 
   
 -   [PDO::prepare](../../connect/php/pdo-prepare.md) and [PDOStatement::execute](../../connect/php/pdostatement-execute.md).  
   
-## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+## Related content
 
-[PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)
-
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-  
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)

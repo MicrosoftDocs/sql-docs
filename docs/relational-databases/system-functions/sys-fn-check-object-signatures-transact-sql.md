@@ -82,7 +82,6 @@ GO
   
 ```  
   
-## See Also  
- [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
-  
-  
+## Related content
+
+- [IS_OBJECTSIGNED (Transact-SQL)](../../t-sql/functions/is-objectsigned-transact-sql.md)

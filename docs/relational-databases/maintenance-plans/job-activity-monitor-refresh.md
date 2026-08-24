@@ -29,6 +29,6 @@ To open this dialog, select **View refresh settings**, in the **Status** section
 
   The number of seconds between auto-refresh attempts. Defaults to 60 seconds. Refreshes every 5 seconds when set to 5 or less.
 
-## See also
+## Related content
 
 - [Monitor Job Activity](/ssms/agent/monitor-job-activity)

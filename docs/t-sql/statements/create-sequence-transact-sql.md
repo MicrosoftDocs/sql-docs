@@ -313,5 +313,4 @@ WHERE name = 'DecSeq';
 - [ALTER SEQUENCE (Transact-SQL)](alter-sequence-transact-sql.md)
 - [DROP SEQUENCE (Transact-SQL)](drop-sequence-transact-sql.md)
 - [NEXT VALUE FOR (Transact-SQL)](../functions/next-value-for-transact-sql.md)
-- [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)
-
+- [Sequence numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)

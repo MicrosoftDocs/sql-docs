@@ -138,13 +138,13 @@ Migrate SQL Server Integration Services (SSIS) packages to Azure by redeploying 
 
 ### SQL Server Reporting Services
 
-Migrate SQL Server Reporting Services (SSRS) reports to paginated reports in Power BI. Use the [RDL Migration Tool](https://github.com/microsoft/RdlMigration) to help prepare and migrate your reports. Microsoft developed this tool to help customers migrate Report Definition Language (RDL) reports from their SSRS servers to Power BI. It's available on GitHub, and it documents an end-to-end walkthrough of the migration scenario.
+Migrate SQL Server Reporting Services (SSRS) reports to paginated reports in Power BI. Use the [RDL Migration Tool](https://github.com/microsoft/RdlMigration) to help prepare and migrate your reports. Microsoft developed this tool to help customers migrate Report Definition Language (RDL) reports from their SSRS servers to Power BI. It's available on GitHub, and it documents an end-to-end walkthrough of the migration scenario.
 
 ### High availability
 
 Manual setup of SQL Server high-availability features like Always On failover cluster instances and Always On availability groups becomes obsolete on the target SQL database. High-availability architecture is already built into both [General Purpose (standard availability model)](/azure/azure-sql/database/high-availability-sla-local-zone-redundancy#locally-redundant-availability) and [Business Critical (premium availability model)](/azure/azure-sql/database/high-availability-sla-local-zone-redundancy#locally-redundant-availability) service tiers for Azure SQL Database. The Business Critical/Premium service tier also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes.
 
-Beyond the high-availability architecture that's included in Azure SQL Database, the [failover groups](/azure/azure-sql/database/failover-group-sql-db) feature allows you to manage the replication and failover of databases to a server in another region.
+Beyond the high-availability architecture that's included in Azure SQL Database, the [failover groups](/azure/azure-sql/database/failover-group-sql-db) feature allows you to manage the replication and failover of databases to a server in another region.
 
 ### Logins and groups
 
@@ -162,11 +162,11 @@ For Azure SQL Database, the only applicable system databases are [master](/sql/r
 
 Be sure to take advantage of the advanced cloud-based features in SQL Database. For example, you don't need to worry about managing backups because the service does it for you. You can restore to any [point in time within the retention period](/azure/azure-sql/database/recovery-using-backups#point-in-time-restore).
 
-To strengthen security, consider using [Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview), [auditing](/azure/azure-sql/database/auditing-overview), [threat detection](/azure/azure-sql/database/azure-defender-for-sql), [row-level security](/sql/relational-databases/security/row-level-security), and [dynamic data masking](/sql/relational-databases/security/dynamic-data-masking).
+To strengthen security, consider using [Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview), [auditing](/azure/azure-sql/database/auditing-overview), [threat detection](/azure/azure-sql/database/azure-defender-for-sql), [row-level security](/sql/relational-databases/security/row-level-security), and [dynamic data masking](/sql/relational-databases/security/dynamic-data-masking).
 
 In addition to advanced management and security features, SQL Database provides tools that can help you [monitor and tune your workload](/azure/azure-sql/database/monitor-tune-overview). [Azure SQL Analytics (Preview)](/azure/azure-monitor/insights/azure-sql) is an advanced solution for monitoring the performance of all of your databases in Azure SQL Database at scale and across multiple subscriptions in a single view. Azure SQL Analytics collects and visualizes key performance metrics with built-in intelligence for performance troubleshooting.
 
-[Automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning#automatic-plan-correction) continuously monitors performance of your SQL execution plan and automatically fixes identified performance issues.
+[Automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning#automatic-plan-correction) continuously monitors performance of your SQL execution plan and automatically fixes identified performance issues.
 
 ## Migration assets
 

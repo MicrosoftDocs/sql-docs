@@ -171,13 +171,6 @@ include one variable: `Score`; and multi-class classifiers include
 of these output variable names.
 
 
-## See also
-
-[`rx_featurize`](rx-featurize.md),
-[revoscalepy.rx_data_step](/machine-learning-server/python-reference/revoscalepy/rx-data-step),
-[revoscalepy.rx_import](/machine-learning-server/python-reference/revoscalepy/rx-import).
-
-
 ## Binary classification example
 
 
@@ -341,3 +334,8 @@ Writing completed.
 4    236.0  14.9  81.0  43.590839
 ```
 
+## Related content
+
+- [*microsoftml.rx_featurize*: Data transformation for data sources](rx-featurize.md)
+- [revoscalepy.rx_data_step](/machine-learning-server/python-reference/revoscalepy/rx-data-step)
+- [revoscalepy.rx_import](/machine-learning-server/python-reference/revoscalepy/rx-import)

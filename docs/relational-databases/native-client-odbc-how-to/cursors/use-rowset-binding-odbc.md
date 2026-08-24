@@ -62,8 +62,8 @@ helpviewer_keywords:
   
 5.  Each call to [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md) or [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
   
-## See Also  
- [Using Cursors How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
- [How Cursors Are Implemented](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [Use Cursors &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
-  
+## Related content
+
+- [Using Cursors How-to Topics (ODBC)](using-cursors-how-to-topics-odbc.md)
+- [How Cursors Are Implemented](../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)
+- [Use Cursors (ODBC)](use-cursors-odbc.md)

@@ -56,7 +56,8 @@ The following table defines the meaning of the various columns:
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## See also  
- [Automatic Page Repair &#40;Availability Groups: Database Mirroring&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [suspect_pages &#40;Transact-SQL&#41;](../system-tables/suspect-pages-transact-sql.md)   
- [Manage the suspect_pages Table &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)
+## Related content
+
+- [Automatic Page Repair (Availability Groups: Database Mirroring)](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)
+- [suspect_pages (Transact-SQL)](../system-tables/suspect-pages-transact-sql.md)
+- [Manage the suspect_pages Table (SQL Server)](../backup-restore/manage-the-suspect-pages-table-sql-server.md)

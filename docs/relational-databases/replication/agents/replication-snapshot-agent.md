@@ -263,4 +263,4 @@ A valid TLS/SSL certificate is defined with a fully qualified domain name of the
   
 ## Related content
 
-- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
+- [Replication Agent Administration](replication-agent-administration.md)

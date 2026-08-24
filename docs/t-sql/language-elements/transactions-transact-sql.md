@@ -55,4 +55,4 @@ The SQL Database Engine provides the following transaction statements:
 ## Related content
 
 - [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../statements/set-implicit-transactions-transact-sql.md)
-- [&#x40;&#x40;TRANCOUNT (Transact-SQL)](../functions/trancount-transact-sql.md)
+- [@@TRANCOUNT (Transact-SQL)](../functions/trancount-transact-sql.md)

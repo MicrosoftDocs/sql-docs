@@ -84,7 +84,7 @@ f1_keywords:
   
 ## Related content
 
-- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Add a Border Frame to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)
-- [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)
-- [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Add a border frame to a chart in a paginated report (Report Builder)](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)
+- [Define colors on a paginated report chart using a palette (Report Builder)](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)
+- [Chart effects - add bevel, emboss, or texture to a paginated report chart (Report Builder)](chart-effects-add-bevel-emboss-or-texture-report-builder.md)

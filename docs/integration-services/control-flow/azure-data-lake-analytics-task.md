@@ -121,7 +121,8 @@ Note that the input and output paths are defined in **\@in** and **\@out** param
 
 You can assign all properties in the General page configuration as a property expression, to enable dynamic update of the property at runtime. For related information, see [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).
 
-## See also
-- [Azure Data Lake Analytics Connection Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
-- [Azure Data Lake Store File System Task](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
-- [Azure Data Lake Store Connection Manager](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+## Related content
+
+- [Azure Data Lake Analytics connection manager](../connection-manager/azure-data-lake-analytics-connection-manager.md)
+- [Azure Data Lake Store File System Task](azure-data-lake-store-file-system-task.md)
+- [Azure Data Lake Store Connection Manager](../connection-manager/azure-data-lake-store-connection-manager.md)

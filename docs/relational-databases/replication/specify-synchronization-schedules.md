@@ -311,8 +311,8 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
-- [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)
-- [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)
-- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)
+- [Subscribe to Publications](subscribe-to-publications.md)
+- [Synchronize a Push Subscription](synchronize-a-push-subscription.md)
+- [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)
+- [Synchronize Data](synchronize-data.md)

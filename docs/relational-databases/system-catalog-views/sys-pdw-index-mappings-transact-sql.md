@@ -22,10 +22,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |index_id|**nvarchar(32)**|The ID for the index. See [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).||  
 |physical_name|**nvarchar(36)**|The name of the index in the databases on the Compute nodes.<br /><br /> **physical_name** and **object_id** form the key for this view.||  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
- [sys.pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)   
- [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [sys.pdw_table_mappings (Transact-SQL)](sys-pdw-table-mappings-transact-sql.md)
+- [sys.pdw_permanent_table_mappings (Transact-SQL)](sys-pdw-permanent-table-mappings-transact-sql.md)
+- [sys.pdw_database_mappings (Transact-SQL)](sys-pdw-database-mappings-transact-sql.md)

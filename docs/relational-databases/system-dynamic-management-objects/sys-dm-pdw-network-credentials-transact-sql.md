@@ -29,5 +29,6 @@ monikerRange: ">=aps-pdw-2016"
 ## General Remarks  
  The key for this dynamic management view is *pdw_node_id* plus *target_server_name*.  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+## Related content
+
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)

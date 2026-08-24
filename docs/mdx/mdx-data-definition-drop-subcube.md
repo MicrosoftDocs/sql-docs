@@ -23,8 +23,7 @@ DROP SUBCUBE Subcube_Name
  *Subcube_Name*  
  A valid string expression that provides a subcube name.  
   
-## See Also  
- [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [CREATE SUBCUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)  
-  
-  
+## Related content
+
+- [MDX Scripting Statements (MDX)](mdx-scripting-statements-mdx.md)
+- [MDX Data Definition - CREATE SUBCUBE](mdx-data-definition-create-subcube.md)

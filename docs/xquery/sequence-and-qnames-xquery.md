@@ -139,7 +139,6 @@ WHERE ProductModelID=7;
 > [!NOTE]  
 >  This implementation does not support the `local` prefix as described in the XQuery specification in http://www.w3.org/2004/07/xquery-local-functions.  
   
-## See Also  
- [XQuery Basics](../xquery/xquery-basics.md)  
-  
-  
+## Related content
+
+- [XQuery basics](xquery-basics.md)

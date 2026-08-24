@@ -82,8 +82,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
-## See Also  
- [Fetching BLOB Data Using IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
-  
-  
+## Related content
 
+- [Fetching a Single Row with IRow (OLE DB Driver)](fetching-a-single-row-with-irow.md)

@@ -93,11 +93,8 @@ Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL 
   
 -   [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider)  
   
-##  <a name="RelatedContent"></a> Related Content  
-  
--   [How It Works: DROP AVAILABILITY GROUP Behaviors](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server Engineers blog)  
-  
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
-  
+## Related content
+
+- [How It Works: DROP AVAILABILITY GROUP Behaviors](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Reference for the creation and configuration of Always On availability groups](creation-and-configuration-of-availability-groups-sql-server.md)

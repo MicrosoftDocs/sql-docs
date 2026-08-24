@@ -85,9 +85,7 @@ WHERE PostalCode = '12345';
 GO  
 ```  
   
-## See Also  
- [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-  
-  
+## Related content
 
+- [COLUMNS_UPDATED (Transact-SQL)](columns-updated-transact-sql.md)
+- [CREATE TRIGGER (Transact-SQL)](../statements/create-trigger-transact-sql.md)

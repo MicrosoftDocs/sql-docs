@@ -146,7 +146,7 @@ Good reports present information that leads to actions or insights. To present a
   
 ## Related content
 
-- [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)
-- [Tutorial: Map Report &#40;Report Builder&#41;](../../reporting-services/tutorial-map-report-report-builder.md)
-- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
-- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)
+- [Customize the display of a map or map layer in a paginated report (Report Builder)](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)
+- [Tutorial: Map report (Report Builder)](../tutorial-map-report-report-builder.md)
+- [Maps in a paginated report (Report Builder)](maps-report-builder-and-ssrs.md)
+- [Troubleshoot reports: map reports in a paginated report (Report Builder)](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)

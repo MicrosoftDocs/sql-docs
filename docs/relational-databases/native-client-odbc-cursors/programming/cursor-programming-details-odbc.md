@@ -26,7 +26,6 @@ helpviewer_keywords:
   
 -   [Fast Forward-Only Cursors &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
   
-## See Also  
- [Using Cursors &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
-  
-  
+## Related content
+
+- [Using Cursors (ODBC)](../using-cursors-odbc.md)

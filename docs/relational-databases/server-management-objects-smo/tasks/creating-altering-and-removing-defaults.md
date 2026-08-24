@@ -109,7 +109,6 @@ $def.UnbindFromColumn("SpecialOffer", "StartDate", "Sales")
 $def.Drop()  
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.Default>  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.Default>

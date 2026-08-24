@@ -187,5 +187,4 @@ If the extended stored procedures use COM components, the administrator must reg
 ## Related content
 
 - [View and read SQL Server Setup log files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [How Extended Stored Procedures Work](../../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
-- [Execution Characteristics of Extended Stored Procedures](../../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
+- [Programming Database Engine extended stored procedures](../../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)

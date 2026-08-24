@@ -121,4 +121,4 @@ GO
 ## Related content
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-- [Database Identifiers](database-identifiers.md)
+- [Database identifiers](database-identifiers.md)

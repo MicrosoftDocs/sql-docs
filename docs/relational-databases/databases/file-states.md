@@ -44,13 +44,10 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 |SUSPECT|Recovery of the file failed during an online restore process. If the file is in the primary filegroup, the database is also marked as suspect. Otherwise, only the file is suspect and the database is still online.<br /><br /> The file will remain in the suspect state until it is made available by one of the following methods:<br /><br /> Restore and recovery<br /><br /> DBCC CHECKDB with REPAIR_ALLOW_DATA_LOSS|  
 |DEFUNCT|The file was dropped when it was not online. All files in a filegroup become defunct when an offline filegroup is removed.|  
   
-## Related Content  
- [ALTER DATABASE \(Transact-SQL\)](../../t-sql/statements/alter-database-transact-sql.md)  
-  
- [Database States](../../relational-databases/databases/database-states.md)  
-  
- [Mirroring States \(SQL Server\)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
-  
- [DBCC CHECKDB \(Transact-SQL\)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
-  
- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [Database states](database-states.md)
+- [Mirroring States (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)
+- [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
+- [Database files and filegroups](database-files-and-filegroups.md)

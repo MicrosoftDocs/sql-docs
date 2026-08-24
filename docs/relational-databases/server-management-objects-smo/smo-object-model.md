@@ -25,9 +25,8 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
   
  The SMO object model is made up of several namespaces. For more information, see [SMO Namespaces](../../relational-databases/server-management-objects-smo/smo-object-model-namespaces.md).  
   
-## See Also  
- [SMO Object Model Diagram](../../relational-databases/server-management-objects-smo/smo-object-model-diagram.md)   
- [SMO Namespaces](../../relational-databases/server-management-objects-smo/smo-object-model-namespaces.md)   
- [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
-  
-  
+## Related content
+
+- [SMO Object Model Diagram](smo-object-model-diagram.md)
+- [SMO Object Model Namespaces](smo-object-model-namespaces.md)
+- [WMI Provider for Configuration Management](../wmi-provider-configuration/wmi-provider-for-configuration-management.md)

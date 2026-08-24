@@ -33,7 +33,6 @@ object.PropertyName [= value]
   
 ## Remarks  
   
-## See Also  
- [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
-  
-  
+## Related content
+
+- [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)

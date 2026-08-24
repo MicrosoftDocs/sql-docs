@@ -394,6 +394,6 @@ Specific types of wait times during query execution can indicate bottlenecks or 
   
 ## Related content
 
-- [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md)    
-- [sys.dm_tran_locks](sys-dm-tran-locks-transact-sql.md)    
-- [sys.dm_os_waiting_tasks](sys-dm-os-waiting-tasks-transact-sql.md)    
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_tran_locks (Transact-SQL)](sys-dm-tran-locks-transact-sql.md)
+- [sys.dm_os_waiting_tasks (Transact-SQL)](sys-dm-os-waiting-tasks-transact-sql.md)

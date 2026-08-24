@@ -35,8 +35,7 @@ Contains one row for each article that supports immediate-updating subscriptions
 |**ins_conflict_proc**|**int**|The ID of the procedure used to write the conflict to the **conflict_table**.|  
 |**identity_support**|**bit**|Specifies whether automatic identity range handling is enabled when queued updating is used. **0** means that there is no identity range support.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

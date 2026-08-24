@@ -47,11 +47,9 @@ DECLARE @next_baseline bigint;
 SET @next_baseline = CHANGE_TRACKING_CURRENT_VERSION();  
 ```  
   
-## See Also  
- [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
-  
+## Related content
 
+- [Change Tracking Functions (Transact-SQL)](change-tracking-functions-transact-sql.md)
+- [CHANGETABLE (Transact-SQL)](changetable-transact-sql.md)
+- [CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)](change-tracking-min-valid-version-transact-sql.md)
+- [Track data changes (SQL Server)](../track-changes/track-data-changes-sql-server.md)

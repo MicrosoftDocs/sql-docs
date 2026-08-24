@@ -615,7 +615,7 @@ Or:
 ## Related content
 
 - [Command Line Options in SSMA Console](command-line-options-in-ssma-console-mysqltosql.md)
-- [Working with the Sample Console Script Files](working-with-the-sample-console-script-files-mysqltosql.md)
+- [Working with the Sample console script files](working-with-the-sample-console-script-files-mysqltosql.md)
 - [Managing Passwords](managing-passwords-mysqltosql.md)
 - [Generating Reports](generating-reports-mysqltosql.md)
 - [Troubleshooting](troubleshooting-mysqltosql.md)

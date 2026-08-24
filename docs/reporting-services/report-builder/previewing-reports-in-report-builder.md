@@ -72,8 +72,8 @@ If a subreport used by your report is changed after your edit session was create
 
 ## Related content
 
-- [Report datasets](../../reporting-services/report-data/report-datasets-ssrs.md)
-- [Format report items (Report Builder)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)
-- [Tables, matrices, and lists (Report Builder)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Charts (Report Builder)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Save reports (Report Builder)](../../reporting-services/report-builder/saving-reports-report-builder.md)
+- [Report Datasets (SSRS)](../report-data/report-datasets-ssrs.md)
+- [Format paginated report items (Report Builder)](../report-design/formatting-report-items-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](../report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](../report-design/charts-report-builder-and-ssrs.md)
+- [Save reports (Report Builder)](saving-reports-report-builder.md)

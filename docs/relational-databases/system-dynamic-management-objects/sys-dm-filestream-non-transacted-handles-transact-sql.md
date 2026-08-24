@@ -60,5 +60,6 @@ dev_langs:
 |share_write|bit|Opened with share_write allowed.|  
 |share_delete|bit|Opened with share_delete allowed.|  
   
-## See Also  
- [Manage FileTables](../blob/manage-filetables.md)
+## Related content
+
+- [Manage FileTables](../blob/manage-filetables.md)

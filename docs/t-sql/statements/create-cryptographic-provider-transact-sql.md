@@ -69,14 +69,13 @@ CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider
     FROM FILE = 'C:\SecurityProvider\SecurityProvider_v1.dll';  
 ```  
   
-## See Also  
- [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   
- [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
- [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
- [sys.cryptographic_providers](../../relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql.md)  
- [sys.dm_cryptographic_provider_properties](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql.md)
-  
-  
+## Related content
+
+- [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
+- [ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)](alter-cryptographic-provider-transact-sql.md)
+- [DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)](drop-cryptographic-provider-transact-sql.md)
+- [CREATE SYMMETRIC KEY (Transact-SQL)](create-symmetric-key-transact-sql.md)
+- [Extensible Key Management using Azure Key Vault (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)
+- [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)
+- [sys.cryptographic_providers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql.md)
+- [sys.dm_cryptographic_provider_properties](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql.md)

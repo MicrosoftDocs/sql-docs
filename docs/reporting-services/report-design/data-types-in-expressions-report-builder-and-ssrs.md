@@ -138,4 +138,4 @@ ms.custom:
   
 ## Related content
 
-- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)
+- [Format paginated report items (Report Builder)](formatting-report-items-report-builder-and-ssrs.md)

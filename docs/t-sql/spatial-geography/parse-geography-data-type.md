@@ -65,4 +65,4 @@ SELECT @g.ToString();
 ## Related content
 
 - [Extended Static Geography Methods](extended-static-geography-methods.md)
-- [STGeomFromText (geography Data Type)](stgeomfromtext-geography-data-type.md)
+- [STGeomFromText (geography data type)](stgeomfromtext-geography-data-type.md)

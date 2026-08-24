@@ -73,8 +73,7 @@ The PDW cluster is named WFOHST01. It manages all of the physical hosts and virt
 *appliance_domain*-DAS01 through *appliance_domain*-DAS03  
 This is the direct attached storage that is connected to the Compute nodes. HP has one DAS for every two Compute nodes. Dell and Quanta have one DAS for every three Compute nodes.  
   
-## See Also  
-<!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[Appliance Configuration &#40;Analytics Platform System&#41;](appliance-configuration.md)  
-[Appliance Management Tasks &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
-  
+## Related content
+
+- [Appliance configuration checklists for Analytics Platform System](appliance-configuration.md)
+- [Appliance Management Tasks &#40;Analytics Platform System&#41;](appliance-management-tasks.md)

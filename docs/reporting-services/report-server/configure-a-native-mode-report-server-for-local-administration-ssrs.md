@@ -170,4 +170,4 @@ Follow the steps in the [Web portal folder settings](#bkmk_configure_folder_sett
   
 ## Related content
 
-- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+- [Manage a Reporting Services native mode report server](manage-a-reporting-services-native-mode-report-server.md)

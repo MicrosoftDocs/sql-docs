@@ -74,5 +74,5 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
   
 ## Related content
 
-- [Reporting Services WMI provider library reference &#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [Reporting Services WMI provider library reference (SSRS)](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)
+- [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md)

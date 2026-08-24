@@ -119,7 +119,7 @@ dev_langs:
 
 ## Related content
 
-- [Full-Text Search and Semantic Search Catalog Views (Transact-SQL)](../system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
+- [Full-Text Search and semantic search catalog views (Transact-SQL)](../system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
 - [Full-Text and Semantic Search Dynamic Management Views - Functions](../system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Full-Text Search](../search/full-text-search.md)

@@ -208,7 +208,7 @@ If the server doesn't support TDS 8.0, use `Encrypt=yes` instead.
 
 ## Related content
 
-- [Connection strings](connection-strings.md)
-- [Error handling](error-handling.md)
-- [Troubleshooting](troubleshooting.md)
-- [Configure SQL Server for encrypted connections](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
+- [Troubleshoot mssql-python](troubleshooting.md)
+- [Encrypt connections to SQL Server by importing a certificate](../../../database-engine/configure-windows/configure-sql-server-encryption.md)

@@ -38,5 +38,5 @@ The following table provides links to additional information about each log, inc
 
 ## Related content
 
-- [Reporting Services report server (native mode)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
-- [Errors and events reference (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+- [Reporting Services report server (native mode)](reporting-services-report-server-native-mode.md)
+- [Errors and events reference (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)

@@ -306,4 +306,4 @@ You can now import **revoscalepy**, **microsoftml**, or **azureml** modules. You
 ## Related content
 
 - [What is SQL Server Management Studio (SSMS)?](/ssms/sql-server-management-studio-ssms)
-- [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)
+- [Quickstart: Run simple Python scripts with SQL machine learning](../tutorials/quickstart-python-create-script.md)

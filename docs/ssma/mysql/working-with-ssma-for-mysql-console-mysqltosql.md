@@ -30,6 +30,6 @@ Topics covered in this section include:
 |[Generating Reports &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|Lists the commands to generate reports.|  
 |[Troubleshooting &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Provides brief information about fixing migration issues.|  
   
-## See Also  
-[Getting Started with SSMA for MySQL Console](getting-started-with-ssma-for-mysql-console-mysqltosql.md)  
-  
+## Related content
+
+- [Getting Started with SSMA for MySQL Console](getting-started-with-ssma-for-mysql-console-mysqltosql.md)

@@ -52,9 +52,9 @@ ms.custom:
   
 ## Related content
 
-- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
-- [Commonly used filters &#40;Report Builder&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)
-- [Add, change, or delete a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)
-- [Tutorial: Add a parameter to your report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)
-- [Report Builder tutorials](../../reporting-services/report-builder-tutorials.md)
-- [Built-in collections in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)
+- [Commonly used filters in a paginated report (Report Builder)](commonly-used-filters-report-builder-and-ssrs.md)
+- [Add, change, or delete a paginated report parameter (Report Builder)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)
+- [Tutorial: Add parameters to your report (Report Builder)](../tutorial-add-a-parameter-to-your-report-report-builder.md)
+- [Report Builder tutorials](../report-builder-tutorials.md)
+- [Built-in collections in expressions in a paginated report (Report Builder)](built-in-collections-in-expressions-report-builder.md)

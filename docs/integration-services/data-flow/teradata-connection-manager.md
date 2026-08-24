@@ -55,8 +55,8 @@ To set the property:
 
 To log Teradata connection manager calls to the Teradata Open Database Connectivity (ODBC) driver, enable Windows ODBC tracing in the Windows ODBC Data Source Administrator.
 
-## Next steps
+## Related content
 
-- Configure the [Teradata source](teradata-source.md).
-- Configure the [Teradata destination](teradata-destination.md).
-- If you have questions, visit the [Tech Community](https://aka.ms/AA5u35j).
+- [Connect to the Teradata source](teradata-source.md)
+- [Teradata destination](teradata-destination.md)
+- [Tech Community](https://aka.ms/AA5u35j)

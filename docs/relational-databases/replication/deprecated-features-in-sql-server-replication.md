@@ -26,4 +26,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)
+- [Replication backward compatibility](replication-backward-compatibility.md)

@@ -61,8 +61,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
-- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
-- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
-- [Preload the cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)
+- [Subscriptions and delivery (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Set report processing properties](set-report-processing-properties.md)
+- [Credentials and connections for report data sources](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Report server content management (SSRS native mode)](report-server-content-management-ssrs-native-mode.md)
+- [Preload the cache](preload-the-cache-report-manager.md)

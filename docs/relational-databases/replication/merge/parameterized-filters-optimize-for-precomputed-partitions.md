@@ -62,4 +62,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)
+- [Parameterized Filters - Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)

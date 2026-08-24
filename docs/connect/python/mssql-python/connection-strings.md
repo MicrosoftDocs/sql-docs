@@ -321,6 +321,6 @@ except mssql_python.ConnectionStringParseError as e:
 
 - [Build connection strings programmatically](build-connection-strings.md)
 - [Install mssql-python](installation.md)
-- [Microsoft Entra authentication](entra-authentication.md)
-- [Connection pooling](connection-pooling.md)
-- [Connection management](connection-management.md)
+- [Microsoft Entra authentication with mssql-python](entra-authentication.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
+- [Manage connections with mssql-python](connection-management.md)

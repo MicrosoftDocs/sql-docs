@@ -37,7 +37,6 @@ helpviewer_keywords:
   
  An ODBC application is not required to connect through a data source. However, the application must provide the same connectivity information to an ODBC connect function that the driver would otherwise find in a DSN.  
   
-## See Also  
- [Communicating with SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
-  
-  
+## Related content
+
+- [Communicating with SQL Server (ODBC)](communicating-with-sql-server-odbc.md)

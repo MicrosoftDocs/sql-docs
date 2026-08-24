@@ -182,11 +182,11 @@ This example uses the <xref:System.Web.Configuration.WebConfigurationManager.Ope
 
 For more information about securing ASP.NET applications, see [Securing ASP.NET web sites](/previous-versions/aspnet/91f66yxt(v=vs.100)).
 
-## See also
+## Related content
 
 - [Connection string builders](connection-string-builders.md)
 - [Protecting connection information](protecting-connection-information.md)
 - [Using the configuration classes](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [Configuring apps](/dotnet/framework/configure-apps/index)
 - [ASP.NET web site administration](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

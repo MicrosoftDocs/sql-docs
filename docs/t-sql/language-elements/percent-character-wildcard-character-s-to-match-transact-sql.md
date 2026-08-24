@@ -53,11 +53,11 @@ WHERE FirstName LIKE 'J%n';
 GO
 ```
 
-## See also
+## Related content
 
-- [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)
-- [Operators (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)
-- [Expressions (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)
-- [&#91; &#93; (Wildcard - Character(s) to Match)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)
-- [&#91;^&#93; (Wildcard - Character(s) Not to Match)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)
-- [_ (Wildcard - Match One Character)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)
+- [LIKE (Transact-SQL)](like-transact-sql.md)
+- [Operators (Transact-SQL)](operators-transact-sql.md)
+- [Expressions (Transact-SQL)](expressions-transact-sql.md)
+- [\[\] (wildcard - characters to match) (Transact-SQL)](wildcard-character-s-to-match-transact-sql.md)
+- [\[^\] (Wildcard - characters not to match) (Transact-SQL)](wildcard-character-s-not-to-match-transact-sql.md)
+- [_ (Wildcard - match one character) (Transact-SQL)](wildcard-match-one-character-transact-sql.md)

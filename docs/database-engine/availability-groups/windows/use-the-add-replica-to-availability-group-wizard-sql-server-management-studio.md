@@ -122,4 +122,4 @@ Also requires `CONTROL ON ENDPOINT` permission if you want to allow Add Replica 
 
 - [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
 - [Prerequisites, restrictions, and recommendations for Always On availability groups](prereqs-restrictions-recommendations-always-on-availability.md)
-- [Add a secondary replica to an Always On availability group](add-a-secondary-replica-to-an-availability-group-sql-server.md)
+- [Add a secondary replica to an Always On Availability Group](add-a-secondary-replica-to-an-availability-group-sql-server.md)

@@ -214,7 +214,7 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 > [!WARNING]
 > This query is for troubleshooting purpose only. The internal views referenced in the query are to change in the future. 
 
-## Next steps
-For more info, see the following articles about setting up and configuring SSIS Scale Out:
--   [Get started with Integration Services (SSIS) Scale Out on a single computer](get-started-with-ssis-scale-out-onebox.md)
--   [Walkthrough: Set up Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+## Related content
+
+- [Get started with Integration Services (SSIS) Scale Out on a single computer](get-started-with-ssis-scale-out-onebox.md)
+- [Walkthrough: Set up Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)

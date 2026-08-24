@@ -132,7 +132,8 @@ SELECT
 
  In the output, when `w_runnable` and `w_suspended` are equal, this represents the time that the worker is in the SUSPENDED state. Otherwise, `w_runnable` represents the time that is spent by the worker in the RUNNABLE state. In the output, session `52` is `SUSPENDED` for `35,094` milliseconds.  
   
-## See Also  
-[SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[Query Processing Architecture Guide](../query-processing-architecture-guide.md#degree-of-parallelism-dop)       
-[Thread and Task Architecture Guide](../thread-and-task-architecture-guide.md)
+## Related content
+
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [Query Processing Architecture Guide](../query-processing-architecture-guide.md#degree-of-parallelism-dop)
+- [Thread and task architecture guide](../thread-and-task-architecture-guide.md)

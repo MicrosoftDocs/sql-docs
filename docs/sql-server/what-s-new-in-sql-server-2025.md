@@ -303,7 +303,7 @@ For changes related to SQL Server Integration Services, see [What's New in SQL S
 
 **Master Data Services** (MDS) is discontinued in this version of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. We continue to support MDS in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and earlier versions.
 
-**Synapse Link** is discontinued in this version of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. Use [Mirroring in Fabric](/fabric/database/mirrored-database/overview) instead. For more information, see [Mirroring in Fabric – What's new](https://aka.ms/IntroMirroringSQL).
+**Synapse Link** is discontinued in this version of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. Use [Mirroring in Fabric](/fabric/database/mirrored-database/overview) instead. For more information, see [Mirroring for SQL Server in Microsoft Fabric (Preview)](https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/mirroring-for-sql-server-in-microsoft-fabric-preview/5172765).
 
 **Purview access policies** (DevOps policies and data owner policies) are discontinued in this version of SQL Server. Use [Fixed server roles](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022) instead.
 

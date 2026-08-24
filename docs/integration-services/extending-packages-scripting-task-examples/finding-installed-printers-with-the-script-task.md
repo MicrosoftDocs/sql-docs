@@ -134,7 +134,6 @@ public void Main()
         }  
 ```  
   
-## See Also  
- [Script Task Examples](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
-  
-  
+## Related content
+
+- [Script Task Examples](script-task-examples.md)

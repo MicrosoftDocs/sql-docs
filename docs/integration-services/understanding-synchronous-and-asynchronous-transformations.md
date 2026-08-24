@@ -41,10 +41,9 @@ helpviewer_keywords:
   
  It would also be possible to create an asynchronous transformation that emulates a synchronous transformation by explicitly copying each input row to the output. By using this approach, you could rename columns or convert data types or formats. However this approach degrades performance. You can achieve the same results with better performance by using built-in Integration Services components, such as Copy Column or Data Conversion.  
   
-## See Also  
- [Creating a Synchronous Transformation with the Script Component](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
- [Creating an Asynchronous Transformation with the Script Component](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
- [Developing a Custom Transformation Component with Synchronous Outputs](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
- [Developing a Custom Transformation Component with Asynchronous Outputs](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
-  
-  
+## Related content
+
+- [Creating a Synchronous Transformation with the Script Component](extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)
+- [Creating an Asynchronous Transformation with the Script Component](extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)
+- [Developing a Custom Transformation Component with Synchronous Outputs](extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
+- [Developing a Custom Transformation Component with Asynchronous Outputs](extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)

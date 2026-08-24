@@ -66,10 +66,7 @@ minipump              MINIPUMP               minipump
 taillights - battery  TAILLIGHTS - BATTERY   taillights - battery
 ```  
   
-## See Also  
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
-  [UPPER &#40;Transact-SQL&#41;](../../t-sql/functions/upper-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [UPPER (Transact-SQL)](upper-transact-sql.md)

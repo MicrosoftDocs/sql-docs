@@ -56,4 +56,4 @@ ms.custom:
   
 ## Related content
 
-- [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)
+- [Indicators in a paginated report (Report Builder)](indicators-report-builder-and-ssrs.md)

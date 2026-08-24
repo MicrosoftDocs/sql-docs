@@ -38,9 +38,9 @@ f1_keywords:
   
 ## Related content
 
-- [Multiple Series on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)
-- [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
-- [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)
-- [Polar Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)
-- [Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)
-- [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)
+- [Multiple series on a paginated report chart (Report Builder)](multiple-series-on-a-chart-report-builder-and-ssrs.md)
+- [Formatting data points on a paginated report chart (Report Builder)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
+- [Define colors on a paginated report chart using a palette (Report Builder)](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)
+- [Polar charts in a paginated report (Report Builder)](polar-charts-report-builder-and-ssrs.md)
+- [Shape charts in a paginated report (Report Builder)](shape-charts-report-builder-and-ssrs.md)
+- [Pie charts in a paginated report (Report Builder)](pie-charts-report-builder-and-ssrs.md)

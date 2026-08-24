@@ -63,8 +63,9 @@ FROM sys.dm_os_cluster_nodes;
 |node2|0|up|0|  
 |Node3|1|down|0|  
   
-## See also  
- [sys.dm_os_cluster_properties &#40;Transact-SQL&#41;](sys-dm-os-cluster-properties-transact-sql.md)   
- [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../system-functions/sys-fn-virtualservernodes-transact-sql.md)   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)
+## Related content
+
+- [sys.dm_os_cluster_properties (Transact-SQL)](sys-dm-os-cluster-properties-transact-sql.md)
+- [sys.dm_io_cluster_shared_drives (Transact-SQL)](sys-dm-io-cluster-shared-drives-transact-sql.md)
+- [sys.fn_virtualservernodes (Transact-SQL)](../system-functions/sys-fn-virtualservernodes-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)

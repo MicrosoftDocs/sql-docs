@@ -69,7 +69,7 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Related content
 
-- [sp_help_publication_access (Transact-SQL)](sp-help-publication-access-transact-sql.md)
-- [sp_revoke_publication_access (Transact-SQL)](sp-revoke-publication-access-transact-sql.md)
+- [sys.sp_help_publication_access (Transact-SQL)](sp-help-publication-access-transact-sql.md)
+- [sys.sp_revoke_publication_access (Transact-SQL)](sp-revoke-publication-access-transact-sql.md)
 - [Secure the Publisher](../replication/security/secure-the-publisher.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

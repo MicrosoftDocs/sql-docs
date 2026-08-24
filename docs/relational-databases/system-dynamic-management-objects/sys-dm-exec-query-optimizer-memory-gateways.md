@@ -71,8 +71,7 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [How to use the DBCC MEMORYSTATUS command to monitor memory usage on SQL Server 2005](/troubleshoot/sql/database-engine/performance/dbcc-memorystatus-monitor-memory-usage)
 - [Large query compilation waits on RESOURCE_SEMAPHORE_QUERY_COMPILE in SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
-

@@ -140,5 +140,6 @@ User instance scenarios include:
   
 - Dedicated ASP.NET hosting using Windows Authentication. A single SQL Server Express instance can be hosted on an intranet. The application connects using the ASPNET Windows account, not by using impersonation. User instances should not be used for third-party or shared hosting scenarios where all applications would share the same user instance and would no longer remain isolated from each other.  
   
-## Next steps
+## Related content
+
 - [SQL Server and ADO.NET](index.md)

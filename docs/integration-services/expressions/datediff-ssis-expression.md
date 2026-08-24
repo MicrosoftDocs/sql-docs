@@ -80,12 +80,11 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## See Also  
- [DATEADD &#40;SSIS Expression&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART &#40;SSIS Expression&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY &#40;SSIS Expression&#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH &#40;SSIS Expression&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR &#40;SSIS Expression&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
-  
-  
+## Related content
+
+- [DATEADD (SSIS Expression)](dateadd-ssis-expression.md)
+- [DATEPART (SSIS Expression)](datepart-ssis-expression.md)
+- [DAY (SSIS Expression)](day-ssis-expression.md)
+- [MONTH (SSIS Expression)](month-ssis-expression.md)
+- [YEAR (SSIS Expression)](year-ssis-expression.md)
+- [Functions (SSIS Expression)](functions-ssis-expression.md)

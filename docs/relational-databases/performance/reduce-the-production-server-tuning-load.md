@@ -85,8 +85,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 </DTAXML>  
 ```  
   
-## See Also  
- [Considerations for Using Test Servers](../../relational-databases/performance/considerations-for-using-test-servers.md)   
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
-  
-  
+## Related content
+
+- [Considerations for Using Test Servers](considerations-for-using-test-servers.md)
+- [XML Input File Reference (Database Engine Tuning Advisor)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)

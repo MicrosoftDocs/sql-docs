@@ -21,8 +21,7 @@ ms.topic: reference
 |[valueOf(java.sql.Timestamp, int)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-int.md)|Creates a **DateTimeOffset** object representing a point in time at a particular offset from GMT given a java.sql.Timestamp value and a value indicating the offset in minutes.|  
 |[valueOf(java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|Creates a **DateTimeOffset** object representing a point in time at a particular offset from GMT given a java.sql.Timestamp value and a java.util.Calendar value indicating the offset.|  
   
-## See Also  
- [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)   
- [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md)  
-  
-  
+## Related content
+
+- [DateTimeOffset Class](datetimeoffset-class.md)
+- [DateTimeOffset Members](datetimeoffset-members.md)

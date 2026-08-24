@@ -67,7 +67,6 @@ SELECT @p.IsValidDetailed()
 --Returns: 24409: Not valid because some portion of polygon ring (1) lies in the interior of a polygon.  
 ```  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)

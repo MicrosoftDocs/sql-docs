@@ -293,10 +293,10 @@ DEALLOCATE vendor_cursor;
 
 ## Related content
 
-- [&#x40;&#x40;FETCH_STATUS (Transact-SQL)](../functions/fetch-status-transact-sql.md)
+- [@@FETCH_STATUS (Transact-SQL)](../functions/fetch-status-transact-sql.md)
 - [CLOSE (Transact-SQL)](close-transact-sql.md)
 - [Cursors (Transact-SQL)](cursors-transact-sql.md)
 - [DEALLOCATE (Transact-SQL)](deallocate-transact-sql.md)
 - [FETCH (Transact-SQL)](fetch-transact-sql.md)
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

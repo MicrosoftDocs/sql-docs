@@ -41,8 +41,7 @@ helpviewer_keywords:
   
  The *pTableID* and *pUnkOuter* parameters should be set as in the static scenario. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider then obtains the type information (column information and constraints) from the server, and return a table-valued parameter rowset object through the *ppRowset* parameter. This operation requires communication with the server, and therefore does not perform as well as the static scenario. The dynamic scenario works only with parameterized procedure calls.  
   
-## See Also  
- [Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Use Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
-  
-  
+## Related content
+
+- [Table-Valued Parameters  in SQL Server Native Client (OLE DB)](table-valued-parameters-ole-db.md)
+- [Use Table-Valued Parameters in SQL Server Native Client (OLE DB)](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)

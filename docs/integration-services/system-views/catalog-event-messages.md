@@ -52,7 +52,6 @@ ms.topic: reference
   
 -   Membership to the **sysadmin** server role.  
   
-## See Also  
- [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
-  
-  
+## Related content
+
+- [catalog.event_message_context](catalog-event-message-context.md)

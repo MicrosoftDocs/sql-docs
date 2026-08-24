@@ -48,10 +48,10 @@ EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Associati
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  
 ```  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
- [IMPORT &#40;DMX&#41;](../dmx/import-dmx.md)   
- [Export and Import Data Mining Objects](/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+## Related content
+
+- [DMX Statements - Data Definition](dmx-statements-data-definition.md)
+- [DMX Statements - Data Manipulation](dmx-statements-data-manipulation.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)
+- [IMPORT (DMX)](import-dmx.md)
+- [Export and Import Data Mining Objects](/analysis-services/data-mining/export-and-import-data-mining-objects)

@@ -333,12 +333,12 @@ CREATE CREDENTIAL [contoso.managedhsm.azure.net] -- for Azure Key Vault Managed 
 
 ## Related content
 
-- [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)
-- [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)
-- [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)
-- [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)
-- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
-- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)
+- [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [ALTER CREDENTIAL (Transact-SQL)](alter-credential-transact-sql.md)
+- [DROP CREDENTIAL (Transact-SQL)](drop-credential-transact-sql.md)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](create-database-scoped-credential-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [ALTER LOGIN (Transact-SQL)](alter-login-transact-sql.md)
+- [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)
 - [Lesson 2: Create a SQL Server credential using a shared access signature](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server.md#2---create-a-sql-server-credential-using-a-shared-access-signature)
 - [Shared Access Signatures](/azure/storage/common/storage-sas-overview)

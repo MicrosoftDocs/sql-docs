@@ -25,6 +25,6 @@ This section contains sample XML input files that you can use with the **dta** c
 
 - [XML Input File Sample with User-specified Configuration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)  
 
-## See Also
+## Related content
 
-[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)
+- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

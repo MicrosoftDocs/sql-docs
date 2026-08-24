@@ -49,4 +49,4 @@ To disable the option, set the value to `0`.
 
 - [Enable Stretch Database for a database](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-database)
 - [Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

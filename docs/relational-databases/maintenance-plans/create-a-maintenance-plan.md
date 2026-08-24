@@ -135,7 +135,7 @@ To create or manage maintenance plans, you must be a member of the **sysadmin** 
    GO
    ```
 
-## Next steps
+## Related content
 
 - [sp_add_job (Transact-SQL)](../system-stored-procedures/sp-add-job-transact-sql.md)
 - [sp_add_jobstep (Transact-SQL)](../system-stored-procedures/sp-add-jobstep-transact-sql.md)

@@ -224,7 +224,7 @@ Report bugs and request features on GitHub:
 
 ## Related content
 
-- [mssql-python driver](python-sql-driver-mssql-python.md)
+- [Microsoft Python Driver for SQL Server - mssql-python](python-sql-driver-mssql-python.md)
 - [What's new in mssql-python](whats-new.md)
-- [Installation](installation.md)
+- [Install mssql-python](installation.md)
 - [GitHub repository](https://github.com/microsoft/mssql-python)

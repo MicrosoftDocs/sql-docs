@@ -402,9 +402,9 @@ zyxwv
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
 
-## See Also
+## Related content
 
-[Programming Guide for PHP SQL Driver](programming-guide-for-php-sql-driver.md)  
-[SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV Driver API Reference](pdo-sqlsrv-driver-reference.md)  
-[Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md)
+- [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)

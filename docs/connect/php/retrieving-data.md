@@ -71,11 +71,8 @@ You can see how many rows are in a result set if you specify a scrollable cursor
 |[Formatting decimal strings with SQLSRV Driver](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Demonstrates how to format decimal or money values using the SQLSRV driver.|  
 |[Formatting decimal strings with PDO_SQLSRV Driver](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Demonstrates how to format decimal or money values using the PDO_SQLSRV driver.|  
   
-## Related Sections  
-[How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)  
-  
-## See Also  
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+## Related content
 
-[Retrieving Data](#retrieving-data)  
-  
+- [How to: Specify PHP Data Types](how-to-specify-php-data-types.md)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [Retrieving Data](#retrieving-data)

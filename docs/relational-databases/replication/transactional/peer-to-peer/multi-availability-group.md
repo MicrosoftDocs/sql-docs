@@ -369,7 +369,7 @@ DECLARE @publisher_security_mode smallint = 1
 EXEC [MyDBName].dbo.sp_addlogreader_agent @publisher_security_mode = @publisher_security_mode
 GO
 
--- Note – Make sure that the value for @p2p_originator_id is different from Peer1.
+-- Make sure that the value for @p2p_originator_id is different from Peer1.
 DECLARE @allow_dts nvarchar(5) = N'false'
 DECLARE @allow_pull nvarchar(5) = N'true'
 DECLARE @allow_push nvarchar(5) = N'true'
@@ -407,7 +407,7 @@ EXEC [MyDBName].dbo.sp_addarticle @article = @article, @description = @descripti
 GO
 ```
 
-##	Make peer to peer publication compatible with availability group (*Peer2*)
+## Make peer to peer publication compatible with availability group (*Peer2*)
 
 On the original publisher (Node3), run the following script to make the publication compatible with availability group:
 
@@ -522,5 +522,3 @@ At each secondary replica host, make sure the push subscribers of the database p
 EXEC sys.sp_addlinkedserver   
     @server = 'MySubscriber';
 ```
-
-## Next steps

@@ -66,12 +66,9 @@ DROP AVAILABILITY GROUP group_name
 DROP AVAILABILITY GROUP AccountsAG;  
 ```  
   
-##  <a name="RelatedContent"></a> Related Content  
-  
--   [How It Works: DROP AVAILABILITY GROUP Behaviors](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server Engineers blog)  
-  
-## See Also  
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Remove an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
-  
+## Related content
+
+- [How It Works: DROP AVAILABILITY GROUP Behaviors](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors)
+- [ALTER AVAILABILITY GROUP (Transact-SQL)](alter-availability-group-transact-sql.md)
+- [CREATE AVAILABILITY GROUP (Transact-SQL)](create-availability-group-transact-sql.md)
+- [Remove an availability group (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)

@@ -51,7 +51,6 @@ dev_langs:
 |**proxy_id**|**int**|Proxy for the job step.|  
 |**step_uid**|**uniqueidentifier**|Identifier for the job step.|  
   
-## See Also  
- [SQL Server Agent Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [SQL Server Agent tables (Transact-SQL)](sql-server-agent-tables-transact-sql.md)

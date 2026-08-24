@@ -240,10 +240,9 @@ XML indexes are also recorded in the catalog view `sys.xml_indexes`. This contai
 
 The space use of XML indexes can be found in the table-valued function [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). It provides information, such as the number of data pages occupied, average row size in bytes, and number of records, for all index types. This also includes XML indexes. This information is available for each database partition. XML indexes use the same partitioning scheme and partitioning function of the base table.
 
-## Next steps
+## Related content
 
 - [Create XML indexes](create-xml-indexes.md)
 - [ALTER INDEX (Selective XML Indexes)](../../t-sql/statements/alter-index-selective-xml-indexes.md)
 - [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
-- [XML Data (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)
-
+- [XML data (SQL Server)](xml-data-sql-server.md)

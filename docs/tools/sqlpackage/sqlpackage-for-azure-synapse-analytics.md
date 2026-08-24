@@ -72,8 +72,9 @@ Synapse serverless SQL pools are supported for both the extract and publish acti
 - [OPENROWSET](/azure/synapse-analytics/sql/develop-openrowset) provider CosmosDB with PROVIDER, CONNECTION, OBJECT, and CREDENTIAL or SERVER_CREDENTIAL specified
 - `with ()` clause on [OPENROWSET](/azure/synapse-analytics/sql/develop-openrowset)
 
-## Next Steps
-- Learn more about [Extract](sqlpackage-extract.md)
-- Learn more about [Publish](sqlpackage-publish.md)
-- Learn more about [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction)
-- Learn more about [Azure Storage Account Keys](/azure/storage/common/storage-account-keys-manage)
+## Related content
+
+- [SqlPackage Extract parameters and properties](sqlpackage-extract.md)
+- [SqlPackage Publish parameters, properties, and SQLCMD variables](sqlpackage-publish.md)
+- [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction)
+- [Azure Storage Account Keys](/azure/storage/common/storage-account-keys-manage)

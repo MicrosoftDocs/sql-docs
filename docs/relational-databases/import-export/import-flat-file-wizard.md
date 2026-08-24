@@ -128,8 +128,6 @@ Currently, the importer uses encoding based on the system's active code page. On
 
 ## Related content
 
-Learn more about the wizard.
-
-- **Learn more about importing other sources.** If you're looking to import more than flat files, see [Import and Export Data with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
-- **Learn more about connecting to flat file sources.** If you're looking for more information about connecting to flat file sources, see [Connect to a Flat File Data Source (SQL Server Import and Export Wizard)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).
-- **Learn more about PROSE.** If you're looking for an overview of the intelligent framework used by this wizard, see [PROSE SDK](https://microsoft.github.io/prose/).
+- [Import and Export Data with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+- [Connect to a Flat File Data Source (SQL Server Import and Export Wizard)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
+- [PROSE SDK](https://microsoft.github.io/prose/)

@@ -19,7 +19,6 @@ helpviewer_keywords:
   
  Applications request autofetch by setting the driver-specific SQL_SOPT_SS_CURSOR_OPTIONS statement attribute to SQL_CO_AF.  
   
-## See Also  
- [Cursor Programming Details &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
-  
-  
+## Related content
+
+- [Cursor Programming Details (ODBC)](cursor-programming-details-odbc.md)

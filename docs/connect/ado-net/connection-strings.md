@@ -78,6 +78,6 @@ Describes how to configure provider-specific connection strings for `SqlClient`.
 [Protecting Connection Information](protecting-connection-information.md)\
 Demonstrates techniques for protecting information used to connect to a data source.
 
-## See also
+## Related content
 
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

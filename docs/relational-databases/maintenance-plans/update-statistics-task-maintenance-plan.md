@@ -127,8 +127,8 @@ This task executes the `UPDATE STATISTICS` statement.
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
 - [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)
-- [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)
+- [sys.sp_updatestats (Transact-SQL)](../system-stored-procedures/sp-updatestats-transact-sql.md)
 - [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

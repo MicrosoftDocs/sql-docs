@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[updateDate (int, java.sql.Date)](../../../connect/jdbc/reference/updatedate-method-int-java-sql-date.md)|Updates the designated column with a date value given the column index.|  
 |[updateDate (java.lang.String, java.sql.Date)](../../../connect/jdbc/reference/updatedate-method-java-lang-string-java-sql-date.md)|Updates the designated column with a date value given the column name.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

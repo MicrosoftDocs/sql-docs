@@ -55,8 +55,9 @@ helpviewer_keywords:
   
 8.  In the confirmation dialog box, click **OK**.  
   
-## See Also  
- [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)
+## Related content
+
+- [Attributes (Master Data Services)](attributes-master-data-services.md)
+- [Domain-Based Attributes (Master Data Services)](domain-based-attributes-master-data-services.md)
+- [Create a Text Attribute (Master Data Services)](create-a-text-attribute-master-data-services.md)
+- [Create a Domain-Based Attribute (Master Data Services)](create-a-domain-based-attribute-master-data-services.md)

@@ -40,8 +40,7 @@ public int getHoldability()
   
  When the holdability is reset and the getHoldability method is called on the previously created result set object, the value returned by this method may be different than the holdability value returned by the following methods: Statement.getResultSetHoldability, Connection.getHoldability, or DatabaseMetaData.getResultSetHoldability.  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

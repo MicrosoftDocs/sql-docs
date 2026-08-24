@@ -176,4 +176,4 @@ To improve query performance, you can use [!INCLUDE [ssNoVersion](../../includes
 ## Related content
 
 - [Frequently asked questions in PolyBase](polybase-faq.yml)
-- [Data virtualization with PolyBase in SQL Server](overview.md)
+- [PolyBase overview](overview.md)

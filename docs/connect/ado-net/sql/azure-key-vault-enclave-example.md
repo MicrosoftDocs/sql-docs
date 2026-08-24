@@ -33,7 +33,7 @@ Secondly, a column encryption key is created. Once the keys are created, a table
 >
 > - To use Always Encrypted with VBS enclaves without attestation, **Microsoft.Data.SqlClient** version 4.1.0 or higher is required.
 
-## See also
+## Related content
 
 - [Example demonstrating use of Azure Key Vault provider with Always Encrypted](azure-key-vault-example.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)

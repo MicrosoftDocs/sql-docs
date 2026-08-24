@@ -53,9 +53,8 @@ dev_langs:
  SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
 ```  
   
-## See Also  
- [STLength &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
- [STNumPoints &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
- [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)  
-  
-  
+## Related content
+
+- [STLength (geography Data Type)](stlength-geography-data-type.md)
+- [STNumPoints (geography Data Type)](stnumpoints-geography-data-type.md)
+- [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)

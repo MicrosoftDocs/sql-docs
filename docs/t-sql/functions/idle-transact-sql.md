@@ -1,6 +1,6 @@
 ---
 title: "@@IDLE (Transact-SQL)"
-description: "&#x40;&#x40;IDLE (Transact-SQL)"
+description: "@@IDLE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "09/18/2017"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;IDLE (Transact-SQL)
+# @@IDLE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been idle since it was last started. The result is in CPU time increments, or "ticks," and is cumulative for all CPUs, so it may exceed the actual elapsed time. Multiply by @@TIMETICKS to convert to microseconds.  
@@ -58,10 +58,9 @@ Idle microseconds  as of
 8199934           12/5/2006 10:23:00 AM   
 ```  
   
-## See Also  
- [@@CPU_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/cpu-busy-transact-sql.md)   
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)   
- [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [@@CPU_BUSY (Transact-SQL)](cpu-busy-transact-sql.md)
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+- [@@IO_BUSY (Transact-SQL)](io-busy-transact-sql.md)
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

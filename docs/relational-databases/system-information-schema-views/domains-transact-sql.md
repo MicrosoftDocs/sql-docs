@@ -46,12 +46,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**DATETIME_PRECISION**|**smallint**|Subtype code for **datetime** and ISO **interval** data type. For other data types, this column returns a NULL.|  
 |**DOMAIN_DEFAULT**|**nvarchar(**4000**)**|Actual text of the definition [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.|  
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.syscharsets &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
-  
+## Related content
 
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [sys.syscharsets (Transact-SQL)](../system-compatibility-views/sys-syscharsets-transact-sql.md)
+- [sys.sql_modules (Transact-SQL)](../system-catalog-views/sys-sql-modules-transact-sql.md)
+- [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md)
+- [sys.types (Transact-SQL)](../system-catalog-views/sys-types-transact-sql.md)

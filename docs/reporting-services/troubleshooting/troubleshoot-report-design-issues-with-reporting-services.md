@@ -47,7 +47,5 @@ To group multiple data regions or report items together, place them in the same 
   
 ## Related content
 
-- [Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)
-- [Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)
-
-[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+- [Troubleshoot data retrieval issues with Reporting Services reports](troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)
+- [Troubleshoot Reporting Services subscriptions and delivery](troubleshoot-reporting-services-subscriptions-and-delivery.md)

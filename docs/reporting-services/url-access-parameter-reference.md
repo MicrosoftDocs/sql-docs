@@ -108,5 +108,5 @@ Target the Report Viewer web part that integrates with SharePoint by using the p
 
 ## Related content
 
-- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
-- [Export a report using URL access](../reporting-services/export-a-report-using-url-access.md)
+- [URL access (SSRS)](url-access-ssrs.md)
+- [Export a report by using URL access](export-a-report-using-url-access.md)

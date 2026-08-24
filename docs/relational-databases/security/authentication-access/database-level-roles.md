@@ -187,5 +187,5 @@ GO
 - [Security stored procedures (Transact-SQL)](../../system-stored-procedures/security-stored-procedures-transact-sql.md)
 - [Security Functions (Transact-SQL)](../../../t-sql/functions/security-functions-transact-sql.md)
 - [Securing SQL Server](../securing-sql-server.md)
-- [sp_helprotect (Transact-SQL)](../../system-stored-procedures/sp-helprotect-transact-sql.md)
+- [sys.sp_helprotect (Transact-SQL)](../../system-stored-procedures/sp-helprotect-transact-sql.md)
 - [Azure SQL Database server roles for permission management](/azure/azure-sql/database/security-server-roles)

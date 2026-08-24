@@ -39,5 +39,6 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  For more information about file data sources, see [Connecting Using File Data Sources](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) or the [SQLDriverConnect Function](../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
-## See Also  
- [ODBC Data Source Administrator](../../odbc/admin/odbc-data-source-administrator.md)
+## Related content
+
+- [ODBC Data Source Administrator](odbc-data-source-administrator.md)

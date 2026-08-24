@@ -28,6 +28,6 @@ The following list shows new getter, setter, and updater methods to support the 
 
 To send String parameters to the server in Unicode format, the applications should either use the new JDBC 4.0 national character methods; or set the **sendStringParametersAsUnicode** connection property to "**true**" when using the non-national character methods. The recommended way is to use the new JDBC 4.0 national character methods where possible. For more information about the **sendStringParametersAsUnicode** connection property, see [Setting the Connection Properties](setting-the-connection-properties.md).
 
-## See also
+## Related content
 
-[Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

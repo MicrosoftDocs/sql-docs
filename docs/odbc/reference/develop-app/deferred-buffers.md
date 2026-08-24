@@ -29,6 +29,6 @@ Both input and output buffers can be deferred. The following table summarizes th
 
 ## Related content
 
-- [Allocating and Freeing Buffers](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)
-- [Data Buffer Address](../../../odbc/reference/develop-app/data-buffer-address.md)
-- [Binding Parameters ODBC](../../../odbc/reference/develop-app/binding-parameters-odbc.md)
+- [Allocating and Freeing Buffers](allocating-and-freeing-buffers.md)
+- [Data Buffer Address](data-buffer-address.md)
+- [Binding Parameters ODBC](binding-parameters-odbc.md)

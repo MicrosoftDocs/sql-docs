@@ -157,8 +157,6 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 :::row-end:::
  
 
-## See Also  
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  
-  
+## Related content
 
+- [What are the SQL database functions?](functions.md)

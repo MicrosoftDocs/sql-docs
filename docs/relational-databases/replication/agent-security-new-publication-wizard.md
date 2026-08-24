@@ -49,10 +49,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [Create a publication](publish/create-a-publication.md)
 - [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)
-- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
-- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
-- [Identity access and control for Replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)
-- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
+- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)
+- [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)
+- [Identity and Access Control (Replication)](security/identity-and-access-control-replication.md)
+- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)
+- [Replication Agents Overview](agents/replication-agents-overview.md)

@@ -38,11 +38,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**UPDATE_RULE**|**varchar(**11**)**|Action taken when a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement violates the referential integrity that is defined by this constraint. Returns one of the following: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> If NO ACTION is specified on ON UPDATE for this constraint, the update of the primary key that is referenced in the constraint won't be propagated to the foreign key. If such an update of a primary key will cause a referential integrity violation because at least one foreign key contains the same value, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] won't make any change to the parent and referring tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also will raise an error.<br /><br /> If CASCADE is specified on ON UPDATE for this constraint, any change to the primary key value is automatically propagated to the foreign key value.|  
 |**DELETE_RULE**|**varchar(**11**)**|Action taken when a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement violates referential integrity defined by this constraint. Returns one of the following: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> If NO ACTION is specified on ON DELETE for this constraint, the delete on the primary key that is referenced in the constraint won't be propagated to the foreign key. If such a delete of a primary key will cause a referential integrity violation because at least one foreign key contains the same value, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] won't make any change to the parent and referring tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also will raise an error.<br /><br /> If CASCADE is specified on ON DELETE on this constraint, any change to the primary key value is automatically propagated to the foreign key value.|  
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.foreign_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
-  
+## Related content
 
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [sys.indexes (Transact-SQL)](../system-catalog-views/sys-indexes-transact-sql.md)
+- [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)
+- [sys.foreign_keys (Transact-SQL)](../system-catalog-views/sys-foreign-keys-transact-sql.md)

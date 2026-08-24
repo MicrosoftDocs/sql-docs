@@ -30,10 +30,9 @@ ms.custom: dmx
   
  For more information about how to use different kinds of comments in DMX, see [Comments &#40;DMX&#41;](../dmx/comments-dmx.md).  
   
-## See Also  
- [Slash Star &#40;Comment&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
- [Double Slash &#40;Comment&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
-  
-  
+## Related content
+
+- [Slash Star (Comment) (DMX)](slash-star-comment-dmx.md)
+- [Double Slash (Comment) (DMX)](double-slash-comment-dmx.md)
+- [Data Mining Extensions (DMX) Operator Reference](data-mining-extensions-dmx-operator-reference.md)
+- [Operators (DMX)](operators-dmx.md)

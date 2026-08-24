@@ -91,6 +91,6 @@ In the following expression, **Lookup** compares the value of **ProductID** to t
   
 ## Related content
 
-- [Expression uses in paginated reports (Report Builder)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
-- [Expression examples in paginated reports (Report Builder)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Data types in expressions in a paginated report (Report Builder)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)
+- [Expression uses in paginated reports (Report Builder)](expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [Data types in expressions in a paginated report (Report Builder)](data-types-in-expressions-report-builder-and-ssrs.md)

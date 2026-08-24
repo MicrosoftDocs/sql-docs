@@ -39,6 +39,6 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
   
 -   The **namespace-uri-from-QName()** function returns instances of xs:string instead of xs:anyURI.  
   
-## See Also  
- [Functions Related to QNames &#40;XQuery&#41;](./functions-related-to-qnames-expanded-qname.md)  
-  
+## Related content
+
+- [Functions Related to QNames - expanded-QName](functions-related-to-qnames-expanded-qname.md)

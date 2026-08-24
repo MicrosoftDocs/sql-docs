@@ -29,6 +29,6 @@ The articles in this section describe the SQLXML interface and how to program ag
 |[SQLXML interface](sqlxml-interface.md)|Describes the SQLXML interface and its methods.|
 |[Programming with SQLXML](programming-with-sqlxml.md)|Describes how to use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API methods to store and retrieve an XML data in and from a relational database with the **SQLXML** Java data type. Also contains information about the types of SQLXML objects and provides a list of important guidelines and limitations when using SQLXML objects.|
 
-## See also
+## Related content
 
-[Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

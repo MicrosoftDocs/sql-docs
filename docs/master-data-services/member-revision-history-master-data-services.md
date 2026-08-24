@@ -65,6 +65,7 @@ ms.custom:
 |----------------------|-----------|  
 |Rollback the member revision history|[Rollback Member Revision History &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## See Also  
- [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
- [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)
+## Related content
+
+- [Create a Model (Master Data Services)](create-a-model-master-data-services.md)
+- [System Settings (Master Data Services)](system-settings-master-data-services.md)

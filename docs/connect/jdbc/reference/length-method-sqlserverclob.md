@@ -33,9 +33,8 @@ public long length()
 ## Remarks  
  This length method is specified by the length method in the java.sql.Clob interface.  
   
-## See Also  
- [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
- [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
- [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  
-  
-  
+## Related content
+
+- [SQLServerClob Methods](sqlserverclob-methods.md)
+- [SQLServerClob Members](sqlserverclob-members.md)
+- [SQLServerClob Class](sqlserverclob-class.md)

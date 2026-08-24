@@ -82,12 +82,9 @@ helpviewer_keywords:
 |Exclude a business rule so it is not used.|[Exclude a Business Rule &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |Delete an existing business rule.|[Delete a Business Rule &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
-## Related Content  
-  
--   [Master Data Services Overview &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
-  
--   [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
-  
--   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
-  
--   [Change Tracking &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)
+## Related content
+
+- [Master Data Services Overview (MDS)](master-data-services-overview-mds.md)
+- [Versions (Master Data Services)](versions-master-data-services.md)
+- [Validation (Master Data Services)](validation-master-data-services.md)
+- [Change Tracking (Master Data Services)](change-tracking-master-data-services.md)

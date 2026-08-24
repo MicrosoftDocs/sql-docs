@@ -40,9 +40,6 @@ Before you test the package, verify that the control and data flows in the Lesso
 ## Go to next lesson  
 [Lesson 3: Add logging with SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
-## See also  
-[Execution of projects and packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
-  
-  
-  
+## Related content
 
+- [Deploy Integration Services (SSIS) Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)

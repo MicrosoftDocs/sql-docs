@@ -52,8 +52,7 @@ DATEDIFF("dd",ModifiedDate,GETDATE())
 DATEADD("Month",3,GETDATE())  
 ```  
   
-## See Also  
- [GETUTCDATE &#40;SSIS Expression&#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
-  
-  
+## Related content
+
+- [GETUTCDATE (SSIS Expression)](getutcdate-ssis-expression.md)
+- [Functions (SSIS Expression)](functions-ssis-expression.md)

@@ -56,7 +56,7 @@ Executing `sys.dm_xe_session_targets` forces a flush of the collected session da
 
 ## Related content
 
-- [Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [sys.dm_xe_sessions (Transact-SQL)](sys-dm-xe-sessions-transact-sql.md)
 - [sys.dm_xe_session_events (Transact-SQL)](sys-dm-xe-session-events-transact-sql.md)
 - [Extended Events overview](../extended-events/extended-events.md)

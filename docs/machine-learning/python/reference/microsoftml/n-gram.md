@@ -64,7 +64,7 @@ Maximum number of ngrams to store in the dictionary (settings).
 The weighting criteria (settings).
 
 
-## See also
+## Related content
 
-[n_gram_hash](n-gram-hash.md),
-[featurize_text](featurize-text.md)
+- [*microsoftml.n_gram_hash*: Converts text into features using hashed n-grams](n-gram-hash.md)
+- [*microsoftml.featurize_text*: Converts text columns into numerical features](featurize-text.md)

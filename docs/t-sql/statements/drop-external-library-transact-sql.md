@@ -85,9 +85,9 @@ Delete the `customPackage` library.
 DROP EXTERNAL LIBRARY customPackage;
 ```
 
-## See also
+## Related content
 
-[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
-[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
-[sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+- [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+- [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)
+- [sys.external_library_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)
+- [sys.external_libraries (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

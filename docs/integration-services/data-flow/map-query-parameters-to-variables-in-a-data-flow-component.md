@@ -45,8 +45,7 @@ helpviewer_keywords:
   
 10. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
- [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)   
- [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
+## Related content
+
+- [OLE DB Source](ole-db-source.md)
+- [Lookup Transformation](transformations/lookup-transformation.md)

@@ -24,5 +24,6 @@ Quick view of the SSMA Console command line options:
 |7|-p/securepassword|No|-a/add {<server_id> [,...n] &#124; all} -c&#124;serverconnection  \<server-connection-file\> [-v&#124;variable \<variable-value-file\>] [-o/overwrite]<br /><br />or<br /><br />-a/add {<server_id> [,...n] &#124; all} -s&#124;script \<script-file\> [-v&#124;variable \<variable-value-file\>] [-o/overwrite]<br /><br />-r/remove {<server_id> [, ...n] &#124; all}<br /><br />-l/list<br /><br />-e/export {\<server-id\> [, ...n] &#124; all} <encrypted-password -file><br /><br />-i/import {\<server-id\> [, ...n] &#124; all} \<encrypted-password-file\>|If specified, this option must not be combined with any other options.<br /><br />server-id: A unique ID provided for a server {string}<br /><br />server-connection-file: server definition file (serverconnectionfile or scriptfile).<br /><br />variable-value-file: It is a variable definition file and used in server-connection-file.<br /><br />encrypted-password-file: It is a server passwords file encrypted using a user-specified pass-phrase.|  
 |8|-?|No|Not Applicable|Not Applicable|  
   
-## See Also  
-[Executing the SSMA Console (Oracle)](./executing-the-ssma-console-oracletosql.md)  
+## Related content
+
+- [Executing the SSMA console](executing-the-ssma-console-oracletosql.md)

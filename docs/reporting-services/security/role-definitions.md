@@ -47,9 +47,9 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
-- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)
-- [Grant user access to a report server &#40;Report Manager&#41;](./grant-user-access-to-a-report-server.md)
-- [Modify or delete a role assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)
-- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)
+- [Tasks and permissions](tasks-and-permissions.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)
+- [Create, delete, or modify a role (Management Studio)](role-definitions-create-delete-or-modify.md)
+- [Grant users access to a report server](grant-user-access-to-a-report-server.md)
+- [Modify or delete a role assignment (SSRS web portal)](role-assignments-modify-or-delete.md)
+- [Set permissions for report server items on a SharePoint site](set-permissions-for-report-server-items-on-a-sharepoint-site.md)

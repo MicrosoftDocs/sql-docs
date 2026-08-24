@@ -255,7 +255,6 @@ For more information, see [ALTER TABLE](../../t-sql/statements/alter-table-trans
 - [Data compression](data-compression.md)
 - [Row compression implementation](row-compression-implementation.md)
 - [Page compression implementation](page-compression-implementation.md)
-- [sp_estimate_data_compression_savings (Transact-SQL)](../system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)
+- [sys.sp_estimate_data_compression_savings (Transact-SQL)](../system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)
 - [Create a compressed index](../../t-sql/statements/create-index-transact-sql.md#l-create-a-compressed-index)
 - [Create a table that uses row compression](../../t-sql/statements/create-table-transact-sql.md#n-creating-a-table-that-uses-row-compression)
-

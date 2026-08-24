@@ -41,9 +41,9 @@ The following table shows the Oracle database data types and their default mappi
 |ROWID|Not Supported||
 |User-defined type (object type, VARRAY, Nested Table)|Not Supported||
 
-## Next steps
+## Related content
 
-- Configure [Oracle Connection Manager](oracle-connection-manager.md).
-- Configure [Oracle Source](oracle-source.md).
-- Configure [Oracle Destination](oracle-destination.md).
-- If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).
+- [Oracle Connection Manager](oracle-connection-manager.md)
+- [Oracle source](oracle-source.md)
+- [Oracle destination](oracle-destination.md)
+- [TechCommunity](https://aka.ms/AA5u35j)

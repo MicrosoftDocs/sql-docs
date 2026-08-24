@@ -135,6 +135,6 @@ Follow these steps to upgrade your Always On failover cluster instance in a mult
 
 ## Related content
 
-- [Complete the Database Engine Upgrade](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
+- [Complete the Database Engine upgrade](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Change the database compatibility level and use the Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [What's new in SQL Server 2017](../../what-s-new-in-sql-server-2017.md)

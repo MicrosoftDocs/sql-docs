@@ -46,6 +46,6 @@ The `lightweight pooling` option is an advanced option. If you use the `sp_confi
 
 ## Related content
 
-- [clr enabled (server configuration option)](clr-enabled-server-configuration-option.md)
+- [Server configuration: clr enabled](clr-enabled-server-configuration-option.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

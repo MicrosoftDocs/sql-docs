@@ -61,6 +61,6 @@ Color-interpretation of the console output in the following table:
 |Green|Prompt for user-input|  
 |Cyan|Start, Finish and Result of an operation|  
   
-## See Also  
-[Installing SSMA for MySQL](installing-ssma-for-mysql-mysqltosql.md)  
-  
+## Related content
+
+- [Install SSMA for MySQL](installing-ssma-for-mysql-mysqltosql.md)

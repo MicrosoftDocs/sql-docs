@@ -49,6 +49,6 @@ The instance name must identify the instance to which the T-SQL is issued. NULL 
 
 OpenInSecondaryEx supersedes the original IClientVirtualDeviceSet::OpenInSecondary that was defined in the original SQL Server version 7.0 interface. New development should use OpenInSecondaryEx.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

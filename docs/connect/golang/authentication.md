@@ -163,7 +163,7 @@ sqlserver://<user>@MYREALM:<password>@<server>:1433?database=AdventureWorks2025&
 
 ## Related content
 
-- [Microsoft Entra ID authentication](entra-authentication.md)
-- [Connection strings](connection-strings.md)
-- [Encryption and certificates](encryption-certificates.md)
-- [Linux and macOS](linux-macos.md)
+- [Microsoft Entra ID authentication with go-mssqldb](entra-authentication.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [go-mssqldb encryption and certificates](encryption-certificates.md)
+- [go-mssqldb on Linux and macOS](linux-macos.md)

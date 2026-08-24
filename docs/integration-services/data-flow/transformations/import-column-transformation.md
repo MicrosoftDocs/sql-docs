@@ -45,8 +45,8 @@ helpviewer_keywords:
 ## Related Tasks  
  For information about how to set properties of this component, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## See Also  
- [Export Column Transformation](../../../integration-services/data-flow/transformations/export-column-transformation.md)   
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Export Column Transformation](export-column-transformation.md)
+- [Data Flow](../data-flow.md)
+- [Integration Services Transformations](integration-services-transformations.md)

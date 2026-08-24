@@ -51,8 +51,6 @@ helpviewer_keywords:
 > [!NOTE]  
 >  When creating a new table, the OLE DB Driver for SQL Server maps only the OLE DB data type enumeration values specified in the preceding table. Attempting to create a table with a column of any other OLE DB data type generates an error.  
 
-## See Also  
- [Data Types &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
-  
-  
+## Related content
 
+- [Data Types (OLE DB)](data-types-ole-db.md)

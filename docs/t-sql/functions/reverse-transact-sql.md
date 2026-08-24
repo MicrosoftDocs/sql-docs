@@ -94,19 +94,16 @@ SELECT name, REVERSE(name) FROM sys.databases;
 GO  
 ```  
   
-## See Also  
- [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
-   
-  
+## Related content
 
-
+- [CONCAT (Transact-SQL)](concat-transact-sql.md)
+- [CONCAT_WS (Transact-SQL)](concat-ws-transact-sql.md)
+- [FORMATMESSAGE (Transact-SQL)](formatmessage-transact-sql.md)
+- [QUOTENAME (Transact-SQL)](quotename-transact-sql.md)
+- [REPLACE (Transact-SQL)](replace-transact-sql.md)
+- [STRING_AGG (Transact-SQL)](string-agg-transact-sql.md)
+- [STRING_ESCAPE (Transact-SQL)](string-escape-transact-sql.md)
+- [STUFF (Transact-SQL)](stuff-transact-sql.md)
+- [TRANSLATE (Transact-SQL)](translate-transact-sql.md)
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)

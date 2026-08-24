@@ -109,8 +109,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Define Parameters in the MDX Query Designer for Analysis Services &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)
-- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
-- [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)
-- [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)
-- [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)
+- [Define Parameters in the MDX Query Designer for Analysis Services](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)
+- [Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
+- [Analysis Services Connection Type for DMX (SSRS)](analysis-services-connection-type-for-dmx-ssrs.md)
+- [RSReportDesigner configuration file](../report-server/rsreportdesigner-configuration-file.md)
+- [Analysis Services Connection Type for MDX (SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)

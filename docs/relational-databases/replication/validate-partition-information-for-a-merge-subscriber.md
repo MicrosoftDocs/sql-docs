@@ -29,7 +29,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Replication Administration FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)
-- [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)
-- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)
-- [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)
+- [Replication Administration FAQ](administration/frequently-asked-questions-for-replication-administrators.yml)
+- [Best practices for replication administration](administration/best-practices-for-replication-administration.md)
+- [Reinitialize Subscriptions](reinitialize-subscriptions.md)
+- [Validate Replicated Data](validate-data-at-the-subscriber.md)

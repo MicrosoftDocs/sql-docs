@@ -60,13 +60,6 @@ Additional arguments sent to compute engine.
 An object defining the transform.
 
 
-## See also
-
-[`resize_image`](resize-image.md),
-[`extract_pixels`](extract-pixels.md),
-[`featurize_image`](featurize-image.md).
-
-
 ## Example
 
 
@@ -199,3 +192,8 @@ Writing completed.
 0          False    0.0          0.5
 ```
 
+## Related content
+
+- [*microsoftml.resize_image*: Resizes an Image](resize-image.md)
+- [*microsoftml.extract_pixels*: Extracts pixels from an image](extract-pixels.md)
+- [*microsoftml.featurize_image*: Converts an image into features](featurize-image.md)

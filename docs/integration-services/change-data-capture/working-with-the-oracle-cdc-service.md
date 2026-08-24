@@ -265,8 +265,7 @@ This section describes some important concepts of the Oracle CDC Service. The co
   
  **Note**: Any parameter that contains spaces or double quotes must be wrapped with double quotes ("). Embedded double quotation marks must be doubled (for example to use **"A#B" D** as a password enter **""A#B"" D"**).  
   
-## See Also  
- [How to Use the CDC Service Command-Line Interface](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
- [How to Prepare SQL Server for CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
-  
-  
+## Related content
+
+- [How to Use the CDC Service Command-Line Interface](how-to-use-the-cdc-service-command-line-interface.md)
+- [How to Prepare SQL Server for CDC](how-to-prepare-sql-server-for-cdc.md)

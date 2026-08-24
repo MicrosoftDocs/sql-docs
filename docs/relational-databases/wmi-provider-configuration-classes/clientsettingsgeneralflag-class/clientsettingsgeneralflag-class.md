@@ -23,6 +23,6 @@ apiname: "ClientSettingsGeneralFlag Class"
   
 -   View and modify the flag value.  
   
-## See Also  
- [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
-  
+## Related content
+
+- [Configure client protocols](../../../database-engine/configure-windows/configure-client-protocols.md)

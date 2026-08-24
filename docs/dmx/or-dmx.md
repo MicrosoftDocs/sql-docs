@@ -41,9 +41,8 @@ Expression1 OR Expression2
 |FALSE|TRUE|TRUE|  
 |FALSE|FALSE|FALSE|  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Logical Operators &#40;DMX&#41;](../dmx/operators-logical.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
-  
-  
+## Related content
+
+- [Data Mining Extensions (DMX) Operator Reference](data-mining-extensions-dmx-operator-reference.md)
+- [Operators - Logical](operators-logical.md)
+- [Operators (DMX)](operators-dmx.md)

@@ -134,7 +134,7 @@ Communication protocols among components and data platforms are described in thi
 
   Processes that might need to work in "chunks" or transfer data back to a remote client can also use the [XDF file format](/machine-learning-server/r/concept-what-is-xdf). Actual data transfer is via encoded blobs.
 
-## See Also
+## Related content
 
-+ [R extension in SQL Server](extension-r.md)
-+ [Python extension in SQL Server](extension-python.md)
+- [R language extension in SQL Server Machine Learning Services](extension-r.md)
+- [Python language extension in SQL Server Machine Learning Services](extension-python.md)

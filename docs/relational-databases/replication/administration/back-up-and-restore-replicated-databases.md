@@ -59,5 +59,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)
+- [Back up and restore of SQL Server databases](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Best practices for replication administration](best-practices-for-replication-administration.md)

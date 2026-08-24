@@ -462,6 +462,6 @@ Release Date: December 5, 2019
 
 Initial release of SSIS DevOps Tools. This is a preview release.
 
-## Next steps
+## Related content
 
-- Get [SSIS DevOps extension](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools)
+- [SSIS DevOps extension](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools)

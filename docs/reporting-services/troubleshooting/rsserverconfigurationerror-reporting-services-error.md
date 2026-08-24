@@ -44,5 +44,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [Reporting Services configuration files](../report-server/reporting-services-configuration-files.md)
+- [Modify a Reporting Services configuration file (RSreportserver.config)](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)

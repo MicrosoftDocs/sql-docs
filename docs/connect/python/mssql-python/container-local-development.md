@@ -604,7 +604,7 @@ uv run pytest
 ## Related content
 
 - [Install mssql-python](installation.md)
-- [Support lifecycle](support-lifecycle.md)
-- [Connection strings](connection-strings.md)
-- [Microsoft Entra authentication](entra-authentication.md)
-- [Quickstart: Repeatable deployments](python-sql-driver-mssql-python-repeatable-deployments-quickstart.md)
+- [Support lifecycle for mssql-python](support-lifecycle.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Microsoft Entra authentication with mssql-python](entra-authentication.md)
+- [Quickstart: Repeatable deployments with the mssql-python driver for Python](python-sql-driver-mssql-python-repeatable-deployments-quickstart.md)

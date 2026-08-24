@@ -193,14 +193,14 @@ Exit the shell with `exit()`. Alternatively, use <kbd>Ctrl</kbd>+<kbd>Z</kbd> on
 > python manage.py migrate myapp
 > ```
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [mssql-django configuration reference](configuration-reference.md)
+
 ## Related content
 
 - [Install mssql-django](installation.md)
 - [Django field to SQL Server type mappings](data-type-mappings.md)
 - [Django tutorial](https://docs.djangoproject.com/en/stable/intro/tutorial01)
 - [mssql-django on GitHub](https://github.com/microsoft/mssql-django)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [mssql-django configuration reference](configuration-reference.md)

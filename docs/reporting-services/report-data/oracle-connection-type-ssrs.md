@@ -204,6 +204,6 @@ For more information about platform and version support, see [Data sources suppo
 
 ## Related content
 
-- [Paginated report parameters in Report Builder](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
-- [Filter, group, and sort data in Report Builder paginated reports](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
-- [Expressions in a paginated report (Report Builder)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Paginated report parameters in Report Builder](../report-design/report-parameters-report-builder-and-report-designer.md)
+- [Filter, group, and sort data in Report Builder paginated reports](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](../report-design/expressions-report-builder-and-ssrs.md)

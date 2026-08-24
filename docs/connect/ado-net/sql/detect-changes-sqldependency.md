@@ -90,6 +90,6 @@ void Termination()
 }
 ```
 
-## Next steps
+## Related content
 
 - [Query notifications in SQL Server](query-notifications-sql-server.md)

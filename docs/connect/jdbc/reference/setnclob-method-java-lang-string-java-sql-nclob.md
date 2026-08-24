@@ -39,8 +39,7 @@ public final void setNClob(java.lang.String parameterName,
   
  This setNClob method is specified by the setNClob method in the java.sql.CallableStatement interface.  
   
-## See Also  
- [setNClob Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlservercallablestatement.md)   
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
-  
-  
+## Related content
+
+- [setNClob Method (SQLServerCallableStatement)](setnclob-method-sqlservercallablestatement.md)
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)

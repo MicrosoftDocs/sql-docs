@@ -107,5 +107,5 @@ Requires `ALTER` permissions on the table.
 - [Unique constraints and check constraints](unique-constraints-and-check-constraints.md)
 - [Column Properties (General Page)](column-properties-general-page.md)
 - [Add Columns to a Table (Database Engine)](add-columns-to-a-table-database-engine.md)
-- [Specify Default Values for Columns](specify-default-values-for-columns.md)
+- [Specify default values for columns](specify-default-values-for-columns.md)
 - [Create unique constraints](create-unique-constraints.md)

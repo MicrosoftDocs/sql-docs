@@ -106,6 +106,7 @@ SQLRETURN SQLCancel(
 |Sending parameter data at execution time|[SQLPutData Function](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |Positioning the cursor in a rowset, refreshing data in the rowset, or updating or deleting data in the result set|[SQLSetPos Function](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

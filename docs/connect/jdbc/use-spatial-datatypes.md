@@ -151,6 +151,6 @@ These methods are the new public APIs that have been introduced with this additi
 
 3. Stored procedures, TVP, and BulkCopy operations are currently not supported with spatial data types.
 
-## See also
+## Related content
 
-[Spatial data types sample (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)
+- [Spatial data types sample](spatial-data-types-sample.md)

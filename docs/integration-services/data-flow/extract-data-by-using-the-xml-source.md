@@ -54,10 +54,9 @@ helpviewer_keywords:
   
 11. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
- [XML Source](../../integration-services/data-flow/xml-source.md)   
- [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md)   
- [Data Flow Task](../../integration-services/control-flow/data-flow-task.md)  
-  
-  
+## Related content
+
+- [XML Source](xml-source.md)
+- [Integration Services Transformations](transformations/integration-services-transformations.md)
+- [Integration Services Paths](integration-services-paths.md)
+- [Data Flow Task](../control-flow/data-flow-task.md)

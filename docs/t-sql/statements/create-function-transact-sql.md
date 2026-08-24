@@ -905,6 +905,6 @@ The definition of functions created by using the `ENCRYPTION` option can't be vi
 - [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
 - [sys.assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)
 - [EXECUTE (Transact-SQL)](../language-elements/execute-transact-sql.md)
-- [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)
+- [CLR user-defined functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [CREATE SECURITY POLICY (Transact-SQL)](create-security-policy-transact-sql.md)

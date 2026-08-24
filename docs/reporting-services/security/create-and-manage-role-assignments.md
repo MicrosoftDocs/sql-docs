@@ -64,8 +64,8 @@ You can delete role assignments by selecting the checkbox by each assignment you
 
 ## Related content
 
-- [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)
-- [Role assignments](../../reporting-services/security/role-assignments.md)
-- [Role definitions](../../reporting-services/security/role-definitions.md)
-- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Grant users access to a report server](grant-user-access-to-a-report-server.md)
+- [Role assignments](role-assignments.md)
+- [Role definitions](role-definitions.md)
+- [Predefined roles in Reporting Services](role-definitions-predefined-roles.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)

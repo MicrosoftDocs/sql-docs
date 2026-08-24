@@ -52,4 +52,4 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 ## Related content
 
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
-- [Catalog Views (Transact-SQL)](catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)

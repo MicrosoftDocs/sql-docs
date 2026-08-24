@@ -52,7 +52,6 @@ WHERE session_id = (
 	SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## See Also  
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
-  
-  
+## Related content
+
+- [dbo.sysjobhistory (Transact-SQL)](dbo-sysjobhistory-transact-sql.md)

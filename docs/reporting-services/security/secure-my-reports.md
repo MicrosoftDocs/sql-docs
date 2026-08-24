@@ -47,6 +47,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)
-- [Secure folders](../../reporting-services/security/secure-folders.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Secure reports and resources](secure-reports-and-resources.md)
+- [Secure folders](secure-folders.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)

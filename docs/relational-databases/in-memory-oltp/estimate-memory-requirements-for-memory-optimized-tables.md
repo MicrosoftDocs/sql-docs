@@ -209,4 +209,4 @@ This optimization is more relevant for large machines with many logical CPUs. Th
 
 ## Related content
 
-- [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)
+- [Plan your adoption of In-Memory OLTP Features in SQL Server](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

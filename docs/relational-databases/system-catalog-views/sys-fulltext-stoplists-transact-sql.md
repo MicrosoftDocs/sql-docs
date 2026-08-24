@@ -45,7 +45,7 @@ Contains a row per full-text stoplist in the database.
 - [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [sys.fulltext_system_stopwords (Transact-SQL)](sys-fulltext-system-stopwords-transact-sql.md)
 - [sys.fulltext_stopwords (Transact-SQL)](sys-fulltext-stopwords-transact-sql.md)
-- [Configure and Manage Stopwords and Stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
+- [Configure and manage stopwords and stoplists for Full-Text Search](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)
 - [CREATE FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)
 - [ALTER FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)
 - [DROP FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)

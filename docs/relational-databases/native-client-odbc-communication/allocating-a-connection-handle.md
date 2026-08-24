@@ -31,7 +31,6 @@ helpviewer_keywords:
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver has a number of extended connection attributes that an application can use to increase its functionality. Some of these attributes control the same options that can be specified in data sources and used to override whatever option is set in a data source. For example, if an application uses quoted identifiers, it can set the driver-specific attribute SQL_COPT_SS_QUOTED_IDENT to SQL_QI_ON to ensure this option is always set regardless of the setting in any data source.  
   
-## See Also  
- [Communicating with SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
-  
-  
+## Related content
+
+- [Communicating with SQL Server (ODBC)](communicating-with-sql-server-odbc.md)

@@ -55,6 +55,7 @@ helpviewer_keywords:
   
 8.  Click **OK**.  
   
-## See Also  
- [Create a Consolidated Member &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
- [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)
+## Related content
+
+- [Create a Consolidated Member (Master Data Services)](create-a-consolidated-member-master-data-services.md)
+- [Members (Master Data Services)](members-master-data-services.md)

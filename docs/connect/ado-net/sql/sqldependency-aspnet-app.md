@@ -54,6 +54,6 @@ The application caches the data displayed on the Web form and refreshes it every
 
 Now update the data in the database using a Transact-SQL UPDATE command and refresh the page. The time displayed now indicates the cache was refreshed with the new data from the database. Although the cache is updated, the time displayed on the page doesn't change until a postback event occurs.
 
-## Next steps
+## Related content
 
 - [Query notifications in SQL Server](query-notifications-sql-server.md)

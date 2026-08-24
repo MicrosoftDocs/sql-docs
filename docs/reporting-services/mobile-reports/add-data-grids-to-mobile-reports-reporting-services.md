@@ -76,7 +76,7 @@ When you add a chart column to a data grid, you need to add a separate data tabl
 
 ## Related content
 
-- [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
-- [Navigators in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
-- [Visualizations in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
-- [Gauges in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
+- [Maps in Reporting Services mobile reports](maps-in-reporting-services-mobile-reports.md)
+- [Add navigators to Reporting Services mobile reports](add-navigators-to-reporting-services-mobile-reports.md)
+- [Add visualizations to Reporting Services mobile reports](add-visualizations-to-reporting-services-mobile-reports.md)
+- [Add gauges to mobile reports](add-gauges-to-mobile-reports-reporting-services.md)

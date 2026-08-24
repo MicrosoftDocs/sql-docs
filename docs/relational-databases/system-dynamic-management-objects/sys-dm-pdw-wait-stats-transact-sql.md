@@ -29,6 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |**completed_count**|**bigint**|Total number of waits of this type completed since the last server restart.||  
 |**wait_time**|**bigint**|Total wait time for this wait type in milliseconds. Inclusive of signal_time.||  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [sys.dm_pdw_waits &#40;Transact-SQL&#41;](sys-dm-pdw-waits-transact-sql.md)
+## Related content
+
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [sys.dm_pdw_waits (Transact-SQL)](sys-dm-pdw-waits-transact-sql.md)

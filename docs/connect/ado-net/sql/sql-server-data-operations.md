@@ -28,5 +28,6 @@ Describes how to perform asynchronous database operations by using an API that i
 [Table-valued parameters](table-valued-parameters.md)  
 Describes how to work with table-valued parameters, which were introduced in SQL Server 2008.  
   
-## Next steps
+## Related content
+
 - [SQL Server and ADO.NET](index.md)

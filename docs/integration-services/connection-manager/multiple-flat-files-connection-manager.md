@@ -269,9 +269,8 @@ ms.custom: sfi-ropc-nochange
  **Preview rows**  
  View sample data in the first selected flat file, divided into columns and rows by using the options selected.  
   
-## See Also  
- [Flat File Source](../../integration-services/data-flow/flat-file-source.md)   
- [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
-  
+## Related content
+
+- [Flat File Source](../data-flow/flat-file-source.md)
+- [Flat File Destination](../data-flow/flat-file-destination.md)
+- [Integration Services (SSIS) Connections](integration-services-ssis-connections.md)

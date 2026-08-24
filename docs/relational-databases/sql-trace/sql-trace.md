@@ -155,8 +155,7 @@ SQL Trace uses data columns in the trace output to describe events that are retu
 |Describes how to minimize the amount of data that the trace collects.|[Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Describes the two ways to schedule tracing in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Schedule Traces](../../relational-databases/sql-trace/schedule-traces.md)|  
   
-## See Also  
- [SQL Server Profiler Templates and Permissions](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
-  
-  
+## Related content
+
+- [SQL Server Profiler templates and permissions](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)
+- [SQL Server Management Objects (SMO) Programming Guide](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)

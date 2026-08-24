@@ -41,9 +41,9 @@ You can add test conditions to a SQL Server unit test by using the **SQL Server 
 ## Related content
 
 - [Create and define SQL Server unit tests](creating-and-defining-sql-server-unit-tests.md)
-- [How to: Create an Empty SQL Server Unit Test](how-to-create-an-empty-sql-server-unit-test.md)
-- [How to: Create SQL Server Unit Tests for Functions, Triggers, and Stored Procedures](how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)
+- [How to: Create an empty SQL Server unit test](how-to-create-an-empty-sql-server-unit-test.md)
+- [How to: Create SQL Server unit tests for functions, triggers, and stored procedures](how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)
 - [Use test conditions in SQL Server unit tests](using-test-conditions-in-sql-server-unit-tests.md)
-- [Scripts in SQL Server Unit Tests](scripts-in-sql-server-unit-tests.md)
+- [Scripts in SQL Server unit tests](scripts-in-sql-server-unit-tests.md)
 - [Interpret SQL Server unit test results](interpreting-sql-server-unit-test-results.md)
 - [How to: Run SQL Server unit tests](how-to-run-sql-server-unit-tests.md)

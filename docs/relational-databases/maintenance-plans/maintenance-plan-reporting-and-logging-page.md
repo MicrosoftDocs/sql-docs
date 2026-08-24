@@ -55,7 +55,7 @@ Use the **Reporting and Logging** dialog box to configure the reports and logs t
 
   Displays the **Connection Properties** dialog box. Used to configure new connection information for logging to a remote server.
 
-## See also
+## Related content
 
-- [Maintenance Plans](maintenance-plans.md)
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Maintenance plans](maintenance-plans.md)
+- [Database Mail](../database-mail/database-mail.md)

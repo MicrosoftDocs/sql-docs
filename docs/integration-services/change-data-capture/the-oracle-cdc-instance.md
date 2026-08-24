@@ -34,7 +34,6 @@ ms.topic: concept-article
   
 -   **Handling recovery**: When an Oracle CDC Instance starts its internal state is restored from the **xdbcdc_state** and the **xdbcdc_staged_transactions** tables. Once the state is restored, the CDC instance proceeds as usual.  
   
-## See Also  
- [Error Handling](../../integration-services/change-data-capture/error-handling.md)  
-  
-  
+## Related content
+
+- [Error Handling](error-handling.md)

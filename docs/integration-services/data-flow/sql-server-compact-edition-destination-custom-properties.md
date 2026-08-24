@@ -23,6 +23,6 @@ ms.topic: reference
   
  For more information, see [SQL Server Compact Edition Destination](../../integration-services/data-flow/sql-server-compact-edition-destination.md).  
   
-## See Also  
- [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
-  
+## Related content
+
+- [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)

@@ -42,7 +42,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**StartTime**|**datetime**|Time at which the event started, if available.|14|Yes|  
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Related content
+
+- [Extended Events overview](../extended-events/extended-events.md)

@@ -23,8 +23,7 @@ helpviewer_keywords:
 |DBSCHEMA_TABLE_TYPE_PRIMARY_KEYS|This rowset was added to support table-valued parameters. It is identical to DBSCHEMA_PRIMARY_KEYS, except that it returns primary keys metadata only for table types, rather than for tables.|  
 |DBSCHEMA_TABLE_TYPE_COLUMNS|This rowset was added to support table-valued parameters. It is identical to DBSCHEMA_COLUMNS, except that it returns column metadata only for table types, rather than for tables, views, or synonyms.|  
 
-## See Also  
- [Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Use Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
-  
-  
+## Related content
+
+- [Table-Valued Parameters  in SQL Server Native Client (OLE DB)](table-valued-parameters-ole-db.md)
+- [Use Table-Valued Parameters in SQL Server Native Client (OLE DB)](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)

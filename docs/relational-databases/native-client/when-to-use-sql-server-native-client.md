@@ -32,8 +32,8 @@ helpviewer_keywords:
   
  For information about the differences between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client and MDAC, see [Updating an Application to SQL Server Native Client from MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
-## See Also  
- [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB How-to Topics](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
+## Related content
+
+- [SQL Server Native Client Programming](sql-server-native-client-programming.md)
+- [ODBC How-to Topics](../native-client-odbc-how-to/odbc-how-to-topics.md)
+- [OLE DB How-to Topics (Native Client OLE DB provider)](../native-client-ole-db-how-to/ole-db-how-to-topics.md)

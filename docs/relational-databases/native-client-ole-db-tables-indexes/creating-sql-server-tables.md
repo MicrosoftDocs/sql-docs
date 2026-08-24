@@ -208,7 +208,6 @@ SAFE_EXIT:
     }  
 ```  
   
-## See Also  
- [Tables and Indexes](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
-  
-  
+## Related content
+
+- [Tables and Indexes in SQL Server Native Client](tables-and-indexes.md)

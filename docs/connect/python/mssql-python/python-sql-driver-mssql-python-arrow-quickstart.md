@@ -350,13 +350,12 @@ code .
 
 1. **Parquet I/O**: `pyarrow.parquet.write_table()` saves the Arrow table to a compressed Parquet file. This format preserves column types and supports efficient partial reads.
 
-## Next steps
-
-Use these articles to keep building:
-
-- [Arrow integration](arrow-integration.md) for advanced Arrow patterns including batch processing, memory management, and library interop.
-- [pandas integration](pandas-integration.md) to load query results directly into DataFrames.
-- [Polars integration](polars-integration.md) to build Polars DataFrames from Arrow-native queries.
+## Next step
 
 > [!div class="nextstepaction"]
 > [Arrow integration](arrow-integration.md)
+
+## Related content
+
+- [Use mssql-python with pandas](pandas-integration.md)
+- [Use mssql-python with Polars](polars-integration.md)

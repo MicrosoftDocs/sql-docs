@@ -72,6 +72,6 @@ For additional examples, see [Example *JARO_WINKLER_DISTANCE*](../../relational-
 
 ## Related content
 
-- [EDIT_DISTANCE (Transact-SQL)](edit-distance-transact-sql.md)
-- [EDIT_DISTANCE_SIMILARITY (Transact-SQL)](edit-distance-similarity-transact-sql.md)
-- [JARO_WINKLER_SIMILARITY (Transact-SQL)](jaro-winkler-similarity-transact-sql.md)
+- [EDIT_DISTANCE (Transact-SQL) preview](edit-distance-transact-sql.md)
+- [EDIT_DISTANCE_SIMILARITY (Transact-SQL) preview](edit-distance-similarity-transact-sql.md)
+- [JARO_WINKLER_SIMILARITY (Transact-SQL) preview](jaro-winkler-similarity-transact-sql.md)

@@ -175,11 +175,11 @@ pr_info
 (1 row(s) affected)  
 ```  
   
-## See Also  
- [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
- [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
-  
+## Related content
+
+- [DATALENGTH (Transact-SQL)](datalength-transact-sql.md)
+- [PATINDEX (Transact-SQL)](patindex-transact-sql.md)
+- [READTEXT (Transact-SQL)](../queries/readtext-transact-sql.md)
+- [SET TEXTSIZE (Transact-SQL)](../statements/set-textsize-transact-sql.md)
+- [UPDATETEXT (Transact-SQL)](../queries/updatetext-transact-sql.md)
+- [WRITETEXT (Transact-SQL)](../queries/writetext-transact-sql.md)

@@ -40,9 +40,8 @@ public void updateBigDecimal(int index,
 ## Remarks  
  This updateBigDecimal method is specified by the updateBigDecimal method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateBigDecimal Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateBigDecimal Method (SQLServerResultSet)](updatebigdecimal-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

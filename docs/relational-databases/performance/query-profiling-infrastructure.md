@@ -271,5 +271,5 @@ Extended Events that use lightweight profiling use information from standard pro
 - [sys.dm_exec_query_profiles](../system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)
 - [Set trace flags with DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [Logical and physical showplan operator reference](../showplan-logical-and-physical-operators-reference.md)
-- [actual execution plan](display-an-actual-execution-plan.md)
-- [Live Query Statistics](live-query-statistics.md)
+- [Display an actual execution plan](display-an-actual-execution-plan.md)
+- [Live query statistics](live-query-statistics.md)

@@ -90,8 +90,7 @@ ProductModelID Result
   
 -   The **ceiling()** function maps all integer values to xs:decimal.  
   
-## See Also  
- [floor Function &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
- [round Function &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
-  
-  
+## Related content
+
+- [Numeric Values Functions - floor](numeric-values-functions-floor.md)
+- [Numeric Values Functions - round](numeric-values-functions-round.md)

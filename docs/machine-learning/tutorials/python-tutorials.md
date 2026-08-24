@@ -44,6 +44,6 @@ If you are new to SQL machine learning, you can also try the Python quickstarts.
 | [Data structures and objects using Python](quickstart-python-data-structures.md) | Shows how SQL uses the Python pandas package to handle data structures. |
 | [Create and score a predictive model in Python](quickstart-python-train-score-model.md) | Explains how to create, train, and use a Python model to make predictions from new data. |
 
-## Next steps
+## Related content
 
-+ [Python extension in SQL Server](../concepts/extension-python.md)
+- [Python language extension in SQL Server Machine Learning Services](../concepts/extension-python.md)

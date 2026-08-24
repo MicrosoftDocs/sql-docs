@@ -355,7 +355,6 @@ $i.IndexedColumns.Add($ic)
 $i.Create()  
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.Index>  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.Index>

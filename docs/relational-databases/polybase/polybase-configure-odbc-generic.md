@@ -272,5 +272,5 @@ The following Transact-SQL commands are used in this section:
 
 ## Related content
 
-- [Data virtualization with PolyBase in SQL Server](overview.md)
+- [PolyBase overview](overview.md)
 - [PolyBase Transact-SQL reference](polybase-t-sql-objects.md)

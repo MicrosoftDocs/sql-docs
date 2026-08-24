@@ -106,15 +106,10 @@ helpviewer_keywords:
 |Excluded|Specifies whether the business rule is excluded.|  
 |Notification|Specifies the selected user or group to send the email notification to.|  
   
-## Next Steps  
-  
--   Apply business rules to data by following one of these procedures:  
-  
-    -   [Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
-  
-    -   [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
-  
-## See Also  
- [Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
- [Change a Business Rule Name &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)
+## Related content
+
+- [Configure Business Rules to Send Notifications (Master Data Services)](configure-business-rules-to-send-notifications-master-data-services.md)
+- [Change a Business Rule Name (Master Data Services)](change-a-business-rule-name-master-data-services.md)
+- [Add Multiple Conditions to a Business Rule (Master Data Services)](add-multiple-conditions-to-a-business-rule-master-data-services.md)
+- [Validate Specific Members against Business Rules (Master Data Services)](validate-specific-members-against-business-rules-master-data-services.md)
+- [Validate a Version against Business Rules (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)

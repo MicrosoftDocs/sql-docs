@@ -87,8 +87,8 @@ After you have enabled this feature, you can use RevoScaleR function to install 
 
     This command removes the package management feature from the instance. You might need to manually restart the Launchpad service once more to see changes.
 
-## Next steps
+## Related content
 
-+ [Use RevoScaleR to install R packages](install-r-packages-with-revoscaler.md)
-+ [Get R package information](r-package-information.md)
-+ [Tips for using R packages](tips-for-using-r-packages.md)
+- [Use RevoScaleR to install R packages](install-r-packages-with-revoscaler.md)
+- [Get R package information](r-package-information.md)
+- [Tips for using R packages](tips-for-using-r-packages.md)

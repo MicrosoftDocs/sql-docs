@@ -123,9 +123,7 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## See Also  
- [Transactions](../../oledb/ole-db-transactions/transactions.md)   
- [Working with Snapshot Isolation](../../oledb/features/working-with-snapshot-isolation.md)  
-  
-  
+## Related content
 
+- [Transactions](transactions.md)
+- [Working with Snapshot Isolation](../features/working-with-snapshot-isolation.md)

@@ -40,11 +40,11 @@ Describes <xref:System.Transactions> integration with SQL Server for working wit
 [Optimistic concurrency](optimistic-concurrency.md) 
 Describes optimistic and pessimistic concurrency, and how you can test for concurrency violations.  
 
-## See also
+## Related content
 
 - [Transaction fundamentals](/dotnet/framework/data/transactions/transaction-fundamentals)
-- [Connecting to data source](connecting-to-data-source.md)
+- [Connecting to a data source in ADO.NET](connecting-to-data-source.md)
 - [Commands and parameters](commands-parameters.md)
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [DbProviderFactories](dbproviderfactories.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

@@ -77,4 +77,4 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Related content
 
-- [sp_setreplfailovermode (Transact-SQL)](sp-setreplfailovermode-transact-sql.md)
+- [sys.sp_setreplfailovermode (Transact-SQL)](sp-setreplfailovermode-transact-sql.md)

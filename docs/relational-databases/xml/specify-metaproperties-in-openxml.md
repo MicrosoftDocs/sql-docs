@@ -212,8 +212,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>
 ```
 
-## See also
+## Related content
 
-- [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)
-- [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)
-
+- [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+- [OPENXML (SQL Server)](openxml-sql-server.md)

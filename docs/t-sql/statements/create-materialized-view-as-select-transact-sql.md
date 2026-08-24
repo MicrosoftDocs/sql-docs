@@ -112,11 +112,11 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction doesn't apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED VIEW with REBUILD.
+- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction doesn't apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED VIEW with REBUILD.
   
 ## Remarks
 
-A materialized view in Azure data warehouse is similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](../../relational-databases/views/create-indexed-views.md) for details) except that a materialized view supports aggregate functions.   
+A materialized view in Azure data warehouse is similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](../../relational-databases/views/create-indexed-views.md) for details) except that a materialized view supports aggregate functions.   
 
 >[!Note]
 >Although CREATE MATERIALIZED VIEW does not support COUNT, DISTINCT, COUNT(DISTINCT expression), or COUNT_BIG (DISTINCT expression), SELECT queries with these functions can still benefit from materialized views for faster performance as the Synapse SQL optimizer can automatically re-write those aggregations in the user query to match existing materialized views.  For details, check this article's example section. 
@@ -131,7 +131,7 @@ A materialized view can't be created on a table with dynamic data masking (DDM),
 
 A materialized view can't be created on a table with row level security enabled.
 
-Materialized Views can be created on partitioned tables.  Partition SPLIT/MERGE are supported on materialized views base tables, partition SWITCH isn't supported.  
+Materialized Views can be created on partitioned tables.  Partition SPLIT/MERGE are supported on materialized views base tables, partition SWITCH isn't supported.  
  
 ALTER TABLE SWITCH is not supported on tables that are referenced in materialized views. Disable or drop the materialized views before using ALTER TABLE SWITCH. In the following scenarios, the materialized view creation requires new columns to be added to the materialized view:
 
@@ -257,19 +257,16 @@ revert;
 GO
 ```
 
-## See also
+## Related content
 
-- [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](./alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)      
-- [DROP VIEW](./drop-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)  
-- [EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-- [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-- [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-- [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-- [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-- [[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-- [System views supported in Azure [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+- [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](./alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [DROP VIEW](./drop-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [System views supported in Azure [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)
 - [T-SQL statements supported in Azure [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
-
-## Next steps
-
 - [Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)

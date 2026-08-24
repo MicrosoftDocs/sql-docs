@@ -187,6 +187,5 @@ GO
 
 ## Related content
 
-- [sp_refreshview (Transact-SQL)](sp-refreshview-transact-sql.md)
+- [sys.sp_refreshview (Transact-SQL)](sp-refreshview-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-

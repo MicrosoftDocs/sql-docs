@@ -109,4 +109,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)
+- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)

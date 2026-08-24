@@ -68,7 +68,6 @@ ProductModelID Result
        </LastTwoManuSteps>  
 ```  
   
-## See Also  
- [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)  
-  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)

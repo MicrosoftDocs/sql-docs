@@ -28,7 +28,6 @@ ms.topic: reference
 |TableName|String|The name of the table with the data that is being used when AccessMode is set to Table Name.|  
 |LobChunckSize|Integer|The chunk size allocation for LOB columns.|  
   
-## See Also  
- [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
- [ODBC Source Editor &#40;Connection Manager Page&#41;](./odbc-source.md)  
-  
+## Related content
+
+- [ODBC Source](odbc-source.md)

@@ -64,7 +64,7 @@ EXECUTE sp_denylogin 'CORPORATE\GeorgeV';
 
 ## Related content
 
-- [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
+- [sys.sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

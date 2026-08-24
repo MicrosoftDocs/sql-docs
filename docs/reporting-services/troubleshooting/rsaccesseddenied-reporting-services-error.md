@@ -45,6 +45,6 @@ Local administration of the report server causes this error. For more informatio
 
 ## Related content
 
-- [Role assignments](../../reporting-services/security/role-assignments.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
-- [Roles and permissions in Reporting Services](../../reporting-services/security/roles-and-permissions-reporting-services.md)
+- [Role assignments](../security/role-assignments.md)
+- [Grant permissions on a native mode report server](../security/granting-permissions-on-a-native-mode-report-server.md)
+- [Roles and permissions in Reporting Services](../security/roles-and-permissions-reporting-services.md)

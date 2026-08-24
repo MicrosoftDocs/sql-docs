@@ -48,5 +48,6 @@ helpviewer_keywords:
   
 5.  On the confirmation dialog box, click **OK**.  
   
-## See Also  
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)
+## Related content
+
+- [Security (Master Data Services)](security-master-data-services.md)

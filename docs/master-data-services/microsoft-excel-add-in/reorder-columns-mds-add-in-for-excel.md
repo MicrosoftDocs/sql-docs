@@ -48,5 +48,6 @@ ms.custom:
   
 8.  Click **Load Data**. The sheet is populated with MDS-managed data and the columns are displayed in the order you specified.  
   
-## See Also  
- [Overview: Exporting Data to Excel &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)
+## Related content
+
+- [Overview: Exporting Data to Excel (MDS Add-in for Excel)](overview-exporting-data-to-excel-mds-add-in-for-excel.md)

@@ -47,13 +47,13 @@ sys.dm_hs_database_log_rate (
 
 #### database_id
 
-*database_id* is an **integer** representing the database ID, with no default value. Valid inputs are either a database ID or `NULL`.
+*database_id* is an **integer** representing the database ID, with no default value. Valid inputs are either a database ID or `NULL`.
 
 When a `database_id` is provided, `sys.dm_hs_database_log_rate` returns a row for that specific database.
 
 When not provided or when `NULL` is provided, for a single database, returns a row for the current database. For a database in an elastic pool, returns rows for all databases in the pool where the caller has sufficient [permissions](#permissions).
 
-The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified.
+The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified.
 
 ## Table Returned
 

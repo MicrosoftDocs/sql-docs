@@ -361,7 +361,6 @@ helpviewer_keywords:
  **Close**  
  Click to close the **Execute Package Utility** dialog box.  
   
-## See Also  
- [dtexec Utility](../../integration-services/packages/dtexec-utility.md)  
-  
-  
+## Related content
+
+- [dtexec Utility](dtexec-utility.md)

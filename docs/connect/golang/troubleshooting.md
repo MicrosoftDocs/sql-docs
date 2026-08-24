@@ -407,9 +407,9 @@ For programmatic logging, use `SetLogger` or `SetContextLogger`. See [Logging an
 
 ## Related content
 
-- [Error handling and retry patterns](error-handling.md)
-- [Connection pooling](connection-pooling.md)
-- [Azure SQL Database](azure-sql.md)
-- [Transactions](transactions.md)
-- [Logging and diagnostics](logging-diagnostics.md)
-- [Known limitations](known-limitations.md)
+- [Error handling and retry patterns with go-mssqldb](error-handling.md)
+- [Connection pooling with go-mssqldb](connection-pooling.md)
+- [Use go-mssqldb with Azure SQL Database](azure-sql.md)
+- [Transactions with go-mssqldb](transactions.md)
+- [Logging and diagnostics with go-mssqldb](logging-diagnostics.md)
+- [go-mssqldb Limitations](known-limitations.md)

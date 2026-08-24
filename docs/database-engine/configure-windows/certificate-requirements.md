@@ -205,7 +205,8 @@ Computer name: sqlserver.domain.com
 
 ## Next step
 
-- [Configure the SQL Server Database Engine to encrypt connections](configure-sql-server-encryption.md) by importing a certificate. 
+> [!div class="nextstepaction"]
+> [Configure the SQL Server Database Engine to encrypt connections](configure-sql-server-encryption.md) by importing a certificate. 
 
 ## Related content
 

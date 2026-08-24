@@ -1618,7 +1618,6 @@ GO
 - [Best practices for monitoring workloads with Query Store](performance/best-practice-with-the-query-store.md)
 - [Cardinality Estimation (SQL Server)](performance/cardinality-estimation-sql-server.md)
 - [Intelligent query processing in SQL databases](performance/intelligent-query-processing.md)
-- [Operator Precedence (Transact-SQL)](../t-sql/language-elements/operator-precedence-transact-sql.md)
+- [Operator precedence (Transact-SQL)](../t-sql/language-elements/operator-precedence-transact-sql.md)
 - [Execution plan overview](performance/execution-plans.md)
 - [Performance Center for SQL Server Database Engine and Azure SQL Database](performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
-

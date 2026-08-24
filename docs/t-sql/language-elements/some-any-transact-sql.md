@@ -141,13 +141,13 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
 
 `At least one item for this order can't be manufactured in specified number of days.`
 
-## See also
+## Related content
 
-- [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)
-- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)
-- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)
-- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
-- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
-- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)
-- [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)
-- [IS [NOT] DISTINCT FROM (Transact-SQL)](../../t-sql/queries/is-distinct-from-transact-sql.md)
+- [ALL (Transact-SQL)](all-transact-sql.md)
+- [CASE (Transact-SQL)](case-transact-sql.md)
+- [What are the SQL database functions?](../functions/functions.md)
+- [Operators (Transact-SQL)](operators-transact-sql.md)
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
+- [WHERE (Transact-SQL)](../queries/where-transact-sql.md)
+- [IN (Transact-SQL)](in-transact-sql.md)
+- [IS \[NOT\] DISTINCT FROM (Transact-SQL)](../queries/is-distinct-from-transact-sql.md)

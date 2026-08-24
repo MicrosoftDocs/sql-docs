@@ -166,15 +166,15 @@ The following example drops Anna's membership in the `LargeRC` server role.
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   
-## Next steps
+## Related content
 
-- [CREATE SERVER ROLE (Transact-SQL)](../../t-sql/statements/create-server-role-transact-sql.md)
-- [DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)
-- [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)
-- [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)
-- [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)
-- [Security Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)
-- [Security Functions (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)
+- [CREATE SERVER ROLE (Transact-SQL)](create-server-role-transact-sql.md)
+- [DROP SERVER ROLE (Transact-SQL)](drop-server-role-transact-sql.md)
+- [CREATE ROLE (Transact-SQL)](create-role-transact-sql.md)
+- [ALTER ROLE (Transact-SQL)](alter-role-transact-sql.md)
+- [DROP ROLE (Transact-SQL)](drop-role-transact-sql.md)
+- [Security stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)
+- [Security Functions (Transact-SQL)](../functions/security-functions-transact-sql.md)
 - [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
 - [sys.server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)

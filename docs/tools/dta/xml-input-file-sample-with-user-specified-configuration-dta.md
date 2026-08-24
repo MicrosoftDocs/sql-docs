@@ -90,9 +90,8 @@ Copy and paste this sample of an XML input file that specifies a user-specified 
   
 -   You cannot create and drop the same physical design structure in either mode (**Relative** or **Absolute**) of the **Configuration** element.  
   
-## See Also  
- [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
- [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
-  
-  
+## Related content
+
+- [Start and use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)
+- [View and Work with the Output from the Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)
+- [XML Input File Reference (Database Engine Tuning Advisor)](xml-input-file-reference-database-engine-tuning-advisor.md)

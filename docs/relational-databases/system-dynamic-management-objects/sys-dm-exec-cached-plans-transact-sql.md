@@ -120,7 +120,7 @@ WHERE cacheobjtype = 'Compiled Plan';
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_exec_query_plan (Transact-SQL)](sys-dm-exec-query-plan-transact-sql.md)
 - [sys.dm_exec_plan_attributes (Transact-SQL)](sys-dm-exec-plan-attributes-transact-sql.md)

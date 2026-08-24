@@ -22,5 +22,6 @@ helpviewer_keywords:
 |*szTableQualifier*|In the TABLE_QUALIFIER column, **SQLTables** will return the path to a directory.|  
 |*SzTableType*|For Paradox files, "TABLE" is the only table type supported.|  
   
-## See Also  
- [SQLTables Function](../../odbc/reference/syntax/sqltables-function.md)
+## Related content
+
+- [SQLTables Function](../reference/syntax/sqltables-function.md)

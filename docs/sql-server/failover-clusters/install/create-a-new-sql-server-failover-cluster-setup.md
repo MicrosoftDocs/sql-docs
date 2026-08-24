@@ -396,11 +396,8 @@ helpviewer_keywords:
   
 19. After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes. To complete the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation process, select **Close**. With this step, all the prepared nodes for the same failover cluster instance are now part of the completed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
   
-## Next Steps  
- **Configure your new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation** - To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
-  
- For more information about log file locations, see [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
-  
-## See Also  
- [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
-  
+## Related content
+
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+- [Surface area configuration](../../../relational-databases/security/surface-area-configuration.md)
+- [View and read SQL Server Setup log files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)

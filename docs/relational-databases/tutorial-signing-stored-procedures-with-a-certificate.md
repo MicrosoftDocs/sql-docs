@@ -276,7 +276,6 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## See Also  
-[Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
-  
+## Related content
+
+- [Security for SQL Server Database Engine and Azure SQL Database](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)

@@ -39,5 +39,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)
-- [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
+- [Reporting Services concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)

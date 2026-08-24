@@ -171,5 +171,6 @@ helpviewer_keywords:
  **Browse (...)**  
  Select a path for the error log.  
   
-## See Also  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)
+## Related content
+
+- [Integration Services error and message reference](../integration-services-error-and-message-reference.md)

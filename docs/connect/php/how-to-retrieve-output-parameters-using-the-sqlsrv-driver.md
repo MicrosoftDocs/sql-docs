@@ -142,10 +142,8 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## See Also  
-[How to: Specify Parameter Direction Using the SQLSRV Driver](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+## Related content
 
-[How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
-
-[Retrieving Data](../../connect/php/retrieving-data.md)  
-  
+- [How to: Specify Parameter Direction Using the SQLSRV Driver](how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+- [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+- [Retrieving Data](retrieving-data.md)

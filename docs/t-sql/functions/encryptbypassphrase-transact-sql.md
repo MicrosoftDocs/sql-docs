@@ -95,9 +95,7 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## See Also  
- [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
 
+- [DECRYPTBYPASSPHRASE (Transact-SQL)](decryptbypassphrase-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

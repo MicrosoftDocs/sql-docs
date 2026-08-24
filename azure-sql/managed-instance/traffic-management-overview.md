@@ -84,7 +84,7 @@ To learn more about the security capabilities of Azure SQL Managed Instance, see
 
 ## Related content
 
-- For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md)
+- For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md)
 - To learn more, see:
   - [Virtual cluster architecture](virtual-cluster-architecture.md).
   - [Connectivity architecture](connectivity-architecture-overview.md).

@@ -75,5 +75,5 @@ For information about converting character data, see [char and varchar](char-and
 - [LIKE (Transact-SQL)](../language-elements/like-transact-sql.md)
 - [SET ANSI_PADDING (Transact-SQL)](../statements/set-ansi-padding-transact-sql.md)
 - [SET @local_variable (Transact-SQL)](../language-elements/set-local-variable-transact-sql.md)
-- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+- [Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)
 - [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

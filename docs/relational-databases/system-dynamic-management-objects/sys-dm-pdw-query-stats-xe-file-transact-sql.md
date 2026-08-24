@@ -22,5 +22,6 @@ monikerRange: ">=aps-pdw-2016"
 |data|**xml**|||  
 |pdw_node_id|**int**|Node on which this Xevent instance is running.||  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+## Related content
+
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)

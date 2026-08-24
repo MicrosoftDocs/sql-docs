@@ -87,8 +87,7 @@ You must have the dqs_kb_editor role on the DQS_MAIN database to map domains to 
 ##  <a name="FollowUp"></a> Follow Up: After Mapping a Domain to Reference Data  
  Create a data quality project, and run the cleansing activity on your source data containing US addresses by comparing it against the knowledge base created in this topic. See [Cleanse Data Using Reference Data &#40;External&#41; Knowledge](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## See Also  
- [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)   
- [Data Cleansing](../data-quality-services/data-cleansing.md)  
-  
-  
+## Related content
+
+- [Reference Data Services in DQS](reference-data-services-in-dqs.md)
+- [Data Cleansing](data-cleansing.md)

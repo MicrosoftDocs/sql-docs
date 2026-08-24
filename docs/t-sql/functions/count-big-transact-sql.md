@@ -292,6 +292,6 @@ ProductCount   SalesOrderID
 
 ## Related content
 
-- [Aggregate Functions (Transact-SQL)](aggregate-functions-transact-sql.md)
+- [Aggregate functions (Transact-SQL)](aggregate-functions-transact-sql.md)
 - [COUNT (Transact-SQL)](count-transact-sql.md)
-- [int, bigint, smallint, and tinyint](../data-types/int-bigint-smallint-and-tinyint-transact-sql.md)
+- [int, bigint, smallint, and tinyint (Transact-SQL)](../data-types/int-bigint-smallint-and-tinyint-transact-sql.md)

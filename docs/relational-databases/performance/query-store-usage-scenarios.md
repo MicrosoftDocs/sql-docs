@@ -212,8 +212,8 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## Next steps
+## Related content
 
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
-- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)         
-- [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)  
+- [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
+- [Best practices for monitoring workloads with Query Store](best-practice-with-the-query-store.md)
+- [Upgrade databases using the Query Tuning Assistant](upgrade-dbcompat-using-qta.md)

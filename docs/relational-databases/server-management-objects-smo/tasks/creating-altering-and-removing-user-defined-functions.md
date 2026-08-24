@@ -129,7 +129,6 @@ $udf.Create()
 $udf.Drop()  
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>

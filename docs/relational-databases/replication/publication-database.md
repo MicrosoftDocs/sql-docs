@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
-- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
-- [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)
+- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)
+- [Create a publication](publish/create-a-publication.md)
+- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)
+- [sys.sp_replicationdboption (Transact-SQL)](../system-stored-procedures/sp-replicationdboption-transact-sql.md)

@@ -149,5 +149,6 @@ This tutorial is finished. To return to the start, visit [Tutorial: Administerin
   
 For a list of tutorials, see [Tutorials for SQL Server](../../sql-server/tutorials-for-sql-server.md).
   
-## See Also  
-[Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
+## Related content
+
+- [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)

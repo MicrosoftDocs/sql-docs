@@ -90,8 +90,8 @@ NATURAL PREDICTION JOIN
   
  **Note** This example is provided only to illustrate the usage of **TopSum**. Depending on the size of your data set, this query might take a long time to run.  
   
-## See Also  
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
-  
+## Related content
+
+- [Functions (DMX)](functions-dmx.md)
+- [General Prediction Functions (DMX)](general-prediction-functions-dmx.md)
+- [TopPercent (DMX)](toppercent-dmx.md)

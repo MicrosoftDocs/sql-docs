@@ -83,5 +83,5 @@ You can link to bookmarks to a location in the current report. To link to a book
   
 ## Related content
 
-- [Interactive sort, document maps, and links &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
-- [Create a document map &#40;Report Builder&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)
+- [Interactive sort, document maps, and links in a paginated report (Report Builder)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
+- [Create a document map or table of contents in paginated reports (Report Builder)](create-a-document-map-report-builder-and-ssrs.md)

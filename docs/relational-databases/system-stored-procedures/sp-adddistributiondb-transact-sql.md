@@ -209,8 +209,8 @@ Only members of the **sysadmin** fixed server role can execute `sp_adddistributi
 ## Related content
 
 - [Configure Publishing and Distribution](../replication/configure-publishing-and-distribution.md)
-- [sp_changedistributiondb (Transact-SQL)](sp-changedistributiondb-transact-sql.md)
-- [sp_dropdistributiondb (Transact-SQL)](sp-dropdistributiondb-transact-sql.md)
-- [sp_helpdistributiondb (Transact-SQL)](sp-helpdistributiondb-transact-sql.md)
+- [sys.sp_changedistributiondb (Transact-SQL)](sp-changedistributiondb-transact-sql.md)
+- [sys.sp_dropdistributiondb (Transact-SQL)](sp-dropdistributiondb-transact-sql.md)
+- [sys.sp_helpdistributiondb (Transact-SQL)](sp-helpdistributiondb-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Configure Distribution](../replication/configure-distribution.md)

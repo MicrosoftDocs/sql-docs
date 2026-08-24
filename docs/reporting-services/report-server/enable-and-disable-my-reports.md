@@ -43,5 +43,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Secure My Reports](../../reporting-services/security/secure-my-reports.md)
-- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
+- [Secure My Reports](../security/secure-my-reports.md)
+- [Report server content management (SSRS native mode)](report-server-content-management-ssrs-native-mode.md)

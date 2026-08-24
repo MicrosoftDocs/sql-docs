@@ -52,7 +52,6 @@ In the previous example, all the instances stored in the column are validated an
 > [!NOTE]
 > If a table is large, modifying an **xml** type column can be costly. This is because each document must be checked for being well formed and, for typed XML, must also be validated.
 
-## See also
+## Related content
 
-- For more information about typed XML, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).
-
+- [Compare typed XML to untyped XML](compare-typed-xml-to-untyped-xml.md)

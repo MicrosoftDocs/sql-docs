@@ -57,5 +57,6 @@ SET @g = geography::STPolyFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+## Related content
+
+- [OGC Static Geography Methods](ogc-static-geography-methods.md)

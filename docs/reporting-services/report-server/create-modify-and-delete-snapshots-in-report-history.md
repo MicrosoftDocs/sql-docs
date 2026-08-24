@@ -52,8 +52,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Create report history &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)
-- [Report manager &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md)
-- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
-- [Add a snapshot to report history &#40;report manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)
-- [Limit report history &#40;report manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
+- [Create report history (Reporting Services in SharePoint integrated mode)](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
+- [Report server content management (SSRS native mode)](report-server-content-management-ssrs-native-mode.md)
+- [Add a snapshot to report history](add-a-snapshot-to-report-history-report-manager.md)
+- [Limit Report History - Reporting Services](../reports/limit-report-history-report-manager.md)

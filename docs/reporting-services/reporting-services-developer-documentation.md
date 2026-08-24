@@ -48,7 +48,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
-- [Report definition language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)
-- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)
-- [Secure development &#40;Reporting Services&#41;](../reporting-services/extensions/secure-development/secure-development-reporting-services.md)
+- [What is SQL Server Reporting Services (SSRS)?](create-deploy-and-manage-mobile-and-paginated-reports.md)
+- [Report Definition Language (SSRS)](reports/report-definition-language-ssrs.md)
+- [Technical reference (SSRS)](technical-reference-ssrs.md)
+- [Secure development (Reporting Services)](extensions/secure-development/secure-development-reporting-services.md)

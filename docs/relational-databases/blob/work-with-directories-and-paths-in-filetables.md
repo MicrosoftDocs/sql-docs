@@ -113,6 +113,6 @@ When the database that contains FILESTREAM or FileTable data belongs to an avail
 ## Related content
 
 - [Enable the prerequisites for FileTable](enable-the-prerequisites-for-filetable.md)
-- [Create, Alter, and Drop FileTables](create-alter-and-drop-filetables.md)
+- [Create, alter, or drop a FileTable](create-alter-and-drop-filetables.md)
 - [Access FileTables with Transact-SQL](access-filetables-with-transact-sql.md)
 - [Access FileTables with File Input-Output APIs](access-filetables-with-file-input-output-apis.md)

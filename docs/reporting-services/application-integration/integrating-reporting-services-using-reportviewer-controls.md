@@ -34,5 +34,5 @@ helpviewer_keywords:
 ## Related content
 
 - [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-- [Using the WebForms Report Viewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)
-- [Using the WinForms Report Viewer Control](../../reporting-services/application-integration/using-the-winforms-reportviewer-control.md)
+- [Use the WebForms ReportViewer control](using-the-webforms-reportviewer-control.md)
+- [Use the WinForms ReportViewer control](using-the-winforms-reportviewer-control.md)

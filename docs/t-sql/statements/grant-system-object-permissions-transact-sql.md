@@ -105,4 +105,4 @@ GO
 - [sys.system_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)
 - [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
 - [REVOKE System Object Permissions (Transact-SQL)](revoke-system-object-permissions-transact-sql.md)
-- [DENY System Object Permissions (Transact-SQL)](deny-system-object-permissions-transact-sql.md)
+- [DENY system object permissions (Transact-SQL)](deny-system-object-permissions-transact-sql.md)

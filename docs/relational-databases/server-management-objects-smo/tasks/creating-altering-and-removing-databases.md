@@ -85,7 +85,6 @@ $db.CreateDate
 $db.Drop()  
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.Database>  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.Database>

@@ -43,7 +43,7 @@ Requires `VIEW SERVER PERFORMANCE STATE` permission.
 
 This view will always return one row with statistics data.
 
-## See also
+## Related content
 
 - [sys.sp_manage_distributed_transaction (Transact-SQL)](../system-stored-procedures/sys-sp-manage-distributed-transaction.md)
 - [sp_reset_dtc_log (Transact-SQL)](../system-stored-procedures/sp-reset-dtc-log.md)

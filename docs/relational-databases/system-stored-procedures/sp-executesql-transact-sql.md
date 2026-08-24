@@ -306,4 +306,3 @@ EXECUTE sp_executesql
 
 - [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

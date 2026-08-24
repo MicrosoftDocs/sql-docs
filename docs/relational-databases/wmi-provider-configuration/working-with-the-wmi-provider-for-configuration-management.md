@@ -71,7 +71,6 @@ gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerMan
   
  Security certificates are supported by the WMI Provider for Configuration Management. For more information about certificates, see [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-## See Also  
- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)  
-  
-  
+## Related content
+
+- [SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager.md)

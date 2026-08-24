@@ -138,7 +138,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Administrative Considerations for Oracle Publishers](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)
-- [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)
-- [Glossary of Terms for Oracle Publishing](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)
-- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)
+- [Administrative Considerations for Oracle Publishers](administrative-considerations-for-oracle-publishers.md)
+- [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)
+- [Glossary of Terms for Oracle Publishing](glossary-of-terms-for-oracle-publishing.md)
+- [Oracle Publishing Overview](oracle-publishing-overview.md)

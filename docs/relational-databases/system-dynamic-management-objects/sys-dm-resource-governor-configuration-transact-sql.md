@@ -63,6 +63,6 @@ Requires the `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
 ## Related content
 
-- [Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [sys.resource_governor_configuration (Transact-SQL)](../system-catalog-views/sys-resource-governor-configuration-transact-sql.md)
 - [Resource governor](../resource-governor/resource-governor.md)

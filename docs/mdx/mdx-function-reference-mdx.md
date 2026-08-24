@@ -211,7 +211,6 @@ ms.custom: mdx
 |--------------|-----------------|  
 |[Error &#40;MDX&#41;](../mdx/error-mdx.md)|Raises an error, optionally providing a specified error message.|  
   
-## See Also  
- [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Language Reference (MDX)](mdx-language-reference-mdx.md)

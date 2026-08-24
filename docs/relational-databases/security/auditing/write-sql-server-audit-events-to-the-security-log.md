@@ -115,6 +115,6 @@ You must be a Windows administrator to configure these settings.
 
 1. Close the Security Policy tool.
 
-## See also
+## Related content
 
-- [SQL Server Audit (Database Engine)](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)
+- [SQL Server Audit (Database Engine)](sql-server-audit-database-engine.md)

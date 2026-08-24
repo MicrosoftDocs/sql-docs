@@ -1,6 +1,6 @@
 ---
 title: "@@IO_BUSY (Transact-SQL)"
-description: "&#x40;&#x40;IO_BUSY (Transact-SQL)"
+description: "@@IO_BUSY (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "09/18/2017"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;IO_BUSY (Transact-SQL)
+# @@IO_BUSY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has spent performing input and output operations since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started. The result is in CPU time increments ("ticks"), and is cumulative for all CPUs, so it may exceed the actual elapsed time. Multiply by @@TIMETICKS to convert to microseconds.  
@@ -59,10 +59,9 @@ IO microseconds as of
 4552312500      12/5/2006 10:23:00 AM   
 ```  
   
-## See Also  
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [@@CPU_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/cpu-busy-transact-sql.md)   
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-sys-info-transact-sql.md)
+- [@@CPU_BUSY (Transact-SQL)](cpu-busy-transact-sql.md)
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

@@ -33,7 +33,6 @@ object.ProtocolName [= value]
   
 ## Remarks  
   
-## See Also  
- [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
-  
-  
+## Related content
+
+- [Configure client protocols](../../../database-engine/configure-windows/configure-client-protocols.md)

@@ -57,12 +57,12 @@ ms.custom:
   
 ## Related content
 
-- [Add, change, or delete available values for a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)
-- [Add, change, or delete default values for a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)
-- [Change the order of a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)
-- [Report parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
-- [Add cascading parameters to a report &#40;Report Builder&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)
-- [Tutorial: Add a parameter to your report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)
-- [Add dataset filters, data region filters, and group filters &#40;Report Builder&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
-- [Parameters collection references &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)
-- [Add a multi-value parameter to a report](../../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md)
+- [Add, change, or delete available values for a paginated report parameter (Report Builder)](add-change-or-delete-available-values-for-a-report-parameter.md)
+- [Add, change, or delete default values for a paginated report parameter (Report Builder)](add-change-or-delete-default-values-for-a-report-parameter.md)
+- [Change the order of a paginated report parameter (Report Builder)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)
+- [Paginated report parameters in Report Builder](report-parameters-report-builder-and-report-designer.md)
+- [Add cascading parameters to a paginated report (Report Builder)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)
+- [Tutorial: Add parameters to your report (Report Builder)](../tutorial-add-a-parameter-to-your-report-report-builder.md)
+- [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](add-dataset-filters-data-region-filters-and-group-filters.md)
+- [Parameters collection references in a paginated report (Report Builder)](built-in-collections-parameters-collection-references-report-builder.md)
+- [Add a multi-value parameter to a paginated report](add-a-multi-value-parameter-to-a-report.md)

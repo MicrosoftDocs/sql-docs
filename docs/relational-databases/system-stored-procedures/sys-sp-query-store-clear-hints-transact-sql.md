@@ -96,4 +96,3 @@ WHERE query_id = 39;
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)
 - [Query Store hints](../performance/query-store-hints.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
-

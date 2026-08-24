@@ -61,7 +61,7 @@ GO
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  
   
-## See also
-[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
-[DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
-  
+## Related content
+
+- [CREATE ASSEMBLY (Transact-SQL)](../statements/create-assembly-transact-sql.md)
+- [DROP ASSEMBLY (Transact-SQL)](../statements/drop-assembly-transact-sql.md)

@@ -90,7 +90,7 @@ Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL 
   
 -   [View Availability Group Listener Properties &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
+## Related content
+
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Connect to an Always On availability group listener](listeners-client-connectivity-application-failover.md)

@@ -73,6 +73,6 @@ $conn = null;
 ?>  
 ```  
   
-## See Also  
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
-  
+## Related content
+
+- [Connecting to the Server](connecting-to-the-server.md)

@@ -194,11 +194,11 @@ SqlPackage and DacFx support all [supported SQL versions](/lifecycle/products/?p
 
 In addition to SQL Server, SqlPackage and DacFx supports Azure SQL Managed Instance, Azure SQL Database, Azure Synapse Analytics, and Fabric Data Warehouse.
 
-## Next steps
+## Related content
 
-- Learn more about [SqlPackage Extract](sqlpackage-extract.md)
-- Learn more about [SqlPackage Publish](sqlpackage-publish.md)
-- Learn more about [SqlPackage Export](sqlpackage-export.md)
-- Learn more about [SqlPackage Import](sqlpackage-import.md)
-- Learn more about [troubleshooting issues with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)
-- Share feedback on SqlPackage in the [DacFx GitHub repository](https://github.com/microsoft/DacFx)
+- [SqlPackage Extract parameters and properties](sqlpackage-extract.md)
+- [SqlPackage Publish parameters, properties, and SQLCMD variables](sqlpackage-publish.md)
+- [SqlPackage Export parameters and properties](sqlpackage-export.md)
+- [SqlPackage Import parameters and properties](sqlpackage-import.md)
+- [Troubleshoot issues and performance with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)
+- [DacFx GitHub repository](https://github.com/microsoft/DacFx)

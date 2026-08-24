@@ -146,10 +146,9 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## See Also  
- [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [Restore Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
-  
-  
+## Related content
+
+- [Restore a Database Backup Using SSMS](restore-a-database-backup-using-ssms.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md)
+- [Restore Files and Filegroups (SQL Server)](restore-files-and-filegroups-sql-server.md)

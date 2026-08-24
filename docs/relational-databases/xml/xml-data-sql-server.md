@@ -32,17 +32,13 @@ helpviewer_keywords:
 
 - XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md). XML compression is available in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
-## Next steps
+## Related content
 
-- [XML Data Type and Columns (SQL Server)](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)
-- [XML Indexes (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)
-- [XML Schema Collections (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)
-- [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)
-- [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
-
-## See also
-
-- [Examples of Bulk Import and Export of XML Documents (SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
+- [Examples of bulk import and export of XML documents (SQL Server)](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
 - [XQuery Language Reference (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)
 - [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)
-
+- [xml data type and columns (SQL Server)](xml-data-type-and-columns-sql-server.md)
+- [XML indexes (SQL Server)](xml-indexes-sql-server.md)
+- [XML schema collections (SQL Server)](xml-schema-collections-sql-server.md)
+- [FOR XML (SQL Server)](for-xml-sql-server.md)
+- [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)

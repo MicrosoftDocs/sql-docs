@@ -399,6 +399,6 @@ for category, products in products_by_category.items():
 
 ## Related content
 
-- [Retrieving data](retrieving-data.md)
-- [Data type mappings](data-type-mappings.md)
-- [Custom type converters](custom-type-converters.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Custom type converters with mssql-python](custom-type-converters.md)

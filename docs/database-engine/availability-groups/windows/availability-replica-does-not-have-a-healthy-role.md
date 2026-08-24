@@ -30,8 +30,7 @@ helpviewer_keywords:
   
 ## Possible Solution: Information_still_to_come  
   
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
-  
-  
+## Related content
+
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Use the Always On Availability Group dashboard (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)

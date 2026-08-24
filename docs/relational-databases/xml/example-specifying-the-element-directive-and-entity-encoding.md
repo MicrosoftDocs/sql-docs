@@ -89,7 +89,6 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT;
 ```
 
-## See also
+## Related content
 
-- [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)
-
+- [Use EXPLICIT mode with FOR XML](use-explicit-mode-with-for-xml.md)

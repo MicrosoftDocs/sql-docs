@@ -69,8 +69,7 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-## See Also  
- [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [System Compatibility Views (Transact-SQL)](../system-compatibility-views/system-compatibility-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](../system-catalog-views/catalog-views-transact-sql.md)

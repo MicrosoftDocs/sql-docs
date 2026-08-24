@@ -111,7 +111,6 @@ The following SQL is an example of the [!INCLUDE[tsql](../../../includes/tsql-md
 EXECUTE SalesByCategory 'Produce', '1995'
 ```
 
-## See also
+## Related content
 
-[Stored procedures](stored-procedures.md)
-
+- [Stored Procedures](stored-procedures.md)

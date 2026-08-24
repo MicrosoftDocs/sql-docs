@@ -318,7 +318,7 @@ Other performance topics:
 - [Query Store stored procedures (Transact-SQL)](../system-stored-procedures/query-store-stored-procedures-transact-sql.md)
 - [Query Store catalog views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
 - [sys.database_query_store_options (Transact-SQL)](../system-catalog-views/sys-database-query-store-options-transact-sql.md)
-- [Live Query Statistics](live-query-statistics.md)
+- [Live query statistics](live-query-statistics.md)
 - [Activity Monitor](../performance-monitor/activity-monitor.md)
 - [How Query Store collects data](how-query-store-collects-data.md)
 - [Monitor and Tune for Performance](monitor-and-tune-for-performance.md)

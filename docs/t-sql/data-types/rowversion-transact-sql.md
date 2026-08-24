@@ -124,16 +124,15 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-## See also
-[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
-[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
-[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
-  
-  
+## Related content
+
+- [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
+- [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
+- [Data types (Transact-SQL)](data-types-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../language-elements/declare-local-variable-transact-sql.md)
+- [DELETE (Transact-SQL)](../statements/delete-transact-sql.md)
+- [INSERT (Transact-SQL)](../statements/insert-transact-sql.md)
+- [MIN_ACTIVE_ROWVERSION (Transact-SQL)](../functions/min-active-rowversion-transact-sql.md)
+- [SET @local_variable (Transact-SQL)](../language-elements/set-local-variable-transact-sql.md)
+- [UPDATE (Transact-SQL)](../queries/update-transact-sql.md)

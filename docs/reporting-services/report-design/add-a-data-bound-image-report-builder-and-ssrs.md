@@ -40,7 +40,6 @@ Adding a data-bound image to a page header or page footer requires additional st
   
 ## Related content
 
-- [Images &#40;Report Builder&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
-- [Embed an image in a report &#40;Report Builder&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)
-- [Add an external image &#40;Report Builder&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)
-- [Image Properties dialog, general &#40;Report Builder&#41;](./images-report-builder-and-ssrs.md)
+- [Images in paginated reports (Report Builder)](images-report-builder-and-ssrs.md)
+- [Embed an image in a paginated report (Report Builder)](embed-an-image-in-a-report-report-builder-and-ssrs.md)
+- [Add an external image to a paginated report (Report Builder)](add-an-external-image-report-builder-and-ssrs.md)

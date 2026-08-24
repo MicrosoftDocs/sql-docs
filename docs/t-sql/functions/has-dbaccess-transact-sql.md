@@ -69,9 +69,7 @@ SELECT HAS_DBACCESS('AdventureWorksPDW2012');
 GO  
 ```  
   
-## See Also  
- [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
- [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)  
-  
-  
+## Related content
 
+- [IS_MEMBER (Transact-SQL)](is-member-transact-sql.md)
+- [IS_SRVROLEMEMBER (Transact-SQL)](is-srvrolemember-transact-sql.md)

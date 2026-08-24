@@ -112,8 +112,7 @@ RESTORE DATABASE AdventureWorks2022
 GO  
 ```  
   
-## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
-  
+## Related content
+
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

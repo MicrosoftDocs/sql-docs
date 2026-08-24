@@ -819,5 +819,5 @@ OPTION (USE HINT('DISABLE_RESULT_SET_CACHE'));
 - [OPTION clause (Transact-SQL)](option-clause-transact-sql.md)
 - [Hints (Transact-SQL)](hints-transact-sql.md)
 - [Query Store hints](../../relational-databases/performance/query-store-hints.md)
-- [Plan guides](../../relational-databases/performance/plan-guides.md)
+- [Plan Guides](../../relational-databases/performance/plan-guides.md)
 - [Set trace flags with DBCC TRACEON (Transact-SQL)](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

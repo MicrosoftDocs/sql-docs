@@ -31,8 +31,7 @@ dev_langs:
 |**merge_jobid**|**binary(16)**|The merge job ID for this subscription.|  
 |**sync_info**|**int**|Internal-use only.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

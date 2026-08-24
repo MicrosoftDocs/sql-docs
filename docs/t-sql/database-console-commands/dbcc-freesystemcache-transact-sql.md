@@ -111,9 +111,9 @@ The following example uses the MARK_IN_USE_FOR_REMOVAL clause to release entries
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [DBCC FREEPROCCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)
-- [DBCC FREESESSIONCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)
-- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [DBCC FREEPROCCACHE (Transact-SQL)](dbcc-freeproccache-transact-sql.md)
+- [DBCC FREESESSIONCACHE (Transact-SQL)](dbcc-freesessioncache-transact-sql.md)
+- [Resource governor](../../relational-databases/resource-governor/resource-governor.md)

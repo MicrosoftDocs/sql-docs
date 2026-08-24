@@ -75,10 +75,6 @@ Returns an error if the Query is invalid.
 
 Creating a Demo OLAP Cube (the same as the one used in the examples): [Multidimensional Modeling (Adventure Works Tutorial)](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-## See also
-
-[Query](Query.md), [OlapConnection](OlapConnection.md), [execute2D](Execute2D.md), [explore](Explore.md), array
-
 ## Examples
 
  ```
@@ -99,3 +95,10 @@ Creating a Demo OLAP Cube (the same as the one used in the examples): [Multidime
 
   result2 <- executeMD(olapCnn, mdx)
 ```
+
+## Related content
+
+- [Query: olapR Query Construction](Query.md)
+- [OlapConnection: olapR OlapConnection Creation](OlapConnection.md)
+- [execute2D: olapR execute2D Methods](Execute2D.md)
+- [explore: olapR explore Method](Explore.md)

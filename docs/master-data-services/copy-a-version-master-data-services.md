@@ -43,9 +43,7 @@ helpviewer_keywords:
   
 4.  In the confirmation dialog box, click **OK**.  
   
-## Next Steps  
-  
--   [Change a Version Name &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
-  
-## See Also  
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)
+## Related content
+
+- [Versions (Master Data Services)](versions-master-data-services.md)
+- [Change a Version Name (Master Data Services)](change-a-version-name-master-data-services.md)

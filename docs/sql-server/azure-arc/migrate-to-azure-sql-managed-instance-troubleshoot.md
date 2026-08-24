@@ -292,7 +292,7 @@ You can provide feedback to the product group to help improve the migration expe
 
 - [Provide feedback to the product group](https://aka.ms/arc-migrations-feedback)
 
-## Related content 
+## Related content
 
 - [SQL Server migration in Azure Arc Overview](migration-overview.md)
 - [Prepare environment for a Managed Instance link migration - SQL Server migration in Azure Arc](migration-sql-mi-prepare-link.md)

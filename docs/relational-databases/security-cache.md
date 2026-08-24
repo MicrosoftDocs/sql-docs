@@ -112,7 +112,7 @@ The table below lists all security Data Definition Language (DDL) actions that i
 | --- | --- | --- |
 | `CREATE/ALTER/DROP` | `APPLICATION ROLE`<br />`SYMMETRIC KEY`<br />`ASYMMETRIC KEY`<br />`AUTHORIZATION`<br />`CERTIFICATE`<br />`ROLE`<br />`SCHEMA`<br />`USER` | Specified database |
 | `DROP` | *Any* object that appears in [sys.all_objects](system-catalog-views/sys-all-objects-transact-sql.md) or any securable listed in the database or schema-scoped [securable list](security/securables.md). | Specified database |
-| `GRANT/DENY/REVOKE` | *Any* [permission](security/permissions-database-engine.md) to securable contained by database or schema. | Specified database |
+| `GRANT/DENY/REVOKE` | *Any* [permission](security/permissions-database-engine.md) to securable contained by database or schema. | Specified database |
 | `CREATE/ALTER/DROP` | `LOGIN`<br />(`SERVICE`) `MASTER KEY` | SQL Server instance |
 | `ALTER` | `DATABASE` | Specified database |
 

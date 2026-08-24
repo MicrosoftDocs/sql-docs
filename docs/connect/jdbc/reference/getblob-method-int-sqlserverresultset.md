@@ -38,9 +38,8 @@ public java.sql.Blob getBlob(int i)
 ## Remarks  
  This getBlob method is specified by the getBlob method in the java.sql.ResultSet interface.  
   
-## See Also  
- [getBlob Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [getBlob Method (SQLServerResultSet)](getblob-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

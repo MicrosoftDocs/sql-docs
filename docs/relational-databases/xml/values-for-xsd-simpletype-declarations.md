@@ -37,7 +37,6 @@ Also, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't support 
 |**string**|Values of this type must comply with the format of the SQL **nvarchar(max)** type.|
 |**anyURI**|Values of this type can be no more than 4000 Unicode characters in length.|
 
-## See also
+## Related content
 
-- [Requirements and Limitations for XML Schema Collections on the Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)
-
+- [Requirements and limitations for XML schema collections on the server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)

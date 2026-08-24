@@ -32,8 +32,8 @@ To view the state of the files for the specified filegroup, query either the **s
   
 Restore the offline file from a backup.  
   
-## See Also  
-[sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
-[sys.master_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-[RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
-  
+## Related content
+
+- [sys.database_files (Transact-SQL)](../system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../system-catalog-views/sys-master-files-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

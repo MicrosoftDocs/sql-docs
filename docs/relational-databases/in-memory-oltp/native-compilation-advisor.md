@@ -94,7 +94,7 @@ EXECUTE dbo.InsertOrderXTP @id= 11, @date = '1956-01-01 12:01:00', @status = 2;
 SELECT * from SalesOrders;  
 ```  
   
-## See Also  
- [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)   
- [Requirements for Using Memory-Optimized Tables](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
-  
+## Related content
+
+- [Plan your adoption of In-Memory OLTP Features in SQL Server](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)
+- [Requirements for using memory-optimized tables](requirements-for-using-memory-optimized-tables.md)

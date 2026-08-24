@@ -84,11 +84,9 @@ Index Column 1      Index Column 2
 SalesOrderID        SalesOrderDetailID  
 ```  
   
-## See Also  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
-  
+## Related content
 
+- [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
+- [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)

@@ -203,12 +203,12 @@ Get-ClusterResource $IPResourceName | Get-ClusterParameter
 
 ## Configure port exclusion 
 
-When using a health probe port between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each health probe port on every VM. 
+When using a health probe port between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each health probe port on every VM. 
 
 Configuring port exclusion prevents other system processes from being dynamically assigned the same port on the VM
 
 To set a port exclusion, use the following PowerShell script: 
--  for each health probe port 
+-  for each health probe port 
 -  on every VM
 
 ```powershell

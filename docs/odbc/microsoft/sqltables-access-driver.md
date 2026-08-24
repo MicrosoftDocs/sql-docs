@@ -22,5 +22,6 @@ helpviewer_keywords:
 |*szTableQualifier*|In the TABLE_QUALIFIER column, **SQLTables** will return the path to a database file.|  
 |*SzTableType*|When the Microsoft Access driver is used, "SYSTEM TABLE" is supported for *szTableType* for system tables, "SYNONYM" is supported for attached tables, and "VIEW" is supported for row-returning queries.|  
   
-## See Also  
- [SQLTables Function](../../odbc/reference/syntax/sqltables-function.md)
+## Related content
+
+- [SQLTables Function](../reference/syntax/sqltables-function.md)

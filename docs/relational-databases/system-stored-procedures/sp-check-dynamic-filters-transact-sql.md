@@ -71,5 +71,5 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 ## Related content
 
 - [Manage Partitions for a Merge Publication with Parameterized Filters](../replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)
-- [sp_check_join_filter (Transact-SQL)](sp-check-join-filter-transact-sql.md)
-- [sp_check_subset_filter (Transact-SQL)](sp-check-subset-filter-transact-sql.md)
+- [sys.sp_check_join_filter (Transact-SQL)](sp-check-join-filter-transact-sql.md)
+- [sys.sp_check_subset_filter (Transact-SQL)](sp-check-subset-filter-transact-sql.md)

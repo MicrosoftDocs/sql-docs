@@ -129,8 +129,8 @@ COMMIT TRANSACTION;
 DBCC INPUTBUFFER (52);
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
-- [sys.dm_exec_input_buffer (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [sys.sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+- [sys.dm_exec_input_buffer (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-input-buffer-transact-sql.md)

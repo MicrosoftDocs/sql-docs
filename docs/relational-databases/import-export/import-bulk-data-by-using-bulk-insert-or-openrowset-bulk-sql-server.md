@@ -219,10 +219,10 @@ SELECT * FROM OPENROWSET(
 ## Related content
 
 - [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
-- [SELECT Clause (Transact-SQL)](../../t-sql/queries/select-clause-transact-sql.md)
-- [Bulk Import and Export of Data (SQL Server)](bulk-import-and-export-of-data-sql-server.md)
+- [SELECT clause (Transact-SQL)](../../t-sql/queries/select-clause-transact-sql.md)
+- [Bulk import and export of data (SQL Server)](bulk-import-and-export-of-data-sql-server.md)
 - [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
 - [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
 - [FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)
-- [bcp Utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)

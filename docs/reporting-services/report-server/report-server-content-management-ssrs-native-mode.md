@@ -170,6 +170,6 @@ Tools for managing report server content include [!INCLUDE[ssManStudio](../../in
   
 ## Related content
 
-- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
-- [Roles and permissions &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)
-- [Reporting Services reports &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)
+- [SQL Server Reporting Services tools](../tools/reporting-services-tools.md)
+- [Roles and permissions in Reporting Services](../security/roles-and-permissions-reporting-services.md)
+- [Reporting Services Reports (SSRS)](../reports/reporting-services-reports-ssrs.md)

@@ -13,6 +13,6 @@ ms.topic: tutorial
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]
 
-## Next steps
+## Related content
 
 - [Step 3: Proof of concept connecting to SQL using Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)

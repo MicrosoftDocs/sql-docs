@@ -169,11 +169,10 @@ where SalesOrderID =  @so_id',
 |Describes how to use SQL Server Profiler to create and test plan guides.|[Use SQL Server Profiler to Create and Test Plan Guides](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Describes how to validate plan guides.|[Validate Plan Guides After Upgrade](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## See Also  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
- [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
- [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.sp_create_plan_guide (Transact-SQL)](../system-stored-procedures/sp-create-plan-guide-transact-sql.md)
+- [sys.sp_create_plan_guide_from_handle (Transact-SQL)](../system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)
+- [sys.sp_control_plan_guide (Transact-SQL)](../system-stored-procedures/sp-control-plan-guide-transact-sql.md)
+- [sys.plan_guides (Transact-SQL)](../system-catalog-views/sys-plan-guides-transact-sql.md)
+- [sys.fn_validate_plan_guide (Transact-SQL)](../system-functions/sys-fn-validate-plan-guide-transact-sql.md)

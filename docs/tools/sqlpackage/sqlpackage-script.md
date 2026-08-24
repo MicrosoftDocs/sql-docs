@@ -183,6 +183,6 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Specifies whether collation compatibility is verified.|
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifies whether checks should be performed before publishing that will stop the publish action if issues are present that might block successful publishing. For example, your publish action might stop if you have foreign keys on the target database that do not exist in the database project, and that causes errors when you publish.|
 
-## Next Steps
+## Related content
 
-- Learn more about [SqlPackage](sqlpackage.md)
+- [SqlPackage](sqlpackage.md)

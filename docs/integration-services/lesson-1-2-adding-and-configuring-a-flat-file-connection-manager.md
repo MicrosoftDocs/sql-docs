@@ -88,9 +88,7 @@ By default, all four of the columns are initially set to a string data type [DT_
 ## Go to next task
 [Step 3: Add and configure an OLE DB connection manager](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## See also  
-[Flat File connection manager](../integration-services/connection-manager/flat-file-connection-manager.md)  
-[Integration Services data types](../integration-services/data-flow/integration-services-data-types.md)  
-  
-  
-  
+## Related content
+
+- [Flat File Connection Manager](connection-manager/flat-file-connection-manager.md)
+- [Integration Services Data Types](data-flow/integration-services-data-types.md)

@@ -236,6 +236,7 @@ int main() {
 |Returning table statistics and indexes|[SQLStatistics Function](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
 |Returning privileges for a table or tables|[SQLTablePrivileges Function](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

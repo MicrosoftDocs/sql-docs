@@ -35,7 +35,6 @@ helpviewer_keywords:
   
 -   [Calling a Stored Procedure &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
   
-## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB)](sql-server-native-client-ole-db.md)

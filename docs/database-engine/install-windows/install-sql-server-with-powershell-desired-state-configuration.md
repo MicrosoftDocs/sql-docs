@@ -214,5 +214,5 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 ## Related content
 
 - [Windows PowerShell Desired State Configuration Overview](/powershell/dsc/overview)
-- [Install and configure SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
 - [Install SQL Server using a configuration file](install-sql-server-using-a-configuration-file.md)

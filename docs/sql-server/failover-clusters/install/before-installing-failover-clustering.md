@@ -286,14 +286,11 @@ The following rules are applied for an instance of MSDTC to be chosen by [!INCLU
 
 After you install the operating system and configure your cluster, you must configure MSDTC to work in a cluster by using the Cluster Administrator. Failure to cluster MSDTC won't block [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup, but [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] application functionality may be affected if MSDTC isn't properly configured.
 
-## See also
+## Related content
 
 - [Hardware and software requirements for SQL Server 2025](../../install/hardware-and-software-requirements-for-installing-sql-server-2025.md)
-- [Check Parameters for the System Configuration Checker](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
-- [Failover Cluster Instance Administration and Maintenance](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)
-
-## Next steps
-
+- [Check parameters for the System Configuration Checker](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
+- [Failover Cluster Instance Administration and Maintenance](../windows/failover-cluster-instance-administration-and-maintenance.md)
 - [Use Cluster Shared Volumes in a failover cluster](/windows-server/failover-clustering/failover-cluster-csvs)
 - [Configure volume mount points on a server cluster in Windows Server](/troubleshoot/windows-server/high-availability/configure-volume-mount-points-server-cluser)
 - [Microsoft Windows Failover cluster resource dependencies in SQL Server](/troubleshoot/sql/failover-clusters/windows-failover-cluster-resource-depend)

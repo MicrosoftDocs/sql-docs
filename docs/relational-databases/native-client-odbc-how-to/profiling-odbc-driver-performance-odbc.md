@@ -23,7 +23,6 @@ ms.topic: "reference"
   
 -   [Log Long-Running Queries &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## See Also  
- [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
-  
-  
+## Related content
+
+- [ODBC How-to Topics](odbc-how-to-topics.md)

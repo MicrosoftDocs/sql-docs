@@ -86,5 +86,5 @@ End Function
   
 ## Related content
 
-- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Report datasets](../../reporting-services/report-data/report-datasets-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [Report Datasets (SSRS)](../report-data/report-datasets-ssrs.md)

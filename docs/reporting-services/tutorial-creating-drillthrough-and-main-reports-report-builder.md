@@ -675,4 +675,4 @@ Run the main report, and then select values in the product category column to ru
   
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Report Builder tutorials](report-builder-tutorials.md)

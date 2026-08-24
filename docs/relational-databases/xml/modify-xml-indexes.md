@@ -80,7 +80,6 @@ ALTER INDEX PIdx_T_XmlCol on T REBUILD;
 GO
 ```
 
-## See also
+## Related content
 
-- [XML indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)
-
+- [XML indexes (SQL Server)](xml-indexes-sql-server.md)

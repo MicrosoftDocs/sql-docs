@@ -36,4 +36,4 @@ Displays the option value for all secondary databases.
 
 ## Related content
 
-- [sys.database_scoped_configurations](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
+- [sys.database_scoped_configurations (Transact-SQL)](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md)

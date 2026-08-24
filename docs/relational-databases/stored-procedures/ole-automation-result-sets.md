@@ -38,12 +38,7 @@ monikerRange: ">=sql-server-2017"
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## See also
+## Related content
 
-- [Ole Automation Procedures Server Configuration Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
-
-## Next steps
-
-- [OLE Automation Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
-  
-  
+- [Server configuration: Ole Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)
+- [OLE Automation stored procedures (Transact-SQL)](../system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)

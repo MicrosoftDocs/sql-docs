@@ -289,13 +289,12 @@ For more information about the settings on the Web Configuration page, see [Web 
   
          ![MDS Web site, home page.](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS Web site, home page.")  
   
-## Next Step  
- Create a new model and entities for your data. See [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md) and [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
-  
- For an overview of how you use a model and entities to build a structure for your data in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], see [Master Data Services Overview &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
-    
-## See Also  
- [Master Data Services Database](../master-data-services/master-data-services-database.md)   
- [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)   
- [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)
+## Related content
+
+- [Master Data Services Database](master-data-services-database.md)
+- [Master Data Manager Web Application](master-data-manager-web-application.md)
+- [Database Configuration Page (Master Data Services Configuration Manager)](database-configuration-page-master-data-services-configuration-manager.md)
+- [What's New in Master Data Services (MDS)](what-s-new-in-master-data-services-mds.md)
+- [Create a Model (Master Data Services)](create-a-model-master-data-services.md)
+- [Create an Entity (Master Data Services)](create-an-entity-master-data-services.md)
+- [Master Data Services Overview (MDS)](master-data-services-overview-mds.md)

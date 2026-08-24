@@ -73,13 +73,12 @@ EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak' ;
 GO  
 ```  
   
-## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
-  
-  
+## Related content
+
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [Backup Devices (SQL Server)](backup-devices-sql-server.md)
+- [sys.backup_devices (Transact-SQL)](../system-catalog-views/sys-backup-devices-transact-sql.md)
+- [sys.sp_addumpdevice (Transact-SQL)](../system-stored-procedures/sp-addumpdevice-transact-sql.md)
+- [sys.sp_dropdevice (Transact-SQL)](../system-stored-procedures/sp-dropdevice-transact-sql.md)
+- [Define a Logical Backup Device for a Tape Drive (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)
+- [View the Properties and Contents of a Logical Backup Device (SQL Server)](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)

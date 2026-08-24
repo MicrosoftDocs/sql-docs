@@ -59,9 +59,8 @@ dev_langs:
   
 -   [STGeomCollFromWKB &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
-## See Also  
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)
+- [Extended Static Geometry Methods](extended-static-geometry-methods.md)

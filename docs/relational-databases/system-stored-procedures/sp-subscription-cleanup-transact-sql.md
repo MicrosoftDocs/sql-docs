@@ -72,6 +72,6 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Related content
 
-- [sp_expired_subscription_cleanup (Transact-SQL)](sp-expired-subscription-cleanup-transact-sql.md)
-- [sp_mergesubscription_cleanup (Transact-SQL)](sp-mergesubscription-cleanup-transact-sql.md)
+- [sys.sp_expired_subscription_cleanup (Transact-SQL)](sp-expired-subscription-cleanup-transact-sql.md)
+- [sys.sp_mergesubscription_cleanup (Transact-SQL)](sp-mergesubscription-cleanup-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

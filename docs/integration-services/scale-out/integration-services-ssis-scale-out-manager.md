@@ -94,7 +94,7 @@ After you finish editing the description, select **Save**.
 
 ![Portal Save Worker](media/portal-save-worker-new.PNG)
 
-## Next steps
-For more info, see the following articles:
--   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
--   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)
+## Related content
+
+- [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
+- [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

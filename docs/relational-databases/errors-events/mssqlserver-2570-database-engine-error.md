@@ -223,7 +223,7 @@ In this output, you can clearly see the column values for the row of interest. I
 > [!WARNING]
 > We recommend that you use the first method (that is, use T-SQL queries to find the required information). Use the `DBCC PAGE` command only as a last resort. Take the utmost care when you use this command in a production environment. It's recommended to restore the production database on a test server, get all the required information using `DBCC PAGE`, and then do the updates on the production server. As always, make sure to keep a backup ready in case something goes wrong, and you need to revert to an earlier copy of the database.
 
-## See also
+## Related content
 
 - [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

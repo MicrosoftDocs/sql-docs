@@ -105,7 +105,6 @@ lob read-ahead reads 0, lob page server read-ahead reads 0.
   
 ## Related content
 
-- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md)
-- [SET STATISTICS TIME (Transact-SQL)](../../t-sql/statements/set-statistics-time-transact-sql.md)
-
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET SHOWPLAN_ALL (Transact-SQL)](set-showplan-all-transact-sql.md)
+- [SET STATISTICS TIME (Transact-SQL)](set-statistics-time-transact-sql.md)

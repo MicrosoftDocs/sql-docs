@@ -529,19 +529,18 @@ WHERE CONTAINS(PROPERTY(Document,'Title'), 'Maintenance OR Repair');
 GO  
 ```  
   
-## See Also  
- [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
- [Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
- [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
- [Full-Text Search](../../relational-databases/search/full-text-search.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](/ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
-  
+## Related content
+
+- [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)
+- [Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
+- [CREATE FULLTEXT CATALOG (Transact-SQL)](../statements/create-fulltext-catalog-transact-sql.md)
+- [CREATE FULLTEXT INDEX (Transact-SQL)](../statements/create-fulltext-index-transact-sql.md)
+- [Create and manage full-text indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)
+- [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)
+- [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)
+- [FREETEXT (Transact-SQL)](freetext-transact-sql.md)
+- [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)
+- [Full-Text Search](../../relational-databases/search/full-text-search.md)
+- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](/ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools)
+- [WHERE (Transact-SQL)](where-transact-sql.md)
+- [Search document properties with search property lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)

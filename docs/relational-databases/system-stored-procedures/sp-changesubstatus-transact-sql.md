@@ -227,8 +227,8 @@ Only members of the **sysadmin** fixed server role, **db_owner** fixed database 
 
 ## Related content
 
-- [sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)
-- [sp_dropsubscription (Transact-SQL)](sp-dropsubscription-transact-sql.md)
-- [sp_helpdistributor (Transact-SQL)](sp-helpdistributor-transact-sql.md)
-- [sp_helpsubscription (Transact-SQL)](sp-helpsubscription-transact-sql.md)
+- [sys.sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)
+- [sys.sp_dropsubscription (Transact-SQL)](sp-dropsubscription-transact-sql.md)
+- [sys.sp_helpdistributor (Transact-SQL)](sp-helpdistributor-transact-sql.md)
+- [sys.sp_helpsubscription (Transact-SQL)](sp-helpsubscription-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

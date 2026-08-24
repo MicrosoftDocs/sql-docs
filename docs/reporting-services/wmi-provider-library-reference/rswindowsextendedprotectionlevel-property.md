@@ -31,7 +31,7 @@ public string RSWindowsExtendedProtectionLevel;
   
 ## Related content
 
-- [RSWindowsExtendedProtectionScenario property &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md)
-- [SetExtendedProtectionSettings method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)
-- [Extended Protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [RSWindowsExtendedProtectionScenario property](rswindowsextendedprotectionscenario-property.md)
+- [ConfigurationSetting method - SetExtendedProtectionSettings](configurationsetting-method-setextendedprotectionsettings.md)
+- [Extended protection for authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)
+- [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md)

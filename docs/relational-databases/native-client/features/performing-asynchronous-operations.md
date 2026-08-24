@@ -180,9 +180,8 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
-## See Also  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Rowset Properties and Behaviors](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Features](sql-server-native-client-features.md)
+- [Rowset Properties and Behaviors (Native Client OLE DB provider)](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)
+- [ISSAsynchStatus (Native Client OLE DB Provider)](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)

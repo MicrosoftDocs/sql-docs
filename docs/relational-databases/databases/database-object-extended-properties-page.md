@@ -31,6 +31,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  **Delete**  
  Removes the selected extended property.  
   
-## See Also  
- [Extended Properties Catalog Views &#40;Transact-SQL&#41;](../system-catalog-views/catalog-views-transact-sql.md)  
-  
+## Related content
+
+- [System catalog views (Transact-SQL)](../system-catalog-views/catalog-views-transact-sql.md)

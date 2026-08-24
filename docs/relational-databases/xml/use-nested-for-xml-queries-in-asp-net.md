@@ -92,5 +92,4 @@ using(Microsoft.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
 
 ## Related content
 
-- [Use Nested FOR XML Queries](../../relational-databases/xml/use-nested-for-xml-queries.md)
-
+- [Use nested FOR XML queries](use-nested-for-xml-queries.md)

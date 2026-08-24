@@ -57,13 +57,12 @@ The following example uses ALTER INDEX to set several options on the index `AK_S
   
 1.  To add, remove, or change the position of an index column, you must drop and recreate the index.  
   
-## See Also  
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
- [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [Set Index Options](../../relational-databases/indexes/set-index-options.md)   
- [Rename Indexes](../../relational-databases/indexes/rename-indexes.md)  
-  
-  
+## Related content
+
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
+- [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)
+- [sys.indexes (Transact-SQL)](../system-catalog-views/sys-indexes-transact-sql.md)
+- [sys.index_columns (Transact-SQL)](../system-catalog-views/sys-index-columns-transact-sql.md)
+- [Set Index Options](set-index-options.md)
+- [Rename Indexes](rename-indexes.md)

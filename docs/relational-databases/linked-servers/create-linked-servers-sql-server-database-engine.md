@@ -329,5 +329,5 @@ If you're using Azure SQL Managed Instance, see the following examples from [sp_
 ## Related content
 
 - [Linked servers (Database Engine)](linked-servers-database-engine.md)
-- [sp_addlinkedserver (Transact-SQL)](../system-stored-procedures/sp-addlinkedserver-transact-sql.md)
-- [sp_serveroption (Transact-SQL)](../system-stored-procedures/sp-serveroption-transact-sql.md)
+- [sys.sp_addlinkedserver (Transact-SQL)](../system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [sys.sp_serveroption (Transact-SQL)](../system-stored-procedures/sp-serveroption-transact-sql.md)

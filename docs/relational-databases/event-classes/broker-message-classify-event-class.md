@@ -42,7 +42,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**TargetUserName**|**nvarchar**|The network address of the next hop broker.|39|No|  
 |**TransactionID**|**bigint**|The system-assigned ID of the transaction.|4|No|  
   
-## See Also  
- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
-  
-  
+## Related content
+
+- [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)

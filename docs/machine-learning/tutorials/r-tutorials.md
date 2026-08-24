@@ -48,6 +48,6 @@ If you are new to SQL machine learning, you can also try the R quickstarts.
 | [Data structures and objects using R](quickstart-r-data-types-and-objects.md) | Shows how SQL uses the R to handle data structures. |
 | [Create and score a predictive model in R](quickstart-r-data-types-and-objects.md) | Explains how to create, train, and use an R model to make predictions from new data. |
 
-## Next steps
+## Related content
 
-+ [R extension in SQL Server](../concepts/extension-r.md)
+- [R language extension in SQL Server Machine Learning Services](../concepts/extension-r.md)

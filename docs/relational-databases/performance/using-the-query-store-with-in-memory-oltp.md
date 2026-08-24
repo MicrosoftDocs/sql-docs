@@ -129,10 +129,10 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
 ```
 
-## See also
+## Related content
 
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)
-- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
-- [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-- [Query Store Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
+- [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)
+- [Best practices for monitoring workloads with Query Store](best-practice-with-the-query-store.md)
+- [Query Store stored procedures (Transact-SQL)](../system-stored-procedures/query-store-stored-procedures-transact-sql.md)
+- [Query Store catalog views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)

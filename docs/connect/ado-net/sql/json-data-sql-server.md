@@ -34,6 +34,6 @@ The following example demonstrates the following scenarios to interact with JSON
 
 [!code-csharp[SqlJsonExample#1](~/../sqlclient/doc/samples/SqlJsonExample.cs#1)]
   
-## Next steps
+## Related content
 
 - [SQL Server and ADO.NET](index.md)

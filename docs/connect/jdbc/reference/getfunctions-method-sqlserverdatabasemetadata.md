@@ -65,8 +65,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  All the descriptions in the returned result set are ordered by FUNCTION_CAT, FUNCTION_SCHEM, FUNCTION_NAME, and SPECIFIC_NAME.  
   
-## See Also  
- [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
- [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDatabaseMetaData Members](sqlserverdatabasemetadata-members.md)
+- [SQLServerDatabaseMetaData Class](sqlserverdatabasemetadata-class.md)

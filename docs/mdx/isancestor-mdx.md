@@ -40,8 +40,7 @@ SELECT MEASURES.ISANCESTORDEMO ON 0,
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Ancestor &#40;MDX&#41;](../mdx/ancestor-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Ancestor (MDX)](ancestor-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

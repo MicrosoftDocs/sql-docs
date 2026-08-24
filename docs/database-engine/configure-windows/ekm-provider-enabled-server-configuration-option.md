@@ -36,5 +36,5 @@ EXECUTE sp_configure 'EKM provider enabled', 0;
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
 - [Monitor Resource Usage (Performance Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
-- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)

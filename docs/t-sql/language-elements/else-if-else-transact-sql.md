@@ -193,6 +193,6 @@ END
 ## Related content
 
 - [ALTER TRIGGER (Transact-SQL)](../statements/alter-trigger-transact-sql.md)
-- [Control-of-Flow Language (Transact-SQL)](control-of-flow.md)
+- [Control-of-Flow](control-of-flow.md)
 - [CREATE TRIGGER (Transact-SQL)](../statements/create-trigger-transact-sql.md)
 - [IF...ELSE (Transact-SQL)](if-else-transact-sql.md)

@@ -185,7 +185,7 @@ GO
 
 - [Delete an Article](../replication/publish/delete-an-article.md)
 - [Add Articles to and Drop Articles from Existing Publications](../replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)
-- [sp_addmergearticle (Transact-SQL)](sp-addmergearticle-transact-sql.md)
-- [sp_changemergearticle (Transact-SQL)](sp-changemergearticle-transact-sql.md)
-- [sp_helpmergearticle (Transact-SQL)](sp-helpmergearticle-transact-sql.md)
+- [sys.sp_addmergearticle (Transact-SQL)](sp-addmergearticle-transact-sql.md)
+- [sys.sp_changemergearticle (Transact-SQL)](sp-changemergearticle-transact-sql.md)
+- [sys.sp_helpmergearticle (Transact-SQL)](sp-helpmergearticle-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

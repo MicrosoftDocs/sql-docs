@@ -211,14 +211,11 @@ EXEC sys.sp_cdc_vupgrade
 
 For more information, see [Error when you attach a CDC-enabled database to an instance of SQL Server 2016 or SQL Server 2017 on Windows](/troubleshoot/sql/replication/attach-change-data-capture-database).
 
-## See also  
+## Related content
 
-- [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
-- [Detach a Database](../../relational-databases/databases/detach-a-database.md)  
-- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 
-- [Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)  
-
-## Next steps
-
-- [Manage metadata when making a database available on another server](manage-metadata-when-making-a-database-available-on-another-server.md)  
-- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+- [Database detach and attach (SQL Server)](database-detach-and-attach-sql-server.md)
+- [Detach a database](detach-a-database.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [Configure file system permissions for Database Engine access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)
+- [Manage Metadata When Making a Database Available on Another Server](manage-metadata-when-making-a-database-available-on-another-server.md)
+- [ALTER DATABASE (Transact-SQL) compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

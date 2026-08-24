@@ -740,10 +740,11 @@ CREATE AVAILABILITY GROUP [AccountsAG]
   
 -   [Use the availability group Wizard &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
-## See also  
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
- [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
- [Troubleshoot Always On availability groups Configuration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
- [Overview of Always On availability groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Availability group listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)
+## Related content
+
+- [ALTER AVAILABILITY GROUP (Transact-SQL)](alter-availability-group-transact-sql.md)
+- [ALTER DATABASE (Transact-SQL) SET HADR](alter-database-transact-sql-set-hadr.md)
+- [DROP AVAILABILITY GROUP (Transact-SQL)](drop-availability-group-transact-sql.md)
+- [Troubleshoot Always On Availability Groups Configuration (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
+- [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [Connect to an Always On availability group listener](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

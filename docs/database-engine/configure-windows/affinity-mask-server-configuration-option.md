@@ -138,6 +138,6 @@ If a specified affinity mask violates the licensing policy when running [!INCLUD
 - [Monitor Resource Usage (Performance Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
 - [Server configuration: affinity64 mask](affinity64-mask-server-configuration-option.md)

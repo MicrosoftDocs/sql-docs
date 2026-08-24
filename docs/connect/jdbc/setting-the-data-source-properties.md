@@ -20,6 +20,6 @@ Java EE products, such as application servers and servlet/JSP engines, typically
 
 For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources, see the [SQLServerDataSource](reference/sqlserverdatasource-class.md) class. For an example of how to use the SQLServerDataSource class to make a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, see [Data source sample](data-source-sample.md).
 
-## See also
+## Related content
 
-[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)
+- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

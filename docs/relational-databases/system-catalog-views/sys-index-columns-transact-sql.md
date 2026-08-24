@@ -75,12 +75,12 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
 (5 row(s) affected)
 ```
 
-## Next steps
+## Related content
 
-- [Object Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
-- [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [sys.indexes (Transact-SQL)](sys-indexes-transact-sql.md)
+- [sys.objects (Transact-SQL)](sys-objects-transact-sql.md)
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
-- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)
-- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)
+- [sys.columns (Transact-SQL)](sys-columns-transact-sql.md)
+- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)

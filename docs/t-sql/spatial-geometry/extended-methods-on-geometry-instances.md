@@ -106,10 +106,8 @@ These methods provide information about SQL Server version compatibility.
 
 ## Related content
 
-- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)
-- [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)
-- [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)
+- [OGC Static Geometry Methods](ogc-static-geometry-methods.md)
+- [Extended Static Geometry Methods](extended-static-geometry-methods.md)
 - [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)
-- [Create, Construct, and Query geometry Instances](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
-  
-  
+- [Create, construct, and query geometry instances](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)

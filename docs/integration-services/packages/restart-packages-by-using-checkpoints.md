@@ -103,8 +103,7 @@ helpviewer_keywords:
   
     -   Set the FailPackageOnFailure property to **True** for each selected task and container.  
     
-## External Resources  
-  
--   Technical article, [Automatic Restart of SSIS packages after Failover or Failure](../../integration-services/packages/restart-packages-by-using-checkpoints.md)
-  
--   Support article, [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](/troubleshoot/sql/integration-services/ssis-checkpoints-not-honored-for-loop), on support.microsoft.com.
+## Related content
+
+- [Restart Packages by Using Checkpoints](restart-packages-by-using-checkpoints.md)
+- [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](/troubleshoot/sql/integration-services/ssis-checkpoints-not-honored-for-loop)

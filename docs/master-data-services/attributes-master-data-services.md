@@ -87,12 +87,9 @@ helpviewer_keywords:
 |Change the order of attributes.|[Change the Order of Attributes](../master-data-services/change-the-order-of-attributes.md)|  
 |Create a date attribute|[Create a Date Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
-## Related Content  
-  
--   [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
-  
--   [Attribute Groups &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
-  
--   [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
-  
--   [Leaf Permissions &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
+## Related content
+
+- [Domain-Based Attributes (Master Data Services)](domain-based-attributes-master-data-services.md)
+- [Attribute Groups (Master Data Services)](attribute-groups-master-data-services.md)
+- [Members (Master Data Services)](members-master-data-services.md)
+- [Leaf Permissions (Master Data Services)](leaf-permissions-master-data-services.md)

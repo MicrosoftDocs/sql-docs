@@ -46,6 +46,6 @@ https://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=
   
 ## Related content
 
-- [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)
-- [Customize Rendering Extension Parameters in RSReportServer.Config](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)
-- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Device information settings for rendering extensions (Reporting Services)](../../device-information-settings-for-rendering-extensions-reporting-services.md)
+- [Customize rendering extension parameters in RSReportServer.Config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)
+- [Building Applications Using the Web Service and the .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)

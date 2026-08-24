@@ -480,8 +480,8 @@ def compare_results(pyodbc_conn_str: str, mssql_conn_str: str, query: str):
 
 ## Related content
 
-- [Migrate from pymssql](migrate-from-pymssql.md)
-- [Installation](installation.md)
-- [Connection strings](connection-strings.md)
-- [Executing queries](executing-queries.md)
-- [Stored procedures](stored-procedures.md)
+- [Migrate from pymssql to mssql-python](migrate-from-pymssql.md)
+- [Install mssql-python](installation.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Call stored procedures with mssql-python](stored-procedures.md)

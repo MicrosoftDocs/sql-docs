@@ -45,9 +45,9 @@ Intel MKL implementation.
 Max cache size (settings).
 
 
-## See also
+## Related content
 
-[`avx_math`](avx-math.md),
-[`clr_math`](clr-math.md),
-[`gpu_math`](gpu-math.md),
-[`sse_math`](sse-math.md)
+- [*microsoftml.avx_math*: Acceleration with AVX instructions](avx-math.md)
+- [*microsoftml.clr_math*: Acceleration with .NET math](clr-math.md)
+- [*microsoftml.gpu_math*: Acceleration with NVidia CUDA](gpu-math.md)
+- [*microsoftml.sse_math*: Acceleration with SSE instructions](sse-math.md)

@@ -101,8 +101,8 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 DBCC PDW_SHOWSPACEUSED;
 ```
 
-## Next steps
+## Related content
 
 - [DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)](dbcc-pdw-showexecutionplan-transact-sql.md)
 - [DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)](dbcc-pdw-showpartitionstats-transact-sql.md)
-- [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries).
+- [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries)

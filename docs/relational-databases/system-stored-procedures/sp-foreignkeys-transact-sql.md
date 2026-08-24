@@ -116,11 +116,11 @@ EXECUTE sp_foreignkeys
 
 ## Related content
 
-- [sp_catalogs (Transact-SQL)](sp-catalogs-transact-sql.md)
-- [sp_column_privileges (Transact-SQL)](sp-column-privileges-transact-sql.md)
-- [sp_indexes (Transact-SQL)](sp-indexes-transact-sql.md)
+- [sys.sp_catalogs (Transact-SQL)](sp-catalogs-transact-sql.md)
+- [sys.sp_column_privileges (Transact-SQL)](sp-column-privileges-transact-sql.md)
+- [sys.sp_indexes (Transact-SQL)](sp-indexes-transact-sql.md)
 - [sp_linkedservers (Transact-SQL)](sp-linkedservers-transact-sql.md)
-- [sp_primarykeys (Transact-SQL)](sp-primarykeys-transact-sql.md)
-- [sp_tables_ex (Transact-SQL)](sp-tables-ex-transact-sql.md)
-- [sp_table_privileges (Transact-SQL)](sp-table-privileges-transact-sql.md)
+- [sys.sp_primarykeys (Transact-SQL)](sp-primarykeys-transact-sql.md)
+- [sys.sp_tables_ex (Transact-SQL)](sp-tables-ex-transact-sql.md)
+- [sys.sp_table_privileges (Transact-SQL)](sp-table-privileges-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -215,12 +215,12 @@ To invoke the function, run this query.
 SELECT * FROM Sales.ufn_SalesByStore (602);
 ```
 
-## See also
+## Related content
 
 - [COLLATE (Transact-SQL)](../statements/collations.md)
-- [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)
-- [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md)
-- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [Use Table-Valued Parameters (Database Engine)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)
-- [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
+- [CREATE FUNCTION (Transact-SQL)](../statements/create-function-transact-sql.md)
+- [User-defined functions](../../relational-databases/user-defined-functions/user-defined-functions.md)
+- [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../language-elements/declare-local-variable-transact-sql.md)
+- [Use table-valued parameters (Database Engine)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)
+- [Query hints (Transact-SQL)](../queries/hints-transact-sql-query.md)

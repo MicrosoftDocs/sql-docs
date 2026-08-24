@@ -150,9 +150,8 @@ CREATE MESSAGE TYPE
     VALIDATION = NONE ;  
 ```  
   
-## See Also  
- [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER MESSAGE TYPE (Transact-SQL)](alter-message-type-transact-sql.md)
+- [DROP MESSAGE TYPE (Transact-SQL)](drop-message-type-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

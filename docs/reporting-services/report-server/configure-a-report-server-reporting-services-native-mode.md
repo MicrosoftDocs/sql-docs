@@ -52,8 +52,8 @@ You should configure web portal so that you can grant user access to the report 
   
 ## Related content
 
-- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
-- [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)
-- [Configure a native mode report server for local administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
-- [Configure a report server for remote administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)
-- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Manage a Reporting Services native mode report server](manage-a-reporting-services-native-mode-report-server.md)
+- [Configure a firewall for report server access](configure-a-firewall-for-report-server-access.md)
+- [Configure a native mode report server for local administration (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)
+- [Configure a report server for remote administration](configure-a-report-server-for-remote-administration.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)

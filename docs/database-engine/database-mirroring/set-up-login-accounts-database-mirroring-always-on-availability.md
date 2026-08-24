@@ -53,9 +53,8 @@ helpviewer_keywords:
   
 -   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-## See Also  
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Troubleshoot Always On Availability Groups Configuration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
-  
-  
+## Related content
+
+- [The database mirroring endpoint (SQL Server)](the-database-mirroring-endpoint-sql-server.md)
+- [Troubleshoot Database Mirroring Configuration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)
+- [Troubleshoot Always On Availability Groups Configuration (SQL Server)](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)

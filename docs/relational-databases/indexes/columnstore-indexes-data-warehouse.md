@@ -114,9 +114,9 @@ Use snapshot isolation (SI) to guarantee transactional consistency, and read-com
 
 ## Related content
 
-- [Columnstore indexes - Design guidance](columnstore-indexes-design-guidance.md)
-- [Columnstore indexes - Data loading guidance](columnstore-indexes-data-loading-guidance.md)
-- [Columnstore indexes - Query performance](columnstore-indexes-query-performance.md)
-- [Get started with Columnstore for real-time operational analytics](get-started-with-columnstore-for-real-time-operational-analytics.md)
+- [Columnstore indexes - design guidance](columnstore-indexes-design-guidance.md)
+- [Columnstore indexes - data loading guidance](columnstore-indexes-data-loading-guidance.md)
+- [Columnstore indexes - query performance](columnstore-indexes-query-performance.md)
+- [Get started with columnstore indexes for real-time operational analytics](get-started-with-columnstore-for-real-time-operational-analytics.md)
 - [Optimize index maintenance to improve query performance and reduce resource consumption](reorganize-and-rebuild-indexes.md)
-- [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)
+- [Columnstore Index Architecture](../sql-server-index-design-guide.md#columnstore_index)

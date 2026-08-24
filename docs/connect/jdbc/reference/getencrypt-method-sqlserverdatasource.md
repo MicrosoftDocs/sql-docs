@@ -32,8 +32,7 @@ public boolean getEncrypt()
   
  If the encrypt property is unspecified or set to **false**, the driver will not enforce the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to support TLS encryption. If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is not configured to force the TLS encryption, a connection is established without any encryption. If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is configured to force the TLS encryption, the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] will automatically enable TLS encryption when running on properly configured Java Virtual Machine (JVM), or else the connection is terminated and the driver will raise an error. If the encryption property is not set, the [getEncrypt](#getencrypt-method-sqlserverdatasource) method returns the default value of **false**.  
   
-## See Also  
- [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDataSource Members](sqlserverdatasource-members.md)
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

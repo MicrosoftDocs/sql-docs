@@ -55,9 +55,9 @@ Batch execution has the same effect as the execution of each individual statemen
 > [!NOTE]
 > The Microsoft SqlClient Data Provider for SQL Server and the back-end database server determine which SQL constructs are supported for batch execution. An exception may be thrown if a non-supported statement is submitted for execution.
 
-## See also
+## Related content
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Update data sources with DataAdapters](update-data-sources-with-dataadapters.md)
 - [Handle DataAdapter events](handle-dataadapter-events.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

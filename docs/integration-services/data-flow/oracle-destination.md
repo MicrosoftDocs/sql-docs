@@ -134,7 +134,7 @@ Select the method for selecting data from the source. The options are shown in t
 
 |Option|Description|
 |:-|:-|
-|Table Name|Configure Oracle destination to work in batch mode. Options:<br><br> **Name of the table or the view**: Select an available table or view from the database from the list.<br><br> **Transaction size**: Input the number of inserts that can be in a single transaction. The default is the **BatchSize**.<br><br> **Batch size**: Type the size (number of rows loaded) of the batch for bulk loading.
+|Table Name|Configure Oracle destination to work in batch mode. Options:<br /><br /> **Name of the table or the view**: Select an available table or view from the database from the list.<br /><br /> **Transaction size**: Input the number of inserts that can be in a single transaction. The default is the **BatchSize**.<br /><br /> **Batch size**: Type the size (number of rows loaded) of the batch for bulk loading.
 |Table Name – Fast Load|Configure the Oracle destination to work in fast (Direct Path) load mode. <br><br>Options are available:<br><br> **Name of the table or the view**: Select an available table or view from the database from the list.<br><br> **Parallel load**: Whether parallel loading is enabled. For more information, see [Parallelism](#parallelism).<br><br> **No logging**: This check box to disable database logging. This logging is Oracle database used for recovery purpose, not related to tracing.<br><br> **Maximum number of errors**: Maximum number of errors that can occur before the data flow is stopped. The default value is 0, which means there is no number limit.<br><br> All errors can occur are returned in the error output.<br><br> **Transfer buffer size (KB)**: Input the size of the transfer buffer. The default size is 64 KB.|
 
 **View Existing Data**
@@ -198,9 +198,9 @@ Select how the Oracle source should handle errors in a flow: ignore the failure,
 
 Select how the Oracle source should handle truncation in a flow: ignore the failure, redirect the row, or fail the component.
 
-## Next steps
+## Related content
 
-- Configure [Oracle Connection Manager](oracle-connection-manager.md).
-- Configure [Oracle Source](oracle-source.md).
-- Configure [Oracle Destination](oracle-destination.md).
-- If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).
+- [Oracle Connection Manager](oracle-connection-manager.md)
+- [Oracle source](oracle-source.md)
+- [Oracle destination](oracle-destination.md)
+- [TechCommunity](https://aka.ms/AA5u35j)

@@ -20,6 +20,6 @@ apitype: "MOFDef"
   
  The [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) class represents properties that are unique to the service. These properties are not in the list of properties that is associated with the [SqlService Class](../sqlservice-class/sqlservice-class.md) class. The `SqlServiceAdvancedProperty Class` class allows representation of string, numeric, or Boolean properties. You can use this class to view the unique properties of the specified service.  
   
-## See Also  
- [Starting, Stopping, and Pausing Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
-  
+## Related content
+
+- [Starting, Stopping, and Pausing Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)

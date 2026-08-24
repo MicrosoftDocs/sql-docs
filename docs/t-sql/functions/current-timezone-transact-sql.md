@@ -63,9 +63,7 @@ SELECT CURRENT_TIMEZONE();
 */
 ```  
   
-## See also
+## Related content
 
-[SQL Managed Instance Time Zone](/azure/sql-database/sql-database-managed-instance-timezone)
-
-[CURRENT_TIMEZONE_ID()](./current-timezone-id-transact-sql.md)
-
+- [SQL Managed Instance Time Zone](/azure/sql-database/sql-database-managed-instance-timezone)
+- [CURRENT_TIMEZONE_ID (Transact-SQL)](current-timezone-id-transact-sql.md)

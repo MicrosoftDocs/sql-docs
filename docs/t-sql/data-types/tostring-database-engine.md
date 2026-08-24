@@ -112,8 +112,7 @@ The following code snippet calls the ToString() method:
 this.ToString()  
 ```  
   
-## See also
-[hierarchyid Data Type Method Reference](./hierarchyid-data-type-method-reference.md)  
-[Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
-[hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
+## Related content
+
+- [hierarchyid data type method reference](hierarchyid-data-type-method-reference.md)
+- [Hierarchical data (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)

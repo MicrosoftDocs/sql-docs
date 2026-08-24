@@ -169,4 +169,4 @@ This error could be due to permission issues on the certificate. Make sure that 
 
 ## Related content
 
-- [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Tutorial: Set up Microsoft Entra authentication for SQL Server with app registration](azure-ad-authentication-sql-server-setup-tutorial.md)

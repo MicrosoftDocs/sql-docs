@@ -89,6 +89,6 @@ For more information, see [Server configuration options](server-configuration-op
 - [Change the target recovery time of a database (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)
 - [Database checkpoints (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-- [show advanced options Server Configuration Option](show-advanced-options-server-configuration-option.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [Server configuration: show advanced options](show-advanced-options-server-configuration-option.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)

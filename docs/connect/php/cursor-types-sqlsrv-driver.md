@@ -216,6 +216,6 @@ if ($row ) {
 ?>  
 ```  
   
-## See Also  
-[Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)  
-  
+## Related content
+
+- [Specifying a cursor type and selecting rows](specifying-a-cursor-type-and-selecting-rows.md)

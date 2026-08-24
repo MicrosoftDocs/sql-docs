@@ -42,7 +42,8 @@ f1_keywords:
 |------------------|-----------------|  
 |**Enable integration with Data Quality Services**|Select this option to enable the Data Quality functionality available in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. For more information, see [Enable Data Quality Services Integration with Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   
-## See Also  
-[Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md) 
- [Web Application Requirements &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
- [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)
+## Related content
+
+- [Master Data Services Installation and Configuration](master-data-services-installation-and-configuration.md)
+- [Web application requirements (Master Data Services)](install-windows/web-application-requirements-master-data-services.md)
+- [Create a master data manager web application (Master Data Services)](install-windows/create-a-master-data-manager-web-application-master-data-services.md)

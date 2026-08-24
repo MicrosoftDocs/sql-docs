@@ -147,26 +147,20 @@ If the **xmltext** directive is specified, the column content is wrapped in a si
 
 If *AttributeName* is specified, the tag name is replaced by the specified name. Otherwise, the attribute is appended to the current list of attributes of the enclosing elements by putting the content at the beginning of the containment without entity encoding. The column with this directive must be a text type, such as **varchar**, **nvarchar**, **char**, **nchar**, **text**, or **ntext**. This directive can be used only with **hide**. This directive is useful in fetching overflow data stored in a column. If the content isn't a well-formed XML, the behavior is undefined.
 
-## Next steps
+## Related content
 
-The following examples illustrate the use of EXPLICIT mode.
-
-- [Example: Retrieving Employee Information](../../relational-databases/xml/example-retrieving-employee-information.md)
-- [Example: Specifying the ELEMENT Directive](../../relational-databases/xml/example-specifying-the-element-directive.md)
-- [Example: Specifying the ELEMENTXSINIL Directive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)
-- [Example: Constructing Siblings with EXPLICIT Mode](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)
-- [Example: Specifying the ID and IDREF Directives](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)
-- [Example: Specifying the ID and IDREFS Directives](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)
-- [Example: Specifying the HIDE Directive](../../relational-databases/xml/example-specifying-the-hide-directive.md)
-- [Example: Specifying the ELEMENT Directive and Entity Encoding](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)
-- [Example: Specifying the CDATA Directive](../../relational-databases/xml/example-specifying-the-cdata-directive.md)
-- [Example: Specifying the XMLTEXT Directive](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)
-
-## See also
-
-- [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)
-- [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)
-- [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)
-- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
-- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)
-
+- [Use RAW mode with FOR XML](use-raw-mode-with-for-xml.md)
+- [Use AUTO mode with FOR XML](use-auto-mode-with-for-xml.md)
+- [Use PATH mode with FOR XML](use-path-mode-with-for-xml.md)
+- [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
+- [FOR XML (SQL Server)](for-xml-sql-server.md)
+- [Example: Retrieve employee information](example-retrieving-employee-information.md)
+- [Example: Specify the ELEMENT directive](example-specifying-the-element-directive.md)
+- [Example: Specify the ELEMENTXSINIL directive](example-specifying-the-elementxsinil-directive.md)
+- [Example: Construct siblings with EXPLICIT mode](example-constructing-siblings-with-explicit-mode.md)
+- [Example: Specify the ID and IDREF directives](example-specifying-the-id-and-idref-directives.md)
+- [Example: Specify the ID and IDREFS directives](example-specifying-the-id-and-idrefs-directives.md)
+- [Example: Specify the HIDE directive](example-specifying-the-hide-directive.md)
+- [Example: Specify the ELEMENT directive and entity encoding](example-specifying-the-element-directive-and-entity-encoding.md)
+- [Example: Specify the CDATA directive](example-specifying-the-cdata-directive.md)
+- [Example: Specify the XMLTEXT directive](example-specifying-the-xmltext-directive.md)

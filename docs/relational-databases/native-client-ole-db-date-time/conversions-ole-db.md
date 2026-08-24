@@ -60,7 +60,6 @@ helpviewer_keywords:
  [Conversions Performed from Server to Client](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Describes date/time conversions performed between [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
   
-## See Also  
- [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Date and Time Improvements (OLE DB)](date-and-time-improvements-ole-db.md)

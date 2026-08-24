@@ -66,19 +66,12 @@ helpviewer_keywords:
 |Update the attribute values of a member.|[Change the Attribute Type &#40;MDS Add-in for Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
-## Related Content  
-  
--   [Master Data Services Overview &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
-  
--   [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
-  
--   [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
-  
--   [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)  
-  
--   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
-  
--   [Leaf Permissions &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
-  
- 
--   [Filter Operators &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)
+## Related content
+
+- [Master Data Services Overview (MDS)](master-data-services-overview-mds.md)
+- [Entities (Master Data Services)](entities-master-data-services.md)
+- [Attributes (Master Data Services)](attributes-master-data-services.md)
+- [Hierarchies (Master Data Services)](hierarchies-master-data-services.md)
+- [Collections (Master Data Services)](collections-master-data-services.md)
+- [Leaf Permissions (Master Data Services)](leaf-permissions-master-data-services.md)
+- [Filter Operators (Master Data Services)](filter-operators-master-data-services.md)

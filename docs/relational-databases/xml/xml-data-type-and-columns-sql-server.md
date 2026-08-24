@@ -185,7 +185,6 @@ Note the following general limitations that apply to the **xml** data type:
 
 - XML elements can be nested up to 128 levels.
 
-## See also
+## Related content
 
-- [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
-
+- [Examples of bulk import and export of XML documents (SQL Server)](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)

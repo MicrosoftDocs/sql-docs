@@ -190,6 +190,6 @@ BackupIoRequest::ReportIoError: write failure on backup device 'https://storagea
 
 ## Related content
 
-- [Restore from backups stored in Azure](restoring-from-backups-stored-in-microsoft-azure.md)
+- [Restoring From Backups Stored in Microsoft Azure](restoring-from-backups-stored-in-microsoft-azure.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
-- [RESTORE statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

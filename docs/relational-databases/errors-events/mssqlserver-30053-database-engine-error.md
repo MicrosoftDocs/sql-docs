@@ -48,10 +48,10 @@ Select the user action that is appropriate to the probable cause of the timeout,
 |The filter daemon process configuration is incorrect.|Ensure that you are using the current password and that a domain policy is not preventing the filter daemon account from logging on.|  
 |A very heavy query workload is running on the server instance.|Try running the query again under a lighter load.|  
   
-## See Also  
-[Set the Service Account for the Full-text Filter Daemon Launcher](~/relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
-[Full-Text Search](~/relational-databases/search/full-text-search.md)  
-[sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
-[Configure and Manage Word Breakers and Stemmers for Search](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-[Configure and Manage Filters for Search](~/relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
+## Related content
+
+- [Set the service account for the full-text Filter Daemon Launcher](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)
+- [Full-Text Search](../search/full-text-search.md)
+- [sys.sp_help_fulltext_system_components (Transact-SQL)](../system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)
+- [Configure and manage word breakers and stemmers](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
+- [Configure and manage filters](../search/configure-and-manage-filters-for-search.md)

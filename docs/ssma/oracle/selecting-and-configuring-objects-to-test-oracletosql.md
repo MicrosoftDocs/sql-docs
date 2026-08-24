@@ -72,9 +72,7 @@ Controls how trailing spaces are treated during the comparison.
 ## Specify input values for procedures and functions (Call Values)  
 You can specify input parameter values on the **Call Values** page. The **Add Call** button adds a new call with empty parameter values. The **Remove Calls** button removes the current call.  
   
-## Next Step  
-[Selecting and Configuring Affected Objects &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-  
-## See Also  
-[Testing Migrated Database Objects &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  
+## Related content
+
+- [Testing Migrated Database Objects](testing-migrated-database-objects-oracletosql.md)
+- [Selecting and Configuring Affected Objects](selecting-and-configuring-affected-objects-oracletosql.md)

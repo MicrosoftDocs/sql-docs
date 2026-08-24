@@ -44,6 +44,6 @@ This is used to return a virtual device interface.
 
 Each call returns the next unopened device. The function can be called only the number of times equal to the number of devices specified in the virtual device set configuration.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

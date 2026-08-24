@@ -71,11 +71,10 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## See Also  
- [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
-  
-  
+## Related content
+
+- [BEGIN DIALOG CONVERSATION (Transact-SQL)](begin-dialog-conversation-transact-sql.md)
+- [GET CONVERSATION GROUP (Transact-SQL)](get-conversation-group-transact-sql.md)
+- [END CONVERSATION (Transact-SQL)](end-conversation-transact-sql.md)
+- [sys.conversation_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)
+- [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)

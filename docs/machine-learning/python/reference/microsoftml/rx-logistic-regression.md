@@ -364,23 +364,12 @@ This algorithm will attempt to load the entire dataset into memory
 when `train_threads > 1` (multi-threading).
 
 
-## See also
-
-[`rx_predict`](rx-predict.md)
-
-
 ## References
 
-[Wikipedia: L-BFGS](https://wikipedia.org/wiki/L-BFGS)
-
-[Wikipedia: Logistic
-regression](https://wikipedia.org/wiki/Logistic_regression)
-
-[Scalable
-Training of L1-Regularized Log-Linear Models](https://research.microsoft.com/apps/pubs/default.aspx?id=78900)
-
-[Test Run - L1
-and L2 Regularization for Machine Learning](/archive/msdn-magazine/2015/february/test-run-l1-and-l2-regularization-for-machine-learning)
+- [Wikipedia: L-BFGS](https://wikipedia.org/wiki/L-BFGS)
+- [Wikipedia: Logistic regression](https://wikipedia.org/wiki/Logistic_regression)
+- [Scalable Training of L1-Regularized Log-Linear Models](https://research.microsoft.com/apps/pubs/default.aspx?id=78900)
+- [Test Run - L1 and L2 Regularization for Machine Learning](/archive/msdn-magazine/2015/february/test-run-l1-and-l2-regularization-for-machine-learning)
 
 
 ## Binary classification example
@@ -546,3 +535,7 @@ Rows Read: 5, Total Rows Processed: 5, Total Chunk Time: 0.001 seconds
 3      setosa  0.767652  0.211191  0.021157
 4  versicolor  0.116369  0.498615  0.385016
 ```
+
+## Related content
+
+- [*microsoftml.rx_predict*: Scores using a Microsoft machine learning model](rx-predict.md)

@@ -31,8 +31,7 @@ helpviewer_keywords:
   
 5.  Click **OK** to save the change.  
   
-## See Also  
- [Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
-  
-  
+## Related content
+
+- [Run SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)
+- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)

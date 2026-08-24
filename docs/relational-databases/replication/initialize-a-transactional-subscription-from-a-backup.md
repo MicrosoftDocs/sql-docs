@@ -65,5 +65,5 @@ dev_langs:
   
 ## Related content
 
-- [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)
-- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md)
+- [Back up and restore of SQL Server databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)

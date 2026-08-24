@@ -284,5 +284,5 @@ WHERE EmployeeID = 17;
 
 ## Related content
 
-- [JSON Path Expressions](../../relational-databases/json/json-path-expressions-sql-server.md)
+- [JSON path expressions in the SQL Database Engine](../../relational-databases/json/json-path-expressions-sql-server.md)
 - [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md)

@@ -180,14 +180,11 @@ EXEC sp_executesql @DatePartitionFunction;
 GO  
 ```  
   
-## Next steps
-
-Learn more about table partitioning and related concepts in the following articles: 
+## Related content
 
 - [CREATE PARTITION SCHEME (Transact-SQL)](create-partition-scheme-transact-sql.md)
 - [Partitioned tables and indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)
-- [Modify a Partition Function](../../relational-databases/partitions/modify-a-partition-function.md)
-- [Modify a Partition Scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)
+- [Modify a partition function](../../relational-databases/partitions/modify-a-partition-function.md)
+- [Modify a partition scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)
 - [sys.partition_functions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)
 - [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)
-

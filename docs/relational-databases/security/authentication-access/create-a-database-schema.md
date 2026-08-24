@@ -123,4 +123,3 @@ The **Schema - New** dialog box also offers options on two extra pages: **Permis
 ## Related content
 
 - [CREATE SCHEMA (Transact-SQL)](../../../t-sql/statements/create-schema-transact-sql.md)
-

@@ -126,14 +126,10 @@ GO
   > ```
   > In this example, `SQL2019` is the instance name of the SQL Server.
 
-## Next steps
+## Related content
 
-For more information about the service sid structure, read [SERVICE_SID_INFO structure](/windows/win32/api/winsvc/ns-winsvc-service_sid_info).
-
-Read about additional options that are available when [creating a login](../../t-sql/statements/create-login-transact-sql.md).
-
-To use Role-Based Security with Service SIDs, read about [creating roles](../../t-sql/statements/create-role-transact-sql.md) in SQL Server.
-
-Read about different ways to [grant permissions](../../t-sql/statements/grant-transact-sql.md) to Service SIDs in SQL Server.
-
-For more information on configuring service accounts for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], read [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+- [SERVICE_SID_INFO structure](/windows/win32/api/winsvc/ns-winsvc-service_sid_info)
+- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
+- [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)
+- [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)
+- [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)

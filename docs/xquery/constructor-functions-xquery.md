@@ -178,8 +178,7 @@ select @x.query('
    DateCreated="2000-01-01T00:00:00Z"/>  
 ```  
   
-## See Also  
- [XML Construction &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
- [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)  
-  
-  
+## Related content
+
+- [XML construction (XQuery)](xml-construction-xquery.md)
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)

@@ -157,4 +157,3 @@ value
 
 - [SEQUENCES (Transact-SQL)](../../relational-databases/system-information-schema-views/sequences-transact-sql.md)
 - [Relational operators (Transact-SQL)](../language-elements/relational-operators-transact-sql.md)
-

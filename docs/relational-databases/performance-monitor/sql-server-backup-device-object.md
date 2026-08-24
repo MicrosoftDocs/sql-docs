@@ -27,5 +27,5 @@ helpviewer_keywords:
   
 ## Related content
 
- - [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+- [Backup Devices (SQL Server)](../backup-restore/backup-devices-sql-server.md)
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

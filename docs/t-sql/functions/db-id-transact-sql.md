@@ -113,11 +113,9 @@ This example returns the database ID of the AdventureWorksDW2022 database.
 SELECT DB_ID('AdventureWorksPDW2012');  
 ```  
   
-## See also
-[DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
-[Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)
-  
-  
+## Related content
 
+- [DB_NAME (Transact-SQL)](db-name-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md)

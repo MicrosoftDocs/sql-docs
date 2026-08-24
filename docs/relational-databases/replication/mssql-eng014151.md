@@ -45,10 +45,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)
-- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
-- [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)
-- [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)
-- [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)
-- [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)
-- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)
+- [Replication Agent Administration](agents/replication-agent-administration.md)
+- [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)
+- [Replication Distribution Agent](agents/replication-distribution-agent.md)
+- [Replication Log Reader Agent](agents/replication-log-reader-agent.md)
+- [Replication Merge Agent](agents/replication-merge-agent.md)
+- [Replication Queue Reader Agent](agents/replication-queue-reader-agent.md)
+- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)

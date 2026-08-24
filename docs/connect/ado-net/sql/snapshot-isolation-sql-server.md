@@ -136,6 +136,7 @@ Using the UPDLOCK lock hint blocks any rows attempting to update the rows before
   
 If your application has many conflicts, snapshot isolation may not be the best choice. Hints should only be used when really needed. Your application should not be designed so that it constantly relies on lock hints for its operation.  
   
-## Next steps
+## Related content
+
 - [SQL Server and ADO.NET](index.md)
-- [Transaction Locking and Row Versioning Guide](../../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)
+- [Transaction locking and row versioning guide](../../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)

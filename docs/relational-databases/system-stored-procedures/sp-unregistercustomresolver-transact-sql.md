@@ -53,6 +53,6 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [sp_lookupcustomresolver (Transact-SQL)](sp-lookupcustomresolver-transact-sql.md)
-- [sp_registercustomresolver (Transact-SQL)](sp-registercustomresolver-transact-sql.md)
+- [sys.sp_lookupcustomresolver (Transact-SQL)](sp-lookupcustomresolver-transact-sql.md)
+- [sys.sp_registercustomresolver (Transact-SQL)](sp-registercustomresolver-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

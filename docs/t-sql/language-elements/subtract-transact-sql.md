@@ -99,8 +99,8 @@ FROM DimEmployee;
 
 ## Related content
 
-- [-= (Subtraction Assignment) (Transact-SQL)](subtract-equals-transact-sql.md)
-- [Compound Operators (Transact-SQL)](compound-operators-transact-sql.md)
+- [-= (Subtraction assignment) (Transact-SQL)](subtract-equals-transact-sql.md)
+- [Compound operators (Transact-SQL)](compound-operators-transact-sql.md)
 - [Arithmetic operators (Transact-SQL)](arithmetic-operators-transact-sql.md)
 - [Unary operators - Negative (Transact-SQL)](unary-operators-negative.md)
 - [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)

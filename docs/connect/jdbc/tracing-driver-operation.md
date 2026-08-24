@@ -171,6 +171,6 @@ Set these loggers to `FINE` level to enable metric output. You can also register
 
 For configuration details, tracked activities, and code examples, see [Performance Logger and callback](performance-logger-callback.md).
 
-## See also
+## Related content
 
-[Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)
+- [Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)

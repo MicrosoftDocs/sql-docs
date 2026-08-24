@@ -146,7 +146,7 @@ If the test fails, verify:
 
 - [Linked servers (Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md)
 - [Create linked servers (SQL Server Database Engine)](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
-- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [sys.sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 - [Enable Microsoft Entra authentication for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm?view=azuresql&tabs=azure-portal&preserve-view=true)
 - [Tutorial: Set up Microsoft Entra authentication for SQL Server enabled by Azure Arc](entra-authentication-setup-tutorial.md)
 - [Prerequisites - SQL Server enabled by Azure Arc](prerequisites.md)

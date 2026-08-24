@@ -143,4 +143,4 @@ Add a new SQL Server unit test to the project to create an assembly reference to
 
 ## Related content
 
-- [Custom Test Conditions for SQL Server Unit Tests](custom-test-conditions-for-sql-server-unit-tests.md)
+- [Custom test conditions for SQL Server unit tests](custom-test-conditions-for-sql-server-unit-tests.md)

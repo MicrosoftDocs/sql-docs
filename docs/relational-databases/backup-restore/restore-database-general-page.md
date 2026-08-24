@@ -122,5 +122,5 @@ Select **URL** from the **Backup media type:** dropdown list from the **Select b
 - [Restore a Transaction Log Backup (SQL Server)](restore-a-transaction-log-backup-sql-server.md)
 - [View the contents of a backup tape or file (SQL Server)](view-the-contents-of-a-backup-tape-or-file-sql-server.md)
 - [View the Properties and Contents of a Logical Backup Device (SQL Server)](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)
-- [Media Sets, Media Families, and Backup Sets (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)
+- [Media sets, media families, and backup sets (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)
 - [Apply Transaction Log Backups (SQL Server)](apply-transaction-log-backups-sql-server.md)

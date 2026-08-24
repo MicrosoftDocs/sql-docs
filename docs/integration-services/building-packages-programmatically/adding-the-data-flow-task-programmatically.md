@@ -69,10 +69,7 @@ Module Module1
 End Module  
 ```  
   
-## External Resources  
- Blog entry, [EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042), on blogs.msdn.com.  
-  
-## See Also  
- [Discovering Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
-  
-  
+## Related content
+
+- [EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042)
+- [Discovering Data Flow Components Programmatically](discovering-data-flow-components-programmatically.md)

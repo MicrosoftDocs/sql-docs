@@ -21,5 +21,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
-- [Report server system properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)
+- [Connect to a report server in Management Studio](connect-to-a-report-server-in-management-studio.md)
+- [Reporting Services Properties - Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

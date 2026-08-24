@@ -52,9 +52,8 @@ public java.lang.Object getObject(int index)
   
 -   A value of type **datetimeoffset** will be returned as a microsoft.sql.DateTimeOffset object.  
   
-## See Also  
- [getObject Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [getObject Method (SQLServerCallableStatement)](getobject-method-sqlservercallablestatement.md)
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

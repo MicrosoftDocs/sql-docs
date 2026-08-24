@@ -514,7 +514,6 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## See Also  
- [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
+## Related content
 
+- [OLE DB How-to articles](ole-db-how-to-topics.md)

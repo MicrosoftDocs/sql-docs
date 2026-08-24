@@ -68,7 +68,7 @@ The example uses a file named "caCert.cer" as a certificate file. You must obtai
 8. Enter an export file name.
 9. Select Next, and then select Finish to export the certificate.
 
-## See also
+## Related content
 
-[Using encryption](using-ssl-encryption.md)  
-[Securing JDBC driver applications](securing-jdbc-driver-applications.md)  
+- [Using encryption](using-ssl-encryption.md)
+- [Securing JDBC driver applications](securing-jdbc-driver-applications.md)

@@ -45,8 +45,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**SPID**|**Int**|ID of the session on which the event occurred.|12|Yes|  
 |**StartTime**|**datetime**|Time at which the event started, if available.|14|Yes|  
   
-## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
-  
-  
+## Related content
 
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)

@@ -184,7 +184,7 @@ The following operations, which are fully logged under the full recovery model, 
 ## Related content
 
 - [SQL Server transaction log architecture and management guide](../sql-server-transaction-log-architecture-and-management-guide.md)
-- [Control transaction durability](control-transaction-durability.md)
+- [Control Transaction Durability](control-transaction-durability.md)
 - [Prerequisites for minimal logging in bulk import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)
 - [Back up and restore of SQL Server databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)
 - [Restore and recovery overview (SQL Server)](../backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)
@@ -192,5 +192,5 @@ The following operations, which are fully logged under the full recovery model, 
 - [View or change the properties of a database](../databases/view-or-change-the-properties-of-a-database.md)
 - [Recovery models (SQL Server)](../backup-restore/recovery-models-sql-server.md)
 - [Transaction log backups (SQL Server)](../backup-restore/transaction-log-backups-sql-server.md)
-- [sys.dm_db_log_info (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)
-- [sys.dm_db_log_space_usage (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)
+- [sys.dm_db_log_info (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-log-info-transact-sql.md)
+- [sys.dm_db_log_space_usage (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-log-space-usage-transact-sql.md)

@@ -71,6 +71,6 @@ Take frequent enough log backups to support your business requirements, specific
 
 - [The transaction log](../logs/the-transaction-log-sql-server.md)
 - [Transaction Log Backups in the SQL Server Transaction Log Architecture and Management Guide](../sql-server-transaction-log-architecture-and-management-guide.md#Backups)
-- [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)
+- [Back up and restore of SQL Server databases](back-up-and-restore-of-sql-server-databases.md)
 - [Tail-log backups (SQL Server)](tail-log-backups-sql-server.md)
 - [Apply Transaction Log Backups (SQL Server)](apply-transaction-log-backups-sql-server.md)

@@ -51,7 +51,6 @@ helpviewer_keywords:
  **File name**  
  Provide the path of a package or click the browse button **(...)** and locate the package.  
   
-## See Also  
- [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)  
-  
-  
+## Related content
+
+- [Message Queue Task](message-queue-task.md)

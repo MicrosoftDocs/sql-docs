@@ -615,6 +615,6 @@ print(f"Due date: {due_date}")  # 2024-03-22 (next Friday)
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
 - [Handle NULL values](null-handling.md)
-- [Retrieving data](retrieving-data.md)
+- [Retrieve data with mssql-python](retrieving-data.md)

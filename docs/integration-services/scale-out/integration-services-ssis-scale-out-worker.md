@@ -52,5 +52,6 @@ The log location of each individual task is configured in the `WorkerSettings.co
 
 The *[account]* parameter is the account running the Scale Out Worker service. By default, the account is `SSISScaleOutWorker140`.
 
-## Next steps
-[Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
+## Related content
+
+- [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)

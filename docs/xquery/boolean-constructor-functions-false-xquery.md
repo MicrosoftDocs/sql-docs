@@ -30,6 +30,6 @@ fn:false() as xs:boolean
 ### A. Using the false() XQuery Boolean function  
  For a working sample, see [true Function &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
   
-## See Also  
- [Boolean Constructor Functions &#40;XQuery&#41;](./xquery-functions-against-the-xml-data-type.md)  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)

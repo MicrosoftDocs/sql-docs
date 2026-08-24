@@ -35,5 +35,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
-- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)
+- [Start the Replication Monitor](monitor/start-the-replication-monitor.md)
+- [Monitoring (Replication)](monitor/monitoring-replication.md)

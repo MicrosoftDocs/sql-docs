@@ -33,6 +33,4 @@ dev_langs:
   
 ## Related content
 
-[dbo.sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
-  
-  
+- [dbo.sysproxies (Transact-SQL)](dbo-sysproxies-transact-sql.md)

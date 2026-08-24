@@ -131,6 +131,6 @@ FROM sys.dm_pdw_resource_waits;
 ```  
   
   
-## See Also  
-[Workload Management](workload-management.md)  
-  
+## Related content
+
+- [Workload management in Analytics Platform System](workload-management.md)

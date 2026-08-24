@@ -51,8 +51,9 @@ helpviewer_keywords:
   
 10. Click **OK**.  
   
-## See Also  
- [Create an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Create a Leaf Member &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
- [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)
+## Related content
+
+- [Create an Explicit Hierarchy (Master Data Services)](create-an-explicit-hierarchy-master-data-services.md)
+- [Create a Leaf Member (Master Data Services)](create-a-leaf-member-master-data-services.md)
+- [Members (Master Data Services)](members-master-data-services.md)
+- [Explicit Hierarchies (Master Data Services)](explicit-hierarchies-master-data-services.md)

@@ -53,8 +53,7 @@ CREATE TABLE Orders
 GO  
 ```  
   
-## See Also  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
-  
-  
+## Related content
+
+- [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)

@@ -40,7 +40,7 @@ To address the above situation, dynamic SQL offers an optimized form of executio
 
 Prepared execution is still not the same as static SQL. In static SQL, the first four steps of processing a SQL statement take place at compile time. In prepared execution, these steps still take place at run time, but they're only done once. Execution of the plan takes place only when EXECUTE is called. This behavior helps eliminate some of the performance disadvantages inherent in the architecture of dynamic SQL.
 
-## See also
+## Related content
 
-[EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)  
-[sp_executesql (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)  
+- [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
+- [sp_executesql (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)

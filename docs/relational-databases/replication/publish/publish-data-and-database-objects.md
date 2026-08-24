@@ -229,9 +229,9 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)
-- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)
-- [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)
-- [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)
-- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)
-- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)
+- [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md)
+- [Configure Distribution](../configure-distribution.md)
+- [Initialize a Subscription](../initialize-a-subscription.md)
+- [Scripting Replication](../scripting-replication.md)
+- [Secure the Publisher](../security/secure-the-publisher.md)
+- [Subscribe to Publications](../subscribe-to-publications.md)

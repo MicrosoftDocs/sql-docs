@@ -53,7 +53,7 @@ In Azure SQL Database, only members of the special database role **loginmanager*
 
 ## Related content
 
-- [System catalog views](catalog-views-transact-sql.md)
-- [Security Catalog Views](security-catalog-views-transact-sql.md)
-- [Password Policy](../security/password-policy.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [Password policy](../security/password-policy.md)
 - [Principals (Database Engine)](../security/authentication-access/principals-database-engine.md)

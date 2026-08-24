@@ -109,12 +109,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## Permissions  
  Requires CONTROL permission on the database scoped credential.  
   
-## See Also  
- [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
- [GRANT Database Scoped Credential (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [DENY Database Scoped Credential (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
+
+- [REVOKE (Transact-SQL)](revoke-transact-sql.md)
+- [GRANT Database Scoped Credential permissions (Transact-SQL)](grant-database-scoped-credential-transact-sql.md)
+- [DENY Database Scoped Credential (Transact-SQL)](deny-database-scoped-credential-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

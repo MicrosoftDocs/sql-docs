@@ -103,8 +103,8 @@ As an alternative to **miniCRAN**, you can perform these steps manually:
 1. Move the files to a folder accessible by the server.
 1. Run a supported installation command or DDL statement to install the package into the instance library.
 
-## See also
+## Related content
 
-+ [Get R package information](r-package-information.md)
-+ [Tips for using R packages](tips-for-using-r-packages.md)
-+ [SQL Server R language tutorials](../tutorials/r-tutorials.md)
+- [Get R package information](r-package-information.md)
+- [Tips for using R packages](tips-for-using-r-packages.md)
+- [R tutorials for SQL machine learning](../tutorials/r-tutorials.md)

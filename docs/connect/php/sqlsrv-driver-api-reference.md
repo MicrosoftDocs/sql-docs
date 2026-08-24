@@ -46,15 +46,10 @@ The SQLSRV driver contains the following functions:
 |[sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)|Sends up to eight kilobytes (8 KB) of data to the server with each call to the function.|  
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Provides information about the server.|  
   
-## Reference  
-[PHP Manual](https://php.net/manual)  
-  
-## See Also  
-[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+## Related content
 
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
-
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-
-[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
-  
+- [PHP Manual](https://php.net/manual)
+- [Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)
+- [Constants (Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
+- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)

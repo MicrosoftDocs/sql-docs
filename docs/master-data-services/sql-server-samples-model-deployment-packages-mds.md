@@ -49,5 +49,6 @@ keywords:
  
  In Master Data Services, a package is an XML file that contains a deployable model structure, and optionally, data from the model. Use model packages to move copies of models from one MDS environment to another, or to create new models in your existing [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] environment.  
   
-## See Also  
- [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)
+## Related content
+
+- [Deploy a Model Deployment Package by Using MDSModelDeploy](deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)

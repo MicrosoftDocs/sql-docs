@@ -423,7 +423,6 @@ RETURN
   
 -   Explicitly querying for **xsi:type** or **xsi:nil** is not supported.  
   
-## See Also  
- [Type System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
-  
-  
+## Related content
+
+- [Type System (XQuery)](type-system-xquery.md)

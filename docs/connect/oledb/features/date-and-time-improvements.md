@@ -44,8 +44,6 @@ ms.custom:
 ### Use Date/Time/Datetime/Datetimeoffset Data with Client-Side Conversions Consistent with Existing Conversions  
  The conversions are extended in a consistent manner to include conversions between all date and time types introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)].  
   
-## See Also  
- [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)

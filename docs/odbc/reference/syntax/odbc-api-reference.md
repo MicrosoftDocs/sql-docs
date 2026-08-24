@@ -188,6 +188,6 @@ These functions manage transaction boundaries, controlling when changes are comm
 
 ## Related content
 
-- [ODBC overview](../odbc-overview.md)
-- [Developing applications](../develop-app/developing-applications.md)
-- [ODBC Programmer's reference](../odbc-programmer-s-reference.md)
+- [ODBC Overview](../odbc-overview.md)
+- [Developing Applications](../develop-app/developing-applications.md)
+- [ODBC Programmer's Reference](../odbc-programmer-s-reference.md)

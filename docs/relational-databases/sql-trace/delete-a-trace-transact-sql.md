@@ -26,9 +26,8 @@ helpviewer_keywords:
 > [!NOTE]  
 >  A trace must be stopped first before it can be closed.  
   
-## See Also  
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)  
-  
-  
+## Related content
+
+- [sp_trace_setstatus (Transact-SQL)](../system-stored-procedures/sp-trace-setstatus-transact-sql.md)
+- [System stored procedures (Transact-SQL)](../system-stored-procedures/system-stored-procedures-transact-sql.md)
+- [SQL Server Profiler stored procedures (Transact-SQL)](../system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)

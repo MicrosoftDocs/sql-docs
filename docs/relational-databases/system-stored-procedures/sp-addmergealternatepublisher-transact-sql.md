@@ -92,5 +92,5 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [sp_dropmergealternatepublisher (Transact-SQL)](sp-dropmergealternatepublisher-transact-sql.md)
+- [sys.sp_dropmergealternatepublisher (Transact-SQL)](sp-dropmergealternatepublisher-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -75,6 +75,6 @@ Requires membership in the **sysadmin** fixed server role. Read-only access to t
 
 ## Related content
 
-- [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)
-- [dbo.sysdac_instances](../system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)
-- [sysdac_instances_internal](data-tier-application-tables-sysdac-instances-internal.md)
+- [Data-tier applications (DAC) overview](../../tools/sql-database-projects/concepts/data-tier-applications/overview.md)
+- [Data-tier Application Views - dbo.sysdac_instances](../system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)
+- [Data-tier Application Tables - sysdac_instances_internal](data-tier-application-tables-sysdac-instances-internal.md)

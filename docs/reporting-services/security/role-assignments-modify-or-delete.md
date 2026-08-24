@@ -55,5 +55,5 @@ Similarly, if you're a system or network administrator, it's probably easier for
 
 ## Related content
 
-- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
-- [Role assignments](../../reporting-services/security/role-assignments.md)
+- [Create and manage role assignments](create-and-manage-role-assignments.md)
+- [Role assignments](role-assignments.md)

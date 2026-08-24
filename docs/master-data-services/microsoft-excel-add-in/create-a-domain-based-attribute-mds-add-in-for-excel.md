@@ -55,11 +55,9 @@ ms.custom:
   
 7.  Click **OK**. Each cell in the column now has a list of values for users to choose from.  
   
-## Next Steps  
-  
--   To add and delete values in the constrained list, load the entity that the attribute is based on. For more information on loading entities, see [Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md).  
-  
-## See Also  
- [Domain-Based Attributes &#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)   
- [Create an Entity &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
- [Building a Model &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)
+## Related content
+
+- [Domain-Based Attributes (Master Data Services)](../domain-based-attributes-master-data-services.md)
+- [Create an Entity (MDS Add-in for Excel)](create-an-entity-mds-add-in-for-excel.md)
+- [Building a Model (MDS Add-in for Excel)](building-a-model-mds-add-in-for-excel.md)
+- [Export Data to Excel from Master Data Services](export-data-to-excel-from-master-data-services.md)

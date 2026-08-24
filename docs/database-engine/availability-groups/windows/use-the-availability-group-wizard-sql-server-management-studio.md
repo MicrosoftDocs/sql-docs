@@ -171,7 +171,7 @@ Requires membership in the **sysadmin** fixed server role and either CREATE AVAI
   
 -   [Troubleshoot a Failed Add-File Operation &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Related Content  
+##  <a name="RelatedContent"></a> Related tasks  
   
 -   **Blogs:**  
   
@@ -192,7 +192,8 @@ Requires membership in the **sysadmin** fixed server role and either CREATE AVAI
 As an alternative to using the New Availability Group Wizard, you can use [!INCLUDE[tsql](../../../includes/tsql-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlets. For more information, see [Create an Availability Group &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md) or [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
 
 
-## See Also  
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
+## Related content
+
+- [The database mirroring endpoint (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Prerequisites, restrictions, and recommendations for Always On availability groups](prereqs-restrictions-recommendations-always-on-availability.md)

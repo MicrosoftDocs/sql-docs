@@ -119,6 +119,6 @@ GO
 ## Related content
 
 - [Application Roles](../../relational-databases/security/authentication-access/application-roles.md)
-- [CREATE APPLICATION ROLE](create-application-role-transact-sql.md)
-- [DROP APPLICATION ROLE](drop-application-role-transact-sql.md)
-- [EVENTDATA](../functions/eventdata-transact-sql.md)
+- [CREATE APPLICATION ROLE (Transact-SQL)](create-application-role-transact-sql.md)
+- [DROP APPLICATION ROLE (Transact-SQL)](drop-application-role-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

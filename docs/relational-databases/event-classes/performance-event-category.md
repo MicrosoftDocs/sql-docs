@@ -36,8 +36,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |[Plan Guide Successful Event Class](../../relational-databases/event-classes/plan-guide-successful-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] successfully produced an execution plan for a query or batch that contained a plan guide.|  
 |[Plan Guide Unsuccessful Event Class](../../relational-databases/event-classes/plan-guide-unsuccessful-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] could not produce an execution plan for a query or batch that contained a plan guide.|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Related content
 
+- [Extended Events overview](../extended-events/extended-events.md)

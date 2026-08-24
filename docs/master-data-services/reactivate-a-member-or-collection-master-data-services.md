@@ -60,7 +60,8 @@ helpviewer_keywords:
   
 7.  On the confirmation dialog box, click **OK**. A new transaction is added, showing **Active** in the **New Value** column.  
   
-## See Also  
- [Delete a Member or Collection &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)
+## Related content
+
+- [Delete a Member or Collection (Master Data Services)](delete-a-member-or-collection-master-data-services.md)
+- [Members (Master Data Services)](members-master-data-services.md)
+- [Collections (Master Data Services)](collections-master-data-services.md)

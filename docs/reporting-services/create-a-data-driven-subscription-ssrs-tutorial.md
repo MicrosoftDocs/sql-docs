@@ -66,6 +66,6 @@ The following diagram illustrates the basic workflow of the process:
   
 ## Related content
 
-- [Lesson 1: Create a sample subscriber database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md)
-- [Lesson 2: Configure report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)
-- [Lesson 3: Define a data-driven subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)
+- [Lesson 1: Create a sample subscriber database](lesson-1-creating-a-sample-subscriber-database.md)
+- [Lesson 2: Modify the report data source properties](lesson-2-modifying-the-report-data-source-properties.md)
+- [Lesson 3: Define a data-driven subscription](lesson-3-defining-a-data-driven-subscription.md)

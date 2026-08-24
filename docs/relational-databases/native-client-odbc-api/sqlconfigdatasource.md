@@ -18,7 +18,7 @@ apitype: "DLLExport"
   
  For a list of the keywords available in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, see [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-## See Also  
- [SQLConfigDataSource Function](../../odbc/reference/syntax/sqlconfigdatasource-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLConfigDataSource Function](../../odbc/reference/syntax/sqlconfigdatasource-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

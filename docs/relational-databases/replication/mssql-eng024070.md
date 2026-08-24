@@ -45,6 +45,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
-- [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)
+- [Identity and Access Control (Replication)](security/identity-and-access-control-replication.md)
+- [SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager.md)

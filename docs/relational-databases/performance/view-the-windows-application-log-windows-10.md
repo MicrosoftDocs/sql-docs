@@ -43,4 +43,4 @@ helpviewer_keywords:
 
 ## Related content
 
-- [View the SQL Server error log (SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)
+- [View the SQL Server error log in SQL Server Management Studio (SSMS)](view-the-sql-server-error-log-sql-server-management-studio.md)

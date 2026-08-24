@@ -135,4 +135,4 @@ The machine could not be found.
   
 ## Related content
 
-- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)

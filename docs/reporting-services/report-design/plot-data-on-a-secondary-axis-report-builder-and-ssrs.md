@@ -32,6 +32,6 @@ The paginated report chart has two axis types: primary and secondary. The second
 
 ## Related content
 
-- [Formatting Axis Labels on a Chart](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
-- [Specify an Axis Interval](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)
+- [Formatting axis labels on a paginated report chart (Report Builder)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Specify an axis interval in a paginated report (Report Builder)](specify-an-axis-interval-report-builder-and-ssrs.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

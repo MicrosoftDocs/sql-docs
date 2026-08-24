@@ -44,6 +44,6 @@ In this task, you create an OLE DB connection manager that uses Windows Authenti
 ## Go to next task
 [Step 4: Add a Data Flow task to the package](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## See also  
-[OLE DB connection manager](../integration-services/connection-manager/ole-db-connection-manager.md)  
-  
+## Related content
+
+- [OLEDB connection manager](connection-manager/ole-db-connection-manager.md)

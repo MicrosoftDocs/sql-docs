@@ -62,5 +62,6 @@ WHERE appdomain_address =
  WHERE assembly_id = 555);  
 ```  
   
-## See Also  
- [Common Language Runtime Related Dynamic Management Views &#40;Transact-SQL&#41;](common-language-runtime-related-dynamic-management-views-transact-sql.md)
+## Related content
+
+- [Common Language Runtime Related Dynamic Management Views (Transact-SQL)](common-language-runtime-related-dynamic-management-views-transact-sql.md)

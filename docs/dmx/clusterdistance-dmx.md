@@ -116,9 +116,9 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## See Also  
- [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
-  
+## Related content
+
+- [Cluster (DMX)](cluster-dmx.md)
+- [Data Mining Extensions (DMX) Function Reference](data-mining-extensions-dmx-function-reference.md)
+- [Functions (DMX)](functions-dmx.md)
+- [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)

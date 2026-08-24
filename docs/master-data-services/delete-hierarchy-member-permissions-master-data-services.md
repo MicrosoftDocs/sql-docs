@@ -54,6 +54,7 @@ helpviewer_keywords:
   
 10. Click **Save**.  
   
-## See Also  
- [Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)
+## Related content
+
+- [Hierarchy Member Permissions (Master Data Services)](hierarchy-member-permissions-master-data-services.md)
+- [Assign Hierarchy Member Permissions (Master Data Services)](assign-hierarchy-member-permissions-master-data-services.md)

@@ -180,6 +180,4 @@ GO
 
 ## Related content
 
-For a visual introduction to the built-in JSON support, see the following videos:
-
 - [JSON as a bridge between NoSQL and relational worlds](/events/datadriven-sqlserver2016/json-as-bridge-betwen-nosql-relational-worlds)

@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[setNull (int, int)](../../../connect/jdbc/reference/setnull-method-int-int.md)|Sets the designated parameter to a null value, given the type of parameter to set.|  
 |[setNull (int, int, java.lang.String)](../../../connect/jdbc/reference/setnull-method-int-int-java-lang-string.md)|Sets the designated parameter to a null value, given the type and name of the parameter to set.|  
   
-## See Also  
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)
+- [SQLServerPreparedStatement Class](sqlserverpreparedstatement-class.md)

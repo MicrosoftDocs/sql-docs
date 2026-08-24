@@ -172,9 +172,9 @@ CREATE TABLE dbo.FriendOf(
 ```
 
 
-## See Also 
- [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)
+## Related content
 
+- [ALTER TABLE table_constraint (Transact-SQL)](alter-table-table-constraint-transact-sql.md)
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
+- [INSERT (SQL Graph)](insert-sql-graph.md)
+- [Graph processing with SQL Server and Azure SQL Database](../../relational-databases/graphs/sql-graph-overview.md)

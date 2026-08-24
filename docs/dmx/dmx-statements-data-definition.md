@@ -23,8 +23,7 @@ ms.custom: dmx
 |[IMPORT &#40;DMX&#41;](../dmx/import-dmx.md)|Imports a mining model or mining structure and associated objects from a .abf file.|  
 |[SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|Creates a copy of an existing mining model.|  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
-  
-  
+## Related content
+
+- [DMX Statements - Data Manipulation](dmx-statements-data-manipulation.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)

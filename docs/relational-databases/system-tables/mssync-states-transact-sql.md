@@ -26,10 +26,9 @@ dev_langs:
 |**publisher_db**|**sysname**|The Name of the publication database.|  
 |**publication_id**|**int**|The ID of the publication.|  
   
-## See Also  
- [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Integration Services Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
- [Backup and Restore Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [Log Shipping Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [Mapping System Tables to System Views (Transact-SQL)](mapping-system-tables-to-system-views-transact-sql.md)
+- [Integration Services Tables (Transact-SQL)](integration-services-tables-transact-sql.md)
+- [Backup and Restore Tables (Transact-SQL)](backup-and-restore-tables-transact-sql.md)
+- [Log Shipping Tables (Transact-SQL)](log-shipping-tables-transact-sql.md)

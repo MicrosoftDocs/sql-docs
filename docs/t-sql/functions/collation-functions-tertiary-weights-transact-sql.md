@@ -90,8 +90,6 @@ Col2 AS TERTIARY_WEIGHTS(Col1));
 GO   
 ```  
   
-## See also
-[ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
-  
-  
+## Related content
 
+- [SELECT - ORDER BY clause (Transact-SQL)](../queries/select-order-by-clause-transact-sql.md)

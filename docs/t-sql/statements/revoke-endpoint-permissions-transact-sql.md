@@ -113,14 +113,12 @@ REVOKE TAKE OWNERSHIP ON ENDPOINT::Shipping83 FROM PKomosinski
 GO  
 ```  
   
-## See Also  
- [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [DENY Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Endpoints Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
-  
-  
+## Related content
 
+- [GRANT Endpoint Permissions (Transact-SQL)](grant-endpoint-permissions-transact-sql.md)
+- [DENY Endpoint Permissions (Transact-SQL)](deny-endpoint-permissions-transact-sql.md)
+- [CREATE ENDPOINT (Transact-SQL)](create-endpoint-transact-sql.md)
+- [Endpoints Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)
+- [sys.endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)

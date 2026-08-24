@@ -57,9 +57,9 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Host a report server database in a SQL Server failover cluster](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)
-- [Store encrypted report server data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
-- [Reporting Services report server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
-- [Administer a report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
-- [Create a Report Server Database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)
-- [Backup and restore operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)
+- [Host a report server database in a SQL Server failover cluster](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)
+- [SSRS Encryption Keys - Store Encrypted Report Server Data](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
+- [Comparing native and SharePoint Reporting Services report servers](../report-server-sharepoint/reporting-services-report-server.md)
+- [Administer a report server database (SSRS native mode)](administer-a-report-server-database-ssrs-native-mode.md)
+- [Create a report server database, Report Server Configuration Manager](../install-windows/ssrs-report-server-create-a-report-server-database.md)
+- [Backup and restore operations for Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)

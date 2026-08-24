@@ -34,7 +34,6 @@ helpviewer_keywords:
   
  If all statements executed with **SQLExecDirect** are coded using these conventions, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can reuse execution plans when the opportunity arises.  
   
-## See Also  
- [Executing Statements &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
-  
-  
+## Related content
+
+- [Executing Statements (ODBC)](executing-statements-odbc.md)

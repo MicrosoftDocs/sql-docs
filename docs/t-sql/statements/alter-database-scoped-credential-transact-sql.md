@@ -91,6 +91,6 @@ GO
 - [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](create-database-scoped-credential-transact-sql.md)
 - [DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)](drop-database-scoped-credential-transact-sql.md)
-- [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
+- [sys.database_scoped_credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md)
 - [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

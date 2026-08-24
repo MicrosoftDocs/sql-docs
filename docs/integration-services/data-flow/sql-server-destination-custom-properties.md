@@ -36,6 +36,6 @@ ms.topic: reference
   
  For more information, see [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md).  
   
-## See Also  
- [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
-  
+## Related content
+
+- [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)

@@ -95,5 +95,6 @@ In an earlier lesson, you modified the packages in the tutorial to use configura
 ## Next Task in Lesson  
 [Step 3: Testing the Deployed Packages](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-## See Also  
-[Integration Services Service &#40;SSIS Service&#41;](../integration-services/service/integration-services-service-ssis-service.md)  
+## Related content
+
+- [Integration Services Service (SSIS Service)](service/integration-services-service-ssis-service.md)

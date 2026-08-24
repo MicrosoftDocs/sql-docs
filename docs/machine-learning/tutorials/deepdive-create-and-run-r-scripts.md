@@ -111,7 +111,7 @@ Number of valid observations: 10000
     rxSetComputeContext(sqlCompute)
     ```
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Visualize SQL Server data using R](../../machine-learning/tutorials/deepdive-visualize-sql-server-data-using-r.md)

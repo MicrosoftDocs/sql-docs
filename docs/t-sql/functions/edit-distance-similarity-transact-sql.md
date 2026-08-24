@@ -51,7 +51,7 @@ An alphanumeric expression of character data. *character_expression* can be a co
 
 ## Remarks
 
-This function implements the Damerau-Levenshtein algorithm. If any of the inputs is NULL then the function returns a NULL value. Otherwise, the function returns an integer value from 0 to 100. The similarity value is computed as `(1 – (edit_distance / greatest(len(string1), len(string2)))) * 100`.
+This function implements the Damerau-Levenshtein algorithm. If any of the inputs is NULL then the function returns a NULL value. Otherwise, the function returns an integer value from 0 to 100. The similarity value is computed as `(1 - (edit_distance / greatest(len(string1), len(string2)))) * 100`.
 
 ## Examples
 
@@ -75,6 +75,6 @@ For additional examples, see [Example *EDIT_DISTANCE_SIMILARITY()*](../../relati
 
 ## Related content
 
-- [EDIT_DISTANCE (Transact-SQL)](edit-distance-transact-sql.md)
-- [JARO_WINKLER_DISTANCE (Transact-SQL)](jaro-winkler-distance-transact-sql.md)
-- [JARO_WINKLER_SIMILARITY (Transact-SQL)](jaro-winkler-similarity-transact-sql.md)
+- [EDIT_DISTANCE (Transact-SQL) preview](edit-distance-transact-sql.md)
+- [JARO_WINKLER_DISTANCE (Transact-SQL) preview](jaro-winkler-distance-transact-sql.md)
+- [JARO_WINKLER_SIMILARITY (Transact-SQL) preview](jaro-winkler-similarity-transact-sql.md)

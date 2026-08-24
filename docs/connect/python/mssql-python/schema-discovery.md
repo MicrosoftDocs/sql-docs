@@ -386,6 +386,6 @@ describe_table(conn, "Product")
 
 ## Related content
 
-- [Execute queries](executing-queries.md)
-- [Retrieve data](retrieving-data.md)
-- [Cursor management](cursor-management.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Manage cursors and result sets](cursor-management.md)

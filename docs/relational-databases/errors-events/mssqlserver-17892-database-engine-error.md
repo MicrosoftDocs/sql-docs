@@ -131,8 +131,8 @@ As a consequence, `EVENTDATA` always returns **NULL**, and all SA equivalent log
 
 ## Related content
 
-- [Logon Triggers](../triggers/logon-triggers.md)
-- [sys.server_triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)
+- [Logon triggers](../triggers/logon-triggers.md)
+- [sys.server_triggers (Transact-SQL)](../system-catalog-views/sys-server-triggers-transact-sql.md)
 - [DISABLE TRIGGER (Transact-SQL)](../../t-sql/statements/disable-trigger-transact-sql.md)
 - [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)
 - [Manage trigger security](../triggers/manage-trigger-security.md)

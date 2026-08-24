@@ -106,8 +106,7 @@ f1_keywords:
  **Disable this job**  
  Suspend restore operations to the secondary database.  
   
-## See Also  
- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
-  
-  
+## Related content
+
+- [Back up and restore of SQL Server databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)

@@ -47,7 +47,6 @@ SELECT
 FROM [Adventure Works]
 ```
   
-## See Also  
- [MDX Syntax Elements &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Syntax Elements (MDX)](mdx-syntax-elements-mdx.md)

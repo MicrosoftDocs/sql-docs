@@ -257,12 +257,12 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO;
 GO
 ```
 
-## See also
+## Related content
 
-- [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)
+- [Create and manage full-text indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)
 - [ALTER FULLTEXT INDEX (Transact-SQL)](alter-fulltext-index-transact-sql.md)
 - [DROP FULLTEXT INDEX (Transact-SQL)](drop-fulltext-index-transact-sql.md)
 - [Full-Text Search](../../relational-databases/search/full-text-search.md)
 - [GRANT (Transact-SQL)](grant-transact-sql.md)
 - [sys.fulltext_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)
-- [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)
+- [Search document properties with search property lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)

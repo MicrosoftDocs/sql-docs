@@ -150,8 +150,7 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 ```    
 
 
-## See also
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
-  
-  
+## Related content
+
+- [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)
+- [SQL_VARIANT_PROPERTY (Transact-SQL)](../functions/sql-variant-property-transact-sql.md)

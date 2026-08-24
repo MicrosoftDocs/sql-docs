@@ -86,11 +86,9 @@ If you started the wizard from an Integration Services project in Visual Studio 
   
 -   If you selected the option to save the package, the next page is **Save SSIS Package**. On this page, you specify additional options for saving the package. (Then, after you save the package, the following page is **Complete the Wizard**.) For more info, see [Save SSIS Package](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
-## See Also  
-[Save Packages](../../integration-services/save-packages.md)  
-[Run Integration Services (SSIS) Packages](../../integration-services/packages/run-integration-services-ssis-packages.md)  
-[SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-[Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+## Related content
 
-  
-
+- [Save Packages](../save-packages.md)
+- [Run Integration Services (SSIS) Packages](../packages/run-integration-services-ssis-packages.md)
+- [SQL Server Integration Services](../sql-server-integration-services.md)
+- [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

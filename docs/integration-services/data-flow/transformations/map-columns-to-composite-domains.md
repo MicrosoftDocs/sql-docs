@@ -45,6 +45,6 @@ ms.topic: how-to
   
 6.  As needed, set properties on the **Advanced** tab. For more information about the properties, see [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md).  
   
-## See Also  
- [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
-  
+## Related content
+
+- [DQS Cleansing Transformation](dqs-cleansing-transformation.md)

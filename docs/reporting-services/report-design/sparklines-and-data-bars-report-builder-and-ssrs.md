@@ -98,5 +98,5 @@ f1_keywords:
   
 ## Related content
 
-- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Tutorial: Add a sparkline to your report (Report Builder)](../tutorial-add-a-sparkline-to-your-report-report-builder.md)

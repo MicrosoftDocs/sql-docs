@@ -294,7 +294,7 @@ To view the plot, open the destination folder and review the files that were cre
 
    ![tip amount plotted over fare amount](media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")
 
-## Next steps
+## Next step
 
 In this article, you:
 

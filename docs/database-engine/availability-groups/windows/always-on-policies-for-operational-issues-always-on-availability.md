@@ -99,17 +99,11 @@ For more information, see [The Always On Health Model Part 2--Extending the Heal
 
 - [Troubleshoot a Failed Add-File Operation](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)
 
-## <a id="RelatedContent"></a> Related Content
+## Related content
 
 - [The Always On Health Model Part 1--Health Model Architecture](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)
-
 - [The Always On Health Model Part 2--Extending the Health Model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)
-
 - [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
-
-## See also
-
-- [Always On availability groups](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-- [Overview of Always On availability groups](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-- [Administration of an availability group](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)
-- [Monitoring of availability groups](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Administration of an availability group](administration-of-an-availability-group-sql-server.md)
+- [Tools to monitor Always On availability groups](monitoring-of-availability-groups-sql-server.md)

@@ -26,8 +26,7 @@ dev_langs:
 |**rowguid**|**uniqueidentifier**|The row identifier.|  
 |**lineage**|**varbinary(501)**|Stores a history list of which Subscribers and Publishers have made updates to a row. It is used to detect and resolve conflict situations.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

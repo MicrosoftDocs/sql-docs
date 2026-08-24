@@ -174,6 +174,6 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## See also
+## Related content
 
-+ [Data type mappings between Python and SQL Server](../python/python-libraries-and-data-types.md)
+- [Data type mappings between Python and SQL Server](../python/python-libraries-and-data-types.md)

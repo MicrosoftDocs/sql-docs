@@ -33,6 +33,6 @@ object.ProtocolDLL [= value]
   
 ## Remarks  
   
-## See Also  
- [Configuring Client Network Protocols and Net-Libraries](../../../database-engine/configure-windows/configure-client-protocols.md)  
-  
+## Related content
+
+- [Configure client protocols](../../../database-engine/configure-windows/configure-client-protocols.md)

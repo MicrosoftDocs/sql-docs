@@ -474,7 +474,7 @@ All `Authentication` connection string values continue to work the same way. No 
 
 If your application connects using SQL authentication, Windows integrated authentication, or `AccessToken`/`AccessTokenCallback`, no changes are required. You benefit from a lighter core package with fewer dependencies.
 
-## See also
+## Related content
 
 - [Microsoft.Data.SqlClient 7.0 release notes](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.0.md)
 - [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals)

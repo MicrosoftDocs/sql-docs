@@ -52,7 +52,6 @@ RETCODE bcp_colptr (
   
  There must be a separate **bcp_colptr** call for every column in the table whose data address you want to modify.  
   
-## See Also  
- [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
-  
-  
+## Related content
+
+- [SQL Server Driver Extensions - Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)

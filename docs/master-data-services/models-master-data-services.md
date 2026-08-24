@@ -72,14 +72,10 @@ helpviewer_keywords:
 |Change the name of an existing model.|[Edit Model &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
 |Delete an existing model.|[Delete a Model &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
-## Related Content  
-  
--   [Master Data Services Overview &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
-  
--   [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
-  
--   [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
-  
--   [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
-  
--   [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)
+## Related content
+
+- [Master Data Services Overview (MDS)](master-data-services-overview-mds.md)
+- [Entities (Master Data Services)](entities-master-data-services.md)
+- [Attributes (Master Data Services)](attributes-master-data-services.md)
+- [Deploying Models (Master Data Services)](deploying-models-master-data-services.md)
+- [Model Object Permissions (Master Data Services)](model-object-permissions-master-data-services.md)

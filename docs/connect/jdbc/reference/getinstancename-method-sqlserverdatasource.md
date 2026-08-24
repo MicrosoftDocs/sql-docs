@@ -27,8 +27,7 @@ public java.lang.String getInstanceName()
 ## Return Value  
  A **String** that contains the instance name, or null if no value is set.  
   
-## See Also  
- [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDataSource Members](sqlserverdatasource-members.md)
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

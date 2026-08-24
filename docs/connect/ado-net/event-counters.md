@@ -108,10 +108,10 @@ Number of connections currently waiting to be ready           0
 ...
 ```
 
-## See also
+## Related content
 
 - [Performance counters in SqlClient](performance-counters.md)
 - [dotnet-counters](/dotnet/core/diagnostics/dotnet-counters)
 - [dotnet-trace](/dotnet/core/diagnostics/dotnet-trace)
 - [Enable event tracing in SqlClient](enable-eventsource-tracing.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

@@ -29,7 +29,6 @@ helpviewer_keywords:
   
 -   [Debug a Script by Setting Breakpoints in a Script Task and Script Component](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
-## See Also  
- [Troubleshooting Tools for Package Development](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
-  
-  
+## Related content
+
+- [Troubleshooting Tools for Package Development](troubleshooting-tools-for-package-development.md)

@@ -25,7 +25,6 @@ helpviewer_keywords:
   
 -   Lock (SQL_CONCUR_LOCK)  
   
-## See Also  
- [Cursor Properties](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
-  
-  
+## Related content
+
+- [Cursor Properties](cursor-properties.md)

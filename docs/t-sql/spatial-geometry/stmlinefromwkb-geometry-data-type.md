@@ -55,7 +55,6 @@ SET @g = geometry::STMLineFromWKB(0x01050000000200000001020000000200000000000000
 SELECT @g.STAsText();  
 ```  
   
-## See Also  
- [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [OGC Static Geometry Methods](ogc-static-geometry-methods.md)

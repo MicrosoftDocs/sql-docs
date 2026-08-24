@@ -344,7 +344,7 @@ The `go-mssqldb` driver doesn't support distributed transactions (XA transaction
 
 ## Related content
 
-- [Error handling and retry patterns](error-handling.md)
-- [Queries and statements](queries-statements.md)
-- [Connection pooling](connection-pooling.md)
-- [Concurrent programming](concurrent-programming.md)
+- [Error handling and retry patterns with go-mssqldb](error-handling.md)
+- [Queries and statements with go-mssqldb](queries-statements.md)
+- [Connection pooling with go-mssqldb](connection-pooling.md)
+- [Concurrent programming with go-mssqldb](concurrent-programming.md)

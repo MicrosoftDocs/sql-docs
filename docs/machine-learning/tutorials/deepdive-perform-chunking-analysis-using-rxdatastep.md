@@ -109,7 +109,7 @@ In this tutorial, you'll use the **rxDataStep** function to process data in chun
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)
     ```
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [R Tutorials for SQL Server](./r-tutorials.md)

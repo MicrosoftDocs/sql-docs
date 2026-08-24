@@ -380,16 +380,15 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## See Also
+## Related content
 
- [SQLSetConnectAttr Function](../../odbc/reference/syntax/sqlsetconnectattr-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [SQLPrepare Function](../../odbc/reference/syntax/sqlprepare-function.md)   
- [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
-  
+- [SQLSetConnectAttr Function](../../odbc/reference/syntax/sqlsetconnectattr-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)
+- [SQL Server Driver Extensions - Bulk Copy Functions](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
+- [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)
+- [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)
+- [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md)
+- [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
+- [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)
+- [SQLPrepare Function](../../odbc/reference/syntax/sqlprepare-function.md)
+- [SQLGetInfo](sqlgetinfo.md)

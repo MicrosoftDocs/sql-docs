@@ -389,7 +389,7 @@ conn.QueryContext(ctx, "SELECT * FROM #Temp")
 
 ## Related content
 
-- [Connection pooling](connection-pooling.md)
-- [Error handling and retry patterns](error-handling.md)
-- [Transactions](transactions.md)
-- [Performance tuning](performance-tuning.md)
+- [Connection pooling with go-mssqldb](connection-pooling.md)
+- [Error handling and retry patterns with go-mssqldb](error-handling.md)
+- [Transactions with go-mssqldb](transactions.md)
+- [Performance tuning with go-mssqldb](performance-tuning.md)

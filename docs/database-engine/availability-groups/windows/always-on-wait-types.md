@@ -43,6 +43,6 @@ WHERE name='wait_types' AND map_value LIKE '%hadr%'
 ORDER BY map_key ASC  
 ```  
   
-## Next steps  
- [Types of waits](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)  
-  
+## Related content
+
+- [Types of waits](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)

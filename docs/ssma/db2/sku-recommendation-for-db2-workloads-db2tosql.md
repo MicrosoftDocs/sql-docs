@@ -83,4 +83,4 @@ The report includes:
 
 - [Migration guide: IBM Db2 to Azure SQL Database](/azure/azure-sql/migration-guides/database/db2-to-sql-database-guide)
 - [Migration guide: IBM Db2 to SQL Server on Azure VM](/azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide)
-- [Migrate Db2 Databases to SQL Server (Db2ToSQL)](migrating-db2-databases-to-sql-server-db2tosql.md)
+- [Migrate Db2 databases to SQL Server](migrating-db2-databases-to-sql-server-db2tosql.md)

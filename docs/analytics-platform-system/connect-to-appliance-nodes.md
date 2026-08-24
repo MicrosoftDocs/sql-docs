@@ -46,10 +46,6 @@ For example, a loading command will start with the following:
 dwloader -S mypdw-SQLCTL01  
 ```  
   
-<!-- MISSING LINKS ## See Also  
-[Configure an External Windows System To Receive Remote Table Copies Using InfiniBand &#40;SQL Server PDW&#41;](../sqlpdw/configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband-sql-server-pdw.md)  
-  -->  
-  
 ## Related content
 
 - [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

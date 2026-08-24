@@ -44,5 +44,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)
-- [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)
+- [Article Options for Merge Replication](article-options-for-merge-replication.md)
+- [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md)

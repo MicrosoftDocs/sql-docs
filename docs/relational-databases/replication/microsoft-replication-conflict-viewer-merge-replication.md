@@ -78,5 +78,5 @@ f1_keywords:
   
 ## Related content
 
-- [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)
-- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Conflict resolution for Merge Replication](view-and-resolve-data-conflicts-for-merge-publications.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)

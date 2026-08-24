@@ -90,10 +90,10 @@ NATURAL PREDICTION JOIN
   
  **Note** This example is provided only to illustrate the use of BottomCount. Depending on the size of your data set, this query might take a long time to run.  
   
-## See Also  
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
- [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
- [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
-  
+## Related content
+
+- [Functions (DMX)](functions-dmx.md)
+- [General Prediction Functions (DMX)](general-prediction-functions-dmx.md)
+- [BottomPercent (DMX)](bottompercent-dmx.md)
+- [BottomSum (DMX)](bottomsum-dmx.md)
+- [TopCount (DMX)](topcount-dmx.md)

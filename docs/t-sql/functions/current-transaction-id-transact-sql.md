@@ -52,12 +52,10 @@ This example returns the transaction ID of the current session:
 SELECT CURRENT_TRANSACTION_ID();  
 ```  
   
-## See also
-[sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
-[SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)  
-[Row-Level Security](../../relational-databases/security/row-level-security.md)  
-[CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
-[SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
-  
-  
+## Related content
 
+- [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)
+- [SESSION_CONTEXT (Transact-SQL)](session-context-transact-sql.md)
+- [Row-level security](../../relational-databases/security/row-level-security.md)
+- [CONTEXT_INFO (Transact-SQL)](context-info-transact-sql.md)
+- [SET CONTEXT_INFO (Transact-SQL)](../statements/set-context-info-transact-sql.md)

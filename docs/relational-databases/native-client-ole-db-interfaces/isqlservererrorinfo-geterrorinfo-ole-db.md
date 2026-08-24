@@ -80,6 +80,6 @@ SSERRORINFO;
   
  Pointers in the structure reference addresses in the string returned in the *ppErrorStrings* argument.  
   
-## See Also  
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
+## Related content
+
+- [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)

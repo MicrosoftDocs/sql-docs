@@ -91,6 +91,6 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 - [Delete a Push Subscription](../replication/delete-a-push-subscription.md)
 - [Delete a Pull Subscription](../replication/delete-a-pull-subscription.md)
-- [sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)
-- [sp_changemergesubscription (Transact-SQL)](sp-changemergesubscription-transact-sql.md)
-- [sp_helpmergesubscription (Transact-SQL)](sp-helpmergesubscription-transact-sql.md)
+- [sys.sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)
+- [sys.sp_changemergesubscription (Transact-SQL)](sp-changemergesubscription-transact-sql.md)
+- [sys.sp_helpmergesubscription (Transact-SQL)](sp-helpmergesubscription-transact-sql.md)

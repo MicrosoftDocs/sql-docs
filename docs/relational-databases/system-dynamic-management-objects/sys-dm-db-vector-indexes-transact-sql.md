@@ -128,7 +128,7 @@ ORDER BY approximate_staleness_percent DESC;
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
-- [CREATE VECTOR INDEX (Transact-SQL)](../../t-sql/statements/create-vector-index-transact-sql.md)
-- [VECTOR_SEARCH (Transact-SQL)](../../t-sql/functions/vector-search-transact-sql.md)
+- [CREATE VECTOR INDEX (Transact-SQL) (Preview)](../../t-sql/statements/create-vector-index-transact-sql.md)
+- [VECTOR_SEARCH (Transact-SQL) (Preview)](../../t-sql/functions/vector-search-transact-sql.md)

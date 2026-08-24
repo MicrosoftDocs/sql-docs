@@ -51,7 +51,6 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
 LinRegPoint([Measures].[Unit Sales],LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

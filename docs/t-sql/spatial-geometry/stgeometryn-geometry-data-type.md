@@ -51,7 +51,6 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.STGeometryN(2).ToString();  
 ```  
   
-## See Also  
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

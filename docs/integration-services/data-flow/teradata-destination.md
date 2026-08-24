@@ -225,9 +225,9 @@ Select how the Teradata destination should handle errors in a flow: ignore the f
 
 Select how the Teradata destination should handle truncation in a flow: ignore the failure, redirect the row, or fail the component.
 
-## Next steps
+## Related content
 
-- Configure [Teradata connection manager](teradata-connection-manager.md)
-- Configure [Teradata source](teradata-source.md)
-- Configure [Teradata destination](teradata-destination.md)
-- If you have questions, visit [Tech Community](https://aka.ms/AA6iwdw).
+- [Use the Teradata connection manager](teradata-connection-manager.md)
+- [Connect to the Teradata source](teradata-source.md)
+- [Teradata destination](teradata-destination.md)
+- [Tech Community](https://aka.ms/AA6iwdw)

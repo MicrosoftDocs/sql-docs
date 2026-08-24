@@ -22,9 +22,8 @@ CalculationCurrentPass()
 ## Remarks  
  The **CalculationCurrentPass** function returns the zero-based index of the calculation pass for the current query context. With automatic recursion resolution, this function has little practical use.  
   
-## See Also  
- [CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)   
- [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [CalculationPassValue (MDX)](calculationpassvalue-mdx.md)
+- [IIf (MDX)](iif-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

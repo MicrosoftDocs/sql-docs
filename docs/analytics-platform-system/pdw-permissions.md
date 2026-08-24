@@ -236,5 +236,5 @@ The system of fixed server roles and fixed database roles is a legacy system ori
 
 ## Related content
 
-- [Grant permissions](grant-permissions.md)
+- [Grant T-SQL permissions for Parallel Data Warehouse](grant-permissions.md)
 - [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

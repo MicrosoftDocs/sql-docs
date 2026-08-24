@@ -65,9 +65,8 @@ dev_langs:
 ## Remarks  
  If a user has VIEW SERVER STATE permission on the server, the user will see all executing sessions in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session.  
   
-## See Also  
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-objects/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Mapping System Tables to System Views (Transact-SQL)](../system-tables/mapping-system-tables-to-system-views-transact-sql.md)
+- [System Compatibility Views (Transact-SQL)](system-compatibility-views-transact-sql.md)

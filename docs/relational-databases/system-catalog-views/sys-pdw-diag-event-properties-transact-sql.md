@@ -21,7 +21,6 @@ monikerRange: ">=aps-pdw-2016"
 |**event_name**|**nvarchar(255)**|Name of the specific diagnostics event.||  
 |**property_name**|**nvarchar(255)**|Name of a property of the event.||  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)

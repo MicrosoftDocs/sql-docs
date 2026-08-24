@@ -99,11 +99,8 @@ helpviewer_keywords:
 |Enumerator|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|Properties window only. Enumerator Configuration area of editor is empty.|  
 |Data flow component|<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>|Advanced Editor|  
   
-## External Resources  
-  
--   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references), on blogs.msdn.com.  
-  
-## See Also  
- [Persisting Custom Objects](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
- [Building, Deploying, and Debugging Custom Objects](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
-  
+## Related content
+
+- [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references)
+- [Persisting Custom Objects](persisting-custom-objects.md)
+- [Building, Deploying, and Debugging Custom Objects](building-deploying-and-debugging-custom-objects.md)

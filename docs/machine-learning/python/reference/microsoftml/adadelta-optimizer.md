@@ -50,6 +50,6 @@ Decay rate (settings).
 Condition constant (settings).
 
 
-## See also
+## Related content
 
-[`sgd_optimizer`](sgd-optimizer.md)
+- [*microsoftml.sgd_optimizer*: Stochastic gradient descent](sgd-optimizer.md)

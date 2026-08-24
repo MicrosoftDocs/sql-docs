@@ -56,7 +56,6 @@ helpviewer_keywords:
   
  The table in this topic describes conversions between the type returned to the client and the type in the binding. For output parameters, if the server type specified in SQLBindParameter does not match the actual type on the server, an implicit conversion will be performed by the server and the type returned to the client will match the type specified through SQLBindParameter. This can lead to unexpected conversion results when the server's conversion rules are different from those listed in the preceding table. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses 1900-1-1, rather than the current date.  
   
-## See Also  
- [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+## Related content
+
+- [Date and Time Improvements (ODBC)](date-and-time-improvements-odbc.md)

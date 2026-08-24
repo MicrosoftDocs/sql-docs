@@ -106,4 +106,4 @@ If a full-text indexed table was online and a population was running when the ba
 ## Related content
 
 - [Manage and Monitor Full-Text Search for a Server Instance](manage-and-monitor-full-text-search-for-a-server-instance.md)
-- [Upgrade Full-Text Search](upgrade-full-text-search.md)
+- [Upgrade Full-Text Search (SQL Server Search)](upgrade-full-text-search.md)

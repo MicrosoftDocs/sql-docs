@@ -380,7 +380,7 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate
 GO
 ```
 
-## See also
+## Related content
 
 - [sys.fulltext_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)
 - [CREATE FULLTEXT INDEX (Transact-SQL)](create-fulltext-index-transact-sql.md)

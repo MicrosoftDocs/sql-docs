@@ -24,7 +24,7 @@ The data provider <xref:Microsoft.Data.SqlClient> is no longer listed in machine
 [Obtain a SqlClientFactory](obtain-sqlclientfactory.md)  
 Demonstrates how to obtain a `SqlClientFactory` from the `DbProviderFactories` class to work with specific data sources in .NET.  
 
-## See also
+## Related content
 
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

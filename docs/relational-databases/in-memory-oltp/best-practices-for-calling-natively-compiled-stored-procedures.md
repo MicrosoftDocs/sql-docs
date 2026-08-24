@@ -44,5 +44,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  - Named parameters: **reason=named_parameters**
  - DEFAULT values: **reason=default** 
   
-## See Also  
- [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)
+## Related content
+
+- [A Guide to Query Processing for Memory-Optimized Tables](a-guide-to-query-processing-for-memory-optimized-tables.md)

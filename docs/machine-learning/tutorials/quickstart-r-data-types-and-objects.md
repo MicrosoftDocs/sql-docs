@@ -311,7 +311,7 @@ From even these short examples, you can see the need to check the effects of dat
 
 For more information on supported and unsupported data types, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
-## Next steps
+## Next step
 
 To learn about writing advanced R functions with SQL machine learning, follow this quickstart:
 

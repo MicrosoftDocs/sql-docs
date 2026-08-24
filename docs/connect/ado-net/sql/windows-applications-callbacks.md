@@ -211,5 +211,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## Next steps
+## Related content
+
 - [Asynchronous operations](asynchronous-operations.md)

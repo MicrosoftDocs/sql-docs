@@ -97,9 +97,8 @@ Report snapshots aren't saved in a particular rendering format. Instead, report 
   
 ## Related content
 
-- [Configure execution properties for a report (web portal)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
-- [Limit report history (web portal)](../../reporting-services/reports/limit-report-history-report-manager.md)
-- [Schedules](../../reporting-services/subscriptions/schedules.md)   
-- [The web portal  &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md)
-
+- [Configure Execution Properties for a Report](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [Limit Report History - Reporting Services](../reports/limit-report-history-report-manager.md)
+- [Schedules in Reporting Services](../subscriptions/schedules.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
 ::: moniker-end

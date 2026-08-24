@@ -75,7 +75,6 @@ ms.topic: reference
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## See Also  
- [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerStatement Class](sqlserverstatement-class.md)

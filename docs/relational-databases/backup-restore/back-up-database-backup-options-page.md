@@ -78,10 +78,9 @@ Enter a description of the backup set. The description value is available in the
 >   
 >  Only keys residing in the Extensible Key Management (EKM) are supported.  
   
-## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
- [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
- [Back Up the Transaction Log When the Database Is Damaged &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
-  
-  
+## Related content
+
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [Back up a transaction log](back-up-a-transaction-log-sql-server.md)
+- [Back Up Files and Filegroups](back-up-files-and-filegroups-sql-server.md)
+- [Back Up the Transaction Log When the Database Is Damaged (SQL Server)](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)

@@ -81,8 +81,6 @@ Server information can be specified either in the servers section of the script 
 ## Server Connection File Validation  
 The user can easily validate their server connection file against the schema definition file **'M2SSConsoleScriptServersSchema.xsd'** available in the 'Schemas' folder.  
   
-## Next Step  
-The next step in operating the console is [Executing the SSMA Console &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
-  
-## See Also  
-[Executing the SSMA Console (MySQL)](./executing-the-ssma-console-mysqltosql.md)  
+## Related content
+
+- [Executing the SSMA console](executing-the-ssma-console-mysqltosql.md)

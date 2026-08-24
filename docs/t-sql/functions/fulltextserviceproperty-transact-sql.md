@@ -71,9 +71,8 @@ EXEC sp_fulltext_service @action='verify_signature', @value=1;
 GO  
 ```  
   
-## See Also  
- [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
-  
-  
+## Related content
+
+- [FULLTEXTCATALOGPROPERTY (Transact-SQL)](fulltextcatalogproperty-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [sys.sp_fulltext_service (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)

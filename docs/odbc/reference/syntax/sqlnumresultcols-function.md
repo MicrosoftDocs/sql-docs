@@ -87,6 +87,7 @@ SQLRETURN SQLNumResultCols(
 |Preparing a SQL statement for execution|[SQLPrepare Function](../../../odbc/reference/syntax/sqlprepare-function.md)|  
 |Setting cursor scrolling options|[SQLSetStmtAttr Function](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

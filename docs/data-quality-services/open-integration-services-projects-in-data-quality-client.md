@@ -60,8 +60,7 @@ You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database
 6.  After exporting the data, click **Finish** to close the Integration Services project.  
 
   
-## See Also  
- [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
- [Integration Services(SSIS)Projects](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  
+## Related content
+
+- [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)
+- [Integration Services (SSIS) Projects and Solutions](../integration-services/integration-services-ssis-projects-and-solutions.md)

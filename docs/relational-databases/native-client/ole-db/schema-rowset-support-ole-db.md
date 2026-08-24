@@ -50,8 +50,7 @@ helpviewer_keywords:
   
  [LINKEDSERVERS Rowset &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [Using User-Defined Types](../../../relational-databases/native-client/features/using-user-defined-types.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB)](sql-server-native-client-ole-db.md)
+- [Using User-Defined Types in SQL Server Native Client](../features/using-user-defined-types.md)

@@ -104,9 +104,6 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
 -1     0      1
 ```  
   
-## See Also  
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)

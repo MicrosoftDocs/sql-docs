@@ -119,7 +119,7 @@ Valid values: `1.0`, `1.1`, `1.2`, `1.3`.
 
 ## Related content
 
-- [Connection strings](connection-strings.md)
-- [Connection options](connection-options.md)
-- [SQL Server and Windows authentication](authentication.md)
-- [Protocols](protocols.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [go-mssqldb connection options](connection-options.md)
+- [SQL Server and Windows authentication with go-mssqldb](authentication.md)
+- [go-mssqldb protocols](protocols.md)

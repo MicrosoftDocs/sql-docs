@@ -27,8 +27,7 @@ ms.custom: mdx
 |[< (Less Than)](../mdx/less-than-mdx.md)|For non-null arguments, returns TRUE if the left argument has a value that is less than the right argument; otherwise, FALSE.<br /><br /> If either or both arguments evaluate to a null value, the operator returns a null value.|  
 |[<= (Less Than or Equal To)](../mdx/less-than-or-equal-to-mdx.md)|For non-null arguments, returns TRUE if the left argument has a value that is lower than or equal to the right argument; otherwise, FALSE.<br /><br /> If either or both arguments evaluate to a null value, the operator returns a null value.|  
   
-## See Also  
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operators &#40;MDX Syntax&#41;](../mdx/operators-mdx-syntax.md)  
-  
-  
+## Related content
+
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)
+- [Operators (MDX Syntax)](operators-mdx-syntax.md)

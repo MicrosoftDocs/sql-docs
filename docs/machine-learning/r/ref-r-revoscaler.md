@@ -140,10 +140,10 @@ When running locally, you typically run an R script from the command line, or fr
 
 When you are ready to encapsulate R script inside a stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), we recommend rewriting the code as a single function that has clearly defined inputs and outputs. 
 
-## See also
+## Related content
 
-+ [R tutorials](../tutorials/r-tutorials.md)
-+ [Learn to use compute contexts](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [R for SQL developers: Train and operationalize a model](../tutorials/r-taxi-classification-introduction.md)
-+ [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
-+ [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)
+- [R tutorials for SQL machine learning](../tutorials/r-tutorials.md)
+- [Tutorial: Use RevoScaleR R functions with SQL Server data](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+- [R tutorial: Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)
+- [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
+- [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)

@@ -41,8 +41,7 @@ SELECT @p.HasZ
 --Returns: 1 (true)  
 ```  
   
-## See Also  
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Z &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)
+- [Z (geometry Data Type)](z-geometry-data-type.md)

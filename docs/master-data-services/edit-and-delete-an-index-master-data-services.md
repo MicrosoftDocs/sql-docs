@@ -57,6 +57,7 @@ ms.custom:
   
 5.  In the confirmation message boxes, click **OK**.  
   
-## See Also  
- [Create an Index &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
- [Custom Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)
+## Related content
+
+- [Create an Index (Master Data Services)](create-an-index-master-data-services.md)
+- [Custom Index (Master Data Services)](custom-index-master-data-services.md)

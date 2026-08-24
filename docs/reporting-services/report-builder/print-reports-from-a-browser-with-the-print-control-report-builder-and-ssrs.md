@@ -35,5 +35,5 @@ You can modify the print margins in the rendered EMF report before printing the 
 
 ## Related content
 
-- [Print reports (Report Builder)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
-- [Print a report (Report Builder)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)
+- [Print reports](print-reports-report-builder-and-ssrs.md)
+- [Print a report (Report Builder)](print-a-report-report-builder-and-ssrs.md)

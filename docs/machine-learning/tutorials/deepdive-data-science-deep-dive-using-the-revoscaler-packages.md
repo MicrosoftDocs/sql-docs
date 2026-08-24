@@ -61,7 +61,7 @@ Recall that **RevoScaleR** is required on both local and remote computers. You c
 + Get new data for scoring, by opening an ODBC connection to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Scoring is done on the local workstation.
 + Create a custom R function and run it in the server compute context to perform a simulation.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Tutorial 1: Create database and permissions](deepdive-work-with-sql-server-data-using-r.md)

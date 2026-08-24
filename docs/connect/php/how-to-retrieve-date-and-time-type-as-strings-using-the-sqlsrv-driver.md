@@ -183,7 +183,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## See Also
-[Retrieving Data](../../connect/php/retrieving-data.md)
+## Related content
 
-[How to: Retrieve Date and Time Types as PHP Datetime Objects Using the PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+- [Retrieving Data](retrieving-data.md)
+- [How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver](how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)

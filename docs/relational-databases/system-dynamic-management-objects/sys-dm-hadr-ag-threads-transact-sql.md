@@ -43,9 +43,9 @@ This DMV reports on thread usage at the availability group level.
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## See also  
+## Related content
 
- [Always On Availability Groups Dynamic Management Views and Functions &#40;Transact-SQL&#41;](always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On Availability Groups Catalog Views &#40;Transact-SQL&#41;](../system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [Always On availability groups dynamic management views and functions](always-on-availability-groups-dynamic-management-views-functions.md)
+- [Always On Availability Groups Catalog Views (Transact-SQL)](../system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)
+- [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)
+- [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

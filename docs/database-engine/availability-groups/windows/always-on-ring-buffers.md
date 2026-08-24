@@ -174,7 +174,7 @@ ORDER BY record.value('(./Record/@time)[1]', 'bigint') DESC;
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Configure Extended Events for availability groups](always-on-extended-events.md)
 - [Identify waits associated with availability groups](always-on-wait-types.md)

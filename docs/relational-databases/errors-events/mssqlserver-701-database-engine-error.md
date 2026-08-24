@@ -186,7 +186,9 @@ The following actions can free some memory and make it available to [!INCLUDE [s
 
 - Check the query workload: number of concurrent sessions, currently executing queries and see if there are less critical applications that can be stopped temporarily or moved to another SQL Server.
 
-- If you're running SQL Server on a virtual machine (VM), ensure the memory for the VM isn't overcommitted. For ideas on how to configure memory for VMs, see this blog [Virtualization – Overcommitting memory and how to detect it within the VM](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/virtualization-8211-overcommitting-memory-and-how-to-detect-it/ba-p/367623) and [Troubleshooting ESX/ESXi virtual machine performance issues (memory overcommitment)](https://kb.vmware.com/s/article/2001003#Memory)
+- If you're running SQL Server on a virtual machine (VM), ensure the memory for the VM isn't overcommitted. For ideas on how to configure memory for VMs, see:
+  - [Virtualization - Overcommitting memory and how to detect it within the VM](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/virtualization-8211-overcommitting-memory-and-how-to-detect-it/ba-p/367623)
+  - [Troubleshooting ESX/ESXi virtual machine performance issues (memory overcommitment)](https://kb.vmware.com/s/article/2001003#Memory)
 
 - You can run the following DBCC commands to free several [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] memory caches.
 

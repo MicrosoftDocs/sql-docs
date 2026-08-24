@@ -935,8 +935,8 @@ GO
 - [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [ALTER AUTHORIZATION (Transact-SQL)](alter-authorization-transact-sql.md)
-- [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
-- [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
+- [sys.sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
+- [sys.sp_removedbreplication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
 - [Database snapshots (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)
 - [Move database files](../../relational-databases/databases/move-database-files.md)
 - [Databases](../../relational-databases/databases/databases.md)
@@ -1336,8 +1336,8 @@ AS COPY OF [test_db]
 
 ## Related content
 
-- [sys.dm_database_copies - Azure SQL Database](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
-- [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+- [sys.dm_database_copies (Azure SQL Database)](../../relational-databases/system-dynamic-management-objects/sys-dm-database-copies-azure-sql-database.md)
+- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
 - [Resource limits for single databases using the DTU purchasing model - Azure SQL Database](/azure/azure-sql/database/resource-limits-dtu-single-databases)
 - [vCore resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases)
 - [vCore Resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
@@ -1450,8 +1450,7 @@ CREATE DATABASE MyLedgerDB
 
 ## Related content
 
-- [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
-
+- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 ::: moniker-end
 
 ::: moniker range="=azure-sqldw-latest"
@@ -1609,7 +1608,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS;
 
 ## Related content
 
-- [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [CREATE TABLE](create-table-azure-sql-data-warehouse.md)
 - [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 
@@ -1776,7 +1775,7 @@ CREATE DATABASE mytest
 
 ## Related content
 
-- [ALTER DATABASE (Analytics Platform System)](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 
 ::: moniker-end

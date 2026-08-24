@@ -21,8 +21,7 @@ ms.topic: reference
 |[getNString Method &#40;int&#41;](../../../connect/jdbc/reference/getnstring-method-int.md)|Retrieves the value of the designated **NCHAR**, **NVARCHAR**, or **LONGNVARCHAR** parameter as a String in the Java programming language.|  
 |[getNString Method &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getnstring-method-java-lang-string.md)|Retrieves the value of the designated **NCHAR**, **NVARCHAR**, or **LONGNVARCHAR** parameter as a String in the Java programming language.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

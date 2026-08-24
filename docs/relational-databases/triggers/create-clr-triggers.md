@@ -43,6 +43,6 @@ Executing CLR code is off by default in [!INCLUDE [ssNoVersion](../../includes/s
 
 ## Related content
 
-- [DML Triggers](dml-triggers.md)
+- [DML triggers](dml-triggers.md)
 - [Common language runtime (CLR) integration programming concepts](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
 - [Data access from CLR database objects](../clr-integration/data-access/data-access-from-clr-database-objects.md)

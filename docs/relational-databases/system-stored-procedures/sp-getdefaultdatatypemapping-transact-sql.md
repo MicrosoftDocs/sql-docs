@@ -140,8 +140,8 @@ Only members of the **sysadmin** fixed server role can execute `sp_getdefaultdat
 
 ## Related content
 
-- [sp_helpdatatypemap (Transact-SQL)](sp-helpdatatypemap-transact-sql.md)
-- [sp_setdefaultdatatypemapping (Transact-SQL)](sp-setdefaultdatatypemapping-transact-sql.md)
+- [sys.sp_helpdatatypemap (Transact-SQL)](sp-helpdatatypemap-transact-sql.md)
+- [sys.sp_setdefaultdatatypemapping (Transact-SQL)](sp-setdefaultdatatypemapping-transact-sql.md)
 - [Data Type Mapping for Oracle Publishers](../replication/non-sql/data-type-mapping-for-oracle-publishers.md)
 - [IBM Db2 Subscribers](../replication/non-sql/ibm-db2-subscribers.md)
 - [Oracle Subscribers](../replication/non-sql/oracle-subscribers.md)

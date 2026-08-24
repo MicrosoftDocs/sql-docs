@@ -44,10 +44,9 @@ helpviewer_keywords:
 -   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
   
-## See Also  
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL) Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [Pausing and Resuming Database Mirroring (SQL Server)](pausing-and-resuming-database-mirroring-sql-server.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

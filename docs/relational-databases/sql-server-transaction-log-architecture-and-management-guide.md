@@ -347,6 +347,6 @@ The Log Reader Agent monitors the transaction log of each database configured fo
 - [Database checkpoints (SQL Server)](logs/database-checkpoints-sql-server.md)
 - [Server configuration: recovery interval (min)](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)
 - [Accelerated database recovery](backup-restore/restore-and-recovery-overview-sql-server.md#adr)
-- [sys.dm_db_log_info (Transact-SQL)](system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)
-- [sys.dm_db_log_space_usage (Transact-SQL)](system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)
+- [sys.dm_db_log_info (Transact-SQL)](system-dynamic-management-objects/sys-dm-db-log-info-transact-sql.md)
+- [sys.dm_db_log_space_usage (Transact-SQL)](system-dynamic-management-objects/sys-dm-db-log-space-usage-transact-sql.md)
 - [Understanding Logging and Recovery in SQL Server](/previous-versions/technet-magazine/dd392031(v=msdn.10))

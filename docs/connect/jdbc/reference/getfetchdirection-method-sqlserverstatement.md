@@ -36,8 +36,7 @@ public final int getFetchDirection()
 ## Remarks  
  This getFetchDirection method is specified by the getFetchDirection method in the java.sql.Statement interface.  
   
-## See Also  
- [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
- [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerStatement Members](sqlserverstatement-members.md)
+- [SQLServerStatement Class](sqlserverstatement-class.md)

@@ -79,4 +79,4 @@ BACKUP SYMMETRIC KEY symmetric_key
 
 ## Related content
 
-- [RESTORE SYMMETRIC KEY](restore-symmetric-key-transact-sql.md)
+- [RESTORE SYMMETRIC KEY (Transact-SQL)](restore-symmetric-key-transact-sql.md)

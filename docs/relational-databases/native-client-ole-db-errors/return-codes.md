@@ -37,6 +37,6 @@ helpviewer_keywords:
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider member functions do not return the success code S_FALSE. All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider member functions always return S_OK to indicate success.  
   
-## See Also  
- [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
-  
+## Related content
+
+- [SQL Server Native Client Errors](errors.md)

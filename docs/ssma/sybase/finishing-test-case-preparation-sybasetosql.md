@@ -51,8 +51,8 @@ Defines the saving mode for auxiliary tables created during test execution. See 
   
 Click the **Finish** button to save the prepared Test Case into [Using Test Repositories &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
   
-## See Also  
-[Using Test Repositories &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[Running Test Cases &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testing Migrated Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
-  
+## Related content
+
+- [Using Test Repositories](using-test-repositories-sybasetosql.md)
+- [Running Test Cases](running-test-cases-sybasetosql.md)
+- [Testing Migrated Database Objects](testing-migrated-database-objects-sybasetosql.md)

@@ -36,5 +36,6 @@ ms.custom:
 |Validate specific subsets of data against business rules. All users with permission to the **Explorer** functional area.|[Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Validate specific subsets of data against business rules. All users with permission to the **Explorer** functional area and using the [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].|[Apply Business Rules &#40;MDS Add-in for Excel&#41;](../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
   
-## See Also  
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)
+## Related content
+
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)

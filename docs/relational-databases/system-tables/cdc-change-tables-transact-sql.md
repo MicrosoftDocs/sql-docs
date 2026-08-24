@@ -36,7 +36,6 @@ dev_langs:
 |**create_date**|**datetime**|Date that the source table was enabled.|  
 |**partition_switch**|**bit**|Indicates whether the **SWITCH PARTITION** command of **ALTER TABLE** can be executed against a table that is enabled for change data capture. 0 indicates that partition switching is blocked. Non-partitioned tables always return 1.|  
   
-## See Also  
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.sp_cdc_help_change_data_capture (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)

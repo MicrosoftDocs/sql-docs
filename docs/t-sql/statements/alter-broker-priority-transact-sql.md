@@ -130,9 +130,8 @@ ALTER BROKER PRIORITY SimpleContractPriority
          PRIORITY_LEVEL = 8);  
 ```  
   
-## See Also  
- [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
-  
-  
+## Related content
+
+- [CREATE BROKER PRIORITY (Transact-SQL)](create-broker-priority-transact-sql.md)
+- [DROP BROKER PRIORITY (Transact-SQL)](drop-broker-priority-transact-sql.md)
+- [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)

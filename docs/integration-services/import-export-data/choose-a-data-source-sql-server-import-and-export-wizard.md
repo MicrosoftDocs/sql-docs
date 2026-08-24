@@ -65,7 +65,8 @@ For info about how to connect to a data source that's not listed here, see [The 
 ## What's next?
  After you provide info about the source of your data and about how to connect to it, the next page is **Choose a Destination**. On this page, you provide info about the destination for your data and about how to connect to it. For more info, see [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
 
-## See also
-[Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+## Related content
+
+- [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]

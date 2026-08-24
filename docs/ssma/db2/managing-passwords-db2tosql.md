@@ -123,4 +123,4 @@ The SSMA console application allows you to export encrypted database passwords p
 
 ## Related content
 
-- [Execute the SSMA console (Db2ToSQL)](executing-the-ssma-console-db2tosql.md)
+- [Execute the SSMA console](executing-the-ssma-console-db2tosql.md)

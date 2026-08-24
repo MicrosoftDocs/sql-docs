@@ -42,6 +42,4 @@ In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.
   
 ## Related content
 
-- [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
-
-[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+- [Errors and events reference (Reporting Services)](errors-and-events-reference-reporting-services.md)

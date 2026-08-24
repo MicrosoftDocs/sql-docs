@@ -91,4 +91,3 @@ Requires CREATE VIEW permission in the database and ALTER permission on the sche
 
 > [!div class="nextstepaction"]
 > [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)
-

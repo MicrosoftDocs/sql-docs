@@ -270,8 +270,7 @@ GO
   
  [&#91;Top&#93;](#Top)  
   
-## See Also  
- [Create and Test a Classifier User-Defined Function](../resource-governor/resource-governor-walkthrough.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
-  
-  
+## Related content
+
+- [Tutorial: Resource governor configuration examples and best practices](../resource-governor/resource-governor-walkthrough.md)
+- [Resource governor](../resource-governor/resource-governor.md)

@@ -73,12 +73,13 @@ At this step, SSMA Tester invokes each object selected for the testing, compares
 
 During the finalization SSMA Tester cleans up the auxiliary objects created at the **Initialization** step.
 
-## Next Step
+## Next step
 
-[Viewing Test Case Reports &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)
+> [!div class="nextstepaction"]
+> [Viewing Test Case Reports](viewing-test-case-reports-oracletosql.md)
 
-## See Also
+## Related content
 
-[Selecting and Configuring Objects to Test &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)
-[Selecting and Configuring Affected Objects &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)
-[Testing Migrated Database Objects &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)
+- [Selecting and Configuring Objects to Test](selecting-and-configuring-objects-to-test-oracletosql.md)
+- [Selecting and Configuring Affected Objects](selecting-and-configuring-affected-objects-oracletosql.md)
+- [Testing Migrated Database Objects](testing-migrated-database-objects-oracletosql.md)

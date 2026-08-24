@@ -35,10 +35,8 @@ The value of the setting specified by the *$setting* parameter. If an invalid se
 ## Remarks  
 If **false** is returned by **sqlsrv_get_config**, you must call [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) to determine if an error occurred or if **false** is the value of the setting specified by the *$setting* parameter.  
   
-## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+## Related content
 
-[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
-
-[sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
-  
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [sqlsrv_configure](sqlsrv-configure.md)
+- [sqlsrv_errors](sqlsrv-errors.md)

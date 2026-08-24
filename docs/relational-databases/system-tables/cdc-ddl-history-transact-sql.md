@@ -31,8 +31,7 @@ dev_langs:
 |**ddl_lsn**|**binary(10)**|Log sequence number (LSN) associated with the commitment of the DDL modification.|  
 |**ddl_time**|**datetime**|Date and time that the DDL change was made to the source table.|  
   
-## See Also  
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.sp_cdc_help_change_data_capture (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)
+- [cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)](../system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)

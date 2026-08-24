@@ -38,9 +38,8 @@ public java.net.URL getURL(java.lang.String s)
 ## Remarks  
  This getURL method is specified by the getURL method in the java.sql.CallableStatement interface.  
   
-## See Also  
- [getURL Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [getURL Method (SQLServerCallableStatement)](geturl-method-sqlservercallablestatement.md)
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

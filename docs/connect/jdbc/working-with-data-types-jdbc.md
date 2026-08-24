@@ -30,6 +30,6 @@ The topics in this section describe how to use the JDBC driver data types to acc
 |[SQLXML data type sample](sqlxml-data-type-sample.md)|Describes how to store an XML data in a relational database, how to retrieve an XML data from a database, and how to parse an XML data with the **SQLXML** Java data type.|
 |[Spatial data types sample](spatial-data-types-sample.md)|Describes how to store and retrieve data with Spatial Datatypes 'Geometry' and 'Geography' of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database with **Geometry** and **Geography** Java types defined by Microsoft JDBC Driver.|
 
-## See also
+## Related content
 
-[Sample JDBC driver applications](sample-jdbc-driver-applications.md)
+- [Sample JDBC driver applications](sample-jdbc-driver-applications.md)

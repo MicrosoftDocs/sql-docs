@@ -316,8 +316,8 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ## Related content
 
-- [bcp Utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
 - [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
-- [Use a Format File to Skip a Table Column (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)
+- [Use a format file to skip a table column (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [Use a format file to map table columns to data-file fields (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)

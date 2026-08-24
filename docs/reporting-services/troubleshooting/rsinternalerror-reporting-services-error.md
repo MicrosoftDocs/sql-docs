@@ -38,4 +38,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)
+- [Start and stop the Report Server service](../report-server/start-and-stop-the-report-server-service.md)

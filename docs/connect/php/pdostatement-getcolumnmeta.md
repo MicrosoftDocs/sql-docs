@@ -180,7 +180,7 @@ The updated JSON representation is shown below:
 {"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
 ```
 
-## See Also  
-[PDOStatement Class](../../connect/php/pdostatement-class.md)
+## Related content
 
-[PDO](https://php.net/manual/book.pdo.php)
+- [PDOStatement Class](pdostatement-class.md)
+- [PDO](https://php.net/manual/book.pdo.php)

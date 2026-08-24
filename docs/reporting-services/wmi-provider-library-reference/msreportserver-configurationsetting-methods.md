@@ -55,4 +55,4 @@ apitype: MOFDef
   
 ## Related content
 
-- [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)
+- [MSReportServer_ConfigurationSetting class](msreportserver-configurationsetting-class.md)

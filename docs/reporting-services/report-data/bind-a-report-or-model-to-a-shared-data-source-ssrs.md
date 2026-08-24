@@ -57,5 +57,5 @@ helpviewer_keywords:
 
 - [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)
 - [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/)
-- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
-- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)
+- [Create data connection strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Data Sources Supported by Reporting Services (SSRS)](data-sources-supported-by-reporting-services-ssrs.md)

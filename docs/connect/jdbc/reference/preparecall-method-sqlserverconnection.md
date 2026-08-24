@@ -25,8 +25,7 @@ apitype: "Assembly"
 |[prepareCall (java.lang.String, int, int)](../../../connect/jdbc/reference/preparecall-method-java-lang-string-int-int.md)|Creates a SQLServerCallableStatement object that generates [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objects with the given type and concurrency.|  
 |[prepareCall (java.lang.String, int, int, int)](../../../connect/jdbc/reference/preparecall-method-java-lang-string-int-int-int.md)|Creates a SQLServerCallableStatement object that generates SQLServerResultSet objects with the given type, concurrency, and holdability.|  
   
-## See Also  
- [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnection Members](sqlserverconnection-members.md)
+- [SQLServerConnection Class](sqlserverconnection-class.md)

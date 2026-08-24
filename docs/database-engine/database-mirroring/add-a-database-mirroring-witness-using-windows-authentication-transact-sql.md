@@ -129,12 +129,11 @@ helpviewer_keywords:
   
  For a complete example showing security setup, preparing the mirror database, setting up the partners, and adding a witness, see [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
- [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)   
- [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
-  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [Database Mirroring - Allow Network Access - Windows Authentication](database-mirroring-allow-network-access-windows-authentication.md)
+- [Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)
+- [Configure database mirroring](database-mirroring-establish-session-windows-authentication.md)
+- [Remove the Witness from a Database Mirroring Session (SQL Server)](remove-the-witness-from-a-database-mirroring-session-sql-server.md)
+- [Database Mirroring Witness](database-mirroring-witness.md)

@@ -238,6 +238,7 @@ Read-only identifier.
   
 
 
-## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)

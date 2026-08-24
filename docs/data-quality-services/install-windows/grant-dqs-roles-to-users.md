@@ -41,11 +41,7 @@ ms.custom:
     > [!NOTE]  
     >  If you grant the **dqs_administrator** role to a user, apply the changes, and then recheck the user permissions, the other two DQS roles check boxes (**dq_kb_editor** and **dqs_kb_operator**) are also selected.  
   
-## Next Steps  
- Try logging on to [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] by using the Windows user account for which you just created a SQL login, and granted a DQS role.  
-  
-## See Also  
- [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)  
-  
-  
+## Related content
+
+- [Install Data Quality Services](install-data-quality-services.md)
+- [Create a login](../../relational-databases/security/authentication-access/create-a-login.md)

@@ -175,9 +175,8 @@ DROP TABLE T1;
   
 ## Related content
 
-- [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
-- [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
-- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET ANSI_DEFAULTS (Transact-SQL)](../../t-sql/statements/set-ansi-defaults-transact-sql.md)
-- [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)
-
+- [INSERT (Transact-SQL)](insert-transact-sql.md)
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET ANSI_DEFAULTS (Transact-SQL)](set-ansi-defaults-transact-sql.md)
+- [SESSIONPROPERTY (Transact-SQL)](../functions/sessionproperty-transact-sql.md)

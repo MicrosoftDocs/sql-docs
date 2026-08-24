@@ -41,6 +41,6 @@ In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], R language and Windows
 
 ## Related content
 
-- [sys.external_library_files](sys-external-library-files-transact-sql.md)
+- [sys.external_library_files (Transact-SQL)](sys-external-library-files-transact-sql.md)
 - [CREATE EXTERNAL LIBRARY (Transact-SQL)](../../t-sql/statements/create-external-library-transact-sql.md)
 - [Install R packages with sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)

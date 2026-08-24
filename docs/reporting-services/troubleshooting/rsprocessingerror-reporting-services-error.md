@@ -117,11 +117,11 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
-- [Aggregate functions reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)
-- [Expression examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Report datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
-- [Commonly used filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)
-- [Dataset fields collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
-- [Custom code and assembly references in expressions in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)
-- [Parameters collection references &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)
+- [Expressions in a paginated report (Report Builder)](../report-design/expressions-report-builder-and-ssrs.md)
+- [Report Builder functions - aggregate functions reference in paginated reports (Report Builder)](../report-design/report-builder-functions-aggregate-functions-reference.md)
+- [Expression examples in Report Builder paginated reports](../report-design/expression-examples-report-builder-and-ssrs.md)
+- [Report Datasets (SSRS)](../report-data/report-datasets-ssrs.md)
+- [Commonly used filters in a paginated report (Report Builder)](../report-design/commonly-used-filters-report-builder-and-ssrs.md)
+- [Dataset Fields Collection (Report Builder and SSRS)](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+- [Custom code and assembly references in expressions in a paginated report in Report Designer (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)
+- [Parameters collection references in a paginated report (Report Builder)](../report-design/built-in-collections-parameters-collection-references-report-builder.md)

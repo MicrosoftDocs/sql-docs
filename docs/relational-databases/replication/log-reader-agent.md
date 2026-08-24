@@ -59,7 +59,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
-- [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
-- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)
-- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Start the Replication Monitor](monitor/start-the-replication-monitor.md)
+- [View information and perform tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Monitoring (Replication)](monitor/monitoring-replication.md)
+- [Replication Agents Overview](agents/replication-agents-overview.md)

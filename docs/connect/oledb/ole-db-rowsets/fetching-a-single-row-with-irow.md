@@ -36,8 +36,6 @@ helpviewer_keywords:
   
 -   [Using IRow::GetColumns](../../oledb/ole-db-rowsets/using-irow-getcolumns.md)   
   
-## See Also  
- [Rowsets](../../oledb/ole-db-rowsets/rowsets.md)  
-  
-  
+## Related content
 
+- [Rowsets](rowsets.md)

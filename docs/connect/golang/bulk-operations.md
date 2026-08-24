@@ -319,8 +319,8 @@ for _, p := range categories {
 
 ## Related content
 
-- [Performance tuning](performance-tuning.md)
-- [Queries and statements](queries-statements.md)
-- [Data type mappings](data-type-mappings.md)
-- [Migration guide](migration-guide.md)
-- [Error handling and retry patterns](error-handling.md)
+- [Performance tuning with go-mssqldb](performance-tuning.md)
+- [Queries and statements with go-mssqldb](queries-statements.md)
+- [go-mssqldb data type mappings](data-type-mappings.md)
+- [Migrate to go-mssqldb from other drivers](migration-guide.md)
+- [Error handling and retry patterns with go-mssqldb](error-handling.md)

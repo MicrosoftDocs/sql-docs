@@ -354,7 +354,6 @@ int main() {
 }  
 ```  
   
-## See Also  
- [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
-  
-  
+## Related content
+
+- [IBCPSession2 (Native Client OLE DB Provider)](ibcpsession2-ole-db.md)

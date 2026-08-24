@@ -40,4 +40,4 @@ The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error log contain
 ## Related content
 
 - [SQL Server Configuration Manager: Configure SQL Server error logs](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)
-- [sp_readerrorlog (Transact-SQL)](../system-stored-procedures/sp-readerrorlog-transact-sql.md)
+- [sys.sp_readerrorlog (Transact-SQL)](../system-stored-procedures/sp-readerrorlog-transact-sql.md)

@@ -46,13 +46,9 @@ helpviewer_keywords:
   
 5.  In the confirmation dialog box, click **OK**.  
   
-## Next Steps  
-  
--   [Create a Version Flag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
-  
--   [Assign a Flag to a Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
-  
--   [Copy a Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
-  
-## See Also  
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)
+## Related content
+
+- [Versions (Master Data Services)](versions-master-data-services.md)
+- [Create a Version Flag (Master Data Services)](create-a-version-flag-master-data-services.md)
+- [Assign a Flag to a Version (Master Data Services)](assign-a-flag-to-a-version-master-data-services.md)
+- [Copy a Version (Master Data Services)](copy-a-version-master-data-services.md)

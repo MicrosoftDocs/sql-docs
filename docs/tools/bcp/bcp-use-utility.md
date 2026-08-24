@@ -379,8 +379,8 @@ The following articles contain examples of using **bcp**:
 - [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
 - [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
 - [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-- [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
 - [Format files to import or export data (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
 
 [!INCLUDE [get-help-options](../../includes/paragraph-content/get-help-options.md)]

@@ -79,6 +79,6 @@ DROP XML SCHEMA COLLECTION SC
 go  
 ```  
   
-## See Also  
- [Boolean Constructor Functions &#40;XQuery&#41;](./xquery-functions-against-the-xml-data-type.md)  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)

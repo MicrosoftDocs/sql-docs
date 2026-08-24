@@ -93,10 +93,9 @@ pub_id Valid (if 1) Text data
 (8 row(s) affected)  
 ```  
   
-## See Also  
- [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](./text-and-image-functions-textptr-transact-sql.md)   
- [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
-  
+## Related content
+
+- [DATALENGTH (Transact-SQL)](datalength-transact-sql.md)
+- [PATINDEX (Transact-SQL)](patindex-transact-sql.md)
+- [SET TEXTSIZE (Transact-SQL)](../statements/set-textsize-transact-sql.md)
+- [Text and Image Functions - TEXTPTR (Transact-SQL)](text-and-image-functions-textptr-transact-sql.md)

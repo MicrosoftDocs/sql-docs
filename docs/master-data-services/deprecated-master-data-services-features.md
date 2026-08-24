@@ -47,8 +47,7 @@ Entity transaction log type "Attribute" is deprecated, migrate to the "Member" e
 * [Change the Entity Transaction Log Type (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [Member Revision History](../master-data-services/member-revision-history-master-data-services.md)
   
-## External Resources  
- Blog post, [Deprecated: Explicit Hierarchies and Collections](https://techcommunity.microsoft.com/t5/sql-server-integration-services/deprecated-explicit-hierarchies-and-collections/ba-p/388221), on msdn.com.  
-  
-## See Also  
- [Discontinued Features of Master Data Services](../master-data-services/discontinued-master-data-services-features.md)
+## Related content
+
+- [Deprecated: Explicit Hierarchies and Collections](https://techcommunity.microsoft.com/t5/sql-server-integration-services/deprecated-explicit-hierarchies-and-collections/ba-p/388221)
+- [Discontinued Features of Master Data Services](discontinued-master-data-services-features.md)

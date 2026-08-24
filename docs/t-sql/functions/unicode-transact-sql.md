@@ -133,13 +133,9 @@ Character # Unicode Character UNICODE Value
 12          4                 52  
 ```  
   
-## See Also  
- [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
-    
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
-  
-  
+## Related content
 
-
+- [ASCII (Transact-SQL)](ascii-transact-sql.md)
+- [CHAR (Transact-SQL)](char-transact-sql.md)
+- [NCHAR (Transact-SQL)](nchar-transact-sql.md)
+- [Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)

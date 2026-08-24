@@ -66,7 +66,8 @@ ms.custom:
 |-----------------|-----------------|  
 |**start workflow**|Initiates an external workflow. The data that caused this action to occur is passed to the workflow. For more information, see [SharePoint Workflow Integration with Master Data Services](/previous-versions/sql/sql-server-2008-r2/gg690195(v=msdn.10)).<br /><br /> This action is valid for text, number, date, and link values.|  
   
-## See Also  
- [Business Rule Conditions &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Create and Publish a Business Rule &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)
+## Related content
+
+- [Business Rule Conditions (Master Data Services)](business-rule-conditions-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Create and Publish a Business Rule (Master Data Services)](create-and-publish-a-business-rule-master-data-services.md)

@@ -32,13 +32,10 @@ When sending data to the server, the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 |Object|Not supported.|Not supported.|  
 |DateTime (1)|datetime|Not supported.|  
   
-## See Also  
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+## Related content
 
-[Converting Data Types](../../connect/php/converting-data-types.md)
-
-[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
-
-[PHP Types](https://php.net/manual/language.types.php)
-
-[Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
+- [Constants (Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
+- [Converting Data Types](converting-data-types.md)
+- [sqlsrv_field_metadata](sqlsrv-field-metadata.md)
+- [PHP Types](https://php.net/manual/language.types.php)
+- [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

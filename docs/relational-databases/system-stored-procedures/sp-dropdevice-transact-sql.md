@@ -72,7 +72,7 @@ EXECUTE sp_dropdevice 'tapedump1';
 
 - [Backup Devices (SQL Server)](../backup-restore/backup-devices-sql-server.md)
 - [Delete a Backup Device (SQL Server)](../backup-restore/delete-a-backup-device-sql-server.md)
-- [sp_addumpdevice (Transact-SQL)](sp-addumpdevice-transact-sql.md)
-- [sp_helpdb (Transact-SQL)](sp-helpdb-transact-sql.md)
-- [sp_helpdevice (Transact-SQL)](sp-helpdevice-transact-sql.md)
+- [sys.sp_addumpdevice (Transact-SQL)](sp-addumpdevice-transact-sql.md)
+- [sys.sp_helpdb (Transact-SQL)](sp-helpdb-transact-sql.md)
+- [sys.sp_helpdevice (Transact-SQL)](sp-helpdevice-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

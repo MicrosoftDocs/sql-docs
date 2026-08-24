@@ -74,5 +74,5 @@ You can also add subreports to dynamic rows or columns in a table or matrix. Whe
   
 ## Related content
 
-- [Subreports in paginated reports (Report Builder)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)
-- [Rendering behaviors in a paginated report (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
+- [Subreports in paginated reports (Report Builder)](subreports-report-builder-and-ssrs.md)
+- [Rendering behaviors in a paginated report (Report Builder)](rendering-behaviors-report-builder-and-ssrs.md)

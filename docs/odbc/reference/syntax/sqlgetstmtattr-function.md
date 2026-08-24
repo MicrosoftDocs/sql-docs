@@ -114,6 +114,7 @@ SQLRETURN SQLGetStmtAttr(
 |Setting a connection attribute|[SQLSetConnectAttr Function](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
 |Setting a statement attribute|[SQLSetStmtAttr Function](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

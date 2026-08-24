@@ -110,5 +110,5 @@ A report can also contain subreports.
   
 ## Related content
 
-- [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
-- [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
+- [Interactive functionality - different report rendering extensions](../report-builder/interactive-functionality-different-report-rendering-extensions.md)
+- [Export paginated reports (Report Builder)](../report-builder/export-reports-report-builder-and-ssrs.md)

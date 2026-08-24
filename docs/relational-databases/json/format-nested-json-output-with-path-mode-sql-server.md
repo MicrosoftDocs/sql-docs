@@ -128,4 +128,4 @@ For a visual introduction to the built-in JSON support, see [JSON as a bridge be
 
 ## Related content
 
-- [SELECT - FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)
+- [SELECT - FOR clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)

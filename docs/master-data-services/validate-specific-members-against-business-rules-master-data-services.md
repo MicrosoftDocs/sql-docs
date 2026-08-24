@@ -43,6 +43,7 @@ helpviewer_keywords:
   
 5.  Click **Apply Rules**. Business rules are applied only to the members displayed in the grid.  
   
-## See Also  
- [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)
+## Related content
+
+- [Validate a Version against Business Rules (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)

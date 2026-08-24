@@ -77,5 +77,5 @@ Only members of the **sysadmin** fixed server role and the **db_owner** fixed da
 
 ## Related content
 
-- [sp_addmergepartition (Transact-SQL)](sp-addmergepartition-transact-sql.md)
-- [sp_dropmergepartition (Transact-SQL)](sp-dropmergepartition-transact-sql.md)
+- [sys.sp_addmergepartition (Transact-SQL)](sp-addmergepartition-transact-sql.md)
+- [sys.sp_dropmergepartition (Transact-SQL)](sp-dropmergepartition-transact-sql.md)

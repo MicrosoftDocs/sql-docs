@@ -97,7 +97,7 @@ For information about securing [!INCLUDE [ssnoversion-md](../../includes/ssnover
 ## Related content
 
 - [Walkthrough for the security features of SQL Server on Linux](get-started.md)
-- [SQL Server on Linux - Security and permissions guide](permissions-guide.md)
+- [Security and permissions guide for SQL Server on Linux](permissions-guide.md)
 - [Configure SQL Server on Linux with the mssql-conf tool](../configure/mssql-conf.md)
 - [Editions and supported features of SQL Server 2022 on Linux](../sql-server-linux-editions-and-components-2022.md)
 - [Security for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)

@@ -35,8 +35,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=s
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Scalar Types Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Scalar Types Catalog Views (Transact-SQL)](scalar-types-catalog-views-transact-sql.md)

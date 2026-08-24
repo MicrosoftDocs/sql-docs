@@ -51,4 +51,4 @@ To remove ghost rows when ghost cleanup is disabled, rebuild indexes on tables w
 
 ## Related content
 
-- [Pages and extents architecture guide](pages-and-extents-architecture-guide.md)
+- [Page and extent architecture guide](pages-and-extents-architecture-guide.md)

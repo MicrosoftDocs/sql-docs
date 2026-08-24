@@ -35,8 +35,7 @@ public final java.sql.SQLXML getSQLXML(int columnIndex)
 ## Remarks  
  This getSQLXML method is specified by the getSQLXML method in the java.sql.ResultSet interface.  
   
-## See Also  
- [getSQLXML Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
-  
-  
+## Related content
+
+- [getSQLXML Method (SQLServerResultSet)](getsqlxml-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)

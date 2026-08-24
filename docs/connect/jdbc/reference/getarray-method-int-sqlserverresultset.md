@@ -38,9 +38,8 @@ public java.sql.Array getArray(int i)
 ## Remarks  
  This getArray method is specified by the getArray method in the java.sql.ResultSet interface.  
   
-## See Also  
- [getArray Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [getArray Method (SQLServerResultSet)](getarray-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

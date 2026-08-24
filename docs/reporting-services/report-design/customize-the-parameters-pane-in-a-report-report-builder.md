@@ -87,4 +87,4 @@ For reports that were authored before SQL Server Reporting Services 2016, a defa
 
 ## Related content
 
-- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
+- [Paginated report parameters in Report Builder](report-parameters-report-builder-and-report-designer.md)

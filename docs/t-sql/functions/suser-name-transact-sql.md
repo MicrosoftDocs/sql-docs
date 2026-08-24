@@ -91,7 +91,7 @@ username@contoso.com
 
 - [USER_NAME (Transact-SQL)](user-name-transact-sql.md)
 - [SUSER_SNAME (Transact-SQL)](suser-sname-transact-sql.md)
-- [SUSER_ID (Transact-SQL)](../../t-sql/functions/suser-id-transact-sql.md)
+- [SUSER_ID (Transact-SQL)](suser-id-transact-sql.md)
 - [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
 - [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)
 - [sys.sql_logins (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)

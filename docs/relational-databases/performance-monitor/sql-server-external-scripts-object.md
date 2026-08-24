@@ -45,4 +45,4 @@ WHERE object_name LIKE '%External Scripts%';
 
 - [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
 - [sys.resource_governor_external_resource_pools (Transact-SQL)](../system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)
-- [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)
+- [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../system-dynamic-management-objects/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)

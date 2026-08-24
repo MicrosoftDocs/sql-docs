@@ -28,5 +28,6 @@ ms.custom:
   
 4.  The next time you open the browser window, you will be prompted for a user name and password.  
   
-## See Also  
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)
+## Related content
+
+- [Security (Master Data Services)](security-master-data-services.md)

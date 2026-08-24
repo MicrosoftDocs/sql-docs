@@ -55,5 +55,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)
-- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)
+- [Report Server Web service](../report-server-web-service.md)
+- [Technical reference (SSRS)](../../technical-reference-ssrs.md)

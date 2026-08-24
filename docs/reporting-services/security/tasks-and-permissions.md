@@ -35,6 +35,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Role definitions](../../reporting-services/security/role-definitions.md)
-- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Role definitions](role-definitions.md)
+- [Predefined roles in Reporting Services](role-definitions-predefined-roles.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)

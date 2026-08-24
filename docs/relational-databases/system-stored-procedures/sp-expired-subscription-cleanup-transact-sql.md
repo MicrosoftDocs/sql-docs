@@ -53,6 +53,6 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [sp_mergesubscription_cleanup (Transact-SQL)](sp-mergesubscription-cleanup-transact-sql.md)
-- [sp_subscription_cleanup (Transact-SQL)](sp-subscription-cleanup-transact-sql.md)
+- [sys.sp_mergesubscription_cleanup (Transact-SQL)](sp-mergesubscription-cleanup-transact-sql.md)
+- [sys.sp_subscription_cleanup (Transact-SQL)](sp-subscription-cleanup-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

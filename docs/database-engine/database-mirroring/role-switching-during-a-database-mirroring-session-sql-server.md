@@ -302,13 +302,12 @@ helpviewer_keywords:
   
 -   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## See Also  
- [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
- [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [Complete Database Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Mirroring States &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
-  
-  
+## Related content
+
+- [Estimate the Interruption of Service During Role Switching (Database Mirroring)](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)
+- [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)
+- [Connect Clients to a Database Mirroring Session (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md)
+- [Database Mirroring Witness](database-mirroring-witness.md)
+- [Complete Database Restores (Full Recovery Model)](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)
+- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)
+- [Mirroring States (SQL Server)](mirroring-states-sql-server.md)

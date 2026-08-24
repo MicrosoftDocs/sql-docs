@@ -195,4 +195,4 @@ Only members of the **sysadmin** fixed server role at the Distributor can execut
 
 ## Related content
 
-- [sp_addpublication_snapshot (Transact-SQL)](sp-addpublication-snapshot-transact-sql.md)
+- [sys.sp_addpublication_snapshot (Transact-SQL)](sp-addpublication-snapshot-transact-sql.md)

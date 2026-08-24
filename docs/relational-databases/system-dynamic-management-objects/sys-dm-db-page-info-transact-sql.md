@@ -154,9 +154,9 @@ CROSS APPLY sys.fn_PageResCracker(d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info;
 ```
 
-## See also
+## Related content
 
-- [Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects.md)
-- [Database Related Dynamic Management Views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
 - [sys.dm_exec_requests (Transact-SQL)](sys-dm-exec-requests-transact-sql.md)
-- [sys.fn_PageResCracker](../system-functions/sys-fn-pagerescracker-transact-sql.md)
+- [sys.fn_PageResCracker (Transact-SQL)](../system-functions/sys-fn-pagerescracker-transact-sql.md)

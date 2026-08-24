@@ -25,8 +25,7 @@ ms.topic: reference
 public class SQLServerResource  
 ```  
   
-## See Also  
- [SQLServerResource Members](../../../connect/jdbc/reference/sqlserverresource-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerResource Members](sqlserverresource-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

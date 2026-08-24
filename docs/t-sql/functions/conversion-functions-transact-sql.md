@@ -30,6 +30,5 @@ The following functions support data type casting and conversion:
 
 ## Related content
 
-- [Functions](functions.md)
+- [What are the SQL database functions?](functions.md)
 - [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
-

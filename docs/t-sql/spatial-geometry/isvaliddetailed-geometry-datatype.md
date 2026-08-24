@@ -63,7 +63,6 @@ SELECT @p.IsValidDetailed()
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  
 ```  
   
-## See Also  
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)

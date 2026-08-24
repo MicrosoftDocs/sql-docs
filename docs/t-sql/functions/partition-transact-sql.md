@@ -156,4 +156,3 @@ WHERE $PARTITION.RangePF1 (col1) = 3;
 - [Modify a partition scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)
 - [sys.partition_functions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)
 - [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)
-

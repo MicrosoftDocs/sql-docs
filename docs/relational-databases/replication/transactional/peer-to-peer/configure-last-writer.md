@@ -304,6 +304,6 @@ GO
 
 - [Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication](../peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
 - [Transactional Articles - Specify How Changes Are Propagated](../transactional-articles-specify-how-changes-are-propagated.md)
-- [sp_addpublication (Transact-SQL)](../../../system-stored-procedures/sp-addpublication-transact-sql.md)
+- [sys.sp_addpublication (Transact-SQL)](../../../system-stored-procedures/sp-addpublication-transact-sql.md)
 - [Configure one peer as part of availability group](single-availability-group.md)
 - [Configure both peers in availability groups](multi-availability-group.md)

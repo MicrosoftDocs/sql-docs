@@ -85,4 +85,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)
+- [Secure development (Reporting Services)](secure-development-reporting-services.md)

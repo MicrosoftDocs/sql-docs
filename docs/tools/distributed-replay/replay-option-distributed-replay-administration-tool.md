@@ -158,11 +158,11 @@ You must run the administration tool as an interactive user, as either a local u
 
 For more information, see [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).
 
-## See also
+## Related content
 
-- [Replay Trace Data](../../tools/distributed-replay/replay-trace-data.md)
-- [Review the Replay Results](../../tools/distributed-replay/review-the-replay-results.md)
-- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)
+- [Replay Trace Data](replay-trace-data.md)
+- [Review the Replay Results](review-the-replay-results.md)
+- [SQL Server Distributed Replay overview](sql-server-distributed-replay.md)
+- [Configure Distributed Replay](configure-distributed-replay.md)
 - [Using Distributed Replay to Load Test Your SQL Server - Part 2](/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)
 - [Using Distributed Replay to Load Test Your SQL Server - Part 1](/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)

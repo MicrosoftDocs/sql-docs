@@ -36,8 +36,7 @@ helpviewer_keywords:
  **Package path**  
  Type the package path, or click the browse button **(...)** and locate the package to copy.  
   
-## See Also  
- [Save Copy of Package](./save-packages.md)   
- [Save Packages](../integration-services/save-packages.md)   
- [Integration Services Service &#40;SSIS Service&#41;](../integration-services/service/integration-services-service-ssis-service.md)
-  
+## Related content
+
+- [Save Packages](save-packages.md)
+- [Integration Services Service (SSIS Service)](service/integration-services-service-ssis-service.md)

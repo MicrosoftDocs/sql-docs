@@ -35,5 +35,6 @@ Windows 8 includes an updated version of ODBC 3.8. ODBC 3.8 in Windows 8 include
   
  For more information, see [Compatibility Matrix](../../odbc/reference/develop-app/compatibility-matrix.md).  
   
-## See Also  
- [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md)
+## Related content
+
+- [ODBC Programmer's Reference](odbc-programmer-s-reference.md)

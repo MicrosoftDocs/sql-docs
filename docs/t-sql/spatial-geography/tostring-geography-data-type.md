@@ -49,8 +49,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [AsTextZM &#40;geography Data Type&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [AsTextZM (geography Data Type)](astextzm-geography-data-type.md)

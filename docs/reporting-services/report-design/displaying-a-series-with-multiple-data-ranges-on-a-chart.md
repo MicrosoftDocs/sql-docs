@@ -57,10 +57,10 @@ ms.custom:
 
 ## Related content
 
-- [Multiple Series on a Chart](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)
-- [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
-- [3D, Bevel, and Other Effects in a Chart](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)
-- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Multiple series on a paginated report chart (Report Builder)](multiple-series-on-a-chart-report-builder-and-ssrs.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
+- [3D, bevel, and others in a paginated report (Report Builder)](chart-effects-3d-bevel-and-other-report-builder.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
 - [Axis Properties Dialog Box, Axis Options](/previous-versions/sql/)
-- [Collect Small Slices on a Pie Chart](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)
+- [Collect small slices on a paginated report pie chart (Report Builder)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

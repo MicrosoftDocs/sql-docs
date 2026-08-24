@@ -101,7 +101,6 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
 
-## See Also  
- [Data Flow](../../../integration-services/data-flow/data-flow.md)  
-  
-  
+## Related content
+
+- [Data Flow](../../data-flow/data-flow.md)

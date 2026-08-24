@@ -229,13 +229,10 @@ GO
   
 -   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Related Content  
-  
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
-  
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Statistics](../../../relational-databases/statistics/statistics.md)  
-  
+## Related content
+
+- [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Types of client connections to replicas within an Always On availability group](about-client-connection-access-to-availability-replicas-sql-server.md)
+- [Connect to an Always On availability group listener](listeners-client-connectivity-application-failover.md)
+- [Statistics](../../../relational-databases/statistics/statistics.md)

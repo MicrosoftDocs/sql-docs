@@ -57,13 +57,12 @@ helpviewer_keywords:
   
 -   [Positioned Updates &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
   
-## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [Cursors](../../relational-databases/cursors.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)
+- [CLOSE (Transact-SQL)](../../t-sql/language-elements/close-transact-sql.md)
+- [Cursors (SQL Server)](../cursors.md)
+- [DEALLOCATE (Transact-SQL)](../../t-sql/language-elements/deallocate-transact-sql.md)
+- [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)
+- [FETCH (Transact-SQL)](../../t-sql/language-elements/fetch-transact-sql.md)
+- [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)

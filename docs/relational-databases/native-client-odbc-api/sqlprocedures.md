@@ -22,7 +22,7 @@ apitype: "DLLExport"
   
  **SQLProcedures** returns information about any procedures whose names match *ProcName* and can be executed by the current user, or for which the current user has been granted VIEW DEFINITION permission.  
   
-## See Also  
- [SQLProcedures Function](../../odbc/reference/syntax/sqlprocedures-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLProcedures Function](../../odbc/reference/syntax/sqlprocedures-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

@@ -69,5 +69,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
                0                 673673  
 ```  
   
-## See also  
- [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](memory-optimized-table-dynamic-management-views-transact-sql.md)
+## Related content
+
+- [In-Memory OLTP System Views (Transact-SQL)](memory-optimized-table-dynamic-management-views-transact-sql.md)

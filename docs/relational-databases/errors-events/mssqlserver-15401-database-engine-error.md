@@ -68,8 +68,8 @@ If you have problems resolving the name of a computer that is involved in adding
 
 Verify that your name resolution mechanism (such as, WINS, DNS, HOSTS, or LMHOSTS) is configured correctly.
 
-## See also
+## Related content
 
 - [Test a channel between the local computer and its domain](/powershell/module/microsoft.powershell.management/test-computersecurechannel#example-1--test-a-channel-between-the-local-computer-and-its-domain)
 - [LogonSessions v1.4](/sysinternals/downloads/logonsessions)
-- [sp_change_users_login (Transact-SQL)](../system-stored-procedures/sp-change-users-login-transact-sql.md)
+- [sys.sp_change_users_login (Transact-SQL)](../system-stored-procedures/sp-change-users-login-transact-sql.md)

@@ -22,7 +22,6 @@ This view stores information about logical groupings of components and devices.
 |group_id|**int**|Unique identifier for components and devices.<br />Key for this view.|NOT NULL|
 |group_name|**nvarchar(255)**|Logical group name for the components and devices.|NOT NULL|
 
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)

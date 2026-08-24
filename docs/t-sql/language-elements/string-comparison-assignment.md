@@ -119,7 +119,7 @@ DROP TABLE #tmp;
 GO
 ```
 
-## Next steps
+## Related content
 
 - [SET ANSI_PADDING (Transact-SQL)](../statements/set-ansi-padding-transact-sql.md)
 - [String operators (Transact-SQL)](string-operators-transact-sql.md)

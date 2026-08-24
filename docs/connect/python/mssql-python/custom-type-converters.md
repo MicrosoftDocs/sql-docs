@@ -298,6 +298,6 @@ def slow_converter(value):
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
-- [Retrieve data](retrieving-data.md)
-- [Connection management](connection-management.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Manage connections with mssql-python](connection-management.md)

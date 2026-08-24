@@ -48,5 +48,5 @@ You can run multiple instances of the [!INCLUDE [ssDE](../../includes/ssde-md.md
 
 ## Related content
 
-- [sqlservr Application](../../tools/sqlservr-application.md)
+- [sqlservr application](../../tools/sqlservr-application.md)
 - [Databases](../../relational-databases/databases/databases.md)

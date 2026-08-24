@@ -97,4 +97,3 @@ GO
 - [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
 - [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
-

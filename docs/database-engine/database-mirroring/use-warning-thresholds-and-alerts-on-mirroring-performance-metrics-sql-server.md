@@ -120,8 +120,7 @@ helpviewer_keywords:
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
-  
-  
+## Related content
+
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [Monitoring Database Mirroring (SQL Server)](monitoring-database-mirroring-sql-server.md)

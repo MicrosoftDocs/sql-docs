@@ -73,7 +73,6 @@ SELECT SCHEMA_ID('dbo');
 
 ## Related content
 
-- [Metadata Functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
 - [SCHEMA_NAME (Transact-SQL)](schema-name-transact-sql.md)
-- [sys.schemas (Transact-SQL)](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)
-
+- [Schema catalog view - sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)

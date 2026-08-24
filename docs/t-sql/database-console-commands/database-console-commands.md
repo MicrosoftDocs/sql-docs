@@ -27,8 +27,8 @@ dev_langs:
 - [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)
 
-## Next steps
+## Related content
 
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Configure SQL Server Agent](/ssms/agent/configure-sql-server-agent)
 - [Monitor SQL Server Components](../../relational-databases/performance/monitor-sql-server-components.md)

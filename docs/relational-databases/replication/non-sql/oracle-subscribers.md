@@ -138,5 +138,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)
-- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)
+- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)
+- [Subscribe to Publications](../subscribe-to-publications.md)

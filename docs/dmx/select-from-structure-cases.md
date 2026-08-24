@@ -80,9 +80,9 @@ WHERE IsTestCase();
   
  To return the training cases, substitute the function `IsTrainingCase()`.  
   
-## See Also  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
-  
+## Related content
+
+- [SELECT (DMX)](select-dmx.md)
+- [DMX Statements - Data Definition](dmx-statements-data-definition.md)
+- [DMX Statements - Data Manipulation](dmx-statements-data-manipulation.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)

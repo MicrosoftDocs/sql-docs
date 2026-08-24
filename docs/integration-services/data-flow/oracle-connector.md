@@ -64,9 +64,9 @@ To execute SSIS packages targeting SQL Server 2019 and above, you don't need to 
 
 You can run uninstall wizard to remove Microsoft Connector for Oracle database from SQL Server.
 
-## Next steps
+## Related content
 
-- Configure [Oracle Connection Manager](oracle-connection-manager.md).
-- Configure [Oracle Source](oracle-source.md).
-- Configure [Oracle Destination](oracle-destination.md).
-- If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).
+- [Oracle Connection Manager](oracle-connection-manager.md)
+- [Oracle source](oracle-source.md)
+- [Oracle destination](oracle-destination.md)
+- [TechCommunity](https://aka.ms/AA5u35j)

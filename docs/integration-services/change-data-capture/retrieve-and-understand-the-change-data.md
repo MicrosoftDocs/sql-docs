@@ -47,9 +47,6 @@ helpviewer_keywords:
   
 3.  In the **OLE DB Source Editor**, on the **Columns** page, make sure that all the columns that you want are mapped to output columns.  
   
-## Next Step  
- After you have configured an OLE DB source to retrieve the change data, the next step is to start designing the data flow in the package.  
-  
- **Next topic:** [Process Inserts, Updates, and Deletes](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
-  
-  
+## Related content
+
+- [Process Inserts, Updates, and Deletes](process-inserts-updates-and-deletes.md)

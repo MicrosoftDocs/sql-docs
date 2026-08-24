@@ -236,11 +236,11 @@ This example enables the `AdventureWorks` database for merge publishing and crea
 
 ## Related content
 
-- [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)
-- [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
-- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)
-- [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)
-- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)
+- [Use sqlcmd with scripting variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
+- [Publish Data and Database Objects](publish-data-and-database-objects.md)
+- [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)
+- [Define an Article](define-an-article.md)
+- [View and Modify Publication Properties](view-and-modify-publication-properties.md)
+- [Configure Distribution](../configure-distribution.md)
+- [Secure the Distributor](../security/secure-the-distributor.md)
+- [Secure the Publisher](../security/secure-the-publisher.md)

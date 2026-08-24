@@ -84,6 +84,6 @@ The Admin Console provides the ability to monitor the following:
 |Monitor additional information for loads, backups, and restores.|Click **Loads** or **Backups/Restores**.|  
 |Performance information|Click **Performance Monitor**.|  
   
-## See Also  
-[Appliance Monitoring &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
-  
+## Related content
+
+- [Appliance monitoring for Analytics Platform System](appliance-monitoring.md)

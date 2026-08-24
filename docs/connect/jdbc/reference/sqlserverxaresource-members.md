@@ -50,7 +50,6 @@ ms.topic: reference
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
- [SQLServerXAResource Class](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerXAResource Class](sqlserverxaresource-class.md)

@@ -20,7 +20,6 @@ helpviewer_keywords:
   
  **bcp_moretext** has no parameter to identify a column. When there are multiple **text**, **ntext**, or **image** columns in a row, **bcp_moretext** operates on the **text**, **ntext**, or **image** columns starting with the column having the lowest ordinal number and proceeding to the column with the highest ordinal number. **bcp_moretext** goes from one column to the next when the sum of the lengths of data sent equals the length specified in the latest **bcp_collen** or **bcp_bind** for the current column.  
   
-## See Also  
- [Performing Bulk Copy Operations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
-  
-  
+## Related content
+
+- [Performing Bulk Copy Operations (ODBC)](performing-bulk-copy-operations-odbc.md)

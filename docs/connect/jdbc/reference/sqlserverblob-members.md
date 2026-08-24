@@ -45,7 +45,6 @@ ms.topic: reference
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
- [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  
-  
-  
+## Related content
+
+- [SQLServerBlob Class](sqlserverblob-class.md)

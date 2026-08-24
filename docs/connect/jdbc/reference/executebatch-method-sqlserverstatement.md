@@ -37,8 +37,7 @@ public int[] executeBatch()
   
  After submitting commands to the database, this method clears any command in the batch.  
   
-## See Also  
- [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
- [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerStatement Members](sqlserverstatement-members.md)
+- [SQLServerStatement Class](sqlserverstatement-class.md)

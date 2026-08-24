@@ -38,7 +38,6 @@ ms.topic: reference
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
- [SQLServerPooledConnection Class](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerPooledConnection Class](sqlserverpooledconnection-class.md)

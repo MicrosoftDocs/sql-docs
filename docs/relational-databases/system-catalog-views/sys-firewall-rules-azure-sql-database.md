@@ -50,7 +50,7 @@ Read-only access to this view is available to all users with permission to conne
 - [sp_delete_firewall_rule (Azure SQL Database)](../system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)
 - [sp_set_database_firewall_rule (Azure SQL Database)](../system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)
 - [sp_delete_database_firewall_rule (Azure SQL Database)](../system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)
-- [sys.database_firewall_rules (Azure SQL Database)](sys-database-firewall-rules-azure-sql-database.md)
+- [sys.database_firewall_rules](sys-database-firewall-rules-azure-sql-database.md)
 - [Configure Windows Firewall for Database Engine access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 - [Configure a Firewall for FILESTREAM Access](../blob/configure-a-firewall-for-filestream-access.md)
 - [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)

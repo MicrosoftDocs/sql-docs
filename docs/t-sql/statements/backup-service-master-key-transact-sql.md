@@ -56,8 +56,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
 ```  
   
-## See Also  
- [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER SERVICE MASTER KEY (Transact-SQL)](alter-service-master-key-transact-sql.md)
+- [RESTORE SERVICE MASTER KEY (Transact-SQL)](restore-service-master-key-transact-sql.md)

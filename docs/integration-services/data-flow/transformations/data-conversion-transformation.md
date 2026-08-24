@@ -41,9 +41,6 @@ helpviewer_keywords:
 ## Related Tasks  
  You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). For information about setting properties of this transformation programmatically, see [Common Properties](../set-the-properties-of-a-data-flow-component.md) and [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-## Related Content  
- Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035), on blogs.msdn.com.  
-  
 ## Data Conversion Transformation Editor
   Use the **Data Conversion Transformation Editor** dialog box to select the columns to convert, select the data type to which the column is converted, and set conversion attributes.  
   
@@ -78,8 +75,9 @@ helpviewer_keywords:
  **Configure error output**  
  Specify how to handle row-level errors by using the [Configure Error Output](../error-handling-in-data.md) dialog box.  
   
-## See Also  
- [Fast Parse](../parsing-data.md)   
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)
+- [Parsing Data](../parsing-data.md)
+- [Data Flow](../data-flow.md)
+- [Integration Services Transformations](integration-services-transformations.md)

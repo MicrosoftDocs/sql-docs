@@ -29,8 +29,8 @@ You can only merge cells within each area of a data region: corner, column heade
   
 ## Related content
 
-- [Tablix Data Region](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)
-- [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)
-- [Create a Matrix](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
-- [Create Invoices and Forms with Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
-- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Tablix data region in a paginated report (Report Builder)](tablix-data-region-report-builder-and-ssrs.md)
+- [Tables in paginated reports (Report Builder)](tables-report-builder-and-ssrs.md)
+- [Create a matrix in a paginated report (Report Builder)](create-a-matrix-report-builder-and-ssrs.md)
+- [Create invoices and forms with lists in a paginated report (Report Builder)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)

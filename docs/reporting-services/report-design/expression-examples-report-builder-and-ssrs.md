@@ -549,6 +549,6 @@ To avoid this condition, use one of the following strategies:
   
 ## Related content
 
-- [Filter equation examples in a paginated report (Report Builder)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)
-- [Group expression examples in paginated reports (Report Builder)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)
-- [Expression uses in paginated reports (Report Builder)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Filter equation examples in a paginated report (Report Builder)](filter-equation-examples-report-builder-and-ssrs.md)
+- [Group expression examples in paginated reports (Report Builder)](group-expression-examples-report-builder-and-ssrs.md)
+- [Expression uses in paginated reports (Report Builder)](expression-uses-in-reports-report-builder-and-ssrs.md)

@@ -115,8 +115,7 @@ public static void executeGetProcedureColumns(Connection con) {
 }  
 ```  
   
-## See Also  
- [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
- [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDatabaseMetaData Members](sqlserverdatabasemetadata-members.md)
+- [SQLServerDatabaseMetaData Class](sqlserverdatabasemetadata-class.md)

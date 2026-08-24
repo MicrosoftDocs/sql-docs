@@ -65,11 +65,10 @@ MYROWS ON 1
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
-  
-  
+## Related content
+
+- [DefaultMember (MDX)](defaultmember-mdx.md)
+- [Filter (MDX)](filter-mdx.md)
+- [IsEmpty (MDX)](isempty-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)
+- [NonEmptyCrossjoin (MDX)](nonemptycrossjoin-mdx.md)

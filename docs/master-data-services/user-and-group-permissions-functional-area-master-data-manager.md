@@ -42,6 +42,6 @@ ms.custom:
   
  [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
  
-## See Also  
+## Related content
 
-[Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)
+- [Master Data Manager Web Application](master-data-manager-web-application.md)

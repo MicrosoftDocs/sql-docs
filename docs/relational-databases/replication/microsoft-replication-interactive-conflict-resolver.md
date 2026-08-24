@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
   
 ## Related content
 
-- [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)
-- [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)
-- [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)
-- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Advanced Merge Replication Conflict - Interactive Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)
+- [Conflict resolution for Merge Replication](view-and-resolve-data-conflicts-for-merge-publications.md)
+- [Synchronize a Subscription Using Windows Synchronization Manager](synchronize-a-subscription-using-windows-synchronization-manager.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)

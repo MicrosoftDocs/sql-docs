@@ -40,10 +40,9 @@ dev_langs:
 |**resultobj**|**bit**|1 = Object is being updated.<br /><br /> 0 = No.|  
 |**readobj**|**bit**|1 = The object is being read.<br /><br /> 0 = No.|  
   
-## See Also  
- [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [sp_depends &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)   
- [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
-  
-  
+## Related content
+
+- [Mapping System Tables to System Views (Transact-SQL)](../system-tables/mapping-system-tables-to-system-views-transact-sql.md)
+- [System Compatibility Views (Transact-SQL)](system-compatibility-views-transact-sql.md)
+- [sys.sp_depends (Transact-SQL)](../system-stored-procedures/sp-depends-transact-sql.md)
+- [sys.sql_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-dependencies-transact-sql.md)

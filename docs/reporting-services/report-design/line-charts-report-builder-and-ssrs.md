@@ -41,9 +41,9 @@ ms.custom:
   
 ## Related content
 
-- [Bar Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)
-- [Column Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)
-- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)
-- [Area Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)
-- [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
+- [Bar charts in a paginated report (Report Builder)](bar-charts-report-builder-and-ssrs.md)
+- [Column charts in a paginated report (Report Builder)](column-charts-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Chart types in a paginated report (Report Builder)](chart-types-report-builder-and-ssrs.md)
+- [Area charts in a paginated report (Report Builder)](area-charts-report-builder-and-ssrs.md)
+- [Empty and null data points in paginated report charts (Report Builder)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)

@@ -163,7 +163,6 @@ Because the `TYPE` directive returns a query result as **xml** type, you can que
     FOR XML AUTO, TYPE ) as T(XmlCol);
     ```
 
-## See also
+## Related content
 
-- [Use Nested FOR XML Queries](../../relational-databases/xml/use-nested-for-xml-queries.md)
-
+- [Use nested FOR XML queries](use-nested-for-xml-queries.md)

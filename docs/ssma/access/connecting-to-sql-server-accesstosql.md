@@ -94,4 +94,4 @@ The procedure for reconnecting to [!INCLUDE [ssNoVersion](../../includes/ssnover
 
 - [Migrate Access databases to SQL Server and Azure SQL](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)
 - [Map source and target databases](mapping-source-and-target-databases-accesstosql.md)
-- [convert database objects](converting-access-database-objects-accesstosql.md)
+- [Convert Access database objects](converting-access-database-objects-accesstosql.md)

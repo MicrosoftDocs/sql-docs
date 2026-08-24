@@ -91,6 +91,5 @@ SQL Server supports the following types of locks. Not all lock types are availab
   
 ## Related content
 
-- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)  
-- [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
-  
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)
+- [sys.dm_pdw_waits (Transact-SQL)](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-waits-transact-sql.md)

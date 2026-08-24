@@ -69,8 +69,7 @@ SELECT Status =
   
  In this case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not configured to allow [!INCLUDE[ssSB](../../includes/sssb-md.md)] to communicate over the network.  
   
-## See Also  
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)
+- [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)

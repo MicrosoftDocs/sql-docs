@@ -49,5 +49,5 @@ For Reporting Services 2016 and earlier versions, you must verify that the insta
   
 ## Related content
 
-- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)
 - [Start, stop, or pause the SQL Server agent service](/ssms/agent/start-stop-or-pause-the-sql-server-agent-service)

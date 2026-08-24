@@ -63,4 +63,4 @@ FROM sys.dm_os_windows_info;
 ## Related content
 
 - [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_os_host_info](sys-dm-os-host-info-transact-sql.md)
+- [sys.dm_os_host_info (Transact-SQL)](sys-dm-os-host-info-transact-sql.md)

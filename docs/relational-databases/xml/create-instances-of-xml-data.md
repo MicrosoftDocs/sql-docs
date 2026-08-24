@@ -252,4 +252,3 @@ The enhanced [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) func
 - [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)
 - [XML Data Modification Language (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)
 - [XML data (SQL Server)](xml-data-sql-server.md)
-

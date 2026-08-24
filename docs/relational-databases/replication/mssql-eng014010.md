@@ -56,5 +56,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [@@SERVERNAME &#40;Transact-SQL&#41;](../../t-sql/functions/servername-transact-sql.md)
-- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
+- [@@SERVERNAME (Transact-SQL)](../../t-sql/functions/servername-transact-sql.md)
+- [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)

@@ -138,8 +138,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## See Also  
- [BLOBs and OLE Objects](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [Using Large Value Types](../../relational-databases/native-client/features/using-large-value-types.md)  
-  
-  
+## Related content
+
+- [BLOBs and OLE Objects in SQL Server Native Client](blobs-and-ole-objects.md)
+- [Using Large Value Types in SQL Server Native Client](../native-client/features/using-large-value-types.md)

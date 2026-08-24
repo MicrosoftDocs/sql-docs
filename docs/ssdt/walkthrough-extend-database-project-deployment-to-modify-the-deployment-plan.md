@@ -765,5 +765,5 @@ The output artifact from a SQL project build is a `.dacpac` file. A `.dacpac` fi
 ## Related content
 
 - [Customize database build and deployment by using build and deployment contributors](use-deployment-contributors-to-customize-database-build-and-deployment.md)
-- [Walkthrough: Extend Database Project Build to Generate Model Statistics](walkthrough-extend-database-project-build-to-generate-model-statistics.md)
-- [Walkthrough: Extend Database Project Deployment to Analyze the Deployment Plan](walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)
+- [Walkthrough: Extend database project build to generate model statistics](walkthrough-extend-database-project-build-to-generate-model-statistics.md)
+- [Walkthrough: Extend database project deployment to analyze the deployment plan](walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)

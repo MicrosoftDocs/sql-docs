@@ -97,6 +97,6 @@ When you open a project, it's disconnected from Db2 and from [!INCLUDE [ssNoVers
 
 ## Related content
 
-- [Migrate Db2 Databases to SQL Server (Db2ToSQL)](migrating-db2-databases-to-sql-server-db2tosql.md)
-- [Connect to Db2 database (Db2ToSQL)](connecting-to-db2-database-db2tosql.md)
-- [Connect to SQL Server (Db2ToSQL)](connecting-to-sql-server-db2tosql.md)
+- [Migrate Db2 databases to SQL Server](migrating-db2-databases-to-sql-server-db2tosql.md)
+- [Connect to Db2 database](connecting-to-db2-database-db2tosql.md)
+- [Connect to SQL Server](connecting-to-sql-server-db2tosql.md)

@@ -151,6 +151,6 @@ When you run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a 
 ## Related content
 
 - [Performance best practices: Storage, kernel, CPU, and network for SQL Server on Linux](performance-best-practices-operating-system.md)
-- [Linux related dynamic management views and functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/linux-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Linux related dynamic management views and functions (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/linux-related-dynamic-management-views-and-functions-transact-sql.md)
 - [Walkthrough for the performance features of SQL Server on Linux](../sql-server-linux-performance-get-started.md)
 - [What is SQL Server on Linux?](../sql-server-linux-overview.md)

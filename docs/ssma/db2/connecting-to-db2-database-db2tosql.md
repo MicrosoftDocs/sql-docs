@@ -97,5 +97,5 @@ Metadata about the Db2 database isn't automatically refreshed. The metadata in D
 
 ## Related content
 
-- [Migrate Db2 Databases to SQL Server (Db2ToSQL)](migrating-db2-databases-to-sql-server-db2tosql.md)
-- [Connect to SQL Server (Db2ToSQL)](connecting-to-sql-server-db2tosql.md)
+- [Migrate Db2 databases to SQL Server](migrating-db2-databases-to-sql-server-db2tosql.md)
+- [Connect to SQL Server](connecting-to-sql-server-db2tosql.md)

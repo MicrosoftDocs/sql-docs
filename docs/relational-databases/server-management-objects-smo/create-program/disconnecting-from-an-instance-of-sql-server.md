@@ -66,7 +66,7 @@ srv.ConnectionContext.Disconnect();
 }  
 ```  
   
-## See Also  
- <xref:Microsoft.SqlServer.Management.Smo.Server>   
- [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Management.Smo.Server>
+- [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))

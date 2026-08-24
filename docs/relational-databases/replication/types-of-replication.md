@@ -34,4 +34,4 @@ Each type of replication typically begins with an initial synchronization of the
  
 ## Related content
 
-- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Replication Agents Overview](agents/replication-agents-overview.md)

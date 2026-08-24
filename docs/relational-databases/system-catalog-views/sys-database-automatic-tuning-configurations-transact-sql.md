@@ -49,6 +49,6 @@ Requires the `VIEW DATABASE STATE` permission.
 - [Automatic tuning](../automatic-tuning/automatic-tuning.md)
 - [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
 - [sys.database_query_store_options (Transact-SQL)](sys-database-query-store-options-transact-sql.md)
-- [sys.dm_db_tuning_recommendations (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)
-- [sys.database_automatic_tuning_mode](sys-database-automatic-tuning-mode-transact-sql.md)
+- [sys.dm_db_tuning_recommendations (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-tuning-recommendations-transact-sql.md)
+- [sys.database_automatic_tuning_mode (Transact-SQL)](sys-database-automatic-tuning-mode-transact-sql.md)
 - [sp_configure_automatic_tuning (Transact-SQL)](../system-stored-procedures/sp-configure-automatic-tuning-transact-sql.md)

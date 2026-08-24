@@ -260,5 +260,6 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
 }  
 ```  
   
-## See Also  
- [Statement Parameters](../../../odbc/reference/develop-app/statement-parameters.md)
+## Related content
+
+- [Statement Parameters](statement-parameters.md)

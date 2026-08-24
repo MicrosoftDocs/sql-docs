@@ -130,4 +130,3 @@ After Close
 
 - [Cursor Functions (Transact-SQL)](cursor-functions-transact-sql.md)
 - [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
-

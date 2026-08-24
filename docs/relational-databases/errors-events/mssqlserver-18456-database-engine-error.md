@@ -204,6 +204,6 @@ In this example, the authentication error state is 8. This indicates that the pa
 > [!NOTE]  
 > When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed using Windows Authentication mode and is later changed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication mode, the **sa** login is initially disabled. This causes the state 7 error: "Login failed for user 'sa'." To enable the **sa** login, see [Change Server Authentication Mode](~/database-engine/configure-windows/change-server-authentication-mode.md).
 
-## See also
+## Related content
 
 - [0420 Reasons for Consistent Auth Issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0420-Reasons-for-Consistent-Auth-Issues)

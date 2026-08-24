@@ -117,12 +117,10 @@ The user must be a domain account that is member of the local Administrators gro
   
 -   [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
-##  <a name="RelatedContent"></a> Related Content  
-  
--   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
-  
--   [Get-ClusterLog Failover Cluster Cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
-  
-## See Also  
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
-  
+<a id="RelatedContent"></a>
+
+## Related content
+
+- [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)
+- [Get-ClusterLog Failover Cluster Cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))
+- [Windows Server Failover Clustering with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)

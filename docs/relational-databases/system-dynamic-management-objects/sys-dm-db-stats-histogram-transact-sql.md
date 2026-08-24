@@ -168,4 +168,3 @@ WHERE ss.[object_id] = OBJECT_ID('Region')
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 - [Object Related Dynamic Management Views and Functions (Transact-SQL)](object-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_db_stats_properties (Transact-SQL)](sys-dm-db-stats-properties-transact-sql.md)
-

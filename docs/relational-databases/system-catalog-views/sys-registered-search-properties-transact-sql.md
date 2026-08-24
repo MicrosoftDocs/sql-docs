@@ -57,10 +57,8 @@ SELECT * FROM sys.registered_search_properties;
 GO  
 ```  
   
-## See Also  
- [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
- [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
-  
-  
+## Related content
 
+- [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)
+- [sys.fulltext_indexes (Transact-SQL)](sys-fulltext-indexes-transact-sql.md)
+- [Search document properties with search property lists](../search/search-document-properties-with-search-property-lists.md)

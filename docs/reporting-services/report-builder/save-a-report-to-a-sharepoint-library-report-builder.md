@@ -30,4 +30,4 @@ You must have **Member** or **Owner** permission on the SharePoint site to set t
 
 ## Related content
 
-- [Find, view, and manage reports (Report Builder)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

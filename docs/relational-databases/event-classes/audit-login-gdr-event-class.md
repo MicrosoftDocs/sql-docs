@@ -45,12 +45,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
 |**XactSequence**|**bigint**|Token used to describe the current transaction.|50|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [Audit Server Principal Management Event Class](../../relational-databases/event-classes/audit-server-principal-management-event-class.md)  
-  
-  
+## Related content
+
+- [Extended Events overview](../extended-events/extended-events.md)
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [sys.sp_grantlogin (Transact-SQL)](../system-stored-procedures/sp-grantlogin-transact-sql.md)
+- [sys.sp_revokelogin (Transact-SQL)](../system-stored-procedures/sp-revokelogin-transact-sql.md)
+- [sys.sp_denylogin (Transact-SQL)](../system-stored-procedures/sp-denylogin-transact-sql.md)
+- [Audit Server Principal Management Event Class](audit-server-principal-management-event-class.md)

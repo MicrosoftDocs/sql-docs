@@ -53,8 +53,8 @@ Consider the following solutions.
   
 -   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, review [Remove duplicate rows from a SQL Server table](/troubleshoot/sql/database-design/remove-duplicate-rows-sql-server-tab).  
   
-## See Also  
-[CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
-[Create Unique Indexes](~/relational-databases/indexes/create-unique-indexes.md)  
-[Create Unique Constraints](~/relational-databases/tables/create-unique-constraints.md)  
-  
+## Related content
+
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+- [Create a unique index](../indexes/create-unique-indexes.md)
+- [Create unique constraints](../tables/create-unique-constraints.md)

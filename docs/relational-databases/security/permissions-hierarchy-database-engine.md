@@ -44,14 +44,14 @@ For information about designing a permissions system, see [Getting Started with 
   
 ## Related content
 
-- [Securing SQL Server](../../relational-databases/security/securing-sql-server.md)
-- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
-- [Securables](../../relational-databases/security/securables.md)
-- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
+- [Securing SQL Server](securing-sql-server.md)
+- [Permissions (Database Engine)](permissions-database-engine.md)
+- [Securables](securables.md)
+- [Principals (Database Engine)](authentication-access/principals-database-engine.md)
 - [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)
 - [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)
 - [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)
 - [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)
-- [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)
-- [sys.server_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)
-- [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
+- [sys.fn_builtin_permissions (Transact-SQL)](../system-functions/sys-fn-builtin-permissions-transact-sql.md)
+- [sys.server_permissions (Transact-SQL)](../system-catalog-views/sys-server-permissions-transact-sql.md)
+- [sys.database_permissions (Transact-SQL)](../system-catalog-views/sys-database-permissions-transact-sql.md)

@@ -74,5 +74,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)
-- [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)
+- [Analysis Services Connection Type for MDX (SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)
+- [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md)

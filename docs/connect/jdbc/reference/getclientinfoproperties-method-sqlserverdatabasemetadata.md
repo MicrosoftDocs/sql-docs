@@ -33,8 +33,7 @@ public java.sql.ResultSet getClientInfoProperties()
 > [!NOTE]  
 >  This method returns an empty result set. The driver supports setting only the **applicationName** and sets the **applicationName** only at connection time. SQL Server does not support updating the client application information after the connection is established.  
   
-## See Also  
- [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
- [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDatabaseMetaData Members](sqlserverdatabasemetadata-members.md)
+- [SQLServerDatabaseMetaData Class](sqlserverdatabasemetadata-class.md)

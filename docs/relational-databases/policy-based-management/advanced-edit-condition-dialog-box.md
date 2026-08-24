@@ -93,5 +93,5 @@ The following sections provide additional information about the functions you ca
 
 ## Related content
 
-- [Create new condition or open condition dialog box, general page](create-new-condition-or-open-condition-dialog-box-general-page.md)
+- [Create New Condition or Open Condition dialog box, General page](create-new-condition-or-open-condition-dialog-box-general-page.md)
 - [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)

@@ -206,10 +206,9 @@ Setting the *flags* parameter in OPENXML to 2 (XML_ELEMENTS) specifies **element
 
 - For multiple subelements that have the same name, the first node is returned.
 
-## See also
+## Related content
 
-- [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
-- [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
-- [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)
-- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)
-
+- [sp_xml_preparedocument (Transact-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+- [sp_xml_removedocument (Transact-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+- [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+- [XML data (SQL Server)](xml-data-sql-server.md)

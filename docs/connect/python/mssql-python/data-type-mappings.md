@@ -415,6 +415,6 @@ If you work heavily with pandas or numpy data, consider using the [Arrow integra
 
 ## Related content
 
-- [Execute queries](executing-queries.md)
-- [Retrieve data](retrieving-data.md)
-- [Custom type converters](custom-type-converters.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Custom type converters with mssql-python](custom-type-converters.md)

@@ -24,7 +24,6 @@ apitype: "MOFDef"
   
 -   Set the security certificate for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## See Also  
- [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
-  
-  
+## Related content
+
+- [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)

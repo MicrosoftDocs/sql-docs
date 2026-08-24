@@ -24,31 +24,19 @@ helpviewer_keywords:
 |System Monitor|The **SQLServer:Availability Replica** performance object contains performance counters that report information about availability replicas.|[SQL Server, Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |System Monitor|The **SQLServer:Database Replica** performance object contains performance counters that report information about the secondary databases on a given secondary replica.<br /><br /> The **SQLServer:Databases** object in SQL Server contains performance counters that monitor transaction log activities, among other things. The following counters are particularly relevant for monitoring transaction-log activity on availability databases: **Log Flush Write Time (ms)**, **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec**, and **Log Pool Requests/sec**.|[SQL Server, Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md) and [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> Related Content  
-  
--   **Blogs:**  
-  
-     [The Always On Health Model Part 1 -- Health Model Architecture](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
-  
-     [The Always On Health Model Part 2 -- Extending the Health Model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
-  
-     [Monitoring Always On Health with PowerShell - Part 1: Basic Cmdlet Overview](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
-  
-     [Monitoring Always On Health with PowerShell - Part 2: Advanced Cmdlet Usage](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
-  
-     [Monitoring Always On Health with PowerShell - Part 3 : A Simple Monitoring Application](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
-  
-     [Monitoring Always On Health with PowerShell - Part 4 : Integration with SQL Server Agent](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
-  
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
-  
-     [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
+## Related content
 
-## See Also  
- [Always On Availability Groups Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Always On Availability Groups Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md)   
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Automatic Page Repair &#40;Availability Groups: Database Mirroring&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
-  
+- [The Always On Health Model Part 1 -- Health Model Architecture](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)
+- [The Always On Health Model Part 2 -- Extending the Health Model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)
+- [Monitoring Always On Health with PowerShell - Part 1: Basic Cmdlet Overview](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)
+- [Monitoring Always On Health with PowerShell - Part 2: Advanced Cmdlet Usage](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)
+- [Monitoring Always On Health with PowerShell - Part 3 : A Simple Monitoring Application](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)
+- [Monitoring Always On Health with PowerShell - Part 4 : Integration with SQL Server Agent](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)
+- [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)
+- [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)
+- [Always On Availability Groups Catalog Views (Transact-SQL)](../../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)
+- [Always On availability groups dynamic management views and functions](../../../relational-databases/system-dynamic-management-objects/always-on-availability-groups-dynamic-management-views-functions.md)
+- [Configure a flexible automatic failover policy for an Always On availability group](configure-flexible-automatic-failover-policy.md)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Automatic Page Repair (Availability Groups: Database Mirroring)](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)
+- [Use the Always On Availability Group dashboard (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)

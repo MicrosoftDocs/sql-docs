@@ -271,8 +271,8 @@ After you successfully migrate your report server to a new instance, you should 
 ## Related content
 
 - [Migrate a Reporting Services Installation (SharePoint Mode)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)
-- [Report server database (SSRS native mode)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
-- [Upgrade and migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)
-- [Reporting Services backward compatibility](../../reporting-services/reporting-services-backward-compatibility.md)
-- [What is Report Server Configuration Manager (Native mode)?](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Report server database (SSRS native mode)](../report-server/report-server-database-ssrs-native-mode.md)
+- [Upgrade and migrate Reporting Services](upgrade-and-migrate-reporting-services.md)
+- [Reporting Services backward compatibility](../reporting-services-backward-compatibility.md)
+- [What is the Report Server configuration manager (native mode)?](reporting-services-configuration-manager-native-mode.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

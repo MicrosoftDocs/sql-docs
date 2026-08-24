@@ -53,10 +53,9 @@ DROP APPLICATION ROLE weekly_ledger;
 GO  
 ```  
   
-## See Also  
- [Application Roles](../../relational-databases/security/authentication-access/application-roles.md)   
- [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
+## Related content
+
+- [Application Roles](../../relational-databases/security/authentication-access/application-roles.md)
+- [CREATE APPLICATION ROLE (Transact-SQL)](create-application-role-transact-sql.md)
+- [ALTER APPLICATION ROLE (Transact-SQL)](alter-application-role-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

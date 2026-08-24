@@ -128,7 +128,7 @@ In all of the preceding cases, to create a data file for later reloading into [!
 
 ## Related content
 
-- [bcp utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 - [Specify field and row terminators (SQL Server)](specify-field-and-row-terminators-sql-server.md)
 - [Specify prefix length in data files using bcp (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)

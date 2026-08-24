@@ -73,6 +73,6 @@ helpviewer_keywords:
 |Deploy a package of model objects only by using the wizard.|[Deploy a Model Deployment Package by Using the Wizard](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
 |Edit a model deployment package to deploy selected parts of a model, rather than the entire model.|[Edit a Model Deployment Package](../master-data-services/edit-a-model-deployment-package.md)|  
   
-## Related Content  
-  
--   [Model Deployment Options &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)
+## Related content
+
+- [Model Deployment Options (Master Data Services)](model-deployment-options-master-data-services.md)

@@ -149,6 +149,6 @@ SharePoint integrated mode is deprecated after SQL Server 2016. To add Reporting
 ## Related content
 
 - [Reporting Services backward compatibility](reporting-services-backward-compatibility.md)
-- [SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server.md)
-- [Upgrade and migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)
+- [SQL Server Reporting Services features supported by editions](reporting-services-features-supported-by-the-editions-of-sql-server.md)
+- [Upgrade and migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -75,7 +75,7 @@ EXECUTE sp_helpdevice;
 
 ## Related content
 
-- [sp_addumpdevice (Transact-SQL)](sp-addumpdevice-transact-sql.md)
-- [sp_dropdevice (Transact-SQL)](sp-dropdevice-transact-sql.md)
+- [sys.sp_addumpdevice (Transact-SQL)](sp-addumpdevice-transact-sql.md)
+- [sys.sp_dropdevice (Transact-SQL)](sp-dropdevice-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

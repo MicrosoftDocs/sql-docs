@@ -183,6 +183,6 @@ FROM sys.dm_exec_describe_first_result_set(
 
 ## Related content
 
-- [sp_describe_first_result_set](../system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
-- [sp_describe_undeclared_parameters](../system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
-- [sys.dm_exec_describe_first_result_set_for_object](sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+- [sp_describe_first_result_set (Transact-SQL)](../system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
+- [sp_describe_undeclared_parameters (Transact-SQL)](../system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
+- [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

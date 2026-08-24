@@ -34,5 +34,5 @@ For more information, see [DSN and Connection String Keywords and Attributes](ds
 
 ## Related content
 
-- [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md)
-- [Data Source Wizard Screen 4](windows/odbc-administrator-dsn-creation.md)
+- [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md)
+- [ODBC Data Source Administrator DSN options](windows/odbc-administrator-dsn-creation.md)

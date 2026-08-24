@@ -60,6 +60,6 @@ ms.topic: reference
   
  For more information, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-## See Also  
- [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
-  
+## Related content
+
+- [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)

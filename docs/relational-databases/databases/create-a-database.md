@@ -109,7 +109,7 @@ For more examples, see [CREATE DATABASE](../../t-sql/statements/create-database-
 
 ## Related content
 
-- [Database Files and Filegroups](database-files-and-filegroups.md)
+- [Database files and filegroups](database-files-and-filegroups.md)
 - [Database detach and attach (SQL Server)](database-detach-and-attach-sql-server.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)

@@ -67,8 +67,7 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HumanResources_Employee(@from_lsn, @to_
 GO  
 ```  
   
-## See Also  
- [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
-  
-  
+## Related content
+
+- [sys.fn_cdc_get_min_lsn (Transact-SQL)](sys-fn-cdc-get-min-lsn-transact-sql.md)
+- [The transaction log](../logs/the-transaction-log-sql-server.md)

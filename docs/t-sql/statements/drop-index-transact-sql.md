@@ -422,8 +422,7 @@ DROP INDEX PK_MyClusteredIndex
 - [CREATE SPATIAL INDEX (Transact-SQL)](create-spatial-index-transact-sql.md)
 - [CREATE XML INDEX (Transact-SQL)](create-xml-index-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
-- [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
-- [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)
-- [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
-- [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-
+- [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
+- [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)
+- [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)

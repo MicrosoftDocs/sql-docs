@@ -84,9 +84,8 @@ where ProductModelID=19
   
  Because both the operands to the **eq** operator are atomic values, the value operator is used in the query. You can write the same query by using the general comparison operator ( **=** ).  
   
-## See Also  
- [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
-  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)
+- [XML data (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)
+- [XQuery Language Reference (SQL Server)](xquery-language-reference-sql-server.md)

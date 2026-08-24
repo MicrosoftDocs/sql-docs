@@ -181,9 +181,9 @@ When possible, prompt users to enter security credentials at runtime.
   
 ## Related content
 
-- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)
-- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
-- [Distributor and Publisher Information Script](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)
-- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)
+- [Disable Publishing and Distribution](disable-publishing-and-distribution.md)
+- [Configure Distribution](configure-distribution.md)
+- [Distributor and Publisher Information Script](administration/distributor-and-publisher-information-script.md)
+- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)
+- [View information and perform tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)

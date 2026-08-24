@@ -136,6 +136,6 @@ helpviewer_keywords:
   
 -   You cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs on [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] computers to run [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages that are stored in the upgraded instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-## External Resources  
- Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951), on blogs.msdn.com.  
-  
+## Related content
+
+- [Making your Existing Custom SSIS Extensions and Applications Work in Denali](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951)

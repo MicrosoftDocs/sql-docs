@@ -1060,6 +1060,5 @@ For a lock compatibility matrix, see [sys.dm_tran_locks](sys-dm-tran-locks-trans
 
 - [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
 - [sys.dm_exec_session_wait_stats (Transact-SQL)](sys-dm-exec-session-wait-stats-transact-sql.md)
-- [sys.dm_db_wait_stats (Azure SQL Database)](sys-dm-db-wait-stats-azure-sql-database.md)
+- [sys.dm_db_wait_stats](sys-dm-db-wait-stats-azure-sql-database.md)
 - [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)
-

@@ -70,5 +70,6 @@ These settings will be available based on the type of Metabase node. For example
   
     3.  The settings made by the user are saved in cascaded preferences file on clicking **Apply** button.  
   
-## See Also  
-[Project Settings (Conversion) (MySQL to SQL)](./project-settings-conversion-mysqltosql.md)  
+## Related content
+
+- [Project Settings (Conversion)](project-settings-conversion-mysqltosql.md)

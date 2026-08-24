@@ -50,6 +50,6 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STArea();  
 ```  
   
-## See Also  
-[OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
+## Related content
+
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)

@@ -155,8 +155,8 @@ ms.custom:
   
 ## Related content
 
-- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)
-- [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)
-- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [Group expression examples in paginated reports (Report Builder)](group-expression-examples-report-builder-and-ssrs.md)
+- [Creating recursive hierarchy groups in a paginated report (Report Builder)](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Format text and placeholders in paginated reports (Report Builder)](formatting-text-and-placeholders-report-builder-and-ssrs.md)

@@ -158,11 +158,11 @@ try {
 ?>  
 ```  
 
-## See Also  
-[Retrieving Data](../../connect/php/retrieving-data.md)  
-[Working with UTF-8 Data](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
-[Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  
+## Related content
+
+- [Retrieving Data](retrieving-data.md)
+- [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+- [Updating data (Microsoft Drivers for PHP for SQL Server)](updating-data-microsoft-drivers-for-php-for-sql-server.md)
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [Constants (Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
+- [Example Application (SQLSRV Driver)](example-application-sqlsrv-driver.md)

@@ -69,4 +69,4 @@ Operands for bitwise operators can be any one of the data types of the integer o
 
 - [Operators (Transact-SQL)](operators-transact-sql.md)
 - [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
-- [Compound Operators (Transact-SQL)](compound-operators-transact-sql.md)
+- [Compound operators (Transact-SQL)](compound-operators-transact-sql.md)

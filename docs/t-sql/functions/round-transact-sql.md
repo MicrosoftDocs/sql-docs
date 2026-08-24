@@ -165,4 +165,3 @@ GO
 - [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
 - [FLOOR (Transact-SQL)](floor-transact-sql.md)
 - [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
-

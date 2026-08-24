@@ -39,13 +39,13 @@ sys.dm_hs_database_replicas (
 
 #### database_id
 
-*database_id* is an **integer** representing the database ID, with no default value. Valid inputs are either a database ID or `NULL`.
+*database_id* is an **integer** representing the database ID, with no default value. Valid inputs are either a database ID or `NULL`.
 
 When a `database_id` is provided, `sys.dm_hs_database_replicas` returns a row for that specific database.
 
 When not provided or when `NULL` is provided, for a single database, returns a row for the current database. For a database in an elastic pool, returns rows for all databases in the pool where the caller has sufficient [permissions](#permissions).
 
-The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified.
+The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified.
  
 ## Table returned
 
@@ -84,7 +84,7 @@ FROM sys.dm_hs_database_replicas(DB_ID(N'Contosodb'));
 
 ## Related content
 
-- [sys.dm_database_replica_states (Azure SQL Database)](../system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md?view=azuresqldb-current&preserve-view=true)
-- [sys.dm_exec_requests (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md?view=azuresqldb-current&preserve-view=true)
-- [sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+- [sys.dm_database_replica_states (Azure SQL Database)](../system-dynamic-management-objects/sys-dm-database-replica-states-azure-sql-database.md?view=azuresqldb-current&preserve-view=true)
+- [sys.dm_exec_requests (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+- [sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md?view=azuresqldb-current&preserve-view=true)
 - [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md?view=azuresqldb-current&preserve-view=true)

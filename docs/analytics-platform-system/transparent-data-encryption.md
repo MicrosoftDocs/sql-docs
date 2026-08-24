@@ -261,23 +261,20 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ## Performance Impact  
 The performance impact of TDE varies with the type of data you have, how it is stored, and the type of workload activity on the SQL Server PDW. When protected by TDE, the I/O of reading and then decrypting data or the encrypting and then writing data is a CPU intensive activity and will have more impact when other CPU intensive activities are happening at the same time. Because TDE encrypts `tempdb`, TDE can affect the performance of databases that are not encrypted. To get an accurate idea of performance, you should test the entire system with your data and query activity.  
   
-## Related Content  
-The following links contain general information about how SQL Server manages encryption. These articles can help you understand SQL Server encryption, but these articles do not have information specific to SQL Server PDW and they discuss features that are not present in SQL Server PDW.  
-  
--   [SQL Server Encryption](../relational-databases/security/encryption/sql-server-encryption.md)  
-  
--   [Encryption Hierarchy](../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
--   [SQL Server and Database Encryption Keys](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
+## Related tasks
 
-  
-## See Also  
-[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
-[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
-[BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
-[sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
-[sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
-[sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
+- [SQL Server encryption](../relational-databases/security/encryption/sql-server-encryption.md)
+- [Encryption hierarchy](../relational-databases/security/encryption/encryption-hierarchy.md)
+- [SQL Server and Database Encryption Keys (Database Engine)](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)
+
+## Related content
+
+- [ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
+- [CREATE MASTER KEY (Transact-SQL)](../t-sql/statements/create-master-key-transact-sql.md)
+- [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../t-sql/statements/create-database-encryption-key-transact-sql.md)
+- [BACKUP CERTIFICATE (Transact-SQL)](../t-sql/statements/backup-certificate-transact-sql.md)
+- [sp_pdw_database_encryption (Azure Synapse Analytics)](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)
+- [sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)
+- [sp_pdw_log_user_data_mask (Azure Synapse Analytics)](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)
+- [sys.certificates (Transact-SQL)](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+- [sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)

@@ -271,9 +271,9 @@ Transact-SQL:
 ## Related content
 
 - [Create a Server Audit and Server Audit Specification](../security/auditing/create-a-server-audit-and-server-audit-specification.md)
-- [sys.dm_server_audit_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)
-- [sys.dm_audit_actions (Transact-SQL)](../system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)
-- [sys.dm_audit_class_type_map (Transact-SQL)](../system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)
+- [sys.dm_server_audit_status (Transact-SQL)](../system-dynamic-management-objects/sys-dm-server-audit-status-transact-sql.md)
+- [sys.dm_audit_actions (Transact-SQL)](../system-dynamic-management-objects/sys-dm-audit-actions-transact-sql.md)
+- [sys.dm_audit_class_type_map (Transact-SQL)](../system-dynamic-management-objects/sys-dm-audit-class-type-map-transact-sql.md)
 - [sys.server_audits (Transact-SQL)](../system-catalog-views/sys-server-audits-transact-sql.md)
 - [sys.server_file_audits (Transact-SQL)](../system-catalog-views/sys-server-file-audits-transact-sql.md)
 - [Get Started with SQL Database auditing](/azure/sql-database/sql-database-auditing?view=azuresql-db&preserve-view=true)

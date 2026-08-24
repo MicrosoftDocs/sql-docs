@@ -214,9 +214,9 @@ GO
 
 ## Related content
 
-- [bcp Utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
 - [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
-- [Specify Field Length by Using bcp (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)
+- [Specify field length by using bcp (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)
 - [Specify prefix length in data files using bcp (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)
 - [Specify file storage type using bcp (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)

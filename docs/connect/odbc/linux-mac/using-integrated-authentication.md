@@ -123,9 +123,8 @@ If Kerberos authentication fails, the ODBC driver on Linux or macOS does not use
 
 For more information about authenticating Linux or macOS computers with Active Directory, see [Authenticate Linux Clients with Active Directory](/previous-versions/technet-magazine/dd228986(v=msdn.10)#id0060048). For more information about configuring Kerberos, see the [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
-## See Also  
-[Programming Guidelines](programming-guidelines.md)
+## Related content
 
-[Release Notes](release-notes-odbc-sql-server-linux-mac.md)
-
-[Using Microsoft Entra ID](../using-azure-active-directory.md)
+- [Programming Guidelines](programming-guidelines.md)
+- [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)
+- [Using Microsoft Entra ID with the ODBC Driver](../using-azure-active-directory.md)

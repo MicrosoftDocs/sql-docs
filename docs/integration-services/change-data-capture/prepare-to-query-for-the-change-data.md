@@ -187,9 +187,6 @@ helpviewer_keywords:
   
 -   On the **Control Flow** tab, add a Data Flow task and connect the task that concatenated the query string.  
   
-## Next Step  
- After you prepare the query string and configure the Data Flow task, the next step is create the table-valued function that will retrieve the change data from the database.  
-  
- **Next topic:** [Create the Function to Retrieve the Change Data](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
-  
-  
+## Related content
+
+- [Create the function to retrieve the change data](create-the-function-to-retrieve-the-change-data.md)

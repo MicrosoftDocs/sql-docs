@@ -21,7 +21,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;TEXTSIZE (Transact-SQL)
+# @@TEXTSIZE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   Returns the current value of the [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) option.  
@@ -59,9 +59,6 @@ Text Size
 2048
  ```  
   
-## See Also  
+## Related content
 
- [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)  
-  
-  
-
+- [SET TEXTSIZE (Transact-SQL)](../statements/set-textsize-transact-sql.md)

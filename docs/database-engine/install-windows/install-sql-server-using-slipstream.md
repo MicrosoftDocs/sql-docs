@@ -191,6 +191,6 @@ Slipstreaming doesn't eliminate the need to monitor future updates post-installa
 
 ## Related content
 
-- [Install and configure SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
+- [Install, configure, or uninstall SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
 - [Install SQL Server from the Installation Wizard (Setup)](install-sql-server-from-the-installation-wizard-setup.md)
 - [Install SQL Server using a configuration file](install-sql-server-using-a-configuration-file.md)

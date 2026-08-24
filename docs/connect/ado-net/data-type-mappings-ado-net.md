@@ -32,9 +32,9 @@ Lists inferred data type mappings and data accessor methods for <xref:Microsoft.
 [Floating-Point Numbers](floating-point-numbers.md)
 Describes issues that developers frequently encounter when working with floating-point numbers.
 
-## See also
+## Related content
 
-- [SQL Server data types and ADO.NET](./sql/sql-server-data-types.md)
+- [SQL Server data types and ADO.NET](sql/sql-server-data-types.md)
 - [Configuring parameters](configure-parameters.md)
 - [Retrieving database schema information](retrieving-database-schema-information.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

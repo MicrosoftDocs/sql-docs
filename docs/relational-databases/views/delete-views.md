@@ -71,7 +71,6 @@ Requires ALTER permission on SCHEMA or CONTROL permission on OBJECT.
    GO
    ```
 
-## Next steps
+## Related content
 
 - [DROP VIEW (Transact-SQL)](../../t-sql/statements/drop-view-transact-sql.md)
-

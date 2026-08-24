@@ -75,16 +75,16 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## See Also  
- [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
-  
+## Related content
+
+- [Cluster (DMX)](cluster-dmx.md)
+- [ClusterProbability (DMX)](clusterprobability-dmx.md)
+- [PredictAdjustedProbability (DMX)](predictadjustedprobability-dmx.md)
+- [PredictProbability (DMX)](predictprobability-dmx.md)
+- [PredictStdev (DMX)](predictstdev-dmx.md)
+- [PredictSupport (DMX)](predictsupport-dmx.md)
+- [PredictVariance (DMX)](predictvariance-dmx.md)
+- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)
+- [Data Mining Extensions (DMX) Function Reference](data-mining-extensions-dmx-function-reference.md)
+- [Functions (DMX)](functions-dmx.md)
+- [General Prediction Functions (DMX)](general-prediction-functions-dmx.md)

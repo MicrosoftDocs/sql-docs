@@ -55,7 +55,6 @@ SET @g = geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0);
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [OGC Static Geometry Methods](ogc-static-geometry-methods.md)

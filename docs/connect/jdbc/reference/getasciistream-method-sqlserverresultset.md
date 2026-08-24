@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[getAsciiStream (int)](../../../connect/jdbc/reference/getasciistream-method-int.md)|Retrieves the value of the designated column index in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a stream of ASCII characters.|  
 |[getAsciiStream (java.lang.String)](../../../connect/jdbc/reference/getasciistream-method-java-lang-string.md)|Retrieves the value of the designated column name in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a stream of ASCII characters.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

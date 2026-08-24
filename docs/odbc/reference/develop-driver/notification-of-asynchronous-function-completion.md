@@ -27,5 +27,6 @@ In the Windows 8 SDK, ODBC added a mechanism to notify applications when an asyn
   
  The Driver Manager will call the original function again after the driver calls back. The Driver Manager may use a thread that is neither an application thread nor a driver thread. If the driver uses some information associated with the thread (for example, security token or user identifier), the driver should save the required information in the initial asynchronous call and use the saved value before the whole asynchronous operation completes. Usually, only **SQLDriverConnect**, **SQLConnect**, or **SQLBrowseConnect** need to use that kind of information.  
   
-## See Also  
- [Developing an ODBC Driver](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
+## Related content
+
+- [Developing an ODBC Driver](developing-an-odbc-driver.md)

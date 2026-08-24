@@ -51,10 +51,9 @@ helpviewer_keywords:
   
 -   [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## See Also  
- [Data Flow Task](../../../integration-services/control-flow/data-flow-task.md)   
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Connect Components with Paths](../connect-components-in-a-data-flow.md)   
- [Error Handling in Data](../../../integration-services/data-flow/error-handling-in-data.md)   
- [Data Flow](../../../integration-services/data-flow/data-flow.md)  
-  
+## Related content
+
+- [Data Flow Task](../../control-flow/data-flow-task.md)
+- [Data Flow](../data-flow.md)
+- [Connect Components in a Data Flow](../connect-components-in-a-data-flow.md)
+- [Error Handling in Data](../error-handling-in-data.md)

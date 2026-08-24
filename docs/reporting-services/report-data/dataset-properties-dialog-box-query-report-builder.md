@@ -57,6 +57,6 @@ This option appears when you choose the Stored Procedure command type option. Ty
   
 ## Related content
 
-- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
-- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
-- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)
+- [Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Report Datasets (SSRS)](report-datasets-ssrs.md)
+- [Query Design Tools (SSRS)](query-design-tools-ssrs.md)

@@ -308,8 +308,8 @@ After migration, your application gains access to Microsoft SQL features that SQ
 ## Related content
 
 - [Install mssql-python](installation.md)
-- [Connection strings](connection-strings.md)
-- [Bulk copy](bulk-copy.md)
-- [Parameterized queries](parameterized-queries.md)
-- [Pagination](pagination.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Use bulk copy with mssql-python](bulk-copy.md)
+- [Build parameterized queries](parameterized-queries.md)
+- [Implement pagination](pagination.md)
 - [Use mssql-python with Flask](flask-integration.md)

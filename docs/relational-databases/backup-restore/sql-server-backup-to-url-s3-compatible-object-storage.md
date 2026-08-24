@@ -423,6 +423,6 @@ GO
 ## Related content
 
 - [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md)
-- [SQL Server back up to URL for Microsoft Azure Blob Storage best practices and troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+- [SQL Server backup to URL for Microsoft Azure Blob Storage best practices and troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 - [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-- [SQL Server backup to URL for Microsoft Azure Blob Storage](sql-server-backup-to-url.md)
+- [SQL Server backup to URL for Azure Blob Storage](sql-server-backup-to-url.md)

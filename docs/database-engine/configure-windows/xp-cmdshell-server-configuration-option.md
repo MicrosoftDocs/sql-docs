@@ -51,6 +51,6 @@ GO
 
 ## Related content
 
-- [xp_cmdshell extended stored procedure](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)
+- [xp_cmdshell (Transact-SQL)](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
 - [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)

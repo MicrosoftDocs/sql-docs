@@ -187,7 +187,7 @@ The complete documentation for FILESTREAM is located in the following sections i
 |[Create Client Applications for FILESTREAM Data](../../../relational-databases/blob/create-client-applications-for-filestream-data.md)|Describes the Windows API functions for working with FILESTREAM data.|
 |[FILESTREAM and Other SQL Server Features](../../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)|Provides considerations, guidelines, and limitations for using FILESTREAM data with other features of SQL Server.|
 
-## Next steps
+## Related content
 
 - [SQL Server data types and ADO.NET](sql-server-data-types.md)
 - [SQL Server binary and large-value data](sql-server-binary-large-value-data.md)

@@ -48,7 +48,7 @@ For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, re
 
 ## Related content
 
-- [Always On Availability Groups Dynamic Management Views - Functions](always-on-availability-groups-dynamic-management-views-functions.md)
+- [Always On availability groups dynamic management views and functions](always-on-availability-groups-dynamic-management-views-functions.md)
 - [Always On Availability Groups Catalog Views (Transact-SQL)](../system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)
 - [sys.dm_hadr_cluster_members (Transact-SQL)](sys-dm-hadr-cluster-members-transact-sql.md)

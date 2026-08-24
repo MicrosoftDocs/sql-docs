@@ -207,5 +207,6 @@ helpviewer_keywords:
   
  [Connect Components in a Data Flow](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
-## Related Content  
- Video, [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.
+## Related content
+
+- [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))

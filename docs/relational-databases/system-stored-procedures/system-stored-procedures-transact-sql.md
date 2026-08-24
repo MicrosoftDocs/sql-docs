@@ -172,8 +172,7 @@ The following stored procedures aren't documented and are for internal use only:
 ## Related content
 
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
-- [Stored Procedures (Database Engine)](../stored-procedures/stored-procedures-database-engine.md)
-- [Running stored procedures (OLE DB)](../native-client/ole-db/stored-procedures-running.md)
-- [Running stored procedures](../native-client-odbc-stored-procedures/running-stored-procedures.md)
+- [Stored procedures (Database Engine)](../stored-procedures/stored-procedures-database-engine.md)
+- [Stored Procedures - Running in SQL Server Native Client](../native-client/ole-db/stored-procedures-running.md)
+- [Running Stored Procedures](../native-client-odbc-stored-procedures/running-stored-procedures.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-

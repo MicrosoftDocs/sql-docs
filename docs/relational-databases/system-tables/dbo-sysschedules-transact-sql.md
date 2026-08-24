@@ -55,7 +55,6 @@ dev_langs:
 |**64** (starts when SQL Server Agent service starts)|**freq_interval** is unused (**0**)|  
 |**128** (runs when computer is idle)|**freq_interval** is unused (**0**)|  
   
-## See also  
- [dbo.sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
-  
-  
+## Related content
+
+- [dbo.sysjobschedules (Transact-SQL)](dbo-sysjobschedules-transact-sql.md)

@@ -29,15 +29,10 @@ A user instance is generated from a primary instance of SQL Server or SQL Server
   
 Each user instance is isolated from its parent instance and from other user instances running on the same computer. Databases installed on user instances are opened in single-user mode only; multiple users cannot connect to them. Replication, distributed queries and remote connections are disabled for user instances. When connected to a user instance, users do not have any special privileges on the parent SQL Server Express instance.  
   
-## External resources  
-For more information about SQL Server Express, see the following resources.  
-  
-|Resource|Description|
-|-|-|  
-|[Microsoft SQL Server 2005 Express Edition Books Online](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Complete documentation for SQL Server 2005 Express Edition.|  
-|[User Instances for Non-Administrators](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) in SQL Server Books Online|Describes how to create and deploy user instances.|  
-|[SQL Server Express user instances](sql-server-express-user-instances.md)|Describes user instance capabilities in an ADO.NET application. Provides information about how to enable a user instance, connect to a user instance using a <xref:Microsoft.Data.SqlClient.SqlConnection>, user instance lifetime, and user instance scenarios.|  
-  
-## Next steps
-- [SQL Server security](sql-server-security.md)
+## Related content
+
+- [Microsoft SQL Server 2005 Express Edition Books Online](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))
+- [User Instances for Non-Administrators](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))
 - [SQL Server Express user instances](sql-server-express-user-instances.md)
+- <xref:Microsoft.Data.SqlClient.SqlConnection>
+- [SQL Server security](sql-server-security.md)

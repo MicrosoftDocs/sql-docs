@@ -46,10 +46,9 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 > [!NOTE]  
 >  This method is typically called by XA connection pool implementations and not by regular JDBC application code.  
   
-## See Also  
- [getXAConnection Method &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/getxaconnection-method-sqlserverxadatasource.md)   
- [SQLServerXADataSource Methods](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
- [SQLServerXADataSource Members](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
- [SQLServerXADataSource Class](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  
-  
-  
+## Related content
+
+- [getXAConnection Method (SQLServerXADataSource)](getxaconnection-method-sqlserverxadatasource.md)
+- [SQLServerXADataSource Methods](sqlserverxadatasource-methods.md)
+- [SQLServerXADataSource Members](sqlserverxadatasource-members.md)
+- [SQLServerXADataSource Class](sqlserverxadatasource-class.md)

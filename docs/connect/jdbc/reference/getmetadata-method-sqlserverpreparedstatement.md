@@ -33,8 +33,7 @@ public final java.sql.ResultSetMetaData getMetaData()
 ## Remarks  
  This getMetaData method is specified by the getMetaData method in the java.sql.PreparedStatement interface.  
   
-## See Also  
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)
+- [SQLServerPreparedStatement Class](sqlserverpreparedstatement-class.md)

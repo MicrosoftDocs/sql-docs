@@ -51,8 +51,7 @@ helpviewer_keywords:
 |Create a subscription view of your master data.|[Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Delete an existing subscription view.|[Delete a Subscription View &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
-## Related Content  
-  
--   [Subscription View Formats &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)  
-  
--   [Views](../relational-databases/views/views.md)
+## Related content
+
+- [Subscription View Formats (Master Data Services)](subscription-view-formats-master-data-services.md)
+- [Views](../relational-databases/views/views.md)

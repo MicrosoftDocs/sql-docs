@@ -58,7 +58,6 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## See Also  
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
-  
+## Related content
+
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)

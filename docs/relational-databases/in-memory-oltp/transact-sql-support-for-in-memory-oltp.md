@@ -39,8 +39,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  For information about supported constructs in and on natively compiled stored procedures, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md) and [Supported DDL for Natively Compiled T-SQL modules](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md).  
   
-## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](./overview-and-usage-scenarios.md)   
- [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
- [Unsupported SQL Server Features for In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)   
- [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
+## Related content
+
+- [In-Memory OLTP overview and usage scenarios](overview-and-usage-scenarios.md)
+- [A Guide to Query Processing for Memory-Optimized Tables](a-guide-to-query-processing-for-memory-optimized-tables.md)
+- [Unsupported SQL Server Features for In-Memory OLTP](unsupported-sql-server-features-for-in-memory-oltp.md)

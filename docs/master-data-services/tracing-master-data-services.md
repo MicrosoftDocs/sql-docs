@@ -27,11 +27,11 @@ As an administrator with access to files on the IIS web server, you can enable l
 
 By default, the *Web.config* file is in one of the following web application folders:
 
-- **SQL Server 2008 R2**: *program_files\Microsoft SQL Server\Master Data Services\WebApplication*
+- **SQL Server 2008 R2**: *program_files\Microsoft SQL Server\Master Data Services\WebApplication*
 
-- **SQL Server 2012 and later versions**: *program_files\Microsoft SQL Server\\\<nnn>\Master Data Services\WebApplication*
+- **SQL Server 2012 and later versions**: *program_files\Microsoft SQL Server\\\<nnn>\Master Data Services\WebApplication*
 
-The numbers *nnn* in the path correspond to the version of SQL Server being installed. The following table identifies versions for the paths:
+The numbers *nnn* in the path correspond to the version of SQL Server being installed. The following table identifies versions for the paths:
 
 |Version|nnn|
 |-|-|
@@ -281,8 +281,8 @@ You can use the following procedure to create a log file that can help troublesh
 
     `<source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="All">`
 
-1. Try again to create the database. Then, open the file *MdsConfigManagerTrace.log* that is saved to *C:\Program Files\Microsoft SQL Server\Master Data Services\Configuration* and review the same for other information regarding the failure.
+1. Try again to create the database. Then, open the file *MdsConfigManagerTrace.log* that is saved to *C:\Program Files\Microsoft SQL Server\Master Data Services\Configuration* and review the same for other information regarding the failure.
 
-## External resources
+## Related content
 
-[Troubleshooting logging improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)
+- [Troubleshooting logging improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)

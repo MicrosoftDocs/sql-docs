@@ -132,8 +132,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## See Also  
- [Access FILESTREAM Data with OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
- [Using Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
-  
-  
+## Related content
+
+- [Access FILESTREAM Data with OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)
+- [Using Multiple Active Result Sets (MARS) in SQL Server Native Client](../native-client/features/using-multiple-active-result-sets-mars.md)

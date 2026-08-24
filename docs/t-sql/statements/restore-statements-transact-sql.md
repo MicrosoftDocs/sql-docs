@@ -773,22 +773,21 @@ WITH METADATA_ONLY,
 
 [&#91;Top of examples&#93;](#examples)
 
-## Next steps
+## Related content
 
 - [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)
-- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
+- [Back up and restore of SQL Server databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Back up and restore: System databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
-- [Back Up and Restore Full-Text Catalogs and Indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
+- [Back up and restore full-text catalogs and indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
 - [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [BACKUP](../../t-sql/statements/backup-transact-sql.md)
-- [Media Sets, Media Families, and Backup Sets](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
-- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [Backup History and Header Information](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
-
+- [BACKUP (Transact-SQL)](backup-transact-sql.md)
+- [Media sets, media families, and backup sets (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
+- [RESTORE Statements - REWINDONLY (Transact-SQL)](restore-statements-rewindonly-transact-sql.md)
+- [RESTORE Statements - VERIFYONLY (Transact-SQL)](restore-statements-verifyonly-transact-sql.md)
+- [RESTORE Statements - FILELISTONLY (Transact-SQL)](restore-statements-filelistonly-transact-sql.md)
+- [RESTORE statements - HEADERONLY (Transact-SQL)](restore-statements-headeronly-transact-sql.md)
+- [Backup History and Header Information (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current"
@@ -1101,8 +1100,7 @@ RESTORE HEADERONLY
 
 You can use the header information to check the contents of a backup, or to make sure the target restoration appliance is compatible with the source backup appliance before attempting to restore the backup.
 
-## Next steps
+## Related content
 
-- [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-
+- [BACKUP (Transact-SQL)](backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 ::: moniker-end

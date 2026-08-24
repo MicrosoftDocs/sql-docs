@@ -160,7 +160,7 @@ Release Date: October 16, 2020
 
 Initial preview release of standalone SSIS DevOps Tools.
 
-## Next steps
+## Related content
 
-- Get [standalone SSIS DevOps Tools](https://aka.ms/AA9xp65)
-- If you have questions, visit [Q&A](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools&ssr=false#qna)
+- [standalone SSIS DevOps Tools](https://aka.ms/AA9xp65)
+- [Q&A](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools&ssr=false#qna)

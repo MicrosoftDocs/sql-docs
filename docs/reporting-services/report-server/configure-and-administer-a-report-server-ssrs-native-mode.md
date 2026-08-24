@@ -51,6 +51,6 @@ Describes how to configure a user account to process reports in unattended mode.
 
 ## Related content
 
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [What is Report Server Configuration Manager (Native mode)?](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-- [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)
+- [Reporting Services configuration files](reporting-services-configuration-files.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Reporting Services security and protection](../security/reporting-services-security-and-protection.md)

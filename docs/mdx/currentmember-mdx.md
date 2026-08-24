@@ -84,6 +84,6 @@ FROM [Adventure Works]
 WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

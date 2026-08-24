@@ -75,5 +75,5 @@ Install the latest version of [SQL Server Management Studio (SSMS)](/ssms/instal
 
 ## Related content
 
-- [sp_rename (Transact-SQL)](../system-stored-procedures/sp-rename-transact-sql.md)
-- [sys.sql_expression_dependencies](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
+- [sys.sp_rename (Transact-SQL)](../system-stored-procedures/sp-rename-transact-sql.md)
+- [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)

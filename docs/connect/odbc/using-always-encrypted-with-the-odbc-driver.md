@@ -755,7 +755,7 @@ Additionally, when using the secure enclave, attestation failures identify the s
 | 200-299 | Unexpected or incorrect format of enclave's identity. |
 | 300-399 | Error establishing secure channel with enclave. |
 
-## See also
+## Related content
 
-- [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)

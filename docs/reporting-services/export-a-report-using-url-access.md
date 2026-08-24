@@ -63,5 +63,5 @@ If you don't include the `rs:Format` parameter as part of the URL, the report se
   
 ## Related content
 
-- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
-- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)
+- [URL access (SSRS)](url-access-ssrs.md)
+- [URL access parameter reference](url-access-parameter-reference.md)

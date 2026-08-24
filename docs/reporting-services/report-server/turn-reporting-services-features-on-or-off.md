@@ -109,5 +109,5 @@ As of SQL Server 2016 Reporting Services Cumulative Update 2, the web portal is 
   
 ## Related content
 
-- [Report Server Configuration Manager (native mode)](../install-windows/reporting-services-configuration-manager-native-mode.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)
 - [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

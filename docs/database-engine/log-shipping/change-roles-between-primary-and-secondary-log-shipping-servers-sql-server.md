@@ -78,7 +78,6 @@ helpviewer_keywords:
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## See Also  
- [Log Shipping Tables and Stored Procedures](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
-  
-  
+## Related content
+
+- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)

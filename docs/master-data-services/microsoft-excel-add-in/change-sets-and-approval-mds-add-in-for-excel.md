@@ -21,5 +21,6 @@ ms.custom:
   
  If the entity requires approval for changes, you must save the pending changes into a change set and submit for approval. For more information, see [Approval Required &#40;Master Data Services&#41;](../../master-data-services/approval-required-master-data-services.md)  
   
-## See Also  
- [Changesets &#40;Master Data Services&#41;](../../master-data-services/changesets-master-data-services.md)
+## Related content
+
+- [Changesets (Master Data Services)](../changesets-master-data-services.md)

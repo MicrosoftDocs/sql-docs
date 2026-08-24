@@ -107,7 +107,8 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  Click **Save**.  
   
-## See Also  
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Business Rule Conditions &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Business Rule Actions &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)
+## Related content
+
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)
+- [Business Rule Conditions (Master Data Services)](business-rule-conditions-master-data-services.md)
+- [Business Rule Actions (Master Data Services)](business-rule-actions-master-data-services.md)

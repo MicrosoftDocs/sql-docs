@@ -115,6 +115,7 @@ The **View** menu provides commands to toggle the visibility of the Output pane 
   
 -   The Error List pane shows error, warning, and informational messages in a sortable list.  
   
-## See Also  
-[User Interface Reference &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
-[Migrating MySQL Data into SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+## Related content
+
+- [User Interface Reference](user-interface-reference-mysqltosql.md)
+- [Migrating MySQL Data into SQL Server - Azure SQL Database](migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)

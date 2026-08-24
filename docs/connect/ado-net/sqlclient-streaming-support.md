@@ -164,7 +164,7 @@ This sample demonstrates how to asynchronously stream a large BLOB from one SQL 
 
 [!code-csharp[SqlClient_Streaming_ServerToServer#1](~/../sqlclient/doc/samples/SqlClient_Streaming_ServerToServer.cs#1)]
 
-## See also
+## Related content
 
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

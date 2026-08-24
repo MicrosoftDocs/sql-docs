@@ -153,11 +153,10 @@ Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull
 > - [Extended events in Azure SQL Database](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
 > - [System objects that support extended events](xevents-references-system-objects.md)
 
-## See Also  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
- [sys.dm_xe_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md)  
-  
-  
+## Related content
+
+- [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)
+- [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)
+- [DROP EVENT SESSION (Transact-SQL)](../../t-sql/statements/drop-event-session-transact-sql.md)
+- [sys.dm_xe_session_targets (Transact-SQL)](../system-dynamic-management-objects/sys-dm-xe-session-targets-transact-sql.md)
+- [sys.dm_xe_sessions (Transact-SQL)](../system-dynamic-management-objects/sys-dm-xe-sessions-transact-sql.md)

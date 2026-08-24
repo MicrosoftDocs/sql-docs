@@ -127,10 +127,10 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
 
-## Next steps
+## Related content
 
-- [Metadata Functions (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)
-- [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)
-- [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)
-- [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [OBJECT_DEFINITION (Transact-SQL)](object-definition-transact-sql.md)
+- [OBJECT_ID (Transact-SQL)](object-id-transact-sql.md)
+- [OBJECT_NAME (Transact-SQL)](object-name-transact-sql.md)
 - [Securables](../../relational-databases/security/securables.md)

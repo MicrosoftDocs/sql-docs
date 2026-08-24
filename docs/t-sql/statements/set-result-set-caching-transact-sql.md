@@ -64,10 +64,10 @@ FROM sys.dm_pdw_exec_requests
 WHERE request_id = 'QID58286'
 ```
 
-## See also
+## Related content
 
 - [Performance tuning with result set caching](/azure/sql-data-warehouse/performance-tuning-result-set-caching)
-- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](./alter-database-transact-sql-set-options.md?preserve-view=true&view=azure-sqldw-latest&preserve-view=true)
-- [ALTER DATABASE &#40;Transact-SQL&#41;](./alter-database-transact-sql.md?preserve-view=true&view=azure-sqldw-latest&preserve-view=true)
+- [ALTER DATABASE SET options (Transact-SQL)](alter-database-transact-sql-set-options.md?preserve-view=true&view=azure-sqldw-latest&preserve-view=true)
+- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?preserve-view=true&view=azure-sqldw-latest&preserve-view=true)
 - [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](../database-console-commands/dbcc-showresultcachespaceused-transact-sql.md)
 - [DBCC DROPRESULTSETCACHE (Transact-SQL)](../database-console-commands/dbcc-dropresultsetcache-transact-sql.md)

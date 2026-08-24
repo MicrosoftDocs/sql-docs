@@ -78,10 +78,8 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## See Also  
-[SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+## Related content
 
-[Connecting to the Server](connecting-to-the-server.md)
-
-[About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)  
-  
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [Connecting to the Server](connecting-to-the-server.md)
+- [About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)

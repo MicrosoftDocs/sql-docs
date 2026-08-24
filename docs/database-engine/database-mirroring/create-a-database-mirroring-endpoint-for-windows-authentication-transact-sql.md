@@ -194,13 +194,11 @@ GO
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
-## See Also  
- [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Example: Setting Up Database Mirroring Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
-  
-  
+## Related content
 
+- [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
+- [Choose an encryption algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
+- [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
+- [Specify a Server Network Address (Database Mirroring)](specify-a-server-network-address-database-mirroring.md)
+- [Example: Configure database mirroring using Windows authentication (Transact-SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)
+- [The database mirroring endpoint (SQL Server)](the-database-mirroring-endpoint-sql-server.md)

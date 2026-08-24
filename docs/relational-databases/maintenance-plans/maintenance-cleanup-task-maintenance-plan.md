@@ -116,6 +116,6 @@ Use the **Maintenance Cleanup Task** to remove old files related to maintenance 
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
-- [Maintenance Plans](maintenance-plans.md)
+- [Maintenance plans](maintenance-plans.md)

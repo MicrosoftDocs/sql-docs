@@ -212,5 +212,5 @@ GO
 - [REVOKE (Transact-SQL)](revoke-transact-sql.md)
 - [CREATE VIEW (Transact-SQL)](create-view-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
-- [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)
+- [Schema catalog view - sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)
 - [Create a database schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)

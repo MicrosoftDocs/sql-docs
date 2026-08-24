@@ -71,7 +71,6 @@ ORDER BY SpaceUsed_MB DESC;
 
 ## Related content
 
-- [Object Catalog Views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
-

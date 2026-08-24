@@ -197,10 +197,7 @@ public class ScriptMain : UserComponent
  [Simulating an Error Output for the Script Component](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)  
  Explains how to simulate an error output for rows that raise errors during processing by the Script component.  
   
-## External Resources  
-  
--   Blog entry, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations), on blogs.msdn.com.  
-  
-## See Also  
- [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
-  
+## Related content
+
+- [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations)
+- [Configuring the Script Component in the Script Component Editor](configuring-the-script-component-in-the-script-component-editor.md)

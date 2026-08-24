@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[updateShort (int, short)](../../../connect/jdbc/reference/updateshort-method-int-short.md)|Updates the designated column with a **short** value given the column index.|  
 |[updateShort (java.lang.String, short)](../../../connect/jdbc/reference/updateshort-method-java-lang-string-short.md)|Updates the designated column with a **short** value given the column name.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

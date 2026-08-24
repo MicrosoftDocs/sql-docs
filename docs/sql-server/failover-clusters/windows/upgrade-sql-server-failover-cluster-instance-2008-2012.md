@@ -313,10 +313,11 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 
     Flat files, Excel files, XML sources, and others must be accessible at the same location specified by the SSIS package.
 
-## Next steps
-- [Complete the Database Engine Upgrade](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
-- [Change the Database Compatibility Mode and Use the Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [Take Advantage of New SQL Server 2016 Features](../../what-s-new-in-sql-server-2017.md)
-- [Upgrade a SQL Server Failover Cluster Instance](upgrade-a-sql-server-failover-cluster-instance.md)
-- [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [Add Features to an Instance of SQL Server 2016 (Setup)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)
+## Related content
+
+- [Complete the Database Engine upgrade](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
+- [Change the database compatibility level and use the Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
+- [What's new in SQL Server 2017](../../what-s-new-in-sql-server-2017.md)
+- [Upgrade a failover cluster instance](upgrade-a-sql-server-failover-cluster-instance.md)
+- [View and read SQL Server Setup log files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
+- [Add Features to an Instance of SQL Server (Setup)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)

@@ -39,10 +39,9 @@ DROP FULLTEXT CATALOG catalog_name
 ## Permissions  
  User must have DROP permission on the full-text catalog or be a member of the **db_owner**, or **db_ddladmin** fixed database roles.  
   
-## See Also  
- [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [Full-Text Search](../../relational-databases/search/full-text-search.md)  
-  
-  
+## Related content
+
+- [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)
+- [ALTER FULLTEXT CATALOG (Transact-SQL)](alter-fulltext-catalog-transact-sql.md)
+- [CREATE FULLTEXT CATALOG (Transact-SQL)](create-fulltext-catalog-transact-sql.md)
+- [Full-Text Search](../../relational-databases/search/full-text-search.md)

@@ -25,8 +25,7 @@ ms.topic: reference
 |[getDateTimeOffset(int)](../../../connect/jdbc/reference/getdatetimeoffset-method-int.md)|Retrieves the value of the designated parameter as a [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) object in the Java programming language given the parameter index.|  
 |[getDateTimeOffset(String)](../../../connect/jdbc/reference/getdatetimeoffset-method-string.md)|Retrieves the value of the designated parameter as a [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) object in the Java programming language given the parameter index.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

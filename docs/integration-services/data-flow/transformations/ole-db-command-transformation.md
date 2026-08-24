@@ -93,8 +93,7 @@ helpviewer_keywords:
   
 15. To save the updated package, click **Save** on the **File** menu.  
   
-## See Also  
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
-  
+## Related content
+
+- [Data Flow](../data-flow.md)
+- [Integration Services Transformations](integration-services-transformations.md)

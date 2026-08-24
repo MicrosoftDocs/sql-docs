@@ -85,4 +85,4 @@ When you insert data into the `OrderData` column, SQL Server validates the XML a
 
 - [XML schema collections (SQL Server)](../../../relational-databases/xml/xml-schema-collections-sql-server.md)
 - [XML data (SQL Server)](../../../relational-databases/xml/xml-data-sql-server.md)
-- [Project properties](project-properties.md)
+- [SQL projects properties](project-properties.md)

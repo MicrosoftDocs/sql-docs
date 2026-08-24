@@ -85,5 +85,5 @@ GO
 
 ## Related content
 
-- [sp_db_vardecimal_storage_format (Transact-SQL)](sp-db-vardecimal-storage-format-transact-sql.md)
-- [sp_tableoption (Transact-SQL)](sp-tableoption-transact-sql.md)
+- [sys.sp_db_vardecimal_storage_format (Transact-SQL)](sp-db-vardecimal-storage-format-transact-sql.md)
+- [sys.sp_tableoption (Transact-SQL)](sp-tableoption-transact-sql.md)

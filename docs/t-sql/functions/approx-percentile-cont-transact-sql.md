@@ -70,7 +70,7 @@ This function provides rank-based error guarantees not value based. The function
 
 ## Compatibility support
 
-Under compatibility level 110 and higher, WITHIN GROUP is a reserved keyword. For more information, see [ALTER DATABASE Compatibility Level (Transact-SQL).](../statements/alter-database-transact-sql-compatibility-level.md)
+Under compatibility level 110 and higher, WITHIN GROUP is a reserved keyword. For more information, see [ALTER DATABASE Compatibility Level (Transact-SQL)](../statements/alter-database-transact-sql-compatibility-level.md).
 
 ## Examples
 
@@ -100,4 +100,3 @@ GROUP BY DeptId;
 ## Related content
 
 - [PERCENTILE_CONT (Transact-SQL)](percentile-cont-transact-sql.md)
-

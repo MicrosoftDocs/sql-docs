@@ -65,8 +65,6 @@ ms.topic: how-to
   
 15. Click **OK**.  
   
-## See Also  
- [CDC Source Editor &#40;Connection Manager Page&#41;](./cdc-source.md)   
- [CDC Source Editor &#40;Columns Page&#41;](./cdc-source.md)   
- [CDC Source Editor &#40;Error Output Page&#41;](./cdc-source.md)  
-  
+## Related content
+
+- [CDC Source](cdc-source.md)

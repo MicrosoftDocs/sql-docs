@@ -406,7 +406,6 @@ To troubleshoot common issues when migrating to Azure SQL Managed Instance, see 
 > [!div class="nextstepaction"]
 > [Migrate to Azure SQL Managed Instance](migrate-to-azure-sql-managed-instance.md)
 
-
 ## Related content
 
 - [Managed Instance link best practices](/azure/azure-sql/managed-instance/managed-instance-link-best-practices)
@@ -414,4 +413,3 @@ To troubleshoot common issues when migrating to Azure SQL Managed Instance, see 
 - [Prepare environment for LRS migration - SQL Server migration in Azure Arc](migration-sql-mi-prepare-log-replay-service.md)
 - [SQL Server enabled by Azure Arc](overview.md)
 - [Migration experience feedback directly to the product group](https://aka.ms/arc-migrations-feedback)
-- [Migration to Azure SQL Managed Instance - SQL Server migration in Azure Arc](migrate-to-azure-sql-managed-instance.md)

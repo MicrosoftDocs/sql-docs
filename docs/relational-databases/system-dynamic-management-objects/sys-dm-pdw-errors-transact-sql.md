@@ -39,4 +39,4 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ## Related content
 
 - [sys.dm_pdw_exec_requests (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md)
-- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views (Transact-SQL)](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)

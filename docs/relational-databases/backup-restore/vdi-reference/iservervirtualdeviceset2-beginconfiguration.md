@@ -58,6 +58,6 @@ Milliseconds to wait for the primary client to finish declaring buffer areas it 
 After this function is invoked, the virtual device set moves to the Configurable state, in which buffer layout is decided.
 Once the basic configuration is set (as per the parameters), these values remain fixed for the life of the virtual device set. The alignment property for the virtual device set is used to control alignment of data buffers. This value sets a minimum alignment value that may be overridden on a buffer-by-buffer basis.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

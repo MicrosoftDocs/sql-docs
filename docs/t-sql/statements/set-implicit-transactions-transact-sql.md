@@ -213,6 +213,6 @@ Next is the text output from the preceding Transact-SQL script.
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
 - [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
 - [SET ANSI_DEFAULTS (Transact-SQL)](set-ansi-defaults-transact-sql.md)
-- [&#x40;&#x40;TRANCOUNT (Transact-SQL)](../functions/TRANCOUNT-transact-sql.md)
+- [@@TRANCOUNT (Transact-SQL)](../functions/TRANCOUNT-transact-sql.md)
 - [TRUNCATE TABLE (Transact-SQL)](truncate-table-transact-sql.md)
 - [UPDATE (Transact-SQL)](../queries/update-transact-sql.md)

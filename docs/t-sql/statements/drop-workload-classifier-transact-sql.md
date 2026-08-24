@@ -56,7 +56,7 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 > [!NOTE]
 > A request submitted without a matching classifier, is classified to the default workload group.  The default workload group is the smallrc resource class.
   
-## See Also
+## Related content
 
-[CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+- [CREATE WORKLOAD CLASSIFIER (Transact-SQL)](create-workload-classifier-transact-sql.md)
+- [[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

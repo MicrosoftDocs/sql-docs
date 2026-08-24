@@ -67,11 +67,11 @@ To specify an earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 -   [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## See Also  
- [bcp Utility](../../tools/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [SQL Server Database Engine Backward Compatibility](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
+## Related content
+
+- [bcp utility](../../tools/bcp/bcp-utility.md)
+- [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
+- [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
+- [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+- [Discontinued Database Engine functionality in SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)
+- [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)

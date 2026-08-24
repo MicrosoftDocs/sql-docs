@@ -191,8 +191,8 @@ helpviewer_keywords:
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
- [DataReader Destination](../../integration-services/data-flow/datareader-destination.md)   
- [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)   
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
+## Related content
+
+- [DataReader Destination](datareader-destination.md)
+- [ADO NET Destination](ado-net-destination.md)
+- [Data Flow](data-flow.md)

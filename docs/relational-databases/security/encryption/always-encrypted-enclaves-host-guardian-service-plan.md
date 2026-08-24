@@ -156,6 +156,6 @@ If you're using Always Encrypted with VBS enclaves in a development or test envi
   - Virtualize HGS and/or the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to save physical resources.
   - Run SSMS or other tools for configuring Always Encrypted with secure enclaves on the same computer as [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. This leaves the column master keys on the same computer as [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], so don't do this in a production environment.
 
-## Next steps
+## Related content
 
-- [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md)
+- [Deploy the Host Guardian Service for SQL Server](always-encrypted-enclaves-host-guardian-service-deploy.md)

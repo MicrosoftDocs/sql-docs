@@ -30,7 +30,6 @@ dev_langs:
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [sys.services &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.services (Transact-SQL)](sys-services-transact-sql.md)

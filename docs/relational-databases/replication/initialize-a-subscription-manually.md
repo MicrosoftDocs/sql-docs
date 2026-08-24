@@ -85,6 +85,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)
-- [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)
+- [Back Up and Restore Replicated Databases](administration/back-up-and-restore-replicated-databases.md)
+- [Replication Security Best Practices](security/replication-security-best-practices.md)

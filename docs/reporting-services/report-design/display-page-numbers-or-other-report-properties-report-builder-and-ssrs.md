@@ -70,5 +70,5 @@ ms.custom:
 
 ## Related content
 
-- [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
-- [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)
+- [Page headers and footers in a paginated report (Report Builder)](page-headers-and-footers-report-builder-and-ssrs.md)
+- [Format text in a text box in paginated reports (Report Builder)](format-text-in-a-text-box-report-builder-and-ssrs.md)

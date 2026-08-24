@@ -48,6 +48,7 @@ helpviewer_keywords:
   
 4.  Press ENTER to save the change.  
   
-## See Also  
- [Create a Version Flag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)
+## Related content
+
+- [Create a Version Flag (Master Data Services)](create-a-version-flag-master-data-services.md)
+- [Versions (Master Data Services)](versions-master-data-services.md)

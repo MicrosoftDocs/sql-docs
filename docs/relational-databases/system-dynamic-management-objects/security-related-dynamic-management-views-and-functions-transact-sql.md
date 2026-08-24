@@ -42,8 +42,8 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
-- [Extensible Key Management &#40;EKM&#41;](../security/encryption/extensible-key-management-ekm.md)   
-- [Transparent Data Encryption &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md)   
-- [SQL Server Audit &#40;Database Engine&#41;](../security/auditing/sql-server-audit-database-engine.md)
+- [Extensible Key Management (EKM)](../security/encryption/extensible-key-management-ekm.md)
+- [Transparent data encryption (TDE)](../security/encryption/transparent-data-encryption.md)
+- [SQL Server Audit (Database Engine)](../security/auditing/sql-server-audit-database-engine.md)

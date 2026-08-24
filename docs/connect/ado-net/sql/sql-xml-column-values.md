@@ -25,6 +25,7 @@ The following console application selects two rows, each containing an `xml` col
   
 [!code-csharp [SqlDataReader_GetSqlXml#1](~/../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
   
-## Next steps
+## Related content
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [XML data in SQL Server](xml-data-sql-server.md)

@@ -61,8 +61,8 @@ You may be blocked making these changes by an important safety feature of SSMS, 
 
 To query existing columns, use the [sys.columns](../system-catalog-views/sys-columns-transact-sql.md) object catalog view.
 
-## Next steps
+## Related content
 
 - [Tables](tables.md)
-- [Adding columns to a table](add-columns-to-a-table-database-engine.md)
+- [Add Columns to a Table (Database Engine)](add-columns-to-a-table-database-engine.md)
 - [Delete columns from a table](delete-columns-from-a-table.md)

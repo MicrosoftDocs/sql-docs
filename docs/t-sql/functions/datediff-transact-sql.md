@@ -433,4 +433,3 @@ FROM dbo.DimEmployee;
 
 - [DATEDIFF_BIG (Transact-SQL)](datediff-big-transact-sql.md)
 - [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
-

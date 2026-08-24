@@ -28,8 +28,8 @@ apitype: "COM"
 |[ISSCommandWithParameters::GetParameterProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|Returns one **SSPARAMPROPS** property set structure in the array for each UDT or XML parameter passed to the command, but none is returned for other types of parameters.|  
 |[ISSCommandWithParameters::SetParameterProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|Sets the parameter properties on a per parameter basis by ordinal, or sets bulk parameter properties by specifying an array of **SSPARAMPROPS** structures.|  
   
-## See Also  
- [Interfaces &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)   
- [Using XML Data Types](../../relational-databases/native-client/features/using-xml-data-types.md)   
- [Using User-Defined Types](../../relational-databases/native-client/features/using-user-defined-types.md)  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB) Interfaces](sql-server-native-client-ole-db-interfaces.md)
+- [Using XML Data Types in SQL Server Native Clients](../native-client/features/using-xml-data-types.md)
+- [Using User-Defined Types in SQL Server Native Client](../native-client/features/using-user-defined-types.md)

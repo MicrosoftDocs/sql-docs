@@ -33,8 +33,8 @@ For Column and Scatter chart types in paginated reports, the chart automatically
   
 ## Related content
 
-- [Format axis labels on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Formatting axis labels on a paginated report chart (Report Builder)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
 - [Axis Properties dialog, axis options &#40;Report Builder&#41;](/previous-versions/sql/)
-- [Specify an axis interval &#40;Report Builder&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)
-- [Format axis labels as dates or currencies &#40;Report Builder&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)
-- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Specify an axis interval in a paginated report (Report Builder)](specify-an-axis-interval-report-builder-and-ssrs.md)
+- [Format axis labels as dates or currencies in a paginated report (Report Builder)](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)

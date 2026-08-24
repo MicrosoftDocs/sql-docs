@@ -59,5 +59,6 @@ To enable a Scale Out Worker, switch to **Worker Manager** and select the worker
 ## 5. Run packages in Scale Out
 Now you're ready to run SSIS packages in Scale Out. For more info, see [Run Packages in Integration Services (SSIS) Scale Out](run-packages-in-integration-services-ssis-scale-out.md).
 
-## Next steps
--   [Add a Scale Out Worker with Scale Out Manager](add-scale-out-worker.md).
+## Related content
+
+- [Add a Scale Out Worker with Scale Out Manager](add-scale-out-worker.md)

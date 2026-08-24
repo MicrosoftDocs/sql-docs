@@ -65,7 +65,7 @@ Under some circumstances, problems recovering the `model` database might require
 
 - [Distribution Database](../replication/distribution-database.md)
 - [master Database](../databases/master-database.md)
-- [msdb Database](../databases/msdb-database.md)
+- [msdb database](../databases/msdb-database.md)
 - [model Database](../databases/model-database.md)
 - [Resource Database](../databases/resource-database.md)
-- [tempdb Database](../databases/tempdb-database.md)
+- [tempdb database](../databases/tempdb-database.md)

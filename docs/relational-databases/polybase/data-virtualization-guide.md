@@ -783,7 +783,7 @@ After you implement data virtualization, use these guides to optimize performanc
 
 ## Related content
 
-- [Data virtualization with PolyBase in SQL Server](overview.md)
+- [PolyBase overview](overview.md)
 - [Get started with PolyBase in SQL Server 2022](polybase-get-started.md)
 - [PolyBase Transact-SQL reference](polybase-t-sql-objects.md)
 - [Type mapping with PolyBase](polybase-type-mapping.md)

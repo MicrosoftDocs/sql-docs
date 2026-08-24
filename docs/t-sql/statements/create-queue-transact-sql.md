@@ -220,8 +220,8 @@ CREATE QUEUE ExpenseQueue
 
 ## Related content
 
-- [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
-- [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
-- [DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
-- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-- [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
+- [ALTER QUEUE (Transact-SQL)](alter-queue-transact-sql.md)
+- [CREATE SERVICE (Transact-SQL)](create-service-transact-sql.md)
+- [DROP QUEUE (Transact-SQL)](drop-queue-transact-sql.md)
+- [RECEIVE (Transact-SQL)](receive-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

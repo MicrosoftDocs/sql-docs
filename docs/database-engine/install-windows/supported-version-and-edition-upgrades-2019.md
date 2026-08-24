@@ -138,8 +138,8 @@ Additionally you can also perform an edition upgrade between [!INCLUDE [sssql19-
 
 ## Related content
 
-- [Editions and supported features of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md)
+- [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
 - [Hardware and software requirements for SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
 - [Upgrade SQL Server](upgrade-sql-server.md)
 - [Upgrade the Database Engine](upgrade-database-engine.md)
-- [Upgrade to a different edition of SQL Server (Setup)](upgrade-downgrade-sql-server-edition-setup.md)
+- [In-place change of a SQL Server edition (Setup)](upgrade-downgrade-sql-server-edition-setup.md)

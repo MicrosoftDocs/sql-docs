@@ -40,7 +40,7 @@ The following table lists the SSMA dialog boxes:
 |[Refresh from Database &#40;OracleToSQL&#41;](../../ssma/oracle/refresh-from-database-oracletosql.md)|Use the **Refresh from Database** dialog box to select objects to refresh from the Oracle database.|  
 |[Save Metadata  &#40;OracleToSQL&#41;](../../ssma/oracle/save-metadata-oracletosql.md)|The **Save Metadata** dialog box appears when you save a project that is missing metadata.|  
   
-## See Also  
-[Getting Started with SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
-[Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
-  
+## Related content
+
+- [Explore SSMA for Oracle interface](getting-started-with-ssma-for-oracle-oracletosql.md)
+- [Migrate Oracle Databases to SQL Server](migrating-oracle-databases-to-sql-server-oracletosql.md)

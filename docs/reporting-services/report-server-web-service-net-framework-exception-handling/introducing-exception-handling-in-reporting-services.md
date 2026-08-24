@@ -29,4 +29,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Build application by using the Web service and the .NET framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Building Applications Using the Web Service and the .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)

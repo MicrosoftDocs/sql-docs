@@ -27,7 +27,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |[OLEDB Provider Information Event Class](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|Indicates that a distributed query has run and has collected information that corresponds to the provider connection.|  
 |[OLEDB QueryInterface Event Class](../../relational-databases/event-classes/oledb-queryinterface-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has issued an OLE DB **QueryInterface** call for distributed queries and remote stored procedures.|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Related content
+
+- [Extended Events overview](../extended-events/extended-events.md)

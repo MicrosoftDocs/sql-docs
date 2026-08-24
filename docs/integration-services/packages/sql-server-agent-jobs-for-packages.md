@@ -185,20 +185,12 @@ You can automate and schedule the execution of [!INCLUDE[ssNoVersion](../../incl
     > [!TIP]  
     >  When you name the schedule, consider using a name that is unique and descriptive so you can more easily distinguish the schedule from other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent schedules.  
 
-## See Also  
- [Execution of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)  
+## Related content
 
-## External Resources  
-  
--   Knowledge Base article, [An SSIS package doesn't run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760), on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web site  
-  
--   Video, [Troubleshooting: Package Execution Using SQL Server Agent (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100)), in the MSDN Library  
-  
--   Video, [How to: Automate Package Execution by Using the SQL Server Agent (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100)), in the MSDN Library  
-  
--   Technical article, [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675), on mssqltips.com  
-  
--   Technical article, [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676), on mssqltips.com  
-  
--   Blog entry, [Configuring SQL Agent Jobs to Write to Windows Event Log](https://go.microsoft.com/fwlink/?LinkId=220745), on mssqltips.com.  
-  
+- [Deploy Integration Services (SSIS) Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)
+- [An SSIS package doesn't run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760)
+- [Troubleshooting: Package Execution Using SQL Server Agent (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100))
+- [How to: Automate Package Execution by Using the SQL Server Agent (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100))
+- [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)
+- [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676)
+- [Configuring SQL Agent Jobs to Write to Windows Event Log](https://go.microsoft.com/fwlink/?LinkId=220745)

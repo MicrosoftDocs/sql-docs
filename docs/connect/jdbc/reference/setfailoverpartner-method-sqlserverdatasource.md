@@ -34,8 +34,7 @@ public void setFailoverPartner(java.lang.String serverName)
   
  The driver does not support specifying the port number of the failover server when the failover server name is set. However, calling the [setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) method and the [setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) method with the [setFailoverPartner](#setfailoverpartner-method-sqlserverdatasource) method is supported.  
   
-## See Also  
- [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDataSource Members](sqlserverdatasource-members.md)
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

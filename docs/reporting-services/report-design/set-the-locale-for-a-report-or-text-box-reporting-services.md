@@ -46,5 +46,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Expression uses in paginated reports (Report Builder)](expression-uses-in-reports-report-builder-and-ssrs.md)
 - [Solution Design Considerations for Multi-Lingual or Global Deployments (Reporting Services)](/previous-versions/sql/)

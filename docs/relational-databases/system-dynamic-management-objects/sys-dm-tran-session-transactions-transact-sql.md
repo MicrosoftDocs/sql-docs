@@ -61,5 +61,5 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)

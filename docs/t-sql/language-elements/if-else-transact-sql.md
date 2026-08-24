@@ -106,5 +106,5 @@ ELSE
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
 - [WHILE (Transact-SQL)](while-transact-sql.md)
 - [CASE (Transact-SQL)](case-transact-sql.md)
-- [Control-of-Flow Language (Transact-SQL)](control-of-flow.md)
+- [Control-of-Flow](control-of-flow.md)
 - [ELSE (IF...ELSE) (Transact-SQL)](else-if-else-transact-sql.md)

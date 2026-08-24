@@ -71,7 +71,8 @@ DROP USER AbolrousHazem;
 GO  
 ```  
   
-## See Also  
- [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+## Related content
+
+- [CREATE USER (Transact-SQL)](create-user-transact-sql.md)
+- [ALTER USER (Transact-SQL)](alter-user-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

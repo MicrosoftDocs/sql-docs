@@ -52,6 +52,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingSprocWithReturnStatus1](codesnippet/Java/using-a-stored-procedure_1_1.java)]
 
-## See also
+## Related content
 
-[Using statements with stored procedures](using-statements-with-stored-procedures.md)
+- [Using statements with stored procedures](using-statements-with-stored-procedures.md)

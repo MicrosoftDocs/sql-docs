@@ -19,7 +19,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  For a working sample using the **sql:inverse** annotation, see [Specifying an Annotated Mapping Schema in an Updategram](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-## See Also  
- [Specifying Relationships Using sql:relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Specifying Relationships Using sql:relationship (SQLXML 4.0)](specifying-relationships-using-sql-relationship-sqlxml-4-0.md)

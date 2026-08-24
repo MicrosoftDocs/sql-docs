@@ -93,7 +93,6 @@ dev_langs:
     :::column-end:::
 :::row-end:::
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](../system-tables/replication-tables-transact-sql.md)

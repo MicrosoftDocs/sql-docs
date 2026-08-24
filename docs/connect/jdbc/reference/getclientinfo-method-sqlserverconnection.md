@@ -21,8 +21,7 @@ ms.topic: reference
 |[getClientInfo Method &#40;&#41;](../../../connect/jdbc/reference/getclientinfo-method.md)|Retrieves a list that contains the name and current value of each client information property supported by the JDBC driver.|  
 |[getClientInfo Method &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|Retrieves the value of a specified client information property.|  
   
-## See Also  
- [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnection Members](sqlserverconnection-members.md)
+- [SQLServerConnection Class](sqlserverconnection-class.md)

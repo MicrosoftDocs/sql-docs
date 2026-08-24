@@ -480,9 +480,9 @@ If the context deadline expires, the driver cancels the query on the server and 
 
 ## Related content
 
-- [Transactions](transactions.md)
-- [Error handling and retry patterns](error-handling.md)
-- [Data type mappings](data-type-mappings.md)
-- [Stored procedures](stored-procedures.md)
-- [JSON and XML data](json-xml-data.md)
-- [Connection pooling](connection-pooling.md)
+- [Transactions with go-mssqldb](transactions.md)
+- [Error handling and retry patterns with go-mssqldb](error-handling.md)
+- [go-mssqldb data type mappings](data-type-mappings.md)
+- [Stored procedures with go-mssqldb](stored-procedures.md)
+- [JSON and XML data with go-mssqldb](json-xml-data.md)
+- [Connection pooling with go-mssqldb](connection-pooling.md)

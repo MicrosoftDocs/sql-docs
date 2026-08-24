@@ -76,6 +76,6 @@ helpviewer_keywords:
   
  Sample code for this use case is in the routine `demo_metadata_from_prepared_statement` in [Use Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
-## See Also  
- [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
-  
+## Related content
+
+- [Table-Valued Parameters (ODBC)](table-valued-parameters-odbc.md)

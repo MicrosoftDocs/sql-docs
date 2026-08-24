@@ -94,8 +94,8 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 - [Create a Pull Subscription](../replication/create-a-pull-subscription.md)
 - [Subscribe to Publications](../replication/subscribe-to-publications.md)
-- [sp_addmergepullsubscription_agent (Transact-SQL)](sp-addmergepullsubscription-agent-transact-sql.md)
-- [sp_changemergepullsubscription (Transact-SQL)](sp-changemergepullsubscription-transact-sql.md)
-- [sp_dropmergepullsubscription (Transact-SQL)](sp-dropmergepullsubscription-transact-sql.md)
-- [sp_helpmergepullsubscription (Transact-SQL)](sp-helpmergepullsubscription-transact-sql.md)
-- [sp_helpsubscription_properties (Transact-SQL)](sp-helpsubscription-properties-transact-sql.md)
+- [sys.sp_addmergepullsubscription_agent (Transact-SQL)](sp-addmergepullsubscription-agent-transact-sql.md)
+- [sys.sp_changemergepullsubscription (Transact-SQL)](sp-changemergepullsubscription-transact-sql.md)
+- [sys.sp_dropmergepullsubscription (Transact-SQL)](sp-dropmergepullsubscription-transact-sql.md)
+- [sys.sp_helpmergepullsubscription (Transact-SQL)](sp-helpmergepullsubscription-transact-sql.md)
+- [sys.sp_helpsubscription_properties (Transact-SQL)](sp-helpsubscription-properties-transact-sql.md)

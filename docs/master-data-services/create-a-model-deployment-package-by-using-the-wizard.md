@@ -49,9 +49,7 @@ helpviewer_keywords:
   
 8.  Click **Close** to close the wizard.  
   
-## Next Steps  
-  
--   [Deploy a Model Deployment Package by Using the Wizard](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
-  
-## See Also  
- [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)
+## Related content
+
+- [Deploying Models (Master Data Services)](deploying-models-master-data-services.md)
+- [Deploy a Model Deployment Package by Using the Wizard](deploy-a-model-deployment-package-by-using-the-wizard.md)

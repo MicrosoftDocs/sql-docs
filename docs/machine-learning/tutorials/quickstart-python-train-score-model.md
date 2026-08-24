@@ -180,8 +180,6 @@ For some Python developers who are used to writing all-inclusive script handling
 
 A final benefit is that the processes can be modified using parameters. In this exercise, Python code that created the model (named "Naive Bayes" in this example) was passed as an input to a second stored procedure calling the model in a scoring process. This exercise only uses one model, but you can imagine how parameterizing the model in a scoring task would make that script more useful.
 
-## Next steps
+## Related content
 
-For more information on tutorials for Python with SQL machine learning, see:
-
-- [Python tutorials](python-tutorials.md)
+- [Python tutorials for SQL machine learning](python-tutorials.md)

@@ -43,7 +43,7 @@ The name of the materialized view.
 
 ## Remarks
 
-To keep materialized views refreshed with data changes in base tables, data warehouse engine adds tracking rows to each affected view to reflect the changes. Selecting from a materialized view includes scanning the view's clustered columnstore index and applying any incremental changes.  The tracking rows (TOTAL_ROWS - BASE_VIEW_ROWS) don't get eliminated until users REBUILD the materialized view.
+To keep materialized views refreshed with data changes in base tables, data warehouse engine adds tracking rows to each affected view to reflect the changes. Selecting from a materialized view includes scanning the view's clustered columnstore index and applying any incremental changes.  The tracking rows (TOTAL_ROWS - BASE_VIEW_ROWS) don't get eliminated until users REBUILD the materialized view.
 
 The overhead_ratio is calculated as TOTAL_ROWS / MAX(1, BASE_VIEW_ROWS). If it's high, SELECT performance will degrade. Users can rebuild the materialized view to reduce its overhead ratio.
 
@@ -154,15 +154,15 @@ Output
 | 587149137 | 2 | 2 | 1.00000000000000000 |
 ```
 
-## See also
+## Related content
 
 - [Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)
 - [CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)](../statements/create-materialized-view-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [ALTER MATERIALIZED VIEW (Transact-SQL)](../statements/alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [EXPLAIN (Transact-SQL)](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-- [sys.pdw_materialized_view_distribution_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [sys.pdw_materialized_view_mappings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
 - [System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)
 - [T-SQL statements supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

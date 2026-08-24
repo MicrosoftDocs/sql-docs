@@ -86,8 +86,7 @@ FROM [Adventure Works]
   
 ```  
   
-## See Also  
- [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Union - MDX operator reference](union-mdx-operator-reference.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

@@ -41,4 +41,4 @@ The dialog box in SQL Server Management Studio (SSMS) allows you to specify the 
   
 ## Related content
 
-- [SQL Server backup to URL for Microsoft Azure Blob Storage](sql-server-backup-to-url.md)
+- [SQL Server backup to URL for Azure Blob Storage](sql-server-backup-to-url.md)

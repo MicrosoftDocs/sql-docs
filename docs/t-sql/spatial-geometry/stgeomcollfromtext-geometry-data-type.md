@@ -55,7 +55,6 @@ SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [OGC Static Geometry Methods](ogc-static-geometry-methods.md)

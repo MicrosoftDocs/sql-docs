@@ -114,5 +114,5 @@ EXECUTE sp_unbindrule '[t.4].c1';
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)
 - [DROP RULE (Transact-SQL)](../../t-sql/statements/drop-rule-transact-sql.md)
-- [sp_bindrule (Transact-SQL)](sp-bindrule-transact-sql.md)
-- [sp_helptext (Transact-SQL)](sp-helptext-transact-sql.md)
+- [sys.sp_bindrule (Transact-SQL)](sp-bindrule-transact-sql.md)
+- [sys.sp_helptext (Transact-SQL)](sp-helptext-transact-sql.md)

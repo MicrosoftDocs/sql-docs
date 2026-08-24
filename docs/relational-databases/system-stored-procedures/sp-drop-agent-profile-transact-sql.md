@@ -53,7 +53,7 @@ Only members of the **sysadmin** fixed server role can execute `sp_drop_agent_pr
 
 ## Related content
 
-- [sp_add_agent_profile (Transact-SQL)](sp-add-agent-profile-transact-sql.md)
-- [sp_change_agent_profile (Transact-SQL)](sp-change-agent-profile-transact-sql.md)
-- [sp_help_agent_profile (Transact-SQL)](sp-help-agent-profile-transact-sql.md)
+- [sys.sp_add_agent_profile (Transact-SQL)](sp-add-agent-profile-transact-sql.md)
+- [sys.sp_change_agent_profile (Transact-SQL)](sp-change-agent-profile-transact-sql.md)
+- [sys.sp_help_agent_profile (Transact-SQL)](sp-help-agent-profile-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

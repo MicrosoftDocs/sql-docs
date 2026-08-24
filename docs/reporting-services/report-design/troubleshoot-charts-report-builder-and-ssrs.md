@@ -29,4 +29,4 @@ ms.custom:
   
 ## Related content
 
-- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)

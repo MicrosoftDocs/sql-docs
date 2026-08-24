@@ -37,6 +37,6 @@ The JDBC driver provides three classes for retrieving data from a [!INCLUDE[ssNo
 | [Performing batch operations](../../connect/jdbc/performing-batch-operations.md)                         | Describes how to use the JDBC driver to perform batch operations.                                                                                      |
 | [Handling complex statements](../../connect/jdbc/handling-complex-statements.md)                         | Describes how to use the JDBC driver to run complex statements that perform a variety of tasks and might return different types of data.               |
   
-## See also
+## Related content
 
-[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

@@ -155,4 +155,3 @@ GO
 - [SCOPE_IDENTITY (Transact-SQL)](../functions/scope-identity-transact-sql.md)
 - [INSERT (Transact-SQL)](insert-transact-sql.md)
 - [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
-

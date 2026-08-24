@@ -128,7 +128,7 @@ When you bulk export data from an instance of [!INCLUDE [ssNoVersion](../../incl
 
 ## Related content
 
-- [bcp utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 - [Specify field length by using bcp (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)
 - [Specify field and row terminators (SQL Server)](specify-field-and-row-terminators-sql-server.md)

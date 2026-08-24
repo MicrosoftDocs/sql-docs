@@ -57,7 +57,7 @@ Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 ## Related content
 
 - [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)
-- [Memory-Optimized Table Dynamic Management Views](memory-optimized-table-dynamic-management-views-transact-sql.md)
-- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [In-Memory OLTP System Views (Transact-SQL)](memory-optimized-table-dynamic-management-views-transact-sql.md)
+- [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql-db&preserve-view=true)
 - [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true)

@@ -689,7 +689,7 @@ from config import get_connection_string
 
 ## Related content
 
-- [Connection management](connection-management.md)
-- [Connection pooling](connection-pooling.md)
-- [Error handling](error-handling.md)
-- [Microsoft Entra authentication](entra-authentication.md)
+- [Manage connections with mssql-python](connection-management.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
+- [Microsoft Entra authentication with mssql-python](entra-authentication.md)

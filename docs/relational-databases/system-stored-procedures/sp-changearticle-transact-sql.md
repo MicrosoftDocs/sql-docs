@@ -243,8 +243,8 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 - [View and Modify Article Properties](../replication/publish/view-and-modify-article-properties.md)
 - [Change Publication and Article Properties](../replication/publish/change-publication-and-article-properties.md)
-- [sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md)
-- [sp_articlecolumn (Transact-SQL)](sp-articlecolumn-transact-sql.md)
-- [sp_droparticle (Transact-SQL)](sp-droparticle-transact-sql.md)
-- [sp_helparticle (Transact-SQL)](sp-helparticle-transact-sql.md)
-- [sp_helparticlecolumns (Transact-SQL)](sp-helparticlecolumns-transact-sql.md)
+- [sys.sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md)
+- [sys.sp_articlecolumn (Transact-SQL)](sp-articlecolumn-transact-sql.md)
+- [sys.sp_droparticle (Transact-SQL)](sp-droparticle-transact-sql.md)
+- [sys.sp_helparticle (Transact-SQL)](sp-helparticle-transact-sql.md)
+- [sys.sp_helparticlecolumns (Transact-SQL)](sp-helparticlecolumns-transact-sql.md)

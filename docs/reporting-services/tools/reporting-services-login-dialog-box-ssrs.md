@@ -28,6 +28,6 @@ f1_keywords:
   
 ## Related content
 
-- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
-- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
-- [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)
+- [Create data connection strings in Report Builder](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Credentials and connections for report data sources](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Report Designer F1 Help](report-designer-f1-help.md)

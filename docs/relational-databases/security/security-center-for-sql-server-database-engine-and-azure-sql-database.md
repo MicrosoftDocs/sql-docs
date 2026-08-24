@@ -96,9 +96,9 @@ Additional links for application programmers:
 - [SQL Server Certificates and Asymmetric Keys](sql-server-certificates-and-asymmetric-keys.md)
 - [SQL Server encryption](encryption/sql-server-encryption.md)
 - [Surface area configuration](surface-area-configuration.md)
-- [Strong Passwords](strong-passwords.md)
+- [Strong passwords](strong-passwords.md)
 - [TRUSTWORTHY database property](trustworthy-database-property.md)
 - [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-2019.md)
-- [Protecting Your SQL Server Intellectual Property](protecting-your-sql-server-intellectual-property.md)
+- [Protecting your SQL Server intellectual property](protecting-your-sql-server-intellectual-property.md)
 
 [!INCLUDE [get-help-security](../../includes/get-help-security.md)]

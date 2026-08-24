@@ -65,7 +65,6 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

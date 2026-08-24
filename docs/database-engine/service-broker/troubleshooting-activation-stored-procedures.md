@@ -57,5 +57,5 @@ If activated tasks are running but messages remain on the queue, the task is eit
 ## Related content
 
 - [sys.service_queues (Transact-SQL)](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)
-- [sys.dm_broker_queue_monitors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)
-- [sys.dm_broker_activated_tasks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)
+- [sys.dm_broker_queue_monitors (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-broker-queue-monitors-transact-sql.md)
+- [sys.dm_broker_activated_tasks (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-broker-activated-tasks-transact-sql.md)

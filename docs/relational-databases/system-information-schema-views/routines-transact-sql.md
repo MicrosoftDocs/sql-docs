@@ -83,12 +83,11 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 |CREATED|**datetime**|Time when the routine was created.|  
 |LAST_ALTERED|**datetime**|The last time the function was modified.|  
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
-  
+## Related content
 
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [sys.columns (Transact-SQL)](../system-catalog-views/sys-columns-transact-sql.md)
+- [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)
+- [sys.procedures (Transact-SQL)](../system-catalog-views/sys-procedures-transact-sql.md)
+- [sys.sql_modules (Transact-SQL)](../system-catalog-views/sys-sql-modules-transact-sql.md)

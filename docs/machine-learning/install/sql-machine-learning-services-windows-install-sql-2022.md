@@ -290,7 +290,6 @@ RevoScale packages are also supported as a standalone package with Python and R 
 
 ## Related content
 
-- [Python Tutorial: Deploy a linear regression model with SQL machine learning](../tutorials/python-ski-rental-linear-regression-deploy-model.md)
-- [Python tutorial: Categorizing customers using k-means clustering with SQL machine learning](../tutorials/python-clustering-model.md)
+- [Python language extension in SQL Server Machine Learning Services](../concepts/extension-python.md)
 - [Quickstart: Run simple R scripts with SQL machine learning](../tutorials/quickstart-r-create-script.md)
 - [R tutorial: Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)

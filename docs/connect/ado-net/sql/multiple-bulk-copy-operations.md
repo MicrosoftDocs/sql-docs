@@ -29,5 +29,6 @@ If you perform several bulk copy operations using the same <xref:Microsoft.Data.
   
 [!code-csharp[DataWorks SqlBulkCopy_._ColumnMappingOrdersDetails#1](~/../sqlclient/doc/samples/SqlBulkCopy_ColumnMappingOrdersDetails.cs#1)]
   
-## Next steps
+## Related content
+
 - [Bulk copy operations in SQL Server](bulk-copy-operations-sql-server.md)

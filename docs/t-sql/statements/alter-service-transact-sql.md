@@ -102,8 +102,8 @@ ALTER AUTHORIZATION ON SERVICE::[//Adventure-Works.com/Expenses] TO dbo ;
 GO
 ```
 
-## See also
+## Related content
 
-- [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)
-- [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)
-- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+- [CREATE SERVICE (Transact-SQL)](create-service-transact-sql.md)
+- [DROP SERVICE (Transact-SQL)](drop-service-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

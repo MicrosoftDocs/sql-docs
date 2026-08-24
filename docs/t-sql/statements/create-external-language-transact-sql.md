@@ -161,5 +161,5 @@ TO mylogin;
 
 - [ALTER EXTERNAL LANGUAGE (Transact-SQL)](alter-external-language-transact-sql.md)
 - [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)
-- [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)
-- [sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)
+- [sys.external_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)
+- [sys.external_language_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

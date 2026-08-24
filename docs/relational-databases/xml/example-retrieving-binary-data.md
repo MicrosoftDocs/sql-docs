@@ -37,7 +37,6 @@ Expect the following result:
 <row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>
 ```
 
-## See also
+## Related content
 
-[Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)
-
+- [Use RAW mode with FOR XML](use-raw-mode-with-for-xml.md)

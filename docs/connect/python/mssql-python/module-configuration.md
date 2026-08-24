@@ -238,6 +238,6 @@ conn.autocommit = True
 
 ## Related content
 
-- [Connection strings](connection-strings.md)
-- [Connection management](connection-management.md)
-- [Data type mappings](data-type-mappings.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Manage connections with mssql-python](connection-management.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)

@@ -32,5 +32,6 @@ You can suppress these log entries by using [!INCLUDE[ssNoVersion](../../include
   
 For information about using trace flags, see SQL Server Books Online.  
   
-## See Also  
-[Set trace flags with DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+## Related content
+
+- [Set trace flags with DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

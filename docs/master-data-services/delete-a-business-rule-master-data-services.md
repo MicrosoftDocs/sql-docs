@@ -53,7 +53,8 @@ helpviewer_keywords:
   
 10. In the confirmation dialog box, click **OK**. The deleted business rule is no longer displayed in the grid.  
   
-## See Also  
- [Exclude a Business Rule &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
- [Create and Publish a Business Rule &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)
+## Related content
+
+- [Exclude a Business Rule (Master Data Services)](exclude-a-business-rule-master-data-services.md)
+- [Create and Publish a Business Rule (Master Data Services)](create-and-publish-a-business-rule-master-data-services.md)
+- [Business Rules (Master Data Services)](business-rules-master-data-services.md)

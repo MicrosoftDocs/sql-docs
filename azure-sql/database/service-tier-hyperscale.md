@@ -157,7 +157,7 @@ The following table compares compute resources in different hardware configurati
 \* For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel&reg; Broadwell, Skylake, Ice Lake, Cascade Lake, Emerald Rapid, or AMD Milan, Genoa). In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using:
   - Intel&reg; SP-8160 (Skylake) processors appears as Gen6
   - Intel&reg; 8272CL (Cascade Lake) appears as Gen7
-  - Intel&reg; Xeon&reg; Platinum 8370C (Ice Lake) or AMD EPYC&trade; 7763v (Milan) appear as Gen8
+  - Intel&reg; Xeon&reg; Platinum 8370C (Ice Lake) or AMD EPYC&trade; 7763v (Milan) appear as Gen8
   - AMD EPYC&trade; 9004 (Genoa) appear as Gen9 or Intel&reg; Xeon&reg; Platinum 8573C (Emerald Rapids) appear as Gen10
 
 For more information, see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).

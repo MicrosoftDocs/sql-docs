@@ -79,4 +79,4 @@ ALTER RESOURCE GOVERNOR DISABLE;
 - [Resource governor resource pool](resource-governor-resource-pool.md)
 - [Resource governor workload group](resource-governor-workload-group.md)
 - [Resource governor classifier function](resource-governor-classifier-function.md)
-- [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md)
+- [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)

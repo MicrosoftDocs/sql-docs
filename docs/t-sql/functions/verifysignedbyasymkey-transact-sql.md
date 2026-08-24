@@ -83,13 +83,11 @@ AND Description = N'data encrypted by asymmetric key ''WillisKey74''';
 GO  
 ```  
   
-## See Also  
- [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
- [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
 
+- [ASYMKEY_ID (Transact-SQL)](asymkey-id-transact-sql.md)
+- [SIGNBYASYMKEY (Transact-SQL)](signbyasymkey-transact-sql.md)
+- [CREATE ASYMMETRIC KEY (Transact-SQL)](../statements/create-asymmetric-key-transact-sql.md)
+- [ALTER ASYMMETRIC KEY (Transact-SQL)](../statements/alter-asymmetric-key-transact-sql.md)
+- [DROP ASYMMETRIC KEY (Transact-SQL)](../statements/drop-asymmetric-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

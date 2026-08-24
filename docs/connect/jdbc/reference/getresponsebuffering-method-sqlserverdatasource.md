@@ -34,9 +34,8 @@ public java.lang.String getResponseBuffering()
   
  For more information about using the response buffering mode, see [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
   
-## See Also  
- [setResponseBuffering Method &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   
- [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [setResponseBuffering Method (SQLServerDataSource)](setresponsebuffering-method-sqlserverdatasource.md)
+- [SQLServerDataSource Members](sqlserverdatasource-members.md)
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

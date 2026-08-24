@@ -43,5 +43,5 @@ For more information about the sendStringParametersAsUnicode connection property
   
 ## Related content
 
-- [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)
-- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
+- [SQLServerDataSource Members](sqlserverdatasource-members.md)
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

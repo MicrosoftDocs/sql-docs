@@ -60,7 +60,6 @@ Expect the following good result:
 <MyTable Col1="1" Col2="Bw==" />
 ```
 
-## See also
+## Related content
 
-[Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)
-
+- [Use AUTO mode with FOR XML](use-auto-mode-with-for-xml.md)

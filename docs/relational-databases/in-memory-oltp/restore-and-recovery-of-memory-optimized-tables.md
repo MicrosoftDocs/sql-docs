@@ -57,6 +57,6 @@ Memory-optimized tables can generally be loaded into memory at the speed of I/O,
   
 -   Large memory-optimized tables with one or more nonclustered indexes can cause high CPU utilization. Unlike a hash index whose bucket count is sized at create time, nonclustered indexes grow dynamically.  
   
-## See also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
-  
+## Related content
+
+- [Backup, Restore, and Recovery of Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))

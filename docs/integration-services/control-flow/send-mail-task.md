@@ -73,10 +73,6 @@ helpviewer_keywords:
 ## Related Tasks  
  For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-## Related Content  
-  
--   Technical article, [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
-  
 ## Send Mail Task Editor (General Page)
   Use the **General page** of the **Send Mail Task Editor** dialog box to name and describe the Send Mail task.  
   
@@ -152,7 +148,8 @@ helpviewer_keywords:
   
  **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
   
-## See Also  
- [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
+## Related content
+
+- [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)
+- [Integration Services Tasks](integration-services-tasks.md)
+- [Control Flow](control-flow.md)

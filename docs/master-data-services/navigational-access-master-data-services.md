@@ -39,5 +39,6 @@ helpviewer_keywords:
   
  When you assign permissions to collections, you can read or update the name, code, description and owner ID. You can also read the model name.  
   
-## See Also  
- [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)
+## Related content
+
+- [How Permissions Are Determined (Master Data Services)](how-permissions-are-determined-master-data-services.md)

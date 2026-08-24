@@ -80,7 +80,7 @@ C:\> sqlcmd
 - [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
 - [Rebuild system databases](../databases/rebuild-system-databases.md)
 - [Database Engine Service startup options](../../database-engine/configure-windows/database-engine-service-startup-options.md)
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager.md)
 - [Back up and restore: System databases (SQL Server)](back-up-and-restore-of-system-databases-sql-server.md)
 - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
 - [Single-user mode for SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)

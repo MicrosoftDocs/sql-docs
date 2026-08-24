@@ -201,7 +201,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 > [!TIP]
 > While this is running, you can use a tool like [Process Explorer](/sysinternals/downloads/process-explorer) or SQL Profiler to see how the connection is made and the R code is run using SQL Server services.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Create graphs and plots using R](walkthrough-create-graphs-and-plots-using-r.md)

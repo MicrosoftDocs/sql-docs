@@ -700,6 +700,6 @@ SO43659      229      2    16     18.75
 
 ## Related content
 
-- [Aggregate Functions (Transact-SQL)](../functions/aggregate-functions-transact-sql.md)
+- [Aggregate functions (Transact-SQL)](../functions/aggregate-functions-transact-sql.md)
 - [Analytic functions (Transact-SQL)](../functions/analytic-functions-transact-sql.md)
 - [Excellent blog post about window functions and OVER, on sqlmag.com, by Itzik Ben-Gan](https://www.itprotoday.com/innovations-of-the-2010s/how-to-use-microsoft-sql-server-2012-s-window-functions-part-1)

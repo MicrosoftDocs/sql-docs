@@ -406,7 +406,7 @@ def query_with_fallback(conn_manager, query: str, params: dict, max_retries: int
 
 ## Related content
 
-- [Connection strings](connection-strings.md)
-- [Retry logic](retry-logic.md)
-- [Connection pooling](connection-pooling.md)
-- [Always On availability groups](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Retry logic and connection resiliency with mssql-python](retry-logic.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
+- [What is an Always On availability group?](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

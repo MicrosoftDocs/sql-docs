@@ -30,8 +30,6 @@ helpviewer_keywords:
   
  The **Execute** command is used to execute the command. The command can be any SQL statement or procedure name. Not all commands produce a result set (rowset) object. Commands such as SELECT * FROM Authors produce a result set.  
   
-## See Also  
- [Creating an OLE DB Driver for SQL Server Application](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
-  
-  
+## Related content
 
+- [Creating an OLE DB Driver for SQL Server Application](creating-a-oledb-driver-for-sql-server-application.md)

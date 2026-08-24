@@ -28,10 +28,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |ObjectID|**int**|The ID of the user-defined classifier object.|22|Yes|  
 |ObjectName|**nvarchar(256)**|The two-part name of the classifier user-defined function. For example, dbo.classifier.|34|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [PreConnect:Completed Event Class](../../relational-databases/event-classes/preconnect-completed-event-class.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
-  
-  
+## Related content
 
+- [Extended Events overview](../extended-events/extended-events.md)
+- [PreConnect:Completed Event Class](preconnect-completed-event-class.md)
+- [Resource governor](../resource-governor/resource-governor.md)

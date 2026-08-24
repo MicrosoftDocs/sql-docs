@@ -68,8 +68,8 @@ BEGIN
 END
 ```
 
-## See Also
+## Related content
 
-- [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)
-- [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)
-- [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)
+- [Control-of-Flow](control-of-flow.md)
+- [WHILE (Transact-SQL)](while-transact-sql.md)
+- [IF...ELSE (Transact-SQL)](if-else-transact-sql.md)

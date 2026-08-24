@@ -88,4 +88,4 @@ WHERE so.type = 'V'
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
-- [sp_refreshsqlmodule (Transact-SQL)](sp-refreshsqlmodule-transact-sql.md)
+- [sys.sp_refreshsqlmodule (Transact-SQL)](sp-refreshsqlmodule-transact-sql.md)

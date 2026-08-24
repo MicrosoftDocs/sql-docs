@@ -73,6 +73,6 @@ If the jobs currently in process can't be completed within the allotted time, th
   
 ## Related content
 
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
-- [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)
+- [RsReportServer.config configuration file](rsreportserver-config-configuration-file.md)
+- [Modify a Reporting Services configuration file (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [Configure available memory for report server applications](configure-available-memory-for-report-server-applications.md)

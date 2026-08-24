@@ -249,7 +249,7 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 - [Create a push subscription](../replication/create-a-push-subscription.md)
 - [Subscribe to Publications](../replication/subscribe-to-publications.md)
-- [sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)
-- [sp_changemergesubscription (Transact-SQL)](sp-changemergesubscription-transact-sql.md)
-- [sp_dropmergesubscription (Transact-SQL)](sp-dropmergesubscription-transact-sql.md)
-- [sp_helpmergesubscription (Transact-SQL)](sp-helpmergesubscription-transact-sql.md)
+- [sys.sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)
+- [sys.sp_changemergesubscription (Transact-SQL)](sp-changemergesubscription-transact-sql.md)
+- [sys.sp_dropmergesubscription (Transact-SQL)](sp-dropmergesubscription-transact-sql.md)
+- [sys.sp_helpmergesubscription (Transact-SQL)](sp-helpmergesubscription-transact-sql.md)

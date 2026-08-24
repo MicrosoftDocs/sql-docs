@@ -68,13 +68,11 @@ WHERE Description = N'encrypted by asym key''JanainaAsymKey02''';
 GO  
 ```  
   
-## See Also  
- [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
- [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
- [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
 
+- [ENCRYPTBYASYMKEY (Transact-SQL)](encryptbyasymkey-transact-sql.md)
+- [CREATE ASYMMETRIC KEY (Transact-SQL)](../statements/create-asymmetric-key-transact-sql.md)
+- [ALTER ASYMMETRIC KEY (Transact-SQL)](../statements/alter-asymmetric-key-transact-sql.md)
+- [DROP ASYMMETRIC KEY (Transact-SQL)](../statements/drop-asymmetric-key-transact-sql.md)
+- [Choose an encryption algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

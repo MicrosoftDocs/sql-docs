@@ -92,15 +92,13 @@ DROP DATABASE ENCRYPTION KEY;
 GO  
 ```  
   
-## See Also  
- [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
- [SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md)   
- [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
-  
-  
+## Related content
 
+- [Transparent data encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)
+- [SQL Server encryption](../../relational-databases/security/encryption/sql-server-encryption.md)
+- [SQL Server and Database Encryption Keys (Database Engine)](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [ALTER DATABASE SET options (Transact-SQL)](alter-database-transact-sql-set-options.md)
+- [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](create-database-encryption-key-transact-sql.md)
+- [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](alter-database-encryption-key-transact-sql.md)
+- [sys.dm_database_encryption_keys (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-database-encryption-keys-transact-sql.md)

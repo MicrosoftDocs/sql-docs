@@ -276,17 +276,17 @@ GO
 ## Related content
 
 - [CREATE DATABASE](create-database-transact-sql.md)
-- [DATABASEPROPERTYEX](../functions/databasepropertyex-transact-sql.md)
-- [DROP DATABASE](drop-database-transact-sql.md)
-- [SET TRANSACTION ISOLATION LEVEL](set-transaction-isolation-level-transact-sql.md)
-- [EVENTDATA](../functions/eventdata-transact-sql.md)
-- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-- [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
-- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
+- [DATABASEPROPERTYEX (Transact-SQL)](../functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
+- [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
+- [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
 - [System Databases](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
@@ -740,16 +740,16 @@ ALTER DATABASE [mySampleDatabase] PERFORM_CUTOVER;
 
 ## Related content
 
-- [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
-- [DATABASEPROPERTYEX](../functions/databasepropertyex-transact-sql.md)
-- [DROP DATABASE](drop-database-transact-sql.md)
-- [SET TRANSACTION ISOLATION LEVEL](set-transaction-isolation-level-transact-sql.md)
-- [EVENTDATA](../functions/eventdata-transact-sql.md)
-- [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
-- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
+- [CREATE DATABASE](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+- [DATABASEPROPERTYEX (Transact-SQL)](../functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
+- [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
 - [System Databases](../../relational-databases/databases/system-databases.md)
 - [Disaster recovery guidance - Azure SQL Database](/azure/azure-sql/database/disaster-recovery-guidance)
 - [Azure SQL Database high availability and disaster recovery checklist](/azure/azure-sql/database/high-availability-disaster-recovery-checklist)
@@ -905,18 +905,18 @@ ALTER DATABASE WideWorldImporters
 
 ## Related content
 
-- [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
-- [DATABASEPROPERTYEX](../functions/databasepropertyex-transact-sql.md)
-- [DROP DATABASE](drop-database-transact-sql.md)
-- [SET TRANSACTION ISOLATION LEVEL](set-transaction-isolation-level-transact-sql.md)
-- [EVENTDATA](../functions/eventdata-transact-sql.md)
-- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-- [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
-- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
+- [CREATE DATABASE](create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+- [DATABASEPROPERTYEX (Transact-SQL)](../functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
+- [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
+- [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
 - [System Databases](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
@@ -1110,7 +1110,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## Related content
 
-- [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [CREATE DATABASE](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [T-SQL language elements for dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
@@ -1358,8 +1358,8 @@ ALTER DATABASE
 
 ## Related content
 
-- [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-- [DROP DATABASE](drop-database-transact-sql.md)
+- [CREATE DATABASE](create-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+- [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 
 ::: moniker-end
 

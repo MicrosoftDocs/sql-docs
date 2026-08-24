@@ -80,6 +80,6 @@ RESTORE SYMMETRIC KEY symmetric_key
    ENCRYPTION BY PASSWORD = '259087M#MyjkFkjhywiyedfgGDFD'; 
 ```
 
-## See also
+## Related content
 
-[BACKUP SYMMETRIC KEY](backup-symmetric-key-transact-sql.md)
+- [BACKUP SYMMETRIC KEY (Transact-SQL)](backup-symmetric-key-transact-sql.md)

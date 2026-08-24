@@ -108,9 +108,7 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   
-## See Also  
- [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
-  
+## Related content
 
+- [IS_MEMBER (Transact-SQL)](is-member-transact-sql.md)
+- [Security Functions (Transact-SQL)](security-functions-transact-sql.md)

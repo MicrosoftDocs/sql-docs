@@ -105,6 +105,6 @@ John        pubs     John       User
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_helpdb (Transact-SQL)](sp-helpdb-transact-sql.md)
-- [sp_helpuser (Transact-SQL)](sp-helpuser-transact-sql.md)
+- [sys.sp_helpdb (Transact-SQL)](sp-helpdb-transact-sql.md)
+- [sys.sp_helpuser (Transact-SQL)](sp-helpuser-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

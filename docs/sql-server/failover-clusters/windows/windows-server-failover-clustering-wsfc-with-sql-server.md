@@ -183,9 +183,9 @@ If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE
 
 - [Windows Server Technologies:  Failover Clusters](/windows-server/failover-clustering/failover-clustering-overview)
 - [Storage Spaces Direct \(S2D\) Overview](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
-- [Always On failover cluster instances](always-on-failover-cluster-instances-sql-server.md)
+- [Always On failover cluster instances (SQL Server)](always-on-failover-cluster-instances-sql-server.md)
 - [What is an Always On availability group?](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-- [WSFC Quorum Modes and Voting Configuration](wsfc-quorum-modes-and-voting-configuration-sql-server.md)
-- [Failover Policy for failover cluster instances](failover-policy-for-failover-cluster-instances.md)
-- [WSFC Disaster Recovery through Forced Quorum](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)
+- [WSFC Quorum Modes and Voting Configuration (SQL Server)](wsfc-quorum-modes-and-voting-configuration-sql-server.md)
+- [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)
+- [WSFC Disaster Recovery through Forced Quorum (SQL Server)](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)
 - [SQL Server 2016 Supports Windows Server 2016 Storage Spaces Direct](https://www.microsoft.com/sql-server/blog/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct)

@@ -36,8 +36,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 ## Permissions  
  Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Data Spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)  
-  
+## Related content
 
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Data Spaces (Transact-SQL)](data-spaces-transact-sql.md)

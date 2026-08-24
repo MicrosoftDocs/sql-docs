@@ -200,7 +200,6 @@ GO
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [sys.fn_listextendedproperty (Transact-SQL)](../system-functions/sys-fn-listextendedproperty-transact-sql.md)
-- [sp_addextendedproperty (Transact-SQL)](sp-addextendedproperty-transact-sql.md)
-- [sp_dropextendedproperty (Transact-SQL)](sp-dropextendedproperty-transact-sql.md)
-- [sys.extended_properties (Transact-SQL)](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)
-
+- [sys.sp_addextendedproperty (Transact-SQL)](sp-addextendedproperty-transact-sql.md)
+- [sys.sp_dropextendedproperty (Transact-SQL)](sp-dropextendedproperty-transact-sql.md)
+- [Extended properties catalog views - sys.extended_properties](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)

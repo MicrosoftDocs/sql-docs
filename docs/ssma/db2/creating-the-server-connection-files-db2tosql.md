@@ -56,4 +56,4 @@ For example:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Execute the SSMA console (Db2ToSQL)](executing-the-ssma-console-db2tosql.md)
+> [Execute the SSMA console](executing-the-ssma-console-db2tosql.md)

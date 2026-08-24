@@ -25,7 +25,6 @@ monikerRange: ">=aps-pdw-2016"
 |**principal_id**|**int**|ID of the user that created the session at the database level.||  
 |**database_id**|**int**|ID of the database that is the scope of the diagnostic session.|  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)

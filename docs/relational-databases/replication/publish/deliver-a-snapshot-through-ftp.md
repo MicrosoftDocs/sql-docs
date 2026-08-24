@@ -167,6 +167,6 @@ For more information about modifying the snapshot folder location properties, se
   
 ## Related content
 
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
-- [Initialize a Subscription with a Snapshot](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)
+- [Change Publication and Article Properties](change-publication-and-article-properties.md)
+- [Initialize a Subscription with a Snapshot for a New Publication](../initialize-a-subscription-with-a-snapshot.md)

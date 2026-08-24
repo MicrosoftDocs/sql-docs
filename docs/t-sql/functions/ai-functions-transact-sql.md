@@ -52,4 +52,4 @@ For more info about the built-in support for AI in various platforms of the [the
 - [CREATE EXTERNAL MODEL (Transact-SQL)](../statements/create-external-model-transact-sql.md)
 - [ALTER EXTERNAL MODEL (Transact-SQL)](../statements/alter-external-model-transact-sql.md)
 - [DROP EXTERNAL MODEL (Transact-SQL)](../statements/drop-external-model-transact-sql.md)
-- [sp_invoke_external_rest_endpoint](../../relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md)
+- [sys.sp_invoke_external_rest_endpoint (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md)

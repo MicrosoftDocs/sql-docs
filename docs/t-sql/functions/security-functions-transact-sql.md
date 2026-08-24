@@ -136,9 +136,9 @@ dev_langs:
   
  For information about membership in Windows groups, see [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md) and [xp_enumgroups &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md).  
   
-## See Also  
- [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Cryptographic Functions &#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)   
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Security Statements](../statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)  
-  
+## Related content
+
+- [Security stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)
+- [Cryptographic functions (Transact-SQL)](cryptographic-functions-transact-sql.md)
+- [What are the SQL database functions?](functions.md)
+- [Permissions: GRANT, DENY, REVOKE](../statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)

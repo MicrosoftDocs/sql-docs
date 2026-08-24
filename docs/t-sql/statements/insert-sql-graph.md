@@ -150,9 +150,9 @@ INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Al
         (SELECT $node_id FROM dbo.Person WHERE name = 'John'), '9/15/2011');
 ```
   
-## Next steps
+## Related content
 
-- [Graph processing](../../relational-databases/graphs/sql-graph-overview.md)
+- [Graph processing with SQL Server and Azure SQL Database](../../relational-databases/graphs/sql-graph-overview.md)
 - [Create a graph database and run some pattern matching queries using T-SQL](../../relational-databases/graphs/sql-graph-sample.md)
-- [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+- [INSERT (Transact-SQL)](insert-transact-sql.md)
 - [SHORTEST_PATH (Transact-SQL)](../../relational-databases/graphs/sql-graph-shortest-path.md)

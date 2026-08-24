@@ -67,8 +67,7 @@ WHERE g.Filter(geography::Parse(
    'POLYGON((-120.1 44.9, -119.9 44.9, -119.9 45.1, -120.1 45.1, -120.1 44.9))')) = 1;  
 ```  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [STIntersects &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [STIntersects (geography Data Type)](stintersects-geography-data-type.md)

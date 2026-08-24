@@ -682,7 +682,7 @@ WITH (
 
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](create-external-file-format-transact-sql.md)
-- [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md)
+- [sys.sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md)
 
 ::: moniker-end
 
@@ -1435,9 +1435,9 @@ FROM census_external_table;
 
 ## Related content
 
-- [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](create-external-file-format-transact-sql.md)
-- [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [CREATE TABLE AS SELECT](create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
@@ -1954,8 +1954,6 @@ For more examples, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source
    ```
 
 ## Related content
-
-Learn more about external tables and related concepts in the following articles:
 
 - [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview)
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)

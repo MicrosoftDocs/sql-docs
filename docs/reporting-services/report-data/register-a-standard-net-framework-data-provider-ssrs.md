@@ -193,7 +193,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)
-- [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
-- [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)
+- [Configure and administer a report server (SSRS native mode)](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)
+- [Implement a data processing extension](../extensions/data-processing/implementing-a-data-processing-extension.md)
+- [Reporting Services configuration files](../report-server/reporting-services-configuration-files.md)
+- [Code access security in Reporting Services](../extensions/secure-development/code-access-security-in-reporting-services.md)

@@ -20,8 +20,6 @@ ms.custom: mdx
 |[,] ...n|Indicates that the preceding item can be repeated any number of times. The items are sometimes separated by commas.|  
 |\<label> ::=|Indicates the name for a block of syntax. This convention is used to group and label portions of lengthy syntax or a unit of syntax that can be used in more than one place within a statement. Each location in which the block of syntax can be used is indicated with the label enclosed in angle brackets: \<label>.|  
   
-## See Also  
- [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
-  
-  
+## Related content
 
+- [MDX Language Reference (MDX)](mdx-language-reference-mdx.md)

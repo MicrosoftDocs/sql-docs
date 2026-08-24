@@ -51,7 +51,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  [Applying an XSL Transformation &#40;SQLXMLOLEDB Provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
  Illustrates the use of the ClientSideXML and xsl properties in applying an XSL transformation.  
   
-## See Also  
- [System Requirements for SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)  
-  
-  
+## Related content
+
+- [System Requirements for SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md)

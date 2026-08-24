@@ -28,8 +28,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |[Object:Created Event Class](../../relational-databases/event-classes/object-created-event-class.md)|Indicates that an object has been created; for example, by the CREATE INDEX statement, the CREATE TABLE statement, or the CREATE DATABASE statement.|  
 |[Object:Deleted Event Class](../../relational-databases/event-classes/object-deleted-event-class.md)|Indicates that an object has been deleted; for example, by the DROP INDEX statement or the DROP TABLE statement.|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Related content
 
+- [Extended Events overview](../extended-events/extended-events.md)

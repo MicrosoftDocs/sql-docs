@@ -473,5 +473,5 @@ GO
 
 - [DBCC (Transact-SQL)](dbcc-transact-sql.md)
 - [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)
-- [sp_helpdb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)
+- [sys.sp_helpdb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)
 - [System Tables (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)

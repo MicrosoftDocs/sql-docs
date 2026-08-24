@@ -77,7 +77,7 @@ DROP SYNONYM MyProduct;
 GO  
 ```  
   
-## See Also  
- [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+## Related content
 
+- [CREATE SYNONYM (Transact-SQL)](create-synonym-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

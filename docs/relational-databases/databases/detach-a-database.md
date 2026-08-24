@@ -113,5 +113,5 @@ Be sure to account for all files associated with the database before you detach,
 ## Related content
 
 - [Database detach and attach (SQL Server)](database-detach-and-attach-sql-server.md)
-- [sp_detach_db (Transact-SQL)](../system-stored-procedures/sp-detach-db-transact-sql.md)
+- [sys.sp_detach_db (Transact-SQL)](../system-stored-procedures/sp-detach-db-transact-sql.md)
 - [Attach a Database](attach-a-database.md)

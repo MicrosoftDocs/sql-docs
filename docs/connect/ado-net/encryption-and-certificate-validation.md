@@ -78,7 +78,7 @@ The following table describes the encryption and validation outcome for encrypti
 | True | False (default) | N/A | Encryption of all network traffic occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 | True | True | N/A | Encryption of all network traffic occurs, but the certificate isn't validated. |
 
-## See also
+## Related content
 
-[Connection strings](connection-strings.md)  
-[Connection string syntax](connection-string-syntax.md)  
+- [Connection strings in ADO.NET](connection-strings.md)
+- [Connection string syntax](connection-string-syntax.md)

@@ -86,7 +86,6 @@ Requires ALTER permission on the schema to which the function belongs, or CONTRO
    GO
    ```
 
-## See also
+## Related content
 
-- [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)
-
+- [DROP FUNCTION (Transact-SQL)](../../t-sql/statements/drop-function-transact-sql.md)

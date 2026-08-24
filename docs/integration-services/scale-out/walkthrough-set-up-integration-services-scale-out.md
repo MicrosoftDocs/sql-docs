@@ -183,5 +183,6 @@ EXEC [catalog].[enable_worker_agent] '6583054A-E915-4C2A-80E4-C765E79EF61D'
 GO 
 ```
 
-## Next steps
--   [Run Packages in Integration Services (SSIS) Scale Out](run-packages-in-integration-services-ssis-scale-out.md).
+## Related content
+
+- [Run packages in Integration Services (SSIS) Scale Out](run-packages-in-integration-services-ssis-scale-out.md)

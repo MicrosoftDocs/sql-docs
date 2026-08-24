@@ -33,5 +33,5 @@ This section describes the system stored procedures to the FileTable and FILESTR
 
 - [FILESTREAM (SQL Server)](../blob/filestream-sql-server.md)
 - [FileTables (SQL Server)](../blob/filetables-sql-server.md)
-- [FILESTREAM and FileTable dynamic management views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+- [FILESTREAM and FileTable dynamic management views (Transact-SQL)](../system-dynamic-management-objects/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 - [FILESTREAM and FileTable catalog views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

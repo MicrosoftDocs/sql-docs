@@ -37,8 +37,6 @@ helpviewer_keywords:
   
 -   [Calling a Stored Procedure &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Programming](oledb-driver-for-sql-server-programming.md)

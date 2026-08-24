@@ -91,13 +91,9 @@ FROM Production.ProductInventory;
 287  
 ```  
   
-## See also
+## Related content
 
-[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)
-
-[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)
-
-[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
-
-[OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
-
+- [CHECKSUM (Transact-SQL)](checksum-transact-sql.md)
+- [HASHBYTES (Transact-SQL)](hashbytes-transact-sql.md)
+- [BINARY_CHECKSUM (Transact-SQL)](binary-checksum-transact-sql.md)
+- [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

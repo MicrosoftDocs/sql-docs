@@ -69,7 +69,6 @@ It's important not to uninstall OLE DB Driver for SQL Server until all dependent
 The value passed to APPGUID is your specific product code. A product code must be created when using Microsoft Installer to bundle your application setup program.
 The APPGUID option requires running the installer from an elevated Command Prompt.
 
-## See also
+## Related content
 
-[Building applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)
-
+- [Building applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)

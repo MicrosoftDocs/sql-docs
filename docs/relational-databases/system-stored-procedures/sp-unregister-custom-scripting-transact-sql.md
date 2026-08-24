@@ -69,4 +69,4 @@ Only members of the **sysadmin** fixed server role, the **db_owner** fixed datab
 
 ## Related content
 
-- [sp_register_custom_scripting (Transact-SQL)](sp-register-custom-scripting-transact-sql.md)
+- [sys.sp_register_custom_scripting (Transact-SQL)](sp-register-custom-scripting-transact-sql.md)

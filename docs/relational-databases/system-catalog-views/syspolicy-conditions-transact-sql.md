@@ -40,8 +40,7 @@ dev_langs:
 ## Permissions  
  Requires membership in the PolicyAdministratorRole role in the msdb database.  
   
-## See Also  
- [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Administer Servers by Using Policy-Based Management](../policy-based-management/administer-servers-by-using-policy-based-management.md)
+- [Policy-Based Management Views (Transact-SQL)](policy-based-management-views-transact-sql.md)

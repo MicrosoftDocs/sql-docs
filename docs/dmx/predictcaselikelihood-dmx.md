@@ -71,9 +71,9 @@ NATURAL PREDICTION JOIN
   
  The difference between these results demonstrates the effect of normalization. The raw value for **CaseLikelihood** suggests that the probability of the case is about 20 percent; however, when you normalize the results, it becomes apparent that the likelihood of the case is very low.  
   
-## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
-  
+## Related content
+
+- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)
+- [Data Mining Extensions (DMX) Function Reference](data-mining-extensions-dmx-function-reference.md)
+- [Functions (DMX)](functions-dmx.md)
+- [General Prediction Functions (DMX)](general-prediction-functions-dmx.md)

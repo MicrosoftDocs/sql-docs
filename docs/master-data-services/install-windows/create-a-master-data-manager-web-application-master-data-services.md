@@ -69,11 +69,8 @@ ms.custom:
   
 6.  Click **OK**.  
   
-## Next Steps  
-  
--   Associate the web application with a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. For more information, see [Associate a Master Data Services Database and Web Application](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md).  
-  
--   Optionally, configure the website that hosts the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to use an HTTPS binding if you want to encrypt content by using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). You must use an Internet Information Services (IIS) tool, such as IIS Manager, to configure the server certificate for the web server, and to configure an HTTPS binding and the TLS settings for the site. For more information, see [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
-  
-## See Also  
- [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)
+## Related content
+
+- [Installation Tasks for Master Data Services](install-master-data-services.md)
+- [Associate a Master Data Services Database and Web Application](associate-a-master-data-services-database-and-web-application.md)
+- [Secure a Master Data Manager Web Application](secure-a-master-data-manager-web-application.md)

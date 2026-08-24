@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
-- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)
-- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
-- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [Configure Distribution](configure-distribution.md)
+- [Configure Publishing and Distribution](configure-publishing-and-distribution.md)
+- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)
+- [Create a publication](publish/create-a-publication.md)

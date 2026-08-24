@@ -73,7 +73,7 @@ A logon trigger can effectively prevent successful connections to the [!INCLUDE 
 
 ## Related content
 
-- [DDL Triggers](ddl-triggers.md)
+- [DDL triggers](ddl-triggers.md)
 - [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)
 - [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)
 - [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)

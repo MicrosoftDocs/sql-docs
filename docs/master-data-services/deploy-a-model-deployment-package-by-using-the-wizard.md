@@ -70,10 +70,7 @@ helpviewer_keywords:
   
      When updating a model, if the process fails during any of the first three steps, it does not proceed beyond that step; however, changes that are already made are not rolled back.  
   
-## Next Steps  
- File attributes, and user and group permissions are not included in model deployment packages. After you deploy a model, you must update these manually. For more information, see:  
-  
--   [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
-  
-## See Also  
- [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)
+## Related content
+
+- [Deploying Models (Master Data Services)](deploying-models-master-data-services.md)
+- [Assign Model Object Permissions (Master Data Services)](assign-model-object-permissions-master-data-services.md)

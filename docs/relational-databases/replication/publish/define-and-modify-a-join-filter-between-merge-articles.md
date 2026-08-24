@@ -116,11 +116,11 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Join Filters](../../../relational-databases/replication/merge/join-filters.md)
-- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)
-- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
-- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)
+- [Join Filters](../merge/join-filters.md)
+- [Parameterized Filters - Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)
+- [Change Publication and Article Properties](change-publication-and-article-properties.md)
+- [Filter Published Data for Merge Replication](../merge/filter-published-data-for-merge-replication.md)
 - [How to: Define and Modify a Join Filter Between Merge Articles (SQL Server Management Studio)](#define-and-modify-a-join-filter-between-merge-articles)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)
-- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)
+- [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)
+- [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)

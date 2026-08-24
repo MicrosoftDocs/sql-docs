@@ -35,7 +35,7 @@ To add or remove **Toolbox** items, on the **Tools** menu, select **Choose Toolb
 
 The Azure Feature Pack for Integration Services contains connection managers to connect to Azure data sources and tasks to do common Azure operations. Install the Feature Pack to add these items to the Toolbox. For more info, see [Azure Feature Pack for Integration Services (SSIS)](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-## See also
+## Related content
 
 - [Use the Toolbox](/ssms/use-the-toolbox)
 - [Choose Toolbox Items (Maintenance Tasks Page)](/ssms/menu-help/choose-toolbox-items-maintenance-tasks-page)

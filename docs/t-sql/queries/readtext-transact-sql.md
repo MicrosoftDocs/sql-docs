@@ -77,9 +77,8 @@ READTEXT pub_info.pr_info @ptrval 1 25;
 GO  
 ```  
   
-## See Also  
-[@@TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/functions/textsize-transact-sql.md)   
-[UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
-[WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
-  
-  
+## Related content
+
+- [@@TEXTSIZE (Transact-SQL)](../functions/textsize-transact-sql.md)
+- [UPDATETEXT (Transact-SQL)](updatetext-transact-sql.md)
+- [WRITETEXT (Transact-SQL)](writetext-transact-sql.md)

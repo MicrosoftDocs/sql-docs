@@ -14,6 +14,6 @@ ms.custom: mdx
   
  The assignment operator is used to assign values to subcubes in MDX Script. For more information, see [MDX Scripting Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services).  
   
-## See Also  
- [Operators &#40;MDX Syntax&#41;](../mdx/operators-mdx-syntax.md)  
-  
+## Related content
+
+- [Operators (MDX Syntax)](operators-mdx-syntax.md)

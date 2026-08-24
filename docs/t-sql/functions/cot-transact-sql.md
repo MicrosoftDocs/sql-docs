@@ -57,9 +57,6 @@ The COT of the angle is: -0.040312
 (1 row(s) affected)  
 ```  
   
-## See also
-[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
-  
-  
+## Related content
 
-
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)

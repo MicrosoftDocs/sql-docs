@@ -96,7 +96,8 @@ SQLRETURN SQLCancelHandle(
 |---------------------------|---------|  
 |Canceling a function running asynchronously on a statement handle, canceling a function on a statement that needs data, or canceling a function running on a statement on another thread.|[SQLCancel Function](../../../odbc/reference/syntax/sqlcancel-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)   
- [Asynchronous Execution (Polling Method)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)
+- [Asynchronous Execution (Polling Method)](../develop-app/asynchronous-execution-polling-method.md)

@@ -113,10 +113,7 @@ Year  Quarter  SalesQuota              Variance
 2002  4        154000.0000             1580250000.00
  ```  
   
-## See Also  
- [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [Aggregate functions (Transact-SQL)](aggregate-functions-transact-sql.md)
+- [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

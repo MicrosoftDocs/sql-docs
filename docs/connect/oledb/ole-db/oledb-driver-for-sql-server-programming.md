@@ -70,8 +70,6 @@ helpviewer_keywords:
   
 -   [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
-## See Also  
- [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
-  
-  
+## Related content
 
+- [Microsoft OLE DB Driver for SQL Server](../oledb-driver-for-sql-server.md)

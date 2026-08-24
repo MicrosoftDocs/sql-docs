@@ -83,16 +83,12 @@ The Service Master Key can only be opened by the Windows service account under w
   
  [Encrypt a Column of Data](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)  
   
-## Related Content  
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
-  
- [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md)  
-  
- [Restore a Database Master Key](../../../relational-databases/security/encryption/restore-a-database-master-key.md)  
-  
-## See Also  
- [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
- [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
-  
+## Related content
+
+- [CREATE MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-master-key-transact-sql.md)
+- [ALTER SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-service-master-key-transact-sql.md)
+- [Restore a database master key](restore-a-database-master-key.md)
+- [Back up and restore SQL Server Reporting Services (SSRS) encryption keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
+- [Delete and Recreate Encryption Keys (Report Server Configuration Manager)](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)
+- [Add and remove encryption keys for scale-out deployment](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)
+- [Transparent data encryption (TDE)](transparent-data-encryption.md)

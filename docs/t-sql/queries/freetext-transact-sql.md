@@ -147,17 +147,17 @@ WHERE FREETEXT(Description, @SearchWord);
 GO  
 ```  
   
-## See Also  
- [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
- [Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
- [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](/ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools)   
- [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
-  
+## Related content
+
+- [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)
+- [Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
+- [CREATE FULLTEXT CATALOG (Transact-SQL)](../statements/create-fulltext-catalog-transact-sql.md)
+- [CREATE FULLTEXT INDEX (Transact-SQL)](../statements/create-fulltext-index-transact-sql.md)
+- [Create and manage full-text indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)
+- [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)
+- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](/ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools)
+- [CONTAINS (Transact-SQL)](contains-transact-sql.md)
+- [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)
+- [WHERE (Transact-SQL)](where-transact-sql.md)

@@ -241,14 +241,14 @@ GO
 
 ## Related content
 
-- [DENY Object Permissions (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)
-- [REVOKE Object Permissions (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)
-- [Object Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)
+- [DENY Object Permissions (Transact-SQL)](deny-object-permissions-transact-sql.md)
+- [REVOKE Object Permissions (Transact-SQL)](revoke-object-permissions-transact-sql.md)
+- [Object catalog views (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)
 - [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
 - [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
 - [Securables](../../relational-databases/security/securables.md)
 - [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)
-- [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)
+- [HAS_PERMS_BY_NAME (Transact-SQL)](../functions/has-perms-by-name-transact-sql.md)
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [Dynamic data masking](../../relational-databases/security/dynamic-data-masking.md)
-- [Row-Level security](../../relational-databases/security/row-level-security.md)
+- [Row-level security](../../relational-databases/security/row-level-security.md)

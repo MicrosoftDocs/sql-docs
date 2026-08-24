@@ -381,8 +381,8 @@ from [Adventure Works]
 |-|-|-|-|  
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
-## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restricting the Query with Query and Slicer Axes &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
-  
+## Related content
+
+- [Key Concepts in MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)
+- [MDX Data Manipulation Statements (MDX)](mdx-data-manipulation-statements-mdx.md)
+- [Restricting the Query with Query and Slicer Axes &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)

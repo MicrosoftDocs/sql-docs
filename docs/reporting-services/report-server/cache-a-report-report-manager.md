@@ -41,5 +41,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
-- [Caching reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)
+- [Set report processing properties](set-report-processing-properties.md)
+- [Cache reports (SSRS)](caching-reports-ssrs.md)

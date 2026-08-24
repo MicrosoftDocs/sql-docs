@@ -73,8 +73,7 @@ FROM msdb.managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## See Also  
- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
- [Restoring From Backups Stored in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
-  
-  
+## Related content
+
+- [SQL Server managed backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)
+- [Restoring From Backups Stored in Microsoft Azure](../backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)

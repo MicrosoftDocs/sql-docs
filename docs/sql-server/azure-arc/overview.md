@@ -192,11 +192,11 @@ For VMware vSphere–based environments, review [Support on VMware](#support-on-
 
 ## Related content
 
-- [Learn about the prerequisites to connect your SQL Server to Azure Arc](prerequisites.md)
-- [SQL Server enabled by Azure Arc deployment options](deployment-options.md)
+- [Prerequisites - SQL Server enabled by Azure Arc](prerequisites.md)
+- [Deployment options for SQL Server enabled by Azure Arc](deployment-options.md)
 - [Learn more about Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage)
 - [Learn more about Microsoft Purview](/azure/purview/register-scan-azure-arc-enabled-sql-server)
 - [Azure Arc-enabled servers Run Command](/azure/azure-arc/servers/run-command)
 - [Tutorial: Send data to Azure Monitor Logs with Logs ingestion API](/azure/azure-monitor/logs/tutorial-logs-ingestion-api)
 - [Azure Automation Runbooks](/azure/automation/automation-runbook-types)
-- [Security overview | SQL Server enabled by Azure Arc](security-overview.md)
+- [Security &#124; SQL Server enabled by Azure Arc](security-overview.md)

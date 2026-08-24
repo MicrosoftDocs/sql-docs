@@ -59,10 +59,8 @@ Install the latest version of [SQL Server Management Studio (SSMS)](/ssms/instal
 
     ![Edit Trigger](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image7-edit2.png)
 
-## Next steps
+## Related content
 
-To learn about other methods for scheduling an SSIS package, see [Schedule the execution of an SSIS package on Azure](ssis-azure-schedule-packages.md).
-
-To learn more about Azure Data Factory pipelines, activities, and triggers, see the following articles:
--   [Pipelines and activities in Azure Data Factory](/azure/data-factory/concepts-pipelines-activities)
--   [Pipeline execution and triggers in Azure Data Factory](/azure/data-factory/concepts-pipeline-execution-triggers)
+- [Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure](ssis-azure-schedule-packages.md)
+- [Pipelines and activities in Azure Data Factory](/azure/data-factory/concepts-pipelines-activities)
+- [Pipeline execution and triggers in Azure Data Factory](/azure/data-factory/concepts-pipeline-execution-triggers)

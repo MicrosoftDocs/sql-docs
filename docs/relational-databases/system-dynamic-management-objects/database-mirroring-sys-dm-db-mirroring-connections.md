@@ -78,5 +78,5 @@ Returns a row for each connection established for database mirroring.
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Monitoring Database Mirroring (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)

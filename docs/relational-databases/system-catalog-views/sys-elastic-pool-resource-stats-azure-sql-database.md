@@ -78,9 +78,7 @@ WHERE elastic_pool_name = '<your pool name>'
 ORDER BY end_time DESC;
 ```
 
-## Next steps
-
-Learn more about elastic pools and related concepts in the following articles:
+## Related content
 
 - [Elastic pools help you manage and scale multiple databases in Azure SQL Database](/azure/azure-sql/database/elastic-pool-overview)
 - [sys.resource_stats (Azure SQL Database)](sys-resource-stats-azure-sql-database.md)

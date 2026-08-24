@@ -271,9 +271,9 @@ FROM (
 WHERE Q.LastNode != 'Alice'
 ```
 
-## Next steps
+## Related content
 
-- [MATCH (SQL Graph)](../../t-sql/queries/match-sql-graph.md)
+- [MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 - [CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)
-- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]
-- [Graph processing](../../relational-databases/graphs/sql-graph-overview.md)
+- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)
+- [Graph processing with SQL Server and Azure SQL Database](sql-graph-overview.md)

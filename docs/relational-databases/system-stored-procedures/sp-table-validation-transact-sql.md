@@ -117,6 +117,6 @@ To execute `sp_table_validation`, you must have SELECT permissions on the table 
 
 - [CHECKSUM (Transact-SQL)](../../t-sql/functions/checksum-transact-sql.md)
 - [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)
-- [sp_article_validation (Transact-SQL)](sp-article-validation-transact-sql.md)
-- [sp_publication_validation (Transact-SQL)](sp-publication-validation-transact-sql.md)
+- [sys.sp_article_validation (Transact-SQL)](sp-article-validation-transact-sql.md)
+- [sys.sp_publication_validation (Transact-SQL)](sp-publication-validation-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

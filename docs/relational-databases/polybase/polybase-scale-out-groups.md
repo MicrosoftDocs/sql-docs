@@ -57,7 +57,7 @@ The PolyBase data movement service receives instructions from the PolyBase engin
 
 ## Related content
 
-- [sys-dm-exec-compute-nodes](../system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)
-- [sys-dm-exec-compute-node-status](../system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)
-- [sys.dm_exec_compute_node_errors](../system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)
+- [sys.dm_exec_compute_nodes (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-compute-nodes-transact-sql.md)
+- [sys.dm_exec_compute_node_status (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-compute-node-status-transact-sql.md)
+- [sys.dm_exec_compute_node_errors (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-compute-node-errors-transact-sql.md)
 - [Configure PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md)

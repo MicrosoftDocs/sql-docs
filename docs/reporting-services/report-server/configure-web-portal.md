@@ -83,12 +83,12 @@ You can create a custom brand package to alter the colors used for the web porta
 
 ## Related content
 
-- [Web portal](../../reporting-services/web-portal-ssrs-native-mode.md)
-- [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
-- [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
-- [Verify a Reporting Services installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)
-- [Turn Reporting Services features on or off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)
-- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [Configure a native mode report server for local administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
+- [Browser support for Reporting Services and Power View](../browser-support-for-reporting-services-and-power-view.md)
+- [Configure a URL (Report Server Configuration Manager)](../install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Verify a Reporting Services Installation](../install-windows/verify-a-reporting-services-installation.md)
+- [Turn Reporting Services features on or off](turn-reporting-services-features-on-or-off.md)
+- [Manage a Reporting Services native mode report server](manage-a-reporting-services-native-mode-report-server.md)
+- [RsReportServer.config configuration file](rsreportserver-config-configuration-file.md)
+- [Configure a native mode report server for local administration (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -47,7 +47,6 @@ ms.topic: reference
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## See Also  
- [SQLServerParameterMetaData Class](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerParameterMetaData Class](sqlserverparametermetadata-class.md)

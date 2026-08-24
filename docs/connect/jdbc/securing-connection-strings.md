@@ -24,6 +24,6 @@ Another approach is to store the encrypted password in a file. Make sure you use
 
 If you take connection string information from an external source, such as a user supplying a user ID and password, you must validate any input from the source to ensure that it follows the correct format and doesn't contain extra parameters that affect your connection.
 
-## See also
+## Related content
 
-[Securing JDBC driver applications](securing-jdbc-driver-applications.md)
+- [Securing JDBC driver applications](securing-jdbc-driver-applications.md)

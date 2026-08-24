@@ -146,6 +146,6 @@ It is possible for a package to include unrelated transactions in an [!INCLUDE[s
  Package E does not use transactions.  
  
   
-## External Resources  
-  
--   Blog entry, [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783), on www.mssqltips.com. 
+## Related content
+
+- [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783)

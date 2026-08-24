@@ -63,7 +63,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)
-- [Rendering extensions overview](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)
-- [Implement the IRenderingExtension interface](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)
-- [Security considerations for extensions](../../../reporting-services/extensions/security-considerations-for-extensions.md)
+- [Implement a rendering extension](implementing-a-rendering-extension.md)
+- [Rendering extensions overview](rendering-extensions-overview.md)
+- [Implement the IRenderingExtension interface](implementing-the-irenderingextension-interface.md)
+- [Security considerations for extensions](../security-considerations-for-extensions.md)

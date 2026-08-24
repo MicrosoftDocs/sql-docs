@@ -37,8 +37,7 @@ helpviewer_keywords:
   
  For more information about programming management applications using the WMI Provider, see the WMI documentation in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
   
-## See Also  
- [Working with the WMI Provider for Configuration Management](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
- [Using WQL and Scripting Languages with the WMI Provider for Configuration Management](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
-  
-  
+## Related content
+
+- [Working with the WMI Provider for Configuration Management](working-with-the-wmi-provider-for-configuration-management.md)
+- [Using WQL and Scripting Languages with the WMI Provider](using-wql-and-scripting-languages-with-the-wmi-provider.md)

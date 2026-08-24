@@ -575,6 +575,6 @@ EXIT:
 }  
 ```  
   
-## See Also  
- [ODBC Table-Valued Parameter Programming Examples](./table-valued-parameters-odbc.md)  
-  
+## Related content
+
+- [Table-Valued Parameters (ODBC)](table-valued-parameters-odbc.md)

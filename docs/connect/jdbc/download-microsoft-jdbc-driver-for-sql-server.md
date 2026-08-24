@@ -64,6 +64,7 @@ The JDBC driver can be added to a Maven project by adding it as a dependency in 
 
 Unsupported driver versions aren't available for download here. We're continually improving the Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.
 
-## Next steps
+## Related content
 
-For more information about the Microsoft JDBC Driver for SQL Server, see [Overview of the JDBC driver](overview-of-the-jdbc-driver.md) and the [JDBC driver GitHub repository](https://github.com/microsoft/mssql-jdbc/blob/dev/README.md).
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [JDBC driver GitHub repository](https://github.com/microsoft/mssql-jdbc/blob/dev/README.md)

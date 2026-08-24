@@ -16,5 +16,6 @@ ODBC supports asynchronous operations for both statement and connection operatio
   
 2.  [Asynchronous Execution (Notification Method)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
-## See Also  
- [Executing Statements ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
+## Related content
+
+- [Executing Statements ODBC](executing-statements-odbc.md)

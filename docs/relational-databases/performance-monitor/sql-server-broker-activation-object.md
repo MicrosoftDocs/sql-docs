@@ -37,6 +37,6 @@ WHERE object_name LIKE '%Broker Activation%';
 
 ## Related content
 
-- [sys.dm_broker_activated_tasks (Transact-SQL)](../system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)
-- [sys.dm_broker_queue_monitors (Transact-SQL)](../system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)
+- [sys.dm_broker_activated_tasks (Transact-SQL)](../system-dynamic-management-objects/sys-dm-broker-activated-tasks-transact-sql.md)
+- [sys.dm_broker_queue_monitors (Transact-SQL)](../system-dynamic-management-objects/sys-dm-broker-queue-monitors-transact-sql.md)
 - [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

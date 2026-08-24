@@ -54,11 +54,9 @@ Returns one row for the database mirroring endpoint of an instance of [!INCLUDE[
 
 ## Related content
 
-- [Specify the Endpoint URL When Adding or Modifying an Availability Replica (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)
-- [sys.availability_replicas (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)
-- [sys.database_mirroring (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)
-- [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
-- [The Database Mirroring Endpoint (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
-- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
-  
-  
+- [Specify Endpoint URL - Adding or Modifying Availability Replica](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)
+- [sys.availability_replicas (Transact-SQL)](sys-availability-replicas-transact-sql.md)
+- [sys.database_mirroring (Transact-SQL)](sys-database-mirroring-transact-sql.md)
+- [Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [The database mirroring endpoint (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
+- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)

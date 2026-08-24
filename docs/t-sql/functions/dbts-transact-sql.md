@@ -19,7 +19,7 @@ dev_langs:
   - "TSQL"
 ---
 
-# &#x40;&#x40;DBTS (Transact-SQL)
+# @@DBTS (Transact-SQL)
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
@@ -50,11 +50,8 @@ GO
 SELECT @@DBTS;  
 ```  
   
-## See also
+## Related content
 
-[Cursor Concurrency &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
-  
-  
-
+- [Cursor Concurrency (ODBC)](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [MIN_ACTIVE_ROWVERSION (Transact-SQL)](min-active-rowversion-transact-sql.md)

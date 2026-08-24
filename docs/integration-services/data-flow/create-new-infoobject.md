@@ -145,11 +145,10 @@ ms.topic: ui-reference
  **Remove**  
  Remove the selected InfoObject from the **Attributes** list.  
   
-## See Also  
- [Create InfoCube for Transaction Data](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
- [Create InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
- [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
-  
+## Related content
+
+- [Create InfoCube for Transaction Data](create-infocube-for-transaction-data.md)
+- [Create InfoSource](create-infosource.md)
+- [Create InfoSource for Transaction Data](create-infosource-for-transaction-data.md)
+- [Create InfoSource for Master Data](create-infosource-for-master-data.md)
+- [Microsoft Connector for SAP BW F1 Help](../microsoft-connector-for-sap-bw-f1-help.md)

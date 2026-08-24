@@ -47,7 +47,7 @@ This article describes how to use built-in functions to view a saved trace.
 
 Requires ALTER TRACE on the server.
 
-## See also
+## Related content
 
 - [sys.fn_trace_getinfo (Transact-SQL)](../system-functions/sys-fn-trace-getinfo-transact-sql.md)
 - [View and analyze traces with SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)

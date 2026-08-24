@@ -96,7 +96,7 @@ WHERE ProductModelID=19
   
 -   The **namespace-uri()** function returns instances of type xs:string instead of xs:anyURI.  
   
-## See Also  
- [Functions on Nodes](./xquery-functions-against-the-xml-data-type.md)   
- [local-name Function &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
-  
+## Related content
+
+- [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)
+- [Functions on nodes - local-name](functions-on-nodes-local-name.md)

@@ -106,6 +106,6 @@ This article is an overview of report definition support by [!INCLUDE[ssRSnovers
   
 ## Related content
 
-- [Reports, report parts, and report definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)
-- [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)
-- [Report definition language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)
+- [Reports, Report Parts, and Report Definitions (Report Builder and SSRS)](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)
+- [SQL Server Reporting Services tools](tools/reporting-services-tools.md)
+- [Report Definition Language (SSRS)](reports/report-definition-language-ssrs.md)

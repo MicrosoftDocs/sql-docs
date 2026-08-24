@@ -62,12 +62,8 @@ When a stored procedure that has been signed with a certificate executes, the pe
 ### Cross database access  
 Cross-database ownership chaining does not work in cases where dynamically created SQL statements are executed. You can work around this in SQL Server by creating a stored procedure that accesses data in another database and signing the procedure with a certificate that exists in both databases. This gives users access to the database resources used by the procedure without granting them database access or permissions.  
   
-## External resources  
-For more information, see the following resources.  
-  
-|Resource|Description|  
-|--------------|-----------------|  
-|[Stored Procedures](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md) and [SQL Injection](../../../relational-databases/security/sql-injection.md) in SQL Server Books Online|Topics describe how to create stored procedures and how SQL Injection works.|  
-  
-## Next steps
+## Related content
+
+- [Stored procedures (Database Engine)](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+- [SQL injection](../../../relational-databases/security/sql-injection.md)
 - [Application security scenarios in SQL Server](application-security-scenarios-sql-server.md)

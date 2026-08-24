@@ -61,6 +61,6 @@ DROP EXTERNAL MODEL myAImodel;
 
 - [CREATE EXTERNAL MODEL (Transact-SQL)](create-external-model-transact-sql.md)
 - [ALTER EXTERNAL MODEL (Transact-SQL)](alter-external-model-transact-sql.md)
-- [sys.external_data_sources](../../relational-databases/system-catalog-views/sys-external-models-transact-sql.md)
+- [sys.external_models (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-models-transact-sql.md)
 - [AI_GENERATE_EMBEDDINGS (Transact-SQL)](../functions/ai-generate-embeddings-transact-sql.md)
 - [AI_GENERATE_CHUNKS (Transact-SQL)](../functions/ai-generate-chunks-transact-sql.md)

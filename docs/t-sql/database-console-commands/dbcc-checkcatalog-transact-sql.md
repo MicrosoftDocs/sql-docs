@@ -107,7 +107,7 @@ DBCC CHECKCATALOG (AdventureWorks2022);
 GO
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
 - [System Tables (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)

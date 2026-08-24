@@ -48,7 +48,6 @@ ms.custom: sfi-ropc-nochange
   
  For more information about how to use connection managers with the script component, see [Creating a Source with the Script Component](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) and [Creating a Destination with the Script Component](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Create Connection Managers](../../connection-manager/integration-services-ssis-connections.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Connections](../../connection-manager/integration-services-ssis-connections.md)

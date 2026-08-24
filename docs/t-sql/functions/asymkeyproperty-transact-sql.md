@@ -61,16 +61,15 @@ ASYMKEYPROPERTY(256, 'sid') AS SID ;
 GO  
 ```  
   
-## See also
-[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
-[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
-[Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
-[Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
-[SYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)
-  
-  
+## Related content
+
+- [CREATE ASYMMETRIC KEY (Transact-SQL)](../statements/create-asymmetric-key-transact-sql.md)
+- [ALTER ASYMMETRIC KEY (Transact-SQL)](../statements/alter-asymmetric-key-transact-sql.md)
+- [DROP ASYMMETRIC KEY (Transact-SQL)](../statements/drop-asymmetric-key-transact-sql.md)
+- [SIGNBYASYMKEY (Transact-SQL)](signbyasymkey-transact-sql.md)
+- [VERIFYSIGNEDBYASYMKEY (Transact-SQL)](verifysignedbyasymkey-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [sys.asymmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)
+- [Security Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+- [ASYMKEY_ID (Transact-SQL)](asymkey-id-transact-sql.md)
+- [SYMKEYPROPERTY (Transact-SQL)](symkeyproperty-transact-sql.md)

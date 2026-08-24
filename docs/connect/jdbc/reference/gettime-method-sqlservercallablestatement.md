@@ -26,8 +26,7 @@ apitype: "Assembly"
 |[getTime (java.lang.String)](../../../connect/jdbc/reference/gettime-method-java-lang-string.md)|Retrieves the value of the designated parameter as a java.sql.Time object in the Java programming language given the parameter name.|  
 |[getTime (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-java-lang-string-java-util-calendar.md)|Retrieves the value of the designated parameter as a java.sql.Time object in the Java programming language given the parameter name, using the given Calendar object.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

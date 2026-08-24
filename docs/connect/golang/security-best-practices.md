@@ -308,8 +308,8 @@ For production, use `log=1` (errors only) or `log=3` (errors + messages).
 
 ## Related content
 
-- [Encryption and certificates](encryption-certificates.md)
-- [Microsoft Entra ID authentication](entra-authentication.md)
-- [Always Encrypted](always-encrypted.md)
-- [Connection strings](connection-strings.md)
-- [Azure SQL Database](azure-sql.md)
+- [go-mssqldb encryption and certificates](encryption-certificates.md)
+- [Microsoft Entra ID authentication with go-mssqldb](entra-authentication.md)
+- [Always Encrypted with go-mssqldb](always-encrypted.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [Use go-mssqldb with Azure SQL Database](azure-sql.md)

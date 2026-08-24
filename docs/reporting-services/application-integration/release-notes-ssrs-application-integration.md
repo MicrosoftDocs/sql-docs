@@ -79,5 +79,5 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 
 ## Related content
 
-- [Getting started](integrating-reporting-services-using-reportviewer-controls-get-started.md)
+- [Get started with Report Viewer controls](integrating-reporting-services-using-reportviewer-controls-get-started.md)
 - [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -65,6 +65,6 @@ This topic lists the options that are permitted in the associative array (when u
 
 Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [DSN and Connection String Keywords and Attributes](../odbc/dsn-connection-string-attribute.md).
 
-## See Also  
+## Related content
 
-[Connecting to the Server](connecting-to-the-server.md)  
+- [Connecting to the Server](connecting-to-the-server.md)

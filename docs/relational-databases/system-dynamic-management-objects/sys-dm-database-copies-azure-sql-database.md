@@ -55,12 +55,10 @@ This view is only available in the **master** database on the [logical server](/
 
 You can use the **sys.dm_database_copies** view in the **master** database of the source or target [logical server](/azure/azure-sql/database/logical-servers) in Azure SQL Database. When the database copy completes successfully and the new database becomes ONLINE, the row in the **sys.dm_database_copies** view is removed automatically.  
 
-## Next steps
-
-Learn more about related concepts in the following articles:
+## Related content
 
 - [Copy a transactionally consistent copy of a database in Azure SQL Database](/azure/azure-sql/database/database-copy)
-- [Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
+- [Geo-replication dynamic management views and functions](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
 - [sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)](sys-dm-geo-replication-link-status-azure-sql-database.md)
 - [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)
 - [Auto-failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/auto-failover-group-sql-db)

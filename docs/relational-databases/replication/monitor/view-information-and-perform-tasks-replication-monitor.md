@@ -152,8 +152,8 @@ Replication Monitor provides the **Agents** tab, which includes information abou
 
 ## Related content
 
-- [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
-- [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
-- [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)
-- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)
-- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
+- [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)
+- [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md)
+- [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)
+- [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)
+- [Replication Agent Administration](../agents/replication-agent-administration.md)

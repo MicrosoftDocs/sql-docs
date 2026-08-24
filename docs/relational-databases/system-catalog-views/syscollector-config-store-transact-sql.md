@@ -48,14 +48,13 @@ SELECT parameter_name, parameter_value
 FROM msdb.dbo.syscollector_config_store;  
 ```  
   
-## See Also  
- [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Data Collector Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [Data Collection](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
- [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
- [sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
- [sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
- [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
-  
-  
+## Related content
+
+- [Data collector stored procedures (Transact-SQL)](../system-stored-procedures/data-collector-stored-procedures-transact-sql.md)
+- [Data Collector Views (Transact-SQL)](data-collector-views-transact-sql.md)
+- [Data collection](../data-collection/data-collection.md)
+- [sp_syscollector_enable_collector (Transact-SQL)](../system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)
+- [sp_syscollector_disable_collector (Transact-SQL)](../system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)
+- [sp_syscollector_set_warehouse_database_name (Transact-SQL)](../system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)
+- [sp_syscollector_set_warehouse_instance_name (Transact-SQL)](../system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)
+- [sp_syscollector_set_cache_window (Transact-SQL)](../system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)

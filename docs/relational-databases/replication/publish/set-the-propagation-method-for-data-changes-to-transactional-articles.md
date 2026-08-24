@@ -144,5 +144,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)
-- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
+- [Transactional Articles - Specify How Changes Are Propagated](../transactional/transactional-articles-specify-how-changes-are-propagated.md)
+- [Create a publication](create-a-publication.md)

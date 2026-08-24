@@ -34,7 +34,7 @@ The following table identifies features available by [!INCLUDE [ssnoversion-md](
 | [Client connection summary](../sql-connection-summary.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Operate with least privilege](../configure-least-privilege.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> [Express LocalDB isn't supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities)
+<sup>1</sup> [Express LocalDB isn't supported](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities).
 
 ::: moniker-end
 
@@ -61,6 +61,6 @@ The following table identifies features available by [!INCLUDE [ssnoversion-md](
 | [Client connection summary](../sql-connection-summary.md) | Yes | Yes | Yes | Yes | Yes |
 | [Operate with least privilege](../configure-least-privilege.md) | Yes | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> [Express LocalDB isn't supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities)
+<sup>1</sup> [Express LocalDB isn't supported](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities).
 
 ::: moniker-end

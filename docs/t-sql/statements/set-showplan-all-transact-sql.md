@@ -113,10 +113,8 @@ SET SHOWPLAN_ALL OFF;
 GO  
 ```  
   
-## See Also  
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)   
- [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)  
-  
-  
+## Related content
 
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET SHOWPLAN_TEXT (Transact-SQL)](set-showplan-text-transact-sql.md)
+- [SET SHOWPLAN_XML (Transact-SQL)](set-showplan-xml-transact-sql.md)

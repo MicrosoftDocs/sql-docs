@@ -45,4 +45,4 @@ Creating and editing shapefiles is a complex process that is beyond the scope of
 ## Related content
 
 - [Maps in Reporting Services mobile reports](maps-in-reporting-services-mobile-reports.md)
-- [Create and publish mobile reports with SQL Server Mobile Report Publisher](create-mobile-reports-with-sql-server-mobile-report-publisher.md)
+- [Create mobile reports with SQL Server Mobile Report Publisher](create-mobile-reports-with-sql-server-mobile-report-publisher.md)

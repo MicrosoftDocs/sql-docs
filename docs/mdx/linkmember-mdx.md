@@ -43,9 +43,8 @@ SELECT  Hierarchize
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Ascendants &#40;MDX&#41;](../mdx/ascendants-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Hierarchize (MDX)](hierarchize-mdx.md)
+- [Ascendants (MDX)](ascendants-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

@@ -60,7 +60,7 @@ EXEC sp_execute_external_script
 @script=N'library(randomForest)'
 ```
 
-## See also
+## Related content
 
-+ [Get R package information](r-package-information.md)
-+ [R tutorials](../tutorials/r-tutorials.md)
+- [Get R package information](r-package-information.md)
+- [R tutorials for SQL machine learning](../tutorials/r-tutorials.md)

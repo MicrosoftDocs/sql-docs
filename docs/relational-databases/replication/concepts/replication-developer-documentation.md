@@ -47,5 +47,5 @@ The following programming interfaces are available for developing replication ap
 
 ## Related content
 
-- [SQL Server replication](../sql-server-replication.md)
+- [SQL Server Replication](../sql-server-replication.md)
 - [Replication stored procedures (Transact-SQL)](../../system-stored-procedures/replication-stored-procedures-transact-sql.md)

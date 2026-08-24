@@ -113,5 +113,5 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)
-- [sp_dropsubscription (Transact-SQL)](sp-dropsubscription-transact-sql.md)
+- [sys.sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md)
+- [sys.sp_dropsubscription (Transact-SQL)](sp-dropsubscription-transact-sql.md)

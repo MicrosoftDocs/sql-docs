@@ -58,14 +58,10 @@ helpviewer_keywords:
 |Create a derived hierarchy.|[Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Hide or delete levels in an existing derived hierarchy.|[Hide or Delete Levels in a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
   
-## Related Content  
-  
--   [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
-  
--   [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
-  
--   [Recursive Hierarchies &#40;Master Data Services&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
-  
--   [Derived Hierarchies with Explicit Caps &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
-  
--   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)
+## Related content
+
+- [Explicit Hierarchies (Master Data Services)](explicit-hierarchies-master-data-services.md)
+- [Derived Hierarchies (Master Data Services)](derived-hierarchies-master-data-services.md)
+- [Recursive Hierarchies (Master Data Services)](recursive-hierarchies-master-data-services.md)
+- [Derived Hierarchies with Explicit Caps (Master Data Services)](derived-hierarchies-with-explicit-caps-master-data-services.md)
+- [Collections (Master Data Services)](collections-master-data-services.md)

@@ -73,6 +73,6 @@ This group of filter criteria is available when filtering the Job Activity Monit
 
   Returns the filter settings back to the default settings.
 
-## See also
+## Related content
 
 - [Monitor Job Activity](/ssms/agent/monitor-job-activity)

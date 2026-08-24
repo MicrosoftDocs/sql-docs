@@ -214,11 +214,10 @@ The variable parts of the crawl log file name are the following.
   
  For example, `SQLFT0000500008.2` is the crawl log file for a database with database ID = 5, and full-text catalog ID = 8. The 2 at the end of the file name indicates that there are two crawl log files for this database/catalog pair.  
 
-## See Also  
- [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
- [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
- [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
- [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.dm_fts_index_population (Transact-SQL)](../system-dynamic-management-objects/sys-dm-fts-index-population-transact-sql.md)
+- [Get Started with Full-Text Search](get-started-with-full-text-search.md)
+- [Create and manage full-text indexes](create-and-manage-full-text-indexes.md)
+- [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)
+- [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)

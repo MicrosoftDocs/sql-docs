@@ -78,8 +78,7 @@ After you have made these modifications to the package, when the package is run,
 ## Go to next task  
 [Step 3: Modify the Flat File connection manager](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## See also  
-[Configure a Foreach Loop container](./control-flow/foreach-loop-container.md)  
-[Use variables in packages](./integration-services-ssis-variables.md)  
-  
-  
+## Related content
+
+- [Foreach Loop Container](control-flow/foreach-loop-container.md)
+- [Integration Services (SSIS) Variables](integration-services-ssis-variables.md)

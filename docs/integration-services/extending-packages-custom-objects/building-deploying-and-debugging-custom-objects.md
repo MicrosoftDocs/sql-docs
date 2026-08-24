@@ -149,9 +149,8 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 3.  Return to the paused package and continue past the breakpoint, or click **OK** to dismiss the message box raised by the Script task, and continue package execution and debugging.  
   
-## See Also  
- [Developing Custom Objects for Integration Services](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
- [Persisting Custom Objects](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
- [Troubleshooting Tools for Package Development](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
-  
-  
+## Related content
+
+- [Developing Custom Objects for Integration Services](developing-custom-objects-for-integration-services.md)
+- [Persisting Custom Objects](persisting-custom-objects.md)
+- [Troubleshooting Tools for Package Development](../troubleshooting/troubleshooting-tools-for-package-development.md)

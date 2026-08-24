@@ -172,8 +172,8 @@ For more information, see [Export a report by using URL access](../../reporting-
 
 ## Related content
 
-- [Control page breaks, headings, columns, and rows (Report Builder and SSRS)](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)
-- [Find, view, and manage reports (Report Builder and SSRS )](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Print reports (Report Builder and SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
-- [Save reports (Report Builder)](../../reporting-services/report-builder/saving-reports-report-builder.md)
+- [Controlling page breaks, headings, columns, and rows in paginated reports (Report Builder)](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Print reports](print-reports-report-builder-and-ssrs.md)
+- [Save reports (Report Builder)](saving-reports-report-builder.md)
 - [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

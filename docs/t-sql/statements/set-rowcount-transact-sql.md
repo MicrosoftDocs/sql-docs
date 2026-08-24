@@ -115,9 +115,6 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
-## See Also  
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)

@@ -893,8 +893,8 @@ This configuration option isn't currently available in [!INCLUDE [sssql25-md](..
 
 ## Related content
 
-- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
-- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
+- [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
+- [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
 - [Databases and Files Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
 - [Server configuration options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
 - [ALTER INDEX (Transact-SQL)](alter-index-transact-sql.md)

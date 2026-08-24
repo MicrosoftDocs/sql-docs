@@ -35,4 +35,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)
+- [Add the Report Viewer web part to a web page](../report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)

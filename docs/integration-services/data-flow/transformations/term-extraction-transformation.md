@@ -244,6 +244,7 @@ helpviewer_keywords:
  **Configure Error Output**  
  Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling for rows that cause errors.  
   
-## See Also  
- [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)
+## Related content
+
+- [Integration Services error and message reference](../../integration-services-error-and-message-reference.md)
+- [Term Lookup Transformation](term-lookup-transformation.md)

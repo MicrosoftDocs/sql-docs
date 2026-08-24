@@ -37,12 +37,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**PRIVILEGE_TYPE**|**varchar(**10**)**|Type of privilege.|  
 |**IS_GRANTABLE**|**varchar(**3**)**|Specifies whether the grantee can grant permissions to others.|  
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)  
-  
+## Related content
 
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [sys.sql_modules (Transact-SQL)](../system-catalog-views/sys-sql-modules-transact-sql.md)
+- [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)
+- [sys.database_permissions (Transact-SQL)](../system-catalog-views/sys-database-permissions-transact-sql.md)
+- [sys.server_permissions (Transact-SQL)](../system-catalog-views/sys-server-permissions-transact-sql.md)

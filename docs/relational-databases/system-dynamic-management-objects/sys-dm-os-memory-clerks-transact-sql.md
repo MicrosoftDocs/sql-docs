@@ -188,11 +188,11 @@ The following table lists the memory clerk types:
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
-## See Also  
+## Related content
 
- [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](sys-dm-exec-sql-text-transact-sql.md)
+- [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_exec_query_memory_grants (Transact-SQL)](sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_requests (Transact-SQL)](sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_query_plan (Transact-SQL)](sys-dm-exec-query-plan-transact-sql.md)
+- [sys.dm_exec_sql_text (Transact-SQL)](sys-dm-exec-sql-text-transact-sql.md)

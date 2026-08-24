@@ -76,5 +76,5 @@ GO
 
 ## Related content
 
-- [System Dynamic Management Views](system-dynamic-management-objects.md)
-- [Database Related Dynamic Management Views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)

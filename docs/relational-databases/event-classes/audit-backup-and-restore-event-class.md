@@ -42,10 +42,9 @@ helpviewer_keywords:
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
 |**XactSequence**|**bigint**|Token used to describe the current transaction.|50|Yes|  
   
-## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
-  
+## Related content
+
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [Back up and restore of SQL Server databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

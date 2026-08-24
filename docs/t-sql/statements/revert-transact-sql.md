@@ -143,13 +143,12 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## See Also  
- [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
- [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)  
-  
-  
+## Related content
+
+- [EXECUTE AS (Transact-SQL)](execute-as-transact-sql.md)
+- [EXECUTE AS clause (Transact-SQL)](execute-as-clause-transact-sql.md)
+- [EXECUTE (Transact-SQL)](../language-elements/execute-transact-sql.md)
+- [SUSER_NAME (Transact-SQL)](../functions/suser-name-transact-sql.md)
+- [USER_NAME (Transact-SQL)](../functions/user-name-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [CREATE USER (Transact-SQL)](create-user-transact-sql.md)

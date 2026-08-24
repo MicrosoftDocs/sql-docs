@@ -49,5 +49,5 @@ If folders used by Report Builder include custom files, the folders and the file
 
 ## Related content
 
-- [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)
+- [Install Microsoft Report Builder](install-report-builder.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

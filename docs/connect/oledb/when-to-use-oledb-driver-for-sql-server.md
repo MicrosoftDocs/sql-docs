@@ -37,6 +37,5 @@ For existing OLE DB applications, the primary issue is whether you need to acces
   
 ## Related content
 
-- [OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)
-- [OLE DB How-to Topics](ole-db-how-to/ole-db-how-to-topics.md)  
-  
+- [Microsoft OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)
+- [OLE DB How-to articles](ole-db-how-to/ole-db-how-to-topics.md)

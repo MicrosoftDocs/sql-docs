@@ -96,4 +96,3 @@ Sánchez    -1                 NULL
 
 - [Cursor Functions (Transact-SQL)](cursor-functions-transact-sql.md)
 - [OPEN (Transact-SQL)](../language-elements/open-transact-sql.md)
-

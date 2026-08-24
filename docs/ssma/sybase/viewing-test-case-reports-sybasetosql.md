@@ -38,7 +38,7 @@ A comparison of results (success or failure) and the mismatches that SSMA Tester
 **Finalization**  
 Shows the status of execution as **Success** or **Failure**.  
   
-## See Also  
-[Running Test Cases &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testing Migrated Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
-  
+## Related content
+
+- [Running Test Cases](running-test-cases-sybasetosql.md)
+- [Testing Migrated Database Objects](testing-migrated-database-objects-sybasetosql.md)

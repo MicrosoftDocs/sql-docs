@@ -48,8 +48,8 @@ helpviewer_keywords:
 ## Related Tasks  
  For information about how to set properties of the component in the [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-## See Also  
- [Add or Delete a Task or a Container in a Control Flow](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Connect Tasks and Containers by Using a Default Precedence Constraint](./precedence-constraints.md)   
- [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)  
-  
+## Related content
+
+- [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md)
+- [Precedence Constraints](precedence-constraints.md)
+- [Integration Services Containers](integration-services-containers.md)

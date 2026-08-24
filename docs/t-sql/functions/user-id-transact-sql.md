@@ -61,11 +61,9 @@ SELECT USER_ID('Harold');
 GO  
 ```  
   
-## See Also  
- [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [DATABASE_PRINCIPAL_ID &#40;Transact-SQL&#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
-  
+## Related content
 
+- [USER_NAME (Transact-SQL)](user-name-transact-sql.md)
+- [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
+- [DATABASE_PRINCIPAL_ID (Transact-SQL)](database-principal-id-transact-sql.md)
+- [Security Functions (Transact-SQL)](security-functions-transact-sql.md)

@@ -36,7 +36,6 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |lock_escalation_desc|**nvarchar(60)**|A text description of the lock_escalation option.|Always ꞌAUTOꞌ.|  
 |pdw_node_id|**int**|Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node.|NOT NULL|  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)

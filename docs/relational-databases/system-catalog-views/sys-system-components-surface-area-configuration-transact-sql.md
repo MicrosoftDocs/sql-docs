@@ -35,9 +35,8 @@ dev_langs:
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
-  
+## Related content
+
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md)

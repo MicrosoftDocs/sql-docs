@@ -44,9 +44,8 @@ public java.lang.String getString(java.lang.String columnName)
   
  User defined types are returned as hexadecimal **String** values.  
   
-## See Also  
- [getString Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [getString Method (SQLServerResultSet)](getstring-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

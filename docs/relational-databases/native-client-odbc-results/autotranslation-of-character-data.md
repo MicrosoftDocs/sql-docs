@@ -51,8 +51,7 @@ helpviewer_keywords:
   
  Data always must be converted when moved from character to Unicode.  
   
-## See Also  
- [Processing Results &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
-  
-  
+## Related content
+
+- [Processing Results (ODBC)](processing-results-odbc.md)
+- [Collation and Unicode support](../collations/collation-and-unicode-support.md)

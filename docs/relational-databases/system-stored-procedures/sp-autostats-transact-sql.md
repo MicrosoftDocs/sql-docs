@@ -135,7 +135,6 @@ GO
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 - [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)
-- [sp_createstats (Transact-SQL)](sp-createstats-transact-sql.md)
+- [sys.sp_createstats (Transact-SQL)](sp-createstats-transact-sql.md)
 - [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

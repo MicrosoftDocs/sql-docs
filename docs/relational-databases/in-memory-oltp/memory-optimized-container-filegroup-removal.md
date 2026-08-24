@@ -145,7 +145,7 @@ FROM sys.dm_db_xtp_undeploy_status;
 
 ## Related content
 
-- [sys.dm_db_xtp_undeploy_status](../system-dynamic-management-views/sys-dm-db-xtp-undeploy-status.md)
+- [sys.dm_db_xtp_undeploy_status (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-xtp-undeploy-status.md)
 - [In-Memory OLTP overview and usage scenarios](overview-and-usage-scenarios.md)
 - [The memory-optimized filegroup](the-memory-optimized-filegroup.md)
 - [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)

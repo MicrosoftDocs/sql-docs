@@ -414,6 +414,6 @@ FROM text_embeddings;
 - [ALTER EXTERNAL MODEL (Transact-SQL)](../statements/alter-external-model-transact-sql.md)
 - [DROP EXTERNAL MODEL (Transact-SQL)](../statements/drop-external-model-transact-sql.md)
 - [AI_GENERATE_CHUNKS (Transact-SQL)](ai-generate-chunks-transact-sql.md)
-- [sp_invoke_external_rest_endpoint](../../relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md)
+- [sys.sp_invoke_external_rest_endpoint (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md)
 - [Create and deploy an Azure OpenAI in Azure AI Foundry Models resource](/azure/ai-services/openai/how-to/create-resource)
 - [Connect your SQL Server to Azure Arc](../../sql-server/azure-arc/connect.md#connect-your-sql-server-to-azure-arc)

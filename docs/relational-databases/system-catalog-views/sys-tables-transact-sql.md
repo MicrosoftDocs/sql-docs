@@ -128,10 +128,9 @@ WHERE T1.temporal_type = 2;
 
 ## Related content
 
-- [Object Catalog Views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
 - [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
 - [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
-

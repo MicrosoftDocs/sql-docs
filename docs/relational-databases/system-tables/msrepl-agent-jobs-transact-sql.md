@@ -56,7 +56,7 @@ The `MSrepl_agent_jobs` table contains information about Replication agent jobs 
 | **active_end_time** | **int** |
 | **agent_id** | **int** |
 
-## See also
+## Related content
 
-- [Replication Tables (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)
-- [Replication Views (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

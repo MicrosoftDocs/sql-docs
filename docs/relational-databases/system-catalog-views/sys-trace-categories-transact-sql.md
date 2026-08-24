@@ -36,12 +36,11 @@ dev_langs:
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [sys.traces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
- [sys.trace_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
- [sys.trace_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
- [sys.trace_event_bindings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   
- [sys.trace_subclass_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
-  
-  
+## Related content
+
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [sys.traces (Transact-SQL)](sys-traces-transact-sql.md)
+- [sys.trace_columns (Transact-SQL)](sys-trace-columns-transact-sql.md)
+- [sys.trace_events (Transact-SQL)](sys-trace-events-transact-sql.md)
+- [sys.trace_event_bindings (Transact-SQL)](sys-trace-event-bindings-transact-sql.md)
+- [sys.trace_subclass_values (Transact-SQL)](sys-trace-subclass-values-transact-sql.md)

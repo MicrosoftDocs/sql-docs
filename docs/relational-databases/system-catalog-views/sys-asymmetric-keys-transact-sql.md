@@ -47,11 +47,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-  
-  
+## Related content
+
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [Extensible Key Management (EKM)](../security/encryption/extensible-key-management-ekm.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Encryption hierarchy](../security/encryption/encryption-hierarchy.md)
+- [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)

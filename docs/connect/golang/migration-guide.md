@@ -394,9 +394,9 @@ return tx.Commit()
 
 ## Related content
 
-- [Quickstart](quickstart.md)
-- [Installation](installation.md)
-- [Connection strings](connection-strings.md)
-- [Data type mappings](data-type-mappings.md)
-- [Bulk operations](bulk-operations.md)
-- [Table-valued parameters](table-valued-parameters.md)
+- [Quickstart: Connect and query with go-mssqldb](quickstart.md)
+- [Install the go-mssqldb driver](installation.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [go-mssqldb data type mappings](data-type-mappings.md)
+- [Bulk operations with go-mssqldb](bulk-operations.md)
+- [Table-valued parameters with go-mssqldb](table-valued-parameters.md)

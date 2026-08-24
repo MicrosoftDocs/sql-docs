@@ -36,8 +36,6 @@ helpviewer_keywords:
   
  If any other comparison is attempted, DB_E_BADCOMPAREOP is returned. This is consistent with the OLE DB specification.  
   
-## See Also  
- [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
-  
-  
+## Related content
 
+- [Date and Time Improvements in OLE DB](date-and-time-improvements-ole-db.md)

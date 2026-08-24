@@ -149,12 +149,7 @@ The following table defines the accepted formats and rules for inserting literal
 |Money literal|Format: $nnnnnn.nnnnn<br /><br />Example: $123456.99|The currency symbol is not inserted with the value. To insert the currency symbol, insert the value as a string literal. This will match the format of the **dwloader** tool, which treats every literal as a string literal.<br /><br />Commas are not allowed.<br /><br />If the number of digits after the decimal point exceed 2, the value is rounded up to the nearest value. For example, the value 123.946789 is inserted as 123.95.<br /><br />Only the default style 0 (no commas and 2 digits after the decimal point) is allowed when using the CONVERT function to insert money literals.|  
 
   
-## See Also  
- 
-[Distributed data](/azure/synapse-analytics/sql-data-warehouse/massively-parallel-processing-mpp-architecture)  
-[INSERT](../t-sql/statements/insert-transact-sql.md)  
-  
-<!-- MISSING LINKS
-[Grant permissions to load data](grant-permissions-to-load-data.md)  
-[Metadata query examples](metadata-query-examples.md) 
--->
+## Related content
+
+- [Distributed data](/azure/synapse-analytics/sql-data-warehouse/massively-parallel-processing-mpp-architecture)
+- [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md)

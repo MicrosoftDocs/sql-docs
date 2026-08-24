@@ -45,7 +45,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
     0, NULL, 0);  
 ```  
   
-## See Also  
- [SQLTables Function](../../odbc/reference/syntax/sqltables-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLTables Function](../../odbc/reference/syntax/sqltables-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

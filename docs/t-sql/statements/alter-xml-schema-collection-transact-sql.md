@@ -251,11 +251,10 @@ ON     sys.xml_schema_collections.xml_collection_id =
 WHERE  sys.xml_schema_namespaces.name='';  
 ```  
   
-## See Also  
- [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Requirements and Limitations for XML Schema Collections on the Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
-  
-  
+## Related content
+
+- [CREATE XML SCHEMA COLLECTION (Transact-SQL)](create-xml-schema-collection-transact-sql.md)
+- [DROP XML SCHEMA COLLECTION (Transact-SQL)](drop-xml-schema-collection-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [Compare typed XML to untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
+- [Requirements and limitations for XML schema collections on the server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)

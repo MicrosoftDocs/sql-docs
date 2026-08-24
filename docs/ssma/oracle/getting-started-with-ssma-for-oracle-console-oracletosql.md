@@ -60,6 +60,6 @@ Color-interpretation of the console output in the following table:
 |Green|Prompt for user-input|  
 |Cyan|Start, Finish and Result of an operation|  
   
-## See Also  
-[Installing SSMA for Oracle](installing-ssma-for-oracle-oracletosql.md)  
-  
+## Related content
+
+- [Install SSMA for Oracle](installing-ssma-for-oracle-oracletosql.md)

@@ -43,6 +43,5 @@ Displays one row for each transaction that is committed for a table that is trac
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [About Change Tracking (SQL Server)](../track-changes/about-change-tracking-sql-server.md)
-

@@ -90,4 +90,4 @@ Only the following personnel have the authority to execute `sp_deletetracertoken
 ## Related content
 
 - [Measure Latency and Validate Connections for Transactional Replication](../replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [sp_helptracertokenhistory (Transact-SQL)](sp-helptracertokenhistory-transact-sql.md)
+- [sys.sp_helptracertokenhistory (Transact-SQL)](sp-helptracertokenhistory-transact-sql.md)

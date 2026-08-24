@@ -67,7 +67,6 @@ Reports an issue that was found by the **ssbdiagnose** utility. The **ssbdiagnos
 <Issue type="Diagnosis" code="1102" server="TestComputer" database="TargetDB" object="TargetDB">The master key was not found</diagnostic>  
 ```  
   
-## See Also  
- [ssbdiagnose Utility &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
-  
-  
+## Related content
+
+- [ssbdiagnose utility (Service Broker)](ssbdiagnose-utility-service-broker.md)

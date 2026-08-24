@@ -55,5 +55,6 @@ command.ExecuteReader();
 // SQL Server queue to see if you have a new message.
 ```
 
-## Next steps
+## Related content
+
 - [Query notifications in SQL Server](query-notifications-sql-server.md)

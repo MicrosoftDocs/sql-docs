@@ -72,11 +72,10 @@ The following example assumes that `xp_sample` is implemented as `xp_sample.dll`
 DBCC xp_sample (FREE);
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [Execution Characteristics of Extended Stored Procedures](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
-- [sp_addextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)
-- [sp_dropextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)
-- [sp_helpextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)
-- [Unloading an Extended Stored Procedure DLL](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [Programming Database Engine extended stored procedures](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
+- [sys.sp_addextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)
+- [sys.sp_dropextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)
+- [sys.sp_helpextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)

@@ -170,7 +170,8 @@ int main() {
 |Canceling statement processing|[SQLCancel Function](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Setting a cursor name|[SQLSetCursorName Function](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)   
- [Sample ODBC Program](../../../odbc/reference/sample-odbc-program.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)
+- [Sample ODBC Program](../sample-odbc-program.md)

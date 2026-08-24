@@ -169,7 +169,7 @@ helpviewer_keywords:
  **Token delimiters**  
  The transformation provides a default set of delimiters for tokenizing data, but you can add or remove delimiters as needed by editing the list.  
   
-## See Also  
- [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Fuzzy Lookup Transformation](fuzzy-lookup-transformation.md)
+- [Integration Services Transformations](integration-services-transformations.md)

@@ -22,7 +22,6 @@ helpviewer_keywords:
 > [!NOTE]  
 >  The LEN function includes leading and trailing blanks in its count.  
   
-## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis), on pragmaticworks.com  
-  
-  
+## Related content
+
+- [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis)

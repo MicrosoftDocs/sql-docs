@@ -33,7 +33,6 @@ object.SetEnable()
   
 ## Remarks  
   
-## See Also  
- [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
-  
-  
+## Related content
+
+- [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)

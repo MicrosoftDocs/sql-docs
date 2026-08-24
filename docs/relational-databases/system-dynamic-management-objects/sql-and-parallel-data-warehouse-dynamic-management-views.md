@@ -98,5 +98,6 @@ This topic lists the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-
   
  [sys.dm_pdw_query_stats_xe_file &#40;Transact-SQL&#41;](sys-dm-pdw-query-stats-xe-file-transact-sql.md)  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)

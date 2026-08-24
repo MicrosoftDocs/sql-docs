@@ -85,7 +85,6 @@ $c.Create("pGFD4bb925DGvbd2439587y")
   
 ```  
   
-## See Also  
- [Using Encryption Keys](#using-encryption)  
-  
-  
+## Related content
+
+- [Using Encryption Keys](#using-encryption)

@@ -28,9 +28,9 @@ By default, the HOST_NAME() function returns the name of the computer connecting
   
 ## Related content
 
-- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
-- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
-- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)
-- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
-- [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Create a Pull Subscription](create-a-pull-subscription.md)
+- [Create a push subscription](create-a-push-subscription.md)
+- [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)
+- [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)
+- [HOST_NAME (Transact-SQL)](../../t-sql/functions/host-name-transact-sql.md)
+- [Subscribe to Publications](subscribe-to-publications.md)

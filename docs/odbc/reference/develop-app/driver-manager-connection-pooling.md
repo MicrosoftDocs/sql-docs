@@ -74,7 +74,8 @@ Connection pooling enables an application to use a connection from a pool of con
 ## Driver-Aware Connection Pooling  
  Beginning in Windows 8, an ODBC driver can use connections in the pool more efficiently. For more information, see [Driver-Aware Connection Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
   
-## See Also  
- [Connecting to a Data Source or Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
- [Developing an ODBC Driver](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Pooling in the Microsoft Data Access Components](/previous-versions/ms810829(v=msdn.10))
+## Related content
+
+- [Connecting to a Data Source or Driver](connecting-to-a-data-source-or-driver.md)
+- [Developing an ODBC Driver](../develop-driver/developing-an-odbc-driver.md)
+- [Pooling in the Microsoft Data Access Components](/previous-versions/ms810829(v=msdn.10))

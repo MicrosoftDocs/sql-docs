@@ -557,6 +557,6 @@ cursor.execute("""
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
-- [JSON data](json-data.md)
-- [Microsoft SQL XML documentation](../../../relational-databases/xml/xml-data-sql-server.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Use JSON data with mssql-python](json-data.md)
+- [XML data (SQL Server)](../../../relational-databases/xml/xml-data-sql-server.md)

@@ -602,15 +602,15 @@ AZ Login
 #Input parameters
 $subscriptionId="<subscriptionId>" 
 $tenantId="<tenantId>" 
-$machineName="<machineName>"  # hostname 
-$instanceName="<instanceName>"  # SQL Server is define as `machine_name\instance_name` 
+$machineName="<machineName>"  # hostname 
+$instanceName="<instanceName>"  # SQL Server is define as `machine_name\instance_name` 
 $resourceGroupName="<resourceGroupName>" 
 $keyVaultName="<keyVaultName>"  
 $certSubjectName="<certSubjectName>" # Your existing certificate name
 $applicationName="<applicationName>" # Your existing application name 
 $adminAccountName="<adminAccountName>"
-$adminAccountSid="<adminID>"  # Use object ID for the Azure AD user and group, or client ID for the Azure AD application 
-$adminAccountType= 0  # 0 – for Azure AD user and application, 1 for Azure AD group 
+$adminAccountSid="<adminID>"  # Use object ID for the Azure AD user and group, or client ID for the Azure AD application 
+$adminAccountType= 0  # 0 - for Azure AD user and application, 1 for Azure AD group 
 
 # Helper function
 #
@@ -1135,15 +1135,15 @@ Connect-AzAccount
 
 $subscriptionId="<subscriptionId>" 
 $tenantId="<tenantId>" 
-$machineName="<machineName>"  # hostname 
-$instanceName="<instanceName>"  # SQL Server is define as `machine_name\instance_name` 
+$machineName="<machineName>"  # hostname 
+$instanceName="<instanceName>"  # SQL Server is define as `machine_name\instance_name` 
 $resourceGroupName="<resourceGroupName>" 
 $keyVaultName="<keyVaultName>"  
 $certSubjectName="<certSubjectName>" # Your existing certificate name
 $applicationName="<applicationName>" # Your existing application name 
 $adminAccountName="<adminAccountName>"
-$adminAccountSid="<adminID>"  # Use object ID for the Microsoft Entra user and group, or client ID for the Microsoft Entra application 
-$adminAccountType= 0  # 0 – for Microsoft Entra user and application, 1 for Microsoft Entra group 
+$adminAccountSid="<adminID>"  # Use object ID for the Microsoft Entra user and group, or client ID for the Microsoft Entra application 
+$adminAccountType= 0  # 0 - for Microsoft Entra user and application, 1 for Microsoft Entra group 
 
 $keyVault = Get-AzKeyVault -VaultName $keyVaultName
 if (!$keyVault)
@@ -1362,5 +1362,5 @@ Microsoft Entra authentication is now set up for your SQL Server that is connect
 
 - [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md)
 - [Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-overview.md)
-- [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Tutorial: Set up Microsoft Entra authentication for SQL Server with app registration](azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Linked server for SQL Server with Microsoft Entra authentication](azure-ad-authentication-sql-server-linked-server.md)

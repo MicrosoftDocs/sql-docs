@@ -110,10 +110,8 @@ Metadata about the ASE databases is not automatically refreshed. The metadata in
   
 4. If you are asked to check the current object, click **Yes**.  
   
-## Next Step  
-  
-- The next step in the migration process is to [Connect to an instance of SQL Server](connecting-to-sql-server-sybasetosql.md) / [Connecting to an instance of SQL Azure](connecting-to-azure-sql-db-sybasetosql.md)  
-  
-## See Also
+## Related content
 
-[Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Connecting to SQL Server](connecting-to-sql-server-sybasetosql.md)
+- [Connecting to Azure SQL Database](connecting-to-azure-sql-db-sybasetosql.md)

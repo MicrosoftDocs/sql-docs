@@ -103,7 +103,7 @@ Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 
 ## Related content
 
-- [Export reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
-- [Interactive sort, document maps, and links (Report Builder)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
-- [Tables, matrices, and lists (Report Builder)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Charts (Report Builder)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](export-reports-report-builder-and-ssrs.md)
+- [Interactive sort, document maps, and links in a paginated report (Report Builder)](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](../report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](../report-design/charts-report-builder-and-ssrs.md)

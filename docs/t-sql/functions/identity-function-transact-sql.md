@@ -106,7 +106,7 @@ GO
 ## Related content
 
 - [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
-- [&#x40;&#x40;IDENTITY (Transact-SQL)](identity-transact-sql.md)
+- [@@IDENTITY (Transact-SQL)](identity-transact-sql.md)
 - [CREATE TABLE (Transact-SQL) IDENTITY (Property)](../statements/create-table-transact-sql-identity-property.md)
 - [SELECT @local_variable (Transact-SQL)](../language-elements/select-local-variable-transact-sql.md)
 - [DBCC CHECKIDENT (Transact-SQL)](../database-console-commands/dbcc-checkident-transact-sql.md)

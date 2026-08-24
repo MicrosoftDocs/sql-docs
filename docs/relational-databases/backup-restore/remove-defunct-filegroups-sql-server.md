@@ -87,13 +87,12 @@ GO
   
 ```  
   
-## See Also  
- [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)   
- [Deferred Transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)   
- [File Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [File Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
- [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
- [Restore Pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
- [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
-  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+- [Deferred Transactions (SQL Server)](deferred-transactions-sql-server.md)
+- [File Restores (Full Recovery Model)](file-restores-full-recovery-model.md)
+- [File Restores (Simple Recovery Model)](file-restores-simple-recovery-model.md)
+- [Online Restore (SQL Server)](online-restore-sql-server.md)
+- [Restore Pages (SQL Server)](restore-pages-sql-server.md)
+- [Piecemeal Restores (SQL Server)](piecemeal-restores-sql-server.md)

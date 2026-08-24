@@ -239,7 +239,7 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 - [View and Modify Article Properties](../replication/publish/view-and-modify-article-properties.md)
 - [Change Publication and Article Properties](../replication/publish/change-publication-and-article-properties.md)
-- [sp_addmergearticle (Transact-SQL)](sp-addmergearticle-transact-sql.md)
-- [sp_dropmergearticle (Transact-SQL)](sp-dropmergearticle-transact-sql.md)
-- [sp_helpmergearticle (Transact-SQL)](sp-helpmergearticle-transact-sql.md)
+- [sys.sp_addmergearticle (Transact-SQL)](sp-addmergearticle-transact-sql.md)
+- [sys.sp_dropmergearticle (Transact-SQL)](sp-dropmergearticle-transact-sql.md)
+- [sys.sp_helpmergearticle (Transact-SQL)](sp-helpmergearticle-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

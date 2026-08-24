@@ -187,12 +187,11 @@ RESTORE LOG MyDatabase
 GO  
 ```  
   
-## See Also  
- [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
- [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
- [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
- [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
-  
+## Related content
+
+- [Restore a Database Backup Using SSMS](restore-a-database-backup-using-ssms.md)
+- [Back Up Files and Filegroups](back-up-files-and-filegroups-sql-server.md)
+- [Create a full database backup](create-a-full-database-backup-sql-server.md)
+- [Back up a transaction log](back-up-a-transaction-log-sql-server.md)
+- [Restore a Transaction Log Backup (SQL Server)](restore-a-transaction-log-backup-sql-server.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

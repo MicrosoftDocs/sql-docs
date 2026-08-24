@@ -130,5 +130,5 @@ This page reports the success or failure of the delete operation.
 - [Data-tier applications (DAC) overview](overview.md)
 - [Deploy a data-tier application](deploy-data-tier-application.md)
 - [Register a database as a DAC](register-database-as-dac.md)
-- [Back Up and Restore of SQL Server Databases](../../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Back up and restore of SQL Server databases](../../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 - [Database detach and attach (SQL Server)](../../../../relational-databases/databases/database-detach-and-attach-sql-server.md)

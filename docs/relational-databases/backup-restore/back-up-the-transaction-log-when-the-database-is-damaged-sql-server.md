@@ -143,14 +143,13 @@ BACKUP LOG AdventureWorks2022
 GO  
 ```  
   
-## See Also  
- [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
- [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Back Up Database &#40;Backup Options Page&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)   
- [Back Up Database &#40;General Page&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)   
- [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [File Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
- [File Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)  
-  
-  
+## Related content
+
+- [Restore a Transaction Log Backup (SQL Server)](restore-a-transaction-log-backup-sql-server.md)
+- [Restore a SQL Server Database to a Point in Time (Full Recovery Model)](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)
+- [Back Up Database (Backup Options Page)](back-up-database-backup-options-page.md)
+- [Back Up Database (General Page)](back-up-database-general-page.md)
+- [Apply Transaction Log Backups (SQL Server)](apply-transaction-log-backups-sql-server.md)
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [File Restores (Simple Recovery Model)](file-restores-simple-recovery-model.md)
+- [File Restores (Full Recovery Model)](file-restores-full-recovery-model.md)

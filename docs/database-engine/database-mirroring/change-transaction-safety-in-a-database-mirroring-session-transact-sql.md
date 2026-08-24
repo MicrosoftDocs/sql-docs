@@ -40,8 +40,7 @@ helpviewer_keywords:
   
      where *\<database>* is the mirrored database.  
   
-## See Also  
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
-  
-  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL) Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
+- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)

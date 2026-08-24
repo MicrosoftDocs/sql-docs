@@ -26,7 +26,7 @@ See [features and limitation](../relational-databases/polybase/polybase-versione
 > [!NOTE] 
 > The rest of the PolyBase related articles describe how to configure PolyBase on APS 2016 (AU6) and later.
 
-## See Also
-- [Hadoop](polybase-configure-hadoop.md)
-- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
-<!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
+## Related content
+
+- [Configure PolyBase in Analytics Platform System (PDW) to access external data in Hadoop](polybase-configure-hadoop.md)
+- [Configure PolyBase to access external data in Azure Blob Storage](polybase-configure-azure-blob-storage.md)

@@ -124,7 +124,7 @@ The permissions required to change the authentication mode are [sysadmin](../../
 
 ## Related content
 
-- [Strong Passwords](../../relational-databases/security/strong-passwords.md)
+- [Strong passwords](../../relational-databases/security/strong-passwords.md)
 - [Security considerations for a SQL Server installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
 - [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)
 - [Connect to SQL Server when system administrators are locked out](connect-to-sql-server-when-system-administrators-are-locked-out.md)

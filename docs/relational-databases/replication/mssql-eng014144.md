@@ -39,5 +39,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 
 ## Related content
 
-- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)
+- [Subscribe to Publications](subscribe-to-publications.md)

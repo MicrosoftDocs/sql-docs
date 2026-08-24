@@ -82,12 +82,13 @@ helpviewer_keywords:
   
 -   [Restore.SqlRestore Method (Server) (SMO)](/dotnet/api/microsoft.sqlserver.management.smo.restore.sqlrestore)   
   
-## See Also  
- [Backup and Restore: Interoperability and Coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
- [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
- [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Complete Database Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
- [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
+## Related content
+
+- [Backup and Restore: Interoperability and Coexistence (SQL Server)](backup-and-restore-interoperability-and-coexistence-sql-server.md)
+- [Differential backups (SQL Server)](differential-backups-sql-server.md)
+- [Full File Backups (SQL Server)](full-file-backups-sql-server.md)
+- [Backup overview (SQL Server)](backup-overview-sql-server.md)
+- [Restore and recovery overview (SQL Server)](restore-and-recovery-overview-sql-server.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Complete Database Restores (Simple Recovery Model)](complete-database-restores-simple-recovery-model.md)
+- [Piecemeal Restores (SQL Server)](piecemeal-restores-sql-server.md)

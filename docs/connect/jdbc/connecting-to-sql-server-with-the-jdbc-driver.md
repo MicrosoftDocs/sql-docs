@@ -37,6 +37,6 @@ The articles in this section describe how to make and work with a connection to 
 |[Using Kerberos Integrated Authentication to Connect to SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Discusses a Java implementation for applications to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using Kerberos integrated authentication.|
 |[Connecting to an Azure SQL database](connecting-to-an-azure-sql-database.md)|Discusses connectivity issues for databases on Azure SQL.|
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

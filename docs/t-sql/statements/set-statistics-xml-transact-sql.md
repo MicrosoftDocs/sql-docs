@@ -86,7 +86,7 @@ SET STATISTICS XML OFF;
 GO  
 ```  
   
-## See Also  
- [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
- [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)  
+## Related content
 
+- [SET SHOWPLAN_XML (Transact-SQL)](set-showplan-xml-transact-sql.md)
+- [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md)

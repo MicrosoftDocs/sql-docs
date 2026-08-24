@@ -410,8 +410,7 @@ The following sample XML document is referenced in the examples in this article:
 </a>
 ```
 
-## See also
+## Related content
 
-- [Selective XML Indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)
-- [Create, Alter, and Drop Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)
-
+- [Selective XML indexes (SXI)](selective-xml-indexes-sxi.md)
+- [Create, alter, and drop selective XML indexes](create-alter-and-drop-selective-xml-indexes.md)

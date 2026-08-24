@@ -20,8 +20,7 @@ ms.custom: dmx
 |[&#60;source data query&#62;](../dmx/source-data-query.md)|Queries data sources for both **INSERT INTO** and **SELECT** statements.|  
 |[UPDATE &#40;DMX&#41;](../dmx/update-dmx.md)|Changes the content in the mining model.|  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
-  
-  
+## Related content
+
+- [DMX Statements - Data Definition](dmx-statements-data-definition.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)

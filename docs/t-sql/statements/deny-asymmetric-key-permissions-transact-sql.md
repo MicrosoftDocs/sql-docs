@@ -102,12 +102,11 @@ DENY { permission  [ ,...n ] }
 ## Permissions  
  Requires CONTROL permission on the asymmetric key. If the AS clause is used, the specified principal must own the asymmetric key.  
   
-## See Also  
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
+
+- [DENY (Transact-SQL)](deny-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
+- [CREATE CERTIFICATE (Transact-SQL)](create-certificate-transact-sql.md)
+- [CREATE ASYMMETRIC KEY (Transact-SQL)](create-asymmetric-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

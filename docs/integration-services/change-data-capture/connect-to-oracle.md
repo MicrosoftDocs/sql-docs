@@ -22,7 +22,6 @@ f1_keywords:
   
 -   **Oracle Authentication**: If you select this option, you must type the **User Name** and **Password** for the user in the Oracle database you are connecting to.  
   
-## See Also  
- [Add Tables to a CDC Instance](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
-  
-  
+## Related content
+
+- [Add Tables to a CDC Instance](add-tables-to-a-cdc-instance.md)

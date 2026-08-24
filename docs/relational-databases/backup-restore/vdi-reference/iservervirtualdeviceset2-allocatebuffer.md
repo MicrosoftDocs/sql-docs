@@ -45,6 +45,6 @@ This specifies the alignment boundary for the buffer. For example, a value of 40
 | VD_E_MEMORY | An out of memory condition has occurred. |
 | VD_E_INVALID | A parameter was invalid. |
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

@@ -133,7 +133,7 @@ rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver
   
 ## Related content
 
-- [Run a Reporting Services script file](../../reporting-services/tools/run-a-reporting-services-script-file.md)
-- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)
-- [Script with the rs.exe utility and the web service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)
-- [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)
+- [Run a Reporting Services script file](run-a-reporting-services-script-file.md)
+- [Script deployment and administrative tasks](script-deployment-and-administrative-tasks.md)
+- [Script with the rs.exe utility and the web service](script-with-the-rs-exe-utility-and-the-web-service.md)
+- [Report Server command prompt utilities (SSRS)](report-server-command-prompt-utilities-ssrs.md)

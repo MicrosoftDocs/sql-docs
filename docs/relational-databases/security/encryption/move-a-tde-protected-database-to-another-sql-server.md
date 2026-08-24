@@ -334,4 +334,4 @@ For more information, see:
 
 - [Database detach and attach (SQL Server)](../../databases/database-detach-and-attach-sql-server.md)
 - [Transparent data encryption for SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
-- [sp_detach_db (Transact-SQL)](../../system-stored-procedures/sp-detach-db-transact-sql.md)
+- [sys.sp_detach_db (Transact-SQL)](../../system-stored-procedures/sp-detach-db-transact-sql.md)

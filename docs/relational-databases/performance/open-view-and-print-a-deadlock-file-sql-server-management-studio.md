@@ -38,8 +38,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 4. On the **File** menu, select **Print**.  
   
-## See also  
- [Save deadlock graphs &#40;SQL Server Profiler&#41;](../../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)  
-  
-  
+## Related content
 
+- [Save deadlock graphs (SQL Server Profiler)](save-deadlock-graphs-sql-server-profiler.md)

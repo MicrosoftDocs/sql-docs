@@ -68,7 +68,6 @@ HRESULT Abort(
   
  Calling **ISSAsynchStatus::Abort** and passing a value for *eOperation* other than DBASYNCHOP_OPEN returns S_OK. This does not imply that the operation completed or was canceled.  
   
-## See Also  
- [Performing Asynchronous Operations](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
-  
-  
+## Related content
+
+- [Performing Asynchronous Operations in SQL Server Native Client](../native-client/features/performing-asynchronous-operations.md)

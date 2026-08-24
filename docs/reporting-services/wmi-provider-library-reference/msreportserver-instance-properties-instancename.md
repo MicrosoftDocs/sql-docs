@@ -37,4 +37,4 @@ public string InstanceName;
   
 ## Related content
 
-- [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)
+- [MSReportServer_Instance members](msreportserver-instance-members.md)

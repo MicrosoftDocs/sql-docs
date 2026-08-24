@@ -74,11 +74,10 @@ CLOSE Employee_Cursor;
 DEALLOCATE Employee_Cursor;  
 ```  
   
-## See Also  
- [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
-  
-  
+## Related content
+
+- [CLOSE (Transact-SQL)](close-transact-sql.md)
+- [@@CURSOR_ROWS (Transact-SQL)](../functions/cursor-rows-transact-sql.md)
+- [DEALLOCATE (Transact-SQL)](deallocate-transact-sql.md)
+- [DECLARE CURSOR (Transact-SQL)](declare-cursor-transact-sql.md)
+- [FETCH (Transact-SQL)](fetch-transact-sql.md)

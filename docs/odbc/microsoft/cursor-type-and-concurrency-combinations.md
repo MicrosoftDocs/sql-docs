@@ -30,5 +30,6 @@ helpviewer_keywords:
   
  <sup>[2]</sup> SQL_CONCUR_LOCK is supported only when the SQL_AUTOCOMMIT connection option is set to SQL_AUTOCOMMIT_OFF.  
   
-## See Also  
- [Connect Options](../../odbc/microsoft/connect-options.md)
+## Related content
+
+- [Connect Options](connect-options.md)

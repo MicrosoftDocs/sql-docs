@@ -38,8 +38,7 @@ public void releaseSavepoint(java.sql.Savepoint savepoint)
 ## Remarks  
  This releaseSavepoint method is specified by the releaseSavepoint method in the java.sql.Connection interface.  
   
-## See Also  
- [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnection Members](sqlserverconnection-members.md)
+- [SQLServerConnection Class](sqlserverconnection-class.md)

@@ -72,9 +72,6 @@ SELECT SIN(45.175643);
 0.929607
 ```  
   
-## See Also  
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)

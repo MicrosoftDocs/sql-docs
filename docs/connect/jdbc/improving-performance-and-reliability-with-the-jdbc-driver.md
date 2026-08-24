@@ -34,6 +34,6 @@ The articles in this section describe various techniques for improving applicati
 |[Not sending String parameters as Unicode](setting-the-connection-properties.md)|When you're working with **CHAR**, **VARCHAR**, and **LONGVARCHAR** data, set the connection property **sendStringParametersAsUnicode** to `false` for optimal performance gain.|
 |[Performance Logger and callback](performance-logger-callback.md)|Describes how to use the performance logging framework and callback infrastructure to track execution timing for critical driver operations such as connections, prelogin, login, and token acquisition.|
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

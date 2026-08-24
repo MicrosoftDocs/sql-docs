@@ -195,29 +195,18 @@ DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'
   
 -   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Related Content  
-  
--   [Always On: Value Proposition of Readable Secondary](/archive/blogs/sqlserverstorageengine/alwayson-value-proposition-of-readable-secondary)  
-  
--   [Always On: Why there are two options to enable a secondary replica for read workload?](/archive/blogs/sqlserverstorageengine/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload)  
-  
--   [Always On: Setting up Readable Secondary Replica](/archive/blogs/sqlserverstorageengine/alwayson-setting-up-readable-seconary-replica)  
-  
--   [Always On: I just enabled Readable Secondary but my query is blocked?](/archive/blogs/sqlserverstorageengine/alwayson-i-just-enabled-readable-secondary-but-my-query-is-blocked)  
-  
--   [Always On: Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot](/archive/blogs/sqlserverstorageengine/alwayson-making-latest-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot)  
-  
--   [Always On: Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica](/archive/blogs/sqlserverstorageengine/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica)  
-  
--   [Always On: Impact on the primary workload when you run reporting workload on the secondary replica](/archive/blogs/sqlserverstorageengine/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica)  
-  
--   [Always On: Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation](/archive/blogs/sqlserverstorageengine/alwayson-impact-of-mapping-reporting-workload-on-readable-secondary-to-snapshot-isolation)  
-  
--   [Always On: Minimizing blocking of REDO thread when running reporting workload on Secondary Replica](/archive/blogs/sqlserverstorageengine/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica)  
-  
--   [Always On: Readable Secondary and data latency](/archive/blogs/sqlserverstorageengine/alwayson-readable-secondary-and-data-latency)  
-  
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)
+## Related content
+
+- [Always On: Value Proposition of Readable Secondary](/archive/blogs/sqlserverstorageengine/alwayson-value-proposition-of-readable-secondary)
+- [Always On: Why there are two options to enable a secondary replica for read workload?](/archive/blogs/sqlserverstorageengine/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload)
+- [Always On: Setting up Readable Secondary Replica](/archive/blogs/sqlserverstorageengine/alwayson-setting-up-readable-seconary-replica)
+- [Always On: I just enabled Readable Secondary but my query is blocked?](/archive/blogs/sqlserverstorageengine/alwayson-i-just-enabled-readable-secondary-but-my-query-is-blocked)
+- [Always On: Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot](/archive/blogs/sqlserverstorageengine/alwayson-making-latest-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot)
+- [Always On: Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica](/archive/blogs/sqlserverstorageengine/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica)
+- [Always On: Impact on the primary workload when you run reporting workload on the secondary replica](/archive/blogs/sqlserverstorageengine/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica)
+- [Always On: Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation](/archive/blogs/sqlserverstorageengine/alwayson-impact-of-mapping-reporting-workload-on-readable-secondary-to-snapshot-isolation)
+- [Always On: Minimizing blocking of REDO thread when running reporting workload on Secondary Replica](/archive/blogs/sqlserverstorageengine/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica)
+- [Always On: Readable Secondary and data latency](/archive/blogs/sqlserverstorageengine/alwayson-readable-secondary-and-data-latency)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Offload read-only workload to secondary replica of an Always On availability group](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
+- [Types of client connections to replicas within an Always On availability group](about-client-connection-access-to-availability-replicas-sql-server.md)

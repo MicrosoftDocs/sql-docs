@@ -36,7 +36,7 @@ The catalog view sys.external_languages lists a row for each external language i
 |create_date |datetime2 |Date and time of creation|
 |principal_id |int |ID of the principal that owns this external library|
 
-## See also  
+## Related content
 
-+ [sys.external_language_files](sys-external-language-files-transact-sql.md)  
-+ [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) 
+- [sys.external_language_files (Transact-SQL)](sys-external-language-files-transact-sql.md)
+- [CREATE EXTERNAL LANGUAGE (Transact-SQL)](../../t-sql/statements/create-external-language-transact-sql.md)

@@ -120,7 +120,7 @@ EXECUTE sp_execute_external_script
 
 For other useful functions, see [Use R code profiling functions to improve performance](../r/using-r-code-profiling-functions.md).
 
-## Next steps
+## Next step
 
 To create a machine learning model using R with SQL machine learning, follow this quickstart:
 

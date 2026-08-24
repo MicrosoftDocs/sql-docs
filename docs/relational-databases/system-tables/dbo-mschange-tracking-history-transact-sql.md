@@ -34,9 +34,9 @@ This system table contains the history of Change Tracking cleanup jobs.
 |**cleanup_version**|**bigint**|Current valid change tracking version.|  
 |**comments**|**ntext**|Clean up job comments.|  
   
-## See Also
+## Related content
 
- [About Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
- [Change Tracking Cleanup and Troubleshooting &#40;Transact-SQL&#41;](../../relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)  
- [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
- [Change Tracking Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)  
+- [About Change Tracking (SQL Server)](../track-changes/about-change-tracking-sql-server.md)
+- [Troubleshoot change tracking auto cleanup issues](../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)
+- [Change Tracking Functions (Transact-SQL)](../system-functions/change-tracking-functions-transact-sql.md)
+- [Change Tracking stored procedures (Transact-SQL)](../system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)

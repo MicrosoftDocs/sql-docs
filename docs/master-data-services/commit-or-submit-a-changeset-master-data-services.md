@@ -48,10 +48,8 @@ ms.custom:
   
 4.  Click **Submit**.  
   
-## Next Steps  
- [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
-  
-## See Also  
- [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
- [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
- [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)
+## Related content
+
+- [Create a Changeset (Master Data Services)](create-a-changeset-master-data-services.md)
+- [Apply and Update a Changeset (Master Data Services)](apply-and-update-a-changeset-master-data-services.md)
+- [Approve or Reject a Changeset (Master Data Services)](approve-or-reject-a-changeset-master-data-services.md)

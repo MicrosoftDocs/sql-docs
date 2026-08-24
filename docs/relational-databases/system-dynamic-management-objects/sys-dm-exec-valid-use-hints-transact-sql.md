@@ -34,7 +34,7 @@ See [Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) for 
 
 Introduced in [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1.
   
-## See Also  
-    
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](database-related-dynamic-management-views-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)

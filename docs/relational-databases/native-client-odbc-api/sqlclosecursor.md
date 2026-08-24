@@ -16,7 +16,6 @@ apitype: "DLLExport"
 
   **SQLCloseCursor** replaces [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) with an *Option* value of SQL_CLOSE. On receipt of **SQLCloseCursor**, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver discards pending result set rows. Note that the statement's column and parameter bindings (if any exist) are left unaltered by **SQLCloseCursor**.  
   
-## See Also  
+## Related content
 
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+- [ODBC API implementation details](odbc-api-implementation-details.md)

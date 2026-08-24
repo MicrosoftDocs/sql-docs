@@ -40,8 +40,7 @@ Contains a row for each object that is a CHECK constraint, with **sys.objects.ty
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also
+## Related content
 
-- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)
-- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)

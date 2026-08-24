@@ -111,11 +111,6 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
   See [execute2D](Execute2D.md) or [executeMD](ExecuteMD.md) for references.  
 
 
-## See also
-
-[execute2D](Execute2D.md), [executeMD](ExecuteMD.md), [OlapConnection](OlapConnection.md), [explore](Explore.md)
-
-
 ## Examples
 
  ```
@@ -136,3 +131,9 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
   print(compose(qry))  #SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amount]} ON AXIS(0), {[Product].[Product Line].[Product Line].MEMBERS} ON AXIS(1), {[Date].[Calendar Quarter].MEMBERS} ON AXIS(2) FROM [Analysis Services Tutorial] WHERE {[Sales Territory].[Sales Territories].[Sales Territory Region].[Northwest]}
 ```
 
+## Related content
+
+- [execute2D: olapR execute2D Methods](Execute2D.md)
+- [executeMD: olapR executeMD Methods](ExecuteMD.md)
+- [OlapConnection: olapR OlapConnection Creation](OlapConnection.md)
+- [explore: olapR explore Method](Explore.md)

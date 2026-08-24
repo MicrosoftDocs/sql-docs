@@ -37,7 +37,6 @@ ms.topic: "reference"
   
 -   [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
-## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)

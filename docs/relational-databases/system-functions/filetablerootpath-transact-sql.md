@@ -95,7 +95,6 @@ SELECT FileTableRootPath(N'dbo.MyFileTable');
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   
-## See Also  
- [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
-  
-  
+## Related content
+
+- [Work with directories and paths in FileTables](../blob/work-with-directories-and-paths-in-filetables.md)

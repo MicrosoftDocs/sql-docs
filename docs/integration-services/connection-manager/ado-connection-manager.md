@@ -49,6 +49,6 @@ helpviewer_keywords:
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Connections](integration-services-ssis-connections.md)

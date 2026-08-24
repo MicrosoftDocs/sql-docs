@@ -108,6 +108,6 @@ FROM [Adventure Works]
   
  If you remove just the flag and re-run the query, you get the same results, minus the calculated member, [West Coast].  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

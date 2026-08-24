@@ -57,5 +57,6 @@ ODBCCONF [switches] action
 |REGSVR *dll*|Registers a DLL.<br /><br /> Equivalent to regsvr32.exe.<br /><br /> For example:<br /><br /> /A {REGSVR c:\my.dll}|  
 |SETFILEDSNDIR|When HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI\ODBC File DSN\DefaultDSNDir does not exist, the SETFILEDSNDIR action will create it and assign it the value at HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir, appended with \ODBC\Data Sources.<br /><br /> The value at HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI\ODBC File DSN\DefaultDSNDir specifies the default location used by the ODBC Data Source Administrator when creating a file-based data source.<br /><br /> For example:<br /><br /> /A {SETFILEDSNDIR}|  
   
-## See Also  
- [Microsoft Open Database Connectivity (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)
+## Related content
+
+- [Microsoft Open Database Connectivity (ODBC)](microsoft-open-database-connectivity-odbc.md)

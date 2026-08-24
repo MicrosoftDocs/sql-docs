@@ -85,6 +85,6 @@ These functions provide error information when installer functions fail.
 
 ## Related content
 
-- [Installer DLL overview](../install/installer-dll.md)
-- [ODBC overview](../odbc-overview.md)
-- [Configuration components](../install/configuration-components.md)
+- [Installer DLL](../install/installer-dll.md)
+- [ODBC Overview](../odbc-overview.md)
+- [Configuration Components](../install/configuration-components.md)

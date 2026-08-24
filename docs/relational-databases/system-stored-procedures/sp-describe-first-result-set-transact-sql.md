@@ -537,5 +537,5 @@ Both `dbo.t1.a` and `s1.t1.a` have type **int**, and different nullability.
 ## Related content
 
 - [sp_describe_undeclared_parameters (Transact-SQL)](sp-describe-undeclared-parameters-transact-sql.md)
-- [sys.dm_exec_describe_first_result_set (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)
-- [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+- [sys.dm_exec_describe_first_result_set (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-describe-first-result-set-transact-sql.md)
+- [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

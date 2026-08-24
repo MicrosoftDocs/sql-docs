@@ -110,5 +110,5 @@ Only members of the **sysadmin** fixed server role at the Distributor or members
 
 ## Related content
 
-- [sp_getdefaultdatatypemapping (Transact-SQL)](sp-getdefaultdatatypemapping-transact-sql.md)
-- [sp_setdefaultdatatypemapping (Transact-SQL)](sp-setdefaultdatatypemapping-transact-sql.md)
+- [sys.sp_getdefaultdatatypemapping (Transact-SQL)](sp-getdefaultdatatypemapping-transact-sql.md)
+- [sys.sp_setdefaultdatatypemapping (Transact-SQL)](sp-setdefaultdatatypemapping-transact-sql.md)

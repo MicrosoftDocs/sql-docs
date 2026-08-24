@@ -86,5 +86,5 @@ In Report Designer, after you create tables, charts, and other paginated report 
 
 ## Related content
 
-- [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)
+- [Managing Report Parts](managing-report-parts.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

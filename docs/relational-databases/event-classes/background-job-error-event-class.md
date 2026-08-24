@@ -38,10 +38,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**TextData**|**ntext**|Text description of the event subclass value.|1|Yes|  
 |**Type**|**int**|Type of job.|57|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Auto Stats Event Class](../../relational-databases/event-classes/auto-stats-event-class.md)  
-  
-  
+## Related content
 
+- [Extended Events overview](../extended-events/extended-events.md)
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [Auto Stats Event Class](auto-stats-event-class.md)

@@ -291,10 +291,8 @@ helpviewer_keywords:
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## Related Content  
- [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)  
-  
- [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)  
-  
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
+## Related content
+
+- [OLE DB Source](ole-db-source.md)
+- [Integration Services (SSIS) Variables](../integration-services-ssis-variables.md)
+- [Data Flow](data-flow.md)

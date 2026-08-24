@@ -133,7 +133,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.
 ```
 
-## See also
+## Related content
 
-- [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)
+- [Transactions in SQL Server Native Client](transactions.md)
 - [MS DTC for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc)

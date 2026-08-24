@@ -49,6 +49,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)
 ```
 
-## See also
+## Related content
 
-[Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)
+- [Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)

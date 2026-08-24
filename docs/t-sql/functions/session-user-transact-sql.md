@@ -139,16 +139,13 @@ Order #   Customer #  When Delivered       Received By
 SELECT SESSION_USER;  
 ```  
   
-## See Also  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)   
- [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
+- [CURRENT_TIMESTAMP (Transact-SQL)](current-timestamp-transact-sql.md)
+- [CURRENT_USER (Transact-SQL)](current-user-transact-sql.md)
+- [SYSTEM_USER (Transact-SQL)](system-user-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [USER (Transact-SQL)](user-transact-sql.md)
+- [USER_NAME (Transact-SQL)](user-name-transact-sql.md)

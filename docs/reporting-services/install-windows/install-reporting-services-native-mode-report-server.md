@@ -199,6 +199,6 @@ For more information, see the following articles:
 
 ## Related content
 
-- [Configure the report server service account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
-- [Configure a report server database connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Configure the Report Server Service Account (Report Server Configuration Manager)](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [Configure a report server database connection (Report Server Configuration Manager)](configure-a-report-server-database-connection-ssrs-configuration-manager.md)
 - [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)

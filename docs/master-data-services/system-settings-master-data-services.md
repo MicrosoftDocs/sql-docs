@@ -152,5 +152,6 @@ helpviewer_keywords:
   
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
-## See Also  
- [Database Object Security &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)
+## Related content
+
+- [Database Object Security (Master Data Services)](database-object-security-master-data-services.md)

@@ -138,6 +138,6 @@ f1_keywords:
  **Test Connection**  
  Test the connection using the values that you have provided. After clicking **Test Connection**, a message box appears and indicates whether the connection succeeded or failed.  
   
-## See Also  
- [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
+## Related content
+
+- [Microsoft Connector for SAP BW Components](../microsoft-connector-for-sap-bw-components.md)

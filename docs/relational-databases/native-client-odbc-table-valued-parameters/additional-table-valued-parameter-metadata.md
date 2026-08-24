@@ -43,7 +43,6 @@ helpviewer_keywords:
   
  When SQL_SOPT_SS_NAME_SCOPE is set to SQL_SS_NAME_SCOPE_TABLE, queries to linked servers fail. Calls to SQLColumns or SQLPrimaryKeys with a catalog that contains a server component will fail.  
   
-## See Also  
- [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
-  
-  
+## Related content
+
+- [Table-Valued Parameters (ODBC)](table-valued-parameters-odbc.md)

@@ -38,6 +38,6 @@ ms.custom:
   
 ## Related content
 
-- [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)
-- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
-- [Design reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)
+- [Install Microsoft Report Builder](../install-windows/install-report-builder.md)
+- [SQL Server Reporting Services tools](reporting-services-tools.md)
+- [Design Reporting Services paginated reports with Report Designer (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)

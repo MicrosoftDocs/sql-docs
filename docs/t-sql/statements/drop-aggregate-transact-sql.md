@@ -58,6 +58,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 DROP AGGREGATE dbo.Concatenate;  
 ```  
   
-## See Also  
- [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
- [Create User-defined Aggregates](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
+## Related content
+
+- [CREATE AGGREGATE (Transact-SQL)](create-aggregate-transact-sql.md)
+- [Create user-defined aggregates](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)

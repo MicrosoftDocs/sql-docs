@@ -87,7 +87,7 @@ For more information about report paging, see [Pagination in Reporting Services 
 
 ## Related content
 
-- [Print reports (Report Builder)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
-- [Export reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
+- [Print reports](print-reports-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](export-reports-report-builder-and-ssrs.md)
 - [Report Properties dialog, page setup (Report Builder)](/previous-versions/sql/sql-server-2016/dd220640(v=sql.130))
-- [Report design view (Report Builder)](../../reporting-services/report-builder/report-design-view-report-builder.md)
+- [Report design view in Report Builder](report-design-view-report-builder.md)

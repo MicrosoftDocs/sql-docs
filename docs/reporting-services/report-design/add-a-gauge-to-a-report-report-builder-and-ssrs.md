@@ -37,5 +37,5 @@ ms.custom:
   
 ## Related content
 
-- [Nested data regions &#40;Report Builder&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)
-- [Gauges &#40;Report Builder&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
+- [Nested data regions in a paginated report (Report Builder)](nested-data-regions-report-builder-and-ssrs.md)
+- [Gauges in a paginated report (Report Builder)](gauges-report-builder-and-ssrs.md)

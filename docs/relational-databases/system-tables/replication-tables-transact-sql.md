@@ -341,8 +341,8 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-## See Also  
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
+## Related content
+
+- [Configure Publishing and Distribution](../replication/configure-publishing-and-distribution.md)
+- [Disable Publishing and Distribution](../replication/disable-publishing-and-distribution.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

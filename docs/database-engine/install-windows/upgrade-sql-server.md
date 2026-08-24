@@ -65,4 +65,4 @@ The following articles help you upgrade components of SQL Server:
 - [Upgrade Master Data Services](upgrade-master-data-services.md)
 - [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=436)
 - [Discontinued Database Engine functionality in SQL Server](../discontinued-database-engine-functionality-in-sql-server.md)
-- [Upgrade to a different edition of SQL Server (Setup)](upgrade-downgrade-sql-server-edition-setup.md)
+- [In-place change of a SQL Server edition (Setup)](upgrade-downgrade-sql-server-edition-setup.md)

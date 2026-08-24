@@ -72,6 +72,6 @@ The following client drivers support Always Encrypted with secure enclaves:
   > [!NOTE]
   > Using the .NET Framework Data Provider for SQL Server (System.Data.SqlClient) isn't recommended for new development. For more information, see [System.Data.SqlClient](../../../connect/connect-history.md#systemdatasqlclient).
 
-## See also
+## Related content
 
 - [Troubleshoot common issues for Always Encrypted with secure enclaves](always-encrypted-enclaves-troubleshooting.md)

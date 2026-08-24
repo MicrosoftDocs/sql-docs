@@ -21,9 +21,8 @@ ms.topic: reference
 |[getCharacterStream Method &#40;&#41;](../../../connect/jdbc/reference/getcharacterstream-method.md)|Returns the Clob data as a java.io.Reader object or as a stream of characters.|  
 |[getCharacterStream Method &#40;long, long&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long.md)|Returns the Clob data as a java.io.Reader object or as a stream of characters with the specified position and length.|  
   
-## See Also  
- [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
- [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
- [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  
-  
-  
+## Related content
+
+- [SQLServerClob Methods](sqlserverclob-methods.md)
+- [SQLServerClob Members](sqlserverclob-members.md)
+- [SQLServerClob Class](sqlserverclob-class.md)

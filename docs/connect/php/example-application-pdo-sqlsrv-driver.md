@@ -504,14 +504,10 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## Related content  
-[Connecting to the Server](connecting-to-the-server.md)
+## Related content
 
-[Comparing Execution Functions](comparing-execution-functions.md)
-
-[Retrieving Data](retrieving-data.md)
-
-[Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](updating-data-microsoft-drivers-for-php-for-sql-server.md)
-
-[SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)  
-  
+- [Connecting to the Server](connecting-to-the-server.md)
+- [Comparing Execution Functions](comparing-execution-functions.md)
+- [Retrieving Data](retrieving-data.md)
+- [Updating data (Microsoft Drivers for PHP for SQL Server)](updating-data-microsoft-drivers-for-php-for-sql-server.md)
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)

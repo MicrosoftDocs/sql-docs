@@ -134,9 +134,9 @@ Report Builder opens its own connection to a report server. If you're not using 
 
 ## Related content
 
-- [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [Browser support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
-- [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)
-- [The web portal of a report server (SSRS native mode)](../web-portal-ssrs-native-mode.md)
-- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
-- [Report server system properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)
+- [Authentication in a report server](../security/authentication-with-the-report-server.md)
+- [Browser support for Reporting Services and Power View](../browser-support-for-reporting-services-and-power-view.md)
+- [Start Microsoft Report Builder](../report-builder/start-report-builder.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
+- [Connect to a report server in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)
+- [Reporting Services Properties - Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

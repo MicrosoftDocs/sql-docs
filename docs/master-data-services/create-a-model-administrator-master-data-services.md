@@ -52,9 +52,10 @@ helpviewer_keywords:
   
 10. Click **Save**.  
   
-## See Also  
- [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
- [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)
+## Related content
+
+- [Administrators (Master Data Services)](administrators-master-data-services.md)
+- [Assign Model Object Permissions (Master Data Services)](assign-model-object-permissions-master-data-services.md)
+- [Assign Hierarchy Member Permissions (Master Data Services)](assign-hierarchy-member-permissions-master-data-services.md)
+- [Model Object Permissions (Master Data Services)](model-object-permissions-master-data-services.md)
+- [Hierarchy Member Permissions (Master Data Services)](hierarchy-member-permissions-master-data-services.md)

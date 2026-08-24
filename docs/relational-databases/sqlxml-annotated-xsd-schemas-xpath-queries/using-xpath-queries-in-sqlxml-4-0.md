@@ -34,7 +34,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  [XPath Data Types &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
  Describes XPath data types, which are significantly different from those of both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and XSD.  
   
-## See Also  
- [Client-side XML Formatting &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Client-side XML Formatting (SQLXML 4.0)](../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)

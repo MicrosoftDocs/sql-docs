@@ -92,15 +92,7 @@ You need the *ALTER ANY COLUMN ENCRYPTION KEY* and *VIEW ANY COLUMN MASTER KEY D
 
 The [Always Encrypted Wizard](always-encrypted-wizard.md) is a tool for encrypting, decrypting, and re-encrypting selected database columns. While it can use already configured keys, it also allows you to generate a new column master key and a new column encryption. 
 
-## Next Steps
-
-- [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
-- [Configure column encryption using Always Encrypted with a DAC package](configure-always-encrypted-using-dacpac.md)
-- [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
-- [Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
-
-## See Also
+## Related content
 
 - [Always Encrypted](always-encrypted-database-engine.md)
 - [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
@@ -111,6 +103,11 @@ The [Always Encrypted Wizard](always-encrypted-wizard.md) is a tool for encrypti
 - [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)
 - [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 - [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md)
-- [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 
+- [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md)
 - [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md)
 - [sys.column_encryption_keys (Transact-SQL)](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md)
+- [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
+- [Configure column encryption using Always Encrypted with a DAC package](configure-always-encrypted-using-dacpac.md)
+- [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+- [Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)

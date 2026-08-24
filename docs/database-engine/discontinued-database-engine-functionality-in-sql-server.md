@@ -53,7 +53,7 @@ This article describes the [!INCLUDE [ssDE](../includes/ssde-md.md)] features th
 
 - Master Data Services (MDS) is [removed](/lifecycle/definitions#removal) in [!INCLUDE [sssql25-md](../includes/sssql25-md.md)]. We continue to support MDS in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and earlier versions.
 
-- Synapse Link is discontinued in this version of SQL Server. Use [Mirroring in Fabric](/fabric/database/mirrored-database/overview) instead. For more information, see [Mirroring in Fabric – What's new](https://aka.ms/IntroMirroringSQL).
+- Synapse Link is discontinued in this version of SQL Server. Use [Mirroring in Fabric](/fabric/database/mirrored-database/overview) instead. For more information, see [Mirroring for SQL Server in Microsoft Fabric (Preview)](https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/mirroring-for-sql-server-in-microsoft-fabric-preview/5172765).
 
 - Purview access policies (DevOps policies and data owner policies) are discontinued in [!INCLUDE [sssql25-md](../includes/sssql25-md.md)]. Use [Fixed server-level roles](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022) instead.
 

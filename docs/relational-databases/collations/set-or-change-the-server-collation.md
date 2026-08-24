@@ -73,7 +73,7 @@ You cannot change or set the logical server collation on Azure SQL Database, but
 
 ## Related content
 
-- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
-- [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)
-- [Set or Change the Column Collation](../../relational-databases/collations/set-or-change-the-column-collation.md)
-- [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)
+- [Collation and Unicode support](collation-and-unicode-support.md)
+- [Set or change the database collation](set-or-change-the-database-collation.md)
+- [Set or Change the Column Collation](set-or-change-the-column-collation.md)
+- [Rebuild system databases](../databases/rebuild-system-databases.md)

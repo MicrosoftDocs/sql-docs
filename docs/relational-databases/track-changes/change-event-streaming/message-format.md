@@ -404,6 +404,6 @@ Use the following schema when deserializing the `data` byte array in native JSON
 
 ## Related content
 
-- [What is change event streaming?](overview.md)
-- [Configure change event streaming](configure.md)
+- [What is change event streaming (preview)?](overview.md)
+- [Configure change event streaming (preview) to Azure Event Hubs](configure.md)
 - [Frequently asked CES questions](frequently-asked-questions-faq.yml)

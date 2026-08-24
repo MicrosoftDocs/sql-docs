@@ -239,5 +239,5 @@ NULL      1          Chief Executive Officer       0
 - [INSERT (Transact-SQL)](../statements/insert-transact-sql.md)
 - [UPDATE (Transact-SQL)](update-transact-sql.md)
 - [DELETE (Transact-SQL)](../statements/delete-transact-sql.md)
-- [EXCEPT and INTERSECT (Transact-SQL)](../language-elements/set-operators-except-and-intersect-transact-sql.md)
+- [Set Operators - EXCEPT and INTERSECT (Transact-SQL)](../language-elements/set-operators-except-and-intersect-transact-sql.md)
 - [Recursive CTEs](https://techcommunity.microsoft.com/blog/sqlserver/recursive-ctes/383326)

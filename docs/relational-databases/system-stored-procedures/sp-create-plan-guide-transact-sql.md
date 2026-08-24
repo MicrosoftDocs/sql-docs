@@ -366,14 +366,13 @@ GO
 ## Related content
 
 - [Plan Guides](../performance/plan-guides.md)
-- [sp_control_plan_guide (Transact-SQL)](sp-control-plan-guide-transact-sql.md)
+- [sys.sp_control_plan_guide (Transact-SQL)](sp-control-plan-guide-transact-sql.md)
 - [sys.plan_guides (Transact-SQL)](../system-catalog-views/sys-plan-guides-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [sys.dm_exec_sql_text (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)
-- [sys.dm_exec_cached_plans (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)
-- [sys.dm_exec_query_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)
-- [sp_create_plan_guide_from_handle (Transact-SQL)](sp-create-plan-guide-from-handle-transact-sql.md)
+- [sys.dm_exec_sql_text (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-sql-text-transact-sql.md)
+- [sys.dm_exec_cached_plans (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-cached-plans-transact-sql.md)
+- [sys.dm_exec_query_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md)
+- [sys.sp_create_plan_guide_from_handle (Transact-SQL)](sp-create-plan-guide-from-handle-transact-sql.md)
 - [sys.fn_validate_plan_guide (Transact-SQL)](../system-functions/sys-fn-validate-plan-guide-transact-sql.md)
 - [sp_get_query_template (Transact-SQL)](sp-get-query-template-transact-sql.md)
-

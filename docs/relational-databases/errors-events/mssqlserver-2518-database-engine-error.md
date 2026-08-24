@@ -30,6 +30,6 @@ This informational message indicates that the query processor could not provide 
 ## User Action  
 Enable CLR and rerun the DBCC statement.  
   
-## See Also  
-[Enabling CLR Integration](~/relational-databases/clr-integration/clr-integration-enabling.md)  
-  
+## Related content
+
+- [Enable CLR integration](../clr-integration/clr-integration-enabling.md)

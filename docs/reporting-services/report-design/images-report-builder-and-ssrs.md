@@ -83,5 +83,5 @@ SVG files aren't supported.
   
 ## Related content
 
-- [Exporting to an Image File &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)
-- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
+- [Export a paginated report to an image file (Report Builder)](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)
+- [Rendering behaviors in a paginated report (Report Builder)](rendering-behaviors-report-builder-and-ssrs.md)

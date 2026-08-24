@@ -35,15 +35,9 @@ dev_langs:
  [Developing a Custom Destination Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
  Contains information on developing a component that receives rows from upstream components in the data flow and writes them to an external data source.  
   
-## Reference  
- <xref:Microsoft.SqlServer.Dts.Pipeline>  
- Contains the classes and interfaces used to create custom data flow components.  
-  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>  
- Contains the unmanaged classes and interfaces of the data flow task. The developer uses these, and the managed <xref:Microsoft.SqlServer.Dts.Pipeline> namespace, when building a data flow programmatically or creating custom data flow components.  
-  
-## See Also  
- [Comparing Scripting Solutions and Custom Objects](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
- [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
-  
-  
+## Related content
+
+- <xref:Microsoft.SqlServer.Dts.Pipeline>
+- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>
+- [Comparing Scripting Solutions and Custom Objects](../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)
+- [Developing Specific Types of Script Components](../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)

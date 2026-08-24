@@ -207,9 +207,7 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## See Also  
- [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
- [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
-  
-  
+## Related content
 
+- [REVERT (Transact-SQL)](revert-transact-sql.md)
+- [EXECUTE AS clause (Transact-SQL)](execute-as-clause-transact-sql.md)

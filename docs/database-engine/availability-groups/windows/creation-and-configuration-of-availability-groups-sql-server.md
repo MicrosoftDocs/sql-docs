@@ -77,24 +77,14 @@ helpviewer_keywords:
   
 -   [Troubleshoot a Failed Add-File Operation &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Related Content  
-  
--   **Blogs:**  
-  
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
-  
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
-  
-     [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
-  
--   **Whitepapers:**  
-  
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
-  
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Administration of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
- [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
- [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
- [Always On Availability Groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
+## Related content
+
+- [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)
+- [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)
+- [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)
+- [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Administration of an availability group](administration-of-an-availability-group-sql-server.md)
+- [Policy based management for operational issues with Always On availability groups](always-on-policies-for-operational-issues-always-on-availability.md)
+- [Tools to monitor Always On availability groups](monitoring-of-availability-groups-sql-server.md)
+- [Always On availability groups: interoperability (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)

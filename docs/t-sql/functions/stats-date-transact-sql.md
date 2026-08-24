@@ -145,12 +145,12 @@ WHERE object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
-## See Also  
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [Statistics](../../relational-databases/statistics/statistics.md)    
- [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)
+## Related content
 
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [UPDATE STATISTICS (Transact-SQL)](../statements/update-statistics-transact-sql.md)
+- [sys.sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)
+- [Statistics](../../relational-databases/statistics/statistics.md)
+- [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md)
+- [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)
+- [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)

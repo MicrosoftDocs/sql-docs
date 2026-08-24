@@ -81,12 +81,11 @@ DATEPART("hh", (DT_DATE) "2020-09-02 19:24" )
 DATEPART("Hh", (DT_DATE) "2020-09-02 19:24" )
 ```  
   
-## See Also  
- [DATEADD &#40;SSIS Expression&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEDIFF &#40;SSIS Expression&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DAY &#40;SSIS Expression&#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH &#40;SSIS Expression&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR &#40;SSIS Expression&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
-  
-  
+## Related content
+
+- [DATEADD (SSIS Expression)](dateadd-ssis-expression.md)
+- [DATEDIFF (SSIS Expression)](datediff-ssis-expression.md)
+- [DAY (SSIS Expression)](day-ssis-expression.md)
+- [MONTH (SSIS Expression)](month-ssis-expression.md)
+- [YEAR (SSIS Expression)](year-ssis-expression.md)
+- [Functions (SSIS Expression)](functions-ssis-expression.md)

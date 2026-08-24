@@ -72,8 +72,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 1 1, 1 1)';
 SELECT @g.MakeValid().ToString();  
 ```  
   
-## See Also  
- [STIsValid &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [STIsValid (geometry Data Type)](stisvalid-geometry-data-type.md)
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)

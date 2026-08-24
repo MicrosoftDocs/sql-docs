@@ -30,7 +30,6 @@ FOR XML PATH;
 
 These samples illustrate the use of PATH mode in generating XML from a SELECT query. Many of these queries are specified against the bicycle manufacturing instructions XML documents that are stored in the Instructions column of the ProductModel table.
 
-## See also
+## Related content
 
-- [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)
-
+- [Use PATH mode with FOR XML](use-path-mode-with-for-xml.md)

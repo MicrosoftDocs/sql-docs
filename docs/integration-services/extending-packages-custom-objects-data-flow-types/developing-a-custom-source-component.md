@@ -659,8 +659,7 @@ Namespace BlobSrc
 End Namespace  
 ```  
   
-## Related content  
- [Developing a Custom Destination Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
- [Creating a Source with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
-  
-  
+## Related content
+
+- [Developing a Custom Destination Component](developing-a-custom-destination-component.md)
+- [Creating a Source with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)

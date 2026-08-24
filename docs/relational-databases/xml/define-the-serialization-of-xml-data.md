@@ -150,8 +150,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50));
 
 This returns the string value 13.4.
 
-## See also
+## Related content
 
 - [Type Casting Rules in XQuery](../../xquery/type-casting-rules-in-xquery.md)
-- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-
+- [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)

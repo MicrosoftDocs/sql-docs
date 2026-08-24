@@ -151,7 +151,8 @@ helpviewer_keywords:
  **Password**  
  Enter the password.  
   
-## See Also  
- [Integration Services \(SSIS\) Packages](../../integration-services/integration-services-ssis-packages.md)   
- [Security Overview \(Integration Services\)](../../integration-services/security/security-overview-integration-services.md)  
- [dtutil Utility](../../integration-services/dtutil-utility.md)  
+## Related content
+
+- [Integration Services (SSIS) Packages](../integration-services-ssis-packages.md)
+- [Security Overview (Integration Services)](security-overview-integration-services.md)
+- [dtutil Utility](../dtutil-utility.md)

@@ -42,10 +42,10 @@ Requires the `VIEW SERVER STATE` permission.
 
 ## Related content
 
-[Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)
-[Resource governor Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
-[sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
-[Resource governor](../../relational-databases/resource-governor/resource-governor.md)
-[sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
-[external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-[ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
+- [Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services](../../machine-learning/administration/resource-governor.md)
+- [Resource governor catalog views (Transact-SQL)](resource-governor-catalog-views-transact-sql.md)
+- [sys.dm_resource_governor_resource_pools (Transact-SQL)](../system-dynamic-management-objects/sys-dm-resource-governor-resource-pools-transact-sql.md)
+- [Resource governor](../resource-governor/resource-governor.md)
+- [sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)](../system-dynamic-management-objects/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+- [Server configuration: external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
+- [ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)

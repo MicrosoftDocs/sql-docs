@@ -89,10 +89,8 @@ ms.custom:
   
 6.  Press Enter. When the package is successfully created, a message stating "MDSModelDeploy operation completed successfully" is displayed.  
   
-## Next Steps  
-  
--   [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
-  
-## See Also  
- [Model Deployment Options &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
- [Deploying Models &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)
+## Related content
+
+- [Model Deployment Options (Master Data Services)](model-deployment-options-master-data-services.md)
+- [Deploying Models (Master Data Services)](deploying-models-master-data-services.md)
+- [Deploy a Model Deployment Package by Using MDSModelDeploy](deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)

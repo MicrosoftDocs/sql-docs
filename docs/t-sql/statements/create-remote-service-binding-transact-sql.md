@@ -104,9 +104,8 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser, ANONYMOUS=ON ;  
 ```  
   
-## See Also  
- [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
- [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER REMOTE SERVICE BINDING (Transact-SQL)](alter-remote-service-binding-transact-sql.md)
+- [DROP REMOTE SERVICE BINDING (Transact-SQL)](drop-remote-service-binding-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

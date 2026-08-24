@@ -91,4 +91,4 @@ For more information on how to apply updates to an existing instance, see [Apply
 
 ## Related content
 
-- [Install R Server (Standalone) or Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
+- [Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup](../install/sql-machine-learning-standalone-windows-install.md)

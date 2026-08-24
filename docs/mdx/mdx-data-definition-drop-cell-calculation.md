@@ -26,8 +26,7 @@ DROP [ SESSION ] CELL CALCULATION CURRENTCUBE | Cube_Name.CellCalc_Name
  *CellCalc_Name*  
  A valid string expression that provides the name of the cell calculation to be dropped.  
   
-## See Also  
- [CREATE CELL CALCULATION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Data Definition - CREATE CELL CALCULATION](mdx-data-definition-create-cell-calculation.md)
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)

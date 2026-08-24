@@ -74,9 +74,6 @@ cosCalc1  cosCalc2
 -0.58     0.99
 ```
   
-## See also
-[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
-  
-  
+## Related content
 
-
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)

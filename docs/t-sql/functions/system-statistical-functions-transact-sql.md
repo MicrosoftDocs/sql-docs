@@ -71,7 +71,6 @@ dev_langs:
   
  All system statistical functions are nondeterministic. This means these functions do not always return the same results every time they are called, even with the same set of input values. For more information about function determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-## See Also  
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  
-  
+## Related content
+
+- [What are the SQL database functions?](functions.md)

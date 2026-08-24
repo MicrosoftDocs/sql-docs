@@ -30,7 +30,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  When parameters are passed to an updategram, NULL can be passed as the parameter value. This is done by specifying the **nullvalue** attribute in the **\<updg:header>** block. For an example, see [Passing Parameters to Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md).  
   
-## See Also  
- [Updategram Security Considerations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Updategram Security Considerations (SQLXML 4.0)](../security/updategram-security-considerations-sqlxml-4-0.md)

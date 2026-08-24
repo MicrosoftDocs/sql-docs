@@ -39,10 +39,9 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 In Fabric SQL database, Microsoft Entra ID for database users is the only supported authentication method. Only database-scoped credentials are supported.
   
-## Related Content  
- [Create a Credential](../../../relational-databases/security/authentication-access/create-a-credential.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md)   
- [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
- [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)  
-  
-  
+## Related content
+
+- [Create a Credential](create-a-credential.md)
+- [CREATE CREDENTIAL (Transact-SQL)](../../../t-sql/statements/create-credential-transact-sql.md)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [Securing SQL Server](../securing-sql-server.md)

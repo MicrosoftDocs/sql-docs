@@ -52,7 +52,8 @@ f1_keywords:
 ## Progress and Finish  
  Displays the progress of the creation process. After the database is created, click **Finish** to close the database wizard and return to the **Databases** page. The new database is selected and you can view and modify its system settings.  
   
-## See Also  
- [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md) 
- [Database Requirements &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)
+## Related content
+
+- [Database Configuration Page (Master Data Services Configuration Manager)](database-configuration-page-master-data-services-configuration-manager.md)
+- [Master Data Services Installation and Configuration](master-data-services-installation-and-configuration.md)
+- [Database Requirements (Master Data Services)](install-windows/database-requirements-master-data-services.md)

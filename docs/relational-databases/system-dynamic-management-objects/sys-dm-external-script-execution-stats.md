@@ -89,9 +89,9 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'Python';
 ```
 
-## See also
+## Related content
 
-- [System Dynamic Management Views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_external_script_requests](sys-dm-external-script-requests.md)
 - [sp_execute_external_script (Transact-SQL)](../system-stored-procedures/sp-execute-external-script-transact-sql.md)

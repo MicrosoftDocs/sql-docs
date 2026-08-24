@@ -96,5 +96,6 @@ It is possible that multiple connections using read-only routing will not all co
   
 Read-only routing may take longer than connecting to the primary because read only routing first connects to the primary and then looks for the best available readable secondary. Because of this, you should increase your login timeout.  
   
-## Next steps
+## Related content
+
 - [SQL Server features and ADO.NET](sql-server-features-adonet.md)

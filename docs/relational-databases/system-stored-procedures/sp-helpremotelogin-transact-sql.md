@@ -87,8 +87,8 @@ EXECUTE sp_helpremotelogin;
 
 ## Related content
 
-- [sp_addremotelogin (Transact-SQL)](sp-addremotelogin-transact-sql.md)
-- [sp_dropremotelogin (Transact-SQL)](sp-dropremotelogin-transact-sql.md)
-- [sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
-- [sp_remoteoption (Transact-SQL)](sp-remoteoption-transact-sql.md)
+- [sys.sp_addremotelogin (Transact-SQL)](sp-addremotelogin-transact-sql.md)
+- [sys.sp_dropremotelogin (Transact-SQL)](sp-dropremotelogin-transact-sql.md)
+- [sys.sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
+- [sys.sp_remoteoption (Transact-SQL)](sp-remoteoption-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

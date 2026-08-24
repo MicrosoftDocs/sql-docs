@@ -232,12 +232,11 @@ REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;
 GO  
 ```  
   
-## See Also  
- [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
- [DENY Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
-  
-  
+## Related content
+
+- [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
+- [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
+- [GRANT Database Permissions (Transact-SQL)](grant-database-permissions-transact-sql.md)
+- [DENY Database Permissions (Transact-SQL)](deny-database-permissions-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)

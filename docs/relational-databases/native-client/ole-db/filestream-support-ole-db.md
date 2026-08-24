@@ -25,7 +25,6 @@ helpviewer_keywords:
   
  This change affects all interfaces that transfer data, principally IRowset::GetData, ICommand::Execute, and IRowsetFastLoad::InsertRow.  
   
-## See Also  
- [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Programming](../sql-server-native-client-programming.md)

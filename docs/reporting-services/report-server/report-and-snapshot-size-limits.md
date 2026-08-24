@@ -72,6 +72,6 @@ EXEC sp_spaceused
   
 ## Related content
 
-- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
-- [Report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
-- [Process large reports](../../reporting-services/report-server/process-large-reports.md)
+- [Set report processing properties](set-report-processing-properties.md)
+- [Report server database (SSRS native mode)](report-server-database-ssrs-native-mode.md)
+- [Process large reports](process-large-reports.md)

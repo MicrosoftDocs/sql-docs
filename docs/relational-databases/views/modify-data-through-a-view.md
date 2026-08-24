@@ -99,4 +99,3 @@ For more information, see [INSERT](../../t-sql/statements/insert-transact-sql.md
 
 - [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)
 - [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
-

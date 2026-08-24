@@ -81,5 +81,5 @@ In SharePoint integrated mode, authentication and authorization are handled on t
   
 ## Related content
 
-- [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Authentication in a report server](authentication-with-the-report-server.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)

@@ -100,4 +100,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)
+- [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md)

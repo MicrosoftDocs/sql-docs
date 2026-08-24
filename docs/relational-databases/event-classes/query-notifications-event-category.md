@@ -30,10 +30,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  [QN:Template Event Class](../../relational-databases/event-classes/qn-template-event-class.md)  
  Reports information about the internal use of query templates.  
   
-## See Also  
- [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
-  
-  
+## Related content
 
+- [SQL Trace](../sql-trace/sql-trace.md)
+- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)

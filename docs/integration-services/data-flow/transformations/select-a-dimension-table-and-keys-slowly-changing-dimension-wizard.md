@@ -39,7 +39,6 @@ f1_keywords:
  **Key Type**  
  Select one of the dimension columns to be the business key. You must have one business key.  
   
-## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
-  
-  
+## Related content
+
+- [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)

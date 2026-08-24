@@ -63,9 +63,9 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)
-- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
-- [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)
-- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)
-- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Start and Stop a Replication Agent (SQL Server Management Studio)](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)
+- [Start the Replication Monitor](monitor/start-the-replication-monitor.md)
+- [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
+- [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)
+- [Monitoring (Replication)](monitor/monitoring-replication.md)
+- [Replication Agents Overview](agents/replication-agents-overview.md)

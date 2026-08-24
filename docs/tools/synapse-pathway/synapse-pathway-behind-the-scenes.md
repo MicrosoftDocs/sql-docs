@@ -86,7 +86,7 @@ WITH
 AS SELECT  * FROM staging.table2;
 ```
 
-## Next steps
+## Related content
 
-- [Download Azure Synapse Pathway](synapse-pathway-download.md)
+- [Azure Synapse Pathway download](synapse-pathway-download.md)
 - [FAQ](pathway-faq.yml)

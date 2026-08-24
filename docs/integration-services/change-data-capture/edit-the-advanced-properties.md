@@ -25,8 +25,7 @@ f1_keywords:
   
  For a description of the properties you can enter, see the available options table in [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#cdcxdbcdc_config).  
   
-## See Also  
- [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [How to Edit the CDC Instance Properties](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
-  
-  
+## Related content
+
+- [How to Manage a CDC Instance](how-to-manage-a-cdc-instance.md)
+- [How to Edit the CDC Instance Properties](how-to-edit-the-cdc-instance-properties.md)

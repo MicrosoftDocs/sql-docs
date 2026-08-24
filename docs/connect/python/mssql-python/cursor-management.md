@@ -581,7 +581,7 @@ def update_inventory(conn, items: list):
 
 ## Related content
 
-- [Executing queries](executing-queries.md)
-- [Retrieving data](retrieving-data.md)
-- [Connection pooling](connection-pooling.md)
-- [Pagination](pagination.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
+- [Implement pagination](pagination.md)

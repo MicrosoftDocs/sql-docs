@@ -98,10 +98,10 @@ DBCC TRACEON (3205, 260, -1);
 GO
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [DBCC TRACEOFF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)
-- [DBCC TRACESTATUS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)
-- [Set trace flags with DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [DBCC TRACEOFF (Transact-SQL)](dbcc-traceoff-transact-sql.md)
+- [DBCC TRACESTATUS (Transact-SQL)](dbcc-tracestatus-transact-sql.md)
+- [Set trace flags with DBCC TRACEON (Transact-SQL)](dbcc-traceon-trace-flags-transact-sql.md)
 - [Enable plan-affecting SQL Server query optimizer behavior that can be controlled by different trace flags on a specific-query level](https://support.microsoft.com/help/2801413)

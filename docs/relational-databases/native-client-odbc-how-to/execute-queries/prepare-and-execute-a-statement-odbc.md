@@ -103,6 +103,6 @@ helpviewer_keywords:
   
     -   If data-at-execution input parameters are used, SQLExecute returns SQL_NEED_DATA. Send the data in chunks by using SQLParamData and SQLPutData.  
   
-## See Also  
- [Executing Queries How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
+## Related content
+
+- [Executing Queries How-to Topics (ODBC)](executing-queries-how-to-topics-odbc.md)

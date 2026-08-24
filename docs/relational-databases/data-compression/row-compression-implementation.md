@@ -82,4 +82,3 @@ The following table describes how row compression affects the existing types in 
 - [Data compression](data-compression.md)
 - [Page compression implementation](page-compression-implementation.md)
 - [Unicode compression implementation](unicode-compression-implementation.md)
-

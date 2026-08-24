@@ -99,11 +99,11 @@ COMMIT TRANSACTION;
 GO
 ```
 
-## Next steps
+## Related content
 
-- [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)
-- [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)
-- [COMMIT WORK (Transact-SQL)](../../t-sql/language-elements/commit-work-transact-sql.md)
-- [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
-- [ROLLBACK WORK (Transact-SQL)](../../t-sql/language-elements/rollback-work-transact-sql.md)
-- [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)
+- [BEGIN TRANSACTION (Transact-SQL)](begin-transaction-transact-sql.md)
+- [COMMIT TRANSACTION (Transact-SQL)](commit-transaction-transact-sql.md)
+- [COMMIT WORK (Transact-SQL)](commit-work-transact-sql.md)
+- [ROLLBACK TRANSACTION (Transact-SQL)](rollback-transaction-transact-sql.md)
+- [ROLLBACK WORK (Transact-SQL)](rollback-work-transact-sql.md)
+- [SAVE TRANSACTION (Transact-SQL)](save-transaction-transact-sql.md)

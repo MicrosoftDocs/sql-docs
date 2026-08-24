@@ -240,7 +240,6 @@ Module Module1
 End Module  
 ```  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Event Handlers](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Add an Event Handler to a Package](../integration-services-ssis-event-handlers.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Event Handlers](../integration-services-ssis-event-handlers.md)

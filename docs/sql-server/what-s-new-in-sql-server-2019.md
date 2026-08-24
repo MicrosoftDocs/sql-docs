@@ -163,7 +163,7 @@ One common task that everyone who deploys [!INCLUDE [ssNoVersion](../includes/ss
 | --- | --- |
 | Up to five synchronous replicas | [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE [ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There's one primary replica, plus four synchronous secondary replicas. |
 | Secondary-to-primary replica connection redirection | Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md). |
-| HADR Benefits | Every Software Assurance customer of SQL Server will be able to use three enhanced benefits for any SQL Server release that is still supported by Microsoft. For details, see [our announcement here.](https://www.microsoft.com/sql-server/blog/2019/10/30/new-high-availability-and-disaster-recovery-benefits-for-sql-server) |
+| HADR Benefits | Every Software Assurance customer of SQL Server will be able to use three enhanced benefits for any SQL Server release that is still supported by Microsoft. For details, see [New high availability and disaster recovery benefits for SQL Server](https://www.microsoft.com/sql-server/blog/2019/10/30/new-high-availability-and-disaster-recovery-benefits-for-sql-server/). |
 
 ### Recovery
 

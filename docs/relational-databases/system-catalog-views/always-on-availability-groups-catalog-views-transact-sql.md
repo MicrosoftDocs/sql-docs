@@ -34,10 +34,10 @@ This section contains catalog views and functions that are related to [!INCLUDE[
 >  
 > For information about joined availability databases, see the `replica_id` and `group_database_id` columns in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-## See also
+## Related content
 
 - [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)
 - [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)
-- [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)
-- [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+- [Always On availability groups dynamic management views and functions](../system-dynamic-management-objects/always-on-availability-groups-dynamic-management-views-functions.md)

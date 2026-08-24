@@ -38,7 +38,6 @@ ms.topic: reference
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
- [SQLServerDataSourceObjectFactory Class](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDataSourceObjectFactory Class](sqlserverdatasourceobjectfactory-class.md)

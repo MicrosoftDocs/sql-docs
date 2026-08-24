@@ -275,5 +275,4 @@ FROM enc;
 - [ASCII (Transact-SQL)](ascii-transact-sql.md)
 - [NCHAR (Transact-SQL)](nchar-transact-sql.md)
 - [UNICODE (Transact-SQL)](unicode-transact-sql.md)
-- [+ (String Concatenation) (Transact-SQL)](../language-elements/string-concatenation-transact-sql.md)
-
+- [+ (String concatenation) (Transact-SQL)](../language-elements/string-concatenation-transact-sql.md)

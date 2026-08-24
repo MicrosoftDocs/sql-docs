@@ -181,9 +181,8 @@ dev_langs:
   
 -   The **fn:collection()** function is not supported.  
   
-## See Also  
- [XQuery Basics](../xquery/xquery-basics.md)   
- [Compare Typed XML to Untyped XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [XML Schema Collections &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)  
-  
-  
+## Related content
+
+- [XQuery basics](xquery-basics.md)
+- [Compare typed XML to untyped XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
+- [XML schema collections (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)

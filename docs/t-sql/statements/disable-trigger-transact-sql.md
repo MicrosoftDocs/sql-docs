@@ -109,12 +109,10 @@ DISABLE Trigger ALL ON ALL SERVER;
 GO  
 ```  
   
-## See Also  
- [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
- [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
- [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)  
-  
-  
+## Related content
 
+- [ENABLE TRIGGER (Transact-SQL)](enable-trigger-transact-sql.md)
+- [ALTER TRIGGER (Transact-SQL)](alter-trigger-transact-sql.md)
+- [CREATE TRIGGER (Transact-SQL)](create-trigger-transact-sql.md)
+- [DROP TRIGGER (Transact-SQL)](drop-trigger-transact-sql.md)
+- [sys.triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)

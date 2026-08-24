@@ -65,9 +65,8 @@ When a new table is created that has page compression, no compression occurs. Ho
 
 When an existing table that contains data is converted to page compression, each page is rebuilt and evaluated. Rebuilding all the pages causes the rebuilding of the table, index, or partition.
 
-## Next steps
+## Related content
 
 - [Data compression](data-compression.md)
-- [Row compression implementation](row-compression-implementation.md)  
+- [Row compression implementation](row-compression-implementation.md)
 - [Unicode compression implementation](unicode-compression-implementation.md)
-

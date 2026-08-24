@@ -35,10 +35,9 @@ To retrieve information from these views, specify the fully qualified name of **
 |**TABLE_NAME**|**sysname**|Table or view name.|  
 |**TABLE_TYPE**|**varchar(**10**)**|Type of table. Can be VIEW or BASE TABLE.|  
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)  
-  
+## Related content
 
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)
+- [sys.tables (Transact-SQL)](../system-catalog-views/sys-tables-transact-sql.md)

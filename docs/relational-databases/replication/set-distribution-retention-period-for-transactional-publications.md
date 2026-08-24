@@ -28,5 +28,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 
 ## Related content
 
-- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
-- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)
+- [Configure Distribution](configure-distribution.md)
+- [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)

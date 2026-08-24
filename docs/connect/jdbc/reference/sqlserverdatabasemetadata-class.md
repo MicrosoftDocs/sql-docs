@@ -27,8 +27,7 @@ ms.topic: reference
 public final class SQLServerDatabaseMetaData  
 ```  
   
-## See Also  
- [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [SQLServerDatabaseMetaData Members](sqlserverdatabasemetadata-members.md)
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

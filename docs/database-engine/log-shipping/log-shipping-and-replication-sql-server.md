@@ -105,7 +105,8 @@ helpviewer_keywords:
   
      If you synchronize with a Subscriber that is running a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases). For more information, see [Synchronize Data](../../relational-databases/replication/synchronize-data.md).  
   
-## See Also  
- [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)   
- [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
- [Configure replication with Always On availability groups](../availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)
+## Related content
+
+- [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)
+- [About log shipping (SQL Server)](about-log-shipping-sql-server.md)
+- [Configure replication with Always On availability groups](../availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

@@ -302,9 +302,9 @@ The columns returned are:
 | Version  | Version of the package.                   |
 | Location | Directory where you can find the package. |
 
-## Next steps
+## Related content
 
-+ [Extended events for machine learning](extended-events.md)
-+ [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
-+ [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-+ [Monitor machine learning using custom reports in Management Studio](monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [Monitor Python and R scripts with extended events in SQL Server Machine Learning Services](extended-events.md)
+- [Resource governor related dynamic management views (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/resource-governor-related-dynamic-management-views-transact-sql.md)
+- [System dynamic management views and functions](../../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md)
+- [Monitor Python and R script execution using custom reports in SQL Server Management Studio](monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)

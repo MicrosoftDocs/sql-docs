@@ -200,6 +200,6 @@ sqlpackage /Action:Publish \
 - [Tutorial: Create and deploy a SQL project](tutorials/create-deploy-sql-project.md)
 - [SqlPackage in development pipelines](../sqlpackage/sqlpackage-pipelines.md)
 - [SQL projects tools](sql-projects-tools.md)
-- [SqlPackage overview](../sqlpackage/sqlpackage.md)
+- [SqlPackage](../sqlpackage/sqlpackage.md)
 - [Azure SQL Deploy action (GitHub)](https://github.com/azure/sql-action)
 - [SqlAzureDacpacDeployment task reference](/azure/devops/pipelines/tasks/reference/sql-azure-dacpac-deployment-v1)

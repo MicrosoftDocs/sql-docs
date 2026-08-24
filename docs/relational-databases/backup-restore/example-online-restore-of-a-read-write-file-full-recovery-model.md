@@ -72,6 +72,6 @@ The syntax for an online restore sequence is the same as for an offline restore 
 - [Online Restore (SQL Server)](online-restore-sql-server.md)
 - [Piecemeal Restores (SQL Server)](piecemeal-restores-sql-server.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
-- [Restore and Recovery Overview (SQL Server)](restore-and-recovery-overview-sql-server.md)
+- [Restore and recovery overview (SQL Server)](restore-and-recovery-overview-sql-server.md)
 - [Apply Transaction Log Backups (SQL Server)](apply-transaction-log-backups-sql-server.md)
-- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

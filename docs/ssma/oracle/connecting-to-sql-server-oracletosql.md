@@ -95,7 +95,7 @@ You can manually update metadata for all databases, or for any single database o
 
 ## Related content
 
-- [Map Oracle schemas to SQL Server schemas (OracleToSQL)](mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)
-- [Set project options (OracleToSQL)](setting-project-options-oracletosql.md)
-- [Map Oracle and SQL Server data types (OracleToSQL)](mapping-oracle-and-sql-server-data-types-oracletosql.md)
-- [Convert Oracle schemas (OracleToSQL)](converting-oracle-schemas-oracletosql.md)
+- [Map Oracle schemas to SQL Server schemas](mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)
+- [Set project options](setting-project-options-oracletosql.md)
+- [Map Oracle and SQL Server data types](mapping-oracle-and-sql-server-data-types-oracletosql.md)
+- [Convert Oracle schemas](converting-oracle-schemas-oracletosql.md)

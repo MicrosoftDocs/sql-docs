@@ -22,4 +22,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)
+- [Replication backward compatibility](replication-backward-compatibility.md)

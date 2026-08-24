@@ -207,6 +207,6 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## See Also  
- [In-Memory OLTP Code Samples](./sample-database-for-in-memory-oltp.md)  
-  
+## Related content
+
+- [Sample database for in-memory OLTP](sample-database-for-in-memory-oltp.md)

@@ -621,9 +621,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ## Related content
 
-- [Handling errors and warnings](handling-errors-and-warnings.md)
-- [Logging activity](logging-activity.md)
-- [Idle connection resiliency](connection-resiliency.md)
-- [Performance tuning](performance-tuning-php-sql-driver.md)
-- [Connection options](connection-options.md)
-- [Support matrix](microsoft-php-drivers-for-sql-server-support-matrix.md)
+- [Handling Errors and Warnings](handling-errors-and-warnings.md)
+- [Logging Activity](logging-activity.md)
+- [Idle Connection Resiliency](connection-resiliency.md)
+- [Performance tuning for the Microsoft Drivers for PHP for SQL Server](performance-tuning-php-sql-driver.md)
+- [Connection Options](connection-options.md)
+- [Microsoft PHP Drivers for SQL Server Support Matrix](microsoft-php-drivers-for-sql-server-support-matrix.md)

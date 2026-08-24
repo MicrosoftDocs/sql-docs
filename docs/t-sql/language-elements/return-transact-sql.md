@@ -145,12 +145,11 @@ GO
  2
  ```  
   
-## See Also  
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   
- [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER PROCEDURE (Transact-SQL)](../statements/alter-procedure-transact-sql.md)
+- [CREATE PROCEDURE (Transact-SQL)](../statements/create-procedure-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](declare-local-variable-transact-sql.md)
+- [EXECUTE (Transact-SQL)](execute-transact-sql.md)
+- [SET @local_variable (Transact-SQL)](set-local-variable-transact-sql.md)
+- [THROW (Transact-SQL)](throw-transact-sql.md)

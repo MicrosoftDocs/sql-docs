@@ -92,8 +92,6 @@ The lifetime of a cursor declared on a table that is involved in an online index
 
 ## Related content
 
-- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)
-- [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
+- [Perform index operations online](perform-index-operations-online.md)
+- [Guidelines for online index operations](guidelines-for-online-index-operations.md)
 - [ALTER TABLE index options](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)
-
-

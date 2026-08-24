@@ -813,10 +813,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
     :::column-end:::
 :::row-end:::
  
-## See Also  
- [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)   
- [Event Notifications](../../relational-databases/service-broker/event-notifications.md)   
- [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md)  
-  
-  
+## Related content
 
+- [DDL triggers](ddl-triggers.md)
+- [Event notifications](../service-broker/event-notifications.md)
+- [DDL Event Groups](ddl-event-groups.md)

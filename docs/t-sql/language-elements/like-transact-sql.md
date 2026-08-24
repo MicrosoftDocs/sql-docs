@@ -16,7 +16,7 @@ f1_keywords:
   - "LIKE_TSQL"
 helpviewer_keywords:
   - "ESCAPE keyword"
-  - "% (wildcard - character(s) to match)"
+  - "% (wildcard - characters to match)"
   - "ASCII pattern matching"
   - "pattern searching [SQL Server]"
   - "wildcard characters [SQL Server]"
@@ -409,11 +409,10 @@ WHERE phone LIKE '6_2%'
 ORDER BY LastName;
 ```
 
-## See also
+## Related content
 
 - [PATINDEX (Transact-SQL)](../functions/patindex-transact-sql.md)
-- [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
+- [Expressions (Transact-SQL)](expressions-transact-sql.md)
 - [What are the SQL database functions?](../functions/functions.md)
-- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
 - [WHERE (Transact-SQL)](../queries/where-transact-sql.md)

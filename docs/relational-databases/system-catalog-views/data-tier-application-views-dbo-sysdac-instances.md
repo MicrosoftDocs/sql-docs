@@ -48,4 +48,4 @@ Requires membership in the **sysadmin** fixed server role to view all of the col
 
 ## Related content
 
-- [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)
+- [Data-tier applications (DAC) overview](../../tools/sql-database-projects/concepts/data-tier-applications/overview.md)

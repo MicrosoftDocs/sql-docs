@@ -64,4 +64,4 @@ The values that you specify for `<computername>` and `<domainname>` identify the
 ## Related content
 
 - [Configure the Report Server Service Account (Report Server Configuration Manager)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
-- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+- [Manage a Reporting Services native mode report server](manage-a-reporting-services-native-mode-report-server.md)

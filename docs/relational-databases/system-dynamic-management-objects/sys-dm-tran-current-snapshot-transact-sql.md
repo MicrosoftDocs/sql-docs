@@ -96,6 +96,7 @@ transaction_sequence_num
   
  The output for XSN-60 includes the same transactions that appear for XSN-59, but also includes XSN-59, which was active when XSN-60 started.  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](transaction-related-dynamic-management-views-and-functions-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)

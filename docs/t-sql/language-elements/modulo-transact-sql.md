@@ -108,4 +108,4 @@ FROM DimEmployee;
 - [Operators (Transact-SQL)](operators-transact-sql.md)
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
 - [%= (Modulus assignment) (Transact-SQL)](modulo-equals-transact-sql.md)
-- [Compound Operators (Transact-SQL)](compound-operators-transact-sql.md)
+- [Compound operators (Transact-SQL)](compound-operators-transact-sql.md)

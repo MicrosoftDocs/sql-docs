@@ -71,6 +71,6 @@ GO
 ## Related content
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [sp_addtype (Transact-SQL)](sp-addtype-transact-sql.md)
-- [sp_rename (Transact-SQL)](sp-rename-transact-sql.md)
+- [sys.sp_addtype (Transact-SQL)](sp-addtype-transact-sql.md)
+- [sys.sp_rename (Transact-SQL)](sp-rename-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

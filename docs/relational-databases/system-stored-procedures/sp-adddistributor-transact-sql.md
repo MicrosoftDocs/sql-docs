@@ -150,8 +150,8 @@ Only members of the **sysadmin** fixed server role can execute `sp_adddistributo
 ## Related content
 
 - [Configure Publishing and Distribution](../replication/configure-publishing-and-distribution.md)
-- [sp_changedistributor_property (Transact-SQL)](sp-changedistributor-property-transact-sql.md)
-- [sp_dropdistributor (Transact-SQL)](sp-dropdistributor-transact-sql.md)
-- [sp_helpdistributor (Transact-SQL)](sp-helpdistributor-transact-sql.md)
+- [sys.sp_changedistributor_property (Transact-SQL)](sp-changedistributor-property-transact-sql.md)
+- [sys.sp_dropdistributor (Transact-SQL)](sp-dropdistributor-transact-sql.md)
+- [sys.sp_helpdistributor (Transact-SQL)](sp-helpdistributor-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Configure Distribution](../replication/configure-distribution.md)

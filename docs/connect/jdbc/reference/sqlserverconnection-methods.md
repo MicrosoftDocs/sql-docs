@@ -14,7 +14,6 @@ ms.topic: reference
 
   For information about the members of ISQLServerConnection, see [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md).  
   
-## See Also  
- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnection Class](sqlserverconnection-class.md)

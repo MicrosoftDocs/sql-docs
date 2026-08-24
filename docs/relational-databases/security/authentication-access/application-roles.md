@@ -58,6 +58,6 @@ In earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.m
 | Delete an application role. | [DROP APPLICATION ROLE (Transact-SQL)](../../../t-sql/statements/drop-application-role-transact-sql.md) |
 | Using an application role. | [sp_setapprole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md) |
 
-## See also
+## Related content
 
-[Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)
+- [Securing SQL Server](../securing-sql-server.md)

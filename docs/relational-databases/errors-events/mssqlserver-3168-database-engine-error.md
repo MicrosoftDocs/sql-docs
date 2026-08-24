@@ -86,10 +86,8 @@ In this case, the source SQL Server version when the backup was taken is 15.0.42
 
 1. (Recommended) Update Server B to the latest available version, and then take a new backup of your system databases.
 
-## See also
+## Related content
 
-[Limitations on Restoring System Databases &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md#limitations-on-restoring-system-databases)  
-  
-[Restore the master database (Transact-SQL)](../backup-restore/restore-the-master-database-transact-sql.md)
-
-[The Easiest Way To Rebuild The master Database](https://techcommunity.microsoft.com/t5/sql-server-blog/the-easiest-way-to-rebuild-the-master-database/ba-p/383742)
+- [Limitations on Restoring System Databases &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md#limitations-on-restoring-system-databases)
+- [Restore the master database (Transact-SQL)](../backup-restore/restore-the-master-database-transact-sql.md)
+- [The Easiest Way To Rebuild The master Database](https://techcommunity.microsoft.com/t5/sql-server-blog/the-easiest-way-to-rebuild-the-master-database/ba-p/383742)

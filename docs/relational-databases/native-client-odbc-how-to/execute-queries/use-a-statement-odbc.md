@@ -62,6 +62,6 @@ helpviewer_keywords:
   
 8.  Call [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) with a *HandleType* of SQL_HANDLE_STMT to free the statement handle.  
   
-## See Also  
- [Executing Queries How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
+## Related content
+
+- [Executing Queries How-to Topics (ODBC)](executing-queries-how-to-topics-odbc.md)

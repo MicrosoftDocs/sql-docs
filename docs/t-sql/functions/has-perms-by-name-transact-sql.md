@@ -171,12 +171,10 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## See Also  
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Securables](../../relational-databases/security/securables.md)   
- [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-  
-  
+## Related content
 
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Securables](../../relational-databases/security/securables.md)
+- [Permissions Hierarchy (Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)
+- [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)
+- [Security Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)

@@ -77,22 +77,20 @@ helpviewer_keywords:
 |Switch to the source database on which to create the event notification, and if you are not already connected as the source database user, do so now.|Switch to the target database to receive event notification messages.|  
 |[Create the event notification](../../t-sql/statements/create-event-notification-transact-sql.md), and specify the broker service and identifier of the target database.||  
   
-## See Also  
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Implement Event Notifications](../../relational-databases/service-broker/implement-event-notifications.md)   
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
- [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)  
-  
-  
+## Related content
+
+- [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)
+- [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)
+- [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
+- [Encryption hierarchy](../security/encryption/encryption-hierarchy.md)
+- [Implement Event Notifications](implement-event-notifications.md)
+- [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
+- [CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
+- [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+- [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
+- [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
+- [CREATE EVENT NOTIFICATION (Transact-SQL)](../../t-sql/statements/create-event-notification-transact-sql.md)

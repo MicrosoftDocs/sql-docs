@@ -46,10 +46,9 @@ helpviewer_keywords:
   
 -   [Dropping a SQL Server Index](../../relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
-## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)
+- [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+- [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)

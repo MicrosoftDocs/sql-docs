@@ -295,5 +295,5 @@ For more information, see [JSON_MODIFY](../../t-sql/functions/json-modify-transa
 - [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)
 - [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)
 - [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)
-- [JSON Path Expressions](json-path-expressions-sql-server.md)
+- [JSON path expressions in the SQL Database Engine](json-path-expressions-sql-server.md)
 - [JSON data type](../../t-sql/data-types/json-data-type.md)

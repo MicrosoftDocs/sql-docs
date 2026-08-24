@@ -233,8 +233,8 @@ The following example assumes that the server is the current principal.
     ```
   The current value of `mirroring_role_desc` is now `Mirror`.
 
-## See Also
+## Related content
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [CREATE DATABASE](create-database-transact-sql.md)
+- [DATABASEPROPERTYEX (Transact-SQL)](../functions/databasepropertyex-transact-sql.md)
+- [Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)

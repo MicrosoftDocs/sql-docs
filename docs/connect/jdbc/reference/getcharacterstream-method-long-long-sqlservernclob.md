@@ -40,10 +40,9 @@ public java.io.Reader getCharacterStream(long pos,
 ## Remarks  
  This getCharacterStream method is specified by the getCharacterStream method in the java.sql.NClob interface.  
   
-## See Also  
- [getCharacterStream Method &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
- [SQLServerNClob Methods](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
- [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
- [SQLServerNClob Class](../../../connect/jdbc/reference/sqlservernclob-class.md)  
-  
-  
+## Related content
+
+- [getCharacterStream Method (SQLServerNClob)](getcharacterstream-method-sqlservernclob.md)
+- [SQLServerNClob Methods](sqlservernclob-methods.md)
+- [SQLServerNClob Members](sqlservernclob-members.md)
+- [SQLServerNClob Class](sqlservernclob-class.md)

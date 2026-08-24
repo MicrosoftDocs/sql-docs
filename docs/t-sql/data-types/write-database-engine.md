@@ -49,9 +49,9 @@ hid.Write(bw);
 byte[] encoding = stream.ToArray();  
 ```  
   
-## See also
-[Read &#40;Database Engine&#41;](../../t-sql/data-types/read-database-engine.md)  
-[ToString &#40;Database Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)  
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[hierarchyid Data Type Method Reference](./hierarchyid-data-type-method-reference.md)
-  
+## Related content
+
+- [Read (Database Engine) by using CSharp](read-database-engine.md)
+- [ToString (Database Engine)](tostring-database-engine.md)
+- [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)
+- [hierarchyid data type method reference](hierarchyid-data-type-method-reference.md)

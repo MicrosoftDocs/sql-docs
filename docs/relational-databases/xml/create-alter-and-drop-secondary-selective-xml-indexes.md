@@ -66,7 +66,6 @@ DROP INDEX ssxi_index
 ON tbl;
 ```
 
-## See also
+## Related content
 
-- [Selective XML indexes &#40;SXI&#41;](selective-xml-indexes-sxi.md)
-
+- [Selective XML indexes (SXI)](selective-xml-indexes-sxi.md)

@@ -102,10 +102,10 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
   
  The results contain the top 3 predictions sorted by the support value. You can replace $SUPPORT with $PROBABILITY or $ADJUSTED_PROBABILITY to return predictions ranked by probability or adjusted probability. For more information, see **Predict (DMX)**.  
   
-## See Also  
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
- [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
- [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
-  
+## Related content
+
+- [Functions (DMX)](functions-dmx.md)
+- [General Prediction Functions (DMX)](general-prediction-functions-dmx.md)
+- [BottomCount (DMX)](bottomcount-dmx.md)
+- [TopPercent (DMX)](toppercent-dmx.md)
+- [TopSum (DMX)](topsum-dmx.md)

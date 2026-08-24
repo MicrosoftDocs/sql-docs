@@ -75,7 +75,8 @@ SQLRETURN  SQLRateConnection(
   
  Include sqlspi.h for ODBC driver development.  
   
-## See Also  
- [Developing an ODBC Driver](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Driver-Aware Connection Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Developing Connection-Pool Awareness in an ODBC Driver](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+## Related content
+
+- [Developing an ODBC Driver](../develop-driver/developing-an-odbc-driver.md)
+- [Driver-Aware Connection Pooling](../develop-app/driver-aware-connection-pooling.md)
+- [Developing Connection-Pool Awareness in an ODBC Driver](../develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

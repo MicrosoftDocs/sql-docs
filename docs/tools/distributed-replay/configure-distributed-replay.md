@@ -190,9 +190,9 @@ If you need to use synchronization mode and wish to avoid this behavior, you mus
 
 4. Start the distributed replay trace capture and resume the normal workload.
 
-## See also
+## Related content
 
-- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
-- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
+- [Administration Tool Command-line Options (Distributed Replay Utility)](administration-tool-command-line-options-distributed-replay-utility.md)
+- [SQL Server Distributed Replay overview](sql-server-distributed-replay.md)
 - [Using Distributed Replay to Load Test Your SQL Server - Part 2](/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)
 - [Using Distributed Replay to Load Test Your SQL Server - Part 1](/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)

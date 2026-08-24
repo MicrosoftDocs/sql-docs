@@ -46,14 +46,13 @@ ms.custom: dmx
  [Modeling Flags &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
  Define additional hints that the algorithm can use to process a mining model.  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Understanding the DMX Select Statement](../dmx/understanding-the-dmx-select-statement.md)  
-  
-  
+## Related content
+
+- [Data Mining Extensions (DMX) Reference](data-mining-extensions-dmx-reference.md)
+- [Data Mining Extensions (DMX) Function Reference](data-mining-extensions-dmx-function-reference.md)
+- [Data Mining Extensions (DMX) Operator Reference](data-mining-extensions-dmx-operator-reference.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)
+- [Data Mining Extensions (DMX) Syntax Conventions](data-mining-extensions-dmx-syntax-conventions.md)
+- [General Prediction Functions (DMX)](general-prediction-functions-dmx.md)
+- [Structure and Usage of DMX Prediction Queries](structure-and-usage-of-dmx-prediction-queries.md)
+- [Understanding the DMX Select Statement](understanding-the-dmx-select-statement.md)

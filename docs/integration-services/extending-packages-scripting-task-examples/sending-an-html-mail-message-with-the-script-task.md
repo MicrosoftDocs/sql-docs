@@ -144,7 +144,6 @@ public void Main()
         }  
 ```  
   
-## See Also  
- [Send Mail Task](../../integration-services/control-flow/send-mail-task.md)  
-  
-  
+## Related content
+
+- [Send Mail Task](../control-flow/send-mail-task.md)

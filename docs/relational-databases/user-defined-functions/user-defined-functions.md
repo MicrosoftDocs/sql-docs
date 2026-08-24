@@ -146,4 +146,3 @@ A user-defined function takes zero or more input parameters and returns either a
 - [Execute user-defined functions](execute-user-defined-functions.md)
 - [Rename user-defined functions](rename-user-defined-functions.md)
 - [View user-defined functions](view-user-defined-functions.md)
-

@@ -72,4 +72,4 @@ These dialog boxes help you import policies from files and export policies for u
 ## Related content
 
 - [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)
-- [Policy-Based Management facets](working-with-policy-based-management-facets.md)
+- [Working with Policy-Based Management Facets](working-with-policy-based-management-facets.md)

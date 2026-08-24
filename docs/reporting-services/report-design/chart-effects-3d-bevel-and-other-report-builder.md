@@ -56,6 +56,6 @@ f1_keywords:
   
 ## Related content
 
-- [Format axis labels on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
-- [Format a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
-- [Add 3D effects to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)
+- [Formatting axis labels on a paginated report chart (Report Builder)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)
+- [Add 3D effects to a paginated report chart (Report Builder)](chart-effects-add-3d-effects-report-builder.md)

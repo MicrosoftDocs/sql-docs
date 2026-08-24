@@ -30,7 +30,7 @@ The following example returns the publisher ID and logo from the [**pubs** sampl
 
 [!code-csharp[SqlCommand_ExecuteReader_SequentialAccess#1](~/../sqlclient/doc/samples/SqlCommand_ExecuteReader_SequentialAccess.cs#1)]
 
-## See also
+## Related content
 
-- [SQL Server binary and large-value data](./sql/sql-server-binary-large-value-data.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [SQL Server binary and large-value data](sql/sql-server-binary-large-value-data.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

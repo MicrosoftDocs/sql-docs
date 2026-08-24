@@ -64,7 +64,6 @@ where ProductModelID=19
   
 ```  
   
-## See Also  
- [XQuery Expressions](../xquery/xquery-expressions.md)  
-  
-  
+## Related content
+
+- [XQuery Expressions](xquery-expressions.md)

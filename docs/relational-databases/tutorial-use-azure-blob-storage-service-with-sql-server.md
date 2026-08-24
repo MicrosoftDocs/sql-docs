@@ -505,7 +505,7 @@ To delete the resource group, run the following PowerShell code:
 ## Related content
 
 - [SQL Server data files in Microsoft Azure](databases/sql-server-data-files-in-microsoft-azure.md)
-- [File-Snapshot Backups for Database Files in Azure](backup-restore/file-snapshot-backups-for-database-files-in-azure.md)
+- [File-snapshot backups for database files in Azure](backup-restore/file-snapshot-backups-for-database-files-in-azure.md)
 - [SQL Server backup to URL for Azure Blob Storage](backup-restore/sql-server-backup-to-url.md)
 - [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview)
 - [Create Container](/rest/api/storageservices/Create-Container)
@@ -514,6 +514,6 @@ To delete the resource group, run the following PowerShell code:
 - [Credentials (Database Engine)](security/authentication-access/credentials-database-engine.md)
 - [CREATE CREDENTIAL (Transact-SQL)](../t-sql/statements/create-credential-transact-sql.md)
 - [sys.credentials (Transact-SQL)](system-catalog-views/sys-credentials-transact-sql.md)
-- [sp_delete_backup (Transact-SQL)](system-stored-procedures/snapshot-backup-sp-delete-backup.md)
+- [sys.sp_delete_backup (Transact-SQL)](system-stored-procedures/snapshot-backup-sp-delete-backup.md)
 - [sys.fn_db_backup_file_snapshots (Transact-SQL)](system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)
 - [sp_delete_backup_file_snapshot (Transact-SQL)](system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)

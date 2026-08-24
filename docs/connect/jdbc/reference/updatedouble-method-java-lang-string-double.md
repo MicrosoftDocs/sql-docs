@@ -40,9 +40,8 @@ public void updateDouble(java.lang.String columnName,
 ## Remarks  
  This updateDouble method is specified by the updateDouble method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateDouble Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateDouble Method (SQLServerResultSet)](updatedouble-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

@@ -115,4 +115,4 @@ GO
   
 ## Related content
 
-- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
+- [Create a publication](create-a-publication.md)

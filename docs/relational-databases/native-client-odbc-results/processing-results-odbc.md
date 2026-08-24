@@ -69,7 +69,7 @@ helpviewer_keywords:
   
 -   [Autotranslation of Character Data](../../relational-databases/native-client-odbc-results/autotranslation-of-character-data.md)  
   
-## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Processing Results How-to Topics &#40;ODBC&#41;](../native-client-odbc-how-to/processing-results-process-results.md)  
-  
+## Related content
+
+- [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)
+- [Processing Results - Process Results](../native-client-odbc-how-to/processing-results-process-results.md)

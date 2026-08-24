@@ -177,7 +177,7 @@ On Linux, macOS, or Windows, dotnet-trace can be used to capture traces. The dot
    dotnet-trace ps
    8734  MyApplication  /home/appuser/MyApplication/MyApplication
 
-   dotnet-trace collect -–process-id 8734 --providers Microsoft.Data.SqlClient.EventSource:1FFF:4
+   dotnet-trace collect --process-id 8734 --providers Microsoft.Data.SqlClient.EventSource:1FFF:4
    ```
 
    Run the application separately and let it run as long as needed to reproduce the issue. If it's a high CPU issue, 5-10 seconds is usually enough.
@@ -198,13 +198,8 @@ On Linux, macOS, or Windows, dotnet-trace can be used to capture traces. The dot
 
    The trace file name ends in `.nettrace`. If not tracing on Windows, copy the file to a Windows system. View the trace file in [PerfView](https://github.com/microsoft/perfview).
 
-## External resources
+## Related content
 
-For another set of examples on how to trace Microsoft.Data.SqlClient cross-platform, see the [CSS SQL Networking Tools wiki](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-.NET-Core-SQL-Driver-Trace).
-
-For more information about event tracing, see the following resources.
-
-|Resource|Description|
-|--------------|-----------------|
-|[EventSource Class](/dotnet/api/system.diagnostics.tracing.eventsource)|Used to create ETW events.|
-|[EventListener Class](/dotnet/api/system.diagnostics.tracing.eventlistener)|Provides methods for enabling and disabling events from event sources.|
+- [CSS SQL Networking Tools wiki](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-.NET-Core-SQL-Driver-Trace)
+- [EventSource Class](/dotnet/api/system.diagnostics.tracing.eventsource)
+- [EventListener Class](/dotnet/api/system.diagnostics.tracing.eventlistener)

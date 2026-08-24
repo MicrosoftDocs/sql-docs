@@ -92,5 +92,5 @@ Typically, the expand and collapse action is used to initially display only summ
   
 ## Related content
 
-- [Drilldown action in a paginated report (Report Builder)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)
-- [Hide an item &#40;Report Builder&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)
+- [Drilldown action in a paginated report (Report Builder)](drilldown-action-report-builder-and-ssrs.md)
+- [Hide an item (Report Builder)](../report-builder/hide-an-item-report-builder-and-ssrs.md)

@@ -59,12 +59,6 @@ The client always tries to connect to the principal server. If it fails, it trie
 > [!NOTE]
 > Mirroring support on the server is configured on a per-database basis. If data manipulation operations are executed against other databases not included in the principal/mirror set, either by using multipart names or by changing the current database, the changes to these other databases do not propagate in the event of failure. No error is generated when data is modified in a database that is not mirrored. The developer must evaluate the possible impact of such operations.
 
-## Next steps
+## Related content
 
-### Database mirroring resources
-
-For conceptual documentation and information on configuring, deploying, and administering mirroring, see the following resources in SQL Server documentation.
-
-|Resource|Description|
-|--------------|-----------------|
-|[Database Mirroring](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)|Describes how to set up and configure mirroring in SQL Server.|
+- [Database Mirroring (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)

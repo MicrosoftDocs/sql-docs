@@ -97,7 +97,6 @@ EXECUTE ('SELECT Name FROM MyAddressType');
 GO  
 ```  
 
-## Next steps
+## Related content
 
 - [CREATE SYNONYM (Transact-SQL)](../../t-sql/statements/create-synonym-transact-sql.md)
-

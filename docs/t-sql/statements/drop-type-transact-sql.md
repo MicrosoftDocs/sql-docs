@@ -64,7 +64,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 DROP TYPE ssn ;  
 ```  
   
-## See Also  
- [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+## Related content
 
+- [CREATE TYPE (Transact-SQL)](create-type-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

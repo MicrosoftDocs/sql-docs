@@ -117,5 +117,6 @@ class Class1
 }  
 ```  
   
-## Next steps
+## Related content
+
 - [Asynchronous operations](asynchronous-operations.md)

@@ -74,8 +74,9 @@ GROUP BY database_id;
 GO  
 ```  
   
-## See also  
- - [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- - [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- - [Statistics](../statistics/statistics.md)   
- - [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Statistics](../statistics/statistics.md)
+- [KILL STATS JOB (Transact-SQL)](../../t-sql/language-elements/kill-stats-job-transact-sql.md)

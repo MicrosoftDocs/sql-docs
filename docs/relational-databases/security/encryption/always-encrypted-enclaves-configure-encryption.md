@@ -46,12 +46,9 @@ You can trigger in-place encryption using one of the following methods:
 - The [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet. See [Configure column encryption in-place with PowerShell](always-encrypted-enclaves-configure-encryption-powershell.md).
 - A [data-tier application (DAC) package](../../data-tier-applications/data-tier-applications.md). See [Configure column encryption in-place with DAC package](always-encrypted-enclaves-configure-encryption-dacpac.md).
 
-## Next steps
-
-- [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
-- [Create and use indexes on column using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
-- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
-
-## See also
+## Related content
 
 - [Troubleshoot common issues for Always Encrypted with secure enclaves](always-encrypted-enclaves-troubleshooting.md)
+- [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
+- [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)

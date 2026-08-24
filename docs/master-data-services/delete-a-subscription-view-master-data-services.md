@@ -40,6 +40,7 @@ helpviewer_keywords:
   
 5.  In the confirmation dialog box, click **OK**.  
   
-## See Also  
- [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)   
- [Overview: Exporting Data &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)
+## Related content
+
+- [Create a Subscription View to Export Data (Master Data Services)](create-a-subscription-view-to-export-data-master-data-services.md)
+- [Overview: Exporting Data (Master Data Services)](overview-exporting-data-master-data-services.md)

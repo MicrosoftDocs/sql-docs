@@ -140,8 +140,8 @@ DBCC UPDATEUSAGE (AdventureWorks2022, 'HumanResources.Employee', IX_Employee_Org
 GO
 ```
 
-## See also
+## Related content
 
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-- [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [sys.sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
+- [UPDATE STATISTICS (Transact-SQL)](../statements/update-statistics-transact-sql.md)

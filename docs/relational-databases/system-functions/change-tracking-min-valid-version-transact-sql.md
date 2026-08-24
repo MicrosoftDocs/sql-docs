@@ -79,9 +79,7 @@ ELSE
 -- Obtain changes using CHANGETABLE(CHANGES ...)  
 ```  
   
-## See also  
- [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
-  
-  
+## Related content
 
+- [Change Tracking Functions (Transact-SQL)](change-tracking-functions-transact-sql.md)
+- [Change Tracking Catalog Views - sys.change_tracking_tables](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)

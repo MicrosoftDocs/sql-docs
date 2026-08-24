@@ -218,13 +218,6 @@ A data frame or an [revoscalepy.RxDataSource](/machine-learning-server/python-re
 representing the created output data.
 
 
-## See also
-
-[`rx_predict`](rx-predict.md),
-[revoscalepy.rx_data_step](/machine-learning-server/python-reference/revoscalepy/rx-data-step),
-[revoscalepy.rx_import](/machine-learning-server/python-reference/revoscalepy/rx-import).
-
-
 ## Example
 
 
@@ -290,3 +283,8 @@ Writing completed.
 4             1.0  
 ```
 
+## Related content
+
+- [*microsoftml.rx_predict*: Scores using a Microsoft machine learning model](rx-predict.md)
+- [revoscalepy.rx_data_step](/machine-learning-server/python-reference/revoscalepy/rx-data-step)
+- [revoscalepy.rx_import](/machine-learning-server/python-reference/revoscalepy/rx-import)

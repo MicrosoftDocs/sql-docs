@@ -82,4 +82,4 @@ Only members of the **sysadmin** fixed server role, the **db_owner** fixed datab
 
 ## Related content
 
-- [sp_unregister_custom_scripting (Transact-SQL)](sp-unregister-custom-scripting-transact-sql.md)
+- [sys.sp_unregister_custom_scripting (Transact-SQL)](sp-unregister-custom-scripting-transact-sql.md)

@@ -127,9 +127,8 @@ FROM MyModel.CASES
 WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)  
 ```  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
-  
-  
+## Related content
+
+- [Data Mining Extensions (DMX) Function Reference](data-mining-extensions-dmx-function-reference.md)
+- [Functions (DMX)](functions-dmx.md)
+- [General Prediction Functions (DMX)](general-prediction-functions-dmx.md)

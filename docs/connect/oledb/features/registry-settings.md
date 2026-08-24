@@ -48,7 +48,7 @@ The TCP Keep-Alive parameter (in milliseconds) controls how often TCP attempts t
 
 The Keep-Alive Interval parameter (in milliseconds) determines the interval separating KEEPALIVE retransmissions until a response is received. The default is 1000 milliseconds.
 
-## See also 
-[Encryption and certificate validation](./encryption-and-certificate-validation.md)  
-[MSOLEDBSQL major version differences](../major-version-differences.md)  
+## Related content
 
+- [Encryption and certificate validation in OLE DB](encryption-and-certificate-validation.md)
+- [Major version differences in MSOLEDBSQL](../major-version-differences.md)

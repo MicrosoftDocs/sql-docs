@@ -58,5 +58,6 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 ## Remarks  
  For more information about dynamic management view, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
-## See also  
- [User Instances for Non-Administrators](/previous-versions/sql/)
+## Related content
+
+- [User Instances for Non-Administrators](/previous-versions/sql/)

@@ -38,5 +38,6 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
   
  For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)
+## Related content
+
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)

@@ -40,14 +40,11 @@ Follow these articles to uninstall an existing instance of [!INCLUDE[ssnoversion
 
   This article describes how to manually remove the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] objects after uninstalling either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or just the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] component in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS).
 
-## See also
+## Related content
 
-- [Remove a SQL Server Failover Cluster Instance (Setup)](../../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)
-- [Add or Remove Nodes in a SQL Server Failover Cluster (Setup)](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)
-- [Repair a Failed SQL Server Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
-
-## Next steps
-
-- [Planning a SQL Server Installation](planning-a-sql-server-installation.md)
-- [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)
-- [Upgrade to SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
+- [Remove a failover cluster instance (Setup)](../failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)
+- [Add or remove nodes in a failover cluster instance (Setup)](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)
+- [Repair a failed SQL Server installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
+- [Plan a SQL Server installation](planning-a-sql-server-installation.md)
+- [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md)
+- [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

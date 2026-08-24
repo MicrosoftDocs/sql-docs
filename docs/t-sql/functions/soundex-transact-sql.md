@@ -128,4 +128,3 @@ GO
 
 - [DIFFERENCE (Transact-SQL)](difference-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL) compatibility level](../statements/alter-database-transact-sql-compatibility-level.md)
-

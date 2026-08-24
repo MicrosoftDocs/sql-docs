@@ -27,8 +27,7 @@ public static final int TYPE_SS_SCROLL_DYNAMIC
 ## Field Value  
  An **int** value of 1006.  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

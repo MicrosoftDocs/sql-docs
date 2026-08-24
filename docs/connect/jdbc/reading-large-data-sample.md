@@ -41,6 +41,6 @@ Finally, the sample code iterates through the rows of data that are in the resul
 
 [!code[JDBC#UsingAdaptiveBuffering1](codesnippet/Java/reading-large-data-sample_1.java)]
 
-## See also
+## Related content
 
-[Working with large data](working-with-large-data.md)
+- [Working with large data](working-with-large-data.md)

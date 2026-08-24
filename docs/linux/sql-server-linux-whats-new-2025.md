@@ -80,7 +80,7 @@ The following updates are available in [!INCLUDE [sssql25-md](../includes/sssql2
 
 ## Related content
 
-- [Quickstart: Install SQL Server and create a database on Red Hat](install-upgrade/quickstart-install-red-hat.md?view=sql-server-linux-ver17&preserve-view=true)
+- [Quickstart: Install SQL Server and create a database on Red Hat Enterprise Linux](install-upgrade/quickstart-install-red-hat.md?view=sql-server-linux-ver17&preserve-view=true)
 - [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](install-upgrade/quickstart-install-suse.md?view=sql-server-linux-ver17&preserve-view=true)
 - [Quickstart: Install SQL Server and create a database on Ubuntu](install-upgrade/quickstart-install-ubuntu.md?view=sql-server-linux-ver17&preserve-view=true)
 - [Quickstart: Run SQL Server Linux container images with Docker](install-upgrade/quickstart-install-docker.md?view=sql-server-linux-ver17&preserve-view=true)

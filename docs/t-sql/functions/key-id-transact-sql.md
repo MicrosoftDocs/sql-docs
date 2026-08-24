@@ -63,11 +63,10 @@ SELECT KEY_ID('ABerglundKey1');
 SELECT KEY_ID('#ABerglundKey2');  
 ```  
   
-## See Also  
- [KEY_GUID &#40;Transact-SQL&#41;](../../t-sql/functions/key-guid-transact-sql.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
+
+- [KEY_GUID (Transact-SQL)](key-guid-transact-sql.md)
+- [CREATE SYMMETRIC KEY (Transact-SQL)](../statements/create-symmetric-key-transact-sql.md)
+- [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
+- [sys.key_encryptions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

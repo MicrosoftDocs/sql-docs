@@ -55,6 +55,6 @@ SELECT ToggleDrillState
    FROM [Adventure Works]  
 ```  
   
-## See Also  
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
+## Related content
+
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

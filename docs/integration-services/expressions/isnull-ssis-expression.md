@@ -49,8 +49,7 @@ ISNULL(LastName)? "Unknown last name":LastName
 ISNULL(DaysToManufacture + @AddDays)  
 ```  
   
-## See Also  
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)   
- [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
-  
-  
+## Related content
+
+- [Functions (SSIS Expression)](functions-ssis-expression.md)
+- [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)

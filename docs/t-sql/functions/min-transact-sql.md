@@ -192,7 +192,7 @@ LeastExpensiveProduct SalesOrderID
 
 ## Related content
 
-- [Aggregate Functions (Transact-SQL)](aggregate-functions-transact-sql.md)
+- [Aggregate functions (Transact-SQL)](aggregate-functions-transact-sql.md)
 - [MAX (Transact-SQL)](max-transact-sql.md)
 - [Logical functions - LEAST (Transact-SQL)](logical-functions-least-transact-sql.md)
 - [SELECT - OVER clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

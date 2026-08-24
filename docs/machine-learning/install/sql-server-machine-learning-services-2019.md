@@ -80,7 +80,7 @@ As before, additional configuration is still required for *implied authenticatio
 A symbolic link is created to the current default **R_SERVICES**  and **PYTHON_SERVICES** as part of SQL Server Setup. If you don't want to create this link, an alternative is to grant 'all application packages' read permission to the hierarchy leading up to the folder.
 
 
-## See also
+## Related content
 
-+ [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md)
-+ [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
+- [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md)
+- [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](../../linux/install-upgrade/setup-machine-learning.md)

@@ -329,9 +329,7 @@ SELECT *
 FROM prediction_results;
 ```
 
-## Next steps
+## Related content
 
-- In this tutorial, you used [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to iterate operations over partitioned data. For a closer look at calling external scripts in stored procedures and using RevoScaleR functions, continue with the following tutorial.
-
-> [!div class="nextstepaction"]
-> [walkthrough for R and SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
+- [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
+- [Tutorial: SQL Server development for R data scientists](walkthrough-data-science-end-to-end-walkthrough.md)

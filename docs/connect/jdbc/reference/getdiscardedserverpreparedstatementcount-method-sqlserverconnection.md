@@ -33,8 +33,7 @@ public int getDiscardedServerPreparedStatementCount()
 ## Remarks  
  This method is available from JDBC driver version 6.4 and onward.
  
-## See Also  
- [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnection Members](sqlserverconnection-members.md)
+- [SQLServerConnection Class](sqlserverconnection-class.md)

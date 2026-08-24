@@ -54,8 +54,9 @@ As a validation step, run a query to confirm the data was uploaded.
     SELECT COUNT(*) FROM AirlineDemoSmall;
     ```
 
-## Next steps
+## Next step
 
-In the following lesson, you will create a linear regression model based on this data.
+In the following lesson, you create a linear regression model based on this data.
 
-+ [Create a Python model using revoscalepy](use-python-revoscalepy-to-create-model.md)
+> [!div class="nextstepaction"]
+> [Use Python with revoscalepy to create a model that runs remotely on SQL Server](use-python-revoscalepy-to-create-model.md)

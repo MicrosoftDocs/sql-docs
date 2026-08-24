@@ -30,8 +30,6 @@ ms.custom:
 |IRowsetFastLoad|This interface supports the new date/time types, but there is no change to its interface.|  
 |ITableDefinition::CreateTable|For more information, see [Data Type Support for OLE DB Date and Time Improvements](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
-## See Also  
- [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
-  
-  
+## Related content
 
+- [Date and Time Improvements in OLE DB](date-and-time-improvements-ole-db.md)

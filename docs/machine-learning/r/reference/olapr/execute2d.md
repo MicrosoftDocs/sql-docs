@@ -81,11 +81,6 @@ Creating a Demo OLAP Cube (the same as the one used in the examples):
 
 
 
-## See also
-
-[Query](Query.md), [OlapConnection](OlapConnection.md), [executeMD](ExecuteMD.md), [explore](Explore.md), data.frame
-
-
 ## Examples
 
  ```
@@ -106,3 +101,10 @@ Creating a Demo OLAP Cube (the same as the one used in the examples):
 
   result2 <- execute2D(olapCnn, mdx)
 ```
+
+## Related content
+
+- [Query: olapR Query Construction](Query.md)
+- [OlapConnection: olapR OlapConnection Creation](OlapConnection.md)
+- [executeMD: olapR executeMD Methods](ExecuteMD.md)
+- [explore: olapR explore Method](Explore.md)

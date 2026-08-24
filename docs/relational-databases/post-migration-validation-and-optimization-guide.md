@@ -190,7 +190,7 @@ For MSTVFs, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] uses a fixed
 ## Related content
 
 - [Best practices for monitoring workloads with Query Store](performance/best-practice-with-the-query-store.md)
-- [Sample Database for In-Memory OLTP](in-memory-oltp/sample-database-for-in-memory-oltp.md)
+- [Sample database for in-memory OLTP](in-memory-oltp/sample-database-for-in-memory-oltp.md)
 - [User-defined functions](user-defined-functions/user-defined-functions.md)
 - [Table Variables and Row Estimations - Part 1](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)
 - [Table Variables and Row Estimations - Part 2](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)

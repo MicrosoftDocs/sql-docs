@@ -117,6 +117,6 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 ## Related content
 
 - [Create a publication](../replication/publish/create-a-publication.md)
-- [sp_addpublication (Transact-SQL)](sp-addpublication-transact-sql.md)
-- [sp_changelogreader_agent (Transact-SQL)](sp-changelogreader-agent-transact-sql.md)
+- [sys.sp_addpublication (Transact-SQL)](sp-addpublication-transact-sql.md)
+- [sys.sp_changelogreader_agent (Transact-SQL)](sp-changelogreader-agent-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

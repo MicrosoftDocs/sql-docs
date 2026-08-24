@@ -136,4 +136,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)
+- [Article Options for Merge Replication](article-options-for-merge-replication.md)

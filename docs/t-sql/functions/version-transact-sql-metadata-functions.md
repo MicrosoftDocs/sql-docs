@@ -37,8 +37,7 @@ The following example returns the version number.
 SELECT VERSION();  
 ```  
   
-## See Also 
-[SESSION_ID (Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
-[DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
-  
-  
+## Related content
+
+- [SESSION_ID (Transact-SQL)](session-id-transact-sql.md)
+- [DB_NAME (Transact-SQL)](db-name-transact-sql.md)

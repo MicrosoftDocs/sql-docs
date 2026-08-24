@@ -69,8 +69,7 @@ ms.topic: ui-reference
   
  When the list of InfoPackages appears, select the InfoPackage that you want, and the destination will populate the associated options with the required values.  
   
-## See Also  
- [SAP BW Destination Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
-  
+## Related content
+
+- [SAP BW Destination Editor (Connection Manager Page)](sap-bw-destination-editor-connection-manager-page.md)
+- [Microsoft Connector for SAP BW F1 Help](../microsoft-connector-for-sap-bw-f1-help.md)

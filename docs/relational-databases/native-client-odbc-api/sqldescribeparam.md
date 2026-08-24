@@ -79,7 +79,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## SQLDescribeParam Support for Large CLR UDTs  
  **SQLDescribeParam** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## See Also  
- [SQLDescribeParam Function](../../odbc/reference/syntax/sqldescribeparam-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLDescribeParam Function](../../odbc/reference/syntax/sqldescribeparam-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

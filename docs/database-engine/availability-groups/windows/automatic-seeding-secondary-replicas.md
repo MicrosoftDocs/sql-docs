@@ -45,7 +45,7 @@ In SQL Server 2017, Microsoft recommends using the same data and log file path o
 
 The following table presents examples of supported data disk layouts that can support automatic seeding:
 
-|Primary instance</br>Default data path|Secondary instance</br>Default data path|Primary instance</br>Source file location|Secondary instance</br> Target file location
+|Primary instance<br />Default data path|Secondary instance<br />Default data path|Primary instance<br />Source file location|Secondary instance<br /> Target file location
 |:------|:------|:------|:------
 |c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
 |c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
@@ -54,7 +54,7 @@ The following table presents examples of supported data disk layouts that can su
 
 Scenarios where primary and secondary replica database location are not the instance default paths are not impacted by this change. Requirements for secondary replica file paths to match the primary replica file paths remain the same.
 
-|Primary instance</br>Default data path|Secondary instance</br>Default data path|Primary instance</br>File location|Secondary instance</br> File location
+|Primary instance<br />Default data path|Secondary instance<br />Default data path|Primary instance<br />File location|Secondary instance<br /> File location
 |:------|:------|:------|:------
 |c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
 |c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
@@ -62,7 +62,7 @@ Scenarios where primary and secondary replica database location are not the inst
 
 If you mix default and non default paths on the primary and secondary replicas, SQL Server 2017 behaves differently than previous releases. The following table shows the SQL Server 2017 behavior.
 
-|Primary instance</br>Default data path |Secondary instance</br>Default data path |Primary instance</br>File location |SQL Server 2016 </br>Secondary instance</br>File location |SQL Server 2017 </br>Secondary instance</br>File location
+|Primary instance<br />Default data path |Secondary instance<br />Default data path |Primary instance<br />File location |SQL Server 2016 <br />Secondary instance<br />File location |SQL Server 2017 <br />Secondary instance<br />File location
 |:------|:------|:------|:------|:------
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
@@ -239,14 +239,8 @@ The following table lists extended events related to automatic seeding.
 |hadr_automatic_seeding_failure|Occurs when an automatic seeding operation fails.|
 |hadr_automatic_seeding_timeout|Occurs when an automatic seeding operation times out.|
 
-## See also
+## Related content
 
-[ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)
-
-[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
-
-[Always On Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))
-
-<!--Image references-->
-[1]: ./media/auto-seed-new-availability-group.png
-[2]: ./media/auto-seed-sql-server-log.png
+- [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)
+- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
+- [Always On Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))

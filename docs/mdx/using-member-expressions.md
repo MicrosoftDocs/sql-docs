@@ -53,6 +53,6 @@ Dimension_Name
 > [!NOTE]  
 >  For more information about member names and member keys, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
-## See Also  
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
-  
+## Related content
+
+- [Expressions (MDX)](expressions-mdx.md)

@@ -326,7 +326,7 @@ A fatal error occurred during a full-text population and caused the population t
 - [Customize filters and word breakers](view-or-change-registered-filters-and-word-breakers.md)
 - [Configure and manage filters](configure-and-manage-filters-for-search.md)
 - [Configure and manage word breakers and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md)
-- [sys.fulltext_indexes](../system-catalog-views/sys-fulltext-indexes-transact-sql.md)
+- [sys.fulltext_indexes (Transact-SQL)](../system-catalog-views/sys-fulltext-indexes-transact-sql.md)
 - [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#fulltext_index_version)
 - [Full-text filter binaries](full-text-filter-binaries.md)
 - [Full-text word breaker and stemmer binaries](full-text-word-breaker-and-stemmer-binaries.md)

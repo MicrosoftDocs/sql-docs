@@ -94,12 +94,11 @@ ORDER BY bs.database_name ASC, bs.Backup_Start_Date DESC;
 ```   
 
 
-## See Also  
- [Backup and Restore Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [Backup and Restore Tables (Transact-SQL)](backup-and-restore-tables-transact-sql.md)
+- [backupfile (Transact-SQL)](backupfile-transact-sql.md)
+- [backupfilegroup (Transact-SQL)](backupfilegroup-transact-sql.md)
+- [backupmediafamily (Transact-SQL)](backupmediafamily-transact-sql.md)
+- [backupset (Transact-SQL)](backupset-transact-sql.md)
+- [System Tables (Transact-SQL)](system-tables-transact-sql.md)

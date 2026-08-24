@@ -136,7 +136,7 @@ Your backup strategy remains the same: continue performing periodic database, lo
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
 - [Maintenance plans](../maintenance-plans/maintenance-plans.md)
-- [Create a Full Database Backup](create-a-full-database-backup-sql-server.md)
+- [Create a full database backup](create-a-full-database-backup-sql-server.md)
 - [Back up a transaction log](back-up-a-transaction-log-sql-server.md)
 - [Create a Job](/ssms/agent/create-a-job)
 - [Disable or Enable a Job](/ssms/agent/disable-or-enable-a-job)

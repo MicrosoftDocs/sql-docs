@@ -142,13 +142,13 @@ GO
 ```
 ::: moniker-end
 
-## See also
+## Related content
 
-+ [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)
-+ [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-+ [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
-+ [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
-+ [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
-+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
-+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
-+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) 
+- [Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services](../../machine-learning/administration/resource-governor.md)
+- [Server configuration: external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
+- [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](create-external-resource-pool-transact-sql.md)
+- [DROP EXTERNAL RESOURCE POOL (Transact-SQL)](drop-external-resource-pool-transact-sql.md)
+- [ALTER RESOURCE POOL (Transact-SQL)](alter-resource-pool-transact-sql.md)
+- [CREATE WORKLOAD GROUP (Transact-SQL)](create-workload-group-transact-sql.md)
+- [Resource governor resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
+- [ALTER RESOURCE GOVERNOR (Transact-SQL)](alter-resource-governor-transact-sql.md)

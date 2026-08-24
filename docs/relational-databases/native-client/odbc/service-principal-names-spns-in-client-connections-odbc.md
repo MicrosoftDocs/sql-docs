@@ -46,7 +46,6 @@ ms.topic: "reference"
   
 -   [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)  
   
-## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)

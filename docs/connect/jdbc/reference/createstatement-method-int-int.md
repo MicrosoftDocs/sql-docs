@@ -56,6 +56,6 @@ public java.sql.Statement createStatement(int resultSetType,
   
 ## Related content
 
-- [createStatement Method (SQLServerConnection)](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)
-- [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)
-- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)
+- [createStatement Method (SQLServerConnection)](createstatement-method-sqlserverconnection.md)
+- [SQLServerConnection Members](sqlserverconnection-members.md)
+- [SQLServerConnection Class](sqlserverconnection-class.md)

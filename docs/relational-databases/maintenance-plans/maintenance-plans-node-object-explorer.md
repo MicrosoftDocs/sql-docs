@@ -18,6 +18,6 @@ f1_keywords:
 
 This section contains the F1 Help for the **Maintenance Plans** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-## See also
+## Related content
 
-- [Maintenance Plans](maintenance-plans.md)
+- [Maintenance plans](maintenance-plans.md)

@@ -32,8 +32,7 @@ dev_langs:
 |**MSrepl_create_time**|**datetime**|The time that the conflict occurred.|  
 |**origin_datasource_id**|**uniqueidentifier**|The identifier of the database where the conflicting change originated.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

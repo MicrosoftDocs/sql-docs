@@ -50,7 +50,6 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], use [Integ
          You can control the backup compression behavior of log backups.  
   
   
-## See Also  
- [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)  
-  
-  
+## Related content
+
+- [Backup compression (SQL Server)](backup-compression-sql-server.md)

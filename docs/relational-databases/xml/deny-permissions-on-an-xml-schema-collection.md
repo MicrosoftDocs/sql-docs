@@ -191,12 +191,11 @@ DROP LOGIN TestLogin1;
 GO
 ```
 
-## See also
+## Related content
 
-- [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)
-- [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)
-- [Requirements and Limitations for XML Schema Collections on the Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)
-- [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)
-- [GRANT Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)
-- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)
-
+- [Compare typed XML to untyped XML](compare-typed-xml-to-untyped-xml.md)
+- [XML schema collections (SQL Server)](xml-schema-collections-sql-server.md)
+- [Requirements and limitations for XML schema collections on the server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)
+- [DENY Object Permissions (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)
+- [GRANT object permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)
+- [XML data (SQL Server)](xml-data-sql-server.md)

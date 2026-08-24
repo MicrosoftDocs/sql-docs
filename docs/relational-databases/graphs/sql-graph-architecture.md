@@ -168,10 +168,7 @@ There are certain limitations on node and edge tables:
 - Graph pseudo-columns (`node_id`, `$from_id`, `$to_id` and `edge_id`) can't be used as the sort columns for an [ordered clustered columnstore index](../indexes/columnstore-indexes-design-guidance.md#choose-the-best-columnstore-index-for-your-needs). Attempting to use any graph pseudo-columns as the sort columns for ordered clustered columnstore results in an `Msg 102: Incorrect syntax` error.
 - In [Fabric SQL database](/fabric/database/sql/overview), SQL Graph is allowed, but Node and Edge tables will not mirror to Fabric OneLake.
 
-## See also
+## Related content
 
- - [Graph Functions (Transact-SQL)](../../t-sql/functions/graph-functions-transact-sql.md)
-
-## Next steps
-
- - To get started with SQL Graph, see [SQL Graph Database - Sample](./sql-graph-sample.md)
+- [Graph functions (Transact-SQL)](../../t-sql/functions/graph-functions-transact-sql.md)
+- [Create a graph database and run some pattern matching queries using T-SQL](sql-graph-sample.md)

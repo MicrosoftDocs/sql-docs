@@ -109,6 +109,6 @@ By default, in the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], Full-Text Se
 - [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)
 - [FREETEXTTABLE (Transact-SQL)](../system-functions/freetexttable-transact-sql.md)
 - [Configure and manage filters](configure-and-manage-filters-for-search.md)
-- [sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
+- [sys.sp_fulltext_service (Transact-SQL)](../system-stored-procedures/sp-fulltext-service-transact-sql.md)
 - [sys.fulltext_languages (Transact-SQL)](../system-catalog-views/sys-fulltext-languages-transact-sql.md)
 - [Configure and manage word breakers and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md)

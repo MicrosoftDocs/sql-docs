@@ -773,11 +773,11 @@ For local development and CI, see [Container and local development](container-lo
 
 ## Related content
 
-- [Installation](installation.md)
-- [Connection strings](connection-strings.md)
-- [Microsoft Entra authentication](entra-authentication.md)
-- [Bulk copy operations](bulk-copy.md)
-- [Data type mappings](data-type-mappings.md)
-- [Transaction management](transaction-management.md)
-- [Container and local development](container-local-development.md)
-- [Migrate from SQLite](migrate-from-sqlite.md)
+- [Install mssql-python](installation.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Microsoft Entra authentication with mssql-python](entra-authentication.md)
+- [Use bulk copy with mssql-python](bulk-copy.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Transaction management with mssql-python](transaction-management.md)
+- [Container and local development with mssql-python](container-local-development.md)
+- [Migrate from SQLite to Microsoft SQL with mssql-python](migrate-from-sql-lite.md)

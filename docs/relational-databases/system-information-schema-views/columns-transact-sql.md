@@ -67,15 +67,14 @@ WHERE TABLE_NAME = 'Person';
 GO  
 ```  
   
-## See Also
+## Related content
 
-- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
-- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-- [sys.syscharsets &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)
-- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)
-- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
-- [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
-- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)
-- [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
-- [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)
-
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)
+- [System information schema views (Transact-SQL)](system-information-schema-views-transact-sql.md)
+- [sys.syscharsets (Transact-SQL)](../system-compatibility-views/sys-syscharsets-transact-sql.md)
+- [sys.columns (Transact-SQL)](../system-catalog-views/sys-columns-transact-sql.md)
+- [sys.sql_modules (Transact-SQL)](../system-catalog-views/sys-sql-modules-transact-sql.md)
+- [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md)
+- [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)
+- [sys.types (Transact-SQL)](../system-catalog-views/sys-types-transact-sql.md)
+- [COLUMNS_UPDATED (Transact-SQL)](../../t-sql/functions/columns-updated-transact-sql.md)

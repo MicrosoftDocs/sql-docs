@@ -317,12 +317,6 @@ This algorithm is multi-threaded and will always attempt to load the entire data
 memory.
 
 
-## See also
-
-[`rx_fast_trees`](rx-fast-trees.md),
-[`rx_predict`](rx-predict.md)
-
-
 ## References
 
 [Wikipedia: Random forest](https://wikipedia.org/wiki/Random_forest)
@@ -487,3 +481,8 @@ Writing completed.
 3    187.0   5.1  87.0  80.662109
 4    175.0   7.4  89.0  67.570549
 ```
+
+## Related content
+
+- [*microsoftml.rx_fast_trees*: Boosted Trees](rx-fast-trees.md)
+- [*microsoftml.rx_predict*: Scores using a Microsoft machine learning model](rx-predict.md)

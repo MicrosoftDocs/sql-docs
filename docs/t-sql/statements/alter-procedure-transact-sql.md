@@ -225,14 +225,12 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
 (2 row(s) affected)`  
 ```  
 
-## See Also  
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Stored Procedures &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
-  
-  
+## Related content
 
+- [CREATE PROCEDURE (Transact-SQL)](create-procedure-transact-sql.md)
+- [DROP PROCEDURE (Transact-SQL)](drop-procedure-transact-sql.md)
+- [EXECUTE (Transact-SQL)](../language-elements/execute-transact-sql.md)
+- [EXECUTE AS (Transact-SQL)](execute-as-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [Stored procedures (Database Engine)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+- [sys.procedures (Transact-SQL)](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)

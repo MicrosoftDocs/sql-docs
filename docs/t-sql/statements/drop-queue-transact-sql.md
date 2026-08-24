@@ -59,9 +59,8 @@ DROP QUEUE <object>
 DROP QUEUE ExpenseQueue ;  
 ```  
   
-## See Also  
- [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
+## Related content
+
+- [CREATE QUEUE (Transact-SQL)](create-queue-transact-sql.md)
+- [ALTER QUEUE (Transact-SQL)](alter-queue-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

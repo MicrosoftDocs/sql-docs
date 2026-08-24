@@ -167,8 +167,7 @@ Requires ALTER permission on the table or view. User must be a member of the **s
     GO  
     ```  
 
-## Next steps
+## Related content
 
-For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-[SQL Server Index Architecture and Design Guide](../sql-server-index-design-guide.md)
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+- [Index architecture and design guide](../sql-server-index-design-guide.md)

@@ -48,6 +48,6 @@ When VD_E_CLOSE is returned, SQL Server has closed the device. This is part of t
 
 When this routine must block to wait for a command, the thread is left in an Alertable condition.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

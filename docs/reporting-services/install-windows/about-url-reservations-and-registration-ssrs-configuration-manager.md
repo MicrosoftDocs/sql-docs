@@ -98,5 +98,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure a URL &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
-- [URL Reservation Syntax &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)
+- [Configure a URL (Report Server Configuration Manager)](configure-a-url-ssrs-configuration-manager.md)
+- [URL Reservation Syntax  (Report Server Configuration Manager)](url-reservation-syntax-ssrs-configuration-manager.md)

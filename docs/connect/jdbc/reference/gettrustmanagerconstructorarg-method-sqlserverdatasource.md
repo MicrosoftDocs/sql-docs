@@ -30,8 +30,7 @@ public java.lang.String getTrustManagerConstructorArg()
 ## Remarks  
  If the TrustManagerClass property is not set, the [getTrustManagerConstructorArg](#gettrustmanagerconstructorarg-method-sqlserverdatasource) method returns null.  
   
-## See Also  
- [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDataSource Members](sqlserverdatasource-members.md)
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

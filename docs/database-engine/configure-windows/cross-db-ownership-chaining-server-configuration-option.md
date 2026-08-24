@@ -63,5 +63,5 @@ You should avoid enabling cross-database ownership chaining at the instance leve
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)

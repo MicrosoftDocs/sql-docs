@@ -95,14 +95,14 @@ helpviewer_keywords:
     > [!NOTE]  
     >  When you use an expression to set the value of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, the expression is evaluated every time that the value of the variable is accessed.  
   
-## Next Step  
- After you calculate the starting point and ending point for a range of changes, the next step is to determine whether the change data is ready.  
-  
- **Next topic:** [Determine Whether the Change Data Is Ready](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
-  
-## See Also  
- [Use Variables in Packages](../integration-services-ssis-variables.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md)   
- [Script Task](../../integration-services/control-flow/script-task.md)  
-  
+## Next step
+
+> [!div class="nextstepaction"]
+> [Determine Whether the Change Data Is Ready](determine-whether-the-change-data-is-ready.md)
+
+## Related content
+
+- [Integration Services (SSIS) Variables](../integration-services-ssis-variables.md)
+- [Integration Services (SSIS) Expressions](../expressions/integration-services-ssis-expressions.md)
+- [Execute SQL Task](../control-flow/execute-sql-task.md)
+- [Script Task](../control-flow/script-task.md)

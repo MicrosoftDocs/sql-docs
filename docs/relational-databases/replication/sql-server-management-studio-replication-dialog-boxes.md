@@ -74,4 +74,4 @@ These dialog boxes generate replication scripts and configure connections to Ora
 
 ## Related content
 
-- [SQL Server replication](sql-server-replication.md)
+- [SQL Server Replication](sql-server-replication.md)

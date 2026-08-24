@@ -45,6 +45,6 @@ f1_keywords:
   
 -   [Integration Services Transformations](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## See Also  
- [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md)  
-  
+## Related content
+
+- [Integration Services error and message reference](integration-services-error-and-message-reference.md)

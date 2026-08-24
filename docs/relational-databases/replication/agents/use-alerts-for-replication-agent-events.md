@@ -84,6 +84,6 @@ deallocate hc
   
 ## Related content
 
-- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
-- [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)
-- [Monitoring (Replication)](../../../relational-databases/replication/monitor/monitoring-replication.md)
+- [Replication Agent Administration](replication-agent-administration.md)
+- [Best practices for replication administration](../administration/best-practices-for-replication-administration.md)
+- [Monitoring (Replication)](../monitor/monitoring-replication.md)

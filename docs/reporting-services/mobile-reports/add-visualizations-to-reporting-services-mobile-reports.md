@@ -184,7 +184,7 @@ Waterfall charts are a good choice:
 
 ## Related content
 
-- [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
-- [Navigators in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
-- [Data grids in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
-- [Gauges in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
+- [Maps in Reporting Services mobile reports](maps-in-reporting-services-mobile-reports.md)
+- [Add navigators to Reporting Services mobile reports](add-navigators-to-reporting-services-mobile-reports.md)
+- [Add data grids to mobile reports](add-data-grids-to-mobile-reports-reporting-services.md)
+- [Add gauges to mobile reports](add-gauges-to-mobile-reports-reporting-services.md)

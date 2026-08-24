@@ -58,8 +58,8 @@ GO
 ```  
  
   
-## See Also  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+## Related content
 
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [ALTER LOGIN (Transact-SQL)](alter-login-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

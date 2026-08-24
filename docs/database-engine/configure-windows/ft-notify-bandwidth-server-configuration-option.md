@@ -30,5 +30,5 @@ Under certain circumstances the number of buffers currently allocated is less th
 ## Related content
 
 - [Server configuration options](server-configuration-options-sql-server.md)
-- [ft crawl bandwidth Server Configuration Option](ft-crawl-bandwidth-server-configuration-option.md)
-- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [Server configuration: ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

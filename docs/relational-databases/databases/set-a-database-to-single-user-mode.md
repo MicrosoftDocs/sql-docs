@@ -65,5 +65,5 @@ Requires ALTER permission on the database.
   
 ## Related content
 
-- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Single-user mode for SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)

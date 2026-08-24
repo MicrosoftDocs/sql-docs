@@ -773,7 +773,7 @@ The SQL writer supports restore of both `model` and `msdb` databases online, wit
 - [SQL Server VSS Writer logging](sql-server-vss-writer-logging.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
 - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)
+- [Back up and restore of SQL Server databases](back-up-and-restore-of-sql-server-databases.md)
 - [Copy-only backups](copy-only-backups-sql-server.md)
 - [Transaction log backups (SQL Server)](transaction-log-backups-sql-server.md)
 - [Apply Transaction Log Backups (SQL Server)](apply-transaction-log-backups-sql-server.md)

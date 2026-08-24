@@ -77,4 +77,3 @@ Latin1-General , case-sensitive , accent-sensitive , kanatype-insensitive , widt
 - [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)
 - [sys.fn_helpcollations (Transact-SQL)](../system-functions/sys-fn-helpcollations-transact-sql.md)
 - [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)
-

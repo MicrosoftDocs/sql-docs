@@ -59,9 +59,9 @@ Requires ALTER permission on the table.
   
  For more information, see [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
 
-## Next steps
+## Related content
 
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
-- [sys.key_constraints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)
-- [Create Foreign Key Relationships](create-foreign-key-relationships.md)
+- [sys.key_constraints (Transact-SQL)](../system-catalog-views/sys-key-constraints-transact-sql.md)
+- [Create foreign key relationships](create-foreign-key-relationships.md)
 - [Modify Foreign Key Relationships](modify-foreign-key-relationships.md)

@@ -183,13 +183,13 @@ DBCC CHECKIDENT ('dbo.ErrorLog', RESEED, 0);
 GO
 ```
 
-## See also
+## Related content
 
-- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
-- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [IDENTITY (Property) (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)
+- [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)
+- [CREATE TABLE (Transact-SQL) IDENTITY (Property)](../statements/create-table-transact-sql-identity-property.md)
 - [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)
-- [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)
-- [IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)
-- [IDENT_INCR (Transact-SQL)](../../t-sql/functions/ident-incr-transact-sql.md)
+- [USE (Transact-SQL)](../language-elements/use-transact-sql.md)
+- [IDENT_SEED (Transact-SQL)](../functions/ident-seed-transact-sql.md)
+- [IDENT_INCR (Transact-SQL)](../functions/ident-incr-transact-sql.md)

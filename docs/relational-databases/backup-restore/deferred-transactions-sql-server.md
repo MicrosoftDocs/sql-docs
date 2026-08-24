@@ -88,14 +88,13 @@ helpviewer_keywords:
   
          When DBCC encounters the bad page, DBCC deallocates it and repairs any related errors. This approach enables the database to be brought back online in a physically consistent state. However, additional data might also be lost; therefore, this approach should be used as a last resort.  
   
-## See Also  
- [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Remove Defunct Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
- [File Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [File Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
- [Restore Pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
- [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
-  
+## Related content
+
+- [Restore and recovery overview (SQL Server)](restore-and-recovery-overview-sql-server.md)
+- [Remove Defunct Filegroups (SQL Server)](remove-defunct-filegroups-sql-server.md)
+- [File Restores (Full Recovery Model)](file-restores-full-recovery-model.md)
+- [File Restores (Simple Recovery Model)](file-restores-simple-recovery-model.md)
+- [Restore Pages (SQL Server)](restore-pages-sql-server.md)
+- [Piecemeal Restores (SQL Server)](piecemeal-restores-sql-server.md)
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

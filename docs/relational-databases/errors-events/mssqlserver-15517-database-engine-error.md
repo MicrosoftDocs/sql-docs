@@ -223,8 +223,7 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
    */ 
    ```
 
-## See Also
+## Related content
 
-[Copy databases to other servers](../databases/copy-databases-to-other-servers.md)
-
-[Transfer logins and passwords between instances](/troubleshoot/sql/database-engine/security/transfer-logins-passwords-between-instances)
+- [Copy databases to other servers](../databases/copy-databases-to-other-servers.md)
+- [Transfer logins and passwords between instances](/troubleshoot/sql/database-engine/security/transfer-logins-passwords-between-instances)

@@ -50,6 +50,6 @@ This is a response to the GetPosition command only.
 | VD_E_ABORT | Abort was signaled. |
 | VD_E_PROTOCOL | The device is not open. |
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

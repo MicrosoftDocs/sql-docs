@@ -186,13 +186,8 @@ Check the server memory configuration and CPU for each of the workload groups. V
   
      No information will be displayed because the pools were created with an affinity of AUTO. For more information, see [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
-## Next steps
+## Related content
 
-For more information about managing server resources, see:
-
-+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
-
-For an overview of resource governance for machine learning, see:
-
-+ [Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services](resource-governor.md)
+- [Resource governor](../../relational-databases/resource-governor/resource-governor.md)
+- [Resource governor related dynamic management views (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/resource-governor-related-dynamic-management-views-transact-sql.md)
+- [Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services](resource-governor.md)

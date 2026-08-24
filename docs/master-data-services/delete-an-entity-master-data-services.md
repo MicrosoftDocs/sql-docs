@@ -45,6 +45,7 @@ helpviewer_keywords:
   
 6.  In the confirmation dialog box, click **OK**.  
   
-## See Also  
- [Entities &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)
+## Related content
+
+- [Entities (Master Data Services)](entities-master-data-services.md)
+- [Create an Entity (Master Data Services)](create-an-entity-master-data-services.md)

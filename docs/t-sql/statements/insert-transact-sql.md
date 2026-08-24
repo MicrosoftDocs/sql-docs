@@ -1038,16 +1038,16 @@ WHERE g.CountryRegionCode = 'FR'
 OPTION ( LABEL = 'Add French Prospects', HASH JOIN);  
 ```  
   
-## See Also  
- [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
- [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
- [Use the inserted and deleted Tables](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
-  
+## Related content
+
+- [BULK INSERT (Transact-SQL)](bulk-insert-transact-sql.md)
+- [DELETE (Transact-SQL)](delete-transact-sql.md)
+- [EXECUTE (Transact-SQL)](../language-elements/execute-transact-sql.md)
+- [FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)](../queries/from-transact-sql.md)
+- [CREATE TABLE (Transact-SQL) IDENTITY (Property)](create-table-transact-sql-identity-property.md)
+- [NEWID (Transact-SQL)](../functions/newid-transact-sql.md)
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
+- [UPDATE (Transact-SQL)](../queries/update-transact-sql.md)
+- [MERGE (Transact-SQL)](merge-transact-sql.md)
+- [OUTPUT clause (Transact-SQL)](../queries/output-clause-transact-sql.md)
+- [Use the inserted and deleted tables](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)

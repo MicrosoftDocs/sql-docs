@@ -22,9 +22,8 @@ ms.custom: mdx
 |[SELECT Statement &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)|Retrieves data from a specified cube.|  
 |[UPDATE CUBE Statement &#40;MDX&#41;](../mdx/mdx-data-manipulation-update-cube.md)|Updates the value of a specified leaf or nonleaf cell in a cube, optionally allocating the value for a specified non-leaf cell across dependent leaf cells.|  
   
-## See Also  
- [MDX Statement Reference &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Statement Reference (MDX)](mdx-statement-reference-mdx.md)
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)
+- [MDX Scripting Statements (MDX)](mdx-scripting-statements-mdx.md)

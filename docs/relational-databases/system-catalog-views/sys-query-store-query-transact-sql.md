@@ -70,7 +70,7 @@ Contains information about the query and its associated overall aggregated runti
 
 ## Remarks
 
-The `object_id` column is populated only when the statement is compiled from a Transact‑SQL module. A module is any schema‑scoped object that has a row in [sys.sql_modules](sys-sql-modules-transact-sql.md).
+The `object_id` column is populated only when the statement is compiled from a Transact-SQL module. A module is any schema-scoped object that has a row in [sys.sql_modules](sys-sql-modules-transact-sql.md).
 
 Because the query optimizer expands non-indexed views before it produces a plan, only the underlying tables remain, though indexed views do appear as tables.
 
@@ -96,4 +96,3 @@ Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [Query Store stored procedures (Transact-SQL)](../system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-

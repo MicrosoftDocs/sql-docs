@@ -93,8 +93,8 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 - [Delete an Article](../replication/publish/delete-an-article.md)
 - [Add Articles to and Drop Articles from Existing Publications](../replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)
-- [sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md)
-- [sp_changearticle (Transact-SQL)](sp-changearticle-transact-sql.md)
-- [sp_helparticle (Transact-SQL)](sp-helparticle-transact-sql.md)
-- [sp_helparticlecolumns (Transact-SQL)](sp-helparticlecolumns-transact-sql.md)
+- [sys.sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md)
+- [sys.sp_changearticle (Transact-SQL)](sp-changearticle-transact-sql.md)
+- [sys.sp_helparticle (Transact-SQL)](sp-helparticle-transact-sql.md)
+- [sys.sp_helparticlecolumns (Transact-SQL)](sp-helparticlecolumns-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

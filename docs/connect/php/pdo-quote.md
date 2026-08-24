@@ -80,8 +80,7 @@ $db->quote('foo', PDO::PARAM_STR | PDO::PARAM_STR_CHAR); // 'foo'
 ?>
 ```
   
-## See Also  
-[PDO Class](../../connect/php/pdo-class.md)
+## Related content
 
-[PDO](https://php.net/manual/book.pdo.php)  
-  
+- [PDO Class](pdo-class.md)
+- [PDO](https://php.net/manual/book.pdo.php)

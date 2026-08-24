@@ -41,7 +41,6 @@ ms.topic: reference
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
- [SQLServerSavepoint Class](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
-  
-  
+## Related content
+
+- [SQLServerSavepoint Class](sqlserversavepoint-class.md)

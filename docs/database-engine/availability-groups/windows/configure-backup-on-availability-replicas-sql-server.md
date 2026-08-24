@@ -185,13 +185,9 @@ BACKUP DATABASE @DBNAME TO DISK = '<path to backup file>'
 |[sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)|Backup priority of a given availability replica|**backup_priority**|  
 |[sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)|Is replica local to the server instance?<br /><br /> Current role<br /><br /> Operational state<br /><br /> Connected state<br /><br /> Synchronization health of an availability replica|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
   
-##  <a name="RelatedContent"></a> Related Content  
-  
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
-  
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
-  
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
-  
+## Related content
+
+- [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
+- [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
+- [Offload supported backups to secondary replicas of an availability group](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)

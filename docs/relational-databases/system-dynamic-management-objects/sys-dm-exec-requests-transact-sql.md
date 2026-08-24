@@ -223,7 +223,7 @@ GO
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_os_memory_clerks (Transact-SQL)](sys-dm-os-memory-clerks-transact-sql.md)
 - [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)

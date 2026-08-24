@@ -118,6 +118,6 @@ The following extended events are available to monitor buffer pool extension in-
 ## Related content
 
 - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
-- [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)
-- [sys.dm_os_buffer_descriptors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)
+- [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)
+- [sys.dm_os_buffer_descriptors (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-buffer-descriptors-transact-sql.md)
 - [SQL Server, Buffer Manager object](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)

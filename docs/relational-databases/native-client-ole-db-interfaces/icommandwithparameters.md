@@ -18,6 +18,6 @@ ms.topic: "reference"
   
  Also beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when calling ICommandWithParameters::SetParameterInfo, the value passed to the *pwszName* parameter must be a valid identifier. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-## See Also  
- [Interfaces &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)  
-  
+## Related content
+
+- [SQL Server Native Client (OLE DB) Interfaces](sql-server-native-client-ole-db-interfaces.md)

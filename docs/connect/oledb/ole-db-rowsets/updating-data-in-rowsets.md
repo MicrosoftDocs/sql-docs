@@ -38,8 +38,6 @@ helpviewer_keywords:
   
 -   [Resynchronizing Rows](../../oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
-## See Also  
- [Rowsets](../../oledb/ole-db-rowsets/rowsets.md)  
-  
-  
+## Related content
 
+- [Rowsets](rowsets.md)

@@ -117,5 +117,5 @@ If brew is having trouble finding the formulas, make sure you didn't skip the in
 
 - [C / C++ ODBC example application accesses a SQL database](../cpp-code-example-app-connect-access-sql-db.md)
 - [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md)
-- [release notes](release-notes-odbc-sql-server-linux-mac.md)
-- [system requirements](system-requirements.md)
+- [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)
+- [System Requirements (Linux and macOS)](system-requirements.md)

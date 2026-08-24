@@ -94,9 +94,8 @@ SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))
 AS 'File_ID';  
 ```  
   
-## See Also  
- [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
-  
+## Related content
+
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)

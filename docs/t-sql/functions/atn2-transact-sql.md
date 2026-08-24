@@ -56,11 +56,8 @@ The ATN2 of the angle is: 1.30545
 (1 row(s) affected)  
 ```  
   
-## See also
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[float and real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
-  
-  
+## Related content
 
-
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [float and real (Transact-SQL)](../data-types/float-and-real-transact-sql.md)
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)

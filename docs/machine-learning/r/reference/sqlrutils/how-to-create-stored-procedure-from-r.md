@@ -225,6 +225,6 @@ myetl1function <- function() {
 > 
 > Although you do not need to open the ODBC connection explicitly as part of your code, an ODBC connection is still required to use **sqlrutils**.
 
-## See also
+## Related content
 
-[sqlrutils reference](../../ref-r-sqlrutils.md)
+- [sqlrutils (R package in SQL Server Machine Learning Services)](../../ref-r-sqlrutils.md)

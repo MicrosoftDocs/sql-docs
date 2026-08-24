@@ -137,6 +137,6 @@ WHERE sp.modification_counter > 1000;
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 - [sys.stats (Transact-SQL)](../system-catalog-views/sys-stats-transact-sql.md)
 - [Object Related Dynamic Management Views and Functions (Transact-SQL)](object-related-dynamic-management-views-and-functions-transact-sql.md)
-- [Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [sys.dm_db_incremental_stats_properties (Transact-SQL)](sys-dm-db-incremental-stats-properties-transact-sql.md)
 - [sys.dm_db_stats_histogram (Transact-SQL)](sys-dm-db-stats-histogram-transact-sql.md)

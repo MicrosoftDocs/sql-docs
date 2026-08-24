@@ -42,9 +42,8 @@ From [the web portal of a report server (SSRS Native Mode)](../../reporting-serv
    >[!NOTE]
    >If you want to create a snapshot immediately, select the **New history snapshot** button instead of the **Schedules and settings** button, and a report snapshot will be created immediately.  
   
-## See also  
--  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
--  [Report Server Content Management (SSRS Native Mode)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
--  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
+## Related content
 
+- [Set report processing properties](../report-server/set-report-processing-properties.md)
+- [Report server content management (SSRS native mode)](../report-server/report-server-content-management-ssrs-native-mode.md)
 ::: moniker-end

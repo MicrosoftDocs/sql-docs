@@ -107,6 +107,6 @@ ms.topic: how-to
   
 -   [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
-## See Also  
- [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
+## Related content
+
+- [Microsoft Connector for SAP BW Components](../microsoft-connector-for-sap-bw-components.md)

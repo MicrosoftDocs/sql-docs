@@ -59,6 +59,6 @@ The JDBC Driver 6.0 for SQL Server supports the use of Internationalized Domain 
 > [!NOTE]
 > Most resolver software written for non-Windows platforms is based on the Internet DSN standards and is therefore most likely to use the Punycode format for IDNs, while a Windows-based DNS Server on a private network can be configured to allow the use of UTF-8 characters on a per-server basis.  For more information, see [Unicode character support](/previous-versions/windows/it-pro/windows-server-2003/cc738403(v=ws.10)).
 
-## See also
+## Related content
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

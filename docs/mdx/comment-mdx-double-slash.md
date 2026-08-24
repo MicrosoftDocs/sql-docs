@@ -46,9 +46,8 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## See Also  
- [Comment &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Comment (MDX)](comment-mdx.md)
+- [Comment - MDX Operator Reference](comment-mdx-operator-reference.md)
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)

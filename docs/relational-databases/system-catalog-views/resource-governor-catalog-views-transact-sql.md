@@ -35,5 +35,5 @@ This section contains resource governor information for the following catalog vi
 
 ## Related content
 
-- [Resource governor related dynamic management views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)   
-- [Resource governor](../../relational-databases/resource-governor/resource-governor.md)  
+- [Resource governor related dynamic management views (Transact-SQL)](../system-dynamic-management-objects/resource-governor-related-dynamic-management-views-transact-sql.md)
+- [Resource governor](../resource-governor/resource-governor.md)

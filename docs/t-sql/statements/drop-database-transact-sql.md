@@ -195,4 +195,4 @@ IF EXISTS (SELECT 1
 - [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md)
 - [CREATE DATABASE](create-database-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

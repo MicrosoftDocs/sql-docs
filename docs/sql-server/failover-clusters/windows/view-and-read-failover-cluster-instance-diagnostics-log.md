@@ -140,7 +140,7 @@ SELECT is_enabled, [path], max_size, max_files
 FROM sys.dm_os_server_diagnostics_log_configurations;
 ```
 
-## See also
+## Related content
 
-- [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)
-- [sys-dm-os-server-diagnostics-log-configurations](../../../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md)
+- [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)
+- [sys.dm_os_server_diagnostics_log_configurations](../../../relational-databases/system-dynamic-management-objects/sys-dm-os-server-diagnostics-log-configurations.md)

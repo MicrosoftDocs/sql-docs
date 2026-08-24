@@ -45,8 +45,7 @@ SELECT @p.HasZ
 --Returns: 1 (true)  
 ```  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Z &#40;geography Data Type&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [Z (geography Data Type)](z-geography-data-type.md)

@@ -134,15 +134,14 @@ DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## See Also  
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
- [GRANT Server Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   
- [REVOKE Server Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
-  
-  
+## Related content
+
+- [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)
+- [sys.server_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)
+- [GRANT Server Principal Permissions (Transact-SQL)](grant-server-principal-permissions-transact-sql.md)
+- [REVOKE Server Principal Permissions (Transact-SQL)](revoke-server-principal-permissions-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Security Functions (Transact-SQL)](../functions/security-functions-transact-sql.md)
+- [Security stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)

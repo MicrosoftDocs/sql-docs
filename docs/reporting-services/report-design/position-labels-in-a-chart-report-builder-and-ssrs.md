@@ -90,9 +90,9 @@ ms.custom:
   
 ## Related content
 
-- [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)
-- [Bar Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)
-- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
-- [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)
-- [Display Data Point Labels Outside a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)
-- [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
+- [Pie charts in a paginated report (Report Builder)](pie-charts-report-builder-and-ssrs.md)
+- [Bar charts in a paginated report (Report Builder)](bar-charts-report-builder-and-ssrs.md)
+- [Formatting axis labels on a paginated report chart (Report Builder)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Format axis labels as dates or currencies in a paginated report (Report Builder)](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)
+- [Display data point labels outside a pie chart in a paginated report (Report Builder)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)
+- [Formatting data points on a paginated report chart (Report Builder)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)

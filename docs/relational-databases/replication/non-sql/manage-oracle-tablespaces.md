@@ -37,5 +37,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
-- [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)
+- [Configure an Oracle Publisher](configure-an-oracle-publisher.md)
+- [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)

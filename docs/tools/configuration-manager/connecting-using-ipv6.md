@@ -46,4 +46,4 @@ Because [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 
 ## Related content
 
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](sql-server-configuration-manager.md)

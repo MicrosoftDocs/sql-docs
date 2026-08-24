@@ -218,7 +218,7 @@ GO
 ## Related content
 
 - [sp_add_notification (Transact-SQL)](sp-add-notification-transact-sql.md)
-- [sp_altermessage (Transact-SQL)](sp-altermessage-transact-sql.md)
+- [sys.sp_altermessage (Transact-SQL)](sp-altermessage-transact-sql.md)
 - [sp_delete_alert (Transact-SQL)](sp-delete-alert-transact-sql.md)
 - [sp_help_alert (Transact-SQL)](sp-help-alert-transact-sql.md)
 - [sp_update_alert (Transact-SQL)](sp-update-alert-transact-sql.md)

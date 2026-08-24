@@ -53,5 +53,6 @@ helpviewer_keywords:
   
 11. Optionally, set weight values by clicking the value in the **Weight** column.  
   
-## See Also  
- [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)
+## Related content
+
+- [Collections (Master Data Services)](collections-master-data-services.md)

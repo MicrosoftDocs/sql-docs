@@ -29,9 +29,8 @@ SELECT{MEASURES.[CurrentMemberDemo],MEASURES.[ParentDemo],MEASURES.[AncestorDemo
 FROM [Adventure Works]  
 ```  
   
-## See Also  
- [Functions &#40;MDX Syntax&#41;](../mdx/functions-mdx-syntax.md)   
- [Using Tuple Functions](../mdx/using-tuple-functions.md)   
- [Using Set Functions](../mdx/using-set-functions.md)  
-  
-  
+## Related content
+
+- [Functions (MDX Syntax)](functions-mdx-syntax.md)
+- [Using Tuple Functions](using-tuple-functions.md)
+- [Using Set Functions](using-set-functions.md)

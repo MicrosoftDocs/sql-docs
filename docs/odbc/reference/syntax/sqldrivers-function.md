@@ -111,6 +111,7 @@ FileUsage=1\0FileExtns=*.dbf\0\0
 |Returning data source names|[SQLDataSources Function](../../../odbc/reference/syntax/sqldatasources-function.md)|  
 |Connecting to a data source using a connection string or dialog box|[SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

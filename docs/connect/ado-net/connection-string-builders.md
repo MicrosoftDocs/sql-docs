@@ -64,7 +64,7 @@ This example demonstrates retrieving a partial connection string from a configur
 
 [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](~/../sqlclient/doc/samples/SqlConnectionStringBuilder_UserNamePwd.cs#1)]
   
-## See also
+## Related content
 
-- [Connection strings](connection-strings.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Connection strings in ADO.NET](connection-strings.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

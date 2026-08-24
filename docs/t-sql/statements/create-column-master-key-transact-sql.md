@@ -233,12 +233,12 @@ WITH (
 );
 ```  
   
-## See Also
- 
-* [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
-* [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
-* [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-* [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
-* [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
-* [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+## Related content
+
+- [DROP COLUMN MASTER KEY (Transact-SQL)](drop-column-master-key-transact-sql.md)
+- [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](create-column-encryption-key-transact-sql.md)
+- [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
+- [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
+- [Overview of key management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)

@@ -56,5 +56,5 @@ ms.custom:
   
 ## Related content
 
-- [Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)
-- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Tablix data region in a paginated report (Report Builder)](tablix-data-region-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)

@@ -394,5 +394,5 @@ GO
 - [CREATE ASSEMBLY (Transact-SQL)](create-assembly-transact-sql.md)
 - [DROP TYPE (Transact-SQL)](drop-type-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
-- [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)
-- [Working with User-Defined Types in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)
+- [CLR user-defined types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)
+- [Work with user-defined types in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)

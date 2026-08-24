@@ -156,7 +156,6 @@ To handle an **xml** data type passed as a parameter in ADO.NET and the [!INCLUD
 
 For more information and example code, see "XML Values as Command Parameters" in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SDK documentation.
 
-## See also
+## Related content
 
-- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)
-
+- [XML data (SQL Server)](xml-data-sql-server.md)

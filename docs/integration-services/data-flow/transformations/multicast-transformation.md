@@ -45,7 +45,7 @@ helpviewer_keywords:
  **Properties**  
  All output properties listed are read-only except **Name** and **Description**.  
   
-## See Also  
- [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
+## Related content
+
+- [Data Flow](../data-flow.md)
+- [Integration Services Transformations](integration-services-transformations.md)

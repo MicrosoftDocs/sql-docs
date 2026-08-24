@@ -51,8 +51,7 @@ DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';
 SELECT @g.EnvelopeAngle();  
 ```  
   
-## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [EnvelopeCenter &#40;geography Data Type &#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
-  
-  
+## Related content
+
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [EnvelopeCenter (geography Data Type)](envelopecenter-geography-data-type.md)

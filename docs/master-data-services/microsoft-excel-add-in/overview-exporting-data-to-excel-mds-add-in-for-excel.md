@@ -43,12 +43,9 @@ ms.custom:
 |Load MDS data into Excel.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |Change the order of columns before you download data.|[Reorder Columns &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)|  
   
-## Related Content  
-  
--   [Connections &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
-  
--   [Shortcut Query Files &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
-  
--   [Master Data Services Add-in for Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
-  
--   [Security &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)
+## Related content
+
+- [Connections (MDS Add-in for Excel)](connections-mds-add-in-for-excel.md)
+- [Shortcut Query Files (MDS Add-in for Excel)](shortcut-query-files-mds-add-in-for-excel.md)
+- [Master Data Services Add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)
+- [Security (Master Data Services)](../security-master-data-services.md)

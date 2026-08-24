@@ -145,6 +145,6 @@ Operations on the loading server can use a UNC path to pull data from outside th
 
   Microsoft network client: **Digitally sign communications (always)**: *Enabled*.
 
-## Next steps
+## Related content
 
-[Backup and restore](backup-and-restore-overview.md)
+- [Backup and restore](backup-and-restore-overview.md)

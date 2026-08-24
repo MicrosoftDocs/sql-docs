@@ -70,4 +70,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)
+- [Initialize a Subscription](initialize-a-subscription.md)

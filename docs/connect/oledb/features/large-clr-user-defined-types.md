@@ -32,8 +32,6 @@ helpviewer_keywords:
   
  For applications that have existing data access code, you can exploit CLR UDT behavior on the client by retrieving UDTs through native APIs and instantiating them by using C++ CLI interop in mixed mode applications.  
   
-## See Also  
- [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)    
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)

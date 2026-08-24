@@ -67,10 +67,7 @@ DROP INDEX index_name ON <object>
 DROP INDEX sxi_index ON tbl;  
 ```  
   
-## See Also  
- [Selective XML Indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [Create, Alter, and Drop Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
-  
-  
+## Related content
 
-
+- [Selective XML indexes (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)
+- [Create, alter, and drop selective XML indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)

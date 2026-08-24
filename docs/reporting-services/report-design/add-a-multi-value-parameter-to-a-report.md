@@ -50,5 +50,5 @@ ms.custom:
 
 ## Related content
 
-- [Add cascading parameters to a report &#40;Report Builder&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)
-- [Add, change, or delete a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)
+- [Add cascading parameters to a paginated report (Report Builder)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)
+- [Add, change, or delete a paginated report parameter (Report Builder)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)

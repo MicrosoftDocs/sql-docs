@@ -71,6 +71,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Create, modify, and delete data-driven subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)
-- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Create, modify, and delete data-driven subscriptions](create-modify-and-delete-data-driven-subscriptions.md)
+- [Data-driven subscriptions in Reporting Services](data-driven-subscriptions.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)

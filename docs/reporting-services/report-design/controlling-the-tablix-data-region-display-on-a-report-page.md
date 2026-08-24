@@ -64,12 +64,12 @@ Table, matrix, and list data regions are all examples of *tablix* data regions. 
   
 ## Related content
 
-- [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)
-- [Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)
-- [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)
-- [Controlling Page Breaks, Headings, Columns, and Rows &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)
-- [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)
-- [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)
-- [Create a Matrix](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
-- [Create Invoices and Forms with Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
-- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Linking multiple data regions to the same dataset in a paginated report (Report Builder)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)
+- [Nested data regions in a paginated report (Report Builder)](nested-data-regions-report-builder-and-ssrs.md)
+- [Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)](expression-scope-for-totals-aggregates-and-built-in-collections.md)
+- [Controlling page breaks, headings, columns, and rows in paginated reports (Report Builder)](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)
+- [Tablix data region in a paginated report (Report Builder)](tablix-data-region-report-builder-and-ssrs.md)
+- [Tables in paginated reports (Report Builder)](tables-report-builder-and-ssrs.md)
+- [Create a matrix in a paginated report (Report Builder)](create-a-matrix-report-builder-and-ssrs.md)
+- [Create invoices and forms with lists in a paginated report (Report Builder)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)

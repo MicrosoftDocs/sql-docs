@@ -46,7 +46,7 @@ Null values are shown on the chart as empty spaces or gaps between data points i
   
 ## Related content
 
-- [Add dataset filters, data region filters, and group filters &#40;Report Builder&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
-- [Chart types &#40;Report Builder&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)
-- [Add scale breaks to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)
-- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](add-dataset-filters-data-region-filters-and-group-filters.md)
+- [Chart types in a paginated report (Report Builder)](chart-types-report-builder-and-ssrs.md)
+- [Add scale breaks to a paginated report chart (Report Builder)](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)

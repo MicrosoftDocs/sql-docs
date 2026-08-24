@@ -1,6 +1,6 @@
 ---
 title: "@@PACKET_ERRORS (Transact-SQL)"
-description: "&#x40;&#x40;PACKET_ERRORS (Transact-SQL)"
+description: "@@PACKET_ERRORS (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/18/2017"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;PACKET_ERRORS (Transact-SQL)
+# @@PACKET_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of network packet errors that have occurred on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.  
@@ -53,10 +53,9 @@ Packet Errors
 0  
 ```  
   
-## See Also  
- [@@PACK_RECEIVED &#40;Transact-SQL&#41;](../../t-sql/functions/pack-received-transact-sql.md)   
- [@@PACK_SENT &#40;Transact-SQL&#41;](../../t-sql/functions/pack-sent-transact-sql.md)   
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [@@PACK_RECEIVED (Transact-SQL)](pack-received-transact-sql.md)
+- [@@PACK_SENT (Transact-SQL)](pack-sent-transact-sql.md)
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

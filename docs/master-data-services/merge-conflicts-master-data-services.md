@@ -41,5 +41,6 @@ ms.custom:
   
 4.  After you click **Apply**, you can make additional changes and publish again. Or you can click **Cancel** to cancel the update and reload the latest version from the server.  
   
-## See Also  
- [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)
+## Related content
+
+- [Members (Master Data Services)](members-master-data-services.md)

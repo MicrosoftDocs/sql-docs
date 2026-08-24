@@ -25,6 +25,6 @@ ms.topic: reference
   
  For more information, see [DataReader Destination](../../integration-services/data-flow/datareader-destination.md).  
   
-## See Also  
- [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
-  
+## Related content
+
+- [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)

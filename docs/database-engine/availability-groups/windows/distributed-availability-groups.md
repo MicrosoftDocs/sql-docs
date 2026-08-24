@@ -414,6 +414,6 @@ GO
 
 ## Related content
 
-- [Use the availability group wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
-- [Use the new availability group dialog box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
-- [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
+- [Use the Availability Group Wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+- [Use the New Availability Group Dialog Box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
+- [Create an Always On availability group using Transact-SQL (T-SQL)](create-an-availability-group-transact-sql.md)

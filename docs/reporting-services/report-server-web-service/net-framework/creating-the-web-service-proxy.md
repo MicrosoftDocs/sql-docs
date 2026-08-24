@@ -121,6 +121,6 @@ using myNamespace.myReferenceName;
   
 ## Related content
 
-- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)
-- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
-- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)
+- [Report Server Web service](../report-server-web-service.md)
+- [Building Applications Using the Web Service and the .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)
+- [Technical reference (SSRS)](../../technical-reference-ssrs.md)

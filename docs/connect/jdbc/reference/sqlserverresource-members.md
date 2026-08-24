@@ -43,7 +43,6 @@ ms.topic: reference
 |java.util.ResourceBundle|getBundle, getLocale, getObject, getString, getStringArray, setParent|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
- [SQLServerResource Class](../../../connect/jdbc/reference/sqlserverresource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResource Class](sqlserverresource-class.md)

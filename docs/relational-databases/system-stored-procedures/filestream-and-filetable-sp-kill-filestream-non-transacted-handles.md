@@ -106,6 +106,6 @@ GO
 ## Related content
 
 - [Manage FileTables](../blob/manage-filetables.md)
-- [FILESTREAM and FileTable dynamic management views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+- [FILESTREAM and FileTable dynamic management views (Transact-SQL)](../system-dynamic-management-objects/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 - [FILESTREAM and FileTable catalog views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
-- [sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
+- [sys.sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)

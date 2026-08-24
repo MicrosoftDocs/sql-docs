@@ -85,8 +85,6 @@ Information Services   Bueno                  27.4038               0.4         
 (15 row(s) affected)  
 ```  
   
-## See also
-[PERCENT_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)
-  
-  
+## Related content
 
+- [PERCENT_RANK (Transact-SQL)](percent-rank-transact-sql.md)

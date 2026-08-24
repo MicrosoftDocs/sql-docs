@@ -117,16 +117,14 @@ END CATCH;
 GO  
 ``` 
   
-## See Also  
- [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
- [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
- [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
-  
-  
+## Related content
 
+- [TRY...CATCH (Transact-SQL)](../language-elements/try-catch-transact-sql.md)
+- [Messages (for errors) catalog views - sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
+- [ERROR_NUMBER (Transact-SQL)](error-number-transact-sql.md)
+- [ERROR_MESSAGE (Transact-SQL)](error-message-transact-sql.md)
+- [ERROR_PROCEDURE (Transact-SQL)](error-procedure-transact-sql.md)
+- [ERROR_SEVERITY (Transact-SQL)](error-severity-transact-sql.md)
+- [ERROR_STATE (Transact-SQL)](error-state-transact-sql.md)
+- [RAISERROR (Transact-SQL)](../language-elements/raiserror-transact-sql.md)
+- [@@ERROR (Transact-SQL)](error-transact-sql.md)

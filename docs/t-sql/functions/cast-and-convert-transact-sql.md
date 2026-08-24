@@ -947,17 +947,13 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 2010-07-25T13:50:38.544 07/25/2010 1:50:38 PM   07/25/2010 1:50:38 PM
 ```
 
-## See also
+## Related content
 
 - [FORMAT (Transact-SQL)](format-transact-sql.md)
 - [STR (Transact-SQL)](str-transact-sql.md)
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
-- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
-- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
-
-## Next steps
-
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)
 - [Data type precedence (Transact-SQL)](../data-types/data-type-precedence-transact-sql.md)
 - [Data type conversion (Database Engine)](../data-types/data-type-conversion-database-engine.md)
 - [Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)
-

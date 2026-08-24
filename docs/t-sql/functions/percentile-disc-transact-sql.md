@@ -127,4 +127,3 @@ Shipping and Receiving  9.250000     9.0000
 ## Related content
 
 - [PERCENTILE_CONT (Transact-SQL)](percentile-cont-transact-sql.md)
-

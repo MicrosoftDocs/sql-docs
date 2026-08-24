@@ -30,4 +30,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)
+- [Reporting Services extensions](reporting-services-extensions.md)

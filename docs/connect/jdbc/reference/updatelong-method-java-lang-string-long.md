@@ -40,9 +40,8 @@ public void updateLong(java.lang.String columnName,
 ## Remarks  
  This updateLong method is specified by the updateLong method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateLong Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateLong Method (SQLServerResultSet)](updatelong-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

@@ -55,7 +55,7 @@ ms.custom:
   
 ## Related content
 
-- [Bar Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)
-- [Column Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)
-- [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)
-- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Bar charts in a paginated report (Report Builder)](bar-charts-report-builder-and-ssrs.md)
+- [Column charts in a paginated report (Report Builder)](column-charts-report-builder-and-ssrs.md)
+- [Pie charts in a paginated report (Report Builder)](pie-charts-report-builder-and-ssrs.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)

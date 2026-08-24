@@ -32,7 +32,6 @@ The procedures in this topic require membership in the PolicyAdministratorRole r
   
  [Copy a Policy-Based Management Facet State to an XML File](../../relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
   
-## See Also  
- [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
-  
+## Related content
+
+- [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)

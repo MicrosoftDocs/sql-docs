@@ -77,11 +77,6 @@ Arguments must be specified in order. For example: In order to explore hierarchi
   See [execute2D](Execute2D.md) or [executeMD](ExecuteMD.md) for references.  
 
 
-## See also
-
-query, [OlapConnection](OlapConnection.md), [executeMD](ExecuteMD.md), [execute2D](Execute2D.md)
-
-
 ## Examples
 
  ```
@@ -160,3 +155,8 @@ query, [OlapConnection](OlapConnection.md), [executeMD](ExecuteMD.md), [execute2
   #--> Assembly Components
 ```
 
+## Related content
+
+- [OlapConnection: olapR OlapConnection Creation](OlapConnection.md)
+- [executeMD: olapR executeMD Methods](ExecuteMD.md)
+- [execute2D: olapR execute2D Methods](Execute2D.md)

@@ -75,6 +75,6 @@ In this video, you learn how to use Transact-SQL to insert, update, and delete d
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?show=programming-databases-with-t-sql-for-beginners&ep=modify-data-with-transact-sql-7-of-7-programming-databases-with-t-sql-for-beginners]
 
-## Next steps
+## Related content
 
-To learn more, visit the [Get Started Querying with Transact-SQL learning path on Microsoft Learn](https://aka.ms/learntsql).
+- [Get Started Querying with Transact-SQL learning path on Microsoft Learn](/training/paths/get-started-querying-with-transact-sql/)

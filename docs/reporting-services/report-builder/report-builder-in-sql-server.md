@@ -66,12 +66,12 @@ This paginated report features a matrix with row and column groups, sparklines, 
 
 ## Related content
 
-- [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)
-- [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)
-- [What's new in SQL Server Reporting Services and Report Builder](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
-- [Tutorial: Create a quick chart report offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)
-- [Plan a report (Report Builder)](../../reporting-services/report-design/planning-a-report-report-builder.md)
+- [Start Microsoft Report Builder](start-report-builder.md)
+- [Install Microsoft Report Builder](../install-windows/install-report-builder.md)
+- [What's new in SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md)
+- [Tutorial: Create a quick chart report offline (Report Builder)](tutorial-create-a-quick-chart-report-offline-report-builder.md)
+- [Planning a paginated report (Report Builder)](../report-design/planning-a-report-report-builder.md)
 - [Reporting Services concepts (SSRS)](../reporting-services-concepts-ssrs.md)
-- [Report design view (Report Builder)](../../reporting-services/report-builder/report-design-view-report-builder.md)
-- [Shared dataset design view (Report Builder)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)
-- [Keyboard shortcuts (Report Builder)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)
+- [Report design view in Report Builder](report-design-view-report-builder.md)
+- [Shared Dataset Design View (Report Builder)](shared-dataset-design-view-report-builder.md)
+- [Keyboard shortcuts for accessibility in paginated reports in Report Builder](keyboard-shortcuts-report-builder.md)

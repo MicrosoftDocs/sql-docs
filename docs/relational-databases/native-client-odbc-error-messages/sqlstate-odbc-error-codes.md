@@ -25,6 +25,6 @@ helpviewer_keywords:
   
 -   [SQLSTATE Mappings](../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
-## See Also  
- [Handling Errors and Messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
-  
+## Related content
+
+- [Handling Errors and Messages](handling-errors-and-messages.md)

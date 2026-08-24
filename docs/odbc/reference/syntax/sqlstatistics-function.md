@@ -174,5 +174,5 @@ For a code example of a similar function, see [SQLColumns Function](sqlcolumns-f
 
 ## Related content
 
-- [ODBC API Reference](odbc-api-reference.md)
+- [ODBC API reference](odbc-api-reference.md)
 - [ODBC Header Files](../install/odbc-header-files.md)

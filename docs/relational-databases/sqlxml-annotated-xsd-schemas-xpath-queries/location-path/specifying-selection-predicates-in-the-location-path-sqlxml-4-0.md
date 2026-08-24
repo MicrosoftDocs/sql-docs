@@ -115,8 +115,7 @@ Customer[Order/@OrderDate=Order/@ShipDate]
   
  This query selects all customers with any `Order` for which the `OrderDate` equals the `ShipDate` of any `Order`.  
   
-## See Also  
- [Introduction to Annotated XSD Schemas &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [Client-side XML Formatting &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Introduction to Annotated XSD Schemas (SQLXML 4.0)](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)
+- [Client-side XML Formatting (SQLXML 4.0)](../../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)

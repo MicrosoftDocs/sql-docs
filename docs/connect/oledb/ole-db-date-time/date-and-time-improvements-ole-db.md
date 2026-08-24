@@ -44,7 +44,6 @@ Describes the OLE DB APIs that support enhanced date/time features.
 [Comparability for IRowsetFind](comparability-for-irowsetfind.md)  
 Describes date/time types and **IRowsetFind**.
 
-## See also
+## Related content
 
-[OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)
-
+- [OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)

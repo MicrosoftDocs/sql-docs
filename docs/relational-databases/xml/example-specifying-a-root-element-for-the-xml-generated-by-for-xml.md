@@ -42,7 +42,6 @@ This is the result:
 </MyRoot>
 ```
 
-## See also
+## Related content
 
-- [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)
-
+- [Use RAW mode with FOR XML](use-raw-mode-with-for-xml.md)

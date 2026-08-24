@@ -100,6 +100,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
-- [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)
-- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)
+- [Configure an Oracle Publisher](configure-an-oracle-publisher.md)
+- [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md)
+- [Oracle Publishing Overview](oracle-publishing-overview.md)

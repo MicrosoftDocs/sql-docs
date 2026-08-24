@@ -27,8 +27,7 @@ DROP ACTION CURRENTCUBE | Cube_Name
  *Action_Name*  
  A valid string expression that provides the name of the action being dropped.  
   
-## See Also  
- [CREATE ACTION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)   
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Data Definition - CREATE ACTION](mdx-data-definition-create-action.md)
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)

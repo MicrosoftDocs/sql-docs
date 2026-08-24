@@ -181,6 +181,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Do not uninstall the Analysis Services OLE DB provider. SharePoint installs the OLE DB provider as a prerequisite for Excel workbooks that connect to Analysis Services databases. [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] installs a newer version, but this version is backwards compatible so you should leave it on the system to avoid data connection problems later.  
   
-## See Also  
- [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
- [Power Pivot Configuration Tools](/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)
+## Related content
+
+- [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)
+- [Power Pivot Configuration Tools](/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)

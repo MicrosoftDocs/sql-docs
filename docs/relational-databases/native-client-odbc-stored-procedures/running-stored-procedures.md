@@ -58,7 +58,7 @@ helpviewer_keywords:
   
 -   [Processing Stored Procedure Results](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
-## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
-  
+## Related content
+
+- [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)
+- [Running Stored Procedures - Call Stored Procedures](../native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)

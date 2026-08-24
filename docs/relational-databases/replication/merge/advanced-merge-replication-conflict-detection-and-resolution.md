@@ -144,4 +144,4 @@ Resolve Merge Replication Conflicts
   
 ## Related content
 
-- [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)
+- [Synchronize Data](../synchronize-data.md)

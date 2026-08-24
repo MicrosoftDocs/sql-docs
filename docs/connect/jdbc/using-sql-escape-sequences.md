@@ -151,6 +151,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 The escape syntax has two parts: \<*rows*> is mandatory and specifies the number of rows to return. OFFSET and \<*row offset*> are optional and specify the number of rows to skip before beginning to return rows. The JDBC driver supports only the mandatory part by transforming the query to use TOP instead of LIMIT. SQL Server does not support the LIMIT clause. **The JDBC driver does not support the optional \<row offset> and the driver will throw an exception if it is used**.  
   
-## See also
+## Related content
 
-[Using statements with the JDBC driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+- [Using statements with the JDBC driver](using-statements-with-the-jdbc-driver.md)

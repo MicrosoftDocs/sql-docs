@@ -40,9 +40,8 @@ public void updateByte(int index,
 ## Remarks  
  This updateByte method is specified by the updateByte method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateByte Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateByte Method (SQLServerResultSet)](updatebyte-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

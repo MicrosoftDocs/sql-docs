@@ -42,8 +42,7 @@ public boolean relative(int nRows)
   
  Calling the method `relative(1)` is identical to calling the [next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md) method. Calling the method `relative(-1)` is identical to calling the [previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md) method.  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

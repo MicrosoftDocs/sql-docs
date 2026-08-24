@@ -34,8 +34,6 @@ To use this tutorial, your system must have [!INCLUDE[ssManStudioFull](../../inc
 ## Start the Tutorial  
 [Lesson 1: Create and Apply an Off By Default Policy](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
-## See Also  
-[Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
-  
-  
+## Related content
+
+- [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)

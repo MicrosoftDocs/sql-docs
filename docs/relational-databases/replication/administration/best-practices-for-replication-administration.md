@@ -144,4 +144,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)
+- [Replication Administration FAQ](frequently-asked-questions-for-replication-administrators.yml)

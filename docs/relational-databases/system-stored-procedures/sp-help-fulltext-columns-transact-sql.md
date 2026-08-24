@@ -86,6 +86,6 @@ GO
 ## Related content
 
 - [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)
-- [sp_fulltext_column (Transact-SQL)](sp-fulltext-column-transact-sql.md)
-- [sp_help_fulltext_columns_cursor (Transact-SQL)](sp-help-fulltext-columns-cursor-transact-sql.md)
+- [sys.sp_fulltext_column (Transact-SQL)](sp-fulltext-column-transact-sql.md)
+- [sys.sp_help_fulltext_columns_cursor (Transact-SQL)](sp-help-fulltext-columns-cursor-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

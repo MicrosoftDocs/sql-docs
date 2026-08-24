@@ -48,6 +48,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server.md)
-- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
-- [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)
+- [Microsoft Report Builder in SQL Server](../report-builder/report-builder-in-sql-server.md)
+- [Reporting Services concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [Report Builder tutorials](../report-builder-tutorials.md)

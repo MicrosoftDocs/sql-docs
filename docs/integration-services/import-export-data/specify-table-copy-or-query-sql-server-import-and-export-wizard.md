@@ -71,7 +71,6 @@ You can still use the **Write a query** option, even if you don't typically writ
     
 -   If you selected **Write a query to specify the data to transfer**, the next page is **Provide a Source Query**. On this page, you write and test the SQL statement that selects the data to copy from the data source to the destination. (Then, after you provide a query, the following page is **Select Source Tables and Views**.) For more info, see [Provide a Source Query](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).
 
-## See also
-[Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+## Related content
 
-
+- [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

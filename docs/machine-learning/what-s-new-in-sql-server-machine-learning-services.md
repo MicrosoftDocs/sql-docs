@@ -117,6 +117,6 @@ SQL Server 2019 adds Linux support for R and Python when you install the machine
 On Linux, SQL Server 2017 does not have R or Python integration, but you can use [Native scoring](predictions/native-scoring-predict-transact-sql.md) on Linux because that functionality is available through T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), which runs on Linux. Native scoring enables high-performance scoring from a pretrained model, without calling or even requiring an R runtime.
 ::: moniker-end
 
-## Next steps
+## Related content
 
-+ [Install SQL Server Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
+- [Install SQL Server Machine Learning Services (Python and R) on Windows](install/sql-machine-learning-services-windows-install.md)

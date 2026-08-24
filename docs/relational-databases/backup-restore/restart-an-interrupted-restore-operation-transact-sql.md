@@ -53,8 +53,8 @@ WITH RESTART;
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Complete Database Restores (Full Recovery Model)](complete-database-restores-full-recovery-model.md)
 - [Complete Database Restores (Simple Recovery Model)](complete-database-restores-simple-recovery-model.md)
-- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

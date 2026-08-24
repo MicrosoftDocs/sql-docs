@@ -170,11 +170,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## Permissions  
  Requires CONTROL permission on the [!INCLUDE[ssSB](../../includes/sssb-md.md)] contract, message type, remote service binding, route, or service  
   
-## See Also  
- [GRANT Service Broker Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
- [DENY Service Broker Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
-  
-  
+## Related content
+
+- [GRANT Service Broker Permissions (Transact-SQL)](grant-service-broker-permissions-transact-sql.md)
+- [DENY Service Broker Permissions (Transact-SQL)](deny-service-broker-permissions-transact-sql.md)
+- [GRANT (Transact-SQL)](grant-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)

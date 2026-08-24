@@ -76,7 +76,7 @@ The following steps use [SQL Server Management Studio (SSMS)](https://aka.ms/ssm
 
 ## Related content
 
-- [Configure Database Mail](configure-database-mail.md)
+- [Configure database mail](configure-database-mail.md)
 - [Configure SQL Server Agent](/ssms/agent/configure-sql-server-agent)
 - [General database mail troubleshooting steps](database-mail-general-troubleshooting.md)
 - [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance)

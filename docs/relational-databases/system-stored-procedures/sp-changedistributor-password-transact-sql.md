@@ -57,5 +57,5 @@ Only members of the **sysadmin** fixed server role can execute `sp_changedistrib
 
 - [View and modify replication security settings](../replication/security/view-and-modify-replication-security-settings.md)
 - [Secure the Distributor](../replication/security/secure-the-distributor.md)
-- [sp_adddistributor (Transact-SQL)](sp-adddistributor-transact-sql.md)
+- [sys.sp_adddistributor (Transact-SQL)](sp-adddistributor-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

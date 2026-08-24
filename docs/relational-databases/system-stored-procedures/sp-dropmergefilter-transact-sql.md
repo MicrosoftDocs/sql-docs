@@ -81,7 +81,7 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 ## Related content
 
 - [Change Publication and Article Properties](../replication/publish/change-publication-and-article-properties.md)
-- [sp_addmergefilter (Transact-SQL)](sp-addmergefilter-transact-sql.md)
-- [sp_changemergefilter (Transact-SQL)](sp-changemergefilter-transact-sql.md)
-- [sp_helpmergefilter (Transact-SQL)](sp-helpmergefilter-transact-sql.md)
+- [sys.sp_addmergefilter (Transact-SQL)](sp-addmergefilter-transact-sql.md)
+- [sys.sp_changemergefilter (Transact-SQL)](sp-changemergefilter-transact-sql.md)
+- [sys.sp_helpmergefilter (Transact-SQL)](sp-helpmergefilter-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

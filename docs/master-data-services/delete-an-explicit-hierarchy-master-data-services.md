@@ -47,6 +47,7 @@ helpviewer_keywords:
   
 7.  In the confirmation dialog box, click **OK**.  
   
-## See Also  
- [Create an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)
+## Related content
+
+- [Create an Explicit Hierarchy (Master Data Services)](create-an-explicit-hierarchy-master-data-services.md)
+- [Explicit Hierarchies (Master Data Services)](explicit-hierarchies-master-data-services.md)

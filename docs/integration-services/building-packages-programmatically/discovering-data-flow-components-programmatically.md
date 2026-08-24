@@ -25,9 +25,7 @@ dev_langs:
 ## Discovering Components  
  The <xref:Microsoft.SqlServer.Dts.Runtime.Application> class provides the <xref:Microsoft.SqlServer.Dts.Runtime.Application.PipelineComponentInfos%2A> collection, which contains a <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo> object for each component correctly installed on the local computer. Each <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo> contains information about a component such as its name, description, and creation name. You can use the value returned in the <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> property to set the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> property of the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> when you add a component to a package.  
   
-## Next Step  
- After discovering available components, the next step is to add and configure the components, which is discussed in the next topic, [Adding Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md).  
-  
+
 ## Sample  
  The following code sample shows how to enumerate the <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfos> collection of the <xref:Microsoft.SqlServer.Dts.Runtime.Application> object to programmatically discover the data flow components available on the local computer. This sample requires a reference to the Microsoft.SqlServer.ManagedDTS assembly.  
   
@@ -78,7 +76,6 @@ Module Module1
 End Module  
 ```
   
-## See Also  
- [Adding Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
-  
-  
+## Related content
+
+- [Adding Data Flow Components Programmatically](adding-data-flow-components-programmatically.md)

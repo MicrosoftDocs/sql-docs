@@ -110,6 +110,6 @@ EXECUTE sp_filestream_force_garbage_collection
 
 - [FILESTREAM (SQL Server)](../blob/filestream-sql-server.md)
 - [FileTables (SQL Server)](../blob/filetables-sql-server.md)
-- [FILESTREAM and FileTable dynamic management views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+- [FILESTREAM and FileTable dynamic management views (Transact-SQL)](../system-dynamic-management-objects/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 - [FILESTREAM and FileTable catalog views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
-- [sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
+- [sys.sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)

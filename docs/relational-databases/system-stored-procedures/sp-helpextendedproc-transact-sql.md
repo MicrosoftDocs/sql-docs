@@ -87,6 +87,6 @@ GO
 
 ## Related content
 
-- [sp_addextendedproc (Transact-SQL)](sp-addextendedproc-transact-sql.md)
-- [sp_dropextendedproc (Transact-SQL)](sp-dropextendedproc-transact-sql.md)
+- [sys.sp_addextendedproc (Transact-SQL)](sp-addextendedproc-transact-sql.md)
+- [sys.sp_dropextendedproc (Transact-SQL)](sp-dropextendedproc-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

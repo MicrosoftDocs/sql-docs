@@ -90,4 +90,4 @@ The following procedure shows how to map data types at the project, database, or
 ## Related content
 
 - [Migrate Access databases to SQL Server and Azure SQL](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)
-- [convert access database objects to SQL Server objects](converting-access-database-objects-accesstosql.md)
+- [Convert Access database objects](converting-access-database-objects-accesstosql.md)

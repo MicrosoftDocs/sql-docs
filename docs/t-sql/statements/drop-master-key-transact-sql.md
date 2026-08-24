@@ -64,13 +64,12 @@ DROP MASTER KEY;
 GO  
 ```  
   
-## See Also  
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
- [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
- [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
+
+- [CREATE MASTER KEY (Transact-SQL)](create-master-key-transact-sql.md)
+- [OPEN MASTER KEY (Transact-SQL)](open-master-key-transact-sql.md)
+- [CLOSE MASTER KEY (Transact-SQL)](close-master-key-transact-sql.md)
+- [BACKUP MASTER KEY (Transact-SQL)](backup-master-key-transact-sql.md)
+- [RESTORE MASTER KEY (Transact-SQL)](restore-master-key-transact-sql.md)
+- [ALTER MASTER KEY (Transact-SQL)](alter-master-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

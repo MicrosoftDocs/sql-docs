@@ -150,4 +150,3 @@ DROP TABLE t2;
 - [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
 - [INSERT (Transact-SQL)](insert-transact-sql.md)
 - [SET ANSI_DEFAULTS (Transact-SQL)](set-ansi-defaults-transact-sql.md)
-

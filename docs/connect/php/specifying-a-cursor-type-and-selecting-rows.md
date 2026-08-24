@@ -22,6 +22,6 @@ You can create a result set with rows that you can access in any order, dependin
 
 - [Cursor Types &#40;PDO_SQLSRV Driver&#41;](cursor-types-pdo-sqlsrv-driver.md)
 
-## See also
+## Related content
 
-[Retrieving Data](retrieving-data.md)
+- [Retrieving Data](retrieving-data.md)

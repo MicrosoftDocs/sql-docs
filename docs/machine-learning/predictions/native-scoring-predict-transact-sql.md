@@ -240,6 +240,6 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 
 ## Related content
 
-- [PREDICT T-SQL function](../../t-sql/queries/predict-transact-sql.md)
-- [SQL machine learning documentation](../index.yml)\
+- [PREDICT (Transact-SQL)](../../t-sql/queries/predict-transact-sql.md)
+- [SQL machine learning documentation](../index.yml)
 - [Score machine learning models with PREDICT in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-predict)

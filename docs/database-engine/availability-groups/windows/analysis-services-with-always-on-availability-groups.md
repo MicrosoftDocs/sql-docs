@@ -208,10 +208,10 @@ monikerRange: ">=sql-server-2017"
   
  To do this, create an additional data source in an Analysis Services model to support the read-write connection. When creating the additional data source, use the same listener name and database that you specified in the read-only connection, but instead of modifying **Application Intent**, keep the default that supports READWRITE connections. You can now add new fact or dimension tables to your data source view that are based on the read-write data source, and then enable writeback on the new tables.  
   
-## See Also  
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
- [Create a Data Source &#40;SSAS Multidimensional&#41;](/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [Enable Dimension Writeback](/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
-  
+## Related content
+
+- [Connect to an Always On availability group listener](listeners-client-connectivity-application-failover.md)
+- [Offload read-only workload to secondary replica of an Always On availability group](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
+- [Policy based management for operational issues with Always On availability groups](always-on-policies-for-operational-issues-always-on-availability.md)
+- [Create a Data Source &#40;SSAS Multidimensional&#41;](/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)
+- [Enable Dimension Writeback](/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)

@@ -87,10 +87,9 @@ Returns this error message:
   
 "Arithmetic overflow error converting expression to data type int."
 
-## See also
+## Related content
 
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[Built-in Functions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
-
+- [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
+- [What are the SQL database functions?](functions.md)

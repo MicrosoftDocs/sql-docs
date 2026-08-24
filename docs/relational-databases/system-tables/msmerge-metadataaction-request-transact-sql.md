@@ -28,9 +28,8 @@ dev_langs:
 |**generation**|**bigint**|The value of the generation for which the compensating action is needed.|  
 |**changed**|**int**|Internal-use only.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
+- [Web Synchronization for Merge Replication](../replication/web-synchronization-for-merge-replication.md)

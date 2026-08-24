@@ -315,4 +315,4 @@ You can validate the script file against the schema definition file `O2SSConsole
 
 ## Related content
 
-- [Create variable value files (Db2ToSQL)](creating-variable-value-files-db2tosql.md)
+- [Create variable value files](creating-variable-value-files-db2tosql.md)

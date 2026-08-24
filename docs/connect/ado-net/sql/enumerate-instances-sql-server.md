@@ -89,5 +89,6 @@ class Program
 }  
 ```  
   
-## Next steps
+## Related content
+
 - [SQL Server and ADO.NET](index.md)

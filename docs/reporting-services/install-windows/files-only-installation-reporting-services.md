@@ -55,13 +55,11 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
 
  When you select [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the Feature Selection page, Setup provides a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration page that enables you to specify the installation mode. To specify a files-only installation, select **Install but do not configure the report server** on the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration page.  
   
-## Related content 
+## Related content
 
-- [Verify a Reporting Services installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)
-- [Configure the Report Server Service Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
-- [Configure report server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-- [Configure a report server database connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
-
-- [Install Reporting Services native mode report server](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)
-- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)  
-  
+- [Verify a Reporting Services Installation](verify-a-reporting-services-installation.md)
+- [Configure the Report Server Service Account (Report Server Configuration Manager)](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [Configure report server URLs (Report Server Configuration Manager)](configure-report-server-urls-ssrs-configuration-manager.md)
+- [Configure a report server database connection (Report Server Configuration Manager)](configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Install a Reporting Services 2016 native mode report server](install-reporting-services-native-mode-report-server.md)
+- [SQL Server Reporting Services tools](../tools/reporting-services-tools.md)

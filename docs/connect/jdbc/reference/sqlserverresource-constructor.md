@@ -24,9 +24,8 @@ apitype: "Assembly"
 public SQLServerResource()  
 ```  
   
-## See Also  
- [SQLServerResource Constructors](../../../connect/jdbc/reference/sqlserverresource-constructors.md)   
- [SQLServerResource Members](../../../connect/jdbc/reference/sqlserverresource-members.md)   
- [SQLServerResource Class](../../../connect/jdbc/reference/sqlserverresource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResource Constructors](sqlserverresource-constructors.md)
+- [SQLServerResource Members](sqlserverresource-members.md)
+- [SQLServerResource Class](sqlserverresource-class.md)

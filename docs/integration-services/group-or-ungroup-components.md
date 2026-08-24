@@ -52,7 +52,7 @@ helpviewer_keywords:
   
 5.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
- [Add or Delete a Task or a Container in a Control Flow](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Connect Tasks and Containers by Using a Default Precedence Constraint](./control-flow/precedence-constraints.md)  
-  
+## Related content
+
+- [Add or Delete a Task or a Container in a Control Flow](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)
+- [Precedence Constraints](control-flow/precedence-constraints.md)

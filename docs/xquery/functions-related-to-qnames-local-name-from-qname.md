@@ -66,6 +66,6 @@ FROM T
 -- Result = https://someURI  
 ```  
   
-## See Also  
- [Functions Related to QNames &#40;XQuery&#41;](./functions-related-to-qnames-expanded-qname.md)  
-  
+## Related content
+
+- [Functions Related to QNames - expanded-QName](functions-related-to-qnames-expanded-qname.md)

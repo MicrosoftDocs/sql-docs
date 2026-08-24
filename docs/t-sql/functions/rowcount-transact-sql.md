@@ -79,6 +79,5 @@ GO
 
 ## Related content
 
-- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [SET ROWCOUNT (Transact-SQL)](../statements/set-rowcount-transact-sql.md)
-

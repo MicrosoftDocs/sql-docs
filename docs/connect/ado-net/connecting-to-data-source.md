@@ -27,11 +27,11 @@ Describes how to use a **Connection** object to establish a connection to a data
 [Connection Events](connection-events.md)\
 Describes how to use an **InfoMessage** event to retrieve informational messages from a data source.
 
-## See also
+## Related content
 
-- [Connection strings](connection-strings.md)
+- [Connection strings in ADO.NET](connection-strings.md)
 - [Connection pooling](connection-pooling.md)
 - [Commands and parameters](commands-parameters.md)
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Transactions and concurrency](transactions-and-concurrency.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

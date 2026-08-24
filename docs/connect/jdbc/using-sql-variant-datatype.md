@@ -87,6 +87,6 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
     `Inserting null value with column type sql_variant in TVP is not supported.`
 
-## See also
+## Related content
 
-[Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

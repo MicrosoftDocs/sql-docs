@@ -73,9 +73,8 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  (7 row(s) affected)  
  ```
   
-## See Also
+## Related content
 
-[COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-[COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)      
-[Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)
-
+- [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)
+- [Collation Functions - COLLATIONPROPERTY (Transact-SQL)](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)
+- [Collation and Unicode support](../collations/collation-and-unicode-support.md)

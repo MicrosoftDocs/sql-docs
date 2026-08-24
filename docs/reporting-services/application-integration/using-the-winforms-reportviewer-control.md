@@ -497,4 +497,4 @@ End Class
   
 ## Related content
 
-- [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)
+- [Integrate Reporting Services by using Report Viewer controls](integrating-reporting-services-using-reportviewer-controls.md)

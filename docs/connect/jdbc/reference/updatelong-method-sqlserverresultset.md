@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[updateLong (int, long)](../../../connect/jdbc/reference/updatelong-method-int-long.md)|Updates the designated column with a **long** value given the column index.|  
 |[updateLong (java.lang.String, long)](../../../connect/jdbc/reference/updatelong-method-java-lang-string-long.md)|Updates the designated column with a **long** value given the column name.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

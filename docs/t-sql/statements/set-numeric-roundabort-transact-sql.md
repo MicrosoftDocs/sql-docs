@@ -140,10 +140,8 @@ SELECT @result;
 GO  
 ```  
   
-## See Also  
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
-[SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
-[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
-  
-  
+## Related content
 
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET ARITHABORT (Transact-SQL)](set-arithabort-transact-sql.md)

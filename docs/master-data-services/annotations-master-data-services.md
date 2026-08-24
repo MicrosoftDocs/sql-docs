@@ -35,6 +35,6 @@ helpviewer_keywords:
 |----------------------|-----------|  
 |Add an annotation to a transaction.|[Annotate a Transaction &#40;Master Data Services&#41;](../master-data-services/annotate-a-transaction-master-data-services.md)|  
   
-## Related Content  
-  
--   [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)
+## Related content
+
+- [Transactions (Master Data Services)](transactions-master-data-services.md)

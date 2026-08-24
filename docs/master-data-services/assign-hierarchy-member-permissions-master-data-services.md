@@ -57,7 +57,8 @@ helpviewer_keywords:
     > [!NOTE]  
     >  Hierarchy member permissions do not take effect immediately. See [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md) for more information.  
   
-## See Also  
- [Delete Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
- [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)
+## Related content
+
+- [Delete Hierarchy Member Permissions (Master Data Services)](delete-hierarchy-member-permissions-master-data-services.md)
+- [Assign Model Object Permissions (Master Data Services)](assign-model-object-permissions-master-data-services.md)
+- [Hierarchy Member Permissions (Master Data Services)](hierarchy-member-permissions-master-data-services.md)

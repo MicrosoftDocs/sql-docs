@@ -91,13 +91,11 @@ ORDER BY migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + mi
 > [!NOTE]
 > The [Index-Creation](https://github.com/microsoft/tigertoolbox/tree/master/Index-Creation) script in Microsoft's [Tiger Toolbox](https://github.com/microsoft/tigertoolbox) examines missing index DMVs and automatically removes any redundant suggested indexes, parses out low impact indexes, and generates index creation scripts for your review. As in the query above, it does NOT execute index creation commands. The [Index-Creation](https://github.com/microsoft/tigertoolbox/tree/master/Index-Creation) script is suitable for SQL Server and  Azure SQL Managed Instance. For Azure SQL Database, consider implementing [automatic index tuning](/azure/azure-sql/database/automatic-tuning-overview).
 
-## Next steps
-
-Learn more about the missing index feature in the following articles:
+## Related content
 
 - [Tune nonclustered indexes with missing index suggestions](../indexes/tune-nonclustered-missing-index-suggestions.md)
-- [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](sys-dm-db-missing-index-columns-transact-sql.md)   
-- [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](sys-dm-db-missing-index-groups-transact-sql.md)   
-- [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](sys-dm-db-missing-index-group-stats-transact-sql.md)  
-- [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](sys-dm-db-missing-index-group-stats-query-transact-sql.md)     
-- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_db_missing_index_columns (Transact-SQL)](sys-dm-db-missing-index-columns-transact-sql.md)
+- [sys.dm_db_missing_index_groups (Transact-SQL)](sys-dm-db-missing-index-groups-transact-sql.md)
+- [sys.dm_db_missing_index_group_stats (Transact-SQL)](sys-dm-db-missing-index-group-stats-transact-sql.md)
+- [sys.dm_db_missing_index_group_stats_query (Transact-SQL)](sys-dm-db-missing-index-group-stats-query-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)

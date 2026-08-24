@@ -446,8 +446,8 @@ def handle_database_error(error: Exception) -> str:
 
 ## Related content
 
-- [Encryption and certificates](encryption-certificates.md)
-- [Microsoft Entra authentication](entra-authentication.md)
-- [Container and local development](container-local-development.md)
-- [Error handling](error-handling.md)
-- [SQL Server security documentation](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+- [Encryption and TLS with mssql-python](encryption-certificates.md)
+- [Microsoft Entra authentication with mssql-python](entra-authentication.md)
+- [Container and local development with mssql-python](container-local-development.md)
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
+- [Security for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)

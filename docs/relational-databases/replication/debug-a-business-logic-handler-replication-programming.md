@@ -77,4 +77,4 @@ dev_langs:
   
 ## Related content
 
-- [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)
+- [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md)

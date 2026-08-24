@@ -125,10 +125,8 @@ These methods test the validity and properties of geography instances.
 
 ## Related content
 
-- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)
-- [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)
-- [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)
+- [Extended methods on geography instances](extended-methods-on-geography-instances.md)
+- [OGC Static Geography Methods](ogc-static-geography-methods.md)
+- [Extended Static Geography Methods](extended-static-geography-methods.md)
 - [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)
-- [Create, Construct, and Query geography Instances](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
-  
-  
+- [Create, Construct, and Query geography instances](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)

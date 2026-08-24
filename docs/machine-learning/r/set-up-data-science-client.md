@@ -235,9 +235,7 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
    + View help on packages in the current library by pressing CTRL + 3.
    + See R variables in the **Variable Explorer**, by pressing CTRL + 8.
 
-## Next steps
+## Related content
 
-Two different tutorials include exercises so that you can practice switching the compute context from local to a remote SQL Server instance.
-
-+ [Tutorial: Use RevoScaleR R functions with SQL Server data](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [Data Science End-to-End Walkthrough](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+- [Tutorial: Use RevoScaleR R functions with SQL Server data](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+- [Tutorial: SQL Server development for R data scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

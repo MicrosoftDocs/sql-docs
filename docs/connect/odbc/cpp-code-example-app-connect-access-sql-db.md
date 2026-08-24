@@ -942,6 +942,6 @@ EndGlobal
 </Project>
 ```
 
-## See also
+## Download driver
 
-[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
+[!INCLUDE [driver_odbc_download](../../includes/driver_odbc_download.md)]

@@ -137,7 +137,7 @@ When a pane is expanded, Activity Monitor queries the instance for information. 
 ## Related content
 
 - [What is SQL Server Management Studio (SSMS)?](/ssms/sql-server-management-studio-ssms)
-- [Export and import a database on Linux with SSMS or SqlPackage.exe on Windows](sql-server-linux-migrate-ssms.md)
+- [Export and import a database on Linux with SSMS or SqlPackage.exe on Windows](migrate/sql-server-management-studio.md)
 - [Quickstart: Connect and query a SQL Server instance using SQL Server Management Studio (SSMS)](/ssms/quickstarts/ssms-connect-query-sql-server)
 - [Tutorial: Write Transact-SQL statements](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Server Performance and Activity Monitoring](../relational-databases/performance/server-performance-and-activity-monitoring.md)

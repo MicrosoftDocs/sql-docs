@@ -399,6 +399,6 @@ This release only applies to Linux and macOS.
 
 In version 2.0, support for the PDO_SQLSRV driver was added. For more information, see [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md).  
 
-## See Also
+## Related content
 
-[Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)
+- [Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)

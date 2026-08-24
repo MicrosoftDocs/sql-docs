@@ -171,6 +171,6 @@ pip install --user mssql-python
 
 ## Related content
 
-- [Quickstart: Connect and query](python-sql-driver-mssql-python-quickstart.md)
-- [Connection strings reference](connection-strings.md)
+- [Quickstart: Connect with the mssql-python driver for Python](python-sql-driver-mssql-python-quickstart.md)
+- [Connection strings for mssql-python](connection-strings.md)
 - [mssql-python GitHub repository](https://github.com/microsoft/mssql-python)

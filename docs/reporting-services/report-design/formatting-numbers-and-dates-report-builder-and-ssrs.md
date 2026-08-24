@@ -54,6 +54,6 @@ Before you format numbers and dates in your report, consider the following detai
   
 ## Related content
 
-- [Format text and placeholders in paginated reports (Report Builder)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)
-- [Format lines, colors, and images in a paginated report (Report Builder)](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)
-- [Format a chart in a paginated report (Report Builder)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Format text and placeholders in paginated reports (Report Builder)](formatting-text-and-placeholders-report-builder-and-ssrs.md)
+- [Formatting lines, colors, and images in a paginated report (Report Builder)](formatting-lines-colors-and-images-report-builder-and-ssrs.md)
+- [Formatting a chart in a paginated report (Report Builder)](formatting-a-chart-report-builder-and-ssrs.md)

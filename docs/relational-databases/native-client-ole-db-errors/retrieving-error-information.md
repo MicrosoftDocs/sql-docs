@@ -209,7 +209,6 @@ void DumpErrorInfo
     }  
 ```  
   
-## See Also  
- [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Errors](errors.md)

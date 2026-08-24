@@ -107,7 +107,7 @@ webBrowser1.Navigate(url);
 ## Related content
 
 - [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-- [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)
-- [Integrating Reporting Services by using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)
-- [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)
-- [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)
+- [Integrate Reporting Services by using URL access](integrating-reporting-services-using-url-access.md)
+- [Integrate Reporting Services by using SOAP](integrating-reporting-services-using-soap.md)
+- [Integrate Reporting Services by using Report Viewer controls](integrating-reporting-services-using-reportviewer-controls.md)
+- [URL access (SSRS)](../url-access-ssrs.md)

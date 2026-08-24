@@ -108,8 +108,7 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
 ```  
   
-## See Also  
- [CurveToLineWithTolerance &#40;geography Data Type&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
-  
-  
+## Related content
+
+- [CurveToLineWithTolerance (geography Data Type)](../spatial-geography/curvetolinewithtolerance-geography-data-type.md)
+- [STCurveToLine (geometry Data Type)](stcurvetoline-geometry-data-type.md)

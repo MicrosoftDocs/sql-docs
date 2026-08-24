@@ -78,11 +78,11 @@ ms.custom:
   
 ## Related content
 
-- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
-- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
-- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
-- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)
-- [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)
-- [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)
+- [Filter, group, and sort data in Report Builder paginated reports](filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Gauges in a paginated report (Report Builder)](gauges-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)
+- [Format paginated report items (Report Builder)](formatting-report-items-report-builder-and-ssrs.md)
+- [Tutorial: Add a KPI to your report (Report Builder)](../tutorial-adding-a-kpi-to-your-report-report-builder.md)
+- [Formatting scales on a gauge in a paginated report (Report Builder)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)

@@ -104,10 +104,9 @@ f1_keywords:
 |**InfoSource**|Create a new InfoSource by using the **Create InfoSource** dialog box, and then by using the **Create InfoSource for Transaction Data** or the **Create InfoSource for Master Data** dialog box. For more information about these dialog boxes, see [Create InfoSource](../../integration-services/data-flow/create-infosource.md), [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md) and [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).|  
 |**InfoPackage**|Create a new InfoPackage by using the **Create InfoPackage** dialog box. For more information about this dialog box, see [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
   
-## See Also  
- [SAP BW Destination Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [SAP BW Destination Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [SAP BW Destination Editor &#40;Advanced Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
- [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
-  
+## Related content
+
+- [SAP BW Destination Editor (Mappings Page)](sap-bw-destination-editor-mappings-page.md)
+- [SAP BW Destination Editor (Error Output Page)](sap-bw-destination-editor-error-output-page.md)
+- [SAP BW Destination Editor (Advanced Page)](sap-bw-destination-editor-advanced-page.md)
+- [Microsoft Connector for SAP BW F1 Help](../microsoft-connector-for-sap-bw-f1-help.md)

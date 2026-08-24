@@ -52,6 +52,6 @@ Report parts are paginated report items that have been published separately to a
   
 ## Related content
 
-- [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)
-- [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)
-- [Browse for Report Parts and Set a Default Folder &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)
+- [Report Parts (Report Builder and SSRS)](report-parts-report-builder-and-ssrs.md)
+- [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md)
+- [Browse for report parts and set a default folder (Report Builder)](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)

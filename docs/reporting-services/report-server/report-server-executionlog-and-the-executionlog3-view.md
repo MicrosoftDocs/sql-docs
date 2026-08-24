@@ -368,5 +368,5 @@ select * from ExecutionLog order by TimeStart DESC
   
 ## Related content
 
-- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
-- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+- [Reporting Services log files and sources](reporting-services-log-files-and-sources.md)
+- [Errors and events reference (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)

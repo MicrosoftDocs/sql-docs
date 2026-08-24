@@ -35,8 +35,7 @@ ms.topic: upgrade-and-migration-article
 ## Uninstall SQL Server Instance Containing Data Quality Server  
  If you are completely uninstalling the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that has [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], you must manually delete the DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA databases from your computer after the uninstall process is complete. For a default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, the DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA databases files are available at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA.  
   
-## See Also  
- [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
- [Uninstall SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)  
-  
-  
+## Related content
+
+- [Uninstall an existing instance of SQL Server (Setup)](uninstall-an-existing-instance-of-sql-server-setup.md)
+- [Uninstall SQL Server](uninstall-sql-server.md)

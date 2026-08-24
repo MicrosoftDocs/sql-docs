@@ -171,7 +171,6 @@ Set con = Nothing
 
 In prior versions of the OLE DB provider, this code would cause an implicit connection to be created on the second execution because only one active set of results could be opened per a single connection. Because the implicit connection wasn't pooled in the OLE DB connection pool, this behavior would cause extra overhead. With the MARS feature exposed by the OLE DB Driver for SQL Server, you get multiple active results on the one connection.
 
-## See also
+## Related content
 
-[Building applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)
-
+- [Building applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)

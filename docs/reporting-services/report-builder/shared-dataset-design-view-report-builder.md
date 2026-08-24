@@ -89,6 +89,6 @@ To save the query that you built, on the **Report Builder** button, select **Sav
 
 ## Related content
 
-- [Report datasets](../../reporting-services/report-data/report-datasets-ssrs.md)
-- [Filter, group, and sort data (Report Builder)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
-- [Report parameters (Report Builder and Report Designer)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
+- [Report Datasets (SSRS)](../report-data/report-datasets-ssrs.md)
+- [Filter, group, and sort data in Report Builder paginated reports](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Paginated report parameters in Report Builder](../report-design/report-parameters-report-builder-and-report-designer.md)

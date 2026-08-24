@@ -91,17 +91,10 @@ ms.custom:
   
 4.  The required actions are performed based on the specified command. If you just chose to install [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] without any command-line parameters, rest of the steps are same as described in steps 2-6 in the previous section, [Run DQSInstaller.exe from Start Screen, Start Menu or Windows Explorer](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   
-## Next Steps  
-  
--   Grant appropriate DQS roles to users based on their work profile. See [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
-  
--   If [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] will be accessed remotely from [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], enable the TCP/IP protocol using SQL Server Configuration Manager on this computer.  
-  
--   Make sure that you can access your source data for the DQS operations, and can export the processed data to a table in a database. See [Access Data for the DQS Operations](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
-  
-## See Also  
- [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Upgrade SQLCLR Assemblies After .NET Framework Update](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
-  
-  
+## Related content
+
+- [Install Data Quality Services](install-data-quality-services.md)
+- [Upgrade SQLCLR assemblies after .NET framework update](upgrade-sqlclr-assemblies-after-net-framework-update.md)
+- [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)
+- [Grant DQS Roles to Users](grant-dqs-roles-to-users.md)
+- [Access Data for the DQS Operations](access-data-for-the-dqs-operations.md)

@@ -168,10 +168,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
-- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md)
-- [View Information and Perform Tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
-- [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)
+- [Publish Data and Database Objects](publish-data-and-database-objects.md)
+- [Change Publication and Article Properties](change-publication-and-article-properties.md)
+- [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)
+- [Add Articles to and Drop Articles from a Publication](add-articles-to-and-drop-articles-from-a-publication.md)
+- [View information and perform tasks using Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [View and Modify Article Properties](view-and-modify-article-properties.md)

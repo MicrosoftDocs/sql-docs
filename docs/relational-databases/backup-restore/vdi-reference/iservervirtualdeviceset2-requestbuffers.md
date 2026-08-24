@@ -52,6 +52,6 @@ This method should be used before buffers are allocated with AllocateBuffer. Set
 
 During the configuration phase, RequestBuffers calls are "summed" together so that at the EndConfiguration call a single buffer area can be used (it is allocated at that time). After configuration is complete, any RequestBuffers calls result in immediate allocation of more buffer space.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

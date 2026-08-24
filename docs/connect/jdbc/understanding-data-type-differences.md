@@ -69,6 +69,6 @@ The JDBC **TIMESTAMP** type maps to the [!INCLUDE[ssNoVersion](../../includes/ss
 
 The custom type mapping feature of JDBC that uses the SQLData interfaces for the JDBC advanced types (UDTs, Struct, and so on). is not implemented in the JDBC driver.  
   
-## See also
+## Related content
 
-[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

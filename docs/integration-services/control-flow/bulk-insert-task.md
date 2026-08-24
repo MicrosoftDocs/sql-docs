@@ -99,14 +99,6 @@ helpviewer_keywords:
 ## Related Tasks  
  [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
-## Related Content  
-  
--   Technical article, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693), on support.microsoft.com.  
-  
--   Technical article, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), on msdn.microsoft.com.  
-  
--   Technical article, [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701), on simple-talk.com.  
-  
 ## Bulk Insert Task Editor (Connection Page)
   Use the **Connection** page of the **Bulk Insert Task Editor** dialog box to specify the source and destination of the bulk insert operation and the format to use.  
   
@@ -206,3 +198,9 @@ helpviewer_keywords:
   
 > [!NOTE]  
 >  Each row that cannot be imported by the bulk load operation is counted as one error.  
+
+## Related content
+
+- [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)
+- [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))
+- [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701)

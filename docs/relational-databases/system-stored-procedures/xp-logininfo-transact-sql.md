@@ -90,8 +90,8 @@ EXECUTE xp_logininfo 'BUILTIN\Administrators';
 
 ## Related content
 
-- [sp_denylogin (Transact-SQL)](sp-denylogin-transact-sql.md)
-- [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
-- [sp_revokelogin (Transact-SQL)](sp-revokelogin-transact-sql.md)
+- [sys.sp_denylogin (Transact-SQL)](sp-denylogin-transact-sql.md)
+- [sys.sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
+- [sys.sp_revokelogin (Transact-SQL)](sp-revokelogin-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)

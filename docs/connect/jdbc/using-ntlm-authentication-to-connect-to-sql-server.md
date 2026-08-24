@@ -89,6 +89,6 @@ For more information on connecting with encryption, see:
 > [!NOTE]
 > For the 7.4 release, enabling **both** Extended Protection and Encryption is not supported.
 
-## See also
+## Related content
 
-[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)
+- [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

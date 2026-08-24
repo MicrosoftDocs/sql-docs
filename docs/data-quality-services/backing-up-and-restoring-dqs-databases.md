@@ -70,7 +70,6 @@ ms.custom:
   
 12. Press F5 to execute the statements. Check the **Results** pane to verify that the statements have executed successfully.  
   
-## See Also  
- [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
-  
-  
+## Related content
+
+- [Manage DQS Databases](manage-dqs-databases.md)

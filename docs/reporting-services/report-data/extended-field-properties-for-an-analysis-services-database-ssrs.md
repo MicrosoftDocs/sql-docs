@@ -141,6 +141,6 @@ CELL PROPERTIES
   
 ## Related content
 
-- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
-- [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)
-- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](../report-design/expressions-report-builder-and-ssrs.md)
+- [Built-in collections in expressions in a paginated report (Report Builder)](../report-design/built-in-collections-in-expressions-report-builder.md)
+- [Dataset Fields Collection (Report Builder and SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)

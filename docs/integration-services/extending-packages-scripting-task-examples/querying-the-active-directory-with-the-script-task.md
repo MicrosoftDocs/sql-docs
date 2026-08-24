@@ -99,8 +99,6 @@ public void Main()
 }  
 ```  
   
-## External Resources  
-  
--   Technical article, [Processing Active Directory Information in SSIS](../../integration-services/performance/integration-services-ssis-logging.md)
-  
-  
+## Related content
+
+- [Integration Services (SSIS) Logging](../performance/integration-services-ssis-logging.md)

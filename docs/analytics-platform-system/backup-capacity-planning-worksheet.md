@@ -37,6 +37,6 @@ Print this worksheet and fill it in with your own requirements.
 
 When you finish determining your capacity requirements, return to the [Acquire and Configure a Loading Server](acquire-and-configure-loading-server.md) article to plan your purchase.
 
-## See also
-[Backup and loading hardware](backup-and-loading-hardware.md)
+## Related content
 
+- [Backup and loading hardware overview - Parallel Data Warehouse](backup-and-loading-hardware.md)

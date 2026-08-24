@@ -223,5 +223,5 @@ After the rebuild operation is complete, examine the [!INCLUDE [ssNoVersion](../
 
 ## Related content
 
-- [System Databases](../../relational-databases/databases/system-databases.md)
-- [sqlservr Application](../../tools/sqlservr-application.md)
+- [System Databases](system-databases.md)
+- [sqlservr application](../../tools/sqlservr-application.md)

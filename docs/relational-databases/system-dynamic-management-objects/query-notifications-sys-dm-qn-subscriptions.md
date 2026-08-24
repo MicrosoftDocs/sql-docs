@@ -126,7 +126,7 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Query Notifications Related Dynamic Management Views &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)

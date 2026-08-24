@@ -113,11 +113,6 @@ Additional arguments sent to compute engine.
 An object defining the transform.
 
 
-## See also
-
-[`categorical_hash`](categorical-hash.md)
-
-
 ## Example
 
 
@@ -201,3 +196,6 @@ Writing completed.
 4       I hate it          False -0.580586     0.358798
 ```
 
+## Related content
+
+- [*microsoftml.categorical_hash*: Hashes and converts a text column into categories](categorical-hash.md)

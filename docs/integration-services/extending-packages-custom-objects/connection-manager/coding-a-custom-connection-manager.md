@@ -252,8 +252,7 @@ public override void ReleaseConnection(object connection)
 }  
 ```  
  
-## See Also  
- [Creating a Custom Connection Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
- [Developing a User Interface for a Custom Connection Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
-  
-  
+## Related content
+
+- [Creating a Custom Connection Manager](creating-a-custom-connection-manager.md)
+- [Developing a User Interface for a Custom Connection Manager](developing-a-user-interface-for-a-custom-connection-manager.md)

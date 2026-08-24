@@ -43,7 +43,6 @@ ms.custom: mdx
 |[OR &#40;MDX&#41;](../mdx/or-mdx.md)|Performs a logical disjunction on two numeric expressions.|  
 |[XOR &#40;MDX&#41;](../mdx/xor-mdx.md)|Performs a logical exclusion on two numeric expressions.|  
   
-## See Also  
- [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Language Reference (MDX)](mdx-language-reference-mdx.md)

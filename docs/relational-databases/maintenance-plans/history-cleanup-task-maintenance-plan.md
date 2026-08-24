@@ -88,7 +88,7 @@ This statement uses the `sp_purge_jobhistory` and `sp_delete_backuphistory` stat
 
   Provide a password to use when authenticating. This option isn't available.
 
-## See also
+## Related content
 
-- [sp_purge_jobhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)
-- [sp_delete_backuphistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)
+- [sp_purge_jobhistory (Transact-SQL)](../system-stored-procedures/sp-purge-jobhistory-transact-sql.md)
+- [sp_delete_backuphistory (Transact-SQL)](../system-stored-procedures/sp-delete-backuphistory-transact-sql.md)

@@ -80,7 +80,7 @@ The setting takes effect immediately without restarting the server.
 - [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)
 - [UPDATETEXT (Transact-SQL)](../../t-sql/queries/updatetext-transact-sql.md)
 - [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)

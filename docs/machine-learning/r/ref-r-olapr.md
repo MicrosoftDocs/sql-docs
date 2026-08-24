@@ -135,6 +135,6 @@ mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sa
 result2 <- execute2D(olapCnn, mdx)
 ```
 
-## See also
+## Related content
 
-[How to create MDX queries using olapR](how-to-create-mdx-queries-using-olapr.md)
+- [How to create MDX queries in R using olapR](how-to-create-mdx-queries-using-olapr.md)

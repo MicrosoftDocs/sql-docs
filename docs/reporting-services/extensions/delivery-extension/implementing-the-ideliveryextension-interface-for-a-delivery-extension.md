@@ -29,5 +29,5 @@ The IDeliveryExtension interface allows validation of user data and for clients 
   
 ## Related content
 
-- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)
+- [Implement a delivery extension](implementing-a-delivery-extension.md)
+- [Reporting Services extension library](../reporting-services-extension-library.md)

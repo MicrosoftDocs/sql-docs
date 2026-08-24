@@ -52,6 +52,6 @@ ms.custom:
   
 ## Related content
 
-- [Sort Data in a Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)
-- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
-- [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)
+- [Sort data in a data region in a paginated report (Report Builder)](sort-data-in-a-data-region-report-builder-and-ssrs.md)
+- [Filter, group, and sort data in Report Builder paginated reports](filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Add interactive sort to a table or matrix in paginated reports (Report Builder)](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)

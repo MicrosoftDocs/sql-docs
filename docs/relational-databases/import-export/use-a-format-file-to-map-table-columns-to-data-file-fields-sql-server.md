@@ -317,6 +317,6 @@ FROM TestDatabase.dbo.myRemap;
 
 ## Related content
 
-- [bcp Utility](../../tools/bcp-utility.md)
-- [Use a Format File to Skip a Table Column (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
+- [Use a format file to skip a table column (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [Use a format file to skip a data field (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)

@@ -96,4 +96,4 @@ These pages configure how data is filtered and displayed in Replication Monitor.
 
 ## Related content
 
-- [Start the replication monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [Start the Replication Monitor](monitor/start-the-replication-monitor.md)

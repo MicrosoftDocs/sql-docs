@@ -68,6 +68,6 @@ To add a filter, you must specify one or more conditions that are filter equatio
   
 ## Related content
 
-- [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
-- [Expression examples in paginated reports (Report Builder)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Add a filter to a paginated report (Report Builder)](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)
+- [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
+- [Expression examples in Report Builder paginated reports](../report-design/expression-examples-report-builder-and-ssrs.md)
+- [Add a filter to a Report Builder paginated report](../report-design/add-a-filter-report-builder-and-ssrs.md)

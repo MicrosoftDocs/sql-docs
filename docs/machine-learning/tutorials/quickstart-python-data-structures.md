@@ -203,7 +203,7 @@ Now you'll output specific values from two series of math results in a data.fram
 
    If you try to use a numeric index to get a value from this series, you get an error.
 
-## Next steps
+## Next step
 
 To learn about writing advanced Python functions with SQL machine learning, follow this quickstart:
 

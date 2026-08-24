@@ -212,4 +212,4 @@ An initial offline installation of SQL Server Machine Learning Services requires
 
 - [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md)
 - [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
-- [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
+- [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](../../linux/install-upgrade/setup-machine-learning.md)

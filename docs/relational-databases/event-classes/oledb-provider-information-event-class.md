@@ -57,9 +57,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**TextData**|**ntext**|Text value dependent on the event class captured in the trace.|1|Yes|  
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [OLE Automation Objects in Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
-  
-  
+## Related content
+
+- [Extended Events overview](../extended-events/extended-events.md)
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [OLE Automation Objects in Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)

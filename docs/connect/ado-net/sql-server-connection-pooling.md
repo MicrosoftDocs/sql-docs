@@ -122,9 +122,9 @@ After a SQL Server application role has been activated by calling the `sp_setapp
 
 We recommend that you take advantage of security mechanisms that you can use instead of application roles.
 
-## See also
+## Related content
 
 - [Connection pooling](connection-pooling.md)
-- [SQL Server and ADO.NET](./sql/index.md)
+- [SQL Server and ADO.NET](sql/index.md)
 - [Diagnostic counters in SqlClient](diagnostic-counters.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

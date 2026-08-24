@@ -42,8 +42,7 @@ SESSION_ID ( )
 SELECT SESSION_ID();  
 ```  
   
-## See Also  
- [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
- [VERSION &#40;Azure Synapse Analytics&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)
-  
-  
+## Related content
+
+- [DB_NAME (Transact-SQL)](db-name-transact-sql.md)
+- [@@VERSION (Transact-SQL)](version-transact-sql-configuration-functions.md)

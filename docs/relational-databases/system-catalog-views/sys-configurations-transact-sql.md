@@ -77,7 +77,5 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Related content
 
-- [Server-wide Configuration Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)
-- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
-  
+- [Server-wide configuration catalog views (Transact-SQL)](server-wide-configuration-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)

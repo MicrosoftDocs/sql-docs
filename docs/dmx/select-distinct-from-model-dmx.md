@@ -121,8 +121,8 @@ FROM [TM Decision Tree]
 > [!NOTE]  
 >  The minimum value of the minimum bucket and the maximum value of the maximum bucket are just the highest and lowest observed values. Any values that fall outside this observed range are assumed to belong to the minimum and maximum buckets.  
   
-## See Also  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
-  
+## Related content
+
+- [SELECT (DMX)](select-dmx.md)
+- [DMX Statements - Data Manipulation](dmx-statements-data-manipulation.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)

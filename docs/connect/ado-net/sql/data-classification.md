@@ -96,8 +96,8 @@ This sample application demonstrates how to access the Data Classification prope
 
 [!code-csharp [SqlDataReader_DataDiscoveryAndClassification#1](~/../sqlclient/doc/samples/SqlDataReader_DataDiscoveryAndClassification.cs#1)]
 
-## See also
+## Related content
 
 - [SQL Server features and ADO.NET](sql-server-features-adonet.md)
 - [sys.sensitivity_classifications (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
-- [ADD SENSITIVITY CLASSIFICATION](../../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+- [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../../t-sql/statements/add-sensitivity-classification-transact-sql.md)

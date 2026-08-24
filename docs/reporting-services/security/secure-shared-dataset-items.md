@@ -41,7 +41,7 @@ ms.custom:
   
 ## Related content
 
-- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)
-- [Secure folders](../../reporting-services/security/secure-folders.md)
-- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Manage Shared Datasets](../report-data/manage-shared-datasets.md)
+- [Secure folders](secure-folders.md)
+- [Secure reports and resources](secure-reports-and-resources.md)
+- [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md)

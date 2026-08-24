@@ -206,7 +206,7 @@ By using **revoscalepy**, you can create remote compute contexts, move data betw
 
 In the next part of this tutorial, you'll use the trained models to create predictions.
 
-## Next steps
+## Next step
 
 In this article, you:
 

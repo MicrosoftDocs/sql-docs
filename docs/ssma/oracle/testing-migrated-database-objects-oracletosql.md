@@ -43,6 +43,6 @@ Note that the current version of SSMA Tester does not support parallel execution
 
 [Creating Test Cases &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)
 
-## See Also
+## Related content
 
-[Project Settings &#40;Conversion&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)
+- [Project Settings (Conversion)](project-settings-conversion-oracletosql.md)

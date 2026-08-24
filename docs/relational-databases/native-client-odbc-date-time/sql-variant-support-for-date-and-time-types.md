@@ -50,7 +50,6 @@ helpviewer_keywords:
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE is ignored|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE is ignored|  
   
-## See Also  
- [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+## Related content
+
+- [Date and Time Improvements (ODBC)](date-and-time-improvements-odbc.md)

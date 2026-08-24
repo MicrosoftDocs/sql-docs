@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[rollback ()](../../../connect/jdbc/reference/rollback-method.md)|Undoes all changes made in the current transaction and releases any database locks currently held by this [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.|  
 |[rollback (java.sql.Savepoint)](../../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md)|Undoes all changes made after the given [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) object was set.|  
   
-## See Also  
- [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  
+## Related content
+
+- [SQLServerConnection Members](sqlserverconnection-members.md)
+- [SQLServerConnection Class](sqlserverconnection-class.md)

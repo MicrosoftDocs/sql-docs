@@ -37,7 +37,6 @@ public final void setSQLXML(int parameterIndex,
 ## Remarks  
  This setSQLXML method is specified by the setSQLXML method in the java.sql.PreparedStatement interface.  
   
-## See Also  
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
-  
-  
+## Related content
+
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)

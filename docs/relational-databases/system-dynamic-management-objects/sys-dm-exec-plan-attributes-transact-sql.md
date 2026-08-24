@@ -174,9 +174,10 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../system-catalog-views/sys-databases-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../system-catalog-views/sys-objects-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_exec_cached_plans (Transact-SQL)](sys-dm-exec-cached-plans-transact-sql.md)
+- [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
+- [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)

@@ -57,6 +57,6 @@ dev_langs:
   
 ## Related content
 
-- [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)
-- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)
+- [Replication Administration FAQ](frequently-asked-questions-for-replication-administrators.yml)
+- [Back up and restore of SQL Server databases](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Peer-to-Peer - Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)

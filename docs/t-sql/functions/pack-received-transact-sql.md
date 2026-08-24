@@ -17,7 +17,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;PACK_RECEIVED (Transact-SQL)
+# @@PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of input packets read from the network by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since it was last started.  
@@ -51,9 +51,8 @@ Packets Received
 128  
 ```  
   
-## See Also  
- [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
- [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [System Statistical Functions](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-  
-  
+## Related content
+
+- [@@PACK_SENT (Transact-SQL)](pack-sent-transact-sql.md)
+- [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+- [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

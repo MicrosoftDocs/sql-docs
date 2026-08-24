@@ -148,6 +148,6 @@ You can set credentials in your code to control access to reports and to the rep
 
 ## Related content
 
-- [Data sources supported by Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)
-- [Create data connection strings in Report Builder](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
-- [Manage report data sources](../../reporting-services/report-data/manage-report-data-sources.md)
+- [Data Sources Supported by Reporting Services (SSRS)](data-sources-supported-by-reporting-services-ssrs.md)
+- [Create data connection strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Manage Report Data Sources](manage-report-data-sources.md)

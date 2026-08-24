@@ -45,4 +45,3 @@ This section describes mapping columns in a rowset under various conditions, and
 - [Add namespaces to queries using WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)
 - [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
 - [FOR XML (SQL Server)](for-xml-sql-server.md)
-

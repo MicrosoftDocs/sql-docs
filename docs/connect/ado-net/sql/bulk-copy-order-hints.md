@@ -28,6 +28,6 @@ A SqlBulkCopyColumnOrderHint object is created to define the sort order for the 
 
 [!code-csharp [SqlBulkCopy.ColumnOrderHint#1](~/../sqlclient/doc/samples/SqlBulkCopy_ColumnOrderHint.cs#1)]
 
-## Next steps
+## Related content
 
 - [Bulk copy operations in SQL Server](bulk-copy-operations-sql-server.md)

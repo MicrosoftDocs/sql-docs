@@ -135,10 +135,10 @@ EXEC uspGetEmployeeManagers '1';
   
 ## Related content
 
-- [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)
-- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
-- [SQL Server Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)
-- [OLE DB Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)
-- [Oracle Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)
-- [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)
+- [Query Design Tools (SSRS)](query-design-tools-ssrs.md)
+- [Report Datasets (SSRS)](report-datasets-ssrs.md)
+- [SQL Server Connection Type (SSRS)](sql-server-connection-type-ssrs.md)
+- [OLE DB Connection Type (SSRS)](ole-db-connection-type-ssrs.md)
+- [Set up the Oracle connection type with SSRS and a Power BI report server](oracle-connection-type-ssrs.md)
+- [RSReportDesigner configuration file](../report-server/rsreportdesigner-configuration-file.md)
 - [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](/ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools)

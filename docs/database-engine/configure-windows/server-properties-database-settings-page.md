@@ -84,4 +84,4 @@ View the currently running values for the options on this pane. These values are
 ## Related content
 
 - [Server configuration options](server-configuration-options-sql-server.md)
-- [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)
+- [Specify fill factor for an index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)

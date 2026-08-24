@@ -35,7 +35,6 @@ dev_langs:
  [sysdbmaintplans](../../relational-databases/system-tables/sysdbmaintplans-transact-sql.md)  
  Contains one row for each upgraded database maintenance plan.  
   
-## See Also  
- [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)  
-  
-  
+## Related content
+
+- [Maintenance plans](../maintenance-plans/maintenance-plans.md)

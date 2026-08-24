@@ -33,9 +33,8 @@ helpviewer_keywords:
   
  To allow the driver to know the current state of SET options, ODBC applications should not use the [!INCLUDE[tsql](../../../includes/tsql-md.md)] SET statement to set these options. They should only set these options using either the data source or the connection options. If the application issues SET statements, the driver can generate incorrect SQL statements.  
   
-## See Also  
- [Executing Statements &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)   
- [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)   
- [SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)  
-  
-  
+## Related content
+
+- [Executing Statements (ODBC)](executing-statements-odbc.md)
+- [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)
+- [SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)

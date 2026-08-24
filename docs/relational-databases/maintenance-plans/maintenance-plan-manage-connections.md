@@ -30,6 +30,6 @@ Use the **Manage Connections** dialog box to specify the properties of connectio
 > [!IMPORTANT]  
 > The package is stored in the `msdb` database with its **ProtectionLevel** set to **ServerStorage**, so when *SQL Server Authentication* is used, the password will not be encrypted in `msdb`. You can use *SQL Server Authentication* as long as `msdb` is secured, but using *Windows Authentication* is recommended
 
-## See also
+## Related content
 
-- [Maintenance Plans](maintenance-plans.md)
+- [Maintenance plans](maintenance-plans.md)

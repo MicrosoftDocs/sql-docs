@@ -56,8 +56,7 @@ UPPER(SUBSTRING(FirstName, 1, 1))
 UPPER(@PostalCode)  
 ```  
   
-## See Also  
- [LOWER &#40;SSIS Expression&#41;](../../integration-services/expressions/lower-ssis-expression.md)   
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
-  
-  
+## Related content
+
+- [LOWER (SSIS Expression)](lower-ssis-expression.md)
+- [Functions (SSIS Expression)](functions-ssis-expression.md)

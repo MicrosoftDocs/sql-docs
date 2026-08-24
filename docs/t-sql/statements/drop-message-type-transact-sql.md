@@ -50,9 +50,8 @@ DROP MESSAGE TYPE message_type_name
 DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;  
 ```  
   
-## See Also  
- [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER MESSAGE TYPE (Transact-SQL)](alter-message-type-transact-sql.md)
+- [CREATE MESSAGE TYPE (Transact-SQL)](create-message-type-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

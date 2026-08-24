@@ -50,6 +50,7 @@ dev_langs:
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
-## See also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [I/O Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](i-o-related-dynamic-management-views-and-functions-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [I/O Related Dynamic Management Views and Functions (Transact-SQL)](i-o-related-dynamic-management-views-and-functions-transact-sql.md)

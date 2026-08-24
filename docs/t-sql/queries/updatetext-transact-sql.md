@@ -115,9 +115,8 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## See Also  
- [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
- [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
-  
-  
+## Related content
+
+- [READTEXT (Transact-SQL)](readtext-transact-sql.md)
+- [Text and Image Functions - TEXTPTR (Transact-SQL)](../functions/text-and-image-functions-textptr-transact-sql.md)
+- [WRITETEXT (Transact-SQL)](writetext-transact-sql.md)

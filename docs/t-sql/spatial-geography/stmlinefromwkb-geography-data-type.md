@@ -55,7 +55,6 @@ SET @g = geography::STMLineFromWKB(0x010500000002000000010200000005000000F4FDD47
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
-  
-  
+## Related content
+
+- [OGC Static Geography Methods](ogc-static-geography-methods.md)

@@ -49,5 +49,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)
-- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)
+- [Run Replication Maintenance Jobs (SQL Server Management Studio)](../administration/run-replication-maintenance-jobs-sql-server-management-studio.md)
+- [Monitoring (Replication)](monitoring-replication.md)

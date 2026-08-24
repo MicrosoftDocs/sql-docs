@@ -61,6 +61,6 @@ The `go-mssqldb` driver is an open-source project hosted on [GitHub](https://git
 
 ## Related content
 
-- [What's new](whats-new.md)
-- [Installation and system requirements](installation.md)
-- [Limitations](known-limitations.md)
+- [What's new in go-mssqldb](whats-new.md)
+- [Install the go-mssqldb driver](installation.md)
+- [go-mssqldb Limitations](known-limitations.md)

@@ -28,5 +28,5 @@ This section contains the following dynamic management views.
 
 ## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)

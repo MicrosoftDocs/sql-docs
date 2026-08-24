@@ -69,7 +69,7 @@ Use the **Invoke-PolicyEvaluation** [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 To turn endpoints off, use Policy-Based Management. To create and alter the properties of endpoints, use [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md) and [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md).
 
-## Next steps
+## Related content
 
-- [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [Security for SQL Server Database Engine and Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+- [sys.sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md)

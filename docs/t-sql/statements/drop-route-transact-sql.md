@@ -52,10 +52,9 @@ DROP ROUTE route_name
 DROP ROUTE ExpenseRoute ;  
 ```  
   
-## See Also  
- [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
- [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.routes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER ROUTE (Transact-SQL)](alter-route-transact-sql.md)
+- [CREATE ROUTE (Transact-SQL)](create-route-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
+- [sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)

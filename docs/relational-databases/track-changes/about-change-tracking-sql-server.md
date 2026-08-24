@@ -103,10 +103,10 @@ A stored procedure was added in Service Packs for [!INCLUDE [ssSQL14](../../incl
 
 ## Related content
 
-- [Enable and Disable Change Tracking](enable-and-disable-change-tracking-sql-server.md)
-- [Work with change tracking](work-with-change-tracking-sql-server.md)
-- [Manage Change Tracking](manage-change-tracking-sql-server.md)
+- [Enable and Disable Change Tracking (SQL Server)](enable-and-disable-change-tracking-sql-server.md)
+- [Work with change tracking (SQL Server)](work-with-change-tracking-sql-server.md)
+- [Manage Change Tracking (SQL Server)](manage-change-tracking-sql-server.md)
 - [Troubleshoot change tracking auto cleanup issues](cleanup-and-troubleshoot-change-tracking-sql-server.md)
-- [Track data changes](track-data-changes-sql-server.md)
-- [Change Tracking stored procedures](../system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)
-- [Change Tracking tables](../system-tables/change-tracking-tables-transact-sql.md)
+- [Track data changes (SQL Server)](track-data-changes-sql-server.md)
+- [Change Tracking stored procedures (Transact-SQL)](../system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)
+- [Change Tracking tables (Transact-SQL)](../system-tables/change-tracking-tables-transact-sql.md)

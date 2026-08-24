@@ -35,8 +35,7 @@ public int getFetchDirection()
   
  This method returns FETCH_FORWARD for forward-only cursors, the last setting made by a call to the [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md) method for other cursor types, and will return FETCH_UNKNOWN these cursor types if the setFetchDirection method has never been called.  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

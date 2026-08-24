@@ -38,7 +38,6 @@ helpviewer_keywords:
 - [About OLE DB Properties](about-ole-db-properties.md)
 - [Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server](using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)
 
-## See also
+## Related content
 
-[OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)
-
+- [OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)

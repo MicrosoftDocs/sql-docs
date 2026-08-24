@@ -43,8 +43,6 @@ ms.topic: how-to
   
 11. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
- [ODBC Source Editor &#40;Connection Manager Page&#41;](./odbc-source.md)   
- [ODBC Source Editor &#40;Columns Page&#41;](./odbc-source.md)   
- [ODBC Source Editor &#40;Error Output Page&#41;](./odbc-source.md)  
-  
+## Related content
+
+- [ODBC Source](odbc-source.md)

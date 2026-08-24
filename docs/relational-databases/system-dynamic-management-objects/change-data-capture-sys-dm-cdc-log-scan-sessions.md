@@ -80,7 +80,7 @@ WHERE session_id = (SELECT MAX(b.session_id) FROM sys.dm_cdc_log_scan_sessions A
 GO  
 ```  
   
-## Next steps
+## Related content
 
- - [sys.dm_cdc_errors &#40;Transact-SQL&#41;](change-data-capture-sys-dm-cdc-errors.md)  
- - [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)
+- [Change Data Capture - sys.dm_cdc_errors](change-data-capture-sys-dm-cdc-errors.md)
+- [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)

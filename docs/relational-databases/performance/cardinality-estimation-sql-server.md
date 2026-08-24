@@ -360,4 +360,4 @@ r.date = '2016-05-11';
 - [Query Store hints](query-store-hints.md)
 - [Intelligent query processing in SQL databases](intelligent-query-processing.md)
 - [Set trace flags with DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-- [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)
+- [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)

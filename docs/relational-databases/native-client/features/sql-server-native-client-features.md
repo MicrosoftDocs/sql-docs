@@ -91,10 +91,9 @@ helpviewer_keywords:
  [SQL Server Native Client Support for LocalDB](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
  Discusses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client support for the LocalDB feature.  
   
-## See Also  
- [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB How-to Topics](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
- [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Programming](../sql-server-native-client-programming.md)
+- [ODBC How-to Topics](../../native-client-odbc-how-to/odbc-how-to-topics.md)
+- [OLE DB How-to Topics (Native Client OLE DB provider)](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)
+- [Installing SQL Server Native Client](../applications/installing-sql-server-native-client.md)

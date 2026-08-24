@@ -95,12 +95,11 @@ PRINT CONVERT(nvarchar, @CertSubject);
 GO  
 ```  
   
-## See also
-[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
-[CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)
-[Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
-[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
-[Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
-  
-  
+## Related content
+
+- [CREATE CERTIFICATE (Transact-SQL)](../statements/create-certificate-transact-sql.md)
+- [ALTER CERTIFICATE (Transact-SQL)](../statements/alter-certificate-transact-sql.md)
+- [CERT_ID (Transact-SQL)](cert-id-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [sys.certificates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+- [Security Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)

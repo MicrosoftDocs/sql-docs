@@ -67,10 +67,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
 |**XactSequence**|**bigint**|Token that describes the current transaction.|50|Yes|  
   
-## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Set Index Options](../../relational-databases/indexes/set-index-options.md)   
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
-  
-  
+## Related content
 
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [Set Index Options](../indexes/set-index-options.md)
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)

@@ -186,5 +186,6 @@ WHERE
 GO
 ```
 
-## See also
-[Dynamic management views and functions](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 
+## Related content
+
+- [System dynamic management views and functions](../system-dynamic-management-objects/system-dynamic-management-objects.md)

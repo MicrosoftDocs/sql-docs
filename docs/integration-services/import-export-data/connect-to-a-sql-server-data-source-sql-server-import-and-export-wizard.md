@@ -115,6 +115,7 @@ Here's the screen that you see after entering the connection string.
 ## Other data providers and more info
 For info about how to connect to SQL Server with a data provider that's not listed here, see [SQL Server connection strings](https://www.connectionstrings.com/sql-server/). This third-party site also contains more info about the data providers and the connection parameters described on this page.
 
-## See also
-[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+## Related content
+
+- [Choose a Data Source (SQL Server Import and Export Wizard)](choose-a-data-source-sql-server-import-and-export-wizard.md)
+- [Choose a Destination (SQL Server Import and Export Wizard)](choose-a-destination-sql-server-import-and-export-wizard.md)

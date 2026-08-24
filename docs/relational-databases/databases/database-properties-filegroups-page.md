@@ -54,8 +54,7 @@ f1_keywords:
  **Remove**  
  Removes the selected filegroup row from the grid.  
   
-## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
-  
+## Related content
+
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)

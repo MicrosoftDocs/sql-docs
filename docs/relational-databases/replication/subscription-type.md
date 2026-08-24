@@ -34,6 +34,6 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
-- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Create a Pull Subscription](create-a-pull-subscription.md)
+- [Create a push subscription](create-a-push-subscription.md)
+- [Subscribe to Publications](subscribe-to-publications.md)

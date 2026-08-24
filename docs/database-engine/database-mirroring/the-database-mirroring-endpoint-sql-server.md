@@ -89,7 +89,7 @@ It's important to understand that the [!INCLUDE [ssNoVersion](../../includes/ssn
 
 ## Related content
 
-- [Transport Security - Database Mirroring - Always On Availability](transport-security-database-mirroring-always-on-availability.md)
+- [Transport security in availability groups and database mirroring](transport-security-database-mirroring-always-on-availability.md)
 - [Troubleshoot Database Mirroring Configuration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)
-- [sys.dm_hadr_availability_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)
-- [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)
+- [sys.dm_hadr_availability_replica_states (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-availability-replica-states-transact-sql.md)
+- [sys.dm_db_mirroring_connections (Database mirroring)](../../relational-databases/system-dynamic-management-objects/database-mirroring-sys-dm-db-mirroring-connections.md)

@@ -58,6 +58,6 @@ You must run the administration tool as an interactive user, as either a local u
 
 For more information, see [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).
 
-## See also
+## Related content
 
-- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
+- [SQL Server Distributed Replay overview](sql-server-distributed-replay.md)

@@ -33,11 +33,10 @@ helpviewer_keywords:
  **Delete**  
  Select a property, and then click **Delete**.  
   
-## See Also  
- [Expressions Page](../../integration-services/expressions/expressions-page.md)   
- [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
- [System Variables](../../integration-services/system-variables.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md)  
-  
-  
+## Related content
+
+- [Expressions Page](expressions-page.md)
+- [Integration Services (SSIS) Variables](../integration-services-ssis-variables.md)
+- [System Variables](../system-variables.md)
+- [Integration Services (SSIS) Expressions](integration-services-ssis-expressions.md)
+- [Use Property Expressions in Packages](use-property-expressions-in-packages.md)

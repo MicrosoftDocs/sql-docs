@@ -65,4 +65,4 @@ Only members of the **sysadmin** fixed server role can execute `sp_validatemerge
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Validate Replicated Data](../replication/validate-data-at-the-subscriber.md)
-- [sp_validatemergesubscription (Transact-SQL)](sp-validatemergesubscription-transact-sql.md)
+- [sys.sp_validatemergesubscription (Transact-SQL)](sp-validatemergesubscription-transact-sql.md)

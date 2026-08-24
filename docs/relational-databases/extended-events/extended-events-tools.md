@@ -79,10 +79,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |[trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|Contains one row for each Extended Events event that is mapped to a SQL Trace event class.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|Contains one row for each Extended Events action that is mapped to a SQL Trace column ID.|  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server Extended Events Tables &#40;Transact-SQL&#41;](../system-tables/system-tables-transact-sql.md)   
- [Use the system_health Session](../../relational-databases/extended-events/use-the-system-health-session.md)   
- [Use the PowerShell Provider for Extended Events](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
-  
+## Related content
+
+- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [System catalog views (Transact-SQL)](../system-catalog-views/catalog-views-transact-sql.md)
+- [System Tables (Transact-SQL)](../system-tables/system-tables-transact-sql.md)
+- [Use the system_health session](use-the-system-health-session.md)
+- [Use the PowerShell Provider for Extended Events](use-the-powershell-provider-for-extended-events.md)

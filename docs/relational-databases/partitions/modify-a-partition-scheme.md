@@ -123,11 +123,9 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
   
 1. In the **Delete Object** dialog box, ensure that the correct partition scheme is selected, and then select **OK**.
 
-## Next steps
-
-Learn more about table partitioning in these articles:
+## Related content
 
 - [Create partitioned tables and indexes](create-partitioned-tables-and-indexes.md)
-- [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md).  
-- [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)
+- [ALTER PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/alter-partition-scheme-transact-sql.md)
+- [ALTER PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/alter-partition-function-transact-sql.md)
 - [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition)

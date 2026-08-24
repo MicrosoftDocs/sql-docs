@@ -69,10 +69,10 @@ SQLDriverConnect(hdbc, hwnd,
 "DRIVER={SQL Server Native Client 10};SERVER=(local);Trusted_Connection=yes"  
 ```  
   
-## See Also  
- [SQLDriverConnect Function](../../odbc/reference/syntax/sqldriverconnect-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
-  
+## Related content
+
+- [SQLDriverConnect Function](../../odbc/reference/syntax/sqldriverconnect-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)
+- [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)
+- [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)
+- [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md)

@@ -23,7 +23,6 @@ helpviewer_keywords:
   
 -   [Fetch and Update Rowsets &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
-## See Also  
- [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
-  
-  
+## Related content
+
+- [ODBC How-to Topics](../odbc-how-to-topics.md)

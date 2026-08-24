@@ -126,7 +126,7 @@ For information on file management and shrink operations specific to Azure SQL D
 
 - [Shrink the tempdb database](shrink-tempdb-database.md)
 - [Considerations for the autogrow and autoshrink settings in SQL Server](/troubleshoot/sql/admin/considerations-autogrow-autoshrink)
-- [Database Files and Filegroups](database-files-and-filegroups.md)
+- [Database files and filegroups](database-files-and-filegroups.md)
 - [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
 - [sys.database_files (Transact-SQL)](../system-catalog-views/sys-database-files-transact-sql.md)
 - [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)

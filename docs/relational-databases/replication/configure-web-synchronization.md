@@ -169,4 +169,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)
+- [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)

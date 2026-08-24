@@ -52,10 +52,9 @@ DROP FULLTEXT INDEX ON HumanResources.JobCandidate;
 GO  
 ```  
   
-## See Also  
- [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
- [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
- [Full-Text Search](../../relational-databases/search/full-text-search.md)  
-  
-  
+## Related content
+
+- [sys.fulltext_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)
+- [ALTER FULLTEXT INDEX (Transact-SQL)](alter-fulltext-index-transact-sql.md)
+- [CREATE FULLTEXT INDEX (Transact-SQL)](create-fulltext-index-transact-sql.md)
+- [Full-Text Search](../../relational-databases/search/full-text-search.md)

@@ -71,8 +71,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=s
 |**rkey15**|**smallint**|Column ID of the referenced column.|  
 |**rkey16**|**smallint**|Column ID of the referenced column.|  
   
-## See Also  
- [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
-  
-  
+## Related content
+
+- [Mapping System Tables to System Views (Transact-SQL)](../system-tables/mapping-system-tables-to-system-views-transact-sql.md)
+- [System Compatibility Views (Transact-SQL)](system-compatibility-views-transact-sql.md)

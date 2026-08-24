@@ -74,8 +74,8 @@ ms.custom:
   
 ## Related content
 
-- [Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)
-- [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)
-- [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)
-- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
-- [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
+- [Formatting ranges on a gauge in a paginated report (Report Builder)](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)
+- [Formatting pointers on a gauge in a paginated report (Report Builder)](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)
+- [Format axis labels as dates or currencies in a paginated report (Report Builder)](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)
+- [Formatting axis labels on a paginated report chart (Report Builder)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Gauges in a paginated report (Report Builder)](gauges-report-builder-and-ssrs.md)

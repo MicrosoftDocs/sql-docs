@@ -39,9 +39,7 @@ helpviewer_keywords:
   
 6.  Click **Save**.  
   
-## Next Steps  
-  
--   [Assign Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
-  
-## See Also  
- [Security &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)
+## Related content
+
+- [Security (Master Data Services)](security-master-data-services.md)
+- [Assign Functional Area Permissions (Master Data Services)](assign-functional-area-permissions-master-data-services.md)

@@ -88,7 +88,6 @@ ms.topic: reference
 |javax.sql.XADataSource|getLoginTimeout, getLogWriter, setLoginTimeout, setLogWriter|  
 |javax.sql.ConnectionPoolDataSource|getLoginTimeout, getLogWriter, setLoginTimeout, setLogWriter|  
   
-## See Also  
- [SQLServerXADataSource Class](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerXADataSource Class](sqlserverxadatasource-class.md)

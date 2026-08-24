@@ -231,14 +231,10 @@ First field:  1
 Second field:  test_data
 ```
 
-## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+## Related content
 
-[How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)  
-
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-
-[How to: Send Data as a Stream](../../connect/php/how-to-send-data-as-a-stream.md)  
-
-[Using Directional Parameters](../../connect/php/using-directional-parameters.md)  
-
+- [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
+- [How to: Perform Parameterized Queries](how-to-perform-parameterized-queries.md)
+- [About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)
+- [How to: Send Data as a Stream](how-to-send-data-as-a-stream.md)
+- [Using directional parameters](using-directional-parameters.md)

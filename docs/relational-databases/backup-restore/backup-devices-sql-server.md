@@ -263,15 +263,14 @@ GO
   
 -   [Delete a Backup Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## See also  
- [SQL Server, Backup Device Object](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
- [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
- [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)   
- [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)  
-  
-  
+## Related content
+
+- [SQL Server, Backup Device object](../performance-monitor/sql-server-backup-device-object.md)
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [Maintenance plans](../maintenance-plans/maintenance-plans.md)
+- [Media sets, media families, and backup sets (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [RESTORE Statements - LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)
+- [sys.backup_devices (Transact-SQL)](../system-catalog-views/sys-backup-devices-transact-sql.md)
+- [sys.dm_io_backup_tapes (Transact-SQL)](../system-dynamic-management-objects/sys-dm-io-backup-tapes-transact-sql.md)
+- [Mirrored Backup Media Sets (SQL Server)](mirrored-backup-media-sets-sql-server.md)

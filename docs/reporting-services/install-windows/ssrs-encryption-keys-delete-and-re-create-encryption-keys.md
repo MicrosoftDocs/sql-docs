@@ -109,5 +109,5 @@ ms.custom:
   
 ## Related content
 
-- [Configure and Manage Encryption Keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
-- [Store Encrypted Report Server Data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
+- [Configure and Manage Encryption Keys (Report Server Configuration Manager)](ssrs-encryption-keys-manage-encryption-keys.md)
+- [SSRS Encryption Keys - Store Encrypted Report Server Data](ssrs-encryption-keys-store-encrypted-report-server-data.md)

@@ -27,8 +27,7 @@ public int getMinutesOffset()
 ## Remarks  
  For a DateTimeOffset object representing 8 March 2010, 11:35:48 -0800, getMinutesOffset returns the value 480.  
   
-## See Also  
- [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)   
- [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md)  
-  
-  
+## Related content
+
+- [DateTimeOffset Class](datetimeoffset-class.md)
+- [DateTimeOffset Members](datetimeoffset-members.md)

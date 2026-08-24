@@ -116,9 +116,9 @@ SELECT
 FROM sys.dm_db_file_space_usage;
 ```
 
-## See also
+## Related content
 
-- [Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects.md)
-- [Database Related Dynamic Management Views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
 - [sys.dm_db_task_space_usage (Transact-SQL)](sys-dm-db-task-space-usage-transact-sql.md)
 - [sys.dm_db_session_space_usage (Transact-SQL)](sys-dm-db-session-space-usage-transact-sql.md)

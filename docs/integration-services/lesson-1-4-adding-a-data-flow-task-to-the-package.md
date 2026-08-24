@@ -35,8 +35,6 @@ After you've created the connection managers for the source and destination data
 ## Go to next task
 [Step 5: Add and configure the Flat File source](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## See also  
-[Data Flow task](../integration-services/control-flow/data-flow-task.md)  
-  
-  
-  
+## Related content
+
+- [Data Flow Task](control-flow/data-flow-task.md)

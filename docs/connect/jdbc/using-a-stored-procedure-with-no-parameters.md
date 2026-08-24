@@ -50,6 +50,6 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
 }
 ```
 
-## See also
+## Related content
 
-[Using statements with stored procedures](using-statements-with-stored-procedures.md)
+- [Using statements with stored procedures](using-statements-with-stored-procedures.md)

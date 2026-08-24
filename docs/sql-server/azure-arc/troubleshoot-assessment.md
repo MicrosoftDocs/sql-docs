@@ -191,8 +191,8 @@ For more assistance, create a support ticket with Microsoft and attach the log f
 
 ## Related content
 
-- [Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md)
-- [View SQL Azure Arc inventory](view-inventory.md)
+- [Configure best practices assessment for SQL Server enabled by Azure Arc](assess.md)
+- [Manage inventory of SQL Server resources with Azure Arc](view-inventory.md)
 - [Configure SQL Server enabled by Azure Arc](manage-configuration.md)
 - [Use activity logs with SQL Server enabled by Azure Arc](activity-logs.md)
 - [Data collection and reporting for SQL Server enabled by Azure Arc](data-collection.md)

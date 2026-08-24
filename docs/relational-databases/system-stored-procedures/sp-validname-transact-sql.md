@@ -62,4 +62,3 @@ Requires membership in the **public** role.
 - [nchar and nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
 - [ntext, text, and image (Transact-SQL)](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

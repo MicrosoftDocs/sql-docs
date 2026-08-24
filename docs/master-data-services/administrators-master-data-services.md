@@ -65,10 +65,9 @@ helpviewer_keywords:
 |Model administrator|Can be a model administrator based on admin permissions assigned explicitly or permissions inherited from a group.<br /><br /> Has access only to functional areas that access is granted to.<br /><br /> Automatically has all permissions to all objects and members in the specific model.|  
 |Entity administrator|Can be an entity administrator based on administrator permissions assigned explicitly or permissions inherited from a group.<br /><br /> Has access only to functional areas that access is granted to.<br /><br /> Automatically has all permissions to all objects and members in the specific entity.<br /><br /> Can approve the pending change sets if the entity changes require approval.|  
   
-## External Resources  
- Blog post, [Security Improvements](/archive/blogs/e7/improvements-to-autoplay), on msdn.com.  
-  
-## See Also  
- [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Create a Master Data Services Database](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)
+## Related content
+
+- [Security Improvements](/archive/blogs/e7/improvements-to-autoplay)
+- [Create a Model Administrator (Master Data Services)](create-a-model-administrator-master-data-services.md)
+- [Create a Master Data Services Database](install-windows/create-a-master-data-services-database.md)
+- [Notifications (Master Data Services)](notifications-master-data-services.md)

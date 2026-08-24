@@ -72,11 +72,9 @@ VarChar     NVarChar
 40          80  
 ```  
   
-## See also
-[Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
-[COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
-  
-  
+## Related content
 
+- [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [COL_NAME (Transact-SQL)](col-name-transact-sql.md)
+- [COLUMNPROPERTY (Transact-SQL)](columnproperty-transact-sql.md)

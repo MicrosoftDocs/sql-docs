@@ -150,7 +150,7 @@ The table below gives a summary of the BACKUP DATABASE with COMPRESSION options 
 |`BACKUP DATABASE <database_name> TO DISK` | Backup with no compression or with compression depending on default setting.|
 |`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION`|Backup using the default setting in `sp_configure`.
 |`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = MS_XPRESS)` | Backup with compression using the MS_XPRESS algorithm.|
-|`BACKUP DATABASE <database_name> TO  DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE)`| Backup with compression using the QATzip library.|
+|`BACKUP DATABASE <database_name> TO  DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE)`| Backup with compression using the QATzip library.|
 
 > [!NOTE]
 > The examples in the table above specify DISK as destination. The actual destination may be DISK, TAPE, or URL.
@@ -230,12 +230,12 @@ In the case of the Windows operating system, there's a complimentary software li
 > [!NOTE]
 > The unavailability of an Intel&reg; QAT hardware device doesn't prevent instances from performing backup or restore operations using the QAT_DEFLATE algorithm. If the physical device is not available, the software algorithm will be leveraged as a fallback solution.
 
-## Next steps
+## Related content
 
 - [Integrated acceleration and offloading](overview.md)
-- [Hardware offload enabled configuration option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
+- [Server configuration: hardware offload enabled](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
 - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
 - [BACKUP COMPRESSION (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression)
 - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-- [View or configure the backup compression algorithm Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md)
-- [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)
+- [Server configuration: backup compression algorithm](../../database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md)
+- [Server configuration: backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)

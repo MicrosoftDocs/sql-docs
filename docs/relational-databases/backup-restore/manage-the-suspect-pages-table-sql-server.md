@@ -141,17 +141,11 @@ GO
   
 ```  
   
-## See Also  
- [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [Restore Pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
- [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
-    
-   
-  
-  
+## Related content
 
-
-
+- [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [Restore Pages (SQL Server)](restore-pages-sql-server.md)
+- [suspect_pages (Transact-SQL)](../system-tables/suspect-pages-transact-sql.md)

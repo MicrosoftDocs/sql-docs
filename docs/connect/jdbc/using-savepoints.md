@@ -24,6 +24,6 @@ In the following example, a savepoint is used while performing a local transacti
 
 [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]
 
-## See also
+## Related content
 
-[Performing transactions with the JDBC driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)
+- [Performing transactions with the JDBC driver](performing-transactions-with-the-jdbc-driver.md)

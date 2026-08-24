@@ -58,7 +58,6 @@ dev_langs:
 |last_local_recguid|**uniqueidentifier**|Stores the last local received generation GUID from previous merge agent sync.|
 |last_local_recgen|**bigint**|Set by merge cleanup. Stores the last local generation received.|
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md) 
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)

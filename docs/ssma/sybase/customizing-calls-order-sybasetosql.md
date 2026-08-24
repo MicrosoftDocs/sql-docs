@@ -18,9 +18,7 @@ At this step you select the order in which the objects to test will be invoked.
 ## Customizing order  
 Use the buttons placed on the top of the grid with list of objects to place the objects in the right order. Alternatively, you can use buttons appeared on the right when the row becomes selected.  
   
-## Next Step  
-[Finishing Test Case Preparation &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
-  
-## See Also  
-[Testing Migrated Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
-  
+## Related content
+
+- [Testing Migrated Database Objects](testing-migrated-database-objects-sybasetosql.md)
+- [Finishing Test Case Preparation](finishing-test-case-preparation-sybasetosql.md)

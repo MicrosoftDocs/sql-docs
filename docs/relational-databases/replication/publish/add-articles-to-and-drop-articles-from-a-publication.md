@@ -39,5 +39,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Define an Article](define-an-article.md)
+- [Publish Data and Database Objects](publish-data-and-database-objects.md)

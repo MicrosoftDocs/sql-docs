@@ -90,9 +90,8 @@ INSERT INTO AdventureWorks2022.Sales.ProtectedData04
 GO  
 ```  
   
-## See Also  
- [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
+## Related content
 
+- [DECRYPTBYASYMKEY (Transact-SQL)](decryptbyasymkey-transact-sql.md)
+- [CREATE ASYMMETRIC KEY (Transact-SQL)](../statements/create-asymmetric-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

@@ -55,8 +55,8 @@ When configuring storage, you must provide free disk space that is four times th
 > If a `MAXSIZE` value is set for the memory-optimized filegroup, and checkpoint files exceed the max size of the container, then the database will become SUSPECT.   
 > In this case do not attempt to set the database OFFLINE and ONLINE, causing the database to stay in RECOVERY_PENDING state.
   
-## See Also  
-[Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-[Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 
+## Related content
 
+- [Create and manage storage for memory-optimized objects](creating-and-managing-storage-for-memory-optimized-objects.md)
+- [Database files and filegroups](../databases/database-files-and-filegroups.md)
+- [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)

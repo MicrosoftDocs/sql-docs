@@ -32,10 +32,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ## Permissions  
  Requires `VIEW SERVER STATE` permission.  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
+- [sys.pdw_nodes_column_store_segments (Transact-SQL)](sys-pdw-nodes-column-store-segments-transact-sql.md)
+- [sys.pdw_nodes_column_store_row_groups (Transact-SQL)](sys-pdw-nodes-column-store-row-groups-transact-sql.md)

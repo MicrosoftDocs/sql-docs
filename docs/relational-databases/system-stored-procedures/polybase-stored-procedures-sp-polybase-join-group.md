@@ -78,5 +78,5 @@ EXECUTE sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER';
 
 ## Related content
 
-- [Data virtualization with PolyBase in SQL Server](../polybase/overview.md)
+- [PolyBase overview](../polybase/overview.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

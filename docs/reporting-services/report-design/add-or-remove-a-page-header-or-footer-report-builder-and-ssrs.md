@@ -58,4 +58,4 @@ ms.custom:
   
 ## Related content
 
-- [Page headers and rooters &#40;Report Builder&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
+- [Page headers and footers in a paginated report (Report Builder)](page-headers-and-footers-report-builder-and-ssrs.md)

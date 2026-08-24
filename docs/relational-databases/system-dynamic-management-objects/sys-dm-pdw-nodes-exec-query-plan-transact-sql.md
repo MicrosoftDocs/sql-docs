@@ -41,8 +41,7 @@ The same remarks in [sys.dm_exec_query_plan](sys-dm-exec-query-plan-transact-sql
 ## Permissions  
  Require **sysadmin** server role or `VIEW SERVER STATE` permission on the server.  
   
-## See also  
- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## Related content
 
- ## Next steps
- For more development tips, see [Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)

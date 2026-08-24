@@ -78,6 +78,6 @@ Default Filegroup
 
 - [FILEGROUP_ID (Transact-SQL)](filegroup-id-transact-sql.md)
 - [FILEGROUP_NAME (Transact-SQL)](filegroup-name-transact-sql.md)
-- [Metadata Functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
-- [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
+- [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)

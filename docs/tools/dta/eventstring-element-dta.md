@@ -56,7 +56,6 @@ Specifies a [!INCLUDE[tsql](../../includes/tsql-md.md)] script workload directly
 ## Example  
  For a usage example of this element, see the [XML Input File Sample with Inline Workload &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md) .  
   
-## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
-  
-  
+## Related content
+
+- [XML Input File Reference (Database Engine Tuning Advisor)](xml-input-file-reference-database-engine-tuning-advisor.md)

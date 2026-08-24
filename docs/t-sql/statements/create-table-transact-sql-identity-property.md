@@ -240,9 +240,9 @@ SET IDENTITY_INSERT img OFF;
 
 ```sql
 CREATE TABLE dbo.Employees (
-    EmployeeID BIGINT IDENTITY,
-    FirstName VARCHAR(50),
-    LastName VARCHAR(50),
+    EmployeeID BIGINT IDENTITY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
     Retired BIT
 );
 ```
@@ -270,7 +270,7 @@ The column on the target table inherits the `IDENTITY` property from the source 
 - [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
 - [DBCC CHECKIDENT (Transact-SQL)](../database-console-commands/dbcc-checkident-transact-sql.md)
 - [IDENT_INCR (Transact-SQL)](../functions/ident-incr-transact-sql.md)
-- [&#x40;&#x40;IDENTITY (Transact-SQL)](../functions/identity-transact-sql.md)
+- [@@IDENTITY (Transact-SQL)](../functions/identity-transact-sql.md)
 - [IDENTITY (Function) (Transact-SQL)](../functions/identity-function-transact-sql.md)
 - [IDENT_SEED (Transact-SQL)](../functions/ident-seed-transact-sql.md)
 - [SET IDENTITY_INSERT (Transact-SQL)](set-identity-insert-transact-sql.md)

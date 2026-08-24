@@ -35,7 +35,6 @@ public interface ISQLServerStatement
 |public String getResponseBuffering|[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|  
 |public void setResponseBuffering|[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|  
   
-## See Also  
- [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+## Related content
+
+- [JDBC driver API reference](jdbc-driver-api-reference.md)

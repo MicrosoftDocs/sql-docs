@@ -707,7 +707,7 @@ SELECT TableName, TotalAvg FROM CountCustomer;
 - [Recursive queries using common table expressions (Transact-SQL)](recursive-common-table-expression-transact-sql.md)
 - [CREATE VIEW (Transact-SQL)](../statements/create-view-transact-sql.md)
 - [DELETE (Transact-SQL)](../statements/delete-transact-sql.md)
-- [EXCEPT and INTERSECT (Transact-SQL)](../language-elements/set-operators-except-and-intersect-transact-sql.md)
+- [Set Operators - EXCEPT and INTERSECT (Transact-SQL)](../language-elements/set-operators-except-and-intersect-transact-sql.md)
 - [INSERT (Transact-SQL)](../statements/insert-transact-sql.md)
 - [SELECT (Transact-SQL)](select-transact-sql.md)
 - [UPDATE (Transact-SQL)](update-transact-sql.md)

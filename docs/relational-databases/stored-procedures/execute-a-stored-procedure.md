@@ -229,10 +229,10 @@ A `sysadmin` can use [sp_procoption](../system-stored-procedures/sp-procoption-t
 
 ## Related content
 
-- [Stored Procedures (Database Engine)](stored-procedures-database-engine.md)
+- [Stored procedures (Database Engine)](stored-procedures-database-engine.md)
 - [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
 - [Create a stored procedure](create-a-stored-procedure.md)
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
 - [Specify parameters in a stored procedure](specify-parameters.md)
-- [sp_procoption (Transact-SQL)](../system-stored-procedures/sp-procoption-transact-sql.md)
+- [sys.sp_procoption (Transact-SQL)](../system-stored-procedures/sp-procoption-transact-sql.md)
 - [Server configuration: scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)

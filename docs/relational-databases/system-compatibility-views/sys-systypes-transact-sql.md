@@ -52,9 +52,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 |**scale**|**tinyint**|Scale for this data type, based on precision.<br /><br /> NULL = Data type is nonnumeric.|  
 |**collation**|**sysname**|If character based, **collation** is the collation of the current database; otherwise, it is NULL.|  
   
-## See Also  
- [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
-  
-  
+## Related content
 
+- [System Compatibility Views (Transact-SQL)](system-compatibility-views-transact-sql.md)
+- [Mapping System Tables to System Views (Transact-SQL)](../system-tables/mapping-system-tables-to-system-views-transact-sql.md)

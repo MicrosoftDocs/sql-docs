@@ -99,4 +99,4 @@ For more information about creating symmetric keys, see [Initialize a Report Ser
   
 ## Related content
 
-- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+- [Configure and Manage Encryption Keys (Report Server Configuration Manager)](ssrs-encryption-keys-manage-encryption-keys.md)

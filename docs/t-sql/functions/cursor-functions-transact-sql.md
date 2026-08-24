@@ -26,7 +26,6 @@ These scalar functions return information about cursors:
   
 All cursor functions are nondeterministic. In other words, these functions do not always return the same results each time they execute, even with the same set of input values. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information about function determinism.
   
-## See also
+## Related content
 
-[Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)
-
+- [What are the SQL database functions?](functions.md)

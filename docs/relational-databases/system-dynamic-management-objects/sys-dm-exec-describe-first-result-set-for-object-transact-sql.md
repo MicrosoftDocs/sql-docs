@@ -144,7 +144,8 @@ GO
   
 ```  
   
-## See Also  
- [sp_describe_first_result_set &#40;Transact-SQL&#41;](../system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](sys-dm-exec-describe-first-result-set-transact-sql.md)
+## Related content
+
+- [sp_describe_first_result_set (Transact-SQL)](../system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
+- [sp_describe_undeclared_parameters (Transact-SQL)](../system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
+- [sys.dm_exec_describe_first_result_set (Transact-SQL)](sys-dm-exec-describe-first-result-set-transact-sql.md)

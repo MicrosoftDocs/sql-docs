@@ -36,7 +36,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 > [!NOTE]  
 >  The XSD native **targetNamespace** attribute replaces the **target-namespace** annotation that was introduced in the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] XDR mapping schema.  
   
-## See Also  
- [Specifying a Target Namespace Using the targetNamespace Attribute &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Specify a target namespace using the targetNamespace attribute (SQLXML 4.0)](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)

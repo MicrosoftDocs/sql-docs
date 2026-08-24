@@ -74,7 +74,7 @@ Only members of the **sysadmin** fixed server role or the user that created the 
 ## Related content
 
 - [Delete a Pull Subscription](../replication/delete-a-pull-subscription.md)
-- [sp_addmergepullsubscription (Transact-SQL)](sp-addmergepullsubscription-transact-sql.md)
-- [sp_changemergepullsubscription (Transact-SQL)](sp-changemergepullsubscription-transact-sql.md)
-- [sp_dropmergesubscription (Transact-SQL)](sp-dropmergesubscription-transact-sql.md)
-- [sp_helpmergepullsubscription (Transact-SQL)](sp-helpmergepullsubscription-transact-sql.md)
+- [sys.sp_addmergepullsubscription (Transact-SQL)](sp-addmergepullsubscription-transact-sql.md)
+- [sys.sp_changemergepullsubscription (Transact-SQL)](sp-changemergepullsubscription-transact-sql.md)
+- [sys.sp_dropmergesubscription (Transact-SQL)](sp-dropmergesubscription-transact-sql.md)
+- [sys.sp_helpmergepullsubscription (Transact-SQL)](sp-helpmergepullsubscription-transact-sql.md)

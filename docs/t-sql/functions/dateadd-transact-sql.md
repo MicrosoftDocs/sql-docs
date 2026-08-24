@@ -441,4 +441,3 @@ GO
 ## Related content
 
 - [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
-

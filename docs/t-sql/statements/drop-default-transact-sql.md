@@ -87,8 +87,9 @@ GO
 GO  
 ```  
   
-## See Also  
- [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+## Related content
+
+- [CREATE DEFAULT (Transact-SQL)](create-default-transact-sql.md)
+- [sys.sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)
+- [sys.sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+- [sys.sp_unbindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)

@@ -45,8 +45,7 @@ To protect the key material of the symmetric key, SQL Server and Azure SQL store
 
 ## Related content
 
-- [System catalog views](catalog-views-transact-sql.md)
-- [Security Catalog Views](security-catalog-views-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
 - [Encryption hierarchy](../security/encryption/encryption-hierarchy.md)
-- [CREATE SYMMETRIC KEY](../../t-sql/statements/create-symmetric-key-transact-sql.md)
-
+- [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)

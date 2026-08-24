@@ -52,7 +52,7 @@ public void DeleteItem(string item);
   
 ## Related content
 
-- [Accessing the SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)
-- [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)
-- [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
-- [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)
+- [Accessing the SOAP API](accessing-the-soap-api.md)
+- [What is the report server web portal (Native mode)?](../web-portal-ssrs-native-mode.md)
+- [Comparing native and SharePoint Reporting Services report servers](../report-server-sharepoint/reporting-services-report-server.md)
+- [Report Server Web service](report-server-web-service.md)

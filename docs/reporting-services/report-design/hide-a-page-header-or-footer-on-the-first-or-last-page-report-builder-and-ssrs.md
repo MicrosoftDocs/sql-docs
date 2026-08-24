@@ -43,6 +43,6 @@ ms.custom:
   
 ## Related content
 
-- [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
-- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
-- [Add or Remove a Page Header or Footer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)
+- [Page headers and footers in a paginated report (Report Builder)](page-headers-and-footers-report-builder-and-ssrs.md)
+- [Pagination in paginated reports (Microsoft Report Builder)](pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Add or remove a page header or footer in a paginated report (Report Builder)](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)

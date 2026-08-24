@@ -204,6 +204,6 @@ SqlPackage /Action:DriftReport \
     /OutputPath:"C:\AdventureWorksLT.DriftReport.xml"
 ```
 
-## Next steps
+## Related content
 
-- Learn more about [SqlPackage](sqlpackage.md)
+- [SqlPackage](sqlpackage.md)

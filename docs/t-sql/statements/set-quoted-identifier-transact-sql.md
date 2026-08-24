@@ -240,5 +240,5 @@ GO
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
 - [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
 - [SET ANSI_DEFAULTS (Transact-SQL)](set-ansi-defaults-transact-sql.md)
-- [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+- [sys.sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
 - [Database identifiers](../../relational-databases/databases/database-identifiers.md)

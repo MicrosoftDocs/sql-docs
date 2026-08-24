@@ -156,7 +156,7 @@ Returns a geometric object that represents the union of all points whose distanc
   
  The first two **SELECT** statements return a `MultiPolygon` instance because the parameter *distance* is less than or equal to 1/2 the distance between the two points (1 1) and (1 4). The third **SELECT** statement returns a `Polygon` instance because the buffered instances of the two points (1 1) and (1 4) overlap.  
   
-## See Also  
- [BufferWithTolerance &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
+## Related content
+
+- [BufferWithTolerance (geometry Data Type)](bufferwithtolerance-geometry-data-type.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

@@ -246,6 +246,6 @@ Only members of the **sysadmin** fixed server role can execute `sp_addsubscriber
 
 - [Create a push subscription](../replication/create-a-push-subscription.md)
 - [Create a Pull Subscription](../replication/create-a-pull-subscription.md)
-- [sp_changesubscriber (Transact-SQL)](sp-changesubscriber-transact-sql.md)
-- [sp_dropsubscriber (Transact-SQL)](sp-dropsubscriber-transact-sql.md)
-- [sp_helpsubscriberinfo (Transact-SQL)](sp-helpsubscriberinfo-transact-sql.md)
+- [sys.sp_changesubscriber (Transact-SQL)](sp-changesubscriber-transact-sql.md)
+- [sys.sp_dropsubscriber (Transact-SQL)](sp-dropsubscriber-transact-sql.md)
+- [sys.sp_helpsubscriberinfo (Transact-SQL)](sp-helpsubscriberinfo-transact-sql.md)

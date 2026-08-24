@@ -37,7 +37,7 @@ helpviewer_keywords:
   
  For more information, see [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## See Also  
- [SQLSetDescField](../../odbc/reference/syntax/sqlsetdescfield-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLSetDescField Function](../../odbc/reference/syntax/sqlsetdescfield-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

@@ -250,16 +250,14 @@ Database owner or system administrator.
   
 -   [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Back Up and Restore Full-Text Catalogs and Indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
- [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   
- [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
-  
-  
+## Related content
 
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)
+- [Transport security in availability groups and database mirroring](transport-security-database-mirroring-always-on-availability.md)
+- [Setting Up Database Mirroring (SQL Server)](setting-up-database-mirroring-sql-server.md)
+- [Back up and restore full-text catalogs and indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
+- [Database mirroring and full-text catalogs (SQL Server)](database-mirroring-and-full-text-catalogs-sql-server.md)
+- [Database Mirroring and Replication (SQL Server)](database-mirroring-and-replication-sql-server.md)
+- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [RESTORE Statements - Arguments (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)

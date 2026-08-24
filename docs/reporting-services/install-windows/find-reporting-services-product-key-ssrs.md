@@ -38,5 +38,5 @@ If your volume licensing has moved to the Microsoft 365 Admin Center, you can fi
 
 ## Related content
 
-- [Install SQL Server Reporting Services](install-reporting-services.md)
+- [Install and configure SQL Server Reporting Services](install-reporting-services.md)
 - [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

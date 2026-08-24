@@ -42,8 +42,7 @@ public void setBytes(java.lang.String sCol,
   
  This setBytes method is specified by the setBytes method in the java.sql.CallableStatement interface.  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

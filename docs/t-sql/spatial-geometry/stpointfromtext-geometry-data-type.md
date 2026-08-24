@@ -55,7 +55,6 @@ SET @g = geometry::STPointFromText('POINT (100 100)', 0);
 SELECT @g.ToString();  
 ```  
   
-## See Also  
- [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
-  
-  
+## Related content
+
+- [OGC Static Geometry Methods](ogc-static-geometry-methods.md)

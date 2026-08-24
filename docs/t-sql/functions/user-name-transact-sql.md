@@ -170,12 +170,11 @@ User7
 
 - [SUSER_NAME (Transact-SQL)](suser-name-transact-sql.md)
 - [SUSER_SNAME (Transact-SQL)](suser-sname-transact-sql.md)
-- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
-- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
-- [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
-- [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
-- [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
-- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
-- [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)  
-- [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
-
+- [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
+- [CURRENT_TIMESTAMP (Transact-SQL)](current-timestamp-transact-sql.md)
+- [CURRENT_USER (Transact-SQL)](current-user-transact-sql.md)
+- [SESSION_USER (Transact-SQL)](session-user-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [SYSTEM_USER (Transact-SQL)](system-user-transact-sql.md)
+- [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

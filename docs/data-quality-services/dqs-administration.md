@@ -76,9 +76,8 @@ ms.custom:
 |Describes how to back up and restore DQS databases.|[Backing Up and Restoring DQS Databases](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Describes how to detach and attach DQS databases.|[Detaching and Attaching DQS Databases](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## See Also  
- [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)   
- [Manage DQS Log Files](../data-quality-services/manage-dqs-log-files.md)   
- [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
-  
-  
+## Related content
+
+- [Reference Data Services in DQS](reference-data-services-in-dqs.md)
+- [Manage DQS Log Files](manage-dqs-log-files.md)
+- [Manage DQS Databases](manage-dqs-databases.md)

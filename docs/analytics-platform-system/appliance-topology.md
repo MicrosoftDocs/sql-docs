@@ -18,6 +18,6 @@ The page lists a read-only version of all the hosts and fabric nodes in the curr
   
 ![Screenshot of the Microsoft Analytics Platform System Configuration Manager dialog box showing the Appliance Topology.](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## See Also  
-[Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
-  
+## Related content
+
+- [Launch the Configuration Manager in Analytics Platform System](launch-the-configuration-manager.md)

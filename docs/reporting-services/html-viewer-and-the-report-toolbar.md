@@ -66,6 +66,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Specify credential and connection information for report data sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
-- [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Export reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
+- [Credentials and connections for report data sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](report-builder/export-reports-report-builder-and-ssrs.md)

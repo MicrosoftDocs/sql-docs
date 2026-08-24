@@ -60,5 +60,5 @@ Only members of the **sysadmin** fixed server role can execute `sp_enumdsn`.
 
 ## Related content
 
-- [sp_dsninfo (Transact-SQL)](sp-dsninfo-transact-sql.md)
+- [sys.sp_dsninfo (Transact-SQL)](sp-dsninfo-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

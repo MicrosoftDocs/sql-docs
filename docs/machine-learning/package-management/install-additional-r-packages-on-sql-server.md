@@ -291,8 +291,8 @@ library(sqlmlutils)
 help("sql_install.packages")
 ```
 
-## Next steps
+## Related content
 
-- For information about installed R packages, see [Get R package information](r-package-information.md)
-- For help in working with R packages, see [Tips for using R packages](tips-for-using-r-packages.md)
-- For more information about SQL Server Machine Learning Services, see [What is SQL Server Machine Learning Services (Python and R)?](../sql-server-machine-learning-services.md)
+- [Get R package information](r-package-information.md)
+- [Tips for using R packages](tips-for-using-r-packages.md)
+- [What is SQL Server Machine Learning Services with Python and R?](../sql-server-machine-learning-services.md)

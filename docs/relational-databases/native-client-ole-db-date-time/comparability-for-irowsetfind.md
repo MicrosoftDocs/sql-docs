@@ -30,7 +30,6 @@ helpviewer_keywords:
   
  If any other comparison is attempted, DB_E_BADCOMPAREOP is returned. This is consistent with the OLE DB specification.  
   
-## See Also  
- [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Date and Time Improvements (OLE DB)](date-and-time-improvements-ole-db.md)

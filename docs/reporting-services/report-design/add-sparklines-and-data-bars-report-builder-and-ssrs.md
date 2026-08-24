@@ -41,5 +41,5 @@ ms.custom:
   
 ## Related content
 
-- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Align the data in a chart in a table or matrix &#40;Report Builder&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)
+- [Charts in a paginated report (Report Builder)](charts-report-builder-and-ssrs.md)
+- [Align the data in a paginated report chart in a table or matrix (Report Builder)](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)

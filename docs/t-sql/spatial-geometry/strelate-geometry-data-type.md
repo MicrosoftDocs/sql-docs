@@ -56,7 +56,6 @@ SET @h = geometry::STGeomFromText('POINT(5 5)', 0);
 SELECT @g.STRelate(@h, 'FF*FF****');  
 ```  
   
-## See Also  
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

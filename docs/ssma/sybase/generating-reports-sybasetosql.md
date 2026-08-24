@@ -135,5 +135,6 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
   
 -   fail-script  
   
-## See Also  
-[Executing the SSMA Console (Sybase)](./executing-the-ssma-console-sybasetosql.md)  
+## Related content
+
+- [Executing the SSMA console](executing-the-ssma-console-sybasetosql.md)

@@ -84,10 +84,9 @@ INNER JOIN sys.sql_logins AS sql_logins
 GO  
 ```  
   
-## See Also  
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
-  
-  
+## Related content
+
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [Server-level roles](../security/authentication-access/server-level-roles.md)
+- [Principals (Database Engine)](../security/authentication-access/principals-database-engine.md)

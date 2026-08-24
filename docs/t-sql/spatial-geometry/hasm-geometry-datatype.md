@@ -41,7 +41,7 @@ SELECT @p.HasM
 --Returns: 1 (true)  
 ```  
   
-## See Also  
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [M &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
-  
+## Related content
+
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)
+- [M (geometry Data Type)](m-geometry-data-type.md)

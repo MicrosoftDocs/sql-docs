@@ -57,6 +57,7 @@ ms.custom:
 |Rows|The number of rows that will be loaded into Excel, based on the filters applied in the **Rows** section.|  
 |Columns|The number of columns that will be loaded into Excel, based on the attributes selected in the **Columns** section.|  
   
-## See Also  
- [Filter Data before Exporting &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
- [Overview: Exporting Data to Excel &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)
+## Related content
+
+- [Filter Data before Exporting (MDS Add-in for Excel)](filter-data-before-exporting-mds-add-in-for-excel.md)
+- [Overview: Exporting Data to Excel (MDS Add-in for Excel)](overview-exporting-data-to-excel-mds-add-in-for-excel.md)

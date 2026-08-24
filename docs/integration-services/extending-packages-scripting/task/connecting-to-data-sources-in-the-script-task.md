@@ -80,7 +80,6 @@ ms.custom: sfi-ropc-nochange
 		}
 ```  
   
-## See Also  
- [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Create Connection Managers](../../connection-manager/integration-services-ssis-connections.md)  
-  
+## Related content
+
+- [Integration Services (SSIS) Connections](../../connection-manager/integration-services-ssis-connections.md)

@@ -82,4 +82,4 @@ Under the schema mapping tab, select any row and select **Reset to Default** to 
 ## Related content
 
 - [Migrate Access databases to SQL Server and Azure SQL](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)
-- [converting database objects](converting-access-database-objects-accesstosql.md)
+- [Convert Access database objects](converting-access-database-objects-accesstosql.md)

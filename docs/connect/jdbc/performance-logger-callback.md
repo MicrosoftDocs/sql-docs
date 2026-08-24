@@ -121,7 +121,7 @@ ConnectionID:1, StatementID:1 First server response, duration: 0ms
 ConnectionID:1, StatementID:1 Statement execute, duration: 0ms         ← 3rd call: sp_execute
 ```
 
-## See also
+## Related content
 
-[Improving performance and reliability with the JDBC driver](improving-performance-and-reliability-with-the-jdbc-driver.md)
-[Setting the connection properties](setting-the-connection-properties.md)
+- [Improving performance and reliability (JDBC)](improving-performance-and-reliability-with-the-jdbc-driver.md)
+- [Set the connection properties](setting-the-connection-properties.md)

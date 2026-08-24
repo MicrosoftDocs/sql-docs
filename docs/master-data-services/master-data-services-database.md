@@ -41,7 +41,8 @@ helpviewer_keywords:
   
 -   [Staging Process Errors &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
-## See Also  
- [Create a Master Data Services Database](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Database Object Security &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)   
- [Database Logins, Users, and Roles &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)
+## Related content
+
+- [Create a Master Data Services Database](install-windows/create-a-master-data-services-database.md)
+- [Database Object Security (Master Data Services)](database-object-security-master-data-services.md)
+- [Database Logins, Users, and Roles (Master Data Services)](database-logins-users-and-roles-master-data-services.md)

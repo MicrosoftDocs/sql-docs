@@ -106,5 +106,5 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 ## Related content
 
 - [View and modify replication security settings](../replication/security/view-and-modify-replication-security-settings.md)
-- [sp_helplogreader_agent (Transact-SQL)](sp-helplogreader-agent-transact-sql.md)
-- [sp_addlogreader_agent (Transact-SQL)](sp-addlogreader-agent-transact-sql.md)
+- [sys.sp_helplogreader_agent (Transact-SQL)](sp-helplogreader-agent-transact-sql.md)
+- [sys.sp_addlogreader_agent (Transact-SQL)](sp-addlogreader-agent-transact-sql.md)

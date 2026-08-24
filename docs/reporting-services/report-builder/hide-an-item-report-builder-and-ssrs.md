@@ -60,5 +60,5 @@ The following sections describe how to show or hide a report item in a rendered 
 
 ## Related content
 
-- [Drilldown action in a paginated report (Report Builder)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)
-- [Expression examples in Report Builder paginated reports](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Drilldown action in a paginated report (Report Builder)](../report-design/drilldown-action-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](../report-design/expression-examples-report-builder-and-ssrs.md)

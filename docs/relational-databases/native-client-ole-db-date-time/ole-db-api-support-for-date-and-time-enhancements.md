@@ -24,7 +24,6 @@ ms.topic: "reference"
 |IRowsetFastLoad|This interface supports the new date/time types, but there is no change to its interface.|  
 |ITableDefinition::CreateTable|For more information, see [Data Type Support for OLE DB Date and Time Improvements](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
-## See Also  
- [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client Date and Time Improvements (OLE DB)](date-and-time-improvements-ole-db.md)

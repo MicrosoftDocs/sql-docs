@@ -331,6 +331,6 @@ These parameters apply across multiple fedauth types:
 
 ## Related content
 
-- [SQL Server and Windows authentication](authentication.md)
-- [Connection strings](connection-strings.md)
-- [Encryption and certificates](encryption-certificates.md)
+- [SQL Server and Windows authentication with go-mssqldb](authentication.md)
+- [go-mssqldb connection strings](connection-strings.md)
+- [go-mssqldb encryption and certificates](encryption-certificates.md)

@@ -864,9 +864,7 @@ If the connection is successful, you should see the following message as output:
 You have successfully logged on as: <your client ID>
 ```
 
-## Next steps
-
-Learn more about related concepts in the following articles:
+## Related content
 
 - [Connecting to Azure SQL by using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
 - [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java)

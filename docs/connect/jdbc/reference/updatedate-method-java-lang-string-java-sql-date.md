@@ -40,9 +40,8 @@ public void updateDate(java.lang.String columnName,
 ## Remarks  
  This updateDate method is specified by the updateDate method in the java.sql.ResultSet interface.  
   
-## See Also  
- [updateDate Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [updateDate Method (SQLServerResultSet)](updatedate-method-sqlserverresultset.md)
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

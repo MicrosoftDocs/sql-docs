@@ -129,6 +129,7 @@ record_length_second_part_in_bytes record_image_second_part
   
  The output shows that XSN-57 has created three row versions from one table and XSN-58 has created one row version from another table.  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](transaction-related-dynamic-management-views-and-functions-transact-sql.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)

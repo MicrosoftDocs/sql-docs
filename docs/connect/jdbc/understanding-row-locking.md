@@ -24,6 +24,6 @@ Locking is used to assure transactional integrity and database consistency. Lock
 > [!NOTE]  
 > For more information about row locking in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Locking in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_engine).
 
-## See also
+## Related content
 
-[Managing result sets with the JDBC driver](managing-result-sets-with-the-jdbc-driver.md)
+- [Managing result sets with the JDBC driver](managing-result-sets-with-the-jdbc-driver.md)

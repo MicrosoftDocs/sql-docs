@@ -167,7 +167,6 @@ EXECUTE sp_xml_preparedocument
 - [XML stored procedures (Transact-SQL)](xml-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
-- [sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+- [sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-xml-handles-transact-sql.md)
 - [sp_xml_removedocument (Transact-SQL)](sp-xml-removedocument-transact-sql.md)
 - [nodes() Method (xml Data Type)](../../t-sql/xml/nodes-method-xml-data-type.md)
-

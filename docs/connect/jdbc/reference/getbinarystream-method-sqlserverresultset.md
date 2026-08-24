@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[getBinaryStream (int)](../../../connect/jdbc/reference/getbinarystream-method-int.md)|Retrieves the value of the designated column index in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a binary stream of uninterpreted bytes.|  
 |[getBinaryStream (java.lang.String)](../../../connect/jdbc/reference/getbinarystream-method-java-lang-string.md)|Retrieves the value of the designated column name in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a binary stream of uninterpreted bytes.|  
   
-## See Also  
- [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Members](sqlserverresultset-members.md)
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

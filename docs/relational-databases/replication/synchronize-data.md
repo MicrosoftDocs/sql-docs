@@ -65,4 +65,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Detect and Resolve Merge Replication Conflicts](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Advanced Merge Replication - Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)

@@ -82,17 +82,16 @@ WHERE ([Geography].[State-Province].x,
   
 ```  
   
-## See Also  
- [Count &#40;Dimension&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [Count &#40;Hierarchy Levels&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count &#40;Tuple&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Count (Dimension) (MDX)](count-dimension-mdx.md)
+- [Count (Hierarchy Levels) (MDX)](count-hierarchy-levels-mdx.md)
+- [Count (Tuple) (MDX)](count-tuple-mdx.md)
+- [DrilldownLevel (MDX)](drilldownlevel-mdx.md)
+- [AddCalculatedMembers (MDX)](addcalculatedmembers-mdx.md)
+- [Hierarchize (MDX)](hierarchize-mdx.md)
+- [Properties (MDX)](properties-mdx.md)
+- [Aggregate (MDX)](aggregate-mdx.md)
+- [Filter (MDX)](filter-mdx.md)
+- [PrevMember (MDX)](prevmember-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

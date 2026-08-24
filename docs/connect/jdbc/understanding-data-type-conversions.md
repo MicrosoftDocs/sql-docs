@@ -116,6 +116,6 @@ When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column data t
 
 Note that a byte-order mark (BOM) is required if the XML characters are in specific character encodings.
 
-## See also
+## Related content
 
-[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+- [Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

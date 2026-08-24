@@ -514,6 +514,6 @@ Creates a new primary key in the [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 > [!NOTE]
 > When connected to Azure SQL, it is **Yes** by default.
 
-## See Also
+## Related content
 
-[User Interface Reference (SybaseToSQL)](../../ssma/sybase/user-interface-reference-sybasetosql.md)
+- [User Interface Reference](user-interface-reference-sybasetosql.md)

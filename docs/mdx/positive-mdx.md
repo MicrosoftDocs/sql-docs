@@ -26,7 +26,6 @@ ms.custom: mdx
 ## Return Value  
  A positive value that has the data type of the specified parameter.  
   
-## See Also  
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)

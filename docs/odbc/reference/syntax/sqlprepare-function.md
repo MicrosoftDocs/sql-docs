@@ -119,6 +119,7 @@ SQLRETURN SQLPrepare(
 |Returning the number of rows affected by a statement|[SQLRowCount Function](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
 |Setting a cursor name|[SQLSetCursorName Function](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

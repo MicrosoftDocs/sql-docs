@@ -240,11 +240,11 @@ Before uninstalling [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.
 
 ## Related content
 
-- [Create a new Always On failover cluster instance (Setup)](../install/create-a-new-sql-server-failover-cluster-setup.md)
+- [Create a New Always On Failover Cluster Instance (Setup)](../install/create-a-new-sql-server-failover-cluster-setup.md)
 - [Upgrade a failover cluster instance](upgrade-a-sql-server-failover-cluster-instance.md)
 - [Windows Server Failover Clustering with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)
-- [Failover clustering and Always On availability groups (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)
+- [Failover Clustering and Always On availability groups (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)
 - [SQL Server enabled by Azure Arc](../../azure-arc/overview.md)
 - [View Always On failover cluster instances in Azure Arc](../../azure-arc/support-for-fci.md)
-- [Failover policy for failover cluster instances](failover-policy-for-failover-cluster-instances.md)
+- [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)
 - [Support policy for Microsoft SQL Server products that are running in a hardware virtualization environment](/troubleshoot/sql/database-engine/install/windows/support-policy-hardware-virtualization-product)

@@ -39,8 +39,6 @@ ms.custom:
   
 -   sp_describe_undeclared_parameters  
   
-## See Also  
- [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
-  
+## Related content
 
+- [OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)

@@ -37,7 +37,7 @@ List all available data actions, independently of them being used or not.
 
 Principals must have the **VIEW SERVER SECURITY STATE** permission.
 
-## Next steps
+## Related content
 
 - [sys.dm_server_external_policy_principal_assigned_actions (Transact-SQL)](sys-dm-server-external-policy-principal-assigned-actions-transact-sql.md)
 - [Provision access by data owner for Azure SQL Database](/azure/purview/how-to-policies-data-owner-azure-sql-db)

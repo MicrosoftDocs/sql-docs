@@ -76,8 +76,8 @@ Pie charts with too many slices can look cluttered. Learn to collect many small 
   
 ## Related content
 
-- [Tutorial: Add a Pie Chart to Your Report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
-- [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)
-- [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
-- [Display Data Point Labels Outside a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)
-- [Display Percentage Values on a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)
+- [Tutorial: Add a pie chart to your report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+- [Pie charts in a paginated report (Report Builder)](pie-charts-report-builder-and-ssrs.md)
+- [Formatting data points on a paginated report chart (Report Builder)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
+- [Display data point labels outside a pie chart in a paginated report (Report Builder)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)
+- [Display percentage values on a pie chart in a Report Builder paginated report](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)

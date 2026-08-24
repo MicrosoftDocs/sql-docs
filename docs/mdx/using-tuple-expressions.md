@@ -35,8 +35,7 @@ ms.custom: mdx
 ## One-Member Tuples  
  If the tuple expression has a single member, MDX converts the member into a one-member tuple for the purposes of evaluating the expression. In other words, providing the member expression `[Measures].[TestMeasure]` instead of a tuple expression is functionally equivalent to the tuple expression `( [Measures].[TestMeasure] ).`  
   
-## See Also  
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
-  
+## Related content
+
+- [Expressions (MDX)](expressions-mdx.md)
+- [MDX Function Reference (MDX)](mdx-function-reference-mdx.md)

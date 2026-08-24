@@ -88,4 +88,3 @@ SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;
 ## Related content
 
 - [datetime (Transact-SQL)](../data-types/datetime-transact-sql.md)
-

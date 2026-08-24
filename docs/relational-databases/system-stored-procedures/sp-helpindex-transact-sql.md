@@ -83,4 +83,3 @@ GO
 - [sys.index_columns (Transact-SQL)](../system-catalog-views/sys-index-columns-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)
-

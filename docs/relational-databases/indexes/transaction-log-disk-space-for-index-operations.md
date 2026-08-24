@@ -45,4 +45,3 @@ When you run large-scale index operations, consider the following recommendation
 
 - [Disk space requirements for index DDL operations](disk-space-requirements-for-index-ddl-operations.md)
 - [Index disk space example](index-disk-space-example.md)
-

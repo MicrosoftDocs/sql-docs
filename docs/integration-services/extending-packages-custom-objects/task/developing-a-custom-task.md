@@ -49,37 +49,14 @@ dev_langs:
  [Developing a User Interface for a Custom Task](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
  Describes how to create a user interface that shows in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer to configure properties on the custom task.  
   
-## Related Sections  
-  
-### Information Common to all Custom Objects  
- For information that is common to all the type of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], see the following topics:  
-  
- [Developing Custom Objects for Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
- Describes the basic steps in implementing all kinds of custom objects for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
-  
- [Persisting Custom Objects](../../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)  
- Describes custom persistence and explains when it is necessary.  
-  
- [Building, Deploying, and Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
- Describes the techniques for building, signing, deploying, and debugging custom objects.  
-  
-### Information about Other Custom Objects  
- For information about the other types of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], see the following topics:  
-  
- [Developing a Custom Connection Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
- Discusses how to program custom connection managers.  
-  
- [Developing a Custom Log Provider](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
- Discusses how to program custom log providers.  
-  
- [Developing a Custom ForEach Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
- Discusses how to program custom enumerators.  
-  
- [Developing a Custom Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
- Discusses how to program custom data flow sources, transformations, and destinations.  
-  
-## See Also  
- [Extending the Package with the Script Task](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
- [Comparing Scripting Solutions and Custom Objects](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
-  
-  
+## Related content
+
+- [Developing Custom Objects for Integration Services](../developing-custom-objects-for-integration-services.md)
+- [Persisting Custom Objects](../persisting-custom-objects.md)
+- [Building, Deploying, and Debugging Custom Objects](../building-deploying-and-debugging-custom-objects.md)
+- [Developing a Custom Connection Manager](../connection-manager/developing-a-custom-connection-manager.md)
+- [Developing a Custom Log Provider](../log-provider/developing-a-custom-log-provider.md)
+- [Developing a Custom ForEach Enumerator](../foreach-enumerator/developing-a-custom-foreach-enumerator.md)
+- [Developing a Custom Data Flow Component](../data-flow/developing-a-custom-data-flow-component.md)
+- [Extending the Package with the Script Task](../../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)
+- [Comparing Scripting Solutions and Custom Objects](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)

@@ -34,6 +34,6 @@ CatalogItem[] items = rs.ListChildren("/", true);
   
 ## Related content
 
-- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
-- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)
-- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)
+- [Building Applications Using the Web Service and the .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)
+- [Report Server Web service](../report-server-web-service.md)
+- [Technical reference (SSRS)](../../technical-reference-ssrs.md)

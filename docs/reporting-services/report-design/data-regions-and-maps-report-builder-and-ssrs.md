@@ -61,8 +61,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
-- [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)
-- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)
-- [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)
-- [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)
+- [Reporting Services concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [Reports, Report Parts, and Report Definitions (Report Builder and SSRS)](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)
+- [Page layout and rendering in paginated reports (Report Builder)](page-layout-and-rendering-report-builder-and-ssrs.md)
+- [Report Builder tutorials](../report-builder-tutorials.md)
+- [Reporting Services tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)

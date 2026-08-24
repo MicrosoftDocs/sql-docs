@@ -23,6 +23,6 @@ ms.custom: mdx
 |[Reserved Keywords](../mdx/reserved-keywords-mdx-syntax.md)|Reserved keywords are words that are reserved for the use of MDX and should not be used for object names used in MDX statements.|  
 |[Members, Tuples, and Sets](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Members, tuples and sets are core concepts of multidimensional data that you must understand before you create an MDX query.|  
   
-## See Also  
- [Multidimensional Expressions &#40;MDX&#41; Reference](../mdx/multidimensional-expressions-mdx-reference.md)  
-  
+## Related content
+
+- [Multidimensional Expressions (MDX) Reference](multidimensional-expressions-mdx-reference.md)

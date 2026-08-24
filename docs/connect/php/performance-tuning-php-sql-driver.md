@@ -450,10 +450,10 @@ Use this checklist as a pre-deployment review of any PHP application that connec
 
 ## Related content
 
-- [Connection pooling](connection-pooling-microsoft-drivers-for-php-for-sql-server.md)
-- [Connection options](connection-options.md)
-- [Cursor types (PDO_SQLSRV)](cursor-types-pdo-sqlsrv-driver.md)
-- [Cursor types (SQLSRV)](cursor-types-sqlsrv-driver.md)
-- [Use table-valued parameters](use-table-valued-parameters.md)
-- [Troubleshooting](troubleshooting-php-sql-driver.md)
-- [Monitoring performance with the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Connection Pooling (Microsoft Drivers for PHP for SQL Server)](connection-pooling-microsoft-drivers-for-php-for-sql-server.md)
+- [Connection Options](connection-options.md)
+- [Cursor Types (PDO_SQLSRV Driver)](cursor-types-pdo-sqlsrv-driver.md)
+- [Cursor Types (SQLSRV Driver)](cursor-types-sqlsrv-driver.md)
+- [Use table-valued parameters (PHP)](use-table-valued-parameters.md)
+- [Troubleshoot the Microsoft Drivers for PHP for SQL Server](troubleshooting-php-sql-driver.md)
+- [Monitor performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)

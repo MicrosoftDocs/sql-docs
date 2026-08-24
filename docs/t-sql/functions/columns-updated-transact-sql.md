@@ -226,4 +226,3 @@ GO
 - [Bitwise operators (Transact-SQL)](../language-elements/bitwise-operators-transact-sql.md)
 - [CREATE TRIGGER (Transact-SQL)](../statements/create-trigger-transact-sql.md)
 - [UPDATE - Trigger Functions (Transact-SQL)](update-trigger-functions-transact-sql.md)
-

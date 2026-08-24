@@ -109,5 +109,5 @@ For each item that couldn't be converted, you have to determine what you want to
 
 ## Related content
 
-- [Migrating MySQL Databases to SQL Server - Azure SQL Database (MySQLToSQL)](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
-- [Loading Converted Database Objects into SQL Server (MySQLToSQL)](loading-converted-database-objects-into-sql-server-mysqltosql.md)
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Loading Converted Database Objects into SQL Server](loading-converted-database-objects-into-sql-server-mysqltosql.md)

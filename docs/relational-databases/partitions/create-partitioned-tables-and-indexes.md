@@ -513,7 +513,7 @@ Learn about limitations as well as performance considerations for partitioning i
 - [Partitioned tables and indexes](partitioned-tables-and-indexes.md)
 - [Scaling out with Azure SQL Database](/azure/azure-sql/database/elastic-scale-introduction)
 - [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition)
-- [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
+- [Index architecture and design guide](../sql-server-index-design-guide.md)
 - [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 - [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)
 - [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)

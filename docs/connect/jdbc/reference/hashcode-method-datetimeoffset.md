@@ -24,8 +24,7 @@ public int hashCode()
 ## Return Value  
  The hash code for the object.  
   
-## See Also  
- [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)   
- [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md)  
-  
-  
+## Related content
+
+- [DateTimeOffset Class](datetimeoffset-class.md)
+- [DateTimeOffset Members](datetimeoffset-members.md)

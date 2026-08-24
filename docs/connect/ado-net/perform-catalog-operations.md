@@ -25,8 +25,8 @@ The following code example creates a stored procedure in a Microsoft SQL Server 
 
 [!code-csharp[DataWorks SqlCommand.ExecuteNonQuery#3](~/../sqlclient/doc/samples/SqlCommand_ExecuteNonQuery_SP_DML.cs#3)]
 
-## See also
+## Related content
 
 - [Using commands to modify data](use-commands-to-modify-data.md)
 - [Commands and parameters](commands-parameters.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

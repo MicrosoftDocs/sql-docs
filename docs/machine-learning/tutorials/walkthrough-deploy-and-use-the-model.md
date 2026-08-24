@@ -212,14 +212,7 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
     >[!TIP]
     > R Tools for Visual Studio (RTVS) provides great integration with both SQL Server and R. See this article for more examples of using RODBC with a SQL Server connection: [Working with SQL Server and R](/visualstudio/rtvs/sql-server)
 
-## Next steps
+## Related content
 
-Now that you have learned how to work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and persist trained R models to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it should be relatively easy for you to create new models based on this data set. For example, you might try creating these additional models:
-
-+ A regression model that predicts the tip amount
-+ A multiclass classification model that predicts whether the tip is big, medium, or small
-
-You might also want to explore these additional samples and resources:
-
-+ [Data science scenarios and solution templates](./python-tutorials.md)
-+ [In-database advanced analytics](r-taxi-classification-introduction.md)
+- [Python tutorials for SQL machine learning](python-tutorials.md)
+- [R tutorial: Predict NYC taxi fares with binary classification](r-taxi-classification-introduction.md)

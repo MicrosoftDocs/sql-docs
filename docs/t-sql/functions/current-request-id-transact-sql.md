@@ -34,7 +34,6 @@ CURRENT_REQUEST_ID()
 ## Remarks  
 To find exact information about the current session, use @@SPID. For exact information about the current request, use CURRENT_REQUEST_ID().
   
-## See also
-[@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)
-  
-  
+## Related content
+
+- [@@SPID (Transact-SQL)](spid-transact-sql.md)

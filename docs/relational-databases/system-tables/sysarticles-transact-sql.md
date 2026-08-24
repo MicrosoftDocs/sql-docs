@@ -48,11 +48,11 @@ Contains a row for each table article defined in the local database. This table 
 |**custom_script**|**nvarchar(2048)**|The registered custom stored procedure or script that is executed at the end of the DDL trigger.|  
 |**fire_triggers_on_snapshot**|**bit**|Indicates whether or not replicated triggers are executed when the snapshot is applied, which can be one of these values:<br /><br /> **0** = Triggers are not executed.<br /><br /> **1** = Triggers are executed.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  
- [sysschemaarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysschemaarticles-transact-sql.md) 
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
+- [sys.sp_addarticle (Transact-SQL)](../system-stored-procedures/sp-addarticle-transact-sql.md)
+- [sys.sp_changearticle (Transact-SQL)](../system-stored-procedures/sp-changearticle-transact-sql.md)
+- [sys.sp_helparticle (Transact-SQL)](../system-stored-procedures/sp-helparticle-transact-sql.md)
+- [sysschemaarticles (Transact-SQL)](sysschemaarticles-transact-sql.md)

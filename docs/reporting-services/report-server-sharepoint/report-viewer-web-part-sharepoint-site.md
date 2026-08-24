@@ -43,4 +43,4 @@ The items listed are specific to the updated Report Viewer web part.
 
 ## Related content
 
-- [Deploy the Report Viewer web part on a SharePoint site](deploy-report-viewer-web-part.md)
+- [Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site](deploy-report-viewer-web-part.md)

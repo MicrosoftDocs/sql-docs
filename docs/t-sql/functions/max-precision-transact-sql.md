@@ -21,7 +21,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;MAX_PRECISION (Transact-SQL)
+# @@MAX_PRECISION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   Returns the precision level used by **decimal** and **numeric** data types as currently set in the server.  
@@ -46,10 +46,7 @@ dev_langs:
 SELECT @@MAX_PRECISION AS 'Max Precision'  
 ```  
   
-## See Also  
+## Related content
 
- [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
-  
-  
-
+- [decimal and numeric (Transact-SQL)](../data-types/decimal-and-numeric-transact-sql.md)
+- [Precision, scale, and length (Transact-SQL)](../data-types/precision-scale-and-length-transact-sql.md)

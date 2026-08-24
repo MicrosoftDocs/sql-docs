@@ -69,7 +69,7 @@ EXECUTE sp_helpntgroup;
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
-- [sp_grantdbaccess (Transact-SQL)](sp-grantdbaccess-transact-sql.md)
-- [sp_helprole (Transact-SQL)](sp-helprole-transact-sql.md)
-- [sp_revokedbaccess (Transact-SQL)](sp-revokedbaccess-transact-sql.md)
+- [sys.sp_grantdbaccess (Transact-SQL)](sp-grantdbaccess-transact-sql.md)
+- [sys.sp_helprole (Transact-SQL)](sp-helprole-transact-sql.md)
+- [sys.sp_revokedbaccess (Transact-SQL)](sp-revokedbaccess-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

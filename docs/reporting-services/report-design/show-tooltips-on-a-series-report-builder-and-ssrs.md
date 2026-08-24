@@ -27,7 +27,7 @@ ms.custom:
   
 ## Related content
 
-- [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
-- [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)
-- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)
-- [Add a Drillthrough Action on a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)
+- [Formatting data points on a paginated report chart (Report Builder)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
+- [Chart legend - change item text in a paginated report (Report Builder)](chart-legend-change-item-text-report-builder.md)
+- [Formatting series colors on a paginated report chart (Report Builder)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)
+- [Add a drillthrough action on a paginated report (Report Builder)](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)

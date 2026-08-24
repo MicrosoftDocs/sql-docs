@@ -143,9 +143,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## See Also  
- [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
- [Using Large Value Types](../../oledb/features/using-large-value-types.md)  
-  
-  
+## Related content
 
+- [BLOBs and OLE Objects](blobs-and-ole-objects.md)
+- [Using large value types](../features/using-large-value-types.md)

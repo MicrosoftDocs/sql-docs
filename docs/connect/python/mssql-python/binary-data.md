@@ -518,6 +518,6 @@ def insert_safe_image(cursor, name: str, data: bytes):
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
-- [Bulk copy](bulk-copy.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Use bulk copy with mssql-python](bulk-copy.md)
 - [Handle NULL values](null-handling.md)

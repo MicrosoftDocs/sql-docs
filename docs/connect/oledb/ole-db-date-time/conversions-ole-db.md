@@ -66,8 +66,6 @@ helpviewer_keywords:
  [Conversions Performed from Server to Client](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Describes date/time conversions performed between [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions, and a client application written with OLE DB Driver for SQL Server.  
   
-## See Also  
- [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
-  
-  
+## Related content
 
+- [Date and Time Improvements in OLE DB](date-and-time-improvements-ole-db.md)

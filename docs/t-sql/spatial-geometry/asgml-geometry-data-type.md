@@ -23,7 +23,7 @@ dev_langs:
 
 Returns the Geography Markup Language (GML) representation of a **geometry** instance.
   
-For more information on Geography Markup Language, see the following Open Geospatial Consortium Specification:[OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)
+For more information on Geography Markup Language, see the following Open Geospatial Consortium Specification:[OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629).
   
 ## Syntax  
   
@@ -56,7 +56,6 @@ SELECT @g.AsGml();
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   
-## See Also  
- [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [Extended methods on geometry instances](extended-methods-on-geometry-instances.md)

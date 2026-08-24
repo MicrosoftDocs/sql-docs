@@ -153,4 +153,4 @@ SELECT IDENT_CURRENT('t7');
 - [IDENT_INCR (Transact-SQL)](ident-incr-transact-sql.md)
 - [IDENT_SEED (Transact-SQL)](ident-seed-transact-sql.md)
 - [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
-- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)

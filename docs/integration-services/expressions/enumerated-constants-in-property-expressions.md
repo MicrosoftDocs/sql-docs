@@ -594,11 +594,10 @@ helpviewer_keywords:
 ## Related Tasks  
  [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## See Also  
- [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)   
- [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)   
- [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)  
-  
-  
+## Related content
+
+- [Use Property Expressions in Packages](use-property-expressions-in-packages.md)
+- [Integration Services (SSIS) Packages](../integration-services-ssis-packages.md)
+- [Integration Services Containers](../control-flow/integration-services-containers.md)
+- [Integration Services Tasks](../control-flow/integration-services-tasks.md)
+- [Precedence Constraints](../control-flow/precedence-constraints.md)

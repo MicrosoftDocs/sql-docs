@@ -78,7 +78,7 @@ After the model has been saved to the database, you can call the model for predi
 
 Whether you're a SQL programmer new to Python, or a Python developer new to SQL, this five-part tutorial series introduces a typical workflow for conducting in-database analytics with Python and SQL Server.
 
-## Next steps
+## Next step
 
 In this article, you:
 

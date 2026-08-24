@@ -138,5 +138,6 @@ RESTORE DATABASE [imoltp]
 GO
 ```
 
-## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))
+## Related content
+
+- [Backup, Restore, and Recovery of Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))

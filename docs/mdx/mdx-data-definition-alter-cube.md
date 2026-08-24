@@ -155,6 +155,6 @@ CELL CALCULATION Calculation_Name
 ## Creating a Cell Calculation  
  For more information about creating a cell calculation using the ALTER CUBE statement, see [DROP CELL CALCULATION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## See Also  
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
+## Related content
+
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)

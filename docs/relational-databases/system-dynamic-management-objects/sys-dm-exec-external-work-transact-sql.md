@@ -50,7 +50,8 @@ Query `sys.dm_exec_external_work` to identify the work spun up to communicate wi
 
 Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you can use `sys.dm_exec_external_work` to view the remote query passed to an external data source in PolyBase pushdown computation. For more information, see [How to tell if external pushdown occurred](../polybase/polybase-how-to-tell-pushdown-computation.md).
 
-## See also  
- [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](database-related-dynamic-management-views-transact-sql.md)
+## Related content
+
+- [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)

@@ -61,4 +61,3 @@ This operation requires **SELECT** on the source table, **INSERT** in the target
 - [Ledger considerations and limitations](../security/ledger/ledger-limits.md)
 - [Ledger overview](../security/ledger/ledger-overview.md)
 - [Migrate data from regular tables to ledger tables](../security/ledger/ledger-how-to-migrate-data-to-ledger-tables.md)
-

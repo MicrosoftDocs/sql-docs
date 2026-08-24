@@ -102,11 +102,8 @@ helpviewer_keywords:
      Returns a row for every automatic page-repair attempt on any mirrored database on the server instance.  
   
  
-## See Also  
- [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
-  
-  
+## Related content
 
-
+- [Manage the suspect_pages Table (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)
+- [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [Database Mirroring (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)

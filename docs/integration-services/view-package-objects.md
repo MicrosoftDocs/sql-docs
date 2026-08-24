@@ -50,12 +50,11 @@ helpviewer_keywords:
   
 -   Right-click an object and then click **Delete**. 
  
-## See Also  
- [Integration Services Tasks](../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services Containers](../integration-services/control-flow/integration-services-containers.md)   
- [Precedence Constraints](../integration-services/control-flow/precedence-constraints.md)   
- [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40;SSIS&#41; Event Handlers](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS&#41; Logging](../integration-services/performance/integration-services-ssis-logging.md)  
-  
-  
+## Related content
+
+- [Integration Services Tasks](control-flow/integration-services-tasks.md)
+- [Integration Services Containers](control-flow/integration-services-containers.md)
+- [Precedence Constraints](control-flow/precedence-constraints.md)
+- [Integration Services (SSIS) Variables](integration-services-ssis-variables.md)
+- [Integration Services (SSIS) Event Handlers](integration-services-ssis-event-handlers.md)
+- [Integration Services (SSIS) Logging](performance/integration-services-ssis-logging.md)

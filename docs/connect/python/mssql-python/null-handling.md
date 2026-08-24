@@ -448,6 +448,6 @@ df = df.with_columns(pl.col("Color").fill_null("No color"))
 
 ## Related content
 
-- [Data type mappings](data-type-mappings.md)
-- [Retrieving data](retrieving-data.md)
-- [Row objects](row-objects.md)
+- [Data type mappings for mssql-python](data-type-mappings.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Row objects in mssql-python](row-objects.md)

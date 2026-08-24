@@ -129,7 +129,7 @@ OPENROWSET( BULK 'data_file_path',
 
 ::: moniker-end
 
-Some `OPENROWSET` options are format‑specific, while others are universal. For example, row and field delimiters are meaningful only for delimited text (CSV/TSV), whereas options like DATA_SOURCE and MAXERRORS apply to all formats. The following table summarizes which options are supported for the most common formats.
+Some `OPENROWSET` options are format-specific, while others are universal. For example, row and field delimiters are meaningful only for delimited text (CSV/TSV), whereas options like DATA_SOURCE and MAXERRORS apply to all formats. The following table summarizes which options are supported for the most common formats.
 
 | Options | CSV(1.0) | CSV(2.0) | PARQUET | JSONL |
 |---|---|---|---|---|

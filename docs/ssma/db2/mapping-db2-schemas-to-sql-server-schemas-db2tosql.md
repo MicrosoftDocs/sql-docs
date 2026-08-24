@@ -67,6 +67,6 @@ If you customize the mapping between an Db2 schema and a [!INCLUDE [ssNoVersion]
 
 ## Related content
 
-- [Connect to SQL Server (Db2ToSQL)](connecting-to-sql-server-db2tosql.md)
-- [Migrate Db2 Databases to SQL Server (Db2ToSQL)](migrating-db2-databases-to-sql-server-db2tosql.md)
-- [Data Migration Report (Db2ToSQL)](data-migration-report-db2tosql.md)
+- [Connect to SQL Server](connecting-to-sql-server-db2tosql.md)
+- [Migrate Db2 databases to SQL Server](migrating-db2-databases-to-sql-server-db2tosql.md)
+- [Data Migration Report](data-migration-report-db2tosql.md)

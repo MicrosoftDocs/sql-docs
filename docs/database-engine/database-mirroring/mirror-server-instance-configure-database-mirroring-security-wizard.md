@@ -55,11 +55,10 @@ f1_keywords:
   
  To disable encryption, clear the check box. To re-enable encryption, select the check box.  
   
-## See Also  
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
-  
-  
+## Related content
+
+- [The database mirroring endpoint (SQL Server)](the-database-mirroring-endpoint-sql-server.md)
+- [Database Properties (Mirroring Page)](../../relational-databases/databases/database-properties-mirroring-page.md)
+- [Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)
+- [Start Database Mirroring Monitor (SQL Server Management Studio)](start-database-mirroring-monitor-sql-server-management-studio.md)
+- [Database Mirroring (SQL Server)](database-mirroring-sql-server.md)

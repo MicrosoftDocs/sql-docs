@@ -177,10 +177,9 @@ GRANT permission  [ ,...n ] ON
   
  Grantees of CONTROL SERVER permission, such as members of the **sysadmin** fixed server role, can grant any permission on any securable in the server. Grantees of CONTROL permission on a database, such as members of the **db_owner** fixed database role, can grant any permission on any securable in the database. Grantees of CONTROL permission on a schema can grant any permission on any object within the schema.  
   
-## See Also  
- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
-  
-  
+## Related content
+
+- [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)
+- [GRANT (Transact-SQL)](grant-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)

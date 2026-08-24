@@ -42,6 +42,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
-- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)
+- [Back Up and Restore Replicated Databases](../administration/back-up-and-restore-replicated-databases.md)
+- [Configure an Oracle Publisher](configure-an-oracle-publisher.md)
+- [Oracle Publishing Overview](oracle-publishing-overview.md)

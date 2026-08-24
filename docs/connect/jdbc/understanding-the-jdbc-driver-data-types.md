@@ -32,6 +32,6 @@ The topics in this section describe how to use the basic and advanced data types
 | [Supporting XML data](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Describes the SQLXML interface. Also describes how to read and write an XML data from and to the relational database with the **SQLXML** Java data type.                                                                                                             |
 | [Wrappers and interfaces](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Discusses the interfaces that have the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] specific methods and constants that allow an application server to create a proxy of the class, Also discusses supports for the `java.sql.Wrapper` interface. |
   
-## See also
+## Related content
 
-[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

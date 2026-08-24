@@ -210,7 +210,6 @@ You can use the following XSD schemas to test the preprocessor tool:
 </xsd:schema>
 ```
 
-## See also
+## Related content
 
-- [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)
-
+- [XML schema collections (SQL Server)](xml-schema-collections-sql-server.md)

@@ -30,7 +30,6 @@ helpviewer_keywords:
   
 -   [Bulk Copy Data from Program Variables &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-data-from-program-variables-odbc.md)  
   
-## See Also  
- [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
-  
-  
+## Related content
+
+- [ODBC How-to Topics](../odbc-how-to-topics.md)

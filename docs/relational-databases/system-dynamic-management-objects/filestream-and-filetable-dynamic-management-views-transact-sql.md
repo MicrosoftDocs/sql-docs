@@ -38,5 +38,5 @@ This section describes the dynamic management views related to the FILESTREAM an
 
 - [FILESTREAM (SQL Server)](../blob/filestream-sql-server.md)
 - [FileTables (SQL Server)](../blob/filetables-sql-server.md)
-- [FILESTREAM and FileTable Catalog Views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+- [FILESTREAM and FileTable catalog views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 - [FILESTREAM and FileTable system stored procedures (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

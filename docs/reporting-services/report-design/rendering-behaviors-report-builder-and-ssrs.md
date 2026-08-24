@@ -123,6 +123,6 @@ ms.custom:
   
 ## Related content
 
-- [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
-- [Rendering to HTML &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)
-- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)
+- [Interactive functionality - different report rendering extensions](../report-builder/interactive-functionality-different-report-rendering-extensions.md)
+- [Render to HTML (Report Builder)](../report-builder/rendering-to-html-report-builder-and-ssrs.md)
+- [Page layout and rendering in paginated reports (Report Builder)](page-layout-and-rendering-report-builder-and-ssrs.md)

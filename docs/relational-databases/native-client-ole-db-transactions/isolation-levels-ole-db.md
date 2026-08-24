@@ -31,7 +31,6 @@ helpviewer_keywords:
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced snapshot isolation level. For more information, see [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
-## See Also  
- [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
-  
-  
+## Related content
+
+- [Transactions in SQL Server Native Client](transactions.md)

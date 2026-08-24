@@ -73,7 +73,7 @@ The [SSMS Custom Reports repository in GitHub](https://github.com/Microsoft/sql-
 | Packages | List the R or Python packages installed on the SQL Server instance and their properties, such as version and name. |
 | Resource Usage | View the CPU, Memory, IO consumption of SQL Server, and external scripts execution. You can also view the memory setting for external resource pools. |
 
-## Next steps
+## Related content
 
 - [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
 - [Monitor Python and R scripts with extended events in SQL Server Machine Learning Services](extended-events.md)

@@ -60,7 +60,7 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 > [!NOTE]
 > The Azure Key Vault provider built in to the JDBC driver supports both [Vaults and Managed HSMs in Azure Key Vault](/azure/key-vault/keys/about-keys).
 
-To use the Azure Key Vault store provider, an application developer must create the vault and the keys in Azure Key Vault and create an App registration in [Microsoft Entra ID (formerly Azure Active Directory)](connecting-using-azure-active-directory-authentication.md). The registered application must be granted Get, Decrypt, Encrypt, Unwrap Key, Wrap Key, and Verify permissions in the Access policies defined for the key vault created for use with Always Encrypted. For more information on how to set up the key vault and create a column master key, see [Azure Key Vault—Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step) and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+To use the Azure Key Vault store provider, an application developer must create the vault and the keys in Azure Key Vault and create an App registration in [Microsoft Entra ID (formerly Azure Active Directory)](connecting-using-azure-active-directory-authentication.md). The registered application must be granted Get, Decrypt, Encrypt, Unwrap Key, Wrap Key, and Verify permissions in the Access policies defined for the key vault created for use with Always Encrypted. For more information on how to set up the key vault and create a column master key, see [Azure Key Vault-Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step) and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 For Azure Key Vault provider, the JDBC driver validates the column master key path against the list of trusted endpoints. As of version 8.2.2, this list is configurable: create a `mssql-jdbc.properties` file in the working directory of the application, set the `AKVTrustedEndpoints` property to a semicolon-delimited list. If the value begins with a semicolon, it extends the default list. Otherwise, it replaces the default list.
 
@@ -853,6 +853,6 @@ With `SQLServerBulkCopy`, you can copy data that is already encrypted and stored
 > [!NOTE]
 > Use caution when specifying `AllowEncryptedValueModifications` as this option may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server doesn't check if the data is indeed encrypted or if it is correctly encrypted with the same encryption type, algorithm, and key as the target column.
 
-## See also
+## Related content
 
-[Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

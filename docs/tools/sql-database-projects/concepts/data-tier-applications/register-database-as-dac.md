@@ -50,8 +50,8 @@ Registering a DAC in an instance of [!INCLUDE [ssDE](../../../../includes/ssde-m
 1. Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application...**
 1. Complete the wizard dialogs:
     1. [Introduction Page](#introduction-page)
-    1. [Set Properties Page](#set-properties-page
-    1. [Validation and Summary Page](#validation-and-summary-page
+    1. [Set Properties Page](#set-properties-page)
+    1. [Validation and Summary Page](#validation-and-summary-page)
     1. [Register DAC Page](#register-dac-page)
 
 ## Introduction Page

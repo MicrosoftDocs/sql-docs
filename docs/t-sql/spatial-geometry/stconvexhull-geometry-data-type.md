@@ -47,7 +47,6 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 1 1, 2 2, 2 0, 0 0))', 0);
 SELECT @g.STConvexHull().ToString();  
 ```  
   
-## See Also  
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

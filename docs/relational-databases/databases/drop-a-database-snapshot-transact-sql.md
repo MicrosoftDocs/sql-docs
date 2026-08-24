@@ -55,8 +55,7 @@ DROP DATABASE SalesSnapshot0600 ;
 -   [Revert a Database to a Database Snapshot](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
   
-## See Also  
- [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
-  
-  
+## Related content
+
+- [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md)
+- [Database snapshots (SQL Server)](database-snapshots-sql-server.md)

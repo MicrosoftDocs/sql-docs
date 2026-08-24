@@ -148,6 +148,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. You must use [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] databases is a requirement.  
   
   
-## See Also  
- [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
+## Related content
+
+- [Spatial Indexes Overview](spatial-indexes-overview.md)

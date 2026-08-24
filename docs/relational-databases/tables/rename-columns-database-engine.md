@@ -74,4 +74,4 @@ For more information, see [sp_rename](../system-stored-procedures/sp-rename-tran
 
 - [Modify columns](modify-columns-database-engine.md)
 - [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
-- [sp_rename (Transact-SQL)](../system-stored-procedures/sp-rename-transact-sql.md)
+- [sys.sp_rename (Transact-SQL)](../system-stored-procedures/sp-rename-transact-sql.md)

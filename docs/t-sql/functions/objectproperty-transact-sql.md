@@ -257,7 +257,7 @@ GO
 ## Related content
 
 - [COLUMNPROPERTY (Transact-SQL)](columnproperty-transact-sql.md)
-- [Metadata Functions (Transact-SQL)](metadata-functions-transact-sql.md)
+- [Metadata functions (Transact-SQL)](metadata-functions-transact-sql.md)
 - [OBJECTPROPERTYEX (Transact-SQL)](objectpropertyex-transact-sql.md)
 - [ALTER AUTHORIZATION (Transact-SQL)](../statements/alter-authorization-transact-sql.md)
 - [TYPEPROPERTY (Transact-SQL)](typeproperty-transact-sql.md)

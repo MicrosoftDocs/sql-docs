@@ -62,8 +62,7 @@ ms.custom:
   
 -   **On**: The date and time when the index was last updated.  
   
-## Next Steps  
- [Edit and Delete an Index &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
-  
-## See Also  
- [Custom Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)
+## Related content
+
+- [Custom Index (Master Data Services)](custom-index-master-data-services.md)
+- [Edit and Delete an Index (Master Data Services)](edit-and-delete-an-index-master-data-services.md)

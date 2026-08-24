@@ -104,7 +104,7 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Related content
 
-- [sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)
-- [sp_dropmergesubscription (Transact-SQL)](sp-dropmergesubscription-transact-sql.md)
-- [sp_helpmergesubscription (Transact-SQL)](sp-helpmergesubscription-transact-sql.md)
+- [sys.sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)
+- [sys.sp_dropmergesubscription (Transact-SQL)](sp-dropmergesubscription-transact-sql.md)
+- [sys.sp_helpmergesubscription (Transact-SQL)](sp-helpmergesubscription-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -31,7 +31,6 @@ REFRESH CUBECube_Name
 > [!IMPORTANT]  
 >  Named sets that are stored on the server are not refreshed.  
   
-## See Also  
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
-  
+## Related content
+
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)

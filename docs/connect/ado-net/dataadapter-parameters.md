@@ -62,11 +62,11 @@ The following example demonstrates how to create a <xref:Microsoft.Data.SqlClien
 
 [!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter#1](~/../sqlclient/doc/samples/SqlDataAdapter_SqlDataAdapter.cs#1)]
 
-## See also
+## Related content
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Commands and parameters](commands-parameters.md)
 - [Update data sources with DataAdapters](update-data-sources-with-dataadapters.md)
 - [Modify data with stored procedures](modify-data-with-stored-procedures.md)
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

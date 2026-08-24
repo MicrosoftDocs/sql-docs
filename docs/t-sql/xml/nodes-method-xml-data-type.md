@@ -295,10 +295,8 @@ WHERE ProductModelID=7
 GO    
 ```  
   
-## See Also  
-[Add Namespaces to Queries with WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
-[Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)   
-[xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)  
-  
-  
+## Related content
 
+- [Add namespaces to queries using WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)
+- [Create instances of XML data](../../relational-databases/xml/create-instances-of-xml-data.md)
+- [xml Data Type Methods](xml-data-type-methods.md)

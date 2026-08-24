@@ -150,4 +150,3 @@ GO
 ## Related content
 
 - [Mathematical functions (Transact-SQL)](mathematical-functions-transact-sql.md)
-

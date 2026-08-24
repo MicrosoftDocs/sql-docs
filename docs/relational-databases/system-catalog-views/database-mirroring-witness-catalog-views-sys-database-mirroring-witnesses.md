@@ -45,10 +45,9 @@ dev_langs:
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
-  
-  
+## Related content
+
+- [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)
+- [sys.database_mirroring (Transact-SQL)](sys-database-mirroring-transact-sql.md)
+- [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)
+- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)

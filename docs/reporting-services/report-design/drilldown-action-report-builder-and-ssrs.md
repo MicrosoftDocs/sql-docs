@@ -80,6 +80,6 @@ By providing plus and minus icons on a text box, you can enable users in a pagin
   
 ## Related content
 
-- [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)
-- [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
-- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Drillthrough, drilldown, subreports, and nested data regions in a paginated report (Report Builder)](drillthrough-drilldown-subreports-and-nested-data-regions.md)
+- [Interactive sort, document maps, and links in a paginated report (Report Builder)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)

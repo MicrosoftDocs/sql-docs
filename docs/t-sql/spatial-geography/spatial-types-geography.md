@@ -93,8 +93,6 @@ CREATE TABLE SpatialTable
 );  
 ```  
   
-## See Also  
- [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
+## Related content
 
-  
-  
+- [Spatial Data](../../relational-databases/spatial/spatial-data-sql-server.md)

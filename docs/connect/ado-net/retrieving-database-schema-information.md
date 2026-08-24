@@ -33,21 +33,15 @@ Describes all of the common schema collections supported by all of the .NET mana
 [SQL Server schema collections](sql-server-schema-collections.md)  
 Describes the additional schema collections supported by the Microsoft SqlClient Data Provider for SQL Server. 
 
-## Reference
+## Related content
 
-<xref:System.Data.Common.DbConnection.GetSchema%2A>  
-Describes the **GetSchema** method of the <xref:System.Data.Common.DbConnection> class.
-
-<xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A>  
-Describes the **GetSchema** method of the <xref:Microsoft.Data.SqlClient.SqlConnection> class.
-
-<xref:System.Data.Common.DbDataReader.GetSchemaTable%2A>  
-Describes the **GetSchemaTable** method of the <xref:System.Data.Common.DbDataReader> class. 
-
-<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
-Describes the **GetSchemaTable** method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> class.
-
-## See also
-
+- <xref:System.Data.Common.DbConnection.GetSchema%2A>
+- <xref:System.Data.Common.DbConnection>
+- <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A>
+- <xref:Microsoft.Data.SqlClient.SqlConnection>
+- <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A>
+- <xref:System.Data.Common.DbDataReader>
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>
+- <xref:Microsoft.Data.SqlClient.SqlDataReader>
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

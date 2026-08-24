@@ -69,9 +69,7 @@ The **Conversion Statistics panes** show the conversion statistics. If the perce
   
     -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before you load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL and migrate data from ASE.
   
-## Next steps  
-[Converting SAP ASE Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
-  
-## See Also  
-[Migrating SAP ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  
+## Related content
+
+- [Migrating SAP ASE databases to SQL Server - Azure SQL Database](migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Converting SAP ASE database objects](converting-sybase-ase-database-objects-sybasetosql.md)

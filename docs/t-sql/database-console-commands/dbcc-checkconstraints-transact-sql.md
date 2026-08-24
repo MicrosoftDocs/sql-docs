@@ -162,8 +162,8 @@ DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;
 GO
 ```
 
-## See also
+## Related content
 
-- [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
-- [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
-- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [DBCC CHECKDB (Transact-SQL)](dbcc-checkdb-transact-sql.md)
+- [DBCC CHECKTABLE (Transact-SQL)](dbcc-checktable-transact-sql.md)
+- [DBCC (Transact-SQL)](dbcc-transact-sql.md)

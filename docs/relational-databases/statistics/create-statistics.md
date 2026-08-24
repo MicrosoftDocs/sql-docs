@@ -120,6 +120,6 @@ Requires that the user be the table or indexed view owner, or a member of one of
    GO
    ```
 
-## Next steps
+## Related content
 
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)

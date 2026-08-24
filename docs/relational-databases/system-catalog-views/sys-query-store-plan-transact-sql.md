@@ -174,4 +174,3 @@ ORDER BY last_execution_time DESC;
 - [sys.query_store_runtime_stats_interval (Transact-SQL)](sys-query-store-runtime-stats-interval-transact-sql.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [Query Store stored procedures (Transact-SQL)](../system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-

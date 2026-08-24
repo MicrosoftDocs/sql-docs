@@ -45,6 +45,6 @@ A unique identifier for the buffer is returned.
 
 The process that invokes the GetBufferHandle function is responsible for invoking IClientVirtualDevice2::CompleteCommand when the data transfer is complete.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

@@ -100,7 +100,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  When updated cells do not overlap, the **Update Isolation Level** connection string property can be used to enhance performance for UPDATE CUBE.  
   
-## See Also  
- <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
+## Related content
+
+- <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>
+- [MDX Data Manipulation Statements (MDX)](mdx-data-manipulation-statements-mdx.md)

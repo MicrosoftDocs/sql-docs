@@ -132,11 +132,11 @@ RETURN;
 GO  
 ```  
   
-## Next steps
+## Related content
 
-- [OLE Automation Objects in Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
-- [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  
-- [sp_OAGetProperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oagetproperty-transact-sql.md)  
-- [sp_OASetProperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oasetproperty-transact-sql.md)  
-- [sp_OAMethod &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oamethod-transact-sql.md)  
-- [sp_OADestroy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oadestroy-transact-sql.md) 
+- [OLE Automation Objects in Transact-SQL](ole-automation-objects-in-transact-sql.md)
+- [sp_OACreate (Transact-SQL)](../system-stored-procedures/sp-oacreate-transact-sql.md)
+- [sp_OAGetProperty (Transact-SQL)](../system-stored-procedures/sp-oagetproperty-transact-sql.md)
+- [sp_OASetProperty (Transact-SQL)](../system-stored-procedures/sp-oasetproperty-transact-sql.md)
+- [sp_OAMethod (Transact-SQL)](../system-stored-procedures/sp-oamethod-transact-sql.md)
+- [sp_OADestroy (Transact-SQL)](../system-stored-procedures/sp-oadestroy-transact-sql.md)

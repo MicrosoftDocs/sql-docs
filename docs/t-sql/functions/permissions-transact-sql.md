@@ -135,13 +135,11 @@ ELSE
    PRINT 'You may not GRANT INSERT permissions on Person.Address.';  
 ```  
   
-## See Also  
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
-  
-  
+## Related content
 
+- [DENY (Transact-SQL)](../statements/deny-transact-sql.md)
+- [GRANT (Transact-SQL)](../statements/grant-transact-sql.md)
+- [OBJECT_ID (Transact-SQL)](object-id-transact-sql.md)
+- [REVOKE (Transact-SQL)](../statements/revoke-transact-sql.md)
+- [sys.sp_helprotect (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)

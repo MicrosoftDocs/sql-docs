@@ -114,10 +114,10 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
   
 ## Related content
 
-- [Configure a report server database connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
-- [Configure the unattended execution account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
-- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
-- [Store encrypted report server data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [Report Server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)
-- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [Configure a report server database connection (Report Server Configuration Manager)](../install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Configure the unattended execution account (Report Server Configuration Manager)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
+- [Reporting Services report server (native mode)](../report-server/reporting-services-report-server-native-mode.md)
+- [SSRS Encryption Keys - Store Encrypted Report Server Data](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
+- [Reporting Services configuration files](../report-server/reporting-services-configuration-files.md)
+- [Report Server command prompt utilities (SSRS)](report-server-command-prompt-utilities-ssrs.md)
+- [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md)

@@ -28,7 +28,8 @@ ms.custom:
 |**PIVOT_MARK**|An arbitrary record that other records are compared to; it does not have a score value.|  
 |**SCORE**|Represents how similar the records in the group are to the pivot record. This score is determined by DQS. If no score is displayed, either the record is the pivot for other records, or no matches were found.|  
   
-## See Also  
- [Data Quality Matching in the MDS Add-in for Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
- [Match Similar Data &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)   
- [Data Matching](../../data-quality-services/data-matching.md)
+## Related content
+
+- [Data Quality Matching in the MDS Add-in for Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)
+- [Match Similar Data (MDS Add-in for Excel)](match-similar-data-mds-add-in-for-excel.md)
+- [Data Matching](../../data-quality-services/data-matching.md)

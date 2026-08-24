@@ -48,10 +48,10 @@ Requires **VIEW SERVER STATE** permission.
 | index_space | bigint | Space used for indexes, in KB. |
 | unused_space | bigint | Space that is part of the reserved space and not used, in KB. |
 
-## See also
+## Related content
 
-- [Performance tuning with result set caching](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
-- [ALTER DATABASE SET Options (Transact-SQL)](../statements/alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)</br>
-- [ALTER DATABASE (Transact-SQL)](../statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)</br>
-- [SET RESULT SET CACHING (Transact-SQL)](../statements/set-result-set-caching-transact-sql.md)</br>
-- [DBCC DROPRESULTSETCACHE  (Transact-SQL)](./dbcc-dropresultsetcache-transact-sql.md)
+- [Performance tuning with result set caching](/azure/sql-data-warehouse/performance-tuning-result-set-caching)
+- [ALTER DATABASE SET options (Transact-SQL)](../statements/alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
+- [ALTER DATABASE (Transact-SQL)](../statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [SET RESULT SET CACHING (Transact-SQL)](../statements/set-result-set-caching-transact-sql.md)
+- [DBCC DROPRESULTSETCACHE (Transact-SQL)](dbcc-dropresultsetcache-transact-sql.md)

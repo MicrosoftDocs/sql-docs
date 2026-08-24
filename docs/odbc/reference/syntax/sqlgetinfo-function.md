@@ -668,7 +668,7 @@ else
  Returning information about a data source's data types  
  [SQLGetTypeInfo Function](sqlgettypeinfo-function.md)  
   
-## See Also  
+## Related content
 
- [ODBC API Reference](odbc-api-reference.md)  
- [ODBC Header Files](../install/odbc-header-files.md)
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

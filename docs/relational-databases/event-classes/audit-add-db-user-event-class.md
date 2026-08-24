@@ -52,13 +52,12 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
 |**XactSequence**|**bigint**|Token used to describe the current transaction.|50|Yes|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [Audit Database Principal Management Event Class](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)  
-  
-  
+## Related content
+
+- [Extended Events overview](../extended-events/extended-events.md)
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [sys.sp_grantdbaccess (Transact-SQL)](../system-stored-procedures/sp-grantdbaccess-transact-sql.md)
+- [sys.sp_revokedbaccess (Transact-SQL)](../system-stored-procedures/sp-revokedbaccess-transact-sql.md)
+- [sys.sp_adduser (Transact-SQL)](../system-stored-procedures/sp-adduser-transact-sql.md)
+- [sys.sp_dropuser (Transact-SQL)](../system-stored-procedures/sp-dropuser-transact-sql.md)
+- [Audit Database Principal Management Event Class](audit-database-principal-management-event-class.md)

@@ -35,5 +35,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Report Data pane](../../reporting-services/report-data/report-data-pane.md)
-- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Report Data pane in SQL Server Reporting Services (SSRS)](../report-data/report-data-pane.md)
+- [Create data connection strings in Report Builder](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

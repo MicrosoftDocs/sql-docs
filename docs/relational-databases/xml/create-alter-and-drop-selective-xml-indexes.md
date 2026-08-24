@@ -63,8 +63,7 @@ The following example shows a DROP INDEX statement.
 DROP INDEX sxi_index ON tbl
 ```
 
-## See also
+## Related content
 
 - [Create XML indexes](create-xml-indexes.md)
 - [Create, alter, and drop secondary selective XML indexes](create-alter-and-drop-secondary-selective-xml-indexes.md)
-

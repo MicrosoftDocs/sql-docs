@@ -71,11 +71,11 @@ The management packs must be installed. See [Install the System Center Operation
   
     :::image type="content" source="./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png" alt-text="A screenshot of the completed screen. Close is circled in red.":::
   
-## Related content
-
-- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Configure System Center Operations Manager (SCOM) to Monitor Analytics Platform System](configure-scom-to-monitor-analytics-platform-system.md)
+
+## Related content
+
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

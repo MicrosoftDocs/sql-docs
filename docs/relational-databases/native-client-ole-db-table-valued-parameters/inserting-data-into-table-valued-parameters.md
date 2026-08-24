@@ -62,8 +62,7 @@ helpviewer_keywords:
   
  At the time of execution, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider will call back to the rowset object to fetch rows and read column data.  
   
-## See Also  
- [Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Use Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
-  
-  
+## Related content
+
+- [Table-Valued Parameters  in SQL Server Native Client (OLE DB)](table-valued-parameters-ole-db.md)
+- [Use Table-Valued Parameters in SQL Server Native Client (OLE DB)](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)

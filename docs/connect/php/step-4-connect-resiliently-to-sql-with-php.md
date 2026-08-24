@@ -96,5 +96,5 @@ You can use the [sqlsrv_query()](sqlsrv-query.md) function to retrieve a result 
 
 ## Related content
 
-- [Connection resiliency](connection-resiliency.md)
+- [Idle Connection Resiliency](connection-resiliency.md)
 - [Step 3: Proof of concept connecting to SQL using PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)

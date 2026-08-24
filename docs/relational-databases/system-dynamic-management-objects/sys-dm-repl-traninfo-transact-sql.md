@@ -69,7 +69,7 @@ Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 ## Remarks  
  Information is only returned for replicated database objects or tables enabled for change data capture that are currently loaded in the article cache.  
   
-## See also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Replication Related Dynamic Management Views &#40;Transact-SQL&#41;](replication-related-dynamic-management-views-transact-sql.md)   
- [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Replication Related Dynamic Management Views (Transact-SQL)](replication-related-dynamic-management-views-transact-sql.md)

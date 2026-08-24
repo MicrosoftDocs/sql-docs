@@ -47,9 +47,8 @@ SELECT @g.STIsValid();
 DECLARE @g geography  
 ```  
   
-## See Also  
- [STGeometryType &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
- [MakeValid &#40;geography Data Type&#41;](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   
- [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
-  
+## Related content
+
+- [STGeometryType (geography Data Type)](stgeometrytype-geography-data-type.md)
+- [MakeValid (geography Data Type)](makevalid-geography-data-type.md)
+- [OGC methods on geography instances](ogc-methods-on-geography-instances.md)

@@ -29,7 +29,7 @@ A compute autoscaling range and an auto-pause delay are important parameters for
 
 ### Performance configuration
 
-- The **minimum vCores** and **maximum vCores** are configurable parameters that define the range of compute capacity available for the database. Memory and IO limits are proportional to the vCore range specified.  
+- The **minimum vCores** and **maximum vCores** are configurable parameters that define the range of compute capacity available for the database. Memory and IO limits are proportional to the vCore range specified.  
 - The **auto-pause delay** is a configurable parameter that defines the period of time the database must be inactive before it's automatically paused. The database is automatically resumed when the next login or other activity occurs. Alternatively, you can disable automatic pausing. For more information, see [Auto-pause and auto-resume in the serverless compute tier for Azure SQL Database](serverless-tier-auto-pause-resume.md).
 
 ### Default settings

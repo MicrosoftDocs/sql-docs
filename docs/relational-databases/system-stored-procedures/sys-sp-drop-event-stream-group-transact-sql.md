@@ -49,4 +49,4 @@ A user with `CONTROL` database permissions, **db_owner** database role membershi
 ## Related content
 
 - [What is change event streaming (preview)?](../track-changes/change-event-streaming/overview.md)
-- [Configure change event streaming (preview)](../track-changes/change-event-streaming/configure.md)
+- [Configure change event streaming (preview) to Azure Event Hubs](../track-changes/change-event-streaming/configure.md)

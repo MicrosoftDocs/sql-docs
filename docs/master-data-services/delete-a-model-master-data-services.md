@@ -47,6 +47,7 @@ helpviewer_keywords:
   
  The **Status** column in the grid shows the status of the operation on the model. When you click the **Save model** button, the ![Updating](../master-data-services/media/mds-model-status-updating.png "Updating") image is displayed, which indicates that the model is updating. If there are errors when creating or editing a model, the ![Error](../master-data-services/media/mds-model-status-error.png "Error") image is displayed. Otherwise, the status is OK and the ![OK](../master-data-services/media/mds-model-status-ok.png "OK") image is displayed.  
   
-## See Also  
- [Models &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)
+## Related content
+
+- [Models (Master Data Services)](models-master-data-services.md)
+- [Create a Model (Master Data Services)](create-a-model-master-data-services.md)

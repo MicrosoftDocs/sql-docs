@@ -127,6 +127,6 @@ tvp := mssql.TVP{
 
 ## Related content
 
-- [Stored procedures](stored-procedures.md)
-- [Data type mappings](data-type-mappings.md)
-- [Queries and statements](queries-statements.md)
+- [Stored procedures with go-mssqldb](stored-procedures.md)
+- [go-mssqldb data type mappings](data-type-mappings.md)
+- [Queries and statements with go-mssqldb](queries-statements.md)

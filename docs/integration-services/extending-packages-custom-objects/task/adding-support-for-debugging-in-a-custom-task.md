@@ -333,7 +333,6 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-## See Also  
- [Debugging Control Flow](../../../integration-services/troubleshooting/debugging-control-flow.md)  
-  
-  
+## Related content
+
+- [Debugging Control Flow](../../troubleshooting/debugging-control-flow.md)

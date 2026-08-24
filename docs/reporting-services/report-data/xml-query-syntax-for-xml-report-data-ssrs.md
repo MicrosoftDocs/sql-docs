@@ -101,5 +101,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [XML Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)
-- [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)
+- [XML Connection Type (SSRS)](xml-connection-type-ssrs.md)
+- [Reporting Services tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)

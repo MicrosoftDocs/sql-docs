@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "security [SQL Server replication], modifying settings"
 monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
-# View and Modify Replication Security Settings
+# View and modify replication security settings
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to view and modify replication security settings in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO). For example, you might want to change the connection of the Log Reader Agent to the Publisher from SQL Server Authentication to Windows Integrated Authentication, or you might need to change the credentials used to run an agent job when the Windows account password has changed. For information about the permissions required by each agent, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
 
@@ -550,9 +550,9 @@ For security reasons, the actual values of passwords are masked in result sets r
   
 ## Related content
 
-- [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)
-- [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md)
-- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)
-- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)
+- [Upgrade Replication Scripts (Replication Transact-SQL Programming)](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)
+- [Identity and Access Control (Replication)](identity-and-access-control-replication.md)
+- [Replication Agent Security Model](replication-agent-security-model.md)
+- [Replication Security Best Practices](replication-security-best-practices.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)

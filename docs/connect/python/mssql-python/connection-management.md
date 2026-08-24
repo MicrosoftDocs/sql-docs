@@ -284,7 +284,7 @@ Default encodings:
 
 ## Related content
 
-- [Connection strings](connection-strings.md)
-- [Connection pooling](connection-pooling.md)
-- [Transaction management](transaction-management.md)
-- [Cursor management](cursor-management.md)
+- [Connection strings for mssql-python](connection-strings.md)
+- [Connection pooling with mssql-python](connection-pooling.md)
+- [Transaction management with mssql-python](transaction-management.md)
+- [Manage cursors and result sets](cursor-management.md)

@@ -180,11 +180,10 @@ FROM sys.fn_xe_file_target_read_file(
 
 ## Related content
 
-- [Extended Events Dynamic Management Views](../system-dynamic-management-views/extended-events-dynamic-management-views.md)
+- [Extended Events Dynamic Management Views](../system-dynamic-management-objects/extended-events-dynamic-management-views.md)
 - [Extended Events Catalog Views (Transact-SQL)](../system-catalog-views/extended-events-catalog-views-transact-sql.md)
 - [Extended Events overview](../extended-events/extended-events.md)
-- [Targets for Extended Events](../extended-events/targets-for-extended-events-in-sql-server.md)
+- [Extended Events targets](../extended-events/targets-for-extended-events-in-sql-server.md)
 - [View event data in SQL Server Management Studio](../extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
 - [Convert an Existing SQL Trace Script to an Extended Events Session](../extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)
 - [Use the system_health session](../extended-events/use-the-system-health-session.md)
-

@@ -53,7 +53,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
-- [Merge Replication](../../relational-databases/replication/merge/merge-replication.md)
-- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)
-- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
+- [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)
+- [Merge replication](merge/merge-replication.md)
+- [Peer-to-Peer - Transactional Replication](transactional/peer-to-peer-transactional-replication.md)
+- [Updatable Subscriptions - For Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)

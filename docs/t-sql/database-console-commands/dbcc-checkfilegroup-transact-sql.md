@@ -264,8 +264,8 @@ WITH ESTIMATEONLY;
 
 - [DBCC (Transact-SQL)](dbcc-transact-sql.md)
 - [FILEGROUP_ID (Transact-SQL)](../functions/filegroup-id-transact-sql.md)
-- [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)
-- [sp_helpfilegroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)
+- [sys.sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)
+- [sys.sp_helpfilegroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)
 - [sys.sysfilegroups (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)
 - [DBCC CHECKDB (Transact-SQL)](dbcc-checkdb-transact-sql.md)
 - [DBCC CHECKALLOC (Transact-SQL)](dbcc-checkalloc-transact-sql.md)

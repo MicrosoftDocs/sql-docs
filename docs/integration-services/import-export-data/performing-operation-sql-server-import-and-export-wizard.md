@@ -47,7 +47,6 @@ After you review the choices that you made in the wizard and click **Finish** on
 -   If you ran the operation immediately, you can open the destination that you selected to review the data that the wizard copied.  
 -   If you saved the SSIS package created by the wizard, you can open it in SQL Server Data Tools to customize it and reuse it. For info about how to customize the saved package and run it again later, see [Save SSIS Package](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).
 
-## See also
-[Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+## Related content
 
-
+- [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

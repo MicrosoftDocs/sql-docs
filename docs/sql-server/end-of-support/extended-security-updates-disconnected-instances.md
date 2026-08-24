@@ -167,7 +167,7 @@ For a full list of frequently asked questions, see the [Extended Security Update
 ## Related content
 
 - [SQL Server 2014 lifecycle page](/lifecycle/products/sql-server-2014)
-- [SQL Server end of support page](sql-server-end-of-support-overview.md?WT.mc_id=akamseos)
+- [SQL Server end of support options](sql-server-end-of-support-overview.md?WT.mc_id=akamseos)
 - [Extended Security Updates frequently asked questions (FAQ)](/lifecycle/faq/extended-security-updates)
 - [Microsoft Security Response Center (MSRC)](https://msrc.microsoft.com/security-guidance/summary)
 - [Update Management overview](/azure/automation/update-management/overview)

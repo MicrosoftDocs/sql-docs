@@ -56,8 +56,7 @@ helpviewer_keywords:
 |Change the name of an existing derived hierarchy.|[Change a Derived Hierarchy Name &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Delete an existing derived hierarchy.|[Delete a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
-## Related Content  
-  
--   [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
-  
--   [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)
+## Related content
+
+- [Domain-Based Attributes (Master Data Services)](domain-based-attributes-master-data-services.md)
+- [Derived Hierarchies (Master Data Services)](derived-hierarchies-master-data-services.md)

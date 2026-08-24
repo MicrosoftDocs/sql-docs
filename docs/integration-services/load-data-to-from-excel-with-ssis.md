@@ -30,7 +30,7 @@ The following sections contain the information you need to use Excel successfull
    - Issues with [data types](#issues-types).
    - Issues with [importing](#issues-importing).
    - Issues with [exporting](#issues-exporting).
-   - Issues in [unattended or non‑interactive environments](#issues-non‑interactive-environments).
+   - Issues in [unattended or non-interactive environments](#issues-non-interactive-environments).
 
 <a id="tools"></a>
 
@@ -174,10 +174,10 @@ After you select or enter the Excel objects to import or export, you can also do
 
 - Preview sample data to make sure it's what you expect by selecting **Preview**.
 
-<a id="issues-non‑interactive-environments"></a>
-## Issues in Unattended or Non‑Interactive Environments
+<a id="issues-non-interactive-environments"></a>
+## Issues in Unattended or Non-Interactive Environments
 
-When SQL Server Integration Services (SSIS) packages use Excel Connection Managers and are executed in unattended or non‑interactive environments—such as SQL Agent Jobs, the SSIS Catalog, or other server‑side automation—they may fail with connection or provider‑related errors.
+When SQL Server Integration Services (SSIS) packages use Excel Connection Managers and are executed in unattended or non-interactive environments—such as SQL Agent Jobs, the SSIS Catalog, or other server-side automation—they may fail with connection or provider-related errors.
 
 This occurs because Microsoft Office/Excel components (including ACE/Jet providers) are not supported for automation or use in service contexts. These components require an interactive desktop session and may behave unpredictably when invoked by background processes.
 
@@ -185,7 +185,7 @@ Microsoft Office has long provided official guidance that server-side or unatten
 
 ### Recommended Alternatives
 
-To ensure reliability in production and automated ETL pipelines, Microsoft recommends replacing Excel Connection Managers with one of the following supported, server‑safe alternatives:
+To ensure reliability in production and automated ETL pipelines, Microsoft recommends replacing Excel Connection Managers with one of the following supported, server-safe alternatives:
 
 - **Flat file sources (CSV/TXT)** - Ideal for structured tabular data and fully supported for unattended SSIS execution.
 

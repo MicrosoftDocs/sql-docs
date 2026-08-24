@@ -47,7 +47,7 @@ Requires the `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
 ## Related content
 
-- [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)
+- [Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services](../../machine-learning/administration/resource-governor.md)
 - [sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)](sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
-- [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
+- [Server configuration: external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 - [ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)

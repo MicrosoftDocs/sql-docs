@@ -169,5 +169,5 @@ When you preview a report, it looks similar to an HTML report. To see how the re
 
 ## Related content
 
-- [Find, view, & manage reports (Report Builder & SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Microsoft Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Microsoft Report Builder in SQL Server](report-builder-in-sql-server.md)

@@ -85,13 +85,11 @@ GO
 Missing index suggestions should be combined when possible with one another, and with existing indexes in the current database. Learn how to apply these suggestions in [tune nonclustered indexes with missing index suggestions](../indexes/tune-nonclustered-missing-index-suggestions.md).
 
 
-## Next steps
-
-Learn more about the missing index feature in the following articles:
+## Related content
 
 - [Tune nonclustered indexes with missing index suggestions](../indexes/tune-nonclustered-missing-index-suggestions.md)
-- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](sys-dm-db-missing-index-details-transact-sql.md)   
-- [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](sys-dm-db-missing-index-groups-transact-sql.md)   
-- [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](sys-dm-db-missing-index-group-stats-transact-sql.md)  
-- [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](sys-dm-db-missing-index-group-stats-query-transact-sql.md)     
-- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_db_missing_index_details (Transact-SQL)](sys-dm-db-missing-index-details-transact-sql.md)
+- [sys.dm_db_missing_index_groups (Transact-SQL)](sys-dm-db-missing-index-groups-transact-sql.md)
+- [sys.dm_db_missing_index_group_stats (Transact-SQL)](sys-dm-db-missing-index-group-stats-transact-sql.md)
+- [sys.dm_db_missing_index_group_stats_query (Transact-SQL)](sys-dm-db-missing-index-group-stats-query-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)

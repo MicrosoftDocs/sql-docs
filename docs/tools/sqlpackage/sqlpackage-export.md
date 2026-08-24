@@ -108,8 +108,8 @@ SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" /UniversalAut
 |**/p:**|VerifyExtraction=(BOOLEAN 'True')|Specifies whether the extracted schema model should be verified. If set to true, schema validation rules are run on the dacpac or bacpac.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN 'False')|Specifies whether the supported full-text document types for Microsoft Azure SQL Database v12 should be verified.|
 
-## Next Steps
+## Related content
 
-- Learn more about [SqlPackage](sqlpackage.md)
-- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)
-- [Export to Azure Blob Storage](sqlpackage-with-data-in-parquet-files.md)
+- [SqlPackage](sqlpackage.md)
+- [Troubleshoot issues and performance with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)
+- [SqlPackage with data in Parquet files (preview)](sqlpackage-with-data-in-parquet-files.md)

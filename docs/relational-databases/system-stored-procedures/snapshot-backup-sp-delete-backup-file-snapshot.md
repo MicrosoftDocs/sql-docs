@@ -46,4 +46,4 @@ Requires ALTER ANY DATABASE permission.
 ## Related content
 
 - [sys.fn_db_backup_file_snapshots (Transact-SQL)](../system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)
-- [sp_delete_backup (Transact-SQL)](snapshot-backup-sp-delete-backup.md)
+- [sys.sp_delete_backup (Transact-SQL)](snapshot-backup-sp-delete-backup.md)

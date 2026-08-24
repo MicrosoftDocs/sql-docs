@@ -154,5 +154,5 @@ For troubleshooting Database Mail, visit:
 ## Related content
 
 - [Configure SQL Server Agent mail to use Database Mail](configure-sql-server-agent-mail-to-use-database-mail.md)
-- [Database Mail Log and Audits](database-mail-log-and-audits.md)
+- [Database Mail log and audits](database-mail-log-and-audits.md)
 - [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance)

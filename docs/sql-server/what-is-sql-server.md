@@ -144,6 +144,6 @@ You can use Azure services and management capabilities, introduce DevOps practic
 ## Related content
 
 - [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
-- [Installation guidance for SQL Server on Linux](../linux/sql-server-linux-setup.md)
-- [Configure and customize SQL Server Linux containers](../linux/sql-server-linux-docker-container-configure.md)
+- [Installation guidance for SQL Server on Linux](../linux/install-upgrade/setup.md)
+- [Configure and customize SQL Server Linux containers](../linux/containers/configure.md)
 - [Server configuration options](../database-engine/configure-windows/server-configuration-options-sql-server.md)

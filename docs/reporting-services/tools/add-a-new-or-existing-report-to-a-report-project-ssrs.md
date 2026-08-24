@@ -52,5 +52,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)
+- [Reporting Services tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)
 - [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

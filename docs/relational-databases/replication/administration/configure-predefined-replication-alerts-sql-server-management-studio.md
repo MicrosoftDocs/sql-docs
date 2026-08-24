@@ -80,4 +80,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Use Alerts for Replication Agent Events](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)
+- [Use Alerts for Replication Agent Events](../agents/use-alerts-for-replication-agent-events.md)

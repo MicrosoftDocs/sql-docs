@@ -169,15 +169,15 @@ GRANT ALTER ANY DATABASE TO ITDevelopers ;
 GO  
 ```  
   
-## See Also  
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [DENY Server Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOKE Server Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
- [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
-  
+## Related content
+
+- [GRANT (Transact-SQL)](grant-transact-sql.md)
+- [DENY (Transact-SQL)](deny-transact-sql.md)
+- [DENY Server Permissions (Transact-SQL)](deny-server-permissions-transact-sql.md)
+- [REVOKE Server Permissions (Transact-SQL)](revoke-server-permissions-transact-sql.md)
+- [Permissions Hierarchy (Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)
+- [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
+- [HAS_PERMS_BY_NAME (Transact-SQL)](../functions/has-perms-by-name-transact-sql.md)

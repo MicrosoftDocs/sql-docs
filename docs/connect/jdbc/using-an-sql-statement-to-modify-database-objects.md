@@ -25,6 +25,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingSQLToModifyDBObjects1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_0_1.java)]
 
-## See also
+## Related content
 
-[Using statements with SQL](../../connect/jdbc/using-statements-with-sql.md)
+- [Using statements with SQL](using-statements-with-sql.md)

@@ -221,4 +221,3 @@ In T-SQL, use one of the following commands:
 
 - [Views](views.md)
 - [Create views](create-views.md)
-

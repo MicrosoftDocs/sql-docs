@@ -192,6 +192,6 @@ The following properties have special considerations:
   
 ## Related content
 
-- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)
-- [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)
-- [Transactional replication](../../../relational-databases/replication/transactional/transactional-replication.md)
+- [Administer a Peer-to-Peer Topology (Replication Transact-SQL Programming)](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)
+- [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)
+- [Transactional Replication](transactional-replication.md)

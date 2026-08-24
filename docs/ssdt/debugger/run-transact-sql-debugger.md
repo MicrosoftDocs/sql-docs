@@ -92,4 +92,4 @@ The following table shows the debugger menu commands, toolbar buttons, and keybo
 - [Step through Transact-SQL code](step-through-transact-sql-code.md)
 - [Debug stored procedures](debug-stored-procedures.md)
 - [Transact-SQL debugger information](transact-sql-debugger-information.md)
-- [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)
+- [Live query statistics](../../relational-databases/performance/live-query-statistics.md)

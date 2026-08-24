@@ -30,6 +30,6 @@ This error can be caused by transient, timing-related errors, or by in-memory or
 ## User Action  
 Rerun the statement that caused the exception to fire. If the error was caused by a timing-related event, the error may not recur. If the problem persists, run DBCC CHECKDB to check for on-disk corruption. Restart the server to ensure the in-memory data structures are not corrupted.  
   
-## See Also  
-[DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
-  
+## Related content
+
+- [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)

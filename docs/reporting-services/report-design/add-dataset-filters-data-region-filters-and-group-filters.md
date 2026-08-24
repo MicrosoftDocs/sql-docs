@@ -95,5 +95,5 @@ ms.custom:
   
 ## Related content
 
-- [Expression uses in reports &#40;Report Builder&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
-- [Report parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
+- [Expression uses in paginated reports (Report Builder)](expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Paginated report parameters in Report Builder](report-parameters-report-builder-and-report-designer.md)

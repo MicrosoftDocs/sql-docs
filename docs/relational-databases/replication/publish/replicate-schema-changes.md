@@ -76,4 +76,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)
+- [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)

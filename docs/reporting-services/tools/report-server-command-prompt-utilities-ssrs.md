@@ -29,6 +29,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
-- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)
+- [SQL Server Reporting Services tools](reporting-services-tools.md)
+- [Reporting Services report server (native mode)](../report-server/reporting-services-report-server-native-mode.md)

@@ -83,8 +83,6 @@ Variable Value File is an XML file comprising the parameter values of commands l
 ## Variable Value File Validation  
 The user can easily validate their variable value file against the schema definition file **'ConsoleScriptVariablesSchema.xsd'** available in the 'Schemas' folder.  
   
-## Next Step  
-The next step in operating the console is [Creating the Server Connection Files &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
-  
-## See Also  
-[Creating the Server Connection Files (MySQL)](./creating-the-server-connection-files-mysqltosql.md)  
+## Related content
+
+- [Creating the Server Connection Files](creating-the-server-connection-files-mysqltosql.md)

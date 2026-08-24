@@ -291,11 +291,11 @@ Remove temporary folders after installation is complete.
 > [!NOTE]
 > Be sure to wait until installation is complete. It can take a long time to remove R libraries associated with one version and then add the new R libraries. When the operation completes, temporary folders are removed.
 
-## See also
+## Related content
 
-+ [Change the default R or Python language runtime version](./change-default-language-runtime-version.md)
-+ [Install Machine Learning Server for Windows (Internet connected)](/machine-learning-server/install/machine-learning-server-windows-install)
-+ [Install Machine Learning Server for Windows (offline)](/machine-learning-server/install/machine-learning-server-windows-offline)
-+ [Known issues in Machine Learning Server](/machine-learning-server/resources-known-issues)
-+ [Feature announcements from previous release of R Server](/r-server/whats-new-in-r-server)
-+ [Deprecated, no longer supported, or changed features](/machine-learning-server/resources-deprecated-features)
+- [Change the default R or Python language runtime version](change-default-language-runtime-version.md)
+- [Install Machine Learning Server for Windows (Internet connected)](/machine-learning-server/install/machine-learning-server-windows-install)
+- [Install Machine Learning Server for Windows (offline)](/machine-learning-server/install/machine-learning-server-windows-offline)
+- [Known issues in Machine Learning Server](/machine-learning-server/resources-known-issues)
+- [Feature announcements from previous release of R Server](/r-server/whats-new-in-r-server)
+- [Deprecated, no longer supported, or changed features](/machine-learning-server/resources-deprecated-features)

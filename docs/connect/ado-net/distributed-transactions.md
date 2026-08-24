@@ -58,8 +58,8 @@ SQL Server supports promotable transactions in which a local lightweight transac
 
  You may need to enable the MS DTC over the network in order to use distributed transactions. If the server's local Windows Firewall is enabled, you must allow the MS DTC service to use the network or open the MS DTC port.  
   
-## See also
+## Related content
 
 - [Transactions and concurrency](transactions-and-concurrency.md)
 - [System.Transactions integration with SQL Server](system-transactions-integration-with-sql-server.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

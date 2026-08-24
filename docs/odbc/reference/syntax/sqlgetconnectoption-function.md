@@ -29,6 +29,7 @@ apitype: "dllExport"
 > [!NOTE]
 >  The attribute SQL_ASYNC_DBC_FUNCTION_ENABLE introduced in ODBC 3.8 is not supported by **SQLGetConnectOption**. Applications that use the asynchronous operation on a connection handle must use **SQLGetConnectAttr**.  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

@@ -26,5 +26,6 @@ ms.custom:
 |Queued to clear|The batch has finished processing and will be cleared.|4|  
 |Cleared|The batch has been cleared.|5|  
   
-## See Also  
- [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)
+## Related content
+
+- [Overview: Importing Data from Tables (Master Data Services)](overview-importing-data-from-tables-master-data-services.md)

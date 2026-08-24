@@ -72,6 +72,7 @@ SQLRETURN SQLCloseCursor(
 |Freeing a handle|[SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Processing multiple result sets|[SQLMoreResults Function](../../../odbc/reference/syntax/sqlmoreresults-function.md)|  
   
-## See Also  
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)
+## Related content
+
+- [ODBC API reference](odbc-api-reference.md)
+- [ODBC Header Files](../install/odbc-header-files.md)

@@ -30,8 +30,8 @@ CALCULATE
 > [!NOTE]  
 >  Calculated members are not aggregated.  
   
-## See Also  
- [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)   
- [Define Assignments and Other Script Commands](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
-  
+## Related content
+
+- [MDX Scripting Statements (MDX)](mdx-scripting-statements-mdx.md)
+- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)
+- [Define Assignments and Other Script Commands](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)

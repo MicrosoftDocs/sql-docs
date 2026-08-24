@@ -23,7 +23,6 @@ This view stores information about all components and devices that exist in the 
 |group_id|**int**|The logical component group to which this component belongs. See [sys.pdw_health_component_groups (Parallel Data Warehouse)](../../relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql.md).|NOT NULL|
 |component_name|**nvarchar(255)**|Name of the component.|NOT NULL|  
   
-## See Also  
- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-  
-  
+## Related content
+
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)

@@ -337,9 +337,9 @@ The code listing follows:
 
 [!code-csharp[SqlClient_RetrieveIdentity#1](~/../sqlclient/doc/samples/SqlClient_RetrieveIdentity.cs#1)]
 
-## See also
+## Related content
 
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Update data sources with DataAdapters](update-data-sources-with-dataadapters.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

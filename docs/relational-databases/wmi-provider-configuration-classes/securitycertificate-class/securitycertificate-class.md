@@ -24,7 +24,6 @@ apitype: "MOFDef"
   
 -   Verify the SHA thumbprint for the specified instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## See Also  
- [Encryption Hierarchy](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+## Related content
+
+- [Encryption hierarchy](../../security/encryption/encryption-hierarchy.md)

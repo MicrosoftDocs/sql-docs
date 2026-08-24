@@ -101,7 +101,7 @@ Users who are assigned the `dbo` as default schema don't inherit the permissions
 ## Related content
 
 - [User-Schema Separation](/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))
-- [Protecting Your SQL Server Intellectual Property](../protecting-your-sql-server-intellectual-property.md)
-- [Getting Started with Database Engine Permissions](../authentication-access/getting-started-with-database-engine-permissions.md)
-- [Server-Level Roles](../authentication-access/server-level-roles.md)
+- [Protecting your SQL Server intellectual property](../protecting-your-sql-server-intellectual-property.md)
+- [Get started with Database Engine permissions](getting-started-with-database-engine-permissions.md)
+- [Server-level roles](server-level-roles.md)
 - [Securing ADO.NET Applications](/dotnet/framework/data/adonet/securing-ado-net-applications)

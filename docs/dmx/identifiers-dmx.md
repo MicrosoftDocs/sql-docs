@@ -87,15 +87,14 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ### Delimiting Identifiers with Multiple Parts  
  When you use qualified object names, you may have to delimit more than one of the identifiers that make up the object name. You must delimit each identifier individually.  
   
-## See Also  
- [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Understanding the DMX Select Statement](../dmx/understanding-the-dmx-select-statement.md)  
-  
-  
+## Related content
+
+- [Data Mining Extensions (DMX) Reference](data-mining-extensions-dmx-reference.md)
+- [Data Mining Extensions (DMX) Syntax Elements](data-mining-extensions-dmx-syntax-elements.md)
+- [Data Mining Extensions (DMX) Function Reference](data-mining-extensions-dmx-function-reference.md)
+- [Data Mining Extensions (DMX) Operator Reference](data-mining-extensions-dmx-operator-reference.md)
+- [Data Mining Extensions (DMX) Statements](data-mining-extensions-dmx-statements.md)
+- [Data Mining Extensions (DMX) Syntax Conventions](data-mining-extensions-dmx-syntax-conventions.md)
+- [General Prediction Functions (DMX)](general-prediction-functions-dmx.md)
+- [Structure and Usage of DMX Prediction Queries](structure-and-usage-of-dmx-prediction-queries.md)
+- [Understanding the DMX Select Statement](understanding-the-dmx-select-statement.md)

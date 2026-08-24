@@ -96,6 +96,6 @@ EXECUTE sp_table_privileges_ex
 
 ## Related content
 
-- [sp_column_privileges_ex (Transact-SQL)](sp-column-privileges-ex-transact-sql.md)
+- [sys.sp_column_privileges_ex (Transact-SQL)](sp-column-privileges-ex-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Distributed Queries stored procedures (Transact-SQL)](distributed-queries-stored-procedures-transact-sql.md)

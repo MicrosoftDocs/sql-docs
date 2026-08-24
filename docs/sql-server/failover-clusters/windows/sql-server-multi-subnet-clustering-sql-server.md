@@ -83,10 +83,8 @@ Following are some examples of [!INCLUDE [ssNoVersion](../../../includes/ssnover
 
 ## Related content
 
-|Description|Article|
-|-------------------------|-----------|
-|Install a SQL Server failover cluster|[Create a new SQL Server failover cluster (Setup)](../install/create-a-new-sql-server-failover-cluster-setup.md)|
-|In-place upgrade of your existing SQL Server failover cluster|[Upgrade a SQL Server failover cluster instance (Setup)](upgrade-a-sql-server-failover-cluster-instance.md)|
-|Maintain your SQL Server failover cluster|[Add or remove nodes in a SQL Server failover cluster (Setup)](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|
-|Use the Failover Cluster Management snap-in to view Windows Server Failover Cluster events and logs|[View events and logs for a failover cluster](https://technet.microsoft.com/library/cc772342(WS.10).aspx)|
-|Use Windows PowerShell to create a log file for all nodes (or a specific node) in a Windows Server failover cluster|[Get-ClusterLog failover cluster cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))|
+- [Create a New Always On Failover Cluster Instance (Setup)](../install/create-a-new-sql-server-failover-cluster-setup.md)
+- [Upgrade a failover cluster instance](upgrade-a-sql-server-failover-cluster-instance.md)
+- [Add or remove nodes in a failover cluster instance (Setup)](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)
+- [View events and logs for a failover cluster](https://technet.microsoft.com/library/cc772342(WS.10).aspx)
+- [Get-ClusterLog failover cluster cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))

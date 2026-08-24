@@ -64,9 +64,9 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  ![Screenshot of a File Explorer window on the This PC page showing the Log_Space drive.](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
-## Next Steps
+## Related content
 
- - [Windows Storage Spaces in Windows 10 and Windows 11](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
- - [Windows Storage Spaces in Windows 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11))   
- - [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- - [View or Change the Default Locations for Data and Log Files &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
+- [Windows Storage Spaces in Windows 10 and Windows 11](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)
+- [Windows Storage Spaces in Windows 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11))
+- [The transaction log](../logs/the-transaction-log-sql-server.md)
+- [View or change the default locations for data and log files](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)

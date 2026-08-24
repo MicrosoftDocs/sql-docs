@@ -61,4 +61,4 @@ For maintainability purposes, variables can be declared inside `variable-group` 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create the Server Connection Files (Db2ToSQL)](creating-the-server-connection-files-db2tosql.md)
+> [Create the Server Connection Files](creating-the-server-connection-files-db2tosql.md)

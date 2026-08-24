@@ -42,14 +42,14 @@ The following table lists the types of indexes available in [!INCLUDE [ssNoVersi
 
 ## Related content
 
-- [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
+- [Index architecture and design guide](../sql-server-index-design-guide.md)
 - [SORT_IN_TEMPDB Option For Indexes](sort-in-tempdb-option-for-indexes.md)
 - [Disable indexes and constraints](disable-indexes-and-constraints.md)
 - [Enable indexes and constraints](enable-indexes-and-constraints.md)
 - [Rename Indexes](rename-indexes.md)
 - [Set Index Options](set-index-options.md)
-- [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)
+- [Disk space requirements for index DDL operations](disk-space-requirements-for-index-ddl-operations.md)
 - [Optimize index maintenance to improve query performance and reduce resource consumption](reorganize-and-rebuild-indexes.md)
-- [Specify Fill Factor for an Index](specify-fill-factor-for-an-index.md)
-- [Pages and extents architecture guide](../pages-and-extents-architecture-guide.md)
+- [Specify fill factor for an index](specify-fill-factor-for-an-index.md)
+- [Page and extent architecture guide](../pages-and-extents-architecture-guide.md)
 - [Clustered and nonclustered indexes](clustered-and-nonclustered-indexes-described.md)

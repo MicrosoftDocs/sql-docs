@@ -72,6 +72,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 |`dm_fts_active_catalogs.catalog_id`|`dm_fts_index_population.catalog_id`|One-to-one|  
 |`dm_fts_population_ranges.parent_memory_address`|`dm_fts_index_population.memory_address`|Many-to-one|  
   
-## Next steps
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md)   
- [Full-Text Search and Semantic Search Dynamic Management Views and Functions &#40;Transact-SQL&#41;](full-text-and-semantic-search-dynamic-management-views-functions.md)
+## Related content
+
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
+- [Full-text and semantic search dynamic management views and functions](full-text-and-semantic-search-dynamic-management-views-functions.md)

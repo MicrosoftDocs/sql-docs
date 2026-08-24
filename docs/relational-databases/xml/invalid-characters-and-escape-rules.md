@@ -64,7 +64,6 @@ There are only two non-alphabetic characters that can occur within an XML name: 
 
      WITH XMLNAMESPACES is the recommended way to add XML namespaces.
 
-## See also
+## Related content
 
-- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)
-
+- [FOR XML (SQL Server)](for-xml-sql-server.md)

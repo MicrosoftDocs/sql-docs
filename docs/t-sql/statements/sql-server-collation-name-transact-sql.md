@@ -69,13 +69,12 @@ WHERE name LIKE 'SQL%';
 > [!NOTE]
 > For Sort Order ID 80, use any of the Window collations with the code page of 1250, and binary order. For example: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.
 
-## See Also
+## Related content
 
-- [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
-- [Constants](../../t-sql/data-types/constants-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-- [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [table](../../t-sql/data-types/table-transact-sql.md)
-- [sys.fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
-
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
+- [Constants (Transact-SQL)](../data-types/constants-transact-sql.md)
+- [CREATE DATABASE](create-database-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../language-elements/declare-local-variable-transact-sql.md)
+- [table (Transact-SQL)](../data-types/table-transact-sql.md)
+- [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)

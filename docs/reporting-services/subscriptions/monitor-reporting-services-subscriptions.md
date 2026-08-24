@@ -122,5 +122,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Create and manage subscriptions for native mode report servers](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)

@@ -105,5 +105,6 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
 ## Go to next task
 [Step 7: Add and configure the OLE DB destination](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## See also  
-[Lookup transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
+## Related content
+
+- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)

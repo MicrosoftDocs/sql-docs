@@ -101,7 +101,7 @@ Typically, database servers block Internet access. This can be inconvenient when
 
     ![plotting taxi rides using a custom R function](media/rsql-e2e-mapplot.png "plotting taxi rides using a custom R function")
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Create data features using R and SQL](walkthrough-create-data-features.md)

@@ -180,12 +180,11 @@ Clear the plan cache for all batches and stored procedures that access the table
 
 Call [sp_refresh_parameter_encryption](../../system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that are persisted in [sys.parameters](../..//system-catalog-views/sys-parameters-transact-sql.md) and might have been invalidated by encrypting the columns.
 
-## Next Steps
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+## Related content
 
-## See Also  
- - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
- - [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
- - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
- - [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
- - [Configure column encryption using Always Encrypted with a DAC package](configure-always-encrypted-using-dacpac.md)
+- [Always Encrypted](always-encrypted-database-engine.md)
+- [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
+- [Configure Always Encrypted using PowerShell](configure-always-encrypted-using-powershell.md)
+- [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
+- [Configure column encryption using Always Encrypted with a DAC package](configure-always-encrypted-using-dacpac.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)

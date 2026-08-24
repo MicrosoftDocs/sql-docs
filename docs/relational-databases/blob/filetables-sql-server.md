@@ -115,6 +115,6 @@ FileTables don't support memory-mapped files. Notepad and Paint are two common e
 - [FileTable Schema](filetable-schema.md)
 - [FileTable compatibility with other SQL Server features](filetable-compatibility-with-other-sql-server-features.md)
 - [FileTable DDL, functions, stored procedures, and views](filetable-ddl-functions-stored-procedures-and-views.md)
-- [FILESTREAM and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
-- [FILESTREAM and FileTable Catalog Views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+- [FILESTREAM and FileTable dynamic management views (Transact-SQL)](../system-dynamic-management-objects/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+- [FILESTREAM and FileTable catalog views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 - [FILESTREAM and FileTable system stored procedures (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

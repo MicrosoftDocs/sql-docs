@@ -151,7 +151,6 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## See Also  
- [Updategram Security Considerations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [Updategram Security Considerations (SQLXML 4.0)](../security/updategram-security-considerations-sqlxml-4-0.md)

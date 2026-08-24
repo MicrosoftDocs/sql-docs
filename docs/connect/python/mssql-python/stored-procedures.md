@@ -412,7 +412,7 @@ Table-valued parameters aren't supported in the current version (1.12.0) of `mss
 
 ## Related content
 
-- [Executing queries](executing-queries.md)
-- [Retrieving data](retrieving-data.md)
-- [Transaction management](transaction-management.md)
-- [Error handling](error-handling.md)
+- [Execute queries with mssql-python](executing-queries.md)
+- [Retrieve data with mssql-python](retrieving-data.md)
+- [Transaction management with mssql-python](transaction-management.md)
+- [Error handling and SQLSTATE codes for mssql-python](error-handling.md)

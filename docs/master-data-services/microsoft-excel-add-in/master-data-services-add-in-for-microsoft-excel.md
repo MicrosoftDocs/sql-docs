@@ -76,15 +76,15 @@ When working with the add-in, you might come across the following terms. For mor
 | Create a domain-based attribute or a constrained list. (Administrators only) | [Create a domain-based attribute](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md) |  
 | Set properties for loading and publishing data. (Administrators only) | [Setting properties](../../master-data-services/microsoft-excel-add-in/setting-properties-for-master-data-services-add-in-for-excel.md) |  
   
-## Related content  
-  
-- [Connections &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
-- [Overview: Exporting data to Excel &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
-- [Shortcut query files &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
-- [Refreshing data &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
-- [Overview: Importing data from Excel &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
-- [Validating data &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
-- [Data quality matching in the MDS Add-in for Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
-- [Building a model &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)
-- [Setting properties for Master Data Services Add-in for Excel](../../master-data-services/microsoft-excel-add-in/setting-properties-for-master-data-services-add-in-for-excel.md)  
-- [Security &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)
+## Related content
+
+- [Connections (MDS Add-in for Excel)](connections-mds-add-in-for-excel.md)
+- [Overview: Exporting Data to Excel (MDS Add-in for Excel)](overview-exporting-data-to-excel-mds-add-in-for-excel.md)
+- [Shortcut Query Files (MDS Add-in for Excel)](shortcut-query-files-mds-add-in-for-excel.md)
+- [Refreshing Data (MDS Add-in for Excel)](refreshing-data-mds-add-in-for-excel.md)
+- [Overview: Importing Data from Excel (MDS Add-in for Excel)](overview-importing-data-from-excel-mds-add-in-for-excel.md)
+- [Validating Data (MDS Add-in for Excel)](validating-data-mds-add-in-for-excel.md)
+- [Data Quality Matching in the MDS Add-in for Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)
+- [Building a Model (MDS Add-in for Excel)](building-a-model-mds-add-in-for-excel.md)
+- [Setting Properties for Master Data Services Add-in for Excel](setting-properties-for-master-data-services-add-in-for-excel.md)
+- [Security (Master Data Services)](../security-master-data-services.md)

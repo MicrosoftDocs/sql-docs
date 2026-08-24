@@ -68,8 +68,9 @@ RESTORE SERVICE MASTER KEY
 GO  
 ```  
   
-## See Also  
- [Service Master Key](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+## Related content
+
+- [SQL Server and Database Encryption Keys (Database Engine)](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)
+- [ALTER SERVICE MASTER KEY (Transact-SQL)](alter-service-master-key-transact-sql.md)
+- [BACKUP SERVICE MASTER KEY (Transact-SQL)](backup-service-master-key-transact-sql.md)
+- [Encryption hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

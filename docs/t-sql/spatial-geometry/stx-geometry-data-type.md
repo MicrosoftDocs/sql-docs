@@ -49,9 +49,8 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STX;  
 ```  
   
-## See Also  
- [STY &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
- [STSrid &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
- [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
-  
-  
+## Related content
+
+- [STY (geometry Data Type)](sty-geometry-data-type.md)
+- [STSrid (geometry Data Type)](stsrid-geometry-data-type.md)
+- [OGC methods on geometry instances](ogc-methods-on-geometry-instances.md)

@@ -84,6 +84,6 @@ If you select **Generate script**, you see the T-SQL query that's generated to c
 > [!NOTE]
 > **Generate script** should be visible only on the last page of the wizard. Currently, it shows on all pages.
 
-## Next steps
+## Related content
 
-For more information on SQL Server Big Data Clusters and related scenarios, see [Introducing [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md).
+- [Introducing [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md)

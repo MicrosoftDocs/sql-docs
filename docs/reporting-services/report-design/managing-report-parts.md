@@ -84,6 +84,6 @@ Report parts can be reused in paginated reports, by multiple users and in multip
   
 ## Related content
 
-- [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)
-- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
-- [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)
+- [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md)
+- [Report server content management (SSRS native mode)](../report-server/report-server-content-management-ssrs-native-mode.md)
+- [Report Parts in Report Designer (SSRS)](report-parts-in-report-designer-ssrs.md)

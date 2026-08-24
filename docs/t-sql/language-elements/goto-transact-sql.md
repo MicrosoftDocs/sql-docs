@@ -71,13 +71,11 @@ Branch_Three:
     SELECT 'Jumping To Branch Three.';  
 ```  
   
-## See Also  
- [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
- [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [BREAK &#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
- [CONTINUE &#40;Transact-SQL&#41;](while-transact-sql.md)   
- [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [WAITFOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
- [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
-  
-  
+## Related content
+
+- [Control-of-Flow](control-of-flow.md)
+- [BEGIN...END (Transact-SQL)](begin-end-transact-sql.md)
+- [BREAK (Transact-SQL)](break-transact-sql.md)
+- [WHILE (Transact-SQL)](while-transact-sql.md)
+- [IF...ELSE (Transact-SQL)](if-else-transact-sql.md)
+- [WAITFOR (Transact-SQL)](waitfor-transact-sql.md)

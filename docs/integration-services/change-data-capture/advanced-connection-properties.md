@@ -23,8 +23,7 @@ ms.topic: concept-article
 > [!IMPORTANT]  
 >  Do not include login credentials in the **Advanced Connection Properties** dialog box. They will not be encrypted when they are passed across the network.  
   
-## See Also  
- [Access the CDC Designer Console](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
- [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
-  
-  
+## Related content
+
+- [Access the CDC Designer Console](access-the-cdc-designer-console.md)
+- [SQL Server Connection for Instance Creation](sql-server-connection-for-instance-creation.md)

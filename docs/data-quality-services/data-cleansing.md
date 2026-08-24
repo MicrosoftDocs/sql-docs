@@ -99,8 +99,7 @@ ms.custom:
 |Describes how to cleanse data using knowledge from reference data service.|[Cleanse Data Using Reference Data &#40;External&#41; Knowledge](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Describes how to cleanse a composite domain.|[Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## See Also  
- [Data Quality Projects &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
- [Data Matching](../data-quality-services/data-matching.md)  
-  
-  
+## Related content
+
+- [Data Quality Projects (DQS)](data-quality-projects-dqs.md)
+- [Data Matching](data-matching.md)

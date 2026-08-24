@@ -94,6 +94,6 @@ Requires ALTER permission on the database.
   
 -   [Suspend an Availability Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
-  
+## Related content
+
+- [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)

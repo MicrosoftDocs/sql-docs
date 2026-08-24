@@ -88,7 +88,7 @@ For information on how to configure a SharePoint mode report server, see [Create
   
 ## Related content
 
-- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
-- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
-- [Role assignments](../../reporting-services/security/role-assignments.md)
+- [Tasks and permissions](../security/tasks-and-permissions.md)
+- [Subscriptions and delivery (Reporting Services)](subscriptions-and-delivery-reporting-services.md)
+- [Data-driven subscriptions in Reporting Services](data-driven-subscriptions.md)
+- [Role assignments](../security/role-assignments.md)

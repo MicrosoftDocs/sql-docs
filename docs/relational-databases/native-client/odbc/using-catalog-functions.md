@@ -69,13 +69,12 @@ helpviewer_keywords:
   
      Must be present at execution time. sqlncli11.dll is distributed with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver.  
   
-## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
- [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
- [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
- [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
- [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md)   
- [SQLStatistics](../../../relational-databases/native-client-odbc-api/sqlstatistics.md)  
-  
-  
+## Related content
+
+- [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)
+- [SQLColumnPrivileges](../../native-client-odbc-api/sqlcolumnprivileges.md)
+- [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)
+- [SQLPrimaryKeys](../../native-client-odbc-api/sqlprimarykeys.md)
+- [SQLTablePrivileges](../../native-client-odbc-api/sqltableprivileges.md)
+- [SQLTables](../../native-client-odbc-api/sqltables.md)
+- [SQLStatistics](../../native-client-odbc-api/sqlstatistics.md)

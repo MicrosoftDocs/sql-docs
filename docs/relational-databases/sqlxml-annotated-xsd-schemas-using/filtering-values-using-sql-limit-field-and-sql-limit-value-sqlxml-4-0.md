@@ -294,10 +294,9 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
     </root>  
     ```  
   
-## See Also  
- [float and real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
- [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Using Annotated XSD Schemas in Queries &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
-  
-  
+## Related content
+
+- [float and real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)
+- [nchar and nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
+- [Installing SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)
+- [Using Annotated XSD Schemas in Queries (SQLXML 4.0)](../sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)

@@ -84,4 +84,4 @@ The default paths for non-system databases can be changed using the `mssql-conf`
 
 - [Configure failover cluster instance - iSCSI - SQL Server on Linux](shared-disk-cluster-configure-iscsi.md)
 - [Configure failover cluster instance - NFS - SQL Server on Linux](shared-disk-cluster-configure-network-file-system.md)
-- [Configure SMB storage failover cluster instance - SQL Server on Linux](shared-disk-cluster-configure-server-message-block.md)
+- [Configure SMB storage failover cluster instance for SQL Server on Linux](shared-disk-cluster-configure-server-message-block.md)

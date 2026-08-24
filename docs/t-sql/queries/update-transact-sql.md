@@ -1190,14 +1190,15 @@ FROM dbo.Table2;
 GO
 ```
 
-## See Also  
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](../functions/text-and-image-functions-textptr-transact-sql.md)   
- [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
- [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
- [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
+## Related content
+
+- [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
+- [CREATE TRIGGER (Transact-SQL)](../statements/create-trigger-transact-sql.md)
+- [Cursors (Transact-SQL)](../language-elements/cursors-transact-sql.md)
+- [DELETE (Transact-SQL)](../statements/delete-transact-sql.md)
+- [INSERT (Transact-SQL)](../statements/insert-transact-sql.md)
+- [Text and Image Functions - TEXTPTR (Transact-SQL)](../functions/text-and-image-functions-textptr-transact-sql.md)
+- [WITH common_table_expression (Transact-SQL)](with-common-table-expression-transact-sql.md)
+- [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)
+- [Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)
+- [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

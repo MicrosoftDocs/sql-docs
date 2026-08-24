@@ -81,8 +81,8 @@ Metadata about [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] databa
 
 ## Related content
 
-- [Migrate Db2 Databases to SQL Server (Db2ToSQL)](migrating-db2-databases-to-sql-server-db2tosql.md)
-- [Map Db2 Schemas to SQL Server Schemas (Db2ToSQL)](mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)
-- [Project Settings (Conversion) (Db2ToSQL)](project-settings-conversion-db2tosql.md)
-- [Map Db2 and SQL Server Data Types (Db2ToSQL)](mapping-db2-and-sql-server-data-types-db2tosql.md)
-- [Convert Db2 schemas (Db2ToSQL)](converting-db2-schemas-db2tosql.md)
+- [Migrate Db2 databases to SQL Server](migrating-db2-databases-to-sql-server-db2tosql.md)
+- [Map Db2 schemas to SQL Server schemas](mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)
+- [Project Settings (Conversion)](project-settings-conversion-db2tosql.md)
+- [Map Db2 and SQL Server data types](mapping-db2-and-sql-server-data-types-db2tosql.md)
+- [Convert Db2 schemas](converting-db2-schemas-db2tosql.md)

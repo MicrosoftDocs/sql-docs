@@ -186,5 +186,6 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](./overview-and-usage-scenarios.md)  
+## Related content
+
+- [In-Memory OLTP overview and usage scenarios](overview-and-usage-scenarios.md)

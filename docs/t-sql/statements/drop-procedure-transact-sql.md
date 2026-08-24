@@ -107,5 +107,4 @@ GO
 - [CREATE PROCEDURE (Transact-SQL)](create-procedure-transact-sql.md)
 - [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)
 - [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
-- [Delete a Stored Procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)
-
+- [Delete a stored procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)

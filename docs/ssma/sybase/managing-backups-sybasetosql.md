@@ -86,6 +86,6 @@ The following buttons are available on the dialog:
   
 -   Click the **Close** button to close the dialog.  
   
-## See Also  
-[Testing Migrated Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
-  
+## Related content
+
+- [Testing Migrated Database Objects](testing-migrated-database-objects-sybasetosql.md)

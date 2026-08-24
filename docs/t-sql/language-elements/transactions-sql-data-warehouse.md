@@ -178,4 +178,4 @@ COMMIT;
 
 - [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../statements/set-implicit-transactions-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../statements/set-transaction-isolation-level-transact-sql.md)
-- [&#x40;&#x40;TRANCOUNT (Transact-SQL)](../functions/trancount-transact-sql.md)
+- [@@TRANCOUNT (Transact-SQL)](../functions/trancount-transact-sql.md)

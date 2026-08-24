@@ -81,7 +81,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)
-- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)
-- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
-- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
+- [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)
+- [Heterogeneous Database Replication](../non-sql/heterogeneous-database-replication.md)
+- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)
+- [Configure an Oracle Publisher](../non-sql/configure-an-oracle-publisher.md)

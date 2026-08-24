@@ -21,7 +21,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;LANGID (Transact-SQL)
+# @@LANGID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   Returns the local language identifier (ID) of the language that is currently being used.  
@@ -57,10 +57,7 @@ Language ID
 6            
 ```  
   
-## See Also  
- 
- [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
-  
-  
+## Related content
 
+- [SET LANGUAGE (Transact-SQL)](../statements/set-language-transact-sql.md)
+- [sys.sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)

@@ -54,8 +54,7 @@ CEILING(0.00)
   
  Returns 0.00  
   
-## See Also  
- [FLOOR &#40;SSIS Expression&#41;](../../integration-services/expressions/floor-ssis-expression.md)   
- [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
-  
-  
+## Related content
+
+- [FLOOR (SSIS Expression)](floor-ssis-expression.md)
+- [Functions (SSIS Expression)](functions-ssis-expression.md)

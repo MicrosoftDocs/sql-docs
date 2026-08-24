@@ -120,13 +120,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  GO
  ```  
   
-## See Also  
- [GRANT XML Schema Collection Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [DENY XML Schema Collection Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
-  
-  
+## Related content
 
+- [GRANT XML Schema Collection Permissions (Transact-SQL)](grant-xml-schema-collection-permissions-transact-sql.md)
+- [DENY XML Schema Collection Permissions (Transact-SQL)](deny-xml-schema-collection-permissions-transact-sql.md)
+- [sys.xml_schema_collections (Transact-SQL)](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)
+- [CREATE XML SCHEMA COLLECTION (Transact-SQL)](create-xml-schema-collection-transact-sql.md)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)

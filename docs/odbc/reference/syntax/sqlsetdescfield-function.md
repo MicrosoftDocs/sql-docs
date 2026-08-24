@@ -536,6 +536,7 @@ SQLRETURN SQLSetDescField(
 |Getting multiple descriptor fields|[SQLGetDescRec Function](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Setting multiple descriptor fields|[SQLSetDescRec Function](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## See Also  
- [ODBC Header Files](../../../odbc/reference/install/odbc-header-files.md)   
- [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)
+## Related content
+
+- [ODBC Header Files](../install/odbc-header-files.md)
+- [ODBC API reference](odbc-api-reference.md)

@@ -232,9 +232,9 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## See also  
- - [Use column sets](../../relational-databases/tables/use-column-sets.md)   
- - [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- - [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+## Related content
 
+- [Use column sets](use-column-sets.md)
+- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
+- [sys.columns (Transact-SQL)](../system-catalog-views/sys-columns-transact-sql.md)

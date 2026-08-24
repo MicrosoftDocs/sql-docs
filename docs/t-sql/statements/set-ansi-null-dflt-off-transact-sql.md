@@ -137,11 +137,9 @@ DROP TABLE t1, t2, t3, t4, t5, t6;
   
 ```  
   
-## See Also  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)  
-  
-  
+## Related content
 
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
+- [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
+- [SET ANSI_NULL_DFLT_ON (Transact-SQL)](set-ansi-null-dflt-on-transact-sql.md)

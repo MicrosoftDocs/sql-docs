@@ -14,7 +14,6 @@ ms.topic: reference
 
   For more information on the SQLServerDataSource constructors, see [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md).  
   
-## See Also  
- [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDataSource Class](sqlserverdatasource-class.md)

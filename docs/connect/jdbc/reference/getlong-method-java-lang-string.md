@@ -40,9 +40,8 @@ public long getLong(java.lang.String sCol)
   
  This method is supported only on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types that can safely return an integer value such as **bigint**, **int**, **smallint**, **tinyint**, and **bit**. Using this method on any other data types will cause an exception to be thrown.  
   
-## See Also  
- [getLong Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [getLong Method (SQLServerCallableStatement)](getlong-method-sqlservercallablestatement.md)
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

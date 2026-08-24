@@ -74,9 +74,9 @@ ORDER BY    table_nm
 
 Requires **VIEW SERVER STATE** permission.
 
-## See Also
+## Related content
 
-[Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-[sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
-[sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
+- [sys.pdw_nodes_column_store_row_groups (Transact-SQL)](sys-pdw-nodes-column-store-row-groups-transact-sql.md)
+- [sys.pdw_nodes_column_store_dictionaries (Transact-SQL)](sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

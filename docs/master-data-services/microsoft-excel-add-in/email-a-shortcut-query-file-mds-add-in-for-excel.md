@@ -32,9 +32,6 @@ ms.custom:
   
 2.  In the **Save and Send** group, click **Send Query**. An email message opens and the shortcut query file is attached.  
   
-## Next Steps  
-  
--   To open the shortcut query file, the recipient of the email must have the MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] installed. The recipient can double-click the file to open it.  
-  
-## See Also  
- [Shortcut Query Files &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)
+## Related content
+
+- [Shortcut Query Files (MDS Add-in for Excel)](shortcut-query-files-mds-add-in-for-excel.md)

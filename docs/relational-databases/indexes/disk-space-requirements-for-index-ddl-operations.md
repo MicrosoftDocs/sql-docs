@@ -88,6 +88,5 @@ Online index operations use row versioning to isolate the index operation from t
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
 - [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
 - [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)
-- [Specify Fill Factor for an Index](specify-fill-factor-for-an-index.md)
+- [Specify fill factor for an index](specify-fill-factor-for-an-index.md)
 - [Optimize index maintenance to improve query performance and reduce resource consumption](reorganize-and-rebuild-indexes.md)
-

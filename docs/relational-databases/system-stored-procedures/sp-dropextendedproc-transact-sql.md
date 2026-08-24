@@ -73,6 +73,6 @@ EXECUTE sp_dropextendedproc 'xp_hello';
 
 ## Related content
 
-- [sp_addextendedproc (Transact-SQL)](sp-addextendedproc-transact-sql.md)
-- [sp_helpextendedproc (Transact-SQL)](sp-helpextendedproc-transact-sql.md)
+- [sys.sp_addextendedproc (Transact-SQL)](sp-addextendedproc-transact-sql.md)
+- [sys.sp_helpextendedproc (Transact-SQL)](sp-helpextendedproc-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

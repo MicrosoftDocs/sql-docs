@@ -28,7 +28,6 @@ helpviewer_keywords:
   
  When connected to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], executing a statement with these characteristics using a server cursor causes the cursor being converted to a default result set. When connected to earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], it causes an error.  
   
-## See Also  
- [How Cursors Are Implemented](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
-  
-  
+## Related content
+
+- [How Cursors Are Implemented](how-cursors-are-implemented.md)

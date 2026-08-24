@@ -103,12 +103,11 @@ ALTER DATABASE pubs SET RECOVERY SIMPLE;
 GO  
 ```  
   
-## See Also  
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)  
-  
-  
+## Related content
+
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../language-elements/declare-local-variable-transact-sql.md)
+- [DELETE (Transact-SQL)](../statements/delete-transact-sql.md)
+- [SELECT (Transact-SQL)](select-transact-sql.md)
+- [SET Statements (Transact-SQL)](../statements/set-statements-transact-sql.md)
+- [UPDATETEXT (Transact-SQL)](updatetext-transact-sql.md)

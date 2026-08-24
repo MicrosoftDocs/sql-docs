@@ -115,14 +115,13 @@ FROM DimEmployee
 ORDER BY TotalHoursAway ASC;  
 ```  
   
-## See Also  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [+= &#40;Addition Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  
+## Related content
+
+- [Operators (Transact-SQL)](operators-transact-sql.md)
+- [Compound operators (Transact-SQL)](compound-operators-transact-sql.md)
+- [+= (Addition assignment) (Transact-SQL)](add-equals-transact-sql.md)
+- [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)
+- [Data type conversion (Database Engine)](../data-types/data-type-conversion-database-engine.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [What are the SQL database functions?](../functions/functions.md)
+- [SELECT (Transact-SQL)](../queries/select-transact-sql.md)

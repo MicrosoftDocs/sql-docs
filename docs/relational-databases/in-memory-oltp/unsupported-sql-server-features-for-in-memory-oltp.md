@@ -79,6 +79,6 @@ In the following table, _version_ values such as `(15.x)` refer to the value tha
 | :----------- | :-------------------- | :------- |
 | Database snapshots | 2019 (15.x) | Database snapshots are now supported for databases that have a MEMORY_OPTIMIZED_DATA filegroup. |
 
-## See Also
+## Related content
 
-- [SQL Server Support for In-Memory OLTP](./transact-sql-support-for-in-memory-oltp.md)
+- [Transact-SQL Support for In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)

@@ -204,4 +204,4 @@ For a summary of common tasks for creating and maintaining columnstore indexes, 
 
 - [What's new in columnstore indexes](columnstore-indexes-what-s-new.md)
 - [Columnstore indexes in data warehousing](columnstore-indexes-data-warehouse.md)
-- [Columnstore indexes - Query performance](columnstore-indexes-query-performance.md)
+- [Columnstore indexes - query performance](columnstore-indexes-query-performance.md)

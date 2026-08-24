@@ -99,9 +99,8 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## See Also  
- [Contained Databases](../../relational-databases/databases/contained-databases.md)   
- [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
- [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
-  
-  
+## Related content
+
+- [Contained Databases](contained-databases.md)
+- [sp_migrate_user_to_contained (Transact-SQL)](../system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+- [sys.dm_db_uncontained_entities (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-uncontained-entities-transact-sql.md)

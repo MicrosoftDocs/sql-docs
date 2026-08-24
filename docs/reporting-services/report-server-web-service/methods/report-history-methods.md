@@ -27,7 +27,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
-- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)
-- [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)
-- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)
+- [Building Applications Using the Web Service and the .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Report Server Web service](../report-server-web-service.md)
+- [Report Server Web service methods](report-server-web-service-methods.md)
+- [Technical reference (SSRS)](../../technical-reference-ssrs.md)

@@ -134,6 +134,6 @@ While you can view the running value for automatic soft-NUMA using [sp_configure
 ## Related content
 
 - [Map TCP IP Ports to NUMA Nodes (SQL Server)](map-tcp-ip-ports-to-numa-nodes-sql-server.md)
-- [affinity mask (server configuration option)](affinity-mask-server-configuration-option.md)
+- [Server configuration: affinity mask](affinity-mask-server-configuration-option.md)
 - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
-- [sys.dm_os_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql.md)
+- [sys.dm_os_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-nodes-transact-sql.md)

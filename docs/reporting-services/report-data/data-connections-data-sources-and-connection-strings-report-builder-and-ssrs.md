@@ -81,7 +81,7 @@ Data source expressions are processed at run time or when a report is previewed.
 
 ## Related content
 
-- [Intro to report data in SQL Server Reporting Services (SSRS)](report-data-ssrs.md)
-- [Create and modify shared data sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
-- [Create and modify embedded data sources](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)
+- [Intro to Report Data in SQL Server Reporting Services (SSRS)](report-data-ssrs.md)
+- [Create, Modify, and Delete Shared Data Sources (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)
+- [Create and Modify Embedded Data Sources](create-and-modify-embedded-data-sources.md)
 - [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

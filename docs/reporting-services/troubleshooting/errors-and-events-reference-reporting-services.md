@@ -55,5 +55,5 @@ The following report server events are recorded in the [!INCLUDE[msCoName](../..
   
 ## Related content
 
-- [Monitor Reporting Services subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
-- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
+- [Monitor Reporting Services subscriptions](../subscriptions/monitor-reporting-services-subscriptions.md)
+- [Reporting Services log files and sources](../report-server/reporting-services-log-files-and-sources.md)

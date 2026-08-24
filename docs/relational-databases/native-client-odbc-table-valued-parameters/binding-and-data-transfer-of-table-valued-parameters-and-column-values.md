@@ -88,6 +88,6 @@ For variable row binding, rows are transferred in batches at execution time, and
 
 6. Calls SQLParamData again. If there are any data-at-execution parameters among the table-valued parameter columns, these are identified by the value *ValuePtrPtr* returned by SQLParamData. When all column values are available, SQLParamData returns the *ParameterValuePtr* value for the table-valued parameter, and the application begins again.  
 
-## Next steps
+## Related content
 
-[Table-Valued Parameters ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)
+- [Table-Valued Parameters (ODBC)](table-valued-parameters-odbc.md)

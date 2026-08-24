@@ -155,10 +155,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)
-- [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)
-- [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)
-- [ALTER FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-function-transact-sql.md)
-- [ALTER TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-trigger-transact-sql.md)
-- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
-- [Regenerate Custom Transactional Procedures to Reflect Schema Changes](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)
+- [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)
+- [ALTER VIEW (Transact-SQL)](../../../t-sql/statements/alter-view-transact-sql.md)
+- [ALTER PROCEDURE (Transact-SQL)](../../../t-sql/statements/alter-procedure-transact-sql.md)
+- [ALTER FUNCTION (Transact-SQL)](../../../t-sql/statements/alter-function-transact-sql.md)
+- [ALTER TRIGGER (Transact-SQL)](../../../t-sql/statements/alter-trigger-transact-sql.md)
+- [Publish Data and Database Objects](publish-data-and-database-objects.md)
+- [Transactional articles - Regenerate custom procedures to reflect schema changes](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)

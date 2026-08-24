@@ -123,8 +123,6 @@ helpviewer_keywords:
 |12|Seconds are set to zero and fractional seconds are discarded. No truncation error is possible.|  
 |N/A|Existing [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and earlier behavior is maintained.|  
   
-## See Also     
- [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
-  
-  
+## Related content
 
+- [Date and Time Improvements in OLE DB](date-and-time-improvements-ole-db.md)

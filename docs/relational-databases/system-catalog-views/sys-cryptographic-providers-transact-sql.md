@@ -35,10 +35,9 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ## Permissions  
  The **sys.cryptographic_providers** view is visible to the public.  
   
-## See Also  
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)  
-  
-  
+## Related content
+
+- [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
+- [Encryption hierarchy](../security/encryption/encryption-hierarchy.md)
+- [Extensible Key Management (EKM)](../security/encryption/extensible-key-management-ekm.md)
+- [CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)

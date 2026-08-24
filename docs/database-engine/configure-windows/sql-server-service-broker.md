@@ -47,7 +47,7 @@ The messages in the queues can be fetched using the Transact-SQL `RECEIVE` comma
 
 ```sql
 /*
-In this example, the initiator must then use ON CONTRACT [DEFAULT] and a MESSAGE TYPE [DEFAULT]. [DEFAULT] is a delimited identifier for the built‑in contract and isn't a T‑SQL keyword, so it must be bracketed or quoted.
+In this example, the initiator must then use ON CONTRACT [DEFAULT] and a MESSAGE TYPE [DEFAULT]. [DEFAULT] is a delimited identifier for the built-in contract and isn't a T-SQL keyword, so it must be bracketed or quoted.
 */
 CREATE QUEUE dbo.ExpenseQueue;
 GO
@@ -153,7 +153,7 @@ For more information, see [Service Broker with Always On Availability Groups (SQ
 
 ## Related content
 
-- [event notifications](../../relational-databases/service-broker/event-notifications.md)
-- [implement event notifications](../../relational-databases/service-broker/implement-event-notifications.md)
-- [configure dialog security](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)
-- [get more information](../../relational-databases/service-broker/get-information-about-event-notifications.md)
+- [Event notifications](../../relational-databases/service-broker/event-notifications.md)
+- [Implement Event Notifications](../../relational-databases/service-broker/implement-event-notifications.md)
+- [Configure Dialog Security for Event Notifications](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)
+- [Get Information About Event Notifications](../../relational-databases/service-broker/get-information-about-event-notifications.md)

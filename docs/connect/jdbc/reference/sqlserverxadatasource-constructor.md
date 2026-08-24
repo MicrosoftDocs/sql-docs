@@ -24,9 +24,8 @@ apitype: "Assembly"
 public SQLServerXADataSource()  
 ```  
   
-## See Also  
- [SQLServerXADataSource Constructors](../../../connect/jdbc/reference/sqlserverxadatasource-constructors.md)   
- [SQLServerXADataSource Members](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
- [SQLServerXADataSource Class](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  
-  
-  
+## Related content
+
+- [SQLServerXADataSource Constructors](sqlserverxadatasource-constructors.md)
+- [SQLServerXADataSource Members](sqlserverxadatasource-members.md)
+- [SQLServerXADataSource Class](sqlserverxadatasource-class.md)

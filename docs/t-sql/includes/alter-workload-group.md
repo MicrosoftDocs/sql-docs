@@ -196,5 +196,5 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 - [ALTER RESOURCE POOL (Transact-SQL)](../statements/alter-resource-pool-transact-sql.md)
 - [DROP RESOURCE POOL (Transact-SQL)](../statements/drop-resource-pool-transact-sql.md)
 - [ALTER RESOURCE GOVERNOR (Transact-SQL)](../statements/alter-resource-governor-transact-sql.md)
-- [sys.resource_governor_workload_groups](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)
-- [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)
+- [sys.resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)
+- [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md)

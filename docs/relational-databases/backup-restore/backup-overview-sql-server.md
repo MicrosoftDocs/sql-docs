@@ -139,8 +139,8 @@ If a backup operation overlaps with a file-management operation or shrink operat
 
 ## Related content
 
-- [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)
+- [Back up and restore of SQL Server databases](back-up-and-restore-of-sql-server-databases.md)
 - [Restore and recovery overview (SQL Server)](restore-and-recovery-overview-sql-server.md)
 - [Maintenance plans](../maintenance-plans/maintenance-plans.md)
 - [The transaction log](../logs/the-transaction-log-sql-server.md)
-- [Recovery Models (SQL Server)](recovery-models-sql-server.md)
+- [Recovery models (SQL Server)](recovery-models-sql-server.md)

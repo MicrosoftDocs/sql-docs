@@ -36,8 +36,8 @@ public boolean supportsANSI92IntermediateSQL()
 
 This supportsANSI92IntermediateSQL method is specified by the supportsANSI92IntermediateSQL method in the java.sql.DatabaseMetaData interface.
 
-## See also
+## Related content
 
-[SQLServerDatabaseMetaData Methods](sqlserverdatabasemetadata-methods.md)  
-[SQLServerDatabaseMetaData Members](sqlserverdatabasemetadata-members.md)  
-[SQLServerDatabaseMetaData Class](sqlserverdatabasemetadata-class.md)
+- [SQLServerDatabaseMetaData Methods](sqlserverdatabasemetadata-methods.md)
+- [SQLServerDatabaseMetaData Members](sqlserverdatabasemetadata-members.md)
+- [SQLServerDatabaseMetaData Class](sqlserverdatabasemetadata-class.md)

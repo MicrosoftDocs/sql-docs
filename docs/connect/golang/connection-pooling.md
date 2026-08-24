@@ -272,8 +272,8 @@ func recordPoolMetrics(ctx context.Context, db *sql.DB) {
 
 ## Related content
 
-- [Performance tuning](performance-tuning.md)
-- [Concurrent programming](concurrent-programming.md)
-- [Connection options](connection-options.md)
-- [Azure SQL Database](azure-sql.md)
-- [Troubleshooting](troubleshooting.md)
+- [Performance tuning with go-mssqldb](performance-tuning.md)
+- [Concurrent programming with go-mssqldb](concurrent-programming.md)
+- [go-mssqldb connection options](connection-options.md)
+- [Use go-mssqldb with Azure SQL Database](azure-sql.md)
+- [Troubleshoot the go-mssqldb driver](troubleshooting.md)

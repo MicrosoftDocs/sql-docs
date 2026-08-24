@@ -72,10 +72,10 @@ f1_keywords:
   
 ## Related content
 
-- [Change the order of a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)
-- [Add, change, or delete a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)
-- [Add cascading parameters to a report &#40;Report Builder&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)
-- [Add, change, or delete default values for a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)
-- [Parameters collection references &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)
-- [Tutorial: Add a parameter to your report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)
-- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Change the order of a paginated report parameter (Report Builder)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)
+- [Add, change, or delete a paginated report parameter (Report Builder)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)
+- [Add cascading parameters to a paginated report (Report Builder)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)
+- [Add, change, or delete default values for a paginated report parameter (Report Builder)](add-change-or-delete-default-values-for-a-report-parameter.md)
+- [Parameters collection references in a paginated report (Report Builder)](built-in-collections-parameters-collection-references-report-builder.md)
+- [Tutorial: Add parameters to your report (Report Builder)](../tutorial-add-a-parameter-to-your-report-report-builder.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)

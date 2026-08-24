@@ -20,7 +20,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# &#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
+# @@LOCK_TIMEOUT (Transact-SQL)
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 

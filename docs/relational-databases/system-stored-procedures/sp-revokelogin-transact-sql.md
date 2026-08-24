@@ -82,7 +82,7 @@ EXECUTE sp_revokelogin [Corporate\MollyA];
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
 - [DROP LOGIN (Transact-SQL)](../../t-sql/statements/drop-login-transact-sql.md)
-- [sp_denylogin (Transact-SQL)](sp-denylogin-transact-sql.md)
-- [sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)
-- [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
+- [sys.sp_denylogin (Transact-SQL)](sp-denylogin-transact-sql.md)
+- [sys.sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)
+- [sys.sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

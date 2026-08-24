@@ -55,9 +55,8 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
  **Recompile**  
  Indicates if the object was created with the RECOMPILE option.  
   
-## See Also  
- [Stored Procedures &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
-  
-  
+## Related content
+
+- [Stored procedures (Database Engine)](stored-procedures-database-engine.md)
+- [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
+- [ALTER PROCEDURE (Transact-SQL)](../../t-sql/statements/alter-procedure-transact-sql.md)

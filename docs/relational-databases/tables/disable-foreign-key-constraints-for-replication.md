@@ -85,9 +85,8 @@ Requires ALTER permission on the table.
     GO
     ```
   
-## Next steps
- - [ALTER TABLE table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)
- - [Script objects in SQL Server Management Studio](/ssms/tutorials/scripting-ssms)
- - [Frequently Asked Questions for Replication Administrators](../replication/administration/frequently-asked-questions-for-replication-administrators.yml)
-  
+## Related content
 
+- [ALTER TABLE table_constraint (Transact-SQL)](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)
+- [Script objects in SQL Server Management Studio](/ssms/tutorials/scripting-ssms)
+- [Frequently Asked Questions for Replication Administrators](../replication/administration/frequently-asked-questions-for-replication-administrators.yml)

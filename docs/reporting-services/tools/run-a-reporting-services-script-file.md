@@ -47,4 +47,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)
+- [Technical reference (SSRS)](../technical-reference-ssrs.md)

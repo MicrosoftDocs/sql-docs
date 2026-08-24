@@ -53,6 +53,6 @@ GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 ```
 
-## Next steps
+## Related content
 
-For more information about the permissions included in each role, see [Database-level roles](../../relational-databases/security/authentication-access/database-level-roles.md).
+- [Database-level roles](../../relational-databases/security/authentication-access/database-level-roles.md)

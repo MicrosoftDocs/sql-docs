@@ -96,5 +96,5 @@ There are several options available when initializing a subscription with a snap
 
 ## Related content
 
-- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)
-- [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)
+- [Initialize a Subscription](initialize-a-subscription.md)
+- [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md)

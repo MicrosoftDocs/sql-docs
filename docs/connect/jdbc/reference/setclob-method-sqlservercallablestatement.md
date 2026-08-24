@@ -22,8 +22,7 @@ ms.topic: reference
 |[setClob Method &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|Sets the designated parameter to the specified Reader object.|  
 |[setClob Method &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader-long.md)|Sets the designated parameter to the specified Reader object, which is the specified number of characters long.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

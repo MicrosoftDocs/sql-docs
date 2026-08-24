@@ -33,11 +33,10 @@ dev_langs:
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## See Also  
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
-  
+## Related content
+
+- [sys.objects (Transact-SQL)](sys-objects-transact-sql.md)
+- [sys.spatial_index_tessellations (Transact-SQL)](sys-spatial-index-tessellations-transact-sql.md)
+- [sys.indexes (Transact-SQL)](sys-indexes-transact-sql.md)
+- [sys.index_columns (Transact-SQL)](sys-index-columns-transact-sql.md)
+- [Spatial Indexes Overview](../spatial/spatial-indexes-overview.md)

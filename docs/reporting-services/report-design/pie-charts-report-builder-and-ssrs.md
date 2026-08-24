@@ -81,10 +81,10 @@ ms.custom:
   
 ## Related content
 
-- [Display Data Point Labels Outside a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)
-- [Collect Small Slices on a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)
-- [Display Percentage Values on a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)
-- [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)
-- [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)
-- [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
-- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)
+- [Display data point labels outside a pie chart in a paginated report (Report Builder)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)
+- [Collect small slices on a paginated report pie chart (Report Builder)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)
+- [Display percentage values on a pie chart in a Report Builder paginated report](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)
+- [Tutorial: Add a pie chart to your report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+- [Chart legend - formatting the legend on a paginated report chart (Report Builder)](chart-legend-formatting-report-builder.md)
+- [Empty and null data points in paginated report charts (Report Builder)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
+- [Formatting series colors on a paginated report chart (Report Builder)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)

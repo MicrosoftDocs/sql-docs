@@ -2541,9 +2541,9 @@ After the split, the `OrdersHistory` table has the following partitions:
 
 ## Related content
 
-- [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)
-- [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
-- [sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+- [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)
+- [sys.sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+- [sys.sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](create-table-transact-sql.md)
 - [DROP TABLE (Transact-SQL)](drop-table-transact-sql.md)

@@ -33,6 +33,6 @@ HRESULT IServerVirtualDevice::CloseDevice ();
 
 CloseDevice is not required after SignalAbort is used to force abnormal termination. If CloseDevice is invoked after SignalAbort is used, no action is taken.
 
-## Next steps
+## Related content
 
-For more information, see the [SQL Server virtual device interface reference overview](reference-virtual-device-interface.md).
+- [Virtual device interface (VDI) reference](reference-virtual-device-interface.md)

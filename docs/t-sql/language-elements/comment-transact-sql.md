@@ -68,7 +68,6 @@ ORDER BY PostalCode ASC; -- We do not have to specify ASC because
 GO  
 ```  
   
-## See Also  
- [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
-  
-  
+## Related content
+
+- [Control-of-Flow](control-of-flow.md)

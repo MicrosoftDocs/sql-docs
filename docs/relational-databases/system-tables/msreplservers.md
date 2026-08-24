@@ -31,7 +31,7 @@ This table was introduced in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md
 | **srvid** | **smallint** | ID of the remote server. |
 | **srvname** | **sysname** | Name of the server. May be a listener record if appropriate. |
 
-## See also
+## Related content
 
 - [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
 - [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)

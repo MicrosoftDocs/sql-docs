@@ -104,7 +104,7 @@ Only members of the **db_owner** fixed database role in the publication database
 ## Related content
 
 - [View and Modify Article Properties](../replication/publish/view-and-modify-article-properties.md)
-- [sp_addmergearticle (Transact-SQL)](sp-addmergearticle-transact-sql.md)
-- [sp_changemergearticle (Transact-SQL)](sp-changemergearticle-transact-sql.md)
-- [sp_dropmergearticle (Transact-SQL)](sp-dropmergearticle-transact-sql.md)
+- [sys.sp_addmergearticle (Transact-SQL)](sp-addmergearticle-transact-sql.md)
+- [sys.sp_changemergearticle (Transact-SQL)](sp-changemergearticle-transact-sql.md)
+- [sys.sp_dropmergearticle (Transact-SQL)](sp-dropmergearticle-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

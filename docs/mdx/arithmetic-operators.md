@@ -34,8 +34,7 @@ ms.custom: mdx
   
 -   Expressions within parentheses take precedence over all other operations.  
   
-## See Also  
- [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operators &#40;MDX Syntax&#41;](../mdx/operators-mdx-syntax.md)  
-  
-  
+## Related content
+
+- [MDX Operator Reference (MDX)](mdx-operator-reference-mdx.md)
+- [Operators (MDX Syntax)](operators-mdx-syntax.md)

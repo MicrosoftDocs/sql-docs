@@ -55,7 +55,7 @@ Enter the key for the Azure storage account.
  **Use first row as column names**  
  Specify whether the first row of data contains column names.  
 
-## See also
-[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+## Related content
 
+- [Choose a Data Source (SQL Server Import and Export Wizard)](choose-a-data-source-sql-server-import-and-export-wizard.md)
+- [Choose a Destination (SQL Server Import and Export Wizard)](choose-a-destination-sql-server-import-and-export-wizard.md)

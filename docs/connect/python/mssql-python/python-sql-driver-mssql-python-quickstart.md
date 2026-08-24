@@ -315,13 +315,12 @@ Execute an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement 
    Inserted Product ID : 1001
    ```
 
-## Next steps
-
-Use these articles to keep building:
-
-- [Connection strings](connection-strings.md) to adapt the sample for local SQL Server, Azure SQL, containers, and named instances.
-- [Connection management](connection-management.md) to use context managers, pooling, and connection settings.
-- [Troubleshooting](troubleshooting.md) to diagnose authentication, certificate, and connectivity problems.
+## Next step
 
 > [!div class="nextstepaction"]
 > [Connection strings](connection-strings.md)
+
+## Related content
+
+- [Manage connections with mssql-python](connection-management.md)
+- [Troubleshoot mssql-python](troubleshooting.md)

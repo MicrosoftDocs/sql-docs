@@ -23,7 +23,6 @@ helpviewer_keywords:
   
  Bookmarks can also be used with the **SQLBulkOperations** function to perform operations on a set of rows starting at the bookmark.  
   
-## See Also  
- [Scrolling and Fetching Rows](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md)  
-  
-  
+## Related content
+
+- [Scrolling and Fetching Rows](scrolling-and-fetching-rows.md)

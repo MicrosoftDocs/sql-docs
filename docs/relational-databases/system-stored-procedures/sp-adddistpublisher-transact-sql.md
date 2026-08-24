@@ -138,8 +138,8 @@ Only members of the **sysadmin** fixed server role can execute `sp_adddistpublis
 ## Related content
 
 - [Configure Publishing and Distribution](../replication/configure-publishing-and-distribution.md)
-- [sp_changedistpublisher (Transact-SQL)](sp-changedistpublisher-transact-sql.md)
-- [sp_dropdistpublisher (Transact-SQL)](sp-dropdistpublisher-transact-sql.md)
-- [sp_helpdistpublisher (Transact-SQL)](sp-helpdistpublisher-transact-sql.md)
+- [sys.sp_changedistpublisher (Transact-SQL)](sp-changedistpublisher-transact-sql.md)
+- [sys.sp_dropdistpublisher (Transact-SQL)](sp-dropdistpublisher-transact-sql.md)
+- [sys.sp_helpdistpublisher (Transact-SQL)](sp-helpdistpublisher-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Configure Distribution](../replication/configure-distribution.md)

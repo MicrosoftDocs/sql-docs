@@ -59,6 +59,6 @@ SQLSETPOSIROW Size.: 8
 
 *User DSNs* are only available to a specific user. User DSNs are stored in a file in the user's home directory, or a subdirectory. *System DSNs* are available for every user on the system, but can only be added, modified, and removed by a system administrator. If a user has a user DSN with the same name as a system DSN, the user DSN will be used upon connections by that user. For more information, see the [unixODBC documentation](http://www.unixodbc.org/doc/UserManual/).
 
-## See also
+## Related content
 
-- [Programming guidelines](programming-guidelines.md)
+- [Programming Guidelines](programming-guidelines.md)

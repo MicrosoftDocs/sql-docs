@@ -123,4 +123,3 @@ EXECUTE sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2022', 1;
 
 - [Catalog stored procedures (Transact-SQL)](catalog-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

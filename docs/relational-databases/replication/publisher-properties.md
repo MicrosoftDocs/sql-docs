@@ -70,5 +70,5 @@ The **Publisher Properties** dialog box allows you to view and modify properties
   
 ## Related content
 
-- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
-- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)
+- [Create a publication](publish/create-a-publication.md)

@@ -73,7 +73,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 1252   
 ```  
   
-## See also
-[sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-[Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)  
+## Related content
 
+- [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
+- [Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)

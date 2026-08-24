@@ -35,9 +35,8 @@ public int getDefaultTransactionIsolation()
   
  When using the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, this method returns either a value of TRANSACTION_READ_COMMITTED, or the **int** value 2.  
   
-## See Also  
- [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
- [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDatabaseMetaData Methods](sqlserverdatabasemetadata-methods.md)
+- [SQLServerDatabaseMetaData Members](sqlserverdatabasemetadata-members.md)
+- [SQLServerDatabaseMetaData Class](sqlserverdatabasemetadata-class.md)

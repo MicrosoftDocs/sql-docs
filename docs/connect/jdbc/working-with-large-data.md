@@ -29,6 +29,6 @@ The **adaptive** value is the default buffering mode and the JDBC driver buffers
 | [Reading large data with stored procedures sample](reading-large-data-with-stored-procedures-sample.md) | Describes how to retrieve a large CallableStatement OUT parameter value. |
 | [Updating large data sample](updating-large-data-sample.md)                                             | Describes how to update a large-value data in a database.                |
 
-## See also
+## Related content
 
-[Sample JDBC driver applications](sample-jdbc-driver-applications.md)
+- [Sample JDBC driver applications](sample-jdbc-driver-applications.md)

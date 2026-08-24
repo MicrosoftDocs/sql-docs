@@ -111,4 +111,3 @@ This query returns the value of the first `<last-name>` element in each XML inst
 ## Related content
 
 - [xml Data Type Methods](xml-data-type-methods.md)
-

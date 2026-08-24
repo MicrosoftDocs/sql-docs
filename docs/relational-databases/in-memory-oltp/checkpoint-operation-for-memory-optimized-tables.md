@@ -23,7 +23,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  For memory-optimized tables, an automatic checkpoint is taken when transaction log file becomes bigger than 1.5 GB since the last checkpoint. This 1.5 GB size  includes transaction log records for both disk-based and memory-optimized tables.  
   
-## See Also  
- [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
-  
+## Related content
+
+- [Create and manage storage for memory-optimized objects](creating-and-managing-storage-for-memory-optimized-objects.md)

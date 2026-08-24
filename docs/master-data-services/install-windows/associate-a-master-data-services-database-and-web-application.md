@@ -44,12 +44,10 @@ ms.custom:
   
 8.  Under **Associate Application with Database**, verify that the instance and database information are correct, and then click **Apply**.  
   
-## Next Steps  
-  
--   Programmatic access to [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] web services is automatically enabled when the web application is created. To let developers access the service metadata to easily generate proxy classes for programmatic access, enable metadata publishing. For more information, see [Create Master Data Manager Web Service Proxy Classes](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md).  
-  
--   Add users and groups to [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. If no users or groups have been granted access to [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], you must open [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] using the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] system administrator credentials. For more information, see [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md) and [Users and Groups &#40;Master Data Services&#41;](../../master-data-services/users-and-groups-master-data-services.md).  
-  
-## See Also  
- [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
- [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)
+## Related content
+
+- [Installation Tasks for Master Data Services](install-master-data-services.md)
+- [Web Configuration Page (Master Data Services Configuration Manager)](../web-configuration-page-master-data-services-configuration-manager.md)
+- [Create Master Data Manager Web Service Proxy Classes](../develop/create-master-data-manager-web-service-proxy-classes.md)
+- [Administrators (Master Data Services)](../administrators-master-data-services.md)
+- [Users and Groups (Master Data Services)](../users-and-groups-master-data-services.md)

@@ -51,7 +51,6 @@ HRESULT Commit(
   
  The consumer can batch inserted rows by calling the **Commit** method with the *fDone* argument set to FALSE. When *fDone*is set to TRUE, the rowset becomes invalid. An invalid bulk copy rowset supports only the **ISupportErrorInfo** interface and **IRowsetFastLoad::Release** method.  
   
-## See Also  
- [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
-  
-  
+## Related content
+
+- [IRowsetFastLoad (Native Client OLE DB Provider)](irowsetfastload-ole-db.md)

@@ -428,7 +428,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ## Related content
 
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
-- [bcp Utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
 - [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
 - [Table hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)

@@ -24,9 +24,8 @@ apitype: "Assembly"
 public SQLServerDriver()  
 ```  
   
-## See Also  
- [SQLServerDriver Constructors](../../../connect/jdbc/reference/sqlserverdriver-constructors.md)   
- [SQLServerDriver Members](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [SQLServerDriver Class](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDriver Constructors](sqlserverdriver-constructors.md)
+- [SQLServerDriver Members](sqlserverdriver-members.md)
+- [SQLServerDriver Class](sqlserverdriver-class.md)

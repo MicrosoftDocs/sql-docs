@@ -91,7 +91,7 @@ In this case precision is `61`, and scale is `20`.
 
 Scale is greater than 6 and the integral part (`precision-scale = 41`) is greater than 32. This case is the third case in the multiplication rules, and the result type is **decimal(38, 6)**.
 
-## See also
+## Related content
 
-- [Expressions (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)
-- [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+- [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
+- [Data types (Transact-SQL)](data-types-transact-sql.md)

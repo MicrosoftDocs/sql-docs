@@ -138,11 +138,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ### database_uncontained_usage event  
  This XEvent occurs whenever an uncontained entity is identified at run time. This includes entities originated in client code. This XEvent will occur only for actual uncontained entities. However, the event only occurs at run time. Therefore, any uncontained user entities you have not run will not be identified by this XEvent  
   
-## See Also  
- [Modified Features &#40;Contained Database&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
- [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
-  
-  
+## Related content
+
+- [Modified Features (Contained Database)](modified-features-contained-database.md)
+- [Contained database collations](contained-database-collations.md)
+- [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md)
+- [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)
+- [Make your database portable by using contained databases](../security/contained-database-users-making-your-database-portable.md)

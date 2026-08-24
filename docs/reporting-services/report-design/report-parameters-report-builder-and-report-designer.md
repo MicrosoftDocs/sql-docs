@@ -226,6 +226,6 @@ A secure alternative to setting parameters for employee or personal data is to s
 
 ## Related content
 
-- [Tutorial: Add a parameter to your report (Report Builder)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)
-- [Report parameters concepts in paginated reports (Report Builder)](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)
-- [Tools available in SQL Server Reporting Services](../../reporting-services/tools/reporting-services-tools.md)
+- [Tutorial: Add parameters to your report (Report Builder)](../tutorial-add-a-parameter-to-your-report-report-builder.md)
+- [Report parameters concepts in paginated reports (Report Builder)](report-parameters-concepts-report-builder-and-ssrs.md)
+- [SQL Server Reporting Services tools](../tools/reporting-services-tools.md)

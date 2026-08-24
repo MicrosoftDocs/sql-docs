@@ -59,5 +59,5 @@ Requires membership in the **public** role.
 
 - [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](full-text-search-and-semantic-search-stored-procedures-transact-sql.md)
 - [sys.fulltext_catalogs (Transact-SQL)](../system-catalog-views/sys-fulltext-catalogs-transact-sql.md)
-- [sp_help_fulltext_system_components (Transact-SQL)](sp-help-fulltext-system-components-transact-sql.md)
+- [sys.sp_help_fulltext_system_components (Transact-SQL)](sp-help-fulltext-system-components-transact-sql.md)
 - [Full-Text Search](../search/full-text-search.md)

@@ -119,6 +119,6 @@ If one of the following connection-attribute IDs or connection string keywords i
     |`SQL_COPT_SS_USER_DATA`|Yes|Yes|
     |`SQL_COPT_SS_WARN_ON_CP_ERROR`|Yes|Yes|
 
-## See Also
+## Related content
 
-[Microsoft ODBC Driver for SQL Server on Windows](microsoft-odbc-driver-for-sql-server-on-windows.md)
+- [Microsoft ODBC Driver for SQL Server on Windows](microsoft-odbc-driver-for-sql-server-on-windows.md)

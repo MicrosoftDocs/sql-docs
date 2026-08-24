@@ -394,6 +394,6 @@ GO
 
 - [sys.dm_tran_database_transactions (Transact-SQL)](sys-dm-tran-database-transactions-transact-sql.md)
 - [Transaction locking and row versioning guide](../sql-server-transaction-locking-and-row-versioning-guide.md)
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)
 - [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)
 - [SQL Server, Locks object](../performance-monitor/sql-server-locks-object.md)

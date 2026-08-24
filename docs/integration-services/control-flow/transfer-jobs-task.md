@@ -136,7 +136,7 @@ helpviewer_keywords:
 |**True**|Enable jobs on destination server.|  
 |**False**|Disable jobs on destination server.|  
   
-## See Also  
- [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
+## Related content
+
+- [Integration Services Tasks](integration-services-tasks.md)
+- [Control Flow](control-flow.md)

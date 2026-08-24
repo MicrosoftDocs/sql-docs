@@ -526,8 +526,7 @@ public class ScriptMain
 }  
 ```  
   
-## See Also  
- [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
- [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
-  
-  
+## Related content
+
+- [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+- [Loop through Excel Files and Tables with a Foreach Loop Container](../control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)

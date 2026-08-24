@@ -222,7 +222,7 @@ FROM [mssqlrbs_resources].[rbs_internal_blob_store_credentials];
 SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';  
 ```  
   
-## See Also  
-[Remote Blob Store and Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
-  
+## Related content
+
+- [Use Remote Blob Store (RBS) with Always On availability groups](../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)
+- [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)

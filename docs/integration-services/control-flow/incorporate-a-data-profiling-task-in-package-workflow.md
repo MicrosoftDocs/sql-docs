@@ -321,8 +321,7 @@ ms.custom: sfi-ropc-nochange
   
 7.  In the precedence constraints that connect the Script task to downstream branches in the workflow, write expressions that use the values of the variables to direct the workflow.  
   
-## See Also  
- [Setup of the Data Profiling Task](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
- [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
-  
-  
+## Related content
+
+- [Setup of the Data Profiling Task](setup-of-the-data-profiling-task.md)
+- [Data Profile Viewer](data-profile-viewer.md)

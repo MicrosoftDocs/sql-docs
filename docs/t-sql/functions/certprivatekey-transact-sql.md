@@ -75,10 +75,8 @@ SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');
   
 See [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md), Example B, for a more complex example that uses **CERTPRIVATEKEY** and **CERTENCODED** to copy a certificate to another database.
   
-## See also
-[Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)
-[Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)
-[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
-  
-  
+## Related content
+
+- [Security Functions (Transact-SQL)](security-functions-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../statements/create-certificate-transact-sql.md)
+- [sys.certificates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)

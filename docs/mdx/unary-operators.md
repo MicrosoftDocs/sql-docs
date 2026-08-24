@@ -34,6 +34,6 @@ WHERE [Product].[Category].[Bikes]
   
  In addition, MDX uses special unary operators to determine the aggregation operation performed by the [RollupChildren](../mdx/rollupchildren-mdx.md) function. For more information on these special unary operators, see [Add a Custom Aggregation to a Dimension](/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
-## See Also  
- [Operators &#40;MDX Syntax&#41;](../mdx/operators-mdx-syntax.md)  
-  
+## Related content
+
+- [Operators (MDX Syntax)](operators-mdx-syntax.md)

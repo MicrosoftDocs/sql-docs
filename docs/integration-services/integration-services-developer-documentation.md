@@ -65,13 +65,8 @@ dev_langs:
  [Running and Managing Packages Programmatically](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Describes how to enumerate, run, and manage [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages programmatically.  
   
-## Reference  
- [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error codes, together with their symbolic names and descriptions.  
-  
-## Related Sections  
- [Troubleshooting Tools for Package Development](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
- Describes the features and tools that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides for troubleshooting packages during development.  
- 
-## See Also  
- [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
+## Related content
+
+- [Integration Services error and message reference](integration-services-error-and-message-reference.md)
+- [Troubleshooting Tools for Package Development](troubleshooting/troubleshooting-tools-for-package-development.md)
+- [SQL Server Integration Services](sql-server-integration-services.md)

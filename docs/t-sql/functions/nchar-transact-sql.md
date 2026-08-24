@@ -205,9 +205,9 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## See Also  
- [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
- [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
- 
+## Related content
+
+- [ASCII (Transact-SQL)](ascii-transact-sql.md)
+- [CHAR (Transact-SQL)](char-transact-sql.md)
+- [UNICODE (Transact-SQL)](unicode-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)

@@ -43,9 +43,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |StartTime|**datetime**|Time at which the user opened this connection (login time).|14|Yes|  
 |TextData|**ntext**|Set options specific to the connection.|1|Yes|  
   
-## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Audit Login Event Class](../../relational-databases/event-classes/audit-login-event-class.md)  
-  
-  
+## Related content
 
+- [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
+- [Audit Login Event Class](audit-login-event-class.md)

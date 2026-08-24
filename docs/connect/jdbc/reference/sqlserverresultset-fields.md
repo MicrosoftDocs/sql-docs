@@ -14,7 +14,6 @@ ms.topic: reference
 
   For information about the members of SQLServerResultSet, see [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md).  
   
-## See Also  
- [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
-  
-  
+## Related content
+
+- [SQLServerResultSet Class](sqlserverresultset-class.md)

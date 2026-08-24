@@ -129,6 +129,6 @@ customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName
   
  For more information, see "Implementing a UI Type Editor" in the [MSDN Library](../../../sql-server/index.yml).  
   
-## See Also  
- [Run-time Methods of a Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
-  
+## Related content
+
+- [Run-time Methods of a Data Flow Component](run-time-methods-of-a-data-flow-component.md)

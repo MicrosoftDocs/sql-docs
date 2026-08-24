@@ -55,7 +55,6 @@ ms.custom:
 |Describes how to open, unlock, rename, and delete a data quality project.|[Open, Unlock, Rename, and Delete a Data Quality Project](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Describes how to open an Integration Services project in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Open Integration Services Projects in Data Quality Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## See Also  
- [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
-  
-  
+## Related content
+
+- [DQS Knowledge Bases and Domains](dqs-knowledge-bases-and-domains.md)

@@ -36,4 +36,4 @@ An **ssbdiagnose** output file contains a `DiagnosticInformation` root element w
 
 ## Related content
 
-- [ssbdiagnose Utility (Service Broker)](ssbdiagnose-utility-service-broker.md)
+- [ssbdiagnose utility (Service Broker)](ssbdiagnose-utility-service-broker.md)

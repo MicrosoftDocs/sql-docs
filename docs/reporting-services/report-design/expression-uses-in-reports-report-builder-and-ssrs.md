@@ -64,11 +64,11 @@ In paginated reports, expressions are used throughout the report definition to s
   
 ## Related content
 
-- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
-- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
-- [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)
-- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
-- [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
-- [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)
-- [Hide an Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)
+- [Expression examples in Report Builder paginated reports](expression-examples-report-builder-and-ssrs.md)
+- [Paginated report parameters in Report Builder](report-parameters-report-builder-and-report-designer.md)
+- [Filter equation examples in a paginated report (Report Builder)](filter-equation-examples-report-builder-and-ssrs.md)
+- [Filter, group, and sort data in Report Builder paginated reports](filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Page headers and footers in a paginated report (Report Builder)](page-headers-and-footers-report-builder-and-ssrs.md)
+- [Format text and placeholders in paginated reports (Report Builder)](formatting-text-and-placeholders-report-builder-and-ssrs.md)
+- [Hide an item (Report Builder)](../report-builder/hide-an-item-report-builder-and-ssrs.md)

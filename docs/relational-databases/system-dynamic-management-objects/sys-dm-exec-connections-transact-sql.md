@@ -98,11 +98,9 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## Next steps
+## Related content
 
-Learn more about related concepts in the following articles:
-
-- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_exec_sessions (Transact-SQL)](sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_sql_text (Transact-SQL)](sys-dm-exec-sql-text-transact-sql.md)
 - [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md)

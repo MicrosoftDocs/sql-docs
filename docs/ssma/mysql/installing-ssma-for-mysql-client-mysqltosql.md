@@ -61,4 +61,4 @@ The default installation location is `C:\Program Files\Microsoft SQL Server Migr
 
 ## Related content
 
-- [Migrating MySQL Databases to SQL Server - Azure SQL Database](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

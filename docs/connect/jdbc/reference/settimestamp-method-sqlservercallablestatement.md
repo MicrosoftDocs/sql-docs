@@ -24,8 +24,7 @@ apitype: "Assembly"
 |[setTimestamp (java.lang.String, java.sql.Timestamp)](../../../connect/jdbc/reference/settimestamp-method-java-lang-string-java-sql-timestamp.md)|Sets the designated parameter to the given timestamp value.|  
 |[setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/settimestamp-method-java-lang-string-java-sql-timestamp-java-util-calendar.md)|Sets the designated parameter to the given timestamp and calendar values.|  
   
-## See Also  
- [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerCallableStatement Members](sqlservercallablestatement-members.md)
+- [SQLServerCallableStatement Class](sqlservercallablestatement-class.md)

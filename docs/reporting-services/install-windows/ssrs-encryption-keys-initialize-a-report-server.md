@@ -64,4 +64,4 @@ The initialization process creates and stores a symmetric key used for encryptio
   
 ## Related content
 
-- [Configure and Manage Encryption Keys (Report Server Configuration Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+- [Configure and Manage Encryption Keys (Report Server Configuration Manager)](ssrs-encryption-keys-manage-encryption-keys.md)

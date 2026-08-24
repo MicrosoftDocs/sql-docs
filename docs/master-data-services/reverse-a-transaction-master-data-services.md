@@ -42,7 +42,8 @@ helpviewer_keywords:
   
 7.  In the confirmation dialog box, click **OK**. Another transaction is added to the grid to record the reversed transaction.  
   
-## See Also  
- [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
- [Reactivate a Member or Collection &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
- [Rollback Member Revision History](../master-data-services/rollback-member-revision-history-master-data-services.md)
+## Related content
+
+- [Transactions (Master Data Services)](transactions-master-data-services.md)
+- [Reactivate a Member or Collection (Master Data Services)](reactivate-a-member-or-collection-master-data-services.md)
+- [Rollback Member Revision History (Master Data Services)](rollback-member-revision-history-master-data-services.md)

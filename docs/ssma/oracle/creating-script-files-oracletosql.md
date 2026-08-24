@@ -389,9 +389,6 @@ Complete list of script-commands can be found in [Executing the SSMA Console &#4
 ## Script File Validation  
 The user can easily validate their script file against the schema definition file **'O2SSConsoleScriptSchema.xsd'** available in the 'Schemas' folder.  
   
-## Next Step  
-The next step in operating the console is [Creating Variable Value Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
-  
-## See Also  
-[Creating Variable Value Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
-  
+## Related content
+
+- [Creating Variable Value Files](creating-variable-value-files-oracletosql.md)

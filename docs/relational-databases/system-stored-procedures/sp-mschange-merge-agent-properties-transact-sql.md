@@ -102,5 +102,5 @@ Only members of the **sysadmin** fixed server role at the Distributor can execut
 
 ## Related content
 
-- [sp_addmergepushsubscription_agent (Transact-SQL)](sp-addmergepushsubscription-agent-transact-sql.md)
-- [sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)
+- [sys.sp_addmergepushsubscription_agent (Transact-SQL)](sp-addmergepushsubscription-agent-transact-sql.md)
+- [sys.sp_addmergesubscription (Transact-SQL)](sp-addmergesubscription-transact-sql.md)

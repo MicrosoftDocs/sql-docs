@@ -141,8 +141,8 @@ GO
 ## Related content
 
 - [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)
-- [sp_addmessage (Transact-SQL)](sp-addmessage-transact-sql.md)
-- [sp_altermessage (Transact-SQL)](sp-altermessage-transact-sql.md)
+- [sys.sp_addmessage (Transact-SQL)](sp-addmessage-transact-sql.md)
+- [sys.sp_altermessage (Transact-SQL)](sp-altermessage-transact-sql.md)
 - [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)
-- [Messages (for errors) Catalog Views - sys.messages](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
+- [Messages (for errors) catalog views - sys.messages](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

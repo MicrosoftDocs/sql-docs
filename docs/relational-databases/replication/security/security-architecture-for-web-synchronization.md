@@ -131,5 +131,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)
-- [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)
+- [Configure Web Synchronization](../configure-web-synchronization.md)
+- [Replication Merge Agent](../agents/replication-merge-agent.md)

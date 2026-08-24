@@ -61,9 +61,8 @@ public boolean deletesAreDetected(int type)
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detects deleted rows for all updatable cursor types, although the detection is transient for forward and dynamic cursors.  
   
-## See Also  
- [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
- [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
-  
-  
+## Related content
+
+- [SQLServerDatabaseMetaData Methods](sqlserverdatabasemetadata-methods.md)
+- [SQLServerDatabaseMetaData Members](sqlserverdatabasemetadata-members.md)
+- [SQLServerDatabaseMetaData Class](sqlserverdatabasemetadata-class.md)

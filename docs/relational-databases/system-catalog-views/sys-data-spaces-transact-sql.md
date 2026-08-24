@@ -35,13 +35,13 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=s
 ## Permissions  
  Requires membership in the public role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
- [Data Spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md)  
-  
+## Related content
+
+- [Data Spaces (Transact-SQL)](data-spaces-transact-sql.md)
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)
+- [sys.destination_data_spaces (Transact-SQL)](sys-destination-data-spaces-transact-sql.md)
+- [sys.filegroups (Transact-SQL)](sys-filegroups-transact-sql.md)
+- [sys.partition_schemes (Transact-SQL)](sys-partition-schemes-transact-sql.md)
+- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
+- [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)

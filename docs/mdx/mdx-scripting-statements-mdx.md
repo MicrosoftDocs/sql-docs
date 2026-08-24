@@ -23,9 +23,9 @@ ms.custom: mdx
 |[IF Statement  &#40;MDX&#41;](../mdx/mdx-scripting-if.md)|Executes a statement if the condition is true.|  
 |[SCOPE Statement &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)|Limits the scope of specified MDX statements to a specified subcube.|  
   
-## See Also  
- [MDX Statement Reference &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
-  
+## Related content
+
+- [MDX Statement Reference (MDX)](mdx-statement-reference-mdx.md)
+- [MDX Data Definition Statements (MDX)](mdx-data-definition-statements-mdx.md)
+- [MDX Data Manipulation Statements (MDX)](mdx-data-manipulation-statements-mdx.md)
+- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)

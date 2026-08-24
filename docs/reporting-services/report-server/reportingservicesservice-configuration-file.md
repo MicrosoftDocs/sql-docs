@@ -85,5 +85,5 @@ This file could be located in either of the following paths:
   
 ## Related content
 
-- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
-- [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)
+- [Reporting Services configuration files](reporting-services-configuration-files.md)
+- [Report server service trace log](report-server-service-trace-log.md)

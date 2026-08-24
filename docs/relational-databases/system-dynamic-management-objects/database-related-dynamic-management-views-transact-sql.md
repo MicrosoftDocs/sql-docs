@@ -65,6 +65,6 @@ DMVs unique to SQL Database or Azure Synapse Analytics.
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
-- [System dynamic management views](system-dynamic-management-objects.md)
+- [System dynamic management views and functions](system-dynamic-management-objects.md)

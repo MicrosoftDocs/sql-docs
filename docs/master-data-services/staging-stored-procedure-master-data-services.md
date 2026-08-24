@@ -55,6 +55,7 @@ GO
   
 ```  
   
-## See Also  
- [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
- [View Errors that Occur During Staging &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)
+## Related content
+
+- [Validation Stored Procedure (Master Data Services)](validation-stored-procedure-master-data-services.md)
+- [View Errors that Occur During Staging (Master Data Services)](view-errors-that-occur-during-staging-master-data-services.md)

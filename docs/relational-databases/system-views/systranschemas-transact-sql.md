@@ -27,7 +27,6 @@ dev_langs:
 |**endlsn**|**binary**|LSN value at the end of the schema change.|  
 |**typeid**|**int**|Type of schema change.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](../system-tables/replication-tables-transact-sql.md)

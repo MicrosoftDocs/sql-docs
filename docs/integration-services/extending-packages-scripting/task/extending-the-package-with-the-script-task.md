@@ -55,8 +55,7 @@ dev_langs:
  [Script Task Examples](../../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
  Provides simple examples that demonstrate several possible uses for a Script task.  
   
-## See Also  
- [Script Task](../../../integration-services/control-flow/script-task.md)   
- [Comparing the Script Task and the Script Component](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
-  
-  
+## Related content
+
+- [Script Task](../../control-flow/script-task.md)
+- [Comparing the Script Task and the Script Component](../comparing-the-script-task-and-the-script-component.md)

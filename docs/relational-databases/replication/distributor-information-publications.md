@@ -155,5 +155,5 @@ The **Agents** tab displays information about the agents and maintenance jobs th
   
 ## Related content
 
-- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
-- [Monitoring Replication](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)
+- [Start the Replication Monitor](monitor/start-the-replication-monitor.md)
+- [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)

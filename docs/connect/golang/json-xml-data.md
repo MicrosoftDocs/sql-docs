@@ -528,7 +528,7 @@ func bulkInsertFromXML(ctx context.Context, db *sql.DB, xmlData string) (int64, 
 
 ## Related content
 
-- [Queries and statements](queries-statements.md)
-- [Data type mappings](data-type-mappings.md)
-- [Stored procedures](stored-procedures.md)
-- [Performance tuning](performance-tuning.md)
+- [Queries and statements with go-mssqldb](queries-statements.md)
+- [go-mssqldb data type mappings](data-type-mappings.md)
+- [Stored procedures with go-mssqldb](stored-procedures.md)
+- [Performance tuning with go-mssqldb](performance-tuning.md)

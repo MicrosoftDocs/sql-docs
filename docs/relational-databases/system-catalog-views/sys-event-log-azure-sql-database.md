@@ -140,12 +140,10 @@ WHERE event_type = 'connection_failed'
     AND end_time <= '2022-03-25 11:00:00';  
 ```
 
-## Next steps
-
-Learn more about Azure SQL Database in these articles:
+## Related content
 
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
+- [Azure SQL Database and SQL database in Fabric catalog views](azure-sql-database-catalog-views.md)
 - [sys.database_connection_stats (Azure SQL Database)](sys-database-connection-stats-azure-sql-database.md)
 - [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/troubleshoot-common-errors-issues)
 - [Troubleshoot transient connection errors in SQL Database and SQL Managed Instance](/azure/azure-sql/database/troubleshoot-common-connectivity-issues)

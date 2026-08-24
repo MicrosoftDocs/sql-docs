@@ -23,7 +23,7 @@ Returns distribution information for columns.
 |**column_id**|**int**|ID of the column.||  
 |**distribution_ordinal**|**tinyint**|Ordinal (1-based) within set of distribution.| = 0: Not a distribution column. <br /><br /> = 1 or >1: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] is using this column to distribute the parent table.|  
   
-## Next steps 
+## Related content
 
-- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
 - [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor)

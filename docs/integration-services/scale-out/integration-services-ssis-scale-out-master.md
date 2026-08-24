@@ -58,6 +58,6 @@ The Scale Out Master service log file is located in the `<drive>:\Users\[account
 
 The *[account]* parameter refers to the account running the Scale Out Master service. By default, this account is `SSISScaleOutMaster140`.
 
-## Next steps
+## Related content
 
-[Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)
+- [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

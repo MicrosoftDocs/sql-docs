@@ -16,7 +16,7 @@ apitype: "DLLExport"
 
   The ODBC Driver Manager returns all **SQLDrivers** attribute specification strings. For more information about attribute string and value definition, see the [Data Access and Storage Developer Center](../../connect/sql-data-developer.md), or you can view the [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md) online.  
   
-## See Also  
- [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLDrivers Function](../../odbc/reference/syntax/sqldrivers-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

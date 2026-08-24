@@ -35,5 +35,5 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
-- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
+- [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)
+- [Configure Distribution](configure-distribution.md)

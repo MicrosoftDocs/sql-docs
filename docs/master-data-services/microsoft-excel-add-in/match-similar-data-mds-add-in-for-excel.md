@@ -51,10 +51,8 @@ ms.custom:
   
 4.  When all DQS domains are mapped to columns in the worksheet, click **OK**.  
   
-## Next Steps  
-  
--   View additional information to determine which data is similar. For more information, see [Data Quality Matching Columns &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/data-quality-matching-columns-mds-add-in-for-excel.md).  
-  
-## See Also  
- [Data Quality Matching in the MDS Add-in for Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
- [Data Matching](../../data-quality-services/data-matching.md)
+## Related content
+
+- [Data Quality Matching in the MDS Add-in for Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)
+- [Data Matching](../../data-quality-services/data-matching.md)
+- [Data Quality Matching Columns (MDS Add-in for Excel)](data-quality-matching-columns-mds-add-in-for-excel.md)

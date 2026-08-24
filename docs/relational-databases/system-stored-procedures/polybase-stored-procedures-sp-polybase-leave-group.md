@@ -64,5 +64,5 @@ EXECUTE sp_polybase_leave_group;
 
 ## Related content
 
-- [Data virtualization with PolyBase in SQL Server](../polybase/overview.md)
+- [PolyBase overview](../polybase/overview.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

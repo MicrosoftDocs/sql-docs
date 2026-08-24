@@ -66,10 +66,9 @@ A text box can be a paginated report item. It can also be an individual cell wit
   
 ## Related content
 
-- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
-- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
-- [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)
-- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](./text-boxes-report-builder-and-ssrs.md)
-- [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)
-- [Text Boxes &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)
+- [Expressions in a paginated report (Report Builder)](expressions-report-builder-and-ssrs.md)
+- [Formatting axis labels on a paginated report chart (Report Builder)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Formatting scales on a gauge in a paginated report (Report Builder)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists in Report Builder paginated reports](tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Text boxes in paginated reports (Report Builder)](text-boxes-report-builder-and-ssrs.md)
+- [Export a paginated report to Microsoft Excel (Report Builder)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)

@@ -39,4 +39,4 @@ Use this page to enable FILESTREAM for this installation of [!INCLUDE [ssnoversi
 ## Related content
 
 - [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)
-- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

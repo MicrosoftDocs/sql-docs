@@ -138,6 +138,6 @@ For more information about session management, see [Identify the execution state
 
 ## Related content
 
-- [Save reports (Report Builder)](../../reporting-services/report-builder/saving-reports-report-builder.md)
-- [Report builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server.md)
-- [Preview reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)
+- [Save reports (Report Builder)](saving-reports-report-builder.md)
+- [Microsoft Report Builder in SQL Server](report-builder-in-sql-server.md)
+- [Preview reports in Report Builder](previewing-reports-in-report-builder.md)

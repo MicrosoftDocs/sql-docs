@@ -42,9 +42,8 @@ You construct the data flow in a package on the design surface of the **Data Flo
   
 6.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
- [Add or Delete a Component in a Data Flow](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)
- [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
-  
+## Related content
+
+- [Add or Delete a Component in a Data Flow](add-or-delete-a-component-in-a-data-flow.md)
+- [Debugging Data Flow](../troubleshooting/debugging-data-flow.md)
+- [Data Flow](data-flow.md)

@@ -68,8 +68,8 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Bind a Report or Model to a Shared Data Source &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)
-- [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)
-- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
-- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)
-- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
+- [Bind a Report to a Shared Data Source (SSRS)](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)
+- [Store Credentials in a Reporting Services Data Source](store-credentials-in-a-reporting-services-data-source.md)
+- [Create data connection strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Data Sources Supported by Reporting Services (SSRS)](data-sources-supported-by-reporting-services-ssrs.md)
+- [Report server content management (SSRS native mode)](../report-server/report-server-content-management-ssrs-native-mode.md)

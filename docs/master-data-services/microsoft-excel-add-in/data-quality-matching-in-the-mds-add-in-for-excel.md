@@ -50,8 +50,7 @@ ms.custom:
 |Combine external data with MDS-managed data in preparation to compare it.|[Combine Data &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md)|  
 |Use DQS knowledge to find similarities in your data.|[Match Similar Data &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)|  
   
-## Related Content  
-  
--   [Overview: Importing Data from Excel &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
-  
--   [Data Matching](../../data-quality-services/data-matching.md)
+## Related content
+
+- [Overview: Importing Data from Excel (MDS Add-in for Excel)](overview-importing-data-from-excel-mds-add-in-for-excel.md)
+- [Data Matching](../../data-quality-services/data-matching.md)

@@ -77,11 +77,10 @@ dev_langs:
 |**generation_leveling_threshold**|**int**|Specifies the number of changes contained in a generation. A generation is a collection of changes that are delivered to a Publisher or Subscriber.|  
 |**automatic_reinitialization_policy**|**bit**|Indicates whether changes are uploaded from the Subscriber before an automatic reinitialization occurs.<br /><br /> **1** = Changes are uploaded from the Subscriber before an automatic reinitialization occurs.<br /><br /> **0** = Changes are not uploaded before an automatic reinitialization.|  
   
-## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
-  
-  
+## Related content
+
+- [Replication Tables (Transact-SQL)](replication-tables-transact-sql.md)
+- [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
+- [sys.sp_addmergepublication (Transact-SQL)](../system-stored-procedures/sp-addmergepublication-transact-sql.md)
+- [sys.sp_changemergepublication (Transact-SQL)](../system-stored-procedures/sp-changemergepublication-transact-sql.md)
+- [sys.sp_helpmergepublication (Transact-SQL)](../system-stored-procedures/sp-helpmergepublication-transact-sql.md)

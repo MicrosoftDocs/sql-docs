@@ -42,8 +42,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
   
  If executing a stored procedure results in an update count that is greater than one, or that generates more than one result set, use the [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) method to execute the stored procedure.  
   
-## See Also  
- [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
- [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
-  
-  
+## Related content
+
+- [SQLServerStatement Members](sqlserverstatement-members.md)
+- [SQLServerStatement Class](sqlserverstatement-class.md)

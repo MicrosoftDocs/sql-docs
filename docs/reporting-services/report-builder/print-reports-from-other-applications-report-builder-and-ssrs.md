@@ -21,8 +21,8 @@ If you choose web archive, also known as MHTML, the report is exported to your d
 
 ## Related content
 
-- [Print a report (Report Builder)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)
-- [Print reports from a browser with the print control (Report Builder)](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)
-- [Export reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
+- [Print a report (Report Builder)](print-a-report-report-builder-and-ssrs.md)
+- [Print reports from a browser with the print control (Report Builder)](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)
+- [Export paginated reports (Report Builder)](export-reports-report-builder-and-ssrs.md)
 - [Export a report as another file type (Report Builder)](/previous-versions/sql/)
-- [Find, view, and manage reports (Report Builder)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Find, view, and manage reports (Report Builder and SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

@@ -216,7 +216,7 @@ For more information about the algorithms used in these deep learning models, an
 
 ## Related content
 
-- [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)
-- [Upgrade R and Python components in SQL Server instances](upgrade-r-and-python.md)
-- [MicrosoftML package for R](../r/ref-r-microsoftml.md)
-- [microsoftml package for Python](../python/ref-py-microsoftml.md)
+- [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md)
+- [Upgrade Python and R runtime with binding in SQL Server Machine Learning Services](upgrade-r-and-python.md)
+- [MicrosoftML (R package in SQL Server Machine Learning Services)](../r/ref-r-microsoftml.md)
+- [microsoftml (Python package in SQL Server Machine Learning Services)](../python/ref-py-microsoftml.md)

@@ -40,9 +40,8 @@ public final void setNull(int index,
 ## Remarks  
  This setNull method is specified by the setNull method in the java.sql.PreparedStatement interface.  
   
-## See Also  
- [setNull Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
- [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
-  
-  
+## Related content
+
+- [setNull Method (SQLServerPreparedStatement)](setnull-method-sqlserverpreparedstatement.md)
+- [SQLServerPreparedStatement Members](sqlserverpreparedstatement-members.md)
+- [SQLServerPreparedStatement Class](sqlserverpreparedstatement-class.md)

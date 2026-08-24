@@ -82,9 +82,9 @@ For more information, see [Complete Database Restores (Simple Recovery Model)](c
 
 ## Related content
 
-- [Create a Full Database Backup](create-a-full-database-backup-sql-server.md)
-- <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)
+- [Create a full database backup](create-a-full-database-backup-sql-server.md)
+- <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A>
 - [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)
-- [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)
+- [Back up and restore of SQL Server databases](back-up-and-restore-of-sql-server-databases.md)
 - [Backup overview (SQL Server)](backup-overview-sql-server.md)
 - [Backup and Restore of Analysis Services Databases](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)

@@ -72,8 +72,8 @@ f1_keywords:
   
 ## Related content
 
-- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
-- [View Information and Perform Tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
-- [Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)
-- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)
-- [Set Thresholds and Warnings in Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)
+- [Start the Replication Monitor](monitor/start-the-replication-monitor.md)
+- [View information and perform tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)
+- [Monitoring (Replication)](monitor/monitoring-replication.md)
+- [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)

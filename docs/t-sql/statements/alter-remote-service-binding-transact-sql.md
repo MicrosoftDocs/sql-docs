@@ -61,9 +61,8 @@ ALTER REMOTE SERVICE BINDING APBinding
     WITH USER = SecurityAccount ;  
 ```  
   
-## See Also  
- [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
+## Related content
+
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](create-remote-service-binding-transact-sql.md)
+- [DROP REMOTE SERVICE BINDING (Transact-SQL)](drop-remote-service-binding-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

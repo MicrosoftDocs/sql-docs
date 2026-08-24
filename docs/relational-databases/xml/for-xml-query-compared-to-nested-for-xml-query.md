@@ -204,5 +204,4 @@ If you remove the `ELEMENTS` directive from the nested `FOR XML` query that gene
 
 ## Related content
 
-- [Use Nested FOR XML Queries](use-nested-for-xml-queries.md)
-
+- [Use nested FOR XML queries](use-nested-for-xml-queries.md)

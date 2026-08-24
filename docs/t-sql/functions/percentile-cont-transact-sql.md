@@ -131,4 +131,3 @@ Shipping and Receiving 9.250000      9.0000
 ## Related content
 
 - [PERCENTILE_DISC (Transact-SQL)](percentile-disc-transact-sql.md)
-

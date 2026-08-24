@@ -51,7 +51,7 @@ helpviewer_keywords:
 ## SQLGetDescRec Support for Large CLR UDTs  
  **SQLGetDescRec** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## See Also  
- [SQLGetDescRec](../../odbc/reference/syntax/sqlgetdescrec-function.md)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
+## Related content
+
+- [SQLGetDescRec Function](../../odbc/reference/syntax/sqlgetdescrec-function.md)
+- [ODBC API implementation details](odbc-api-implementation-details.md)

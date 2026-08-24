@@ -170,6 +170,6 @@ To run an SSIS package as part of a Data Factory pipeline, use one of the follow
 
 - [Stored Procedure activity](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
-## Next steps
+## Related content
 
-Review the options for running SSIS packages deployed to Azure. For more info, see [Run SSIS packages in Azure](ssis-azure-run-packages.md).
+- [Run SQL Server Integration Services (SSIS) packages deployed in Azure](ssis-azure-run-packages.md)

@@ -68,9 +68,8 @@ WHERE ProductModelID=7
 |[XQuery Operators Against the xml Data Type](../xquery/xquery-operators-against-the-xml-data-type.md)|Describes XQuery operators that are supported.|  
 |[Additional Sample XQueries Against the xml Data Type](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|Provides additional XQuery samples.|  
   
-## See Also  
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [XML Schema Collections &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)   
- [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
-  
-  
+## Related content
+
+- [XML data (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)
+- [XML schema collections (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)
+- [Examples of bulk import and export of XML documents (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)

@@ -137,7 +137,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
 ## Related content
 
-- [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
-- [Configure a native mode report server scale-out deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)
-- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+- [Configure a URL (Report Server Configuration Manager)](../install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Configure a Native mode report server scale-out deployment](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)
+- [What is the Report Server configuration manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Manage a Reporting Services native mode report server](manage-a-reporting-services-native-mode-report-server.md)

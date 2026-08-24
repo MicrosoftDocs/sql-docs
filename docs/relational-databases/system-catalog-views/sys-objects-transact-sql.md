@@ -178,6 +178,6 @@ GO
 - [sys.all_objects (Transact-SQL)](sys-all-objects-transact-sql.md)
 - [sys.system_objects (Transact-SQL)](sys-system-objects-transact-sql.md)
 - [sys.triggers (Transact-SQL)](sys-triggers-transact-sql.md)
-- [Object Catalog Views (Transact-SQL)](object-catalog-views-transact-sql.md)
+- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
 - [sys.internal_tables (Transact-SQL)](sys-internal-tables-transact-sql.md)

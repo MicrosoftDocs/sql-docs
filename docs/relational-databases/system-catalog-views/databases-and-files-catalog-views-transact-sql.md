@@ -45,8 +45,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
     :::column-end:::
 :::row-end:::
 
-## See Also  
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)  
-  
+## Related content
 
+- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)

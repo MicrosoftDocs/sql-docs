@@ -37,4 +37,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Related content
 
-- [Create Tables &#40;Database Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md)
+- [Create tables (Database Engine)](../tables/create-tables-database-engine.md)

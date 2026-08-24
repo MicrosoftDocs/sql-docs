@@ -54,9 +54,9 @@ help("Sys.time")
 
 The documentation for Microsoft R Open, which is installed by default, includes a manual on developing extensions for the R language that discusses [profiling and debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) in detail.
 
-## Next steps
+## Related content
 
-- For more information about optimizing R scripts in SQL Server, see [Performance tuning and data optimization for R](r-and-data-optimization-r-services.md).
-- For more complete information about performance tuning on SQL Server, see [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md).
-- For more information on the utils package, see [The R Utils Package](https://www.rdocumentation.org/packages/utils/).
-- For in-depth discussions of R programming, see ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz).
+- [Performance tuning and data optimization for R](r-and-data-optimization-r-services.md)
+- [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+- [The R Utils Package](https://www.rdocumentation.org/packages/utils/)
+- ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz)

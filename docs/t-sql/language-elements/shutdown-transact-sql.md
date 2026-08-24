@@ -74,7 +74,7 @@ If `sqlservr.exe` was started from the command prompt, pressing **Ctrl**+**C** s
 ## Related content
 
 - [CHECKPOINT (Transact-SQL)](checkpoint-transact-sql.md)
-- [sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)
-- [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
-- [sqlservr Application](../../tools/sqlservr-application.md)
+- [sys.sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)
+- [sys.sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+- [sqlservr application](../../tools/sqlservr-application.md)
 - [Start, stop, pause, resume, and restart SQL Server services](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

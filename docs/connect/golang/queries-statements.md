@@ -3,7 +3,7 @@ title: "go-mssqldb Queries and Statements"
 description: "Run queries, execute statements, handle multiple result sets, and use transactions with the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.date: 08/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to

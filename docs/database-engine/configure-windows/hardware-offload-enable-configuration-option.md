@@ -45,6 +45,6 @@ GO
 
 ## Related content
 
-- [sys.dm_server_accelerator_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md)
+- [sys.dm_server_accelerator_status (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-server-accelerator-status-transact-sql.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
 - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)

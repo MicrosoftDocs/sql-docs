@@ -1095,7 +1095,7 @@ Using `-V 16` in combination with checking the exit code and `DOS ERRORLEVEL` ca
 - [Download and install the sqlcmd utility](sqlcmd-download-install.md)
 - [Commands in the sqlcmd utility](sqlcmd-commands.md)
 - [Use sqlcmd with scripting variables](sqlcmd-use-scripting-variables.md)
-- [Quickstart: Run SQL Server Linux container images with Docker](../../linux/quickstart-install-connect-docker.md)
+- [Quickstart: Run SQL Server Linux container images with Docker](../../linux/install-upgrade/quickstart-install-docker.md)
 - [Start the sqlcmd utility](sqlcmd-start-utility.md)
 - [Execute T-SQL from a script file with sqlcmd](sqlcmd-run-transact-sql-script-files.md)
 - [Use sqlcmd](sqlcmd-use-utility.md)

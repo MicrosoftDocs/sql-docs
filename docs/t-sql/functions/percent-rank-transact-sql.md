@@ -96,4 +96,3 @@ Information Services   Bueno                  27.4038           0.4             
 ## Related content
 
 - [CUME_DIST (Transact-SQL)](cume-dist-transact-sql.md)
-

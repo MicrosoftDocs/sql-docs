@@ -46,7 +46,7 @@ Requires membership in the DB_OWNER fixed server role.
 ## Related content
 
 - [Performance tuning with result set caching](/azure/sql-data-warehouse/performance-tuning-result-set-caching)
-- [ALTER DATABASE SET Options (Transact-SQL)](../statements/alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
+- [ALTER DATABASE SET options (Transact-SQL)](../statements/alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
 - [ALTER DATABASE (Transact-SQL)](../statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [SET RESULT SET CACHING (Transact-SQL)](../statements/set-result-set-caching-transact-sql.md)
 - [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](dbcc-showresultcachespaceused-transact-sql.md)

@@ -154,4 +154,3 @@ Only members of the **sysadmin** fixed server role can execute `sp_attachsubscri
 ## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

@@ -101,4 +101,3 @@ EXECUTE sp_column_privileges
 - [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)
 - [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

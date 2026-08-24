@@ -131,4 +131,4 @@ SqlPackage /Action:Publish /SourceFile:AdventureWorks.dacpac /TargetConnectionSt
 
 - [SqlPackage Publish parameters, properties, and SQLCMD variables](../../sqlpackage/sqlpackage-publish.md)
 - [Tutorial: Create and deploy a SQL project](../tutorials/create-deploy-sql-project.md)
-- [Database Project Settings](../../../ssdt/database-project-settings.md)
+- [SQL projects properties](project-properties.md)

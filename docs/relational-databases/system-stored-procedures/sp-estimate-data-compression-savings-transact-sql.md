@@ -207,4 +207,3 @@ GO
 - [sys.partitions (Transact-SQL)](../system-catalog-views/sys-partitions-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [Unicode compression implementation](../data-compression/unicode-compression-implementation.md)
-

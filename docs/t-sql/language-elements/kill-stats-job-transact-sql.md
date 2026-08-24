@@ -57,5 +57,5 @@ GO
 
 - [KILL (Transact-SQL)](kill-transact-sql.md)
 - [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](kill-query-notification-subscription-transact-sql.md)
-- [sys.dm_exec_background_job_queue &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)
+- [sys.dm_exec_background_job_queue (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-background-job-queue-transact-sql.md)
 - [Statistics](../../relational-databases/statistics/statistics.md)

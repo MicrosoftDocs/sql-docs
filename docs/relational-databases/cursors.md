@@ -137,4 +137,3 @@ If neither a [!INCLUDE [tsql](../includes/tsql-md.md)] nor API cursor is request
 - [Cursor Functions (Transact-SQL)](../t-sql/functions/cursor-functions-transact-sql.md)
 - [Cursor stored procedures (Transact-SQL)](system-stored-procedures/cursor-stored-procedures-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-

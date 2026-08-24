@@ -32,6 +32,6 @@ Not all Service Broker applications use activation. If an application requires s
 
 ## Related content
 
-- [sys.dm_broker_activated_tasks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)
-- [sys.dm_broker_queue_monitors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)
+- [sys.dm_broker_activated_tasks (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-broker-activated-tasks-transact-sql.md)
+- [sys.dm_broker_queue_monitors (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-broker-queue-monitors-transact-sql.md)
 - [Implement internal activation in Service Broker](implementing-internal-activation.md)

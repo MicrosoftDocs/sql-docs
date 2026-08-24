@@ -244,5 +244,5 @@ The space use of XML indexes can be found in the table-valued function [sys.dm_d
 
 - [Create XML indexes](create-xml-indexes.md)
 - [ALTER INDEX (Selective XML Indexes)](../../t-sql/statements/alter-index-selective-xml-indexes.md)
-- [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
+- [sys.dm_db_index_physical_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md)
 - [XML data (SQL Server)](xml-data-sql-server.md)

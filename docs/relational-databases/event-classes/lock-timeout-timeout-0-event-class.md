@@ -59,4 +59,4 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 - [Lock:Timeout Event Class](lock-timeout-event-class.md)
 - [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
-- [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)
+- [sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md)

@@ -161,5 +161,5 @@ GO
 - [CREATE WORKLOAD GROUP (Transact-SQL)](create-workload-group-transact-sql.md)
 - [Resource governor resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
 - [sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)
-- [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)
+- [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)
 - [ALTER RESOURCE GOVERNOR (Transact-SQL)](alter-resource-governor-transact-sql.md)

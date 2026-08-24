@@ -89,7 +89,7 @@ For more information, see [Check the fragmentation of a columnstore index](../in
 ## Related content
 
 - [Columnstore indexes: overview](../indexes/columnstore-indexes-overview.md)
-- [sys.dm_db_column_store_row_group_physical_stats](../system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)
+- [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)
 - [sys.column_store_dictionaries (Transact-SQL)](sys-column-store-dictionaries-transact-sql.md)
 - [sys.column_store_segments (Transact-SQL)](sys-column-store-segments-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)

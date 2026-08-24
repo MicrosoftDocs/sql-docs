@@ -35,7 +35,7 @@ helpviewer_keywords:
 - [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)
 - [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)
 - [Always On Availability Groups Catalog Views (Transact-SQL)](../../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)
-- [Always On Availability Groups Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)
+- [Always On availability groups dynamic management views and functions](../../../relational-databases/system-dynamic-management-objects/always-on-availability-groups-dynamic-management-views-functions.md)
 - [Configure a flexible automatic failover policy for an Always On availability group](configure-flexible-automatic-failover-policy.md)
 - [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
 - [Automatic Page Repair (Availability Groups: Database Mirroring)](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)

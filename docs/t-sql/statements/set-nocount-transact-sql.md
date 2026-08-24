@@ -99,4 +99,3 @@ GO
 
 - [@@ROWCOUNT (Transact-SQL)](../functions/rowcount-transact-sql.md)
 - [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
-

@@ -846,7 +846,7 @@ Other `BULK INSERT` examples are provided in the following articles:
 ## Related content
 
 - [Bulk import and export of data (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
-- [bcp Utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [Format files to import or export data (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
 - [INSERT (Transact-SQL)](insert-transact-sql.md)
 - [OPENROWSET (Transact-SQL)](../functions/openrowset-transact-sql.md)

@@ -64,4 +64,4 @@ EXEC sys.sp_dw_refresh_ext_table "dbo.publicholidays"
 ## Related content
 
 - [SQL analytics endpoint metadata sync](/fabric/data-engineering/sql-analytics-endpoint-metadata-sync)
-- [sys.dm_db_external_tables_log_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-external-tables-log-status-transact-sql.md)
+- [sys.dm_db_external_tables_log_status (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-external-tables-log-status-transact-sql.md)

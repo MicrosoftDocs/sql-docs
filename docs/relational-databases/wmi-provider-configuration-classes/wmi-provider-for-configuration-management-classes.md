@@ -84,4 +84,3 @@ These classes support client and server certificate management for encrypted con
 ## Related content
 
 - [WMI Provider for Configuration Management](../wmi-provider-configuration/wmi-provider-for-configuration-management.md)
-

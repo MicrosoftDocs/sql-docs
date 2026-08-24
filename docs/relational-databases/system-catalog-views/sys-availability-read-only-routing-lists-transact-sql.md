@@ -44,7 +44,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Related content
 
-- [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)
+- [Always On availability groups dynamic management views and functions](../system-dynamic-management-objects/always-on-availability-groups-dynamic-management-views-functions.md)
 - [Always On Availability Groups Catalog Views (Transact-SQL)](always-on-availability-groups-catalog-views-transact-sql.md)
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)
 - [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

@@ -343,4 +343,3 @@ A `DATEPART` error is thrown if the `DATETRUNC` function, or the input date data
 - [@@DATEFIRST (Transact-SQL)](datefirst-transact-sql.md)
 - [DATEPART (Transact-SQL)](datepart-transact-sql.md)
 - [Date and time data types and functions (Transact-SQL)](date-and-time-data-types-and-functions-transact-sql.md)
-

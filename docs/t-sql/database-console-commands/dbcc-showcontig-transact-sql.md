@@ -374,6 +374,6 @@ GO
 - [CREATE INDEX (Transact-SQL)](../statements/create-index-transact-sql.md)
 - [DBCC (Transact-SQL)](dbcc-transact-sql.md)
 - [DROP INDEX (Transact-SQL)](../statements/drop-index-transact-sql.md)
-- [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
+- [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md)
 - [OBJECT_ID (Transact-SQL)](../functions/object-id-transact-sql.md)
 - [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)

@@ -313,6 +313,6 @@ if writer:
 - [Use mssql-python with Apache Arrow](arrow-integration.md)
 - [Use mssql-python with pandas](pandas-integration.md)
 - [Use mssql-python with Polars](polars-integration.md)
-- [DuckDB integration](duckdb-integration.md)
+- [Use mssql-python with DuckDB](duck-db-integration.md)
 - [Performance tuning for mssql-python applications](performance-tuning.md)
 - [Choose a data loading and movement pattern with mssql-python](data-loading-movement-patterns.md)

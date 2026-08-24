@@ -76,6 +76,6 @@ CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider
 - [DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)](drop-cryptographic-provider-transact-sql.md)
 - [CREATE SYMMETRIC KEY (Transact-SQL)](create-symmetric-key-transact-sql.md)
 - [Extensible Key Management using Azure Key Vault (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)
-- [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)
+- [Set up Transparent Data Encryption with Azure Key Vault for SQL Server](../../relational-databases/security/encryption/set-up-transparent-data-encryption-with-azure-key-vault-for-sql-server.md)
 - [sys.cryptographic_providers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql.md)
-- [sys.dm_cryptographic_provider_properties](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql.md)
+- [sys.dm_cryptographic_provider_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-cryptographic-provider-properties-transact-sql.md)

@@ -303,7 +303,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ## Related content
 
-- [bcp Utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
 - [OPENROWSET BULK (Transact-SQL)](../../t-sql/functions/openrowset-bulk-transact-sql.md)
 - [Use non-XML format files (SQL Server)](non-xml-format-files-sql-server.md)

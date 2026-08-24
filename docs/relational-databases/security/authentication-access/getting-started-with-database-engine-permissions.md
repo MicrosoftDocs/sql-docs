@@ -265,7 +265,7 @@ FROM sys.database_role_members AS dRo
 
 - [Security for SQL Server Database Engine and Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)
 - [Security Functions (Transact-SQL)](../../../t-sql/functions/security-functions-transact-sql.md)
-- [Security-Related Dynamic Management Views and Functions (Transact-SQL)](../../system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Security-Related Dynamic Management Views and Functions (Transact-SQL)](../../system-dynamic-management-objects/security-related-dynamic-management-views-and-functions-transact-sql.md)
 - [Security Catalog Views (Transact-SQL)](../../system-catalog-views/security-catalog-views-transact-sql.md)
 - [sys.fn_builtin_permissions (Transact-SQL)](../../system-functions/sys-fn-builtin-permissions-transact-sql.md)
 - [Determine effective Database Engine permissions](determining-effective-database-engine-permissions.md)

@@ -105,8 +105,8 @@ FROM sys.dm_hs_database_log_rate(NULL);
 
 ## Related content
 
-- [sys.dm_database_replica_states (Azure SQL Database) (Transact-SQL)](../system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md?view=azuresqldb-current&preserve-view=true)
+- [sys.dm_database_replica_states (Azure SQL Database)](../system-dynamic-management-objects/sys-dm-database-replica-states-azure-sql-database.md?view=azuresqldb-current&preserve-view=true)
 - [sys.dm_hs_database_replicas (Transact-SQL)](sys-dm-hs-database-replicas.md?view=azuresqldb-current&preserve-view=true)
-- [sys.dm_exec_requests (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md?view=azuresqldb-current&preserve-view=true)
-- [sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+- [sys.dm_exec_requests (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+- [sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md?view=azuresqldb-current&preserve-view=true)
 - [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md?view=azuresqldb-current&preserve-view=true)

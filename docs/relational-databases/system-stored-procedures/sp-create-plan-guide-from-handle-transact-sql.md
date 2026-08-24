@@ -148,9 +148,9 @@ The following example creates a plan guide for two statements within a multistat
 ## Related content
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [sys.dm_exec_query_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_query_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md)
 - [Plan Guides](../performance/plan-guides.md)
 - [sys.sp_create_plan_guide (Transact-SQL)](sp-create-plan-guide-transact-sql.md)
-- [sys.dm_exec_sql_text (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)
-- [sys.dm_exec_text_query_plan (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)
+- [sys.dm_exec_sql_text (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-sql-text-transact-sql.md)
+- [sys.dm_exec_text_query_plan (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-text-query-plan-transact-sql.md)
 - [sys.sp_control_plan_guide (Transact-SQL)](sp-control-plan-guide-transact-sql.md)

@@ -68,7 +68,7 @@ GO
 ## Related content
 
 - [Always On Availability Groups Functions (Transact-SQL)](always-on-availability-groups-functions-transact-sql.md)
-- [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)
+- [sys.dm_hadr_database_replica_states (Transact-SQL)](../system-dynamic-management-objects/sys-dm-hadr-database-replica-states-transact-sql.md)
 - [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)
 - [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)

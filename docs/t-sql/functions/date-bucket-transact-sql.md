@@ -328,4 +328,3 @@ SELECT DATE_BUCKET(HOUR, 2, @date, @origin);
 - [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)
 - [Date and time types](../data-types/date-and-time-types.md)
 - [Date and time data types and functions (Transact-SQL)](date-and-time-data-types-and-functions-transact-sql.md)
-

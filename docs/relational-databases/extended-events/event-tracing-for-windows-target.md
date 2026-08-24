@@ -88,6 +88,6 @@ For more information about a full example that shows how to use the ETW target, 
 ## Related content
 
 - [Extended Events targets](targets-for-extended-events-in-sql-server.md)
-- [sys.dm_xe_session_targets (Transact-SQL)](../system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)
+- [sys.dm_xe_session_targets (Transact-SQL)](../system-dynamic-management-objects/sys-dm-xe-session-targets-transact-sql.md)
 - [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)
 - [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)

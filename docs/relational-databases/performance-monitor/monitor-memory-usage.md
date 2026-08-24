@@ -137,10 +137,10 @@ WHERE counter_name = 'Page life expectancy';
 ## Related content
 
 - [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
-- [sys.dm_os_sys_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-sys-memory-transact-sql.md)
-- [sys.dm_os_process_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md)
-- [sys.dm_os_sys_info (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_os_performance_counters (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)
+- [sys.dm_os_sys_memory (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-sys-memory-transact-sql.md)
+- [sys.dm_os_process_memory (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-process-memory-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_os_performance_counters (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md)
 - [SQL Server, Memory Manager object](sql-server-memory-manager-object.md)
 - [SQL Server, Buffer Manager object](sql-server-buffer-manager-object.md)
 - [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)

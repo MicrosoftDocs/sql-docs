@@ -301,7 +301,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 
 - [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 - [SELECT clause (Transact-SQL)](../../t-sql/queries/select-clause-transact-sql.md)
-- [bcp utility](../../tools/bcp-utility.md)
+- [bcp utility](../../tools/bcp/bcp-utility.md)
 - [Bulk import and export of data (SQL Server)](bulk-import-and-export-of-data-sql-server.md)
 - [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
 - [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)

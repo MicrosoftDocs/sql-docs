@@ -241,6 +241,6 @@ The DCM and BCM pages are stored at the same GAM intervals of approximately 4 Gi
 - [SQL Server I/O fundamentals](sql-server-storage-guide.md)
 - [sys.allocation_units (Transact-SQL)](system-catalog-views/sys-allocation-units-transact-sql.md)
 - [Heaps (Tables without Clustered Indexes)](indexes/heaps-tables-without-clustered-indexes.md#heap-structures)
-- [sys.dm_db_page_info (Transact-SQL)](system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)
+- [sys.dm_db_page_info (Transact-SQL)](system-dynamic-management-objects/sys-dm-db-page-info-transact-sql.md)
 - [Read data pages in the Database Engine](reading-pages.md)
 - [Write pages in the Database Engine](writing-pages.md)

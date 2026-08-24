@@ -96,4 +96,3 @@ GROUP BY DeptId
 
 - [PERCENTILE_DISC (Transact-SQL)](percentile-disc-transact-sql.md)
 - [APPROX_PERCENTILE_CONT (Transact-SQL)](approx-percentile-cont-transact-sql.md)
-

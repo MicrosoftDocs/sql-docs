@@ -84,4 +84,3 @@ The [!INCLUDE [ssDE](../../includes/ssde-md.md)] contains the following installe
 
 - [System Compatibility Views (Transact-SQL)](system-compatibility-views-transact-sql.md)
 - [Mapping System Tables to System Views (Transact-SQL)](../system-tables/mapping-system-tables-to-system-views-transact-sql.md)
-

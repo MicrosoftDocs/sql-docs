@@ -66,6 +66,6 @@ WHERE object_name LIKE '%Broker/DBM Transport%';
 
 ## Related content
 
-- [sys.dm_broker_forwarded_messages (Transact-SQL)](../system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)
+- [sys.dm_broker_forwarded_messages (Transact-SQL)](../system-dynamic-management-objects/sys-dm-broker-forwarded-messages-transact-sql.md)
 - [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)
 - [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

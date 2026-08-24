@@ -289,4 +289,3 @@ GO
 - [sys.objects (Transact-SQL)](../system-catalog-views/sys-objects-transact-sql.md)
 - [sys.partitions (Transact-SQL)](../system-catalog-views/sys-partitions-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-

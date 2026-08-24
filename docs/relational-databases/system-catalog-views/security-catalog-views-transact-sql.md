@@ -198,4 +198,4 @@ dev_langs:
 ## Related content
 
 - [Security for SQL Server Database Engine and Azure SQL Database](../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
-- [Security-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Security-Related Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-objects/security-related-dynamic-management-views-and-functions-transact-sql.md)

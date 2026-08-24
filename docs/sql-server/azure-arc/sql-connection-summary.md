@@ -112,4 +112,4 @@ az sql server-arc extension feature-flag set  --name ClientConnections --enable 
 ## Related content
 
 - [Monitor SQL Server enabled by Azure Arc (preview)](sql-monitoring.md)
-- [System dynamic management views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [System dynamic management views and functions](../../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md)

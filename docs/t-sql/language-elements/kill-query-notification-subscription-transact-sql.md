@@ -68,4 +68,4 @@ KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;
   
 ## Related content
 
-- [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)
+- [Query Notifications - sys.dm_qn_subscriptions](../../relational-databases/system-dynamic-management-objects/query-notifications-sys-dm-qn-subscriptions.md)

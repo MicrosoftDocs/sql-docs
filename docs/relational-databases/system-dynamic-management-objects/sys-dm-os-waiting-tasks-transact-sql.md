@@ -191,4 +191,3 @@ GO
 - [Transaction locking and row versioning guide](../sql-server-transaction-locking-and-row-versioning-guide.md)
 - [sys.dm_os_wait_stats (Transact-SQL)](sys-dm-os-wait-stats-transact-sql.md)
 - [sys.dm_exec_requests (Transact-SQL)](sys-dm-exec-requests-transact-sql.md)
-

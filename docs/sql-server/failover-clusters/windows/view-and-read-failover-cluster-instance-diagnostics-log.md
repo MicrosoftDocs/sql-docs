@@ -143,4 +143,4 @@ FROM sys.dm_os_server_diagnostics_log_configurations;
 ## Related content
 
 - [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)
-- [sys-dm-os-server-diagnostics-log-configurations](../../../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md)
+- [sys.dm_os_server_diagnostics_log_configurations](../../../relational-databases/system-dynamic-management-objects/sys-dm-os-server-diagnostics-log-configurations.md)

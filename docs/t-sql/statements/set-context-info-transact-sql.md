@@ -92,6 +92,6 @@ GO
 - [SET Statements (Transact-SQL)](set-statements-transact-sql.md)
 - [CONTEXT_INFO (Transact-SQL)](../functions/context-info-transact-sql.md)
 - [SESSION_CONTEXT (Transact-SQL)](../functions/session-context-transact-sql.md)
-- [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
-- [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
+- [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md)
 - [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)

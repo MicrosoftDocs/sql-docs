@@ -73,5 +73,5 @@ WHERE object_name LIKE '%Buffer Manager%';
 - [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
 - [SQL Server, Plan Cache object](sql-server-plan-cache-object.md)
 - [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
-- [sys.dm_os_performance_counters (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)
+- [sys.dm_os_performance_counters (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md)
 - [Buffer pool extension](../../database-engine/configure-windows/buffer-pool-extension.md)

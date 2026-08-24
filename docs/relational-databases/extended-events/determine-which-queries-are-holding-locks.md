@@ -158,5 +158,5 @@ Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull
 - [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)
 - [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)
 - [DROP EVENT SESSION (Transact-SQL)](../../t-sql/statements/drop-event-session-transact-sql.md)
-- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)
-- [sys.dm_xe_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md)
+- [sys.dm_xe_session_targets (Transact-SQL)](../system-dynamic-management-objects/sys-dm-xe-session-targets-transact-sql.md)
+- [sys.dm_xe_sessions (Transact-SQL)](../system-dynamic-management-objects/sys-dm-xe-sessions-transact-sql.md)

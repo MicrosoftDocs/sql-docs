@@ -41,7 +41,7 @@ For more information about security with the extensibility framework, see [Secur
 ## Related content
 
 - [Install SQL Server Java Language Extension on Windows](install/windows-java.md)
-- [Install SQL Server Java Language Extension on Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
+- [Install SQL Server Java Language Extension on Linux](../linux/install-upgrade/setup-language-extensions-java.md)
 - [What is the C# Language Extension?](csharp-overview.md)
 - [Install SQL Server .NET Language Extension on Windows](install/windows-c-sharp.md)
 - [Install a Python custom runtime for SQL Server](../machine-learning/install/custom-runtime-python.md)

@@ -63,7 +63,7 @@ CPU microseconds As of
   
 ## Related content
 
-- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-sys-info-transact-sql.md)
 - [@@IDLE (Transact-SQL)](idle-transact-sql.md)
 - [@@IO_BUSY (Transact-SQL)](io-busy-transact-sql.md)
 - [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)

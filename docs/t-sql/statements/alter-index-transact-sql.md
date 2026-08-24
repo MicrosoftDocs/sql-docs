@@ -1295,5 +1295,5 @@ ALTER INDEX test_idx on test_table ABORT;
 - [Disable indexes and constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md)
 - [XML indexes (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)
 - [Optimize index maintenance to improve query performance and reduce resource consumption](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
-- [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
+- [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)

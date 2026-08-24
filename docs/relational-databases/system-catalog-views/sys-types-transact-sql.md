@@ -80,4 +80,3 @@ WHERE object_id = object_id('dbo.sample');
 - [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
 - [sys.columns (Transact-SQL)](sys-columns-transact-sql.md)
-

@@ -35,4 +35,4 @@ dev_langs:
 - [sys.all_columns (Transact-SQL)](sys-all-columns-transact-sql.md)
 - [sys.system_columns (Transact-SQL)](sys-system-columns-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
-- [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
+- [Temporal tables](../tables/temporal/overview.md)

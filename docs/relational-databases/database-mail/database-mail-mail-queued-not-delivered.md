@@ -76,4 +76,3 @@ In this case, the `msdb.dbo.sysmail_event_log` system view contains the detailed
 
 > [!div class="nextstepaction"]
 > [General database mail troubleshooting](database-mail-general-troubleshooting.md)
-

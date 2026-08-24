@@ -73,4 +73,4 @@ gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerMan
   
 ## Related content
 
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager.md)

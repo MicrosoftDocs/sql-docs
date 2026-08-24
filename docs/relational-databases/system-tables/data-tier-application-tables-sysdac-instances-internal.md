@@ -39,5 +39,5 @@ dev_langs:
   
 ## Related content
 
-- [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)
+- [Data-tier applications (DAC) overview](../../tools/sql-database-projects/concepts/data-tier-applications/overview.md)
 - [Data-tier Application Views - dbo.sysdac_instances](../system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)

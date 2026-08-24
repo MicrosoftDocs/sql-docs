@@ -262,6 +262,6 @@ System Function: **sys.dm_sql_referencing_entities**
 ## Related content
 
 - [Rename a Stored Procedure](rename-a-stored-procedure.md)
-- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
-- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
+- [sys.dm_sql_referencing_entities (Transact-SQL)](../system-dynamic-management-objects/sys-dm-sql-referencing-entities-transact-sql.md)
+- [sys.dm_sql_referenced_entities (Transact-SQL)](../system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md)
 - [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)

@@ -1435,9 +1435,9 @@ FROM census_external_table;
 
 ## Related content
 
-- [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](create-external-file-format-transact-sql.md)
-- [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [CREATE TABLE AS SELECT](create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end

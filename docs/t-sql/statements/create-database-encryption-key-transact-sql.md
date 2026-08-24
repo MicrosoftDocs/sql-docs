@@ -162,6 +162,6 @@ GO
 - [ALTER DATABASE SET options (Transact-SQL)](alter-database-transact-sql-set-options.md)
 - [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](alter-database-encryption-key-transact-sql.md)
 - [DROP DATABASE ENCRYPTION KEY (Transact-SQL)](drop-database-encryption-key-transact-sql.md)
-- [sys.dm_database_encryption_keys (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)
+- [sys.dm_database_encryption_keys (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-database-encryption-keys-transact-sql.md)
 - [BACKUP CERTIFICATE (Transact-SQL)](backup-certificate-transact-sql.md)
 - [CREATE CERTIFICATE (Transact-SQL)](create-certificate-transact-sql.md)

@@ -28,6 +28,6 @@ The dynamic management view `sys.dm_broker_forwarded_messages` shows the message
 
 - [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
 - [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
-- [sys.dm_broker_forwarded_messages (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)
+- [sys.dm_broker_forwarded_messages (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-broker-forwarded-messages-transact-sql.md)
 - [Service Broker endpoints](service-broker-endpoints.md)
 - [Service Broker message forwarding](service-broker-message-forwarding.md)

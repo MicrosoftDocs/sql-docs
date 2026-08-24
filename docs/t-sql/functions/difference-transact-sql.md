@@ -90,4 +90,3 @@ B432  G650  0
 ## Related content
 
 - [SOUNDEX (Transact-SQL)](soundex-transact-sql.md)
-

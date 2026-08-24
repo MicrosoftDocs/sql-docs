@@ -90,4 +90,3 @@ You can't deny access to information schema views in [!INCLUDE [ssazure-sqldb](.
 - [Replication Views (Transact-SQL)](../system-views/replication-views-transact-sql.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 - [System stored procedures (Transact-SQL)](../system-stored-procedures/system-stored-procedures-transact-sql.md)
-

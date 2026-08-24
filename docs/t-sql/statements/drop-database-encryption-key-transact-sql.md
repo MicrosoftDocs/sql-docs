@@ -101,4 +101,4 @@ GO
 - [ALTER DATABASE SET options (Transact-SQL)](alter-database-transact-sql-set-options.md)
 - [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](create-database-encryption-key-transact-sql.md)
 - [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](alter-database-encryption-key-transact-sql.md)
-- [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)
+- [sys.dm_database_encryption_keys (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-database-encryption-keys-transact-sql.md)

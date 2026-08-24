@@ -76,6 +76,6 @@ GO
 
 ## Related content
 
-- [sys.dm_continuous_copy_status (Azure SQL Database)](../system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)
-- [Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)](../system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
-- [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
+- [sys.dm_continuous_copy_status (Azure SQL Database and Azure SQL Managed Instance)](../system-dynamic-management-objects/sys-dm-continuous-copy-status-azure-sql-database.md)
+- [Geo-replication dynamic management views and functions](../system-dynamic-management-objects/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
+- [sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)](../system-dynamic-management-objects/sys-dm-geo-replication-link-status-azure-sql-database.md)

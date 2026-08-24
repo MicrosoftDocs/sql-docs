@@ -236,4 +236,4 @@ The following restrictions apply to editing a thesaurus file:
 - [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)
 - [FREETEXTTABLE (Transact-SQL)](../system-functions/freetexttable-transact-sql.md)
 - [sys.sp_fulltext_load_thesaurus_file (Transact-SQL)](../system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)
-- [sys.dm_fts_parser](../system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)
+- [sys.dm_fts_parser (Transact-SQL)](../system-dynamic-management-objects/sys-dm-fts-parser-transact-sql.md)

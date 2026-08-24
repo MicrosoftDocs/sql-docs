@@ -649,7 +649,7 @@ WHERE a = 2;
 ## Related content
 
 - [Extended Events overview](extended-events/extended-events.md)
-- [sys.dm_tran_locks (Transact-SQL)](system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)
+- [sys.dm_tran_locks (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md)
 - [Deadlock Graph Event Class](event-classes/deadlock-graph-event-class.md)
 - [Deadlocks with Read Repeatable Isolation Level](../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)
 - [Lock:Deadlock Chain Event Class](event-classes/lock-deadlock-chain-event-class.md)

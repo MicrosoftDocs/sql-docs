@@ -117,4 +117,3 @@ This example doesn't consider any additional temporary disk space required in `t
 
 - [Disk space requirements for index DDL operations](disk-space-requirements-for-index-ddl-operations.md)
 - [Transaction log disk space for index operations](transaction-log-disk-space-for-index-operations.md)
-

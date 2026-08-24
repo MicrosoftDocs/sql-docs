@@ -186,4 +186,4 @@ RENAME OBJECT mydb.dbo.Customer COLUMN FName TO FirstName;
 ## Related content
 
 - [sys.sp_renamedb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)
-- [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)

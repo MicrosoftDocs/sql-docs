@@ -74,6 +74,6 @@ For more information about each of these tasks, see F1 help for each task.
 ## Related content
 
 - [SQL Server Services](sql-server-services.md)
-- [SQL Server Network Configuration](sql-server-network-configuration.md)
+- [SQL Server Configuration Manager help](sql-server-configuration-manager-help.md)
 - [SQL Native Client 11.0 Configuration](sql-native-client-11-0-configuration.md)
 - [Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))

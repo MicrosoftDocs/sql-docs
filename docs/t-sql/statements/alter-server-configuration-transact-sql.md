@@ -577,7 +577,7 @@ ALTER SERVER CONFIGURATION
 
 - [Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)
 - [Change which cluster manages the metadata for replicas in an Always On availability group](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)
-- [sys.dm_os_schedulers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)
-- [sys.dm_os_memory_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)
-- [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)
+- [sys.dm_os_schedulers (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-schedulers-transact-sql.md)
+- [sys.dm_os_memory_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-memory-nodes-transact-sql.md)
+- [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)
 - [Buffer pool extension](../../database-engine/configure-windows/buffer-pool-extension.md)

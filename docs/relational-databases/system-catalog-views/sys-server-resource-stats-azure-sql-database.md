@@ -79,5 +79,5 @@ GO
 
 - [Managed Instance Compute Hardware in the vCore Service Tier](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore)
 - [Managed Instance Resource Limits](/azure/azure-sql/managed-instance/resource-limits)
-- [sys.dm_os_out_of_memory_events (Azure SQL Database and Azure SQL Managed Instance)](../system-dynamic-management-views/sys-dm-os-out-of-memory-events.md)
+- [sys.dm_os_out_of_memory_events](../system-dynamic-management-objects/sys-dm-os-out-of-memory-events.md)
 - [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)

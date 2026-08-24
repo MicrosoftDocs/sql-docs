@@ -28,4 +28,4 @@ You can upgrade from [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], [!INCLU
 - [Maximum capacity specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md)
 - [Plan a SQL Server installation](planning-a-sql-server-installation.md)
 - [Hardware and software requirements for SQL Server 2022](hardware-and-software-requirements-for-installing-sql-server-2022.md)
-- [Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md)
+- [Installation guidance for SQL Server on Linux](../../linux/install-upgrade/setup.md)

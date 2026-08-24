@@ -202,4 +202,4 @@ FROM sys.databases AS a;
 - [Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
 - [sys.database_recovery_status (Transact-SQL)](sys-database-recovery-status-transact-sql.md)
 - [Databases and Files Catalog Views (Transact-SQL)](databases-and-files-catalog-views-transact-sql.md)
-- [sys.dm_database_copies (Azure SQL Database)](../system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
+- [sys.dm_database_copies (Azure SQL Database)](../system-dynamic-management-objects/sys-dm-database-copies-azure-sql-database.md)

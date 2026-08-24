@@ -61,7 +61,7 @@ IO microseconds as of
   
 ## Related content
 
-- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-sys-info-transact-sql.md)
 - [@@CPU_BUSY (Transact-SQL)](cpu-busy-transact-sql.md)
 - [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
 - [System Statistical Functions (Transact-SQL)](system-statistical-functions-transact-sql.md)

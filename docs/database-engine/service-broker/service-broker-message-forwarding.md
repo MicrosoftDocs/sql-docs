@@ -46,7 +46,7 @@ However, because transport security applies to the connections between SQL Serve
 
 - [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
 - [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
-- [sys.dm_broker_forwarded_messages (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)
+- [sys.dm_broker_forwarded_messages (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-broker-forwarded-messages-transact-sql.md)
 - [sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)
 - [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
 - [Service Broker routing and networking](service-broker-routing-and-networking.md)

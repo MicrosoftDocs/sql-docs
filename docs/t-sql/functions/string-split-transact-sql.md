@@ -263,4 +263,3 @@ The above statement returns the following table:
 - [RTRIM (Transact-SQL)](rtrim-transact-sql.md)
 - [SUBSTRING (Transact-SQL)](substring-transact-sql.md)
 - [TRIM (Transact-SQL)](trim-transact-sql.md)
-

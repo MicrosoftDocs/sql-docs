@@ -2669,8 +2669,8 @@ WITH (
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](create-database-scoped-credential-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](create-external-table-transact-sql.md)
-- [CREATE EXTERNAL TABLE AS SELECT (Azure Synapse Analytics)](./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-- [CREATE TABLE AS SELECT (Azure Synapse Analytics)](./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true)
+- [CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [CREATE TABLE AS SELECT](create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true)
 - [sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)
 - [Using Shared Access Signatures (SAS)](/azure/storage/common/storage-sas-overview)
 

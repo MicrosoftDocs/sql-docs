@@ -47,4 +47,4 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 
 - [Errors and Events Reference (Replication)](errors-and-events-reference-replication.md)
 - [Identity and Access Control (Replication)](security/identity-and-access-control-replication.md)
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager.md)

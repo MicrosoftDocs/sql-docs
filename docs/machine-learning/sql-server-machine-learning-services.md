@@ -124,6 +124,6 @@ For more information on which packages are installed with Machine Learning Servi
 ## Related content
 
 - [Install SQL Server Machine Learning Services (Python and R) on Windows](install/sql-machine-learning-services-windows-install.md)
-- [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)
+- [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](../linux/install-upgrade/setup-machine-learning.md?toc=/sql/machine-learning/toc.json)
 - [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
 - [R tutorials for SQL machine learning](tutorials/r-tutorials.md)

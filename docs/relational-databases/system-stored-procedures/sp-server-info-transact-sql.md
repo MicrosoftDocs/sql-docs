@@ -98,4 +98,3 @@ Requires membership in the **public** role.
 - [Catalog stored procedures (Transact-SQL)](catalog-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [SQLGetInfo Function](../../odbc/reference/syntax/sqlgetinfo-function.md)
-

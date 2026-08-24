@@ -54,6 +54,6 @@ WHERE object_name LIKE '%Wait Statistics%';
 
 ## Related content
 
-- [sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)
+- [sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md)
 - [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

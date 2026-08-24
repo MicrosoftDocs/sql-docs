@@ -256,4 +256,3 @@ The following functions are collation-sensitive and their output strings have th
 - [Data type conversion (Database Engine)](../data-types/data-type-conversion-database-engine.md)
 - [Operators (Transact-SQL)](../language-elements/operators-transact-sql.md)
 - [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)
-

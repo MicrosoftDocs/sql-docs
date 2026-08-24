@@ -78,5 +78,5 @@ WHERE [name] = 'column encryption enclave type';
 - [sys.sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
-- [sys.dm_column_encryption_enclave](../../relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md)
+- [sys.dm_column_encryption_enclave (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-column-encryption-enclave.md)
 - [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)

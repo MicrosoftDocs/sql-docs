@@ -1069,5 +1069,5 @@ EXEC Get10TopResellers;
 - [OBJECT_DEFINITION (Transact-SQL)](../functions/object-definition-transact-sql.md)
 - [Create a stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)
 - [Use table-valued parameters (Database Engine)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)
-- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
-- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
+- [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md)
+- [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-sql-referencing-entities-transact-sql.md)

@@ -350,7 +350,7 @@ These statements return the row.
 ## Related content
 
 - [Learn more about sqlcmd (Go) utility on GitHub](https://github.com/microsoft/go-sqlcmd)
-- [Quickstart: Run SQL Server Linux container images with Docker](../../linux/quickstart-install-connect-docker.md)
+- [Quickstart: Run SQL Server Linux container images with Docker](../../linux/install-upgrade/quickstart-install-docker.md)
 - [Start the sqlcmd utility](sqlcmd-start-utility.md)
 - [Execute T-SQL from a script file with sqlcmd](sqlcmd-run-transact-sql-script-files.md)
 - [Use sqlcmd](sqlcmd-use-utility.md)

@@ -233,6 +233,6 @@ GO
 - [17-minute video explaining [!INCLUDE[inmemory](../../includes/inmemory-md.md)] and showing the demo](https://www.youtube.com/watch?v=UHhYhSCJil4)
 - [In-Memory OLTP overview and usage scenarios](overview-and-usage-scenarios.md)
 - [Optimize Performance using In-Memory Technologies in Azure SQL](/azure/sql-database/sql-database-in-memory)
-- [System-Versioned Temporal Tables with Memory-Optimized Tables](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
+- [System-versioned temporal tables with memory-optimized tables](../tables/temporal/memory-optimized.md)
 - [The memory-optimized filegroup](the-memory-optimized-filegroup.md)
 - [Script to enable [!INCLUDE[inmemory](../../includes/inmemory-md.md)] and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)

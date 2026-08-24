@@ -59,5 +59,4 @@ The Lock:Acquired and Lock:Released event classes can be used to monitor when ob
 
 - [Lock:Released Event Class](lock-released-event-class.md)
 - [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
-- [sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)
-
+- [sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md)

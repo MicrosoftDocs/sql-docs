@@ -382,5 +382,5 @@ When you attempt to start [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.
 
 - [SQL Server installation guide](../install-windows/install-sql-server.md)
 - [View and read SQL Server Setup log files](../install-windows/view-and-read-sql-server-setup-log-files.md)
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager.md)
 - [Start SQL Server with minimal configuration](start-sql-server-with-minimal-configuration.md)

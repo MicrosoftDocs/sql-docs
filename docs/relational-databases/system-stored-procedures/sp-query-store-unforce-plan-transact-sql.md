@@ -102,4 +102,3 @@ EXECUTE sp_query_store_unforce_plan 3, 3;
 - [Query Store catalog views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [Best Practice with the Query Store](../performance/best-practice-with-the-query-store.md#CheckForced)
-

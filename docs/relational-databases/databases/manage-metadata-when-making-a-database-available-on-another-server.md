@@ -344,7 +344,7 @@ The TRUSTWORTHY database property is used to indicate whether this instance of S
 - [Fail Over to a Log Shipping Secondary (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)
 - [Role Switching During a Database Mirroring Session (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)
 - [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager.md)
 - [Troubleshoot orphaned users (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)
 - [Migrate to a new installation](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md#migrate-to-a-new-installation)
 - [Migration overview: SQL Server to SQL Server on Azure VMs](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview#server-objects)

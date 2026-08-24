@@ -132,4 +132,3 @@ SELECT CAST (0x5B007B0022004900640022003A0031002C002200440061007400610022003A002
 - [sys.fn_trace_geteventinfo (Transact-SQL)](../system-functions/sys-fn-trace-geteventinfo-transact-sql.md)
 - [sp_trace_setevent (Transact-SQL)](sp-trace-setevent-transact-sql.md)
 - [SQL Trace](../sql-trace/sql-trace.md)
-

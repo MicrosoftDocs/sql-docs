@@ -67,7 +67,7 @@ GROUP BY objtype, cacheobjtype;
 
 ## Related content
 
-- [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)
+- [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-cached-plans-transact-sql.md)
 - [Server configuration options](server-configuration-options-sql-server.md)
 - [Monitor performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Query processing architecture guide](../../relational-databases/query-processing-architecture-guide.md)

@@ -70,5 +70,5 @@ The Report Server configuration manager is version-specific. You can't use the R
 
 - [SQL Server Reporting Services tools](../tools/reporting-services-tools.md)
 - [Configure a report server database connection (Report Server Configuration Manager)](configure-a-report-server-database-connection-ssrs-configuration-manager.md)
-- [SQL Server configuration manager](../../relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager.md)
 - [Ask questions on the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

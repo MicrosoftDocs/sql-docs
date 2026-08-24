@@ -76,4 +76,4 @@ EXECUTE sys.sp_xtp_checkpoint_force_garbage_collection N'tempdb';
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sys.sp_xtp_force_gc (Transact-SQL)](sys-sp-xtp-force-gc-transact-sql.md)
 - [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
-- [sys.dm_xtp_system_memory_consumers (Transact-SQL)](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)
+- [sys.dm_xtp_system_memory_consumers (Transact-SQL)](../system-dynamic-management-objects/sys-dm-xtp-system-memory-consumers-transact-sql.md)

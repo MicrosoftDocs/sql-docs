@@ -116,11 +116,9 @@ If you use `SELECT SCOPE_IDENTITY()`, run it in the same batch or transaction as
 
 The count that `RowsAffected()` reports depends on what produced the row counts:
 
-- **Stored procedures:** When every statement runs inside a procedure that uses `SET NOCOUNT ON`, `RowsAffected()` returns 0 because no row count is sent. To get a count, remove `SET NOCOUNT ON`, or return the count through an `OUTPUT` parameter or `SELECT` statement.
+- **Stored procedures:** When every statement runs inside a procedure that uses [`SET NOCOUNT ON`](../../t-sql/statements/set-nocount-transact-sql.md), `RowsAffected()` returns 0 because no row count is sent. To get a count, remove `SET NOCOUNT ON`, or return the count through an `OUTPUT` parameter or `SELECT` statement.
 - **Triggers:** `RowsAffected()` includes rows affected by `AFTER` triggers that don't use `SET NOCOUNT ON`. A single-row `UPDATE` on a table whose trigger writes two audit rows returns 3, not 1. Adding `SET NOCOUNT ON` to the trigger body excludes the trigger's rows and returns 1. The outer statement's count is still reported. Don't remove `SET NOCOUNT ON` from a trigger to correct a row count; removing it causes the inflated number.
 - **Multi-statement batches:** `ExecContext(ctx, "UPDATE ...; UPDATE ...")` returns the sum of all counted statements, not the last statement's count. Use separate `ExecContext` calls to get a per-statement count.
-
-Trigger and multi-statement behavior matches [`SqlCommand.ExecuteNonQuery`](/dotnet/api/microsoft.data.sqlclient.sqlcommand.executenonquery), whose return value includes rows affected by the insert or update operation and by any triggers. The two differ when no statement reports a count: `ExecuteNonQuery` returns -1, and `RowsAffected()` returns 0. If you're porting code that checks for -1, change the check to 0.
 
 ## Parameterized queries
 

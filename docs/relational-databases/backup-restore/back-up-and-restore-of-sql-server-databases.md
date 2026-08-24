@@ -105,9 +105,9 @@ Designing an effective backup and restore strategy requires careful planning, im
 
 The accounts that perform backup or restore operations shouldn't be granted more privileges than necessary. Review [backup](../../t-sql/statements/backup-transact-sql.md#permissions) and [restore](../../t-sql/statements/restore-statements-transact-sql.md#permissions) for specific permission details. It's recommended that backups are [encrypted](../security/encryption/transparent-data-encryption.md) and, if possible, [compressed](backup-compression-sql-server.md).
 
-To ensure security, backup files should have extensions that follow proper conventions:
+Use consistent file extensions to make backups easier to identify and manage. SQL Server doesn't require or enforce these extensions, but following a convention helps with operational tasks such as configuring antivirus exclusions for backup files:
 
-- Database backup files should have the `.BAK` extension
+- Database backup files should have the `.BAK` extension.
 - Log backup files should have the `.TRN` extension.
 
 ### Use Separate Storage

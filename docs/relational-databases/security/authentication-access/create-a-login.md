@@ -309,5 +309,5 @@ The login can connect to [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-m
 ## Related content
 
 - [Security for SQL Server Database Engine and Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)
-- [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins)
+- [Microsoft Entra server principals](/azure/azure-sql/database/authentication-azure-ad-logins)
 - [Tutorial: Create and utilize Microsoft Entra server logins](/azure/azure-sql/database/authentication-azure-ad-logins-tutorial)

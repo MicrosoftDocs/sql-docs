@@ -84,5 +84,5 @@ CDC is supported for SQL Server 2017 on Linux starting with CU18, and SQL Server
 
 ## Related content
 
-- [CDC with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview)
+- [Change data capture (CDC) with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview)
 - [Administer and monitor change data capture](administer-and-monitor-change-data-capture-sql-server.md)

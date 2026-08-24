@@ -432,5 +432,5 @@ ALTER COLUMN LastName DROP MASKED;
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
 - [ALTER TABLE column_definition (Transact-SQL)](../../t-sql/statements/alter-table-column-definition-transact-sql.md)
 - [sys.masked_columns (Transact-SQL)](../system-catalog-views/sys-masked-columns-transact-sql.md)
-- [Get started with SQL Database Dynamic Data Masking (Azure portal)](/azure/azure-sql/database/dynamic-data-masking-overview)
+- [Dynamic data masking](/azure/azure-sql/database/dynamic-data-masking-overview)
 - [Dynamic data masking in Fabric data warehousing](/fabric/data-warehouse/dynamic-data-masking)

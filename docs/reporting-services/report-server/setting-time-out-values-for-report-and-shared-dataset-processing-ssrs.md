@@ -78,6 +78,6 @@ If you specify a time-out value smaller than 60 seconds, the report might still 
   
 ## Related content
 
-- [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)
+- [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](/previous-versions/sql/reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode)
 - [Reporting Services report server (native mode)](reporting-services-report-server-native-mode.md)
 - [Manage a running process](../subscriptions/manage-a-running-process.md)

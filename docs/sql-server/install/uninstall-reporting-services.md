@@ -63,4 +63,4 @@ When you uninstall [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)
 
 - [Uninstall an existing instance of SQL Server (Setup)](uninstall-an-existing-instance-of-sql-server-setup.md)
 - [Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2013)](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)
-- [Install or uninstall the Reporting Services add-in for SharePoint (SSRS)](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+- [Install or uninstall the Reporting Services add-in for SharePoint (SSRS)](/previous-versions/sql/reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint)

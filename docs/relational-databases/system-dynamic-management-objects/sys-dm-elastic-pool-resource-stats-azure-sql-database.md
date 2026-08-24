@@ -79,5 +79,5 @@ ORDER BY end_time DESC;
 - [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
 - [Elastic pools help you manage and scale multiple databases in Azure SQL Database](/azure/azure-sql/database/elastic-pool-overview)
 - [sys.resource_stats (Azure SQL Database)](../system-catalog-views/sys-resource-stats-azure-sql-database.md)
-- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
-- [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)
+- [Monitor performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Monitor and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)

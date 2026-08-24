@@ -259,7 +259,7 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 ## Related content
 
 - [Configure and use Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)
-- [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption](tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

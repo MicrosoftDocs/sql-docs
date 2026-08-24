@@ -45,4 +45,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)
+- [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](/previous-versions/sql/reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode)

@@ -87,10 +87,10 @@ GO
     
 ## Related content
 
-- [Service Tiers](/azure/azure-sql/database/purchasing-models)
-- [Service tier capabilities and limits](/azure/azure-sql/database/performance-guidance)
+- [Compare vCore and DTU-based purchasing models of Azure SQL Database](/azure/azure-sql/database/purchasing-models)
+- [Tune applications and databases for performance in Azure SQL Database](/azure/azure-sql/database/performance-guidance)
 - [sys.dm_os_out_of_memory_events](../system-dynamic-management-objects/sys-dm-os-out-of-memory-events.md)
-- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
-- [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)
+- [Monitor performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Monitor and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)
 - [sys.resource_usage (Azure SQL Database and Azure SQL Managed Instance)](sys-resource-usage-azure-sql-database.md)
 - [sys.dm_db_resource_stats](../system-dynamic-management-objects/sys-dm-db-resource-stats-azure-sql-database.md)

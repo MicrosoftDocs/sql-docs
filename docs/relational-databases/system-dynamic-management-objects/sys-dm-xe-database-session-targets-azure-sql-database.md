@@ -43,8 +43,8 @@ Requires the VIEW DATABASE STATE permission.
 
 ## Related content
 
-- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)
+- [Extended Events in Azure SQL](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [Create an event session with an event_file target in Azure Storage](/azure/azure-sql/database/xevent-code-event-file)
 - [sys.dm_xe_database_sessions](sys-dm-xe-database-sessions-azure-sql-database.md)
 - [sys.dm_xe_database_session_object_columns](sys-dm-xe-database-session-object-columns-azure-sql-database.md)
-- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Monitor performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)

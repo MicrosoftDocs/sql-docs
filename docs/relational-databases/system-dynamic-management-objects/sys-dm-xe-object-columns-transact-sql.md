@@ -64,5 +64,5 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 - [sys.dm_xe_session_events (Transact-SQL)](sys-dm-xe-session-events-transact-sql.md)
 - [Extended Events overview](../extended-events/extended-events.md)
 - [Quickstart: Extended Events](../extended-events/quick-start-extended-events-in-sql-server.md)
-- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)
+- [Extended Events in Azure SQL](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [Create an event session with an event_file target in Azure Storage](/azure/azure-sql/database/xevent-code-event-file)

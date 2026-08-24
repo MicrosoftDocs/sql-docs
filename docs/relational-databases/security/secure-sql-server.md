@@ -104,4 +104,4 @@ Regularly assessing your SQL Server environment helps identify vulnerabilities a
 ## Related content
 
 - [Securing SQL Server](securing-sql-server.md)
-- [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices)
+- [Security considerations for SQL Server on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices)

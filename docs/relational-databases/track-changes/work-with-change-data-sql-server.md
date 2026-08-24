@@ -158,7 +158,7 @@ Because change data capture uses closed query intervals, it is sometimes necessa
 
 ## Related content
 
-- [CDC with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview)
+- [Change data capture (CDC) with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview)
 - [Track data changes (SQL Server)](track-data-changes-sql-server.md)
 - [What is change data capture (CDC)?](about-change-data-capture-sql-server.md)
 - [Enable and disable change data capture](enable-and-disable-change-data-capture-sql-server.md)

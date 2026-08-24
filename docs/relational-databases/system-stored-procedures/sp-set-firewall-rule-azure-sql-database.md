@@ -86,5 +86,5 @@ EXECUTE sp_set_firewall_rule N'Example setting 1', '0.0.0.2', '0.0.0.4';
 
 ## Related content
 
-- [Azure SQL Database and Azure Synapse IP firewall rules](/azure/azure-sql/database/firewall-configure)
+- [Azure SQL Database IP firewall rules](/azure/azure-sql/database/firewall-configure)
 - [sys.firewall_rules (Azure SQL Database)](../system-catalog-views/sys-firewall-rules-azure-sql-database.md)

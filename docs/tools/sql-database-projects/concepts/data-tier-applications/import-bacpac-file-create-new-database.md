@@ -295,7 +295,7 @@ More information on the available parameters and properties can be found in the 
 
 ## Related content
 
-- [Import a BACPAC file to create a new Azure SQL database](/azure/azure-sql/database/database-import)
+- [Quickstart: Import a BACPAC file to a database in Azure SQL Database or Azure SQL Managed Instance](/azure/azure-sql/database/database-import)
 - [Data-tier applications (DAC) overview](overview.md)
 - [Export a BACPAC file](export-bacpac-file.md)
 - [SqlPackage](../../../sqlpackage/sqlpackage.md)

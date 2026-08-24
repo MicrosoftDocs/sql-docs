@@ -165,6 +165,6 @@ To learn more, see [limitations](migration-sql-vm-prepare.md#limitations).
 ## Related content
 
 - [Migrate SQL Server to Azure SQL](/azure/dms/dms-overview)
-- [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview)
+- [What is SQL Server on Azure Windows Virtual Machines?](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview)
 - [SQL Server enabled by Azure Arc](overview.md)
 - [Migration experience feedback directly to the product group](https://aka.ms/arc-migrations-feedback)

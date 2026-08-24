@@ -69,8 +69,8 @@ This page provides links to help you locate the information that you need about 
 
 - [Monitor and Tune for Performance](monitor-and-tune-for-performance.md)
 - [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
-- [Azure SQL Database performance guidance for single databases](/azure/azure-sql/database/performance-guidance)
-- [Optimizing Azure SQL Database Performance using Elastic Pools](/azure/azure-sql/database/elastic-pool-overview)
+- [Tune applications and databases for performance in Azure SQL Database](/azure/azure-sql/database/performance-guidance)
+- [Elastic pools help you manage and scale multiple databases in Azure SQL Database](/azure/azure-sql/database/elastic-pool-overview)
 - [Query Performance Insight for Azure SQL Database](/azure/azure-sql/database/query-performance-insight-use)
 - [Index architecture and design guide](../sql-server-index-design-guide.md)
 - [Memory management architecture guide](../memory-management-architecture-guide.md)

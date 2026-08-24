@@ -220,4 +220,4 @@ EXEC sys.sp_query_store_clear_hints @query_id = 39;
 - [Best practices for monitoring workloads with Query Store](best-practice-with-the-query-store.md)
 - [Query Store hints best practices](query-store-hints-best-practices.md)
 - [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
-- [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism)
+- [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database and SQL database in Fabric](/azure/azure-sql/database/configure-max-degree-of-parallelism)

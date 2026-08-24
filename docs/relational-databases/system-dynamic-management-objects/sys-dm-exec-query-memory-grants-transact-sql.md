@@ -139,4 +139,4 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 - [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [Thread and task architecture guide](../thread-and-task-architecture-guide.md)
 - [MSSQLSERVER_701](../errors-events/mssqlserver-701-database-engine-error.md)
-- [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues)
+- [Troubleshoot out of memory errors with Azure SQL Database and Fabric SQL database](/azure/azure-sql/database/troubleshoot-memory-errors-issues)

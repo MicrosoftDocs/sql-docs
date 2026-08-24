@@ -77,4 +77,4 @@ ms.custom:
   
 ## Related content
 
-- [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)
+- [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](/previous-versions/sql/reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode)

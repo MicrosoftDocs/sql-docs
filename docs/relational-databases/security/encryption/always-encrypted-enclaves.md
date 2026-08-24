@@ -224,7 +224,7 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 
 - [Always Encrypted with secure enclaves documentation](/azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing)
 - [Azure SQL Database Always Encrypted, SIGMOD '20: Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data](https://dl.acm.org/doi/abs/10.1145/3318464.3386141)
-- [Tutorial: Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Configure and use Always Encrypted with secure enclaves](configure-always-encrypted-enclaves.md)
 - [Always Encrypted with secure enclaves demos/samples](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/security/always-encrypted-with-secure-enclaves)
 - [SQL Server samples](https://github.com/Microsoft/sql-server-samples)

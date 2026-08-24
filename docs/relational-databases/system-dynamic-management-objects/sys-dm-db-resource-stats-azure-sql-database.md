@@ -104,4 +104,4 @@ FROM sys.dm_db_resource_stats;
 - [sys.server_resource_stats (Azure SQL Managed Instance)](../system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
 - [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
 - [sys.dm_elastic_pool_resource_stats (Azure SQL Database)](sys-dm-elastic-pool-resource-stats-azure-sql-database.md)
-- [Service Tiers](/azure/azure-sql/database/purchasing-models)
+- [Compare vCore and DTU-based purchasing models of Azure SQL Database](/azure/azure-sql/database/purchasing-models)

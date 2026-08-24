@@ -1339,8 +1339,8 @@ AS COPY OF [test_db]
 - [sys.dm_database_copies (Azure SQL Database)](../../relational-databases/system-dynamic-management-objects/sys-dm-database-copies-azure-sql-database.md)
 - [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
 - [Resource limits for single databases using the DTU purchasing model - Azure SQL Database](/azure/azure-sql/database/resource-limits-dtu-single-databases)
-- [vCore resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases)
-- [vCore Resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
+- [Resource limits for single databases using the vCore purchasing model](/azure/azure-sql/database/resource-limits-vcore-single-databases)
+- [Resource limits for elastic pools using the vCore purchasing model](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
 
 ::: moniker-end
 

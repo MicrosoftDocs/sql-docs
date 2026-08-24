@@ -142,8 +142,8 @@ WHERE event_type = 'connection_failed'
 
 ## Related content
 
-- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [Extended Events in Azure SQL](/azure/azure-sql/database/xevent-db-diff-from-svr)
 - [Azure SQL Database and SQL database in Fabric catalog views](azure-sql-database-catalog-views.md)
 - [sys.database_connection_stats (Azure SQL Database)](sys-database-connection-stats-azure-sql-database.md)
-- [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/troubleshoot-common-errors-issues)
-- [Troubleshoot transient connection errors in SQL Database and SQL Managed Instance](/azure/azure-sql/database/troubleshoot-common-connectivity-issues)
+- [Troubleshoot connectivity issues and other errors](/azure/azure-sql/database/troubleshoot-common-errors-issues)
+- [Troubleshoot transient connection errors](/azure/azure-sql/database/troubleshoot-common-connectivity-issues)

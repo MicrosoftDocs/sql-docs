@@ -617,7 +617,7 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 ## Related content
 
 - [sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-- [sys.pdw_materialized_view_distribution_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [sys.pdw_materialized_view_mappings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
 - [System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)

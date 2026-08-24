@@ -138,4 +138,4 @@ ORDER BY s.distance
 - [VECTOR_SEARCH (Transact-SQL) (Preview)](../../t-sql/functions/vector-search-transact-sql.md)
 - [CREATE VECTOR INDEX (Transact-SQL) (Preview)](../../t-sql/statements/create-vector-index-transact-sql.md)
 - [Azure SQL Database Vector Search Samples](https://github.com/Azure-Samples/azure-sql-db-vector-search)
-- [Intelligent applications with Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications)
+- [Intelligent applications and AI](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications)

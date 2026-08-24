@@ -94,5 +94,5 @@ ORDER BY start_time ASC;
 - [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)
 - [Azure SQL Database and SQL database in Fabric catalog views](azure-sql-database-catalog-views.md)
 - [sys.event_log (Azure SQL Database)](sys-event-log-azure-sql-database.md)
-- [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
-- [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)
+- [Diagnose and troubleshoot high CPU on Azure SQL Database and SQL database in Microsoft Fabric](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
+- [Understand and resolve blocking problems](/azure/azure-sql/database/understand-resolve-blocking)

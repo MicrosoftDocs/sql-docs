@@ -317,4 +317,4 @@ For more information about each part of this sample, see [Azure SQL Database](az
 - [go-mssqldb on GitHub](https://github.com/microsoft/go-mssqldb)
 - [go-mssqldb API reference on pkg.go.dev](https://pkg.go.dev/github.com/microsoft/go-mssqldb)
 - [Connection modules for Microsoft SQL Database](../sql-connection-libraries.md)
-- [Quickstart: Use Golang to query Azure SQL Database](/azure/azure-sql/database/connect-query-go)
+- [Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance](/azure/azure-sql/database/connect-query-go)

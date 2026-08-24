@@ -254,7 +254,7 @@ All of these permissions are included in the `CONTROL` permission on the databas
 - [Extended Events Dynamic Management Views](../system-dynamic-management-objects/extended-events-dynamic-management-views.md)
 - [Extended Events Catalog Views (Transact-SQL)](../system-catalog-views/extended-events-catalog-views-transact-sql.md)
 - [SQL Mysteries: Causality tracking vs Event Sequence for XEvent Sessions](https://techcommunity.microsoft.com/blog/sqlserver/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/3198826)
-- [Analyze and prevent deadlocks in Azure SQL Database and Fabric SQL database](/azure/azure-sql/database/analyze-prevent-deadlocks)
+- [Analyze and prevent deadlocks in Azure SQL Database and SQL database in Fabric](/azure/azure-sql/database/analyze-prevent-deadlocks)
 - [Quickstart: Extended Events](quick-start-extended-events-in-sql-server.md)
 - [Create an event session with an event_file target in Azure Storage](/azure/azure-sql/database/xevent-code-event-file)
 - [Extended Events in Azure SQL](/azure/azure-sql/database/xevent-db-diff-from-svr)

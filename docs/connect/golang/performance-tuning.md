@@ -409,8 +409,8 @@ func processBatched(ctx context.Context, db *sql.DB, batchSize int) error {
 
 ## Related content
 
-- [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
-- [Performance Dashboard](/sql/relational-databases/performance/performance-dashboard)
+- [Monitor performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Performance Dashboard](../../relational-databases/performance/performance-dashboard.md)
 - [Connection pooling with go-mssqldb](connection-pooling.md)
 - [Bulk operations with go-mssqldb](bulk-operations.md)
 - [Concurrent programming with go-mssqldb](concurrent-programming.md)

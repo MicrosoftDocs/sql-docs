@@ -183,7 +183,7 @@ Without automatic index management, a user or DBA would need to manually query t
 
 ## Related content
 
-- [Automatic tuning in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]](/azure/azure-sql/database/automatic-tuning-overview)
+- [Automatic database tuning](/azure/azure-sql/database/automatic-tuning-overview)
 - [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
 - [sys.database_automatic_tuning_options (Transact-SQL)](../system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
 - [sys.dm_db_tuning_recommendations (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-tuning-recommendations-transact-sql.md)

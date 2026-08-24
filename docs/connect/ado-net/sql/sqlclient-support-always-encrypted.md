@@ -664,7 +664,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md)
-- [SQL Database tutorial: Protect sensitive data with Always Encrypted](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
+- [Tutorial: Getting started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Example demonstrating use of Azure Key Vault provider with Always Encrypted](azure-key-vault-example.md)
 - [Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with secure enclaves](azure-key-vault-enclave-example.md)

@@ -142,4 +142,4 @@ WHERE name='Test'
 - [Contained Databases](../databases/contained-databases.md)
 - [Security Best Practices with Contained Databases](../databases/security-best-practices-with-contained-databases.md)
 - [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-- [Connect to Azure SQL Database by using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Microsoft Entra authentication for Azure SQL](/azure/azure-sql/database/authentication-aad-overview)

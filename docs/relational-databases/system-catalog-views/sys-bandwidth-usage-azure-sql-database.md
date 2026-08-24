@@ -38,8 +38,8 @@ monikerRange: "=azuresqldb-current"
   
 ## Related content
 
-- [Azure SQL Database and Azure Synapse Analytics connectivity architecture](/azure/azure-sql/database/connectivity-architecture)
-- [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
+- [Connectivity architecture](/azure/azure-sql/database/connectivity-architecture)
+- [Diagnose and troubleshoot high CPU on Azure SQL Database and SQL database in Microsoft Fabric](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
 - [Azure SQL Database and SQL database in Fabric catalog views](azure-sql-database-catalog-views.md)
 - [sys.database_connection_stats (Azure SQL Database)](sys-database-connection-stats-azure-sql-database.md)
-- [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/troubleshoot-common-errors-issues)
+- [Troubleshoot connectivity issues and other errors](/azure/azure-sql/database/troubleshoot-common-errors-issues)

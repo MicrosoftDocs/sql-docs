@@ -61,5 +61,5 @@ You can use the **sys.dm_database_copies** view in the **master** database of th
 - [Geo-replication dynamic management views and functions](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
 - [sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)](sys-dm-geo-replication-link-status-azure-sql-database.md)
 - [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)
-- [Auto-failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/auto-failover-group-sql-db)
-- [Auto-failover groups overview & best practices (Azure SQL Managed Instance)](/azure/azure-sql/managed-instance/auto-failover-group-sql-mi)
+- [Failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/failover-group-sql-db)
+- [Failover groups overview & best practices - Azure SQL Managed Instance](/azure/azure-sql/managed-instance/failover-group-sql-mi)

@@ -295,5 +295,5 @@ conn = mssql_python.connect(connection_string, authentication="ActiveDirectoryMS
 
 - [Connection strings for mssql-python](connection-strings.md)
 - [Troubleshoot mssql-python](troubleshooting.md)
-- [Azure SQL passwordless migration](/azure/azure-sql/database/azure-sql-passwordless-migration-python)
-- [Microsoft Entra authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-overview)
+- [Migrate a Python application to use passwordless connections with Azure SQL Database](/azure/azure-sql/database/azure-sql-passwordless-migration-python)
+- [Microsoft Entra authentication for Azure SQL](/azure/azure-sql/database/authentication-aad-overview)

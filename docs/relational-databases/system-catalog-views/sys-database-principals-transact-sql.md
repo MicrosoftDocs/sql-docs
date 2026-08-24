@@ -124,4 +124,4 @@ JOIN sys.schemas AS s
 - [sys.server_principals (Transact-SQL)](sys-server-principals-transact-sql.md)
 - [Security Catalog Views (Transact-SQL)](security-catalog-views-transact-sql.md)
 - [Make your database portable by using contained databases](../security/contained-database-users-making-your-database-portable.md)
-- [Connecting to Azure SQL with Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Microsoft Entra authentication for Azure SQL](/azure/azure-sql/database/authentication-aad-overview)

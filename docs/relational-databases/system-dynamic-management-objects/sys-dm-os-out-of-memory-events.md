@@ -134,4 +134,4 @@ ORDER BY event_time DESC, pool_allocations_mb DESC;
 - [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true)
 - [Monitor In-Memory OLTP storage in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-monitor-space?view=azuresql-db&preserve-view=true)
 - [Monitor In-Memory OLTP storage in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-monitor-space?view=azuresql-mi&preserve-view=true)
-- [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues)
+- [Troubleshoot out of memory errors with Azure SQL Database and Fabric SQL database](/azure/azure-sql/database/troubleshoot-memory-errors-issues)

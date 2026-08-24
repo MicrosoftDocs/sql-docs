@@ -136,4 +136,4 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ## Related content
 
 - [Transactions in SQL Server Native Client](transactions.md)
-- [MS DTC for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc)
+- [Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc)

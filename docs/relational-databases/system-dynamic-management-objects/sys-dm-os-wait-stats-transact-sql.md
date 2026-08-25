@@ -552,7 +552,7 @@ The following table lists the wait types encountered by tasks.
 | <a id="preemptive_closebackupmedia"></a> `PREEMPTIVE_CLOSEBACKUPMEDIA` | Occurs when the SQLOS scheduler switches to preemptive mode to close backup media. |
 | <a id="preemptive_closebackuptape"></a> `PREEMPTIVE_CLOSEBACKUPTAPE` | Occurs when the SQLOS scheduler switches to preemptive mode to close a tape backup device. |
 | <a id="preemptive_closebackupvdidevice"></a> `PREEMPTIVE_CLOSEBACKUPVDIDEVICE` | Occurs when the SQLOS scheduler switches to preemptive mode to close a virtual backup device. |
-| <a id="preemptive_clusapi_clusterresourcecontrol"></a> `PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL` | Occurs when the SQLOS scheduler switches to preemptive mode to perform Windows failover cluster operations. |
+| <a id="preemptive_clusapi_clusterresourcecontrol"></a> `PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL` | Occurs when the SQLOS scheduler switches to preemptive mode to perform Windows Server failover cluster operations. |
 | <a id="preemptive_com_cocreateinstance"></a> `PREEMPTIVE_COM_COCREATEINSTANCE` | Occurs when the SQLOS scheduler switches to preemptive mode to create a COM object. |
 | <a id="preemptive_com_cogetclassobject"></a> `PREEMPTIVE_COM_COGETCLASSOBJECT` | Internal use only. |
 | <a id="preemptive_com_createaccessor"></a> `PREEMPTIVE_COM_CREATEACCESSOR` | Internal use only. |

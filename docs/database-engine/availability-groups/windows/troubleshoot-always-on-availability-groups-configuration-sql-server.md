@@ -24,14 +24,14 @@ helpviewer_keywords:
 
 The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must be enabled on each of the instances of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. 
 
-If the Always On Availability Groups feature isn't enabled, you'll get this error message when you try to create an Availability group on SQL Server. 
+If the Always On Availability Groups feature isn't enabled, you'll get this error message when you try to create an Availability group on SQL Server.
 
 `The Always On Availability Groups feature must be enabled for server instance 'SQL1VM' before you can create an availability group on this instance. To enable this feature, open the SQL Server Configuration Manager, select SQL Server Services, right-click on the SQL Server service name, select Properties, and use the Always On Availability Groups tab of the Server Properties dialog. Enabling Always On Availability Groups may require that the server instance is hosted by a Windows Server Failover Cluster (WSFC) node. (Microsoft.SqlServer.Management.HadrTasks)`
 
 The error message clearly indicates that the AG feature isn't enabled and also directs you how to enable it. There are two scenarios where you can get in this state besides the obvious one where AG wasn't enabled in the first place. 
 
-1. If SQL Server was installed and the Always On Availability Groups feature was enabled before you installed the Windows Failover Clustering feature, you might get this error  when you attempt to create an Always On AG. 
-2. If you remove an existing Windows Failover Clustering feature and rebuild it while SQL Server still has Always On configured, when you attempt to use AG again this error may occur.
+1. If SQL Server was installed and the Always On Availability Groups feature was enabled before you installed the Windows Server Failover Clustering (WSFC) feature, you might get this error  when you attempt to create an Always On AG. 
+2. If you remove an existing WSFC feature and rebuild it while SQL Server still has Always On configured, when you attempt to use AG again this error may occur.
 
 In such cases you can take the following steps to resolve it: 
 

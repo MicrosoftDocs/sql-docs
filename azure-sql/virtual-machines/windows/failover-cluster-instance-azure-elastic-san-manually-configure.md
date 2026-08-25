@@ -49,8 +49,9 @@ Follow the instructions to [Connect Elastic SAN volumes](/azure/storage/elastic-
 
 Use [Disk Management](/windows-server/storage/disk-management/overview-of-disk-management) to format your Elastic SAN volume and bring it online. 
 
+<a id="create-windows-failover-cluster"></a>
 
-## Create Windows Failover Cluster
+## Create a Windows Server failover cluster
 
 The steps to create your Windows Server Failover Cluster differ between single subnet and multi-subnet environments. To create your cluster, follow the steps in the tutorial for either a [multi-subnet scenario](availability-group-manually-configure-tutorial-multi-subnet.md#add-failover-cluster-feature) or a [single subnet scenario](availability-group-manually-configure-tutorial-single-subnet.md#create-the-cluster). Though these tutorials create an availability group, the steps to create the cluster are the same for a failover cluster instance. 
 

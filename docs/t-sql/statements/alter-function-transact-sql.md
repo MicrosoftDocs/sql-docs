@@ -372,7 +372,7 @@ COLLATE cannot be specified for CLR table-valued functions.
 
 #### ROWGUIDCOL
 
-Indicates that the new column is a row global unique identifier column. Only one **uniqueidentifier** column per table can be designated as the **ROWGUIDCOL** column. The **ROWGUIDCOL** property can be assigned only to a **uniqueidentifier** column.
+Indicates that the new column is a row globally unique identifier column. Only one **uniqueidentifier** column per table can be designated as the **ROWGUIDCOL** column. The **ROWGUIDCOL** property can be assigned only to a **uniqueidentifier** column.
 
 The ROWGUIDCOL property does not enforce uniqueness of the values stored in the column. It also does not automatically generate values for new rows inserted into the table. To generate unique values for each column, use the `NEWID` function on `INSERT` statements. A default value can be specified; however, `NEWID` cannot be specified as the default.
 

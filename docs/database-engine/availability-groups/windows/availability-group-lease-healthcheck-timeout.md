@@ -20,11 +20,11 @@ Multiple services on each node work to detect failures. The cluster service coul
 
 ## SQL Server 2025 improved health check timeout diagnostics
 
-Resource constraints such as high CPU, disk latency, or memory exhaustion can trigger an Always On availability group lease timeout. When a lease timeout is reported in the cluster log, the most recent performance monitor data for CPU utilization, memory utilization, and disk read and write latency are reported in the Windows Failover Cluster Log along with the lease timeout.
+Resource constraints such as high CPU, disk latency, or memory exhaustion can trigger an Always On availability group lease timeout. When a lease timeout is reported in the failover cluster log, the most recent performance monitor data for CPU utilization, memory utilization, and disk read and write latency are reported in the failover cluster log along with the lease timeout.
 
-Likewise, resource constraints can also trigger a health check timeout. Starting with [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], the same performance monitor counters are now reported in the Windows Failover Cluster Log when a health check timeout is detected, similar to the lease timeout diagnostic output.
+Likewise, resource constraints can also trigger a health check timeout. Starting with [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], the same performance monitor counters are now reported in the failover cluster log when a health check timeout is detected, similar to the lease timeout diagnostic output.
 
-The following is a sample of the improved Windows Failover Cluster Log output for a health check timeout:
+The following is a sample of the improved failover cluster log output for a health check timeout:
 
 ```output
 [Verbose] 000035b8.00001a64::2024/04/18-23:56:35.536 ERR   [RES] SQL Server Availability Group: [hadrag] Failure detected, diagnostics heartbeat is lost

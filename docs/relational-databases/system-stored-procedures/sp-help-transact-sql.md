@@ -111,7 +111,7 @@ The result sets that are returned depend on whether *@name* is specified, when i
 
      | Column name | Data type | Description |
      | --- | --- | --- |
-     | `RowGuidCol` | **sysname** | Name of the global unique identifier column. |
+     | `RowGuidCol` | **sysname** | Name of the globally unique identifier column. |
 
    - The following result set is also returned on filegroups:
 

@@ -60,7 +60,7 @@ When you connect to a database, SSMA reads the database metadata, and then adds 
 
    1. In the **Password** box, enter the password for the specified user name.
 
-1. **SSL:** If you want to securely connect to MySQL, make use of TLS or Secure Socket Layer (SSL) by checking the **SSL** checkbox.
+1. **SSL:** If you want to securely connect to MySQL, make use of TLS or Secure Sockets Layer (SSL) by checking the **SSL** checkbox.
 
 1. **Configure:** Use this option to configure the connection to MySQL through TLS/SSL. To enable **Configure**, SSL must be set to **True**.
 

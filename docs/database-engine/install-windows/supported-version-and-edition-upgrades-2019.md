@@ -127,7 +127,7 @@ Additionally you can also perform an edition upgrade between [!INCLUDE [sssql19-
 
 <sup>1</sup> Also applies to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] Express with Tools and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] Express with Advanced Services.
 
-<sup>2</sup> Upgrading from Evaluation (a free edition) to any of the paid editions is supported for stand-alone installations, but isn't supported for clustered installations. This limitation doesn't apply to stand-alone instances installed on a Windows Failover Cluster participating in an availability group.
+<sup>2</sup> Upgrading from Evaluation (a free edition) to any of the paid editions is supported for stand-alone installations, but isn't supported for clustered installations. This limitation doesn't apply to stand-alone instances installed on a Windows Server failover cluster participating in an availability group.
 
 <sup>3</sup> Changing the edition of a clustered instance of [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] limited. The following scenarios aren't supported for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] failover clusters:
 

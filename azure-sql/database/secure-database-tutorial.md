@@ -262,7 +262,7 @@ To enable Microsoft Defender for SQL:
 
 If anomalous activities are detected, you receive an email with information on the event. This includes the nature of the activity, database, server, event time, possible causes, and recommended actions to investigate and mitigate the potential threat. If such an email is received, select the **Azure SQL Auditing Log** link to launch the Azure portal and show relevant auditing records for the time of the event.
 
-:::image type="content" source="media\secure-database-tutorial\threat-email.png" alt-text="Screenshot of a sample email from Azure, indicating a Potential Sql Injection Threat detection. A link in the body of the email to Azure SQL DB Audit Logs is highlighted.":::
+:::image type="content" source="media\secure-database-tutorial\threat-email.png" alt-text="Screenshot of a sample email from Azure, indicating a Potential SQL Injection Threat detection. A link in the body of the email to Azure SQL Database Audit Logs is highlighted.":::
 
 ### Auditing
 

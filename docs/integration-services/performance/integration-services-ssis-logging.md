@@ -328,8 +328,8 @@ A good practice is to create a separate database for Integration Services loggin
 |**Computer**|The name of the computer on which the logged event occurred.|  
 |**Operator**|The user name of the person who started the package.|  
 |**SourceName**|The name of the package, container, or task in which the logged event occurred.|  
-|**SourceID**|The global unique identifier (GUID) of the package, container, or task in which the logged event occurred.|  
-|**ExecutionID**|The global unique identifier of the package execution instance.|  
+|**SourceID**|The globally unique identifier (GUID) of the package, container, or task in which the logged event occurred.|  
+|**ExecutionID**|The globally unique identifier of the package execution instance.|  
 |**MessageText**|A message associated with the log entry.|  
 |**DataBytes**|Reserved for future use.|  
   

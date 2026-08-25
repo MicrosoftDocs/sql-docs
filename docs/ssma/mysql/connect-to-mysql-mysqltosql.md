@@ -42,11 +42,11 @@ Enter the password for the user name.
   
 **SSL**  
   
-If you want to securely connect to MySQL, make use of Secure Socket Layer (SSL) by checking the **SSL** checkbox.  
+If you want to securely connect to MySQL, make use of Secure Sockets Layer (SSL) by checking the **SSL** checkbox.  
   
 **Configure**  
   
-It provides an option to configure the connection to MySQL through Secure Socket Layer (SSL).  
+It provides an option to configure the connection to MySQL through Secure Sockets Layer (SSL).  
   
 > [!NOTE]  
 > To enable **Configure**, SSL must be set to **True**.  

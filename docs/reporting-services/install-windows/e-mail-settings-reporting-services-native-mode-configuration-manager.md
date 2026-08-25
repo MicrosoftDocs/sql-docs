@@ -163,7 +163,7 @@ The following configuration settings determine the connection between the report
 
 1. In **Control Panel**, find the **Turn Windows features on or off** feature to start the **Add Roles and Features Wizard**.
 1. Select **Role-based or feature-based installation** and select **Next**.
-1. Select the server to install Internet Information Server (IIS) onto and select **Next**.
+1. Select the server to install Internet Information Services (IIS) onto and select **Next**.
 1. Select **Next** on the **Server Roles** page.
 1. On the **Features** page, select **SMTP Server** and then select **Next**.
      If you receive the prompt to add features that are required for SMTP Server, select **Add Features**.

@@ -29,7 +29,7 @@ System tables in the `msdb` database collect information from the [Database Mail
 
  - [Database Mail views](../system-catalog-views/database-mail-views-transact-sql.md) expose the tables for troubleshooting purposes. 
  
- - Errors appear in the [sysmail_event_log (Transact-SQL)](../system-catalog-views/sysmail-event-log-transact-sql.md) view if Service Broker cannot activate the external program, if the external program encounters networking errors or if the Simple Mail Transport Protocol (SMTP) server refuses an e-mail message. 
+ - Errors appear in the [sysmail_event_log (Transact-SQL)](../system-catalog-views/sysmail-event-log-transact-sql.md) view if Service Broker cannot activate the external program, if the external program encounters networking errors or if the Simple Mail Transfer Protocol (SMTP) server refuses an e-mail message. 
 
 - When the external program cannot log to the `msdb` tables, the program logs errors to the Windows Application event log.  
  

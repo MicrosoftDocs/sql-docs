@@ -40,7 +40,7 @@ To learn more, see [Quorum best practices with SQL Server VMs in Azure](hadr-clu
 
 ## Storage
 
-In traditional on-premises clustered environments, a Windows failover cluster uses a storage area network (SAN) that's accessible by all nodes as the shared storage. SQL Server files are hosted on the shared storage, and only the active node can access the files at one time.
+In traditional on-premises clustered environments, a Windows Server failover cluster uses a storage area network (SAN) that's accessible by all nodes as the shared storage. SQL Server files are hosted on the shared storage, and only the active node can access the files at one time.
 
 SQL Server on Azure VMs offers various options as a shared storage solution for a deployment of SQL Server failover cluster instances:
 

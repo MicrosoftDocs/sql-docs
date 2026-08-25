@@ -320,7 +320,7 @@ Use a single NIC per server (cluster node). Azure networking has physical redund
 
 Bandwidth limits for a particular VM are shared across NICs and adding an additional NIC doesn't improve availability group performance for SQL Server on Azure VMs. As such, there's no need to add a second NIC.
 
-The non-RFC-compliant DHCP service in Azure can cause the creation of certain failover cluster configurations to fail. This failure happens because the cluster network name is assigned a duplicate IP address, such as the same IP address as one of the cluster nodes. This is an issue when you use availability groups, which depend on the Windows failover cluster feature.
+The non-RFC-compliant DHCP service in Azure can cause the creation of certain failover cluster configurations to fail. This failure happens because the cluster network name is assigned a duplicate IP address, such as the same IP address as one of the cluster nodes. This is an issue when you use availability groups, which depend on the Windows Server Failover Clustering feature.
 
 Consider the scenario when a two-node cluster is created and brought online:
 
@@ -533,7 +533,7 @@ Make sure you have [appropriate permissions on domain](https://techcommunity.mic
 
 #### Cluster connectivity issues
 
-You might encounter issues while setting up a Windows failover cluster or its connectivity if you don't have [Cluster Service Ports open for communication](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#cluster-service).
+You might encounter issues while setting up a Windows Server failover cluster or its connectivity if you don't have [Cluster Service Ports open for communication](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#cluster-service).
 
 #### Missing Windows Cluster IP on Windows Server 2019
 

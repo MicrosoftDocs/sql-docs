@@ -50,7 +50,7 @@ You can combine technologies to implement a SQL Server solution that has both hi
 
 ## Availability Groups (HADR)
 
-Protecting your SQL Server on Azure VMs at the database level can be done using [**Always On availability groups**](availability-group-overview.md) as a high-availability and disaster recovery (HADR) solution. Replicas running on Azure VMs in the same region provide high availability. A domain controller VM is needed since Windows failover clustering requires an Active Directory domain.
+Protecting your SQL Server on Azure VMs at the database level can be done using [**Always On availability groups**](availability-group-overview.md) as a high-availability and disaster recovery (HADR) solution. Replicas running on Azure VMs in the same region provide high availability. A domain controller VM is needed since Windows Server Failover Clustering requires an Active Directory domain.
 
 :::image type="content" source="media/business-continuity-high-availability-disaster-recovery-hadr-overview/azure-only-ha-always-on.png" alt-text="Diagram that shows the Domain Controller above the WSFC Cluster made of the Primary Replica, Secondary Replica, and File Share Witness.":::
 

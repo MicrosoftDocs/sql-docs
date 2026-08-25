@@ -18,7 +18,7 @@ This article describes considerations for naming service broker objects. The con
 
 ## Public interface objects
 
-Contracts, services, and message types form the public interface of a Service Broker application. Because the names of these objects are contained in messages, naming conventions for these objects often follow Universal Resource Identifier (URI) naming conventions. This helps to ensure unique names for the objects.
+Contracts, services, and message types form the public interface of a Service Broker application. Because the names of these objects are contained in messages, naming conventions for these objects often follow Uniform Resource Identifier (URI) naming conventions. This helps to ensure unique names for the objects.
 
 Services names can also use the conventions to specify a network address in a route. In this case, the name of the service can be used in a transport route. For more information on routing, see [Service Broker routing](service-broker-routing.md).
 

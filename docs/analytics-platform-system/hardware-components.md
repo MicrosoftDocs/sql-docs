@@ -67,7 +67,7 @@ The Base Scale unit contains the minimum number of brain-power hosts, data hosts
 This server runs the brains of PDW.
   
 ### Passive host  
-This server provides high availability. It is online and ready to run jobs in case there is a failure on the orchestration or data host. The orchestration host, passive host, and Data Scale unit servers are configured as a Windows failover cluster. Each rack in the appliance requires one passive host.  
+This server provides high availability. It is online and ready to run jobs in case there is a failure on the orchestration or data host. The orchestration host, passive host, and Data Scale unit servers are configured as a Windows Server failover cluster. Each rack in the appliance requires one passive host.  
   
 ### Optional passive host  
 To add further redundancy, you have the option to add a second passive host to the Base Scale unit.  

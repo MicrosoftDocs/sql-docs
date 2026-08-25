@@ -65,7 +65,9 @@ To mount your premium file share, follow these steps:
   > [!IMPORTANT]  
   > Consider using a separate file share for backup files to save the IOPS and space capacity of the premium file share for data and log files. You can use either a Premium or Standard File Share for backup files.
 
-## Create Windows Failover Cluster
+<a id="create-windows-failover-cluster"></a>
+
+## Create a Windows Server failover cluster
 
 Create the Windows Server Failover Cluster (WSFC) on all SQL Server VMs using a domain account with Create Computer Object permissions; setup steps differ between single subnet (requires load balancer) and multi-subnet (uses distributed network name) environments.
 

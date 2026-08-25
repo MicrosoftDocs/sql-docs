@@ -17,7 +17,7 @@ ms.custom: [sqldbrb=1, sfi-image-nochange]
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-The following document includes links to Azure examples showing how to connect and query Azure SQL Database and Azure SQL Managed Instance. For some related recommendations for Transport Level Security, see [TLS considerations for database connectivity](#tls-considerations-for-database-connectivity).
+The following document includes links to Azure examples showing how to connect and query Azure SQL Database and Azure SQL Managed Instance. For some related recommendations for Transport Layer Security, see [TLS considerations for database connectivity](#tls-considerations-for-database-connectivity).
 
 Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for a brief connect and query overview:
 

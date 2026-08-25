@@ -513,7 +513,7 @@ To add failover clustering features, complete the following steps on both SQL Se
 
 ### Tune network thresholds for a failover cluster
 
-When you're running Windows failover cluster nodes in Azure VMs with SQL Server availability groups, change the cluster setting to a more relaxed monitoring state. This change makes the cluster more stable and reliable. For details, see [IaaS with SQL Server: Tuning failover cluster network thresholds](/windows-server/troubleshoot/iaas-sql-failover-cluster).
+When you're running Windows Server failover cluster nodes in Azure VMs with SQL Server availability groups, change the cluster setting to a more relaxed monitoring state. This change makes the cluster more stable and reliable. For details, see [IaaS with SQL Server: Tuning failover cluster network thresholds](/windows-server/troubleshoot/iaas-sql-failover-cluster).
 
 <a id="endpoint-firewall"></a>
 

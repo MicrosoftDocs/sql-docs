@@ -49,7 +49,7 @@ Beginning in [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)], SysPrep support
 
 1. Deploy the image by running Windows SysPrep Specialize.
 
-1. Create the Windows Failover Cluster.
+1. Create the Windows Server failover cluster.
 
 1. Run setup.exe with **/ACTION=PrepareFailoverCluster** all nodes. For example:
 
@@ -69,7 +69,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName> /FAILO
 
 1. Deploy the image by running Windows SysPrep Specialize.
 
-1. Join the Windows Failover Cluster.
+1. Join the Windows Server failover cluster.
 
 1. Run setup.exe with **/ACTION=AddNode** on all nodes:
 

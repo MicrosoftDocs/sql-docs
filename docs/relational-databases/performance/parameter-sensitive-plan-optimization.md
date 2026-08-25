@@ -141,7 +141,7 @@ And, within the ShowPlan XML of a query variant (inside of the Dispatcher elemen
 
 - Starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and database compatibility *170*, PSP optimization includes the following four improvements:
 
-  - Support for data manipulation language Data Manipulation Language (DML) statements such as DELETE, INSERT, MERGE, and UPDATE.
+  - Support for data manipulation language (DML) statements such as DELETE, INSERT, MERGE, and UPDATE.
   - Expanded support for `tempdb`.
   - Additional consideration given in scenarios where multiple eligible predicates exist on the same table.
   - Changes to the `query_with_parameter_sensitivity` extended event which included the interesting_predicate_count, max_skewness, psp_optimization_supported, and query_type fields before the changes in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and database compatibility *170*. But now include the interesting_predicate_count, interesting_predicate_details, psp_optimization_supported, and query_type fields. For more information see the [Extended Events](#extended-events) section.

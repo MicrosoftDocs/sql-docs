@@ -32,6 +32,13 @@ pie install microsoft/pdo_sqlsrv
 
 Install each driver with its own command. For instructions on installing PIE, see the [PIE documentation](https://github.com/php/pie).
 
+PIE needs the `openssl` extension to reach the package repository. A new PHP installation that uses the stock **php.ini-development** file doesn't enable it, and PIE stops with `The package "composer/ca-bundle" requires the extension "openssl"`. Set `extension_dir` and enable the extension in **php.ini** before you run PIE:
+
+```ini
+extension_dir = "ext"
+extension=openssl
+```
+
 You can also build the drivers from source either when building PHP or by using `phpize`. If you choose to build the drivers from source, you have the option of building them statically into PHP instead of building them as shared extensions by adding `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (on Linux and macOS) or `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (on Windows) to the `./configure` command when building PHP. For more information on the PHP build system and `phpize`, see the [PHP documentation](http://php.net/manual/install.php).
 
 ## Moving the driver file into your extension directory

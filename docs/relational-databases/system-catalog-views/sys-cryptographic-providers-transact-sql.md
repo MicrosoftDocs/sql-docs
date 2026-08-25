@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**name**|**sysname**|Name of the cryptographic provider.|  
 |**guid**|**uniqueidentifier**|Unique provider GUID.|  
 |**version**|**nvarchar(50)**|Version of the provider in the format '*aa.bb.cccc.dd*'.|  
-|**dll_path**|**nvarchar(512)**|Path to DLL that implements the Extensible Key Management (EKM) Application Program Interface (API).|  
+|**dll_path**|**nvarchar(512)**|Path to DLL that implements the Extensible Key Management (EKM) application programming interface (API).|  
 |**is_enabled**|**bit**|Whether the provider is enabled on the server or not.<br /><br /> 0 = not enabled  (default)<br /><br /> 1 = enabled|  
   
 ## Permissions  

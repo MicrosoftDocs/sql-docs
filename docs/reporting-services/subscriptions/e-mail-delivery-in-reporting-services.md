@@ -18,7 +18,7 @@ helpviewer_keywords:
 
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an email delivery extension that provides a way to email a report to individual users or groups. To distribute a report by email, first, you configure the report server for email delivery. Then, define either a standard subscription or a data-driven subscription. A single subscription can't deliver multiple reports in a single email message. However you can create multiple subscriptions.  
   
- The report server connects with an email server through a standard connection. It doesn't use communication that is encrypted by using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). The email server must be a remote or local Simple Mail Transport Protocol (SMTP) server on the same network as the report server.  
+ The report server connects with an email server through a standard connection. It doesn't use communication that is encrypted by using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). The email server must be a remote or local Simple Mail Transfer Protocol (SMTP) server on the same network as the report server.  
   
  For detailed steps that walk you through creating a subscription, see the following articles:  
   

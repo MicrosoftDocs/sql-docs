@@ -16,7 +16,7 @@ ms.topic: how-to
 
 This article teaches you how to enable the Always On availability group feature with Windows Server Failover Cluster (WSFC) on your SQL Server 2016 as an extra step to [prepare your environment](managed-instance-link-preparation.md) for the Managed Instance link.
 
-The steps described in this article are only mandatory for SQL Server 2016, as this version of SQL Server can't enable availability groups without Windows Server Failover Cluster present on the host Windows OS machine. The minimum requirement to enable availability groups on SQL Server 2016 is to create a local single-node (single machine) cluster. No multiple nodes, and therefore no additional SQL Servers, are required. The link can however also support multiple-node cluster configurations as optional, in case you have this type of environment for any SQL Server version (2016-2022).
+The steps described in this article are only mandatory for SQL Server 2016, as this version of SQL Server can't enable availability groups without Windows Server Failover Cluster present on the host Windows OS machine. The minimum requirement to enable availability groups on SQL Server 2016 is to create a local single-node (single machine) cluster. No multiple nodes, and therefore no additional SQL Server instances, are required. The link can however also support multiple-node cluster configurations as optional, in case you have this type of environment for any SQL Server version (2016-2022).
 
 ## Install WSFC module on Windows Server
 

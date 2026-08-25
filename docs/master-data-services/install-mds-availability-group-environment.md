@@ -78,7 +78,7 @@ Consider your scenarios and requirements, and choose how many asynchronous and s
 
 This section covers the following tasks:
 
-1. [Install Windows Failover Cluster feature](#install-failover-cluster-feature).
+1. [Install Windows Server Failover Clustering feature](#install-failover-cluster-feature).
 1. [Create a Windows Server Failover Cluster](#create-a-windows-server-failover-cluster).
 
 As shown in Figure 1 in the previous section, the solution described in this article includes Windows Server Failover Cluster (WSFC). You need to set up WSFC because AGs depend on WSFC for failure detection and failover.

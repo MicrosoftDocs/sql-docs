@@ -89,7 +89,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
 
 ## <a name="SpecifyingVirtualServerName"></a> How to configure `Hostname` and `UrlRoot`
 
- To configure a report server scale-out deployment on an NLB cluster, you must define a single virtual server name that provides a single point of access to the server cluster. Then register this virtual server name with the Domain Name Server (DNS) in your environment.  
+ To configure a report server scale-out deployment on an NLB cluster, you must define a single virtual server name that provides a single point of access to the server cluster. Then register this virtual server name with the Domain Name System (DNS) in your environment.  
   
  After you define the virtual server name, you can configure the `Hostname` and `UrlRoot` properties in the `RSReportServer.config` file to include the virtual server name in the report server URL.  
   

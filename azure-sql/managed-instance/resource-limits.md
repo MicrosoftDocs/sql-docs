@@ -312,7 +312,7 @@ The flexible memory feature is available in the following service tiers and depl
 
 You can change the amount of memory allocated to your SQL managed instance at any time for new and existing instances by using the Azure portal, or the REST API. The memory allocation change is applied to all databases in the instance and performs a failover of the instance as the final operation step. Check [management operations duration](management-operations-duration.md#management-operation-duration) to determine the estimated time for the operation to complete.
 
-Use the **Compute + storage** blade in the Azure portal to change the memory allocation, or the `properties.memorySizeInGB` value of the [Managed Instance - Create or Update](/rest/api/sql/managed-instances/create-or-update) REST API call starting with the **2024-08-01-preview** version. The memory allocation is specified in gigabytes (GB).
+Use the **Compute + storage** pane in the Azure portal to change the memory allocation, or the `properties.memorySizeInGB` value of the [Managed Instance - Create or Update](/rest/api/sql/managed-instances/create-or-update) REST API call starting with the **2024-08-01-preview** version. The memory allocation is specified in gigabytes (GB).
 
 When allocating memory, you can choose between a minimum and maximum value, and also determine the ratio of memory to vCores. The minimum and maximum values are determined by the number of vCores selected for the instance. The memory-to-vCore ratio is a percentage of the total memory allocated to the instance.
 

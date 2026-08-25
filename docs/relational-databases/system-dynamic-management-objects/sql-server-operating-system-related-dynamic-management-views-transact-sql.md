@@ -84,7 +84,7 @@ These DMVs provide information about host OS characteristics, cluster configurat
 | --- | --- |
 | [sys.dm_os_host_info](sys-dm-os-host-info-transact-sql.md) | Exposes host OS details, such as OS version and configuration, relevant to the local SQL Server instance. |
 | [sys.dm_os_hosts](sys-dm-os-hosts-transact-sql.md) | Returns a row for each host known to the SQL Server instance, useful in multihost or clustered environments. |
-| [sys.dm_os_cluster_nodes](sys-dm-os-cluster-nodes-transact-sql.md) | Returns information about cluster node names and roles when SQL Server is running in a Windows failover cluster. |
+| [sys.dm_os_cluster_nodes](sys-dm-os-cluster-nodes-transact-sql.md) | Returns information about cluster node names and roles when SQL Server is running in a Windows Server failover cluster. |
 | [sys.dm_os_cluster_properties](sys-dm-os-cluster-properties-transact-sql.md) | Shows cluster-level properties and settings relevant to the SQL Server node, such as cluster state and configured behaviors. |
 | [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) | Returns high-level SQL Server instance information such as CPU count, memory configuration, and SQLOS version. |
 | [sys.dm_os_windows_info](sys-dm-os-windows-info-transact-sql.md) | Provides OS-specific information about the Windows environment hosting SQL Server, such as version and machine characteristics. |

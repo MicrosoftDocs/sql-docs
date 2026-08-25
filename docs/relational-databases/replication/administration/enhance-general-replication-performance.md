@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 -   Ensure proper allocation of database data files and log files. Use a separate disk drive for the transaction log for all databases involved in replication.  
   
-     You can decrease the time it takes to write transactions by storing the log files on a disk drive different than the one used to store the database. You can mirror that drive, using a Redundant Array of Inexpensive Disks (RAID)-1, if you require fault tolerance. Use RAID 0 or 0+1 (depending on your need for fault tolerance) for other database files. This is a good practice regardless of whether or not replication is being used.  
+     You can decrease the time it takes to write transactions by storing the log files on a disk drive different than the one used to store the database. You can mirror that drive, using a Redundant Array of Independent Disks (RAID)-1, if you require fault tolerance. Use RAID 0 or 0+1 (depending on your need for fault tolerance) for other database files. This is a good practice regardless of whether or not replication is being used.  
   
 -   Consider adding memory to servers used in replication, particularly the Distributor.  
   

@@ -90,7 +90,7 @@ Active Directory (AD) Domain Services (DS)
 Analytics Platform System performs authentication among the Analytics Platform System nodes, and manages the authentication of SQL Server PDW Windows Authentication logins.  
 
 DNS service  
-Windows Domain Name Service (DNS) resolves domain names to IP addresses for the Analytics Platform System appliance.  
+Windows Domain Name System (DNS) resolves domain names to IP addresses for the Analytics Platform System appliance.  
 
 ### Windows Deployment Service
 
@@ -110,7 +110,7 @@ All of the hosts and virtual machines in the appliance run Windows Server operat
 
 ### Failover Clustering
 
-Windows Failover Clustering provides the ability to restart processes on a passive host if a host fails.  
+Windows Server Failover Clustering provides the ability to restart processes on a passive host if a host fails.  
 
 ### Storage Spaces
 

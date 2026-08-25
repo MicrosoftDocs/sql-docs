@@ -144,7 +144,7 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
 | Upgrade from | Upgrade to |
 | --- | --- |
 | Enterprise (Server+CAL and Core) | Enterprise edition |
-| Evaluation Enterprise | Enterprise (Server+CAL or Core License)<br />Standard<br />Developer<br /><br />Upgrading from Evaluation (a free edition) to any of the paid editions is supported for stand-alone installations, but isn't supported for clustered installations. This limitation doesn't apply to stand-alone instances installed on a Windows Failover Cluster participating in an availability group. |
+| Evaluation Enterprise | Enterprise (Server+CAL or Core License)<br />Standard<br />Developer<br /><br />Upgrading from Evaluation (a free edition) to any of the paid editions is supported for stand-alone installations, but isn't supported for clustered installations. This limitation doesn't apply to stand-alone instances installed on a Windows Server failover cluster participating in an availability group. |
 | Standard | Enterprise (Server+CAL or Core License) |
 | Developer | Enterprise (Server+CAL or Core License)<br />Standard |
 | Express | Enterprise (Server+CAL or Core License)<br />Developer<br />Standard |

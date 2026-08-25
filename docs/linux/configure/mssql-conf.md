@@ -49,7 +49,7 @@ You can use this utility to set the following parameters:
 | [Network settings](#network) | Additional network settings for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [TCP port](#tcpport) | Change the port where [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens for connections. |
-| [TLS](#tls) | Configure Transport Level Security. |
+| [TLS](#tls) | Configure Transport Layer Security. |
 | [Trace flags](#traceflags) | Set the trace flags that the service is going to use. |
 
 ::: moniker-end
@@ -81,7 +81,7 @@ You can use this utility to set the following parameters:
 | [Network settings](#network) | Additional network settings for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. |
 | [outboundnetworkaccess](#mlservices-outbound-access) | Enable outbound network access for [Machine Learning Services](../install-upgrade/setup-machine-learning.md) R, Python, and Java extensions. |
 | [TCP port](#tcpport) | Change the port where [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens for connections. |
-| [TLS](#tls) | Configure Transport Level Security. |
+| [TLS](#tls) | Configure Transport Layer Security. |
 | [Trace flags](#traceflags) | Set the trace flags that the service is going to use. |
 
 ::: moniker-end
@@ -115,7 +115,7 @@ You can use this utility to set the following parameters:
 | [Outbound network access](#mlservices-outbound-access) | Enable outbound network access for [Machine Learning Services](../install-upgrade/setup-machine-learning.md) R, Python, and Java extensions. |
 | [SQL Server Connector](#sqlconnector) | Configure logging level for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Connector. |
 | [TCP port](#tcpport) | Change the port where [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens for connections. |
-| [TLS](#tls) | Configure Transport Level Security. |
+| [TLS](#tls) | Configure Transport Layer Security. |
 | [Trace flags](#traceflags) | Set the trace flags that the service is going to use. |
 
 ::: moniker-end
@@ -151,7 +151,7 @@ You can use this utility to set the following parameters:
 | [Outbound network access](#mlservices-outbound-access) | Enable outbound network access for [Machine Learning Services](../install-upgrade/setup-machine-learning.md) R, Python, and Java extensions. |
 | [SQL Server Connector](#sqlconnector) | Configure logging level for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Connector. |
 | [TCP port](#tcpport) | Change the port where [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens for connections. |
-| [TLS](#tls) | Configure Transport Level Security. |
+| [TLS](#tls) | Configure Transport Layer Security. |
 | [Trace flags](#traceflags) | Set the trace flags that the service is going to use. |
 
 ::: moniker-end

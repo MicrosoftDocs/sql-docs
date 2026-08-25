@@ -1,6 +1,6 @@
 ---
 title: Configure availability group (Azure quickstart template)
-description: "Use Azure quickstart templates to create the Windows Failover Cluster, join SQL Server VMs to the cluster, create the listener, and configure the internal load balancer in Azure."
+description: "Use Azure quickstart templates to create the Windows Server failover cluster, join SQL Server VMs to the cluster, create the listener, and configure the internal load balancer in Azure."
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: mathoma
@@ -20,8 +20,8 @@ This article describes how to use the Azure quickstart templates to partially au
 
    | Template | Description |
    | --- | --- |
-   | [101-sql-vm-ag-setup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-ag-setup) | Creates the Windows failover cluster and joins the SQL Server VMs to it. |
-   | [101-sql-vm-aglistener-setup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-aglistener-setup) | Creates the availability group listener and configures the internal load balancer. This template can be used only if the Windows failover cluster was created with the **101-sql-vm-ag-setup** template. |
+   | [101-sql-vm-ag-setup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-ag-setup) | Creates the Windows Server failover cluster and joins the SQL Server VMs to it. |
+   | [101-sql-vm-aglistener-setup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-aglistener-setup) | Creates the availability group listener and configures the internal load balancer. This template can be used only if the Windows Server failover cluster was created with the **101-sql-vm-ag-setup** template. |
 
 
 Other parts of the availability group configuration must be done manually, such as creating the availability group and creating the internal load balancer. This article provides the sequence of automated and manual steps.
@@ -51,12 +51,12 @@ The following permissions are necessary to configure the Always On availability 
 
 ## Create cluster
 
-After your SQL Server VMs have been registered with the SQL IaaS Agent extension, you can join your SQL Server VMs to *SqlVirtualMachineGroups*. This resource defines the metadata of the Windows failover cluster. Metadata includes the version, edition, fully qualified domain name, Active Directory accounts to manage both the cluster and SQL Server, and the storage account as the cloud witness. 
+After your SQL Server VMs have been registered with the SQL IaaS Agent extension, you can join your SQL Server VMs to *SqlVirtualMachineGroups*. This resource defines the metadata of the Windows Server failover cluster. Metadata includes the version, edition, fully qualified domain name, Active Directory accounts to manage both the cluster and SQL Server, and the storage account as the cloud witness. 
 
-Adding SQL Server VMs to the *SqlVirtualMachineGroups* resource bootstraps the Windows Failover Cluster Service to create the cluster and then joins those SQL Server VMs to that cluster. This step is automated with the **101-sql-vm-ag-setup** quickstart template. You can implement it by using the following steps:
+Adding SQL Server VMs to the *SqlVirtualMachineGroups* resource bootstraps the Windows Server Failover Cluster Service to create the cluster and then joins those SQL Server VMs to that cluster. This step is automated with the **101-sql-vm-ag-setup** quickstart template. You can implement it by using the following steps:
 
 1. Go to the [**101-sql-vm-ag-setup**](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-ag-setup) quickstart template. Then, select **Deploy to Azure** to open the quickstart template in the Azure portal.
-1. Fill out the required fields to configure the metadata for the Windows failover cluster. You can leave the optional fields blank.
+1. Fill out the required fields to configure the metadata for the Windows Server failover cluster. You can leave the optional fields blank.
 
    The following table shows the necessary values for the template: 
 
@@ -64,7 +64,7 @@ Adding SQL Server VMs to the *SqlVirtualMachineGroups* resource bootstraps the W
    | --- | --- |
    | **Subscription** |  The subscription where your SQL Server VMs exist. |
    |**Resource group** | The resource group where your SQL Server VMs reside. | 
-   |**Failover Cluster Name** | The name that you want for your new Windows failover cluster. |
+   |**Failover Cluster Name** | The name that you want for your new Windows Server failover cluster. |
    | **Existing Vm List** | The SQL Server VMs that you want to participate in the availability group and be part of this new cluster. Separate these values with a comma and a space (for example: *SQLVM1, SQLVM2*). |
    | **SQL Server Version** | The SQL Server version of your SQL Server VMs. Select it from the drop-down list. |
    | **Existing Fully Qualified Domain Name** | The existing FQDN for the domain in which your SQL Server VMs reside. |
@@ -153,7 +153,7 @@ Create the availability group listener and configure the internal load balancer 
 - Creates the availability group listener with the given IP address and name.
  
 > [!NOTE]
-> You can use **101-sql-vm-aglistener-setup** only if the Windows failover cluster was created with the **101-sql-vm-ag-setup** template.
+> You can use **101-sql-vm-aglistener-setup** only if the Windows Server failover cluster was created with the **101-sql-vm-ag-setup** template.
    
    
 To configure the internal load balancer and create the availability group listener, do the following:

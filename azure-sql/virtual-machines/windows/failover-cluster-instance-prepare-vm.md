@@ -32,7 +32,7 @@ To learn more, see an overview of [FCI with SQL Server on Azure VMs](failover-cl
 - An account that has permissions to create objects on Azure virtual machines and in Active Directory.
 - An Azure virtual network and one or more subnets with enough IP address space for the following components:
   - Both virtual machines
-  - An IP address for the Windows failover cluster
+  - An IP address for the Windows Server failover cluster
   - An IP address for each FCI
 - DNS configured on the Azure network, pointing to the domain controllers.
 

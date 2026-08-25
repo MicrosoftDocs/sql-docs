@@ -136,7 +136,7 @@ For existing SQL Server virtual machines, go to the [SQL virtual machines resour
 
 Select **Enable** on the **Automated Backup** tile to configure your Automated Backup settings: 
 
-:::image type="content" source="media/automated-backup/select-automated-backup.png" alt-text="Screenshot of how to select automated backup on the backup blade for your SQL VM in the Azure portal." lightbox="media/automated-backup/select-automated-backup.png":::
+:::image type="content" source="media/automated-backup/select-automated-backup.png" alt-text="Screenshot of how to select automated backup on the backup pane for your SQL VM in the Azure portal." lightbox="media/automated-backup/select-automated-backup.png":::
 
 On the **Backups** page, select **Enable** to turn on Automated Backup. You can configure the retention period (up to 90 days), the container for the storage account where you want to store your backups, the encryption, and the backup schedule. By default, the schedule is automated. Configure the settings as needed: 
 

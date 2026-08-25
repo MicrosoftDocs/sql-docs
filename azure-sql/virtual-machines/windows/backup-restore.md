@@ -82,7 +82,7 @@ To disable Azure Backups, you have to delete the associated vault. To delete the
 1. Select the ellipses (...) next to each database, and then select **Stop backup** to go to the **Stop backup** page.
 1. On the **Stop backup** page, select **Delete backup data** and then select **OK** to disable Azure Backup and delete the backup data for that database.
 1. Go back to the vault, and under **Manage**, select **Backup Infrastructure**.
-1. On the **Overview** blade of the **Backup Infrastructure** page, select **Workload in Azure VM**.
+1. On the **Overview** pane of the **Backup Infrastructure** page, select **Workload in Azure VM**.
 1. On the **Protected Servers (Workload in Azure VM)** page, select the ellipses (...) next to the SQL Server VM, and then select **Unregister** to remove the SQL Server VM from Azure Backup protection.
 1. Go back to the vault, and then use **Delete** to delete the vault. 
 1. After the vault is deleted, Azure Backup is disabled for your [SQL virtual machine resource](manage-sql-vm-portal.md#backups)

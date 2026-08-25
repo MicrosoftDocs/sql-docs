@@ -25,7 +25,7 @@ Encryption is the process of obfuscating data by the use of a key or password. T
 Although encryption is a valuable tool to help ensure security, it shouldn't be considered for all data or connections. When you're deciding whether to implement encryption, consider how users access data. If users access data over a public network, data encryption might be required to increase security. However, if all access involves a secure intranet configuration, encryption might not be required. Any use of encryption should also include a maintenance strategy for passwords, keys, and certificates.
 
 > [!NOTE]  
-> The latest information about Transport Level Security (TLS 1.2) is available at [TLS 1.2 support for Microsoft SQL Server](/troubleshoot/sql/database-engine/connect/tls-1-2-support-microsoft-sql-server). For more information about TLS 1.3, see [TLS 1.3 support](../networking/tls-1-3.md).
+> The latest information about Transport Layer Security (TLS 1.2) is available at [TLS 1.2 support for Microsoft SQL Server](/troubleshoot/sql/database-engine/connect/tls-1-2-support-microsoft-sql-server). For more information about TLS 1.3, see [TLS 1.3 support](../networking/tls-1-3.md).
 
 ## In this section
 

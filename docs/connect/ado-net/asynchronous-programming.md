@@ -119,7 +119,7 @@ You can begin to use the asynchronous pattern without substantially changing the
 
 You may need to create a tool that can connect to different databases and execute queries. You can use the base provider model and the asynchronous feature.
 
-The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions. For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](/previous-versions/commerce-server/dd327979(v=cs.90)).
+The Microsoft Distributed Transaction Coordinator (MSDTC) must be enabled on the server to use distributed transactions. For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](/previous-versions/commerce-server/dd327979(v=cs.90)).
 
 [!code-csharp[SqlClient_AsyncProgramming_ProviderModel#1](~/../sqlclient/doc/samples/SqlClient_AsyncProgramming_ProviderModel.cs#1)]
 

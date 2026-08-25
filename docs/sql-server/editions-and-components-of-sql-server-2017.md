@@ -259,7 +259,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> For more information, see [Considerations for installing SQL Server using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).
 
-<sup>2</sup> On Linux, PowerShell scripts are supported, from Windows computers targeting SQL Servers on Linux.
+<sup>2</sup> On Linux, PowerShell scripts are supported, from Windows computers targeting SQL Server instances on Linux.
 
 <sup>3</sup> With trace flag.
 

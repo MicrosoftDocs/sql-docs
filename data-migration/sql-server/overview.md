@@ -34,7 +34,7 @@ When you start your cloud migration journey, it's critical to discover installed
 
 The Azure Migrate appliance performs this discovery using the Windows OS domain or non-domain credentials, or SQL Server authentication credentials that have access to your SQL Server instances and databases. This discovery process is agentless, meaning that you don't install anything on the servers. The Azure Migrate appliance supports discovery on various virtualization platforms like VMware, Microsoft Hyper-V, and physical environments.
 
-To learn how to discover your on-premises SQL Servers, see the [Discover](pre-migration.md#discover) section later in this article.
+To learn how to discover your on-premises SQL Server instances, see the [Discover](pre-migration.md#discover) section later in this article.
 
 ## Business case
 

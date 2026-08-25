@@ -19,7 +19,7 @@ dev_langs:
 
 At a high level, encryption between a client and server ensures data is only readable by the client and server. An important part of the encryption process is server certificate validation. Server certificate validation allows the client to ensure the server is who it says it is. The certificate is validated for things like expiry, trust chain, and that the name in the certificate matches the name of the server the client is connecting to. For more information, see [Transport Layer Security and digital certificates](../../database-engine/configure-windows/certificate-overview.md).
 
-It's highly recommended you provision a verifiable certificate on SQL Server for secure connectivity. Transport Security Layer (TLS) can be made secure only with certificate validation.
+It's highly recommended you provision a verifiable certificate on SQL Server for secure connectivity. Transport Layer Security (TLS) can be made secure only with certificate validation.
 
 Applications may request encryption of all network traffic by using the `Encrypt` connection string keyword or connection property. By default, encryption of all network traffic for a connection requires a certificate being provisioned on the server. By setting your client to trust the certificate on the server, you might become vulnerable to man-in-the-middle attacks. If you deploy a verifiable certificate on the server, ensure client `Encrypt` settings are `True` and `Trust Server Certificate` settings are `False`.
 

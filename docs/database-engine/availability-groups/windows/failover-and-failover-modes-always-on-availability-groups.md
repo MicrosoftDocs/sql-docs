@@ -45,7 +45,7 @@ SQL Server 2025 introduces the following changes:
 
 ### Fast failover for persistent health issues
 
-In an Always On availability group environment, the Windows Failover Cluster (WSFC) [monitors the health](availability-group-lease-healthcheck-timeout.md) of the availability group and its replicas. When a health issue is detected on the primary replica, the WSFC triggers a sequence of corrective actions. By default, the WSFC restarts the availability group resource on the current replica. If the WSFC can't bring the resource back online, then the WSFC fails the availability group resource over to another replica. While this sequence of corrective actions is effective for transient failures, it can potentially lead to delays in failover for nontransient failures.
+In an Always On availability group environment, the Windows Server Failover Cluster (WSFC) [monitors the health](availability-group-lease-healthcheck-timeout.md) of the availability group and its replicas. When a health issue is detected on the primary replica, the WSFC triggers a sequence of corrective actions. By default, the WSFC restarts the availability group resource on the current replica. If the WSFC can't bring the resource back online, then the WSFC fails the availability group resource over to another replica. While this sequence of corrective actions is effective for transient failures, it can potentially lead to delays in failover for nontransient failures.
 
 WSFC failover behavior is controlled by the [RestartThreshold](/previous-versions/windows/desktop/mscs/resources-restartthreshold) value. By default, `RestartThreshold` is set to 1 for an Always On availability group, which means WSFC tries to restart the resource on the current node before failing over.
 

@@ -253,7 +253,7 @@ Specific types of wait times during query execution can indicate bottlenecks or 
 |PREEMPTIVE_CLOSEBACKUPMEDIA|Occurs when the SQLOS scheduler switches to preemptive mode to close backup media.|  
 |PREEMPTIVE_CLOSEBACKUPTAPE|Occurs when the SQLOS scheduler switches to preemptive mode to close a tape backup device.|  
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|Occurs when the SQLOS scheduler switches to preemptive mode to close a virtual backup device.|  
-|PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Occurs when the SQLOS scheduler switches to preemptive mode to perform Windows failover cluster operations.|  
+|PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Occurs when the SQLOS scheduler switches to preemptive mode to perform Windows Server failover cluster operations.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|Occurs when the SQLOS scheduler switches to preemptive mode to create a COM object.|  
 |PREEMPTIVE_HADR_LEASE_MECHANISM|Always On Availability Groups lease manager scheduling for CSS diagnostics.|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

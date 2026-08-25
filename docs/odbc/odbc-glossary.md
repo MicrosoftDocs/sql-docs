@@ -27,7 +27,7 @@ helpviewer_keywords:
  *See* application parameter descriptor (APD).  
   
  **API**  
- Application Programming Interface. A set of routines that an application uses to request and carry out lower-level services. The ODBC API is composed of the ODBC functions.  
+ Application programming interface. A set of routines that an application uses to request and carry out lower-level services. The ODBC API is composed of the ODBC functions.  
   
  **application**  
  An executable program that calls functions in the ODBC API.  

@@ -18,14 +18,14 @@ ms.custom:
 
 In SSIS Scale Out, high availability on the Scale Out Worker side is provided by executing packages with multiple Scale Out Workers.
 
-High availability on the Scale Out Master side is achieved with [Always On for SSIS Catalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows failover clustering. In this solution, multiple instances of Scale Out Master are hosted in a Windows failover cluster. When the Scale Out Master service or SSISDB is down on the primary node, the service or SSISDB on the secondary node continues to accept user requests and communicate with Scale Out Workers.
+High availability on the Scale Out Master side is achieved with [Always On for SSIS Catalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows Server Failover Clustering (WSFC). In this solution, multiple instances of Scale Out Master are hosted in a Windows Server failover cluster. When the Scale Out Master service or SSISDB is down on the primary node, the service or SSISDB on the secondary node continues to accept user requests and communicate with Scale Out Workers.
 
 Alternatively, high availability on the Scale Out Master side can be achieved with SQL Server failover cluster instance. See [Scale Out support for high availability via SQL Server failover cluster instance](scale-out-failover-cluster-instance.md).
 
 To set up high availability on the Scale Out Master side with always on for SSIS catalog, do the following things:
 
 ## 1. Prerequisites
-Set up a Windows failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) for instructions. Install the feature and tools on all cluster nodes.
+Set up a Windows Server failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) for instructions. Install the feature and tools on all cluster nodes.
 
 ## 2. Install Scale Out Master on the primary node
 Install SQL Server Database Engine Services, Integration Services, and Scale Out Master on the primary node for Scale Out Master. 
@@ -33,7 +33,7 @@ Install SQL Server Database Engine Services, Integration Services, and Scale Out
 During the installation, do the following things:
 
 ### 2.1 Set the account running Scale Out Master service to a domain account
-This account must be able to access SSISDB on the secondary node in the Windows failover cluster in the future. As the Scale Out Master service and SSISDB can fail over separately, they may not be on the same node after failover.
+This account must be able to access SSISDB on the secondary node in the Windows Server failover cluster in the future. As the Scale Out Master service and SSISDB can fail over separately, they may not be on the same node after failover.
 
 ![HA server configuration](media/ha-server-config.PNG)
 

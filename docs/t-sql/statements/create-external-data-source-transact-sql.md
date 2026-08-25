@@ -38,7 +38,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
      The Fabric moniker is for Fabric Data Warehouse. The fabric-sqldb moniker is for SQL database in Fabric.
      Pay attention to each ::: moniker range.-->
 <!-- At this time the Azure SQL Edge moniker azuresqledge-current isn't functional in sql-docs.  
-     Per PMs, we have added Azure SQL Edge content to Azure SQL DB range. -->
+     Per PMs, we have added Azure SQL Edge content to Azure SQL Database range. -->
 
 ::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 

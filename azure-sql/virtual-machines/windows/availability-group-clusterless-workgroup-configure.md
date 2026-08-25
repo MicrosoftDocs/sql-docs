@@ -95,7 +95,7 @@ new-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\
 
 ## Create the failover cluster
 
-In this step, you create the failover cluster. If you're unfamiliar with the steps, see "Create Windows Failover Cluster" in the [Failover cluster tutorial](failover-cluster-instance-storage-spaces-direct-manually-configure.md).
+In this step, you create the failover cluster. If you're unfamiliar with the steps, see [Create a Windows Server failover cluster](failover-cluster-instance-storage-spaces-direct-manually-configure.md#create-a-windows-server-failover-cluster) in the [Failover cluster tutorial](failover-cluster-instance-storage-spaces-direct-manually-configure.md).
 
 Notable differences between the failover cluster tutorial and what should be done for a workgroup cluster:
 

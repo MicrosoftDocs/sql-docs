@@ -207,7 +207,7 @@ Indicates that the new column is an identity column. When a new row is added to 
 
 #### ROWGUIDCOL
 
-Indicates that the new column is a row global unique identifier column. Only one **uniqueidentifier** column per table can be designated as the `ROWGUIDCOL` column. The `ROWGUIDCOL` property can be assigned only to a **uniqueidentifier** column.
+Indicates that the new column is a row globally unique identifier column. Only one **uniqueidentifier** column per table can be designated as the `ROWGUIDCOL` column. The `ROWGUIDCOL` property can be assigned only to a **uniqueidentifier** column.
 
 #### NULL | NOT NULL
 

@@ -102,7 +102,7 @@ Or to save the output of the effective policies to an XML file for viewing:
 Get-AppLockerPolicy -Effective -Xml > effective_app_policy.xml
 ```
 
-The following steps walk through the process of creating and applying a policy that can be applied to a local server. A Managed Installer policy that is generated using these steps can be merged into a GPO wide policy and distributed to all SQL Servers within an environment, or applied to a single server's local policy. We recommend that you work with a Domain Administrator to have the Code Integrity policy applied from the domain level.
+The following steps walk through the process of creating and applying a policy that can be applied to a local server. A Managed Installer policy that is generated using these steps can be merged into a GPO wide policy and distributed to all SQL Server instances within an environment, or applied to a single server's local policy. We recommend that you work with a Domain Administrator to have the Code Integrity policy applied from the domain level.
 
 1. Use [New-AppLockerPolicy](/powershell/module/applocker/new-applockerpolicy) to make an EXE rule for the file you're designating as a managed installer. This example creates a rule for Hekaton DLL generator using the Publisher rule type, but any AppLocker rule type can be used. You might need to reformat the output for readability.
 

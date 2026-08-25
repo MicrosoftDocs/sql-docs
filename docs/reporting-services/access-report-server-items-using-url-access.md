@@ -53,7 +53,7 @@ helpviewer_keywords:
   
  **Native** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
 
- The user interface you see is similar to the directory browsing mode used by [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). The version number, including the build number, of the report server is also displayed below the folder listing.  
+ The user interface you see is similar to the directory browsing mode used by [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Services (IIS). The version number, including the build number, of the report server is also displayed below the folder listing.  
   
 ## Related content
 

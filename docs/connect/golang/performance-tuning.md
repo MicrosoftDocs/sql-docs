@@ -280,7 +280,7 @@ ALTER DATABASE [AdventureWorks2025] SET QUERY_STORE = ON;
 Once enabled, you can review performance data in several ways:
 
 - **SQL Server Management Studio (SSMS)**: Expand your database in Object Explorer, open the **Query Store** folder, and use the built-in reports like **Top Resource Consuming Queries**, **Regressed Queries**, and **Overall Resource Consumption**.
-- **Azure portal**: For Azure SQL Database, open the **Query Performance Insight** blade to see the top resource-consuming queries without installing any tools.
+- **Azure portal**: For Azure SQL Database, open the **Query Performance Insight** pane to see the top resource-consuming queries without installing any tools.
 - **Transact-SQL (T-SQL)**: Query the `sys.query_store_runtime_stats` and `sys.query_store_plan` catalog views directly from your Go application if you need programmatic access.
 
 > [!TIP]

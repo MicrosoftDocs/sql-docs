@@ -1,6 +1,6 @@
 ---
 title: Configure a Multi-Subnet Availability Group in the Azure Portal
-description: "Use the Azure portal to create SQL Server VMs in multiple subnets, a Windows failover cluster, an availability group, and an availability group listener for SQL Server on Azure VMs."
+description: "Use the Azure portal to create SQL Server VMs in multiple subnets, a Windows Server failover cluster, an availability group, and an availability group listener for SQL Server on Azure VMs."
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: mathoma, randolphwest
@@ -250,7 +250,7 @@ After the script finishes executing and the prerequisites are validated, select 
 
 1. Select **Review + Create**.
 
-1. On the **Review + Create** tab, review the summary. Then select **Create** to create the SQL Servers, failover cluster, availability group, and listener.
+1. On the **Review + Create** tab, review the summary. Then select **Create** to create the SQL Server instances, failover cluster, availability group, and listener.
 
    If needed, you can select **Download a template for automation**.
 

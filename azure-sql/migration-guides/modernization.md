@@ -184,7 +184,7 @@ SQL Managed Instance provides the possibility to [configure a license-free stand
 
 Yes. You can [centrally manage your Azure Hybrid Benefit](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope) for SQL Server across the scope of an entire Azure subscription or overall billing account. This feature is currently in preview.
 
-#### If I move some of SQL Servers, my workloads to SQL Managed Instance and leave some workloads on-premises, can I manage all my SQL licenses in one place?
+#### If I move some of my SQL Server instances and workloads to SQL Managed Instance and leave some workloads on-premises, can I manage all my SQL licenses in one place?
 
 You can [centrally manage your licenses](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope) that are covered by Azure Hybrid Benefit for SQL Server across the scope of an entire Azure subscription or overall billing account. This data can be combined with an overview maintained by your licensing partner/procurement department or obtaining licensing information by creating your own [custom licensing overview](https://techcommunity.microsoft.com/blog/azuresqlblog/getting-insights-into-the-utilization-of-sql-server-licenses-on-azure-to-optimiz/2051320). Your licenses must be used either on-premises or in the cloud, but you have 180 days of concurrent use rights while migrating servers.
 

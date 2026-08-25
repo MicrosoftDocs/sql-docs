@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: randolphwest, mathoma
-ms.date: 08/25/2026
+ms.date: 08/21/2026
 ms.topic: release-notes
 ms.custom:
   - ignite-2025
@@ -35,7 +35,7 @@ Only Azure extension for SQL Server versions released within the last year are s
 
 The following table lists the features of SQL Server enabled by Azure Arc that are currently in preview.
 
-> [!NOTE]
+> [!NOTE]  
 > Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). Review the legal terms that apply to features that are in beta, preview, or otherwise not yet released into general availability (GA). SQL Server enabled by Azure Arc provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0) on features before they become generally available.
 
 | Feature | Details |
@@ -62,7 +62,7 @@ The following table lists features of SQL Server enabled by Azure Arc that reach
 
 ## Current auto-upgrade target version
 
-The current auto-upgrade target version of the Azure extension for SQL Server is `1.1.3453.436`. This version is widely deployed and includes all features and fixes from previous versions. SQL Server instances that have automatic updates enabled for the Azure Extension for SQL Server are automatically upgraded to this version of the extension.
+The current auto-upgrade target version of the Azure extension for SQL Server is `1.1.3518.465`. SQL Server instances that have automatic updates enabled for the Azure Extension for SQL Server are automatically upgraded to this version of the extension.
 
 ## Release notes by date
 
@@ -70,9 +70,10 @@ This section lists the release notes by date, starting with the most recent rele
 
 | Date of release | Extension version |
 | --- | --- |
-| [August 2026](#august-2026) | `1.1.3453.436` |
-| [June 2026](#june-2026) |`1.1.3464.439`|
-| [May 2026](#may-2026) |`1.1.3428.422`|
+| [August 2026](#august-2026) | `1.1.3518.465`<br />`1.1.3500.453` |
+| [July 2026](#july-2026) | `1.1.3494.451` (no longer available) |
+| [June 2026](#june-2026) | `1.1.3464.439` (no longer available),<br />`1.1.3453.436` (no longer available) |
+| [May 2026](#may-2026) | `1.1.3428.422` (no longer available) |
 | [April 2026](#april-2026) |`1.1.3394.392`|
 | [February 2026](#february-2026) |`1.1.3348.364`|
 | [January 2026](#january-2026) | `1.1.3307.355` (no longer available) |
@@ -96,23 +97,33 @@ This section lists the release notes by date, starting with the most recent rele
 
 ### August 2026
 
-**Extension version**: `1.1.3453.436`
+**Extension version**: `1.1.3518.465`
 
 As of August 2026, this version is the auto-upgrade target and is widely deployed.
 
 - [Least privilege](configure-least-privilege.md) is enabled by default. The extension creates the `NT SERVICE\SqlServerExtension` login and grants it the minimum permissions required for each enabled feature.
 
+**Extension version**: `1.1.3500.453`
+
+- Fixes an authentication token access bug.
+
+### July 2026
+
+**Extension version**: `1.1.3494.451` (no longer available)
+
 ### June 2026
 
-**Extension version**: `1.1.3464.439`
+**Extension version**: `1.1.3464.439` (no longer available)
 
 - The ability to migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal is now generally available. To learn more, see [Migration from the Azure portal](migrate-to-sql-server-on-azure-vms.md).
 - Improved HADR detection for billing.
 - Bug fixes and quality improvements.
 
+**Extension version**: `1.1.3453.436` (no longer available)
+
 ### May 2026
 
-**Extension version**: `1.1.3428.422`
+**Extension version**: `1.1.3428.422` (no longer available)
 
 ### April 2026
 
@@ -125,7 +136,7 @@ As of August 2026, this version is the auto-upgrade target and is widely deploye
 **Extension version**: `1.1.3348.364`
 
 - It's now possible to migrate multiple databases through the [Managed Instance link](migration-sql-mi-prepare-link.md) simultaneously with the Azure Extension for SQL Server version `1.1.3348.364` or later. You can migrate up to 10 databases at the same time with this extension version or later. With earlier versions, you can migrate 1 database at a time.
-- You can now migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal. This feature is currently in preview. To learn more, see [Migrate to SQL Server on Azure VMs](migrate-to-sql-server-on-azure-vms.md).
+- It's now possible to migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal. This feature is currently in preview. To learn more, see [Migrate to SQL Server on Azure VMs](migrate-to-sql-server-on-azure-vms.md). 
 
 ### January 2026
 

@@ -250,7 +250,7 @@ After the script finishes executing and the prerequisites are validated, select 
 
 1. Select **Review + Create**.
 
-1. On the **Review + Create** tab, review the summary. Then select **Create** to create the SQL Servers, failover cluster, availability group, and listener.
+1. On the **Review + Create** tab, review the summary. Then select **Create** to create the SQL Server instances, failover cluster, availability group, and listener.
 
    If needed, you can select **Download a template for automation**.
 

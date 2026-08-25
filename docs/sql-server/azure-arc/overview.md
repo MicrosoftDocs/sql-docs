@@ -53,7 +53,7 @@ You can optimize the configuration of your SQL Server instances for best perform
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
-Azure Arc enabled SQL Servers can utilize Microsoft Entra ID for authentication. This feature brings a modern centralized identity and access management solution to SQL Server. This feature requires [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] or later.
+Azure Arc enabled SQL Server instances can use Microsoft Entra ID for authentication. This feature brings a modern centralized identity and access management solution to SQL Server. This feature requires [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] or later.
 
 Microsoft Entra authentication provides greatly enhanced security over traditional username and password-based authentication, which is **not recommended**. For more information about the risks and challenges passwords pose, refer to ["What's the solution to the growing problem of passwords?"](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/).
 
@@ -106,7 +106,7 @@ Organizations can also build custom KQL dashboards and alerts over custom tables
 - Continuous running on a default schedule of once per week
 - Availability for all SQL Server editions
 
-Migration assessment is for SQL Servers located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
+Migration assessment is for SQL Server instances located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
 
 For details, review [Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md).
 

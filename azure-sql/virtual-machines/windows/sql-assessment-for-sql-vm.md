@@ -178,7 +178,7 @@ You can use the Azure CLI to enable the SQL best practices assessment feature on
 
 ```azure-cli
 # This script is formatted for use with Az CLI on Windows PowerShell. You may need to update the script for use with Az CLI on other shells.
-# This script enables SQL best practices assessment feature for all SQL Servers on Azure VMs in a given subscription. It configures the VMs to use a Log Analytics workspace to upload assessment results. It sets a schedule to start an assessment run every Sunday at 11pm (local VM time).
+# This script enables SQL best practices assessment feature for all SQL Server instances on Azure VMs in a given subscription. It configures the VMs to use a Log Analytics workspace to upload assessment results. It sets a schedule to start an assessment run every Sunday at 11pm (local VM time).
 # Please note that if a VM is already associated with another Log Analytics workspace, it will give an error.
 
 $subscriptionId = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'

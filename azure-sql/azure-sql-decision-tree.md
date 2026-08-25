@@ -69,7 +69,7 @@ The following explanation covers each high-level decision point. Your applicatio
 
 #### Do you need, or does company policy require, the ability to move the database back to on-premises or cross-cloud?
 
-   - **Yes:** Choose Azure SQL Managed Instance, which provides migration and reverse migration, as well as on-prem-to-cloud synchronization through availability groups.
+   - **Yes:** Choose Azure SQL Managed Instance, which provides migration and reverse migration, as well as on-premises-to-cloud synchronization through availability groups.
 
    - **No:** Other options remain available for your scenario. Keep reading.
 

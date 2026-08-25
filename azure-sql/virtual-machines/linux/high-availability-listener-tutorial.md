@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This tutorial will go over steps on how to create an availability group (AG) listener for your SQL Servers on Linux virtual machines (VMs) in Azure, for Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu.
+This tutorial will go over steps on how to create an availability group (AG) listener for your SQL Server on Linux virtual machines (VMs) in Azure, for Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu.
 
 You'll learn how to:
 

@@ -203,7 +203,7 @@ To test the connection:
 The SQLCMD connection automatically connects to whichever instance of SQL Server hosts the primary replica.
 
 > [!NOTE]  
-> Make sure that the port you specify is open on the firewall of both SQL Servers. Both servers require an inbound rule for the TCP port that you use. For more information, see [Add or Edit Firewall Rule](/previous-versions/orphan-topics/ws.11/cc753558(v=ws.11)).
+> Make sure that the port you specify is open on the firewall of both SQL Server instances. Both servers require an inbound rule for the TCP port that you use. For more information, see [Add or Edit Firewall Rule](/previous-versions/orphan-topics/ws.11/cc753558(v=ws.11)).
 >
 
 If you're on the secondary replica VM, and you're unable to connect to the listener, it's possible the probe port wasn't configured correctly.

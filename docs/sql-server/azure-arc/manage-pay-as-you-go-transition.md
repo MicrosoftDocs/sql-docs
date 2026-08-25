@@ -32,7 +32,7 @@ To manage the transition follow these steps.
 - Make sure you have an active Azure account with at least one subscription.
 - Make sure that all on-premises SQL Server instances covered by the license with Software assurance or by SQL subscription are connected to Azure Arc.
 - If you license virtual cores or physical cores without using VMs, make sure that the Azure extensions for SQL Server are configured with `licenseType` set to `Paid`. See [License SQL Server instances by virtual cores](manage-license-billing.md#license-vcores) and [License SQL Server instances by physical cores without VMs](manage-license-billing.md#license-pcores-without-vms) for details.
-- If you use the unlimited virtualization licensing method, make sure the physical core license or licenses are created with `billingPlan` set to `Paid`, activated and all SQL Servers instances covered by the licenses are properly configured with `licenseType` set to `Paid`. See [License SQL Server instances by physical cores with unlimited virtualization](manage-license-billing.md#unlimited-virtualization) for details.
+- If you use the unlimited virtualization licensing method, ensure that the physical core licenses are created with `billingPlan` set to `Paid`, activated, and all SQL Server instances covered by the licenses have `licenseType` set to `Paid`. For more information, see [License SQL Server instances by physical cores with unlimited virtualization](manage-license-billing.md#unlimited-virtualization).
 
 > [!IMPORTANT]
 >
@@ -63,7 +63,7 @@ Transitioning of the SQL Server instances licensed through a Services Provider L
 
 When moving customers to Azure pay-as-you-go billing, it's essential to ensure that the Azure Connected Machine agent and the SQL Server extension are healthy and can connect to Azure. If the extension is broken, blocked by firewalls, or misconfigured (for example, proxy issues), it may stop reporting SQL Server usage correctly. This can result in underreported usage, billing errors, and noncompliance.
 
-These issues also limit the functionality of SQL Servers connected via Azure Arc. Affected features include:
+These issues also limit the functionality of SQL Server instances connected via Azure Arc. Affected features include:
 
 - Monitoring
 - Inventory
@@ -123,7 +123,7 @@ The following timeline illustrates the billing behavior for both SQL Server and 
 | Timeline | Event | Service's actions |
 |----------|-------|-------------------|
 | Day 1 | Sets up Arc + Arc SQL using pay-as-you-go on a Windows Server. | - Billing starts based on current configuration and actual usage.<br>- Usage is uploaded and processed every 12 hours. |
-| Day 2 | Azure detects disconnection due to agent failure or blocked connectivity. | Connected machine state changes to **Disconnected**.<br>- Azure extension for SQL Server continues collecting and storing usage data locally.<br>- Warnings appear in the Arc machine Activity Log, SQL Server Configuration page, and SQL Server Overview blade.<br>- No hourly meters are emitted. |
+| Day 2 | Azure detects disconnection due to agent failure or blocked connectivity. | Connected machine state changes to **Disconnected**.<br>- Azure extension for SQL Server continues collecting and storing usage data locally.<br>- Warnings appear in the Arc machine Activity Log, SQL Server Configuration page, and SQL Server Overview pane.<br>- No hourly meters are emitted. |
 | Day 3+ | Continued disconnection | Daily reminders are emitted, warning that recurring billing will begin after 30 days. |
 | Day 30 | Still no usage records or heartbeat. | Connected machine agent's certificate expires.<br>- Connected machine state changes to Expired.<br>- SQL switches to recurring billing based on the last known configuration (edition, cores, HA setup, etc.).<br>- Charges are backfilled for the past 30 days.<br>- Hourly billing resumes using recurring meters. |
 | Day 31+ | Continued disconnection. | Hourly billing continues indefinitely using the last known configuration. |

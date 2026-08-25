@@ -31,13 +31,13 @@ Windows Authentication for Microsoft Entra principals on managed instances is av
 
 Enabling Windows Authentication for a managed instance doesn't require customers to deploy new on-premises infrastructure or manage the overhead of setting up Domain Services.
 
-Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance enables two key scenarios: migrating on-premises SQL Servers to Azure with minimal changes and modernizing security infrastructure.
+Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance enables two key scenarios: migrating on-premises SQL Server instances to Azure with minimal changes and modernizing security infrastructure.
 
-### Lift and shift on-premises SQL Servers to Azure with minimal changes
+### Lift and shift on-premises SQL Server instances to Azure with minimal changes
 
 By enabling Windows Authentication for Microsoft Entra principals, customers can migrate to Azure SQL Managed Instance without implementing changes to application authentication stacks or deploying Microsoft Entra Domain Services. Customers can also use Windows Authentication to access a managed instance from their Active Directory or Microsoft Entra-joined devices.
 
-Windows Authentication for Microsoft Entra principals also enables the following patterns on managed instances. These patterns are frequently used in traditional on-premises SQL Servers:
+Windows Authentication for Microsoft Entra principals also enables the following patterns on managed instances. These patterns are frequently used in traditional on-premises SQL Server instances:
 
 - **"Double hop" authentication**: Web applications use IIS identity impersonation to run queries against an instance in the security context of the end user.
 - **Traces using extended events and SQL Server Profiler** can be launched using Windows authentication, providing ease of use for database administrators and developers accustomed to this workflow. Learn how to [run a trace against Azure SQL Managed Instance using Windows Authentication for Microsoft Entra principals](winauth-azuread-run-trace-managed-instance.md).

@@ -88,7 +88,7 @@ The assessment:
 - Runs continuously on a default schedule of once per week.
 - Is free and available for all SQL Server editions.
 
-You can obtain a migration assessment for SQL Servers located anywhere, such as:
+You can obtain a migration assessment for SQL Server instances located anywhere, such as:
 - Your datacenter.
 - Edge site locations, such as retail stores.
 - Public cloud or hosting providers.

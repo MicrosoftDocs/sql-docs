@@ -45,7 +45,7 @@ The user or service principal needs:
   - For Linux, use the root account
   - For Windows, use an account that's a member of the Local Administrators group
 
-Before enabling SQL Servers with Arc, the installation script checks:
+Before enabling your SQL Server instances with Arc, the installation script checks:
 
 - The region where the Arc-enabled SQL Server is supported
 - `Microsoft.AzureArcData` resource provider is registered

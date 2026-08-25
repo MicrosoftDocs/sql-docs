@@ -64,9 +64,6 @@ cursor.execute("""
 print(cursor.fetchone())  # ('D:12.34', 56.78)
 ```
 
-> [!IMPORTANT]
-> Integer SQL type code keys require mssql-python 1.13.0 and later versions. In earlier versions, the driver accepted these registrations and stored them but never invoked them, so the converters silently did nothing. If you registered converters this way against an earlier version, they begin transforming values when you upgrade. Review them before you deploy.
-
 ### Converter resolution order
 
 For each column, the driver selects at most one converter, in this order:
@@ -76,8 +73,6 @@ For each column, the driver selects at most one converter, in this order:
 1. The converter registered for the Python type in `cursor.description`.
 
 1. The converter registered for `SQL_WVARCHAR`, but only when the column's Python type is `str` or `bytes`.
-
-The third step is a compatibility fallback. In mssql-python 1.12.0 and earlier versions, it wasn't restricted to string columns, so a single `SQL_WVARCHAR` converter also received **int**, **decimal**, and **date** values.
 
 ### Converter function signature
 

@@ -91,7 +91,7 @@ conn2 = mssql_python.connect("Server=<server2>;Database=<database2>;...")
 
 ### Identity isolation
 
-Starting in mssql-python 1.13.0, the driver separates pools for token-based authentication by the Microsoft Entra identity that opens the connection. Two callers that use the same connection string but different identities get separate pools, so a connection authenticated as one principal is never handed to another.
+The driver separates pools for token-based authentication by the Microsoft Entra identity that opens the connection. Two callers that use the same connection string but different identities get separate pools, so a connection authenticated as one principal is never handed to another.
 
 The pool key depends on the authentication method:
 
@@ -104,12 +104,9 @@ The pool key depends on the authentication method:
 
 Because the token hash is part of the key for the last group, each distinct token gets its own pool. A long-lived credential that returns a cached token continues to reuse one pool. The driver reclaims idle identity pools lazily as later pool operations run, rather than by a background thread.
 
-The driver also acquires tokens only when it needs to open a new connection. In earlier versions, every `connect()` call acquired a token even when the pool returned an existing connection.
+The driver acquires tokens only when it needs to open a new connection, so a pool hit doesn't acquire one.
 
 The driver refreshes pooled connections whose token is within 5 minutes of expiry before the connection is handed out, so long-lived pools don't return connections that are about to fail.
-
-> [!IMPORTANT]
-> In mssql-python 1.12.0 and earlier versions, the pool keyed only on the connection string. If your application authenticates with more than one Microsoft Entra identity in the same process, upgrade to mssql-python 1.13.0.
 
 ### Connection lifecycle
 

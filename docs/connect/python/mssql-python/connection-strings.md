@@ -276,7 +276,7 @@ conn.setautocommit(True)
 
 ## Credential objects
 
-Instead of naming an authentication mode in the connection string, you can hand the driver a credential object with the `token_provider` parameter. This parameter is available in mssql-python 1.13.0 and later versions, and it accepts any object with a `get_token(scope)` method, including every credential in the `azure-identity` package:
+Instead of naming an authentication mode in the connection string, you can hand the driver a credential object with the `token_provider` parameter. This parameter accepts any object with a `get_token(scope)` method, including every credential in the `azure-identity` package:
 
 ```python
 import mssql_python

@@ -217,7 +217,7 @@ This mode uses the current Windows user's Kerberos credentials. On Linux and mac
 
 ## Credential objects with token_provider
 
-Starting in mssql-python 1.13.0, pass a credential object directly with the `token_provider` parameter. The driver calls the object's `get_token()` method when it needs a token, so you don't pack the token into a connection attribute yourself.
+Pass a credential object directly with the `token_provider` parameter. The driver calls the object's `get_token()` method when it needs a token, so you don't pack the token into a connection attribute yourself.
 
 Any object with a `get_token(scope)` method that returns an object with a `.token` attribute satisfies the contract. Every credential in the [azure-identity](/python/api/overview/azure/identity-readme) package qualifies, including `DefaultAzureCredential`, `AzureCliCredential`, `ManagedIdentityCredential`, and `ClientSecretCredential`.
 
@@ -276,7 +276,7 @@ If the connection string carries `UID` or `PWD`, the driver ignores them and iss
 
 You might acquire tokens externally, for example, through a shared token cache or a sovereign cloud endpoint. In these cases, use `SQL_COPT_SS_ACCESS_TOKEN` with the `attrs_before` parameter to pass the token directly. This approach bypasses the driver's built-in token acquisition flow.
 
-In mssql-python 1.13.0 and later versions, prefer the `token_provider` parameter described in the previous section when your credential comes from `azure-identity`. It handles the token encoding for you and refreshes tokens for pooled connections.
+Prefer the `token_provider` parameter described in the previous section when your credential comes from `azure-identity`. It handles the token encoding for you and refreshes tokens for pooled connections.
 
 ```python
 import mssql_python

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Create a Differential Database Backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Create a differential database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Create a differential database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell. 
 
 <a id="BeforeYouBegin"></a>
 
@@ -145,7 +145,27 @@ BACKUP DATABASE MyAdvWorks
    WITH DIFFERENTIAL;  
 GO  
 ```  
-  
+##  <a name="PowerShellProcedure"></a> Use PowerShell
+
+Use the `Backup-SqlDatabase` cmdlet. To specify a differential database backup, use the `-Incremental` parameter along with `-BackupAction Database`.
+
+> [!NOTE]  
+> These examples require the SqlServer module. To determine whether it's installed, run `Get-Module -Name SqlServer`. To install it, run `Install-Module -Name SqlServer` in an administrator session of PowerShell.
+>
+> For more information, see [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider).
+
+### Example (PowerShell)
+
+The following example creates a differential database backup of the `<myDatabase>` database to the default backup location of the server instance `Computer\Instance`. A previous full database backup is required before a differential backup can be created.
+
+For full syntax examples, see [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase).
+
+```powershell
+$credential = Get-Credential
+
+Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database <myDatabase> -BackupAction Database -Incremental -Credential $credential
+```
+
 ## Related content
 
 - [Differential backups (SQL Server)](differential-backups-sql-server.md)

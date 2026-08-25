@@ -73,4 +73,4 @@ FROM sys.dm_geo_replication_link_status;
 - [sys.dm_operation_status](sys-dm-operation-status-azure-sql-database.md)
 - [sp_wait_for_database_copy_sync (Active geo-replication)](../system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql.md)
 - [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)
-- [Auto-failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/auto-failover-group-sql-db)
+- [Failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/failover-group-sql-db)

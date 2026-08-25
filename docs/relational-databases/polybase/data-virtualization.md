@@ -86,4 +86,4 @@ If you select **Generate script**, you see the T-SQL query that's generated to c
 
 ## Related content
 
-- [Introducing [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md)
+- [Introducing [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](/previous-versions/sql/big-data-cluster/big-data-cluster-overview)

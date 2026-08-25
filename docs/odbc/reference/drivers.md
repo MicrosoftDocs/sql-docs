@@ -24,4 +24,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Microsoft-Supplied ODBC Drivers](../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)
+- [Microsoft-Supplied ODBC Drivers](/previous-versions/sql/odbc/microsoft/microsoft-supplied-odbc-drivers)

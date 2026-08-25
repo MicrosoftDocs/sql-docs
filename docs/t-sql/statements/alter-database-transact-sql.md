@@ -752,10 +752,10 @@ ALTER DATABASE [mySampleDatabase] PERFORM_CUTOVER;
 - [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
 - [System Databases](../../relational-databases/databases/system-databases.md)
 - [Disaster recovery guidance - Azure SQL Database](/azure/azure-sql/database/disaster-recovery-guidance)
-- [Azure SQL Database high availability and disaster recovery checklist](/azure/azure-sql/database/high-availability-disaster-recovery-checklist)
+- [High availability and disaster recovery checklist - Azure SQL Database](/azure/azure-sql/database/high-availability-disaster-recovery-checklist)
 - [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits)
-- [vCore resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases)
-- [vCore Resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
+- [Resource limits for single databases using the vCore purchasing model](/azure/azure-sql/database/resource-limits-vcore-single-databases)
+- [Resource limits for elastic pools using the vCore purchasing model](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
 
 ::: moniker-end
 

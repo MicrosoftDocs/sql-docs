@@ -67,6 +67,6 @@ After the data migrates to the target environment, all the applications that for
 
 ## Related content
 
-- [Compare SQL data migration tools](/sql/sql-server/migrate/dma-azure-migrate-compare-migration-tools)
+- [Compare SQL data migration tools](../compare-sql-migration-tools.md)
 - [Services and tools for data migration](/azure/dms/dms-tools-matrix)
 - [Azure Database Migration Guide](/data-migration/)

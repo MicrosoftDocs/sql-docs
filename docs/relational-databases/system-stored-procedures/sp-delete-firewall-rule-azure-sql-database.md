@@ -58,6 +58,6 @@ EXECUTE sp_delete_firewall_rule N'Example setting 1';
 
 ## Related content
 
-- [Azure SQL Database and Azure Synapse IP firewall rules](/azure/azure-sql/database/firewall-configure)
+- [Azure SQL Database IP firewall rules](/azure/azure-sql/database/firewall-configure)
 - [sp_set_firewall_rule (Azure SQL Database)](sp-set-firewall-rule-azure-sql-database.md)
 - [sys.firewall_rules (Azure SQL Database)](../system-catalog-views/sys-firewall-rules-azure-sql-database.md)

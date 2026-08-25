@@ -67,5 +67,5 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ## Related content
 
 - [Developing an ODBC Driver](developing-an-odbc-driver.md)
-- [Microsoft-Supplied ODBC Drivers](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)
+- [Microsoft-Supplied ODBC Drivers](/previous-versions/sql/odbc/microsoft/microsoft-supplied-odbc-drivers)
 - [What's New in ODBC 3.8](../what-s-new-in-odbc-3-8.md)

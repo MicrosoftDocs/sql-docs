@@ -33,6 +33,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
+- [Integrating Reporting Services into Applications](/previous-versions/sql/reporting-services/application-integration/integrating-reporting-services-into-applications)
 - [Use the WebForms ReportViewer control](using-the-webforms-reportviewer-control.md)
 - [Use the WinForms ReportViewer control](using-the-winforms-reportviewer-control.md)

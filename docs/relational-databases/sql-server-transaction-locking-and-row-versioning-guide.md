@@ -2057,7 +2057,7 @@ Deadlocks are a complex topic related to locking, but different from blocking.
 ## Related content
 
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking)
-- [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)
+- [Understand and resolve blocking problems](/azure/azure-sql/database/understand-resolve-blocking)
 - [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](system-dynamic-management-objects/transaction-related-dynamic-management-views-and-functions-transact-sql.md)
 - [Overhead of Row Versioning](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)
 - [sys.dm_tran_locks (Transact-SQL)](system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md)

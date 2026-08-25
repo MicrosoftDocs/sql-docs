@@ -866,7 +866,7 @@ You have successfully logged on as: <your client ID>
 
 ## Related content
 
-- [Connecting to Azure SQL by using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Microsoft Entra authentication for Azure SQL](/azure/azure-sql/database/authentication-aad-overview)
 - [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 - [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 - [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)

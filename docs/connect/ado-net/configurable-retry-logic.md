@@ -63,5 +63,5 @@ This condition matters most for the [Serverless compute tier for Azure SQL Datab
 
 - [Retry Pattern](/azure/architecture/patterns/retry)
 - [Transient faults](/azure/azure-sql/database/troubleshoot-common-connectivity-issues#transient-errors-transient-faults)
-- [Troubleshoot connectivity issues and other errors with Azure SQL](/azure/azure-sql/database/troubleshoot-common-errors-issues)
+- [Troubleshoot connectivity issues and other errors](/azure/azure-sql/database/troubleshoot-common-errors-issues)
 - [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)

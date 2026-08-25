@@ -270,7 +270,7 @@ After you successfully migrate your report server to a new instance, you should 
 
 ## Related content
 
-- [Migrate a Reporting Services Installation (SharePoint Mode)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)
+- [Migrate a Reporting Services Installation (SharePoint Mode)](/previous-versions/sql/reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode)
 - [Report server database (SSRS native mode)](../report-server/report-server-database-ssrs-native-mode.md)
 - [Upgrade and migrate Reporting Services](upgrade-and-migrate-reporting-services.md)
 - [Reporting Services backward compatibility](../reporting-services-backward-compatibility.md)

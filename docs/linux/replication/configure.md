@@ -13,7 +13,7 @@ ms.custom:
   - linux-related-content
 monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
 ---
-# Configure SQL Server Replication on Linux
+# Configure SQL Server replication on Linux
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 

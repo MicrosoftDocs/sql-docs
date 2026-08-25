@@ -607,4 +607,4 @@ Not every error is transient. Retrying a configuration or coding error wastes ti
 - [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
 - [Connection pooling with mssql-python](connection-pooling.md)
 - [Troubleshoot mssql-python](troubleshooting.md)
-- [Azure SQL connection resiliency](/azure/azure-sql/database/troubleshoot-common-connectivity-issues)
+- [Troubleshoot transient connection errors](/azure/azure-sql/database/troubleshoot-common-connectivity-issues)

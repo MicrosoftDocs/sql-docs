@@ -89,7 +89,7 @@ The following code creates a database-level firewall setting called `Example DB 
 
 ## Related content
 
-- [Azure SQL Database and Azure Synapse IP firewall rules](/azure/azure-sql/database/firewall-configure)
+- [Azure SQL Database IP firewall rules](/azure/azure-sql/database/firewall-configure)
 - [sp_set_firewall_rule (Azure SQL Database)](sp-set-firewall-rule-azure-sql-database.md)
 - [sp_delete_database_firewall_rule (Azure SQL Database)](sp-delete-database-firewall-rule-azure-sql-database.md)
 - [sys.database_firewall_rules](../system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)

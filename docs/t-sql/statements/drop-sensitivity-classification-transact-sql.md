@@ -83,4 +83,4 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 - [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](add-sensitivity-classification-transact-sql.md)
 - [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
-- [Getting started with SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)
+- [Data Discovery & Classification](/azure/azure-sql/database/data-discovery-and-classification-overview)

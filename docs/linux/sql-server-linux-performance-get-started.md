@@ -63,7 +63,7 @@ A columnstore index is a technology for storing and querying large stores of dat
 
 SQL Server provides In-Memory OLTP features that can greatly improve the performance of application systems. This section walks you through the steps to create a memory-optimized table stored in memory and a natively compiled stored procedure that can access the table without needing to be compiled or interpreted.
 
-### Configure Database for In-Memory OLTP
+### Configure database for In-Memory OLTP
 
 1. You should set the database to a compatibility level of at least 130 to use In-Memory OLTP. Use the following query to check the current compatibility level of `AdventureWorks2022`:
 

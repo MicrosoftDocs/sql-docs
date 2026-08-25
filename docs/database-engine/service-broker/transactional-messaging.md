@@ -28,5 +28,5 @@ When an application processes a message and makes no changes to the database, th
 
 ## Related content
 
-- [Controlling Transactions (ADO)](../../ado/guide/data/controlling-transactions-ado.md)
+- [Controlling Transactions (ADO)](/previous-versions/sql/ado/guide/data/controlling-transactions-ado)
 - [Broker system messages](broker-system-messages.md)

@@ -190,5 +190,5 @@ Consider the following to minimize ransomware risks:
 ## Related content
 
 - [Securing SQL Server](securing-sql-server.md)
-- [Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/security-best-practice)
-- [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices)
+- [Playbook for addressing common security requirements with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/security-best-practice)
+- [Security considerations for SQL Server on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices)

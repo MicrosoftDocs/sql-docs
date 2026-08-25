@@ -3,7 +3,7 @@ title: SQL Server 2025 Known Issues
 description: Known issues, causes, and workarounds for SQL Server 2025 (17.x), covering upgrades, replication, PolyBase, session behavior, platform compatibility (Windows and Linux), backup compression, and other platform-specific limitations.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/11/2026
+ms.date: 08/24/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: troubleshooting-known-issue
@@ -38,6 +38,8 @@ The following issues are currently identified:
 - [SQL Server might become slow or unresponsive after creating or bringing online a large number of databases](#sql-server-might-become-slow-or-unresponsive-after-creating-or-bringing-online-a-large-number-of-databases)
 - [Linked server queries that use MSDASQL fail with error 7416](#linked-server-queries-that-use-msdasql-fail-with-error-7416)
 - [Access violations in Windows Server 2025 with LPIM enabled](#windows-server-2025-lock-pages-in-memory)
+- [Incorrect UTC qualifier for the committime CES value](#incorrect-utc-qualifier-for-the-committime-ces-value)
+- [Database performance counters are missing after DBCC CHECKDB](#database-performance-counters-are-missing-after-dbcc-checkdb)
 
 ## SQL Server 2025 installation fails when TLS 1.2 is disabled
 
@@ -259,6 +261,12 @@ We have identified a fix for a future release of [!INCLUDE [sssql25-md](../inclu
 ## Incorrect UTC qualifier for the committime CES value
 
 On SQL products configured with a non-UTC time zone, the `committime` field in a [change event streaming message](../relational-databases/track-changes/change-event-streaming/message-format.md) incorrectly includes a **Z** suffix, even though this field shows the local time of the publishing database. When the database uses UTC, the value and suffix agree. This problem is known, and a fix is pending in a future release of the feature.
+
+## Database performance counters are missing after DBCC CHECKDB
+
+**Issue**: After you run `DBCC CHECKDB` on a database, the performance counters for that database under the [Databases](../relational-databases/performance-monitor/sql-server-databases-object.md) performance object are missing in [Performance Monitor](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md) and in the [sys.dm_os_performance_counters](../relational-databases/system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
+
+**Workaround**: Restart the database by taking it offline and then online using [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql-set-options.md), fail over the database, or restart the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance.
 
 ## Related content
 

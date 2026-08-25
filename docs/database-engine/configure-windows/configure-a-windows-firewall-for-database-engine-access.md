@@ -76,4 +76,4 @@ The following procedures configure the Windows Firewall by using the Windows Fir
 
 ## Related content
 
-- [Azure SQL Database and Azure Synapse IP firewall rules](/azure/azure-sql/database/firewall-configure)
+- [Azure SQL Database IP firewall rules](/azure/azure-sql/database/firewall-configure)

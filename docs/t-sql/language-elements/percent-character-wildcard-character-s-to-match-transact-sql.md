@@ -1,6 +1,6 @@
 ---
 title: "Wildcard search (%)"
-description: "Percent character (Wildcard - Character(s) to Match) (Transact-SQL)"
+description: "Percent character (wildcard - characters to match) (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 12/19/2022
@@ -15,7 +15,7 @@ f1_keywords:
   - "wildcard"
 helpviewer_keywords:
   - "conditions [SQL Server], wildcards"
-  - "% (wildcard - character(s) to match)"
+  - "% (wildcard - characters to match)"
   - "matching conditions [SQL Server]"
   - "wildcard characters [SQL Server]"
   - "characters [SQL Server], wildcard"
@@ -23,7 +23,7 @@ dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
-# Percent character (wildcard - character(s) to match) (Transact-SQL)
+# Percent character (wildcard - characters to match) (Transact-SQL)
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 

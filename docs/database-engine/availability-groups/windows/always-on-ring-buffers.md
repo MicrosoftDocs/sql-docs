@@ -178,4 +178,4 @@ GO
 
 - [Configure Extended Events for availability groups](always-on-extended-events.md)
 - [Identify waits associated with availability groups](always-on-wait-types.md)
-- [Ring Buffer target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-ring-buffer)
+- [Create an event session with a ring_buffer target in memory](/azure/azure-sql/database/xevent-code-ring-buffer)

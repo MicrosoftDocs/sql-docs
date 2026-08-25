@@ -47,7 +47,7 @@ ms.custom:
 
 - [What's new in SQL Server Reporting Services (SSRS)](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
 - [What's New in Analysis Services](/analysis-services/what-s-new-in-analysis-services)
-- [What's New in Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
+- [What's New in Integration Services](/previous-versions/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2016)
 - [What's New in Master Data Services (MDS)](../../master-data-services/what-s-new-in-master-data-services-mds.md)
 - [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md)
 - [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

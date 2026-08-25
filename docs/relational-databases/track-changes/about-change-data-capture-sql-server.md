@@ -142,7 +142,7 @@ For known issues and errors associated with change data capture, review [Known i
 
 ## Related content
 
-- [Known issues and limitations](/sql/relational-databases/track-changes/known-issues-and-limitations)
+- [Known limitations, issues, and errors with CDC](known-issues-and-errors-change-data-capture.md)
 - [Work with Change Data](work-with-change-data-sql-server.md)
 - [Track data changes (SQL Server)](track-data-changes-sql-server.md)
 - [Enable and disable change data capture](enable-and-disable-change-data-capture-sql-server.md)

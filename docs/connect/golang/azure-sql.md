@@ -282,7 +282,7 @@ if err != nil {
 
 ## Related content
 
-- [Quickstart: Use Golang to query Azure SQL Database](/azure/azure-sql/database/connect-query-go)
+- [Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance](/azure/azure-sql/database/connect-query-go)
 - [Microsoft Entra ID authentication with go-mssqldb](entra-authentication.md)
 - [Error handling and retry patterns with go-mssqldb](error-handling.md)
 - [Connection pooling with go-mssqldb](connection-pooling.md)

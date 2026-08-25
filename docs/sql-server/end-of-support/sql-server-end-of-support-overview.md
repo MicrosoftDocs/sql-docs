@@ -239,6 +239,6 @@ The following table provides an approximation of lifecycle dates for [!INCLUDE [
 
 - [SQL Server 2025](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [What are Extended Security Updates for SQL Server?](sql-server-extended-security-updates.md)
-- [Extend support for SQL Server with Azure](/azure/azure-sql/virtual-machines/windows/extended-security-updates-sql-vm)
+- [Extended security updates (ESUs) for SQL Server on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/extended-security-updates-sql-vm)
 - [SQL Server on Azure VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
-- [SQL Managed Instance overview](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
+- [What is Azure SQL Managed Instance?](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)

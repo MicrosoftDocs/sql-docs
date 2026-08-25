@@ -639,7 +639,7 @@ EXEC (@cmd);
 - [CREATE LOGIN (Transact-SQL)](create-login-transact-sql.md)
 - [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
 - [Contained Databases](../../relational-databases/databases/contained-databases.md)
-- [Connecting to SQL Database By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Microsoft Entra authentication for Azure SQL](/azure/azure-sql/database/authentication-aad-overview)
 - [Get started with Database Engine permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [ALTER ROLE (Transact-SQL)](alter-role-transact-sql.md)
 - [GRANT object permissions (Transact-SQL)](grant-object-permissions-transact-sql.md)

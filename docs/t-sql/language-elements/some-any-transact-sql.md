@@ -150,4 +150,4 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
 - [SELECT (Transact-SQL)](../queries/select-transact-sql.md)
 - [WHERE (Transact-SQL)](../queries/where-transact-sql.md)
 - [IN (Transact-SQL)](in-transact-sql.md)
-- [IS \[NOT\] DISTINCT FROM (Transact-SQL)](../queries/is-distinct-from-transact-sql.md)
+- [IS [NOT] DISTINCT FROM (Transact-SQL)](../queries/is-distinct-from-transact-sql.md)

@@ -259,8 +259,8 @@ To troubleshoot common issues when migrating to Azure SQL Managed Instance, see 
 
 ## Related content
 
-- [Assessment rules for SQL Server to Azure SQL Managed Instance migration](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-sql-managed-instance-assessment-rules)
-- [Assessment rules for SQL Server to Azure SQL Database migration](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-assessment-rules)
+- [Assessment rules for SQL Server to Azure SQL Managed Instance migration](/data-migration/sql-server/managed-instance/assessment-rules)
+- [Assessment rules for SQL Server to Azure SQL Database migration](/data-migration/sql-server/database/assessment-rules)
 - [Migrate SQL Server to Azure SQL](/azure/dms/dms-overview)
 - [SQL Server enabled by Azure Arc](overview.md)
 - [Deployment options for SQL Server enabled by Azure Arc](deployment-options.md)

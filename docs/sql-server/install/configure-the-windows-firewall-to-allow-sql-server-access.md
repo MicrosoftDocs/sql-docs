@@ -326,4 +326,4 @@ To verify which ports are listening, display active TCP connections and IP stati
 ## Related content
 
 - [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
-- [Azure SQL Database and Azure Synapse IP firewall rules](/azure/azure-sql/database/firewall-configure)
+- [Azure SQL Database IP firewall rules](/azure/azure-sql/database/firewall-configure)

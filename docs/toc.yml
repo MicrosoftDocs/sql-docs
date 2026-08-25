@@ -16612,9 +16612,9 @@ items:
             href: t-sql/language-elements/compound-assignment-pipes-transact-sql.md
           - name: += (String concatenation assignment)
             href: t-sql/language-elements/string-concatenation-equal-transact-sql.md
-          - name: '% (Wildcard - character(s) to match)'
+          - name: '% (wildcard - characters to match)'
             href: t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md
-          - name: '[ ] (Wildcard - character(s) to match)'
+          - name: '[] (wildcard - characters to match)'
             href: t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md
           - name: '[^] (Wildcard - character(s) not to match)'
             href: t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md

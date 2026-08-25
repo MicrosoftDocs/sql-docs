@@ -1,6 +1,6 @@
 ---
-title: "IS NULL (Transact-SQL)"
-description: Determines whether a specified expression is null.
+title: "IS [NOT] NULL (Transact-SQL)"
+description: Determines whether a specified expression is NULL.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
@@ -33,7 +33,7 @@ dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
-# IS NULL (Transact-SQL)
+# IS [NOT] NULL (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-FabricDW-FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
 

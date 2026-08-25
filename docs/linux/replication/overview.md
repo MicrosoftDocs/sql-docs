@@ -56,5 +56,5 @@ The following features aren't supported:
 
 ## Related content
 
-- [Configure Replication with T-SQL](tutorial-tsql.md)
-- [Configure SQL Server Replication on Linux](configure.md)
+- [Configure replication with T-SQL](tutorial-tsql.md)
+- [Configure SQL Server replication on Linux](configure.md)

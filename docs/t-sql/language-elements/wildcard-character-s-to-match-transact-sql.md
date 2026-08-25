@@ -13,20 +13,23 @@ f1_keywords:
   - "Match"
   - "wildcard"
   - "[ ]"
+  - "[]"
   - "[_]_TSQL"
 helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "[ ] (wildcard - character(s) to match)"
+  - "[ ] (wildcard - characters to match)"
+  - "[] (wildcard - characters to match)"
 dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
-# \[ \] (Wildcard - characters to match) (Transact-SQL)
+# \[\] (wildcard - characters to match) (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
 
-Matches any single character within the specified range or set that is specified between brackets `[ ]`. These wildcard characters can be used in string comparisons that involve pattern matching, such as `LIKE` and `PATINDEX`.
+Matches any single character within the specified range or set that is specified between brackets (`[` and `]`). These wildcard characters can be used in string comparisons that involve pattern matching, such as `LIKE` and `PATINDEX`.
 
 ## Examples
 
@@ -54,7 +57,7 @@ You might have more qualifying databases installed.
 
 ### B. More complex example
 
-The following example uses the [] operator to find the IDs and names of all [!INCLUDE [ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] employees who have addresses with a four-digit postal code.
+The following example uses the `[]` operator to find the IDs and names of all [!INCLUDE [ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] employees who have addresses with a four-digit postal code.
 
 ```sql
 SELECT e.BusinessEntityID, p.FirstName, p.LastName, a.PostalCode
@@ -75,7 +78,7 @@ EmployeeID      FirstName      LastName      PostalCode
 
 ### C. Use a set that combines ranges and single characters
 
-A wildcard set can include both single characters and ranges. The following example uses the [] operator to find a string that begins with a number or a series of special characters.
+A wildcard set can include both single characters and ranges. The following example uses the `[]` operator to find a string that begins with a number or a series of special characters.
 
 ```sql
 SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id
@@ -98,6 +101,6 @@ object_id     object_name                          name    column_id
 
 - [LIKE (Transact-SQL)](like-transact-sql.md)
 - [PATINDEX (Transact-SQL)](../functions/patindex-transact-sql.md)
-- [Percent character (wildcard - character(s) to match) (Transact-SQL)](percent-character-wildcard-character-s-to-match-transact-sql.md)
+- [Percent character (wildcard - characters to match) (Transact-SQL)](percent-character-wildcard-character-s-to-match-transact-sql.md)
 - [\[^\] (Wildcard - characters not to match) (Transact-SQL)](wildcard-character-s-not-to-match-transact-sql.md)
 - [_ (Wildcard - match one character) (Transact-SQL)](wildcard-match-one-character-transact-sql.md)

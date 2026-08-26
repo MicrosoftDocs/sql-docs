@@ -39,7 +39,7 @@ Base distributions of Python and R are included in Machine Learning Services. Yo
 
 ## How to enable Machine Learning Services
 
-On a SQL managed instance configured with the **SQL Server 2022** update policy, enable Machine Learning Services by enabling extensibility with the following SQL commands (SQL Managed Instance will restart and be unavailable for a few seconds):
+On a SQL managed instance configured with the **SQL Server 2022** update policy, enable Machine Learning Services by enabling extensibility with the following SQL commands (SQL Managed Instance restarts and is unavailable for a few seconds):
 
 ```sql
 sp_configure 'external scripts enabled', 1;

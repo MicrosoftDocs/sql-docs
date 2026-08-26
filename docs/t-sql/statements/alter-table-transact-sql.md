@@ -725,12 +725,12 @@ Indicates that the column is a sparse column. The storage of sparse columns is o
 
 **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
-Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. Three functions are available:
+Specifies a dynamic data mask. `mask_function` is the name of the masking function with the appropriate parameters. The following functions are available:
 
-- default()
-- email()
-- partial()
-- random()
+- `default()`
+- `email()`
+- `partial()`
+- `random()`
 
 Requires `ALTER ANY MASK` permission.
 

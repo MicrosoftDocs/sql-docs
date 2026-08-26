@@ -661,7 +661,7 @@ Indicates that the column is a sparse column. The storage of sparse columns is o
 
 **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]  and later versions.
 
-Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. Four functions are available:
+Specifies a dynamic data mask. `mask_function` is the name of the masking function with the appropriate parameters. The following functions are available:
 
 - `default()`
 - `email()`

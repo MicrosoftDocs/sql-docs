@@ -4,8 +4,8 @@ titleSuffix: Azure Synapse Analytics and Microsoft Fabric
 description: Use the COPY statement in Azure Synapse Analytics and Warehouse in Microsoft Fabric for loading from external storage accounts.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: procha,fresantos, jovanpop
-ms.date: 05/01/2026
+ms.reviewer: procha, fresantos, jovanpop
+ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -64,7 +64,7 @@ For comprehensive examples and quickstarts using the `COPY` statement, see:
 ```syntaxsql
 COPY INTO [ schema. ] table_name
 [ (Column_list) ]
-FROM '<external_location>' [ , ...n ]
+FROM '<external_location>' [ ,...n ]
 WITH
  (
  [ FILE_TYPE = { 'CSV' | 'PARQUET' | 'ORC' } ]
@@ -116,8 +116,8 @@ When you don't specify a column list, `COPY` maps columns based on the source an
 
 The location where the files containing the data are staged. Currently, Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
 
-- *External location* for Blob Storage: `https://<account\>.blob.core.windows.net/<container\>/<path\>`
-- *External location* for ADLS Gen2: `https://<account\>.dfs.core.windows.net/<container\>/<path\>`
+- *External location* for Blob Storage: `https://<account>.blob.core.windows.net/<container>/<path>`
+- *External location* for ADLS Gen2: `https://<account>.dfs.core.windows.net/<container>/<path>`
 
 > [!NOTE]  
 > The `.blob` endpoint is available for ADLS Gen2 as well and currently yields the best performance. Use the `.blob` endpoint when `.dfs`  isn't required for your authentication method.
@@ -139,7 +139,7 @@ You can include wildcards in the path where:
 
 You can specify multiple file locations only from the same storage account and container through a comma-separated list such as:
 
-- `https://<account>.blob.core.windows.net/<container\>/<path\>`, `https://<account\>.blob.core.windows.net/<container\>/<path\>`
+- `https://<account>.blob.core.windows.net/<container>/<path>`, `https://<account>.blob.core.windows.net/<container>/<path>`
 
 #### FILE_TYPE = { 'CSV' | 'PARQUET' | 'ORC' }
 
@@ -176,7 +176,7 @@ You can specify multiple file locations only from the same storage account and c
 
 - Authenticating with Shared Access Signatures (SAS)
 
-  - `IDENTITY`: A constant with a value of `Shared Access Signature`
+  - `IDENTITY`: A constant with a value of `Shared Access Signature`.
   - `SECRET`: The [shared access signature](/azure/storage/common/storage-sas-overview) provides delegated access to resources in your storage account.
 
 - Minimum permissions required: READ and LIST
@@ -205,9 +205,9 @@ You can specify multiple file locations only from the same storage account and c
 
 - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra user
 
-#### ERRORFILE = Directory Location
+#### ERRORFILE = Directory location
 
-`ERRORFILE` only applies to CSV. It specifies the directory within the `COPY` statement where the rejected rows and the corresponding error file are written. You can specify the full path from the storage account or the path relative to the container. If the specified path doesn't exist, the warehouse creates one. A child directory is created with the name `_rejectedrows`. The `_` character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter.
+`ERRORFILE` applies only to CSV. It specifies the directory within the `COPY` statement where the rejected rows and the corresponding error file are written. You can specify the full path from the storage account or the path relative to the container. If the specified path doesn't exist, the warehouse creates one. A child directory is created with the name `_rejectedrows`. The `_` character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter.
 
 > [!NOTE]
 > When you pass a relative path to `ERRORFILE`, make it relative to the container path you specify in *external_location*. 
@@ -218,13 +218,13 @@ If `ERRORFILE` has the full path of the storage account defined, `COPY` uses `ER
 
 #### ERRORFILE_CREDENTIAL = (IDENTITY = '', SECRET = '')
 
-`ERRORFILE_CREDENTIAL` only applies to CSV files. Supported data source and authentication methods are:
+`ERRORFILE_CREDENTIAL` applies only to CSV files. Supported data source and authentication methods are:
 
 - Azure Blob Storage: SAS, service principal, or Microsoft Entra
 - Azure Data Lake Gen2: SAS, MSI, service principal, or Microsoft Entra
 
 - Authenticating with Shared Access Signatures (SAS)
-  - `IDENTITY`: A constant with a value of `Shared Access Signature`
+  - `IDENTITY`: A constant with a value of `Shared Access Signature`.
   - `SECRET`: The [shared access signature](/azure/storage/common/storage-sas-overview) provides delegated access to resources in your storage account.
 - Minimum permissions required: READ, LIST, WRITE, CREATE, DELETE
 
@@ -251,7 +251,7 @@ Using a storage account key with `ERRORFILE_CREDENTIAL` isn't supported.
 
 #### MAXERRORS = max_errors
 
-`MAXERRORS` specifies the maximum number of reject rows allowed in the load before the COPY operation fails. Each row that the COPY operation can't import is ignored and counted as one error. If you don't specify a value for maximum number of errors, the default is `0`.
+`MAXERRORS` specifies the maximum number of reject rows allowed in the load before the `COPY` operation fails. Each row that the `COPY` operation can't import is ignored and counted as one error. If you don't specify a value for maximum number of errors, the default is `0`.
 
 `MAXERRORS` can't be used with `AUTO_CREATE_TABLE`.
 
@@ -301,11 +301,11 @@ Extended ASCII and multibyte characters aren't supported with UTF-8 for `ROWTERM
 
 DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md). DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md).
 
-#### ENCODING = 'UTF8' | 'UTF16'
+#### ENCODING = { 'UTF8' | 'UTF16' }
 
 `ENCODING` only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command.
 
-#### IDENTITY_INSERT = 'ON' | 'OFF'
+#### IDENTITY_INSERT = { 'ON' | 'OFF' }
 
 `IDENTITY_INSERT` specifies whether the identity value or values in the imported data file are to be used for the identity column. If `IDENTITY_INSERT` is `OFF` (default), the identity values for this column are verified, but not imported. Note the following behavior with the COPY command:
 
@@ -335,11 +335,11 @@ The user running the COPY command must have the following permissions:
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
 - [INSERT](grant-database-permissions-transact-sql.md#remarks)
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], you need INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions.
 
-Additionally, if the user executing the COPY command also intends to generate a new table and load data into it, they require CREATE TABLE and ALTER ON SCHEMA permissions.
+If the user running the COPY command also wants to create a new table and load data into it, they need CREATE TABLE and ALTER ON SCHEMA permissions.
 
-For example, to allow `mike@contoso.com` to use COPY to create a new table in the `HR` schema, and insert the data from a Parquet file, use the following Transact-SQL sample:
+For example, to allow `mike@contoso.com` to use COPY to create a new table in the `HR` schema and insert data from a Parquet file, use the following Transact-SQL sample:
 
 ```sql
 GRANT ADMINISTER DATABASE BULK OPERATIONS to [mike@contoso.com];
@@ -351,7 +351,7 @@ GRANT ALTER on SCHEMA::HR to [mike@contoso.com];
 
 ## Remarks
 
-The `COPY` statement accepts only UTF-8 and UTF-16 valid characters for row data and command parameters. The `COPY` statement might incorrectly interpret source files or parameters (such as `ROWTERMINATOR` or `FIELDTERMINATOR`) that use invalid characters and cause unexpected results such as data corruption or other failures. Make sure your source files and parameters are UTF-8 or UTF-16 compliant before you invoke the `COPY` statement.
+The `COPY` statement accepts only UTF-8 and UTF-16 valid characters for row data and command parameters. The `COPY` statement might incorrectly interpret source files or parameters (such as `ROWTERMINATOR` or `FIELDTERMINATOR`) that use invalid characters and cause unexpected results such as data corruption or other failures. Ensure your source files and parameters are UTF-8 or UTF-16 compliant before you invoke the `COPY` statement.
 
 The `MAXDOP` query hint isn't supported with `COPY INTO`.
 
@@ -373,7 +373,7 @@ FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lin
 WITH (FIELDTERMINATOR = '|')
 ```
 
-The default values of the COPY command are:
+The default values of the `COPY` command are:
 
 - `DATEFORMAT` = Session DATEFORMAT
 
@@ -398,7 +398,9 @@ The default values of the COPY command are:
 
 - `IDENTITY_INSERT` = 'OFF'
 
-### B. Load authenticating via Share Access Signature (SAS)
+<a id="b-load-authenticating-via-share-access-signature-sas"></a>
+
+### B. Load authenticating via Shared Access Signature (SAS)
 
 The following example loads files that use the line feed as a row terminator, such as a UNIX output. This example also uses a SAS key to authenticate to Azure Blob Storage.
 
@@ -453,7 +455,7 @@ WITH (
 )
 ```
 
-### E. Load specifying wild cards and multiple files
+### E. Load specifying wildcards and multiple files
 
 ```sql
 COPY INTO t1
@@ -550,7 +552,7 @@ To work around this problem, re-register the workspace's managed identity:
 ## Related content
 
 - [Loading overview with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)
-::: moniker-end
+  ::: moniker-end
 
 ::: moniker range="=fabric"
 
@@ -582,7 +584,7 @@ Use `COPY` for the following capabilities:
 ```syntaxsql
 COPY INTO [ warehouse_name. ] [ schema_name. ] table_name
 [ (Column_list) ]
-FROM '<external_location>' [ , ...n ]
+FROM '<external_location>' [ ,...n ]
 WITH
  (
  [ FILE_TYPE = { 'CSV' | 'JSONL' | 'PARQUET' } ]
@@ -599,6 +601,7 @@ WITH
  [ , ENCODING = { 'UTF8' | 'UTF16' } ]
  [ , PARSER_VERSION = { '1.0' | '2.0' } ]
  [ , MATCH_COLUMN_COUNT = { 'ON' | 'OFF' } ]
+ [ , IDENTITY_INSERT = { 'ON' | 'OFF' } ]
 )
 ```
 
@@ -640,8 +643,8 @@ When you don't specify a column list, `COPY` maps columns based on the source an
 
 Specifies where the files containing the data are staged. Currently Azure Data Lake Storage (ADLS) Gen2, Azure Blob Storage, and OneLake are supported:
 
-- *External location* for Blob Storage: `https://<account\>.blob.core.windows.net/<container\>/<path\>`
-- *External location* for ADLS Gen2: `https://<account\>.dfs.core.windows.net/<container\>/<path\>`
+- *External location* for Blob Storage: `https://<account>.blob.core.windows.net/<container>/<path>`
+- *External location* for ADLS Gen2: `https://<account>.dfs.core.windows.net/<container>/<path>`
 - *External location* for OneLake: `https://onelake.dfs.fabric.microsoft.com/<workspaceId>/<lakehouseId>/Files/`
 
 Azure Data Lake Storage (ADLS) Gen2 offers better performance than Azure Blob Storage (legacy). Consider using an ADLS Gen2 account whenever possible.
@@ -672,8 +675,8 @@ You can specify multiple file locations only from the same storage account and c
 To access files on Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage locations that are behind a firewall, the following prerequisites apply:
 
 - A **workspace identity** for the workspace hosting your warehouse must be provisioned. For more information on how to set up a workspace identity, see [Workspace identity](/fabric/security/workspace-identity).
-- Your Entra ID account must be able to use the workspace identity.
-- Your Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control).
+- Your Microsoft Entra ID account must be able to use the workspace identity.
+- Your Microsoft Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control).
 - Your Fabric workspace hosting the warehouse must be added as a **resource instance rule**. For more information on how to add your Fabric workspace with a resource instance rule, see [Resource instance rule](/fabric/security/security-trusted-workspace-access).
 
 #### FILE_TYPE = { 'CSV' | 'JSONL' | 'PARQUET' }
@@ -703,7 +706,7 @@ The user's Microsoft Entra ID authentication is default. No credential needs to 
   - `IDENTITY`: A constant with a value of `Storage Account Key`.
   - `SECRET`: Storage account key.
 
-#### ERRORFILE = Directory Location
+#### ERRORFILE = Directory location
 
 `ERRORFILE` applies to CSV and JSONL. Specifies the directory where the rejected rows and the corresponding error file should be written. You can specify the full path from the storage account or the path relative to the container. If the specified path doesn't exist, the system creates one on your behalf. A child directory is created with the name `_rejectedrows`. The `_` character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter.
 
@@ -721,7 +724,7 @@ When using a firewall protected Azure Storage Account, the error file is created
 `ERRORFILE_CREDENTIAL` applies to CSV and JSONL files. On [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], the only supported authentication mechanism is Shared Access Signature (SAS).
 
 - Authenticating with Shared Access Signatures (SAS)
-  - `IDENTITY`: A constant with a value of `Shared Access Signature`
+  - `IDENTITY`: A constant with a value of `Shared Access Signature`.
   - `SECRET`: The [shared access signature](/azure/storage/common/storage-sas-overview) provides delegated access to resources in your storage account.
 - Minimum permissions required: READ, LIST, WRITE, CREATE, DELETE
 
@@ -777,7 +780,7 @@ Extended ASCII and multibyte characters aren't supported with UTF-8 for `ROWTERM
 
 DATEFORMAT applies to CSV and JSONL. Specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md). DATEFORMAT within the `COPY` command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md).
 
-#### ENCODING = 'UTF8' | 'UTF16'
+#### ENCODING = { 'UTF8' | 'UTF16' }
 
 `ENCODING` applies to CSV and JSONL. Default is UTF8. Specifies the data encoding standard for the files loaded by the `COPY` command.
 
@@ -812,6 +815,19 @@ Parser version 1.0 is available for backward compatibility only. Use it only whe
 
 > [!NOTE]  
 > `MATCH_COLUMN_COUNT` works independently from `MAXERRORS`. A column count mismatch causes `COPY INTO` to fail regardless of `MAXERRORS`.
+
+#### IDENTITY_INSERT = { 'ON' | 'OFF' }
+
+`IDENTITY_INSERT` specifies whether the identity value or values in the imported data file are to be used for the identity column. If `IDENTITY_INSERT` is `OFF` (default), the identity values for this column are not imported. Note the following behavior with the COPY command:
+
+- If `IDENTITY_INSERT` is OFF, and table has an identity column
+  - You must specify a column list that doesn't map an input field to the identity column.
+- If `IDENTITY_INSERT` is ON, and table has an identity column
+  - If you pass a column list, it must map an input field to the identity column.
+- Default value isn't supported for the IDENTITY column in the column list.
+- You can set `IDENTITY_INSERT` for only one table at a time.
+
+For more information about IDENTITY columns in Fabric Data Warehouse, refer to [IDENTITY columns in Fabric Data Warehouse](/fabric/data-warehouse/identity).
 
 ## Use COPY INTO with OneLake
 
@@ -858,7 +874,7 @@ When you use OneLake as the source, the user must have **Contributor** or higher
 
 ## Remarks
 
-The `COPY` statement accepts only UTF-8 and UTF-16 valid characters for row data and command parameters. If you use source files or parameters (such as `ROWTERMINATOR` or `FIELDTERMINATOR`) that contain invalid characters, the `COPY` statement might interpret them incorrectly and cause unexpected results, such as data corruption or other failures. Before you invoke the `COPY` statement, make sure your source files and parameters are UTF-8 or UTF-16 compliant.  
+The `COPY` statement accepts only UTF-8 and UTF-16 valid characters for row data and command parameters. If you use source files or parameters (such as `ROWTERMINATOR` or `FIELDTERMINATOR`) that contain invalid characters, the `COPY` statement might interpret them incorrectly and cause unexpected results, such as data corruption or other failures. Before you invoke the `COPY` statement, ensure your source files and parameters are UTF-8 or UTF-16 compliant.  
 
 The `COPY INTO` statement has restrictions on the size of individual **varchar(max)** and **varbinary(max)** columns, as well as on the total row size that you can ingest.
 - Parquet: maximum **varchar(max)**/**varbinary(max)** column size 16 MB, max row size 1 GB.
@@ -910,7 +926,9 @@ The default values of the `COPY` command are:
 - `ENCODING = 'UTF8'`
 - `FILE_TYPE = 'CSV'`
 
-### B. Load authenticating via Share Access Signature (SAS)
+<a id="b-load-authenticating-via-share-access-signature-sas"></a>
+
+### B. Load authenticating via Shared Access Signature (SAS)
 
 The following example loads files that use the line feed as a row terminator, such as a UNIX output. This example also uses a SAS key to authenticate to Azure Blob Storage.
 
@@ -1024,8 +1042,22 @@ WITH (
 );
 ```
 
+### I. Load data into IDENTITY columns with IDENTITY_INSERT
+
+`COPY INTO` options override any session-level setting for `IDENTITY_INSERT`.
+
+```sql
+COPY INTO dbo.Employees (EmployeeID 1, FirstName 2, LastName 3)
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/'
+WITH (
+    FILE_TYPE = 'CSV',
+    IDENTITY_INSERT = 'ON'
+);
+```
+
 ## Related content
 
 - [Ingest data into your Warehouse in Microsoft Fabric](/fabric/data-warehouse/ingest-data)
 - [Ingest data into your Warehouse using the COPY statement](/fabric/data-warehouse/ingest-data-copy)
+
 ::: moniker-end

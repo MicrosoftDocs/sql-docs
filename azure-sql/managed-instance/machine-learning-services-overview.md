@@ -14,6 +14,9 @@ ms.topic: overview
 
 Machine Learning Services is a feature of Azure SQL Managed Instance that provides in-database machine learning, supporting both Python and R scripts. The feature includes Microsoft Python and R packages for high-performance predictive analytics and machine learning. The relational data can be used in scripts through stored procedures, T-SQL script containing Python or R statements, or Python or R code containing T-SQL.
 
+> [!IMPORTANT]
+> Machine Learning Services is available only on SQL managed instances configured with the [**SQL Server 2022** update policy](update-policy.md#sql-server-2022-update-policy). It isn't available with the **SQL Server 2025** or **Always-up-to-date** update policy. The SQL Server 2022 update policy is available until [mainstream support for SQL Server 2022 ends](/lifecycle/products/sql-server-2022). At that time, instances automatically move to the update policy for the latest major SQL Server release, and Machine Learning Services becomes unavailable. To call an externally hosted machine learning model from those instances, consider using [`sp_invoke_external_rest_endpoint`](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql).
+
 ## What is Machine Learning Services?
 
 Machine Learning Services in Azure SQL Managed Instance lets you execute Python and R scripts in-database. You can use it to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminates transfer of the data across the network to another server.
@@ -36,7 +39,7 @@ Base distributions of Python and R are included in Machine Learning Services. Yo
 
 ## How to enable Machine Learning Services
 
-You can enable Machine Learning Services in Azure SQL Managed Instance by enabling extensibility with the following SQL commands (SQL Managed Instance will restart and be unavailable for a few seconds):
+On a SQL managed instance configured with the **SQL Server 2022** update policy, enable Machine Learning Services by enabling extensibility with the following SQL commands (SQL Managed Instance will restart and be unavailable for a few seconds):
 
 ```sql
 sp_configure 'external scripts enabled', 1;

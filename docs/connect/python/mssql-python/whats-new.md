@@ -3,7 +3,7 @@ title: What's New in mssql-python Driver
 description: Learn about new features and changes in each version of the mssql-python driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/24/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -12,7 +12,70 @@ ai-usage: ai-assisted
 
 # What's new in mssql-python
 
-Each release of the mssql-python driver introduces new features, performance improvements, and bug fixes. The following sections detail every version.
+This article lists what changed in each release of the mssql-python driver, newest first. Each section covers new features, behavior changes, and bug fixes for one version.
+
+For the versions that Microsoft currently supports, see [Support lifecycle](support-lifecycle.md).
+
+## mssql-python 1.13.0
+
+**Release date**: August 2026
+
+### Enhancements
+
+#### The ODBC driver binaries ship only in `mssql-python-odbc`
+
+Version 1.13.0 removes the `libs/` fallback from the `mssql-python` wheel and declares `mssql-python-odbc==18.6.2.1` in `install_requires`. The command `pip install mssql-python` still produces a working driver. Install `mssql-python-odbc` explicitly when you install with `--no-deps`, or from a private index that doesn't mirror it.
+
+For more information, see [Installation](installation.md).
+
+#### Bulk copy from Apache Arrow sources
+
+The new `cursor.bulkcopy_arrow()` method loads data that's already in Apache Arrow format, without converting each row into Python objects first. Passing an Arrow source to `bulkcopy()` now raises `TypeError`.
+
+For more information, see [Apache Arrow integration](arrow-integration.md) and [Bulk copy](bulk-copy.md).
+
+#### `token_provider` parameter for Microsoft Entra credentials
+
+The `connect()` function and the `Connection` class accept a `token_provider` argument, so you can pass a credential object such as `DefaultAzureCredential` instead of naming an authentication mode in the connection string. The argument is mutually exclusive with the `Authentication` keyword and with tokens passed through `attrs_before`, and it supports only the Azure commercial cloud scope.
+
+For more information, see [Microsoft Entra authentication](entra-authentication.md).
+
+#### Identity-aware connection pooling
+
+The connection pool now separates connections by Microsoft Entra identity. In earlier versions, the pool keyed only on the connection string, so the pool could hand a connection authenticated as one user to a request made by another. The driver also acquires a token only when a connection request misses the pool, and refreshes a pooled connection when its token is within 5 minutes of expiry.
+
+For more information, see [Connection pooling](connection-pooling.md).
+
+### Bug fixes
+
+#### `executemany()` inserted zero rows when NULLs appeared after the first row
+
+An `executemany()` call that mixed non-NULL and NULL numeric values inserted zero rows and raised no exception, when the first NULL appeared after the first row. This behavior affected **tinyint**, **smallint**, **int**, and **float** parameters. The driver now initializes ODBC indicators for every fixed-width numeric parameter before array execution.
+
+#### An `SQL_WVARCHAR` output converter transformed non-string columns
+
+Registering a single string converter also transformed **int**, **decimal**, and **date** values, because the driver fell back to the `SQL_WVARCHAR` converter for any column without its own converter. The driver now uses that fallback only when the column's mapped Python type is `str` or `bytes`.
+
+#### Output converters registered by integer SQL type code never ran
+
+Converters registered with an integer SQL type code, such as `SQL_DECIMAL`, were stored but never invoked, because the driver dispatched only on the Python type in `cursor.description`. The driver now dispatches on the integer code first, then the Python type, and then the `SQL_WVARCHAR` fallback.
+
+> [!IMPORTANT]
+> If you registered converters by integer SQL type code in an earlier version, those converters begin running when you upgrade. Review them before you deploy, because column values that previously passed through unchanged are now transformed.
+
+For more information, see [Custom type converters](custom-type-converters.md).
+
+#### Closing an Arrow reader didn't release the server-side cursor
+
+Closing an Arrow reader left the server-side cursor allocated and the parent `Cursor` in an inconsistent state, because `cursor.arrow_reader()` returned a raw `pyarrow.RecordBatchReader`. The method now returns a wrapper whose `close()` method releases the server-side cursor and resets cursor state, and the wrapper works as a context manager.
+
+For more information, see [Apache Arrow integration](arrow-integration.md).
+
+#### A partially initialized cursor raised `AttributeError` in `Cursor.__del__`
+
+A cursor whose initializer failed raised an `AttributeError` as an unraisable exception during garbage collection.
+
+`Cursor.__init__` raised before it set the `closed` and `hstmt` attributes, which `__del__` then tried to read. The initializer now sets both attributes before any code that can raise, and `__del__` guards its logging call so that it stays safe during interpreter shutdown.
 
 ## mssql-python 1.12.0
 
@@ -22,90 +85,23 @@ Each release of the mssql-python driver introduces new features, performance imp
 
 #### Standalone `mssql-python-odbc` companion package
 
-The ODBC driver binaries that `mssql-python` needs at runtime are now also published as a separate, data-only companion package: [mssql-python-odbc](https://pypi.org/project/mssql-python-odbc/) (import name `mssql_python_odbc`, currently pinned to version `18.6.2`). The `mssql-python` package declares `mssql-python-odbc==18.6.2` in `install_requires`, so `pip install mssql-python` transparently installs the companion package alongside it. No code changes are required.
+The ODBC driver binaries are now published separately as [mssql-python-odbc](https://pypi.org/project/mssql-python-odbc/), a data-only companion package pinned to version `18.6.2`. You don't need to change any code, because `pip install mssql-python` installs the companion package with it. The native loader prefers the companion package and falls back to the binaries bundled inside the `mssql-python` wheel when it isn't present.
 
-The native loader prefers the external `mssql_python_odbc` package when it's present, and falls back to the ODBC binaries still bundled inside the `mssql-python` wheel when it isn't. The fallback is safe with the Python Global Interpreter Lock (GIL) and works on musl-based Linux distributions such as Alpine.
-
-This split lets you pin or update the driver binaries independently of the Python code, gives redistributors a smaller `mssql-python` wheel over time, and avoids duplicate-ownership issues from bundled ODBC files.
-
-> [!IMPORTANT]
-> This split ships without a breaking change. In a future major release (v2.0.0), the bundled `libs/` tree might be removed, in which case `mssql-python-odbc` becomes a hard runtime requirement.
+For more information, see [Installation](installation.md).
 
 ### Bug fixes
 
 #### `cursor.bulkcopy()` now uses the parent connection's connect timeout
 
-The bulk copy operation opens a separate connection through the `mssql_py_core` native extension. Previously, this operation always used a hardcoded 15-second connect timeout with no way to override it from Python. If you set a connect timeout on the parent connection (`connect(..., timeout=<seconds>)`), `bulkcopy()` now forwards that value into the internal connection. Setting `timeout=0` preserves the *no override* behavior and keeps the internal 15-second default. The cursor's timeout at the time of the `bulkcopy()` call is used for the operation, so later changes to the parent connection don't affect an in-flight bulk copy.
+`bulkcopy()` now uses the connect timeout of its parent connection, which you set with `connect(..., timeout=<seconds>)`. Previously, the separate connection that bulk copy opens used a hardcoded 15-second connect timeout that you couldn't override from Python. A parent connection created with `timeout=0` still gets the 15-second default.
 
-The following example uses the `Production.Culture` lookup table from the [AdventureWorks](/sql/samples/adventureworks-install-configure) sample database. Adjust the connection string and database name for your environment:
-
-```python
-import mssql_python
-from datetime import datetime
-
-# The 60-second timeout applies to both the initial connection and
-# the internal connection that bulkcopy() opens.
-conn = mssql_python.connect(
-    "Server=<server>;"
-    "Database=AdventureWorks2022;"
-    "Encrypt=yes",
-    timeout=60,
-)
-conn.autocommit = True
-cursor = conn.cursor()
-
-# Bulk-copy two rows into Production.Culture (CultureID, Name, ModifiedDate).
-now = datetime.now()
-rows = [
-    ("xx", "Demo culture 1", now),
-    ("yy", "Demo culture 2", now),
-]
-result = cursor.bulkcopy("Production.Culture", rows)
-print(f"Copied {result['rows_copied']} rows")
-
-# Remove the demo rows so the sample is re-runnable.
-cursor.execute("DELETE FROM Production.Culture WHERE CultureID IN ('xx','yy')")
-```
+For more information, see [Bulk copy](bulk-copy.md).
 
 #### `cursor.bulkcopy()` supports CLR user-defined type columns
 
-Previously, `cursor.bulkcopy()` failed with `Protocol Error: Unsupported TDS type for bulk copy: 0xF0` for any destination column that used a common language runtime (CLR) user-defined type, including the built-in **geography**, **geometry**, and **hierarchyid** types and any custom, assembly-registered CLR UDT. The native `mssql_py_core` wire path had no handler for the UDT type token (`0xF0`) and errored while writing column metadata, before any rows were sent. CLR UDT columns are now mapped to **varbinary(max)** on the wire, and the supplied bytes are streamed as the UDT's `IBinarySerialize` payload, matching how `pyodbc` and `python-tds` load UDT columns. SQL Server materializes the UDT on insert. Delivered via the `mssql_py_core` 0.1.6 to 0.1.7 bump.
+`cursor.bulkcopy()` previously failed with `Protocol Error: Unsupported TDS type for bulk copy: 0xF0` for any destination column that used a common language runtime (CLR) user-defined type, including the built-in **geography**, **geometry**, and **hierarchyid** types. The driver now maps CLR UDT columns to **varbinary(max)** on the wire and streams the bytes you supply as the UDT's `IBinarySerialize` payload. The fix ships in `mssql_py_core` 0.1.7.
 
-The following example archives the org-chart column from `HumanResources.Employee` (a **hierarchyid** column, one of SQL Server's built-in CLR UDTs) into a new table. In a real workflow, the UDT bytes might come from another SQL Server instance, a serialized file, or your CLR type's `IBinarySerialize.Write()` output; this example reads them from an existing column via `CAST(... AS varbinary(max))` so the sample is self-contained. The bulk copy includes the row whose `OrganizationNode` is NULL:
-
-```python
-import mssql_python
-
-conn = mssql_python.connect(
-    "Server=<server>;"
-    "Database=AdventureWorks2022;"
-    "Encrypt=yes",
-)
-conn.autocommit = True  # bulkcopy uses a separate connection; the destination must be visible
-cursor = conn.cursor()
-
-cursor.execute(
-    "IF OBJECT_ID('dbo.EmployeeOrgArchive','U') IS NOT NULL "
-    "DROP TABLE dbo.EmployeeOrgArchive;"
-    "CREATE TABLE dbo.EmployeeOrgArchive (BusinessEntityID int, OrganizationNode hierarchyid);"
-)
-
-# Casting a hierarchyid column to varbinary(max) yields the UDT's
-# serialized IBinarySerialize payload.
-cursor.execute(
-    "SELECT BusinessEntityID, CAST(OrganizationNode AS varbinary(max)) "
-    "FROM HumanResources.Employee;"
-)
-rows = cursor.fetchall()
-
-# Stream the (id, bytes) tuples into the destination's hierarchyid column.
-result = cursor.bulkcopy("dbo.EmployeeOrgArchive", rows)
-print(f"Copied {result['rows_copied']} rows")
-
-cursor.execute("DROP TABLE dbo.EmployeeOrgArchive")
-```
-
-For a custom, assembly-registered CLR UDT, use the type in the destination table and supply the bytes produced by the type's `IBinarySerialize.Write()` method.
+For more information, see [Bulk copy](bulk-copy.md) and [Data type mappings](data-type-mappings.md).
 
 ## mssql-python 1.11.0
 
@@ -115,27 +111,9 @@ For a custom, assembly-registered CLR UDT, use the type in the destination table
 
 #### Improved context manager semantics
 
-`with connection:` now properly commits transactions on clean exit and rolls back on exception, making it more Pythonic and predictable.
+`with connection:` now commits the transaction when the block exits cleanly, and rolls it back when an exception leaves the block.
 
-```python
-import mssql_python
-
-# On clean exit, transaction commits
-with mssql_python.connect(connection_string) as conn:
-    cursor = conn.cursor()
-    cursor.execute("INSERT INTO MyTable (Name) VALUES ('Alice')")
-    # Automatically committed on exit
-
-# On exception, transaction rolls back
-try:
-    with mssql_python.connect(connection_string) as conn:
-        cursor = conn.cursor()
-        cursor.execute("INSERT INTO MyTable (Name) VALUES ('Bob')")
-        raise ValueError("Oops!")
-except ValueError:
-    pass
-# Changes rolled back on exit
-```
+For more information, see [Transaction management](transaction-management.md).
 
 ### Bug fixes
 
@@ -152,26 +130,9 @@ except ValueError:
 
 #### ActiveDirectoryServicePrincipal support for bulk copy
 
-`cursor.bulkcopy()` now supports `Authentication=ActiveDirectoryServicePrincipal`, allowing bulk inserts by using service principal credentials.
+`cursor.bulkcopy()` now supports `Authentication=ActiveDirectoryServicePrincipal`, so you can bulk insert with service principal credentials.
 
-```python
-import mssql_python
-
-conn = mssql_python.connect(
-    "Server=<server>.database.windows.net;"
-    "Database=<database>;"
-    "Authentication=ActiveDirectoryServicePrincipal;"
-    "UID=<application-client-id>;"
-    "PWD=<client-secret>;"
-    "Encrypt=yes"
-)
-cursor = conn.cursor()
-cursor.execute("CREATE TABLE ##SpDemo (ID INT, Value FLOAT)")
-conn.commit()
-
-result = cursor.bulkcopy("##SpDemo", [(1, 1.5), (2, 2.5)])
-print(f"Copied {result['rows_copied']} rows")
-```
+For more information, see [Bulk copy](bulk-copy.md) and [Microsoft Entra authentication](entra-authentication.md).
 
 ### Bug fixes
 
@@ -188,22 +149,7 @@ print(f"Copied {result['rows_copied']} rows")
 
 `cursor.bulkcopy()` now accepts fetched `Row` objects directly instead of requiring manual tuple conversion.
 
-```python
-import mssql_python
-
-conn = mssql_python.connect(connection_string)
-cursor = conn.cursor()
-
-# Fetch rows from source table
-cursor.execute("SELECT ProductID, Name, ListPrice FROM Production.Product")
-rows = cursor.fetchall()
-
-# Pass fetched Row objects directly to bulkcopy
-cursor.execute("CREATE TABLE ##RowBulkDemo (ProductID INT, Name NVARCHAR(50), ListPrice MONEY)")
-conn.commit()
-result = cursor.bulkcopy("##RowBulkDemo", rows)
-print(f"Copied {result['rows_copied']} rows")
-```
+For more information, see [Bulk copy](bulk-copy.md) and [Row objects](row-objects.md).
 
 ### Bug fixes
 
@@ -225,47 +171,13 @@ print(f"Copied {result['rows_copied']} rows")
 
 `cursor.bulkcopy()` now supports `Authentication=ActiveDirectoryMSI` for system-assigned and user-assigned managed identities.
 
-```python
-import mssql_python
-
-# System-assigned managed identity
-conn = mssql_python.connect(
-    "Server=<server>.database.windows.net;"
-    "Database=<database>;"
-    "Authentication=ActiveDirectoryMSI;"
-    "Encrypt=yes"
-)
-cursor = conn.cursor()
-cursor.execute("CREATE TABLE ##MsiDemo (ID INT, Name NVARCHAR(50))")
-conn.commit()
-
-result = cursor.bulkcopy("##MsiDemo", [(1, "Alice"), (2, "Bob")])
-print(f"Copied {result['rows_copied']} rows")
-```
+For more information, see [Bulk copy](bulk-copy.md) and [Microsoft Entra authentication](entra-authentication.md).
 
 #### Row string-key indexing
 
 You can now access row values by column name, for example `row["col"]`, in addition to positional indexing and attribute access.
 
-```python
-import mssql_python
-
-conn = mssql_python.connect(connection_string)
-cursor = conn.cursor()
-
-cursor.execute("SELECT ProductID, Name, ListPrice FROM Production.Product WHERE ProductID = 1")
-row = cursor.fetchone()
-
-# Access by column name (new in 1.8.0)
-print(row["ProductID"]) # Access by key
-print(row["Name"])
-
-# Still supports positional indexing
-print(row[0])           # Positional access
-
-# And attribute access
-print(row.Name)         # Attribute access
-```
+For more information, see [Row objects](row-objects.md).
 
 #### Bundled ODBC driver upgrade
 
@@ -285,13 +197,20 @@ The bundled Microsoft ODBC Driver for SQL Server was updated to 18.6.2.1.
 
 #### Expanded wheel coverage and performance improvements
 
-This release adds RHEL 8 compatible wheels, restores macOS Python 3.10 `universal2` wheels, improves UTF-16 handling through `simdutf`, and optimizes the `execute()` hot path.
+This release includes:
 
-**Performance impact**: Batch execution throughput improves by ~15% on typical workloads due to hot path optimizations in the `execute()` method.
+- RHEL 8-compatible wheels.
+- Restored macOS Python 3.10 `universal2` wheels.
+- Improved UTF-16 handling through `simdutf`.
+- Optimized `execute()` hot path.
+
+**Performance impact**: Batch execution throughput improves because of hot path optimizations in the `execute()` method.
+
+For more information, see [Installation](installation.md).
 
 ### Bug fixes
 
-- Fixed login failures so they raise `mssql_python` DB-API exceptions instead of `RuntimeError`.
+- Fixed authentication failures so they raise `mssql_python` DB-API exceptions instead of `RuntimeError`.
 - Extended GIL release across blocking ODBC execution, fetch, transaction, and connection attribute calls.
 - Fixed `executemany()` failures when decimal values change sign.
 - Fixed inconsistent CP1252 `VARCHAR` decoding across platforms.
@@ -306,24 +225,11 @@ This release adds RHEL 8 compatible wheels, restores macOS Python 3.10 `universa
 
 ### Enhancements
 
-#### Parser-based connection string sanitization 
+#### Parser-based connection string sanitization
 
-This enhancement ensures correct parsing of special characters in password fields and braced values.
+Connection string sanitization now uses a parser instead of regular expressions, so connection strings that contain special characters in password fields and braced values parse correctly.
 
-```python
-import mssql_python
-
-# Complex passwords with special characters now parse correctly
-conn = mssql_python.connect(
-    "Server=<server>.database.windows.net;"
-    "Database=<database>;"
-    "UID=user@contoso;"
-    "PWD={p@ssw0rd;with{braces}};"  # Braced values now handled correctly
-    "Encrypt=yes"
-)
-```
-
-Connection string sanitization moved from regex-based logic to parser-based processing for correct handling of ODBC connection string syntax.
+For more information, see [Connection strings](connection-strings.md).
 
 ### Bug fixes
 
@@ -348,7 +254,7 @@ Three new cursor methods provide high-performance columnar data retrieval throug
 - `cursor.arrow_batch()` returns a single `pyarrow.RecordBatch`.
 - `cursor.arrow_reader()` returns a `pyarrow.RecordBatchReader` for streaming.
 
-The implementation bypasses Python object creation in the hot path for improved performance. For complete documentation, see [Apache Arrow integration](arrow-integration.md).
+These methods don't create a Python object for each value. For complete documentation, see [Apache Arrow integration](arrow-integration.md).
 
 #### sql_variant type support
 
@@ -357,28 +263,19 @@ The driver now detects `sql_variant` columns at fetch time, resolves their under
 > [!NOTE]
 > `sql_variant` columns use a streaming fetch path, which might have a slight performance impact compared to fixed-type columns.
 
+For more information, see [Data type mappings](data-type-mappings.md).
+
 #### Native UUID support
 
-A new `native_uuid` setting controls whether `UNIQUEIDENTIFIER` columns are returned as `uuid.UUID` objects (default) or as pyodbc-compatible uppercase strings. Configure it at the module level or per connection:
-
-```python
-# Module-level default
-settings = mssql_python.get_settings()
-settings.native_uuid = True  # default
-
-# Per-connection override
-conn = mssql_python.connect(connection_string, native_uuid=False)
-```
+A new `native_uuid` setting controls whether `UNIQUEIDENTIFIER` columns are returned as `uuid.UUID` objects (default) or as pyodbc-compatible uppercase strings. Configure it at the module level or per connection.
 
 For more information, see [Module configuration](module-configuration.md#native_uuid).
 
 #### Row class public export
 
-The `Row` class is now exported at the top level for type annotations:
+The `Row` class is now exported at the top level for type annotations.
 
-```python
-from mssql_python import Row
-```
+For more information, see [Row objects](row-objects.md).
 
 ### Bug fixes
 
@@ -391,36 +288,15 @@ from mssql_python import Row
 
 ## mssql-python 1.4.0
 
-**Release date**: March 2025
+**Release date**: February 2026
 
 ### New features
 
 #### Bulk copy support
 
-High-performance bulk data loading is now available through `cursor.bulkcopy()`:
+High-performance bulk data loading is now available through `cursor.bulkcopy()`. The method accepts options for `batch_size`, `timeout`, `column_mappings`, `keep_identity`, `check_constraints`, `table_lock`, `keep_nulls`, `fire_triggers`, and `use_internal_transaction`.
 
-```python
-import mssql_python
-
-conn = mssql_python.connect(connection_string)
-cursor = conn.cursor()
-
-cursor.execute("CREATE TABLE ##BulkDemo (ID INT, Name NVARCHAR(50), Price DECIMAL(10,2))")
-conn.commit()
-
-data = [
-    (1, "Item 1", 10.50),
-    (2, "Item 2", 20.75),
-    # ... potentially millions of rows
-]
-
-result = cursor.bulkcopy("##BulkDemo", data)
-print(f"Copied {result['rows_copied']} rows")
-```
-
-The method accepts options for `batch_size`, `timeout`, `column_mappings`, `keep_identity`, `check_constraints`, `table_lock`, `keep_nulls`, `fire_triggers`, and `use_internal_transaction`.
-
-See [Bulk copy](bulk-copy.md) for complete documentation.
+For more information, see [Bulk copy](bulk-copy.md).
 
 ### Improvements
 
@@ -432,22 +308,15 @@ See [Bulk copy](bulk-copy.md) for complete documentation.
 
 ## mssql-python 1.3.0
 
-**Release date**: January 2025
+**Release date**: January 2026
 
 ### New features
 
 #### Settings class
 
-Configure module-wide behavior through the new `Settings` class:
+Configure module-wide behavior through the new `Settings` class, which includes the `lowercase` setting for column names in `cursor.description`.
 
-```python
-import mssql_python
-
-settings = mssql_python.get_settings()
-settings.lowercase = True       # Lowercase column names in cursor.description
-```
-
-See [Module configuration](module-configuration.md) for details.
+For more information, see [Module configuration](module-configuration.md).
 
 ### Improvements
 
@@ -456,40 +325,15 @@ See [Module configuration](module-configuration.md) for details.
 
 ## mssql-python 1.2.0
 
-**Release date**: November 2024
+**Release date**: January 2026
 
 ### New features
 
 #### Schema discovery methods
 
-New cursor methods for database metadata exploration:
+New cursor methods explore database metadata: `tables()`, `columns()`, `primaryKeys()`, `foreignKeys()`, `procedures()`, `statistics()`, and `getTypeInfo()`.
 
-```python
-cursor = conn.cursor()
-
-# List all tables
-cursor.tables(schema="dbo")
-
-# Get column information
-cursor.columns(table="Product", schema="Production")
-
-# Get primary keys
-cursor.primaryKeys(table="Product", schema="Production")
-
-# Get foreign key relationships
-cursor.foreignKeys(table="SalesOrderDetail", schema="Sales")
-
-# Get stored procedures
-cursor.procedures(schema="dbo")
-
-# Get index statistics
-cursor.statistics(table="Product", schema="Production")
-
-# Get type information
-cursor.getTypeInfo()
-```
-
-See [Schema discovery](schema-discovery.md) for complete documentation.
+For more information, see [Schema discovery](schema-discovery.md).
 
 ### Improvements
 
@@ -498,45 +342,15 @@ See [Schema discovery](schema-discovery.md) for complete documentation.
 
 ## mssql-python 1.1.0
 
-**Release date**: September 2024
+**Release date**: December 2025
 
 ### New features
 
 #### Custom output converters
 
-Register custom functions to transform column values during fetch:
+Register custom functions to transform column values during fetch, with `add_output_converter()`, `get_output_converter()`, `remove_output_converter()`, and `clear_output_converters()`.
 
-```python
-import mssql_python
-from decimal import Decimal
-
-conn = mssql_python.connect(connection_string)
-
-# Convert decimals to float (converter receives Decimal)
-def decimal_to_float(value):
-    if value is None:
-        return None
-    return float(value)  # value is already a Decimal object
-
-conn.add_output_converter(mssql_python.SQL_DECIMAL, decimal_to_float)
-
-# Custom money formatting
-def format_money(value):
-    if value is None:
-        return "$0.00"
-    return f"${float(value):,.2f}"  # value is already a Decimal object
-
-conn.add_output_converter(mssql_python.SQL_DECIMAL, format_money)
-```
-
-Management methods:
-
-- `add_output_converter(sql_type, converter_func)`
-- `get_output_converter(sql_type)`
-- `remove_output_converter(sql_type)`
-- `clear_output_converters()`
-
-For complete documentation, see [Custom type converters](custom-type-converters.md).
+For more information, see [Custom type converters](custom-type-converters.md).
 
 ### Improvements
 
@@ -545,11 +359,13 @@ For complete documentation, see [Custom type converters](custom-type-converters.
 
 ## mssql-python 1.0.0
 
-**Release date**: July 2024
+**Release date**: November 2025
 
 ### Initial GA release
 
 The first general availability release of mssql-python, Microsoft's native Python driver for SQL Server.
+
+For more information, see [mssql-python driver](python-sql-driver-mssql-python.md).
 
 #### Core features
 

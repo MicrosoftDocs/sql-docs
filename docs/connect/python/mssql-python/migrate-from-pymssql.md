@@ -3,7 +3,7 @@ title: Migrate from pymssql to mssql-python
 description: Guide for migrating existing Python applications from pymssql to the mssql-python driver for Microsoft SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -26,7 +26,7 @@ The mssql-python driver is Microsoft's first-party Python driver for Microsoft S
 | Feature | pymssql | mssql-python |
 | --------- | --------- | -------------- |
 | Parameter style | `format` (`%s`, `%d`) | `qmark` (`?`) and `pyformat` (`%(name)s`) |
-| Native library | FreeTDS | DDBC (bundled) |
+| Native library | FreeTDS | Direct Database Connectivity (DDBC), installed as a package dependency |
 | Connection pooling | External | Built-in |
 | Cursors per connection | 1 | Multiple |
 | Minimum Python | 3.6 | 3.10 |

@@ -3,7 +3,7 @@ title: Install mssql-python
 description: Learn how to install the mssql-python driver on Windows, Linux, and macOS. No external ODBC driver is required.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/24/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -39,7 +39,7 @@ pip install --upgrade mssql-python
 To install a specific version:
 
 ```bash
-pip install mssql-python==1.12.0
+pip install mssql-python==1.13.0
 ```
 
 ## Verify the installation
@@ -58,7 +58,7 @@ print(f"Parameter style: {mssql_python.paramstyle}")
 Expected output:
 
 ```output
-mssql-python version: 1.12.0
+mssql-python version: 1.13.0
 DB-API level: 2.0
 Thread safety: 1
 Parameter style: pyformat

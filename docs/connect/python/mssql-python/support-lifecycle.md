@@ -3,7 +3,7 @@ title: Support Lifecycle for mssql-python Driver
 description: Learn about the support lifecycle, versioning policy, and compatibility for the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/24/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: lifecycle
@@ -20,13 +20,14 @@ Always use the latest release to get new features, performance improvements, and
 
 ### Current version
 
-Version 1.12.0 is the current general availability (GA) release.
+Version 1.13.0 is the current general availability (GA) release.
 
 ### Version history
 
 | Version | Release date | Status | Key features |
 | --------- | -------------- | -------- | -------------- |
-| 1.12.0 | July 2026 | **Current** | Standalone `mssql-python-odbc` companion package, bulk copy connect-timeout fix, bulk copy CLR UDT fix |
+| 1.13.0 | August 2026 | **Current** | Apache Arrow bulk copy, `token_provider` parameter, identity-aware connection pooling, required `mssql-python-odbc` companion package |
+| 1.12.0 | July 2026 | Previous | Standalone `mssql-python-odbc` companion package, bulk copy connect-timeout fix, bulk copy CLR UDT fix |
 | 1.11.0 | July 2026 | Previous | Context manager commit/rollback, Apple Silicon fix, service principal bulk copy fix |
 | 1.10.0 | June 2026 | Previous | Bulk copy with ActiveDirectoryServicePrincipal, Arrow VARCHAR fixes |
 | 1.9.0 | June 2026 | Previous | Bulk copy with Row objects, improved NULL parameter typing |
@@ -34,14 +35,14 @@ Version 1.12.0 is the current general availability (GA) release.
 | 1.7.1 | May 2026 | Previous | RHEL 8 wheels, broader concurrency and Unicode fixes |
 | 1.6.0 | April 2026 | Previous | Parser-based connection string sanitization, connect/disconnect concurrency fixes |
 | 1.5.0 | April 2026 | Previous | Arrow fetch, sql_variant, native UUID |
-| 1.4.0 | February 2025 | Previous | Bulk copy support (BCP) |
-| 1.3.0 | January 2025 | Previous | Settings class, module configuration |
-| 1.2.0 | November 2024 | Previous | Schema discovery methods |
-| 1.1.0 | September 2024 | Previous | Custom output converters |
-| 1.0.0 | July 2024 | Previous | Initial GA release |
+| 1.4.0 | February 2026 | Previous | Bulk copy support (BCP) |
+| 1.3.0 | January 2026 | Previous | Settings class, module configuration |
+| 1.2.0 | January 2026 | Previous | Schema discovery methods |
+| 1.1.0 | December 2025 | Previous | Custom output converters |
+| 1.0.0 | November 2025 | Previous | Initial GA release |
 
 > [!IMPORTANT]
-> Only the current version (1.12.0) receives new features and bug fixes. Previous versions remain functional but don't receive updates. Upgrade to the latest version for the best experience.
+> Only the current version (1.13.0) receives new features and bug fixes. Previous versions remain functional but don't receive updates.
 
 ## Python version compatibility
 
@@ -100,7 +101,7 @@ The mssql-python driver uses DDBC (Direct Database Connectivity) and doesn't req
 
 ## Feature compatibility
 
-The following tables list SQL Server features and their support status in the current version (1.12.0) of the mssql-python driver. If a feature you need isn't supported (such as Always Encrypted or MARS), consider using [pyodbc](../pyodbc/python-sql-driver-pyodbc.md) instead. For information about features added in earlier versions, see [What's new in mssql-python](whats-new.md).
+The following tables list SQL Server features and their support status in the current version (1.13.0) of the mssql-python driver. If a feature you need isn't supported (such as Always Encrypted or MARS), consider using [pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) instead. For information about features added in earlier versions, see [What's new in mssql-python](whats-new.md).
 
 ### SQL Server features
 
@@ -138,9 +139,14 @@ The mssql-python driver has minimal dependencies:
 | Dependency | Purpose | Version |
 | ------------ | --------- | --------- |
 | azure-identity | Microsoft Entra ID authentication | Required (>= 1.12.0) |
-| mssql-python-odbc | Companion package that ships the ODBC driver binaries | Required (== 18.6.2) as of mssql-python 1.12.0 |
+| mssql-python-odbc | Companion package that ships the ODBC driver binaries | Required (== 18.6.2.1) as of mssql-python 1.13.0 |
 
-The `pip install mssql-python` command automatically installs the `mssql-python-odbc` companion package. When it's not present, the driver falls back to the ODBC binaries bundled inside the `mssql-python` wheel. You don't need to install the Microsoft ODBC Driver for SQL Server separately.
+The `pip install mssql-python` command installs the `mssql-python-odbc` companion package automatically. That package supplies the ODBC driver binaries that the driver loads at startup. You don't need to install the Microsoft ODBC Driver for SQL Server separately.
+
+In mssql-python 1.13.0, the companion package is required at runtime. The driver no longer falls back to binaries inside the `mssql-python` wheel. Install `mssql-python-odbc==18.6.2.1` explicitly in these conditions:
+
+- You install with `--no-deps`.
+- You install from a private index that doesn't mirror the companion package.
 
 ## Migration from pyodbc
 

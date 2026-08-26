@@ -3,7 +3,7 @@ title: Migrate from pyodbc to mssql-python
 description: Guide for migrating existing Python applications from pyodbc to the mssql-python driver for Microsoft SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -60,7 +60,7 @@ Before (pyodbc, requires ODBC driver):
 conn = pyodbc.connect(
     "DRIVER={ODBC Driver 18 for SQL Server};"
     "SERVER=localhost;"
-    "DATABASE=AdventureWorks2022;"
+    "DATABASE=AdventureWorks2025;"
     "Trusted_Connection=yes;"
 )
 ```
@@ -175,7 +175,7 @@ The following sections cover specific pyodbc features and their mssql-python equ
 
 | pyodbc keyword | mssql-python keyword | Notes |
 | --------------- | --------------------- | ------- |
-| `DRIVER={...}` | Not needed | The ODBC driver is bundled internally. |
+| `DRIVER={...}` | Not needed | The ODBC driver is installed automatically as a package dependency. |
 | `SERVER=` | `Server=` | No behavior change. |
 | `DATABASE=` | `Database=` | No behavior change. |
 | `Trusted_Connection=` | `Trusted_Connection=` | No behavior change. |
@@ -201,7 +201,7 @@ conn.autocommit = True
 
 ### Bulk inserts
 
-To speed up large `INSERT` batches, pyodbc users set `fast_executemany = True`. The mssql-python driver already optimizes `executemany` for parameterized batches, so moderate inserts need no special flag. For large data loads, prefer `bulkcopy()`, which streams rows over the bulk-copy protocol and is much faster than issuing individual `INSERT` statements. For the full workflow, see [Use bulk copy](bulk-copy.md).
+To speed up large `INSERT` batches, pyodbc users set `fast_executemany = True`. The mssql-python driver already optimizes `executemany` for parameterized batches, so you don't need a special flag. For bulk loads, use `bulkcopy()`, which streams rows over the bulk-copy protocol instead of sending one `INSERT` statement per row. For the full workflow, see [Use bulk copy](bulk-copy.md).
 
 pyodbc:
 
@@ -367,7 +367,7 @@ def get_orders(customer_id: int, start_date: date):
     conn = pyodbc.connect(
         "DRIVER={ODBC Driver 18 for SQL Server};"
         "SERVER=localhost;"
-        "DATABASE=AdventureWorks2022;"
+        "DATABASE=AdventureWorks2025;"
         "Trusted_Connection=yes;"
     )
     cursor = conn.cursor()
@@ -403,7 +403,7 @@ from datetime import date
 def get_orders(customer_id: int, start_date: date):
     conn = mssql_python.connect(
         "Server=localhost;"
-        "Database=AdventureWorks2022;"
+        "Database=AdventureWorks2025;"
         "Trusted_Connection=yes;"
     )
     cursor = conn.cursor()

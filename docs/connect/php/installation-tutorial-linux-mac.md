@@ -71,7 +71,12 @@ pie install microsoft/sqlsrv
 pie install microsoft/pdo_sqlsrv
 ```
 
-PIE might need elevated privileges and can prompt you for your password. On Linux and macOS, PIE checks for `gcc`, `make`, `autoconf`, `pkg-config`, `libtool`, and `phpize`, and offers to install any that are missing through your system package manager before it compiles the extension.
+PIE might need elevated privileges and can prompt you for your password. PIE runs the install command without elevation first, and retries it with `sudo` only if the command fails because of permissions.
+
+On Linux and macOS, PIE checks for `gcc`, `make`, `autoconf`, `pkg-config`, `libtool`, and `phpize`, and offers to install any that are missing through your system package manager before it compiles the extension.
+
+> [!NOTE]
+> On Debian and Ubuntu, PIE proposes the unversioned `php-dev` package when `phpize` is missing, which installs the dev headers for the distro's default PHP. If you installed a specific PHP version, install the matching package yourself, such as `php8.3-dev`, instead of accepting the offer.
 
 Install the two drivers separately rather than in a single command. They're independent of each other, and PIE fails when several extensions named in one command share configure options.
 

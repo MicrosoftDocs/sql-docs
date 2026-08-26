@@ -456,7 +456,7 @@ def incremental_load(cursor, conn, source_table: str, dest_table: str,
 
 ### Use appropriate data types
 
-Pandas defaults to 64-bit types for numbers, which uses more memory than smaller types require. Downcast integers and floats, and convert low-cardinality string columns to [categoricals](https://pandas.pydata.org/docs/user_guide/categorical.html) to reduce memory usage.
+Pandas defaults to 64-bit types for numbers, which use more memory than smaller types require. Downcast integers and floats, and convert low-cardinality string columns to [categoricals](https://pandas.pydata.org/docs/user_guide/categorical.html) to reduce memory usage.
 
 ```python
 def optimize_dataframe_types(df: pd.DataFrame) -> pd.DataFrame:

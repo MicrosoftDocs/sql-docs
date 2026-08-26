@@ -4,7 +4,7 @@ description: Diagnose and resolve common installation, connection, query, and da
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 08/21/2026
+ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -60,6 +60,13 @@ Install the ODBC development headers before installing the drivers:
 - **Red Hat, Fedora, and CentOS**: `sudo dnf install unixODBC-devel`
 - **Alpine**: `apk add unixodbc-dev`
 - **macOS**: `brew install unixodbc`
+
+On Apple silicon, the headers alone aren't enough. Homebrew installs unixODBC under `/opt/homebrew`, which isn't in the default compiler search path, so the build fails with the same error even when the headers are present. Set the compiler flags before you retry:
+
+```bash
+export CPPFLAGS="-I/opt/homebrew/opt/unixodbc/include/"
+export LDFLAGS="-L/opt/homebrew/lib/"
+```
 
 Then retry with PIE:
 

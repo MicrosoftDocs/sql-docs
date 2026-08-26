@@ -4,7 +4,7 @@ description: "In these instructions, learn how to install the Microsoft Drivers 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 08/21/2026
+ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -43,14 +43,26 @@ The following commands install PIE to `/usr/local/bin/pie`:
 
 ```bash
 curl -fL --output /tmp/pie.phar https://github.com/php/pie/releases/latest/download/pie.phar
-gh attestation verify --owner php /tmp/pie.phar
 sudo mv /tmp/pie.phar /usr/local/bin/pie
 sudo chmod +x /usr/local/bin/pie
 ```
 
-The `gh attestation verify` command uses the [GitHub CLI](https://cli.github.com/) to confirm that the PHAR was published by the PIE project. For other ways to install PIE, see the [PIE documentation](https://github.com/php/pie).
+Optionally, before you move the file, confirm that the PHAR was published by the PIE project. This step requires the [GitHub CLI](https://cli.github.com/):
+
+```bash
+gh attestation verify --owner php /tmp/pie.phar
+```
+
+For other ways to install PIE, see the [PIE documentation](https://github.com/php/pie).
 
 ### Install the SQLSRV and PDO_SQLSRV drivers
+
+On Apple silicon, set the compiler flags first. Homebrew installs the unixODBC headers under `/opt/homebrew`, which isn't in the default compiler search path, and the build fails with `fatal error: 'sql.h' file not found` without them:
+
+```bash
+export CPPFLAGS="-I/opt/homebrew/opt/unixodbc/include/"
+export LDFLAGS="-L/opt/homebrew/lib/"
+```
 
 Install each driver with its own command:
 
@@ -59,7 +71,7 @@ pie install microsoft/sqlsrv
 pie install microsoft/pdo_sqlsrv
 ```
 
-PIE might need elevated privileges and can prompt you for your password. On Linux and macOS, PIE offers to install any missing build tools before it compiles the extension.
+PIE might need elevated privileges and can prompt you for your password. On Linux and macOS, PIE checks for `gcc`, `make`, `autoconf`, `pkg-config`, `libtool`, and `phpize`, and offers to install any that are missing through your system package manager before it compiles the extension.
 
 Install the two drivers separately rather than in a single command. They're independent of each other, and PIE fails when several extensions named in one command share configure options.
 
@@ -446,8 +458,6 @@ If you don't already have it, install brew as follows:
 ### Step 1. Install PHP (macOS)
 
 ```bash
-brew tap
-brew tap homebrew/core
 brew install php@8.3
 ```
 

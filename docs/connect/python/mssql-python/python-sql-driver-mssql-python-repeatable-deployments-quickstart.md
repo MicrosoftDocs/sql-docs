@@ -4,7 +4,7 @@ description: Use uv to create repeatable Python environments for database applic
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 06/29/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -16,7 +16,7 @@ ai-usage: ai-assisted
 
 # Quickstart: Repeatable deployments with the mssql-python driver for Python
 
-In this quickstart, you use [`uv`](https://docs.astral.sh/uv/) to manage project dependencies and environments for Python script that connects to a database that you created and loaded with sample data. You use the `mssql-python` driver for Python to connect to your database and perform basic operations, like reading and writing data.
+In this quickstart, you use [`uv`](https://docs.astral.sh/uv/) to manage project dependencies and environments for a Python script that connects to a database that you created and loaded with sample data. You use the `mssql-python` driver for Python to connect to your database and perform basic operations, like reading and writing data.
 
 The `mssql-python` driver doesn't require any external dependencies on Windows machines. The driver installs everything that it needs with a single `pip` install, allowing you to use the latest version of the driver for new scripts without breaking other scripts that you don't have time to upgrade and test.
 
@@ -91,7 +91,7 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=0.10.0",
+       "mssql-python>=1.13.0",
        "python-dotenv>=1.1.1",
        "rich>=14.1.0",
    ]

@@ -3,7 +3,7 @@ title: Use mssql-python with SQLAlchemy
 description: Learn how to use the mssql-python driver with SQLAlchemy ORM and Core for Microsoft SQL and Azure SQL database access.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -583,7 +583,7 @@ If you're migrating from `mssql+pyodbc`, the mssql-python dialect is similar bec
 
 | Topic | `mssql+pyodbc` | `mssql+mssqlpython` |
 | --- | --- | --- |
-| ODBC driver installation | Requires separate ODBC driver (for example, ODBC Driver 18 for Microsoft SQL). | Driver is bundled. No separate ODBC driver needed. |
+| ODBC driver installation | Requires separate ODBC driver (for example, ODBC Driver 18 for SQL Server). | Installed automatically as a package dependency. No separate ODBC driver installation needed. |
 | Connection URL | `mssql+pyodbc://user:pass@host/db?driver=ODBC+Driver+18+for+SQL+Server` | `mssql+mssqlpython://user:pass@host/db` |
 | `fast_executemany` | Supported via `create_engine(..., fast_executemany=True)`. | Not applicable. The driver handles batch performance internally. |
 | Availability | Stable, included in **SQLAlchemy** since 1.x. | Pre-release (**SQLAlchemy** 2.1.0b2+). |

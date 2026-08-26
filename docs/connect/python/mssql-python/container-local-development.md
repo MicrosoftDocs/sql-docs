@@ -3,7 +3,7 @@ title: Container and Local Development with mssql-python
 description: Set up local development environments, Docker containers, and CI pipelines for Python applications that connect to Microsoft SQL with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -40,7 +40,7 @@ After creation, `sqlcmd` stores the connection context so you can query immediat
 sqlcmd query "SELECT @@VERSION"
 ```
 
-Create an application login once, then use it in your Python code:
+Create your application credentials, and then use them in your Python code:
 
 ```bash
 sqlcmd query --database <database> "CREATE LOGIN <app-login> WITH PASSWORD = '<password>';"
@@ -98,7 +98,7 @@ If you prefer to manage containers directly, the official SQL Server container i
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=YourStr0ngP@ssword" \
   -p 1433:1433 --name sql1 \
-  -d mcr.microsoft.com/mssql/server:2022-latest
+  -d mcr.microsoft.com/mssql/server:2025-latest
 ```
 
 Wait a few seconds, then connect from Python:
@@ -127,16 +127,16 @@ To load the AdventureWorks sample database into the container:
 
 ```bash
 # Download AdventureWorks backup
-curl -L -o AdventureWorks2022.bak \
-  "https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022.bak"
+curl -L -o AdventureWorks2025.bak \
+  "https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2025.bak"
 
 # Copy into container
-docker cp AdventureWorks2022.bak sql1:/var/opt/mssql/backup/
+docker cp AdventureWorks2025.bak sql1:/var/opt/mssql/backup/
 
 # Restore
 docker exec sql1 /opt/mssql-tools18/bin/sqlcmd \
   -S localhost -U sa -P "YourStr0ngP@ssword" -C \
-  -Q "RESTORE DATABASE AdventureWorks2022 FROM DISK='/var/opt/mssql/backup/AdventureWorks2022.bak' WITH MOVE 'AdventureWorks2022' TO '/var/opt/mssql/data/AdventureWorks2022.mdf', MOVE 'AdventureWorks2022_log' TO '/var/opt/mssql/data/AdventureWorks2022_log.ldf'"
+  -Q "RESTORE DATABASE AdventureWorks2025 FROM DISK='/var/opt/mssql/backup/AdventureWorks2025.bak' WITH MOVE 'AdventureWorks2025' TO '/var/opt/mssql/data/AdventureWorks2025.mdf', MOVE 'AdventureWorks2025_log' TO '/var/opt/mssql/data/AdventureWorks2025_log.ldf'"
 ```
 
 > [!TIP]
@@ -168,7 +168,7 @@ CMD ["python", "app.py"]
 Your `requirements.txt`:
 
 ```text
-mssql-python>=1.12.0
+mssql-python>=1.13.0
 ```
 
 Build and run:
@@ -248,7 +248,7 @@ services:
       - db
 
   db:
-    image: mcr.microsoft.com/mssql/server:2022-latest
+    image: mcr.microsoft.com/mssql/server:2025-latest
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_SA_PASSWORD: "YourStr0ngP@ssword"
@@ -402,7 +402,7 @@ jobs:
 
     services:
       sqlserver:
-        image: mcr.microsoft.com/mssql/server:2022-latest
+        image: mcr.microsoft.com/mssql/server:2025-latest
         env:
           ACCEPT_EULA: Y
           MSSQL_SA_PASSWORD: YourStr0ngP@ssword
@@ -452,7 +452,7 @@ variables:
 resources:
   containers:
     - container: sqlserver
-      image: mcr.microsoft.com/mssql/server:2022-latest
+      image: mcr.microsoft.com/mssql/server:2025-latest
       env:
         ACCEPT_EULA: Y
         MSSQL_SA_PASSWORD: YourStr0ngP@ssword

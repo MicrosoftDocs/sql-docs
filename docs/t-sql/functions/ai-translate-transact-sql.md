@@ -4,7 +4,7 @@ description: The AI_TRANSLATE function translates input text to a target languag
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop
-ms.date: 06/10/2026
+ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -34,7 +34,7 @@ monikerRange: "=fabric"
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ```syntaxsql
-AI_TRANSLATE ( text, lang_code )
+AI_TRANSLATE ( text, lang_code [ (NULL | ERROR | DEFAULT <value>) ON ERROR ] )
 ```
 
 ## Arguments
@@ -49,14 +49,25 @@ Language code for the translation target.
 
 Supported values: `de`, `en`, `fr`, `it`, `es`, `el`, `pl`, `sv`, `fi`, `cs`.
 
+#### ON ERROR
+
+The `ON ERROR` clause controls how an AI function handles processing errors.
+
+- `NULL ON ERROR` returns `NULL` when the function can't process a value. This is the default behavior and doesn't need to be explicitly specified.
+- `ERROR ON ERROR` causes the entire query to fail if an error occurs while processing any input value.
+- `DEFAULT <value> ON ERROR` returns the specified default value instead of `NULL` when an error occurs.
+
+Errors can be caused by [Responsible AI](https://www.microsoft.com/ai/tools-practices) safety checks, input size limits, transient service issues, or other processing failures.
+
 ## Return types
 
-Returns `nvarchar(max)` with translated text.
+Returns **nvarchar(max)** with translated text.
 
 ## Remarks
 
 AI functions return `NULL` if the AI model can't process the text. Common reasons include:
-- Responsible AI rules block inappropriate content in the input text.
+
+- [Responsible AI](https://www.microsoft.com/ai/tools-practices) rules block inappropriate content in the input text.
 - Input text exceeds token limits. The current model supports up to 15 KB of text.
 
 ## Examples
@@ -74,10 +85,14 @@ Expected result: `Das Hotel war großartig.`
 ```sql
 SELECT review_id,
        ai_translate(review_text, 'de') AS review_de,
-       ai_translate(review_text, 'fr') AS review_fr,
-       ai_translate(review_text, 'es') AS review_es
+       ai_translate(review_text, 'fr' ERROR ON ERROR) AS review_fr,
+       ai_translate(review_text, 'es' DEFAULT 'N/A' ON ERROR) AS review_es
 FROM dbo.hotel_reviews;
 ```
+
+If translation to German fails, the first function will return `NULL` instead of error.
+
+The `NULL ON ERROR` clause instructs AI function that translates text to French to fail the query if any input value cannot be translated. The `DEFAULT 'N/A' ON ERROR` clause instructs AI function that translates text to Spanish to return the value `N/A` for every input value that cannot be processed.
 
 ## Related content
 

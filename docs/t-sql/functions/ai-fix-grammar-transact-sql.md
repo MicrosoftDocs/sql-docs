@@ -4,7 +4,7 @@ description: The AI_FIX_GRAMMAR function corrects grammar in input text.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop
-ms.date: 06/10/2026
+ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -34,7 +34,7 @@ The `AI_FIX_GRAMMAR` function corrects grammar and improves sentence quality for
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ```syntaxsql
-AI_FIX_GRAMMAR ( text )
+AI_FIX_GRAMMAR ( text [ (NULL | ERROR | DEFAULT <value>) ON ERROR ] )
 ```
 
 ## Arguments
@@ -43,14 +43,25 @@ AI_FIX_GRAMMAR ( text )
 
 An [expression](../language-elements/expressions-transact-sql.md) of a character type, for example **nvarchar**, **varchar**, **nchar**, or **char**.
 
+#### ON ERROR
+
+The `ON ERROR` clause controls how an AI function handles processing errors.
+
+- `NULL ON ERROR` returns `NULL` when the function can't process a value. This is the default behavior and doesn't need to be explicitly specified.
+- `ERROR ON ERROR` causes the entire query to fail if an error occurs while processing any input value.
+- `DEFAULT <value> ON ERROR` returns the specified default value instead of `NULL` when an error occurs.
+
+Errors can be caused by [Responsible AI](https://www.microsoft.com/ai/tools-practices) safety checks, input size limits, transient service issues, or other processing failures.
+
 ## Return types
 
-Returns `nvarchar(max)` with corrected text.
+Returns **nvarchar(max)** with corrected text.
 
 ## Remarks
 
 AI functions return `NULL` if the AI model can't process the text. Common reasons include:
-- Responsible AI rules block inappropriate content in the input text.
+
+- [Responsible AI](https://www.microsoft.com/ai/tools-practices) rules block inappropriate content in the input text.
 - Input text exceeds token limits. The current model supports up to 15 KB of text.
 
 ## Examples

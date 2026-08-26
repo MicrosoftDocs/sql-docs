@@ -231,7 +231,7 @@ DOCUMENT
 
 **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 
-Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
+Must be `AEAD_AES_256_CBC_HMAC_SHA_256`.  
 
  For more information including feature constraints, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
@@ -239,12 +239,12 @@ Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.
 
  **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].  
 
- Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. The following functions are available:  
+ Specifies a dynamic data mask. `mask_function` is the name of the masking function with the appropriate parameters. The following functions are available:  
 
-   - `default()`
-   - `email()`
-   - `partial()`
-   - `random()`
+ - `default()`
+ - `email()`
+ - `partial()`
+ - `random()`
 
  For function parameters, see [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md).  
 

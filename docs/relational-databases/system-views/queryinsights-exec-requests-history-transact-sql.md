@@ -3,8 +3,8 @@ title: "queryinsights.exec_requests_history (Transact-SQL)"
 description: "The queryinsights.exec_requests_history in Fabric Data Warehouse provides information about each complete SQL request."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mariyaali, randolphwest, emtehran, marakiketema
-ms.date: 08/05/2026
+ms.reviewer: mariyaali, randolphwest, emtehran, marakiketema, jovanpop
+ms.date: 08/24/2026
 ms.service: sql
 ms.topic: "reference"
 ms.custom:
@@ -55,6 +55,7 @@ The `queryinsights.exec_requests_history` in [!INCLUDE [fabric](../../includes/f
 | `command` | **varchar(max)** | Complete text of the executed query. |
 | `error_code` | **int** | Error code if query failed after beginning execution. `0` if no error encountered. |
 | `is_accelerated` | **int** | Specifies whether [acceleration](/fabric/data-warehouse/query-acceleration) was applied (`1`), or not (`0`) because acceleration was off or the query didn't qualify for acceleration.  |
+| `is_using_external_api` | **bit** | `1` indicates that the query invoked at least one AI function; `0` indicates that it didn't. Use this flag to identify queries that made AI function calls, then investigate detailed execution statistics in the [queryinsights.external_api_call_stats](queryinsights-external-api-call-stats-transact-sql.md) view. |
 
 ## Permissions
 

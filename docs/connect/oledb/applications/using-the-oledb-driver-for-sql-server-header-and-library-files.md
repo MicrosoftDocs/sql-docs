@@ -37,7 +37,7 @@ The OLE DB Driver for SQL Server header file (msoledbsql.h) can be used to add O
 
 In addition to the OLE DB Driver for SQL Server header file, there's also a msoledbsql19.lib/msoledbsql.lib library file, which is the export library for [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) functionality.
 
-The OLE DB Driver for SQL Server header file is backwards compatible with the sqloledb.h header file used with Microsoft Data Access Components (MDAC), but doesn't contain CLSIDs for SQLOLEDB (the OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] included with MDAC) or symbols for XML functionality (which isn't supported by OLE DB Driver for SQL Server).
+The OLE DB Driver for SQL Server header file is backward compatible with the sqloledb.h header file used with Microsoft Data Access Components (MDAC), but doesn't contain CLSIDs for SQLOLEDB (the OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] included with MDAC) or symbols for XML functionality (which isn't supported by OLE DB Driver for SQL Server).
 
 OLE DB applications that use the OLE DB Driver for SQL Server only need to reference msoledbsql.h. If an application uses both MDAC (SQLOLEDB) and the OLE DB Driver for SQL Server, it can reference both sqloledb.h and msoledbsql.h, but the reference to sqloledb.h must come first.
 

@@ -66,7 +66,7 @@ Select the tab for your preferred method to convert your database:
 
 The Azure portal enables you to convert to Hyperscale by modifying the service tier for your database.
 
-:::image type="content" source="media/convert-to-hyperscale/service-tier-dropdown-azure-sql-database-azure-portal.png" alt-text="Screenshot of the compute + storage panel of a database in Azure SQL Database. The service tier dropdown is expanded, displaying the option for the Hyperscale service tier." lightbox="media/convert-to-hyperscale/service-tier-dropdown-azure-sql-database-azure-portal.png":::
+:::image type="content" source="media/convert-to-hyperscale/service-tier-dropdown-azure-sql-database-azure-portal.png" alt-text="Screenshot of the compute + storage panel of a database in Azure SQL Database. The service tier dropdown list is expanded, displaying the option for the Hyperscale service tier." lightbox="media/convert-to-hyperscale/service-tier-dropdown-azure-sql-database-azure-portal.png":::
 
 1. Go to the database you want to convert in the Azure portal.
 1. In the left navigation bar, select **Compute + storage**.

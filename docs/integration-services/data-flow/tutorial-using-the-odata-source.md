@@ -45,7 +45,7 @@ ms.topic: how-to
   
 9. In the **OData Source Editor** Dialog Box, confirm that **Collection** is selected for **Use collection on resource path** option.  
   
-10. From the **Collection** drop-down list, select **Employees**.  
+10. From the **Collection** dropdown list, select **Employees**.  
   
 11. Enter any additional OData query options or filters for **Query Options**. For example, `$orderby=CompanyName&$top=100`. For the purpose of this tutorial, enter `$top=5`.  
   

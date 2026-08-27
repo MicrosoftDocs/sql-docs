@@ -39,7 +39,7 @@ Typically, the expand and collapse action is used to initially display only summ
     > [!NOTE]  
     > If you don't see the **Properties** pane, select **View** on the Ribbon and then choose **Properties**.  
   
-1. In **Visibility** > **Hidden**, select one of the following options from the dropdown to set the visibility of the report item the first time you run a report:  
+1. In **Visibility** > **Hidden**, select one of the following options from the dropdown list to set the visibility of the report item the first time you run a report:  
   
     - Select **False** to display the report item.  
   

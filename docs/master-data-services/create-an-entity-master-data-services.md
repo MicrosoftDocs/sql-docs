@@ -51,7 +51,7 @@ helpviewer_keywords:
     > [!TIP]
     > If using the default naming for Staging tables, MDS will automatically append identifiers (e.g. _1, _2) to the staging table names if an entity with same name exists in another Model.
   
-7.  For the **Transaction Log Type** field, choose the transaction log type in the drop-down list.  
+7.  For the **Transaction Log Type** field, choose the transaction log type in the dropdown list.  
   
      For more information, see [Change the Entity Transaction Log Type &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   

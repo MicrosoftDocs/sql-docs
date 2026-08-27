@@ -97,7 +97,7 @@ helpviewer_keywords:
 |**CreatorComputerName**|The name of the computer on which the package was created.|  
 |**CreatorName**|The name of the person who created the package.|  
 |**Description**|A description of package functionality.|  
-|**ID**|The package GUID, which is assigned when the package is created. This property is read-only. To generate a new random value for the **ID** property, select **\<Generate New ID\>** in the drop-down list.|  
+|**ID**|The package GUID, which is assigned when the package is created. This property is read-only. To generate a new random value for the **ID** property, select **\<Generate New ID\>** in the dropdown list.|  
 |**Name**|The name of the package.|  
 |**PackageType**|The package type. The values are **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**, and **SQLReplication**. The default value of this property is **Default**. For more information, see <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   

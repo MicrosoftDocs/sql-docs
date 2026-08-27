@@ -267,7 +267,7 @@ This is an XML document created by a writer (the SQL writer in this case) using 
   - **Name** - name of the component (database name)
   - **Logical path** – of the server instance (in the form of "server\instance-name" for named instances and "server" for default instance.)
   - **Component Flags**
-  - **VSS_CF_APP_ROLLBACK_RECOVERY** – indicates that SQL Server snapshots always require a "recovery" phase to make the files consistent and useable for non-backup (that is, app-rollback) scenarios.
+  - **VSS_CF_APP_ROLLBACK_RECOVERY** – indicates that SQL Server snapshots always require a "recovery" phase to make the files consistent and usable for non-backup (that is, app-rollback) scenarios.
   - Selectable - True
   - Selectable for Restore - True
   - Restore methods supported - VSS_RME_RESTORE_IF_CAN_REPLACE
@@ -644,7 +644,7 @@ The procedure is as follows:
 
    1. Start the SQL Server instance using the `-f` parameter. (When using the `-f` startup option, only the `master` database can be restored.)
 
-      1. Issue an `ALTER DATABASE <database> SET OFFLINE` (or detatch the database) for each database to be rolled forward.
+      1. Issue an `ALTER DATABASE <database> SET OFFLINE` (or detach the database) for each database to be rolled forward.
 
       1. Stop the SQL Server instance.
 

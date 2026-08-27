@@ -545,7 +545,7 @@ You can use `CREATE EXTERNAL TABLE AS SELECT` (CETAS) to complete the following 
 - For more data virtualization capabilities of [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 > [!NOTE]
-> This content applies to [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] only. For other platforms, choose the appropriate version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) from the drop-down selector.
+> This content applies to [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] only. For other platforms, choose the appropriate version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) from the dropdown list selector.
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -701,7 +701,7 @@ adls://<container>@<storage_account>.blob.core.windows.net/<path>/<file_name>.pa
 ```
 
 > [!IMPORTANT]  
-> The provided Location type prefix is used to choose the optimal protocol for communication and to leverage any advanced capabilities offered by the particular storage type.
+> The provided Location type prefix is used to choose the optimal protocol for communication and to use any advanced capabilities offered by the particular storage type.
 > Using the generic `https://` prefix is disabled. Always use endpoint-specific prefixes.
 
 ## Disabled by default
@@ -862,7 +862,7 @@ To check the asynchronous operation outcome of the API call, there are two metho
 > [!IMPORTANT]
 > When executing the following scripts, use the same Azure Cloud Shell console where you ran the script to set the configuration option. This script depends on the context set by the original `Invoke-WebRequest` script.
 
-- Use PowerShell to invoke HTTP GET towards the server configuration API and check if the configuration option contains the value you desired. The following PowerShell script shows how to invoke a GET request to check the server configuration option. Look for the response JSON and find the `serverConfigurationOptionValue` to make sure it corresponds to what you have set in previous step. Use the same PowerShell console where you ran the script to set the configuration option, because the script depends on the context set by the original script.
+- Use PowerShell to invoke HTTP GET toward the server configuration API and check if the configuration option contains the value you desired. The following PowerShell script shows how to invoke a GET request to check the server configuration option. Look for the response JSON and find the `serverConfigurationOptionValue` to make sure it corresponds to what you have set in previous step. Use the same PowerShell console where you ran the script to set the configuration option, because the script depends on the context set by the original script.
 
    ```powershell
    # You can query the configuration option directly to see if it contains the new changed value.
@@ -872,7 +872,7 @@ To check the asynchronous operation outcome of the API call, there are two metho
    Invoke-WebRequest -Method GET -Headers $headers -Uri $uriFull -ContentType "application/json" 
    ```
 
-- Use PowerShell to invoke HTTP GET towards the callback URL for the asynchronous operation and read the response JSON looking for "status" variable and its value. When you invoke the API to perform server configuration change, the response header will contain a callback URL, which you can use to check the result and status of the asynchronous operation. The header value `Azure-AsyncOperation` contains the callback URL. 
+- Use PowerShell to invoke HTTP GET toward the callback URL for the asynchronous operation and read the response JSON looking for "status" variable and its value. When you invoke the API to perform server configuration change, the response header will contain a callback URL, which you can use to check the result and status of the asynchronous operation. The header value `Azure-AsyncOperation` contains the callback URL. 
  
    This is an example response header:
 

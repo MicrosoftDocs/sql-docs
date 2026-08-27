@@ -14,7 +14,7 @@ ms.custom:
 
 For Column and Scatter chart types in paginated reports, the chart automatically adds side margins on the ends of the x-axis. In Bar chart types, the chart automatically adds side margins on the ends of the y-axis. In all other chart types, the chart doesn't add side margins. You can't change the size of the margin.  
   
- This article doesn't apply to pie, doughnut, funnel, or pyramid chart types.  
+ This article doesn't apply to pie, donut, funnel, or pyramid chart types.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

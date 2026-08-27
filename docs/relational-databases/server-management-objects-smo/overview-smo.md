@@ -41,7 +41,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
   
 -   Snapshot isolation and row level versioning for increased concurrency. For more information, see [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   XML Schema collection, XML indexes, and XML datatype provide validation and storage of XML data. For more information, see [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md) and [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   XML Schema collection, XML indexes, and XML data type provide validation and storage of XML data. For more information, see [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md) and [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Snapshot databases for creating read-only copies of databases.  
   
@@ -140,7 +140,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
   
  Snapshot Isolation (row level versioning) is represented by new <xref:Microsoft.SqlServer.Management.Smo.Database> object properties.  
   
- **XML Schema Namespace, XML Indexes and XML datatype**  
+ **XML Schema Namespace, XML Indexes and XML data type**  
   
  XML Schema Namespaces are represented in SMO by a collection of objects. XML indexes are represented in SMO by an **Index** object property.  
   

@@ -170,7 +170,7 @@ f1_keywords:
 ###  <a name="Tiles"></a> What is a Bing map tile background?  
  To add a geographic image background to your map, select the Bing map tile background option. The report processor downloads tiles from Bing Maps Web Services for the map area and resolution that you specify on this wizard page. You can specify one of the following tile types:  
   
--   **Road.** Display a road map style with white background.  
+-   **Road.** Display a roadmap style with white background.  
   
 -   **Aerial.** Display an aerial view only. No text is displayed in this mode.  
   

@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
 ---
-# JSON datatype support in SqlClient
+# JSON data type support in SqlClient
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 

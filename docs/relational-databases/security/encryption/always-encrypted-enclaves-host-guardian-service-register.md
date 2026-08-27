@@ -46,7 +46,7 @@ To allow a SQL client to verify it's talking to a trustworthy [!INCLUDE [ssnover
 When you install the Host Guardian Hyper-V Support feature, virtualization-based security (VBS) is automatically configured and enabled.
 The enclaves for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted are protected by and run inside the VBS environment.
 VBS may not start if the computer doesn't have an IOMMU device installed and enabled.
-To check if VBS is running, open the System Information tool by running `msinfo32.exe` and find the `Virtualization-based security` items towards the bottom of the System Summary.
+To check if VBS is running, open the System Information tool by running `msinfo32.exe` and find the `Virtualization-based security` items toward the bottom of the System Summary.
 
 ![System Information screenshot showing virtualization-based security status and configuration](./media/always-encrypted-enclaves/msinfo32-vbs-status.png)
 
@@ -93,7 +93,7 @@ In an elevated PowerShell console, update and run the following command to confi
 - Replace `hgs.bastion.local` with the HGS cluster name
 - You can run `Get-HgsServer` on any HGS computer to get the cluster name
 - The attestation URL should always end with `/Attestation`
-- SQL Server doesn't leverage the key protection features of HGS, so provide any dummy URL like `http://localhost` to `-KeyProtectionServerUrl`
+- SQL Server doesn't use the key protection features of HGS, so provide any dummy URL like `http://localhost` to `-KeyProtectionServerUrl`
 
 ```powershell
 Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Attestation" -KeyProtectionServerUrl "http://localhost"

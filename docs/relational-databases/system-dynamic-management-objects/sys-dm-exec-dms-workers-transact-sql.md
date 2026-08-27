@@ -40,7 +40,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 |bytes_processed|`bigint`|||  
 |rows_processed|`bigint`|||  
 |start_time|`datetime`|Time at which the step started execution|Smaller or equal to current time and larger or equal to end_compile_time of the query to which this step belongs.|  
-|end_time|`datetime`|Time at which this step completed execution, was cancelled, or failed.|Smaller or equal to current time and larger or equal to start_time, set to NULL for steps currently in execution or queued.|  
+|end_time|`datetime`|Time at which this step completed execution, was canceled, or failed.|Smaller or equal to current time and larger or equal to start_time, set to NULL for steps currently in execution or queued.|  
 |total_elapsed_time|`int`|Total amount of time the query step has been executing, in milliseconds|Between 0 and the difference between end_time and start_time. 0 for queued steps.|  
 |cpu_time|`bigint`|||  
 |query_time|`int`|||  

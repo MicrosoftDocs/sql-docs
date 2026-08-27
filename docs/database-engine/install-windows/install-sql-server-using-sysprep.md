@@ -153,7 +153,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName> /FAILO
 
 1. On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE [msCoName](../../includes/msconame-md.md)].
 
-1. On the **Select a Prepared Instance** page select the prepared instance you want to complete from the dropdown list box. Select the Unconfigured instance from the **Instance ID** list.
+1. On the **Select a Prepared Instance** page select the prepared instance you want to complete from the dropdown list. Select the Unconfigured instance from the **Instance ID** list.
 
    **Installed instances:** This grid displays all the instances including any prepared instance on this machine.
 

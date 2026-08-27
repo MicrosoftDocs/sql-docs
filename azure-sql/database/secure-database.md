@@ -69,7 +69,7 @@ Controlling privileged access prevents unauthorized changes, reduces the impact 
 
 - **Monitor privileged activities**: Enable auditing to track all actions performed by privileged accounts. Regularly review audit logs for suspicious activities or unauthorized changes. Configure alerts for sensitive operations. For more information, see [Auditing for Azure SQL Database](auditing-overview.md).
 
-- **Use database roles for access management**: Leverage built-in database roles and create custom roles to implement role-based security. Assign users to roles rather than granting individual permissions to simplify management and reduce errors. For more information, see [Database-level roles](/sql/relational-databases/security/authentication-access/database-level-roles).
+- **Use database roles for access management**: Use built-in database roles and create custom roles to implement role-based security. Assign users to roles rather than granting individual permissions to simplify management and reduce errors. For more information, see [Database-level roles](/sql/relational-databases/security/authentication-access/database-level-roles).
 
 - **Implement just-in-time access**: Use Microsoft Entra Privileged Identity Management (PIM) to provide time-limited, approval-based access to administrative roles. This approach ensures users only have elevated privileges when needed. For more information, see [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure).
 

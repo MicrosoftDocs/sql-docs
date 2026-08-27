@@ -34,7 +34,7 @@ Use this procedure if you're copying the completed Lesson 3.  To copy the sample
 
 7.  In the **Properties** window, change the **Name** property to **Lesson 4**.
 
-8.  Select the box for the **ID** property, select the drop-down arrow, and then select **\<Generate New ID>**.
+8.  Select the box for the **ID** property, select the dropdown list arrow, and then select **\<Generate New ID>**.
 
 ## Add the completed Lesson 3 package
 

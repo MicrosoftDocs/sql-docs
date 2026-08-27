@@ -686,7 +686,7 @@ The following table provides a summary of the actions when operating on an encry
 
 | `ColumnEncryption` | BCP direction | Description |
 |--|--|--|
-| `Disabled` | OUT (to client) | Retrieves ciphertext. The observed datatype is **varbinary(max)**. |
+| `Disabled` | OUT (to client) | Retrieves ciphertext. The observed data type is **varbinary(max)**. |
 | `Enabled` | OUT (to client) | Retrieves plaintext. The driver will decrypt the column data. |
 | `Disabled` | IN (to server) | Inserts ciphertext. This setting is intended for opaquely moving encrypted data without requiring it to be decrypted. The operation will fail if the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option isn't set on the user, or BCPMODIFYENCRYPTED isn't set on the connection handle. For more information, see below. |
 | `Enabled` | IN (to server) | Inserts plaintext. The driver will encrypt the column data. |

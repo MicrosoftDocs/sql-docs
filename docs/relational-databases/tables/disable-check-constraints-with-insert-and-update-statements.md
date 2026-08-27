@@ -41,7 +41,7 @@ Requires ALTER permission on the table.
   
 2.  Right-click the constraint and select **Modify**. 
   
-3.  In the grid under **Table Designer**, click **Enforce For INSERTs And UPDATEs** and select **No** from the drop-down menu.  
+3.  In the grid under **Table Designer**, click **Enforce For INSERTs And UPDATEs** and select **No** from the dropdown list.  
   
 4.  Click **Close**.  
   

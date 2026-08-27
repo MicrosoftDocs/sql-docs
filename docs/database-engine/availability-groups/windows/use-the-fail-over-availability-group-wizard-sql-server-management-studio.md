@@ -149,7 +149,7 @@ Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL 
  Click to update the grid.  
   
  **Cancel**  
- Click to cancel the wizard. On the **Select New Primary Replica** page, cancelling the wizard cause it to exit without performing any actions.  
+ Click to cancel the wizard. On the **Select New Primary Replica** page, canceling the wizard cause it to exit without performing any actions.  
   
 ###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
  This section describes the options of the **Confirm Potential Data Loss** page, which is displayed only if you are performing a forced failover. This topic is used only by the [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Use this page to indicate whether you are willing to risk possible data loss in order to force the availability group to fail over.  
@@ -161,7 +161,7 @@ Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL 
  If you are willing to risk data loss in order to make the databases in this availability group available to users, click this checkbox. If you are not willing to risk data loss, you can either click **Previous** to return to the **Select New Primary Replica** page, or click **Cancel** to exit the wizard without failing over the availability group.  
   
  **Cancel**  
- Click to cancel the wizard. On the **Confirm Potential Data Loss** page, cancelling the wizard cause it to exit without performing any actions.  
+ Click to cancel the wizard. On the **Confirm Potential Data Loss** page, canceling the wizard cause it to exit without performing any actions.  
   
 ###  <a name="ConnectToReplica"></a> Connect to Replica Page  
  This section describes the options of the **Connect to Replica** page of the [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. This page is displayed only if you are not connected to the target secondary replica. Use this page to connect to the secondary replica that you have selected as the new primary replica.  
@@ -178,7 +178,7 @@ Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL 
  Click if this server instance is running under a different account than other server instances to which you need to connect.  
   
  **Cancel**  
- Click to cancel the wizard. On the **Connect to Replica** page, cancelling the wizard cause it to exit without performing any actions.  
+ Click to cancel the wizard. On the **Connect to Replica** page, canceling the wizard cause it to exit without performing any actions.  
   
 ## Related content
 

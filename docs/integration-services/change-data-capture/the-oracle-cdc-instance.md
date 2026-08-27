@@ -26,7 +26,7 @@ ms.topic: concept-article
   
     -   Stops writing completed Oracle transactions to the CDC database.  
   
-    -   Waits for up to 30 seconds (if necessary) until the current transaction finishes writing to the CDC database. If more than 30 seconds pass, the writing is cancelled and transaction is rolled back (to be retried when the CDC instance is restarted).  
+    -   Waits for up to 30 seconds (if necessary) until the current transaction finishes writing to the CDC database. If more than 30 seconds pass, the writing is canceled and transaction is rolled back (to be retried when the CDC instance is restarted).  
   
     -   In a separate thread, writes as many memory-cached records as possible to the staged transactions table for up to 30 seconds (from the oldest transaction to the newest), then updates the **xdbcdc_state** table and commits all the changes.  
   

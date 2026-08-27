@@ -19,7 +19,7 @@ This article discusses support for asynchronous programming in the Microsoft Sql
 
 ## Legacy asynchronous programming
 
-The Microsoft SqlClient Data Provider for SQL Server includes methods from **System.Data.SqlClient** to maintain backwards compatibility for applications migrating to <xref:Microsoft.Data.SqlClient>. It isn't recommended to use the following legacy asynchronous programming methods for new development:
+The Microsoft SqlClient Data Provider for SQL Server includes methods from **System.Data.SqlClient** to maintain backward compatibility for applications migrating to <xref:Microsoft.Data.SqlClient>. It isn't recommended to use the following legacy asynchronous programming methods for new development:
 
 - <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -31,7 +31,7 @@ The Microsoft SqlClient Data Provider for SQL Server includes methods from **Sys
 > In the Microsoft SqlClient Data Provider for SQL Server, these legacy methods no longer require `Asynchronous Processing=true` in the connection string.
 
 > [!WARNING]
-> The `Asynchronous Processing` connection property is no longer supported in the Microsoft SqlClient Data Provider v4.0 onwards.
+> The `Asynchronous Processing` connection property is no longer supported in the Microsoft SqlClient Data Provider v4.0 onward.
 
 ## Asynchronous programming features
 

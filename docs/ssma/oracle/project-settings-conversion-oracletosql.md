@@ -19,7 +19,7 @@ The **Conversion** page of the **Project Settings** dialog box contains settings
 
 The **Conversion** pane is available in the **Project Settings** and **Default Project Settings** dialog boxes:
 
-- To specify settings for all SSMA projects, on the **Tools** menu click **Default Project Settings**, select migration project type for which settings are required to be viewed or changed from **Migration Target Version** drop-down, then click **General** at the bottom of the left pane, and then click **Conversion**.
+- To specify settings for all SSMA projects, on the **Tools** menu click **Default Project Settings**, select migration project type for which settings are required to be viewed or changed from **Migration Target Version** dropdown list, then click **General** at the bottom of the left pane, and then click **Conversion**.
 
 - To specify settings for the current project, on the **Tools** menu click **Project Settings**, then click **General** at the bottom of the left pane, and then click **Conversion**.
 

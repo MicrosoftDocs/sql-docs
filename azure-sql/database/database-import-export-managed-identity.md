@@ -339,7 +339,7 @@ The following common issues can occur when you use managed identity authenticati
 - **Storage authorization failures**: Confirm **Storage Blob Data Reader** (import) or **Storage Blob Data Contributor** (export) is granted at the correct Storage scope.
 - **Operation authorization failures**: Confirm the user has Azure RBAC permission to submit import or export operations on the target SQL scope.
 - **Authorization with shared key is disabled**: When selecting a storage account in the Azure portal during import or export operations, the portal uses the signed-in user's credentials and relies on shared-key–based authorization. When shared key authorization is disabled for the storage account, import and export from the Azure portal is unavailable. Use the Azure CLI, PowerShell, or REST API for import and export operations when shared key access is disabled.
-- **Storage account not available in the account selection dropdown**: When using the Azure portal for import or export operations, only storage accounts that the signed-in user has access to are shown in the storage account selection dropdown. If you don't see your storage account in the dropdown, ensure that the signed-in user has at least **Reader** role access to the storage account.
+- **Storage account not available in the account selection dropdown list**: When using the Azure portal for import or export operations, only storage accounts that the signed-in user has access to are shown in the storage account selection dropdown list. If you don't see your storage account in the dropdown list, ensure that the signed-in user has at least **Reader** role access to the storage account.
 
 ## Permissions
 

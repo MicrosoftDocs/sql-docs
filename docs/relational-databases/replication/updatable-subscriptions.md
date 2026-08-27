@@ -23,7 +23,7 @@ f1_keywords:
   
 ## Options  
  **Replicate Subscriber changes**  
- Select the check box in the **Replicate** column for each Subscriber that should be able to make updates. For those Subscribers that can make updates, select the appropriate option from the drop-down list box in the **Commit at Publisher** column:  
+ Select the check box in the **Replicate** column for each Subscriber that should be able to make updates. For those Subscribers that can make updates, select the appropriate option from the dropdown list in the **Commit at Publisher** column:  
   
 -   Select **Simultaneously commit changes** for an immediate updating subscription.  
   

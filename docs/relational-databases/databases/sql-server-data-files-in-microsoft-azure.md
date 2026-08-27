@@ -134,7 +134,7 @@ For more information, see [Manage Access to Azure Storage Resources](/azure/stor
 
 ### Installation prerequisites
 
- The followings are installation prerequisites when storing SQL Server Data Files in Azure.
+ The following are installation prerequisites when storing SQL Server Data Files in Azure.
 
 - **SQL Server on-premises:** SQL Server 2016 and later include this feature. To learn how to download the latest version of SQL Server, see [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
 

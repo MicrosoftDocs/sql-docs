@@ -87,9 +87,9 @@ be penalized more, but a less accurate model with more conservative values
 would be penalized less. L1 and L2 regularization have different effects
 and uses that are complementary in certain respects.
 
-* `l1_weight`: can be applied to sparse models, when working with high-dimensional data. It pulls small weights associated features that are relatively unimportant towards 0. 
+* `l1_weight`: can be applied to sparse models, when working with high-dimensional data. It pulls small weights associated features that are relatively unimportant toward 0. 
 
-* `l2_weight`: is preferable for data that is not sparse. It pulls large weights towards zero. 
+* `l2_weight`: is preferable for data that is not sparse. It pulls large weights toward zero. 
 
 Adding the ridge penalty to the regularization overcomes some of lasso's
 limitations. It can improve its predictive accuracy, for example, when

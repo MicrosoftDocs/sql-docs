@@ -20,7 +20,7 @@ The **Time Zone** page enables you to set the time zone for all nodes on your An
   
 1. Stop the appliance services by using the **Services Status** page in the Configuration Manager. See [PDW Services Status](pdw-services-status.md) for instructions.  
   
-1. In the left pane of the Configuration Manager, select **Time Zone**. Select the desired time zone from the **Time Zone** drop-down menu. Depending on your location, you may also choose to select the box next to **Automatically adjust clock for Daylight Saving Time**.  
+1. In the left pane of the Configuration Manager, select **Time Zone**. Select the desired time zone from the **Time Zone** dropdown list. Depending on your location, you may also choose to select the box next to **Automatically adjust clock for Daylight Saving Time**.  
   
 1. Select **Apply** to save your changes.  
   

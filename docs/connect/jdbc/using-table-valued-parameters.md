@@ -284,7 +284,7 @@ This class represents an in-memory data table to be used with table-valued param
 | public void addColumnMetadata(String columnName, int sqlType) | Adds metadata for the specified column.              |
 | public void addColumnMetadata(SQLServerDataColumn column)     | Adds metadata for the specified column.              |
 | public void addRow(Object... values)                          | Adds one row of data to the data table.              |
-| public Map\<Integer, SQLServerDataColumn> getColumnMetadata() | Retrieves column meta data of this data table.       |
+| public Map\<Integer, SQLServerDataColumn> getColumnMetadata() | Retrieves column metadata of this data table.       |
 | public void clear()                                           | Clears this data table.                              |
 
 ### SQLServerDataColumn
@@ -303,7 +303,7 @@ This class represents an interface that users can implement to stream data to a 
   
 | Name                                                    | Description                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| public SQLServerMetaData getColumnMetaData(int column); | Retrieves the column meta data of the given column index.                                               |
+| public SQLServerMetaData getColumnMetaData(int column); | Retrieves the column metadata of the given column index.                                               |
 | public int getColumnCount();                            | Retrieves the total number of columns.                                                                  |
 | public Object[] getRowData();                           | Retrieves the data for the current row as an array of Objects.                                          |
 | public boolean next();                                  | Moves to the next row. Returns True if the move is successful and there's a next row, false otherwise. |

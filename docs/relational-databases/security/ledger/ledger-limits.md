@@ -69,7 +69,7 @@ Updatable ledger tables are based on the technology of [temporal tables](../../t
 - If the name of a history table is specified during history table creation, you must specify the schema and table name and also the name of the ledger view.
 - By default, the history table is PAGE compressed.
 - If the current table is partitioned, the history table is created on the default file group because partitioning configuration isn't replicated automatically from the current table to the history table.
-- Temporal and history tables can't be a FILETABLE and can contain columns of any supported datatype other than FILESTREAM. FILETABLE and FILESTREAM allow data manipulation outside of SQL Server, and thus system versioning can't be guaranteed.
+- Temporal and history tables can't be a FILETABLE and can contain columns of any supported data type other than FILESTREAM. FILETABLE and FILESTREAM allow data manipulation outside of SQL Server, and thus system versioning can't be guaranteed.
 - A node or edge table can't be created as or altered to a temporal table. Graph isn't supported with ledger.
 - While temporal tables support blob data types, such as `(n)varchar(max)`, `varbinary(max)`, `(n)text`, and `image`, they'll incur significant storage costs and have performance implications due to their size. As such, when designing your system, care should be taken when using these data types.
 - The history table must be created in the same database as the current table. Temporal querying over Linked Server isn't supported.

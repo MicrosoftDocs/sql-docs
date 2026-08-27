@@ -196,7 +196,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
 }
 ```
 
-The following example demonstrates `Active Directory Managed Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v3.0 onwards**.
+The following example demonstrates `Active Directory Managed Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v3.0 onward**.
 
 ```csharp
 // For user-assigned managed identity
@@ -295,7 +295,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 Available starting in version 5.2, like with managed identities, [workload identity](/azure/aks/workload-identity-overview) authentication mode uses the value of the `User ID` parameter in the connection string for its Client ID if specified. But unlike managed identity, WorkloadIdentityCredentialOptions defaults its value from environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, and AZURE_FEDERATED_TOKEN_FILE. However, only the Client ID can be overridden by the connection string.
 
-The following example demonstrates `Active Directory Workload Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v5.2 onwards**.
+The following example demonstrates `Active Directory Workload Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v5.2 onward**.
 
 ```csharp
 // Use your own values for Server, Database, and User Id.
@@ -371,7 +371,7 @@ The following example shows how to set an application client ID through a config
 
 ## Using AccessTokenCallback
 
-Available in version 5.2 onwards, there's a new [AccessTokenCallback](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstokencallback) property on [SqlConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection). Use the `AccessTokenCallback` property to define a custom function that returns an access token given the incoming parameters. Using the callback is better than using the [AccessToken](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) property because it allows the access token to be refreshed within a connection pool. When using the `AccessToken` property, the token can't be updated after opening the connection. There's also no associated expiration date provided through the property. Once the token expires, new connection requests fail with a server authentication error and pools using it must be manually cleared.
+Available in version 5.2 onward, there's a new [AccessTokenCallback](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstokencallback) property on [SqlConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection). Use the `AccessTokenCallback` property to define a custom function that returns an access token given the incoming parameters. Using the callback is better than using the [AccessToken](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) property because it allows the access token to be refreshed within a connection pool. When using the `AccessToken` property, the token can't be updated after opening the connection. There's also no associated expiration date provided through the property. Once the token expires, new connection requests fail with a server authentication error and pools using it must be manually cleared.
 
 > [!IMPORTANT]
 > An `AccessTokenCallback` must return access tokens of the same security context for the same input parameters. If the security context is different, a pooled connection with the wrong security context may be returned for a connection request.
@@ -379,7 +379,7 @@ Available in version 5.2 onwards, there's a new [AccessTokenCallback](/dotnet/ap
 > [!NOTE]
 > `AccessTokenCallback` is part of the key used to identify connection pools. Avoid creating a new function callback for every creation of a SqlConnection since that results in a new pool every time. Reference the same instance of a function for connections you want to be considered for pooling. The connection pool key includes parameters passed to the callback to partition connection pools appropriately.
 
-The following code snippet is an example of using the `AccessTokenCallback` property in **Microsoft.Data.SqlClient v5.2 onwards**.
+The following code snippet is an example of using the `AccessTokenCallback` property in **Microsoft.Data.SqlClient v5.2 onward**.
 
 [!code-csharp [AADAuthenticationAccessTokenCallback#1](~/../sqlclient/doc/samples/SqlConnection_AccessTokenCallback.cs#1)]
 

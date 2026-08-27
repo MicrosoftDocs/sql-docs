@@ -149,7 +149,7 @@ The sample shows how to do the following actions:
 
 - Using the new asynchronous feature and the `await` keyword to transfer a large BLOB.
 
-- Cancelling the transfer of a large BLOB.
+- Canceling the transfer of a large BLOB.
 
 - Streaming from one SQL Server to another using the asynchronous feature.
 

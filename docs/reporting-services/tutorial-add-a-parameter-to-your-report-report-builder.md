@@ -360,7 +360,7 @@ You can also provide a custom value to use as the default value for the paramete
 
    1. Select the **Specify values** option, and then select **Add**. A new value row is added to the **Value** box. The default value in the dropdown list is **(Null)**.
 
-   1. In the dropdown box, enter _200_.
+   1. In the dropdown list, enter _200_.
 
 1. Select **OK** to apply your changes.
 

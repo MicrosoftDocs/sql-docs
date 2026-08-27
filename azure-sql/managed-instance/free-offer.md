@@ -42,9 +42,9 @@ To create your free SQL managed instance, follow these steps:
 
 1. Go to [Azure SQL hub at aka.ms/azuresqlhub](https://aka.ms/azuresqlhub).
 1. Under **Azure SQL Managed Instance**, select **SQL managed instances** to open the **SQL managed instances** pane.
-1. On the **SQL managed instances** pane, select **+ Create**, and then select **SQL managed instance (Free offer)** from the dropdown menu to open the **Create Azure SQL Managed Instance** page with the free offer already applied.
+1. On the **SQL managed instances** pane, select **+ Create**, and then select **SQL managed instance (Free offer)** from the dropdown list to open the **Create Azure SQL Managed Instance** page with the free offer already applied.
 
-   :::image type="content" source="media/free-offer/free-offer.png" alt-text="Screenshot of the Create SQL managed instance dropdown menu with the free offer highlighted.":::
+   :::image type="content" source="media/free-offer/free-offer.png" alt-text="Screenshot of the Create SQL managed instance dropdown list with the free offer highlighted.":::
 
    Use **Advanced configuration** if you want to change your free offer from the default settings. 
 

@@ -12,7 +12,7 @@ ms.custom:
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-  Pie charts and doughnut charts display data as a proportion of the whole in a paginated report. Pie charts are most commonly used to make comparisons between groups. Pie and doughnut charts, along with pyramid and funnel charts, comprise a group of charts known as shape charts. Shape charts have no axes. When a numeric field is dropped on a shape chart, the chart calculates the percentage of each value to the total. For more information on shape charts, see [Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
+  Pie charts and donut charts display data as a proportion of the whole in a paginated report. Pie charts are most commonly used to make comparisons between groups. Pie and donut charts, along with pyramid and funnel charts, comprise a group of charts known as shape charts. Shape charts have no axes. When a numeric field is dropped on a shape chart, the chart calculates the percentage of each value to the total. For more information on shape charts, see [Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
   
  The following illustration shows a 3-D pie chart with data labels formatted as percentages.  The legend is positioned in the right-center.  
   
@@ -27,7 +27,7 @@ ms.custom:
   
 -   **Doughnut**. A pie chart that has an open space in the center.  
   
--   **Exploded doughnut**. A doughnut chart where all of the slices are moved away from the center of the doughnut.  
+-   **Exploded donut**. A donut chart where all of the slices are moved away from the center of the donut.  
   
 -   **3D Pie**. A pie chart that has a 3-D style applied.  
   

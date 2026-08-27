@@ -79,11 +79,11 @@ CREATE PROCEDURE [usr].[YourAction]
   
 2.  On the menu bar, point to **Manage** and click **Business Rules**.  
   
-3.  On the **Business Rules** page, select a model from the **Model** drop-down list.  
+3.  On the **Business Rules** page, select a model from the **Model** dropdown list.  
   
-4.  From the **Entity** drop-down list, select an entity.  
+4.  From the **Entity** dropdown list, select an entity.  
   
-5.  From the **Member Types** drop-down list, select a type of member for the business rule to apply to.  
+5.  From the **Member Types** dropdown list, select a type of member for the business rule to apply to.  
   
 6.  Click **Add**.  
   
@@ -91,7 +91,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     1.  Under the **If** block, click on **Add** button. A panel will be displayed.  
   
-    2.  From the **Operator** drop-down list, select the user-defined function under **User defined script** .  
+    2.  From the **Operator** dropdown list, select the user-defined function under **User defined script** .  
   
     3.  All parameters of the user defined function are displayed.  
   
@@ -103,7 +103,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     1.  Under the **Then** block, click on **Add** button. A panel will be displayed.  
   
-    2.  From the **Operator** drop-down list, select user-defined function under **User defined script** .  
+    2.  From the **Operator** dropdown list, select user-defined function under **User defined script** .  
   
     3.  Click **Save**.  
   

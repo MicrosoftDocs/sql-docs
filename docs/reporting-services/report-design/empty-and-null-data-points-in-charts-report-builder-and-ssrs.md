@@ -19,7 +19,7 @@ ms.custom:
   
 -   If the chart type is a contiguous, linear chart type (area, bar, column, line, scatter), empty data points are added to the chart to maintain continuity in the series.  
   
--   If the chart type is a nonlinear chart type (polar, pie, doughnut, funnel or pyramid), empty values are omitted from display on the chart.  
+-   If the chart type is a nonlinear chart type (polar, pie, donut, funnel or pyramid), empty values are omitted from display on the chart.  
   
 -   In shape chart types, null values are omitted.  
   

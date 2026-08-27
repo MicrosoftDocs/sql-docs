@@ -30,7 +30,7 @@ To open **Power Query Source Editor** in SSDT, drag & drop **Power Query Source*
 
 ![PQ Source](media/power-query-source/pq-source.png)
 
-Three tabs are shown on the left side. On **Queries** tab, you can select your query mode from the dropdown menu.
+Three tabs are shown on the left side. On **Queries** tab, you can select your query mode from the dropdown list.
 -   **Single Query** mode allows you to copy & paste a single Power Query script from Excel/Power BI Desktop.
 -   **Single Query from Variable** mode allows you to specify a string variable that contains your query to be executed.
 
@@ -49,8 +49,8 @@ Finally, on **Columns** tab, you can edit the output column info.
 ## Configure the Power Query Connection Manager
 
 When designing your data flow with Power Query Source on SSDT, you can create a new Power Query Connection Manager in the following ways:
-- Indirectly create it on **Connection Managers** tab of Power Query Source after selecting **Add**/**Detect Data Source** button and selecting **\<New connection...\>** from the dropdown menu as described above.
-- Directly create it by right-clicking on **Connection Managers** panel of your package and selecting **New Connection...** from the dropdown menu.
+- Indirectly create it on **Connection Managers** tab of Power Query Source after selecting **Add**/**Detect Data Source** button and selecting **\<New connection...\>** from the dropdown list as described above.
+- Directly create it by right-clicking on **Connection Managers** panel of your package and selecting **New Connection...** from the dropdown list.
 
 ![PQ Source Connection Managers Panel Add](media/power-query-source/pq-source-connection-managers-panel-add.png)
 
@@ -58,7 +58,7 @@ In **Add SSIS Connection Manager** dialog, double-click on **PowerQuery** from t
 
 ![PQ Source Connection Managers Panel Add Dialog](media/power-query-source/pq-source-connection-managers-panel-add-dialog.png)
 
-In **Power Query Connection Manager Editor**, you need to specify **Data Source Kind**, **Data Source Path**, and **Authentication Kind**, as well as assign the appropriate access credentials. For **Data Source Kind**, you can currently select one of 22 kinds from the dropdown menu.
+In **Power Query Connection Manager Editor**, you need to specify **Data Source Kind**, **Data Source Path**, and **Authentication Kind**, as well as assign the appropriate access credentials. For **Data Source Kind**, you can currently select one of 22 kinds from the dropdown list.
 
 ![PQ Source Connection Manager Editor Kind](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
@@ -68,7 +68,7 @@ For **Data Source Path**, you can enter data source-specific properties forming 
 
 ![PQ Source Connection Manager Editor Path](media/power-query-source/pq-source-connection-manager-editor-path.png)
 
-Finally, For **Authentication Kind**, you can select **Anonymous**/**Windows Authentication**/**Username Password**/**Key** from the dropdown menu, enter the appropriate access credentials, and select the **Test Connection** button to ensure that Power Query Source has been properly configured.
+Finally, For **Authentication Kind**, you can select **Anonymous**/**Windows Authentication**/**Username Password**/**Key** from the dropdown list, enter the appropriate access credentials, and select the **Test Connection** button to ensure that Power Query Source has been properly configured.
 
 ![PQ Source Connection Manager Editor Authentication](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
 

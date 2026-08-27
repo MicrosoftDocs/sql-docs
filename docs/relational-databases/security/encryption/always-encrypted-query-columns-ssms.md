@@ -103,7 +103,7 @@ To enable (disable) Always Encrypted:
 > 1. Enable or disable Always Encrypted, following the above steps and click **Connect**.  
 
 > [!NOTE]
-> To run statements that leverage a server-side secure enclave when you're using [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), see [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md).
+> To run statements that use a server-side secure enclave when you're using [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), see [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md).
 
 ## <a name="param"></a>Parameterization for Always Encrypted
 
@@ -144,7 +144,7 @@ If you execute a query in a Query Editor window that uses a database connection 
 
 ### How Parameterization for Always Encrypted works
 
-If both Parameterization for Always Encrypted and the Always Encrypted behavior in the database connection are enabled for a Query Editor window, SQL Server Management Studio will attempt parameterize Transact-SQL variables that meet the following pre-requisite conditions:
+If both Parameterization for Always Encrypted and the Always Encrypted behavior in the database connection are enabled for a Query Editor window, SQL Server Management Studio will attempt parameterize Transact-SQL variables that meet the following prerequisite conditions:
 
 - Are declared and initialized in the same statement (inline initialization). Variables declared using separate `SET` statements won't be parameterized.
 - Are initialized using a single literal. Variables initialized using expressions including any operators or functions won't be parameterized.
@@ -188,11 +188,11 @@ A declaration of a variable that can be successfully parameterized is marked wit
 
 If SQL Server Management Studio has attempted to parameterize a variable, but the parameterization has failed, the declaration of the variable will be marked with an error underline. If you hover on the declaration statement that has been marked with an error underline, you'll get the results about the error. You can also see the complete list of parameterization errors for all variables in the **Error** tab of the **Error List** view. To open the **Error List** view, select **View** from the main menu and then select **Error List**.
 
-The below screenshot shows an example of six variable declarations. SQL Server Management Studio successfully parameterized the first three variables. The last three variables didn't meet the pre-requisite conditions for parameterization, and therefore, SQL Server Management Studio didn't attempt to parameterize them (their declarations aren't marked in any way).
+The below screenshot shows an example of six variable declarations. SQL Server Management Studio successfully parameterized the first three variables. The last three variables didn't meet the prerequisite conditions for parameterization, and therefore, SQL Server Management Studio didn't attempt to parameterize them (their declarations aren't marked in any way).
 
 :::image type="content" source="../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png" alt-text="Screenshot showing an example of six variable declarations with three successfully parameterized and three failures and the associated warning messages." lightbox="../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png":::
 
-Another example below, shows two variables that meet pre-requisite conditions for parameterization, but the parameterization attempt has failed because the variables are incorrectly initialized.
+Another example below, shows two variables that meet prerequisite conditions for parameterization, but the parameterization attempt has failed because the variables are incorrectly initialized.
 
  :::image type="content" source="../../../relational-databases/security/encryption/media/always-encrypted-error.png" alt-text="Screenshot showing an example of two variable declarations that ultimately fail with the associated error messages." lightbox="../../../relational-databases/security/encryption/media/always-encrypted-error.png":::
 

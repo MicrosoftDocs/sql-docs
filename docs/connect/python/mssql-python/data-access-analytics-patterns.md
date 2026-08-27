@@ -298,7 +298,7 @@ if writer:
 
 ## Anti-patterns to avoid
 
-| Anti-pattern | Problem | Better approach |
+| Antipattern | Problem | Better approach |
 | --- | --- | --- |
 | `fetchall()` then `pd.DataFrame()` for large tables | Loads all rows into memory twice (once as tuples, once as DataFrame). | Use `cursor.arrow()` then `arrow_table.to_pandas()`. |
 | Converting Arrow to pandas just to filter rows | Wastes memory on the full pandas copy. | Filter in SQL (`WHERE` clause) or use Polars/DuckDB on the Arrow table directly. |

@@ -97,7 +97,7 @@ If the database being restored does not exist, the user must have CREATE DATABAS
      This section performs the same function as that of **Restore to** on the [Restore Database (General Page)](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
      **Database**  
-     Specifies the database to restore. You can enter a new database or select an existing database from the drop-down list. The list includes all databases on the server, except the system databases **master** and **tempdb**.  
+     Specifies the database to restore. You can enter a new database or select an existing database from the dropdown list. The list includes all databases on the server, except the system databases **master** and **tempdb**.  
   
     > [!WARNING]  
     >  To restore a password-protected backup, you must use the [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement.  

@@ -50,7 +50,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  If `Reduce()` is called with a negative value, this method will produce an **ArgumentException**. Tolerances used in `Reduce()` must be positive numbers.  
   
- The Douglas-Peucker algorithm works on each curve or ring in the **geography** instance by removing all points except for the start point and end point. Each point removed is then added back, starting with the farthest outlying point, until no point is more than *tolerance* from the result. The result is then made valid if necessary, as a valid result is guaranteed.  
+ The Douglas-Peucker algorithm works on each curve or ring in the **geography** instance by removing all points except for the start point and endpoint. Each point removed is then added back, starting with the farthest outlying point, until no point is more than *tolerance* from the result. The result is then made valid if necessary, as a valid result is guaranteed.  
   
  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], this method has been extended to **FullGlobe** instances.  
   

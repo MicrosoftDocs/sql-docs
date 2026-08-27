@@ -76,7 +76,7 @@ If the 605 error is not transient, the problem is severe and must be corrected b
   
 If the problem is not hardware related, perform one of the following tasks:  
   
-1.  Restore the database from a known clean backup. You can leverage the page restore backup feature to restore just the damaged pages.  
+1.  Restore the database from a known clean backup. You can use the page restore backup feature to restore just the damaged pages.  
   
 2.  Run DBCC CHECKDB with the REPAIR clause recommended by the DBCC CHECKDB operation performed in step 3 to repair the corruption. If running DBCC CHECKDB with one of the REPAIR clauses does not correct the problem, contact your primary support provider. Have the output from DBCC CHECKDB available for review.  
   

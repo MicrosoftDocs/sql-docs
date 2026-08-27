@@ -97,7 +97,7 @@ ms.custom:
   
     -   To work with row groups and column groups in a tablix data region, select the group from the Grouping pane.  
   
- In Report Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], you can select from the drop-down list of objects in the Properties pane toolbar or from the hierarchical view of report items in the Document Outline window. You can select items in this pane and see which item is selected on the design surface. To open the Document Outline window, from the **View** menu, point to **Other Windows**, and then click **Document Outline**.  
+ In Report Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], you can select from the dropdown list of objects in the Properties pane toolbar or from the hierarchical view of report items in the Document Outline window. You can select items in this pane and see which item is selected on the design surface. To open the Document Outline window, from the **View** menu, point to **Other Windows**, and then click **Document Outline**.  
   
 ##  <a name="ReportItems"></a> Working with Specific Types of Report Items  
   

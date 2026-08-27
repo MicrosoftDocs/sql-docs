@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 1.  **Select the table to filter**  
   
-     If you are editing an existing filter, the table selection cannot be changed. If you are adding a new filter, select a table from the drop-down list box. Tables appear in the list box only if they were selected on the **Articles** page and do not already have a row filter. If a table has a row filter and you want to define a new one:  
+     If you are editing an existing filter, the table selection cannot be changed. If you are adding a new filter, select a table from the dropdown list. Tables appear in the list box only if they were selected on the **Articles** page and do not already have a row filter. If a table has a row filter and you want to define a new one:  
   
     1.  Click **Cancel** on the **Add Filter** dialog box.  
   

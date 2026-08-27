@@ -74,7 +74,7 @@ These methods access specific points and curves within a geography instance.
 | Method | Description |
 | --- | --- |
 | [STStartPoint](../../t-sql/spatial-geography/ststartpoint-geography-data-type.md) | Returns the start point of a geography instance (for LineString types). |
-| [STEndpoint](../../t-sql/spatial-geography/stendpoint-geography-data-type.md) | Returns the end point of a geography instance (for LineString types). |
+| [STEndpoint](../../t-sql/spatial-geography/stendpoint-geography-data-type.md) | Returns the endpoint of a geography instance (for LineString types). |
 | [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md) | Returns a specified point from a geography instance. |
 | [STCurveN &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stcurven-geography-data-type.md) | Returns the specified curve from a geography instance that's a LineString, CircularString, or CompoundCurve. |
 | [STCurveToLine &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md) | Returns a polygonal approximation of a geography instance containing circular arc segments. |

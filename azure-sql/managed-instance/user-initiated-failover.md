@@ -48,8 +48,8 @@ The following table describes the expected behavior of the SQL Managed Instance 
 | --- | --- | --- | --- |
 | General Purpose | [Local redundancy](high-availability-sla-local-zone-redundancy.md#general-purpose-service-tier)  <br /> (Single availability zone) | SQL process restarts on the same VM. | SQL process restarts on a different VM. | 
 | General Purpose | [Zone redundancy](high-availability-sla-local-zone-redundancy.md#general-purpose-service-tier-1) <br /> (Multiple availability zones) | SQL process restarts on the same VM. | SQL process restarts on a different VM. | 
-| Business Critical | [Local redundancy](high-availability-sla-local-zone-redundancy.md#business-critical-service-tier) <br /> (Single availability zone) | SQL proces restarts on the primary replica, or random secondary replica is promoted to primary. | N/A | 
-| Business Critical | [Zone redundancy](high-availability-sla-local-zone-redundancy.md#business-critical-service-tier-1) <br /> (Multiple availability zones) | SQL proces restarts on the primary replica, or random secondary replica is promoted to primary, either in the same or different availability zone. | N/A | 
+| Business Critical | [Local redundancy](high-availability-sla-local-zone-redundancy.md#business-critical-service-tier) <br /> (Single availability zone) | SQL process restarts on the primary replica, or random secondary replica is promoted to primary. | N/A | 
+| Business Critical | [Zone redundancy](high-availability-sla-local-zone-redundancy.md#business-critical-service-tier-1) <br /> (Multiple availability zones) | SQL process restarts on the primary replica, or random secondary replica is promoted to primary, either in the same or different availability zone. | N/A | 
 
 ## Permissions
 

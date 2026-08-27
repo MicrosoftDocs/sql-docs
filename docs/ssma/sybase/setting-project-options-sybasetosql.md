@@ -65,9 +65,9 @@ In SSMA, you can configure default settings for all projects. These settings are
   
 2.  In the **Default Project Settings** dialog box, use one of the following procedures:  
   
-    -   Select migration project type for which settings are required to be viewed or changed from **Migration Target Version** drop down click General at the bottom of the left pane, and then select Conversion or Migration or SQL Azure.  
+    -   Select migration project type for which settings are required to be viewed or changed from **Migration Target Version** dropdown list click General at the bottom of the left pane, and then select Conversion or Migration or SQL Azure.  
   
-    -   To select a predefined mode, in the **Mode** drop-down box, select **Default**, **Optimistic**, or **Full**.  
+    -   To select a predefined mode, in the **Mode** dropdown list, select **Default**, **Optimistic**, or **Full**.  
   
     -   To specify custom settings, simply select or enter the new settings or values.  
   
@@ -81,9 +81,9 @@ You can also customize settings for the current project. These settings are save
   
 2.  In the **Project Settings** dialog box, use one of the following procedures:  
   
-    -   To select a predefined mode, in the **Mode** drop-down box, select **Default**, **Optimistic**, or **Full**.  
+    -   To select a predefined mode, in the **Mode** dropdown list, select **Default**, **Optimistic**, or **Full**.  
   
-    -   To specify a custom mode, in the **Mode** drop down box, select **Custom**, select an option in the left pane, click the setting or value in the right pane, and then select or enter the new setting or value.  
+    -   To specify a custom mode, in the **Mode** dropdown list, select **Custom**, select an option in the left pane, click the setting or value in the right pane, and then select or enter the new setting or value.  
   
 3.  Click **OK** to save the settings.  
   

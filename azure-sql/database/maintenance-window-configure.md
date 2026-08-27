@@ -44,7 +44,7 @@ To configure the maintenance window when you create a database or elastic pool, 
 
 For step-by-step information on creating a new database or pool, see [Create an Azure SQL Database single database](single-database-create-quickstart.md).
 
-   :::image type="content" source="media/maintenance-window-configure/additional-settings.png" alt-text="Screenshot from the Azure portal showing the Create SQL Database wizard. The additional settings tab is open, and the Maintenance window drop down is boxed in red.":::
+   :::image type="content" source="media/maintenance-window-configure/additional-settings.png" alt-text="Screenshot from the Azure portal showing the Create SQL Database wizard. The additional settings tab is open, and the Maintenance window dropdown list is boxed in red.":::
 
 # [PowerShell](#tab/azure-powershell)
 

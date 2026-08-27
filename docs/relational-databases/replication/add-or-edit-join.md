@@ -32,7 +32,7 @@ f1_keywords:
   
 1.  **Verify filtered table and select the joined table**  
   
-    -   If you are adding a new join, verify that the table in the **Filtered table** text box is correct (if it is not correct, click **Cancel**, select the correct table on the **Filter Table Rows** page, and click **Add Join** to return to this dialog box). Then select a table from the **Joined table** drop-down list box.  
+    -   If you are adding a new join, verify that the table in the **Filtered table** text box is correct (if it is not correct, click **Cancel**, select the correct table on the **Filter Table Rows** page, and click **Add Join** to return to this dialog box). Then select a table from the **Joined table** dropdown list.  
   
     -   If you are editing an existing join, the table names will be specified already and cannot be changed. To change the tables involved in the join, you must delete the existing join filter on the **Filter Table Rows** page and create a new join between different tables.  
   
@@ -40,7 +40,7 @@ f1_keywords:
   
     -   If you are adding a new join, select either **Use the builder to create the statement** or **Write the join statement manually**. If you begin writing the join manually, you cannot use the builder.  
   
-         If you select to use the builder, use the columns in the grid (**Conjunction**, **Filtered table column**, **Operator**, and **Joined table column**) to build a join statement. Each column in the grid contains a drop-down list box, allowing you to select two columns and an operator (**=**, **<>**, **<=**, **\<**, **>=**, **>**, **like**). The results are displayed in the **Preview** text area. If the join involves more than one pair of columns, select a conjunction (**AND** or **OR**) from the **Conjunction** column, and then enter two more columns and another operator.  
+         If you select to use the builder, use the columns in the grid (**Conjunction**, **Filtered table column**, **Operator**, and **Joined table column**) to build a join statement. Each column in the grid contains a dropdown list, allowing you to select two columns and an operator (**=**, **<>**, **<=**, **\<**, **>=**, **>**, **like**). The results are displayed in the **Preview** text area. If the join involves more than one pair of columns, select a conjunction (**AND** or **OR**) from the **Conjunction** column, and then enter two more columns and another operator.  
   
          If you select to write the statement manually, write the join statement in the **Join statement** text area. Use the **Filtered table columns** list box and **Joined table columns** list box to drag and drop columns to the **Join statement** text area.  
   

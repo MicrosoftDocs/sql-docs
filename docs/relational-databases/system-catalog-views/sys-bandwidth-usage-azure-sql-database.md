@@ -23,18 +23,18 @@ monikerRange: "=azuresqldb-current"
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
 >[!IMPORTANT]
-> This view is unused and is preserved for backwards compatibility.
+> This view is unused and is preserved for backward compatibility.
   
  The **sys.bandwidth_usage** view contains the following columns.  
   
 |Column Name|Description|  
 |-----------------|-----------------|  
-|**time**| This column is unused and is preserved for backwards compatibility.|  
-|**database_name**|This column is unused and is preserved for backwards compatibility.|  
-|**direction**|This column is unused and is preserved for backwards compatibility.|  
-|**class**|This column is unused and is preserved for backwards compatibility.|  
-|**time_period**|This column is unused and is preserved for backwards compatibility.|  
-|**quantity**|This column is unused and is preserved for backwards compatibility.|  
+|**time**| This column is unused and is preserved for backward compatibility.|  
+|**database_name**|This column is unused and is preserved for backward compatibility.|  
+|**direction**|This column is unused and is preserved for backward compatibility.|  
+|**class**|This column is unused and is preserved for backward compatibility.|  
+|**time_period**|This column is unused and is preserved for backward compatibility.|  
+|**quantity**|This column is unused and is preserved for backward compatibility.|  
   
 ## Related content
 

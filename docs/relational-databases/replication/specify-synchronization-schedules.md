@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 #### To specify synchronization schedules  
   
-1.  On the **SynchronizationSchedule** page of the New Subscription Wizard, select one of the following values from the **Agent Schedule** drop-down list for each subscription you are creating:  
+1.  On the **SynchronizationSchedule** page of the New Subscription Wizard, select one of the following values from the **Agent Schedule** dropdown list for each subscription you are creating:  
   
     -   **Run continuously**  
   
@@ -67,7 +67,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 5.  On the **Schedules** page of the **Job Properties - \<JobName>** dialog box, click **Edit.**  
   
-6.  In the **Job Schedule Properties** dialog box, select a value from the **Schedule Type** drop-down list:  
+6.  In the **Job Schedule Properties** dialog box, select a value from the **Schedule Type** dropdown list:  
   
     -   To specify that the agent should run continuously, select **Start automatically when SQL Server Agent starts**.  
   
@@ -89,7 +89,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 4.  On the **Schedules** page of the **Job Properties - \<JobName>** dialog box, click **Edit.**  
   
-5.  In the **Job Schedule Properties** dialog box, select a value from the **Schedule Type** drop-down list:  
+5.  In the **Job Schedule Properties** dialog box, select a value from the **Schedule Type** dropdown list:  
   
     -   To specify that the agent should run continuously, select **Start automatically when SQL Server Agent starts**.  
   
@@ -111,7 +111,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 4.  On the **Schedules** page of the **Job Properties - \<JobName>** dialog box, click **Edit.**  
   
-5.  In the **Job Schedule Properties** dialog box, select a value from the **Schedule Type** drop-down list:  
+5.  In the **Job Schedule Properties** dialog box, select a value from the **Schedule Type** dropdown list:  
   
     -   To specify that the agent should run continuously, select **Start automatically when SQL Server Agent starts**.  
   

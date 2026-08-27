@@ -41,7 +41,7 @@ helpviewer_keywords:
   
 6.  In the **Name for staging tables** field, type the updated name for the staging table.  
   
-7.  For the **Transaction Log Type** field, choose the updated transaction log type in the drop-down list.  
+7.  For the **Transaction Log Type** field, choose the updated transaction log type in the dropdown list.  
   
      For more information, see [Change the Entity Transaction Log Type &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   

@@ -333,12 +333,12 @@ The following example will move the `Sales` database, a Windows login named `con
   
 11. **Location of Source Database Files** page:  Select the ellipsis button for **File share on source server** and navigate to the location for the given Folder location. For example, for Folder location `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` use `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` for **File share on source server**. Select **Next**.
   
-12. **Configure the Package** page:  In the **Package name:** text box, enter `SalesFromServer1toServer2_Move`. Check the **Save transfer logs?** box. In the **Logging options** drop-down list, select **Text file**. Note the **Error log file path**; revise as desired. Select **Next**. 
+12. **Configure the Package** page:  In the **Package name:** text box, enter `SalesFromServer1toServer2_Move`. Check the **Save transfer logs?** box. In the **Logging options** dropdown list, select **Text file**. Note the **Error log file path**; revise as desired. Select **Next**. 
   
     > [!NOTE]
     > The **Error log file path** is the path on the destination server.
       
-13. **Schedule the Package** page: Select the relevant proxy from the **Integration Services Proxy account** drop-down list. Select **Next**.
+13. **Schedule the Package** page: Select the relevant proxy from the **Integration Services Proxy account** dropdown list. Select **Next**.
 
 14. **Complete the Wizard** page:  Review the summary of the selected options. Select **Back** to change an option. Select **Finish** to execute the task. During the transfer, the **Performing operation** page monitors status information about the execution of the **Wizard**.
 

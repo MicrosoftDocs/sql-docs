@@ -54,9 +54,9 @@ You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN da
   
 2.  If the data source is **SQL Server**, proceed as follows:  
   
-    1.  In the **Database** field select the source database that you want to analyze to create the knowledge base. The text box drop-down will list the databases that are available. The source database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Otherwise, it will not appear in the drop-down list.  
+    1.  In the **Database** field select the source database that you want to analyze to create the knowledge base. The dropdown list shows the databases that are available. The source database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Otherwise, it will not appear in the dropdown list.  
   
-    2.  In the **Table/View** field select the table or view that you want to analyze to create the knowledge base. This table or view should be sample data, not an entire source database that you are performing data cleansing or matching on. The text box drop-down will list the tables and views that are available for the selected database.  
+    2.  In the **Table/View** field select the table or view that you want to analyze to create the knowledge base. This table or view should be sample data, not an entire source database that you are performing data cleansing or matching on. The dropdown list shows the tables and views that are available for the selected database.  
   
 3.  If the data source is **Excel**, proceed as follows:  
   
@@ -66,7 +66,7 @@ You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN da
   
 4.  In the **Mappings** table, map each source column that you want knowledge discovery to be performed on to a domain in the knowledge base, as follows:  
   
-    1.  Create a mapping by selecting a source column from the drop-down list for the **Source Column** column of an empty row, and then selecting a domain from the drop-down list for the **Domain** column in the same row, if a domain exists. If no domain exists, click the **Create a domain** or **Create a composite domain** to create a domain. For more information, see [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) or [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
+    1.  Create a mapping by selecting a source column from the dropdown list for the **Source Column** column of an empty row, and then selecting a domain from the dropdown list for the **Domain** column in the same row, if a domain exists. If no domain exists, click the **Create a domain** or **Create a composite domain** to create a domain. For more information, see [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) or [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
     2.  Repeat the previous step for each mapping. To change the number of rows in the table, click **Add a column mapping**, or select a row and click the **Remove selected column mapping**. If you click **Remove selected column mapping** when a populated row is selected, the selected row will be deleted even if there is an unpopulated row.  
   
@@ -152,11 +152,11 @@ You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN da
   
 4.  To change a value's state, proceed as follows:  
   
-    1.  **Set selected domain values as corrected**: To change a value's state from Error or Invalid to Correct, select the value, and then click the **Set selected domain values as corrected** (check) from the down-arrow in the icon bar or from the Type drop-down list. If the in-error or invalid value is grouped with a correct value, delete that value after the operation.  
+    1.  **Set selected domain values as corrected**: To change a value's state from Error or Invalid to Correct, select the value, and then click the **Set selected domain values as corrected** (check) from the down-arrow in the icon bar or from the Type dropdown list. If the in-error or invalid value is grouped with a correct value, delete that value after the operation.  
   
-    2.  **Set selected domain values as errors**: To change a value's state from Correct or Invalid to Error, select the value, and then click the **Set selected domain values as errors** (cross) icon from the down-arrow in the icon bar or from the Type drop-down list. You can either enter a correction in the **Correct to** column, or leave it blank.  
+    2.  **Set selected domain values as errors**: To change a value's state from Correct or Invalid to Error, select the value, and then click the **Set selected domain values as errors** (cross) icon from the down-arrow in the icon bar or from the Type dropdown list. You can either enter a correction in the **Correct to** column, or leave it blank.  
   
-    3.  **Set selected domain values as invalid**: To change a value's state from Correct or Error to Invalid, select the value, and then click the **Set selected domain values as invalid** (triangle) icon from the down-arrow in the icon bar or from the Type drop-down list. You can either enter a correction in the **Correct to** column, or leave it blank.  
+    3.  **Set selected domain values as invalid**: To change a value's state from Correct or Error to Invalid, select the value, and then click the **Set selected domain values as invalid** (triangle) icon from the down-arrow in the icon bar or from the Type dropdown list. You can either enter a correction in the **Correct to** column, or leave it blank.  
   
     4.  **Correct to**: After setting a value as in error or invalid, enter a new value in the **Correct To** column. DQS will add a new row for the replacement value, designate it as correct, and then group the two values. The new value will be shown as the leading value, with the leading value in bold and the in-error or invalid value indented.  
   
@@ -219,7 +219,7 @@ You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN da
 ##  <a name="Display"></a> How to Display the Appropriate Values  
  You can modify the display as follows:  
   
--   **Filter** the results that you want in the table, based on their status, by selecting the status in the **Filter** drop-down list.  
+-   **Filter** the results that you want in the table, based on their status, by selecting the status in the **Filter** dropdown list.  
   
 -   **Find** the data that you want to check or modify by entering one more letters to search for in the **Find** text box. This will highlight have those letters wherever they occur in any value that is displayed.  
   

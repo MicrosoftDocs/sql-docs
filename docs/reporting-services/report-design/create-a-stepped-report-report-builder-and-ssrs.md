@@ -36,7 +36,7 @@ A stepped report is a type of paginated report that shows detail rows or child g
   
     2.  In the Grouping Pane, right-click the Details Group, point to **Add Group**, and then click **Parent Group**.  
   
-    3.  In the **Tablix Group** dialog box, provide a name for the group and type or select a group expression from the drop-down list. The drop-down list displays the simple field expressions that are available in the Report Data pane. For example, [PostalCode] is a simple field expression for the PostalCode field in a dataset.  
+    3.  In the **Tablix Group** dialog box, provide a name for the group and type or select a group expression from the dropdown list. The dropdown list displays the simple field expressions that are available in the Report Data pane. For example, [PostalCode] is a simple field expression for the PostalCode field in a dataset.  
   
     4.  Select **Add group header**. This option adds a static row above the group for the group label and group totals. Likewise, you can select **Add group footer** to add a static row below the group. Select **OK**.
   

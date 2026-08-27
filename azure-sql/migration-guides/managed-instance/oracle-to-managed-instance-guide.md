@@ -41,7 +41,7 @@ To create an assessment:
 
 1. Open [SSMA for Oracle](https://www.microsoft.com/download/details.aspx?id=54258).
 1. Select **File**, and then select **New Project**.
-1. Enter a project name and a location to save your project. Then select **Azure SQL Managed Instance** as the migration target from the drop-down list and select **OK**.
+1. Enter a project name and a location to save your project. Then select **Azure SQL Managed Instance** as the migration target from the dropdown list and select **OK**.
 
    ![Screenshot that shows New Project.](./media/oracle-to-managed-instance-guide/new-project.png)
 
@@ -81,7 +81,7 @@ To convert the schema:
 1. (Optional) Add dynamic or ad hoc queries to statements. Right-click the node, and then select **Add statements**.
 1. Select the **Connect to Azure SQL Managed Instance** tab.
     1. Enter connection details to connect your database in **SQL Database Managed Instance**.
-    1. Select your target database from the drop-down list, or enter a new name, in which case a database will be created on the target server.
+    1. Select your target database from the dropdown list, or enter a new name, in which case a database will be created on the target server.
     1. Enter authentication details, and select **Connect**.
 
     ![Screenshot that shows Connect to Azure SQL Managed Instance.](./media/oracle-to-managed-instance-guide/connect-to-sql-managed-instance.png)

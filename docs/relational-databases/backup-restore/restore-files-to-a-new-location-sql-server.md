@@ -50,7 +50,7 @@ If the database being restored does not exist, the user must have CREATE DATABAS
   
 2.  Right-click the database that you want, point to **Tasks**, point to **Restore**, and then click **Files and Filegroups**.  
   
-3.  On the **General** page, in the **To database** list box, enter the database to restore. You can enter a new database or choose an existing database from the drop-down list. The list includes all databases on the server, excluding the system databases **master** and **tempdb**.  
+3.  On the **General** page, in the **To database** list box, enter the database to restore. You can enter a new database or choose an existing database from the dropdown list. The list includes all databases on the server, excluding the system databases **master** and **tempdb**.  
   
 4.  To specify the source and location of the backup sets to restore, click one of the following options:  
   

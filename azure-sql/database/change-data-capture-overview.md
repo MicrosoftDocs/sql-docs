@@ -422,7 +422,7 @@ For more information, see [DISABLE TRIGGER](/sql/t-sql/statements/disable-trigge
 
 - **Cause**: This error occurs when enabling CDC on a table with system CLR data type, making DML changes, and then making DDL changes on the same table while the CDC capture job is processing changes related to other tables.
 
-- **Recommendation**: The recommended steps are to quiesce DML to the table, run a capture job to process changes, run DDL for the table, run a capture job to process DDL changes, and then re-enable DML processing. For more information, see [CDC capture job fails](/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table) when processing changes for a table with system CLR datatype (geometry, geography, or hierarchyid).
+- **Recommendation**: The recommended steps are to quiesce DML to the table, run a capture job to process changes, run DDL for the table, run a capture job to process DDL changes, and then re-enable DML processing. For more information, see [CDC capture job fails](/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table) when processing changes for a table with system CLR data type (geometry, geography, or hierarchyid).
 
 ## Create user and assign role
 

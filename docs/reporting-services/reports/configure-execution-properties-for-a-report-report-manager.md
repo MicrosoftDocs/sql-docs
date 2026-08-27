@@ -27,7 +27,7 @@ From [the web portal of a report server (SSRS Native Mode)](../../reporting-serv
   
 1. Navigate to the report for which you want to configure the execution properties.  
   
-2. Right-click the report and select **Manage** from the drop-down menu.
+2. Right-click the report and select **Manage** from the dropdown list.
 
 3. Select the **History snapshots** tab to display the **History snapshots** page.  
   

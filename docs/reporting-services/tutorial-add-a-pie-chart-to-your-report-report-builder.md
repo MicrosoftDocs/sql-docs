@@ -11,7 +11,7 @@ ms.custom:
 # Tutorial: Add a pie chart to your report (Report Builder)
 In this tutorial, you create pie chart in a Reporting Services paginated report. You add percentages and combine small slices into a single slice.
 
-Pie and doughnut charts display data as a proportion of the whole. They have no axes. When you add a numeric field to a pie chart, the chart calculates the percentage of each value to the total.  
+Pie and donut charts display data as a proportion of the whole. They have no axes. When you add a numeric field to a pie chart, the chart calculates the percentage of each value to the total.  
 
 This illustration shows the pie chart you create in this tutorial. 
 

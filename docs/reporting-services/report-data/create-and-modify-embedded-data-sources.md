@@ -22,7 +22,7 @@ ms.custom:
   
 3.  Verify that **Embedded connection** is selected, and do the following.  
   
-    1.  From the **Type** drop-down list, select a data source type; for example, **Microsoft SQL Server** or **OLE DB**.  
+    1.  From the **Type** dropdown list, select a data source type; for example, **Microsoft SQL Server** or **OLE DB**.  
   
     2.  Specify a connection string using one of the following alternatives:  
   
@@ -48,7 +48,7 @@ ms.custom:
   
 3.  Verify that **Use a connection embedded in my report** is selected.  
   
-    1.  From the **Select connection type** drop-down list, select a data source type; for example, **Microsoft SQL Server** or **OLE DB**.  
+    1.  From the **Select connection type** dropdown list, select a data source type; for example, **Microsoft SQL Server** or **OLE DB**.  
   
     2.  Specify a connection string by using one of the following alternatives:  
   

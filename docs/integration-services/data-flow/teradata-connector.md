@@ -66,9 +66,9 @@ To design the SSIS package in SSDT *targeting SQL Server 2017 and below*, you ne
 
 ## Limitations and known issues
 
-- Teradata Source/Destination Editor: **Default database** property doesn't take effect. As a workaround, type the database name in dropdown box to filter table or view.
+- Teradata Source/Destination Editor: **Default database** property doesn't take effect. As a workaround, type the database name in dropdown list to filter table or view.
 
-- Teradata Source/Destination Editor: Mapping step doesn't work when type `\<database>.<table/view>`. As work-around, type `\<database>.<table/view>`, then select the drop-down button.
+- Teradata Source/Destination Editor: Mapping step doesn't work when type `\<database>.<table/view>`. As work-around, type `\<database>.<table/view>`, then select the dropdown list.
 
 - Teradata Source Editor: view can't be displayed when Data access mode is "Table Name – TPT Export." As work-around, use Advanced Editor of Teradata Source.
 

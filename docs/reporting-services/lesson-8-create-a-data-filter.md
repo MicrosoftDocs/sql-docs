@@ -30,9 +30,9 @@ You need to complete the following tasks to implement a table-based filter.
   
 3.  Select the **Filters** page, and then choose **Add**.  
   
-4.  In the **Expression** filed, select **ProductID** from the drop-down list. This column is where you apply the filter.  
+4.  In the **Expression** filed, select **ProductID** from the dropdown list. This column is where you apply the filter.  
   
-5.  Select the equal (**=**) operator in the **Operator** drop-down list.  
+5.  Select the equal (**=**) operator in the **Operator** dropdown list.  
   
 6.  Select the expression button next to the **Value** field, choose **Parameters** in the **Category** area, and then double-click **productid** in the **Values** area. The **Set expression for: Value** field should now contain expression similar to **=Parameters!productid.Value**.  
   

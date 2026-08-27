@@ -60,7 +60,7 @@ For example, if you have a table with 10,000 rows and a vector index, and you in
 `VECTOR_SEARCH` uses the current state of the DiskANN graph combined with pending changes that haven't been fully incorporated yet. This means:
 
 - Even when staleness is higher than zero, your `VECTOR_SEARCH` queries still return results and include recently inserted or updated rows.
-- However, the search algorithm can't leverage the full graph structure for optimal ranking until background maintenance completes.
+- However, the search algorithm can't use the full graph structure for optimal ranking until background maintenance completes.
 - Ranking accuracy might be reduced. The similarity scores and ordering might be less optimal for rows not yet fully integrated into the index structure.
 
 Search quality is best when all vectors are properly integrated into the graph and staleness percentage is zero.

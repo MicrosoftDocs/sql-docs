@@ -211,7 +211,7 @@ The driver provides three ways to insert data, each suited to a different scale:
 | --- | --- | --- |
 | `execute()` | 1 row per call | Use for single-row operations like form submissions or API handlers where you need the inserted ID immediately. |
 | `executemany()` | ~10-1,000 rows | Uses column-wise parameter binding for better throughput than a loop. Sends each row as a parameterized statement. |
-| `bulkcopy()` | Hundreds of rows and up | Uses the TDS bulk insert protocol, which is significantly more efficient than row-by-row inserts. Best for data loads, migrations, and batch processing. |
+| `bulkcopy()` | Hundreds of rows and up | Uses the TDS bulk insert protocol, which streams rows instead of sending one statement per row. Best for data loads, migrations, and batch processing. |
 
 For more details and examples, see [Data loading and movement patterns](data-loading-movement-patterns.md).
 

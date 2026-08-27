@@ -34,11 +34,11 @@ helpviewer_keywords:
   
 2.  From the menu bar, point to **Manage** and click **Business Rules**.  
   
-3.  On the **Business Rule** page, from the **Model** drop-down list, select a model.  
+3.  On the **Business Rule** page, from the **Model** dropdown list, select a model.  
   
-4.  From the **Entity** drop-down list, select an entity.  
+4.  From the **Entity** dropdown list, select an entity.  
   
-5.  From the **Member Types** drop-down list, select a type of member for the business rule to apply to.  
+5.  From the **Member Types** dropdown list, select a type of member for the business rule to apply to.  
   
 6.  Click **Add**.  
   
@@ -46,16 +46,16 @@ helpviewer_keywords:
   
 8.  Optionally, in the **Description** field, type the business rule description.  
   
-9. Optionally, check the **Send Notifications** option and from the drop-down list select a user or group to send the email notification to.  
+9. Optionally, check the **Send Notifications** option and from the dropdown list select a user or group to send the email notification to.  
   
     > [!NOTE]  
     >  Notifications are sent only for rules that include a validation action.  
   
 10. Under the **If** block, click **Add**. A panel will be displayed.  
   
-11. From the **Attribute** drop-down list, select an attribute.  
+11. From the **Attribute** dropdown list, select an attribute.  
   
-12. From the **Operator** drop-down list, select a condition.  
+12. From the **Operator** dropdown list, select a condition.  
   
 13. Complete any required fields.  
   
@@ -68,9 +68,9 @@ helpviewer_keywords:
   
 16. Under the **Then** block, click **Add** . A panel will be displayed.  
   
-17. From the **Attribute** drop-down list, select an attribute.  
+17. From the **Attribute** dropdown list, select an attribute.  
   
-18. From the **Operator** drop-down list, select an action.  
+18. From the **Operator** dropdown list, select an action.  
   
 19. Complete any required fields.  
   
@@ -80,9 +80,9 @@ helpviewer_keywords:
   
     1.  Under the **Else** block, click **Add**. A panel will be displayed.  
   
-    2.  From the **Attribute** drop-down list, select an attribute.  
+    2.  From the **Attribute** dropdown list, select an attribute.  
   
-    3.  From the **Operator** drop-down list, select an action.  
+    3.  From the **Operator** dropdown list, select an action.  
   
     4.  Complete any required fields.  
   

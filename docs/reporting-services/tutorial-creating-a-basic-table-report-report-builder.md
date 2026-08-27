@@ -160,7 +160,7 @@ Organize table data into groups on the **Arrange fields** page:
    The Sum function automatically aggregates the Quantity data, which is the default aggregate for numeric fields. The value is [Sum(Quantity)].  
   
    > [!TIP]
-   > You can select the dropdown arrow next to the [Sum(Quantity)] aggregate to view the other aggregate functions. For this exercise, leave the aggregate function set to **Sum**.  
+   > You can select the dropdown list arrow next to the [Sum(Quantity)] aggregate to view the other aggregate functions. For this exercise, leave the aggregate function set to **Sum**.  
   
 1. Drag the Sales field to the **Values** box and position it after the [Sum(Quantity)] aggregate.  
   
@@ -258,7 +258,7 @@ Format the values to display the date only:
 
 1. In your table report, select the cell that contains the `[SalesDate]` value.  
   
-1. On the **Home** tab, in the **Number** group, expand the **Format** dropdown menu, and select **Date**:  
+1. On the **Home** tab, in the **Number** group, expand the **Format** dropdown list, and select **Date**:  
 
    :::image type="content" source="../reporting-services/media/ssrs-tutorial-date-format.png" alt-text="Screenshot that shows how to change the format for the selected table cell to display as date only.":::
 

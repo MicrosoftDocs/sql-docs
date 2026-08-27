@@ -49,7 +49,7 @@ ms.custom:
   
     -   To use values from an existing entity, choose the name of the entity.
     
-    If there are more than fifty entities, you can filter and search for an entity. Otherwise, select an entity from the drop-down list.  
+    If there are more than fifty entities, you can filter and search for an entity. Otherwise, select an entity from the dropdown list.  
   
 6.  If you chose **the selected column** in the previous step, in the **New entity name** box, type a name for the new entity. This can be the same as the column (attribute) name.  
   

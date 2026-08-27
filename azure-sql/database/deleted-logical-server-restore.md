@@ -208,7 +208,7 @@ To restore a soft-deleted logical server in the Azure portal:
 
    1. Select the **Subscription** from the dropdown list.
    1. Select the **Location** of the deleted server from the dropdown list.
-   1. Select a **Deleted server** from the dropdown list. The dropdown shows all soft-deleted servers available to restore within their specified retention period.
+   1. Select a **Deleted server** from the dropdown list. The dropdown list shows all soft-deleted servers available to restore within their specified retention period.
 
    :::image type="content" source="media/deleted-logical-server-restore/restore-deleted-server.png" alt-text="Screenshot of the restore deleted server pane in the Azure portal." lightbox="media/deleted-logical-server-restore/restore-deleted-server.png":::
 

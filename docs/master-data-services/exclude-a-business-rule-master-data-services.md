@@ -33,11 +33,11 @@ helpviewer_keywords:
   
 2.  From the menu bar, point to **Manage** and click **Business Rules**.  
   
-3.  On the **Business Rules** page, from the **Model** drop-down list, select a model.  
+3.  On the **Business Rules** page, from the **Model** dropdown list, select a model.  
   
-4.  From the **Entity** drop-down list, select an entity.  
+4.  From the **Entity** dropdown list, select an entity.  
   
-5.  From the **Member Types** drop-down list, select a type of member.  
+5.  From the **Member Types** dropdown list, select a type of member.  
   
 6.  In the grid, select the row for the business rule you want to exclude and click **Edit**.  
   

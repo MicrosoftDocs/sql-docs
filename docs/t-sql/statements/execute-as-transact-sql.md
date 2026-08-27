@@ -70,12 +70,12 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  For more information, see [Specifying a User or Login Name](#_user) later in this topic.  
   
  NO REVERT  
- Specifies that the context switch cannot be reverted back to the previous context. The **NO REVERT** option can only be used at the adhoc level.  
+ Specifies that the context switch cannot be reverted back to the previous context. The **NO REVERT** option can only be used at the ad hoc level.  
   
  For more information about reverting to the previous context, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
  COOKIE INTO *@varbinary_variable*  
- Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct *@varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to *@varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
+ Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct *@varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to *@varbinary_variable*. The **COOKIE INTO** option can only be used at the ad hoc level.  
   
  *@varbinary_variable* is **varbinary(8000)**.  
   

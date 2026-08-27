@@ -85,7 +85,7 @@ The following steps show how to connect using multifactor authentication in the 
 
 1. To connect using MFA, on the **Connect to Server** dialog box in SSMS select **Microsoft Entra MFA**.
 
-   :::image type="content" source="media/authentication-microsoft-entra-connect-to-azure-sql/1-mfa-connect-authentication-method-dropdown.png" alt-text="Screenshot of the Connect to Server dialog in SSMS. 'Microsoft Entra MFA' is selected from the authentication dropdown list window.":::
+   :::image type="content" source="media/authentication-microsoft-entra-connect-to-azure-sql/1-mfa-connect-authentication-method-dropdown.png" alt-text="Screenshot of the Connect to Server dialog in SSMS. 'Microsoft Entra MFA' is selected from the authentication dropdown list.":::
 
 1. Fill the **Server name** box with your server's name. Fill the **User name** box with your Microsoft Entra credentials, in the format `user_name@domain.com`.
 

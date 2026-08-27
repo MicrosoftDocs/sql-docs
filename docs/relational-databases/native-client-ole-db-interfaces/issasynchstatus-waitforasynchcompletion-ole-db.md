@@ -37,10 +37,10 @@ HRESULT WaitForAsynchCompletion(
  The method succeeded.  
   
  E_UNEXPECTED  
- A rowset is in an unused state because **ITransaction::Commit** or **ITransaction::Abort** has been called or the rowset was cancelled during its initialization phase.  
+ A rowset is in an unused state because **ITransaction::Commit** or **ITransaction::Abort** has been called or the rowset was canceled during its initialization phase.  
   
  DB_E_CANCELED  
- Asynchronous processing was cancelled during rowset population or data source object initialization.  
+ Asynchronous processing was canceled during rowset population or data source object initialization.  
   
  DB_S_ASYNCHRONOUS  
  The operation has not yet completed even though specified time-out has been reached.  

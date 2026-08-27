@@ -91,7 +91,7 @@ STATE = STOP
   
 3.  Specify a name for the session.  
   
-4.  Expand the **Template** drop down box.  
+4.  Expand the **Template** dropdown list.  
   
 5.  Click **\<File From ...>Open** and browse for the session (XML file) you want to import.  
   

@@ -78,7 +78,7 @@ helpviewer_keywords:
   
 -   Source of report data: The type of data being accessed; for example, relational database, multidimensional database, flat file, or XML. This column answers the question: "What types of data can [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] use for a report?"  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Source Type: One of the data source types you see in the drop-down list when you define a data source in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This list is populated from installed and registered DPEs and data providers. This column answers the question: "What data source type do I select from the drop-down list when I create a report data source?"  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Source Type: One of the data source types you see in the dropdown list when you define a data source in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This list is populated from installed and registered DPEs and data providers. This column answers the question: "What data source type do I select from the dropdown list when I create a report data source?"  
   
 -   Name of Data Processing Extension/Data Provider: The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension or other data provider that corresponds to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data source type selected. This column answers the question: "When I select a data source type, which corresponding data processing extension or data provider is used?"  
   

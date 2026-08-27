@@ -51,7 +51,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 
 1. Go to [Azure SQL hub at aka.ms/azuresqlhub](https://aka.ms/azuresqlhub). 
 1. In the resource menu, expand **Azure SQL Database** and select **SQL databases**.
-1. Select the **+ Create** dropdown button and select **SQL database**.
+1. From the **+ Create** dropdown list, select **SQL database**.
 
    :::image type="content" source="media/always-encrypted-enclaves-getting-started-sgx/create-sql-database.png" alt-text="Screenshot from the Azure portal showing the SQL databases page, the Create button, and the SQL database option." lightbox="media/always-encrypted-enclaves-getting-started-sgx/create-sql-database.png":::
 

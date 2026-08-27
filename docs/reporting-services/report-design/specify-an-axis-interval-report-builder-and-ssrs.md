@@ -12,7 +12,7 @@ ms.custom:
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-Learn to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in a paginated report.
+Learn to change the number of labels and check marks on the category (x) axis in a chart by setting the axis interval in a paginated report.
  
 On the value axis (usually the y axis), axis intervals provide a consistent measure of the data points on the chart. 
 
@@ -25,7 +25,7 @@ To try setting the axis interval with sample data, see [Tutorial: Add a Column C
 >
 > This topic doesn't apply to:
 >-   Date or time values on the category axis. Be default, **DateTime** values appear as days. You can specify a different date or time interval, such as a month or time interval. For more information, see [Format Axis Labels as Dates or Currencies](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md).  
->-  Pie, doughnut, funnel or pyramid charts, which do not have axes. 
+>-  Pie, donut, funnel or pyramid charts, which do not have axes. 
   
 ## To show all the category labels on the x-axis  
 

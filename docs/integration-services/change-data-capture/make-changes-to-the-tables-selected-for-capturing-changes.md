@@ -31,7 +31,7 @@ f1_keywords:
  To change the data type, click in the **Data Type** column and select a different data type. Only data types that are compatible with the original data type are available.  
   
 > [!NOTE]  
->  If no additional data types can be selected, the drop-down list is not available.  
+>  If no additional data types can be selected, the dropdown list is not available.  
   
  **Change the Security Role**  
   

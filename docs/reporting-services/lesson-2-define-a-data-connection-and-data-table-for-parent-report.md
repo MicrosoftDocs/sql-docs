@@ -36,7 +36,7 @@ After you create a new website project using the ASP.NET website template for Vi
   
     2.  In the **Log on to the server** section, select the option that provides you access to the data. **Use Windows Authentication** is the default.  
   
-    3.  From the **Select or enter a database name** drop-down list, select [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)].  
+    3.  From the **Select or enter a database name** dropdown list, select [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)].  
   
     4.  Select **OK**, and then choose **Next**.  
   

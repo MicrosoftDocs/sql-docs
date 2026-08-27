@@ -44,7 +44,7 @@ Modernization Advisor evaluates the following SQL Server VM resources to match w
 
 Take advantage of the following benefits by migrating to Azure SQL Managed Instance:
 
-- Fully managed Platform-as-a-Service (PaaS) offering with built-in high availability, and intelligent performance optimization.
+- Fully managed platform as a service (PaaS) offering with built-in high availability, and intelligent performance optimization.
 - 24x7 service health monitoring and automitigation services, with Microsoft engineers monitoring and managing the service to ensure stability. 
 - Easily and dynamically scale, add, or remove resources such as CPU, memory, IO, and storage as online operations without downtime. 
 - No need to enable or configure backups or patching as both are fully automated in Azure SQL Managed Instance. 

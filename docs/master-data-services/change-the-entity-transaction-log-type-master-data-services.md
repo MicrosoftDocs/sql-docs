@@ -41,6 +41,6 @@ ms.custom:
   
 3.  On the **Manage Entity** page, select the row for  the entity that you want to update and then click **Edit**.  
   
-4.  Choose the transaction log type in the drop-down list.  
+4.  Choose the transaction log type in the dropdown list.  
   
 5.  Click **Save**.

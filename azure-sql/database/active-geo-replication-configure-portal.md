@@ -163,7 +163,7 @@ The secondary database can be switched to become the primary.
 1. Scroll to **Data management**, and then select **Replicas**.
 1. In the **Geo replicas** list, select the database you want to become the new primary, select the ellipsis, and then select **Forced failover**.
 
-    :::image type="content" source="media/active-geo-replication-configure-portal/azure-portal-select-forced-failover.png" alt-text="Screenshot that shows selecting forced failover from the drop-down." lightbox="media/active-geo-replication-configure-portal/azure-portal-select-forced-failover.png":::
+    :::image type="content" source="media/active-geo-replication-configure-portal/azure-portal-select-forced-failover.png" alt-text="Screenshot that shows selecting forced failover from the dropdown list." lightbox="media/active-geo-replication-configure-portal/azure-portal-select-forced-failover.png":::
 1. Select **Yes** to begin the failover.
 
 # [Azure CLI](#tab/azure-cli)

@@ -179,7 +179,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Do not uninstall the SQL Server Reporting Services SharePoint 2010 Add-in unless you are following troubleshooting or installation instructions that specifically direct you to uninstall it. The Reporting Services Add-in is used by Access Services. It is installed by the SharePoint Products Preparation tool and should remain on the system to support functionality required by SharePoint.  
   
-     Do not uninstall the Analysis Services OLE DB provider. SharePoint installs the OLE DB provider as a prerequisite for Excel workbooks that connect to Analysis Services databases. [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] installs a newer version, but this version is backwards compatible so you should leave it on the system to avoid data connection problems later.  
+     Do not uninstall the Analysis Services OLE DB provider. SharePoint installs the OLE DB provider as a prerequisite for Excel workbooks that connect to Analysis Services databases. [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] installs a newer version, but this version is backward compatible so you should leave it on the system to avoid data connection problems later.  
   
 ## Related content
 

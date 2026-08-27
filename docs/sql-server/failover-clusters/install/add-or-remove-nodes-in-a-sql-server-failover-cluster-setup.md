@@ -58,7 +58,7 @@ helpviewer_keywords:
   
 7.  The System Configuration Checker will verify the system state of your computer before Setup continues. After the check is complete, click **Next** to continue.  
   
-8.  On the Cluster Node Configuration page, use the drop-down box to specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance that will be modified during this Setup operation.  
+8.  On the Cluster Node Configuration page, use the dropdown list to specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance that will be modified during this Setup operation.  
   
 9. On the Server Configuration - Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install. For failover cluster instance installations, account name and startup type information will be pre-populated on this page based on settings provided for the active node. You must provide passwords for each account. For more information, see [Server Configuration - Service Accounts](../../../database-engine/install-windows/install-sql-server.md) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -90,7 +90,7 @@ helpviewer_keywords:
   
 4.  After you click install on the Setup Support Files page, the System Configuration Checker verifies the system state of your computer before Setup continues. After the check is complete, click **Next** to continue.  
   
-5.  On the Cluster Node Configuration page, use the drop-down box to specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance to be modified during this Setup operation. The node to be removed is listed in the **Name of this node** field.  
+5.  On the Cluster Node Configuration page, use the dropdown list to specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance to be modified during this Setup operation. The node to be removed is listed in the **Name of this node** field.  
   
 6.  The Ready to Remove Node page displays a tree view of options that were specified during Setup. To continue, click **Remove**.  
   

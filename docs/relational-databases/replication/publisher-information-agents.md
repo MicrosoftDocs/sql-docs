@@ -40,7 +40,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
  For more information about these jobs, see [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
 ## Options  
- To display information about an agent or job, select from the **Agent and Job Types** drop-down menu. For more detailed information and tasks that are related to an agent or job, right-click the row for that agent or job, and then click an option on the shortcut menu. To change the way that the grid displays data, right-click the grid, and then click one of the following options:  
+ To display information about an agent or job, select from the **Agent and Job Types** dropdown list. For more detailed information and tasks that are related to an agent or job, right-click the row for that agent or job, and then click an option on the shortcut menu. To change the way that the grid displays data, right-click the grid, and then click one of the following options:  
   
 -   **Sort**: Sort on one or more columns in the **Sort Columns** dialog box.  
   

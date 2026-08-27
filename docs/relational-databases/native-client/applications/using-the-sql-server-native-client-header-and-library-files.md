@@ -36,7 +36,7 @@ helpviewer_keywords:
   
  In addition to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client header file, there is also a sqlncli11.lib library file which is the export library for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Bulk Copy Program (BCP) functionality for ODBC.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client header file is backwards compatible with both the sqloledb.h and odbcss.h header files used with Microsoft Data Access Components (MDAC), but does not contain CLSIDs for SQLOLEDB (the OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] included with MDAC) or symbols for XML functionality (which is not supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client).  
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client header file is backward compatible with both the sqloledb.h and odbcss.h header files used with Microsoft Data Access Components (MDAC), but does not contain CLSIDs for SQLOLEDB (the OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] included with MDAC) or symbols for XML functionality (which is not supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client).  
   
  ODBC applications cannot reference the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client header (sqlncli.h) and odbcss.h in the same program. Even if you are not using any of the features introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client header file will work in place of the older odbcss.h.  
   

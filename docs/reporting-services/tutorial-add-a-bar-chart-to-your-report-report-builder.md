@@ -184,7 +184,7 @@ To improve the readability of the chart values, you might want to move the chart
   
 4.  For **Legend position**, select a different position. For example, set the position to the middle bottom option.  
   
-    When the legend is placed at the top or bottom of a chart, the layout of the legend changes from vertical to horizontal. You can select a different layout from the **Layout** drop-down list.  
+    When the legend is placed at the top or bottom of a chart, the layout of the legend changes from vertical to horizontal. You can select a different layout from the **Layout** dropdown list.  
   
 5.  Select **OK**.
   
@@ -245,7 +245,7 @@ You can add a filter to the chart to specify which data from the dataset to incl
   
 7.  Verify that the data type is **Text**.  
   
-8.  In **Operator**, select **Top N** from the drop-down list.  
+8.  In **Operator**, select **Top N** from the dropdown list.  
   
 9. In **Value**, enter the following expression: **=5**  
   

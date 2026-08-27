@@ -74,7 +74,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 3.  Right-click the **Local Subscriptions** folder, and then click **New Subscriptions**.  
   
-4.  On the **Publication** page of the New Subscription Wizard, select **\<Find SQL Server Publisher>** or **\<Find Oracle Publisher>** from the **Publisher** drop-down list.  
+4.  On the **Publication** page of the New Subscription Wizard, select **\<Find SQL Server Publisher>** or **\<Find Oracle Publisher>** from the **Publisher** dropdown list.  
   
 5.  Connect to the Publisher in the **Connect to Server** dialog box.  
   

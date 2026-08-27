@@ -47,9 +47,9 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
 4.  On the **Map** page, specify a connection to the data source. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
-5.  In the **Mappings** table, select a source column from the drop-down list for the **Source Column** column of an empty row. Make sure that the source column contains composite domain addressed by two existing single domains. If no corresponding single domains exists, click the **Create a Domain** icon.  
+5.  In the **Mappings** table, select a source column from the dropdown list for the **Source Column** column of an empty row. Make sure that the source column contains composite domain addressed by two existing single domains. If no corresponding single domains exists, click the **Create a Domain** icon.  
   
-6.  In the **Mappings** table, select a source column from the drop-down list for the **Source Column** column of an empty row. Ensure that the source column contains composite domain parts of which are addressed by two existing single domains. If no corresponding single domains exist, click the **Create a Domain** icon to create them. For more information, see [Create a Domain](../data-quality-services/create-a-domain.md).  
+6.  In the **Mappings** table, select a source column from the dropdown list for the **Source Column** column of an empty row. Ensure that the source column contains composite domain parts of which are addressed by two existing single domains. If no corresponding single domains exist, click the **Create a Domain** icon to create them. For more information, see [Create a Domain](../data-quality-services/create-a-domain.md).  
   
 7.  Click the **Create a Composite** Domain icon.  
   

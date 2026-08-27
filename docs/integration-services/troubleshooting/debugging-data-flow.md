@@ -193,7 +193,7 @@ order by source_component_name desc
   
 5.  Right-click a path between two data flow components, and click **Edit**.  
   
-6.  On the **General** page, you can view and edit path properties. For example, from the **PathAnnotation** drop-down list you can select the annotation that appears next to the path.  
+6.  On the **General** page, you can view and edit path properties. For example, from the **PathAnnotation** dropdown list you can select the annotation that appears next to the path.  
   
 7.  On the **Metadata** page, you can view the column metadata and copy the metadata to the Clipboard.  
   

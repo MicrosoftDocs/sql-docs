@@ -59,7 +59,7 @@ When you select a conversion mode in the Mode box, SSMA applies the following se
 
 ### CONVERT or CAST empty strings to numeric types
 
-Specifies how to handle empty or blank strings within `CONVERT` or `CAST` expressions with numeric type as datatype argument. The following options are available for this setting:
+Specifies how to handle empty or blank strings within `CONVERT` or `CAST` expressions with numeric type as the data type argument. The following options are available for this setting:
 
 - Select **Simple conversion** to convert the expressions without any correction.
 - If **Empty string as zero numeric** is selected, then string parameter `{s}` will be replaced with `CASE ltrim(rtrim({s})) WHEN "" THEN 0 else {s} END` expression.

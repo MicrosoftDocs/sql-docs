@@ -3,8 +3,8 @@ title: Limitations and Unsupported Features in mssql-django
 description: Limitations and unsupported features of the mssql-django Django backend for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 08/21/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference

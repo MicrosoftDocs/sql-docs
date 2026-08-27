@@ -3,8 +3,8 @@ title: "Quickstart: Connect Django to SQL Server"
 description: Connect a Django application to SQL Server using mssql-django and run database operations with the Django ORM.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 08/21/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart

@@ -3,8 +3,8 @@ title: mssql-django Support and Lifecycle
 description: Learn about the support lifecycle, version compatibility, and how to report issues for the mssql-django package.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 08/21/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview

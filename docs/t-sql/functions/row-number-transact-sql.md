@@ -50,7 +50,10 @@ ROW_NUMBER ( )
 
 #### order_by_clause
 
- The `ORDER BY` clause determines the sequence in which the rows are assigned their unique `ROW_NUMBER` within a specified partition. It is required. The `<ROW or RANGE clause>` of the `OVER` clause can't be specified for the `ROW_NUMBER` function. For more information, see [OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md).  
+ The `ORDER BY` clause determines the sequence in which the rows are assigned their unique `ROW_NUMBER` within a specified partition. It is required. For more information, see [OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md).  
+
+> [!NOTE]  
+> You can't use `ROW` or `RANGE` from the `OVER` clause in the `ROW_NUMBER` function.
 
 ## Return types
 

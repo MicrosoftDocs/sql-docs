@@ -338,6 +338,23 @@ except mssql_python.ConnectionStringParseError as e:
     # Output: Unknown keyword 'Servr'
 ```
 
+### Keywords from other drivers
+
+Validation runs before the driver opens a connection, so a keyword that other SQL Server drivers accept fails immediately here. Connection strings ported from ADO.NET, ODBC, or pyodbc usually need these substitutions:
+
+| Keyword in other drivers | mssql-python equivalent |
+| --- | --- |
+| `Data Source` | `Server`, or its `addr` and `address` aliases |
+| `Initial Catalog` | `Database` |
+| `User ID` | `UID` |
+| `Password` | `PWD` |
+| `Connection Timeout`, `Connect Timeout`, `Timeout`, `Login Timeout` | The `timeout` parameter of `connect()`. For more information, see [Connection timeout](#connection-timeout). |
+| `Application Name`, `APP` | None. The driver sets this value. For more information, see [Reserved keywords](#reserved-keywords). |
+| `Pooling`, `Max Pool Size` | None. Configure pooling in code. For more information, see [Connection pooling](connection-pooling.md). |
+| `Workstation ID`, `WSID` | None. |
+
+`APP` and `Driver` report that the keyword is reserved rather than unrecognized, because the driver controls both values.
+
 ## Related content
 
 - [Build connection strings programmatically](build-connection-strings.md)

@@ -60,7 +60,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
 -   Limit the number of tables in the join filter hierarchy.  
   
-     Join Filters can involve an unlimited number of tables, but filters with a large number of tables can significantly impact performance during merge processing. If you are generating join filters of five or more tables, consider other solutions: do not filter tables that are small, not subject to change, or are primarily lookup tables. Use join filters only between tables that must be partitioned among subscriptions.  
+     Join Filters can involve an unlimited number of tables, but filters with a large number of tables can significantly affect performance during merge processing. If you are generating join filters of five or more tables, consider other solutions: do not filter tables that are small, not subject to change, or are primarily lookup tables. Use join filters only between tables that must be partitioned among subscriptions.  
   
 -   Set the **join unique key** option to **True** where appropriate.  
   

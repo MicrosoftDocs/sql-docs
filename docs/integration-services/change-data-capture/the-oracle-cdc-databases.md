@@ -77,7 +77,7 @@ ms.topic: concept-article
   
  For the Oracle CDC, the LSN values stored in this table are based on the Oracle System Change Number (SCN) value associated with the change. The first 6 bytes of the LSN value is the original Oracle SCN number.  
   
- Also when using the Oracle CDC, the time columns (`tran_begin_time` and `tran_end_time`) store the UTC time of the change rather than the local time as it does with the regular SQL Server CDC. This ensures that daylight saving time changes do not impact the data stored in the lsn_time_mapping.  
+ Also when using the Oracle CDC, the time columns (`tran_begin_time` and `tran_end_time`) store the UTC time of the change rather than the local time as it does with the regular SQL Server CDC. This ensures that daylight saving time changes do not affect the data stored in the lsn_time_mapping.  
   
 ### cdc.xdbcdc_config
 

@@ -96,7 +96,7 @@ RECEIVE * FROM MyQueue
  Initiating a subscription does not guarantee that subsequent messages will be successfully delivered. In addition, no check is made as to the validity of the service name specified.  
   
 > [!NOTE]  
->  Preparing statements will never cause the subscription to be initiated; only statement execution will achieve this and query notifications are not impacted by the use of OLE DB core services.  
+>  Preparing statements will never cause the subscription to be initiated; only statement execution will achieve this and query notifications are not affected by the use of OLE DB core services.  
   
  For more information about the DBPROPSET_SQLSERVERROWSET property set, see [Rowset Properties and Behaviors](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   

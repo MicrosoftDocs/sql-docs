@@ -70,7 +70,9 @@ No. Since the change is only on the client side to connect to the server, there'
 
 Since the clients used for connecting to the server needs to be updating the certificate information as described in the [fix section](ssl-root-certificate-expiring.md#what-do-i-need-to-do-to-maintain-connectivity), we don't need to a downtime for the server in this case.
 
-### If I create a new server after November 30, 2020, will I be impacted?
+<a id="if-i-create-a-new-server-after-november-30-2020-will-i-be-affected"></a>
+
+### If I create a new server after November 30, 2020, will I be affected?
 
 For new servers, you can use the newly issued certificate for your applications to connect using SSL/TLS.
 

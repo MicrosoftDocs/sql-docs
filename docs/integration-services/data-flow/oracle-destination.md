@@ -51,7 +51,7 @@ Types of output errors during the loading process supported are: data conversion
 
 ## Parallelism
 
-In batch loading mode, there is no restriction on configuration of parallel run, but the performance might be impacted by standard record locking mechanism. The amount of performance loss depends on the data and table organization.
+In batch loading mode, there is no restriction on configuration of parallel run, but the performance might be affected by standard record locking mechanism. The amount of performance loss depends on the data and table organization.
 
 In direct path protocol (fast load), only one Oracle destination can be configured to run against the same table at the same time, but can use Parallel mode.
 

@@ -73,7 +73,7 @@ Shrink the log file to reduce its physical size by returning free space to the o
 If the log file is full, probably because of open transactions, investigate [what's preventing transaction log truncation](troubleshoot-a-full-transaction-log-sql-server-error-9002.md#how-to-resolve-a-full-transaction-log).
 
 > [!CAUTION]  
-> Shrink operations shouldn't be considered a regular maintenance operation. Data and log files that grow because of regular recurring business operations don't require shrink operations. Shrink commands impact database performance while running. They should be run during periods of low usage. We don't recommend that you shrink data files if a regular application workload will cause the files to grow to the same allocated size again.
+> Shrink operations shouldn't be considered a regular maintenance operation. Data and log files that grow because of regular recurring business operations don't require shrink operations. Shrink commands affect database performance while running. They should be run during periods of low usage. We don't recommend that you shrink data files if a regular application workload will cause the files to grow to the same allocated size again.
 
 Be aware of the potential negative performance impact of shrinking database files. See [Index maintenance after shrink](#rebuild-indexes).
 

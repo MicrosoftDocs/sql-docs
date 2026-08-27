@@ -28,7 +28,7 @@ Report servers configured for SharePoint mode can also utilize the SharePoint Un
 
 The report server logs data about report execution into an internal database table. The information from the table is available from SQL Server views.  
   
-The report execution log is stored in the report server database that by default is named ReportServer. The SQL views provide the execution log information. The "2" and "3" views were added in more recent releases and contain new fields, or they contain fields with friendlier names than the previous releases. The older views remain in the product so custom applications that depend on them aren't impacted. If you don't have a dependence on an older view, for example ExecutionLog, you should use the most recent view, **ExecutionLog3**.
+The report execution log is stored in the report server database that by default is named ReportServer. The SQL views provide the execution log information. The "2" and "3" views were added in more recent releases and contain new fields, or they contain fields with friendlier names than the previous releases. The older views remain in the product so custom applications that depend on them aren't affected. If you don't have a dependence on an older view, for example ExecutionLog, you should use the most recent view, **ExecutionLog3**.
   
 ## <a name="bkmk_sharepoint"></a> Configuration settings for a SharePoint mode report server  
 

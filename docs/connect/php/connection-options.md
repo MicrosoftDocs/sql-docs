@@ -59,7 +59,7 @@ This topic lists the options that are permitted in the associative array (when u
 
 2. All queries executed on the established connection are made to the database that is specified by the `Database` attribute. However, if the user has the appropriate permissions, data in other databases can be accessed by using a fully qualified name. For example, if the *master* database is set with the `Database` connection attribute, it is still possible to execute a Transact-SQL query that accesses the *AdventureWorks.HumanResources.Employee* table by using the fully qualified name.  
 
-3. Enabling `Encryption` can impact the performance of some applications due to the computational overhead required to encrypt data.  
+3. Enabling `Encryption` can affect the performance of some applications due to the computational overhead required to encrypt data.  
 
 4. The `UID` and `PWD` attributes must both be set when connecting with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
 

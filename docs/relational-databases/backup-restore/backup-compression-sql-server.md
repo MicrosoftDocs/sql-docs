@@ -52,7 +52,7 @@ You can use the ZSTD algorithm for backup compression in one of the following wa
  
 ##  <a name="PerfImpact"></a> Performance impact of compressing backups  
 
-By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely impact concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md). 
+By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely affect concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md). 
 
 Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can use [Integrated offloading & acceleration](../integrated-acceleration/overview.md) to compress backups and offload the CPU resources for the backup.
   
@@ -78,7 +78,7 @@ To obtain a good picture of your backup I/O performance, you can isolate the bac
 SELECT backup_size/compressed_backup_size FROM msdb..backupset;  
 ```  
   
- The compression ratio of a compressed backup depends on the data that has been compressed. A variety of factors can impact the compression ratio obtained. Major factors include:  
+ The compression ratio of a compressed backup depends on the data that has been compressed. A variety of factors can affect the compression ratio obtained. Major factors include:  
   
 -   The type of data.  
   

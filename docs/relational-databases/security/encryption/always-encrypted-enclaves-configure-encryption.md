@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) supports cryptographic operations on database columns in-place - inside a secure enclave in the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)]. In-place encryption eliminates the need to move the data for such operations outside of the database, making the cryptographic operations faster and more reliable.
 
 > [!NOTE]
-> Despite the performance benefits of in-place encryption, cryptographic operations on large tables can take a long time and consume substantial resources, potentially impacting and degrading performance and availability of your applications.
+> Despite the performance benefits of in-place encryption, cryptographic operations on large tables can take a long time and consume substantial resources, potentially affecting and degrading performance and availability of your applications.
 
 In-place encryption makes it also possible to trigger cryptographic operations using the [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) statement, which isn't possible without an enclave.
 
@@ -38,7 +38,7 @@ For information on how to ensure your column encryption keys are enclave-enabled
 
 You also need to ensure that your environment meets the general [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves).
 
-A user or an application triggering cryptographic operations must have permissions to make schema changes on the table containing the impacted columns and to access column master keys involved in the operations, and relevant key metadata in the database.
+A user or an application triggering cryptographic operations must have permissions to make schema changes on the table containing the affected columns and to access column master keys involved in the operations, and relevant key metadata in the database.
 
 You can trigger in-place encryption using one of the following methods:
 - [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) from SQL Server Management Studio or your custom application. See [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).

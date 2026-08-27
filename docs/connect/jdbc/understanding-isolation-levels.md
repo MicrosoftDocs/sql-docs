@@ -35,7 +35,7 @@ Choosing a transaction isolation level doesn't affect the locks that are acquire
 
 A lower isolation level increases the ability of many users to access data at the same time. But it increases the number of concurrency effects, such as dirty reads or lost updates, that users might see. Conversely, a higher isolation level reduces the types of concurrency effects that users might see. But it requires more system resources and increases the chances that one transaction will block another. Choosing the appropriate isolation level depends on balancing the data integrity requirements of the application against the overhead of each isolation level.
 
-The highest isolation level, serializable, guarantees that a transaction will retrieve exactly the same data every time it repeats a read operation. But it uses a level of locking that is likely to impact other users in multi-user systems. The lowest isolation level, read uncommitted, can retrieve data that has been modified but not committed by other transactions. All concurrency side effects can happen in read uncommitted, however there's no read locking or versioning, so overhead is minimized.
+The highest isolation level, serializable, guarantees that a transaction will retrieve exactly the same data every time it repeats a read operation. But it uses a level of locking that is likely to affect other users in multi-user systems. The lowest isolation level, read uncommitted, can retrieve data that has been modified but not committed by other transactions. All concurrency side effects can happen in read uncommitted, however there's no read locking or versioning, so overhead is minimized.
 
 ## Remarks
 

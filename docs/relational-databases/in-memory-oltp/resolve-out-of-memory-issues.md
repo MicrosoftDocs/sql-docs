@@ -18,7 +18,7 @@ ms.topic: how-to
 |Topic|Overview|  
 |-----------|--------------|  
 |[Resolve database restore failures due to OOM](#bkmk_resolveRecoveryFailures)|What to do if you get the error message, "Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'."|  
-|[Resolve impact of low memory or OOM conditions on the workload](#bkmk_recoverFromOOM)|What to do if you find low memory issues are negatively impacting performance.|  
+|[Resolve impact of low memory or OOM conditions on the workload](#bkmk_recoverFromOOM)|What to do if you find low memory issues are negatively affecting performance.|  
 |[Resolve page allocation failures due to insufficient memory when sufficient memory is available](#bkmk_PageAllocFailure)|What to do if you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. ..." when available memory is sufficient for the operation.|
 |[Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs)|What to keep in mind when using In-Memory OLTP in a virtualized environment.|
   

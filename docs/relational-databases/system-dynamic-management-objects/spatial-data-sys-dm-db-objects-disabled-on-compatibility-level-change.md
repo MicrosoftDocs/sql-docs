@@ -143,7 +143,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
 ## Example  
- The following example shows a query on **sys.dm_db_objects_disabled_on_compatibility_level_change** to find the objects impacted by changing the compatibility level to 120.  
+ The following example shows a query on **sys.dm_db_objects_disabled_on_compatibility_level_change** to find the objects affected by changing the compatibility level to 120.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

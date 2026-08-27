@@ -35,7 +35,7 @@ Replacing an existing column master key (that isn't enclave-enabled) with a new 
 - Cons:
   - Doesn't support changing the encryption type from deterministic to randomized. While it unlocks in-place encryption for columns encrypted using deterministic encryption, it doesn't enable rich computations. You'll need to re-encrypt the columns using randomized encryption.
   - Doesn't allow you to selectively convert some of the columns associated with a given column master key.
-  - Introduces key management overhead. You'll need to create a new column master key and make it available to applications that query the impacted columns.
+  - Introduces key management overhead. You'll need to create a new column master key and make it available to applications that query the affected columns.
 
 For information on how to rotate a column master key, see [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md).
 
@@ -48,7 +48,7 @@ This method involves executing Method 1 as the first step, and then re-encrypt t
   
 - Cons:
   - Doesn't allow you to selectively convert some of the columns associated with a given column master key.
-  - It introduces key management overhead. You'll need to create a new column master key and make it available to applications that query the impacted columns.
+  - It introduces key management overhead. You'll need to create a new column master key and make it available to applications that query the affected columns.
 
 For information on how to rotate a column master key and re-encrypt a column in-place to rotate a column encryption key, see [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md).
 
@@ -61,7 +61,7 @@ This method involves re-encrypting a column with an enclave-enabled column encry
   
 - Cons:
   - To re-encrypt the data, the tool will move it out of the database, which can take a long time and is prone to network errors.
-  - It introduces key management overhead. You'll need to create a new column master key and make it available to applications that query the impacted columns.
+  - It introduces key management overhead. You'll need to create a new column master key and make it available to applications that query the affected columns.
 
 For more information on how to rotate a column encryption via a client-side tool, see [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) and [Rotate Always Encrypted keys using PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 

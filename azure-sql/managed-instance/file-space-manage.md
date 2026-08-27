@@ -68,7 +68,7 @@ Storage space metrics displayed in the Azure Resource Manager based metrics APIs
 To reduce the physical size of a physical log file by removing unused space, shrink the log file. A shrink only makes a difference when a transaction log file contains unused space. If the log file is full, likely because of open transactions, investigate [what is preventing transaction log truncation](troubleshoot-transaction-log-errors-issues.md?view=azuresqldb-mi-current&preserve-view=true#prevented-transaction-log-truncation).
 
 > [!CAUTION]  
-> Shrink operations shouldn't be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations don't require shrink operations. Shrink commands impact database performance while running, and if possible should be run during periods of low usage. Shrinking data files isn't recommended if the regular application workload causes the files to grow to the same allocated size again.
+> Shrink operations shouldn't be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations don't require shrink operations. Shrink commands affect database performance while running, and if possible should be run during periods of low usage. Shrinking data files isn't recommended if the regular application workload causes the files to grow to the same allocated size again.
 
 Be aware of the potential negative performance impact of shrinking database files. For more information, see [index maintenance after shrink](#index-maintenance-after-shrink). In rare cases, [automated database backups](automated-backups-overview.md) can affect shrink operations. If necessary, retry the shrink operation.
 

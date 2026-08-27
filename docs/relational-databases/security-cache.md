@@ -100,7 +100,7 @@ This section describes issues with the security cache.
 
 ### Security cache invalidations
 
-Various scenarios can trigger security cache invalidations at either the database or server level. When an invalidation occurs, all current cache entries are invalidated. All future queries and permission checks follow the full "No cache" workflow until the caches are repopulated. Invalidation can significantly impact server performance, especially under high load, as all active connections need to rebuild the cached entries. Repeated cache invalidations can make this impact worse. Invalidations in the `master` database are treated as server-wide invalidations, affecting the caches in all databases on the instance. 
+Various scenarios can trigger security cache invalidations at either the database or server level. When an invalidation occurs, all current cache entries are invalidated. All future queries and permission checks follow the full "No cache" workflow until the caches are repopulated. Invalidation can significantly affect server performance, especially under high load, as all active connections need to rebuild the cached entries. Repeated cache invalidations can make this impact worse. Invalidations in the `master` database are treated as server-wide invalidations, affecting the caches in all databases on the instance. 
 
 SQL Server 2025 introduces a feature that invalidates caches for only a specific login. This means that when security cache entries are invalidated, only those entries belonging to the affected login are affected. For instance, if you grant login L1 a new permission, the tokens for login L2 remain unaffected.
 

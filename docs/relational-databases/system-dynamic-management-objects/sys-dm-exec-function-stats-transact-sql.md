@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
   Returns aggregate performance statistics for cached functions. The view returns one row for each cached function plan, and the lifetime of the row is as long as the function remains cached. When a  function is removed from the cache, the corresponding row is eliminated from this view. At that time, a Performance Statistics SQL trace event is raised similar to **sys.dm_exec_query_stats**. Returns information about scalar functions, including in-memory functions and CLR scalar functions. Does not return information about table valued functions, and about scalar functions that are inlined with [Scalar UDF Inlining](../user-defined-functions/scalar-udf-inlining.md).
   
- In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
+ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], dynamic management views cannot expose information that would affect database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
   
 > [!NOTE]
 > The results of **sys.dm_exec_function_stats**  may vary with each execution as the data only reflects finished queries, and not ones still in-flight. 

@@ -62,7 +62,7 @@ GO
 
 For a U.S. English environment, @@DATEFIRST defaults to 7 (Sunday).
   
-This language setting impacts character string interpretation as SQL Server converts those strings to date values for database storage. This setting also impacts display of date values stored in the database. This setting does not impact the storage format of date data.
+This language setting affects character string interpretation as SQL Server converts those strings to date values for database storage. This setting also affects display of date values stored in the database. This setting does not affect the storage format of date data.
 
 This example first sets the language to `Italian`. The statement `SELECT @@DATEFIRST;` returns `1`. The next statement sets the language to  is then set to `us_english`. The final statement, `SELECT @@DATEFIRST;` returns `7`.
   

@@ -71,7 +71,7 @@ END
  For the supported syntax for Transact-SQL Execute statements, for natively compiled, scalar user-defined functions, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md). For the supported syntax for executing the user-defined functions in a natively compiled stored procedure, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
 ## Hints and Parameters  
- Support for table, join, and query hints inside natively compiled, scalar user-defined functions is equal to support for these hints for natively compiled stored procedures. As with interpreted scalar user-defined functions, the query hints included with a Transact-SQL query that reference a natively compiled, scalar user-defined function do not impact the query plan for this user-defined function.  
+ Support for table, join, and query hints inside natively compiled, scalar user-defined functions is equal to support for these hints for natively compiled stored procedures. As with interpreted scalar user-defined functions, the query hints included with a Transact-SQL query that reference a natively compiled, scalar user-defined function do not affect the query plan for this user-defined function.  
   
  The parameters supported for the natively compiled, scalar user-defined functions are all the parameters supported for natively compiled stored procedures, as long as the parameters are allowed for scalar user-defined functions. An example of a supported parameter is the table-valued parameter.  
   

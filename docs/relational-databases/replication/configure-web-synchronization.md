@@ -88,7 +88,7 @@ helpviewer_keywords:
   
  You can support a greater number of concurrent synchronization operations per CPU by increasing the Maximum Worker Process property value. Scaling out by increasing the number of worker processes per CPU is known as creating a "Web garden."  
   
- Web gardening will allow more than two Subscribers to synchronize at the same time. It will also increase CPU utilization by replisapi.dll, which can negatively impact overall server performance. It is important to balance these considerations when you choose a value for Maximum Worker Processes.  
+ Web gardening will allow more than two Subscribers to synchronize at the same time. It will also increase CPU utilization by replisapi.dll, which can negatively affect overall server performance. It is important to balance these considerations when you choose a value for Maximum Worker Processes.  
   
 #### To increase Maximum Worker Processes in IIS 7  
   

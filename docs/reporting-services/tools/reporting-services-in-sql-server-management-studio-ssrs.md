@@ -433,7 +433,7 @@ Sets header values for all URLs matching the specified regex pattern. Users can 
 ```
 
 > [!NOTE]
-> Too many headers may impact performance.
+> Too many headers may affect performance.
 >
 > The `X-Frame-Options` default response header will block the ability to embed SSRS reports within an iframe html element. Removing this header from the `<CustomHeaders />` advanced server property will allow reports to be used within iframes.
 > **It is not recommended to make this change on any report servers that will be hosted on the public internet.**

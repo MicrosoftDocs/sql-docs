@@ -38,7 +38,7 @@ Reverse migration is available under the following conditions:
 
 Unlike regular service level objective change operations in Hyperscale, migrating to Hyperscale and reverse migration to General Purpose are size-of-data operations.
 
-The duration of a reverse migration operation depends mainly on the size of the database and concurrent write activities happening during the migration. The number of vCores you assign to the target General Purpose database also impacts the duration of the reverse migration. We recommend that you provision the target General Purpose database with a number of vCores greater than or equal to the number of vCores assigned to the source Hyperscale database to sustain similar workloads.
+The duration of a reverse migration operation depends mainly on the size of the database and concurrent write activities happening during the migration. The number of vCores you assign to the target General Purpose database also affects the duration of the reverse migration. We recommend that you provision the target General Purpose database with a number of vCores greater than or equal to the number of vCores assigned to the source Hyperscale database to sustain similar workloads.
 
 During reverse migration, the source Hyperscale database can experience performance degradation if under substantial load. Specifically, transaction log rate might be reduced (throttled) to ensure that reverse migration is making progress.
 

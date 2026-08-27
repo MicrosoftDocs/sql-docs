@@ -35,7 +35,7 @@ helpviewer_keywords:
   
 -   Consider overnormalizing tables that include Large Object (LOB) data types.  
   
-     When synchronization occurs, the Merge Agent might need to read and transfer the entire data row from a Publisher or Subscriber. If the row contains columns that use LOBs, this process can require additional memory allocation and negatively impact performance even though these columns may not have been updated. To reduce the likelihood that this performance impact occurs, consider putting LOB columns in a separate table using a one-to-one relationship to the rest of the row data. The data types **text**, **ntext**, and **image** are deprecated. If you do include LOBs, we recommend that you use the data types **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, respectively.  
+     When synchronization occurs, the Merge Agent might need to read and transfer the entire data row from a Publisher or Subscriber. If the row contains columns that use LOBs, this process can require additional memory allocation and negatively affect performance even though these columns may not have been updated. To reduce the likelihood that this performance impact occurs, consider putting LOB columns in a separate table using a one-to-one relationship to the rest of the row data. The data types **text**, **ntext**, and **image** are deprecated. If you do include LOBs, we recommend that you use the data types **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, respectively.  
   
 ## Publication Design  
   
@@ -65,7 +65,7 @@ helpviewer_keywords:
   
 -   Do not create complex join filter hierarchies.  
   
-     Join filters with five or more tables can significantly impact performance during merge processing. We recommend that if you are generating join filters of five or more tables that you consider other solutions:  
+     Join filters with five or more tables can significantly affect performance during merge processing. We recommend that if you are generating join filters of five or more tables that you consider other solutions:  
   
     -   Avoid filtering tables that are primarily lookup tables, smaller tables, and tables that are not subject to change. Make those tables part of the publication in their entirety. We recommend that you use join filters only between tables that must be partitioned among Subscribers. For more information, see [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   

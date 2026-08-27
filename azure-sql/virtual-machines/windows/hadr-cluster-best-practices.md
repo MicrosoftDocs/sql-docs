@@ -287,7 +287,7 @@ Use the Failover Cluster Manager (cluster administrator required, optional for t
 
 ## Resource limits
 
-VM or disk limits could result in a resource bottleneck that impacts the health of the cluster and impedes the health check.
+VM or disk limits could result in a resource bottleneck that affects the health of the cluster and impedes the health check.
 
 ### Identify resource bottlenecks
 

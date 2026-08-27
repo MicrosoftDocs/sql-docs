@@ -18,7 +18,7 @@ ms.update-cycle: 1095-days
 
 This article describes the various tenancy models available for a multitenant SaaS application.
 
-When designing a multitenant SaaS application, you must carefully choose the tenancy model that best fits the needs of your application. A tenancy model determines how each tenant's data is mapped to storage. Your choice of tenancy model impacts application design and management. Switching to a different model later is sometimes costly.
+When designing a multitenant SaaS application, you must carefully choose the tenancy model that best fits the needs of your application. A tenancy model determines how each tenant's data is mapped to storage. Your choice of tenancy model affects application design and management. Switching to a different model later is sometimes costly.
 
 ## A. SaaS concepts and terminology
 
@@ -34,7 +34,7 @@ The term *tenancy model* refers to how tenants' stored data is organized:
 
 ## B. How to choose the appropriate tenancy model
 
-In general, the tenancy model doesn't affect the function of an application, but it likely impacts other aspects of the overall solution. The following criteria are used to assess each of the models:
+In general, the tenancy model doesn't affect the function of an application, but it likely affects other aspects of the overall solution. The following criteria are used to assess each of the models:
 
 - **Scalability:**
   - Number of tenants.
@@ -42,7 +42,7 @@ In general, the tenancy model doesn't affect the function of an application, but
   - Storage in aggregate.
   - Workload.
 
-- **Tenant isolation:**&nbsp; Data isolation and performance (whether one tenant's workload impacts others).
+- **Tenant isolation:**&nbsp; Data isolation and performance (whether one tenant's workload affects others).
 
 - **Per-tenant cost:**&nbsp; Database costs.
 
@@ -123,7 +123,7 @@ Another available pattern is to store many tenants in a multitenant database. Th
 
 *Data:*&nbsp; A multitenant database necessarily sacrifices tenant isolation. The data of multiple tenants is stored together in one database. During development, ensure that queries never expose data from more than one tenant. SQL Database supports [row-level security](/sql/relational-databases/security/row-level-security), which can enforce that data returned from a query be scoped to a single tenant.
 
-*Processing:*&nbsp; A multitenant database shares compute and storage resources across all its tenants. The database as a whole can be monitored to ensure it's performing acceptably. However, the Azure system has no built-in way to monitor or manage the use of these resources by an individual tenant. Therefore, the multitenant database carries an increased risk of encountering noisy neighbors, where the workload of one overactive tenant impacts the performance experience of other tenants in the same database. More application-level monitoring could monitor tenant-level performance.
+*Processing:*&nbsp; A multitenant database shares compute and storage resources across all its tenants. The database as a whole can be monitored to ensure it's performing acceptably. However, the Azure system has no built-in way to monitor or manage the use of these resources by an individual tenant. Therefore, the multitenant database carries an increased risk of encountering noisy neighbors, where the workload of one overactive tenant affects the performance experience of other tenants in the same database. More application-level monitoring could monitor tenant-level performance.
 
 ### Lower cost
 

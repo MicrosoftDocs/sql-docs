@@ -22,7 +22,7 @@ This article explains offloading and acceleration to hardware devices.
 
 ## Back up and restore databases
 
-One use case for integrated acceleration and offloading is [backup compression](../backup-restore/backup-compression-sql-server.md). Compression speeds up back up and restore operations, and saves space. Compression also consumes CPU resources which may impact application performance. Because Intel&reg; QAT is an integrated acceleration and offloading solution, you can use it to back up and restore databases with compression, and reduce the load compression places on the CPU.
+One use case for integrated acceleration and offloading is [backup compression](../backup-restore/backup-compression-sql-server.md). Compression speeds up back up and restore operations, and saves space. Compression also consumes CPU resources which may affect application performance. Because Intel&reg; QAT is an integrated acceleration and offloading solution, you can use it to back up and restore databases with compression, and reduce the load compression places on the CPU.
 
 Backup compression is enabled by including the COMPRESSION keyword for BACKUP T-SQL commands, and is now available with an ALGORITHM parameter to choose between MS_XPRESS (default) and QAT_DEFLATE. For information about how to compress backups, see [Configure Backup Compression (SQL Server)](../backup-restore/configure-backup-compression-sql-server.md).
 

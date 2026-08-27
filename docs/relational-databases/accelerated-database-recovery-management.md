@@ -33,7 +33,7 @@ If your database workloads frequently encounter the following scenarios, you can
 
 - Long running transactions that can't be avoided. For example, ADR helps in cases where long-running transactions are at risk of being rolled back.
 - Active transactions that cause the transaction log to grow significantly.
-- Long-running database recovery that impacts the availability of the database (for example, after an unexpected SQL Server restart or manual transaction rollback).
+- Long-running database recovery that affects the availability of the database (for example, after an unexpected SQL Server restart or manual transaction rollback).
 
 If your application uses a high volume of single-row modifications in individual transactions, your workload might not be optimal for ADR. Consider batching modifications in multi-row statements where possible, and avoid a high volume of small DML transactions.
 

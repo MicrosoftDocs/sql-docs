@@ -477,7 +477,7 @@ sections:
       - question: |
           What happens to the VM if the extension ('Microsoft.SqlVirtualMachine') resource is dropped?
         answer: |
-          The Microsoft.Compute/VirtualMachine resource isn't impacted when the Microsoft.SqlVirtualMachine resource is dropped. However, the licensing default changes back to the original image source. 
+          The Microsoft.Compute/VirtualMachine resource isn't affected when the Microsoft.SqlVirtualMachine resource is dropped. However, the licensing default changes back to the original image source. 
       
       - question: |
           Is the extension necessary to receive Extended Security Updates (ESU)?

@@ -143,7 +143,7 @@ Maintaining compliance and governance ensures your SQL Managed Instance deployme
 
 - **Meet regulatory compliance standards**: Azure SQL Managed Instance supports compliance with various regulatory frameworks including ISO 27001, PCI DSS, FedRAMP, and SOX. Review and implement controls specific to your industry requirements. For more information, see [Azure compliance documentation](/azure/compliance/).
 
-- **Use resource locks**: Apply resource locks to prevent accidental deletion or modification of critical SQL managed instance resources. This helps maintain configuration integrity and prevents unauthorized changes that could impact compliance. For more information, see [Resource locks](/azure/azure-resource-manager/management/lock-resources).
+- **Use resource locks**: Apply resource locks to prevent accidental deletion or modification of critical SQL managed instance resources. This helps maintain configuration integrity and prevents unauthorized changes that could affect compliance. For more information, see [Resource locks](/azure/azure-resource-manager/management/lock-resources).
 
 - **Monitor with Azure Advisor**: Use Azure Advisor to receive personalized recommendations for security, cost optimization, performance, and operational excellence. Regularly review and implement advisor recommendations to maintain best practices. For more information, see [Azure Advisor](/azure/advisor/advisor-overview).
 

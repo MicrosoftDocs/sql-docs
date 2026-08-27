@@ -43,7 +43,7 @@ You can create a deployment of Azure SQL Managed Instance by using the Azure por
 Consider the following:
 
 - You can [cancel the provisioning process](management-operations-cancel.md) through Azure portal, or via PowerShell or the Azure CLI or other tooling using the REST API.
-- Instance deployment delayed if it's [impacted by other operations](management-operations-overview.md#management-operations-cross-impact) in the same subnet, such as a long-running restore or scaling an instance. 
+- Instance deployment delayed if it's [affected by other operations](management-operations-overview.md#management-operations-cross-impact) in the same subnet, such as a long-running restore or scaling an instance. 
 - **Read** permissions for the resource group are required to see the SQL managed instance in your resource group. 
 
 > [!IMPORTANT]

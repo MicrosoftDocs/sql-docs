@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 -   The subscription expiration period is also referred to as the *publication retention period*. Cleanup of merge replication metadata is dependent on this setting:  
   
-    -   Replication cannot clean up metadata in the publication and subscription databases until the retention period is reached. Use caution in specifying a high value for the retention period, because it can negatively impact replication performance. It is recommended that you use a lower setting if you can reliably predict that all Subscribers will synchronize regularly within that time period.  
+    -   Replication cannot clean up metadata in the publication and subscription databases until the retention period is reached. Use caution in specifying a high value for the retention period, because it can negatively affect replication performance. It is recommended that you use a lower setting if you can reliably predict that all Subscribers will synchronize regularly within that time period.  
   
          The retention period for merge publications has a 24-hour grace period to accommodate Subscribers in different time zones. If, for example, you set a retention period of one day, the actual retention period is 48 hours.  
   

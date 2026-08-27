@@ -36,7 +36,7 @@ To set the target encryption configuration, you need to make sure:
 
 ## Performance and Availability Considerations
 
-To apply the specified target encryption settings for the database, the **Set-SqlColumnEncryption** cmdlet transparently downloads all data from the columns containing the target tables, uploads the data back to a set of temporary table (with the target encrypted settings), and finally replaces the original tables with the new versions of the tables. The underlying .NET Framework Data Provider for SQL Server encrypts or/and decrypts data on download or/and upload, depending on the current encryption configuration of the target column is and the specified target encryption settings for the target columns. The operation to move the data may take a long time, depending on the size of the data in impacted tables and the network bandwidth.
+To apply the specified target encryption settings for the database, the **Set-SqlColumnEncryption** cmdlet transparently downloads all data from the columns containing the target tables, uploads the data back to a set of temporary table (with the target encrypted settings), and finally replaces the original tables with the new versions of the tables. The underlying .NET Framework Data Provider for SQL Server encrypts or/and decrypts data on download or/and upload, depending on the current encryption configuration of the target column is and the specified target encryption settings for the target columns. The operation to move the data may take a long time, depending on the size of the data in affected tables and the network bandwidth.
 
 The **Set-SqlColumnEncryption** cmdlet supports two approaches for setting up the target encryption configuration: online and offline.
 
@@ -174,9 +174,9 @@ Clear the plan cache for all batches and stored procedures that access the table
    ```
 
    > [!NOTE]
-   > If you don't remove the plan for the impacted query from the cache, the first execution of the query after encryption might fail.
+   > If you don't remove the plan for the affected query from the cache, the first execution of the query after encryption might fail.
    >
-   > Use `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` or `DBCC FREEPROCCACHE` to clear the plan cache carefully, as it can result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for only the impacted queries.
+   > Use `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` or `DBCC FREEPROCCACHE` to clear the plan cache carefully, as it can result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for only the affected queries.
 
 Call [sp_refresh_parameter_encryption](../../system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that are persisted in [sys.parameters](../..//system-catalog-views/sys-parameters-transact-sql.md) and might have been invalidated by encrypting the columns.
 

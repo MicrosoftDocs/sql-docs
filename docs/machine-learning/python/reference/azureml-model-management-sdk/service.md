@@ -54,7 +54,7 @@ input records to execute.
 
 Number of threads used to process entries in
 the batch. Default value is 10. Please make sure not to use too
-high of a number because it might negatively impact performance.
+high of a number because it might negatively affect performance.
 
 
 ### Returns

@@ -125,7 +125,7 @@ If you want to offload maintenance and reduce costs, consider moving to [Azure S
 ### Considerations
 
 - **Cost**: SQL managed instance can be more costly than SQL Server on Azure VMs.
-- **Transact-SQL differences**: While the feature set of Azure SQL Managed Instance is comprehensive, there are some [compatibility](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server) differences that can impact your existing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] operations. 
+- **Transact-SQL differences**: While the feature set of Azure SQL Managed Instance is comprehensive, there are some [compatibility](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server) differences that can affect your existing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] operations. 
 - **Deployment**: Deploying a SQL managed instance can take more time than deploying an Azure virtual machine.
 - **Feature limitation**: Although a SQL managed instance shares most features with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], some features are unsupported.
 - **Size limitation**: The combined storage size for all databases within a SQL managed instance is limited to 32 TB, as opposed to 524 PB for on-premises [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].

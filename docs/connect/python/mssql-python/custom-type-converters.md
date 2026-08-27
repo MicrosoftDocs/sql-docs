@@ -3,7 +3,7 @@ title: Custom Type Converters with mssql-python
 description: Learn how to register custom functions to convert SQL data types to Python objects using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 08/21/2026
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -50,6 +50,9 @@ The two key forms differ in how precisely they select columns:
 
 Use an integer key when you need that precision, or when you're porting code from pyodbc, which uses integer keys. Use a Python type key when you want one converter to cover a whole family of SQL types.
 
+> [!IMPORTANT]
+> Integer SQL type code keys require mssql-python 1.13.0 and later versions. Earlier versions accept and store the key but never invoke the converter, so the column returns its unconverted value and nothing raises.
+
 ```python
 import mssql_python
 
@@ -61,7 +64,7 @@ conn.add_output_converter(mssql_python.SQL_DECIMAL, decimal_only)
 cursor.execute("""
     SELECT CAST(12.34 AS decimal(10,2)), CAST(56.78 AS numeric(10,2))
 """)
-print(cursor.fetchone())  # ('D:12.34', 56.78)
+print(cursor.fetchone())  # ('D:12.34', Decimal('56.78'))
 ```
 
 ### Converter resolution order

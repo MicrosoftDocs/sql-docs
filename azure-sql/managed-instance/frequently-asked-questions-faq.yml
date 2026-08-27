@@ -205,7 +205,7 @@ sections:
 
       - question: What causes performance differences between SQL Managed Instance and SQL Server?
         answer: |
-          See [Key causes of performance differences between SQL Managed Instance and SQL Server](https://azure.microsoft.com/blog/key-causes-of-performance-differences-between-sql-managed-instance-and-sql-server/). The transaction log file size can impact General Purpose SQL Managed Instance performance. For more information, see [Impact of log file size on General Purpose](https://medium.com/azure-sqldb-managed-instance/impact-of-log-file-size-on-general-purpose-managed-instance-performance-21ad170c823e).
+          See [Key causes of performance differences between SQL Managed Instance and SQL Server](https://azure.microsoft.com/blog/key-causes-of-performance-differences-between-sql-managed-instance-and-sql-server/). The transaction log file size can affect General Purpose SQL Managed Instance performance. For more information, see [Impact of log file size on General Purpose](https://medium.com/azure-sqldb-managed-instance/impact-of-log-file-size-on-general-purpose-managed-instance-performance-21ad170c823e).
 
       - question: How do I tune performance of my SQL managed instance?
         answer: |
@@ -226,9 +226,9 @@ sections:
       
       - question: How to address `MSSQLSERVER_833` error in SQL Managed Instance?
         answer: |
-          `MSSQLSERVER_833` indicates that an I/O request took longer than 15 seconds to complete. This error in Azure SQL Managed Instance is related to overall infrastructure conditions, and not the workload. In cloud environments, and systems that utilize remote storage, there are multiple architectural layers that impact a single I/O request. This behavior is expected and a known limitation of the service that typically results from transient networking issues, or Azure storage resources becoming temporarily unavailable. The system usually recovers without intervention.
+          `MSSQLSERVER_833` indicates that an I/O request took longer than 15 seconds to complete. This error in Azure SQL Managed Instance is related to overall infrastructure conditions, and not the workload. In cloud environments, and systems that utilize remote storage, there are multiple architectural layers that affect a single I/O request. This behavior is expected and a known limitation of the service that typically results from transient networking issues, or Azure storage resources becoming temporarily unavailable. The system usually recovers without intervention.
           
-          This occurrence is rare, and doesn't impact the average latency of I/O requests to remote storage. Depending on the workload or thread that initiates the I/O request, customers might observe SQL command timeouts and increased latency in specific scenarios, while others are unlikely to experience any impact at all. For example, not all long-running I/O requests block operations, such as, for instance, read-ahead page access is often unaffected.
+          This occurrence is rare, and doesn't affect the average latency of I/O requests to remote storage. Depending on the workload or thread that initiates the I/O request, customers might observe SQL command timeouts and increased latency in specific scenarios, while others are unlikely to experience any impact at all. For example, not all long-running I/O requests block operations, such as, for instance, read-ahead page access is often unaffected.
           
           Using the [Next-gen General Purpose service tier upgrade](service-tiers-next-gen-general-purpose-use.md) can help mitigate this issue, as it improves performance and reliability at no extra cost. Customers are encouraged to explore it for enhanced service quality.
           
@@ -452,7 +452,7 @@ sections:
     questions:
       - question: Is the sysadmin server role available for SQL Managed Instance?
         answer: |
-          Yes, customers can create logins that are members of the **sysadmin** role. Customers who assume the **sysadmin** privilege are also assuming responsibility for operating the instance, which can negatively impact the SLA commitment. To add a login to the **sysadmin** server role, see [Microsoft Entra authentication](./aad-security-configure-tutorial.md#azure-ad-authentication).
+          Yes, customers can create logins that are members of the **sysadmin** role. Customers who assume the **sysadmin** privilege are also assuming responsibility for operating the instance, which can negatively affect the SLA commitment. To add a login to the **sysadmin** server role, see [Microsoft Entra authentication](./aad-security-configure-tutorial.md#azure-ad-authentication).
 
       - question: Is Transparent Data Encryption supported for SQL Managed Instance?
         answer: |

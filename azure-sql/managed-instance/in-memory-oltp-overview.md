@@ -96,7 +96,7 @@ For details about monitoring in-memory OLTP storage utilization and configuring 
 
 ### Change hardware configuration or vCore count
 
-Downgrading your hardware configuration or vCore count can negatively impact your SQL managed instance.
+Downgrading your hardware configuration or vCore count can negatively affect your SQL managed instance.
 
 Data in memory-optimized tables must fit within the in-memory OLTP storage limit for your hardware configuration and vCore count. If you try to scale-down to a setting that doesn't have enough available in-memory OLTP storage, the operation fails.
 

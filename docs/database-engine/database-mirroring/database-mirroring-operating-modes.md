@@ -39,7 +39,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  Most editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] support only synchronous database mirroring ("Safety Full Only"). [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
   
- When transaction safety is set to OFF, the database mirroring session operates asynchronously. Asynchronous operation supports only one operating mode-high-performance mode. This mode enhances performance at the expense of high availability. High-performance mode uses just the principal server and the mirror server. Problems on the mirror server never impact the principal server. On the loss of the principal server, the mirror database is marked DISCONNECTED but is available as a warm standby.  
+ When transaction safety is set to OFF, the database mirroring session operates asynchronously. Asynchronous operation supports only one operating mode-high-performance mode. This mode enhances performance at the expense of high availability. High-performance mode uses just the principal server and the mirror server. Problems on the mirror server never affect the principal server. On the loss of the principal server, the mirror database is marked DISCONNECTED but is available as a warm standby.  
   
  High-performance mode, supports only one form of role switching: forced service (with possible data loss), which uses the mirror server as a warm standby server. Forced service is one of the possible responses to the failure of the principal server. Because data loss is possible, you should consider other alternatives before forcing service to the mirror. For more information, see [Responding to Failure of the Principal](#WhenPrincipalFails), later in this topic.  
   
@@ -60,7 +60,7 @@ helpviewer_keywords:
 -   [Responding to Failure of the Principal](#WhenPrincipalFails)  
   
 ###  <a name="WhenUseHighPerf"></a> When Is High-Performance Mode Appropriate?  
- High-performance mode can be useful in a disaster-recovery scenario in which the principal and mirror servers are separated by a significant distance and where you do not want small errors to impact the principal server.  
+ High-performance mode can be useful in a disaster-recovery scenario in which the principal and mirror servers are separated by a significant distance and where you do not want small errors to affect the principal server.  
   
 > [!NOTE]  
 >  Log shipping can be a supplement to database mirroring and is a favorable alternative to asynchronous database mirroring. For information about the advantages of log shipping, see [High Availability Solutions &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md). For information on using log shipping with database mirroring, see [Database Mirroring and Log Shipping &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  

@@ -35,7 +35,7 @@ helpviewer_keywords:
 -   Custom error resolution  
   
 > [!NOTE]  
->  The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can impact performance.  
+>  The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can affect performance.  
   
 ### Custom Change Handling  
  The business logic handler can be invoked during the processing of non-conflicting data changes and can perform one of three actions:  

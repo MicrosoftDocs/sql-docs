@@ -44,7 +44,7 @@ Some of the usage scenarios supported by resource governor are:
 
 - Provide multitenancy and resource isolation on single instances of SQL Server that serve multiple client workloads. That is, you can divide the available resources on a server among the workloads and minimize the problems that can occur when workloads compete for resources.
 - Provide predictable performance and support SLAs for workloads in a multi-workload and multi-user environment.
-- Isolate and limit runaway queries, or limit I/O resources for I/O intensive operations that can saturate the I/O subsystem and negatively impact other workloads.
+- Isolate and limit runaway queries, or limit I/O resources for I/O intensive operations that can saturate the I/O subsystem and negatively affect other workloads.
 - Add fine-grained resource tracking for resource usage chargebacks and provide predictable billing to the consumers of server resources.
 
 ## Interoperability and limitations

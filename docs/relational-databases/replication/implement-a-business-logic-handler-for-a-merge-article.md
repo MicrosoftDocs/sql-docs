@@ -34,7 +34,7 @@ dev_langs:
   
 4.  Create an article that uses the business logic handler or modify an existing article to use the business logic handler.  
   
- The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can impact performance. For more information about business logic handlers, see [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+ The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can affect performance. For more information about business logic handlers, see [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
 ##  <a name="ReplProg"></a> Using Replication Programming  
   

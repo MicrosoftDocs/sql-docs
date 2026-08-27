@@ -44,7 +44,7 @@ Requires that:
   
 5.  Right-click the statistics object that you wish to modify and select **Properties**.  
   
-6.  In the **Statistics Properties -** *statistics_name* dialog box, on the **General** page, click **Add**, **Remove**, **Move Up**, or **Move Down**, or any combination, to alter the properties of the statistics. Remember that a column's location within the **Statistics Columns** grid can substantially impact the usefulness of the statistics.  
+6.  In the **Statistics Properties -** *statistics_name* dialog box, on the **General** page, click **Add**, **Remove**, **Move Up**, or **Move Down**, or any combination, to alter the properties of the statistics. Remember that a column's location within the **Statistics Columns** grid can substantially affect the usefulness of the statistics.  
   
 7.  Click **OK**.  
 

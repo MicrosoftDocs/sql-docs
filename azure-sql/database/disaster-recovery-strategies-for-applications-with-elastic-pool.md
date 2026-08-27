@@ -17,7 +17,7 @@ Azure SQL Database provides several capabilities to provide for the business con
 
 This article uses the following canonical SaaS independent software vendor (ISV) application pattern:
 
-A modern cloud-based web application provisions one database for each end user. The ISV has many customers and therefore uses many databases, known as tenant databases. Because the tenant databases typically have unpredictable activity patterns, the ISV uses an elastic pool to make the database cost very predictable over extended periods of time. The elastic pool also simplifies the performance management when the user activity spikes. In addition to the tenant databases the application also uses several databases to manage user profiles, security, collect usage patterns etc. Availability of the individual tenants does not impact the application's availability as whole. However, the availability and performance of management databases is critical for the application's function and if the management databases are offline the entire application is offline.
+A modern cloud-based web application provisions one database for each end user. The ISV has many customers and therefore uses many databases, known as tenant databases. Because the tenant databases typically have unpredictable activity patterns, the ISV uses an elastic pool to make the database cost very predictable over extended periods of time. The elastic pool also simplifies the performance management when the user activity spikes. In addition to the tenant databases the application also uses several databases to manage user profiles, security, collect usage patterns etc. Availability of the individual tenants does not affect the application's availability as whole. However, the availability and performance of management databases is critical for the application's function and if the management databases are offline the entire application is offline.
 
 This article discusses DR strategies covering a range of scenarios from cost sensitive startup applications to ones with stringent availability requirements.
 
@@ -118,13 +118,13 @@ I have a mature SaaS application with tiered service offers. I want to offer a v
 
 To support this scenario, use three separate elastic pools. Provision two equal size pools with high eDTUs or vCores per database in two different regions to contain the paid customers' tenant databases. The third pool containing the trial tenants can have lower eDTUs or vCores per database and be provisioned in one of the two regions.
 
-To guarantee the lowest recovery time during outages, the paying customers' tenant databases are geo-replicated with 50% of the primary databases in each of the two regions. Similarly, each region has 50% of the secondary databases. This way, if a region is offline, only 50% of the paid customers' databases are impacted and have to fail over. The other databases remain intact. This configuration is illustrated in the following diagram:
+To guarantee the lowest recovery time during outages, the paying customers' tenant databases are geo-replicated with 50% of the primary databases in each of the two regions. Similarly, each region has 50% of the secondary databases. This way, if a region is offline, only 50% of the paid customers' databases are affected and have to fail over. The other databases remain intact. This configuration is illustrated in the following diagram:
 
 ![Diagram shows a primary region called Region A and secondary region called Region B which employ geo-replication between the management database and paid customers primary pool and secondary pool with no replication for the trial customers pool.](./media/disaster-recovery-strategies-for-applications-with-elastic-pool/diagram-7.png)
 
 As in the previous scenarios, the management databases are quite active so configure them as single geo-replicated databases (1). This ensures the predictable performance of the new customer subscriptions, profile updates, and other management operations. Region A is the primary region for the management databases and the region B is used for recovery of the management databases.
 
-The paying customers' tenant databases are also geo-replicated but with primaries and secondaries split between region A and region B (2). This way, the tenant primary databases impacted by the outage can fail over to the other region and become available. The other half of the tenant databases are not be impacted at all.
+The paying customers' tenant databases are also geo-replicated but with primaries and secondaries split between region A and region B (2). This way, the tenant primary databases affected by the outage can fail over to the other region and become available. The other half of the tenant databases are not be affected at all.
 
 The next diagram illustrates the recovery steps to take if  an outage occurs in region A.
 
@@ -159,7 +159,7 @@ When region A is recovered, you need to decide if you want to use region B for t
 
 The key benefits of this strategy are:
 
-* It supports the most aggressive SLA for the paying customers because it ensures that an outage cannot impact more than 50% of the tenant databases.
+* It supports the most aggressive SLA for the paying customers because it ensures that an outage cannot affect more than 50% of the tenant databases.
 * It guarantees that the new trials are unblocked as soon as the trail DR pool is created during the recovery.
 * It allows more efficient use of the pool capacity as 50% of secondary databases in pool 1 and pool 2 are guaranteed to be less active than the primary databases.
 

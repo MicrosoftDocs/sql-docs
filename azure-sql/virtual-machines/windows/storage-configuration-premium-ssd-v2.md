@@ -79,7 +79,7 @@ Use the following Windows Performance Monitor (PerfMon) counters to determine yo
 
 For more information, review [Collect baseline](performance-guidelines-best-practices-collect-baseline.md#storage). 
 
-If you're migrating to SQL Server on Azure VMs, consider size elements beyond just the database, such as SSIS / DTS packages, jobs, linked servers, Extended Events (XE) sessions, audits, and more. These components can significantly impact the storage requirements and should therefore be factored into capacity planning. For additional migration details, review [SQL Server on Azure VMs migration guide](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md)
+If you're migrating to SQL Server on Azure VMs, consider size elements beyond just the database, such as SSIS / DTS packages, jobs, linked servers, Extended Events (XE) sessions, audits, and more. These components can significantly affect the storage requirements and should therefore be factored into capacity planning. For additional migration details, review [SQL Server on Azure VMs migration guide](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md)
 
 ## Create SQL Server VM with Premium SSD v2
 

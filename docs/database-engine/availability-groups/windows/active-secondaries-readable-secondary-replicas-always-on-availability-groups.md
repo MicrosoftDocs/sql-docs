@@ -85,7 +85,7 @@ helpviewer_keywords:
 -   As soon as a readable replica is enabled for read, it can start accepting connections to its secondary databases. However, if any active transactions exist on a primary database, the row versions will not be fully available on the corresponding secondary database. Any active transactions that existed on the primary replica when the secondary replica was configured must commit or roll back. Until this process completes, the transaction isolation level mapping on the secondary database is incomplete and queries are temporarily blocked.  
   
     > [!WARNING]  
-    >  Running long transactions impacts the number of versioned rows kept, both for disk-based and memory-optimized tables.  
+    >  Running long transactions affects the number of versioned rows kept, both for disk-based and memory-optimized tables.  
   
 -   On a secondary database with memory-optimized tables, even though row versions are always generated for memory-optimized tables, queries are blocked until all active transactions that existed in the primary replica when the secondary replica was enabled for read complete. This ensures that both disk-based and memory-optimized tables are available to the reporting workload and read-only queries at the same time.  
   

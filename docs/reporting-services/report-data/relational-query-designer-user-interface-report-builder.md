@@ -141,7 +141,7 @@ helpviewer_keywords:
 -   **Delete Relationship**  Deletes the selected relationship. 
 
   
--   **Move Up** and **Move Down** Moves relationships up or down the **Relationship** list. The sequence in which relationships are placed in the query can impact the query results. The relationships are added to the query in the order they appear in the **Relationship** list.  
+-   **Move Up** and **Move Down** Moves relationships up or down the **Relationship** list. The sequence in which relationships are placed in the query can affect the query results. The relationships are added to the query in the order they appear in the **Relationship** list.  
   
  The following columns are displayed:  
   

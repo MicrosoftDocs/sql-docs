@@ -130,11 +130,11 @@ Importantly, this approach assumes that only a small number of databases in the 
 > [!WARNING]
 > Because monitoring queries must execute continuously in every monitored database, it is not recommended to monitor more than a few individual databases in a dense elastic pool.
 >
-> If you add many databases from a dense elastic pool as SQL targets, the cumulative resource utilization by the monitoring queries running in each database might impact application workloads because of insufficient resources in the pool.
+> If you add many databases from a dense elastic pool as SQL targets, the cumulative resource utilization by the monitoring queries running in each database might affect application workloads because of insufficient resources in the pool.
 >
 > For the same reason, you might see gaps in the collected data or larger than expected intervals between data samples.
 
-To monitor a dense elastic pool, enable monitoring at the pool level by adding the elastic pool itself as a SQL target. By reducing the total number of monitoring queries in the elastic pool you avoid the risk of impacting application workloads, while still collecting actionable pool-level data in the **SQL elastic pool** [datasets](#datasets).
+To monitor a dense elastic pool, enable monitoring at the pool level by adding the elastic pool itself as a SQL target. By reducing the total number of monitoring queries in the elastic pool you avoid the risk of affecting application workloads, while still collecting actionable pool-level data in the **SQL elastic pool** [datasets](#datasets).
 
 ## Data collection in serverless databases
 

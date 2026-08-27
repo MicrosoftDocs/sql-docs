@@ -128,7 +128,7 @@ This section describes the impact of AMQP protocol deprecation, such as:
 
 ### Impact on consumers of published messages
 
-The protocol used to write to the destination (either Azure Event Hubs or Fabric Eventstream) is independent from the protocol used by message consumers. Therefore, switching from AMQP to Kafka protocol for message publishing doesn't impact message consumers. They can continue consuming messages using either protocol.
+The protocol used to write to the destination (either Azure Event Hubs or Fabric Eventstream) is independent from the protocol used by message consumers. Therefore, switching from AMQP to Kafka protocol for message publishing doesn't affect message consumers. They can continue consuming messages using either protocol.
 
 ### Impact on existing AMQP stream groups
 

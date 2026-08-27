@@ -187,7 +187,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
     ```  
   
 ## Migration Issues  
- The following are issues that could impact migration of your legacy SQLXML applications to SQLXML 4.0.  
+ The following are issues that could affect migration of your legacy SQLXML applications to SQLXML 4.0.  
   
 ### ADO and SQLXML 4.0 Queries  
  In earlier versions of SQLXML, support for URL-based query execution using IIS virtual directories and the SQLXML ISAPI filter was provided. For applications that use SQLXML 4.0, this support is no longer available.  

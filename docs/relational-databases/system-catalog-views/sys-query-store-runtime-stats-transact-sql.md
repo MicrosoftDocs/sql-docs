@@ -113,7 +113,7 @@ Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Remarks
 
-In rare situations, you might notice the DOP columns (max_dop, min_dop, avg_dop and last_dop) report large numbers. This might happen when queries execute on systems with large number of processors. You might notice this discrepancy in scenarios where the query uses user defined functions. The engineering team is investigating this issue and will update this note when this issue is fixed. This is a reporting issue in the statistics gathered for this catalog view and does not impact the actual query execution or its runtime performance.
+In rare situations, you might notice the DOP columns (max_dop, min_dop, avg_dop and last_dop) report large numbers. This might happen when queries execute on systems with large number of processors. You might notice this discrepancy in scenarios where the query uses user defined functions. The engineering team is investigating this issue and will update this note when this issue is fixed. This is a reporting issue in the statistics gathered for this catalog view and does not affect the actual query execution or its runtime performance.
 
 ## Related content
 

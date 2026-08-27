@@ -275,7 +275,7 @@ If forced failback is used:
 - Follow the same steps as for the data lossless failover.
 - Forced failback is expected to fail if a previous forced failover did not succeed on both SQL managed instances. Ensure failover group status is `Synchronizing` on **both** instances before executing the forced failback.
 - Longer failback execution time is expected if the forced failback is executed **shortly after** the initial forced failover is completed, as it has to wait for completion of outstanding automatic backup operations on the former primary SQL managed instance.
-- Any outstanding automatic backup operations on an instance transitioning from the primary to the secondary role can impact database availability on this instance.
+- Any outstanding automatic backup operations on an instance transitioning from the primary to the secondary role can affect database availability on this instance.
 - Please use the failover group status to determine whether both instances have successfully changed their roles and are ready to accept client connections.
 
 ## Related content

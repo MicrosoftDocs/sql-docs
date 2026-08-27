@@ -25,7 +25,7 @@ f1_keywords:
  Join filters typically follow the primary key/foreign key relationships defined for the tables to which they are applied, but they are not limited strictly to primary key/foreign key relationships. The join filter can be based on any logic that compares related data in two article tables.  
   
 > [!IMPORTANT]  
->  Join Filters can involve an unlimited number of tables, but filters with a large number of tables can impact performance during merge processing. If you are generating join filters of five or more tables, consider other solutions: do not filter tables that are small, not subject to change, or are primarily lookup tables. Use join filters only between tables that must be partitioned among Subscribers.  
+>  Join Filters can involve an unlimited number of tables, but filters with a large number of tables can affect performance during merge processing. If you are generating join filters of five or more tables, consider other solutions: do not filter tables that are small, not subject to change, or are primarily lookup tables. Use join filters only between tables that must be partitioned among Subscribers.  
   
 ## Options  
  This dialog box involves a three-step process to create a join filter between two tables. Creating more than one join filter requires more than one pass through the dialog box.  

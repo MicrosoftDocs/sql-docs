@@ -129,7 +129,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 ##  <a name="bkmk_uninstall"></a> Step 3: Run SQL Server Setup to Remove Programs from the Local Computer  
  Deleting program files requires that you run SQL Server Setup to uninstall the software. Uninstall removes both files and the registry entries that were created by Setup. You can use the Programs and Features page to uninstall the software. An installation of [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] is part of a SQL Server installation.  
   
- You can uninstall part of an installation without impacting other SQL Server instances (or features in the same instance) that are already installed. For example, you can uninstall [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint while leaving other components, such as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or the Database Engine, installed.  
+ You can uninstall part of an installation without affecting other SQL Server instances (or features in the same instance) that are already installed. For example, you can uninstall [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint while leaving other components, such as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or the Database Engine, installed.  
   
 1.  Select **Microsoft SQL Server 2014 (64-bit)** from the program list.  
   

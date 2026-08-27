@@ -688,7 +688,7 @@ In Azure SQL Database, after a failover to another replica, your application mig
 There are three potential workarounds to this DNS problem after a Failover Group failover:
 
 1. Modify the application to call `SQLConnection.ClearAllPools` or `SQLConnection.ClearPool(conn)` whenever a "read-only" error is encountered.
-1. In the application connection string, specify `Pooling=False` to disable connection pooling. This should be tested, as it might significantly impact performance if the application opens and closes connections frequently.
+1. In the application connection string, specify `Pooling=False` to disable connection pooling. This should be tested, as it might significantly affect performance if the application opens and closes connections frequently.
 1. Another option to avoid the DNS replication/caching delays is to directly connect using the Azure SQL Database logical server name (of the original secondary server, now the new primary) for a window of time after 3906 is encountered.
 
 #### You might be connected to a read-only replica

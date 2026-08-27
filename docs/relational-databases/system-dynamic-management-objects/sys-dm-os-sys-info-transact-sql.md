@@ -31,7 +31,7 @@ Returns a miscellaneous set of useful information about the computer, and about 
 
 | Column name | Data type | Description and version-specific notes |
 | --- | --- | --- |
-| `cpu_ticks` | **bigint** | Specifies the current CPU check count. CPU ticks are obtained from the processor's RDTSC counter. It's a monotonically increasing number. Not nullable. |
+| `cpu_ticks` | **bigint** | Specifies the current CPU tick count. CPU ticks are obtained from the processor's RDTSC counter. It's a monotonically increasing number. Not nullable. |
 | `ms_ticks` | **bigint** | Specifies the number of milliseconds since the computer started. Not nullable. |
 | `cpu_count` | **int** | Specifies the number of logical CPUs on the system. Not nullable.<br /><br />In Azure SQL Database, this column might return the number of logical CPUs on the machine hosting the database or elastic pool. To determine the number of logical CPUs available to the database or elastic pool, use the `cpu_limit` column in [sys.dm_user_db_resource_governance](sys-dm-user-db-resource-governor-azure-sql-database.md). |
 | `hyperthread_ratio` | **int** | Specifies the ratio of the number of logical or physical cores that are exposed by one physical processor package. Not nullable. |

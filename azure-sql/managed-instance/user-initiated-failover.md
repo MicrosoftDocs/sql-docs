@@ -35,7 +35,7 @@ You might execute a manual failover to restart the engine process for the follow
 - Failed logins, or slowness due to performance issues.
 - Testing application for failover resiliency before deploying to production.
 - Testing end-to-end systems for fault resiliency on automatic failovers.
-- Testing how failover impacts existing database sessions.
+- Testing how failover affects existing database sessions.
 - Query performance degradation (restarting the instance can help mitigate the performance issue).
 
 Ensuring that your applications are failover resilient prior to deploying to production helps mitigate the risk of application faults in production and contributes to application availability for your customers. Learn more about testing your applications for cloud readiness with the following video: 

@@ -52,7 +52,7 @@ The following table presents examples of supported data disk layouts that can su
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
 
-Scenarios where primary and secondary replica database location are not the instance default paths are not impacted by this change. Requirements for secondary replica file paths to match the primary replica file paths remain the same.
+Scenarios where primary and secondary replica database location are not the instance default paths are not affected by this change. Requirements for secondary replica file paths to match the primary replica file paths remain the same.
 
 |Primary instance<br />Default data path|Secondary instance<br />Default data path|Primary instance<br />File location|Secondary instance<br /> File location
 |:------|:------|:------|:------

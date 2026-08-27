@@ -44,4 +44,4 @@ A database page could be damaged due to many reasons including hardware failures
 
 - Use a last know good backup or use the CONTINUE_AFTER_ERROR clause to restore, then use DBCC CHECKDB to check. See [To specify whether a restore operation continues or stops after encountering an error](../backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md#to-specify-whether-backup-continues-or-stops-after-an-error-is-encountered).
 
-- Investigate the hardware where the backup was initially taken and where it was stored.  This action is to ensure no other database backups are impacted and that this issue doesn't occur in the future.
+- Investigate the hardware where the backup was initially taken and where it was stored.  This action is to ensure no other database backups are affected and that this issue doesn't occur in the future.

@@ -82,7 +82,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
   
 -   It is recommended that you limit the number of rows that are captured during the data tap, to avoid generating large data files. If the machine on which the stored procedure is executed, runs out of storage space for the data files, the package stops running and an error message is written to a log.  
   
--   Running the add_data_tap stored procedure impacts the performance of the package. It is recommended that you run the stored procedure only to troubleshoot data issues.  
+-   Running the add_data_tap stored procedure affects the performance of the package. It is recommended that you run the stored procedure only to troubleshoot data issues.  
   
 -   To access the file that stores the tapped data, you must be an administrator on the machine on which the stored procedure is run. You must also be the user who started the execution that contains the package with the data tap.  
   

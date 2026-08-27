@@ -120,7 +120,7 @@ When adding databases or elastic pools to a failover group, there's an initial s
 
 ## Number of databases in failover group
 
-The number of databases within a failover group directly impacts the duration of both Failover and Forced Failover operations. 
+The number of databases within a failover group directly affects the duration of both Failover and Forced Failover operations. 
 
 - During a Failover (also known as Planned Failover), we ensure that all primary databases are fully synchronized with their secondary and reach a ready state. To avoid overwhelming the control plane, databases are prepared in batches. Therefore, it is highly recommended to limit the number of databases in a failover group.
 - In the case of a Forced Failover, the preparation phase is expedited as data synchronization is not initiated. To achieve quicker and predictable failover durations, it might be beneficial to keep the number of databases in the failover group to a smaller number. 

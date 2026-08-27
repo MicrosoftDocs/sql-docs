@@ -21,7 +21,7 @@ monikerRange: "=azuresql || =azuresql-mi"
 
 Azure SQL Managed Instance provides an [enterprise class availability SLA](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1) to support a wide variety of applications, including mission critical, that _always need to be available_. Azure SQL Managed Instance also has turn key business continuity capabilities that you can perform for quick disaster recovery in the event of a regional outage. This article contains valuable information to review in advance of application deployment.
 
-Though we continuously strive to provide availability, there are times when the Azure SQL Managed Instance service incurs outages that cause the unavailability of your database and thus impacts your application. When our service monitoring detects issues that cause widespread connectivity errors, failures or performance issues, the service automatically declares an outage to keep you informed.  
+Though we continuously strive to provide availability, there are times when the Azure SQL Managed Instance service incurs outages that cause the unavailability of your database and thus affects your application. When our service monitoring detects issues that cause widespread connectivity errors, failures or performance issues, the service automatically declares an outage to keep you informed.  
 
 ## Service outage
 
@@ -29,13 +29,13 @@ In the event of an Azure SQL Managed Instance service outage, you can find addit
 
 - **Azure portal banner**
 
-    If your subscription is identified as impacted, there's an outage alert of a Service Issue in your Azure portal **Notifications**:
+    If your subscription is identified as affected, there's an outage alert of a Service Issue in your Azure portal **Notifications**:
 
     :::image type="content" source="../database/media/disaster-recovery-guidance/notification-service-issue-example.png" alt-text="Screenshot from the Azure portal of a notification of an Azure SQL Managed Instance service issue.":::
 
 - **Help + support** or **Support + troubleshooting**
 
-    When you create a support ticket from **Help + support** or **Support + troubleshooting**, there's information about any issues impacting your resources. Select **View outage details** for more information and a summary of impact. There's also an alert in the **New support request** page.
+    When you create a support ticket from **Help + support** or **Support + troubleshooting**, there's information about any issues affecting your resources. Select **View outage details** for more information and a summary of impact. There's also an alert in the **New support request** page.
 
     :::image type="content" source="../database/media/disaster-recovery-guidance/help-support-service-health-notification.png" alt-text="Screenshot of the Help+Support page showing a notification of an active service health issue." lightbox="../database/media/disaster-recovery-guidance/help-support-service-health-notification.png":::
 
@@ -47,11 +47,11 @@ In the event of an Azure SQL Managed Instance service outage, you can find addit
 
 - **Email notification**
 
-    If you have set up alerts, an email notification is sent from `azure-noreply@microsoft.com` when a service outage impacts your subscription and resource. The body of the email typically begins with "The activity log alert ... was triggered by a service issue for the Azure subscription...". For more information on service health alerts, see [Receive activity log alerts on Azure service notifications using Azure portal](/azure/service-health/alerts-activity-log-service-notifications-portal).
+    If you have set up alerts, an email notification is sent from `azure-noreply@microsoft.com` when a service outage affects your subscription and resource. The body of the email typically begins with "The activity log alert ... was triggered by a service issue for the Azure subscription...". For more information on service health alerts, see [Receive activity log alerts on Azure service notifications using Azure portal](/azure/service-health/alerts-activity-log-service-notifications-portal).
 
 ## When to initiate disaster recovery during an outage
 
-In the event of a service outage impacting application resources, consider the following courses of action:
+In the event of a service outage affecting application resources, consider the following courses of action:
 
 - The Azure teams work diligently to restore service availability as quickly as possible but depending on the root cause it can sometimes take hours. If your application can tolerate significant downtime, you can just wait for recovery to complete. In this case, no action on your part is required. View the health of individual resources in the **Resource health** page of any resource under the **Help** menu. Refer to the **Resource health** page for updates and the latest information regarding an outage. After the recovery of the region, your application's availability is restored.
 

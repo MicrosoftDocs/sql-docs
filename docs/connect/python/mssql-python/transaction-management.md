@@ -3,7 +3,7 @@ title: Transaction Management with mssql-python
 description: Learn how to manage database transactions, control autocommit, and set isolation levels using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -192,7 +192,7 @@ For snapshot isolation, use Transact-SQL (T-SQL). Snapshot isolation uses [row v
 # Enable snapshot isolation on the database (one-time setup, requires autocommit)
 conn.commit()
 conn.autocommit = True
-cursor.execute("ALTER DATABASE AdventureWorks2022 SET ALLOW_SNAPSHOT_ISOLATION ON")
+cursor.execute("ALTER DATABASE AdventureWorks2025 SET ALLOW_SNAPSHOT_ISOLATION ON")
 
 # Set isolation level while still in autocommit, then start the transaction
 cursor.execute("SET TRANSACTION ISOLATION LEVEL SNAPSHOT")

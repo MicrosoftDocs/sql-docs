@@ -60,10 +60,10 @@ To create a stored procedure in SSMS:
    - **Description**: Briefly describe what the procedure does.
    - **Procedure_Name**: Replace `ProcedureName` with the new stored procedure name.
    - **@Param1**: Replace `@p1` with your first parameter name, such as *@ColumnName1*.
-   - **@Datatype_For_Param1**: As appropriate, replace `int` with your first parameter's datatype, such as *nvarchar(50)*.
+   - **@Datatype_For_Param1**: As appropriate, replace `int` with your first parameter's data type, such as *nvarchar(50)*.
    - **Default_Value_For_Param1**: As appropriate, replace `0` with your first parameter's default value, or *NULL*.
    - **@Param2**: Replace `@p2` with your second parameter name, such as *@ColumnName2*.
-   - **@Datatype_For_Param2**: As appropriate, replace `int` with your second parameter's datatype, such as *nvarchar(50)*.
+   - **@Datatype_For_Param2**: As appropriate, replace `int` with your second parameter's data type, such as *nvarchar(50)*.
    - **Default_Value_For_Param2**: As appropriate, replace `0` with your second parameter's default value, or *NULL*.
   
    The following screenshot shows the completed dialog box for the example stored procedure:

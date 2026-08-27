@@ -156,7 +156,7 @@ How much you change your code depends on whether you intend to submit the code f
 
 ### Integrate with other workflows
 
-+ Leverage T-SQL tools and ETL processes. Perform feature engineering, feature extraction, and data cleansing in advance as part of data workflows.
++ Use T-SQL tools and ETL processes. Perform feature engineering, feature extraction, and data cleansing in advance as part of data workflows.
 
   When you're working in a dedicated development environment, you might pull data to your computer, analyze the data iteratively, and then write out or display the results.
   However, when standalone code is migrated to SQL Server, much of this process can be simplified or delegated to other SQL Server tools.

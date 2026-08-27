@@ -55,7 +55,9 @@ To enable Microsoft Defender for Azure SQL Database at the subscription level fr
 
 1. Select **Save**.
 
-### Enable Microsoft Defender plans programatically
+<a id="enable-microsoft-defender-plans-programatically"></a>
+
+### Enable Microsoft Defender plans programmatically
 
 The flexibility of Azure allows for several programmatic methods for enabling Microsoft Defender plans.
 

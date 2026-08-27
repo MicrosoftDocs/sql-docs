@@ -31,7 +31,7 @@ ms.custom:
   
      To show vertical strip lines, right-click the horizontal chart axis and click **Horizontal Axis Properties**.  
   
-2.  Select the **Use interlacing** option. Grey strip lines will appear on your chart.  
+2.  Select the **Use interlacing** option. Gray strip lines will appear on your chart.  
   
 3.  (Optional) Specify a color for the strip lines using the adjacent **Color** dropdown list.  
   

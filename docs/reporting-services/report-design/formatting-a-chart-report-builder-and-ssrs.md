@@ -58,7 +58,7 @@ f1_keywords:
   
  All properties that relate to the chart are located in the Properties pane, but many of these properties can also be set from a dialog box. If you are formatting the series, you can specify series-specific properties using custom attributes, which can only be found in the **CustomAttributes** category of properties, located in the Properties pane.  
   
- To effectively format the chart using a minimal number of steps, change the default border style, palette and drawing style. These three features produce the largest visible change on the chart. Drawing styles are only applicable to pie, doughnut, bar and column charts.  
+ To effectively format the chart using a minimal number of steps, change the default border style, palette and drawing style. These three features produce the largest visible change on the chart. Drawing styles are only applicable to pie, donut, bar and column charts.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,7 +68,7 @@ f1_keywords:
  Discusses how colors are defined using a palette, how you can define your own color palette, and how to define colors based on an expression.  
   
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)  
- Discusses how to display gridlines, tick marks, and titles, and how to format numbers and dates on the axis scale.  
+ Discusses how to display gridlines, check marks, and titles, and how to format numbers and dates on the axis scale.  
   
  [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)  
  Discusses how to re-order and format items in the chart legend.  

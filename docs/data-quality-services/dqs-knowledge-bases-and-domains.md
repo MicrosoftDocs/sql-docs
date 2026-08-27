@@ -22,7 +22,7 @@ ms.custom:
   
 -   DQS enables you to see its analysis of the data, and to augment the knowledge in the knowledge base by creating rules and changing data values. You can do so repeatedly to improve the knowledge over time.  
   
--   You can leverage pre-existing data quality knowledge by basing a knowledge base on an existing KB, importing domain knowledge from files into the KB, importing knowledge from a project back into a KB, or using the DQS default KB, DQS Data.  
+-   You can use pre-existing data quality knowledge by basing a knowledge base on an existing KB, importing domain knowledge from files into the KB, importing knowledge from a project back into a KB, or using the DQS default KB, DQS Data.  
   
 -   You can ensure the quality of your data by comparing it to the data maintained by a reference data provider.  
   
@@ -146,6 +146,4 @@ ms.custom:
 |Perform import and export operations on domains and knowledge bases|[Importing and Exporting Knowledge](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Create a single domain, a domain rule, term-based relations, and change domain values|[Managing a Domain](../data-quality-services/managing-a-domain.md)|  
 |Create a composite domain, create a cross-domain rule, and use value relations|[Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md)|  
-|Use the default DQS Data knowledge base built into DQS|[Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
-  
-  
+|Use the default DQS Data knowledge base built into DQS|[Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md)|

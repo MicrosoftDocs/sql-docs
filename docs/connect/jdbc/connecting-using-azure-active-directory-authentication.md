@@ -16,7 +16,7 @@ ms.custom: sfi-image-nochange
 
 This article provides information on how to develop Java applications that use the Microsoft Entra authentication feature with the Microsoft JDBC Driver for SQL Server.
 
-You can use Microsoft Entra authentication, which is a mechanism to connect to Azure SQL Database, Azure SQL Manged Instance, and Azure Synapse Analytics using identities in Microsoft Entra ID. Use Microsoft Entra authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC driver allows you to specify your Microsoft Entra credentials in the JDBC connection string to connect to Azure SQL. For information on how to configure Microsoft Entra authentication visit [Connecting to Azure SQL By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).
+You can use Microsoft Entra authentication, which is a mechanism to connect to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics using identities in Microsoft Entra ID. Use Microsoft Entra authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC driver allows you to specify your Microsoft Entra credentials in the JDBC connection string to connect to Azure SQL. For information on how to configure Microsoft Entra authentication visit [Connecting to Azure SQL By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).
 
 Connection properties to support Microsoft Entra authentication in the Microsoft JDBC Driver for SQL Server are:
 

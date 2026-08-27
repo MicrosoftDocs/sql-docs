@@ -368,7 +368,7 @@ Additionally, even without setting this connection string to 'false', from **v8.
 
 There are currently two limitations:
 
-1. With this connection property set to `false`, the driver will only accept the default string literal format of each temporal datatype, for example:
+1. With this connection property set to `false`, the driver will only accept the default string literal format of each temporal data type, for example:
 
     `DATE: YYYY-MM-DD`
 

@@ -89,8 +89,8 @@ For Azure extension for SQL Server to function, register the following 2 RPs:
 
 Azure Arc Data Processing Service (DPS) is an Azure service that receives the data about SQL Server provided by the Azure Extension for SQL Server on an Arc-connected server. DPS performs the following tasks:
 
-* Processes the inventory data sent to the regional end point by the Azure Extension for SQL Server, and updates the SqlServerInstance resources accordingly via the ARM API and Microsoft.AzureArcData RP.
-* Processes the usage data sent to the regional end point by the Azure Extension for SQL Server and submits the billing requests to the Azure commerce service.
+* Processes the inventory data sent to the regional endpoint by the Azure Extension for SQL Server, and updates the SqlServerInstance resources accordingly via the ARM API and Microsoft.AzureArcData RP.
+* Processes the usage data sent to the regional endpoint by the Azure Extension for SQL Server and submits the billing requests to the Azure commerce service.
 * Monitors the user-created SQL Server physical core license resources in ARM and submits the billing requests to the Azure commerce service based on the license state.
 
 SQL Server enabled by Azure Arc requires an outbound connection from the Azure Extension for SQL Server in the Agent to DPS (`*.<region>.arcdataservices.com` TCP port 443). For specific communication requirements, review [Connect to Azure Arc data processing service](prerequisites.md#connect-to-azure-arc-data-processing-service).

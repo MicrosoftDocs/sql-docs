@@ -19,7 +19,7 @@ There are three ways you can implement query notifications using ADO.NET:
   
 - The low-level implementation is provided by the `SqlNotificationRequest` class that exposes server-side functionality, enabling you to execute a command with a notification request.  
   
-- The high-level implementation is provided by the `SqlDependency` class, which is a class that provides a high-level abstraction of notification functionality between the source application and SQL Server, enabling you to use a dependency to detect changes in the server. In most cases, this is the simplest and most effective way to leverage SQL Server notifications capability by managed client applications using the Microsoft SqlClient Data Provider for SQL Server.  
+- The high-level implementation is provided by the `SqlDependency` class, which is a class that provides a high-level abstraction of notification functionality between the source application and SQL Server, enabling you to use a dependency to detect changes in the server. In most cases, this is the simplest and most effective way to use SQL Server notifications capability by managed client applications using the Microsoft SqlClient Data Provider for SQL Server.  
   
 - In addition, Web applications built using ASP.NET 2.0 or later can use the `SqlCacheDependency` helper classes.  
   

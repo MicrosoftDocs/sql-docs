@@ -13,7 +13,7 @@ ms.custom: sqldbrb-1
 # Disaster recovery strategies for applications using Azure SQL Database elastic pools
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Azure SQL Database provides several capabilities to provide for the business continuity of your application when catastrophic incidents occur. [Elastic pools](elastic-pool-overview.md) and single databases support the same kind of disaster recovery (DR) capabilities. This article describes several DR strategies for elastic pools that leverage these Azure SQL Database business continuity features.
+Azure SQL Database provides several capabilities to provide for the business continuity of your application when catastrophic incidents occur. [Elastic pools](elastic-pool-overview.md) and single databases support the same kind of disaster recovery (DR) capabilities. This article describes several DR strategies for elastic pools that use these Azure SQL Database business continuity features.
 
 This article uses the following canonical SaaS independent software vendor (ISV) application pattern:
 

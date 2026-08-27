@@ -82,7 +82,7 @@ If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup
     >[!NOTE]
     >While the DNS record for the original AG listener exists, attempts to create a listener using this name will fail.
 
-11. Resume traffic towards the listener.
+11. Resume traffic toward the listener.
 
 ## Scenario 2: Windows Clusters with SQL Server Failover Cluster Instances (FCIs)
 
@@ -90,7 +90,7 @@ If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envir
 
 ###  To perform the upgrade
 
-1.  Take a full backup and stop traffic towards the original [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster.
+1.  Take a full backup and stop traffic toward the original [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster.
 
 2.  Take a tail log backup of user databases and restore with recovery on the new environment.
 
@@ -123,7 +123,7 @@ If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup
 
 ### To perform the upgrade
 
-1.  Stop traffic towards [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+1.  Stop traffic toward [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Take a tail log backup of user databases and restore with recovery on the new environment's intended primary, and with NORECOVERY on all intended secondaries.
 
@@ -161,7 +161,7 @@ Migrating a cluster with standalone instances is similar in process to migrating
 
 ###  To perform the upgrade
 
-1.  Stop traffic towards [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+1.  Stop traffic toward [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Take a tail log backup of user databases and restore with recovery on the new environment on each machine.
 
@@ -197,7 +197,7 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 
 ###  To perform the upgrade
 
-1.  Stop traffic towards [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+1.  Stop traffic toward [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Take a tail log backup of user databases and restore with recovery on the new environment on the intended primary, and with NORECOVERY on each intended secondary.
 

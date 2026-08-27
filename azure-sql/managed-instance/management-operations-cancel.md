@@ -114,7 +114,7 @@ By using API version 2020-02-02, as soon as the service accepts the instance cre
 Instances that fail to create still exist as a resource and:
 
 - Aren't charged
-- Don't count towards resource limits (vCore quota)
+- Don't count toward resource limits (vCore quota)
 
 > [!NOTE]
 > To minimize noise in the list of resources or managed instances, delete instances that fail to deploy or instances with canceled deployments. 

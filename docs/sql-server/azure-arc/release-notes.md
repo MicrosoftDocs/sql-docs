@@ -196,7 +196,7 @@ This release enables the following features:
   - Includes retail pricing information to simplify decisions
   - Recommends a single migration target type among the Azure SQL offerings based on your migration strategy selection:
     - Minimize cost
-    - Modernize to Platform as a service (PaaS)
+    - Modernize to platform as a service (PaaS)
   - Introduces assessment settings experience to set pricing options and migration strategy to suit your requirements
 
   For details, review [Assess migration readiness - SQL Server enabled by Azure Arc](migration-assessment.md).

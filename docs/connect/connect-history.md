@@ -69,7 +69,7 @@ Microsoft currently contributes to and supports the open-source tedious module i
 
 ## Microsoft or Windows Data Access Components
 
-Microsoft/Windows Data Access Components (MDAC/WDAC) are shipped with and supported by Windows for application backwards compatibility and aren't part of the current SQL Server technology stack. No new features will be added to components in MDAC/WDAC and it isn't recommended to use them for new application development.
+Microsoft/Windows Data Access Components (MDAC/WDAC) are shipped with and supported by Windows for application backward compatibility and aren't part of the current SQL Server technology stack. No new features will be added to components in MDAC/WDAC and it isn't recommended to use them for new application development.
 
 For the purposes of this document, you can divide the MDAC/WDAC stack into the following components, based on technology and products:
 

@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 # STEndpoint (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
-Returns the end point of a **geometry** instance.
+Returns the endpoint of a **geometry** instance.
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ Returns the end point of a **geometry** instance.
  This method returns null if called on an empty **geometry** instance.  
   
 ## Examples  
- The following example creates a `LineString` instance with `STGeomFromText()` and uses `STEndpoint()` to retrieve the end point of the `LineString`.  
+ The following example creates a `LineString` instance with `STGeomFromText()` and uses `STEndpoint()` to retrieve the endpoint of the `LineString`.  
   
 ```  
 DECLARE @g geometry;  

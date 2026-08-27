@@ -544,7 +544,7 @@ The following tables document the telemetry details available for all logs. For 
 
 <sup>1</sup> To find matching queries and query plans in Query Store, see [Find matching queries and query plans in Query Store](#b-find-matching-queries-and-query-plans-in-query-store) later in this article.
 
-<sup>2</sup> To convert this value into a useable timestamp, see [Convert the interval start and end times to datetime values](#a-convert-the-interval-start-and-end-times-to-datetime-values) later in this article.
+<sup>2</sup> To convert this value into a usable timestamp, see [Convert the interval start and end times to datetime values](#a-convert-the-interval-start-and-end-times-to-datetime-values) later in this article.
 
 For more information, see [sys.query_store_runtime_stats](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql).
 
@@ -586,7 +586,7 @@ For more information, see [sys.query_store_runtime_stats](/sql/relational-databa
 
 <sup>1</sup> To find matching queries and query plans in Query Store, see [Find matching queries and query plans in Query Store](#b-find-matching-queries-and-query-plans-in-query-store) later in this article.
 
-<sup>2</sup> To convert this value into a useable timestamp, see [Convert the interval start and end times to datetime values](#a-convert-the-interval-start-and-end-times-to-datetime-values) later in this article.
+<sup>2</sup> To convert this value into a usable timestamp, see [Convert the interval start and end times to datetime values](#a-convert-the-interval-start-and-end-times-to-datetime-values) later in this article.
 
 For more information, see [sys.query_store_wait_stats](/sql/relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql).
 

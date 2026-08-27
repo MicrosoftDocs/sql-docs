@@ -26,7 +26,7 @@ ms.topic: reference
 |**\<state-name>**|This is the name of the current CDC state.|  
 |**CS**|This marks the current processing range start point (Current Start).|  
 |**\<cs-lsn>**|This is the last (Log Sequence Number) LSN processed in the previous CDC run.|  
-|**CE**|This marks the current processing range end point (Current End). The presence of the CE component in the CDC state is an indication that either a CDC package is currently processing or that a CDC package failed before fully processing its CDC processing range.|  
+|**CE**|This marks the current processing range endpoint (Current End). The presence of the CE component in the CDC state is an indication that either a CDC package is currently processing or that a CDC package failed before fully processing its CDC processing range.|  
 |**\<ce-lsn>**|This is the last LSN to be processed in the current CDC Run. It's always assumed that the last sequence number to be processed is the maximum (0xFFF...).|  
 |**IR**|This marks the initial processing range.|  
 |**\<ir-start>**|This is an LSN of a change just before the initial load began.|  

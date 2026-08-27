@@ -497,7 +497,7 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
   
  You can restore a database to a specific point in time or transaction, by specifying the target recovery point in a STOPAT, STOPATMARK, or STOPBEFOREMARK clause. A specified time or transaction is always restored from a log backup. In every RESTORE LOG statement of the restore sequence, you must specify your target time or transaction in an identical STOPAT, STOPATMARK, or STOPBEFOREMARK clause.  
   
- As a prerequisite to a point-in-time restore, you must first restore a full database backup whose end point is earlier than your target recovery point. To help you identify which database backup to restore, you can optionally specify your WITH STOPAT, STOPATMARK, or STOPBEFOREMARK clause in a RESTORE DATABASE statement to raise an error if a data backup is too recent for the specified target time. But the complete data backup is always restored, even if it contains the target time.  
+ As a prerequisite to a point-in-time restore, you must first restore a full database backup whose endpoint is earlier than your target recovery point. To help you identify which database backup to restore, you can optionally specify your WITH STOPAT, STOPATMARK, or STOPBEFOREMARK clause in a RESTORE DATABASE statement to raise an error if a data backup is too recent for the specified target time. But the complete data backup is always restored, even if it contains the target time.  
   
 > [!NOTE]  
 >  The RESTORE_DATABASE and RESTORE_LOG point-in-time WITH options are similar, but only RESTORE LOG supports the *mark_name* argument.  

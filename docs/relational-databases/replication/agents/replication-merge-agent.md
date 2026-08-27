@@ -167,7 +167,7 @@ replmerg [-?]
 |`0`|Specifies that TLS is not used.|  
 |`1`|Specifies that TLS is used, but the agent does not verify that the TLS/SSL server certificate is signed by a trusted issuer.|  
 |`2`|Specifies that TLS is used, and that the certificate is verified.| 
-|`3`| Not supported, because option `3` is specific for connections towards Azure SQL Managed Instance, and merge replication is not supported with Azure SQL Managed Instance. |
+|`3`| Not supported, because option `3` is specific for connections toward Azure SQL Managed Instance, and merge replication is not supported with Azure SQL Managed Instance. |
 |`4`| Specifies that for connections from SQL Server 2025 and later versions, to SQL Server (any supported version), TLS 1.3 is used, and the certificate is verified. Requires installing the certificate on SQL Server hosts that are receiving connections with `EncryptionLevel` set to `4`. |
 
 [!INCLUDE [sql-25-repl-info](../../../includes/sql-25-repl-info.md)] 
@@ -324,7 +324,7 @@ This parameter is on the list for possible deprecation soon. We recommend settin
  Specifies the number of source threads that the Merge Agent uses to enumerate changes from the source. The source is the Subscriber during upload and the Publisher during download. The default is **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Is the maximum number of seconds that the Merge Agent waits when the number of concurrent merge processes running is at the limit set by the **\@max_concurrent_merge** property of **sp_addmergepublication**. If the maximum number of seconds is reached and the Merge Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be cancelled.  
+ Is the maximum number of seconds that the Merge Agent waits when the number of concurrent merge processes running is at the limit set by the **\@max_concurrent_merge** property of **sp_addmergepublication**. If the maximum number of seconds is reached and the Merge Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be canceled.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Is the path to the Jet database (.mdb file) if **SubscriberType** is **2** (allows a connection to a Jet database without an ODBC Data Source Name (DSN)).  

@@ -30,7 +30,7 @@ The Lock:Acquired and Lock:Released event classes can be used to monitor when ob
 | BinaryData | **image** | Lock resource identifier. | 2 | Yes |
 | ClientProcessID | **int** | ID assigned by the host computer to the process where the client application is running. This data column is populated if the client provides the client process ID. | 9 | Yes |
 | DatabaseID | **int** | ID of the database in which the lock was acquired. [!INCLUDE [ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the ServerName data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function. | 3 | Yes |
-| Duration | **bigint** | Amount of time (in microseconds) between the time the lock was acquired and the time the lock was released or cancelled. | 13 | Yes |
+| Duration | **bigint** | Amount of time (in microseconds) between the time the lock was acquired and the time the lock was released or canceled. | 13 | Yes |
 | EndTime | **datetime** | Time at which the event ended. | 15 | Yes |
 | EventClass | **int** | Type of event = 24. | 27 | No |
 | EventSequence | **int** | Sequence of a given event within the request. | 51 | No |

@@ -14,7 +14,7 @@ ms.custom:
 
   When using certain chart types in a paginated report, you can specify a drawing effect to increase the visual impact of your chart. These drawing effects are only applied to the series of your chart. They have no effect on any other chart element.  
   
- When you are using any variant of a pie or doughnut chart, you can specify a soft edge or concave drawing style, similar to bevel or emboss effects that can be applied to an image.  
+ When you are using any variant of a pie or donut chart, you can specify a soft edge or concave drawing style, similar to bevel or emboss effects that can be applied to an image.  
   
  When you are using any variant of a bar or column chart, you can apply texture styles, such as cylinder, wedge, and light-to-dark, to the individual bars or columns.  
   
@@ -23,11 +23,13 @@ ms.custom:
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### To add bevel or emboss styles to a pie or doughnut chart  
+<a id="to-add-bevel-or-emboss-styles-to-a-pie-or-doughnut-chart"></a>
+
+## Add bevel or emboss styles to a pie or donut chart
   
 1.  On the **View** tab, select **Properties** to open the Properties pane.  
   
-2.  Select the pie or doughnut chart that you want to enhance. Select a data field in the chart, not the entire chart.  
+2.  Select the pie or donut chart that you want to enhance. Select a data field in the chart, not the entire chart.  
   
 3.  In the Properties pane, expand the **CustomAttributes** node.  
   
@@ -38,7 +40,7 @@ ms.custom:
   
  ![Pie chart with concave drawing style](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Pie chart with concave drawing style")  
   
-### To add texture styles to a bar or column chart  
+## Add texture styles to a bar or column chart  
   
 1.  Select the bar or column chart that you want to enhance. Select a data field in the chart, not the entire chart.  
   

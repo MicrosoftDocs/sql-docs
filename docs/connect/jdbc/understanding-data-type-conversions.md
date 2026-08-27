@@ -90,7 +90,7 @@ Note that a byte-order mark (BOM) is required if the XML characters are in speci
 ## Conversions on setObject
 
 > [!NOTE]  
-> Microsoft JDBC Drivers 4.2 (and higher) for SQL Server supports JDBC 4.1 and 4.2. For more detail on 4.1 and 4.2 datatype mappings and conversions see [JDBC 4.1 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md), in addition to the information below.
+> Microsoft JDBC Drivers 4.2 (and higher) for SQL Server supports JDBC 4.1 and 4.2. For more detail on 4.1 and 4.2 data type mappings and conversions see [JDBC 4.1 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md), in addition to the information below.
 
 For the Java typed data passed to the setObject(\<Type>) methods of the [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) class, the following conversions apply.
 

@@ -228,7 +228,7 @@ A report that includes a matrix typically expands horizontally and vertically wh
 
     :::image type="content" source="../reporting-services/media/report-builder-column-handles.png" alt-text="Screenshot for the column and row handles in the Report Builder matrix report.":::
   
-5.  To resize the QTY column farthest to the left of the matrix, point to the line between column handles so that the cursor changes into a double arrow. Drag the column towards the left until it's 0.5 inches wide.  
+5.  To resize the QTY column farthest to the left of the matrix, point to the line between column handles so that the cursor changes into a double arrow. Drag the column toward the left until it's 0.5 inches wide.  
   
     A column width of 0.5 inches is adequate to display the quantity.  
   

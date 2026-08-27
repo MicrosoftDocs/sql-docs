@@ -67,7 +67,7 @@ FOR
  It is possible for client applications to create and run actions that are unsafe; it is also possible for client applications to use unsafe functions. To avoid these situations, use the **Safety Options** property. For more information, see Safety Options Property.  
   
 > [!NOTE]  
->  This statement is included for backwards compatibility. Actions new to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], such as Drillthrough or Report actions, are not supported.  
+>  This statement is included for backward compatibility. Actions new to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], such as Drillthrough or Report actions, are not supported.  
   
 ## Action Types  
  The following table describes the different types of actions available in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

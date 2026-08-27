@@ -42,7 +42,7 @@ IP firewall rules grant access to databases based on the originating IP address 
 
 ### Network security perimeter
 
-An [Azure network security perimeter](/azure/private-link/network-security-perimeter-concepts#onboarded-private-link-resources) creates logical network boundaries around your platform-as-a-service (PaaS) resources that you deploy outside your virtual networks. 
+An [Azure network security perimeter](/azure/private-link/network-security-perimeter-concepts#onboarded-private-link-resources) creates logical network boundaries around your platform as a service (PaaS) resources that you deploy outside your virtual networks. 
 
 - An Azure network security perimeter helps you control public network access to Azure SQL Database.
 - Controlling access with an Azure network security perimeter doesn't apply to Azure SQL Managed Instance.

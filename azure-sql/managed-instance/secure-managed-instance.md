@@ -63,7 +63,7 @@ Controlling privileged access prevents unauthorized changes, reduces the impact 
 
 - **Monitor privileged activities**: Enable auditing to track all actions performed by privileged accounts. Regularly review audit logs for suspicious activities or unauthorized changes. For more information, see [SQL Server Audit in Azure SQL Managed Instance](auditing.md).
 
-- **Use server roles for database-level access**: Leverage built-in server roles and create custom roles to implement role-based security. Assign users to roles rather than granting individual permissions to simplify management and reduce errors. For more information, see [Server-level roles](/sql/relational-databases/security/authentication-access/server-level-roles).
+- **Use server roles for database-level access**: Use built-in server roles and create custom roles to implement role-based security. Assign users to roles rather than granting individual permissions to simplify management and reduce errors. For more information, see [Server-level roles](/sql/relational-databases/security/authentication-access/server-level-roles).
 
 ## Data protection
 

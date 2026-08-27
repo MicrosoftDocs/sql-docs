@@ -21,7 +21,7 @@ helpviewer_keywords:
  For more information about [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error messages, including a list of most [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] errors and their descriptions, see [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md). However, the list currently does not include troubleshooting information.  
   
 > [!IMPORTANT]  
->  Many of the error messages that you may see when you are working with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come from other components. These may include OLE DB providers, other database components such as the [!INCLUDE[ssDE](../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , or other services or components such as the file system, the SMTP server, or Microsoft Message Queueing. To find information about these external error messages, see the documentation specific to the component.  
+>  Many of the error messages that you may see when you are working with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come from other components. These may include OLE DB providers, other database components such as the [!INCLUDE[ssDE](../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , or other services or components such as the file system, the SMTP server, or Microsoft Message Queuing. To find information about these external error messages, see the documentation specific to the component.  
   
 ## Error Messages  
   

@@ -50,7 +50,7 @@ adls://<storage_account_name>.dfs.core.windows.net/<container_name>/
 ```
 
 > [!IMPORTANT]  
-> Always use endpoint-specific prefixes. The provided Location type prefix is used to choose the optimal protocol for communication and to leverage any advanced capabilities offered by the particular storage type.
+> Always use endpoint-specific prefixes. The provided Location type prefix is used to choose the optimal protocol for communication and to use any advanced capabilities offered by the particular storage type.
 > 
 > The generic `https://` prefix is only supported for `BULK INSERT`, but not for other use cases including `OPENROWSET` or `EXTERNAL TABLE`.
 

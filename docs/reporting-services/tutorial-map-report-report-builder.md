@@ -286,7 +286,7 @@ In this section, you add a map layer that displays a Bing Maps tile background.
   
 3.  From the dropdown list, select **Tile Layer**.  
   
-    The last layer in the **Map Layer** pane is TileLayer1. By default, the tile layer displays the road map style.  
+    The last layer in the **Map Layer** pane is TileLayer1. By default, the tile layer displays the roadmap style.  
   
     > [!NOTE]  
     > In the wizard, you can also add a tile layer on the **Choose spatial data and map view options** page. To do this, select **Add a Bing Maps background for this map view**. In a rendered report, the tile background displays Bing Maps tiles for the current map viewport center and zoom level.  

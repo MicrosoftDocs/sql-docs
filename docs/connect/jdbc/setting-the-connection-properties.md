@@ -4,7 +4,7 @@ description: The connection string properties for the Microsoft JDBC Driver for 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, machavan, sunilbs
-ms.date: 08/21/2026
+ms.date: 08/27/2026
 ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: connectivity
@@ -578,7 +578,7 @@ For more information about disaster recovery, see [JDBC driver support for High 
 - **Type**: `Boolean` [`true` | `false`]
 - **Default**: `false`
 
-Always specify `multiSubnetFailover=true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] availability group, or a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance. The driver attempts TCP connections to all resolved IP addresses in parallel and uses the first connection that succeeds. When DNS resolves to one address, the driver does a single connect attempt and doesn't start any parallel connection threads.
+Always specify `multiSubnetFailover=true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] availability group, or a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance. The driver attempts TCP connections to all resolved IP addresses in parallel and uses the first connection that succeeds. When DNS resolves to one address, the driver does a single connection attempt and doesn't start any parallel connection threads.
 
 Possible values are `true` and `false`.
 

@@ -4,7 +4,7 @@ description: This article discusses Microsoft JDBC Driver for SQL Server support
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 08/21/2026
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -72,7 +72,7 @@ When the server name in your connection string resolves to more than one IP addr
 
 - Behavior of an application that uses the **multiSubnetFailover** connection property isn't affected based on the type of authentication: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, Kerberos Authentication, or Windows Authentication.
 
-- Increase the value of **loginTimeout** to accommodate for failover time and reduce application connection retry attempts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, **loginTimeout** also has to be large enough to hold the driver's connection retries. For more information, see [Connect to an auto-paused serverless database](connection-resiliency.md#connect-to-an-auto-paused-serverless-database).
+- Increase the value of **loginTimeout** to accommodate failover time and reduce application connection retry attempts. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, **loginTimeout** also has to be large enough to hold the driver's connection retries. For more information, see [Connect to an auto-paused serverless database](connection-resiliency.md#connect-to-an-auto-paused-serverless-database).
 
 If read-only routing isn't in effect, connecting to a secondary replica location in an availability group will fail in the following situations:
 

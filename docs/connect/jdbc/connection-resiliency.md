@@ -4,7 +4,7 @@ description: Connection resiliency can transparently restore broken idle connect
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs, randolphwest
-ms.date: 08/21/2026
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -99,7 +99,7 @@ The following values keep retrying for about a minute, which covers a typical re
 jdbc:sqlserver://<server>.database.windows.net;databaseName=<database>;encrypt=true;loginTimeout=120;connectRetryCount=5;connectRetryInterval=15
 ```
 
-Raising `loginTimeout` on its own doesn't help, because the connect attempt fails fast with 40613 rather than hanging. Raising `connectRetryCount` on its own doesn't help either, because `loginTimeout` cuts the sequence short.
+Raising `loginTimeout` on its own doesn't help, because the connection attempt fails fast with 40613 rather than hanging. Raising `connectRetryCount` on its own doesn't help either, because `loginTimeout` cuts the sequence short.
 
 ## Detect broken idle connections
 

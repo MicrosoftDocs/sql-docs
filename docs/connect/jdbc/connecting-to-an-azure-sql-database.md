@@ -4,7 +4,7 @@ description: This article discusses issues when you use the Microsoft JDBC Drive
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 08/21/2026
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -29,7 +29,7 @@ To connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], yo
   
 ## Login timeout
 
-When connecting to Azure SQL databases, the `loginTimeout` default of 30 seconds is a reasonable starting point. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, raise it so it can hold the driver's connection retries while the database resumes. For more information, see [Connect to an auto-paused serverless database](connection-resiliency.md#connect-to-an-auto-paused-serverless-database). To set `loginTimeout`, see [Setting the connection properties](setting-the-connection-properties.md).
+When you connect to Azure SQL databases, the `loginTimeout` default of 30 seconds is a reasonable starting point. For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, raise it so it can hold the driver's connection retries while the database resumes. For more information, see [Connect to an auto-paused serverless database](connection-resiliency.md#connect-to-an-auto-paused-serverless-database). To set `loginTimeout`, see [Setting the connection properties](setting-the-connection-properties.md).
 
 ## Connections dropped
 

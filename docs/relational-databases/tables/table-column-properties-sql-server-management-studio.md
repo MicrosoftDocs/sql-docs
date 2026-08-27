@@ -33,10 +33,10 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
  Indicates whether this column allows nulls. To edit this property, click the Allow Nulls checkbox corresponding to the column in the top pane of Table Designer.  
   
  **Data Type**  
- Displays the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value.  
+ Displays the data type for the selected column. To edit this property, click its value, expand the dropdown list, and choose another value.  
   
  **Default Value or Binding**  
- Displays the default for this column whenever no value is specified for this column. The value of this field can be either the value of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default constraint or the name of a global constraint to which the column is bound. The drop-down list contains all global defaults defined in the database. To bind the column to a global default, select from the drop-down list. Alternatively, to create a default constraint for the column, type the default value directly as text.  
+ Displays the default for this column whenever no value is specified for this column. The value of this field can be either the value of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default constraint or the name of a global constraint to which the column is bound. The dropdown list contains all global defaults defined in the database. To bind the column to a global default, select from the dropdown list. Alternatively, to create a default constraint for the column, type the default value directly as text.  
   
  **Length**  
  Shows the number of characters allowed for character-based data types. This property is only available for character-based data types  
@@ -61,7 +61,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
   
 -   **Formula** Displays the formula for the computed column. To edit this property, type a new formula directly.  
   
--   **Is Persisted** Indicates whether the results of the formula are stored. If this property is set to **No** then only the formula is stored and the values are calculated every time this column is referenced. To edit this property, click its value, expand the drop-down list, and choose another value.  
+-   **Is Persisted** Indicates whether the results of the formula are stored. If this property is set to **No** then only the formula is stored and the values are calculated every time this column is referenced. To edit this property, click its value, expand the dropdown list, and choose another value.  
   
  For more information, see [Specify Computed Columns in a Table](../../relational-databases/tables/specify-computed-columns-in-a-table.md).  
   
@@ -83,11 +83,11 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 > [!NOTE]  
 >  To change the value shown for the **Full-text Specification** property, you must expand it and edit the **Is Full-text Indexed** child property.  
   
--   **Is Full-text Indexed** Indicates whether this column is full-text indexed. This property can be set to **Yes** only if the data type for this column is full-text searchable and if the table to which this column belongs has a full-text index specified for it. To edit this property, click its value, expand the drop-down list, and choose a value.  
+-   **Is Full-text Indexed** Indicates whether this column is full-text indexed. This property can be set to **Yes** only if the data type for this column is full-text searchable and if the table to which this column belongs has a full-text index specified for it. To edit this property, click its value, expand the dropdown list, and choose a value.  
   
--   **Full-text Type Column** Displays the name of the column on which this column is full-text indexed. This property must be set if the **Datatype** property for this column is either **image** or **varbinary**. The column named in this property must be of type **[n]char, [n]varchar,** or **xml**, and the drop-down list for this property contains only columns that have one of these three data types. Rows in the column named by this property indicate the document type of the corresponding rows in the full-text-searchable column. To edit this property, click its value, expand the drop-down list, and choose another value.  
+-   **Full-text Type Column** Displays the name of the column on which this column is full-text indexed. This property must be set if the **Datatype** property for this column is either **image** or **varbinary**. The column named in this property must be of type **[n]char, [n]varchar,** or **xml**, and the dropdown list for this property contains only columns that have one of these three data types. Rows in the column named by this property indicate the document type of the corresponding rows in the full-text-searchable column. To edit this property, click its value, expand the dropdown list, and choose another value.  
   
--   **Language** Indicates the language of the word breaker used to index the column. The value stored in the property is actually the locale identifier for the word breaker. For more information about word breakers and LCIDs, see Word Breakers and Stemmers. To edit this property, click its value, expand the drop-down list, and choose another value.  
+-   **Language** Indicates the language of the word breaker used to index the column. The value stored in the property is actually the locale identifier for the word breaker. For more information about word breakers and LCIDs, see Word Breakers and Stemmers. To edit this property, click its value, expand the dropdown list, and choose another value.  
   
  **Statistical Semantics**  
  Select whether to enable statistical semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
@@ -103,7 +103,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 > [!NOTE]  
 >  To change the value shown for the **Identity Specification** property, you must expand it and edit the **Is Identity** child property.  
   
--   **Is Identity** Indicates whether or not this column is an identity column. To edit this property, click its value, expand the drop-down list, and choose another value.  
+-   **Is Identity** Indicates whether or not this column is an identity column. To edit this property, click its value, expand the dropdown list, and choose another value.  
   
 -   **Identity Seed** Displays the seed value specified during the creation of this identity column. This value is assigned to the first row in the table. If you leave this cell blank, the value 1 will be assigned by default. To edit this property, type the new value directly.  
   
@@ -116,13 +116,13 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
  Shows whether the column is merge-published.  
   
  **Not For Replication**  
- Indicates whether original identity values are preserved during replication. For more information on replication see CREATE TABLE. To edit this property, click its value, expand the drop-down list, and choose another value.  
+ Indicates whether original identity values are preserved during replication. For more information on replication see CREATE TABLE. To edit this property, click its value, expand the dropdown list, and choose another value.  
   
  **Replicated**  
  Shows whether this column is replicated in another location.  
   
  **RowGuid**  
- Indicates whether SQL Server uses the column as a ROWGUID. You can set this value to **Yes** only for a unique identity column. To edit this property, click its value, expand the drop-down list, and choose another value.  
+ Indicates whether SQL Server uses the column as a ROWGUID. You can set this value to **Yes** only for a unique identity column. To edit this property, click its value, expand the dropdown list, and choose another value.  
   
  **Size**  
  Shows the size in bytes allowed by column's data type. For example, a nchar data type may have a length of 10 (the number of characters) but it would have a size of 20 to account for Unicode character sets.  

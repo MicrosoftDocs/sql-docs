@@ -39,7 +39,7 @@ ms.custom:
   
 4.  Click **Attribute Groups**.  
   
-5.  On the **Manage Attribute Groups** page, select member type from the **Member Types** drop-down list box to expand **Leaf**, **Consolidated** or **Collection**, depending on the type of group you want to make visible.  
+5.  On the **Manage Attribute Groups** page, select member type from the **Member Types** dropdown list to expand **Leaf**, **Consolidated** or **Collection**, depending on the type of group you want to make visible.  
   
 6.  Select the attribute group you want to edit from the grid, and then click **Edit**.  
   

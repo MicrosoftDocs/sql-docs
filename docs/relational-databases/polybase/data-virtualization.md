@@ -28,7 +28,7 @@ Connect to the master instance by using the IP address/port number of the **sql-
 ![Virtualize Data wizard](media/data-virtualization/virtualize-data-wizard.png)
 ## Select a data source
 
-If you started the wizard from one of the databases, the destination drop-down box fills automatically. You also have the option to enter or change the destination database on this page. The external data source types supported by the wizard are SQL Server, Oracle, MongoDB, and Teradata.
+If you started the wizard from one of the databases, the destination dropdown list fills automatically. You also have the option to enter or change the destination database on this page. The external data source types supported by the wizard are SQL Server, Oracle, MongoDB, and Teradata.
 
 > [!NOTE]
 >SQL Server is highlighted by default.

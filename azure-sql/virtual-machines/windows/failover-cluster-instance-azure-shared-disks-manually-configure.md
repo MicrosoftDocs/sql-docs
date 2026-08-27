@@ -54,7 +54,7 @@ To attach the shared disk to your SQL Server VMs, follow these steps:
 1. Select the VM in the Azure portal that you'll attach the shared disk to.
 1. Select **Disks** in the **Settings** pane.
 1. Select **Attach existing disks** to attach the shared disk to the VM.
-1. Choose the shared disk from the **Disk name** dropdown.
+1. Choose the shared disk from the **Disk name** dropdown list.
 1. Select **Save**.
 1. Repeat these steps for every cluster node SQL Server VM.
 

@@ -36,7 +36,7 @@ Connection manager configuration changes are resolved by Integration Services at
      - In the **User name** box, enter the username that you use to connect to the Teradata database.  
      - In the **Password** box, enter the Teradata database password of the user.
 
-1. (Optional) In the **Default database** drop-down list, select the Teradata database to connect to. If this database-access permission is incorrect, an error is displayed, and you can then manually enter the database name.
+1. (Optional) In the **Default database** dropdown list, select the Teradata database to connect to. If this database-access permission is incorrect, an error is displayed, and you can then manually enter the database name.
 
 1. (Optional) In the **Account** box, enter the name of the account that corresponds to the user name. If this value is empty, the account for the immediate owner of the database is used.
 1. Select **OK**.

@@ -78,7 +78,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
  English is the default language. Setting the **Language** property to **Other** disables the Speller for the domain.  
   
 > [!TIP]  
->  If your language is not listed in the **Language** drop-down list, you must select **Other**. This ensures that DQS cleanses and eliminates duplicates for the non-listed language data based on the available knowledge (domain rules, domain values, TBRs, matching rule) in the domain.  
+>  If your language is not listed in the **Language** dropdown list, you must select **Other**. This ensures that DQS cleanses and eliminates duplicates for the non-listed language data based on the available knowledge (domain rules, domain values, TBRs, matching rule) in the domain.  
   
 ###  <a name="Speller"></a> Enable Speller  
  If the data type is **String**, click to enable the DQS Speller for the domain. The Speller only works on domains with a data type of string. The **Enable Speller** check box enables the speller only for the single domain associated with the check box. The check box does not apply to a composite domain.  

@@ -103,7 +103,7 @@ f1_keywords:
   
 -   **Dataset field.** A field from a dataset in the Report Data pane.  
   
--   **Spatial data source field.** A field from the spatial data source that is included with the spatial data. For example, an ESRI Shapefile frequently includes both spatial and analytical data. Field names from the spatial data source begin with # and appear in the drop-down list of fields when you are specifying the data field for rules for a layer.  
+-   **Spatial data source field.** A field from the spatial data source that is included with the spatial data. For example, an ESRI Shapefile frequently includes both spatial and analytical data. Field names from the spatial data source begin with # and appear in the dropdown list of fields when you are specifying the data field for rules for a layer.  
   
 -   **Embedded data for a map element.** After you embed polygons, lines, or points in a report, you can override the data fields for individual map elements and set custom values.  
   

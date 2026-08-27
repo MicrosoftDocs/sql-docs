@@ -142,9 +142,9 @@ Microsoft Purview Information Protection labels provide a simple and uniform way
 
    :::image type="content" source="./media/data-discovery-and-classification-overview/select-microsoft-information-protection-policy.png" alt-text="Screenshot of selecting Microsoft Information Protection policy for Azure SQL Database." lightbox="./media/data-discovery-and-classification-overview/select-microsoft-information-protection-policy.png":::
 
-1. If you go to the **Classification** tab, or select **Add classification**, you'll now see Microsoft 365 sensitivity labels appear in the **Sensitivity label** dropdown.
+1. If you go to the **Classification** tab, or select **Add classification**, you'll now see Microsoft 365 sensitivity labels appear in the **Sensitivity label** dropdown list.
 
-   :::image type="content" source="./media/data-discovery-and-classification-overview/select-sensitivity-label.png" alt-text="Screenshot of Sensitivity label dropdown.":::
+   :::image type="content" source="./media/data-discovery-and-classification-overview/select-sensitivity-label.png" alt-text="Screenshot of the Sensitivity label dropdown list.":::
 
    :::image type="content" source="./media/data-discovery-and-classification-overview/sensitivity-label-classification-tab.png" alt-text="Screenshot of Sensitivity label in the Classification tab." lightbox="./media/data-discovery-and-classification-overview/sensitivity-label-classification-tab.png":::
 

@@ -82,14 +82,14 @@ Replication Monitor provides the following tabs that display information about t
 ### Perform tasks
   
 1.  Expand a Publisher group in the left pane, expand a Publisher, and then click a publication.   
-2.  To view information about subscriptions, click the **All Subscriptions** tab. To view only those subscriptions in a given state, such as synchronizing, select an option from the **Show** drop-down list.    
+2.  To view information about subscriptions, click the **All Subscriptions** tab. To view only those subscriptions in a given state, such as synchronizing, select an option from the **Show** dropdown list.    
 3.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. 
   
 ### To view information and perform tasks for subscriptions in the Subscription Watch List tab  
   
 1.  Expand a Publisher group in the left pane, and then click a Publisher.    
 2.  To view information about subscriptions, click the **Subscription Watch List** tab.    
-3.  Select the type of subscription to display from the **Show \<SubscriptionType> Subscriptions** drop-down list. To view only those subscriptions in a given state, such as synchronizing, select an option from the **Show** drop-down list.    
+3.  Select the type of subscription to display from the **Show \<SubscriptionType> Subscriptions** dropdown list. To view only those subscriptions in a given state, such as synchronizing, select an option from the **Show** dropdown list.    
 4.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. 
   
   

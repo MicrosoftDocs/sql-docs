@@ -36,7 +36,7 @@ If you already have an existing Azure SQL Database and are looking to add securi
 
    :::image type="content" source="media/network-security-perimeter/associated-resources-sql-network-security-perimeter.png" alt-text="Screenshot of associated resources for network security perimeter in the Azure portal.":::
 
-1. Select your **Profile** from the dropdown and select **Add**.
+1. Select your **Profile** from the dropdown list and select **Add**.
 
    :::image type="content" source="media/network-security-perimeter/select-associated-resources-sql-network-security-perimeter.png" alt-text="Screenshot of adding an associated resource for network security perimeter in the Azure portal.":::
 

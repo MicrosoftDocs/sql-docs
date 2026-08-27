@@ -52,7 +52,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
 ##  <a name="MappingStage"></a> Mapping Stage  
  In the mapping stage you identify the source of the data that you will run the matching analysis on, and you map source columns to domains to make the domains available for the matching activity.  
   
-1.  On the **Map** page, to run matching on a database, leave **Data Source** as **SQL Server**, select the database that you want to run matching on, and then select the table. The source database must be present in the same SQL Server instance as the DQS server. Otherwise, it will not appear in the drop-down list.  
+1.  On the **Map** page, to run matching on a database, leave **Data Source** as **SQL Server**, select the database that you want to run matching on, and then select the table. The source database must be present in the same SQL Server instance as the DQS server. Otherwise, it will not appear in the dropdown list.  
   
 2.  To run matching on the data in an Excel spreadsheet, select **Excel File** for **Data Source**, click **Browse** and select the Excel file, and leave **Use first row as header** selected if appropriate. In **Worksheet**, select the worksheet in the Excel file that will be the source of the data. Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer to select an Excel file. If Excel is not installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer, the **Browse** button will not be available, and you will be notified beneath this text box that Excel is not installed.  
   
@@ -77,7 +77,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
  In the matching results, you can filter on the data that you want, and reject matches that you do not want. You can display profiling data for the matching process as a whole, specifics about the matching rules that are applied, and statistics about the matching results as a whole. The matching process can identify overlapping or non-overlapping clusters, and if being run multiple times, can be executed on data newly copied from the source and re-indexed, or on previous data.  
   
-1.  On the **Matching page**, select **Overlapping clusters** from the drop-down list to display the pivot records and following records for all clusters when matching is executed, even if groups of clusters have records in common. Select **Non overlapping clusters** to display clusters that have records in common as a single cluster when matching is executed.  
+1.  On the **Matching page**, select **Overlapping clusters** from the dropdown list to display the pivot records and following records for all clusters when matching is executed, even if groups of clusters have records in common. Select **Non overlapping clusters** to display clusters that have records in common as a single cluster when matching is executed.  
   
 2.  Click **Reload data from source** (the default) to copy data from the data source into the staging table and re-index it when you run the matching project. Click **Execute on previous data** to run a matching project without copying the data into the staging table and re-indexing the data. **Execute on previous data** is disabled for the first run of the matching project, or if you change mapping in the **Map** page, and then press **Yes** in the following popup. In both of those cases, you must re-index. It is not necessary to re-index if the matching project has not changed. Executing on previous data can help performance.  
   
@@ -114,7 +114,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
 2.  If you selected **SQL Server** for **Destination Type**, select the database to export the results to in **Database Name**.  
   
     > [!IMPORTANT]  
-    >  The destination database must be present in the same SQL Server instance as the DQS server. Otherwise, it will not appear in the drop-down list.  
+    >  The destination database must be present in the same SQL Server instance as the DQS server. Otherwise, it will not appear in the dropdown list.  
   
 3.  Select the check box for **Matching Results** to export matching results (see above for an explanation) to the designated table in a SQL Server database or to the designated .csv or Excel file. Select the check box for **Survivorship Results** to export survivorship results (see above for an explanation) to the designated table in a SQL Server database or to the designated .csv or Excel file.  
   

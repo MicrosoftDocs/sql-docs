@@ -25,7 +25,7 @@ helpviewer_keywords:
  **Specific date and time** permits you stop the restore at a specific date and time that you select. The timeline shows a representation of the backup operations performed in the 24 hours around the select date and time.  
   
  **Date**  
- Enter or select a date from the drop-down list.  
+ Enter or select a date from the dropdown list.  
   
  **Time**  
  Enter or select a date to designate the specific point-in-time for the restore to stop.  

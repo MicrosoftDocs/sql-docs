@@ -17,7 +17,7 @@ The Conversion page of the **Project Settings** dialog box contains settings tha
   
 The Conversion pane is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   
--   Use the **Default Project Settings** dialog box to set configuration options for all projects. To access the conversion settings, on the **Tools** menu, select **Default Project Settings**, select migration project type for which settings are required to be viewed /changed from **Migration Target Version** drop down, click **General** at the bottom of the left pane, and then select **Conversion**.  
+-   Use the **Default Project Settings** dialog box to set configuration options for all projects. To access the conversion settings, on the **Tools** menu, select **Default Project Settings**, select migration project type for which settings are required to be viewed /changed from **Migration Target Version** dropdown list, click **General** at the bottom of the left pane, and then select **Conversion**.  
   
 -   To specify settings for the current project, on the **Tools** menu click **Project Settings**, then click **General** at the bottom of the left pane, and then click **Conversion**.  
   

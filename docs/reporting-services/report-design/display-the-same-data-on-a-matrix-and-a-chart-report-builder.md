@@ -65,7 +65,7 @@ ms.custom:
   
 15. Click **Add**. A new row appears in the sort expressions grid.  
   
-16. In **Sort by**, from the drop-down list, choose the dataset field that you chose to group by in step 9.  
+16. In **Sort by**, from the dropdown list, choose the dataset field that you chose to group by in step 9.  
   
 17. Select **OK**.
   
@@ -83,7 +83,7 @@ ms.custom:
   
 22. Click **Add**. A new row appears in the sort expressions grid.  
   
-23. In **Sort by**, from the drop-down list, choose the dataset field that you chose to group by in step 16.  
+23. In **Sort by**, from the dropdown list, choose the dataset field that you chose to group by in step 16.  
   
 24. Select **OK**.
   

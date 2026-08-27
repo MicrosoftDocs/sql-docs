@@ -174,7 +174,7 @@ To enable Microsoft Entra authentication to your SQL Server VM, follow these ste
 1. Navigate to your [SQL virtual machines resource](manage-sql-vm-portal.md#security-configuration) in the Azure portal.
 1. Select **Security Configuration** under **Security**.
 1. Choose **Enable** under **Microsoft Entra authentication**.
-1. Choose the managed identity type from the drop-down, either **System-assigned** or **User-assigned**. If you choose user-assigned, then select the identity you want to use to authenticate to SQL Server on your Azure VM from the **User-assigned managed identity** drop-down that appears.
+1. Choose the managed identity type from the dropdown list, either **System-assigned** or **User-assigned**. If you choose user-assigned, then select the identity you want to use to authenticate to SQL Server on your Azure VM from the **User-assigned managed identity** dropdown list that appears.
 
    :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/enable-azure-ad-in-portal.png" alt-text="Screenshot of the security configuration page for SQL VM in the Azure portal, with Microsoft Entra authentication selected.":::
 

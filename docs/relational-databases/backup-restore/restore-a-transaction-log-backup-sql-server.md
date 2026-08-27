@@ -64,7 +64,7 @@ RESTORE permissions are given to roles in which membership information is always
   
     -   **From previous backups of database**  
   
-         Select the database to restore from the drop-down list. The list contains only databases that have been backed up according to the **msdb** backup history.  
+         Select the database to restore from the dropdown list. The list contains only databases that have been backed up according to the **msdb** backup history.  
   
     -   **From file or tape**  
   

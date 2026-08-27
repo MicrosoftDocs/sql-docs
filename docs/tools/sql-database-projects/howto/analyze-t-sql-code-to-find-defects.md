@@ -175,7 +175,7 @@ Add or modify the element for `SqlCodeAnalysisRules` in the first `<PropertyGrou
 
 To enable or disable SQL code analysis in SQL Server Management Studio (SSMS), right-click the project in **Solution Explorer** and select **Properties**. In the **Code Analysis** tab of the properties window, select the desired code analysis settings.
 
-To disable a specific rule or to change the severity of a rule, select the corresponding option from the dropdown list for that rule from the rule list.
+To disable a specific rule or to change the severity of a rule, find the rule in the rule list and select the corresponding option from its dropdown list.
 
 :::zone-end
 

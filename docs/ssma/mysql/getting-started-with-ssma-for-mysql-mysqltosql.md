@@ -43,7 +43,7 @@ You can also perform these tasks by using the toolbars and menus.
   
 You must also connect to an instance of SQL Server. After a successful connection, a hierarchy of SQL Server databases will appear in SQL Server Metadata Explorer. After you convert MySQL schemas to SQL Server schemas, select those converted schemas in SQL Server Metadata Explorer, and then synchronize the schemas with SQL Server.  
   
-You must connect to Azure SQL Database if you have selected Azure SQL Database from the Migrate to dropdown in new project dialog box. After a successful connection, a hierarchy of Azure SQL Database databases will appear in Azure SQL Database Metadata Explorer. After you convert MySQL schemas to Azure SQL Database schemas, select those converted schemas in Azure SQL Database Metadata Explorer, and then synchronize the schemas with Azure SQL Database.  
+You must connect to Azure SQL Database if you have selected Azure SQL Database from the Migrate to dropdown list in new project dialog box. After a successful connection, a hierarchy of Azure SQL Database databases will appear in Azure SQL Database Metadata Explorer. After you convert MySQL schemas to Azure SQL Database schemas, select those converted schemas in Azure SQL Database Metadata Explorer, and then synchronize the schemas with Azure SQL Database.  
   
 After you synchronize converted schemas with SQL Server or Azure SQL Database, you can return to MySQL Metadata Explorer and migrate data from MySQL schemas into SQL Server or Azure SQL Database databases.  
   

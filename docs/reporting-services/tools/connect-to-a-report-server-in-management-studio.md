@@ -47,7 +47,7 @@ helpviewer_keywords:
 
 1. In the **Connect to Server** dialog box, enter the name of the report server instance into the **Server name** field. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is the computer name. If you install the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
 
-1. From the **Authentication** drop-down menu, select the authentication type your server uses. If you use **Windows Authentication**, you connect by using your credentials. If you select **Basic Authentication** or **Forms Authentication**, enter the account and password.  
+1. From the **Authentication** dropdown list, select the authentication type your server uses. If you use **Windows Authentication**, you connect by using your credentials. If you select **Basic Authentication** or **Forms Authentication**, enter the account and password.  
   
 1. Select **Connect**. The report server appears in **Object Explorer**.  
 
@@ -61,7 +61,7 @@ helpviewer_keywords:
 
 1. In the **Connect to Server** dialog box, enter a URL to a SharePoint site into the **Server name** field. The following example illustrates the syntax: `https://<web server>/sites/<site>`.
 
-1. From the **Authentication** drop-down menu, select the authentication type your server uses. If you use **Windows Authentication**, you must connect by using your credentials. If you select **Basic Authentication** or **Forms Authentication**, enter the account and password.
+1. From the **Authentication** dropdown list, select the authentication type your server uses. If you use **Windows Authentication**, you must connect by using your credentials. If you select **Basic Authentication** or **Forms Authentication**, enter the account and password.
 
 1. Select **Connect**. The report server appears in **Object Explorer**.
 
@@ -81,7 +81,7 @@ helpviewer_keywords:
 
     - For a report server that runs in SharePoint integrated mode, you connect to the SharePoint site that the report server is connected to. Connect to the SharePoint site so that you can view the permission levels. The permissions control access to report server content and operations. You can specify any site in the site collection. The following example shows the syntax: `https://mysharepointsite`.
 
-1. For **Authentication**, select the authentication mode that the report server uses from the drop-down menu.
+1. For **Authentication**, select the authentication mode that the report server uses from the dropdown list.
 
    - If you use default security, choose **Windows Authentication**.
    - If you installed and deployed a custom security extension, choose **Forms Authentication**.

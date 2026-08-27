@@ -41,7 +41,7 @@ helpviewer_keywords:
   
 9. Optionally, click in the background of the **Control Flow** tab, and the click **Properties**.  
   
-10. In the Properties window, click the value of the ID property, and then in the drop-down list click **\<Generate New ID>**.  
+10. In the Properties window, click the value of the ID property, and then in the dropdown list click **\<Generate New ID>**.  
   
 11. On the **File** menu, click **Save Selected Items** to save the new package.  
   

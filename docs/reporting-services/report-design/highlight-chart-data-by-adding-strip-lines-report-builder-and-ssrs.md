@@ -33,7 +33,7 @@ ms.custom:
   
 2.  Select the **Use interlacing** option. Grey strip lines will appear on your chart.  
   
-3.  (Optional) Specify a color for the strip lines using the adjacent **Color** drop-down list.  
+3.  (Optional) Specify a color for the strip lines using the adjacent **Color** dropdown list.  
   
 ### To display interlaced strip lines at custom intervals on a chart  
   

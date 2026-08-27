@@ -57,7 +57,7 @@ To enable SQL best practices assessments using the Azure portal, follow these st
 1. Select **SQL best practices assessments** under **Settings**.
 1. Select **Enable SQL best practices assessments** or **Configuration** to navigate to the **Configuration** page.
 1. Check the **Enable SQL best practices assessments** box and provide the following:
-   1. The [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) that assessments will be uploaded to. Choose an existing workspace in the subscription from the dropdown.
+   1. The [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) that assessments will be uploaded to. Choose an existing workspace in the subscription from the dropdown list.
    1. Choose a resource group where the Azure Monitor Agent resources [DCE](/azure/azure-monitor/essentials/data-collection-endpoint-overview) and [DCR](/azure/azure-monitor/essentials/data-collection-rule-overview) will be created. If you specify the same resource group across multiple SQL Server VMs, these resources are reused.
    1. The **Run schedule**. You can choose to run assessments on demand, or automatically on a schedule. If you choose a schedule, then provide the frequency (weekly or monthly), day of week, recurrence (every 1-6 weeks), and the time of day your assessments should start (local to VM time).
 1. Select **Apply** to save your changes and deploy the Azure Monitor Agent to your SQL Server VM if it's not already deployed. An Azure portal notification tells you once the SQL best practices assessment feature is ready for your SQL Server VM.
@@ -147,7 +147,7 @@ Access the assessment results Azure workbook in three ways:
 - Choose a completed run from the **Assessment results** section of the **SQL best practices assessments** page.
 - Select **View assessment results** from the **Top 10 recommendations** surfaced on the **Overview** page of your SQL VM resource page.
 
-Once you have the workbook open, you can use the dropdown to select previous runs. You can view the results of a single run using the **Results** page or review historical trends using the **Trends** page.
+Once you have the workbook open, you can use the dropdown list to select previous runs. You can view the results of a single run using the **Results** page or review historical trends using the **Trends** page.
 
 ### Results page
 

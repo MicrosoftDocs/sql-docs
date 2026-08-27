@@ -253,7 +253,7 @@ ms.custom: sfi-ropc-nochange
 |**InputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this will display as a count of characters. This value is ignored for delimited columns.<br /><br /> **Note** In the object model, the name of this property is ColumnWidth.|  
   
  **New**  
- Add a new column by clicking **New**. By default, the **New** button adds a new column at the end of the list. The button also has the following options, available in the drop-down list.  
+ Add a new column by clicking **New**. By default, the **New** button adds a new column at the end of the list. The button also has the following options, available in the dropdown list.  
   
 |Value|Description|  
 |-----------|-----------------|  

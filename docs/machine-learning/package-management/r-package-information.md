@@ -27,7 +27,7 @@ This article describes how to get information about installed R packages on [Azu
 ::: moniker-end
 
 > [!NOTE]
-> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown list to choose the appropriate version of SQL Server.
 
 ## Default R library location
 

@@ -26,11 +26,11 @@ helpviewer_keywords:
   
 2.  Drag a dimension to the filter area and drop it on the first cell in the **Dimension** column.  
   
-3.  In the **Hierarchy** column, choose a value from the drop-down list.  
+3.  In the **Hierarchy** column, choose a value from the dropdown list.  
   
-4.  In the **Operator** column, choose an operator for the drop-down list.  
+4.  In the **Operator** column, choose an operator for the dropdown list.  
   
-5.  In the **Filter Expression** column, select individual values from the drop-down list, or click the **All** member to choose all values.  
+5.  In the **Filter Expression** column, select individual values from the dropdown list, or click the **All** member to choose all values.  
   
 6.  In the **Parameters** column, select the check box to create a report parameter.  
   
@@ -54,13 +54,13 @@ helpviewer_keywords:
   
 4.  In the **Parameter** column, click **\<Enter Parameter>**, and then type the name of a parameter.  
   
-5.  In the **Dimension** column, choose a value from the drop-down list.  
+5.  In the **Dimension** column, choose a value from the dropdown list.  
   
-6.  In the **Hierarchy** column, choose a value from the drop-down list.  
+6.  In the **Hierarchy** column, choose a value from the dropdown list.  
   
 7.  In the **Multiple values** column, select the check box to create a multivalue parameter.  
   
-8.  In the **Default** column, from the drop-down list, select a single value or multiple values depending on your choice in step 5.  
+8.  In the **Default** column, from the dropdown list, select a single value or multiple values depending on your choice in step 5.  
   
 9.  Select **OK**.
   

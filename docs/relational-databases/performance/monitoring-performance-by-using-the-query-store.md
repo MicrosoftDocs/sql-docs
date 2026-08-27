@@ -148,7 +148,7 @@ After enabling the Query Store, refresh the database portion of the Object Explo
 > [!NOTE]  
 > For Azure Synapse Analytics, Query Store views are available under **System Views** in the database portion of the Object Explorer pane.
 
-Select **Regressed Queries** to open the **Regressed Queries** pane in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The Regressed Queries pane shows you the queries and plans in the Query Store. Use the dropdown list boxes at the top to filter queries based on various criteria: Duration (ms) (Default), CPU Time (ms), Logical Reads (KB), Logical Writes (KB), Physical Reads (KB), CLR Time (ms), DOP, Memory Consumption (KB), Row Count, Log Memory Used (KB), Temp DB Memory Used (KB), and Wait Time (ms).
+Select **Regressed Queries** to open the **Regressed Queries** pane in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The Regressed Queries pane shows you the queries and plans in the Query Store. Use the dropdown lists at the top to filter queries based on various criteria: Duration (ms) (Default), CPU Time (ms), Logical Reads (KB), Logical Writes (KB), Physical Reads (KB), CLR Time (ms), DOP, Memory Consumption (KB), Row Count, Log Memory Used (KB), Temp DB Memory Used (KB), and Wait Time (ms).
 
 Select a plan to see the graphical query plan. Buttons are available to view the source query, force and unforce a query plan, toggle between grid and chart formats, compare selected plans (if more than one is selected), and refresh the display.
 
@@ -172,7 +172,7 @@ Select a wait category by selecting on the bar and a detail view on the selected
 
 :::image type="content" source="media/monitoring-performance-by-using-the-query-store/query-store-waits-detail.PNG" alt-text="Screenshot of the SQL Server Query Wait Statistics detail view in SSMS Object Explorer." lightbox="media/monitoring-performance-by-using-the-query-store/query-store-waits-detail.PNG":::
 
-Use the dropdown list box at the top to filter queries based on various wait time criteria for the selected wait category: avg, max, min, std dev, and **total** (default). Select a plan to see the graphical query plan. Buttons are available to view the source query, force, and unforce a query plan, and refresh the display.
+Use the dropdown list at the top to filter queries based on various wait time criteria for the selected wait category: avg, max, min, std dev, and **total** (default). Select a plan to see the graphical query plan. Buttons are available to view the source query, force, and unforce a query plan, and refresh the display.
 
 **Wait categories** are combining different wait types into buckets similar by nature. Different wait categories require a different follow-up analysis to resolve the issue, but wait types from the same category lead to very similar troubleshooting experiences, and providing the affected query on top of waits would be the missing piece to complete most such investigations successfully.
 

@@ -77,7 +77,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 2.  Click the **Tracer Tokens** tab.  
   
-3.  Select a time from the **Time inserted** drop-down list.  
+3.  Select a time from the **Time inserted** dropdown list.  
   
 4.  View elapsed time for the tracer token in the following columns: **Publisher to Distributor**, **Distributor to Subscriber**, **Total Latency**. A value of **Pending** indicates that the token has not reached a given point.  
   

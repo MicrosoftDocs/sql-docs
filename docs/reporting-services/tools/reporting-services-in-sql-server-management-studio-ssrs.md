@@ -142,7 +142,7 @@ To open this page, start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofu
 
 **Options**
 
-**Name** - Enter a name for the shared schedule. This name appears in drop-down lists when users select a shared schedule for reports and subscriptions. Be sure to provide a descriptive name that fits easily within a list and that easily distinguishes one shared schedule from another. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Don't use the following characters when specifying a name:
+**Name** - Enter a name for the shared schedule. This name appears in dropdown lists when users select a shared schedule for reports and subscriptions. Be sure to provide a descriptive name that fits easily within a list and that easily distinguishes one shared schedule from another. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Don't use the following characters when specifying a name:
 
 ` ; ? : \@ & = + , $ / * < > " /  `
 

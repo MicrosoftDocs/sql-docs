@@ -50,7 +50,7 @@ For information on SQL Server restore from Azure Blob Storage, see [SQL Server B
 
     - **Database**
 
-         Select the database to restore from the drop-down list. The list contains only databases that have been backed up according to the **msdb** backup history.
+         Select the database to restore from the dropdown list. The list contains only databases that have been backed up according to the **msdb** backup history.
 
         > [!NOTE]
         > If the backup is taken from a different server, the destination server will not have the backup history information for the specified database. In this case, select **Device** to manually specify the file or device to restore.
@@ -62,10 +62,10 @@ For information on SQL Server restore from Azure Blob Storage, see [SQL Server B
         - **Select backup devices** dialog box  
 
             **Backup media type**  
-         Select a media type from the **Backup media type** drop-down list.  Note: The **Tape** option appears only if a tape drive is mounted on the computer, and the **Backup Device** option appears, only if at least one backup device exists.
+         Select a media type from the **Backup media type** dropdown list.  Note: The **Tape** option appears only if a tape drive is mounted on the computer, and the **Backup Device** option appears, only if at least one backup device exists.
 
             **Add**  
-            Depending on the type of media you select from the **Backup media type** drop-down list, clicking **Add** opens one of the following dialog boxes. (If the list in the **Backup media** list box is full, the **Add** button is unavailable.)
+            Depending on the type of media you select from the **Backup media type** dropdown list, clicking **Add** opens one of the following dialog boxes. (If the list in the **Backup media** list box is full, the **Add** button is unavailable.)
 
             |Media type|Dialog box|Description|
             |----------------|----------------|-----------------|
@@ -186,7 +186,7 @@ The following example restores a database to its state as of `1:23:17 PM` on `Ma
 1. Select **OK** to return to the **General** page.
 1. In the **Destination** section, select **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action.
 1. Select **Specific date and time**.  
-1. Change the **Timeline interval** to **Hour** in the drop-down box (optional).  
+1. Change the **Timeline interval** to **Hour** in the dropdown list (optional).  
 1. Move the slider to the desired time.
 1. Select **OK** to return to the General page.
 1. Select **OK**.
@@ -201,14 +201,14 @@ The two examples below perform a restore of `Sales` from a backup located in the
 1. Right-click **Databases** and select **Restore Database...**.
 1. On the **General** page, select **Device** under the **Source** section.
 1. Select the browse (...) button to open the **Select backup devices** dialog box.
-1. Select **URL** from the **Backup media type:** drop-down list.
+1. Select **URL** from the **Backup media type:** dropdown list.
 1. Select **Add** and the **Select a Backup File Location** dialog box opens.
 
 #### E1.   Restore a striped backup over an existing database and a shared access signature exists
 
 A stored access policy has been created with read, write, delete, and list rights.  A shared access signature that is associated with the stored access policy was created for the container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  The steps are mostly the same if a SQL Server credential already exists.  The database `Sales` currently exists on the server.  The backup files are `Sales_stripe1of2_20160601.bak` and `Sales_stripe2of2_20160601.bak`.  
 
-1. Select `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from the **Azure storage container:** drop-down list if the SQL Server credential already exists, else manually enter the name of the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Select `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from the **Azure storage container:** dropdown list if the SQL Server credential already exists, else manually enter the name of the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
 1. Enter the shared access signature in the **Shared Access Signature:** rich-text box.
 1. Select **OK** and the **Locate Backup File in Microsoft Azure** dialog box opens.
 1. Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.

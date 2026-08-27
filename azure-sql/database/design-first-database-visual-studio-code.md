@@ -107,7 +107,7 @@ The following diagram shows how these tables are related to each other. Some of 
 
 :::image type="content" source="media/design-first-database-visual-studio-code/tutorial-database-tables.png" alt-text="Screenshot of Table relationships.":::
 
-1. In **Object Explorer**, Select *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-click the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
+1. In **Object Explorer**, select *yourDatabase*, which expands the dropdown list of all processes stored in this database. Right-click the **Tables** folder and select **New Table**. A blank Table Designer opens that is connected to your database.
 
 1. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, see [Table Designer](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code#table-designer):
 

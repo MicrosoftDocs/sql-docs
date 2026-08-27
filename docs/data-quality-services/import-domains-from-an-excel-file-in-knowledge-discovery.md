@@ -46,7 +46,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
 5.  In the **Select an Excel File** dialog box, move to the folder that contains the Excel file that you want to import from, select the Excel file, and then click **Open**.  
   
-6.  From the **Worksheet** drop-down list, select the worksheet in the Excel file that you want to import from.  
+6.  From the **Worksheet** dropdown list, select the worksheet in the Excel file that you want to import from.  
   
 7.  Select **Use First Row as header** if you want the first row to be considered a data header, and if you want the values in the first row to be used as column names. Deselect **Use First Row as header** if you want the first row to be considered a data value, in which case DQS will use the Excel header names (alphabetical letters) for the column.  
   

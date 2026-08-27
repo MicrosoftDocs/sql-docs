@@ -44,7 +44,7 @@ You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN da
   
 4.  On the **Map** page, specify a connection to the data source. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
-5.  In the **Mappings** table, select a source column from the drop-down list for the **Source Column** column of an empty row. If no corresponding domain exists, click the **Create a Domain** icon.  
+5.  In the **Mappings** table, select a source column from the dropdown list for the **Source Column** column of an empty row. If no corresponding domain exists, click the **Create a Domain** icon.  
   
 ##  <a name="DomainManagement"></a> Create a Domain in the Domain Management Activity  
   
@@ -67,7 +67,7 @@ You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN da
   
 4.  If the data type is **String**, select **Normalize String** to remove special characters in the domain values, which may improve the likelihood of matches.  
   
-5.  From the **Format Output to** drop-down list, select the formatting that will be applied when the data values in the domain are output. The formatting is specific to the data type selected in step 2, as shown in the following list:  
+5.  From the **Format Output to** dropdown list, select the formatting that will be applied when the data values in the domain are output. The formatting is specific to the data type selected in step 2, as shown in the following list:  
   
     -   For a string value, you can specify that the string be output as upper case, lower case, or capitalized.  
   
@@ -77,9 +77,9 @@ You must have the dqs_kb_editor role or the dqs_administrator on the DQS_MAIN da
   
     -   For a decimal value, you can specify the accuracy and the type of format mask to be applied.  
   
-     Selecting **None** in the **Format Output to** drop-down list means none of the formats in the list will be applied.  
+     Selecting **None** in the **Format Output to** dropdown list means none of the formats in the list will be applied.  
   
-6.  If the data type is **String**, in the **Language** drop-down list, select which language version of the speller you want to apply if you enable the speller.  
+6.  If the data type is **String**, in the **Language** dropdown list, select which language version of the speller you want to apply if you enable the speller.  
   
 7.  If the data type is **String**, select **Enable Speller** to run the Speller on all string values when populating the domain.  
   

@@ -78,7 +78,7 @@ The following SQL managed instance metrics are available for alerting configurat
 
 1. Select **Metrics** menu item in the Monitoring section.
 
-1. On the **Metric** dropdown list, select one of the metrics you wish to set up your alert on (Storage space used is shown in the example).
+1. On the **Metric** dropdown list, select the metric you want to set up an alert for (Storage space used is shown in the example).
 
 1. Use **Aggregation** to select the aggregation period - average, minimum, or maximum reached in the given time period (Avg, Min, or Max).
 

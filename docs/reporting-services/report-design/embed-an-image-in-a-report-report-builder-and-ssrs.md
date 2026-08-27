@@ -50,7 +50,7 @@ You might want to embed an image in the report definition before adding the imag
     > [!NOTE]  
     >  If the Properties pane is not visible, on the **View** tab, click **Properties**.  
   
-3. Click in the text box next to the **MIMEType** property and select a new MIME type from the drop-down list.  
+3. Click in the text box next to the **MIMEType** property and select a new MIME type from the dropdown list.  
   
 ## Related content
 

@@ -67,7 +67,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
 ##  <a name="MatchingStage"></a> Mapping Stage  
  In the mapping stage you identify the source of the data that you will create the matching policy for, and you map source columns to domains to make the domains available for the matching policy activity.  
   
-1.  On the **Map** page, to create a policy for a database, leave **Data Source** as **SQL Server**, select the database that you want to create the policy for in **Database**, and then select the table or view in **Table/View**. The source database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Otherwise, it will not appear in the drop-down list.  
+1.  On the **Map** page, to create a policy for a database, leave **Data Source** as **SQL Server**, select the database that you want to create the policy for in **Database**, and then select the table or view in **Table/View**. The source database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Otherwise, it will not appear in the dropdown list.  
   
 2.  To create a policy for the data in an Excel spreadsheet, select **Excel File** for **Data Source**, click **Browse** and select the Excel file, and leave **Use first row as header** selected if appropriate. In **Worksheet**, select the worksheet in the Excel file that will be the source of the data. Microsoft Excel must be installed on the Data Quality Client computer to select an Excel file. Otherwise, the Browse button will not be available, and you will be notified beneath this text box that Microsoft Excel is not installed.  
   
@@ -118,7 +118,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
 9. Repeat steps 4 through 8 for all other domains that will be part of the matching rule. Ensure that the sum of the weights for all domains in the rule equals 100.  
   
-10. Select **Overlapping clusters** from the drop-down list to display the pivot records and following records for all clusters when matching is executed, even if groups of clusters have records in common. Select **Non overlapping clusters** to display clusters that have records in common as a single cluster when matching is executed.  
+10. Select **Overlapping clusters** from the dropdown list to display the pivot records and following records for all clusters when matching is executed, even if groups of clusters have records in common. Select **Non overlapping clusters** to display clusters that have records in common as a single cluster when matching is executed.  
   
 11. Click **Reload data from source** to copy data from the data source into the staging table and re-index it when you run the matching policy. Click **Execute on previous data** to run a matching policy without copying the data into the staging table and re-indexing the data. **Execute on previous data** is disabled for the first run of the matching policy, or if you change mapping in the **Map** page, and then press **Yes** in the following popup. In both of those cases, you must re-index. It is not necessary to re-index if the matching policy has not changed. Executing on previous data can help performance.  
   
@@ -128,7 +128,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
     -   In **Filter**, select **Matched** to show all matched rows and their score. Rows that are not considered matches (that have a matching score less than the minimum matching score) are not shown in the matching results table. Select **Unmatched** to show all unmatched rows, not matched rows.  
   
-    -   In the **Percent Drop Down Box**, select a percentage from the drop-down list, in increments of "5". All rows with a matching score that is greater than or equal to that percentage will be displayed in the matching results table.  
+    -   In the **Percent** dropdown list, select a percentage in increments of "5". All rows with a matching score that is greater than or equal to that percentage will be displayed in the matching results table.  
   
     -   If you double-click a record in the matching results table, DQS displays a **Matching Score Details** popup that displays the pivot record and source record (and the values in all their fields), the score between them, and a drill-down of the record matching. The drill-down displays the values in each field of the pivot record and source record so you can compare them, and shows the matching score that each field contributes to the overall matching score for the two records.  
   
@@ -150,7 +150,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
  When you test the matching rules on the **Matching Results** page, you will see a matching results table that shows the clusters that DQS has identified for all rules. The table shows each record in the cluster with the mapping domain values and matching score, and the initial pivot record for the cluster. You can also display profiling data for the matching rules as a whole, the conditions in each matching rule, and statistics on the results for all matching rules.  
   
-1.  On the **Matching Results** page, select **Overlapping clusters** from the drop-down list to display the pivot records and following records for all clusters when matching is executed, even if groups of clusters have records in common. Select **Non overlapping clusters** to display clusters that have records in common as a single cluster when matching is executed.  
+1.  On the **Matching Results** page, select **Overlapping clusters** from the dropdown list to display the pivot records and following records for all clusters when matching is executed, even if groups of clusters have records in common. Select **Non overlapping clusters** to display clusters that have records in common as a single cluster when matching is executed.  
   
 2.  Click **Reload data from source** to copy data from the data source into the staging table and re-index it when you run the matching policy. Click **Execute on previous data** to run a matching policy without copying the data into the staging table and re-indexing the data. **Execute on previous data** is disabled for the first run of the matching policy, or if you change mapping in the **Map** page, and then press **Yes** in the following popup. In both of those cases, you must re-index. It is not necessary to re-index if the matching policy has not changed. Executing on previous data can help performance.  
   
@@ -160,7 +160,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
     -   In **Filter**, select **Matched** to show all matched rows and their score. Rows that are not considered matches (that have a matching score less than the minimum matching score) are not shown in the matching results table. Select **Unmatched** to show all unmatched rows, not matched rows.  
   
-    -   In the **Percent Drop Down Box**, select a percentage from the drop-down list, in increments of "5". All rows with a matching score that is greater than or equal to that percentage will be displayed in the matching results table.  
+    -   In the **Percent** dropdown list, select a percentage in increments of "5". All rows with a matching score that is greater than or equal to that percentage will be displayed in the matching results table.  
   
     -   If you double-click a record in the matching results table, DQS displays a **Matching Score Details** popup that displays the pivot record and source record (and the values in all their fields), the score between them, and a drill-down of the record matching. The drill-down displays the values in each field of the pivot record and source record so you can compare them, and shows the matching score that each field contributes to the overall matching score for the two records.  
   

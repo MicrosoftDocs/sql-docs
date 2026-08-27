@@ -91,7 +91,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
 ###  <a name="QueryStoredProcedure"></a> Using Query Type StoredProcedure  
  You can specify a stored procedure for a dataset query in one of the following ways:  
   
--   In the **Dataset Properties** dialog box, set the **Stored Procedure** option. Choose from the drop-down list of stored procedures and table-valued functions.  
+-   In the **Dataset Properties** dialog box, set the **Stored Procedure** option. Choose from the dropdown list of stored procedures and table-valued functions.  
   
 -   In the relational query designer, in the Database view pane, select a stored procedure or table-valued function.  
   

@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 5.  In the **Index name** field, enter a name for the index.  
   
-6.  In the **Index type** drop-down list, select **Spatial**.  
+6.  In the **Index type** dropdown list, select **Spatial**.  
   
 7.  To specify the spatial column that you want to index, click **Add**.  
   

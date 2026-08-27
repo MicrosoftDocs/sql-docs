@@ -77,7 +77,7 @@ To create the virtual network in the Azure portal, follow these steps:
 1. Search for **virtual network** in the **Marketplace** search box, and then choose the **Virtual network** tile from Microsoft. Select **Create**.
 1. On the **Create virtual network** page, enter the following information on the **Basics** tab:
    1. Under **Project details**, for **Subscription**, choose the appropriate Azure subscription. For **Resource group**, select the resource group that you created previously, such as **SQL-HA-RG**.
-   1. Under **Instance details**, provide a name for your virtual network, such as **autoHAVNET**. In the dropdown list, choose the same region that you chose for your resource group.
+   1. Under **Instance details**, provide a name for your virtual network, such as **autoHAVNET**. In the dropdown list, choose the same region you selected for your resource group.
 
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/03-create-vnet-basics.png" alt-text="Screenshot of the Azure portal that shows providing basic details for a creating a virtual network." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/03-create-vnet-basics.png":::
 

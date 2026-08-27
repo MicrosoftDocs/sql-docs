@@ -31,7 +31,7 @@ ms.custom:
   
 3.  In the Properties pane, expand the **CustomAttributes** node.  
   
-4.  For PieDrawingStyle, select a style from the drop-down list.  
+4.  For PieDrawingStyle, select a style from the dropdown list.  
   
 > [!NOTE]  
 >  You can't have 3D and bevel or emboss styles on the same chart. If you have enabled 3D for the chart, you will not see the PieDrawingStyle property.  
@@ -46,7 +46,7 @@ ms.custom:
   
 3.  Expand the **CustomAttributes** node.  
   
-4.  For DrawingStyle, select a style from the drop-down list.  
+4.  For DrawingStyle, select a style from the dropdown list.  
   
 > [!NOTE]  
 >  You can't have 3D and bevel or emboss styles on the same chart. If you have enabled 3D for the chart, you will not see the PieDrawingStyle property.  

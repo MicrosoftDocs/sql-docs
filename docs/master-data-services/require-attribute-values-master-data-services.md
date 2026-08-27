@@ -37,11 +37,11 @@ helpviewer_keywords:
   
 2.  From the menu bar, point to **Manage** and click **Business Rules**.  
   
-3.  On the **Business Rules** page, from the **Model** drop-down list, select a model.  
+3.  On the **Business Rules** page, from the **Model** dropdown list, select a model.  
   
-4.  From the **Entity** drop-down list, select an entity.  
+4.  From the **Entity** dropdown list, select an entity.  
   
-5.  From the **Member Types** drop-down list, select a type of member for the business rule to apply to.  
+5.  From the **Member Types** dropdown list, select a type of member for the business rule to apply to.  
   
 6.  Click **Add**.  
   
@@ -51,9 +51,9 @@ helpviewer_keywords:
   
 9. Under the **Then** block, click **Add**. A panel will be displayed.  
   
-10. From the **Operator** drop-down list, select **required action**.  
+10. From the **Operator** dropdown list, select **required action**.  
   
-11. From the **Attribute** drop-down list, select an attribute.  
+11. From the **Attribute** dropdown list, select an attribute.  
   
 12. Click **Save**. A new row will be added to the **Then** grid.  
   

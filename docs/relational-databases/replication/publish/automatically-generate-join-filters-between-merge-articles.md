@@ -31,7 +31,7 @@ helpviewer_keywords:
   
 2.  Follow the process in the **Generate Filters** dialog box to create a row filter. The row filter is then extended to the tables related to the filtered table through primary key and foreign key relationships.  
   
-    1.  Select a table to filter from the drop-down list box.  
+    1.  Select a table to filter from the dropdown list.  
   
     2.  Create a filter statement in the **Filter statement** text box. You can type directly in the text area, and you can also drag and drop columns from the **Columns** list box.  
   

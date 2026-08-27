@@ -62,7 +62,7 @@ Before performing these steps, you need to:
 
 2. In the left pane, of the WSUS console, click **All Updates**.  
   
-3.  In the **All Updates** pane, click the **Approval** drop-down menu, set **Approval** to **Any Except Declined**. Click the **Status** drop-down menu, set **Status** to **Any**. Click **Refresh**.  
+3.  In the **All Updates** pane, click the **Approval** dropdown list, set **Approval** to **Any Except Declined**. Click the **Status** dropdown list, set **Status** to **Any**. Click **Refresh**.  
   
     Right-click the **Title** column and select **File Status** to verify the file status after the download completes.  
   
@@ -118,7 +118,7 @@ Before performing these steps, you need to:
   
 4.  Select the appliance server group you created in [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  In the **Status** drop-down menu, select **Any** and click **Refresh**.  
+5.  In the **Status** dropdown list, select **Any** and click **Refresh**.  
   
 6.  Expand **Update Services**, *\<appliance name\>*-VMM, **Updates**, **All Updates**, where *\<appliance name\>* is your appliance name.  
   

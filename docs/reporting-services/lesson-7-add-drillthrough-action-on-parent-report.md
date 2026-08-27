@@ -28,7 +28,7 @@ After you add a ReportViewer control to the website application, your next step 
   
 6.  Select **Add** under **Use these parameters to run the report** section.  
   
-7.  Enter **productid** in the **name** box, and then select **ProductID** in the **Value** drop-down list.  
+7.  Enter **productid** in the **name** box, and then select **ProductID** in the **Value** dropdown list.  
   
 8.  Select **Ok** to finish.  
   

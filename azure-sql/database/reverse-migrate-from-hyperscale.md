@@ -89,7 +89,7 @@ The Azure portal enables you to reverse migrate to the General Purpose service t
 1. Navigate to the database in the Azure portal.
 1. In the left navigation bar, select **Compute + storage**.
 1. Select the **Service tier** dropdown list to expand the options for service tiers.
-1. Select **General Purpose (Scalable compute and storage options)** from the dropdown list menu.
+1. Select **General Purpose (Scalable compute and storage options)** from the dropdown list.
 1. Review the **Hardware Configuration** listed. If desired, select **Change configuration** to select the appropriate hardware configuration for your workload.
 1. Select the **vCores** slider if you wish to change the number of vCores available for your database under the General Purpose service tier.
 1. Select **Apply**.

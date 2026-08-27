@@ -166,7 +166,7 @@ The **Parameterize** dialog box lets you associate a new or an existing paramete
  Select the property of the task that you want to associate with a parameter. This list is populated with all the properties that can be parameterized.  
   
  **Use existing parameter**  
- Select this option to associate the property of task with an existing parameter and then select the parameter from drop-down list.  
+ Select this option to associate the property of the task with an existing parameter and then select the parameter from the dropdown list.  
   
  **Do not use parameter**  
  Select this option to remove a reference to a parameter. The parameter is not deleted.  

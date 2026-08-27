@@ -52,7 +52,7 @@ You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md
   
 1. Verify you're signed into [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. In the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the menu item **My Settings** and sign in. For more information, see [My Settings for Power BI integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
-    :::image type="content" source="../reporting-services/media/ssrs-webportal-mysettings.png" alt-text="Screenshot of the web portal highlighting My Settings in the Settings dropdown.":::
+    :::image type="content" source="../reporting-services/media/ssrs-webportal-mysettings.png" alt-text="Screenshot of the web portal highlighting My Settings in the Settings dropdown list.":::
   
 2. Navigate to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] folder that contains your report, and then view the report.  
   

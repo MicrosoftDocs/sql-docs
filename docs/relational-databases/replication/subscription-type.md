@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Options  
  **Subscription properties**  
- For each Subscriber, select **Client** or **Server** from the drop-down list box in the **Subscription Type** column. For Subscribers with server subscriptions, enter a number between 0 and 99.99 in the **Priority for Conflict Resolution** column (the higher the number, the higher the priority for the Subscriber).  
+ For each Subscriber, select **Client** or **Server** from the dropdown list in the **Subscription Type** column. For Subscribers with server subscriptions, enter a number between 0 and 99.99 in the **Priority for Conflict Resolution** column (the higher the number, the higher the priority for the Subscriber).  
   
 ## Related content
 

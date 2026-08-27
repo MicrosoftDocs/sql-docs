@@ -230,7 +230,7 @@ f1_keywords:
     > [!NOTE]  
     >  This approach is not applicable when there is no pointer on the gauge or the report contains more than one dataset and the gauge panel is not associated with a dataset.  
   
--   Right-click on the gauge pointer and select **Pointer Properties**. For **Value**, select a field from the drop-down list or define a field expression by clicking the **Expression** (*fx*) button.  
+-   Right-click on the gauge pointer and select **Pointer Properties**. For **Value**, select a field from the dropdown list or define a field expression by clicking the **Expression** (*fx*) button.  
   
 ### Aggregating Fields into a Single Value  
  When a field is added to a gauge, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calculates an aggregate for the field by default. Numeric data types are aggregated with the SUM function. Non-numeric data types are aggregated with the COUNT function, which counts the number of instances for a particular value or field within the dataset or group. If the data type of your value field is String, the gauge cannot display a numeric value, even if there are numerals in the fields. Instead, the gauge aggregates string fields using the COUNT function. To avoid this behavior, make sure that the fields you use have numeric data types, as opposed to strings that contain formatted numbers. You can use a Visual Basic expression to convert String values to a numeric data type using the CDbl or CInt constant. For example, the following expression converts a string field called MyField to numeric values.  

@@ -62,7 +62,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
     1.  In the domain list in the If clause pane, select one of the single domains included in the composite domain to be the subject of the If clause. You can select any single domain in the composite domain.  
   
-    2.  Select a condition from the drop-down list for the first condition of the clause.  
+    2.  Select a condition from the dropdown list for the first condition of the clause.  
   
     3.  If the condition requires a value, enter the value in the text box associated with the condition.  
   

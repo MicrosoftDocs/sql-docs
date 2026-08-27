@@ -66,11 +66,11 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
 5.  To change a value's state, proceed as follows:  
   
-    -   **Set selected domain values as corrected**: To change a value's state from Error or Invalid to Correct, select the value, and then click the **Set selected domain values as corrected** (check) from the down-arrow in the icon bar or from the Type drop-down list. If the in-error or invalid value is grouped with a correct value, delete that value after the operation.  
+    -   **Set selected domain values as corrected**: To change a value's state from Error or Invalid to Correct, select the value, and then click the **Set selected domain values as corrected** (check) from the down-arrow in the icon bar or from the Type dropdown list. If the in-error or invalid value is grouped with a correct value, delete that value after the operation.  
   
-    -   **Set selected domain values as errors**: To change a value's state from Correct or Invalid to Error, select the value, and then click the **Set selected domain values as errors** (cross) icon from the down-arrow in the icon bar or from the Type drop-down list. You can either enter a correction in the **Correct to** column, or leave it blank.  
+    -   **Set selected domain values as errors**: To change a value's state from Correct or Invalid to Error, select the value, and then click the **Set selected domain values as errors** (cross) icon from the down-arrow in the icon bar or from the Type dropdown list. You can either enter a correction in the **Correct to** column, or leave it blank.  
   
-    -   **Set selected domain values as invalid**: To change a value's state from Correct or Error to Invalid, select the value, and then click the **Set selected domain values as invalid** (triangle) icon from the down-arrow in the icon bar or from the Type drop-down list. You can either enter a correction in the **Correct to** column, or leave it blank.  
+    -   **Set selected domain values as invalid**: To change a value's state from Correct or Error to Invalid, select the value, and then click the **Set selected domain values as invalid** (triangle) icon from the down-arrow in the icon bar or from the Type dropdown list. You can either enter a correction in the **Correct to** column, or leave it blank.  
   
     -   **Correct to**: After setting a value as in error or invalid, enter a new value in the **Correct To** column. DQS will add a new row for the replacement value, designate it as correct, and then group the two values. The new value will be shown as the leading value, with the leading value in bold and the in-error or invalid value indented.  
   
@@ -119,7 +119,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
 ##  <a name="Display"></a> How to Display the Appropriate Values  
  You can modify the display as follows:  
   
--   **Filter** the results that you want in the table, based on their status, by selecting the status in the **Filter** drop-down list.  
+-   **Filter** the results that you want in the table, based on their status, by selecting the status in the **Filter** dropdown list.  
   
 -   **Find** the data that you want to check or modify by entering one more letters to search for in the **Find** text box. This will highlight have those letters wherever they occur in any value that is displayed.  
   

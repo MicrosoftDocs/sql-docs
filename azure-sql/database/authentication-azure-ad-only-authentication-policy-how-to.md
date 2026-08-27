@@ -54,7 +54,7 @@ Start off by creating an Azure Policy enforcing SQL Database or SQL Managed Inst
     :::image type="content" source="media/authentication-azure-ad-only-authentication-policy-how-to/assign-policy-azure-ad-only-authentication.png" alt-text="Screenshot of assigning Azure Policy for Microsoft Entra-only authentication." lightbox="media/authentication-azure-ad-only-authentication-policy-how-to/assign-policy-azure-ad-only-authentication.png":::
     
 1. In the **Basics** tab, add a **Scope** by using the selector (**...**) on the side of the box.
-1. In the **Scope** pane, select your **Subscription** from the dropdown list menu, and select a **Resource Group** for this policy. Once you're done, use the **Select** button to save the selection.
+1. In the **Scope** pane, select your **Subscription** from the dropdown list, and select a **Resource Group** for this policy. Once you're done, use the **Select** button to save the selection.
 
     > [!NOTE]
     > If you don't select a resource group, the policy applies to the whole subscription.

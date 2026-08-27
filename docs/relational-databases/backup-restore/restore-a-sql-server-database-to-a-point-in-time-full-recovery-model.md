@@ -51,7 +51,7 @@ If the database being restored does not exist, the user must have CREATE DATABAS
   
     -   **Database**  
   
-         Select the database to restore from the drop-down list. The list contains only databases that have been backed up according to the **msdb** backup history.  
+         Select the database to restore from the dropdown list. The list contains only databases that have been backed up according to the **msdb** backup history.  
   
     > [!NOTE]  
     >  If the backup is taken from a different server, the destination server will not have the backup history information for the specified database. In this case, select **Device** to manually specify the file or device to restore.  

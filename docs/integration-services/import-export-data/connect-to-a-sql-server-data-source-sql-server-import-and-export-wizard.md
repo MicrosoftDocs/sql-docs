@@ -17,7 +17,7 @@ ms.custom:
 This topic shows you how to connect to a **Microsoft SQL Server** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. There are several data providers that you can use to connect to SQL Server.
 
 > [!TIP]
-> If you're on a network with multiple servers, it may be easier to enter the server name rather than expand the drop-down list of servers. If you click the drop-down list, it may take a lot of time to query the network for all available servers, and the results may not even include the server you want.
+> If you're on a network with multiple servers, it may be easier to enter the server name rather than expand the dropdown list of servers. If you click the dropdown list, it may take a lot of time to query the network for all available servers, and the results may not even include the server you want.
 
 ## Connect to SQL Server with the .NET Framework Data Provider for SQL Server 
 After you select **.NET Framework Data Provider for SQL Server** on the **Choose a Data Source** or **Choose a Destination** page of the wizard, the page displays a grouped list of options for the provider. Many of these are unfriendly names and unfamiliar settings. Fortunately, to connect to any enterprise database, you typically have to provide only a few pieces of information. You can ignore the default values for the other settings.
@@ -29,7 +29,7 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
 |---|---|
 |Authentication|Default **NotSpecified** as "Integrated Security", or choose other authentication mode. "Interactive Active Directory Authentication" is not supported. |
 |Server name|**Data Source**|
-|Authentication (login) info|**Integrated Security**; or, **User ID** and **Password**<br/>If you want to see a drop-down list of databases on the server, you first have to provide valid login info.|
+|Authentication (login) info|**Integrated Security**; or, **User ID** and **Password**<br/>If you want to see a dropdown list of databases on the server, you first have to provide valid login info.|
 |Database name|**Initial Catalog**|
 
 ![Connect to SQL with .NET provider](../../integration-services/import-export-data/media/connect-to-sql-with-net-provider.jpg)
@@ -40,12 +40,12 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
 > The connection options for this data provider are the same whether SQL Server is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
 
 **Data Source**  
- Enter the name or IP address of the source or destination server, or select a server from the drop-down list.  
+ Enter the name or IP address of the source or destination server, or select a server from the dropdown list.  
  
  To specify a non-standard TCP port, enter a comma after the server name or IP address, then enter the port number.
  
  **Initial Catalog**  
- Enter the name of the source or destination database, or select a database from the drop-down list.  
+ Enter the name of the source or destination database, or select a database from the dropdown list.  
   
  **Integrated Security**  
  Specify **True** to connect with Windows integrated authentication (recommended), or **False** to connect with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. If you specify **False**, you must enter a user ID and password. The default value is **False**.  
@@ -57,7 +57,7 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
  Enter the password if you're using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication.  
 
 ## Connect to SQL Server with the ODBC driver for SQL Server 
-ODBC drivers aren't listed in the drop-down list of data sources. To connect with an ODBC driver, start by selecting the **.NET Framework Data Provider for ODBC** as the data source. This provider acts as a wrapper around the ODBC driver.
+ODBC drivers aren't listed in the dropdown list of data sources. To connect with an ODBC driver, start by selecting the **.NET Framework Data Provider for ODBC** as the data source. This provider acts as a wrapper around the ODBC driver.
 
 > [!TIP]
 > **Get the latest driver**. Download the [Microsoft ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).

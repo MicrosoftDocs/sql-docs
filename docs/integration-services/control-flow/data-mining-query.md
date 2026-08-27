@@ -40,7 +40,7 @@ f1_keywords:
  Columns can be dragged from the tables containing the mining model and input columns to the cell.  
   
  **Field**  
- Select a column from the list of columns derived from the source table. If you selected **Prediction Function** in **Source**, this cell contains a drop-down list of the prediction functions available for the selected mining model.  
+ Select a column from the list of columns derived from the source table. If you selected **Prediction Function** in **Source**, this cell contains a dropdown list of the prediction functions available for the selected mining model.  
   
  **Alias**  
  The name of the column returned by the server.  

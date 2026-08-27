@@ -34,7 +34,7 @@ After you design the parent report, your next step is to create a data connectio
   
     2.  In the **Log on to the server** section, select the option that provides you access to the data. **Use Windows Authentication** is the default.  
   
-    3.  From the **Select or enter a database name** drop-down list, choose [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)].  
+    3.  From the **Select or enter a database name** dropdown list, choose [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)].  
   
     4.  Select **OK**, and then select **Next**.  
   

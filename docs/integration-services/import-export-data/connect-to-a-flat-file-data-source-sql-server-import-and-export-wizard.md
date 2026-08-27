@@ -206,7 +206,7 @@ In the screenshot, notice that the **id** column, which contains numbers, initia
 |**TextQualified**|Indicate whether text data is surrounded by text qualifier characters such as quote characters.<br /><br /> True: Text data in the flat file is qualified. False: Text data in the flat file is NOT qualified.|  
   
 **New**  
- Add a new column by clicking **New**. By default, the **New** button adds a new column at the end of the list. The button also has the following options, available in the drop-down list.  
+ Add a new column by clicking **New**. By default, the **New** button adds a new column at the end of the list. The button also has the following options, available in the dropdown list.  
   
 |Value|Description|  
 |-----------|-----------------|  

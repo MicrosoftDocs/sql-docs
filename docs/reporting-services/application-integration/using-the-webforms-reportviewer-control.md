@@ -30,7 +30,7 @@ The WebForms ReportViewer control renders reports deployed to a report server or
   
      The **ReportViewer** control named reportViewer1 is added to the form.  
   
- After you add the control to the form, the **ReportViewer Tasks** smart tag appears and prompts you to select a report. If the report you want to view is deployed to a report server, select the **\<Server Report>** option from the **Choose Report** drop-down list. After you select the **\<Server Report>** option, two more properties appear: **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server, and the **Report Path** is the full path to the report you want to render.  
+ After you add the control to the form, the **ReportViewer Tasks** smart tag appears and prompts you to select a report. If the report you want to view is deployed to a report server, select the **\<Server Report>** option from the **Choose Report** dropdown list. After you select the **\<Server Report>** option, two more properties appear: **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server, and the **Report Path** is the full path to the report you want to render.  
   
  If you want to view a report in local mode, select either the **Design a new report** option to launch the report designer or select a report that's already part of the existing project. After you select a report, enter the name of the report RDLC file in the **ReportPath** property of the ReportViewer control. This property appears under the **LocalReport** node in the **Properties** pane.  
   

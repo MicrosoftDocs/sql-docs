@@ -545,7 +545,7 @@ You can use `CREATE EXTERNAL TABLE AS SELECT` (CETAS) to complete the following 
 - For more data virtualization capabilities of [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 > [!NOTE]
-> This content applies to [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] only. For other platforms, choose the appropriate version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) from the drop-down selector.
+> This content applies to [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] only. For other platforms, choose the appropriate version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) from the dropdown list selector.
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

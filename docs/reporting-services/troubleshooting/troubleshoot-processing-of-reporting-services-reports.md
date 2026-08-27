@@ -28,7 +28,7 @@ To specify a scope parameter, provide the name of a dataset, data region, or gro
 ### Names of objects must be greater than 0 and less than or equal to 256 characters.  
 The length of object identifiers in a report definition is restricted to 256 characters. Identifiers must be case-sensitive and CLS-compliant. Names must begin with a letter, consist of letters, numbers, or an underscore (_), and have no spaces. For example, text box names or data region names must comply with these guidelines.   
   
-To change the name of an object, in the toolbar of the Properties pane, select the item in the drop-down list, scroll to **Name** and enter a valid object name.   
+To change the name of an object, in the toolbar of the Properties pane, select the item in the dropdown list, scroll to **Name** and enter a valid object name.   
   
 ## A text box displays "#Error"; how do I fix it?  
 The "#Error" message occurs when the report processor evaluates expressions in report item properties at run-time and detects a data type conversion, scope, or other error.   

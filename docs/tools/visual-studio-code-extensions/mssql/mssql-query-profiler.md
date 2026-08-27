@@ -92,7 +92,7 @@ When the Query Profiler panel opens with no active session, it shows the **New S
    > [!NOTE]  
    > Azure SQL Database and SQL database in Fabric templates create sessions scoped to the database (`ON DATABASE`) rather than the server. Lock and duration-filtered templates aren't available for these connections.
 
-   :::image type="content" source="media/mssql-query-profiler/query-profiler-templates.png" alt-text="Screenshot of the template selection dropdown showing available profiler templates." lightbox="media/mssql-query-profiler/query-profiler-templates.png":::
+   :::image type="content" source="media/mssql-query-profiler/query-profiler-templates.png" alt-text="Screenshot of the template selection dropdown list showing available profiler templates." lightbox="media/mssql-query-profiler/query-profiler-templates.png":::
 
 1. Enter a **Session name**. Press **Enter** to confirm or **Escape** to cancel.
 

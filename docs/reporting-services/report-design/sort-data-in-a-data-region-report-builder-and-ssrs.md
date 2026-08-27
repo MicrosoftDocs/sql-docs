@@ -39,7 +39,7 @@ ms.custom:
   
     2.  Type or select an expression by which to sort the data.  
   
-    3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
+    3.  From the **Order** column dropdown list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
 4.  Select **OK**.
   
@@ -57,7 +57,7 @@ ms.custom:
   
     2.  Type or select an expression by which to sort the data.  
   
-    3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
+    3.  From the **Order** column dropdown list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
 5.  Select **OK**.
   
@@ -73,7 +73,7 @@ ms.custom:
   
     2.  Select the expression that matches your grouping field. You can verify the expression for the grouping field by clicking **Grouping**.  
   
-    3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending alphabetical order. **Z-A** sorts the expression in descending alphabetical order.  
+    3.  From the **Order** column dropdown list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending alphabetical order. **Z-A** sorts the expression in descending alphabetical order.  
   
 4.  Select **OK**.
   
@@ -89,7 +89,7 @@ ms.custom:
   
     2.  Select the expression that matches your data field. In most cases, this is an aggregated value, such as `=Sum(Fields!Quantity.Value)`.  
   
-    3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
+    3.  From the **Order** column dropdown list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
 4.  Select **OK**.
   
@@ -113,7 +113,7 @@ ms.custom:
   
     2.  Select the expression that matches your grouping field. You can verify the expression for the grouping field by clicking **Grouping**.  
   
-    3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
+    3.  From the **Order** column dropdown list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
 8.  Select **OK**.
   

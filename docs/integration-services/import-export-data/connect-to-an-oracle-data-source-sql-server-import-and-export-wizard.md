@@ -35,7 +35,7 @@ You don't have to enter the connection string in the **ConnectionString** field 
 ![Connect to Oracle with .NET provider](../../integration-services/import-export-data/media/connect-to-oracle-with-net-provider.jpg)
 
 ## Connect to Oracle with the Microsoft ODBC driver for Oracle
-ODBC drivers aren't listed in the drop-down list of data sources. To connect with an ODBC driver, start by selecting the **.NET Framework Data Provider for ODBC** as the data source on the **Choose a Data Source** or **Choose a Destination** page. This provider acts as a wrapper around the ODBC driver.
+ODBC drivers aren't listed in the dropdown list of data sources. To connect with an ODBC driver, start by selecting the **.NET Framework Data Provider for ODBC** as the data source on the **Choose a Data Source** or **Choose a Destination** page. This provider acts as a wrapper around the ODBC driver.
 
 Here's the generic screen that you see immediately after selecting the .NET Framework Data Provider for ODBC.
 

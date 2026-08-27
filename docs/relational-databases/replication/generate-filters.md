@@ -21,7 +21,7 @@ f1_keywords:
   
 1.  **Select the table to filter.**  
   
-     Select a table from the drop-down list box. Tables appear in the list box only if they were selected on the **Articles** page.  
+     Select a table from the dropdown list. Tables appear in the list box only if they were selected on the **Articles** page.  
   
 2.  **Complete the filter statement to identify which table rows Subscribers will receive.**  
   

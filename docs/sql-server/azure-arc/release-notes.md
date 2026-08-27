@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: randolphwest, mathoma
-ms.date: 07/10/2026
+ms.date: 08/21/2026
 ms.topic: release-notes
 ms.custom:
   - ignite-2025
@@ -60,14 +60,20 @@ The following table lists features of SQL Server enabled by Azure Arc that reach
 | [Client connection summary](sql-connection-summary.md)| October 2025 | View a summary of all client connections to your SQL Server instances. |
 | [US Government Virginia region availability](us-government-region.md) | August 2025 | Connect SQL Server instances in US Government Virginia to Azure Arc. |
 
+## Current auto-upgrade target version
+
+The current auto-upgrade target version of the Azure extension for SQL Server is `1.1.3518.465`. SQL Server instances that have automatic updates enabled for the Azure Extension for SQL Server are automatically upgraded to this version of the extension.
+
 ## Release notes by date
 
 This section lists the release notes by date, starting with the most recent release:
 
 | Date of release | Extension version |
 | --- | --- |
-| [June 2026](#june-2026) |`1.1.3464.439`|
-| [May 2026](#may-2026) |`1.1.3428.422`|
+| [August 2026](#august-2026) | `1.1.3518.465`<br />`1.1.3500.453` |
+| [July 2026](#july-2026) | `1.1.3494.451` (no longer available) |
+| [June 2026](#june-2026) | `1.1.3464.439` (no longer available),<br />`1.1.3453.436` (no longer available) |
+| [May 2026](#may-2026) | `1.1.3428.422` (no longer available) |
 | [April 2026](#april-2026) |`1.1.3394.392`|
 | [February 2026](#february-2026) |`1.1.3348.364`|
 | [January 2026](#january-2026) | `1.1.3307.355` (no longer available) |
@@ -89,17 +95,35 @@ This section lists the release notes by date, starting with the most recent rele
 | [November 2024](#november-2024) | `1.1.2859.223` |
 | [October 2024](#october-2024) | `1.1.2830.214` |
 
+### August 2026
+
+**Extension version**: `1.1.3518.465`
+
+As of August 2026, this version is the auto-upgrade target and is widely deployed.
+
+- [Least privilege](configure-least-privilege.md) is enabled by default. The extension creates the `NT SERVICE\SqlServerExtension` login and grants it the minimum permissions required for each enabled feature.
+
+**Extension version**: `1.1.3500.453`
+
+- Fixes an authentication token access bug.
+
+### July 2026
+
+**Extension version**: `1.1.3494.451` (no longer available)
+
 ### June 2026
 
-**Extension version**: `1.1.3464.439`
+**Extension version**: `1.1.3464.439` (no longer available)
 
 - The ability to migrate your SQL Server databases to SQL Server on Azure VMs directly from the Azure portal is now generally available. To learn more, see [Migration from the Azure portal](migrate-to-sql-server-on-azure-vms.md).
 - Improved HADR detection for billing.
 - Bug fixes and quality improvements.
 
+**Extension version**: `1.1.3453.436` (no longer available)
+
 ### May 2026
 
-**Extension version**: `1.1.3428.422`
+**Extension version**: `1.1.3428.422` (no longer available)
 
 ### April 2026
 

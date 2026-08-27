@@ -3,7 +3,7 @@ title: Connection Pooling with mssql-python
 description: Learn how to configure and use connection pooling to improve application performance with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 08/21/2026
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -91,15 +91,15 @@ conn2 = mssql_python.connect("Server=<server2>;Database=<database2>;...")
 
 ### Identity isolation
 
-The driver separates pools for token-based authentication by the Microsoft Entra identity that opens the connection. Two callers that use the same connection string but different identities get separate pools, so a connection authenticated as one principal is never handed to another.
+For most token-based authentication methods, the driver separates pools by the Microsoft Entra identity that opens the connection, so a connection authenticated as one principal isn't handed to a caller using a different one. The exception is the first row of the following table, where the key is the connection string alone.
 
 The pool key depends on the authentication method:
 
 | Authentication | Pool key |
 | --- | --- |
-| SQL authentication, trusted connections, service principals, and Windows interactive authentication | Connection string only |
+| SQL authentication, trusted connections, service principals, Windows Integrated authentication, and `ActiveDirectoryInteractive` on Windows | Connection string only |
 | Managed identity | Connection string, plus the client ID or the system-assigned identity |
-| Interactive and device code authentication | Connection string, plus the signed-in account |
+| Device code authentication, and interactive authentication on platforms other than Windows | Connection string, plus the signed-in account |
 | `DefaultAzureCredential`, a custom `token_provider`, and raw access tokens | Connection string, plus a hash of the token |
 
 Because the token hash is part of the key for the last group, each distinct token gets its own pool. A long-lived credential that returns a cached token continues to reuse one pool. The driver reclaims idle identity pools lazily as later pool operations run, rather than by a background thread.

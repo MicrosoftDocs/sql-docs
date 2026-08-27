@@ -3,7 +3,7 @@ title: Microsoft Entra Authentication with mssql-python
 description: Learn how to connect to Azure SQL using Microsoft Entra ID authentication with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 08/21/2026
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -213,7 +213,7 @@ conn = mssql_python.connect(
 )
 ```
 
-This mode uses the current Windows user's Kerberos credentials. On Linux and macOS, you must configure Kerberos manually (`krb5.conf` and a valid keytab or ticket). See [Use Active Directory authentication with SQL Server on Linux](../../../linux/sql-server-linux-active-directory-authentication.md) for client-side Kerberos setup.
+This mode uses the current Windows user's Kerberos credentials. On Linux and macOS, you must configure Kerberos manually (`krb5.conf` and a valid keytab or ticket). See [Active Directory authentication for SQL Server on Linux](../../../linux/security/authentication/active-directory-overview.md) for client-side Kerberos setup.
 
 ## Credential objects with token_provider
 
@@ -233,7 +233,7 @@ conn = mssql_python.connect(
 )
 ```
 
-The driver requests the `https://database.windows.net/.default` scope. Only the Azure commercial cloud scope is supported through this parameter. For sovereign clouds, use [Access token authentication](#access-token-authentication) and request the scope your cloud requires.
+The driver requests the `https://database.windows.net/.default` scope. This parameter supports the Azure commercial cloud scope only. For sovereign clouds, use [Access token authentication](#access-token-authentication) and request the scope your cloud requires.
 
 Bulk copy operations acquire a fresh token from the provider for each operation, because they open their own connection.
 

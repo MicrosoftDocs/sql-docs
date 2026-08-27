@@ -109,7 +109,7 @@ conn.commit()
 
 ## Bulk copy
 
-When throughput matters more than per-row control, use `bulkcopy()`. It uses the TDS bulk insert protocol, which is significantly more efficient than row-by-row inserts:
+When throughput matters more than per-row control, use `bulkcopy()`. It uses the TDS bulk insert protocol, which streams rows instead of sending one statement per row:
 
 ```python
 rows = [

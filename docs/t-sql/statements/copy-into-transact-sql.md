@@ -1,11 +1,11 @@
 ---
 title: COPY INTO (Transact-SQL)
 titleSuffix: Azure Synapse Analytics and Microsoft Fabric
-description: Use the COPY statement in Azure Synapse Analytics and Warehouse in Microsoft Fabric for loading from external storage accounts.
+description: Use the COPY statement in Azure Synapse Analytics and Warehouse in Microsoft Fabric to load data from Azure Storage and OneLake.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: procha, fresantos, jovanpop
-ms.date: 08/18/2026
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -558,13 +558,13 @@ To work around this problem, re-register the workspace's managed identity:
 
 [!INCLUDE [fabricdw](../../includes/applies-to-version/fabric-dw.md)]
 
-This article explains how to use the `COPY` statement in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] for loading from external storage accounts. The `COPY` statement provides the most flexibility for high-throughput data ingestion into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], and is as strategy to [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)]](/fabric/data-warehouse/ingest-data).
+This article explains how to use the `COPY` statement in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] for loading from Azure Storage and OneLake. The `COPY` statement provides the most flexibility for high-throughput data ingestion into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], and is a strategy to [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)]](/fabric/data-warehouse/ingest-data).
 
-In Fabric Data Warehouse, the `COPY` statement currently supports CSV, JSONL, and PARQUET file formats. For data sources, Azure Data Lake Storage Gen2 accounts and OneLake sources are supported.
+In Fabric Data Warehouse, the `COPY` statement supports CSV, JSONL, and PARQUET file formats. Supported data sources include Azure Data Lake Storage Gen2, Azure Blob Storage, and OneLake.
 
 For more information on using `COPY INTO` on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using the COPY statement](/fabric/data-warehouse/ingest-data-copy).
 
-By default, `COPY INTO` authenticates as the executing Microsoft Entra ID user.
+`COPY INTO` runs in the current user's SQL security context. SQL permission checks and audit attribution remain associated with that user. When you specify `CREDENTIAL = (IDENTITY = 'Workspace Identity')`, the workspace identity is used only to authorize access to the source files.
 
 Use `COPY` for the following capabilities:
 
@@ -588,7 +588,7 @@ FROM '<external_location>' [ ,...n ]
 WITH
  (
  [ FILE_TYPE = { 'CSV' | 'JSONL' | 'PARQUET' } ]
- [ , CREDENTIAL = (AZURE CREDENTIAL) ]
+ [ , CREDENTIAL = (IDENTITY = '' , SECRET = '') ]
  [ , ERRORFILE = ' [ http(s)://storageaccount/container ] /errorfile_directory [ / ] ] '
  [ , ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
  [ , MAXERRORS = max_errors ]
@@ -658,25 +658,27 @@ Azure Data Lake Storage (ADLS) Gen2 offers better performance than Azure Blob St
 
 - *Path* - the folder or file path for the data. The location starts from the container. If you specify a folder, `COPY` retrieves all files from the folder and all its subfolders. `COPY` ignores hidden folders and doesn't return files that begin with an underline (`_`) or a period (`.`) unless explicitly specified in the path. This behavior is the same even when specifying a path with a wildcard.
 
-Wildcards can be included in the path where
-
-- Wildcard path name matching is case-sensitive
-- You can escape a wildcard by using the backslash character (`\`)
-
-> [!NOTE]  
-> For best performance, avoid specifying wildcards that expand over a larger number of files. If possible, list multiple file locations instead of specifying wildcards.
-
 You can specify multiple file locations only from the same storage account and container through a comma-separated list such as:
 
 - `https://<account>.blob.core.windows.net/<container>/<path>, https://<account>.blob.core.windows.net/<container>/<path>`
 
-**External locations behind firewall**
+##### Wildcards
+
+Wildcards can be included in the path:
+
+- Wildcard path name matching is case-sensitive.
+- You can escape a wildcard by using the backslash character (`\`).
+
+> [!NOTE]  
+> For best performance, avoid specifying wildcards that expand over a larger number of files. If possible, list multiple file locations instead of specifying wildcards.
+
+##### External locations behind firewall
 
 To access files on Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage locations that are behind a firewall, the following prerequisites apply:
 
-- A **workspace identity** for the workspace hosting your warehouse must be provisioned. For more information on how to set up a workspace identity, see [Workspace identity](/fabric/security/workspace-identity).
-- Your Microsoft Entra ID account must be able to use the workspace identity.
-- Your Microsoft Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control).
+- A **workspace identity** for the Fabric workspace hosting your warehouse must be provisioned. For more information on how to set up a workspace identity, see [Workspace identity](/fabric/security/workspace-identity).
+- To impersonate the Fabric Workspace Identity, your Microsoft Entra ID account must be a member of a workspace role. Item permissions alone don't grant access to use the workspace identity.
+- Grant access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control). Grant this access to the executing user when you don't specify a credential or to the workspace identity when you specify Workspace Identity.
 - Your Fabric workspace hosting the warehouse must be added as a **resource instance rule**. For more information on how to add your Fabric workspace with a resource instance rule, see [Resource instance rule](/fabric/security/security-trusted-workspace-access).
 
 #### FILE_TYPE = { 'CSV' | 'JSONL' | 'PARQUET' }
@@ -689,14 +691,15 @@ To access files on Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage lo
 
 #### CREDENTIAL (IDENTITY = '', SECRET = '')
 
-`CREDENTIAL` specifies the authentication mechanism to access the external storage account. 
+`CREDENTIAL` specifies the credential that `COPY INTO` uses when authorizing access to the external storage account or OneLake source. It doesn't change the current SQL security context or the identity that executes the statement.
 
 In Fabric Data Warehouse: 
 - `COPY INTO` isn't supported where public access is disabled.
 - For public storage accounts, the supported authentication mechanisms are Microsoft Entra ID, Shared Access Signature (SAS), or Storage Account Key (SAK). 
-- For public storage accounts behind a firewall, Microsoft Entra ID authentication is the only supported authentication method. `COPY INTO` using OneLake as source only supports EntraID authentication.
+- For public storage accounts behind a firewall, Microsoft Entra ID and Workspace Identity are supported.
+- `COPY INTO` using OneLake as the source supports Microsoft Entra ID and Workspace Identity.
 
-The user's Microsoft Entra ID authentication is default. No credential needs to be specified. 
+The executing user's Microsoft Entra identity is the default credential for source access. No credential needs to be specified.
 
 - Authenticating with Shared Access Signature (SAS)
   - `IDENTITY`: A constant with a value of `Shared Access Signature`.
@@ -705,6 +708,12 @@ The user's Microsoft Entra ID authentication is default. No credential needs to 
 - Authenticating with Storage Account Key
   - `IDENTITY`: A constant with a value of `Storage Account Key`.
   - `SECRET`: Storage account key.
+- Use Fabric Workspace Identity
+  - `IDENTITY`: A constant with a value of `Workspace Identity`.
+  - `SECRET`: Not required.
+  - The statement continues to run in the current user's SQL security context. The `CREDENTIAL` clause allows `COPY INTO` to impersonate the workspace identity only when authorizing access to the source. The executing user doesn't need direct permission on the source data.
+  - For Azure Blob Storage and ADLS Gen2, find the workspace identity by the workspace name, and assign the **Storage Blob Data Reader** role on the storage account or container. For ADLS Gen2 directory-level access, grant the required ACL permissions.
+  - For OneLake, find the workspace identity by the workspace name, add it to the workspace that contains the source data, and assign at least the Contributor workspace role.
 
 #### ERRORFILE = Directory location
 
@@ -835,7 +844,7 @@ Use `COPY INTO` to load data directly from files stored in the Fabric OneLake, u
 
 - Reading from any location within a Workspace and an Item
 - Workspace-to-warehouse loads within the same tenant
-- Native identity enforcement by using Microsoft Entra ID
+- Native identity enforcement by using Microsoft Entra ID or Workspace Identity
 
 Example:
 
@@ -852,11 +861,16 @@ WITH (
 
 ### Control plane permissions
 
-To execute the `COPY INTO` command, you must be granted membership to [a workspace role through **Manage access** in the Workspace](/fabric/data-warehouse/workspace-roles), with at least the Viewer role. Alternatively, you can share warehouse access with a user via [Item Permissions](/fabric/data-warehouse/share-warehouse-manage-permissions) in the Fabric portal, with at least Read permissions. To align with the principle of least privilege, Read permission is sufficient.
+The control plane permission requirement depends on the credential used for source access:
+
+- **Without Workspace Identity:** Grant the user at least the Viewer [workspace role through **Manage access**](/fabric/data-warehouse/workspace-roles), or share the warehouse with the user through [Item Permissions](/fabric/data-warehouse/share-warehouse-manage-permissions) with at least Read permission. A user with item-level access doesn't need a workspace role to run `COPY INTO`.
+- **With Workspace Identity:** When you specify `CREDENTIAL = (IDENTITY = 'Workspace Identity')`, the executing user must have at least the Viewer workspace role. Item permissions alone don't authorize a user to impersonate the workspace identity.
 
 ### Data plane permissions
 
 After you grant [control plane permissions](#control-plane-permissions) through workspace roles or item permissions, if the user only has Read permissions at the [data plane level](/fabric/security/permission-model#compute-permissions), also grant the user `INSERT` and `ADMINISTER DATABASE BULK OPERATIONS` permissions by using T-SQL commands.
+
+When you specify `CREDENTIAL = (IDENTITY = 'Workspace Identity')`, grant the executing user `INSERT` permission on the target table. `ADMINISTER DATABASE BULK OPERATIONS` permission isn't required when the workspace identity is impersonated for source access.
 
 For example, the following T-SQL script grants these permissions to an individual user by using their Microsoft Entra ID.
 
@@ -868,9 +882,26 @@ GRANT INSERT to [mike@contoso.com];
 GO
 ```
 
+For example, the following statement grants the table-level permission required when the user runs `COPY INTO` with Workspace Identity:
+
+```sql
+GRANT INSERT ON OBJECT::dbo.SalesOrders TO [mike@contoso.com];
+GO
+```
+
 When you use the error file option, the user must have the minimal permission of Blob Storage Contributor on the Storage Account container.
 
 When you use OneLake as the source, the user must have **Contributor** or higher permissions on both the **source workspace** (where the Lakehouse is located) and the **target workspace** (where the Warehouse resides). Microsoft Entra ID and Fabric workspace roles govern all access.
+
+### Source permissions for Workspace Identity
+
+Grant the workspace identity access to each source location used by `COPY INTO`:
+
+- For Azure Blob Storage and ADLS Gen2, find the workspace identity by using the workspace name, and assign the **Storage Blob Data Reader** role on the storage account or container. For ADLS Gen2 directory-level access, grant the required ACL permissions. Assign permissions as you would for a Microsoft Entra user.
+- For OneLake, add the workspace identity to the workspace that contains the source data by using the workspace name, and assign at least the Contributor workspace role.
+
+> [!IMPORTANT]
+> Sensitivity label policies vary by organization. `COPY INTO` can fail when the destination has a sensitivity label with restrictions that prevent the operation. If a sensitivity label causes the failure, remove the label from the destination before retrying the command.
 
 ## Remarks
 
@@ -888,15 +919,17 @@ If the source data has greater precision than the destination column definition,
 
 <a id="limitations-for-onelake-as-source-public-preview"></a>
 
-## Limitations for OneLake as source
+## Limitations for OneLake as source for COPY INTO
 
-- **Only Microsoft Entra ID authentication is supported.** Other authentication methods, such as SAS tokens, shared keys, or connection strings, aren't permitted.
+- **When using COPY INTO, only Microsoft Entra ID and Fabric Workspace Identity are supported as the CREDENTIAL.** Other credential types, such as SAS tokens, shared keys, or connection strings, aren't permitted.
 
 - **Warehouse items** aren't supported as source locations. Files must originate from other Fabric items that expose files through OneLake storage.
 
 - **OneLake paths must use workspace and warehouse IDs.** Friendly names for workspaces or Lakehouses aren't supported at this time.
 
-- **Contributor permissions are required on both workspaces.** The executing user must have at least Contributor role on the source Lakehouse workspace and the target Warehouse workspace.
+- **Contributor permissions are required on both workspaces when you use the executing user's Microsoft Entra identity.** The executing user must have at least the Contributor role on the source Lakehouse workspace and the target Warehouse workspace.
+
+- **Workspace Identity has separate permission requirements.** When you specify `CREDENTIAL = (IDENTITY = 'Workspace Identity')`, the workspace identity must have at least the Contributor role on the workspace that contains the source data. The executing user doesn't need direct access to the source workspace, but must have at least the Viewer role on the target workspace and `INSERT` permission on the target table.
 
 ## Examples
 
@@ -1042,7 +1075,35 @@ WITH (
 );
 ```
 
-### I. Load data into IDENTITY columns with IDENTITY_INSERT
+### I. Load data from ADLS Gen2 using Fabric Workspace Identity
+
+The following example runs `COPY INTO` in the current user's SQL security context and impersonates the Fabric Workspace Identity to access a CSV file in ADLS Gen2. Assign the workspace identity the **Storage Blob Data Reader** role on the source storage account or container. The executing user must have at least the Viewer workspace role and `INSERT` permission on the target table.
+
+```sql
+COPY INTO dbo.SalesOrders
+FROM 'https://<storage-account>.dfs.core.windows.net/<container>/orders/*.csv'
+WITH (
+    FILE_TYPE = 'CSV',
+    FIRSTROW = 2,
+    CREDENTIAL = (IDENTITY = 'Workspace Identity')
+);
+```
+
+### J. Load data from OneLake using Fabric Workspace Identity
+
+The following example runs `COPY INTO` in the current user's SQL security context and impersonates the Fabric Workspace Identity to access a CSV file in OneLake. The executing user must have at least the Viewer workspace role and `INSERT` permission on the target table, but doesn't need direct permission on the source file.
+
+```sql
+COPY INTO dbo.SalesOrders
+FROM 'https://onelake.dfs.fabric.microsoft.com/<workspace-id>/<item-id>/Files/orders/*.csv'
+WITH (
+    FILE_TYPE = 'CSV',
+    FIRSTROW = 2,
+    CREDENTIAL = (IDENTITY = 'Workspace Identity')
+);
+```
+
+### K. Load data into IDENTITY columns with IDENTITY_INSERT
 
 `COPY INTO` options override any session-level setting for `IDENTITY_INSERT`.
 

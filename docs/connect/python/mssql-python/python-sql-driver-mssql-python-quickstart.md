@@ -26,7 +26,7 @@ Use the local SQL authentication example in this article only for local developm
 
 ## Prerequisites
 
-- Python 3.10 and later versions
+- Python 3.10 or later
 - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
 - Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 

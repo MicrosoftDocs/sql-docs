@@ -24,7 +24,7 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
 ## Prerequisites
 
-- Python 3.10 and later versions
+- Python 3.10 or later
 - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
 - Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 

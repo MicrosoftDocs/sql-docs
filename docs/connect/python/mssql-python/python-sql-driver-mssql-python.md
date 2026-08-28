@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 
 # Microsoft Python Driver for SQL Server - mssql-python
 
-`mssql-python` is Microsoft's Python driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. It uses Direct Database Connectivity (DDBC), so you can connect without installing an external driver manager. The driver supports Python 3.10 and later versions, and complies with the [Python Database API Specification 2.0](https://peps.python.org/pep-0249/) while adding Python-friendly improvements for day-to-day development.
+`mssql-python` is Microsoft's Python driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. It uses Direct Database Connectivity (DDBC), so you can connect without installing an external driver manager. The driver supports Python 3.10 or later and complies with the [Python Database API Specification 2.0](https://peps.python.org/pep-0249/) while adding Python-friendly improvements for day-to-day development.
 
 ## Choose your starting point
 

@@ -50,9 +50,6 @@ The two key forms differ in how precisely they select columns:
 
 Use an integer key when you need that precision, or when you're porting code from pyodbc, which uses integer keys. Use a Python type key when you want one converter to cover a whole family of SQL types.
 
-> [!IMPORTANT]
-> Integer SQL type code keys require mssql-python 1.13.0 and later versions. Earlier versions accept and store the key but never invoke the converter, so the column returns its unconverted value and nothing raises.
-
 ```python
 import mssql_python
 

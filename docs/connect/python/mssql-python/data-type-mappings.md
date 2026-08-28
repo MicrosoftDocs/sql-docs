@@ -3,6 +3,7 @@ title: Data Type Mappings for mssql-python
 description: Reference for how Python data types map to SQL Server types when using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

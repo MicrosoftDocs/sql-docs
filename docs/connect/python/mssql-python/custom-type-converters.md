@@ -3,6 +3,7 @@ title: Custom Type Converters with mssql-python
 description: Learn how to register custom functions to convert SQL data types to Python objects using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity

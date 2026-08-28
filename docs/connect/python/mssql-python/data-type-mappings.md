@@ -319,6 +319,8 @@ Streaming works with `execute()`, `executemany()`, and all fetch APIs (`fetchone
 
 ## Unsupported SQL Server types
 
+The following SQL Server types don't have native Python type mappings.
+
 | SQL Server type | Status |
 | ----------------- | -------- |
 | **json** | Not supported |

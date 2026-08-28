@@ -4,7 +4,7 @@ description: mssql-python is Microsoft's Python driver for SQL Server, Azure SQL
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 07/13/2026
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: get-started
@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 
 # Microsoft Python Driver for SQL Server - mssql-python
 
-`mssql-python` is Microsoft's Python driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. It uses Direct Database Connectivity (DDBC), so you can connect without installing an external driver manager. The driver supports Python 3.10 or later and complies with the [Python Database API Specification 2.0](https://peps.python.org/pep-0249/) while adding Python-friendly improvements for day-to-day development.
+`mssql-python` is Microsoft's Python driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. It uses Direct Database Connectivity (DDBC), so you can connect without installing an external driver manager. The driver supports Python 3.10 and later versions, and complies with the [Python Database API Specification 2.0](https://peps.python.org/pep-0249/) while adding Python-friendly improvements for day-to-day development.
 
 ## Choose your starting point
 
@@ -119,7 +119,7 @@ def execute_with_retry(
 
 def main() -> None:
     # Read configuration from the environment; never hard-code secrets.
-    server = os.environ["SQL_SERVER"]      # for example, myserver.database.windows.net
+    server = os.environ["SQL_SERVER"]      # for example, <server>.database.windows.net
     database = os.environ["SQL_DATABASE"]  # for example, AdventureWorks
     client_id = os.getenv("AZURE_CLIENT_ID")  # set for a user-assigned managed identity
 

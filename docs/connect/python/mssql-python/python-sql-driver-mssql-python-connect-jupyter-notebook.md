@@ -4,7 +4,7 @@ description: Connect to a SQL database from a Jupyter Notebook in Visual Studio 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 06/29/2026
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -24,7 +24,7 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
 ## Prerequisites
 
-- Python 3.10 or later
+- Python 3.10 and later versions
 - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
 - Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 

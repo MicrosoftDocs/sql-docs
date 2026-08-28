@@ -3,7 +3,8 @@ title: Encryption and TLS with mssql-python
 description: Configure encrypted connections and TLS certificate validation with the mssql-python driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -38,7 +39,7 @@ conn = mssql_python.connect(
 | ------- | ------------- |
 | `yes` | Requires encryption and fails if the server doesn't support TLS. |
 | `no` | Doesn't encrypt the connection. Not recommended for production. |
-| `strict` | Uses TDS 8.0 strict encryption mode. Requires SQL Server 2022 or later. |
+| `strict` | Uses TDS 8.0 strict encryption mode. Requires SQL Server 2022 and later versions. |
 
 > [!IMPORTANT]
 > Azure SQL Database requires `Encrypt=yes`. Connections without encryption are rejected.
@@ -78,7 +79,7 @@ conn = mssql_python.connect(
 
 ## TDS 8.0 strict encryption
 
-SQL Server 2022 and later support TDS 8.0 with strict encryption mode:
+SQL Server 2022 and later versions support TDS 8.0 with strict encryption mode:
 
 ```python
 conn = mssql_python.connect(
@@ -200,7 +201,7 @@ The certificate's root CA isn't in the system's trusted root store. Run these ch
 
 TDS 8.0 strict mode has these requirements:
 
-- The server must run SQL Server 2022 or later.
+- Strict mode requires SQL Server 2022 and later versions.
 - The server must have a valid, trusted certificate.
 - You can't set `TrustServerCertificate=yes`.
 

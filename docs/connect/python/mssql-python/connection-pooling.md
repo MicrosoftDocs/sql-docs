@@ -3,6 +3,7 @@ title: Connection Pooling with mssql-python
 description: Learn how to configure and use connection pooling to improve application performance with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity

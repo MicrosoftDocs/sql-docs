@@ -4,7 +4,7 @@ description: Build a quick Streamlit prototype that connects to a SQL database b
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk

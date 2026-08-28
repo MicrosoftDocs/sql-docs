@@ -107,7 +107,7 @@ server=<server>\myinstance;user id=<user>;password=<password>;database=Adventure
 
 ### ADO.NET keyword synonyms
 
-Starting in v1.11.0, the ADO format also accepts the alternate keyword spellings that [Microsoft.Data.SqlClient](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) uses, which lets you reuse a connection string written for a .NET application. Keywords are case-insensitive.
+With v1.11.0 and later versions, the ADO format also accepts the alternate keyword spellings that [Microsoft.Data.SqlClient](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) uses, which lets you reuse a connection string written for a .NET application. Keywords are case-insensitive.
 
 | ADO.NET keyword | go-mssqldb parameter |
 | --- | --- |

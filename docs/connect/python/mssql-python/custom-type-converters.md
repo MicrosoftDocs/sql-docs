@@ -47,22 +47,24 @@ The two key forms differ in how precisely they select columns:
 
 - A **Python type** key applies to every SQL type that maps to that Python type. Registering a converter for `Decimal` transforms **decimal**, **numeric**, **money**, and **smallmoney** columns.
 
-- An **integer SQL type code** key matches the exact ODBC type of the column. `SQL_DECIMAL` transforms **decimal** columns without touching **numeric** columns, and `SQL_NUMERIC` does the reverse.
+- An **integer SQL type code** key matches the ODBC type code that the column reports, which is narrower but isn't always a single SQL type. `SQL_NUMERIC` transforms only **numeric** columns. `SQL_DECIMAL` transforms **decimal**, **money**, and **smallmoney** columns, because all three report that same code.
 
-Use an integer key when you need that precision, or when you're porting code from pyodbc, which uses integer keys. Use a Python type key when you want one converter to cover a whole family of SQL types.
+Use an integer key when a Python type key is broader than you want, or when you're porting code from pyodbc, which uses integer keys. Use a Python type key when you want one converter to cover a whole family of SQL types.
 
 ```python
 import mssql_python
 
-def decimal_only(value):
+def tag_decimal(value):
     return f"D:{value}"
 
-conn.add_output_converter(mssql_python.SQL_DECIMAL, decimal_only)
+conn.add_output_converter(mssql_python.SQL_DECIMAL, tag_decimal)
 
 cursor.execute("""
-    SELECT CAST(12.34 AS decimal(10,2)), CAST(56.78 AS numeric(10,2))
+    SELECT CAST(12.34 AS decimal(10,2)),
+           CAST(56.78 AS numeric(10,2)),
+           CAST(90.12 AS money)
 """)
-print(cursor.fetchone())  # ('D:12.34', Decimal('56.78'))
+print(cursor.fetchone())  # ('D:12.34', Decimal('56.78'), 'D:90.1200')
 ```
 
 ### Converter resolution order

@@ -62,7 +62,7 @@ The following table lists features of SQL Server enabled by Azure Arc that reach
 
 ## Current auto-upgrade target version
 
-The current auto-upgrade target version of the Azure extension for SQL Server is `1.1.3518.465`. SQL Server instances that have automatic updates enabled for the Azure Extension for SQL Server are automatically upgraded to this version of the extension.
+The current auto-upgrade target version of the Azure extension for SQL Server is `1.1.3518.465`, and is being widely deployed. SQL Server instances that have automatic updates enabled for the Azure Extension for SQL Server are automatically upgraded to this version of the extension.
 
 ## Release notes by date
 

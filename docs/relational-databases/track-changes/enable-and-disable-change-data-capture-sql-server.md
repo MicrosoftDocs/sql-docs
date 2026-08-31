@@ -93,8 +93,7 @@ EXEC sys.sp_cdc_enable_table
 GO
 ```
 > [!NOTE]  
-> Attention! When creating a separate filegroup for the change table, ensure it has sufficient space to store the change data, otherwise, you will encounter error 1105 in the capture job, and changes will not be logged to the modified table until there is enough space in the file, There is a risk of losing captured changes, depending on your cleanup configuration.
-
+> When you create a separate filegroup for the change table, make sure it has enough space to store change data. If the filegroup runs out of space, the capture job can encounter error `1105` and stop capturing changes until space is available. Depending on your cleanup configuration, you might lose captured changes.
 
 **A role for controlling access to a change table.**
 

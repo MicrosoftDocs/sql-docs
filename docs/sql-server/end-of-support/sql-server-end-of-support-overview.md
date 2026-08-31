@@ -3,7 +3,8 @@ title: "End of Support Options"
 description: Learn about the different options available for SQL Server products that reach end of support, including SQL Server 2014.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: mathoma, wiassaf
+ms.date: 08/31/2026
 ms.service: sql
 ms.subservice: install
 ms.topic: concept-article
@@ -22,18 +23,17 @@ Each version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] comes
 - **Mainstream support** includes functional, performance, scalability, and security updates.
 - **Extended support** includes only security updates.
 
-**End of support** (also sometimes known as end of life) means that a product has reached the end of its support lifecycle. Microsoft no longer provides servicing and support for the product. For more information about the Microsoft Lifecycle, see [Microsoft Lifecycle Policy](/lifecycle).
+**End of support** (also sometimes known as end of life) means that a product reached the end of its support lifecycle. Microsoft no longer provides servicing and support for the product. For more information about the Microsoft Lifecycle, see [Microsoft Lifecycle Policy](/lifecycle).
 
-## Options
+## End of support options
 
 When your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance reaches the end of support, choose from the following options:
 
 - Upgrade to a current version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
-- [Migrate](/azure/azure-sql/migration-guides/) your workload to [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview).
-- Migrate your SQL Server workload to an [Azure Virtual Machine](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview):
-   - By upgrading your SQL Server instance to a supported version during the migration.
-   - As-is. Subscribe for extended security updates (ESUs) for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. Or, with [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], migrate to an Azure VM for free ESUs until the end of the ESU period.
-- Subscribe to [Extended Security Updates (ESUs)](https://www.microsoft.com/windows-server/extended-security-updates).
+- [Migrate](/azure/azure-sql/migration-guides/) your SQL Server workload to [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview), [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview), or [Azure Virtual Machine](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview). When you migrate to an Azure VM, you can choose to:
+   - Upgrade your SQL Server instance to a supported version during the migration.
+   - Migrate your SQL Server instance as-is. Subscribe for extended security updates (ESUs) for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. Or, with [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], migrate to an Azure VM for free ESUs until the end of the ESU period.
+- Subscribe to [Extended Security Updates (ESUs)](https://www.microsoft.com/windows-server/extended-security-updates) and stay on your current environment until you're able to upgrade or migrate to a supported version or platform.
 
 For more information, guidance, and tools to plan and automate your upgrade or migration, see:
 
@@ -49,15 +49,19 @@ The following table summarizes options for a [!INCLUDE [ssnoversion-md](../../in
 | --- | --- |
 |   | **Modernize** |
 | Upgrade on-premises | **Upgrade** your existing environment to the latest versions of SQL Server and Windows Server. |
-| Move to PaaS with Azure SQL Managed Instance | **Lift and shift** to SQL Managed Instance for fully managed services that always run evergreen features. In other words, the end of support doesn't apply. |
+| Move to PaaS with Azure SQL Managed Instance | **Lift and shift** to SQL Managed Instance for fully managed services that never reach end of support.|
 | Upgrade to IaaS with SQL Server on Azure VMs | **Lift and shift** your workload by moving it to the latest version of SQL Server on an Azure virtual machine. |
+| Move to PaaS with Azure SQL Database | **Modernize** your workload by moving it to the Hyperscale service tier of Azure SQL Database, a fully managed database service that never reaches end of support. |
 |  |**Migrate to Azure as-is**|
 |Move to IaaS with SQL Server on Azure VM | **Move "as-is"**, and subscribe to ESUs for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. Or for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], get ESUs for free until the end of the ESU period. |
-|Move to IaaS with Azure VMware Solution | **Move "as-is"** and subscribe to ESUs for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. Or for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], get ESUs for free until the end of the ESU period.  |
+|Move to IaaS with Azure VMware Solution | **Move "as-is"**, and subscribe to ESUs for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. Or for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], get ESUs for free until the end of the ESU period.  |
 | |**Stay on existing version**|
 | Subscribe to ESUs |**Keep** server and application as-is for up to three years by subscribing to ESUs |
 
 This article describes the benefits and considerations for each approach, with more resources to help guide your decision-making process.
+
+> [!TIP]
+> Use the **Azure SQL Decision Tree** in the [Azure SQL hub](https://aka.ms/azuresqlhub) to help guide your decision.
 
 ## Upgrade SQL Server
 
@@ -183,8 +187,47 @@ Another option is to migrate your workload to an [Azure Virtual Machine running 
 - [Business continuity and HADR for SQL Server on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview)
 - [SQL virtual machine frequently asked questions](/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq)
 
+## Modernize with Azure SQL Database Hyperscale
 
-## Extend support with ESUs for existing environment
+Consider migrating your workload to the [Hyperscale service tier](/azure/azure-sql/database/service-tier-hyperscale) of Azure SQL Database. Hyperscale is a managed platform as a service (PaaS) database that separates compute from storage. The service tier supports up to 128 TB per database and up to 128 vCores (up to 192 vCores currently in preview). This architecture supports scaling compute without moving data.
+
+### Benefits
+
+- **Licensing cost**: Hyperscale has no SQL software license fee.
+- **Compute scaling**: Scale provisioned compute up or down in single-digit minutes, regardless of database size. Serverless compute scales automatically based on workload demand, typically in less than a second.
+- **Storage scaling**: Storage grows automatically up to 128 TB per database or 100 TB per database in an elastic pool. You don't need to preallocate or manually resize storage.
+- **Fast backup and restore**: Hyperscale uses storage snapshots for backups, which minimizes I/O utilization. File snapshot-based restores and database copies can finish in minutes, regardless of database size.
+- **Read scale-out**: Offload read-only workloads such as reporting or analytics to as many as 30 read-only named replicas. Configure compute independently for each named replica. Built-in high-availability replicas and optional geo-replicas are also available.
+- **Workload support**: Use Hyperscale for online transaction processing (OLTP), hybrid transactional and analytical processing (HTAP), reporting, and analytical workloads.
+- **Fully managed PaaS**: Azure manages patching, backups, and platform maintenance.
+
+### Considerations
+
+- **Purchasing model**: Hyperscale uses the vCore-based purchasing model. It supports provisioned and serverless compute for single databases, and provisioned compute for elastic pools.
+- **Feature differences**: Azure SQL Database uses a database-level service model and differs from SQL Server in some Transact-SQL features and instance-level capabilities. Review [T-SQL differences between SQL Server and Azure SQL Database](/azure/azure-sql/database/transact-sql-tsql-differences-sql-server) and [Azure SQL Database and Azure SQL Managed Instance feature differences](/azure/azure-sql/database/features-comparison) before migration.
+- **Application changes**: Applications that use cross-database queries, linked servers, SQL Server Agent jobs, or other instance-level objects might require changes. Azure SQL Database provides alternatives for some features, such as elastic queries and [elastic jobs](/azure/azure-sql/database/elastic-jobs-overview).
+- **Networking**: Azure SQL Database provides a public endpoint by default. Configure [Azure Private Link](/azure/azure-sql/database/private-endpoint-overview) or [virtual network service endpoints](/azure/azure-sql/database/vnet-service-endpoint-rule-overview) if your deployment requires private or restricted connectivity.
+- **Serverless compute**: Hyperscale serverless doesn't support auto-pause. Compare its idle compute costs with General Purpose serverless when evaluating intermittent workloads.
+
+### Resources
+
+- [Azure SQL Database overview](/azure/azure-sql/database/sql-database-paas-overview)
+- [Hyperscale service tier](/azure/azure-sql/database/service-tier-hyperscale)
+- [Azure SQL Database Hyperscale FAQ](/azure/azure-sql/database/service-tier-hyperscale-frequently-asked-questions-faq)
+- [Hyperscale architecture](/azure/azure-sql/database/hyperscale-architecture)
+- [Migration overview: SQL Server to Azure SQL Database](/data-migration/sql-server/database/overview)
+- [Compare Azure SQL deployment options](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)
+- [Reverse migrate from Hyperscale](/azure/azure-sql/database/reverse-migrate-from-hyperscale)
+- [Configure and manage Hyperscale named replicas](/azure/azure-sql/database/hyperscale-named-replica-configure)
+
+### Migration tools
+
+- [Azure Migrate](/azure/migrate/tutorial-assess-sql) discovers and assesses SQL Server instances and recommends Azure SQL deployment options and sizing.
+- [Azure Database Migration Service](/azure/dms/dms-overview) supports offline migrations to Azure SQL Database.
+- [SQL Server migration component in SQL Server Management Studio](/ssms/migrate/migrate-sql-server-azure-sql) assesses SQL Server instances and supports migration to Azure SQL.
+- Use SQL Server Management Studio or SqlPackage 18.4 and later to import or export BACPAC files for Hyperscale databases up to 150 GB.
+
+## Extend support for existing environments with ESUs
 
 [!INCLUDE [2016-esu](../../includes/2016-esu.md)]
 
@@ -213,9 +256,9 @@ If you're not ready to upgrade, and you're not ready to move to the cloud, you c
 
 ## Migrate to Azure VMware Solution
 
-Azure VMware Solution allows you to run your VMware environment in Azure by using familiar tooling and a quick migration path.
+By using Azure VMware Solution, you can run your VMware environment in Azure by using familiar tooling and a quick migration path.
 
-Running [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] on Azure VMware in this environment provides you with the free ESU benefits extended to running in Azure. For information on how to configure ESUs in Azure VMware Solution, review: [ESUs for SQL Server and Windows Server in Azure VMware Solution VMs](/azure/azure-vmware/extended-security-updates-windows-sql-server). For [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] ESU, you can subscribe to ESUs.
+When you run [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] on Azure VMware in this environment, you get the free ESU benefits extended to running in Azure. For information about how to configure ESUs in Azure VMware Solution, see [ESUs for SQL Server and Windows Server in Azure VMware Solution VMs](/azure/azure-vmware/extended-security-updates-windows-sql-server). For [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] ESU, you can subscribe to ESUs.
 
 
 ## Lifecycle dates

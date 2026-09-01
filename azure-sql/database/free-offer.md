@@ -126,7 +126,7 @@ You can use the Azure portal, PowerShell, or Azure CLI to create a free offer da
 - Currently, the Microsoft Azure for Students Starter offer is incompatible with this Azure SQL Database free offer. Instead, consider the [Azure for College Students offer](https://azure.microsoft.com/pricing/offers/ms-azr-0170p/?cid=msft_learn) or the [Azure Free offer](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). If desired, the **Continue using database for additional charges** option can deduct from the starting credits.
 - When setting an **Advanced configuration**, once a region is selected for a free database under a subscription, the same region applies to all free databases in that subscription, and cannot be changed.
 - When setting an **Advanced configuration**, if the free offer banner doesn't appear in the Azure portal as expected, choose the desired logical **Server** in the dropdown list again.
-- You can't copy the free offer database by using [database copy](database-copy.md).
+- You can't copy the free offer database by using [database copy](database-copy.md). To copy the database, you need to [convert the database from the free offer to a paid service tier](free-offer-faq.yml?view=azuresql-db&preserve-view=true#can-i-upgrade-to-a-larger-or-more-powerful-database).
 
 ## Related content
 

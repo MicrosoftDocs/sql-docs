@@ -4,7 +4,7 @@ description: Migrate a database in Azure SQL Database from the DTU model to the 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, moslake, randolphwest
-ms.date: 06/30/2025
+ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: upgrade-and-migration-article
@@ -128,11 +128,6 @@ SELECT dtu_logical_cpus,
         WHEN dtu_hardware_gen = 'standard_series' THEN dtu_logical_cpus
         END AS standard_series_vcores,
     5.05 AS standard_series_memory_per_core_gb,
-    CASE 
-        WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus
-        WHEN dtu_hardware_gen = 'standard_series' THEN dtu_logical_cpus * 0.8
-        END AS Fsv2_vcores,
-    1.89 AS Fsv2_memory_per_core_gb,
     CASE 
         WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus * 1.4
         WHEN dtu_hardware_gen = 'standard_series' THEN dtu_logical_cpus * 0.9

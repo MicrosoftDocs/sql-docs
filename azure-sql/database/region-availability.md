@@ -4,7 +4,7 @@ description: Learn about feature availability by region for Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: peskount, rokhot, shrtiwar
-ms.date: 04/02/2026
+ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.topic: concept-article
 ms.custom:
@@ -124,10 +124,6 @@ US Gov Texas and US Gov Virginia support **Hyperscale premium-series** up to 128
 - West Europe
 
 ---
-
-### Fsv2-series availability
-
-Fsv2-series hardware is no longer available to be created and will be retired October 1, 2026.
 
 ### DC-series availability
 

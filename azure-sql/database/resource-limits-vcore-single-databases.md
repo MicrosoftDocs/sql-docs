@@ -4,7 +4,7 @@ description: This page describes common vCore resource limits for a single datab
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dfurman, mathoma
-ms.date: 03/09/2026
+ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -752,88 +752,6 @@ The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`,
 | Multi-AZ | Yes | Yes | Yes | Yes | Yes |
 | Read Scale-out | N/A | N/A | N/A | N/A | N/A |
 | Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
-
-<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
-
-<sup>4</sup> Latency numbers are approximate and representative for typical workloads at steady state, but aren't guaranteed. 
-
-## General Purpose - provisioned compute - Fsv2-series
-
-> [!NOTE]
-> Fsv2-series hardware is no longer available to be created and will be retired October 1, 2026.
-
-### General Purpose Fsv2-series hardware (part 1 of 2)
-
-Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series databases follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
-
-The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, and `GP_Fsv2_16`:
-
-| vCores | 8 | 10 | 12 | 14 | 16 |
-|:-|-:|-:|-:|-:|-:|
-| Hardware | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
-| Memory (GB) | 15.1 | 18.9 | 22.7 | 26.5 | 30.2 |
-| Columnstore support | Yes | Yes | Yes | Yes | Yes |
-| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
-| Max data size (GB) | 1024 | 1024 | 1024 | 1024 | 1536 |
-| Max log size (GB) <sup>1</sup> | 336 | 336 | 336 | 336 | 512 |
-| `tempdb` max data size (GB) | 37 | 46 | 56 | 65 | 74 |
-| Storage type | Remote SSD | Remote SSD | Remote SSD | Remote SSD | Remote SSD |
-| Read IO latency <sup>4</sup> | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
-| Write IO latency <sup>4</sup> | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
-| Max data IOPS <sup>2</sup> | 2560 | 3200 | 3840 | 4480 | 5120 |
-| Max log rate (MiB/s) | 36 | 45 | 50 | 50 | 50 |
-| Max concurrent workers | 400 | 500 | 600 | 700 | 800 |
-| Max concurrent logins | 400 | 500 | 600 | 700 | 800 |
-| Max concurrent external connections <sup>3</sup> | 40 | 50 | 60 | 70 | 80 |
-| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
-| Number of replicas | 1 | 1 | 1 | 1 | 1 |
-| Multi-AZ | N/A | N/A | N/A | N/A | N/A |
-| Read Scale-out | N/A | N/A | N/A | N/A | N/A |
-| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
-
-<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
-
-<sup>4</sup> Latency numbers are approximate and representative for typical workloads at steady state, but aren't guaranteed. 
-
-### General Purpose Fsv2-series hardware (part 2 of 2)
-
-> [!NOTE]
-> Fsv2-series hardware is no longer available to be created and will be retired October 1, 2026.
-
-Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series databases follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
-
-The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, and `GP_Fsv2_72`:
-
-| vCores | 18 | 20 | 24 | 32 | 36 | 72 |
-|:-|-:|-:|-:|-:|-:|-:|
-| Hardware | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
-| Memory (GB) | 34.0 | 37.8 | 45.4 | 60.5 | 68.0 | 136.0 |
-| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
-| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
-| Max data size (GB) | 1536 | 1536 | 1536 | 3072 | 3072 | 4096 |
-| Max log size (GB) <sup>1</sup> | 512 | 512 | 512 | 1024 | 1024 | 1024 |
-| `tempdb` max data size (GB) | 83 | 93 | 111 | 148 | 167 | 333 |
-| Storage type | Remote SSD | Remote SSD | Remote SSD | Remote SSD | Remote SSD | Remote SSD |
-| Read IO latency <sup>4</sup> | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
-| Write IO latency <sup>4</sup> | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
-| Max data IOPS <sup>2</sup> | 5760 | 6400 | 7680 | 10,240 | 11,520 | 12,800 |
-| Max log rate (MiB/s) | 50 | 50 | 50 | 50 | 50 | 50 |
-| Max concurrent workers | 900 | 1000 | 1200 | 1600 | 1800 | 3600 |
-| Max concurrent logins | 900 | 1000 | 1200 | 1600 | 1800 | 3600 |
-| Max concurrent external connections <sup>3</sup> | 90 | 100 | 120 | 150 | 150 | 150 |
-| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
-| Number of replicas | 1 | 1 | 1 | 1 | 1 | 1 |
-| Multi-AZ | N/A | N/A | N/A | N/A | N/A | N/A |
-| Read Scale-out | N/A | N/A | N/A | N/A | N/A | N/A |
-| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
 
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 

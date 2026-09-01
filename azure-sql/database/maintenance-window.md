@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Database maintenance window can be con
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: urosmil, scottkim, mathoma
-ms.date: 02/18/2025
+ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: concept-article
@@ -85,7 +85,6 @@ Choosing a maintenance window other than the default is available on all SLOs, *
 - SLOs not supported:
     - Azure SQL Database DTU Basic, S0 and S1 tiers
     - DC hardware
-    - Fsv2 hardware
 
 Other scenarios:
 

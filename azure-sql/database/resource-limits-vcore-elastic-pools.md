@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/09/2026
+ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
@@ -196,53 +196,6 @@ The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`,
 | Read Scale-out | N/A | N/A | N/A | N/A | N/A |
 | Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
 
-<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
-
-<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-<sup>4</sup> For the max concurrent workers for any individual database, see [Resource limits for single databases using the vCore purchasing model](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200. If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
-
-<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
-
-<sup>6</sup> Latency numbers are approximate and representative for typical workloads at steady state, but aren't guaranteed. 
-
-## General Purpose - provisioned compute - Fsv2-series
-
-> [!NOTE]
-> Fsv2-series hardware is no longer available to be created and will be retired October 1, 2026.
-
-### General Purpose - Fsv2-series (part 1 of 2)
-
-Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series elastic pools follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
-
-The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, and `GP_Fsv2_16`:
-
-| vCores | 8 | 10 | 12 | 14 | 16 |
-|:-|-:|-:|-:|-:|-:|
-| Hardware | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
-| Memory (GB) | 15.1 | 18.9 | 22.7 | 26.5 | 30.2 |
-| Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
-| Columnstore support | Yes | Yes | Yes | Yes | Yes |
-| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
-| Max data size (GB) | 1024 | 1024 | 1024 | 1024 | 1536 |
-| Max log size (GB) <sup>2</sup> | 336 | 336 | 336 | 336 | 512 |
-| `tempdb` max data size (GB) | 37 | 46 | 56 | 65 | 74 |
-| Storage type | Remote SSD | Remote SSD | Remote SSD | Remote SSD | Remote SSD |
-| Read IO latency <sup>6</sup> | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
-| Write IO latency <sup>6</sup> | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
-| Max data IOPS per pool <sup>3</sup> | 5,600 | 7,000 | 8,400 | 9,800 | 11,200 |
-| Max log rate per pool (MiB/s) | 48 | 60 | 62.5 | 62.5 | 62.5 |
-| Max concurrent workers per pool <sup>4</sup> | 400 | 500 | 600 | 700 | 800 |
-| Max concurrent logins per pool | 400 | 500 | 600 | 700 | 800 |
-| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
-| Max concurrent external connections per pool <sup>5</sup> | 40 | 50 | 60 | 70 | 80 |
-| Min/max elastic pool vCore choices per database | 0, 8 | 0, 8, 10 | 0, 8, 10, 12 | 0, 8, 10, 12, 14 | 0, 8, 10, 12, 14, 16 |
-| Number of replicas | 1 | 1 | 1 | 1 | 1 |
-| Multi-AZ | N/A | N/A | N/A | N/A | N/A |
-| Read Scale-out | N/A | N/A | N/A | N/A | N/A |
-| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
@@ -256,39 +209,6 @@ The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, 
 
 <sup>6</sup> Latency numbers are approximate and representative for typical workloads at steady state, but aren't guaranteed. 
 
-### General Purpose - Fsv2-series (part 2 of 2)
-
-> [!NOTE]
-> Fsv2-series hardware is no longer available to be created and will be retired October 1, 2026.
-
-Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series elastic pools follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
-
-The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, and `GP_Fsv2_72`:
-
-| vCores | 18 | 20 | 24 | 32 | 36 | 72 |
-|:-|-:|-:|-:|-:|-:|-:|
-| Hardware | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
-| Memory (GB) | 34.0 | 37.8 | 45.4 | 60.5 | 68.0 | 136.0 |
-| Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
-| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
-| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
-| Max data size (GB) | 1536 | 1536 | 1536 | 3072 | 3072 | 4096 |
-| Max log size (GB) <sup>2</sup> | 512 | 512 | 512 | 1024 | 1024 | 1024 |
-| `tempdb` max data size (GB) | 83 | 93 | 111 | 148 | 167 | 333 |
-| Storage type | Remote SSD | Remote SSD | Remote SSD | Remote SSD | Remote SSD | Remote SSD |
-| Read IO latency <sup>6</sup>| 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
-| Write IO latency <sup>6</sup> | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
-| Max data IOPS per pool <sup>3</sup> | 12,600 | 14,000 | 16,800 | 22,400 | 25,200 | 31,200 |
-| Max log rate per pool (MiB/s) | 62.5 | 62.5 | 62.5 | 62.5 | 62.5 | 62.5 |
-| Max concurrent workers per pool <sup>4</sup> | 900 | 1000 | 1200 | 1600 | 1800 | 3600 |
-| Max concurrent logins per pool | 900 | 1000 | 1200 | 1600 | 1800 | 3600 |
-| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
-| Max concurrent external connections per pool <sup>5</sup> | 90 | 100 | 120 | 150 | 150 | 150 |
-| Min/max elastic pool vCore choices per database | 0, 8, 10, 12, 14, 16, 18 | 0, 8, 10, 12, 14, 16, 18, 20 | 0, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 8, 10, 12, 14, 16, 18, 20, 24, 32, 36 | 0, 8, 10, 12, 14, 16, 18, 20, 24, 32, 36, 40, 72 |
-| Number of replicas | 1 | 1 | 1 | 1 | 1 | 1 |
-| Multi-AZ | N/A | N/A | N/A | N/A | N/A | N/A |
-| Read Scale-out | N/A | N/A | N/A | N/A | N/A | N/A |
-| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 

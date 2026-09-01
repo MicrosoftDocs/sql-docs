@@ -5,7 +5,8 @@ description: This article provides information on the Microsoft Entra-only authe
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/12/2025
+ms.date: 09/01/2026
+ai-usage: ai-assisted
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: concept-article
@@ -25,7 +26,7 @@ Microsoft Entra-only authentication is a feature within [Azure SQL](../azure-sql
 
 Microsoft Entra-only authentication is also available for dedicated SQL pools (formerly SQL DW) in standalone servers. Microsoft Entra-only authentication can be enabled for the Azure Synapse workspace. For more information, see [Microsoft Entra-only authentication with Azure Synapse workspaces](/azure/synapse-analytics/sql/active-directory-authentication).
 
-SQL authentication is disabled when enabling Microsoft Entra-only authentication in the Azure SQL environment, including connections from SQL server administrators, logins, and users. Only users using [Microsoft Entra authentication](authentication-aad-overview.md) are authorized to connect to the server or database.
+When you enable Microsoft Entra-only authentication, you disable SQL authentication in the Azure SQL environment, including connections from SQL server administrators, logins, and users. Only users who use [Microsoft Entra authentication](authentication-aad-overview.md) can connect to the server or database.
 
 Microsoft Entra-only authentication can be enabled or disabled using the Azure portal, Azure CLI, PowerShell, or REST API. Microsoft Entra-only authentication can also be configured during server creation with an Azure Resource Manager (ARM) template.
 
@@ -33,15 +34,17 @@ For more information on Azure SQL authentication, see [Authentication and author
 
 ## Feature description
 
-When enabling Microsoft Entra-only authentication, [SQL authentication](logins-create-manage.md#authentication-and-authorization) is disabled at the server or managed instance level and prevents any authentication based on any SQL authentication credentials. SQL authentication users won't be able to connect to the [Logical server](logical-servers.md) for Azure SQL Database or managed instance, including all of its databases. Although SQL authentication is disabled, new SQL authentication logins and users can still be created by Microsoft Entra accounts with proper permissions. Newly created SQL authentication accounts won't be allowed to connect to the server. Enabling Microsoft Entra-only authentication doesn't remove existing SQL authentication login and user accounts. The feature only prevents these accounts from connecting to the server, and any database created for this server.
+When you enable Microsoft Entra-only authentication, you disable [SQL authentication](logins-create-manage.md#authentication-and-authorization) at the server or managed instance level. This change prevents any authentication based on SQL authentication credentials. SQL authentication users can't connect to the [logical server](logical-servers.md) for Azure SQL Database or managed instance, including all of its databases. Although SQL authentication is disabled, Microsoft Entra accounts with proper permissions can still create new SQL authentication logins and users. Newly created SQL authentication accounts can't connect to the server. Enabling Microsoft Entra-only authentication doesn't remove existing SQL authentication login and user accounts. The feature only prevents these accounts from connecting to the server and any database created for this server.
 
-You can also force servers to be created with Microsoft Entra-only authentication enabled using Azure Policy. For more information, see [Azure Policy for Microsoft Entra-only authentication with Azure SQL](authentication-azure-ad-only-authentication-policy.md).
+You can also use Azure Policy to force servers to be created with Microsoft Entra-only authentication enabled. For more information, see [Azure Policy for Microsoft Entra-only authentication with Azure SQL](authentication-azure-ad-only-authentication-policy.md).
+
+The service also generates a server administrator name during provisioning, which can appear in the Azure portal even when SQL authentication is disabled. For more information, see [System-generated server administrator account](#system-generated-server-administrator-account).
 
 ## Permissions
 
 Microsoft Entra-only authentication can be enabled or disabled by Microsoft Entra users who are members of high privileged [Microsoft Entra built-in roles](/azure/role-based-access-control/built-in-roles), such as Azure subscription [Owners](/azure/role-based-access-control/built-in-roles#owner) and [Contributors](/azure/role-based-access-control/built-in-roles#contributor). Additionally, the role [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) can also enable or disable the Microsoft Entra-only authentication feature.
 
-The [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) and [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) roles won't have permissions to enable or disable the Microsoft Entra-only authentication feature. This is consistent with the [Separation of Duties](security-best-practice.md#implement-separation-of-duties) approach, where users who can create an Azure SQL server or create a Microsoft Entra admin, can't enable or disable security features.
+The [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) and [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) roles don't have permissions to enable or disable the Microsoft Entra-only authentication feature. This restriction is consistent with the [Separation of Duties](security-best-practice.md#implement-separation-of-duties) approach, where users who can create an Azure SQL server or create a Microsoft Entra admin can't enable or disable security features.
 
 ### Actions required
 
@@ -386,11 +389,25 @@ For more information, see [Microsoft.Sql managedInstances/azureADOnlyAuthenticat
 
 ### Check Microsoft Entra-only authentication using T-SQL
 
-The [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) `IsExternalAuthenticationOnly` has been added to check if Microsoft Entra-only authentication is enabled for your server or managed instance. `1` indicates that the feature is enabled, and `0` represents the feature is disabled.
+Use the [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) function with `IsExternalAuthenticationOnly` to check whether Microsoft Entra-only authentication is enabled for your server or managed instance. `1` indicates that the feature is enabled, and `0` indicates that it's disabled.
 
 ```sql
 SELECT SERVERPROPERTY('IsExternalAuthenticationOnly')
 ```
+
+## System-generated server administrator account
+
+When you create a logical server for Azure SQL Database or an Azure SQL Managed Instance with Microsoft Entra-only authentication enabled, the service generates a server administrator name and a random password. The generated name starts with `CloudSA` followed by a random string, and appears in the Azure portal as the **Server admin login**.
+
+The account exists to satisfy provisioning, not to provide a way to connect. Provisioning either resource type still requires SQL authentication administrator values. Microsoft Entra-only authentication changes which authentication methods can establish a connection after provisioning, but it doesn't remove that provisioning requirement, so the service generates the values needed to meet it.
+
+Seeing a generated name doesn't mean that SQL authentication is enabled. While Microsoft Entra-only authentication is enabled:
+
+- No SQL authentication account can connect, including the system-generated administrator.
+- The generated account isn't a shared account, a fallback, or a break-glass path.
+- Applications and administrators must use Microsoft Entra authentication to connect.
+- The Microsoft Entra admin and other authorized Microsoft Entra principals remain the supported administration paths.
+- The service permanently removes the password from the control plane after provisioning.
 
 ## Remarks
 
@@ -414,7 +431,7 @@ When Microsoft Entra-only authentication is enabled for SQL Database, the follow
 
 - [Elastic jobs in Azure SQL Database](elastic-jobs-overview.md)
 - [SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md)
-- [Change data capture (CDC)](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) - If you create a database in Azure SQL Database as a Microsoft Entra user and enable change data capture on it, a SQL user won't be able to disable or make changes to CDC artifacts. However, another Microsoft Entra user will be able to enable or disable CDC on the same database. Similarly, if you create an Azure SQL Database as a SQL user, enabling or disabling CDC as a Microsoft Entra user won't work
+- [Change data capture (CDC)](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) - If you create a database in Azure SQL Database as a Microsoft Entra user and enable change data capture on it, a SQL user can't disable or make changes to CDC artifacts. However, another Microsoft Entra user can enable or disable CDC on the same database. Similarly, if you create an Azure SQL Database as a SQL user, enabling or disabling CDC as a Microsoft Entra user doesn't work
 - [Transactional replication with Azure SQL Managed Instance](../managed-instance/replication-transactional-overview.md) - Since SQL authentication is required for connectivity between replication participants, when Microsoft Entra-only authentication is enabled, transactional replication isn't supported for SQL Database for scenarios where transactional replication is used to push changes made in an Azure SQL Managed Instance, on-premises SQL Server, or an Azure VM SQL Server instance to a database in Azure SQL Database
 - [SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
 - `EXEC AS` statement for Microsoft Entra group member accounts

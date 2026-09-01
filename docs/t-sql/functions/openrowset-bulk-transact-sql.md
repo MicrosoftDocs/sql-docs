@@ -223,7 +223,7 @@ You can use `OPENROWSET(BULK)` to read data directly from files stored in the On
 - Workspace-to-warehouse loads within the same tenant
 - Native identity enforcement using Microsoft Entra ID
 
-See the [limitations](../statements/copy-into-transact-sql.md?view=fabric&preserve-view=true#limitations-for-onelake-as-source) that apply to both `COPY INTO` and `OPENROWSET(BULK)`.
+See the [limitations](../statements/copy-into-transact-sql.md?view=fabric&preserve-view=true#limitations-for-onelake-as-source-for-copy-into) that apply to both `COPY INTO` and `OPENROWSET(BULK)`.
 
 ::: moniker-end
 

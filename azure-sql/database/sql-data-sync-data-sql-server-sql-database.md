@@ -4,7 +4,7 @@ description: This overview introduces SQL Data Sync for Azure, which allows you 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 11/12/2025
+ms.date: 08/17/2026
 ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: concept-article
@@ -19,9 +19,9 @@ ms.custom:
 
 [!INCLUDE [sql-data-sync-retirement](../includes/sql-data-sync-retirement.md)]
 
-SQL Data Sync is a service built on Azure SQL Database that lets you synchronize the data you select bi-directionally across multiple databases, both on-premises and in the cloud. 
+SQL Data Sync is a service built on Azure SQL Database that you can use to synchronize selected data bidirectionally across multiple databases, both on-premises and in the cloud.
 
-Azure SQL Data Sync does not support Azure SQL Managed Instance or Azure Synapse Analytics.
+Azure SQL Data Sync doesn't support Azure SQL Managed Instance or Azure Synapse Analytics.
 
 ## Overview
 
@@ -41,7 +41,7 @@ Data Sync uses a hub and spoke topology to synchronize data. You define one of t
 A sync group has the following properties:
 
 - The **Sync Schema** describes which data is being synchronized.
-- The **Sync Direction** can be bi-directional or can flow in only one direction. That is, the Sync Direction can be *Hub to Member*, or *Member to Hub*, or both.
+- The **Sync Direction** can be bidirectional, or it can flow in only one direction: *Hub to Member*, *Member to Hub*, or both.
 - The **Sync Interval** describes how often synchronization occurs.
 - The **Conflict Resolution Policy** is a group level policy, which can be *Hub wins* or *Member wins*.
 
@@ -64,23 +64,25 @@ Data Sync isn't the preferred solution for the following scenarios:
 
 ## How it works
 
-- **Tracking data changes:** Data Sync tracks changes using insert, update, and delete triggers. The changes are recorded in a side table in the user database. BULK INSERT doesn't fire triggers by default. If FIRE_TRIGGERS isn't specified, no insert triggers execute. Add the FIRE_TRIGGERS option so Data Sync can track those inserts. 
+- **Tracking data changes:** Data Sync tracks changes by using insert, update, and delete triggers. The changes are recorded in a side table in the user database. `BULK INSERT` doesn't fire triggers by default. If you don't specify `FIRE_TRIGGERS`, no insert triggers execute. Add the `FIRE_TRIGGERS` option so Data Sync can track those inserts.
 - **Synchronizing data:** Data Sync is designed in a hub and spoke model. The hub syncs with each member individually. Changes from the hub are downloaded to the member and then changes from the member are uploaded to the hub.
 - **Resolving conflicts:** Data Sync provides two options for conflict resolution, *Hub wins* or *Member wins*.
   - If you select *Hub wins*, the changes in the hub always overwrite changes in the member.
   - If you select *Member wins*, the changes in the member overwrite changes in the hub. If there's more than one member, the final value depends on which member syncs first.
 
-## Compare with Transactional Replication
+## Compare with transactional replication
 
 | | Data Sync | Transactional Replication |
 |---|---|---|
-| **Advantages** | - Active-active support<br/>- Bi-directional between on-premises and Azure SQL Database | - Lower latency<br/>- Transactional consistency<br/>- Reuse existing topology after migration <br/>-Azure SQL Managed Instance support |
+| **Advantages** | - Active-active support<br/>- Bidirectional between on-premises and Azure SQL Database | - Lower latency<br/>- Transactional consistency<br/>- Reuse existing topology after migration <br/>-Azure SQL Managed Instance support |
 | **Disadvantages** | - No transactional consistency<br/>- Higher performance impact | - Can't publish from Azure SQL Database <br/>-    High maintenance cost |
 
 > [!CAUTION]
-> **SQL Data Sync requires SQL authentication** for connections to the hub and member databases. Microsoft Entra (Azure AD) authentication isn't supported by SQL Data Sync. 
-> Because SQL authentication relies on static passwords, it doesn't benefit from modern protections like multifactor authentication (MFA), Conditional Access, or managed identities. This can increase exposure for the entire SQL instance to credential theft, brute-force attacks, and operational overhead for password rotation and policy enforcement. 
-> Where possible, prefer solutions that support Microsoft Entra authentication or managed identities. Since SQL Data Sync is scheduled for retirement, migrate to an alternative that aligns with your organization's security standards.
+> **SQL Data Sync requires SQL authentication** for connections to the hub and member databases. Microsoft Entra ID authentication isn't supported by SQL Data Sync.
+>
+> Because SQL authentication relies on static passwords, it doesn't benefit from modern protections like multifactor authentication (MFA), Conditional Access, or managed identities. This reliance can increase exposure for the entire SQL instance to credential theft, brute-force attacks, and operational overhead for password rotation and policy enforcement.
+>
+> Where possible, prefer solutions that support Microsoft Entra authentication or managed identities. Because SQL Data Sync is scheduled for retirement, migrate to an alternative that aligns with your organization's security standards.
 
 ## Private link for Data Sync
 
@@ -116,7 +118,7 @@ Before setting up the private link, read the [general requirements](sql-data-syn
 
 - [Best practices for Azure SQL Data Sync](sql-data-sync-best-practices.md)
 
-### Did something go wrong
+### Did something go wrong?
 
 - [Troubleshoot issues with SQL Data Sync](sql-data-sync-troubleshoot.md)
 
@@ -124,7 +126,7 @@ Before setting up the private link, read the [general requirements](sql-data-syn
 
 ### Eventual consistency
 
-Since Data Sync is trigger-based, transactional consistency isn't guaranteed. Microsoft guarantees that all changes are made eventually and that Data Sync doesn't cause data loss.
+Because Data Sync is trigger-based, it doesn't guarantee transactional consistency. Microsoft guarantees that Data Sync eventually makes all changes and doesn't cause data loss.
 
 ### Performance impact
 
@@ -141,13 +143,13 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - Each table must have a primary key. Don't change the value of the primary key in any row. If you have to change a primary key value, delete the row and recreate it with the new primary key value.
 
 > [!IMPORTANT]
-> Changing the value of an existing primary key will result in the following faulty behavior:
-> - Data between hub and member can be lost even though sync does not report any issue.
-> - Sync can fail because the tracking table has a non-existing row from source due to the primary key change.
+> Changing the value of an existing primary key results in the following faulty behavior:
+> - Data between the hub and member can be lost even though sync doesn't report any issue.
+> - Sync can fail because the tracking table has a nonexistent row from the source due to the primary key change.
 
 - Snapshot isolation must be enabled for both Sync members and hub. For more info, see [Snapshot Isolation in SQL Server](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server).
 
-- In order to use Data Sync private link, both the member and hub databases must be hosted in Azure (same or different regions), in the same cloud type (for example, both in public cloud or both in government cloud). Additionally, to use private link, `Microsoft.Network` resource providers must be Registered for the subscriptions that host the hub and member servers. Lastly, you must manually approve the private link for Data Sync during the sync configuration, within the "Private endpoint connections" section in the Azure portal or through PowerShell. For more information on how to approve the private link, see [Tutorial: Set up SQL Data Sync between databases in Azure SQL Database and SQL Server](sql-data-sync-sql-server-configure.md). Once you approve the service managed private endpoint, all communication between the sync service and the member/hub databases happen over the private link. Existing sync groups can be updated to have this feature enabled.
+- To use Data Sync private link, both the member and hub databases must be hosted in Azure (same or different regions), in the same cloud type (for example, both in public cloud or both in government cloud). Also, register the `Microsoft.Network` resource providers for the subscriptions that host the hub and member servers. You must manually approve the private link for Data Sync during the sync configuration, within the **Private endpoint connections** section in the Azure portal or through PowerShell. For more information about how to approve the private link, see [Tutorial: Set up SQL Data Sync between databases in Azure SQL Database and SQL Server](sql-data-sync-sql-server-configure.md). Once you approve the service managed private endpoint, all communication between the sync service and the member/hub databases happens over the private link. You can update existing sync groups to enable this feature.
 
 ### General limitations
 
@@ -157,7 +159,7 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - The names of objects (databases, tables, and columns) can't contain the printable characters period (`.`), left square bracket (`[`), or right square bracket (`]`).
 - A table name can't contain printable characters: `! " # $ % ' ( ) * + -` or space.
 - Microsoft Entra ([formerly Azure Active Directory](/entra/fundamentals/new-name)) authentication isn't supported.
-- If there are tables with the same name but different schema (for example, `dbo.customers` and `sales.customers`) only one of the tables can be added into sync.
+- If there are tables with the same name but different schemas (for example, `dbo.customers` and `sales.customers`), you can add only one of the tables to the sync group.
 - Columns with user-defined data types aren't supported.
 - Moving servers between different subscriptions isn't supported.
 - If two primary keys are only different in case (for example, `Foo` and `foo`), Data Sync won't support this scenario.
@@ -165,11 +167,11 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - Using an Azure SQL Hyperscale database as a Hub or Sync Metadata database isn't supported. However, a Hyperscale database can be a member database in a Data Sync topology.
 - Memory-optimized tables aren't supported.
 - Schema changes aren't automatically replicated.
-- Data Sync supports only the following two index properties: Unique, Clustered/Non-Clustered. Other properties of an index, like `IGNORE_DUP_KEY` or the `WHERE` filter predicate, aren't supported and the destination index is provisioned without these properties even if the source Index has these properties set.
+- Data Sync supports only the following two index properties: Unique, Clustered/Nonclustered. Other properties of an index, like `IGNORE_DUP_KEY` or the `WHERE` filter predicate, aren't supported and the destination index is provisioned without these properties even if the source Index has these properties set.
 - An Azure Elastic jobs database can't be used as the SQL Data Sync Metadata database, and vice versa.
 - SQL Data Sync isn't supported for [ledger databases](/sql/relational-databases/security/ledger/ledger-database-ledger).
-- Data Sync is not a disaster recovery or high availability tool and does not synchronize its own Sync Group information. There is no automatic disaster recovery for Data Sync.
-- Data Sync does not support [Network security perimeter (NSP)](/azure/private-link/network-security-perimeter-concepts).
+- Data Sync isn't a disaster recovery or high availability tool, and it doesn't synchronize its own sync group information. There's no automatic disaster recovery for Data Sync.
+- Data Sync doesn't support [network security perimeter](/azure/private-link/network-security-perimeter-concepts) by design. Data Sync runs as a proxy service rather than an Azure resource, so it has no fully qualified domain name or IP address to write perimeter rules against. A perimeter blocks the network paths that Data Sync requires in both transition and enforced mode, and no access rule makes it work. If your logical server is associated with a perimeter, migrate to a data movement solution that supports network security perimeters.
 
 #### Unsupported data types
 
@@ -195,15 +197,15 @@ Data Sync can't sync read-only or system-generated columns. For example:
 | Database, table, schema, and column names | 50 characters per name |  |
 | Tables in a sync group | 500 | Create multiple sync groups |
 | Columns in a table in a sync group | 1000 |  |
-| Data row size on a table | 24 Mb |  |
+| Data row size on a table | 24 MB |  |
 
 > [!NOTE]
-> There might be up to 30 endpoints in a single sync group if there is only one sync group. If there is more than one sync group, the total number of endpoints across all sync groups cannot exceed 30. If a database belongs to multiple sync groups, it is counted as multiple endpoints, not one.
+> There might be up to 30 endpoints in a single sync group if there's only one sync group. If there's more than one sync group, the total number of endpoints across all sync groups can't exceed 30. If a database belongs to multiple sync groups, it counts as multiple endpoints, not one.
 
 ### Network requirements
 
 > [!NOTE]
-> If you use Sync private link, these network requirements do not apply. 
+> If you use Sync private link, these network requirements don't apply.
 
 When the sync group is established, the Data Sync service needs to connect to the hub database. When establishing the sync group, the Azure SQL server must have the following configuration in its `Firewalls and virtual networks` settings:
 
@@ -213,7 +215,7 @@ When the sync group is established, the Data Sync service needs to connect to th
 Once the sync group is created and provisioned, you can then disable these settings. The sync agent connects directly to the hub database, and you can use the server's [firewall IP rules](firewall-configure.md) or [private endpoints](private-endpoint-overview.md) to allow the agent to access the hub server.
 
 > [!NOTE]
-> If you change the sync group's schema settings, you will need to allow the Data Sync service to access the server again so that the hub database can be re-provisioned.
+> If you change the sync group's schema settings, you need to allow the Data Sync service to access the server again so that the hub database can be reprovisioned.
 
 ### Region data residency
 
@@ -243,11 +245,11 @@ Yes. You can configure sync between databases that belong to resource groups own
 
 - If the subscriptions belong to the same tenant and you have permission to all subscriptions, you can configure the sync group in the Azure portal.
 - Otherwise, you have to use PowerShell to add the sync members.
-- Private Link is not supported in cross-tenant scenarios.
+- Private Link isn't supported in cross-tenant scenarios.
 
 ### Can I set up Data Sync to sync between databases in SQL Database that belong to different clouds (like Azure Public Cloud and Azure operated by 21Vianet)?
 
-Data Sync does not support cross-cloud synchronization. 
+Data Sync doesn't support cross-cloud synchronization.
 
 ### Can I use Data Sync to seed data from my production database to an empty database, and then sync them?
 
@@ -262,7 +264,7 @@ For one recommended backup technique, see [Copy a transactionally consistent cop
 ### Can Data Sync sync encrypted tables and columns?
 
 - If a database uses Always Encrypted, you can sync only the tables and columns that are *not* encrypted. You can't sync the encrypted columns, because Data Sync can't decrypt the data.
-- If a column uses Column-Level Encryption (CLE), you can sync the column, as long as the row size is less than the maximum size of 24 Mb. Data Sync treats the column encrypted by key (CLE) as normal binary data. To decrypt the data on other sync members, you need to have the same certificate.
+- If a column uses Column-Level Encryption (CLE), you can sync the column, as long as the row size is less than the maximum size of 24 MB. Data Sync treats the column encrypted by key (CLE) as normal binary data. To decrypt the data on other sync members, you need to have the same certificate.
 
 ### Is collation supported in SQL Data Sync?
 
@@ -273,7 +275,7 @@ Yes. SQL Data Sync supports configuring collation settings in the following scen
 
 ### Is federation supported in SQL Data Sync?
 
-Federation Root Database can be used in the SQL Data Sync Service without any limitation. You can't add the Federated Database endpoint to the current version of SQL Data Sync.
+You can use a federation root database with SQL Data Sync without limitation. You can't add the federated database endpoint to the current version of SQL Data Sync.
 
 ### Can I use Data Sync to sync data exported from Dynamics 365 using bring your own database (BYOD) feature?
 
@@ -281,7 +283,7 @@ The Dynamics 365 bring your own database feature lets administrators export data
 
 ### How do I create Data Sync in Failover group to support Disaster Recovery?
 
-SQL Data Sync offers no automatic failover or disaster recovery capabilities. In case of database failover to another region, Sync Group will stop working. Manually re-create the Sync Group in failover region with same settings as primary region.
+SQL Data Sync offers no automatic failover or disaster recovery capabilities. If the database fails over to another region, the sync group stops working. Manually re-create the sync group in the failover region with the same settings as the primary region.
 
 ## Related content
 
@@ -294,7 +296,8 @@ Is SQL Data Sync doing as expected? To monitor activity and troubleshoot issues,
 
 ### Learn more about Azure SQL Database
 
-For more info about Azure SQL Database, see the following articles:
+For more information about Azure SQL Database, see the following articles:
 
 - [SQL Database Overview](sql-database-paas-overview.md)
+- [Network security perimeter for Azure SQL Database (preview)](network-security-perimeter.md)
 - [Database Lifecycle Management](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110))

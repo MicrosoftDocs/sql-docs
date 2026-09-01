@@ -4,7 +4,7 @@ description: Learn how Copilot in SQL Server Migration Assistant (SSMA) for SAP 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: niball, subasak
-ms.date: 02/02/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: ssma
 ms.topic: overview
@@ -33,9 +33,9 @@ To use Copilot in SSMA for SAP ASE for code conversion, you can use one of the f
 
 If you don't have these details, see the [Modify Azure OpenAI settings](#modify-azure-openai-settings) section.
 
-### Option 2: Microsoft-managed endpoint with Microsoft Entra ID authentication (Preview)
+### Option 2: Microsoft-managed endpoint with Microsoft Entra ID authentication 
 
-SSMA for SAP ASE 10.5 introduces this authentication type for Copilot in SSMA.
+SSMA for SAP ASE 10.6 makes this authentication type for Copilot in SSMA generally available.
 
 - No manual key entry required.
 - Sign in using your Microsoft Entra ID credentials.
@@ -50,7 +50,7 @@ If the OpenAI resource isn't registered, the tool prompts you with an authentica
 - **Microsoft Entra ID Authentication** (new flow).
 - **Azure OpenAI Key** (existing flow).
 
-### Microsoft Entra ID authentication flow (Preview)
+### Microsoft Entra ID authentication flow 
 
 1. Select **Microsoft Entra ID Authentication**, and then select **Next**.
 1. A browser window opens and prompts you to sign in.
@@ -110,6 +110,20 @@ Because AI generates this code, you must review, validate, and test the changes 
 ## Limitations
 
 You can't save Copilot-generated code for tables and user-defined data types directly in SSMA. In these cases, SSMA provides a download option to save the Copilot-generated code locally.
+
+## Limits of managed endpoint
+
+The Microsoft-managed endpoint for Copilot in SSMA has the following service limits:
+
+| Limit | Value |
+| --- | --- |
+| Source script | Fewer than 16,000 tokens per request |
+| User prompt | Fewer than 2,000 tokens per request |
+| Customer request rate | 15 requests per minute |
+| Customer request volume | 7,200 requests per 8-hour period |
+| Aggregate service rate | 75 requests per minute across all users |
+
+These limits apply when you use the Microsoft-managed endpoint with Microsoft Entra ID authentication.
 
 ## Related content
 

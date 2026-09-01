@@ -4,7 +4,7 @@ description: Find out about changes to SQL Server Migration Assistant (SSMA) for
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: niball, subasak
-ms.date: 02/04/2026
+ms.date: 07/24/2026
 ms.service: sql
 ms.subservice: ssma
 ms.topic: whats-new
@@ -18,6 +18,14 @@ ms.custom:
 This article lists SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (formerly Sybase ASE) changes in each release.
 
 [!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
+## SSMA v10.6
+
+The v10.6 release of SSMA for SAP ASE contains the following changes:
+
+- AI-assisted code conversion with Microsoft Copilot in SSMA for SAP ASE is generally available.
+- Managed endpoint support for SQL Code Conversion Copilot in SSMA for SAP ASE is generally available.
+- Important security, compliance, UX, and accessibility fixes.
 
 ## SSMA v10.5
 

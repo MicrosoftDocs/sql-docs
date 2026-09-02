@@ -70,7 +70,7 @@ This section lists the release notes by date, starting with the most recent rele
 
 | Date of release | Extension version |
 | --- | --- |
-| [August 2026](#august-2026) | `1.1.3518.465`<br />`1.1.3500.453` |
+| [August 2026](#august-2026) | `1.1.3518.465`<br />`1.1.3500.453` (no longer available) |
 | [July 2026](#july-2026) | `1.1.3494.451` (no longer available) |
 | [June 2026](#june-2026) | `1.1.3464.439` (no longer available),<br />`1.1.3453.436` (no longer available) |
 | [May 2026](#may-2026) | `1.1.3428.422` (no longer available) |
@@ -103,7 +103,7 @@ As of August 2026, this version is the auto-upgrade target and is widely deploye
 
 - [Least privilege](configure-least-privilege.md) is enabled by default. The extension creates the `NT SERVICE\SqlServerExtension` login and grants it the minimum permissions required for each enabled feature.
 
-**Extension version**: `1.1.3500.453`
+**Extension version**: `1.1.3500.453` (no longer available)
 
 - Fixes an authentication token access bug.
 

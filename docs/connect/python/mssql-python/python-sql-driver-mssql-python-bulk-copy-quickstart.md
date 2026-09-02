@@ -4,7 +4,7 @@ description: This quickstart describes bulk copying data between databases using
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 06/29/2026
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -93,7 +93,7 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.5.0",
+       "mssql-python>=1.14.0",
        "python-dotenv>=1.1.1",
        "pyarrow>=19.0.0",
    ]
@@ -293,7 +293,7 @@ code .
        elapsed = time.perf_counter() - t0
        rate = f"{int(row_count / elapsed):,} rows/sec" if elapsed > 0 else "n/a"
        print(
-           f"{schema_name}.{table_name} → {parquet_file}: {row_count:,} rows downloaded "
+           f"{schema_name}.{table_name} -> {parquet_file}: {row_count:,} rows downloaded "
            f"in {elapsed:.2f}s ({rate})"
        )
        return row_count
@@ -309,7 +309,7 @@ code .
        return parquet_file
    ```
 
-1. Add the upload function. `upload_parquet` reads the Arrow schema from the Parquet file, generates and executes `DROP`/`CREATE TABLE` DDL to prepare the destination, then reads the file in batches and calls `cursor.bulkcopy()` for high-performance bulk insert. The `table_lock=True` option improves throughput by minimizing lock contention. After the upload completes, the function runs a `SELECT COUNT(*)` and raises an error if the destination row count doesn't match the uploaded row count.
+1. Add the upload function. `upload_parquet` reads the Arrow schema from the Parquet file, generates and executes `DROP`/`CREATE TABLE` DDL to prepare the destination, then reads the file in batches and calls `cursor.bulkcopy_arrow()` for high-performance bulk insert. Because the Parquet batches are already Apache Arrow record batches, this method loads them without converting every value into a Python object first. The `table_lock=True` option improves throughput by minimizing lock contention. After the upload completes, the function runs a `SELECT COUNT(*)` and raises an error if the destination row count doesn't match the uploaded row count.
 
    ```python
    def upload_parquet(conn, parquet_file: str, target: str) -> int:
@@ -326,9 +326,8 @@ code .
        with pq.ParquetFile(parquet_file) as pf:
            with conn.cursor() as cursor:
                for batch in pf.iter_batches(batch_size=BATCH_SIZE):
-                   rows = zip(*(col.to_pylist() for col in batch.columns))
-                   cursor.bulkcopy(
-                       target, rows, batch_size=BATCH_SIZE,
+                   cursor.bulkcopy_arrow(
+                       target, batch, batch_size=BATCH_SIZE,
                        table_lock=True, timeout=3600,
                    )
                    uploaded += batch.num_rows
@@ -345,7 +344,7 @@ code .
 
        rate = f"{int(uploaded / elapsed):,} rows/sec" if elapsed > 0 else "n/a"
        print(
-           f"{parquet_file} → {target}: {uploaded:,} rows uploaded "
+           f"{parquet_file} -> {target}: {uploaded:,} rows uploaded "
            f"in {elapsed:.2f}s ({rate}) "
            f"| destination rows: {count:,}"
        )
@@ -490,7 +489,7 @@ The application performs a full round-trip data transfer in three phases:
 
 1. **Download**: Connects to the source database, reads column metadata from `INFORMATION_SCHEMA.COLUMNS`, builds an Apache Arrow schema, then downloads each table into a local Parquet file.
 1. **Enrich** (optional): Provides a hook (`enrich_parquet`) where you can add transformations, derived columns, or joins before uploading.
-1. **Upload**: Reads each Parquet file in batches, recreates the table in the destination database using DDL generated from Arrow schema metadata, then uses `cursor.bulkcopy()` for high-performance bulk insert.
+1. **Upload**: Reads each Parquet file in batches, recreates the table in the destination database using DDL generated from Arrow schema metadata, then uses `cursor.bulkcopy_arrow()` for high-performance bulk insert. Because the source is already in Arrow format, the record batches pass to the driver without being converted into Python objects.
 
 ## Next step
 

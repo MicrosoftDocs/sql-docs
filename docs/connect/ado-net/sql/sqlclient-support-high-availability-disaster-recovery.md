@@ -4,7 +4,7 @@ description: "Describes SqlClient support for high-availability, disaster recove
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 08/11/2026
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -19,7 +19,7 @@ This article discusses Microsoft SqlClient Data Provider for SQL Server support 
   
 You can now specify the availability group listener of a high availability and disaster recovery (HADR) availability group (AG) or failover cluster instance (FCI) in the connection property. If a SqlClient application connects to an Always On database that fails over, the original connection breaks and the application must open a new connection to continue work after the failover.  
   
-If you don't connect to an availability group listener or FCI, and if multiple IP addresses are associated with a hostname, SqlClient iterates sequentially through all IP addresses associated with the DNS entry. This process can be time consuming if the first IP address returned by the DNS server isn't bound to any network interface card (NIC). When connecting to an AG listener or FCI, SqlClient attempts to establish connections to all IP addresses in parallel. If a connection attempt succeeds, the driver discards any pending connection attempts.  
+If you don't connect to an availability group listener or FCI, and if multiple IP addresses are associated with a hostname, SqlClient iterates sequentially through all IP addresses associated with the DNS entry. This process can be time consuming if the first IP address returned by the DNS server isn't bound to any network interface card (NIC). When you connect to an AG listener or FCI, SqlClient attempts to establish connections to all IP addresses in parallel. If a connection attempt succeeds, the driver discards any pending connection attempts.  
   
 > [!NOTE]
 >  Increasing connection timeout and implementing connection retry logic will increase the probability that an application will connect to an availability group. Also, because a connection can fail because of a failover, you should implement connection retry logic, retrying a failed connection until it reconnects.  
@@ -37,19 +37,29 @@ You can programmatically modify these connection string keywords with:
 - <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
   
 ## Connecting With MultiSubnetFailover  
-Always specify `MultiSubnetFailover=True` when connecting to a Microsoft SQL family TCP endpoint. This setting applies to availability group listeners, failover cluster instances, and multi-IP endpoints such as Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. The property is also safe on single-IP targets. `MultiSubnetFailover` enables faster failover for all Availability Groups and Failover Cluster Instances and significantly reduces failover time for single- and multi-subnet Always On topologies. During a multi-subnet failover, the client attempts connections in parallel. During a subnet failover, it aggressively retries the TCP connection. `MultiSubnetFailover` isn't supported when you connect to a named instance or over a protocol other than TCP.  
-  
-The `MultiSubnetFailover` connection property indicates that SqlClient should try to connect to the database on the primary SQL Server instance by connecting to all the IP addresses in parallel. When you specify `MultiSubnetFailover=True` for a connection, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. This setting enables faster reconnection after failover of either an Always On Availability Group or an Always On Failover Cluster Instance. It applies to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
+Always specify `MultiSubnetFailover=True` when you connect to a Microsoft SQL family TCP endpoint. This setting applies to availability group listeners, failover cluster instances, and multi-IP endpoints such as Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
+
+When the server name in your connection string resolves to more than one IP address, `MultiSubnetFailover=True` makes SqlClient open connections to all of those addresses at the same time and use the first one that answers. Without it, SqlClient tries the addresses one at a time. An address that doesn't answer stalls until the operating system's TCP connect timeout expires, which can exhaust `Connect Timeout` before SqlClient reaches an address that answers. After a failover, the address SqlClient tries first can be one that no longer serves the database, so a connection that would succeed against another address fails with a timeout instead.
+
+`MultiSubnetFailover=True` changes how quickly the client finds the replica that serves the database. It doesn't change how long the server takes to fail over. With the setting on, SqlClient also retries TCP connection attempts faster than the operating system's default TCP retransmit intervals, which speeds up reconnection for both single- and multi-subnet availability groups and failover cluster instances.
+
+`MultiSubnetFailover=True` is safe on single-IP targets. When DNS resolves to a single address, SqlClient makes a single connection attempt, so the setting costs nothing when it isn't needed.  
   
 For more information about connection string keywords in SqlClient, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>. For guidance on the related Transparent Network IP Resolution (TNIR) setting on .NET Framework, and to troubleshoot slow connections caused by multi-IP DNS names, see [Disabling Transparent Network IP Resolution](../appcontext-switches.md#disabling-transparent-network-ip-resolution) and [Long connect delays with pre-login handshake timeout](../sqlclient-troubleshooting-guide.md#long-connect-delays-with-pre-login-handshake-timeout).  
   
 Use the following guidelines when configuring `MultiSubnetFailover`:  
   
-- Use the `MultiSubnetFailover` connection property when connecting to a single subnet or multi-subnet; it will improve performance for both.  
-  
-- To connect to an availability group, specify the availability group listener of the availability group as the server in your connection string.  
-  
-- Connecting to a SQL Server instance configured with more than 64 IP addresses will cause a connection failure.  
+- Set `MultiSubnetFailover=True`.
+
+- To connect to an availability group, specify the availability group listener of the availability group as the server in your connection string.
+
+- You can't use `MultiSubnetFailover` when you connect to a named instance.
+
+- You can't use `MultiSubnetFailover` over a protocol other than TCP.
+
+- Connecting to a SQL Server instance configured with more than 64 IP addresses causes a connection failure.  
+
+- You can't use `MultiSubnetFailover` with database mirroring. For more information, see [Upgrading to use multi-subnet clusters from database mirroring](#upgrading-to-use-multi-subnet-clusters-from-database-mirroring). Database mirroring is deprecated in all supported versions of SQL Server. Use Always On availability groups instead.
   
 - Behavior of an application that uses the `MultiSubnetFailover` connection property is not affected based on the type of authentication: SQL Server Authentication, Kerberos Authentication, or Windows Authentication.  
   
@@ -72,10 +82,10 @@ A connection error (<xref:System.ArgumentException>) will occur if the `MultiSub
   
 If you upgrade a SqlClient application that currently uses database mirroring to a multi-subnet scenario, you should remove the `Failover Partner` connection property and replace it with `MultiSubnetFailover` set to `True` and replace the server name in the connection string with an availability group listener. If a connection string uses `Failover Partner` and `MultiSubnetFailover=True`, the driver will generate an error. However, if a connection string uses `Failover Partner` and `MultiSubnetFailover=False` (or `ApplicationIntent=ReadWrite`), the application will use database mirroring.  
   
-The driver will return an error if database mirroring is used on the primary database in the AG, and if `MultiSubnetFailover=True` is used in the connection string that connects to a primary database instead of to an availability group listener.  
+The driver returns an error if you use database mirroring on the primary replica in the availability group, and if `MultiSubnetFailover=True` is set in the connection string that connects to a primary replica instead of to an availability group listener.  
   
 ## Specifying application intent  
-When `ApplicationIntent=ReadOnly`, the client requests a read workload when connecting to an Always On enabled database. The server will enforce the intent at connection time and during a USE database statement but only to an Always On enabled database.  
+When you set `ApplicationIntent=ReadOnly`, the client requests a read workload when you connect to an Always On enabled database. The server enforces the intent at connection time and during a `USE` database statement but only to an Always On enabled database.  
   
 The `ApplicationIntent` keyword does not work with legacy, read-only databases.  
   

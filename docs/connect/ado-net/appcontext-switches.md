@@ -71,7 +71,7 @@ When the AppContext switch **"Switch.Microsoft.Data.SqlClient.EnableUserAgent"**
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableUserAgent", true);
 ```
 
-## Enabling decimal truncation behavior
+## Enable decimal truncation behavior
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
@@ -140,7 +140,7 @@ To avoid this behavior, set `MultiSubnetFailover=True` in the connection string:
 MultiSubnetFailover=True
 ```
 
-This recommendation works on every .NET version and covers both Azure SQL and on-premises SQL Server. When `MultiSubnetFailover=True`, the driver ignores `TransparentNetworkIPResolution`, attempts the DNS-resolved IP addresses in parallel, and completes authentication with the first responsive replica. Despite the name, `MultiSubnetFailover` applies to any listener whose DNS name resolves to multiple target IPs, regardless of whether those IPs are in different subnets, and it's safe on stand-alone servers whose DNS resolves to a single IP.
+This recommendation works on every .NET version and covers both Azure SQL and on-premises SQL Server. When `MultiSubnetFailover=True`, the driver ignores `TransparentNetworkIPResolution` and attempts TCP connections to the DNS-resolved IP addresses in parallel, then completes the authentication on the first connection that succeeds. Despite the name, `MultiSubnetFailover` applies to any listener whose DNS name resolves to multiple target IPs, regardless of whether those IPs are in different subnets, and it's safe on stand-alone servers whose DNS resolves to a single IP.
 
 For process-wide control without editing every connection string, use the [Enable MultiSubnetFailover by default](#enable-multisubnetfailover-by-default) AppContext switch.
 
@@ -174,7 +174,7 @@ Starting in version 3.0, ReadAsync runs asynchronously. Previous versions run Re
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", false);
 ```
 
-## Enabling rowversion null behavior
+## Enable rowversion null behavior
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 

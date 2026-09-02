@@ -3,7 +3,8 @@ title: Use Bulk Copy with mssql-python Driver
 description: Learn how to efficiently insert large amounts of data using the bulk copy feature with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/24/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -192,10 +193,13 @@ print(f"Imported {result['rows_copied']} rows in {result['batch_count']} batches
 
 ## Load pandas DataFrames
 
-Convert a pandas DataFrame to a list of tuples before passing it to `bulkcopy()`:
+A DataFrame is columnar, so the fastest path is `bulkcopy_arrow()`, which consumes the Arrow table that pandas already knows how to produce. `bulkcopy()` takes row tuples, so you need to flatten the columns into Python objects first.
+
+Cast the Arrow table to the types of the destination columns before you load it. `pyarrow` infers `float64` for a numeric column, which the driver can't map to **money**, **decimal**, or **numeric**:
 
 ```python
 import pandas as pd
+import pyarrow as pa
 import mssql_python
 
 df = pd.DataFrame({
@@ -212,9 +216,60 @@ cursor.execute("""
 """)
 conn.commit()
 
-data = [tuple(row) for row in df.itertuples(index=False, name=None)]
+target = pa.schema([
+    pa.field('ID', pa.int32()),
+    pa.field('Name', pa.string()),
+    pa.field('Amount', pa.decimal128(19, 4)),   # MONEY
+])
+
+table = pa.Table.from_pandas(df, preserve_index=False).cast(target)
+result = cursor.bulkcopy_arrow("##PandasDemo", table)
+```
+
+Without the cast, the load fails with `ValueError: Cannot map Arrow column 'Amount' (Float64) to SQL column 'Amount' (Money)`. Build the cast with `Table.cast()` rather than passing the schema to `Table.from_pandas()`, which can't convert a float column to `decimal128` directly. `NaN` values become SQL `NULL` on this path, so you don't need to replace them first.
+
+If you need the row-tuple path instead, `itertuples()` already yields tuples when you pass `name=None`:
+
+```python
+data = list(df.itertuples(index=False, name=None))
 result = cursor.bulkcopy("##PandasDemo", data)
 ```
+
+## Load Apache Arrow data
+
+Use `cursor.bulkcopy_arrow()` to load Apache Arrow data. This method reads directly from Arrow memory, so you don't build Python row tuples before calling it.
+
+The `source` argument accepts a `pyarrow.Table`, a `pyarrow.RecordBatch`, a `pyarrow.RecordBatchReader`, or any object that exposes the Arrow C data interface. The remaining arguments are the same as `bulkcopy()`.
+
+```python
+import mssql_python
+import pyarrow as pa
+
+conn = mssql_python.connect(connection_string)
+
+# bulkcopy_arrow() opens its own connection, so commit the table creation first.
+conn.autocommit = True
+cursor = conn.cursor()
+
+cursor.execute("""
+    CREATE TABLE ##ArrowDemo (ID INT, Name NVARCHAR(50), Amount FLOAT)
+""")
+
+table = pa.table({
+    "ID": pa.array([1, 2, 3], type=pa.int32()),
+    "Name": pa.array(["Alice", "Bob", "Carol"], type=pa.string()),
+    "Amount": pa.array([50000.0, 60000.0, 55000.0], type=pa.float64()),
+})
+
+result = cursor.bulkcopy_arrow("##ArrowDemo", table)
+print(f"Copied {result['rows_copied']} rows")
+```
+
+Each Arrow column type must be compatible with its destination SQL column type. The writer doesn't convert between type families, so passing a `float64` column to a **money** column raises `ValueError` before any rows are written. Use `decimal128` for **money**, **decimal**, and **numeric** columns.
+
+Passing an Arrow source to `bulkcopy()` raises `TypeError` and directs you to `bulkcopy_arrow()`.
+
+For more information about Arrow support, including how to stream a result set from one table into another, see [Apache Arrow integration](arrow-integration.md).
 
 ## Handle NULL values
 
@@ -269,7 +324,7 @@ When `keep_identity=False` (the default), omit the identity column from your dat
 | `use_internal_transaction` | `False` | Wrap each batch in an internal transaction. |
 
 > [!NOTE]
-> `bulkcopy()` opens a separate internal connection to the server. Starting in mssql-python 1.12.0, that internal connection inherits the cursor's connection timeout: if you passed `timeout=<seconds>` to `mssql_python.connect()`, the same positive value is applied when the bulk copy connection is opened. If you didn't set one (or passed `timeout=0`), the internal connection uses its default 15-second connect timeout. The value is snapshotted when `bulkcopy()` is called, so later changes to the parent connection don't affect an in-flight bulk copy. Increase the connect timeout on your parent connection for slow, throttled, or high-latency endpoints (for example, over a VPN or across regions).
+> `bulkcopy()` opens a separate internal connection to the server. That internal connection inherits the cursor's query timeout: set `Connection.timeout` to a positive value before you create the cursor, and the same value bounds the bulk copy connection attempt. If the cursor's query timeout is `0`, the internal connection uses its default 15-second connect timeout. A cursor takes the value when it's created, so changing `Connection.timeout` afterward doesn't affect an existing cursor or an in-flight bulk copy. Raise the query timeout before you create the cursor for slow, throttled, or high-latency endpoints (for example, over a VPN or across regions).
 
 ## Handle errors
 
@@ -375,6 +430,10 @@ For more information about authentication, see [Microsoft Entra authentication](
 
 The following techniques help you maximize bulk copy throughput.
 
+### Start from a columnar source
+
+`bulkcopy()` takes an iterable of row tuples, so every value has to exist as a Python object before the copy starts. When the data is already columnar, `bulkcopy_arrow()` reads the Arrow buffers directly and skips that step. A pandas or Polars DataFrame, a Parquet file, and the result of `cursor.arrow()` are all Arrow sources. For more information, see [Load Apache Arrow data](#load-apache-arrow-data).
+
 ### Use generators for large datasets
 
 Generators minimize memory usage because `bulkcopy()` accepts any iterable:
@@ -464,7 +523,8 @@ The following table compares bulk copy with other data insertion methods.
 
 | Method | Use case | Performance |
 | --- | --- | --- |
-| `cursor.bulkcopy()` | Large datasets (more than 1,000 rows). | Fastest |
+| `cursor.bulkcopy_arrow()` | Large datasets that are already columnar. | Fastest |
+| `cursor.bulkcopy()` | Large datasets (more than 1,000 rows) from row-oriented sources. | Fast |
 | `cursor.executemany()` | Medium datasets with parameters. | Moderate |
 | `cursor.execute()` in a loop | Small datasets with straightforward logic. | Slowest |
 

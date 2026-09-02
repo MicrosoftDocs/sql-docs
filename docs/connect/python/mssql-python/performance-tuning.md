@@ -3,7 +3,8 @@ title: Performance Tuning for mssql-python Applications
 description: Learn performance optimization techniques for SQL Server applications using the mssql-python driver, including connection pooling, query optimization, and bulk operations.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -205,13 +206,14 @@ cursor.execute(
 
 ## Choose the right insert method
 
-The driver provides three ways to insert data, each suited to a different scale:
+The driver provides four ways to insert data, each suited to a different scale and source shape:
 
 | Method | Row count | Why |
 | --- | --- | --- |
 | `execute()` | 1 row per call | Use for single-row operations like form submissions or API handlers where you need the inserted ID immediately. |
 | `executemany()` | ~10-1,000 rows | Uses column-wise parameter binding for better throughput than a loop. Sends each row as a parameterized statement. |
 | `bulkcopy()` | Hundreds of rows and up | Uses the TDS bulk insert protocol, which streams rows instead of sending one statement per row. Best for data loads, migrations, and batch processing. |
+| `bulkcopy_arrow()` | Hundreds of rows and up | Same protocol as `bulkcopy()`, but reads directly from an Arrow table. Use it when the data is already columnar, such as a pandas or Polars DataFrame or a Parquet file. |
 
 For more details and examples, see [Data loading and movement patterns](data-loading-movement-patterns.md).
 
@@ -299,6 +301,29 @@ cursor.bulkcopy(
     batch_size=5000,
 )
 ```
+
+### Bulk copy from columnar sources
+
+When the source is already columnar, `bulkcopy_arrow()` skips the conversion into Python row tuples that `bulkcopy()` requires. A pandas or Polars DataFrame, a Parquet file, and the result of `cursor.arrow()` are all Arrow sources.
+
+Cast the table to the destination column types first. `pyarrow` infers `float64` for numeric columns, which the driver can't map to **money**, **decimal**, or **numeric**:
+
+```python
+import pyarrow as pa
+
+target = pa.schema([
+    pa.field('ProductID', pa.int32()),
+    pa.field('Name', pa.string()),
+    pa.field('ListPrice', pa.decimal128(19, 4)),   # MONEY
+])
+
+table = pa.Table.from_pandas(df, preserve_index=False).cast(target)
+cursor.bulkcopy_arrow("Production.Product", table)
+```
+
+Use `Table.cast()` rather than passing the schema to `Table.from_pandas()`, which can't convert a float column to `decimal128` directly. Passing an Arrow table to `bulkcopy()` raises `TypeError`.
+
+The same applies on the read side: `cursor.arrow()` returns results as an Arrow table without building a Python object per value, which is faster than `fetchall()` when the destination is a DataFrame. For more information, see [Apache Arrow integration](arrow-integration.md).
 
 ## Caching strategies
 
@@ -524,7 +549,7 @@ Common sources of unexpected memory growth include:
 
 ### Check server-side query performance
 
-Use `SET STATISTICS TIME ON` and `SET STATISTICS IO ON` to see how long queries take on the server and how much data they read. High logical reads usually indicate a missing index. Run these statements in [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) or the [MSSQL extension for Visual Studio Code](../../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md), where the output appears in the **Messages** pane:
+Use `SET STATISTICS TIME ON` and `SET STATISTICS IO ON` to see how long queries take on the server and how much data they read. High logical reads usually indicate a missing index. Run these statements in [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms) or the [MSSQL extension for Visual Studio Code](../../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md), where the output appears in the **Messages** pane:
 
 ```sql
 SET STATISTICS TIME ON;
@@ -603,7 +628,7 @@ This view shows cumulative time per function call, which helps you identify whet
 
 Client-side timing tells you how long a query takes from your application's perspective, but it combines network latency, server execution time, and client processing. [Query Store](../../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) captures execution plans and runtime statistics on the server, so you can see exactly how SQL Server executed each query, how often it ran, and how its performance changed over time.
 
-Query Store is especially useful for identifying parameter sniffing, plan regressions, and queries that consume the most server resources. You can query the `sys.query_store_runtime_stats` and `sys.query_store_plan` views directly, or use the built-in Query Store reports in [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md).
+Query Store is especially useful for identifying parameter sniffing, plan regressions, and queries that consume the most server resources. You can query the `sys.query_store_runtime_stats` and `sys.query_store_plan` views directly, or use the built-in Query Store reports in [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms).
 
 ### Use Performance Dashboard Reports
 
@@ -625,12 +650,14 @@ The [Performance Dashboard Reports](../../../relational-databases/performance/pe
 - [ ] Implement server-side pagination.
 - [ ] Set `SET NOCOUNT ON` once after connecting.
 - [ ] Minimize round trips by batching queries.
+- [ ] Use `cursor.arrow()` when the destination is a DataFrame.
 
 ### Inserts
 
 - [ ] Use `execute()` for single-row inserts.
 - [ ] Use `executemany()` for small-to-moderate batches (~10-1,000 rows).
 - [ ] Use `bulkcopy()` when throughput matters more than per-row control.
+- [ ] Use `bulkcopy_arrow()` when the source is already columnar, and cast the table to the destination column types first.
 
 ### Caching
 

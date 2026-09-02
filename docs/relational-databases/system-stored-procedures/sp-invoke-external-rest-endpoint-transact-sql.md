@@ -251,6 +251,9 @@ Only calls to endpoints for the following services are allowed:
 | Azure Maps | `*.atlas.microsoft.com` |
 | Azure AI Translator | `api.cognitive.microsofttranslator.com` |
 
+> [!NOTE]  
+> Azure AI Foundry resources might also expose an endpoint under `services.ai.azure.com` (for example, `https://<name>.services.ai.azure.com`), but that domain isn't in the allowed endpoints list. Use the corresponding `https://<name>.cognitiveservices.azure.com` endpoint for both the database scoped credential name and the request URL.
+
 [Outbound firewall rules for Azure SQL Database and Azure Synapse Analytics](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
 
 > [!NOTE]  

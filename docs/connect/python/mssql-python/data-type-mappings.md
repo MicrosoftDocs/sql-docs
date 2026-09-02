@@ -3,7 +3,8 @@ title: Data Type Mappings for mssql-python
 description: Reference for how Python data types map to SQL Server types when using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -79,7 +80,7 @@ When the driver retrieves data from SQL Server, the driver converts values to Py
 | **xml** | `str` | XML as text. |
 | **geography**, **geometry** | `bytes` | Spatial types as binary. |
 | **hierarchyid** | `bytes` | Hierarchy data as binary. |
-| **sql_variant** | Varies | Resolved to the underlying base type (v1.5.0+). `sql_variant` columns use a streaming fetch path, which might have a slight performance impact compared to fixed-type columns. |
+| **sql_variant** | Varies | Resolved to the underlying base type. `sql_variant` columns use a streaming fetch path, which might have a slight performance impact compared to fixed-type columns. |
 | `NULL` | `None` | Python None. |
 
 ## SQL type constants
@@ -318,7 +319,7 @@ Streaming works with `execute()`, `executemany()`, and all fetch APIs (`fetchone
 
 ## Unsupported SQL Server types
 
-The following SQL Server types don't have native Python type mappings. If your application requires these types, use string or binary representations as a workaround, or use [pyodbc](../pyodbc/python-sql-driver-pyodbc.md) if it supports the type you need.
+The following SQL Server types don't have native Python type mappings.
 
 | SQL Server type | Status |
 | ----------------- | -------- |

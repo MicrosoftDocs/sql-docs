@@ -3,7 +3,8 @@ title: Use mssql-python with pandas
 description: Learn how to integrate the mssql-python driver with pandas DataFrames for data analysis with Microsoft SQL and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -61,6 +62,26 @@ print(df.head())
 
 > [!NOTE]
 > If your connection string uses `Authentication=ActiveDirectoryDefault`, the driver uses `DefaultAzureCredential`, which tries multiple credential providers in sequence. The first connection can be slow because the SDK walks the chain until it finds a working provider. In production, if you know which credential type your environment uses, specify it directly (for example, `ActiveDirectoryMSI` for managed identity) to avoid the chain walk. For more information, see [Microsoft Entra authentication](entra-authentication.md).
+
+### Query to DataFrame through Arrow
+
+`cursor.arrow()` returns the result set as a `pyarrow.Table`, which pandas converts without building a Python object for every value. Column names and types come from the result set, so you don't rebuild them from `cursor.description`:
+
+```python
+cursor.execute("SELECT Name, ListPrice, ProductSubcategoryID FROM Production.Product")
+df = cursor.arrow().to_pandas()
+```
+
+To keep memory proportional to the batch size, stream with `arrow_reader()` and concatenate:
+
+```python
+cursor.execute("SELECT * FROM Production.TransactionHistory")
+
+with cursor.arrow_reader(batch_size=50000) as reader:
+    df = pd.concat([batch.to_pandas() for batch in reader], ignore_index=True)
+```
+
+Use the reader as a context manager so that it releases the server-side cursor even if an exception interrupts the loop.
 
 ### Stream large datasets
 
@@ -182,9 +203,45 @@ rows = dataframe_to_sql(cursor, conn, df, "#Products")
 print(f"Inserted {rows} rows")
 ```
 
-### Bulk insert with BCP (recommended for large DataFrames)
+### Bulk insert through Arrow (recommended for large DataFrames)
 
-For large DataFrames, use the driver's `bulkcopy()` method, which sends rows in bulk over the TDS (Tabular Data Stream) protocol, the native wire protocol Microsoft SQL uses. This approach is faster than row-by-row inserts because it minimizes round trips.
+`cursor.bulkcopy_arrow()` reads the DataFrame's Arrow data directly, so it doesn't iterate rows in Python. Cast the table to the destination column types first, because `pyarrow` infers `float64` for a numeric column and the driver can't map that type to **decimal**, **numeric**, or **money**:
+
+```python
+import pyarrow as pa
+
+def dataframe_to_sql_arrow(conn, df: pd.DataFrame, table: str, schema: pa.Schema) -> int:
+    """Bulk insert a DataFrame through the Arrow path."""
+    arrow_table = pa.Table.from_pandas(df, preserve_index=False).cast(schema)
+    cursor = conn.cursor()
+    result = cursor.bulkcopy_arrow(table, arrow_table)
+    return result["rows_copied"]
+
+# Usage
+cursor.execute("CREATE TABLE ##PandasProducts (Name NVARCHAR(50), ListPrice DECIMAL(10,2), ProductSubcategoryID INT)")
+conn.commit()
+
+df = pd.DataFrame({
+    "Name": ["Product A", "Product B", "Product C"],
+    "ListPrice": [29.99, 49.99, 19.99],
+    "ProductSubcategoryID": [1, 2, 1]
+})
+
+target = pa.schema([
+    pa.field("Name", pa.string()),
+    pa.field("ListPrice", pa.decimal128(10, 2)),
+    pa.field("ProductSubcategoryID", pa.int32()),
+])
+
+rows = dataframe_to_sql_arrow(conn, df, "##PandasProducts", target)
+print(f"Bulk inserted {rows} rows")
+```
+
+`NaN` values become SQL `NULL` on this path, so you don't need to replace them first. Use `Table.cast()` rather than passing the schema to `Table.from_pandas()`, which can't convert a float column to `decimal128` directly.
+
+### Bulk insert with BCP
+
+When the DataFrame holds Python objects that don't map to an Arrow type, fall back to `bulkcopy()`, which takes row tuples:
 
 ```python
 def dataframe_to_sql_bulk(conn, df: pd.DataFrame, table: str) -> int:

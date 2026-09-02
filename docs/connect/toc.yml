@@ -3711,6 +3711,8 @@
         href: ../connect/python/mssql-python/python-sql-driver-mssql-python-rapid-prototyping-quickstart.md
       - name: 'Quickstart: Bulk copy with the Python driver for SQL Server'
         href: ../connect/python/mssql-python/python-sql-driver-mssql-python-bulk-copy-quickstart.md
+      - name: 'Quickstart: Apache Arrow with the Python driver for SQL Server'
+        href: ../connect/python/mssql-python/python-sql-driver-mssql-python-arrow-quickstart.md
     - name: Connecting to SQL Server
       items:
       - name: Connection strings

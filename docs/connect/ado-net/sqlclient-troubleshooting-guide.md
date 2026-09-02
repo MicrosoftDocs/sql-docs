@@ -125,7 +125,7 @@ Common topologies where this problem appears include:
 - On-premises SQL Server behind an Always On availability group listener whose DNS name resolves to multiple replica IPs.
 - Failover cluster instances with a multi-subnet cluster listener, or any other target whose DNS name has multiple `A` or `AAAA` records.
 
-**Recommended solution**: Set `MultiSubnetFailover=True` in the connection string. This setting selects a parallel-connect code path that completes authentication with the first responsive replica and, on .NET Framework, bypasses the sequential per-IP retry loop. This recommendation works on every .NET version. For more information, see [Disabling Transparent Network IP Resolution](appcontext-switches.md#disabling-transparent-network-ip-resolution).
+**Recommended solution**: Set `MultiSubnetFailover=True` in the connection string. This setting selects a parallel-connect code path that attempts TCP connections to all resolved IP addresses in parallel and uses the first connection that succeeds. On .NET Framework, it bypasses the sequential per-IP retry loop. This recommendation works on every .NET version. For more information, see [Disabling Transparent Network IP Resolution](appcontext-switches.md#disabling-transparent-network-ip-resolution).
 
 ### Login-phase errors
 
@@ -153,14 +153,14 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 
 - SQL Server doesn't support TLS 1.2
 
-  This error typically occurs in client environments like docker image containers, Unix clients, or Windows clients where TLS 1.2 is the minimum supported TLS protocol.
+  This error typically occurs in client environments like Docker image containers, Unix clients, or Windows clients where TLS 1.2 is the minimum supported TLS protocol.
 
   **Recommended Solution:** Install the latest updates on supported versions of SQL Server and ensure the TLS 1.2 protocol is enabled on the server.
 
   > [!NOTE]  
   > View [SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md) for the list of supported SQL Server versions with different versions of `Microsoft.Data.SqlClient`.
 
-  **Insecure solution:** Configure TLS/SSL settings in the docker image/client environment to connect with TLS 1.0.
+  **Insecure solution:** Configure TLS/SSL settings in the Docker image or client environment to connect with TLS 1.0.
 
   ```docker
   MinProtocol = TLSv1

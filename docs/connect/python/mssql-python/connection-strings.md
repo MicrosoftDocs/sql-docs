@@ -3,7 +3,8 @@ title: Connection Strings for mssql-python
 description: Reference for mssql-python connection string keywords, syntax, and examples for connecting to SQL Server and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/31/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -158,11 +159,13 @@ All connections use `Encrypt=yes` by default. For most applications, the default
 
 ### High availability and failover
 
-These keywords cover Always On availability groups, Azure SQL targets, and idle connection resiliency. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. `MultiSubnetFailover=yes` is safe on single-IP targets: when DNS resolves to one address, the driver does a single connect attempt with no measurable overhead compared to `MultiSubnetFailover=no`, so you can leave it on for all Microsoft SQL family TCP endpoints.
+These keywords cover Always On availability groups, Azure SQL targets, and idle connection resiliency. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. When the server name resolves to more than one IP address, the driver connects to all of those addresses at the same time and uses the first one that answers. Without it, the driver tries the addresses one at a time. An address that doesn't answer stalls until the operating system's TCP connect timeout expires, which can exhaust the login timeout before the driver reaches an address that answers. When DNS resolves to a single address, the driver makes a single connection attempt, so the setting is safe to leave on.
+
+`MultiSubnetFailover=yes` has the following limits. You can't use it over a protocol other than TCP, connecting to a SQL Server instance configured with more than 64 IP addresses fails, and you can't use it with database mirroring. Database mirroring is deprecated in all supported versions of SQL Server. Use Always On availability groups instead.
 
 | Keyword | Aliases | Default | Description |
 | --------- | --------- | --------- | ------------- |
-| `MultiSubnetFailover` | `multisubnetfailover` | `no` | Try all resolved endpoints in parallel and complete authentication with the first responsive one. Speeds up failover recovery. |
+| `MultiSubnetFailover` | `multisubnetfailover` | `no` | Connect to all resolved addresses at the same time and use the first connection that succeeds. |
 | `ApplicationIntent` | `applicationintent` | `ReadWrite` | Declare application workload type. Use `ReadOnly` for read-only routing to secondary replicas. |
 | `ConnectRetryCount` | `connectretrycount` | `1` | Number of automatic reconnection attempts for [idle connection resiliency](/sql/connect/odbc/connection-resiliency). This is a driver-level feature for dropped idle connections, not a substitute for [application-level retry logic](retry-logic.md). |
 | `ConnectRetryInterval` | `connectretryinterval` | `10` | Seconds between idle connection resiliency reconnection attempts. |
@@ -260,7 +263,7 @@ You can also change the timeout on an existing connection:
 conn.timeout = 60
 ```
 
-If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, use at least `60`. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. A shorter timeout expires before the resume completes and the connect attempt fails.
+If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, use at least `60`. An auto-paused database resumes on the first connection attempt, and a shorter timeout expires before the resume completes. The attempt can also fail with error 40613 while the database resumes, so the application must retry. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
 
 ## Autocommit mode
 
@@ -273,6 +276,24 @@ conn = mssql_python.connect(connection_string, autocommit=True)
 # Or after connection
 conn.setautocommit(True)
 ```
+
+## Credential objects
+
+Instead of naming an authentication mode in the connection string, you can hand the driver a credential object with the `token_provider` parameter. This parameter accepts any object with a `get_token(scope)` method, including every credential in the `azure-identity` package:
+
+```python
+import mssql_python
+from azure.identity import DefaultAzureCredential
+
+conn = mssql_python.connect(
+    "Server=<server>.database.windows.net;"
+    "Database=<database>;"
+    "Encrypt=yes",
+    token_provider=DefaultAzureCredential(),
+)
+```
+
+Don't combine `token_provider` with the `Authentication` keyword in the same connection. The driver raises `InterfaceError` when both are present. For more information, see [Microsoft Entra authentication](entra-authentication.md).
 
 ## Connection attributes
 

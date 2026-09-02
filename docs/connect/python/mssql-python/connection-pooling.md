@@ -3,7 +3,8 @@ title: Connection Pooling with mssql-python
 description: Learn how to configure and use connection pooling to improve application performance with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -88,6 +89,25 @@ Each unique connection string maintains its own independent pool. Pools don't sh
 conn1 = mssql_python.connect("Server=<server1>;Database=<database1>;...")
 conn2 = mssql_python.connect("Server=<server2>;Database=<database2>;...")
 ```
+
+### Identity isolation
+
+For most token-based authentication methods, the driver separates pools by the Microsoft Entra identity that opens the connection, so a connection authenticated as one principal isn't handed to a caller using a different one. The exception is the first row of the following table, where the key is the connection string alone.
+
+The pool key depends on the authentication method:
+
+| Authentication | Pool key |
+| --- | --- |
+| SQL authentication, trusted connections, service principals, Windows Integrated authentication, and `ActiveDirectoryInteractive` on Windows | Connection string only |
+| Managed identity | Connection string, plus the client ID or the system-assigned identity |
+| Device code authentication, and interactive authentication on platforms other than Windows | Connection string, plus the signed-in account |
+| `DefaultAzureCredential`, a custom `token_provider`, and raw access tokens | Connection string, plus a hash of the token |
+
+Because the token hash is part of the key for the last group, each distinct token gets its own pool. A long-lived credential that returns a cached token continues to reuse one pool. The driver reclaims idle identity pools lazily as later pool operations run, rather than by a background thread.
+
+The driver acquires tokens only when it needs to open a new connection, so a pool hit doesn't acquire one.
+
+The driver refreshes pooled connections whose token is within 5 minutes of expiry before the connection is handed out, so long-lived pools don't return connections that are about to fail.
 
 ### Connection lifecycle
 

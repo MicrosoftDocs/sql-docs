@@ -136,7 +136,7 @@ django.db.utils.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 
 
 - **Azure SQL Database serverless with auto-pause enabled**
 
-  An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. Set `connection_timeout` to at least 60 and retry the first connection. For more information, see [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview).
+  An auto-paused database resumes on the first connect attempt, and that attempt can fail with error 40613 while the database resumes. Set `connection_timeout` to at least 60 and retry the first connection. For more information, see [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) and [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
 
 - **Server overloaded**
 

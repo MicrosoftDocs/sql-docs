@@ -4,10 +4,11 @@ description: Learn about the timeouts used by JDBC. LoginTimeout, queryTimeout, 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 06/05/2023
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Understanding timeout properties in the JDBC driver
@@ -18,7 +19,7 @@ Timeout settings in the JDBC driver can be used to prioritize application respon
 
 For the initial connection, `loginTimeout` is used:
 
-- `loginTimeout` is the amount of time, in seconds, the driver waits to establish a connection to the server. If this amount is exceeded, an error is returned, and no open connection is established. A zero value indicates that the timeout is the default system timeout, which is 30 seconds in versions 11.2 and above. For versions 10.2 and below, the default timeout is 15 seconds. Any nonzero value is the number of seconds the driver should wait before timing out a failed connection. If you're consistently having trouble establishing a connection with the JDBC driver, you may need to increase this timeout to 90, or even 120, seconds. 
+- `loginTimeout` is the number of seconds the driver waits to establish a connection to the server. If this time passes, the driver returns an error and doesn't open a connection. A zero value sets the timeout to the default system timeout, which is 30 seconds in JDBC driver 11.2 and later versions. In JDBC driver 10.2 and earlier versions, the default timeout is 15 seconds. Any nonzero value sets the number of seconds the driver waits before timing out a failed connection. If you consistently have trouble establishing a connection with the JDBC driver, you might need to increase this timeout to 90 or even 120 seconds. `loginTimeout` also bounds the driver's connection retries, not just a single attempt, which matters when you connect to an auto-paused [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) database. For more information, see [Connect to an auto-paused serverless database](connection-resiliency.md#connect-to-an-auto-paused-serverless-database).
 
 Once the connection has been established, `queryTimeout`, `cancelQueryTimeout`, and `lockTimeout` are used during statement executions. `socketTimeout` is used for any driver communication with the server.
 
@@ -27,7 +28,7 @@ Once the connection has been established, `queryTimeout`, `cancelQueryTimeout`, 
 - `lockTimeout` is the amount of time to wait for a lock to be freed, in cases where there's a lock blocking statement execution. Exceeding this timeout doesn't result in a closed connection. The default value for this property is -1, which is an infinite wait time.
 - `socketTimeout` applies to all socket communications with the server. If the server stops communication with the driver, either by not acknowledging or replying to data, the driver waits for the value of `socketTimeout` before it closes the connection. Setting this timeout to a nonzero value ensures applications can remain responsive if there's network or communication failure with the server. The default value is 0, which means an infinite timeout. Ensure `socketTimeout` is greater than `queryTimeout` to avoid socket timeout exceptions during the `queryTimeout` window. Similarly, ensure `socketTimeout` is greater than `cancelQueryTimeout` to avoid socket timeout exceptions during the `cancelQueryTimeout` window.
 
-Reasonable timeout values for your application depend on the application's priorities. Setting lower values for timeouts prioritizes application responsiveness over data consistency. When timeouts are reached, applications need to decide the best course of action. That decision is based on the database action being performed. For example, for a `SELECT` statement, the decision might be to report an error to the user, or it may be to reconnect and retry. For `INSERT` or `UPDATE` statements, that decision may be different.
+Reasonable timeout values for your application depend on the application's priorities. Setting lower values for timeouts prioritizes application responsiveness over data consistency. When timeouts are reached, applications need to decide the best course of action. That decision is based on the database action being performed. For example, for a `SELECT` statement, the decision might be to report an error to the user, or it might be to reconnect and retry. For `INSERT` or `UPDATE` statements, that decision might be different.
 
 For a responsive application, `loginTimeout` and `queryTimeout` should be set to relatively low values. Similarly, `cancelQueryTimeout` should also be set to a low value to ensure the driver doesn't wait too long for the server to acknowledge the query cancellation, when a `queryTimeout` is exceeded. Finally, `socketTimeout` should be set to guard against the driver waiting too long during any scenario where connectivity to the server is broken (network interruption, server crash, etc.).
 

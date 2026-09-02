@@ -3,7 +3,8 @@ title: Connection Strings for mssql-python
 description: Reference for mssql-python connection string keywords, syntax, and examples for connecting to SQL Server and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/31/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -273,6 +274,24 @@ conn = mssql_python.connect(connection_string, autocommit=True)
 # Or after connection
 conn.setautocommit(True)
 ```
+
+## Credential objects
+
+Instead of naming an authentication mode in the connection string, you can hand the driver a credential object with the `token_provider` parameter. This parameter accepts any object with a `get_token(scope)` method, including every credential in the `azure-identity` package:
+
+```python
+import mssql_python
+from azure.identity import DefaultAzureCredential
+
+conn = mssql_python.connect(
+    "Server=<server>.database.windows.net;"
+    "Database=<database>;"
+    "Encrypt=yes",
+    token_provider=DefaultAzureCredential(),
+)
+```
+
+Don't combine `token_provider` with the `Authentication` keyword in the same connection. The driver raises `InterfaceError` when both are present. For more information, see [Microsoft Entra authentication](entra-authentication.md).
 
 ## Connection attributes
 

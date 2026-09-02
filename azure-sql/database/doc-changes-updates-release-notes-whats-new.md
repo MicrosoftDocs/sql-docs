@@ -91,7 +91,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
-| **Fsv2 hardware retired** | Fsv2 hardware is now retired. |
+| **Fsv2 hardware retired** | Fsv2 hardware is now retired. For more information, see [Retirement Notice: Azure SQL Database FSV2-series offer](https://azure.microsoft.com/updates?id=485030). |
 
 ### August 2026
 

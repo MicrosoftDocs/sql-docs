@@ -375,21 +375,9 @@ If `FIRE_TRIGGERS` isn't specified, no insert triggers execute.
 
 #### KEEPIDENTITY
 
-::: moniker range="azuresqldb-current azuresqldb-mi-current sql-server-2017 sql-server-linux-2017 sql-server-linux-ver15 sql-server-linux-ver16 sql-server-linux-ver17 sql-server-ver15 sql-server-ver16 sql-server-ver17"
-
 Specifies that identity value or values in the imported data file are to be used for the identity column. If `KEEPIDENTITY` isn't specified, the identity values for this column are verified but not imported and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns unique values based on the seed and increment values specified during table creation. If the data file doesn't contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view is to be skipped when importing data; [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns unique values for the column. For more information, see [DBCC CHECKIDENT](../database-console-commands/dbcc-checkident-transact-sql.md).
 
 For more information, see about keeping identify values see [Keep identity values when bulk importing data](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).
-
-::: moniker-end
-
-::: moniker range="fabric"
-
-`KEEPIDENTITY` isn't supported in Fabric Data Warehouse. To bulk ingest source identity values into an identity column, use [COPY INTO with `IDENTITY_INSERT`](copy-into-transact-sql.md#k-load-data-into-identity-columns-with-identity_insert).
-
-When you use `BULK INSERT` to load a table that has an identity column, use a [format file](#formatfile) to explicitly map source fields to destination columns. Explicit mapping prevents ordinal shifts, especially when the source file doesn't contain the identity column or when the identity column appears in the middle of the table schema.
-
-::: moniker-end
 
 #### KEEPNULLS
 
@@ -416,6 +404,16 @@ By default, all the data in the data file is sent to the server as a single tran
 Specifies that a table-level lock is acquired for the duration of the bulk-import operation. A table can be loaded concurrently by multiple clients if the table has no indexes and `TABLOCK` is specified. By default, locking behavior is determined by the table option **table lock on bulk load**. Holding a lock for the duration of the bulk-import operation reduces lock contention on the table, in some cases can significantly improve performance. For information about performance considerations, see [Performance considerations](#performance-considerations) later in this article.
 
 For a columnstore index, the locking behavior is different because it's internally divided into multiple rowsets. Each thread loads data exclusively into each rowset by taking an exclusive (X) lock on the rowset allowing parallel data load with concurrent data load sessions. The use of `TABLOCK` option causes the thread to take an exclusive lock on the table (unlike the bulk update (BU) lock for traditional rowsets) which prevents other concurrent threads from loading data concurrently.
+
+::: moniker-end
+
+::: moniker range="=fabric"
+
+#### KEEPIDENTITY
+
+`KEEPIDENTITY` isn't supported in Fabric Data Warehouse. To bulk ingest source identity values into an identity column, use [COPY INTO with `IDENTITY_INSERT`](copy-into-transact-sql.md#k-load-data-into-identity-columns-with-identity_insert).
+
+When you use `BULK INSERT` to load a table that has an identity column, use a [format file](#formatfile) to explicitly map source fields to destination columns. Explicit mapping prevents ordinal shifts, especially when the source file doesn't contain the identity column or when the identity column appears in the middle of the table schema.
 
 ::: moniker-end
 

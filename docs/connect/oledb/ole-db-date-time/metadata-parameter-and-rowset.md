@@ -3,7 +3,7 @@ title: Parameter and rowset metadata (OLE DB driver)
 description: Learn about the DBBINDING type and type members related to OLE DB Driver for SQL Server date and time enhancements.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,7 @@ title: "Registry Settings"
 description: "Registry Settings"
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "08/31/2022"
 ms.service: sql
 ms.subservice: connectivity

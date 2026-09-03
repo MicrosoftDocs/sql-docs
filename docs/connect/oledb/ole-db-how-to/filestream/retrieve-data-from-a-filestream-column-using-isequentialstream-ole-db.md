@@ -3,7 +3,7 @@ title: "Retrieve data from FILESTREAM with ISequentialStream (OLE DB)"
 description: Learn how to use an ISequentialStream interface in an ICommandText interface to retrieve a record from a FILESTREAM column in OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: 10/02/2023
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,8 @@ title: Build Connection Strings Programmatically with mssql-python
 description: Learn how to construct SQL Server connection strings dynamically in Python applications using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -23,7 +24,7 @@ Many applications need to build connection strings dynamically rather than stori
 
 ### Use f-strings
 
-f-strings are a common approach for quick scripts and prototypes. Avoid this pattern when values come from user input, because a malicious value like `mydb;Server=evil.com` could alter the connection target:
+f-strings are a common approach for quick scripts and prototypes. Avoid this pattern when values come from user input, because a malicious value like `AdventureWorks;Server=evil.com` could alter the connection target:
 
 ```python
 import mssql_python

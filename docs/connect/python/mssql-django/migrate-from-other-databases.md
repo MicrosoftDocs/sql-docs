@@ -3,7 +3,7 @@ title: Migrate Django Apps from Other Databases to SQL Server
 description: Guidance for migrating Django applications from PostgreSQL, MySQL, or SQLite to SQL Server using the mssql-django backend.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity

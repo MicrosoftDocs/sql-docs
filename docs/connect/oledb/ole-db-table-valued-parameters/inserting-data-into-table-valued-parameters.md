@@ -3,7 +3,7 @@ title: "Insert data into table-valued parameters (OLE DB driver)"
 description: The OLE DB Driver for SQL Server supports a push model and a pull model for consumers to specify data for table-valued parameter rows.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

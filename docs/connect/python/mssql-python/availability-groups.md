@@ -3,6 +3,7 @@ title: Use Read-Only Routing and Availability Groups with mssql-python
 description: Learn how to connect to SQL Server Always On availability groups and configure read-only routing with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: connectivity

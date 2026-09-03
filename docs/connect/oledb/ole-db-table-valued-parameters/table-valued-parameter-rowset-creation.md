@@ -3,7 +3,7 @@ title: Table-valued parameter rowset creation (OLE DB driver)
 description: Learn about table-valued parameter rowset, an in-memory object that the OLE DB Driver for SQL Server enables consumers to create.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

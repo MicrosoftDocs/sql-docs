@@ -3,7 +3,7 @@ title: Sessions (OLE DB driver)
 description: Learn how to use the OLE DB Driver for SQL Server to connect to a SQL Server database. A session represents a single connection to an instance of SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

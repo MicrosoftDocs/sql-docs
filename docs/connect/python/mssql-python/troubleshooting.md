@@ -3,6 +3,7 @@ title: Troubleshoot mssql-python
 description: Diagnose and resolve common issues when using the mssql-python driver to connect to SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/17/2026
 ms.service: sql
 ms.subservice: connectivity

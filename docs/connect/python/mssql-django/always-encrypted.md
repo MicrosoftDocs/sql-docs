@@ -3,7 +3,7 @@ title: Always Encrypted with mssql-django
 description: Configure column-level encryption with Always Encrypted for Django applications using the mssql-django backend.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity

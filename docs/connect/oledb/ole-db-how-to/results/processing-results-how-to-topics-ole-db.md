@@ -3,7 +3,7 @@ title: Processing results how-to topics (OLE DB driver)
 description: Use these articles to understand processing results in an OLE DB Driver for SQL Server application, including commands that execute stored procedures.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

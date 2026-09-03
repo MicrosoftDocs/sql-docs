@@ -3,7 +3,7 @@ title: "UTF-16 Support in OLE DB Driver for SQL Server| Microsoft Docs"
 description: Learn about UTF-16 support in OLE DB Driver for SQL Server and when it adds a high surrogate code point to the buffer.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

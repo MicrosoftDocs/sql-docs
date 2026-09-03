@@ -3,7 +3,7 @@ title: "Create rowset with ICommand::Execute (OLE DB driver)"
 description: "Learn about creating rowsets with ICommand::Execute in OLE DB Driver for SQL Server. The properties that you want in the rowset can constrain the command text."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

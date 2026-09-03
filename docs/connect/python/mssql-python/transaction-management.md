@@ -3,6 +3,7 @@ title: Transaction Management with mssql-python
 description: Learn how to manage database transactions, control autocommit, and set isolation levels using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity

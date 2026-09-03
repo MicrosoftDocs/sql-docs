@@ -3,7 +3,7 @@ title: Performance Tuning for mssql-django
 description: Optimize Django application performance with SQL Server using the mssql-django backend.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity

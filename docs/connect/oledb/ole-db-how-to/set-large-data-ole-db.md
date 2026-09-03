@@ -3,7 +3,7 @@ title: Set large data (OLE DB driver)
 description: Learn how to set BLOB data, create a table, add a record, fetch that record in the rowset, and set the value of the BLOB field in OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

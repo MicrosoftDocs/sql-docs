@@ -3,7 +3,7 @@ title: "IBCPSession::BCPControl (OLE DB driver)"
 description: "Learn how IBCPSession::BCPControl sets the options for a bulk-copy operation in OLE DB Driver for SQL Server."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/04/2021"
 ms.service: sql
 ms.subservice: connectivity

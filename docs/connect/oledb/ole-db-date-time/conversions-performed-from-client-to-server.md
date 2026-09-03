@@ -3,7 +3,7 @@ title: "Conversions Performed from Client to Server"
 description: Learn about date/time conversions performed between a client application written with OLE DB Driver for SQL Server and SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,7 @@ title: "Bindings and Conversions (OLE DB)"
 description: Learn how OLE DB Driver for SQL Server converts between datetime and datetimeoffset values. There are several general conversion rules.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

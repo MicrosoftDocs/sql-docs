@@ -3,6 +3,7 @@ title: Work with Datetime Values in mssql-python
 description: Learn how to handle datetime, date, time, and time zone data when you use the mssql-python driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: connectivity

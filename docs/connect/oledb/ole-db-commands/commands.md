@@ -3,7 +3,7 @@ title: "Commands (OLE DB driver)"
 description: Learn about the ICommand interface in the OLE DB Driver for SQL Server, including syntax, parameters, preparing commands, and commands with multiple results.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

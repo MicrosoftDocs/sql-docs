@@ -3,7 +3,7 @@ title: Microsoft OLE DB Driver for SQL Server known issues
 description: Learn about known issues and fixes for the Microsoft OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: wiassaf, davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, wiassaf, davidengel, sunilbs, vbeiranvand
 ms.date: 01/24/2024
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,7 @@ title: Troubleshoot mssql-django
 description: Diagnose and resolve common issues when using the mssql-django Django backend with SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 08/03/2026
 ms.service: sql
 ms.subservice: connectivity

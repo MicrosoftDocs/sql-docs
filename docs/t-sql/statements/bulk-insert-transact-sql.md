@@ -125,8 +125,8 @@ The `BULK INSERT` statement has different arguments and options in different pla
 | --- | --- |
 | Data source | Local path, Network path (UNC), or Azure Storage | Azure Storage | Azure Storage, One Lake |
 | Source authentication | Windows authentication, SAS | Microsoft Entra ID, SAS token, managed identity | Microsoft Entra ID |
-| Unsupported options | `*` wildcards in path, `FORMAT = 'PARQUET'` | `*` wildcards in path, `FORMAT = 'PARQUET'` | `DATAFILETYPE = {'native' | 'widenative'}` |
-| Enabled options but without effect | | | `KEEPIDENTITY`, `FIRE_TRIGGERS`, `CHECK_CONSTRAINTS`, `TABLOCK`, `ORDER`, `ROWS_PER_BATCH`, `KILOBYTES_PER_BATCH`, and `BATCHSIZE` aren't applicable. They don't throw a syntax error, but they don't have any effect |
+| Unsupported options | `*` wildcards in path, `FORMAT = 'PARQUET'` | `*` wildcards in path, `FORMAT = 'PARQUET'` | `DATAFILETYPE = {'native' | 'widenative'}`, `KEEPIDENTITY` |
+| Enabled options but without effect | | | `FIRE_TRIGGERS`, `CHECK_CONSTRAINTS`, `TABLOCK`, `ORDER`, `ROWS_PER_BATCH`, `KILOBYTES_PER_BATCH`, and `BATCHSIZE` aren't applicable. They don't throw a syntax error, but they don't have any effect |
 
 #### *database_name*
 
@@ -404,6 +404,16 @@ By default, all the data in the data file is sent to the server as a single tran
 Specifies that a table-level lock is acquired for the duration of the bulk-import operation. A table can be loaded concurrently by multiple clients if the table has no indexes and `TABLOCK` is specified. By default, locking behavior is determined by the table option **table lock on bulk load**. Holding a lock for the duration of the bulk-import operation reduces lock contention on the table, in some cases can significantly improve performance. For information about performance considerations, see [Performance considerations](#performance-considerations) later in this article.
 
 For a columnstore index, the locking behavior is different because it's internally divided into multiple rowsets. Each thread loads data exclusively into each rowset by taking an exclusive (X) lock on the rowset allowing parallel data load with concurrent data load sessions. The use of `TABLOCK` option causes the thread to take an exclusive lock on the table (unlike the bulk update (BU) lock for traditional rowsets) which prevents other concurrent threads from loading data concurrently.
+
+::: moniker-end
+
+::: moniker range="=fabric"
+
+#### KEEPIDENTITY
+
+`KEEPIDENTITY` isn't supported in Fabric Data Warehouse. To bulk ingest source identity values into an identity column, use [COPY INTO with `IDENTITY_INSERT`](copy-into-transact-sql.md#k-load-data-into-identity-columns-with-identity_insert).
+
+When you use `BULK INSERT` to load a table that has an identity column, use a [format file](#formatfile) to explicitly map source fields to destination columns. Explicit mapping prevents ordinal shifts, especially when the source file doesn't contain the identity column or when the identity column appears in the middle of the table schema.
 
 ::: moniker-end
 

@@ -125,8 +125,8 @@ The `BULK INSERT` statement has different arguments and options in different pla
 | --- | --- |
 | Data source | Local path, Network path (UNC), or Azure Storage | Azure Storage | Azure Storage, One Lake |
 | Source authentication | Windows authentication, SAS | Microsoft Entra ID, SAS token, managed identity | Microsoft Entra ID |
-| Unsupported options | `*` wildcards in path, `FORMAT = 'PARQUET'` | `*` wildcards in path, `FORMAT = 'PARQUET'` | `DATAFILETYPE = {'native' | 'widenative'}` |
-| Enabled options but without effect | | | `KEEPIDENTITY`, `FIRE_TRIGGERS`, `CHECK_CONSTRAINTS`, `TABLOCK`, `ORDER`, `ROWS_PER_BATCH`, `KILOBYTES_PER_BATCH`, and `BATCHSIZE` aren't applicable. They don't throw a syntax error, but they don't have any effect |
+| Unsupported options | `*` wildcards in path, `FORMAT = 'PARQUET'` | `*` wildcards in path, `FORMAT = 'PARQUET'` | `DATAFILETYPE = {'native' | 'widenative'}`, `KEEPIDENTITY` |
+| Enabled options but without effect | | | `FIRE_TRIGGERS`, `CHECK_CONSTRAINTS`, `TABLOCK`, `ORDER`, `ROWS_PER_BATCH`, `KILOBYTES_PER_BATCH`, and `BATCHSIZE` aren't applicable. They don't throw a syntax error, but they don't have any effect |
 
 #### *database_name*
 
@@ -375,9 +375,21 @@ If `FIRE_TRIGGERS` isn't specified, no insert triggers execute.
 
 #### KEEPIDENTITY
 
+::: moniker range="azuresqldb-current azuresqldb-mi-current sql-server-2017 sql-server-linux-2017 sql-server-linux-ver15 sql-server-linux-ver16 sql-server-linux-ver17 sql-server-ver15 sql-server-ver16 sql-server-ver17"
+
 Specifies that identity value or values in the imported data file are to be used for the identity column. If `KEEPIDENTITY` isn't specified, the identity values for this column are verified but not imported and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns unique values based on the seed and increment values specified during table creation. If the data file doesn't contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view is to be skipped when importing data; [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns unique values for the column. For more information, see [DBCC CHECKIDENT](../database-console-commands/dbcc-checkident-transact-sql.md).
 
 For more information, see about keeping identify values see [Keep identity values when bulk importing data](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).
+
+::: moniker-end
+
+::: moniker range="fabric"
+
+`KEEPIDENTITY` isn't supported in Fabric Data Warehouse. To bulk ingest source identity values into an identity column, use [COPY INTO with `IDENTITY_INSERT`](copy-into-transact-sql.md#k-load-data-into-identity-columns-with-identity_insert).
+
+When you use `BULK INSERT` to load a table that has an identity column, use a [format file](#formatfile) to explicitly map source fields to destination columns. Explicit mapping prevents ordinal shifts, especially when the source file doesn't contain the identity column or when the identity column appears in the middle of the table schema.
+
+::: moniker-end
 
 #### KEEPNULLS
 

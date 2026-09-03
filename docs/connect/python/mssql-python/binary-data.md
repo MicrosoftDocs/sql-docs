@@ -3,6 +3,7 @@ title: Work with Binary Data Using mssql-python
 description: Learn how to insert, retrieve, and work with binary data types when you use the mssql-python driver for Microsoft SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: connectivity

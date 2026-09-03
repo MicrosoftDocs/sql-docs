@@ -3,6 +3,7 @@ title: Encryption and TLS with mssql-python
 description: Configure encrypted connections and TLS certificate validation with the mssql-python driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/13/2026
 ms.service: sql
 ms.subservice: connectivity

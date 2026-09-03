@@ -3,6 +3,7 @@ title: Migrate from pyodbc to mssql-python
 description: Guide for migrating existing Python applications from pyodbc to the mssql-python driver for Microsoft SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity

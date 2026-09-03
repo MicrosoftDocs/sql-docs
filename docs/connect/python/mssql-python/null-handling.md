@@ -3,6 +3,7 @@ title: Handle NULL Values with mssql-python
 description: Learn how to properly handle NULL values when working with SQL Server data using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: connectivity

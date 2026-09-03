@@ -3,6 +3,7 @@ title: Manage Cursors and Result Sets in mssql-python
 description: Learn best practices for managing cursors, handling multiple result sets, and efficient memory usage with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/01/2026
 ms.service: sql
 ms.subservice: connectivity

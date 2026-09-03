@@ -28,8 +28,6 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 
 Returns CPU, I/O, and memory consumption for a database in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. One row exists for every 15 seconds, even if there's no activity. Historical data is maintained for approximately one hour.
 
-> [!NOTE]  
-> `sys.dm_db_resource_stats` isn't supported in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. Use the [sys.server_resource_stats](../system-catalog-views/sys-server-resource-stats-azure-sql-database.md) catalog view instead.
 
 | Columns | Data Type | Description |
 | --- | --- | --- |

@@ -3,7 +3,7 @@ title: Retry Logic and Connection Resilience with mssql-django
 description: Implement retry logic for transient database errors in Django applications using the mssql-django backend with SQL Server and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,7 @@ title: Microsoft Entra Authentication with mssql-django
 description: Configure Microsoft Entra authentication for Django applications using mssql-django with SQL Server and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity

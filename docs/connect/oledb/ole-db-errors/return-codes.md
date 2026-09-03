@@ -3,7 +3,7 @@ title: Return codes (OLE DB driver)
 description: Learn about return codes for OLE DB Driver for SQL Server member functions and how to get more information about results besides success.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

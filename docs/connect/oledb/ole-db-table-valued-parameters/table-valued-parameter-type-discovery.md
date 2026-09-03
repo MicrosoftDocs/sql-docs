@@ -3,7 +3,7 @@ title: Table-valued parameter type discovery (OLE DB driver)
 description: Learn how a consumer can discover the metadata information for each individual column of the table-valued parameter in OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

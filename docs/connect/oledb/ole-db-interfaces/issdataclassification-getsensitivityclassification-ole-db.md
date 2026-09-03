@@ -3,7 +3,7 @@ title: "ISSDataClassification::GetSensitivityClassification"
 description: "ISSDataClassification::GetSensitivityClassification"
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "09/30/2020"
 ms.service: sql
 ms.subservice: connectivity

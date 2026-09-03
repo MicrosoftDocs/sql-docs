@@ -3,7 +3,7 @@ title: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
 description: "Learn how the ISSCommandWithParameters::SetParameterProperties method sets the parameter properties in OLE DB Driver for SQL Server."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

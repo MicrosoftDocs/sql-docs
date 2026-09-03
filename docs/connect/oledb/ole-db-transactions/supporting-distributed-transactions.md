@@ -3,7 +3,7 @@ title: Supporting distributed transactions (OLE DB driver)
 description: "Learn how OLE DB Driver for SQL Server consumers can use the ITransactionJoin::JoinTransaction method to participate in a distributed transaction."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

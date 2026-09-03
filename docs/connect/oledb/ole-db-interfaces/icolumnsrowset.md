@@ -3,7 +3,7 @@ title: "IColumnsRowset (OLE DB driver)"
 description: "The DBCOLUMN_BASETABLEINSTANCE column in IColumnsRowset::GetColumnRowset is reserved for use by Microsoft in OLE DB Driver for SQL Server."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

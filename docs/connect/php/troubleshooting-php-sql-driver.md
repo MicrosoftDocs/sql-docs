@@ -4,7 +4,7 @@ description: Diagnose and resolve common installation, connection, query, and da
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/22/2026
+ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -43,7 +43,7 @@ php -m | grep -i sqlsrv
 
 You should see both `pdo_sqlsrv` and `sqlsrv` in the output.
 
-### PECL install fails on Linux or macOS
+### PECL or PIE install fails on Linux or macOS
 
 **Symptoms**:
 
@@ -54,21 +54,35 @@ fatal error: 'sql.h' file not found
 
 **Fix**:
 
-Install the ODBC development headers before running `pecl install`:
+Install the ODBC development headers before installing the drivers:
 
 - **Ubuntu and Debian**: `sudo apt-get install unixodbc-dev`
 - **Red Hat, Fedora, and CentOS**: `sudo dnf install unixODBC-devel`
 - **Alpine**: `apk add unixodbc-dev`
 - **macOS**: `brew install unixodbc`
 
-Then retry:
+On Apple silicon, the headers alone aren't enough. Homebrew installs unixODBC under `/opt/homebrew`, which isn't in the default compiler search path, so the build fails with the same error even when the headers are present. Set the compiler flags before you retry:
+
+```bash
+export CPPFLAGS="-I/opt/homebrew/opt/unixodbc/include/"
+export LDFLAGS="-L/opt/homebrew/lib/"
+```
+
+Then retry with PIE:
+
+```bash
+pie install microsoft/sqlsrv
+pie install microsoft/pdo_sqlsrv
+```
+
+Or with PECL:
 
 ```bash
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 
-If `pecl` still fails after the headers are installed, the build tool chain might be incomplete. Install `phpize`, `re2c`, and a C++ compiler (`build-essential` on Debian and Ubuntu, `gcc-c++ make` on Red Hat and Fedora, `build-base` on Alpine).
+If the install still fails after the headers are installed, the build tool chain might be incomplete. Install `phpize`, `re2c`, and a C++ compiler (`build-essential` on Debian and Ubuntu, `gcc-c++ make` on Red Hat and Fedora, `build-base` on Alpine). PIE offers to install missing build tools for you on Linux and macOS.
 
 For the full install path, see [Installation tutorial for Linux and macOS](installation-tutorial-linux-mac.md).
 

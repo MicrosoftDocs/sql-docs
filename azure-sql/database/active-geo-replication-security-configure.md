@@ -82,7 +82,7 @@ The last step is to go to the target server, or servers, and generate the logins
 
 ```sql
 CREATE LOGIN [<login name>]
-WITH PASSWORD = '<login password>',
+WITH PASSWORD = '<password>',
 SID = 0x1234 /*replace 0x1234 with the desired login SID*/
 ```
 

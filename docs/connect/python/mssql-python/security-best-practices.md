@@ -3,7 +3,8 @@ title: Security Best Practices for mssql-python Applications
 description: Learn security best practices for building SQL Server applications with the mssql-python driver, including authentication, parameterized queries, and data protection.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -229,7 +230,7 @@ conn = mssql_python.connect(
 
 ### Protect sensitive data at the server level
 
-[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) isn't currently configurable through mssql-python connection string keywords. If you need Always Encrypted, use [pyodbc with the ODBC Driver for SQL Server](../../odbc/using-always-encrypted-with-the-odbc-driver.md), which supports it. While they don't provide the same level of protection, you can use SQL Server features like [dynamic data masking](../../../relational-databases/security/dynamic-data-masking.md) and [row-level security](../../../relational-databases/security/row-level-security.md) to protect sensitive columns.
+You can't currently configure [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) through mssql-python connection string keywords. [Dynamic data masking](../../../relational-databases/security/dynamic-data-masking.md) and [row-level security](../../../relational-databases/security/row-level-security.md) can protect sensitive columns, though neither provides the same level of protection.
 
 ```python
 employee_id = 1

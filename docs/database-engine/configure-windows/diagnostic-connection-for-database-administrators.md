@@ -118,7 +118,7 @@ The DAC doesn't work over a private endpoint for Azure SQL Managed Instance. On 
 In this example, an administrator notices that server `contoso-server` isn't responding and wants to diagnose the problem. To do this, the user activates the `sqlcmd` command prompt utility and connects to server `contoso-server` using `-A` to indicate the DAC.
 
 ```powershell
-sqlcmd -S contoso-server -U sa -P <StrongPassword> -A
+sqlcmd -S contoso-server -U sa -P <password> -A
 ```
 
 The administrator can now execute queries to diagnose the problem and possibly terminate the unresponsive sessions.

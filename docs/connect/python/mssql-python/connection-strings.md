@@ -250,14 +250,14 @@ To register the application and grant it database access, see [Microsoft Entra s
 
 ## Connection timeout
 
-Set the connection timeout using the `timeout` parameter. Use a timeout to prevent your application from hanging indefinitely when the server is unreachable:
+Set the authentication timeout with the `timeout` parameter. Use a timeout to prevent your application from hanging indefinitely when the server is unreachable:
 
 ```python
-# 30-second connection timeout
+# 30-second authentication timeout
 conn = mssql_python.connect(connection_string, timeout=30)
 ```
 
-You can also change the timeout on an existing connection:
+`Connection.timeout` is a separate setting that bounds each statement rather than the authentication attempt. For more information, see [Connection timeout](connection-management.md#connection-timeout).
 
 ```python
 conn.timeout = 60
@@ -337,6 +337,25 @@ except mssql_python.ConnectionStringParseError as e:
     print(f"Invalid connection string: {e}")
     # Output: Unknown keyword 'Servr'
 ```
+
+### Keywords from other drivers
+
+Validation runs before the driver opens a connection, so a keyword that other SQL Server drivers accept fails immediately here. Connection strings ported from ADO.NET, ODBC, or pyodbc usually need these substitutions:
+
+| Keyword in other drivers | mssql-python equivalent |
+| --- | --- |
+| `Data Source` | `Server`, or its `addr` and `address` aliases |
+| `Initial Catalog` | `Database` |
+| `User ID` | `UID` |
+| `Password` | `PWD` |
+| `Connection Timeout`, `Connect Timeout`, `Timeout`, `Login Timeout` | The `timeout` parameter of `connect()`. For more information, see [Connection timeout](#connection-timeout). |
+| `Application Name` | None. The driver sets this value and reports `Application Name` as an unknown keyword. |
+| `APP` | None. The driver sets this value and reports `APP` as a reserved keyword. For more information, see [Reserved keywords](#reserved-keywords). |
+| `Pooling`, `Max Pool Size` | None. Configure pooling in code. For more information, see [Connection pooling](connection-pooling.md). |
+| `Workstation ID`, `WSID` | None. Remove the keyword from the connection string. |
+| `MultipleActiveResultSets`, `MARS_Connection` | None. Remove the keyword. To run queries concurrently, use separate connections. For more information, see [Multiple cursors](cursor-management.md#multiple-cursors). |
+
+For `APP` and `Driver`, the driver reports a reserved keyword error rather than an unknown keyword error, because it controls both values.
 
 ## Related content
 

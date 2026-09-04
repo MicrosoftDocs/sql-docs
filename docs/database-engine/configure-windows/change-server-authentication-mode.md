@@ -37,13 +37,13 @@ You can enable the `sa` login with SSMS or Transact-SQL.
 
 ### [Transact-SQL](#tab/t-sql)
 
-The following example enables the `sa` login and sets a new password. Replace `<enterStrongPasswordHere>` with a strong password before you run it.
+The following example enables the `sa` login and sets a new password. Replace `<password>` with a strong password before you run it.
 
 ```sql
 ALTER LOGIN sa ENABLE;
 GO
 
-ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>';
+ALTER LOGIN sa WITH PASSWORD = '<password>';
 GO
 ```
 
@@ -106,7 +106,7 @@ The permissions required to change the authentication mode are [sysadmin](../../
    ALTER LOGIN sa ENABLE;
    GO
 
-   ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>';
+   ALTER LOGIN sa WITH PASSWORD = '<password>';
    GO
    ```
 

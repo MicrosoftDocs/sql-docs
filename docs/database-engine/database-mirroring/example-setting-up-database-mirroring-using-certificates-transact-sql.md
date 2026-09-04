@@ -55,11 +55,11 @@ helpviewer_keywords:
 ###  <a name="ConfiguringOutboundConnections"></a> Configuring Outbound Connections  
  **To configure Host_A for outbound connections**  
   
-1.  On the master database, create the database master key, if needed. Replace `<password>` with a valid password.
+1.  On the master database, create the database master key, if needed. Replace `<password>` with a strong password.
   
     ```  
     USE master;  
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
     GO  
     ```  
   
@@ -100,11 +100,11 @@ helpviewer_keywords:
   
  **To configure Host_B for outbound connections**  
   
-1.  On the master database, create the database master key, if needed.  
+1.  On the master database, create the database master key, if needed. Replace `<password>` with a strong password.
   
     ```  
     USE master;  
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Strong_Password_#2>';  
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
     GO  
     ```  
   
@@ -149,11 +149,11 @@ helpviewer_keywords:
 ###  <a name="ConfigureInboundConnections"></a> Configuring Inbound Connections  
  **To configure Host_A for inbound connections**  
   
-1.  Create a login on HOST_A for HOST_B. Replace `<password>` with a valid password.
+1.  Create a login on HOST_A for HOST_B. Replace `<password>` with a strong password.
   
     ```  
     USE master;  
-    CREATE LOGIN HOST_B_login WITH PASSWORD = '<password>';  
+    CREATE LOGIN HOST_B_login WITH PASSWORD = '<password>';
     GO  
     ```  
   
@@ -182,11 +182,11 @@ helpviewer_keywords:
   
  **To configure Host_B for inbound connections**  
   
-1.  Create a login on HOST_B for HOST_A.  
+1.  Create a login on HOST_B for HOST_A. Replace `<password>` with a strong password.
   
     ```  
     USE master;  
-    CREATE LOGIN HOST_A_login WITH PASSWORD = '=Sample#2_Strong_Password2';  
+    CREATE LOGIN HOST_A_login WITH PASSWORD = '<password>';
     GO  
     ```  
   

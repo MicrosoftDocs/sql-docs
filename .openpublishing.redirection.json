@@ -71399,26 +71399,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/connect/python/mssql-python/duckdb-integration.md",
-      "redirect_url": "/sql/connect/python/mssql-python/duck-db-integration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/connect/python/mssql-python/fastapi-integration.md",
-      "redirect_url": "/sql/connect/python/mssql-python/fast-api-integration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/connect/python/mssql-python/sqlalchemy-integration.md",
-      "redirect_url": "/sql/connect/python/mssql-python/sql-alchemy-integration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/connect/python/mssql-python/migrate-from-sqlite.md",
-      "redirect_url": "/sql/connect/python/mssql-python/migrate-from-sql-lite",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/sql-server/what-s-new-in-sql-server-2016.md",
       "redirect_url": "/previous-versions/sql/sql-server/what-s-new-in-sql-server-2016",
       "redirect_document_id": false
@@ -71437,6 +71417,26 @@
       "source_path": "docs/connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md",
       "redirect_url": "/sql/connect/odbc/odbc-driver-support-for-high-availability-disaster-recovery",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/python/mssql-python/duck-db-integration.md",
+      "redirect_url": "/sql/connect/python/mssql-python/duckdb-integration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/connect/python/mssql-python/sql-alchemy-integration.md",
+      "redirect_url": "/sql/connect/python/mssql-python/sqlalchemy-integration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/connect/python/mssql-python/migrate-from-sql-lite.md",
+      "redirect_url": "/sql/connect/python/mssql-python/migrate-from-sqlite",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/connect/python/mssql-python/fast-api-integration.md",
+      "redirect_url": "/sql/connect/python/mssql-python/fastapi-integration",
+      "redirect_document_id": true
     }
   ]
 }

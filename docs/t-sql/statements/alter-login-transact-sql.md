@@ -230,7 +230,7 @@ ALTER LOGIN Mary5 ENABLE;
 The following example changes the password of login `Mary5` to a strong password.
 
 ```sql
-ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';
+ALTER LOGIN Mary5 WITH PASSWORD = '<password>';
 ```
 
 ### C. Change the password of a login when logged in as the login
@@ -238,7 +238,7 @@ ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';
 If you're attempting to change the password of the login that you're currently logged in with, and you don't have the `ALTER ANY LOGIN` permission you must specify the `OLD_PASSWORD` option.
 
 ```sql
-ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';
+ALTER LOGIN Mary5 WITH PASSWORD = '<new-password>' OLD_PASSWORD = '<old-password>';
 ```
 
 ### D. Change the name of a login
@@ -409,7 +409,7 @@ ALTER LOGIN Mary5 ENABLE;
 The following example changes the password of login `Mary5` to a strong password.
 
 ```sql
-ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';
+ALTER LOGIN Mary5 WITH PASSWORD = '<password>';
 ```
 
 ### C. Change the name of a login
@@ -675,7 +675,7 @@ ALTER LOGIN Mary5 ENABLE;
 The following example changes the password of login `Mary5` to a strong password.
 
 ```sql
-ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';
+ALTER LOGIN Mary5 WITH PASSWORD = '<password>';
 ```
 
 ### C. Change the name of a login
@@ -861,7 +861,7 @@ ALTER LOGIN Mary5 ENABLE;
 The following example changes the password of login `Mary5` to a strong password.
 
 ```sql
-ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';
+ALTER LOGIN Mary5 WITH PASSWORD = '<password>';
 ```
 
 ### C. Change the name of a login
@@ -1070,7 +1070,7 @@ ALTER LOGIN Mary5 ENABLE;
 The following example changes the password of login `Mary5` to a strong password.
 
 ```sql
-ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';
+ALTER LOGIN Mary5 WITH PASSWORD = '<password>';
 ```
 
 ### C. Change the name of a login

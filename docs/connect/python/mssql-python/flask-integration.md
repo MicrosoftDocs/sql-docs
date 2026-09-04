@@ -3,7 +3,8 @@ title: Use mssql-python with Flask
 description: Learn how to build web applications with Flask and mssql-python for Microsoft SQL and Azure SQL database access.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -529,5 +530,5 @@ test_app.py ....                                       [100%]
 - [Manage connections with mssql-python](connection-management.md)
 - [Connection pooling with mssql-python](connection-pooling.md)
 - [Error handling and SQLSTATE codes for mssql-python](error-handling.md)
-- [Use mssql-python with FastAPI](fast-api-integration.md)
+- [Use mssql-python with FastAPI](fastapi-integration.md)
 - [Microsoft Entra authentication with mssql-python](entra-authentication.md)

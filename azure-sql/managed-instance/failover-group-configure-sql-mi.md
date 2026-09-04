@@ -452,7 +452,7 @@ For example, if you plan to use the same logins on the secondary instance, make 
 
 ```SQL
 -- Code to create login on the secondary instance
-CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+CREATE LOGIN foo WITH PASSWORD = '<password>', SID = <login_sid>;
 ```
 
 To learn more, see [Replication of logins and agent jobs](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/azure-sql-managed-instance-sync-agent-jobs-and-logins-in/ba-p/2860495).

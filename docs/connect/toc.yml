@@ -3792,13 +3792,13 @@
       - name: Polars integration
         href: ../connect/python/mssql-python/polars-integration.md
       - name: DuckDB integration
-        href: ../connect/python/mssql-python/duck-db-integration.md
+        href: ../connect/python/mssql-python/duckdb-integration.md
       - name: FastAPI integration
-        href: ../connect/python/mssql-python/fast-api-integration.md
+        href: ../connect/python/mssql-python/fastapi-integration.md
       - name: Flask integration
         href: ../connect/python/mssql-python/flask-integration.md
       - name: SQLAlchemy integration
-        href: ../connect/python/mssql-python/sql-alchemy-integration.md
+        href: ../connect/python/mssql-python/sqlalchemy-integration.md
       - name: Async patterns
         href: ../connect/python/mssql-python/asynchronous-patterns.md
       - name: Data access and analytics patterns
@@ -3824,7 +3824,7 @@
       - name: Migrate from pymssql
         href: ../connect/python/mssql-python/migrate-from-pymssql.md
       - name: Migrate from SQLite
-        href: ../connect/python/mssql-python/migrate-from-sql-lite.md
+        href: ../connect/python/mssql-python/migrate-from-sqlite.md
       - name: Migrate from PostgreSQL
         href: ../connect/python/mssql-python/migrate-from-postgresql.md
       - name: Module configuration

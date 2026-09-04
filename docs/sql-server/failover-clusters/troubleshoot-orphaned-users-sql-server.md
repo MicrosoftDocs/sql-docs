@@ -98,7 +98,7 @@ In the `master` database, use the [CREATE LOGIN](../../t-sql/statements/create-l
 
 ```sql
 CREATE LOGIN <login_name>
-WITH PASSWORD = '<use_a_strong_password_here>',
+WITH PASSWORD = '<password>',
 SID = <SID>;
 ```
 
@@ -111,7 +111,7 @@ ALTER USER <user_name> WITH Login = <login_name>;
  When you re-create a missing login, the user can access the database by using the password provided. The user can then change the password of the login account by using the `ALTER LOGIN` statement:
 
 ```sql
-ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
+ALTER LOGIN <login_name> WITH PASSWORD = '<new-password>';
 ```
 
 > [!IMPORTANT]

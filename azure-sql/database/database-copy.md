@@ -168,13 +168,13 @@ You can use the steps in the [Copy a SQL Database to a different logical server]
 
 In the following scripts, the login name to be copied is `loginname`. 
 
-First, connect to the `master` database of the source logical server. Create a login and user in the `master` database of the source Azure SQL Database logical server.
+First, connect to the `master` database of the source logical server. Create a login and user in the `master` database of the source Azure SQL Database logical server. Replace `<password>` with a strong password.
 
 ```sql
 --Step# 1
 --Create login and user in the master database of the source server.
 
-CREATE LOGIN loginname WITH PASSWORD = 'xxxxxxxxx'
+CREATE LOGIN loginname WITH PASSWORD = '<password>'
 GO
 CREATE USER [loginname] FOR LOGIN [loginname] WITH DEFAULT_SCHEMA=[dbo];
 GO
@@ -203,14 +203,14 @@ Next, find the security identifier (SID) of the user `loginname` from the `maste
 SELECT [sid] FROM sysusers WHERE [name] = 'loginname';
 ```
 
-Run the next script on the `master` database of the new or destination logical server. First, create a login and user in the `master` database of the destination logical server, and add it to the dbmanager server role. Provide a `<strong password>`, and replace `<SID of loginname login on source server>` with the SID from the source logical server.
+Run the next script on the `master` database of the new or destination logical server. First, create a login and user in the `master` database of the destination logical server, and add it to the dbmanager server role. Replace `<password>` with a strong password, and replace `<SID of loginname login on source server>` with the SID from the source logical server.
 
 ```sql
 --Step# 4
 --Connect to Destination server.
 --Create login and user in the master database, same as of the source server.
 
-CREATE LOGIN loginname WITH PASSWORD = '<strong password>', SID = <SID of loginname login on source server>;
+CREATE LOGIN loginname WITH PASSWORD = '<password>', SID = <SID of loginname login on source server>;
 GO
 CREATE USER [loginname] FOR LOGIN [loginname] WITH DEFAULT_SCHEMA=[dbo];
 GO

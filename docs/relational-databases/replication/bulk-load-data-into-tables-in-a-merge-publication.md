@@ -1,6 +1,6 @@
 ---
-title: "Bulk-Load Data into Tables in a Merge Publication"
-description: "Bulk-Load Data into Tables in a Merge Publication"
+title: Bulk-Load Data into Tables in a Merge Publication
+description: Bulk-loading data into merge replication tables skips tracking triggers by default. Discover two reliable ways to generate the metadata your publication needs.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -16,18 +16,18 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# Bulk-Load Data into Tables in a Merge Publication
+# Bulk-load data into tables in a merge publication
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  When data is loaded into tables using the [bcp Utility](../../tools/bcp-utility.md) or the [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) command, by default, the merge replication triggers that maintain tracking data in the [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) system table are not fired. You can either force the merge replication triggers to fire as the data is loaded, or you can insert the generated replication metadata programmatically after the bulk copy operation using replication stored procedures.  
+  When you load data into tables by using the [bcp Utility](../../tools/bcp-utility.md) or the [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) command, merge replication triggers that keep tracking data in the [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) system table don't fire by default. You can either force the merge replication triggers to fire as you load the data or insert the generated replication metadata programmatically after the bulk copy operation by using replication stored procedures.  
   
 ### To bulk-load data into tables published by merge replication using the bcp utility  
   
-1.  At either the Publisher or Subscriber, execute the [bcp Utility](../../tools/bcp-utility.md) or [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) to insert data into a table published using merge replication.  
+1.  At either the Publisher or Subscriber, run the [bcp Utility](../../tools/bcp-utility.md) or [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) to insert data into a table published by merge replication.  
   
-2.  Use one of the following methods to ensure that replication metadata is generated for the inserted data.  
+1.  Use one of the following methods to ensure that replication metadata is generated for the inserted data:  
   
-    -   Execute the bulk copy using the FIRE_TRIGGERS option.  
+    -   Run the bulk copy operation by using the `FIRE_TRIGGERS` option.  
   
-    -   On the database into which data was inserted, execute [sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md). Specify the table name into which the data was inserted for `@table_name`.  
+    -   On the database where you inserted data, run [sp_addtabletocontents (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md). Specify the table name where you inserted the data for `@table_name`.  
   
   

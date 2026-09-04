@@ -3,7 +3,8 @@ title: Migrate from PostgreSQL to Microsoft SQL with mssql-python
 description: Guide for migrating Python applications from PostgreSQL to Microsoft SQL using the mssql-python driver, covering installation, SQL dialect differences, and data migration.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -29,7 +30,7 @@ Microsoft SQL includes capabilities that simplify security, compliance, and oper
 
 ## Install the driver
 
-Before you begin, make sure you have Python 3.10 or later and a target SQL database.
+Before you begin, ensure you have Python 3.10 or later, and a target SQL database.
 
 [!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
 
@@ -780,4 +781,4 @@ For local development and CI, see [Container and local development](container-lo
 - [Data type mappings for mssql-python](data-type-mappings.md)
 - [Transaction management with mssql-python](transaction-management.md)
 - [Container and local development with mssql-python](container-local-development.md)
-- [Migrate from SQLite to Microsoft SQL with mssql-python](migrate-from-sql-lite.md)
+- [Migrate from SQLite to Microsoft SQL with mssql-python](migrate-from-sqlite.md)

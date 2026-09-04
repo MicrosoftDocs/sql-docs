@@ -1,6 +1,6 @@
 ---
-title: "Set up a business logic handler for Merge article"
-description: Use replication programming or Replication Management Objects to configure a business logic handler for merge replication synchronization.
+title: Set up a Business Logic Handler for Merge Article
+description: Use replication programming or Replication Management Objects to configure a business logic handler for Merge Replication synchronization.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -18,11 +18,11 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# Implement a Business Logic Handler for a Merge Article
+# Implement a business logic handler for a merge article
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to implement a business logic handler for a merge article in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using replication programming or Replication Management Objects (RMO).  
+  This article describes how to implement a business logic handler for a merge article in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using replication programming or Replication Management Objects (RMO).  
   
- The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events that occur during the merge replication synchronization process. Methods in the business logic handler can be invoked by the replication process for each changed row that is replicated during synchronization.  
+ The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that you can use to write complex business logic to handle events that occur during the Merge Replication synchronization process. The replication process invokes methods in the business logic handler for each changed row that it replicates during synchronization.  
   
  The general process for implementing a business logic handler is:  
   
@@ -30,13 +30,13 @@ dev_langs:
   
 2.  Register the assembly at the Distributor.  
   
-3.  Deploy the assembly at the server on which the Merge Agent runs. For a pull subscription the agent runs on the Subscriber, and for a push subscription the agent runs on the Distributor. When you are using Web synchronization, the agent runs on the Web server.  
+3.  Deploy the assembly at the server on which the Merge Agent runs. For a pull subscription, the agent runs on the Subscriber. For a push subscription, the agent runs on the Distributor. When you use Web synchronization, the agent runs on the Web server.  
   
 4.  Create an article that uses the business logic handler or modify an existing article to use the business logic handler.  
   
  The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can affect performance. For more information about business logic handlers, see [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-##  <a name="ReplProg"></a> Using Replication Programming  
+##  <a name="ReplProg"></a> Using replication programming  
   
 #### To create and deploy a business logic handler  
   
@@ -47,12 +47,12 @@ dev_langs:
     |Assembly Reference|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (default installation)|  
-    |<xref:System.Data>|GAC (component of the .NET Framework)|  
-    |<xref:System.Data.Common>|GAC (component of the .NET Framework)|  
+    |<xref:System.Data>|GAC (component of .NET Framework)|  
+    |<xref:System.Data.Common>|GAC (component of .NET Framework)|  
   
 3.  Add a class that overrides the <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> class.  
   
-4.  Implement the <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.HandledChangeStates%2A> property to indicate the types of changes that are handled.  
+4.  Implement the <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.HandledChangeStates%2A> property to indicate the types of changes that the handler manages.  
   
 5.  Override one or more of the following methods of the <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> class:  
   
@@ -76,19 +76,19 @@ dev_langs:
   
 6.  Build the project to create the business logic handler assembly.  
   
-7.  Deploy the assembly in the directory that contains the Merge Agent executable file (replmerg.exe), which for a default installation is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM, or install it in the .NET global assembly cache (GAC). You should only install the assembly in the GAC if applications other than the Merge Agent require access to the assembly. The assembly can be installed into the GAC using the Global Assembly Cache tool (**Gacutil.exe)** provided in the .NET Framework SDK.  
+7.  Deploy the assembly in the directory that contains the Merge Agent executable file (replmerg.exe), which for a default installation is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM, or install it in the .NET global assembly cache (GAC). Only install the assembly in the GAC if applications other than the Merge Agent require access to the assembly. Use the Global Assembly Cache tool (**Gacutil.exe)** provided in the .NET Framework SDK to install the assembly into the GAC.  
   
     > [!NOTE]  
-    >  A business logic handler must be deployed on every server on which the Merge Agent runs, which includes the IIS server that hosts the replisapi.dll when using Web synchronization.  
+    >  You must deploy a business logic handler on every server on which the Merge Agent runs. This requirement includes the IIS server that hosts the replisapi.dll when using Web synchronization.  
   
 #### To register a business logic handler  
   
-1.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) to verify that the assembly has not already been registered as a business logic handler.  
+1.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) to verify that the assembly isn't already registered as a business logic handler.  
   
-2.  At the Distributor, execute [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), specifying a friendly name for the business logic handler for **\@article_resolver**, a value of **true** for **\@is_dotnet_assembly**, the name of the assembly for **\@dotnet_assembly_name**, and the fully-qualified name of the class that overrides <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> for **\@dotnet_class_name**.  
+2.  At the Distributor, execute [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), specifying a friendly name for the business logic handler for **\@article_resolver**, a value of **true** for **\@is_dotnet_assembly**, the name of the assembly for **\@dotnet_assembly_name**, and the fully qualified name of the class that overrides <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> for **\@dotnet_class_name**.  
   
     > [!NOTE]  
-    >  If the assembly is not deployed in the same directory as the Merge Agent executable, in the same directory as the application that synchronously starts the Merge Agent, or in the global assembly cache (GAC), you need to specify the full path with the assembly name for **\@dotnet_assembly_name**. When using Web synchronization, you must specify the location of assembly at the Web server.  
+    >  If you don't deploy the assembly in the same directory as the Merge Agent executable, in the same directory as the application that synchronously starts the Merge Agent, or in the global assembly cache (GAC), you need to specify the full path with the assembly name for **\@dotnet_assembly_name**. When using Web synchronization, you must specify the location of the assembly at the Web server.  
   
 #### To use a business logic handler with a new table article  
   
@@ -96,7 +96,7 @@ dev_langs:
   
 #### To use a business logic handler with an existing table article  
   
-1.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **\@publication**, **\@article**, a value of **article_resolver** for **\@property**, and the friendly name of the business logic handler for **\@value**.  
+1.  Run [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), and specify **\@publication**, **\@article**, **article_resolver** for **\@property**, and the friendly name of the business logic handler for **\@value**.  
   
 ###  <a name="TsqlExample"></a> Examples (Replication Programming)  
  This example shows a business logic handler that creates an audit log.  
@@ -120,12 +120,12 @@ dev_langs:
     |Assembly Reference|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (default installation)|  
-    |<xref:System.Data>|GAC (component of the .NET Framework)|  
-    |<xref:System.Data.Common>|GAC (component of the .NET Framework)|  
+    |<xref:System.Data>|GAC (component of .NET Framework)|  
+    |<xref:System.Data.Common>|GAC (component of .NET Framework)|  
   
 3.  Add a class that overrides the <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> class.  
   
-4.  Implement the <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.HandledChangeStates%2A> property to indicate the types of changes that are handled.  
+4.  Implement the <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.HandledChangeStates%2A> property to indicate the types of changes that the handler manages.  
   
 5.  Override one or more of the following methods of the <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> class:  
   
@@ -148,7 +148,7 @@ dev_langs:
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> - invoked when UPDATE statements are being uploaded or downloaded.  
   
     > [!NOTE]  
-    >  Any article conflicts not explicitly handled by your custom business logic are handled by the default resolver for the article.  
+    >  The default resolver for the article handles any article conflicts that your custom business logic doesn't explicitly handle.  
   
 6.  Build the project to create the business logic handler assembly.  
   
@@ -158,13 +158,13 @@ dev_langs:
   
 2.  Create an instance of the <xref:Microsoft.SqlServer.Replication.ReplicationServer> class. Pass the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> from step 1.  
   
-3.  Call <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> and check the returned <xref:System.Collections.ArrayList> object to ensure that the assembly has not already been registered as a business logic handler.  
+3.  Call <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> and check the returned <xref:System.Collections.ArrayList> object to ensure that the assembly isn't already registered as a business logic handler.  
   
 4.  Create an instance of the <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> class. Specify the following properties:  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> - the name of the .NET assembly. If the assembly is not deployed in the same directory as the Merge Agent executable, in the same directory as the application that synchronously starts the Merge Agent, or in the GAC, you must include the full path with the assembly name. You must include the full path with the assembly name when using a business logic handler with Web synchronization.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> - the name of the .NET assembly. If you don't deploy the assembly in the same directory as the Merge Agent executable, in the same directory as the application that synchronously starts the Merge Agent, or in the GAC, include the full path with the assembly name. You must include the full path with the assembly name when using a business logic handler with Web synchronization.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A> - the fully-qualified name of the class that overrides <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> and implements the business logic handler.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A> - the fully qualified name of the class that overrides <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> and implements the business logic handler.  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - a friendly name you use when you access the business logic handler.  
   
@@ -172,7 +172,7 @@ dev_langs:
   
 #### To deploy a business logic handler  
   
-1.  Deploy the assembly on the server where the Merge Agent runs in the file location specified when the business logic handler was registered at the Distributor. For a pull subscription the agent runs on the Subscriber, and for a push subscription the agent runs on the Distributor. When you are using Web synchronization, the agent runs on the Web server. If the full path was not included with the assembly name when the business logic handler was registered, deploy the assembly in the same directory as the Merge Agent executable, in the same directory as the application that synchronously starts the Merge Agent. You may install the assembly in the GAC if there are multiple applications that use the same assembly.  
+1.  Deploy the assembly on the server where the Merge Agent runs in the file location specified when you registered the business logic handler at the Distributor. For a pull subscription, the agent runs on the Subscriber. For a push subscription, the agent runs on the Distributor. When you use Web synchronization, the agent runs on the Web server. If you don't include the full path with the assembly name when you register the business logic handler, deploy the assembly in the same directory as the Merge Agent executable or in the same directory as the application that synchronously starts the Merge Agent. If multiple applications use the same assembly, install the assembly in the GAC.  
   
 #### To use a business logic handler with a new table article  
   
@@ -200,9 +200,9 @@ dev_langs:
   
 4.  Set the connection from step 1 for the <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> property.  
   
-5.  Call the <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> method to get the properties of the object. If this method returns **false**, either the article properties in step 3 were defined incorrectly or the article does not exist. For more information, see [View and Modify Article Properties](../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+5.  Call the <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> method to get the properties of the object. If this method returns **false**, either you defined the article properties in step 3 incorrectly or the article doesn't exist. For more information, see [View and Modify Article Properties](../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
-6.  Set the friendly name of the business logic handler for <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. This is the value of the <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> property specified when registering the business logic handler.  
+6.  Set the friendly name of the business logic handler for <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. This value is the <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> property you specify when registering the business logic handler.  
   
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example is a business logic handler that logs information about inserts, updates, and deletes at the Subscriber.  

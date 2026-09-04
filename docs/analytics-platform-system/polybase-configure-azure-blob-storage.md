@@ -47,7 +47,7 @@ To query the data in your Azure Blob Storage, you must define an external table 
 1. Create a master key on the database. It is required to encrypt the credential secret.
 
    ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
    ```
 
 1. Create a database scoped credential for Azure Blob Storage.

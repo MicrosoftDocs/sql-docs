@@ -73,7 +73,7 @@ Requires CONTROL permission on the database.
 Use the following example to create a database master key in a database. The key is encrypted using a password.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 GO
 ```
 

@@ -3,6 +3,7 @@ title: Migrate from SQLite to Microsoft SQL with mssql-python
 description: Guide for migrating Python applications from SQLite to Microsoft SQL using the mssql-python driver, covering SQL dialect differences and data migration.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/17/2026
 ms.service: sql
 ms.subservice: connectivity

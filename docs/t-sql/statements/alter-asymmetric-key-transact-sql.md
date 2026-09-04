@@ -87,13 +87,13 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
 ## Examples  
   
 ### A. Changing the password of the private key  
- The following example changes the password used to protect the private key of asymmetric key `PacificSales09`. The new password will be `<enterStrongPasswordHere>`.  
+ The following example changes the password used to protect the private key of asymmetric key `PacificSales09`. Replace `<new-password>` with a strong password.
   
 ```sql  
 ALTER ASYMMETRIC KEY PacificSales09   
     WITH PRIVATE KEY (  
-    DECRYPTION BY PASSWORD = '<oldPassword>',  
-    ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>');  
+    DECRYPTION BY PASSWORD = '<old-password>',
+    ENCRYPTION BY PASSWORD = '<new-password>');
 GO  
 ```  
   
@@ -106,12 +106,12 @@ GO
 ```  
   
 ### C. Removing password protection from a private key  
- The following example removes the password protection from a private key and protects it with the database master key.  
+ The following example removes the password protection from a private key and protects it with the database master key. Replace `<password>` with a strong password.
   
 ```sql  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
-    DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  
+    DECRYPTION BY PASSWORD = '<password>' );
 GO  
 ```  
   

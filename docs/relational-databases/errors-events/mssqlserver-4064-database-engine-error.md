@@ -151,14 +151,14 @@ You can use the following procedure to change the default database by using the 
 
    - If you want to use SQL Server authentication to connect to the instance, enter the following command in the **Command Prompt** window, and then press **Enter**:
 
-     `sqlcmd -S <InstanceName> -d master -U <SQLAdminAccount> -P <Password>`
+     `sqlcmd -S <InstanceName> -d master -U <SQLAdminAccount> -P <password>`
 
-     `<InstanceName>` is a placeholder for the name of the SQL Server instance to which you are connecting. `<Password>` is a placeholder for the SQL Server login password.
+     `<InstanceName>` is a placeholder for the name of the SQL Server instance to which you are connecting. Replace `<password>` with the SQL Server login password.
 
      For example:
 
      ```cmd
-     sqlcmd -S contososql -U sqladmin -P <Strong password>
+     sqlcmd -S contososql -U sqladmin -P <password>
      ```
 
 1. To change the default database of a login, at the **sqlcmd** prompt, use the following example, and then press **Enter**:

@@ -153,11 +153,11 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 <a id="a-creating-a-remote-table"></a>
 
 ### A. Create a remote table
- This example creates a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] SMP remote table called `MyOrdersTable` on database `OrderReporting` and schema `Orders`. The `OrderReporting` database is on a server named `SQLA` that listens on the default port 1433. Provider your own `<user name>` and `<strong password>`. 
+ This example creates a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] SMP remote table called `MyOrdersTable` on database `OrderReporting` and schema `Orders`. The `OrderReporting` database is on a server named `SQLA` that listens on the default port 1433. Replace `<user name>` with your user name and `<password>` with a strong password.
 
 ```sql
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
-AT ( 'Data Source = SQLA, 1433; User ID = <user name>; Password = <strong password>;' )  
+AT ( 'Data Source = SQLA, 1433; User ID = <user name>; Password = <password>;' )
 AS SELECT <select_criteria>;  
 ```  
 
@@ -179,7 +179,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ```sql
 USE ssawPDW;  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
-AT ( 'Data Source = SQLA, 1433; User ID = <user name>; Password = <strong password>;' )  
+AT ( 'Data Source = SQLA, 1433; User ID = <user name>; Password = <password>;' )
     AS SELECT T1.* FROM OrderReporting.Orders.MyOrdersTable T1   
     JOIN OrderReporting.Orders.Customer T2  
     ON T1.CustomerID=T2.CustomerID OPTION (HASH JOIN);  

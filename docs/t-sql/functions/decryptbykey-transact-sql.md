@@ -139,7 +139,7 @@ GO
 -- Create the key, and certificate
 USE TestingDecryptByKey;
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD= 'ItIsreallyLong1AndSecured!Password#';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD= '<password>';
 
 CREATE CERTIFICATE TestEncryptionCertificate
     WITH SUBJECT = 'TestEncryption';

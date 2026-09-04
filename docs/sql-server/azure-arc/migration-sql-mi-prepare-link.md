@@ -104,14 +104,14 @@ SELECT @@VERSION as 'SQL Server version';
 
 The link uses certificates to encrypt authentication and communication between SQL Server and SQL Managed Instance. The database master key protects the certificates used by the link. If you already have a database master key, you can skip this step.
 
-Create a database master key in the `master` database. Insert your password in place of `<strong_password>` in the following script, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
+Create a database master key in the `master` database. Replace `<password>` with a strong password, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
 
 ```sql
 -- Run on SQL Server
 -- Create a master key
 USE master;
 GO
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong_password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 ```
 
 To make sure that you have the database master key, use the following T-SQL script on SQL Server:

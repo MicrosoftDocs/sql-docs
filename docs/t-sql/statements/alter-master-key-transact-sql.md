@@ -121,21 +121,21 @@ Requires CONTROL permission on the database. If the database master key is encry
 
 ## Examples
 
-The following example creates a new database master key for `AdventureWorks` and reencrypts the keys below it in the encryption hierarchy. Replace `<secure password>` with a strong, unique password.
+The following example creates a new database master key for `AdventureWorks` and reencrypts the keys below it in the encryption hierarchy. Replace `<password>` with a strong, unique password.
 
 ```sql
 USE AdventureWorks2022;
-ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = '<secure password>';
+ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = '<password>';
 GO
 ```
 
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-The following example creates a new database master key for `AdventureWorksPDW2012` and re-encrypts the keys below it in the encryption hierarchy. Replace `<secure password>` with a strong, unique password.
+The following example creates a new database master key for `AdventureWorksPDW2012` and re-encrypts the keys below it in the encryption hierarchy. Replace `<password>` with a strong, unique password.
 
 ```sql
 USE master;
-ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = '<secure password>';
+ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = '<password>';
 GO
 ```
 

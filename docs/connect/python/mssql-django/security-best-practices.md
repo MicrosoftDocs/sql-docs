@@ -122,7 +122,7 @@ Create dedicated SQL Server logins with only the permissions your application ne
 ```sql
 -- Create a login and user for the application
 CREATE LOGIN [django_app]
-WITH PASSWORD = '<strong-password>';
+WITH PASSWORD = '<password>';
 
 USE [<your-database>];
 

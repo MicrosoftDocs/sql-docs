@@ -140,7 +140,7 @@ The following sections describe these steps in detail.
 
 ### Create a certificate on SQL Server and import its public key to SQL Managed Instance
 
-First, create the database master key in the `master` database, if it's not already present. Insert your password in place of `<strong_password>` in the following script, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
+First, create the database master key in the `master` database, if it's not already present. Replace `<password>` with a strong password, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
 
 ```sql
 -- Run on SQL Server
@@ -150,7 +150,7 @@ USE MASTER
 IF NOT EXISTS (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)
 BEGIN
     PRINT 'Creating master key.' + CHAR(13) + 'Keep the password confidential and in a secure place.'
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong_password>'
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 END
 ELSE
     PRINT 'Master key already exists.'

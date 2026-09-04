@@ -59,7 +59,7 @@ CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[
 -- Create new SQL login
 USE master
 GO
-CREATE LOGIN [DDUser01] WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
+CREATE LOGIN [DDUser01] WITH PASSWORD='<password>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
 
 -- Add the new SQL login to tutorial database
 USE RevoDeepDive

@@ -61,7 +61,7 @@ In this lesson, you learn to create the target database and all the Service Brok
   USE InstTargetDB;
   GO
 
-  CREATE MASTER KEY ENCRYPTION BY PASSWORD = N'<EnterStrongPassword1Here>';
+  CREATE MASTER KEY ENCRYPTION BY PASSWORD = N'<password>';
   GO
 
   CREATE USER TargetUser WITHOUT LOGIN;

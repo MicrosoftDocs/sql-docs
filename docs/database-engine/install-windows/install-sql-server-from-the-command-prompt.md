@@ -304,7 +304,7 @@ Use the parameters in the following table to develop command-line scripts for in
 To install a new, stand-alone instance with the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components and enable instant file initialization for [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)].
 
 ```console
-setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\NETWORK SERVICE" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS
+setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<password>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\NETWORK SERVICE" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 ### Install and connect to Azure
@@ -449,7 +449,7 @@ Use the parameters in the following table to develop command-line scripts for co
 To complete a prepared, stand-alone instance that includes [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components.
 
 ```console
-setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\NETWORK SERVICE" /IACCEPTSQLSERVERLICENSETERMS
+setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<password>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\NETWORK SERVICE" /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 <a id="Upgrade"></a>

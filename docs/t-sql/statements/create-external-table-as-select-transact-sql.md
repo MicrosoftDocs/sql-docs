@@ -456,7 +456,7 @@ GO
 USE [<mydatabase>];
 GO
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'managed identity';
 GO
@@ -495,7 +495,7 @@ GO
 USE [<mydatabase>];
 GO
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'managed identity';
 GO
@@ -1004,7 +1004,7 @@ GO
 USE [<mydatabase>];
 GO
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'managed identity';
 GO
@@ -1041,7 +1041,7 @@ GO
 USE [<mydatabase>];
 GO
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL SAS_token
 WITH

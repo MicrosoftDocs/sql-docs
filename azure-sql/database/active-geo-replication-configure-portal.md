@@ -248,11 +248,11 @@ Remove-AzSqlDatabaseSecondary @parameters
 
    For more information, see [Azure SQL Database and Azure Synapse IP firewall rules](firewall-configure.md).
 
-1. In the `master` database on the **primary** server, create a SQL authentication login dedicated to active geo-replication setup. Adjust login name and password as needed.
+1. In the `master` database on the **primary** server, create a SQL authentication login dedicated to active geo-replication setup. Replace `<password>` with a strong password.
 
    ```sql
    CREATE LOGIN geodrsetup
-       WITH PASSWORD = 'ComplexPassword01';
+       WITH PASSWORD = '<password>';
    ```
 
 1. In the same database, create a user for the login, and add it to the `dbmanager` role:
@@ -287,7 +287,7 @@ Remove-AzSqlDatabaseSecondary @parameters
 
    ```sql
    CREATE LOGIN geodrsetup
-       WITH PASSWORD = 'ComplexPassword01', SID = 0x010600000000006400000000000000001C98F52B95D9C84BBBA8578FACE37C3E;
+       WITH PASSWORD = '<password>', SID = 0x010600000000006400000000000000001C98F52B95D9C84BBBA8578FACE37C3E;
    ```
 
 1. In the same database, create a user for the login, and add it to the `dbmanager` role.

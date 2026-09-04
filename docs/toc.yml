@@ -6093,6 +6093,8 @@ items:
       href: relational-databases/sql-server-configuration-manager.md
     - name: Database Lifecycle Management
       href: relational-databases/database-lifecycle-management.md
+    - name: Manage SQL license types at scale
+      href: sql-server/manage-license-type-at-scale.md
     - name: Database mail
       items:
       - name: Overview

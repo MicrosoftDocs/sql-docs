@@ -54,6 +54,10 @@ az sql vm list --query "[?sqlServerLicenseType=='AHUB']"
 
 There's no extra cost for using the extension.
 
+## Manage license types at scale
+
+[!INCLUDE [manage-sql-license-types-at-scale](../../../docs/includes/manage-sql-license-types-at-scale.md)]
+
 ## Installation
 
 [Register](sql-iaas-agent-extension-register-vm-linux.md) your SQL Server VM with the SQL Server IaaS Agent extension to create the **SQL virtual machine** *resource* within your subscription. This resource is *separate* from the virtual machine resource. When you unregister your SQL Server VM from the extension, you remove the **SQL virtual machine** *resource* from your subscription but don't delete the actual virtual machine.

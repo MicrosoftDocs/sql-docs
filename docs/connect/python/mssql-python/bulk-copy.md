@@ -315,7 +315,7 @@ When `keep_identity=False` (the default), omit the identity column from your dat
 | Parameter | Default | Description |
 | --- | --- | --- |
 | `batch_size` | `0` | Rows per batch. `0` lets the server choose the optimal size. |
-| `timeout` | `30` | Operation timeout in seconds. Applies to the bulk copy operation itself, not to the internal connection. |
+| `timeout` | `30` | Operation timeout in seconds. Applies to the bulk copy operation itself, not to the internal connection. Use `0` to disable the operation timeout. |
 | `keep_identity` | `False` | Preserve identity values from source data. |
 | `check_constraints` | `False` | Check table constraints during the load. |
 | `table_lock` | `False` | Acquire a table-level lock instead of row-level locks. |

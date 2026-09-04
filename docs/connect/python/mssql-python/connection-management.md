@@ -146,18 +146,25 @@ print(cursor.fetchone().Name)
 
 ## Connection timeout
 
-Set the connection timeout to control how long the driver waits to establish a connection before raising an error. A reasonable connection timeout is important for applications deployed in environments with unreliable networks or for failing fast when a server is unreachable:
+The driver has two independent timeouts. Setting one doesn't affect the other.
+
+| Setting | What it bounds | Default |
+| --- | --- | --- |
+| `timeout` argument to `connect()` | The authentication attempt, including the network connection. Sets `SQL_ATTR_LOGIN_TIMEOUT`. | `0`, which uses the driver default |
+| `Connection.timeout` property | Each statement that the connection runs. | `0`, which disables the query timeout |
 
 ```python
-# At connection time (in seconds)
+# Bound the authentication attempt (in seconds)
 conn = mssql_python.connect(connection_string, timeout=30)
 
-# Or after connection
+# Bound each statement that this connection runs
 conn.timeout = 60
-print(conn.timeout)  # 60
 ```
 
-A timeout of `0` means no timeout (wait indefinitely). Define reasonable timeouts in production; a hung connection attempt with no timeout blocks the calling thread permanently.
+If you set `SQL_ATTR_LOGIN_TIMEOUT` in `attrs_before`, that value takes precedence over the `timeout` argument.
+
+> [!NOTE]
+> Microsoft Entra ID token acquisition happens before the driver connects, so the authentication timeout doesn't bound it.
 
 If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, use at least `60`. An auto-paused database resumes on the first connection attempt, and a shorter timeout expires before the resume completes. The attempt can also fail with error 40613 while the database resumes, so the application must retry. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
 

@@ -4,7 +4,7 @@ description: Use uv to create repeatable Python environments for database applic
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 08/21/2026
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -91,7 +91,7 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.13.0",
+       "mssql-python>=1.14.0",
        "python-dotenv>=1.1.1",
        "rich>=14.1.0",
    ]

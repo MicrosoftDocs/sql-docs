@@ -3,7 +3,8 @@ title: What's New in mssql-python Driver
 description: Learn about new features and changes in each version of the mssql-python driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 08/21/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -15,6 +16,53 @@ ai-usage: ai-assisted
 This article lists what changed in each release of the mssql-python driver, newest first. Each section covers new features, behavior changes, and bug fixes for one version.
 
 For the versions that Microsoft currently supports, see [Support lifecycle](support-lifecycle.md).
+
+## mssql-python 1.14.0
+
+**Release date**: August 2026
+
+### Enhancements
+
+#### Parameter detection and binding run in native code
+
+Parameter type detection and binding now run in a single native pipeline instead of per-parameter Python calls. This change fixes a significant performance bottleneck, with higher end-to-end throughput improvements in larger operations like bulk inserts. No application change is needed.
+
+### Bug fixes
+
+#### The `timeout` argument to `connect()` set the query timeout instead of the authentication timeout
+
+The `timeout` argument now sets `SQL_ATTR_LOGIN_TIMEOUT` and bounds the authentication attempt, which is what the argument name and the documentation describe. In earlier versions it became the per-statement query timeout, so `connect(timeout=30)` didn't limit how long a connection attempt could run, and it aborted queries after 30 seconds. The per-statement query timeout remains available as the `Connection.timeout` property.
+
+> [!IMPORTANT]
+> If you passed `timeout` to `connect()` to abort long-running queries, that behavior no longer happens. Set `Connection.timeout` instead. The same applies if you relied on `connect(timeout=)` to widen the connect timeout that `bulkcopy()` uses for its internal connection: set `Connection.timeout` before you create the cursor.
+
+For more information, see [Connection timeout](connection-management.md#connection-timeout).
+
+#### `bulkcopy()` rejected `timeout=0`
+
+A `timeout` of `0` raised a validation error, even though `0` means no timeout in the underlying bulk copy API. The method now accepts `0` and disables the operation timeout. Negative, non-integer, and boolean values are still rejected.
+
+For more information, see [Bulk copy](bulk-copy.md).
+
+#### Cleanup replaced the original Arrow fetch exception
+
+When a fetch from an Arrow reader failed, the driver's cleanup path raised a second error that replaced the original one, so callers saw a cleanup failure instead of the reason the fetch failed. Cleanup now checks cursor state first and preserves the original exception.
+
+#### `executemany()` decimal conversion errors included parameter values
+
+A **decimal** conversion failure in `executemany()` reported the offending value through the chained exception, which could place customer data in application logs and monitoring systems. The error now reports the row index, the column index, and the value type only.
+
+For more information, see [Error handling](error-handling.md).
+
+#### Bulk copy rejected Arrow View types
+
+`bulkcopy_arrow()` couldn't consume variable-length Arrow View arrays, so Polars `string_view` columns had to be converted with `DataFrame.to_arrow()` first. String View values and NULLs now pass through the Arrow C Data Interface directly.
+
+For more information, see [Polars integration](polars-integration.md).
+
+#### Windows extension loading used the host CPU architecture
+
+On Windows, the driver picked its native extension based on the host CPU rather than the running interpreter, so x64 Python on an ARM64 host loaded through a fallback path and wrote notices to stdout. The loader now derives the architecture from the interpreter and reports fallbacks as warnings.
 
 ## mssql-python 1.13.0
 

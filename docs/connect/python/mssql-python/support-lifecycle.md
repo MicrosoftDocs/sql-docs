@@ -3,7 +3,8 @@ title: Support Lifecycle for mssql-python Driver
 description: Learn about the support lifecycle, versioning policy, and compatibility for the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 08/21/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: lifecycle
@@ -20,13 +21,14 @@ Always use the latest release to get new features, performance improvements, and
 
 ### Current version
 
-Version 1.13.0 is the current general availability (GA) release.
+Version 1.14.0 is the current general availability (GA) release.
 
 ### Version history
 
 | Version | Release date | Status | Key features |
 | --------- | -------------- | -------- | -------------- |
-| 1.13.0 | August 2026 | **Current** | Apache Arrow bulk copy, `token_provider` parameter, identity-aware connection pooling, required `mssql-python-odbc` companion package |
+| 1.14.0 | August 2026 | **Current** | Native parameter binding pipeline, `connect(timeout=)` sets the authentication timeout, bulk copy accepts `timeout=0`, Arrow View types in bulk copy |
+| 1.13.0 | August 2026 | Previous | Apache Arrow bulk copy, `token_provider` parameter, identity-aware connection pooling, required `mssql-python-odbc` companion package |
 | 1.12.0 | July 2026 | Previous | Standalone `mssql-python-odbc` companion package, bulk copy connect-timeout fix, bulk copy CLR UDT fix |
 | 1.11.0 | July 2026 | Previous | Context manager commit/rollback, Apple Silicon fix, service principal bulk copy fix |
 | 1.10.0 | June 2026 | Previous | Bulk copy with ActiveDirectoryServicePrincipal, Arrow VARCHAR fixes |
@@ -42,11 +44,11 @@ Version 1.13.0 is the current general availability (GA) release.
 | 1.0.0 | November 2025 | Previous | Initial GA release |
 
 > [!IMPORTANT]
-> Only the current version (1.13.0) receives new features and bug fixes. Previous versions remain functional but don't receive updates.
+> Only the current version (1.14.0) receives new features and bug fixes. Previous versions remain functional but don't receive updates.
 
 ## Python version compatibility
 
-The mssql-python driver requires Python 3.10 or later. If you're starting a new project, target the newest supported Python release in the compatibility matrix for the longest support window. If you're constrained to an older Python version (3.9 or earlier), use pyodbc instead.
+The mssql-python driver requires Python 3.10 or later. If you're starting a new project, target the newest supported Python release in the compatibility matrix for the longest support window.
 
 | Python version | Support status |
 | ---------------- | --------------- |
@@ -101,7 +103,7 @@ The mssql-python driver uses DDBC (Direct Database Connectivity) and doesn't req
 
 ## Feature compatibility
 
-The following tables list SQL Server features and their support status in the current version (1.13.0) of the mssql-python driver. If a feature you need isn't supported (such as Always Encrypted or MARS), consider using [pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) instead. For information about features added in earlier versions, see [What's new in mssql-python](whats-new.md).
+The following tables list SQL Server features and their support status in the current version (1.14.0) of the mssql-python driver. If a feature you need isn't supported, such as Always Encrypted or MARS, consider using [pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) instead. For information about features added in earlier versions, see [What's new in mssql-python](whats-new.md).
 
 ### SQL Server features
 
@@ -143,7 +145,7 @@ The mssql-python driver has minimal dependencies:
 
 The `pip install mssql-python` command installs the `mssql-python-odbc` companion package automatically. That package supplies the ODBC driver binaries that the driver loads at startup. You don't need to install the Microsoft ODBC Driver for SQL Server separately.
 
-In mssql-python 1.13.0, the companion package is required at runtime. The driver no longer falls back to binaries inside the `mssql-python` wheel. Install `mssql-python-odbc==18.6.2.1` explicitly in these conditions:
+The companion package is required at runtime. The driver doesn't fall back to binaries inside the `mssql-python` wheel. Install `mssql-python-odbc==18.6.2.1` explicitly in these conditions:
 
 - You install with `--no-deps`.
 - You install from a private index that doesn't mirror the companion package.

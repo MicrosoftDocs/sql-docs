@@ -250,14 +250,14 @@ To register the application and grant it database access, see [Microsoft Entra s
 
 ## Connection timeout
 
-Set the connection timeout using the `timeout` parameter. Use a timeout to prevent your application from hanging indefinitely when the server is unreachable:
+Set the authentication timeout with the `timeout` parameter. Use a timeout to prevent your application from hanging indefinitely when the server is unreachable:
 
 ```python
-# 30-second connection timeout
+# 30-second authentication timeout
 conn = mssql_python.connect(connection_string, timeout=30)
 ```
 
-You can also change the timeout on an existing connection:
+`Connection.timeout` is a separate setting that bounds each statement rather than the authentication attempt. For more information, see [Connection timeout](connection-management.md#connection-timeout).
 
 ```python
 conn.timeout = 60

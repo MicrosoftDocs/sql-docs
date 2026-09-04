@@ -1,16 +1,17 @@
 ---
-title: AppContext switches in SqlClient
+title: AppContext Switches in SqlClient
 description: Learn about the AppContext switches available in SqlClient and how to use them to modify some default behaviors.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 08/11/2026
+ms.reviewer: davidengel, paulmedynski, cmalhotra, randolphwest
+ms.date: 09/03/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ms.custom:
+  - sfi-ropc-nochange
 dev_langs:
-  - "csharp"
-ms.custom: sfi-ropc-nochange
+  - csharp
 ai-usage: ai-assisted
 ---
 
@@ -22,13 +23,15 @@ ai-usage: ai-assisted
 
 The AppContext class allows SqlClient to provide new functionality while continuing to support callers who depend on the previous behavior. Users can opt out of a change in behavior by setting specific AppContext switches.
 
+SqlClient reads and caches each switch the first time it uses that switch. Set switches at application startup, before you use any SqlClient types. Changing a switch after SqlClient has cached its value has no effect.
+
 ## Enable MultiSubnetFailover by default
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
 (Available starting with version 7.0)
 
-To set `MultiSubnetFailover=true` globally without modifying individual connection strings, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.EnableMultiSubnetFailoverByDefault"** to `true` at application startup:  
+To set `MultiSubnetFailover=true` globally without modifying individual connection strings, set the AppContext switch `Switch.Microsoft.Data.SqlClient.EnableMultiSubnetFailoverByDefault` to `true` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableMultiSubnetFailoverByDefault", true);
@@ -65,7 +68,7 @@ By default, both switches are `true`, which preserves the existing (compatible) 
 
 (Available starting with version 7.0)
 
-When the AppContext switch **"Switch.Microsoft.Data.SqlClient.EnableUserAgent"** is enabled, the driver sends user agent details to the server as part of the connection. This information assists with troubleshooting and quantifying driver usage by version and operating system. This switch is disabled by default. To enable it, set the AppContext switch to `true` at application startup:  
+When the AppContext switch `Switch.Microsoft.Data.SqlClient.EnableUserAgent` is enabled, the driver sends user agent details to the server as part of the connection. This information assists with troubleshooting and quantifying driver usage by version and operating system. This switch is disabled by default. To enable it, set the AppContext switch to `true` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableUserAgent", true);
@@ -75,19 +78,19 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableUserAgent", true);
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
-Starting with Microsoft.Data.SqlClient 2.0, decimal data is rounded by default, as is done by SQL Server. To enable the previous behavior of truncation, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to `true` at application startup:
+Starting with Microsoft.Data.SqlClient 2.0, decimal data is rounded by default, as is done by SQL Server. To enable the previous behavior of truncation, you can set the AppContext switch `Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal` to `true` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);
 ```
 
-## Enabling managed networking on Windows
+## Enable managed networking on Windows
 
 [!INCLUDE [dotnet-modern](../../includes/products/applies-plain/dotnet-modern.md)]
 
 (Available starting with version 2.0)
 
-On Windows, SqlClient uses a native implementation of the SNI network interface by default. To enable the use of a managed SNI implementation, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** to `true` at application startup:
+On Windows, SqlClient uses a native implementation of the SNI network interface by default. To enable the use of a managed SNI implementation, set the AppContext switch `Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows` to `true` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
@@ -95,25 +98,27 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWind
 
 This switch toggles the driver's behavior to use a managed networking implementation in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library. It is for testing and debugging purposes only.
 
-> [!NOTE]
-> There are some known differences when compared to the native implementation. For example, the managed implementation does not support non-domain Windows Authentication.
+> [!NOTE]  
+> There are some known differences when compared to the native implementation. For example, the managed implementation doesn't support non-domain Windows Authentication.
 
-## Disabling Transparent Network IP Resolution
+<a id="disabling-transparent-network-ip-resolution"></a>
+
+## Disable Transparent Network IP Resolution
 
 [!INCLUDE [dotnet-framework-only](../../includes/products/applies-plain/dotnet-framework-only.md)]
 
 Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. TNIR affects the connection sequence of the driver in the case where the first resolved IP of the hostname doesn't respond and there are multiple IPs associated with the hostname. The combination of `TransparentNetworkIPResolution` and `MultiSubnetFailover` selects the connection sequence:
 
-|TransparentNetworkIPResolution|MultiSubnetFailover|Connection sequence|
-|--------|--------|--------|
-|True|True|`TransparentNetworkIPResolution` is ignored. The driver attempts the DNS-resolved IP addresses in parallel and completes the authentication with the first responder.|
-|True|False|The driver runs multiple connect rounds across the DNS-resolved IP addresses, with a 500-millisecond minimum on the first attempt and progressively larger per-attempt timeouts, until a connection succeeds or the overall `Connect Timeout` is reached.|
-|False|True|The driver attempts the DNS-resolved IP addresses in parallel and completes the authentication with the first responder.|
-|False|False|The driver attempts each DNS-resolved IP address sequentially until one succeeds or `Connect Timeout` is reached.|
+| TransparentNetworkIPResolution | MultiSubnetFailover | Connection sequence |
+| --- | --- | --- |
+| True | True | `TransparentNetworkIPResolution` is ignored. The driver attempts the DNS-resolved IP addresses in parallel and completes the authentication with the first responder. |
+| True | False | The driver runs multiple connect rounds across the DNS-resolved IP addresses, with a 500-millisecond minimum on the first attempt and progressively larger per-attempt timeouts, until a connection succeeds or the overall `Connect Timeout` is reached. |
+| False | True | The driver attempts the DNS-resolved IP addresses in parallel and completes the authentication with the first responder. |
+| False | False | The driver attempts each DNS-resolved IP address sequentially until one succeeds or `Connect Timeout` is reached. |
 
 `TransparentNetworkIPResolution` is enabled by default on .NET Framework, and `MultiSubnetFailover` is disabled by default. On .NET 5 and later versions, `TransparentNetworkIPResolution` isn't a recognized connection-string keyword and setting it (with any value) throws `ArgumentException` (`KeywordNotSupported`). Those versions honor `MultiSubnetFailover` only. The rest of this section (the automatic override, the failure modes in the following warning, and the AppContext switch) applies to .NET Framework.
 
-> [!TIP]
+> [!TIP]  
 > Set `MultiSubnetFailover=True` on every connection string, regardless of .NET version or whether the target is Azure SQL or on-premises SQL Server. `MultiSubnetFailover=True` selects a parallel-connect code path that finds the first responsive replica quickly. On .NET Framework, it also bypasses TNIR's sequential per-IP retry loop, which is a common cause of long connect delays and pre-authentication handshake timeouts.
 
 On .NET Framework, when `TransparentNetworkIPResolution` isn't specified in the connection string, the driver automatically disables TNIR when the data source is a recognized Azure SQL endpoint, when the `Authentication` key is set to any Microsoft Entra ID method (`Active Directory Password`, `Active Directory Integrated`, `Active Directory Interactive`, `Active Directory Service Principal`, `Active Directory Device Code Flow`, `Active Directory Managed Identity`, `Active Directory MSI`, `Active Directory Default`, or `Active Directory Workload Identity`), or when the [`SqlConnection.AccessToken`](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) property is set. For the endpoint suffixes the driver recognizes, see the `TransparentNetworkIPResolution` entry in [SqlConnection.ConnectionString](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring).
@@ -140,7 +145,7 @@ To avoid this behavior, set `MultiSubnetFailover=True` in the connection string:
 MultiSubnetFailover=True
 ```
 
-This recommendation works on every .NET version and covers both Azure SQL and on-premises SQL Server. When `MultiSubnetFailover=True`, the driver ignores `TransparentNetworkIPResolution` and attempts TCP connections to the DNS-resolved IP addresses in parallel, then completes the authentication on the first connection that succeeds. Despite the name, `MultiSubnetFailover` applies to any listener whose DNS name resolves to multiple target IPs, regardless of whether those IPs are in different subnets, and it's safe on stand-alone servers whose DNS resolves to a single IP.
+This recommendation works on every .NET version and covers both Azure SQL and on-premises SQL Server. When `MultiSubnetFailover=True`, the driver ignores `TransparentNetworkIPResolution`, attempts the DNS-resolved IP addresses in parallel, and completes authentication with the first responsive replica. Despite the name, `MultiSubnetFailover` applies to any listener whose DNS name resolves to multiple target IPs, regardless of whether those IPs are in different subnets, and it's safe on stand-alone servers whose DNS resolves to a single IP.
 
 For process-wide control without editing every connection string, use the [Enable MultiSubnetFailover by default](#enable-multisubnetfailover-by-default) AppContext switch.
 
@@ -158,7 +163,7 @@ For more information about setting these properties, see the documentation for [
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
-To prevent a login attempt from waiting indefinitely, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin** to `true` at application startup:
+To prevent a login attempt from waiting indefinitely, you can set the AppContext switch `Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin` to `true` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin", false);
@@ -168,7 +173,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCal
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
-Starting in version 3.0, ReadAsync runs asynchronously. Previous versions run ReadAsync synchronously and block the calling thread on .NET Framework. To control this blocking behavior, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking** to `true` or `false` at application startup:
+Starting in version 3.0, `ReadAsync` runs asynchronously. Previous versions run `ReadAsync` synchronously and block the calling thread on .NET Framework. To control this blocking behavior, set the AppContext switch `Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking` to `true` or `false` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", false);
@@ -178,7 +183,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", fa
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
-Starting in version 3.0, when a rowversion has a value of null, `SqlDataReader` returns a `DBNull` value instead of an empty `byte[]`. To enable the legacy behavior of returning an empty `byte[]`, enable the AppContext switch **Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior** on application startup.
+Starting in version 3.0, when a **rowversion** has a null value, `SqlDataReader` returns a `DBNull` value instead of an empty `byte[]`. To enable the legacy behavior of returning an empty `byte[]`, enable the AppContext switch `Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior` on application startup.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior", true);
@@ -190,7 +195,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavi
 
 (Available starting with version 4.0.1)
 
-When using `Encrypt=false` in the connection string, a security warning is output to the console if the TLS version is 1.2 or lower. This warning can be suppressed by enabling the following AppContext switch on application startup:
+When using `Encrypt=false` in the connection string, the console outputs a security warning if the TLS version is 1.2 or lower. Suppress this warning by enabling the following AppContext switch on application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.SuppressInsecureTLSWarning", true);
@@ -206,6 +211,56 @@ Upon failover, failover partner information provided by the server is preferred 
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.IgnoreServerProvidedFailoverPartner", true);
+```
+
+## Enforce the connection idle timeout
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+Starting in version 7.1.0-preview2, the `Connection Idle Timeout` connection string keyword configures the idle duration, in seconds, after which a pooled connection becomes eligible for eviction (default 300; a value of 0 disables idle expiration). An eligible connection is discarded on a later retrieval or maintenance pass, so the exact timing can vary by pool implementation and maintenance cadence. The keyword is only enforced when the legacy idle-timeout behavior is disabled. With the switch at its default value of `true`, the pool preserves the historical behavior and the keyword has no effect.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseLegacyIdleTimeoutBehavior", false);
+```
+
+## Enable the V2 connection pool
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+Starting in version 6.1, SqlClient includes an alternative, experimental connection pool implementation (V2). The V1 pool remains the default (the switch defaults to `false`). To opt in to the V2 pool, enable the AppContext switch `Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2` when the application starts.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2", true);
+```
+
+## Count pool waits against the connect timeout
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+Starting in version 7.1.0-preview2, time spent waiting for a connection from the pool can count against the caller's `Connect Timeout` budget, so pool waits and the network connection attempt share one overall timeout. When the switch is set to its default value of `false`, pool operations receive a full `Connect Timeout` and the network connection attempt receives a further full budget.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOverallConnectTimeoutForPoolWait", true);
+```
+
+## Revert to legacy failover alternation on login errors
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+Starting in version 7.1.0-preview2, when connecting with failover configured, SqlClient no longer alternates to the failover partner for SQL errors returned during the login phase. To revert to the legacy alternation behavior, enable the AppContext switch `Switch.Microsoft.Data.SqlClient.UseLegacyFailoverAlternationOnLoginSqlErrors` at application startup. The switch defaults to `false`.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseLegacyFailoverAlternationOnLoginSqlErrors", true);
+```
+
+## Honor an explicit zero scale on vartime parameters
+
+[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
+
+By default, SqlClient sends a scale of 7 when you explicitly set the scale to 0 for **datetime2**, **datetimeoffset**, or **time** parameters. In version 6.0 or later, set `Switch.Microsoft.Data.SqlClient.LegacyVarTimeZeroScaleBehaviour` to `false` at application startup to preserve the explicit scale of 0. The switch defaults to `true`.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.LegacyVarTimeZeroScaleBehaviour", false);
 ```
 
 ## Related content

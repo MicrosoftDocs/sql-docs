@@ -349,11 +349,13 @@ Validation runs before the driver opens a connection, so a keyword that other SQ
 | `User ID` | `UID` |
 | `Password` | `PWD` |
 | `Connection Timeout`, `Connect Timeout`, `Timeout`, `Login Timeout` | The `timeout` parameter of `connect()`. For more information, see [Connection timeout](#connection-timeout). |
-| `Application Name`, `APP` | None. The driver sets this value. For more information, see [Reserved keywords](#reserved-keywords). |
+| `Application Name` | None. The driver sets this value and reports `Application Name` as an unknown keyword. |
+| `APP` | None. The driver sets this value and reports `APP` as a reserved keyword. For more information, see [Reserved keywords](#reserved-keywords). |
 | `Pooling`, `Max Pool Size` | None. Configure pooling in code. For more information, see [Connection pooling](connection-pooling.md). |
-| `Workstation ID`, `WSID` | None. |
+| `Workstation ID`, `WSID` | None. Remove the keyword from the connection string. |
+| `MultipleActiveResultSets`, `MARS_Connection` | None. Remove the keyword. To run queries concurrently, use separate connections. For more information, see [Multiple cursors](cursor-management.md#multiple-cursors). |
 
-`APP` and `Driver` report that the keyword is reserved rather than unrecognized, because the driver controls both values.
+For `APP` and `Driver`, the driver reports a reserved keyword error rather than an unknown keyword error, because it controls both values.
 
 ## Related content
 

@@ -388,8 +388,27 @@ Next, download a version of [ONNX Runtime](https://github.com/microsoft/onnxrunt
 
 Download and build [the `tokenizers-cpp` library](https://github.com/mlc-ai/tokenizers-cpp/tree/main) from GitHub. Once the dll is created, place the tokenizer in the `C:\onnx_runtime` directory.
 
+The tokenizer must be compiled as a shared dynamic link library using MSVC, and must export a specific entry point:
+
+```cpp
+#include "tokenizers_cpp.h"     // for example: `tokenizers-cpp\include\tokenizers_cpp.h`
+#include <string>
+#include <vector>
+ 
+extern "C" __declspec(dllexport)
+void LoadBlobJsonAndEncode(
+  const std::string& json_blob, // contents of `tokenizer.json`
+  const std::string& text,      // input text to tokenize
+  std::vector<int>& out_ids     // output token IDs (the embeddings)
+) {
+  // ~~ Implement according to current API of `tokenizers-cpp` ~~
+  // auto tok = tokenizers::Tokenizer::FromBlobJSON(json_blob);
+  // out_ids = tok->Encode(text);
+}
+```
+
 > [!NOTE]  
-> Ensure the created dll is named **tokenizers_cpp.dll**
+> The exact signature of this export may change. Ensure the created dll is named **tokenizers_cpp.dll**
 
 ### Step 5: Download the ONNX model
 

@@ -17,7 +17,7 @@ In this quickstart, you create a Django project, connect it to a SQL Server data
 
 ## Prerequisites
 
-- Python 3.8 and later versions. Django 6.0 and later versions require Python 3.12 and later versions.
+- Python 3.8 and later versions. Django 6.0 and later versions require at least Python 3.12.
 - Microsoft ODBC Driver 17 or 18 for SQL Server. See [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md).
 - A SQL Server instance or Azure SQL Database with a valid login.
 

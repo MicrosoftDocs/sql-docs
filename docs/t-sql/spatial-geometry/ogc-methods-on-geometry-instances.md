@@ -71,7 +71,7 @@ These methods access specific points and curves within a geometry instance.
 | Method | Description |
 | --- | --- |
 | [STStartPoint](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md) | Returns the start point of a geometry instance (for LineString types). |
-| [STEndpoint](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md) | Returns the end point of a geometry instance (for LineString types). |
+| [STEndpoint](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md) | Returns the endpoint of a geometry instance (for LineString types). |
 | [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) | Returns a specified point from a geometry instance. |
 | [STPointOnSurface](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md) | Returns an arbitrary point guaranteed to be within a geometry instance. |
 | [STCurveN &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md) | Returns the specified curve from a geometry instance that's a LineString, CircularString, or CompoundCurve. |

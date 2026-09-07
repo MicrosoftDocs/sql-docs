@@ -21,7 +21,7 @@ Once you have installed Master Data Services (MDS), you may find the trace loggi
 
 ## Background
 
-Master Data Services consists of an ASP.NET web application (Master Data Manager) and a WCF service; both are hosted in IIS and a SQL Server database. Master Data Manager requests and external calls to the web services API end point are handled by a common service layer. The service layer can log each operation request/response, important events, and errors.
+Master Data Services consists of an ASP.NET web application (Master Data Manager) and a WCF service; both are hosted in IIS and a SQL Server database. Master Data Manager requests and external calls to the web services API endpoint are handled by a common service layer. The service layer can log each operation request/response, important events, and errors.
 
 As an administrator with access to files on the IIS web server, you can enable logging by modifying the MDS *Web.config* file.
 

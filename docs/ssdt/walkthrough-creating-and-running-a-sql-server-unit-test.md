@@ -311,7 +311,7 @@ By default, when you press **F5**, you deploy (or publish) the database to a Loc
 
 1. Select the check boxes for all five stored procedures: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**, and **Sales.uspShowOrderDetails**.
 
-1. In **Project** dropdown list, select **Create a new C# test project**.
+1. In the **Project** dropdown list, select **Create a new C# test project**.
 
 1. Accept the default names for the project name and class name, and select **OK**.
 

@@ -32,4 +32,4 @@ This error requires action from the user in order for query to succeed.
   
 ## User action  
 
-Lower the number of logical file paths in a query bellow the limit shown in error.
+Lower the number of logical file paths in a query below the limit shown in error.

@@ -45,7 +45,7 @@ Returns information about all entries in caches in [!INCLUDE [ssNoVersion](../..
 | `memory_object_address` | **varbinary(8)** | Address of the associated memory object. Nullable. |
 | `pages_allocated_count` | **bigint** | **Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)].<br /><br />Number of 8-KB pages to store this cache entry. Not nullable. |
 | `pages_kb` | **bigint** | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions.<br /><br />Amount of memory in kilobytes (KB) used by this cache entry. Not nullable. |
-| `entry_data` | **nvarchar(2048)** | Serialized representation of the cached entry. This information is cache store dependant. Nullable. |
+| `entry_data` | **nvarchar(2048)** | Serialized representation of the cached entry. This information is cache store dependent. Nullable. |
 | `pool_id` | **int** | **Applies to**: [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)] and later versions.<br /><br />Resource pool ID associated with entry. Nullable. |
 | `pdw_node_id` | **int** | **Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]<br /><br />The identifier for the node that this distribution is on. |
 

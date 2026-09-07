@@ -1,6 +1,6 @@
 ---
 title: "Enhance Transactional Replication Performance"
-description: In addition to general performance tips to enhance replication performance in SQL Server, learn about additional techniques for transactional replication.
+description: In addition to general performance tips to enhance replication performance in SQL Server, learn about additional techniques for Transactional Replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -22,18 +22,18 @@ helpviewer_keywords:
   - "Log Reader Agent, performance"
 monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
-# Enhance Transactional Replication Performance
+# Enhance Transactional Replication performance
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  After considering the general performance tips described in [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), consider these additional areas specific to transactional replication.  
+  After considering the general performance tips described in [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), consider these additional areas specific to Transactional Replication.  
   
-## Database Design  
+## Database design  
   
 -   Minimize transaction size in your application design.  
   
-     By default, transactional replication propagates changes according to transaction boundaries. If transactions are smaller, the Distribution agent is less likely to resend a transaction due to network issues. If the agent is required to resend a transaction, the amount of data sent is smaller. 
+     By default, Transactional Replication propagates changes according to transaction boundaries. If you use smaller transactions, the Distribution agent is less likely to resend a transaction due to network issues. If the agent must resend a transaction, the amount of data sent is smaller. 
 
   
-## Distributor Configuration  
+## Distributor configuration  
   
 -   Configure the Distributor on a dedicated server.  
   
@@ -43,37 +43,37 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
      Test replication with a typical load for your system to determine how much space is required to store commands. Ensure the database is large enough to store commands without having to auto-grow frequently. For more information about changing the size of a database, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Publication Design  
+## Publication design  
   
 -   Replicate stored procedure execution when making batch updates to published tables.  
   
-     If you have batch updates that occasionally affect a large number of rows at the Subscriber, you should consider updating the published table using a stored procedure and publish the execution of the stored procedure. Instead of sending an update or delete for every row affected, the Distribution Agent executes the same procedure at the Subscriber with the same parameter values. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+     If you have batch updates that occasionally affect a large number of rows at the Subscriber, consider updating the published table by using a stored procedure and publishing the execution of the stored procedure. Instead of sending an update or delete for every row affected, the Distribution Agent executes the same procedure at the Subscriber with the same parameter values. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 -   Spread articles across multiple publications.  
   
-     If you cannot use the [**-SubscriptionStreams** parameter](#subscriptionstreams), consider creating multiple publications. Spreading articles across these publications allows replication to apply changes in parallel to Subscribers.  
+     If you can't use the [**-SubscriptionStreams** parameter](#subscriptionstreams), consider creating multiple publications. Spreading articles across these publications allows replication to apply changes in parallel to Subscribers.  
   
-## Subscription Considerations  
+## Subscription considerations  
   
--   Use independent agents rather than shared agents if you have multiple publications on the same Publisher (this is the default for the New Publication Wizard).  
+-   Use independent agents rather than shared agents if you have multiple publications on the same Publisher (this option is the default for the New Publication Wizard).  
   
 -   Run agents continuously instead of on frequent schedules.  
   
-     Setting the agents to run continuously rather than creating frequent schedules (such as every minute) improves replication performance, because the agent does not have to start and stop. When you set the Distribution Agent to run continuously, changes are propagated with low latency to the other servers that are connected in the topology. For more information, see:  
+     Setting the agents to run continuously rather than creating frequent schedules (such as every minute) improves replication performance, because the agent doesn't have to start and stop. When you set the Distribution Agent to run continuously, it propagates changes with low latency to the other servers that are connected in the topology. For more information, see:  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-## Distribution Agent and Log Reader Agent Parameters  
-Agent profile parameters are often adjusted to increase throughput of the Log Reader and Distribution Agent with high traffic OLTP systems. 
+## Distribution Agent and Log Reader Agent parameters  
+Adjust agent profile parameters to increase throughput for the Log Reader and Distribution Agent in high-traffic OLTP systems. 
 
 Testing was conducted to determine the best values to improve performance for the Log Reader and Distribution Agent. This testing concluded that workload was a determining factor for which values worked in which situation, and as such, there isn't a single value adjustment that improves performance for every situation. 
 
 The findings: 
-- For a *Log Reader Agent* with workloads of smaller transactions (fewer than 500 commands), a higher value of **ReadBatchSize** may benefit throughput. However, for workloads with large transactions, changing this value will not improve performance. 
-    - When there are multiple Log Reader Agents and multiple Distribution Agents running in parallel on the same server, a higher value of **ReadBatchSize** causes contention on the distribution database. 
-- For the *Distribution Agent*
-    - Increasing **CommitBatchSize** can improve throughput. The trade-off is that, if a failure occurs, the Distribution Agent must roll back and start over to reapply a larger number of transactions. 
-    - Increasing **SubscriptionStreams** value does help in the overall throughput of the Distribution Agent, since multiple connections to the Subscriber apply batches of changes in parallel. However, depending on the number of processors and other metadata conditions (such as primary key, foreign keys, unique constraints, and indexes) the higher value of SubscriptionStreams might actually have an adverse effect. Additionally, if a stream fails to execute or commit, the Distribution Agent falls back to using a single stream to retry the failed batches.
+- For a *Log Reader Agent* with workloads of smaller transactions (fewer than 500 commands), a higher value of **ReadBatchSize** might increase throughput. For workloads with large transactions, changing this value doesn't improve performance. 
+    - When multiple Log Reader Agents and multiple Distribution Agents run in parallel on the same server, a higher value of **ReadBatchSize** causes contention on the distribution database. 
+- For the *Distribution Agent*:
+    - Increasing **CommitBatchSize** can improve throughput. The trade-off is that, if a failure occurs, the Distribution Agent must roll back and start over to reapply a larger number of transactions.
+    - Increasing **SubscriptionStreams** value helps overall throughput of the Distribution Agent, since multiple connections to the Subscriber apply batches of changes in parallel. However, depending on the number of processors and other metadata conditions (such as primary key, foreign keys, unique constraints, and indexes), a higher value of **SubscriptionStreams** might actually have an adverse effect. If a stream fails to execute or commit, the Distribution Agent falls back to using a single stream to retry the failed batches.
 
 
 For more information about this testing, see the blog [Optimizing replication agent profile parameters for better performance](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance).
@@ -110,13 +110,13 @@ The **–MaxCmdsInTran** parameter specifies the maximum number of statements gr
 #### SubscriptionStreams
 - Increase the **–SubscriptionStreams** parameter for the Distribution Agent.  
   
-The **–SubscriptionStreams** parameter can greatly improve aggregate replication throughput. It allows multiple connections to a Subscriber to apply batches of changes in parallel, while maintaining many of the transactional characteristics present when using a single thread. If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  
+The **–SubscriptionStreams** parameter can greatly improve aggregate replication throughput. It allows multiple connections to a Subscriber to apply batches of changes in parallel, while maintaining many of the transactional characteristics present when using a single thread. If one of the connections fails to execute or commit, all connections abort the current batch, and the agent uses a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  
   
-A value for this agent parameter can be specified using the `@subscriptionstreams` of [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+Specify a value for this agent parameter by using the `@subscriptionstreams` parameter of [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
   
-### Blocking Monitor Thread
+### Blocking monitor thread
 
-Distribution Agent maintains a blocking monitor thread that detects blocking between sessions. If the blocking monitor thread detects blocking between the sessions, Distribution Agent switches to use one session to reapply the current batch of commands that could not be applied previously.
+Distribution Agent maintains a blocking monitor thread that detects blocking between sessions. If the blocking monitor thread detects blocking between the sessions, Distribution Agent switches to use one session to reapply the current batch of commands that it couldn't apply previously.
 
 The blocking monitor thread can detect blocking between Distribution Agent sessions. However, the blocking monitor thread cannot detect blocking in the following situations:
 - One of the sessions where blocking occurs is not a Distribution Agent session.
@@ -135,7 +135,7 @@ This example results in a state in which no sessions are executing their command
 > [!Note]
 > By default, the value of the **QueryTimeout** property is 5 minutes.
 
-You may notice the following trends from the Distribution Agent performance counters during this query time-out period: 
+You might notice the following trends from the Distribution Agent performance counters during this query time-out period: 
 
 - The value of the **Dist: Delivered Cmds/sec** performance counter is always 0.
 - The value of the **Dist: Delivered Trans/sec** performance counter is always 0.

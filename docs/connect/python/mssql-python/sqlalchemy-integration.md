@@ -3,7 +3,8 @@ title: Use mssql-python with SQLAlchemy
 description: Learn how to use the mssql-python driver with SQLAlchemy ORM and Core for Microsoft SQL and Azure SQL database access.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -397,7 +398,7 @@ engine = create_engine(
 
 **SQLAlchemy** is commonly used as the database layer for Flask and FastAPI. The mssql-python dialect works with any framework that supports **SQLAlchemy**.
 
-The following snippets show the recommended session-per-request pattern for each framework. They're illustrative fragments that assume the `engine` and `Product` model from the earlier sections, not complete apps. For complete, runnable applications, see the [FastAPI integration](fast-api-integration.md) and [Flask integration](flask-integration.md) articles.
+The following snippets show the recommended session-per-request pattern for each framework. They're illustrative fragments that assume the `engine` and `Product` model from the earlier sections, not complete apps. For complete, runnable applications, see the [FastAPI integration](fastapi-integration.md) and [Flask integration](flask-integration.md) articles.
 
 ### FastAPI example
 
@@ -583,7 +584,7 @@ If you're migrating from `mssql+pyodbc`, the mssql-python dialect is similar bec
 
 | Topic | `mssql+pyodbc` | `mssql+mssqlpython` |
 | --- | --- | --- |
-| ODBC driver installation | Requires separate ODBC driver (for example, ODBC Driver 18 for Microsoft SQL). | Driver is bundled. No separate ODBC driver needed. |
+| ODBC driver installation | Requires separate ODBC driver (for example, ODBC Driver 18 for SQL Server). | Installed automatically as a package dependency. No separate ODBC driver installation needed. |
 | Connection URL | `mssql+pyodbc://user:pass@host/db?driver=ODBC+Driver+18+for+SQL+Server` | `mssql+mssqlpython://user:pass@host/db` |
 | `fast_executemany` | Supported via `create_engine(..., fast_executemany=True)`. | Not applicable. The driver handles batch performance internally. |
 | Availability | Stable, included in **SQLAlchemy** since 1.x. | Pre-release (**SQLAlchemy** 2.1.0b2+). |
@@ -619,7 +620,7 @@ For the latest pre-release dialect status and known issues, check the [mssql-pyt
 
 ### "No module named 'sqlalchemy.dialects.mssql.mssqlpython'"
 
-This error means your installed **SQLAlchemy** version doesn't include the mssql-python dialect. Verify you have 2.1.0b2 or later:
+This error means your installed **SQLAlchemy** version doesn't include the mssql-python dialect. The dialect requires version 2.1.0b2 or later. Install a supported version:
 
 ```bash
 pip install "sqlalchemy>=2.1.0b2"
@@ -647,6 +648,6 @@ If the direct connection works but **SQLAlchemy** doesn't, check for URL encodin
 
 - [Connection strings for mssql-python](connection-strings.md)
 - [Manage connections with mssql-python](connection-management.md)
-- [Use mssql-python with FastAPI](fast-api-integration.md)
+- [Use mssql-python with FastAPI](fastapi-integration.md)
 - [Use mssql-python with Flask](flask-integration.md)
 - [SQLAlchemy MSSQL dialect documentation](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html)

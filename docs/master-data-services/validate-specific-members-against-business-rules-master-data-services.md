@@ -33,9 +33,9 @@ helpviewer_keywords:
   
 ### To apply business rules selectively  
   
-1.  On the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] home page, from the **Model** drop-down list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] home page, from the **Model** dropdown list, select a model.  
   
-2.  From the **Version** drop-down list, select a version.  
+2.  From the **Version** dropdown list, select a version.  
   
 3.  Click **Explorer** tab.  
   

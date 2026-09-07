@@ -70,7 +70,7 @@ After the Elastic SAN is created, follow these steps to configure your SAN:
 1. Under **SAN Management**, select **Volume groups** to open the **Volume groups** pane. 
 1. If a volume group doesn't already exist, use **+ Create**  on the **Volume groups** pane to create a new volume group. If a volume already exists, then modify it, if necessary, because the volume group should: 
     1. Have **CRC Protection** enabled if you're using a Windows virtual machine. 
-    1. Be in the same virtual network and subnet as the Azure VM you intend to use for SQL Server. Use the **Networking** when you create, or edit, a volume group, and then use the dropdown to select **Add an existing virtual network** to open the **Add network** pane. Select the appropriate subscription, virtual network, and subnet that your Azure VM uses from the dropdowns, and then select **Add**.
+    1. Be in the same virtual network and subnet as the Azure VM you intend to use for SQL Server. Use the **Networking** tab when you create or edit a volume group, and then use the dropdown list to select **Add an existing virtual network** to open the **Add network** pane. Select the appropriate subscription, virtual network, and subnet that your Azure VM uses from the dropdown lists, and then select **Add**.
 
 1. Go to the **Volumes** page under **SAN Management** in the Azure portal to create new volumes in the volume group. To follow best practices: 
     1. Create three separate volumes, one for SQL Server data, one for the log, and one for tempdb. 
@@ -87,7 +87,7 @@ To connect the volumes to the virtual machine, follow these steps:
 
    :::image type="content" source="media/storage-configuration-azure-elastic-san/connect-to-san-volumes.png" alt-text="Screenshot of the volumes page for the elastic SAN in the Azure portal with connect selected.":::
 
-1. If you haven't already done so, configure network access so that the volume group is in the same virtual network and subnet as the Azure VM you intend to use for SQL Server. If this is already done, skip to the next step. Otherwise, use the **Networking** dropdown to select **Add an existing virtual network** to open the **Add network** pane. Select the appropriate subscription, virtual network, and subnet that your Azure VM uses from the dropdowns, and then select **Add**.
+1. If you haven't already done so, configure network access so that the volume group is in the same virtual network and subnet as the Azure VM you intend to use for SQL Server. If this is already done, skip to the next step. Otherwise, use the **Networking** dropdown list to select **Add an existing virtual network** to open the **Add network** pane. Select the appropriate subscription, virtual network, and subnet that your Azure VM uses from the dropdown lists, and then select **Add**.
 1. Choose the appropriate operating system and then copy the PowerShell script provided under the **Connect to target(s)** step. Save this script for a later step. 
 1. Connect to the Azure virtual using your preferred method, such as [Bastion](/azure/bastion/connect-vm-native-client-windows). 
 

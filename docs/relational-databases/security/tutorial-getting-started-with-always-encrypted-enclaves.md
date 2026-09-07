@@ -185,7 +185,7 @@ In this step, you'll create a column master key and a column encryption key that
 
     1. Right-click **Always Encrypted Keys** and select **New Column Encryption Key**.
     2. Enter a name for the new column encryption key: **CEK1**.
-    3. In the **Column master key** dropdown, select the column master key you created in the previous steps.
+    3. In the **Column master key** dropdown list, select the column master key you created in the previous steps.
     4. Select **OK**.
 
 ## Step 5: Encrypt some columns in place

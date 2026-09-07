@@ -17,7 +17,7 @@ The Conversion page of the **Project Settings** dialog box contains settings tha
   
 The Conversion pane is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   
--   Use the **Default Project Settings** dialog box to set configuration options for all projects. To access the conversion settings, on the **Tools** menu, select **Default Project Settings**, select migration project type for which settings are required to be viewed /changed from **Migration Target Version** drop down, click **General** at the bottom of the left pane, and then select **Conversion**.  
+-   Use the **Default Project Settings** dialog box to set configuration options for all projects. To access the conversion settings, on the **Tools** menu, select **Default Project Settings**, select migration project type for which settings are required to be viewed /changed from **Migration Target Version** dropdown list, click **General** at the bottom of the left pane, and then select **Conversion**.  
   
 -   To specify settings for the current project, on the **Tools** menu click **Project Settings**, then click **General** at the bottom of the left pane, and then click **Conversion**.  
   
@@ -91,7 +91,7 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
 |-|-|  
 |**Character to Numeric conversion**|Specifies how to handle implicit and explicit conversion from Character data type to numeric data types.<br /><br />**Default Mode**:   Optimistic<br /><br />**Optimistic Mode**:  Optimistic<br /><br />**Full Mode**:   Precise|  
 |**Control UNSIGNED numeric values**|Control assigning values to UNSIGNED numeric variables and parameters.<br /><br />**Default Mode**:   No<br /><br />**Optimistic Mode**:  No<br /><br />**Full Mode**:   Yes|  
-|**Control UNSIGNED Subtraction**|Modify negative values inserted into table columns of UNSIGNED datatype.<br /><br />**Default Mode**:   Convert 'as-is'<br /><br />**Optimistic Mode**:  Convert 'as-is'<br /><br />**Full Mode**:   Mark With a Warning|  
+|**Control UNSIGNED Subtraction**|Modify negative values inserted into table columns of UNSIGNED data type.<br /><br />**Default Mode**:   Convert 'as-is'<br /><br />**Optimistic Mode**:  Convert 'as-is'<br /><br />**Full Mode**:   Mark With a Warning|  
 |**Conversion to and from Binary data type**|Specifies how to handle implicit and explicit conversion from Binary data type.<br /><br />**Default Mode**:   Optimistic<br /><br />**Optimistic Mode**:  Optimistic<br /><br />**Full Mode**:   Precise|  
 |**Conversion to Date/Time data type**|Specifies how to handle implicit and explicit conversion to Date/Time data type.<br /><br />**Default Mode**:   Emulate MySQL format<br /><br />**Optimistic Mode**:  Use SQL Server format<br /><br />**Full Mode**:   Emulate MySQL format|  
 |**Numeric Literals With Precision Exceeding 38**|Specifies how to convert numeric literals with precision exceeding 38.<br /><br />**Default Mode**:   Round if Possible<br /><br />**Optimistic Mode**:  Round if Possible<br /><br />**Full Mode**:   Round if Possible|  

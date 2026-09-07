@@ -3,6 +3,7 @@ title: Retrieve Data with mssql-python
 description: Learn how to fetch query results using fetchone, fetchmany, fetchall, and row iteration with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/01/2026
 ms.service: sql
 ms.subservice: connectivity

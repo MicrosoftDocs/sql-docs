@@ -3,7 +3,8 @@ title: Use mssql-python with Apache Arrow
 description: Learn how to use Apache Arrow fetch methods in mssql-python for high-performance columnar data retrieval from Microsoft SQL and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -73,7 +74,7 @@ while True:
 
 ### Using `cursor.arrow_reader(batch_size=8192)`
 
-Return a `pyarrow.RecordBatchReader` that yields `RecordBatch` objects until the result set is exhausted. This method is the most memory-efficient option for large result sets.
+Return a reader that yields `RecordBatch` objects until the result set is exhausted. This method is the most memory-efficient option for large result sets.
 
 ```python
 cursor.execute("SELECT * FROM Production.TransactionHistory")
@@ -83,6 +84,28 @@ for batch in reader:
     # Process streaming batches without loading all data
     print(f"Batch: {batch.num_rows} rows")
 ```
+
+The reader streams results over the connection, so while an unread reader is open, that connection can't start another statement. Attempting one fails with a `Connection is busy with results for another command` error.
+
+Three things release the reader: iterating it to the end, closing the parent cursor, or closing the reader. If you stop reading before the result set is exhausted and keep using the cursor, close the reader. Closing it also resets the parent cursor, so you can run another statement on it.
+
+Use the reader as a context manager so that it closes even if an exception interrupts the loop:
+
+```python
+cursor.execute("SELECT * FROM Production.TransactionHistory")
+
+rows_seen = 0
+with cursor.arrow_reader(batch_size=50000) as reader:
+    for batch in reader:
+        rows_seen += batch.num_rows
+        if rows_seen >= 100000:
+            break
+
+# The reader is closed here, and the cursor is ready for the next statement.
+cursor.execute("SELECT COUNT(*) FROM Production.TransactionHistory")
+```
+
+You can also call `reader.close()` directly. Calling it more than once is safe, and the `reader.closed` property reports whether you closed it.
 
 ## Common patterns
 
@@ -165,6 +188,105 @@ pcsv.write_csv(table, "products.csv")
 with pa.ipc.new_file("products.arrow", table.schema) as writer:
     writer.write_table(table)
 ```
+
+## Load Arrow data into SQL Server
+
+The `cursor.bulkcopy_arrow()` method writes Arrow data to a table without converting it to Python row tuples first. The `source` argument accepts any of the following:
+
+- A `pyarrow.Table`.
+
+- A `pyarrow.RecordBatch`.
+
+- A `pyarrow.RecordBatchReader`, including the reader returned by `cursor.arrow_reader()`.
+
+- Any object that exposes the Arrow C data interface through `__arrow_c_stream__` or `__arrow_c_array__`.
+
+```python
+import mssql_python
+import pyarrow as pa
+
+conn = mssql_python.connect(connection_string)
+
+# bulkcopy_arrow() opens its own connection, so commit the table creation first.
+conn.autocommit = True
+cursor = conn.cursor()
+
+cursor.execute("""
+    CREATE TABLE ##SensorArchive (
+        SensorID int NOT NULL,
+        Reading float NULL,
+        Location nvarchar(50) NULL
+    )
+""")
+
+table = pa.table({
+    "SensorID": pa.array([1, 2, 3], type=pa.int32()),
+    "Reading": pa.array([20.5, None, 22.1], type=pa.float64()),
+    "Location": pa.array(["Plant A", "Plant B", None], type=pa.string()),
+})
+
+result = cursor.bulkcopy_arrow("##SensorArchive", table)
+print(f"Copied {result['rows_copied']} rows in {result['batch_count']} batches")
+```
+
+Arrow null values are written as SQL NULL values.
+
+### Stream a result set into another table
+
+Because `bulkcopy_arrow()` accepts a reader, you can move a large result set between tables without materializing it in memory:
+
+```python
+cursor.execute("""
+    CREATE TABLE ##ProductArchive (
+        ProductID int NOT NULL,
+        Name nvarchar(50) NOT NULL,
+        ListPrice money NOT NULL
+    )
+""")
+
+cursor.execute("SELECT ProductID, Name, ListPrice FROM Production.Product")
+
+with cursor.arrow_reader(batch_size=100000) as reader:
+    result = cursor.bulkcopy_arrow("##ProductArchive", reader, batch_size=100000)
+
+print(f"Copied {result['rows_copied']} rows")
+```
+
+### Match Arrow types to the destination columns
+
+The Arrow writer requires each Arrow column type to be compatible with its destination SQL column type. It doesn't convert between families, so a mismatch raises `ValueError` before any rows are written:
+
+```output
+ValueError: Cannot map Arrow column 'ListPrice' (Float64) to SQL column 'ListPrice'
+(Money): Usage Error: type combination is not supported by the Arrow row-major writer
+```
+
+Use the mappings in [Data type mappings](#data-type-mappings) in reverse to choose the Arrow type. **money**, **decimal**, and **numeric** columns need `decimal128`, not `float64`. Data read back with `cursor.arrow()` already carries the correct types, so a table read from SQL Server loads into a matching table without conversion.
+
+### Map columns by name
+
+When the Arrow column order doesn't match the destination table, pass `column_mappings` with the destination column names in Arrow column order:
+
+```python
+from decimal import Decimal
+
+table = pa.table({
+    "Name": pa.array(["Widget"], type=pa.string()),
+    "ProductID": pa.array([9001], type=pa.int32()),
+    "ListPrice": pa.array([Decimal("12.34")], type=pa.decimal128(19, 4)),
+})
+
+cursor.bulkcopy_arrow(
+    "##ProductArchive",
+    table,
+    column_mappings=["Name", "ProductID", "ListPrice"],
+)
+```
+
+The method accepts the same options as `cursor.bulkcopy()`, including `batch_size`, `timeout`, `keep_identity`, `table_lock`, and `keep_nulls`. For more information about those options, see [Bulk copy](bulk-copy.md).
+
+> [!NOTE]
+> Passing an Arrow source to `cursor.bulkcopy()` raises `TypeError` and directs you to `cursor.bulkcopy_arrow()`.
 
 ## Data type mappings
 

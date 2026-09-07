@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
     -   For a merge publication, click **Add**, and then click **Add Filter**.  
   
-2.  In the **Add Filter** dialog box, select a table to filter from the drop-down list box.  
+2.  In the **Add Filter** dialog box, select a table to filter from the dropdown list.  
   
 3.  Create a filter statement in the **Filter statement** text area. You can type directly in the text area, and you can also drag and drop columns from the **Columns** list box.  
   

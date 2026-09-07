@@ -40,7 +40,7 @@ To use a shared data source, you browse to a report server and select one. Usual
   
 2.  Select **Browse**. The **Select Data Source** dialog box opens.  
   
-3.  From the **Look in** drop-down list, select **Recent Sites and Servers**. In the data source pane, select the URL for your server, and then choose **Open**.  
+3.  From the **Look in** dropdown list, select **Recent Sites and Servers**. In the data source pane, select the URL for your server, and then choose **Open**.  
   
     The list of data sources or models appears.  
   

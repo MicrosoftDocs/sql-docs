@@ -26,7 +26,7 @@ To request a quota increase, follow these steps:
 
 1. Go to the [New support request](https://portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview) page in the Azure portal by following the steps to [Open a support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 1. Select **Create a support request** to open the **Support + troubleshooting** pane.
-1. In the **Support + troubleshooting** pane, search for `quota`. Under **Which service are you having an issue with?**, select **None of the above** and then choose **Service and subscription limits (quotas)** from the **Select a service** drop-down menu. Select **Next**.
+1. In the **Support + troubleshooting** pane, search for `quota`. Under **Which service are you having an issue with?**, select **None of the above** and then choose **Service and subscription limits (quotas)** from the **Select a service** dropdown list. Select **Next**.
 
    :::image type="content" source="media/quota-increase-request/support-troubleshooting-quota-search.png" alt-text="Screenshot from the Azure portal showing the Support + troubleshooting pane. Search for quota, select None of the above, and then choose Databases / SQL Database or Databases / SQL Managed Instance.":::
 
@@ -36,7 +36,7 @@ To request a quota increase, follow these steps:
 1. Review details and then select **Next: Support method**.
 1. For **Support Method**, select the desired severity, options, and contact method. Select **Next: Add additional details**.
 1. For **Provide details for this request**, select **Enter details**.
-1. On the **Quota details** page, select a **Region** from the drop-down menu and then provide the new desired quota limit.
+1. On the **Quota details** page, select a **Region** from the dropdown list and then provide the new desired quota limit.
 1. Provide the requested **New quota** information. For more information, see [Azure quotas](https://aka.ms/quotalimits).
 1. Select **Save and continue**.
 1. In the **Support + troubleshooting** pane, select **Next: add contact details**.
@@ -90,7 +90,7 @@ Consumption is calculated in vCores, regardless of your [purchasing model](purch
 To request region access, follow these steps: 
 
 1. Select the **Region access** quota type on the **Quota details** window.
-1. Use the **Location** dropdown to select the Azure region where you want access. The quota is per subscription in each region.
+1. Use the **Location** dropdown list to select the Azure region where you want access. The quota is per subscription in each region.
 1. Enter the **Expected Consumption** in vCores. Then select **Save and continue** to save your changes and go back to the **New support request** page. 
 
 > [!NOTE]
@@ -105,7 +105,7 @@ Use *Zone Redundant Access (Availability Zones)* to request [zone redundant stor
 To request zone redundant access, follow these steps: 
 
 1. Select the **Zone Redundant Access (Availability Zones)** quota type on the **Quota details** window. 
-1. Use the **Location** dropdown to select the Azure region where you want to use availability zones. 
+1. Use the **Location** dropdown list to select the Azure region where you want to use availability zones. 
 1. Enter the **Expected Consumption** in vCores. Then select **Save and continue** to save your changes and navigate back to the **New support request** page. 
 
 > [!NOTE]

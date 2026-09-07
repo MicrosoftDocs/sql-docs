@@ -99,22 +99,22 @@ For step-by-step instructions about how to start [!INCLUDE [ssNoVersion](../../i
    `Sqlcmd: Error: Microsoft ODBC Driver X for SQL Server : Login failed for user 'CONTOSO\BobD'. Reason: Server is in single user mode. Only one administrator can connect at this time.`
 
 1. **Mixed Mode (optional):** If your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance is running in mixed authentication mode, you can also:
-    1. Grant the **sysadmin** role membership to a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] login. Execute code such as the following to create a new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] authentication login that is a member of the **sysadmin** fixed server role. Replace `<strong_password>` with a strong password of your choice.
+    1. Grant the **sysadmin** role membership to a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] login. Execute code such as the following to create a new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] authentication login that is a member of the **sysadmin** fixed server role. Replace `<password>` with a strong password of your choice.
 
        If you have a default instance, use the name of the server.
 
        ```powershell
-       $strong_password = "<strong_password>"
-       sqlcmd.exe -E -S $sql_server_instance -Q "CREATE LOGIN TempLogin WITH PASSWORD = '$strong_password'; ALTER SERVER ROLE sysadmin ADD MEMBER TempLogin; "
+       $login_password = "<password>"
+       sqlcmd.exe -E -S $sql_server_instance -Q "CREATE LOGIN TempLogin WITH PASSWORD = '$login_password'; ALTER SERVER ROLE sysadmin ADD MEMBER TempLogin; "
        ```
 
-    1. Also, if your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance is running in mixed authentication mode and you want to reset the password of an enabled `sa` account. Change the password of the sa account with the following syntax. Be sure to replace `<strong_password>` with a strong password of your choice:
+    1. Also, if your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance is running in mixed authentication mode and you want to reset the password of an enabled `sa` account. Change the password of the sa account with the following syntax. Replace `<password>` with a strong password:
 
        If you have a default instance, use the name of the server.
 
        ```powershell
-       $strong_password = "<strong_password>"
-       sqlcmd.exe -E -S $sql_server_instance -Q "ALTER LOGIN sa WITH PASSWORD = $strong_password; "
+       $sa_password = "<password>"
+       sqlcmd.exe -E -S $sql_server_instance -Q "ALTER LOGIN sa WITH PASSWORD = $sa_password; "
        ```
 
 1. Stop and restart your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance in multi-user mode
@@ -166,21 +166,21 @@ Perform these instructions while logged in to Windows as a member of the local a
    1. If your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running in mixed authentication mode, connect with a Query Window using Windows Authentication (which includes your Administrator credentials). Execute code such as the following to create a new [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication login that is a member of the **sysadmin** fixed server role.
 
       ```sql
-      CREATE LOGIN TempLogin WITH PASSWORD = '<strong_password>';
+      CREATE LOGIN TempLogin WITH PASSWORD = '<password>';
       ALTER SERVER ROLE sysadmin ADD MEMBER TempLogin;
       ```
 
       > [!WARNING]  
-      > Replace <strong_password> with a strong password.
+      > Replace `<password>` with a strong password.
 
    1. If your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running in mixed authentication mode and you want to reset the password of the `sa` account, connect with a Query Window using Windows Authentication (which includes your Administrator credentials). Change the password of the `sa` account with the following syntax.
 
       ```sql
-      ALTER LOGIN sa WITH PASSWORD = '<strong_password>';
+      ALTER LOGIN sa WITH PASSWORD = '<password>';
       ```
 
       > [!WARNING]  
-      > Replace <strong_password> with a strong password.
+      > Replace `<password>` with a strong password.
 
 1. Close [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)].
 

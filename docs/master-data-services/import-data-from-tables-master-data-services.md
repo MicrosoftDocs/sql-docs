@@ -58,7 +58,7 @@ ms.custom:
   
     -   Use the **Integration Management** functional area of Master Data Management.  
   
-         On the **Staging Batches** page, select the model to which you're adding data to, in the drop-down list, and then click **Start Batches**. The status of the batch processing is indicated in the **Status** field. For more information about the statuses, see [Import Statuses &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md).  
+         On the **Staging Batches** page, in the dropdown list, select the model to which you're adding data, and then click **Start Batches**. The status of the batch processing is indicated in the **Status** field. For more information about the statuses, see [Import Statuses &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md).  
   
          ![Staging Batches Page in Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Staging Batches Page in Master Data Manager")  
   

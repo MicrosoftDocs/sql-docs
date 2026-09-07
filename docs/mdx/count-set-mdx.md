@@ -52,7 +52,7 @@ Count(DrilldownLevel (
    [Product].[Product].[Product]))  
 ```  
   
- The following example returns those resellers with declining sales compared to the previous calendar quarter, by using the **Count** function in conjunction with the **Filter** function and a number of other functions. This query uses the **Aggregate** function to support the selection of multiple geography members, such as for selection from within a drop-down list in a client application.  
+ The following example returns those resellers with declining sales compared to the previous calendar quarter, by using the **Count** function in conjunction with the **Filter** function and a number of other functions. This query uses the **Aggregate** function to support the selection of multiple geography members, such as for selection from within a dropdown list in a client application.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

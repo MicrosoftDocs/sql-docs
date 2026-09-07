@@ -183,7 +183,7 @@ f1_keywords:
   
  To configure query parameter values for a shared dataset, in dataset design mode, browse to and open a shared dataset from the report server, and set options on the Dataset Properties Dialog Box, Parameters  page. For more information, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
- For some multidimensional data sources, such as [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the graphical query designer enables you to specify query filters and select an option to create a corresponding query parameter. When you select the parameter option, the data extension automatically creates a separate report dataset to provide available values for a drop-down list for that parameter. By default, these hidden datasets do not appear in the Report Data pane.  
+ For some multidimensional data sources, such as [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the graphical query designer enables you to specify query filters and select an option to create a corresponding query parameter. When you select the parameter option, the data extension automatically creates a separate report dataset to provide available values for a dropdown list for that parameter. By default, these hidden datasets do not appear in the Report Data pane.  
   
  Report parameters that are linked to query parameters help filter data before the data is returned from the external data source. You can also filter data in the report by creating filters that are part of the report definition. For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -200,7 +200,7 @@ f1_keywords:
   
 -   You can link more than one data region to a dataset and provide multiple views of the same data. For more information, see [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
--   You can use datasets to provide a drop-down list of available values or default values for a report parameter. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+-   You can use datasets to provide a dropdown list of available values or default values for a report parameter. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 -   You can link related data from multiple datasets by using parameters with drillthrough reports or subreports. For example, a sales report can show summary data for all stores, and a drillthrough link can specify the store identifier as a parameter to a report with a dataset query that retrieves the individual sales for the specified store. For more information, see [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) and [Subreports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   

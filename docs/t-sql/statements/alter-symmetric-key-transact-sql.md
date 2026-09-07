@@ -91,17 +91,17 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  Requires ALTER permission on the symmetric key. If adding encryption by a certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. If dropping encryption by a certificate or asymmetric key, requires CONTROL permission on the certificate or asymmetric key.  
   
 ## Examples  
- The following example changes the encryption method that is used to protect a symmetric key. The symmetric key `JanainaKey043` is encrypted using certificate `Shipping04` when the key was created. Because the key can never be stored unencrypted, in this example, encryption is added by password, and then encryption is removed by certificate.  
+ The following example changes the encryption method that is used to protect a symmetric key. The symmetric key `JanainaKey043` is encrypted using certificate `Shipping04` when the key was created. Because the key can never be stored unencrypted, in this example, encryption is added by password, and then encryption is removed by certificate. Replace each `<password>` occurrence with a strong password.
   
 ```sql  
 CREATE SYMMETRIC KEY JanainaKey043 WITH ALGORITHM = AES_256   
     ENCRYPTION BY CERTIFICATE Shipping04;  
 -- Open the key.   
 OPEN SYMMETRIC KEY JanainaKey043 DECRYPTION BY CERTIFICATE Shipping04  
-    WITH PASSWORD = '<enterStrongPasswordHere>';   
+    WITH PASSWORD = '<password>';
 -- First, encrypt the key with a password.  
 ALTER SYMMETRIC KEY JanainaKey043   
-    ADD ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';  
+    ADD ENCRYPTION BY PASSWORD = '<password>';
 -- Now remove encryption by the certificate.  
 ALTER SYMMETRIC KEY JanainaKey043   
     DROP ENCRYPTION BY CERTIFICATE Shipping04;  

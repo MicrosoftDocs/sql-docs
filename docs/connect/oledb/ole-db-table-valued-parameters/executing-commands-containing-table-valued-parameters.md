@@ -3,7 +3,7 @@ title: "Executing Commands Containing Table-Valued Parameters"
 description: Learn about specifying parameter types and binding parameter data in executing a command with table-valued parameters in OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

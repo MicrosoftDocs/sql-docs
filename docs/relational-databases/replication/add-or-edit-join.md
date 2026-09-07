@@ -25,14 +25,14 @@ f1_keywords:
  Join filters typically follow the primary key/foreign key relationships defined for the tables to which they are applied, but they are not limited strictly to primary key/foreign key relationships. The join filter can be based on any logic that compares related data in two article tables.  
   
 > [!IMPORTANT]  
->  Join Filters can involve an unlimited number of tables, but filters with a large number of tables can impact performance during merge processing. If you are generating join filters of five or more tables, consider other solutions: do not filter tables that are small, not subject to change, or are primarily lookup tables. Use join filters only between tables that must be partitioned among Subscribers.  
+>  Join Filters can involve an unlimited number of tables, but filters with a large number of tables can affect performance during merge processing. If you are generating join filters of five or more tables, consider other solutions: do not filter tables that are small, not subject to change, or are primarily lookup tables. Use join filters only between tables that must be partitioned among Subscribers.  
   
 ## Options  
  This dialog box involves a three-step process to create a join filter between two tables. Creating more than one join filter requires more than one pass through the dialog box.  
   
 1.  **Verify filtered table and select the joined table**  
   
-    -   If you are adding a new join, verify that the table in the **Filtered table** text box is correct (if it is not correct, click **Cancel**, select the correct table on the **Filter Table Rows** page, and click **Add Join** to return to this dialog box). Then select a table from the **Joined table** drop-down list box.  
+    -   If you are adding a new join, verify that the table in the **Filtered table** text box is correct (if it is not correct, click **Cancel**, select the correct table on the **Filter Table Rows** page, and click **Add Join** to return to this dialog box). Then select a table from the **Joined table** dropdown list.  
   
     -   If you are editing an existing join, the table names will be specified already and cannot be changed. To change the tables involved in the join, you must delete the existing join filter on the **Filter Table Rows** page and create a new join between different tables.  
   
@@ -40,7 +40,7 @@ f1_keywords:
   
     -   If you are adding a new join, select either **Use the builder to create the statement** or **Write the join statement manually**. If you begin writing the join manually, you cannot use the builder.  
   
-         If you select to use the builder, use the columns in the grid (**Conjunction**, **Filtered table column**, **Operator**, and **Joined table column**) to build a join statement. Each column in the grid contains a drop-down list box, allowing you to select two columns and an operator (**=**, **<>**, **<=**, **\<**, **>=**, **>**, **like**). The results are displayed in the **Preview** text area. If the join involves more than one pair of columns, select a conjunction (**AND** or **OR**) from the **Conjunction** column, and then enter two more columns and another operator.  
+         If you select to use the builder, use the columns in the grid (**Conjunction**, **Filtered table column**, **Operator**, and **Joined table column**) to build a join statement. Each column in the grid contains a dropdown list, allowing you to select two columns and an operator (**=**, **<>**, **<=**, **\<**, **>=**, **>**, **like**). The results are displayed in the **Preview** text area. If the join involves more than one pair of columns, select a conjunction (**AND** or **OR**) from the **Conjunction** column, and then enter two more columns and another operator.  
   
          If you select to write the statement manually, write the join statement in the **Join statement** text area. Use the **Filtered table columns** list box and **Joined table columns** list box to drag and drop columns to the **Join statement** text area.  
   

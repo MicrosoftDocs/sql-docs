@@ -3,7 +3,7 @@ title: Connection Pooling in mssql-django
 description: Configure and manage connection pooling behavior for the mssql-django Django database backend.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity

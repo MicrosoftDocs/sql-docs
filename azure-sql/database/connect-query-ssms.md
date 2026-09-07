@@ -86,7 +86,7 @@ In SQL Server Management Studio (SSMS), connect to your database.
 
 
 1. Select the **Connection Properties** tab in the **Connect to Server** dialog box. 
-1. In the **Connect to database** dropdown list menu, select **mySampleDatabase**. Completing the quickstart in the [Prerequisites section](#prerequisites) creates an AdventureWorksLT database named mySampleDatabase. If your working copy of the AdventureWorks database has a different name than mySampleDatabase, then select it instead.
+1. In the **Connect to database** dropdown list, select **mySampleDatabase**. Completing the quickstart in the [Prerequisites section](#prerequisites) creates an AdventureWorksLT database named mySampleDatabase. If your working copy of the AdventureWorks database has a different name than mySampleDatabase, then select it instead.
 
    :::image type="content" source="media/connect-query-ssms/options-connect-to-db.png" alt-text="Screenshot of connect to db on server." lightbox="media/connect-query-ssms/options-connect-to-db.png":::
 

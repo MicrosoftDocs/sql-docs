@@ -108,7 +108,7 @@ The following example creates the credential called `AlterEgo`. The credential c
 
 ```sql
 CREATE CREDENTIAL AlterEgo WITH IDENTITY = 'Mary5',
-    SECRET = '<EnterStrongPasswordHere>';
+    SECRET = '<password>';
 GO
 ```
 
@@ -118,7 +118,7 @@ The following example uses a previously created account called `User1OnEKM` on a
 
 ```sql
 CREATE CREDENTIAL CredentialForEKM
-    WITH IDENTITY='User1OnEKM', SECRET='<EnterStrongPasswordHere>'
+    WITH IDENTITY='User1OnEKM', SECRET='<password>'
     FOR CRYPTOGRAPHIC PROVIDER MyEKMProvider;
 GO
 

@@ -245,7 +245,7 @@ Review affected objects section in Azure Migrate to see all objects using BEGIN 
 
 Alternatively, migrate to SQL Server on Azure VMs.
 
-## <a id="MIHomogeneousMSDTCTransactSQL"></a> Homogenous MS DTC
+## <a id="MIHomogeneousMSDTCTransactSQL"></a> Homogeneous MS DTC
 
 **Title: BEGIN DISTRIBUTED TRANSACTION is supported across multiple servers for Azure SQL Managed Instance.**  
 **Category**: Issue

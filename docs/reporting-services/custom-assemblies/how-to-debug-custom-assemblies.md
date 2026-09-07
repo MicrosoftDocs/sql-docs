@@ -31,7 +31,7 @@ helpviewer_keywords:
   
      The **Solution Property Pages** dialog box opens.  
   
-5.  In the left pane, expand **Common Properties** if necessary, and select **Project Dependencies**. Select the report project from the **Project** drop-down list. Select your assembly project in the **Depends On** list.  
+5.  In the left pane, expand **Common Properties** if necessary, and select **Project Dependencies**. Select the report project from the **Project** dropdown list. Select your assembly project in the **Depends On** list.  
   
 6.  Select **OK** to save the changes, and close the **Property Pages** dialog.  
   

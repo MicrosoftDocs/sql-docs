@@ -32,7 +32,7 @@ helpviewer_keywords:
   
 3.  Verify that **Embedded connection** is selected.  
   
-4.  From the **Type** drop-down list, select **Microsoft SQL Server Analysis Services**.  
+4.  From the **Type** dropdown list, select **Microsoft SQL Server Analysis Services**.  
   
 5.  Specify a connection string that works with your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source.  
   

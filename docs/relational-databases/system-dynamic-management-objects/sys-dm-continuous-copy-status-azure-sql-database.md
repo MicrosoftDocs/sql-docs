@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current"
 # sys.dm_continuous_copy_status (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-This view has been superseded by [sys.dm_geo_replication_link_status](sys-dm-geo-replication-link-status-azure-sql-database.md) and is preserved for backwards compatibility.
+This view has been superseded by [sys.dm_geo_replication_link_status](sys-dm-geo-replication-link-status-azure-sql-database.md) and is preserved for backward compatibility.
 
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  

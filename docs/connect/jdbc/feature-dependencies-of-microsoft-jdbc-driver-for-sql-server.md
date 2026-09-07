@@ -150,7 +150,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 > [!NOTE]
 > With 6.2.2 and 6.4.0 driver versions, the azure-keyvault-java dependency had been updated to version 1.0.0. However, the new version was not compatible with the previous version (0.9.7) and breaks the existing implementation in the driver. The new implementation in the driver required API changes, which in turn breaks client programs that use the Azure Key Vault Provider.
 >
-> This problem is resolved with latest driver version(s) (7.0.0 onwards). The removed constructor that used the authentication callback mechanism is added back to the Azure Key Vault Provider for backward compatibility.
+> This problem is resolved with latest driver version(s) (7.0.0 onward). The removed constructor that used the authentication callback mechanism is added back to the Azure Key Vault Provider for backward compatibility.
 
 <a name='work-with-azure-active-directory-authentication'></a>
 

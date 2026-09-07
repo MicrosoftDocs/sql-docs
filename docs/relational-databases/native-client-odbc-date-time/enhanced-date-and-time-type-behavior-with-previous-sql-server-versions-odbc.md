@@ -53,7 +53,7 @@ helpviewer_keywords:
   
 -   Using a new type to gain additional fractional seconds precision or accuracy.  
   
--   Switching to datetime2 because this is the preferred date and time datatype.  
+-   Switching to datetime2 because this is the preferred date and time data type.  
   
 ### Column Metadata Returned by SQLColumns, SQLProcedureColumns, and SQLSpecialColumns  
  The following column values are returned for date/time types:  

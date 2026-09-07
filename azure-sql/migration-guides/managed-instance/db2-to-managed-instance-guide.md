@@ -39,7 +39,7 @@ To create an assessment, follow these steps:
 
 1. Open [SSMA for Db2](https://www.microsoft.com/download/details.aspx?id=54254). 
 1. Select **File** > **New Project**. 
-1. Provide a project name and a location to save your project. Then select Azure SQL Managed Instance as the migration target from the drop-down list, and select **OK**.
+1. Provide a project name and a location to save your project. Then select Azure SQL Managed Instance as the migration target from the dropdown list, and select **OK**.
 
    :::image type="content" source="media/db2-to-managed-instance-guide/new-project.png" alt-text="Screenshot that shows project details to specify.":::
 
@@ -79,7 +79,7 @@ To convert the schema, follow these steps:
 1. (Optional) Add dynamic or ad hoc queries to statements. Right-click the node, and then choose **Add statements**. 
 1. Select **Connect to Azure SQL Managed Instance**. 
     1. Enter connection details to connect to Azure SQL Managed Instance. 
-    1. Choose your target database from the drop-down list, or provide a new name, in which case a database will be created on the target server. 
+    1. Choose your target database from the dropdown list, or provide a new name, in which case a database will be created on the target server. 
     1. Provide authentication details. 
     1. Select **Connect**.
 

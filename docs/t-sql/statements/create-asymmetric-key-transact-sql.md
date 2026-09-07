@@ -133,7 +133,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
     WITH ALGORITHM = RSA_2048   
-    ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';   
+    ENCRYPTION BY PASSWORD = '<password>';
 GO  
 ```  
   

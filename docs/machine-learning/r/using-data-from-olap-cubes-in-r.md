@@ -80,7 +80,7 @@ However, MDX queries are an inefficient way to retrieve data from a tabular mode
 
 ### How to determine whether an instance contains tabular or multidimensional models
 
-A single Analysis Services instance can contain only one type of model, though it can contain multiple models. The reason is that there are fundamental differences between tabular models and multidimensional models that control the way data is stored and processed. For example, tabular models are stored in memory and leverage columnstore indexes to perform very fast calculations. In multidimensional models, data is stored on disk and aggregations are defined in advance and retrieved by using MDX queries.
+A single Analysis Services instance can contain only one type of model, though it can contain multiple models. The reason is that there are fundamental differences between tabular models and multidimensional models that control the way data is stored and processed. For example, tabular models are stored in memory and use columnstore indexes to perform very fast calculations. In multidimensional models, data is stored on disk and aggregations are defined in advance and retrieved by using MDX queries.
 
 If you connect to Analysis Services using a client such as SQL Server Management Studio, you can tell at a glance which model type is supported, by looking at the icon for the database.
 

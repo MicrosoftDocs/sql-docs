@@ -3,7 +3,8 @@ title: "go-mssqldb Support and Lifecycle"
 description: "Go version support, SQL Server version compatibility, and support lifecycle for the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 06/23/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -19,6 +20,7 @@ The `go-mssqldb` driver is tested against the two most recent stable Go releases
 
 | Driver version | Minimum Go version |
 | --- | --- |
+| v1.11.x | Go 1.25 |
 | v1.10.x | Go 1.25 |
 | v1.9.x | Go 1.23 |
 | v1.8.x | Go 1.18 |

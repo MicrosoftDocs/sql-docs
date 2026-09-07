@@ -102,7 +102,7 @@ The Azure storage administrator must first grant permissions to the managed iden
 
 ```sql
 -- Optional: Create MASTER KEY if it doesn't exist in the database:
--- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Some Very Strong Password Here>'
+-- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 GO
 CREATE DATABASE SCOPED CREDENTIAL MyCredential
 WITH IDENTITY = 'Managed Identity'
@@ -123,7 +123,7 @@ When you generate a SAS token, it includes a question mark (`?`) at the beginnin
 
 ```sql
 -- Optional: Create MASTER KEY if it doesn't exist in the database:
--- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Some Very Strong Password Here>'
+-- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 GO
 CREATE DATABASE SCOPED CREDENTIAL MyCredential
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',

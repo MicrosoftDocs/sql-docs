@@ -25,7 +25,7 @@ The split-merge tool lets you move data between sharded databases. See [Moving d
 
 1. Go to [Azure SQL hub at aka.ms/azuresqlhub](https://aka.ms/azuresqlhub).
 1. In the resource menu, expand **Azure SQL Database** and select **SQL databases**.
-1. Select the **+ Create** dropdown button and select **SQL database**.
+1. From the **+ Create** dropdown list, select **SQL database**.
 1. Name the database and create a new administrator and password. Be sure to record the name and password for later use.
 1. Complete the **Create SQL database** options and create the database with the desired configurations.
 1. Ensure that your [Azure SQL logical server](logical-servers.md) allows Azure Services to connect to it. Navigate to your new Azure SQL logical server. 

@@ -91,7 +91,7 @@ ms.topic: concept-article
 ## Supported Data Types  
  The ODBC Bulk SSIS components support all built-in ODBC data types, including support for large objects (CLOBs and BLOBs).  
   
-There is no data type support for extensible C types as described in the ODBC 3.8 specifications.The following table describes which SSIS data types are used for each ODBC SQL type. An SSIS developer can override the default mapping and specify a different SSIS data type for input/output columns without impacting the performance for the required data conversions.  
+There is no data type support for extensible C types as described in the ODBC 3.8 specifications.The following table describes which SSIS data types are used for each ODBC SQL type. An SSIS developer can override the default mapping and specify a different SSIS data type for input/output columns without affecting the performance for the required data conversions.  
   
 |ODBC SQL Type|SSIS Data Type|Comments|  
 |-----------------|------------------|------------|  

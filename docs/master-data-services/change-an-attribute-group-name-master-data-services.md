@@ -37,7 +37,7 @@ helpviewer_keywords:
   
 4.  Click **Attribute Groups**.  
   
-5.  On the **Manage Attribute Groups** page, select member type from the **Member Types** drop-down list to expand **Leaf**, **Consolidated**, or **Collection**, depending on the type of group you want to update.  
+5.  On the **Manage Attribute Groups** page, select member type from the **Member Types** dropdown list to expand **Leaf**, **Consolidated**, or **Collection**, depending on the type of group you want to update.  
   
 6.  Click the name of the attribute group that you want to update, and then click **Edit**.  
   

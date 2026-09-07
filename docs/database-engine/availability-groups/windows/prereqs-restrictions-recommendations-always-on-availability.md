@@ -310,7 +310,7 @@ For information about [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] suppor
 
   - Don't use the Failover Cluster Manager to fail over availability groups. You must use [!INCLUDE [tsql](../../../includes/tsql-md.md)] or [!INCLUDE [ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].
 
-- **Don't add resources or alter dependencies associated to availability group role**. We don't recommend placing any additional resources (including user or third-party) into the availability group role or altering the role dependencies as these changes can negatively impact failover performance.
+- **Don't add resources or alter dependencies associated to availability group role**. We don't recommend placing any additional resources (including user or third-party) into the availability group role or altering the role dependencies as these changes can negatively affect failover performance.
 
 <a id="RequirementsAG"></a>
 

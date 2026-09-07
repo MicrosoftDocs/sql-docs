@@ -75,7 +75,7 @@ To create a service endpoint policy, follow these steps:
 
 1. Fill in the following values on the **Basics** page:
 
-   - Subscription: Select the subscription for your policy from the drop-down.
+   - Subscription: Select the subscription for your policy from the dropdown list.
    - Resource group: Select the resource group where your managed instance is located, or select **Create new** and fill in the name for a new resource group.
    - Name: Provide a name for your policy, such as **mySEP**.
    - Location: Select the region of the virtual network hosting the managed instance. 

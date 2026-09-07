@@ -32,7 +32,7 @@ A ReportViewer control named `reportViewer1` appears on the form.
   
  After you add the control to the form, the **ReportViewer Tasks** smart tag appears and prompts you to select a report.
   
- If the report you want to view is deployed to a report server, select the **\<Server Report>** option from the **Choose Report** drop-down list. After you select the **\<Server Report>** option, two more properties appear: **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server and the **Report Path** is the full path to the report to render.  
+ If the report you want to view is deployed to a report server, select the **\<Server Report>** option from the **Choose Report** dropdown list. After you select the **\<Server Report>** option, two more properties appear: **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server and the **Report Path** is the full path to the report to render.  
   
  :::image type="content" source="media/windows-app-server-report-settings.png" alt-text="Screenshot of the ReportViewer Tasks smart tag, highlighting the server report.":::  
   

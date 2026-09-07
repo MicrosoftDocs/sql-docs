@@ -22,7 +22,7 @@ The statements used to grant permissions to query data depend on the scope of ac
 USE master;  
 GO  
   
-CREATE LOGIN KimAbercrombie WITH PASSWORD = 'A2c3456$#' MUST_CHANGE,  
+CREATE LOGIN KimAbercrombie WITH PASSWORD = '<password>' MUST_CHANGE,
 CHECK_EXPIRATION = ON,  
 CHECK_POLICY = ON;  
 GO  

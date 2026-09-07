@@ -209,7 +209,7 @@ This example works on all SQL platforms that support PolyBase.
 - **Step 1**: Create a database master key (DMK). This step is required because the credential stores a SAS token secret. However, you can this step if you use Managed Identity or Microsoft Entra authentication.
 
   ```sql
-  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong_password>';
+  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
   ```
 
 - **Step 2**: Create a credential with a SAS token. Omit the leading `?`.
@@ -277,7 +277,7 @@ This example works on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and 
 
   ```sql
   CREATE MASTER KEY ENCRYPTION
-  BY PASSWORD = '<strong_password>';
+  BY PASSWORD = '<password>';
   ```
 
 - **Step 2**: Create a credential for the remote SQL Server instance.
@@ -409,7 +409,7 @@ A database master key (DMK) is created using `CREATE MASTER KEY` syntax. The DMK
 In this example query, the DMK is required (Credential stores a SAS token).
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong_password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL SasCred
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',

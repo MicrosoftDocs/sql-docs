@@ -68,7 +68,7 @@ Use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
   
 3.  Browse to the report server, and select the folder for the shared data source.  
   
-4.  In **Items of type**, click Datasets (*.rsd) in the drop-down list.  
+4.  In **Items of type**, click Datasets (*.rsd) in the dropdown list.  
   
 5.  Select the shared dataset, and then click **Open**. The associated query designer opens.  
   

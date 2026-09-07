@@ -71,7 +71,7 @@ New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyV
 
 ## Microsoft.Data.SqlClient extensions
 
-The major versions of extensions NuGet packages shipped starting with Microsoft.Data.SqlClient v7.0 onwards follow an LTS support cycle:
+The major versions of extensions NuGet packages shipped starting with Microsoft.Data.SqlClient v7.0 onward follow an LTS support cycle:
 
 ### Actively supported Microsoft.Data.SqlClient.Extensions.Abstractions releases
 

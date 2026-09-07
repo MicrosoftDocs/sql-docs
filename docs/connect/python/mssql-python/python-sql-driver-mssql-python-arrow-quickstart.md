@@ -4,7 +4,7 @@ description: Use the mssql-python driver's Arrow fetch methods to retrieve SQL S
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 06/29/2026
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -91,7 +91,7 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.5.0",
+       "mssql-python>=1.14.0",
        "pyarrow>=19.0.0",
        "python-dotenv>=1.1.1",
        "rich>=14.1.0",
@@ -203,7 +203,7 @@ code .
 
 
    def fetch_with_reader(conn: Connection) -> pa.Table:
-       """Use arrow_reader() to stream results as a RecordBatchReader."""
+       """Stream results with arrow_reader() and combine the batches."""
        cursor = conn.cursor()
        cursor.execute("""
            SELECT
@@ -217,9 +217,13 @@ code .
            ORDER BY soh.OrderDate DESC
        """)
        reader = cursor.arrow_reader()
-       arrow_table = reader.read_all()
+       batches = list(reader)
        cursor.close()
-       return arrow_table
+
+       if not batches:
+           return pa.table({})
+
+       return pa.Table.from_batches(batches)
 
 
    def display_arrow_table(arrow_table: pa.Table, title: str, max_rows: int = 10) -> None:
@@ -259,8 +263,8 @@ code .
        customers = fetch_arrow_batches(conn)
        display_arrow_table(customers, "Customers by Total Spent")
 
-       # 3. Use RecordBatchReader with cursor.arrow_reader()
-       console.rule("[bold]cursor.arrow_reader() - RecordBatchReader[/bold]")
+       # 3. Stream results with cursor.arrow_reader()
+       console.rule("[bold]cursor.arrow_reader() - Reader streaming[/bold]")
        orders = fetch_with_reader(conn)
        display_arrow_table(orders, "Recent Orders")
 
@@ -334,7 +338,7 @@ code .
 
     - `cursor.arrow_batch()` returns one `pyarrow.RecordBatch` at a time. Best for large result sets where you want to process data incrementally without loading everything into memory.
 
-    - `cursor.arrow_reader()` returns a `pyarrow.RecordBatchReader` for streaming. Best for pipeline-style processing or passing directly to libraries that accept a reader.
+    - `cursor.arrow_reader()` returns a streaming reader that yields `pyarrow.RecordBatch` objects as you iterate it. Use it for pipeline-style processing or passing directly to libraries that accept a reader.
 
    The script also saves the product data to a Parquet file and reads it back to verify the round-trip.
 
@@ -346,7 +350,9 @@ code .
 
 1. **Batch streaming**: `cursor.arrow_batch()` returns one `pyarrow.RecordBatch` per call. The loop collects batches until no more rows remain, then combines them into a single table. Use this approach for large datasets or when you want to process each batch independently.
 
-1. **RecordBatchReader**: `cursor.arrow_reader()` returns a `pyarrow.RecordBatchReader`, a standard Arrow interface that many libraries accept directly. Calling `reader.read_all()` consumes the entire stream into a table.
+1. **Streaming reader**: `cursor.arrow_reader()` returns a reader that yields `pyarrow.RecordBatch` objects as you iterate it. Compared to the `arrow_batch()` loop, the reader manages its own iteration state, so you don't test for an exhausted result set yourself.
+
+   This function reads the stream to completion and then closes the cursor, so it doesn't need to close the reader. Close the reader when you stop reading early and keep using the cursor. For more information, see [Apache Arrow integration](arrow-integration.md).
 
 1. **Parquet I/O**: `pyarrow.parquet.write_table()` saves the Arrow table to a compressed Parquet file. This format preserves column types and supports efficient partial reads.
 

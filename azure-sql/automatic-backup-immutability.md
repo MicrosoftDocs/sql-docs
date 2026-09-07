@@ -5,7 +5,7 @@ description: Learn how automatic backup immutability protects up to the most rec
 author: dnethi
 ms.author: dinethi
 ms.reviewer: mathoma
-ms.date: 08/04/2026
+ms.date: 08/27/2026
 ms.service: azure-sql
 ms.subservice: backup-restore
 ms.topic: concept-article
@@ -77,8 +77,8 @@ Automatic backup immutability complements existing data protection features, inc
 
 ## Limitations
 
-Automatic backup immutability isn't currently available for the Hyperscale service tier of Azure SQL Database.
-
+- Automatic backup immutability isn't currently available for the Hyperscale service tier of Azure SQL Database.
+- In Azure SQL Managed Instance, automatic backup immutability is only available to instances configured with the **Always-up-to-date** or **SQL Server 2025** [update policy](managed-instance/update-policy.md), not to instances configured with the **SQL Server 2022** update policy.
 
 ## Related content
 

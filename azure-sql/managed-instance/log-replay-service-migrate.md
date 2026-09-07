@@ -166,7 +166,7 @@ To configure the firewall, follow these steps:
 
    :::image type="content" source="media/log-replay-service-migrate/storage-neteworking.png" alt-text="Screenshot of the Storage Account Networking page of the Azure portal, with Add existing virtual network selected." lightbox="media/log-replay-service-migrate/storage-neteworking.png":::
 
-1. Select the appropriate subscription, virtual network, and managed instance subnet from the dropdown list menus and then select **Add** to add the virtual network of the SQL managed instance to the storage account.
+1. Select the appropriate subscription, virtual network, and managed instance subnet from the dropdown lists, and then select **Add** to add the virtual network of the SQL managed instance to the storage account.
 
 ## Authenticate to your Blob Storage account
 

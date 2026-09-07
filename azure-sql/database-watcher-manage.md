@@ -334,7 +334,7 @@ There are different scripts for Microsoft Entra authentication and SQL authentic
 > [!IMPORTANT]
 > Always use provided scripts to grant access to a watcher. Granting access in a different way can block data collection. For more information, see [Watcher authorization](database-watcher-overview.md#watcher-authorization).
 
-Before executing a script, replace all instances of placeholders that might be present in the script, such as `login-name-placeholder` and `password-placeholder` with the actual values.
+Before executing a script, replace all instances of placeholders that might be present in the script, such as `login-name-placeholder` and `<password>`, with the actual values. Replace `<password>` with a strong password.
 
 #### Grant access to Microsoft Entra authenticated watchers
 
@@ -399,7 +399,7 @@ This script creates a SQL authentication login on a logical server in Azure SQL 
 The script must be executed in the `master` database on the logical server, using a login that is a logical server administrator.
 
 ```sql
-CREATE LOGIN [login-name-placeholder] WITH PASSWORD = 'password-placeholder';
+CREATE LOGIN [login-name-placeholder] WITH PASSWORD = '<password>';
 
 ALTER SERVER ROLE ##MS_ServerPerformanceStateReader## ADD MEMBER [login-name-placeholder];
 ALTER SERVER ROLE ##MS_DefinitionReader## ADD MEMBER [login-name-placeholder];
@@ -415,7 +415,7 @@ The script must be executed in the `master` database on the instance, using a lo
 ```sql
 USE master;
 
-CREATE LOGIN [login-name-placeholder] WITH PASSWORD = 'password-placeholder';
+CREATE LOGIN [login-name-placeholder] WITH PASSWORD = '<password>';
 
 GRANT CONNECT SQL, CONNECT ANY DATABASE, VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW SERVER PERFORMANCE STATE TO [login-name-placeholder];
 
@@ -623,12 +623,12 @@ The amount of SQL monitoring data that is ingested in the data store depends on 
 
 Over time, Microsoft might introduce new database watcher [datasets](database-watcher-data.md#datasets), or expand existing datasets. This means that new tables in the data store, or new columns in existing tables might be added automatically.
 
-To do this, the current managed identity of a watcher must be a member of the **Admins** RBAC role in the data store. Revoking this role membership, or replacing it with membership in any other RBAC role can impact data collection and schema management, and is not supported.
+To do this, the current managed identity of a watcher must be a member of the **Admins** RBAC role in the data store. Revoking this role membership, or replacing it with membership in any other RBAC role can affect data collection and schema management, and is not supported.
 
 Similarly, creating any new objects such as tables, external tables, materialized views, functions, etc. in the watcher data store is not supported. You can use [Cross-cluster and cross-database queries](/azure/data-explorer/kusto/query/cross-cluster-or-database-queries) to query data in your data store from other Azure Data Explorer clusters, or from other databases on the same cluster.
 
 > [!IMPORTANT]
-> If you change a watcher's access to its data store, or make any database schema or configuration changes that impact data ingestion, you might need to [change the data store](#change-the-data-store-for-a-watcher) for that watcher to a new empty database, and grant the watcher [access](#grant-access-to-data-store) to this new database to resume data collection and revert to a supported configuration.
+> If you change a watcher's access to its data store, or make any database schema or configuration changes that affect data ingestion, you might need to [change the data store](#change-the-data-store-for-a-watcher) for that watcher to a new empty database, and grant the watcher [access](#grant-access-to-data-store) to this new database to resume data collection and revert to a supported configuration.
 
 ### Stopped Azure Data Explorer clusters
 

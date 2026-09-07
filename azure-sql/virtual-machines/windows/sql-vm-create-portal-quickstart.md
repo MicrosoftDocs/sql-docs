@@ -73,7 +73,7 @@ To deploy a conventional SQL Server on Azure VM, on the **Basics** tab, provide 
 
    ![Screenshot showing the Administrator account section when creating your SQL VM in the Azure portal.](./media/sql-vm-create-portal-quickstart/basics-administrator-account.png)
 
-1. Under **Inbound port rules**, choose **Allow selected ports**, and then select **RDP (3389)** from the dropdown.
+1. Under **Inbound port rules**, choose **Allow selected ports**, and then select **RDP (3389)** from the dropdown list.
 
    ![Screenshot showing the Inbound port rules section when creating your SQL VM in the Azure portal.](./media/sql-vm-create-portal-quickstart/basics-inbound-port-rules.png)
 
@@ -88,7 +88,7 @@ To deploy your SQL Server to an Azure confidential VM, on the **Basics** tab, pr
 1. Under **Instance details**:
    1. Type *SQLVM* for the **Virtual machine name**.
    1. Choose a location for your **Region**. To validate region supportability, look for the `ECadsv6-series` or `DCadsv6-series` in [VM products Available by Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=virtual-machines).
-   1. For **Security type**, choose **Confidential virtual machines** from the dropdown. If this option is grayed out, it's likely the chosen region doesn't currently support confidential VMs. Choose a different region from the drop-down.
+   1. For **Security type**, choose **Confidential virtual machines** from the dropdown list. If this option is grayed out, it's likely the chosen region doesn't currently support confidential VMs. Choose a different region from the dropdown list.
    1. For the purpose of this quickstart, leave **Availability options** set to *No infrastructure redundancy required*. To find out more information about availability options, see [Availability](/azure/virtual-machines/availability).
    1. In the **Image** list, choose the `SQL Server 2022 Enterprise on Windows Server 2022 Database Engine Only` image. To change the SQL Server image, select **See all images**, and then filter by **Security type = Confidential VMs** to identify all SQL Server images that support confidential VMs.
    1. Leave the size at the default of `Standard_EC2ads_v6`. However, to see all available sizes, select **See all sizes** to identify all the VM sizes that support confidential VMs, as well as the sizes that don't.
@@ -99,7 +99,7 @@ To deploy your SQL Server to an Azure confidential VM, on the **Basics** tab, pr
 
    :::image type="content" source="media/sql-vm-create-portal-quickstart/basics-administrator-account.png" alt-text="Screen shot of the Azure portal, Administrator account":::
 
-1. Under **Inbound port rules**, choose **Allow selected ports**, and then select **RDP (3389)** from the dropdown.
+1. Under **Inbound port rules**, choose **Allow selected ports**, and then select **RDP (3389)** from the dropdown list.
 
    :::image type="content" source="media/sql-vm-create-portal-quickstart/basics-inbound-port-rules.png" alt-text="Screen shot of the Azure portal, Inbound port rules.":::
 

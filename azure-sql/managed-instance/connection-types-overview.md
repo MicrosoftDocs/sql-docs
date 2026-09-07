@@ -50,7 +50,7 @@ The following diagram illustrates the proxy TCP flow via the gateway:
 
 ### "Default" connection type 
 
-The value of the `proxyOverride=Default` is deprecated, as it now functions as an alias for the redirect connection type. Starting in October 2025, when you deploy or update a SQL managed instance programatically (by using the REST API, Azure CLI, or PowerShell), and set the `proxyOverride` parameter to `Default`, the value is interpreted as `Redirect`. The value of `Default` itself is never preserved in the properties of the SQL managed instance. As such, 24 hours after setting `proxyOverride` to `Default`, a subsequent request to get the details of the SQL managed instance reveals that the value of the `proxyOverride` parameter is `Redirect`.
+The value of the `proxyOverride=Default` is deprecated, as it now functions as an alias for the redirect connection type. Starting in October 2025, when you deploy or update a SQL managed instance programmatically (by using the REST API, Azure CLI, or PowerShell), and set the `proxyOverride` parameter to `Default`, the value is interpreted as `Redirect`. The value of `Default` itself is never preserved in the properties of the SQL managed instance. As such, 24 hours after setting `proxyOverride` to `Default`, a subsequent request to get the details of the SQL managed instance reveals that the value of the `proxyOverride` parameter is `Redirect`.
 
 > [!NOTE]
 > SQL managed instances with the `proxyOverride` value set to `Default` before October 2025 are converted to `Proxy`.

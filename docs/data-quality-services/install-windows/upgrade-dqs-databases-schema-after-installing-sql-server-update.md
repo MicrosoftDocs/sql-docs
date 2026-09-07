@@ -20,7 +20,7 @@ ms.custom:
 An error occurred in the Microsoft .NET Framework while trying to load assembly id 65581.  
 ```  
   
- Upgrading DQS databases schema does not impact your existing data in the DQS databases (knowledge bases, data quality projects, and exported results in the DQS_STAGING_DATA database). However, you must back up your DQS databases before upgrading DQS databases schema to prevent any accidental data loss during the schema upgrade. For information about backing up DQS databases, see [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
+ Upgrading DQS databases schema does not affect your existing data in the DQS databases (knowledge bases, data quality projects, and exported results in the DQS_STAGING_DATA database). However, you must back up your DQS databases before upgrading DQS databases schema to prevent any accidental data loss during the schema upgrade. For information about backing up DQS databases, see [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
 > [!NOTE]  
 >  Most of the SQL Server updates will require an upgrade to the DQS databases schema. For information about the SQL Server updates that will require an upgrade to the DQS databases schema, see the chart in step 1.A in [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  

@@ -31,11 +31,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 1. In Object Explorer, right-click the table on which you want to create a full-text index, point to **Full-Text index**, and then click **Define Full-Text Index**. This action launches the Wizard in a separate window.
    Click Next 
   
-2. **Unique Index.**  Select an index from the drop down list. The index must be a single-key-column, unique, non-nullable index. Select the smallest unique key index for the full-text unique key. For best performance, a clustered index is recommended.  
+2. **Unique Index.**  Select an index from the dropdown list. The index must be a single-key-column, unique, non-nullable index. Select the smallest unique key index for the full-text unique key. For best performance, a clustered index is recommended.  
   
 3.  **Available Columns.** Check the box next to all column names for columns you want to include.  check box next to the column name. Ineligible columns are greyed out and their check boxes disabled.  
   
-4. **Language for Word Breaker.** Select a language from the drop-down list. This choice will be used  to identify the correct word breakers for the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses word breakers to identify word boundaries in the full-text indexed data.  
+4. **Language for Word Breaker.** Select a language from the dropdown list. This choice will be used  to identify the correct word breakers for the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses word breakers to identify word boundaries in the full-text indexed data.  
   
 5.  **Type Column.** Select the name of the column that holds the document type of column being full-text indexed.  
 
@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 6. **Statistical Semantics.** Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
    > [!NOTE]  
-   > If your selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** checkbox is not enabled. If you select **Statistical Semantics** prior to selecting a **Language**, the languages available in the drop-down combo box will be restricted to those for which there is Semantic Language Model support.  
+   > If your selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** checkbox is not enabled. If you select **Statistical Semantics** prior to selecting a **Language**, the languages available in the dropdown list combo box will be restricted to those for which there is Semantic Language Model support.  
    >
    > Semantic Search is **not available for Azure SQL Database.** The Statistical Semantics option does not appear when running this Wizard on an Azure SQL Database.
   

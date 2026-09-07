@@ -166,7 +166,7 @@ In this section, you add a subscriber to the publication that you previously cre
 
    !["Distribution Agent Location" page with the option selected to run all agents at the distributor](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   
-5. On the **Subscribers** page, if the name of the subscriber instance is not displayed, select **Add Subscriber**, and then select **Add SQL Server Subscriber** from the drop-down list. This step opens the **Connect to Server** dialog box. Enter the subscriber instance name and then select **Connect**.  
+5. On the **Subscribers** page, if the name of the subscriber instance is not displayed, select **Add Subscriber**, and then select **Add SQL Server Subscriber** from the dropdown list. This step opens the **Connect to Server** dialog box. Enter the subscriber instance name and then select **Connect**.  
     
    After the subscriber has been added, select the check box next to the instance name of your subscriber. Then select **New Database** under **Subscription Database**.   
 

@@ -112,7 +112,7 @@ monikerRange: ">=sql-server-ver16"
   
 ## Improved Manageability  
   
- Improvements in manageability help to lower maintenance costs and positively impact your return on investment (ROI). These improvements include transaction log maintenance and improvements to security, and the following new features.  
+ Improvements in manageability help to lower maintenance costs and positively affect your return on investment (ROI). These improvements include transaction log maintenance and improvements to security, and the following new features.  
   
 -   Using attribute names that are longer than 50 characters.  
   

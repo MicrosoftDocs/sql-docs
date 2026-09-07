@@ -264,7 +264,7 @@ helpviewer_keywords:
      For more information, see [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md).  
   
 ###  <a name="DbmPerfCounters"></a> Database Mirroring Performance Counters  
- Performance counters let you monitor database mirroring performance. For example, you can examine the **Transaction Delay** counter to see if database mirroring is impacting performance on the principal server, you can examine the **Redo Queue** and **Log Send Queue** counters to see how well the mirror database is keeping up with the principal database. You can examine the **Log Bytes Sent/sec** counter to monitor the amount of log sent per second.  
+ Performance counters let you monitor database mirroring performance. For example, you can examine the **Transaction Delay** counter to see if database mirroring is affecting performance on the principal server, you can examine the **Redo Queue** and **Log Send Queue** counters to see how well the mirror database is keeping up with the principal database. You can examine the **Log Bytes Sent/sec** counter to monitor the amount of log sent per second.  
   
  In Performance Monitor on either partner, performance counters are available in the database mirroring performance object (**SQLServer:Database Mirroring**). For more information, see [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
   

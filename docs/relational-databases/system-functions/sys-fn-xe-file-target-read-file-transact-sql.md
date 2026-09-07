@@ -4,7 +4,7 @@ description: "The sys.fn_xe_file_target_read_file system function reads files cr
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: dfurman
-ms.date: 05/26/2026
+ms.date: 08/24/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -70,7 +70,11 @@ The file name must be a value returned in the result set of a `sys.fn_xe_file_ta
 
 #### *initial_offset*
 
-Used to specify last offset read previously. Skips all events up to the offset (inclusive). Event enumeration starts after the offset specified. *initial_offset* is **bigint**. If `NULL` is specified as the argument, the entire file is read.
+When an [event_file](../extended-events/targets-for-extended-events-in-sql-server.md#event_file-target) target writes events to an XEL file, it writes one memory buffer at a time. A buffer typically contains multiple events. The `file_offset` column in the result set of `sys.fn_xe_file_target_read_file` represents the byte offset of a buffer within an XEL file. Consequently, multiple events in the result set commonly have the same offset.
+
+Use the *initial_offset* argument to specify the last buffer you read. When you specify this argument, the `sys.fn_xe_file_target_read_file` function skips all events in the buffer specified by the offset and the previous buffers, and returns only the events in the following buffers. In this way, you can read the contents of an XEL file incrementally at the buffer granularity.
+
+*initial_offset* is **bigint**. If you specify `NULL` as the argument, the function reads the entire file.
 
 > [!NOTE]  
 > *initial_file_name* and *initial_offset* are paired arguments. If you specify a value for either argument, you must specify a value for the other argument.
@@ -84,7 +88,7 @@ Used to specify last offset read previously. Skips all events up to the offset (
 | `object_name` | **nvarchar(256)** | The name of the event. Not nullable. |
 | `event_data` | **nvarchar(max)** | The event contents, in XML format. Not nullable. |
 | `file_name` | **nvarchar(260)** | The name of the file that contains the event. Not nullable. |
-| `file_offset` | **bigint** | The offset of the block in the file that contains the event. Not nullable. |
+| `file_offset` | **bigint** | The offset of the buffer in the file that contains the event. Not nullable. |
 | `timestamp_utc` | **datetime2(7)** | The date and time (UTC timezone) of the event. Not nullable.<br /><br />**Applies to**: [!INCLUDE [sssql17](../../includes/sssql17-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. |
 
 ## Remarks

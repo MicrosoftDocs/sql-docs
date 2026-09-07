@@ -98,7 +98,7 @@ To create the virtual network in the Azure portal, follow these steps:
 1. Search for **virtual network** in the **Marketplace** search box and choose the **virtual network** tile from Microsoft. Select **Create** on the **Virtual network** page.
 1. On the **Create virtual network** page, enter the following information on the **Basics** tab:
    1. Under **Project details**, choose the appropriate Azure **Subscription**, and the **Resource group** where you plan to deploy your SQL Server VMs.
-   1. Under **Instance details**, provide a name for your virtual network and choose the same region as your resource group from the dropdown.
+   1. Under **Instance details**, provide a name for your virtual network and choose the same region as your resource group from the dropdown list.
 
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/03-create-vnet-basics.png" alt-text="Screenshot of the Create virtual network page in the Azure portal. A resource group is selected and a virtual network name is entered in the Instance details field.":::
 

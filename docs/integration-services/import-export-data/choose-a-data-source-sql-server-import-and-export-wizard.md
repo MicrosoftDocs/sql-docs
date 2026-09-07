@@ -32,14 +32,14 @@ Specify the data source by selecting a data provider that can connect to the sou
 
 -   **The data provider that you need is typically obvious from its name**, because the name of the provider typically contains the name of the data source - for example, *Flat File* Source, Microsoft *Excel*, Microsoft *Access*, .Net Framework Data Provider for *SqlServer*, .Net Framework Data Provider for *Oracle*.
 
--   **If you have an ODBC driver for your data source**, select the .Net Framework Data Provider for ODBC. Then enter the driver-specific info. ODBC drivers aren't listed in the drop-down list of data sources. The .Net Framework Data Provider for ODBC acts as a wrapper around the ODBC driver. For more info, see [Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
+-   **If you have an ODBC driver for your data source**, select the .Net Framework Data Provider for ODBC. Then enter the driver-specific info. ODBC drivers aren't listed in the dropdown list of data sources. The .Net Framework Data Provider for ODBC acts as a wrapper around the ODBC driver. For more info, see [Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 -   **There may be more than one provider available for your data source.** Typically you can select any provider that works with your source. For example, to connect to Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use the .NET Framework Data Provider for SQL Server or the SQL Server ODBC driver. (Other providers are also still in the list but are no longer supported.) 
 
 ## My data source isn't in the list
 -   **You may have to download the data provider** from Microsoft or from a third party. The list of available data providers in the **Data source** list includes only the providers installed on your computer. For info about the data sources that you can use, see [What data sources and destinations can I use?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
--   **Do you have an ODBC driver for your data source?** ODBC drivers aren't listed in the drop-down list of data sources. If you have an ODBC driver for your data source, select the .Net Framework Data Provider for ODBC. Then enter the driver-specific info. The .Net Framework Data Provider for ODBC acts as a wrapper around the ODBC driver. For more info, see [Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
+-   **Do you have an ODBC driver for your data source?** ODBC drivers aren't listed in the dropdown list of data sources. If you have an ODBC driver for your data source, select the .Net Framework Data Provider for ODBC. Then enter the driver-specific info. The .Net Framework Data Provider for ODBC acts as a wrapper around the ODBC driver. For more info, see [Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 -   **64-bit and 32-bit providers.** If you're running the 64-bit wizard, you won't see data sources for which only a 32-bit provider is installed, and vice versa.
 

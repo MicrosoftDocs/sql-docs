@@ -53,7 +53,7 @@ You must have the dqs_administrator role on the DQS_MAIN database to configure l
   
 3.  Next, click the **Log Settings** tab. The following DQS activities are listed for which you can select a severity level: **Domain Management**, **Knowledge Discovery**, **Cleansing Project (Ex. RDS)**, **Matching Policy and Matching Project**, and **RDS**.  
   
-4.  For a DQS activity, select the severity level that you want to be logged. You can select one among the following: **Fatal**, **Error**, **Warn**, **Info**, and **Debug**. For example, if you want only fatal messages to be written to the DQS log files for the knowledge discovery activity, select **Fatal** in the drop-down list against the **Knowledge Discovery** activity.  
+4.  For a DQS activity, select the severity level that you want to be logged. You can select one among the following: **Fatal**, **Error**, **Warn**, **Info**, and **Debug**. For example, if you want only fatal messages to be written to the DQS log files for the knowledge discovery activity, select **Fatal** in the dropdown list against the **Knowledge Discovery** activity.  
   
     > [!NOTE]  
     >  By default, **Error** is selected for each of the activities. This implies that error and fatal messages will be written to the DQS log files for each activity, by default.  
@@ -75,9 +75,9 @@ You must have the dqs_administrator role on the DQS_MAIN database to configure l
   
 1.  In the **Log Settings** tab, click the down arrow against **Advanced** to display the area.  
   
-2.  In the grid that appears, select a module name from the drop-down list in the **Module** column.  
+2.  In the grid that appears, select a module name from the dropdown list in the **Module** column.  
   
-3.  Next, select a severity level for the module from the drop-down list in the **Severity** column. You can select one among the following: **Fatal**, **Error**, **Warn**, **Info**, and **Debug**.  
+3.  Next, select a severity level for the module from the dropdown list in the **Severity** column. You can select one among the following: **Fatal**, **Error**, **Warn**, **Info**, and **Debug**.  
   
      For example, within the domain management activity, you can set a different granularity level for the domain rule definition functionality than the domain management activity by selecting the **Microsoft.Ssdqs.DomainRules.Define** module, and selecting a different log severity level. Similarly, you can set a different granularity level for the cross-domain rule functionality by selecting the **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** module, and selecting a different log severity level.  
   

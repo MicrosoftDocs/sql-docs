@@ -50,8 +50,8 @@ When you use the CHECKSUM option during a backup operation, the following proces
  
 ## User Action  
 
-- Run DBCC CHECKDB on the impacted database to check its consistency state and address database inconsistencies. For more information, see [Troubleshoot database consistency errors reported](/troubleshoot/sql/admin/troubleshoot-dbcc-checkdb-errors)
+- Run DBCC CHECKDB on the affected database to check its consistency state and address database inconsistencies. For more information, see [Troubleshoot database consistency errors reported](/troubleshoot/sql/admin/troubleshoot-dbcc-checkdb-errors)
 
-- Investigate your hardware to ensure no other database pages are impacted and that this issue doesn't occur in the future
+- Investigate your hardware to ensure no other database pages are affected and that this issue doesn't occur in the future
 
 - Restore the page from a good database backup. For more information, see [Restore Pages (SQL Server)](../backup-restore/restore-pages-sql-server.md)

@@ -83,7 +83,7 @@ This policy definition isn't assigned to a scope by default. If you assign this 
 1. On the **Parameters** tab:
 
    1. Select **Only show parameters that need input for review**, if the checkbox isn't already selected.
-   1. Select **Log Analytics workspace** and **Log Analytics workspace location** from the respective dropdown list menus.
+   1. Select **Log Analytics workspace** and **Log Analytics workspace location** from the respective dropdown lists.
    1. Set the **Enablement** value to **true** to enable the best practices assessment. (Setting this value to **false** disables the assessment.)
    1. Select **Next**.
 
@@ -184,7 +184,7 @@ The first grid shows each recommendation and the affected instances in the envir
 
 You can perform any of these actions:
 
-- If the assessment reports a large number of recommendations, you can filter the results. To filter results, use the dropdown list menu above the grid to select **Name**, **Severity**, or **Check Id**.
+- If the assessment reports a large number of recommendations, you can filter the results. To filter results, use the dropdown list above the grid to select **Name**, **Severity**, or **Check Id**.
 
 - To download results, use **Export to Excel**.
 

@@ -80,7 +80,7 @@ You can open an `.scmp` file in Visual Studio to run the same comparison again l
 
    The **Schema Compare** window opens, and Visual Studio automatically assigns it a name such as `SqlSchemaCompare1`.
 
-   Two dropdown list menus with a green arrow in between them appear just below the **Schema Compare** window toolbar. These menus allow you to select database definitions for your comparison source and target.
+   Two dropdown lists with a green arrow in between them appear just below the **Schema Compare** window toolbar. These menus allow you to select database definitions for your comparison source and target.
 
 2. In the **Select Source** dropdown list, choose **Select Source** and the **Select Source Schema** dialog opens.
 
@@ -127,7 +127,7 @@ To update the schema of the target, you have two options. You can update the tar
 
    The **Schema Compare** window opens, and Visual Studio automatically assigns it a name such as `SqlSchemaCompare1`.
 
-   Two dropdown list menus with a green arrow in between them appear just below the **Schema Compare** window toolbar. These menus allow you to select database definitions for your comparison source and target.
+   Two dropdown lists with a green arrow in between them appear just below the **Schema Compare** window toolbar. These menus allow you to select database definitions for your comparison source and target.
 
 2. In the **Select Source** dropdown list, choose **Select Source** and the **Select Source Schema** dialog opens.
 

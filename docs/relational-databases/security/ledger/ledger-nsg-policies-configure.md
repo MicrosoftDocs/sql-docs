@@ -91,7 +91,7 @@ The two Azure Confidential Ledger IP addresses should also be added to the Route
     |Setting  |Suggested value  |Description  |
     |---------|---------|---------|
     |**Route name**     | Use a preferred name       | Name that you want to use for this route |
-    |**Destination type**     |IP Addresses       | Use the drop-down menu and select **IP Addresses** |
+    |**Destination type**     |IP Addresses       | Use the dropdown list and select **IP Addresses** |
     |**Destination IP addresses/CIDR ranges**     | 1.123.123.123/32 | In this example, we use `1.123.123.123/32`. Create another route to add the identity service endpoint, which is `13.107.246.70/32` in this example |
     |**Next hop type**     |Internet         | |
 

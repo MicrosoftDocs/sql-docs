@@ -84,7 +84,7 @@ ALTER SCHEMA schema_name
  ALTER SCHEMA uses a schema level lock.
 
 > [!CAUTION]
-> In the Fabric SQL analytics endpoint, transferring a table between schemas via T-SQL is not supported. It can negatively impact the sync operation between OneLake and SQL analytics endpoint. 
+> In the Fabric SQL analytics endpoint, transferring a table between schemas via T-SQL is not supported. It can negatively affect the sync operation between OneLake and SQL analytics endpoint. 
 
 ## Permissions
 

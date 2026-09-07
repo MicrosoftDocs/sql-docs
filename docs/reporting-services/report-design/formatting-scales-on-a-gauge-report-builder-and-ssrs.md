@@ -12,7 +12,7 @@ ms.custom:
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-  In a paginated report, the gauge scale is the range of numbers, bound by a minimum and a maximum, shown on a gauge. Typically, a gauge scale contains gauge labels and tick marks to give an accurate reading of what the gauge pointer shows. A gauge scale is generally associated with one or more gauge pointers. You can have more than one scale on the same gauge.  
+  In a paginated report, the gauge scale is the range of numbers, bound by a minimum and a maximum, shown on a gauge. Typically, a gauge scale contains gauge labels and check marks to give an accurate reading of what the gauge pointer shows. A gauge scale is generally associated with one or more gauge pointers. You can have more than one scale on the same gauge.  
   
  ![Overview of elements on a gauge scale](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Overview of elements on a gauge scale")  
   
@@ -20,7 +20,7 @@ ms.custom:
   
  When you add a second scale on a gauge that already contains one scale, the appearance properties of the first scale are cloned on the second scale.  
   
- You can set properties on the scale by right-clicking on the scale labels or tick marks and selecting **Radial Scale Properties** or **Linear Scale Properties**. Each gauge type contains at least one scale with the same set of properties. There are also properties unique to each gauge type:  
+ You can set properties on the scale by right-clicking on the scale labels or check marks and selecting **Radial Scale Properties** or **Linear Scale Properties**. Each gauge type contains at least one scale with the same set of properties. There are also properties unique to each gauge type:  
   
 -   On a radial gauge, you can specify the radius, start angle, and sweep angle of the radial scale.  
   
@@ -31,7 +31,7 @@ ms.custom:
 ##  <a name="DefiningMinMax"></a> Defining Minimum, Maximum, and Intervals on a Scale  
  A gauge is frequently used to display KPIs that are measured in percentages from 0 to 100, so these are the default values given to the minimum and maximum properties on the gauge. However, these values may not represent the scale of values that you are trying to show. Because there is no built-in logic to determine what the KPI data field represents, the gauge does not automatically calculate minimum and maximum values. If your KPI data field is not a value between 0 and 100, you must explicitly set values for the minimum and maximum properties in order to give context to the one value that is being displayed on the gauge.  
   
- On the scale are major and minor tick marks. In addition, the scale has labels that are typically associated with the major tick marks. For example, a scale might have major tick marks at 0, 20, 40, 60, 80, and 100. The labels should correspond to those tick marks. The difference between the label values is called the scale interval. In this example, the scale interval is set to 20. You can set the Interval property in the **Radial Scale Properties** or **Linear Scale Properties** dialog box.  
+ On the scale are major and minor check marks. In addition, the scale has labels that are typically associated with the major check marks. For example, a scale might have major check marks at 0, 20, 40, 60, 80, and 100. The labels should correspond to those check marks. The difference between the label values is called the scale interval. In this example, the scale interval is set to 20. You can set the Interval property in the **Radial Scale Properties** or **Linear Scale Properties** dialog box.  
   
  The application calculates scale intervals according to the following steps:  
   
@@ -39,9 +39,9 @@ ms.custom:
   
 2.  If you do not specify a value for Interval, the default value is Auto. This means the application will calculate an equidistant number of intervals based on the minimum and maximum values specified in the first step. If you do specify a value for Interval, the gauge will calculate the difference between the maximum and minimum value, and divide that number by the value specified in the Interval property.  
   
- There are also properties to define label and tick mark intervals. If you specify a value for these properties, they will override the value specified for the scale interval property. For example, if the scale interval is Auto, but you specify 4 for the label interval, the labels will be displayed as 0, 4, 8 and so on, but the major tick marks will still be calculated by the gauge based on its own calculation. This may cause situations where the labels are not in sync with the tick marks. Consider hiding tick marks from display if you set a label interval.  
+ There are also properties to define label and check mark intervals. If you specify a value for these properties, they will override the value specified for the scale interval property. For example, if the scale interval is Auto, but you specify 4 for the label interval, the labels will be displayed as 0, 4, 8 and so on, but the major check marks will still be calculated by the gauge based on its own calculation. This may cause situations where the labels are not in sync with the check marks. Consider hiding check marks from display if you set a label interval.  
   
- The interval offset determines the number of units that will be skipped before the first label is shown. All successive major tick marks and labels that appear on the scale will use the interval specified. A value of 0 for label or tick mark intervals is the same as resetting the interval to Auto.  
+ The interval offset determines the number of units that will be skipped before the first label is shown. All successive major check marks and labels that appear on the scale will use the interval specified. A value of 0 for label or check mark intervals is the same as resetting the interval to Auto.  
   
 ##  <a name="ReducingCollisions"></a> Reducing Label Collisions with Multipliers  
  If your values contain many digits, they may begin to obscure the readability of the gauge. You can use a scale multiplier to increase or reduce the scale of the values. When a scale multiplier is specified, each original value on the scale is multiplied by the multiplier before being displayed on the scale. To reduce the scale of values, you must specify a decimal number. For example, if your scale goes from 0 to 10000 but you want to show the numbers 0 to 10 on the gauge, you can use a multiplier value of 0.001.  

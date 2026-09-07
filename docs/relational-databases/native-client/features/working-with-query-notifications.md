@@ -37,7 +37,7 @@ helpviewer_keywords:
   
  `service=mySSBService;local database=mydb`  
   
- Notification subscriptions outlive the process that initiates them, as an application may create a notification subscription and then terminate. The subscription remains valid, and the notification will occur if the data changes within the time-out period specified when the subscription was created. A notification is identified by the query executed, the notification options, and the message text, and may be cancelled by setting its time-out value to zero.  
+ Notification subscriptions outlive the process that initiates them, as an application may create a notification subscription and then terminate. The subscription remains valid, and the notification will occur if the data changes within the time-out period specified when the subscription was created. A notification is identified by the query executed, the notification options, and the message text, and may be canceled by setting its time-out value to zero.  
   
  Notifications are sent only once. For continuous notification of data change, a new subscription must be created by re-executing the query after each notification is processed.  
   
@@ -96,7 +96,7 @@ RECEIVE * FROM MyQueue
  Initiating a subscription does not guarantee that subsequent messages will be successfully delivered. In addition, no check is made as to the validity of the service name specified.  
   
 > [!NOTE]  
->  Preparing statements will never cause the subscription to be initiated; only statement execution will achieve this and query notifications are not impacted by the use of OLE DB core services.  
+>  Preparing statements will never cause the subscription to be initiated; only statement execution will achieve this and query notifications are not affected by the use of OLE DB core services.  
   
  For more information about the DBPROPSET_SQLSERVERROWSET property set, see [Rowset Properties and Behaviors](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   

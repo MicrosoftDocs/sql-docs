@@ -25,7 +25,7 @@ ms.custom: sfi-image-nochange
   
 2.  Enter your Azure subscription ID, which uniquely identifies an Azure subscription, for the **Azure subscription ID**. The value can be found on the [Azure Management Portal](https://ms.portal.azure.com) under **Settings**:  
   
-3.  Choose **Management certificate store location** and **Management certificate store name** from the drop-down lists.  
+3.  Choose **Management certificate store location** and **Management certificate store name** from the dropdown lists.  
   
 4.  Enter **Management certificate thumbprint** or click the **Browse...** to choose a certificate from the selected store. The certificate must be uploaded as a management certificate for the subscription. To do so, click **Upload** on the following page of the Azure portal (see this [MSDN post](/previous-versions/azure/gg551722(v=azure.100)) for more detail).  
   

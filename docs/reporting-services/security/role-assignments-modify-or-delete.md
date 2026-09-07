@@ -43,9 +43,9 @@ Similarly, if you're a system or network administrator, it's probably easier for
 
 1. Access the web portal and locate the item for which you want to edit or delete a role assignment.
 
-2. Hover over the item, and select the drop-down arrow.
+2. Hover over the item, and select the dropdown list arrow.
 
-3. In the drop-down menu, select **Security**.
+3. In the dropdown list, select **Security**.
 
 4. Find the role assignment that you want to modify or delete.
 

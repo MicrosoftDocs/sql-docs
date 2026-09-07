@@ -3,7 +3,7 @@ title: Migrate Django Apps from PostgreSQL to SQL Server
 description: Detailed guide for migrating Django applications from PostgreSQL to SQL Server using the mssql-django backend, covering contrib.postgres replacements, full-text search, and connection pooling.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity

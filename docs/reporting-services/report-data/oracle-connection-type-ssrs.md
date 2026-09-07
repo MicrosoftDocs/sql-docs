@@ -168,7 +168,7 @@ For more information, see [Specify credential and connection information for rep
   
 ## <a name="Query"></a> Queries  
 
-To create a dataset, you can either select a stored procedure from a drop-down list or create a SQL query. To build a query, you must use the text-based query designer. For more information, see [Text-based query designer user interface &#40;Report Builder&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+To create a dataset, you can either select a stored procedure from a dropdown list or create a SQL query. To build a query, you must use the text-based query designer. For more information, see [Text-based query designer user interface &#40;Report Builder&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 You can specify stored procedures that return only one result set. Cursor-based queries aren't supported.  
   

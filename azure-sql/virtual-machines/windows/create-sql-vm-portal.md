@@ -178,7 +178,7 @@ Under **Data storage**, choose the location for your data drive, the disk type, 
 
 :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-data-storage.png" alt-text="Screenshot that shows where you can configure the data files storage for your SQL VM.":::
 
-Under **Log storage**, you can choose to use the same drive as the data drive for your transaction log files, or you can choose to use a separate drive from the dropdown list. You can also choose the name of the drive, the disk type, and the number of disks.
+Under **Log storage**, you can use the same drive as the data drive for your transaction log files, or choose a separate drive from the dropdown list. You can also choose the name of the drive, the disk type, and the number of disks.
 
 :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-log-storage.png" alt-text="Screenshot that shows where you can configure the transaction log storage for your SQL VM.":::
 

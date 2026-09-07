@@ -81,7 +81,7 @@ qrdrsvc [-?]
 |`0`|Specifies that TLS is not used.|  
 |`1`|Specifies that TLS is used, but the agent does not verify that the TLS/SSL server certificate is signed by a trusted issuer.|  
 |`2`|Specifies that TLS is used, and that the certificate is verified.|
-|`3`| Not supported, because option `3` is specific for connections towards Azure SQL Managed Instance, and queue reader agent is not supported with Azure SQL Managed Instance. |
+|`3`| Not supported, because option `3` is specific for connections toward Azure SQL Managed Instance, and queue reader agent is not supported with Azure SQL Managed Instance. |
 |`4`| Specifies that for connections from SQL Server 2025 and later versions, to SQL Server (any supported version), TLS 1.3 is used, and the certificate is verified. Requires installing the certificate on SQL Server hosts that are receiving connections with `EncryptionLevel` set to `4`. |
 
 [!INCLUDE [sql-25-repl-info](../../../includes/sql-25-repl-info.md)]

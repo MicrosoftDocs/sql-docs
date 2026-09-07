@@ -56,7 +56,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
 7.  In the **Select file** dialog box, move to the folder that contains the Excel file that you want to import domain values from, select the file (with a .xlsx, .xls, or .csv extension), and then click **Open**. The file must be either on the client that you run DQS from, or in a share file that the user has access to.  
   
-8.  From the **Worksheet** drop-down list, select the worksheet that you are importing from.  
+8.  From the **Worksheet** dropdown list, select the worksheet that you are importing from.  
   
 9. Select **Use first row as header** if the first row in the spreadsheet represents the domain name, and all other rows represent valid domain values.  
   

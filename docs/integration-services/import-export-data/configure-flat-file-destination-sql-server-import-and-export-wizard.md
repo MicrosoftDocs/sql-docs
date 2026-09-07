@@ -26,7 +26,7 @@ f1_keywords:
   
 ## Pick a source table
  **Source table or view**  
--   If you specified on a previous page that you want to copy a table, select the source table or view from the drop-down list.
+-   If you specified on a previous page that you want to copy a table, select the source table or view from the dropdown list.
 -   If you provided a query, `"Query"` is selected and is the only option.  
 
 ## Specify row and column delimiters for the output

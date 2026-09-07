@@ -61,7 +61,7 @@ helpviewer_keywords:
 ### Credential store symmetric key  
  If a provider requires the setup and use of a secret stored within the credential store, RBS uses a symmetric key to encrypt the  provider secrets which a client may use to gain authorization to the provider's blob store.  
   
--   RBS 2016 uses an **AES_128** symmetric key. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not allow the creation of new **TRIPLE_DES** keys except for backwards compatibility reasons. For more information, see [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
+-   RBS 2016 uses an **AES_128** symmetric key. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not allow the creation of new **TRIPLE_DES** keys except for backward compatibility reasons. For more information, see [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
 -   RBS 2014 and prior versions use a credential store which holds secrets encrypted using the **TRIPLE_DES** symmetric key algorithm which is outdated. If you are currently using **TRIPLE_DES**, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you enhance your security by following the steps in this topic to rotate your key to a stronger encryption method.  
   

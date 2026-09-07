@@ -56,7 +56,7 @@ f1_keywords:
   
 1.  Select **OK**.
   
-     When you preview the report, you see a drop-down list of available values for the parameter.  
+     When you preview the report, you see a dropdown list of available values for the parameter.  
   
 ### Remove the available values for a report parameter  
   

@@ -141,7 +141,7 @@ Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression.Accept(Microsoft
 Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression.AcceptChildren(Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragmentVisitor)
 ```
 
-A parameter for SqlPackage is available on all commands, `/ThreadMaxStackSize:`, which specifies the maximum stack size for the thread running the SqlPackage process. The default value is determined by the .NET version running SqlPackage. Setting a large value can impact overall performance of SqlPackage, however increasing this value might resolve the stack overflow exception caused by nested statements. Refactoring the T-SQL code is recommended to avoid stack overflow exceptions whenever possible, but the `/ThreadMaxStackSize:` parameter can be used as a workaround.
+A parameter for SqlPackage is available on all commands, `/ThreadMaxStackSize:`, which specifies the maximum stack size for the thread running the SqlPackage process. The default value is determined by the .NET version running SqlPackage. Setting a large value can affect overall performance of SqlPackage, however increasing this value might resolve the stack overflow exception caused by nested statements. Refactoring the T-SQL code is recommended to avoid stack overflow exceptions whenever possible, but the `/ThreadMaxStackSize:` parameter can be used as a workaround.
 
 When using the `/ThreadMaxStackSize:` parameter, it's recommended to tune repeated operations to the lowest value that resolves the stack overflow exception if performance impact is noted. The value of the parameter is in megabytes (MB), example values for testing as a workaround include 10 and 100.
 

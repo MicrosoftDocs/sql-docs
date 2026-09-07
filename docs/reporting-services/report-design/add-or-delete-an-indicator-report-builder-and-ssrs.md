@@ -52,7 +52,7 @@ ms.custom:
   
 1.  Select the indicator. The **Gauge Data** pane opens.  
   
-1.  In the **Values** area, in the **(Unspecified)** drop-down list, click the field whose values you want to display as an indicator.  
+1.  In the **Values** area, in the **(Unspecified)** dropdown list, click the field whose values you want to display as an indicator.  
   
      The indicator is configured to use default values. By default, indicators are configured use percentages as measurement units and the percentage ranges are evenly distributed across the members of the indicator and the value that the indicator conveys uses the scope of the nearest group.  
   

@@ -22,15 +22,15 @@ monikerRange: "=azuresqldb-current"
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
 >[!IMPORTANT]
-> This view is deprecated and is preserved only for backwards compatibility.
+> This view is deprecated and is preserved only for backward compatibility.
   
  The `sys.database_usage` view contains the following columns.  
   
 |Column Name|Description|  
 |-----------------|-----------------|  
-|time|This column is unused and is preserved for backwards compatibility.|  
-|sku|This column is unused and is preserved for backwards compatibility.|  
-|quantity|This column is unused and is preserved for backwards compatibility.|  
+|time|This column is unused and is preserved for backward compatibility.|  
+|sku|This column is unused and is preserved for backward compatibility.|  
+|quantity|This column is unused and is preserved for backward compatibility.|  
  
 ## Related content
 

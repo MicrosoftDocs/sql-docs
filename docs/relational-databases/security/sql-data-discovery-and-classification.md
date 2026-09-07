@@ -55,7 +55,7 @@ The classification includes two metadata attributes:
     * Review the list of recommendations:
         * To accept a recommendation for a specific column, check the checkbox in the left column of the relevant row. You can also mark *all recommendations* as accepted by checking the checkbox in the recommendations table header.
 
-        * You can also change the recommended Information Type and Sensitivity Label using the drop-down boxes.        
+        * You can also change the recommended Information Type and Sensitivity Label using the dropdown lists.        
 
         ![Screenshot showing the list of recommendations.][4]
 
@@ -66,7 +66,7 @@ The classification includes two metadata attributes:
 > [!NOTE]
 > Recommendation engine which does automatic data discovery and provides sensitive column recommendations is disabled when Microsoft Purview Information Protection policy mode is used.
 
-4. To display the classified columns, select appropriate **schema** and corresponding **table** from the drop-down, then select **Load Columns**.
+4. To display the classified columns, select appropriate **schema** and corresponding **table** from the dropdown list, then select **Load Columns**.
 
    :::image type="content" source="media/sql-data-discovery-and-classification/data-classification-load-columns.png" alt-text="screenshot of SSMS data classification loading classified columns.":::
 
@@ -80,7 +80,7 @@ The classification includes two metadata attributes:
 
         ![Screenshot showing the Add Classification context window.][7]
 
-    - If you want to add classification for all the unclassified columns for a specific table in a single attempt, then select **All Unclassified** in the **Column** drop down of **Add Classification** page.
+    - If you want to add classification for all the unclassified columns for a specific table in a single attempt, then select **All Unclassified** in the **Column** dropdown list of **Add Classification** page.
     
         :::image type="content" source="media/sql-data-discovery-and-classification/data-classification-all-unclassified-column-selection.png" alt-text="screenshot of SSMS data classification selecting all unclassified columns":::
 

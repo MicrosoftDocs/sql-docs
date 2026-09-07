@@ -102,7 +102,7 @@ The following scenarios or conditions can potentially exceed data disk IOPS limi
 - **High Transaction Workload (IOPS)**: If the application is processing a high volume of database transactions that involve frequent read and write operations, it can quickly consume the allocated IOPS.  
 - **Inefficient Queries**: Poorly optimized SQL queries or data retrieval operations can lead to excessive I/O activity, consuming more IOPS than anticipated.  
 - **Concurrent Users**: If multiple users or sessions are concurrently accessing the database and generating I/O requests, the cumulative effect can result in reaching the IOPS limit.  
-- **Contending Resources**: If the underlying physical infrastructure is heavily shared with other tenants or workloads, it can impact the available IOPS for your virtual machine.  
+- **Contending Resources**: If the underlying physical infrastructure is heavily shared with other tenants or workloads, it can affect the available IOPS for your virtual machine.  
 - **Temporary Spikes**: Temporary spikes in workload, such as batch processing or data migrations, can lead to sudden increases in I/O demand that surpass the allocated IOPS.  
 - **Small disk size**: If the provisioned data disk size is relatively small, the IOPS capacity might be limited. Individual smaller disks have lower IOPS limits, and if the application's demands exceed this limit, the "Data Disk IOPS Consumed Percentage" reaches 100%.  
 - **Insufficient disk type**: Choosing a lower-performance disk type (such as a Standard HDD) for an I/O-intensive application can lead to IOPS limitations.  
@@ -128,7 +128,7 @@ The following scenarios or conditions can potentially exceed data disk bandwidth
 - **High data redundancy technology / replication**: Data copying associated with uses disk-based replication, data mirroring, or other redundancy mechanisms can contribute to bandwidth saturation.  
 - **Data backup and restore**: Frequent data backups, snapshots, or restoration processes can consume significant data disk bandwidth.  
 - **Parallel query execution**: Parallel queries that involve large data scans or joins can lead to substantial data movement that results in bandwidth utilization.  
-- **Elevated network traffic**: High network activity, such as data transfers between the virtual machine and other resources, can indirectly impact data disk bandwidth availability.  
+- **Elevated network traffic**: High network activity, such as data transfers between the virtual machine and other resources, can indirectly affect data disk bandwidth availability.  
 - **Insufficient disk type**: Choosing a lower-performance disk type for an application with high data transfer requirements can lead to exceed the bandwidth limit.  
 - **Concurrent data-intensive operations**: The combined effect of multiple concurrent processes or sessions accessing and transferring data on the same disk can result in reaching the bandwidth limit.  
 - **Unoptimized queries or ETL processes**: Poorly optimized SQL queries or Extract, Transform, Load (ETL) processes can lead to excessive data movement that results in excessive bandwidth consumption.  

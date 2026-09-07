@@ -147,7 +147,7 @@ The following animation shows the SQL database in Fabric provisioning workflow i
 - The provisioning flow validates the Fabric account and workspace capacity to ensure the database can be created successfully.
 - The workspace dropdown list shows workspaces without available capacity as **disabled**, with a tooltip explaining the reason.
 
-:::image type="content" source="media/mssql-fabric-integration/fabric-provisioning-capacity.png" alt-text="Screenshot of workspace dropdown showing disabled workspaces due to capacity constraints.":::
+:::image type="content" source="media/mssql-fabric-integration/fabric-provisioning-capacity.png" alt-text="Screenshot of workspace dropdown list showing disabled workspaces due to capacity constraints.":::
 
 ### Post-provisioning behavior
 

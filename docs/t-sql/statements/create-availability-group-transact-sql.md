@@ -574,7 +574,7 @@ LISTENER takes one of the following \<listener_option> options:
 Specifies that the availability group listener uses the Dynamic Host Configuration Protocol (DHCP). Optionally, use the ON clause to identify the network on which this listener is created. DHCP is limited to a single subnet that is used for every server instances that hosts a replica in the availability group.  
   
 > [!IMPORTANT]  
->  We don't recommend DHCP in production environment. If there's a down time and the DHCP IP lease expires, extra time is required to register the new DHCP network IP address that is associated with the listener DNS name and impact the client connectivity. However, DHCP is good for setting up your development and testing environment to verify basic functions of availability groups and for integration with your applications.  
+>  We don't recommend DHCP in production environment. If there's a down time and the DHCP IP lease expires, extra time is required to register the new DHCP network IP address that is associated with the listener DNS name and affect the client connectivity. However, DHCP is good for setting up your development and testing environment to verify basic functions of availability groups and for integration with your applications.  
   
  For example:  
   

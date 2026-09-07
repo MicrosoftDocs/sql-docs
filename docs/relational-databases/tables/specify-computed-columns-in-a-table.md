@@ -46,7 +46,7 @@ Requires ALTER permission on the table.
    > [!IMPORTANT]
    > When a formula combines two expressions of different data types, the rules for data type precedence specify that the data type with the lower precedence is converted to the data type with the higher precedence. If the conversion is not a supported implicit conversion, the error `Error validating the formula for column column_name.` is returned. Use the `CAST` or `CONVERT` function to resolve the data type conflict. For example, if a column of type **nvarchar** is combined with a column of type **int**, the integer type must be converted to **nvarchar** as shown in this formula `('Prod'+CONVERT(nvarchar(23),ProductID))`. For more information, see [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).
 
-1. Indicate whether the data is persisted by choosing **Yes** or **No** from the dropdown for the **Is Persisted** child property.
+1. Indicate whether the data is persisted by choosing **Yes** or **No** from the dropdown list for the **Is Persisted** child property.
 
 1. On the **File** menu, select **Save** _table name_.
 

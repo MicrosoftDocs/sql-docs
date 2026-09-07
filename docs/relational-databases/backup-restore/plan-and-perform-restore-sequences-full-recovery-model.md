@@ -21,7 +21,7 @@ helpviewer_keywords:
  In more complex cases, constructing a correct restore sequence can be a complex process. For example, a restore sequence might require multiple file backups or restoring data to a specific point in time. In very complex cases, you might even have to traverse a forked recovery path that spans one or more recovery forks.  
   
 > [!NOTE]  
->  A *recovery path* is the sequence of data and log backups that have brought a database to a particular point in time (known as a recovery point). A recovery path is a specific set of transformations that have evolved the database over time, yet have maintained the consistency of the database. A recovery path describes a range of LSNs from a start point (LSN,GUID) to an end point (LSN,GUID). The range of LSNs in a recovery path can traverse one or more recovery branches from start to end.  
+>  A *recovery path* is the sequence of data and log backups that have brought a database to a particular point in time (known as a recovery point). A recovery path is a specific set of transformations that have evolved the database over time, yet have maintained the consistency of the database. A recovery path describes a range of LSNs from a start point (LSN,GUID) to an endpoint (LSN,GUID). The range of LSNs in a recovery path can traverse one or more recovery branches from start to end.  
   
 ## To Plan a Restore Sequence  
  Before you start a restore sequence, follow these steps:  

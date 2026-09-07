@@ -46,7 +46,7 @@ You can set/remove a bookmark in the following ways:
   
 -   Use button Toggle Bookmark on top of source or target SQL window  
   
--   Select the grey area on the left of the SQL window  
+-   Select the gray area on the left of the SQL window  
   
 -   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
   
@@ -115,5 +115,4 @@ You can perform quick text search using the following features:
 -   You can also perform all these actions with menu items.  
   
 ### Advanced search  
-To open Advanced Search dialog, on the Edit menu point Find, then click Advanced Search. In the dialog you will be able to find any object using pattern. On the top of the dialog you can choose search area and object categories.  
-  
+To open Advanced Search dialog, on the Edit menu point Find, then click Advanced Search. In the dialog you will be able to find any object using pattern. On the top of the dialog you can choose search area and object categories.

@@ -13,7 +13,7 @@ ms.topic: concept-article
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Starting with version 6.3.0, the JDBC driver supports the sql_variant datatype. Sql_variant is also supported when using features such as Table-Valued Parameters and BulkCopy, with some limitations. Not all data types can be stored in the sql_variant data type. For a list of supported data types with sql_variant, see [sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md).
+Starting with version 6.3.0, the JDBC driver supports the sql_variant data type. Sql_variant is also supported when using features such as Table-Valued Parameters and BulkCopy, with some limitations. Not all data types can be stored in the sql_variant data type. For a list of supported data types with sql_variant, see [sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md).
 
 ## Populating and retrieving a table
 

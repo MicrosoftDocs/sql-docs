@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  In a PREDICTION JOIN, the prediction process always starts at the time step immediately after the end of the original training series. This is true even if you add new data. Therefore, the *n* parameter and *n-start* parameter values must be an integer greater than 0.  
   
 > [!NOTE]  
->  The length of the new data does not affect the starting point for prediction. Therefore, if you want to add new data and also make new predictions, make sure that you either set the prediction start point to a value greater than the length of the new data, or extend the prediction end point by the length of the new data.  
+>  The length of the new data does not affect the starting point for prediction. Therefore, if you want to add new data and also make new predictions, make sure that you either set the prediction start point to a value greater than the length of the new data, or extend the prediction endpoint by the length of the new data.  
   
 ## Examples  
  The following examples show how to make predictions against an existing time series model:  

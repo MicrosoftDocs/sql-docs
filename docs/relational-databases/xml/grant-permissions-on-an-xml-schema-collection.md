@@ -451,7 +451,7 @@ IF EXISTS( SELECT * FROM sys.sql_logins WHERE name='schemaUser' )
 GO
 CREATE DATABASE permissionsDB;
 GO
-CREATE LOGIN schemaUser WITH PASSWORD='Pass#123',DEFAULT_DATABASE=permissionsDB;
+CREATE LOGIN schemaUser WITH PASSWORD='<password>',DEFAULT_DATABASE=permissionsDB;
 GO
 GRANT CONNECT SQL TO schemaUser;
 GO

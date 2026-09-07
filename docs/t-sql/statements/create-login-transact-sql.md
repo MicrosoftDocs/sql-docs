@@ -201,7 +201,7 @@ After creating a login, the login can connect to SQL Server, but only has the pe
 The following example creates a login for a particular user and assigns a password.
 
 ```sql
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
+CREATE LOGIN <login_name> WITH PASSWORD = '<password>';
 GO
 ```
 
@@ -212,7 +212,7 @@ The following example creates a login for a particular user and assigns a passwo
 **Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later versions.
 
 ```sql
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>'
+CREATE LOGIN <login_name> WITH PASSWORD = '<password>'
     MUST_CHANGE, CHECK_EXPIRATION = ON;
 GO
 ```
@@ -227,7 +227,7 @@ The following example creates the login for a particular user, using the user. T
 **Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later versions.
 
 ```sql
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',
+CREATE LOGIN <login_name> WITH PASSWORD = '<password>',
     CREDENTIAL = <credentialName>;
 GO
 ```
@@ -467,7 +467,7 @@ Only the server-level principal login (created by the provisioning process) or m
 The following example creates a login for a particular user and assigns a password. Connect to the `master` databases, then use the following code sample.
 
 ```sql
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
+CREATE LOGIN <login_name> WITH PASSWORD = '<password>';
 GO
 ```
 
@@ -649,7 +649,7 @@ After creating a login, the login can connect to a managed instance, but only ha
 
 ```SQL
 -- Code to create login on the secondary instance
-CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+CREATE LOGIN foo WITH PASSWORD = '<password>', SID = <login_sid>;
 ```
 
 ## Examples
@@ -659,7 +659,7 @@ CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
 The following example creates a login for a particular user and assigns a password.
 
  ```sql
- CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
+ CREATE LOGIN <login_name> WITH PASSWORD = '<password>';
  GO
  ```
 
@@ -862,7 +862,7 @@ After creating a login, the login can connect to Azure Synapse but only has the 
 The following example creates a login for a particular user and assigns a password.
 
 ```sql
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
+CREATE LOGIN <login_name> WITH PASSWORD = '<password>';
 GO
 ```
 

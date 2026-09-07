@@ -23,9 +23,9 @@ ms.custom:
   
 2.  On the design surface, click the chart. The properties for the chart object are displayed in the Properties pane.  
   
-     The object name (**Chart1** by default) appears in the drop-down list at the top of the Properties pane.  
+     The object name (**Chart1** by default) appears in the dropdown list at the top of the Properties pane.  
   
-3.  In the **Chart** section, for the Palette property, select a new palette from the drop-down list.  
+3.  In the **Chart** section, for the Palette property, select a new palette from the dropdown list.  
   
     > [!NOTE]  
     >  You cannot change the colors or order in a pre-defined palette.  
@@ -40,7 +40,7 @@ ms.custom:
   
 4.  In the CustomPaletteColors property, click the Edit Collection (**...**) button. The **ReportColorExpression Collection Editor** opens.  
   
-5.  Click **Add** to add a color. Select a color from the drop-down list or select Expression and specify a hex value for a specific color, such as ff6600 for "Orange".  
+5.  Click **Add** to add a color. Select a color from the dropdown list or select Expression and specify a hex value for a specific color, such as ff6600 for "Orange".  
   
      For more information about hex values, see [Color Table](https://go.microsoft.com/fwlink/?linkid=9258) on MSDN.  
   

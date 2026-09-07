@@ -176,7 +176,7 @@ When you select the fields on which to group the data, you design a matrix with 
   
     The Sum function automatically aggregates Sales_Amount, the default aggregate for numeric fields. The value is `[Sum(Sales_Amount)]`.  
   
-    To view the other aggregate functions available, open the drop-down list (don't change the aggregate function).  
+    To view the other aggregate functions available, open the dropdown list (don't change the aggregate function).  
   
 5.  Drag Sales_Return_Amount to **Values**, and then place it after `[Sum(Sales_Amount)]`.  
   
@@ -491,7 +491,7 @@ When you select the fields on which to group data, you design a matrix with rows
   
     The Sum function automatically aggregates `Net_QTY`, the default aggregate for numeric fields. The value is `[Sum(Net_QTY)]`.  
   
-    To view the other aggregate functions available, open the drop-down list. Don't change the aggregate function.  
+    To view the other aggregate functions available, open the dropdown list. Don't change the aggregate function.  
   
 4.  Drag `Net_Sales_Return` to **Values** and then place it after `[Sum(Net_QTY)]`.  
   

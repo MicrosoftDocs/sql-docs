@@ -126,7 +126,7 @@ In this tutorial, you use a list to display the sales information for sales terr
 
     :::image type="content" source="../reporting-services/media/report-builder-free-form-tablix-properties.png" alt-text="Screenshot that shows the Tablix Properties option for the Report Builder free form report.":::
   
-3.  In the **Dataset name** drop-down list, select **ListDataset**.  
+3.  In the **Dataset name** dropdown list, select **ListDataset**.  
   
 4.  Select **OK**.
   

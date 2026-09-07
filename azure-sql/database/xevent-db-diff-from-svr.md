@@ -5,7 +5,8 @@ description: Describes extended events (XEvents) in Azure SQL
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest, dfurman
-ms.date: 09/23/2025
+ms.date: 08/21/2026
+ai-usage: ai-assisted
 ms.service: azure-sql
 ms.subservice: performance
 ms.topic: concept-article
@@ -135,6 +136,87 @@ When you use the `event_file` target with Azure Storage blobs, the [!INCLUDE [ss
   - Have the start time and expiry time that encompass the lifetime of the event session.
   - Have no IP address restrictions.
 
+## Network security perimeter (preview)
+
+[Network security perimeter](network-security-perimeter.md) (preview) puts a network access boundary around Azure SQL Database and other Azure platform as a service (PaaS) resources. When you associate a logical server with a network security perimeter (NSP), the outbound connections that Extended Events makes to Azure Storage are subject to the perimeter's access rules.
+
+> [!NOTE]  
+> Network security perimeter is available for Azure SQL Database only. This section doesn't apply to Azure SQL Managed Instance or SQL database in Fabric. As a preview feature, network security perimeter is subject to [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+
+### How Extended Events uses network access
+
+Extended Events makes outbound connections from the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to Azure Storage in two cases:
+
+- **Writing event data.** When you start an event session with an `event_file` target that points to a blob, the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] checks outbound access before the session starts, and again each time it flushes event buffers to the blob.
+- **Reading event data.** When you call [sys.fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql) or [sys.fn_MSxe_read_event_stream](/sql/relational-databases/system-functions/sys-fn-msxe-read-event-stream-transact-sql) with a blob URL, the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] checks outbound access when the function initializes. SSMS calls `sys.fn_MSxe_read_event_stream` when you open captured event data in the event viewer.
+
+Inbound TDS connections used to manage event sessions via T-SQL don't need any NSP configuration specific to Extended Events. The `CREATE EVENT SESSION`, `ALTER EVENT SESSION`, and `DROP EVENT SESSION` statements and the read functions all run over a normal client connection, so they follow the same inbound access rules as any other client connection to the database.
+
+### Supported configurations
+
+Behavior depends on the [access mode](/azure/private-link/network-security-perimeter-concepts#access-modes-in-network-security-perimeter) of the perimeter, on whether the storage account is in the same perimeter as the logical server, and on whether two different perimeters are linked to each other.
+
+| SQL logical server NSP | Storage account NSP | Behavior |
+| --- | --- | --- |
+| No NSP | No NSP | The perimeter doesn't evaluate the connection. Extended Events connects to the storage account using the credential you configured and the storage account firewall rules. For more information, see [Storage container authorization and control](#storage-container-authorization-and-control). |
+| No NSP | In an NSP | The perimeter doesn't evaluate outbound access from the logical server. Whether the connection succeeds depends on the inbound rules of the storage account's own perimeter. |
+| In an NSP (Enforced) | Same NSP | Access is always allowed. You don't need an outbound rule. |
+| In an NSP (Enforced) | Different but linked NSP | Access is allowed through cross-perimeter rules. You don't need an outbound FQDN rule. |
+| In an NSP (Enforced) | Different unlinked NSP, or no NSP | Access is allowed when you use a managed identity, or when an outbound FQDN rule in the perimeter profile matches the host name of the storage account. If you use a SAS token and no rule matches, the event session fails to start with error 25602, and read functions might fail with error 25759. |
+| In an NSP (Transition) | Any | The perimeter evaluates and logs rules but doesn't block traffic. |
+
+### Configure outbound access to the storage account
+
+When you configure a database to use Extended Events, you can choose between [managed identity](xevent-code-event-file.md#grant-access-using-managed-identity) and [SAS token](xevent-code-event-file.md#grant-access-using-a-sas-token) authentication. The authentication mechanism you choose determines whether you need an outbound access rule.
+
+1. **Verify the perimeter association.** In the Azure portal, search for **Network Security Perimeter**, select your perimeter, and then select **Associated Resources** from the **Settings** menu to confirm that your server is listed. For more information, see [Network security perimeter](network-security-perimeter.md#get-started).
+1. **Choose your authentication mechanism.** Use managed identity authentication. A managed identity token includes the claims that the perimeter needs, so you don't need to add an outbound rule and can skip the next step.
+1. **Add an outbound access rule (SAS token only).** If you use a SAS token and the perimeter is in enforced mode, add an outbound access rule on the perimeter profile. Use a rule type of **Fully qualified domain names (FQDN)** and the host name of your storage account as the value, for example `myxedata.blob.core.windows.net`.
+
+In this example, you can use `*.blob.core.windows.net` to allow every Azure Storage account, but that setting allows outbound connections to storage accounts you don't own. Use the specific host name where you can.
+
+Keep the perimeter in transition mode until you confirm which outbound rules you need. In transition mode, the perimeter logs rule evaluations without blocking access, so you can find missing rules before they cause failures. Switch to enforced mode after the rules are in place.
+
+### Limitations and behavior differences
+
+- The [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] checks outbound access when a session starts and at every buffer flush. If you remove an outbound rule while a session is running, the session doesn't stop. Individual buffer writes start failing instead.
+- Managed identities and SAS tokens aren't equivalent under a perimeter. A managed identity token carries perimeter claims, so it doesn't need an outbound rule. A SAS token doesn't carry those claims, so it needs a matching outbound rule in enforced mode.
+- A blocked read function might not raise an error. When a perimeter blocks `sys.fn_xe_file_target_read_file` or `sys.fn_MSxe_read_event_stream`, the function might raise error 25759 or 25717, or return an empty result set with no error. If you expect data but get no rows and no error, check your outbound rules.
+
+### Errors when a perimeter blocks access
+
+Error 25602 means the `event_file` target couldn't initialize because the perimeter blocked the outbound connection to the storage account:
+
+```output
+The target, "<target_name>", encountered a configuration error during initialization. Object cannot be added to the event session.
+For more information, see https://go.microsoft.com/fwlink/?linkid=2336061.
+```
+
+Error 25759 means a perimeter blocked a read function:
+
+```output
+Network Security Perimeter (NSP) blocked outbound access to the storage URL '<url>'.
+The NSP configuration does not allow reading from the specified location.
+```
+
+Error 25717 means access was revoked while a read function was reading. Because the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] reads blob data in chunks rather than downloading whole files, this error can happen partway through a result set:
+
+```output
+The operating system returned error <error details> while reading from the file '<url>'.
+```
+
+To resolve any of these errors, switch to managed identity authentication, add an outbound FQDN rule that matches the host name of the storage account, or move the storage account into the same perimeter as the logical server.
+
+For more diagnostic detail about target initialization and buffer write failures, query the Extended Events engine log:
+
+```sql
+SELECT CONVERT(xml, record) AS record_xml
+FROM sys.dm_os_ring_buffers
+WHERE ring_buffer_type = 'RING_BUFFER_XE_LOG';
+```
+
+Perimeter association changes and access mode changes appear in the Azure Activity Log for the logical server. Inbound and outbound rule evaluations appear in [network security perimeter diagnostic logs](/azure/private-link/network-security-perimeter-diagnostic-logs).
+
 ## Resource governance
 
 In Azure SQL Database, memory consumption by extended event sessions is dynamically controlled by the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to minimize resource contention.
@@ -173,3 +255,4 @@ To find the total event session memory for an elastic pool, this query needs to 
 
 - [Extended Events](/sql/relational-databases/extended-events/extended-events)
 - [Quick Start: Extended events](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
+- [Network security perimeter for Azure SQL Database (preview)](network-security-perimeter.md)

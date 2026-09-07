@@ -41,7 +41,7 @@ The `sys.event_log` view contains the following columns.
 |**severity**|**int**|The severity of the error. Possible values are:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Error|  
 |**event_count**|**int**|The number of times that this event occurred for the specified database within the time interval specified (**start_time** and **end_time**).|  
 |**description**|**nvarchar(max)**|A detailed description of the event.<br /><br /> See [Event Types](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) for a list of possible values.|  
-|**additional_data**|**XML**|This column is unused and is preserved for backwards compatibility. |  
+|**additional_data**|**XML**|This column is unused and is preserved for backward compatibility. |  
   
 ##  <a name="EventTypes"></a> Event types
 

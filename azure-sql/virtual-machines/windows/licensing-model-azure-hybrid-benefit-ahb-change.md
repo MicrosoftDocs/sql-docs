@@ -92,6 +92,10 @@ Update-AzSqlVM -ResourceGroupName <resource_group_name> -Name <VM_name> -License
 
 ---
 
+## Manage license types at scale
+
+[!INCLUDE [manage-sql-license-types-at-scale](../../../docs/includes/manage-sql-license-types-at-scale.md)]
+
 ## Integration with centrally managed Azure Hybrid Benefit
 
 [Centrally managed Azure Hybrid Benefit (CM-AHB)](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope) is a service that helps customers optimize their Azure costs and use other benefits such as:

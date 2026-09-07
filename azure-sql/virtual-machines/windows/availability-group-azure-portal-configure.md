@@ -80,7 +80,7 @@ Alternatively, follow these steps to start the availability group deployment fro
 
    :::image type="content" source="../../includes/sql-virtual-machines/media/create-sql-virtual-machine/create-sql-virtual-machine.png" alt-text="Screenshot of the SQL Server on Azure VMs page from the Azure SQL hub page in the Azure portal, showing the +Create button.":::
 
-1. On the **SQL Server on Azure Virtual Machines** page, select an image offer from the drop-down list, and then select the box next to **High availability** to enable availability group configuration. Use **Create virtual machine** to open the **Create Always On availability group for SQL Server on Azure Virtual Machines** page.
+1. On the **SQL Server on Azure Virtual Machines** page, select an image offer from the dropdown list, and then select the box next to **High availability** to enable availability group configuration. Use **Create virtual machine** to open the **Create Always On availability group for SQL Server on Azure Virtual Machines** page.
 
     :::image type="content" source="./media/availability-group-azure-portal-configure/show-options-high-availability-create-virtual-machine.png" alt-text="Screenshot from the Azure portal of the Azure SQL hub, showing the Show options button and the Create SQL Managed Instance button." lightbox="./media/availability-group-azure-portal-configure/show-options-high-availability-create-virtual-machine.png":::
 

@@ -244,7 +244,7 @@ f1_keywords:
 1.  In **Data field**, verify that the analytical data that you're visualizing on the layer is selected.  
   
     > [!NOTE]  
-    >  If no fields appear in the drop-down list, right-click the layer, and then click **Layer Data** to open the Map Layer Data Properties Dialog Box, Analytical Data page and verify that you have specified analytical data for this layer.  
+    >  If no fields appear in the dropdown list, right-click the layer, and then click **Layer Data** to open the Map Layer Data Properties Dialog Box, Analytical Data page and verify that you have specified analytical data for this layer.  
   
 1.  Select **Legend**.  
   

@@ -38,7 +38,7 @@ Reverse migration is available under the following conditions:
 
 Unlike regular service level objective change operations in Hyperscale, migrating to Hyperscale and reverse migration to General Purpose are size-of-data operations.
 
-The duration of a reverse migration operation depends mainly on the size of the database and concurrent write activities happening during the migration. The number of vCores you assign to the target General Purpose database also impacts the duration of the reverse migration. We recommend that you provision the target General Purpose database with a number of vCores greater than or equal to the number of vCores assigned to the source Hyperscale database to sustain similar workloads.
+The duration of a reverse migration operation depends mainly on the size of the database and concurrent write activities happening during the migration. The number of vCores you assign to the target General Purpose database also affects the duration of the reverse migration. We recommend that you provision the target General Purpose database with a number of vCores greater than or equal to the number of vCores assigned to the source Hyperscale database to sustain similar workloads.
 
 During reverse migration, the source Hyperscale database can experience performance degradation if under substantial load. Specifically, transaction log rate might be reduced (throttled) to ensure that reverse migration is making progress.
 
@@ -89,7 +89,7 @@ The Azure portal enables you to reverse migrate to the General Purpose service t
 1. Navigate to the database in the Azure portal.
 1. In the left navigation bar, select **Compute + storage**.
 1. Select the **Service tier** dropdown list to expand the options for service tiers.
-1. Select **General Purpose (Scalable compute and storage options)** from the dropdown list menu.
+1. Select **General Purpose (Scalable compute and storage options)** from the dropdown list.
 1. Review the **Hardware Configuration** listed. If desired, select **Change configuration** to select the appropriate hardware configuration for your workload.
 1. Select the **vCores** slider if you wish to change the number of vCores available for your database under the General Purpose service tier.
 1. Select **Apply**.

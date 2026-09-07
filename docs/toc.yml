@@ -6093,6 +6093,8 @@ items:
       href: relational-databases/sql-server-configuration-manager.md
     - name: Database Lifecycle Management
       href: relational-databases/database-lifecycle-management.md
+    - name: Manage SQL license types at scale
+      href: sql-server/manage-license-type-at-scale.md
     - name: Database mail
       items:
       - name: Overview
@@ -11520,6 +11522,8 @@ items:
         href: relational-databases/system-views/queryinsights-exec-requests-history-transact-sql.md
       - name: queryinsights.exec_sessions_history
         href: relational-databases/system-views/queryinsights-exec-sessions-history-transact-sql.md
+      - name: queryinsights.external_api_call_stats
+        href: relational-databases/system-views/queryinsights-external-api-call-stats-transact-sql.md
       - name: queryinsights.frequently_run_queries
         href: relational-databases/system-views/queryinsights-frequently-run-queries-transact-sql.md
       - name: queryinsights.long_running_queries

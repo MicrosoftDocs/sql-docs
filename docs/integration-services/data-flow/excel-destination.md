@@ -71,7 +71,7 @@ helpviewer_keywords:
 |SQL command|Load data into the Excel destination by using a SQL query.|  
   
  **Name of the Excel sheet**  
- Select the excel destination from the drop-down list. If the list is empty, click **New**.  
+ Select the excel destination from the dropdown list. If the list is empty, click **New**.  
   
  **New**  
  Click **New** to launch the **Create Table** dialog box. When you click **OK**, the dialog box creates the excel file that the **Excel Connection Manager** points to.  

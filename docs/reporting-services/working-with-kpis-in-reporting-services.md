@@ -63,7 +63,7 @@ You can either assign static values, or use data from a shared dataset. When you
   
 To use data from a shared dataset, you can do the following steps.
   
-1. Change the fields drop down box from **Set manually**, or **Not set**, to **Dataset field**.  
+1. Change the fields dropdown list from **Set manually**, or **Not set**, to **Dataset field**.  
 
     :::image type="content" source="../reporting-services/media/rscreatekpi3.png" alt-text="Screenshot that shows the Value option set to Dataset field and the Pick dataset field set to Not set.":::
   
@@ -91,7 +91,7 @@ When you choose **Mobile Report**, you can choose the destination in a dialog.
 
 :::image type="content" source="media/rscreatekpi-related-content-mobile-report.png" alt-text="Screenshot that shows the Related content option set to Mobile report and the Choose a mobile report option set to Not set.":::
 
-When you now select the KPI in the portal, a thumbnail of the mobile report shows under the related content dropdown. Selecting this thumbnail can directly navigate you to this report.
+When you now select the KPI in the portal, a thumbnail of the mobile report shows under the related content dropdown list. Selecting this thumbnail can directly navigate you to this report.
 
 You can also specify a custom URL. This task can be anything: a website, a SharePoint site, a URL to an SSRS report (which would allow you to pass along hardcoded parameters).
 

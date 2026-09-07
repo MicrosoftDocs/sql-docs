@@ -121,7 +121,7 @@ USE Test;
 GO
 
 CREATE USER Carlo
-WITH PASSWORD='Enterpwdhere*'
+WITH PASSWORD='<password>'
 
 SELECT containment_desc FROM sys.databases
 WHERE name='Test'

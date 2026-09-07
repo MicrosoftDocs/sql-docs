@@ -60,7 +60,7 @@ GO
  The @@CONNECTIONS function returns the number of connections or attempted connections since an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] started. This value is passed to the `sp_user_counter1` stored procedure as the parameter.  
   
 > [!IMPORTANT]  
->  Make the queries defined in the user counter stored procedures as simple as possible. Memory-intensive queries that perform substantial sort or hash operations or queries that perform large amounts of I/O are expensive to execute and can impact performance.  
+>  Make the queries defined in the user counter stored procedures as simple as possible. Memory-intensive queries that perform substantial sort or hash operations or queries that perform large amounts of I/O are expensive to execute and can affect performance.  
   
 ## <a id="monitoring-example"></a> Monitor example
 

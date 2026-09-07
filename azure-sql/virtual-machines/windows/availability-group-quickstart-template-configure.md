@@ -66,7 +66,7 @@ Adding SQL Server VMs to the *SqlVirtualMachineGroups* resource bootstraps the W
    |**Resource group** | The resource group where your SQL Server VMs reside. | 
    |**Failover Cluster Name** | The name that you want for your new Windows Server failover cluster. |
    | **Existing Vm List** | The SQL Server VMs that you want to participate in the availability group and be part of this new cluster. Separate these values with a comma and a space (for example: *SQLVM1, SQLVM2*). |
-   | **SQL Server Version** | The SQL Server version of your SQL Server VMs. Select it from the drop-down list. |
+   | **SQL Server Version** | The SQL Server version of your SQL Server VMs. Select it from the dropdown list. |
    | **Existing Fully Qualified Domain Name** | The existing FQDN for the domain in which your SQL Server VMs reside. |
    | **Existing Domain Account** | An existing domain user account that has **Create Computer Object** permission in the domain as the [CNO](/windows-server/failover-clustering/prestage-cluster-adds) is created during template deployment. For example, a domain admin account typically has sufficient permission (for example: account@domain.com). *This account should also be part of the local administrator group on each VM to create the cluster.*| 
    | **Domain Account Password** | The password for the previously mentioned domain user account. | 
@@ -224,7 +224,7 @@ Verify that the account exists. If it does, you might be running into the second
 
     ![Blank user account indicates missing UPN](./media/availability-group-quickstart-template-configure/account-missing-upn.png)
 
-5. Fill in the **User logon name** box to match the name of the user, and select the proper domain from the drop-down list. 
+5. Fill in the **User logon name** box to match the name of the user, and select the proper domain from the dropdown list. 
 6. Select **Apply** to save your changes, and close the dialog box by selecting **OK**. 
 
 After you make these changes, try to deploy the Azure quickstart template once more. 

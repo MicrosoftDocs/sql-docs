@@ -169,7 +169,7 @@ The default commit mode for the link is asynchronous. While it's possible to cha
 
 During a planned linked failover, replication temporarily switches to synchronous commit mode until the failover completes. After failover, the commit mode switches back to asynchronous, even if it's explicitly set to synchronous commit mode before the failover.
 
-Using synchronous commit mode for the link can impact the performance of your primary replica, especially if there's high network latency between the replicas. In synchronous commit mode, transactions on the primary replica must wait for confirmation that the transaction log records are hardened on the secondary replica before the transaction can be committed on the primary. This waiting time increases with higher network latency, which can lead to increased transaction response times and reduced throughput on the primary replica.
+Using synchronous commit mode for the link can affect the performance of your primary replica, especially if there's high network latency between the replicas. In synchronous commit mode, transactions on the primary replica must wait for confirmation that the transaction log records are hardened on the secondary replica before the transaction can be committed on the primary. This waiting time increases with higher network latency, which can lead to increased transaction response times and reduced throughput on the primary replica.
 
 ## Related content
 

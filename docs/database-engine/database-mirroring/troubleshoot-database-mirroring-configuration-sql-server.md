@@ -130,7 +130,7 @@ Ensure that you are meeting all the [prerequisites for database mirroring](../..
  For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
- Adding a file without impacting a mirroring session requires that the path of the file exist on both servers. Therefore, if you move the database files when creating the mirror database, a later add-file operation might fail on the mirror database and cause mirroring to be suspended.  
+ Adding a file without affecting a mirroring session requires that the path of the file exist on both servers. Therefore, if you move the database files when creating the mirror database, a later add-file operation might fail on the mirror database and cause mirroring to be suspended.  
   
  To fix the problem:  
   

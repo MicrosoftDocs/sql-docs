@@ -141,7 +141,7 @@ If you use TLS 1.3 to secure the connections between instances in a replication 
 - [Log reader agent](/sql/relational-databases/replication/agents/replication-log-reader-agent#encryption-level)
 - [Snapshot agent](/sql/relational-databases/replication/agents/replication-snapshot-agent#encryption-level)
 
-A value of `3` enforces TLS 1.3 connections to SQL managed instances, but has not impact on connections to SQL Server instances. A value of `4` enforces TLS 1.3 connections between SQL managed instances, and also connections from SQL managed instance to SQL Server, and requires that you install the certificate to the SQL Server host. 
+A value of `3` enforces TLS 1.3 connections to SQL managed instances, but has no effect on connections to SQL Server instances. A value of `4` enforces TLS 1.3 connections between SQL managed instances, and also connections from SQL managed instance to SQL Server, and requires that you install the certificate to the SQL Server host. 
 
 ### Login `replAgentUser`
 

@@ -40,7 +40,7 @@ In each case, we then implemented the recommended indexes. We report the CPU Tim
 
 **Effectiveness of recommendations for workload with multiple queries**: The final set of bars corresponding to the full workload for Customer 2 exemplifies DTA's ability to analyze multiple queries in the workload to recommend a suitable set of rowstore and columnstore indexes which can improve the overall workload's execution cost. DTA (rowstore + columnstore) recommends four columnstore indexes and tens of rowstore indexes that result in over an order of magnitude improvement for the workload when compared to the option that builds only columnstore indexes; and about 4X-5X improvement when compared to DTA (rowstore only).
 
-In summary, the above examples illustrate DTA's ability to suitably leverage both rowstore and columnstore indexes supported in the SQL Server Database Engine, and recommend an appropriate combination of indexes that can significantly reduce CPU Time for the workload. 
+In summary, the above examples illustrate DTA's ability to suitably use both rowstore and columnstore indexes supported in the SQL Server Database Engine, and recommend an appropriate combination of indexes that can significantly reduce CPU Time for the workload. 
 
 See Also
 ---
@@ -55,6 +55,3 @@ See Also
 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 
 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
-
-
-

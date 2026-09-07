@@ -50,7 +50,7 @@ adls://<storage_account_name>.dfs.core.windows.net/<container_name>/
 ```
 
 > [!IMPORTANT]  
-> Always use endpoint-specific prefixes. The provided Location type prefix is used to choose the optimal protocol for communication and to leverage any advanced capabilities offered by the particular storage type.
+> Always use endpoint-specific prefixes. The provided Location type prefix is used to choose the optimal protocol for communication and to use any advanced capabilities offered by the particular storage type.
 > 
 > The generic `https://` prefix is only supported for `BULK INSERT`, but not for other use cases including `OPENROWSET` or `EXTERNAL TABLE`.
 
@@ -102,7 +102,7 @@ A shared access signature (SAS) provides delegated access to files in a storage 
     ```sql
     -- Create MASTER KEY if it doesn't exist in the database:
     CREATE MASTER KEY 
-    ENCRYPTION BY PASSWORD = '<Some Very Strong Password Here>';
+    ENCRYPTION BY PASSWORD = '<password>';
     ```
     
 1. When a SAS token is generated, it includes a question mark (`?`) at the beginning of the token. To use the token, you must remove the question mark (`?`) when creating a credential. For example:

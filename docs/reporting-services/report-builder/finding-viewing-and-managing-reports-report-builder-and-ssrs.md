@@ -118,7 +118,7 @@ From the **Actions** menu, you can also open the report in Report Builder. The f
 
 ### Manage items through actions
 
-Management tasks are supported through actions on a dropdown menu for each item. Depending on your permissions, each item has common actions that are standard for items that are stored in a SharePoint library. **View Properties** and **Edit Properties** are examples of common actions. Custom actions provide item-specific management functionality. The following image shows the actions for a report definition. Examples of custom actions for a report definition include **Manage Subscriptions** and **Manage Processing Options**.
+Management tasks are supported through actions on a dropdown list for each item. Depending on your permissions, each item has common actions that are standard for items that are stored in a SharePoint library. **View Properties** and **Edit Properties** are examples of common actions. Custom actions provide item-specific management functionality. The following image shows the actions for a report definition. Examples of custom actions for a report definition include **Manage Subscriptions** and **Manage Processing Options**.
 
 :::image type="content" source="media/finding-viewing-and-managing-reports-report-builder-and-ssrs/rs-ecbforrsitems.gif" alt-text="Screenshot of the menu commands for report server items.":::
 

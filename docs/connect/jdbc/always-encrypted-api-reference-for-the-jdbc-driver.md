@@ -29,7 +29,7 @@ There are several new additions and modifications to the JDBC driver API for use
 |Name|Description|
 |----------|-----------------|
 |New connection string keyword:<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled enables Always Encrypted functionality for the connection and columnEncryptionSetting=Disabled disables it. Accepted values are Enabled/Disabled. The default is Disabled.|
-|New connection string keyword:(MS JDBC 7.4 onwards)<br /><br /> keyVaultProviderClientId <br /><br /> keyVaultProviderClientKey |keyVaultProviderClientId=\<ClientID>;keyVaultProviderClientKey=\<ClientKey> <br/><br/> Registers SQLServerColumnEncryptionAzureKeyVaultProvider and uses ClientID and ClientKey values to retrieve Column Master Key from Azure Key Vault|
+|New connection string keyword:(MS JDBC 7.4 onward)<br /><br /> keyVaultProviderClientId <br /><br /> keyVaultProviderClientKey |keyVaultProviderClientId=\<ClientID>;keyVaultProviderClientKey=\<ClientKey> <br/><br/> Registers SQLServerColumnEncryptionAzureKeyVaultProvider and uses ClientID and ClientKey values to retrieve Column Master Key from Azure Key Vault|
 |New methods:<br /><br />`public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br />`public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br />`public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|Allows you to set/update/remove a list of trusted key paths for a database server. If while processing an application query the driver receives a key path that's not on the list, the query will fail. This property provides extra protection against security attacks that involve a compromised server sending fake key paths, which may lead to leaking key store credentials.|
 |New method:<br /><br />`public static Map<String, List\<String>> getColumnEncryptionTrustedMasterKeyPaths()`|Returns a list of trusted key paths for a database server.|
 |New method:<br /><br />`public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|Allows you to register custom key store providers. It's a dictionary that maps key store provider names to key store provider implementations.<br /><br /> To use the JVM key store, you need to instantiate a SQLServerColumnEncryptionJVMKeyStoreProvider object with JVM keystore credentials and register it with the driver. The name for this provider must be 'MSSQL_JVM_KEYSTORE'.<br /><br /> To use the Azure Key Vault store, you need to instantiate a SQLServerColumnEncryptionAzureKeyStoreProvider object and register it with the driver. The name for this provider must be 'AZURE_KEY_VAULT'.|
@@ -187,7 +187,7 @@ The statement level setting for AE is added to the SQLServerConnection class and
 > [!NOTE]
 > If Always Encrypted is disabled for a query and the query has parameters that need to be encrypted (parameters that correspond to encrypted columns), the query will fail.
 >
-> If Always Encrypted is disabled for a query and the query returns results from encrypted columns, the query will return encrypted values. The encrypted values will have the varbinary datatype.
+> If Always Encrypted is disabled for a query and the query returns results from encrypted columns, the query will return encrypted values. The encrypted values will have the varbinary data type.
 
 ## Related content
 

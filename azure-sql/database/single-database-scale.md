@@ -59,7 +59,7 @@ The estimated latency to change the service tier, scale the compute size of a si
 
 > [!NOTE]
 > - Additionally, for Standard (S2-S12) and General Purpose databases, latency for moving a database in/out of an elastic pool or between elastic pools will be proportional to database size if the database is using Premium File Share ([PFS](/azure/storage/files/storage-files-introduction)) storage.
-> - In the case of moving a database to/from an elastic pool, only the space used by the database impacts the latency, not the space used by the elastic pool.
+> - In the case of moving a database to/from an elastic pool, only the space used by the database affects the latency, not the space used by the elastic pool.
 > - To determine if a database is using PFS storage, execute the following query in the context of the database. If the value in the AccountType column is `PremiumFileStorage` or `PremiumFileStorage-ZRS`, the database is using PFS storage.
 
 ```sql

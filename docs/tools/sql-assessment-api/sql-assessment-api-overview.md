@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-The SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API is delivered with a ruleset containing best practice rules suggested by the SQL Server team. This ruleset is enhanced with the release of new versions, but at the same time, the API is built to give a highly customizable and extensible solution. Users can tune the default rules and create their own.
+The SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API is delivered with a rule set containing best practice rules suggested by the SQL Server team. This rule set is enhanced with the release of new versions, but at the same time, the API is built to give a highly customizable and extensible solution. Users can tune the default rules and create their own.
 
 The SQL Assessment API is useful when you want to make sure your SQL Server configuration is in line with recommended best practices. After an initial assessment, configuration stability can be tracked by regularly scheduled assessments.
 
@@ -32,9 +32,9 @@ The API can be used to assess:
 
 ## Rules
 
-Rules (sometimes referred to as checks) are defined in JSON formatted files. The ruleset format requires a ruleset name and version to be specified. When you use custom rulesets, you can easily know which recommendations from what ruleset come.
+Rules (sometimes referred to as checks) are defined in JSON formatted files. The rule set format requires a rule set name and version to be specified. When you use custom rulesets, you can easily know which recommendations from what rule set come.
 
-The Microsoft's shipped ruleset is available on GitHub. You can view the [entire ruleset](https://github.com/microsoft/sql-server-samples/blob/567d49a42d4cf10e4942b19290ab80828b451b77/samples/manage/sql-assessment-api/DefaultRuleset.csv) in the [samples repository](https://aka.ms/sql-assessment-api).
+The Microsoft's shipped rule set is available on GitHub. You can view the [entire ruleset](https://github.com/microsoft/sql-server-samples/blob/567d49a42d4cf10e4942b19290ab80828b451b77/samples/manage/sql-assessment-api/DefaultRuleset.csv) in the [samples repository](https://aka.ms/sql-assessment-api).
 
 ## SQL Assessment cmdlets and associated extensions
 
@@ -66,7 +66,7 @@ If you would like to invoke the SQL Assessment API via PowerShell, you must [ins
 
 ## Get started using SQL Assessment cmdlets
 
-An assessment is performed against a chosen SQL Server object. In the default ruleset, there are checks for two kinds of objects only: `Server` and `Database` (in addition to them, the API supports two more kinds: `Filegroup` and `AvailabilityGroup`). If you want to assess a SQL Server instance and all its databases, you should run the SQL Assessment cmdlets for each object separately. Or, you can pass objects for assessment to the SQL Assessment cmdlets in a variable or the pipeline.
+An assessment is performed against a chosen SQL Server object. In the default rule set, there are checks for two kinds of objects only: `Server` and `Database` (in addition to them, the API supports two more kinds: `Filegroup` and `AvailabilityGroup`). If you want to assess a SQL Server instance and all its databases, you should run the SQL Assessment cmdlets for each object separately. Or, you can pass objects for assessment to the SQL Assessment cmdlets in a variable or the pipeline.
 
 `SqlServer` and `RegisteredServer` objects are interchangeable, so you can pass any to the SQL Assessment cmdlets.
 
@@ -114,7 +114,7 @@ Go through the following examples to get started.
 
 ## Customize rules
 
-Rules are designed to be customizable and extensible. Microsoft's ruleset is designed to work for most environments. However, it's impossible to have one ruleset that works for every single environment. Users can write their own JSON files and customize existing rules or add new ones. Examples of customization and complete Microsoft released ruleset are available in the [samples repository](https://aka.ms/sql-assessment-api). For more details on how to run the SQL Assessment cmdlets with custom JSON files, use the `Get-Help` cmdlet.
+Rules are designed to be customizable and extensible. Microsoft's rule set is designed to work for most environments. However, it's impossible to have one rule set that works for every single environment. Users can write their own JSON files and customize existing rules or add new ones. Examples of customization and complete Microsoft released rule set are available in the [samples repository](https://aka.ms/sql-assessment-api). For more details on how to run the SQL Assessment cmdlets with custom JSON files, use the `Get-Help` cmdlet.
 
 ### Options available with rule customization feature
 
@@ -128,7 +128,7 @@ Specific rules have thresholds that are compared against the current value of a 
 
 #### Add more rules written by you or third parties
 
-You can combine rulesets by adding one or more JSON files as parameters to your SQL Assessment API call. Your organization might write those files or obtain them from a third party. For example, you can have your JSON file that disables specific rules from the Microsoft ruleset, and another JSON file by an industry expert that include rules you find useful for your environment, followed by another JSON file that changes some threshold values in that JSON file.
+You can combine rulesets by adding one or more JSON files as parameters to your SQL Assessment API call. Your organization might write those files or obtain them from a third party. For example, you can have your JSON file that disables specific rules from the Microsoft rule set, and another JSON file by an industry expert that include rules you find useful for your environment, followed by another JSON file that changes some threshold values in that JSON file.
 
 > [!IMPORTANT]  
 > We urge you not to use rulesets that come from untrusted sources, until you thoroughly review them to make sure they are safe.

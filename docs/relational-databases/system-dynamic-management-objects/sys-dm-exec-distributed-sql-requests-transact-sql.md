@@ -34,7 +34,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 |status|**nvarchar(32)**|Status of this step|Active, Cancelled, Completed, Failed, Queued|  
 |error_id|**nvarchar(36)**|Unique id of the error associated with this step, if any|See id of [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](sys-dm-exec-compute-node-errors-transact-sql.md), NULL if no error occurred.|  
 |start_time|**datetime**|Time at which the step started execution|Smaller or equal to current time and larger or equal to end_compile_time of the query to which this step belongs.|  
-|end_time|**datetime**|Time at which this step completed execution, was cancelled, or failed.|Smaller or equal to current time and larger or equal to start_time, set to NULL for steps currently in execution or queued.|  
+|end_time|**datetime**|Time at which this step completed execution, was canceled, or failed.|Smaller or equal to current time and larger or equal to start_time, set to NULL for steps currently in execution or queued.|  
 |total_elapsed_time|**int**|Total amount of time the query step has been executing, in milliseconds|Between 0 and the difference between end_time and start_time. 0 for queued steps.|  
 |row_count|**bigint**|Total number of rows changed or returned by this request|0 for steps that did not change or return data, number of rows affected otherwise. Set to -1 for DMS steps.|  
 |spid|**int**|Session id on the SQL Server instance executing the query distribution||  

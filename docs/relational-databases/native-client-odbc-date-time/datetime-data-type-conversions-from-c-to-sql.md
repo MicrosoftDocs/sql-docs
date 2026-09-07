@@ -73,7 +73,7 @@ helpviewer_keywords:
     | **Type** | 0 | 1..9 |  
     |**SQL_C_TYPE_TIMESTAMP** |19|21..29|  
   
-     However, for SQL_C_TYPE_TIMESTAMP, if the fractional seconds can be represented with three digits without data loss and the column size is 23 or larger, then exactly three fractional seconds' digits are generated. This behavior ensures backwards compatibility for applications developed using older ODBC drivers.  
+     However, for SQL_C_TYPE_TIMESTAMP, if the fractional seconds can be represented with three digits without data loss and the column size is 23 or larger, then exactly three fractional seconds' digits are generated. This behavior ensures backward compatibility for applications developed using older ODBC drivers.  
   
      For column sizes larger than the range in the table, a scale of 9 is implied. This conversion should allow for up to nine fractional seconds digits, the maximum allowed by ODBC.  
   

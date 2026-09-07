@@ -3,7 +3,7 @@ title: "About OLE DB connection properties"
 description: In OLE DB Driver for SQL Server, consumers set property values to request specific object behavior. Learn about setting properties.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "05/20/2020"
 ms.service: sql
 ms.subservice: connectivity

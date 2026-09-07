@@ -21,7 +21,7 @@ f1_keywords:
   
  For all chart types, you can add three-dimensional effects to a chart area in the **Chart Area Properties** dialog by selecting **Enable 3D**. For more information, see [Add 3D effects to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
- Another way to add visual impact to charts is by adding bevel, emboss and texture styles in bar, column, pie, and doughnut charts. For more information, see [Add bevel, emboss, and texture styles to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+ Another way to add visual impact to charts is by adding bevel, emboss and texture styles in bar, column, pie, and donut charts. For more information, see [Add bevel, emboss, and texture styles to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,7 +46,7 @@ f1_keywords:
  Clustering can be disabled for bar and column charts. When clustering is disabled, multiple bar and column series are displayed side-by-side in one row.  
   
 ## Shape-based three-dimensional charts  
- Shape-based chart types (pie, doughnut, funnel, pyramid) have fewer three-dimensional effects available. When working with shape-based chart types, you can change the rotation and inclination values only.  
+ Shape-based chart types (pie, donut, funnel, pyramid) have fewer three-dimensional effects available. When working with shape-based chart types, you can change the rotation and inclination values only.  
   
 ## Rotations  
  Charts can be rotated horizontally and vertically from -90 degrees to 90 degrees. A positive horizontal angle rotates the chart counter-clockwise around the x-axis, while a positive vertical angle rotates the chart clockwise around the y-axis.  

@@ -93,7 +93,7 @@ Here are detailed instructions on how to do the tasks:
   
     1. On the **General Properties** page, select **Basic Authentication** account type.  
   
-        :::image type="content" source="./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties2.png" alt-text="Screenshot showing the General Properties page of the Create Run As Account Wizard with Basic Authentication selected from the Run As Account type dropdown.":::
+        :::image type="content" source="./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties2.png" alt-text="Screenshot showing the General Properties page of the Create Run As Account Wizard with Basic Authentication selected from the Run As Account type dropdown list.":::
   
     1. On the **Credentials** page, supply valid credentials to access APS health state DMVs.  
   

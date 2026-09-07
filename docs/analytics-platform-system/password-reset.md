@@ -43,7 +43,7 @@ Both the domain administrator credentials and the system administrator credentia
   
 2.  In the left pane of the **Configuration Manager**, click **Password Reset**.  
   
-3.  Select the administrator type from the **Account** drop-down menu, and then enter the new password in the **Password** and **Confirm Password** boxes. Click **Apply** to save your changes.  
+3.  Select the administrator type from the **Account** dropdown list, and then enter the new password in the **Password** and **Confirm Password** boxes. Click **Apply** to save your changes.  
   
     Changes you make to these accounts do not affect any currently active sessions, but will be applied at the next logon attempt for each user.  
   

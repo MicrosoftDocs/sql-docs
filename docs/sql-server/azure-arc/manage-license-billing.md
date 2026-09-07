@@ -345,6 +345,12 @@ For details, see [Feature availability by service type](overview.md#feature-avai
 
 The SQL Server associated services are represented and managed for licensing purposes as SQL Server instances. Their usage is reported using the metering rules described in [Metering software usage](manage-license-billing.md#usage-metering).
 
+If you use pay-as-you-go (`PAYG`) licensing for SQL Server enabled by Azure Arc, you might be entitled to use Power BI Report Server (PBIRS) or SQL Server Reporting Services (SSRS) based on your licensing eligibility.
+
+Currently, pay-as-you-go activation or installation isn't available for PBIRS or SSRS, and you might need to provide a product key during deployment.
+
+If you're an eligible pay-as-you-go Azure Arc customer and need a PBIRS or SSRS product key, open a Microsoft Support request to validate eligibility and coordinate issuing the required product key.
+
 > [!IMPORTANT]  
 >
 > The SQL Server associated service installations require a separate license only when they are installed on the machine as a standalone instance (without SQL Server database engine). Otherwise, separate license isn't required.

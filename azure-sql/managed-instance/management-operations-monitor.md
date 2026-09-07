@@ -45,7 +45,7 @@ The following table compares management operation monitoring options:
 
 <sup>1</sup> The deployment history for a resource group is limited to 800 deployments.
 
-<sup>2</sup> Resource group deployments support cancel operations. However, due to cancel logic, only an operation scheduled for deployment after the initiated cancel action is canceled. Ongoing deployment isn't canceled when the resource group deployment is canceled. Since SQL managed instance deployment consists of one long running step (from the perspective  of Azure Resource Manger), canceling resource group deployment doesn't cancel SQL managed instance deployment and the operation still completes. 
+<sup>2</sup> Resource group deployments support cancel operations. However, due to cancel logic, only an operation scheduled for deployment after the initiated cancel action is canceled. Ongoing deployment isn't canceled when the resource group deployment is canceled. Since SQL managed instance deployment consists of one long running step (from the perspective  of Azure Resource Manager), canceling resource group deployment doesn't cancel SQL managed instance deployment and the operation still completes. 
 
 ## SQL Managed Instance operations API
 

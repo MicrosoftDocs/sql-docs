@@ -25,7 +25,7 @@ For more information about using the `GetSchema` methods, see [GetSchema and Sch
 
 This collection exposes information about all of the schema collections supported by the provider that is currently used to connect to the database.
 
-|ColumnName|DataType|Description|
+|Column name|Data type|Description|
 |----------------|--------------|-----------------|
 |CollectionName|`string`|The name of the collection to pass to the `GetSchema` method to return the collection.|
 |NumberOfRestrictions|`int`|The number of restrictions that may be specified for the collection.|
@@ -35,7 +35,7 @@ This collection exposes information about all of the schema collections supporte
 
 This schema collection exposes information about data source that the Microsoft SqlClient Data Provider for SQL Server is currently connected to.
 
-|ColumnName|DataType|Description|
+|Column name|Data type|Description|
 |----------------|--------------|-----------------|
 |CompositeIdentifierSeparatorPattern|`string`|The regular expression to match the composite separators in a composite identifier. For example, `\.` (for SQL Server).<br /><br /> A composite identifier is typically what is used for a database object name, for example: `pubs.dbo.authors` or `pubs@dbo.authors`.<br /><br /> For SQL Server, use the regular expression `\.`. |
 |DataSourceProductName|`string`|The name of the product accessed by the provider, such as "SQLServer".|
@@ -59,7 +59,7 @@ This schema collection exposes information about data source that the Microsoft 
 
 This schema collection exposes information about the data types that are supported by the database that the provider is currently connected to.
 
-|ColumnName|DataType|Description|
+|Column name|Data type|Description|
 |----------------|--------------|-----------------|
 |TypeName|`string`|The provider-specific data type name.|
 |ProviderDbType|`int`|The provider-specific type value that should be used when specifying a parameter's type. For example, `SqlDbType.Money`.|
@@ -88,7 +88,7 @@ This schema collection exposes information about the data types that are support
 
 This schema collection exposed information about the restrictions that are supported by the provider that is currently used to connect to the database.
 
-|ColumnName|DataType|Description|
+|Column name|Data type|Description|
 |----------------|--------------|-----------------|
 |CollectionName|`string`|The name of the collection that these restrictions apply to.|
 |RestrictionName|`string`|The name of the restriction in the collection.|
@@ -99,7 +99,7 @@ This schema collection exposed information about the restrictions that are suppo
 
 This schema collection exposes information about the words that are reserved by the database that the provider that is currently connected to.
 
-|ColumnName|DataType|Description|
+|Column name|Data type|Description|
 |----------------|--------------|-----------------|
 |ReservedWord|`string`|Provider specific reserved word.|
 

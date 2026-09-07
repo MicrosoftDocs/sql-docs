@@ -403,7 +403,7 @@ For available options, run `SSDT-Setup-ENU.exe /help`
 
 | New Item | Details |
 | --- | --- |
-| Integration Services (SSIS) | Add AzureEnabled feature. Enable packages of the project to be run on SSIS Platform-as-a-Service (PaaS) in Azure Data Factory |
+| Integration Services (SSIS) | Add AzureEnabled feature. Enable packages of the project to be run on SSIS platform as a service (PaaS) in Azure Data Factory |
 | Integration Services (SSIS) | Fixed an issue that Oracle connector properties aren't able to be set from variable expression |
 | Integration Services (SSIS) | Fixed an issue that Oracle connector has VS_NEEDSNEWMETATDATA error when debugging packages targeted to pre-SQL Server 2019 |
 | Integration Services (SSIS) | Fixed an issue that Oracle connector failed to upgrade/downgrade package/project if the package/project uses expressions for connection manager's properties |

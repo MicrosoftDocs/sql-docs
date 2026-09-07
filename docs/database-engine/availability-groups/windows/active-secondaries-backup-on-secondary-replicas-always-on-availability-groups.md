@@ -32,7 +32,7 @@ The [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] active secondary capabil
 
 ## Backup types supported on secondary replicas
 
-To perform a full database backup on a secondary replica, you must take a [Copy-only backups](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md), since copy-only backups don't impact the log chain or clear the differential bitmap. Consider:
+To perform a full database backup on a secondary replica, you must take a [Copy-only backups](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md), since copy-only backups don't affect the log chain or clear the differential bitmap. Consider:
 
 - Copy-only backups don't prevent the truncation of the transaction log on other replicas.
 

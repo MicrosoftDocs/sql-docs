@@ -40,13 +40,13 @@ Requires ALTER permission on the table.
   
 2.  Right-click the constraint and select **Modify**.  
   
-3.  In the grid under **Table Designer**, select **Enforce Foreign Key Constraint** and select **No** from the drop-down menu.  
+3.  In the grid under **Table Designer**, select **Enforce Foreign Key Constraint** and select **No** from the dropdown list.  
   
 4.  Select **Close**.  
 
-5.  To re-enable the constraint when desired, reverse the above steps. Select **Enforce Foreign Key Constraint** and select **Yes** from the drop-down menu.  
+5.  To re-enable the constraint when desired, reverse the above steps. Select **Enforce Foreign Key Constraint** and select **Yes** from the dropdown list.  
 
-6.  To trust the constraint by checking the existing data in the foreign key's relationship, select **Check Existing Data on Creation Or Re-Enabling** and select **Yes** from the drop-down menu. This would ensure the foreign key constraint is trusted. 
+6.  To trust the constraint by checking the existing data in the foreign key's relationship, select **Check Existing Data on Creation Or Re-Enabling** and select **Yes** from the dropdown list. This would ensure the foreign key constraint is trusted. 
 
 -   If **Check Existing Data on Creation Or Re-Enabling** is set to **No**, the foreign key does not check existing data when it is re-enabled. The query optimizer is therefore unable to consider potential performance improvements. Trusted foreign keys are recommended because they can be used to simplify execution plans with assumptions based on the foreign key constraint. To check whether foreign keys are trusted in your database, see a sample query later in this article.
 

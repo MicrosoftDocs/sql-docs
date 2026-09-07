@@ -124,9 +124,9 @@ sections:
         answer: |
           Under settings of the Azure resource, the maintenance tab allows you to review and change the current maintenance plan schedule. You can also review and set the maintenance window schedules for multiple resources via PowerShell, CLI, or Azure API.
 
-      - question: Can I check the list of resources that will be impacted by the event that I got notified for?
+      - question: Can I check the list of resources that will be affected by the event that I got notified for?
         answer: |
-          Yes, this information is available in Azure Monitor under the Service Health Planned Maintenance page, by visiting the single event. Another way is to [retrieve the list of impacted resources](advance-notifications.md#programmatically-retrieve-the-list-of-impacted-resources) by using [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview). You will receive an advance notification email that contains the notification ID and a link to the Azure Resource Graph Explorer. 
+          Yes, this information is available in Azure Monitor under the Service Health Planned Maintenance page, by visiting the single event. Another way is to [retrieve the list of affected resources](advance-notifications.md#programmatically-retrieve-the-list-of-affected-resources) by using [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview). You will receive an advance notification email that contains the notification ID and a link to the Azure Resource Graph Explorer. 
 
   - name: Maintenance window monitoring
     questions:

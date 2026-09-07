@@ -26,7 +26,7 @@ helpviewer_keywords:
  This topic describes the prerequisites and recommendations for setting up database mirroring. For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
 > [!IMPORTANT]  
-> We recommend that you configure database mirroring during off-peak hours because configuration can impact performance.  
+> We recommend that you configure database mirroring during off-peak hours because configuration can affect performance.  
   
   
 ##  <a name="PrepareInstances"></a> Preparing a Server Instance to Host a Mirror Server  

@@ -3,7 +3,7 @@ title: Resynchronizing rows (OLE DB driver)
 description: For updating data in rowsets, the OLE DB Driver for SQL Server supports IRowsetResynch on SQL Server cursor-supported rowsets only.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

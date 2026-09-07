@@ -26,7 +26,7 @@ ms.custom:
   
 -   Standardizes and enriches customer data by using domain values, domain rules, and reference data. For example, standardize term usage by changing "St." to "Street", enrich data by filling in missing elements by changing "1 Microsoft way Redmond 98006" to "1 Microsoft Way, Redmond, WA 98006".  
   
--   Provides a simple, intuitive, and consistent wizard-like interface to the user to navigate data and inspect errors amongst a very large set of data.  
+-   Provides a simple, intuitive, and consistent wizard-like interface to the user to navigate data and inspect errors among a very large set of data.  
   
  The following illustration displays how data cleansing is done in DQS:  
   

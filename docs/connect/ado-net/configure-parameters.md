@@ -87,7 +87,7 @@ The Microsoft SqlClient Data Provider for SQL Server type of a `Parameter` objec
 >
 > **Vector**
 >
-> For SQL vector datatype, a parameter `Value` of type `Microsoft.Data.SqlTypes.SqlVector<T>` must be specified. Parameter `Size` and vector dimension are inferred from the parameter `Value`. The parameter `Size` is ignored.
+> For SQL vector data type, a parameter `Value` of type `Microsoft.Data.SqlTypes.SqlVector<T>` must be specified. Parameter `Size` and vector dimension are inferred from the parameter `Value`. The parameter `Size` is ignored.
 
 > [!NOTE]
 > When you send a null parameter value to the server, you must specify <xref:System.DBNull>, not `null` (`Nothing` in Visual Basic). The null value in the system is an empty object that has no value. <xref:System.DBNull> is used to represent null values.

@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 This articles describes what new capabilities and features are included in each version of [SQL Server Machine Learning Services](sql-server-machine-learning-services.md). Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform, advanced analytics, and data science. 
 
 > [!NOTE]
-> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown list to choose the appropriate version of SQL Server.
 
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 

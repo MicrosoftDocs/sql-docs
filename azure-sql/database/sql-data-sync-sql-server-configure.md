@@ -202,7 +202,7 @@ Make and propagate all schema changes manually.
 
 For adding new tables and columns:
 
-New tables and columns don't impact the current sync and Data Sync ignores them until they're added to the sync schema. When adding new database objects, follow the sequence:
+New tables and columns don't affect the current sync and Data Sync ignores them until they're added to the sync schema. When adding new database objects, follow the sequence:
 
 1. Add new tables or columns to the hub and to all sync members.
 1. Add new tables or columns to the sync schema.

@@ -109,7 +109,7 @@ f1_keywords:
   
          ![Data Feed Publishing Wizard - Publish Settings Pag](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Data Feed Publishing Wizard - Publish Settings Pag")  
   
-    2.  Type a **name** for the **view**. You can also select an existing view from the drop-down list.  
+    2.  Type a **name** for the **view**. You can also select an existing view from the dropdown list.  
   
     3.  In the **Settings** list, specify a **name** of the **linked server** to be associated with the view. If linked server does not already exist, the wizard will create the linked server before creating the view. You can also set values for **User32BitRuntime** and **Timeout** values here.  
   

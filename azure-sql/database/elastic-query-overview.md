@@ -4,7 +4,7 @@ description: Elastic query enables you to run a Transact-SQL query that spans mu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: drskwier, bgavrilovic, mathoma, randolphwest
-ms.date: 08/11/2026
+ms.date: 08/12/2026
 ms.service: azure-sql-database
 ms.subservice: scale-out
 ms.topic: overview
@@ -118,7 +118,7 @@ The following steps configure elastic database queries for horizontal partitioni
 - [CREATE EXTERNAL TABLE](/sql/t-sql/statements/create-external-table-transact-sql) `mytable`
 
 Once you have performed these steps, you can access the horizontally partitioned table `mytable` as though it were a local table. Azure SQL Database automatically opens multiple parallel connections to the remote databases where the tables are physically stored, processes the requests on the remote databases, and returns the results.
-More information on the steps required for the horizontal partitioning scenario can be found in [elastic query for horizontal partitioning](elastic-query-horizontal-partitioning.md).
+For more information about the steps required for the horizontal partitioning scenario, see [elastic query for horizontal partitioning](elastic-query-horizontal-partitioning.md).
 
 To begin coding, see [Getting started with elastic query for horizontal partitioning (sharding)](elastic-query-getting-started.md).
 
@@ -136,6 +136,8 @@ The `LOCATION` of an external data source can identify a SQL endpoint by fully q
 Only principals with `ALTER ANY EXTERNAL DATA SOURCE` permission can create or change an external data source. Limit this permission to database administrators who require it, and periodically review external data sources by querying [sys.external_data_sources](/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql).
 
 As a separate network control, have a network administrator [restrict outbound networking and allow only approved destination FQDNs](outbound-firewall-rule-overview.md) for the logical server. Use an FQDN instead of an IP address in each external data source so that its destination can be explicitly allow listed. Separating database configuration from network approval implements separation of duties and prevents a database administrator from establishing an unapproved communication path without an independent network policy change.
+
+[Network security perimeter](network-security-perimeter.md) (preview) provides another network boundary you can apply to the logical server. Elastic query works within a single perimeter, so the database that runs the query and the remote database must belong to the same perimeter. For more information, see [Preview limitations](#preview-limitations).
 
 ## Connectivity for tools
 
@@ -166,6 +168,10 @@ Elastic query is included in the cost of Azure SQL Database. Topologies where yo
 
 - Private links are currently not supported with elastic query for those databases that are targets of external data sources.
 
+- Elastic query is supported with [network security perimeter](network-security-perimeter.md) (preview) when the database that runs the query and the remote database are in the same perimeter. You can't query a remote database in a different perimeter. Elastic query needs no perimeter configuration of its own because access between resources in the same perimeter is always allowed.
+
+- If a perimeter blocks access to a remote database, the failure surfaces when the query runs, not when you create the external data source. Creating an external data source doesn't contact the remote endpoint.
+
 ## Related content
 
 - [Get started with cross-database queries (vertical partitioning) (preview)](elastic-query-getting-started-vertical.md)
@@ -173,3 +179,4 @@ Elastic query is included in the cost of Azure SQL Database. Topologies where yo
 - [Report across scaled-out cloud databases (preview)](elastic-query-getting-started.md)
 - [Reporting across scaled-out cloud databases (preview)](elastic-query-horizontal-partitioning.md)
 - [sp_execute_remote (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database)
+- [Network security perimeter for Azure SQL Database (preview)](network-security-perimeter.md)

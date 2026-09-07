@@ -43,7 +43,7 @@ To configure the maintenance window when you create a SQL managed instance, set 
 
 For step-by-step information on creating a new SQL managed instance, see [Create an Azure SQL Managed Instance](instance-create-quickstart.md).
 
-:::image type="content" source="media/maintenance-window-configure/additional-settings-sql-managed-instance.png" alt-text="Screenshot from the Azure portal. In the Create Azure SQL managed instance, on the Additional settings tab, the Maintenance window drop down is open.":::
+:::image type="content" source="media/maintenance-window-configure/additional-settings-sql-managed-instance.png" alt-text="Screenshot from the Azure portal. On the Additional settings tab of the Create Azure SQL Managed Instance page, the Maintenance window dropdown list is open.":::
 
 # [PowerShell](#tab/azure-powershell)
 

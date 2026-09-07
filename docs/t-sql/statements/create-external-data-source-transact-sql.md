@@ -3043,7 +3043,7 @@ For more examples, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source
 
    ```sql
    -- Optional: Create MASTER KEY if it doesn't exist in the database:
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Strong Password>'
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
    GO
    ```
 

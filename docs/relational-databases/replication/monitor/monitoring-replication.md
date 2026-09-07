@@ -1,6 +1,6 @@
 ---
-title: "Monitoring (Replication)"
-description: Learn about the monitoring tools used to track activity and status of replication in SQL Server replication topology.
+title: Monitoring (Replication)
+description: Monitoring replication in SQL Server helps you track agent activity, status, and latency across your topology. Explore the tools to keep replication healthy.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -21,12 +21,12 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Monitoring (Replication)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  Monitoring a replication topology is an important aspect of deploying replication. Because replication activity is distributed, it is essential to track activity and status across all computers involved in replication. With the use of various monitoring tools, you can answer such common questions as: 
+  Monitoring a replication topology is an important aspect of deploying replication. Because replication activity is distributed, it's essential to track activity and status across all computers involved in replication. By using various monitoring tools, you can answer such common questions as: 
 
 -   Is my replication system healthy?
 -   Which subscriptions are slow?
 -   How far behind is my transactional subscription?
--   How long will it take a transaction committed now to reach a Subscriber in transactional replication?
+-   How long will it take a transaction committed now to reach a Subscriber in Transactional Replication?
 -   Why is my merge subscription slow?
 -   Why is an agent not running?  
   
@@ -38,7 +38,7 @@ The following tools can be used to monitor replication:
   
 -   **Transact-SQL (T-SQL) and Replication Management Objects (RMO)** - Both interfaces allow you to monitor all types of replication from the Distributor. Merge replication also provides the ability to monitor replication from the Subscriber.  
   
--   **Alerts for replication agent events** - Replication provides a number of predefined alerts for replication agent events, and you can create additional alerts if necessary. Alerts can be used to trigger an automated response to an event and/or notify an administrator. For more information, see [Use Alerts for Replication Agent Events](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
+-   **Alerts for replication agent events** - Replication provides a number of predefined alerts for replication agent events, and you can create additional alerts if necessary. Alerts can be used to trigger an automated response to an event and notify an administrator. For more information, see [Use Alerts for Replication Agent Events](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
 -   **System Monitor** - can be useful for monitoring performance, providing a number of counters for replication. For more information, see [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).  
   

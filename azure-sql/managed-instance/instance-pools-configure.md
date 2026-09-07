@@ -603,6 +603,10 @@ To create a new support request in the Azure portal, follow these steps:
 
 To create larger SQL Managed Instance deployments (with or without instance pools), you might need to obtain a larger regional quota. For more information, see [Request quota increase](../database/quota-increase-request.md). The deployment logic for instance pools compares total vCore consumption *at the pool level* against your quota to determine whether you're allowed to create new resources without further increasing your quota.
 
+## Manage license types at scale
+
+[!INCLUDE [manage-sql-license-types-at-scale](../../docs/includes/manage-sql-license-types-at-scale.md)]
+
 ## Related content
 
 - [Features comparison: Azure SQL Database and Azure SQL Managed Instance](../database/features-comparison.md)

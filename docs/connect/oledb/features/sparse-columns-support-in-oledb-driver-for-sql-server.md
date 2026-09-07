@@ -3,7 +3,7 @@ title: "Sparse Columns Support in OLE DB Driver for SQL Server"
 description: Learn how OLE DB Driver for SQL Server supports sparse columns and see information about sparse columns in SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

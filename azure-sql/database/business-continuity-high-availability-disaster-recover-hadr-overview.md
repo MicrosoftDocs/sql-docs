@@ -49,7 +49,7 @@ In most cases, SQL Database handles disruptive events that might happen in a clo
 
 ## High Availability
 
-Azure SQL Database comes with a core resiliency and reliability promise that protects it against software or hardware failures. Database backups are automated to protect your data from corruption or accidental deletion. As a Platform-as-a-service (PaaS), the Azure SQL Database service provides availability as an off-the-shelf feature with an [enterprise class availability SLA](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1). 
+Azure SQL Database comes with a core resiliency and reliability promise that protects it against software or hardware failures. Database backups are automated to protect your data from corruption or accidental deletion. As a platform as a service (PaaS), the Azure SQL Database service provides availability as an off-the-shelf feature with an [enterprise class availability SLA](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1). 
 
 To achieve high availability in the Azure cloud environment, enable [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability). With zone redundancy, the database or elastic pool uses [Azure availability zones](/azure/reliability/availability-zones-overview) to ensure resilience to zonal failures. 
 

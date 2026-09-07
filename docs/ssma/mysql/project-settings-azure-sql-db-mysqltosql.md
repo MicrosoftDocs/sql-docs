@@ -19,7 +19,7 @@ The SQL Azure pane is available in the **Project Settings** and **Default Projec
   
 -   Use the Project Settings dialog box to set configuration options for the current project. To access the SQL Azure settings, on the **Tools** menu, select **Project Settings**, click **General** at the bottom of the left pane, and then select **SQL Azure**.  
   
--   Use the Default Project Settings dialog box to set configuration options for all projects. To access the SQL Azure settings, on the **Tools** menu, select **DefaultProject Settings**, select migration project type as SQL Azure from **Migration Target Version** drop down to access the settings in SQL Azure pane, click **General** at the bottom of the left pane, and then select **SQL Azure**.  
+-   Use the Default Project Settings dialog box to set configuration options for all projects. To access the SQL Azure settings, on the **Tools** menu, select **Default Project Settings**, select **SQL Azure** as the migration project type from the **Migration Target Version** dropdown list to access the settings in the SQL Azure pane, click **General** at the bottom of the left pane, and then select **SQL Azure**.  
   
 ## Options  
   

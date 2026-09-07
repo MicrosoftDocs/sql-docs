@@ -4,7 +4,7 @@ description: The AI_ANALYZE_SENTIMENT function detects sentiment in input text.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop
-ms.date: 06/10/2026
+ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -34,7 +34,7 @@ The `AI_ANALYZE_SENTIMENT` function analyzes input text and returns one of these
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ```syntaxsql
-AI_ANALYZE_SENTIMENT ( text )
+AI_ANALYZE_SENTIMENT ( text [ (NULL | ERROR | DEFAULT <value>) ON ERROR ] )
 ```
 
 ## Arguments
@@ -43,9 +43,18 @@ AI_ANALYZE_SENTIMENT ( text )
 
 An [expression](../language-elements/expressions-transact-sql.md) of a character type, for example **nvarchar**, **varchar**, **nchar**, or **char**.
 
+#### ON ERROR
+
+The `ON ERROR` clause controls how an AI function handles processing errors.
+- `NULL ON ERROR` returns `NULL` when the function can't process a value. This is the default behavior and doesn't need to be explicitly specified.
+- `ERROR ON ERROR` causes the entire query to fail if an error occurs while processing any input value.
+- `DEFAULT <value> ON ERROR` returns the specified default value instead of `NULL` when an error occurs.
+
+Errors can be caused by [Responsible AI](https://www.microsoft.com/ai/tools-practices) safety checks, input size limits, transient service issues, or other processing failures.
+
 ## Return types
 
-Returns `nvarchar` with one of the following values:
+Returns **nvarchar** with one of the following values:
 
 - `positive`
 - `negative`
@@ -55,7 +64,8 @@ Returns `nvarchar` with one of the following values:
 ## Remarks
 
 AI functions return `NULL` if the AI model can't process the text. Common reasons include:
-- Responsible AI rules block inappropriate content in the input text.
+
+- [Responsible AI](https://www.microsoft.com/ai/tools-practices) rules block inappropriate content in the input text.
 - Input text exceeds token limits. The current model supports up to 15 KB of text.
 
 ## Examples
@@ -72,9 +82,11 @@ Expected result: `positive`
 
 ```sql
 SELECT review_id,
-       ai_analyze_sentiment(review_text) AS sentiment
+       ai_analyze_sentiment(review_text ERROR ON ERROR) AS sentiment
 FROM dbo.hotel_reviews;
 ```
+
+The optional `ERROR ON ERROR` clause causes the query to fail if any input value cannot be processed.
 
 ## Related content
 

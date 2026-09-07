@@ -151,7 +151,7 @@ For more information, see:
 
 1. SQL Server queries on an external table backed by S3-compatible storage are limited to 1,000 objects per prefix. This is because S3-compatible object listing is limited to 1,000 object keys per prefix.
 2. For S3-compatible object storage, customers are not allowed to create their access key ID with a `:` character in it.
-3. The total URL length is limited to 259 characters. This means `s3://<hostname>/<objectkey>` shouldn't exceed 259 characters. The `s3://` counts towards this limit, so the path length cannot exceed 259-5 = 254 characters.
+3. The total URL length is limited to 259 characters. This means `s3://<hostname>/<objectkey>` shouldn't exceed 259 characters. The `s3://` counts toward this limit, so the path length cannot exceed 259-5 = 254 characters.
 4. The SQL credential name is limited by 128 characters in UTF-16 format.
 5. The credential name created must contain the bucket name unless this credential is for a new external data source.
 6. Access Key ID and Secret Key ID must only contain alphanumeric values.

@@ -224,7 +224,7 @@ To create a database, follow these steps:
 1. Open **SQL Server Management Studio** and connect to the SQL Server instance.
 1. In **Object Explorer**, right-click **Databases** and select **New Database**.
 1. In **Database name**, type **MyDB1**.
-1. Select the **Options** page, and choose **Full** from the **Recovery model** dropdown if it's not full by default. The database must be in the full recovery model to meet the prerequisites of participating in an availability group.
+1. Select the **Options** page, and choose **Full** from the **Recovery model** dropdown list if it's not full by default. The database must be in the full recovery model to meet the prerequisites of participating in an availability group.
 1. Select **OK** to close the **New Database** page and create your new database.
 
 To back up the database, follow these steps:
@@ -286,7 +286,7 @@ To create your availability group, follow these steps.
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/14-new-ag-add-replica.png" alt-text="Screenshot of the Specify Replicas page in the New Availability Group Wizard in SSMS.":::
 
 1. The **Connect to Server** dialog pops up. Type the name of the second server in **Server name**, such as **SQL-VM-2**. Select **Connect**.
-1. On the **Specify Replicas** page, check the boxes for **Automatic Failover** and choose **Synchronous commit** for the availability mode from the dropdown:
+1. On the **Specify Replicas** page, check the boxes for **Automatic Failover** and choose **Synchronous commit** for the availability mode from the dropdown list:
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/15-new-ag-replica.png" alt-text="Screenshot of the Specify Replicas page in the New Availability Group Wizard in SSMS, with automatic failover and availability mode highlighted.":::
 
@@ -311,11 +311,11 @@ To create your availability group, follow these steps.
    | SQL-VM-1 | SQL-subnet-1 | 10.38.1.0/24 | availability-group-listener | 10.38.1.11 |
    | SQL-VM-2 | SQL-subnet-2 | 10.38.2.0/24 | availability-group-listener | 10.38.2.11 |
 
-1. Choose the first subnet (such as 10.38.1.0/24) from the dropdown on the **Add IP address** dialog box, and then provide the secondary dedicated listener **IPv4 address**, such as `10.38.1.11`. Select **OK**.
+1. Choose the first subnet (such as 10.38.1.0/24) from the dropdown list on the **Add IP address** dialog box, and then provide the secondary dedicated listener **IPv4 address**, such as `10.38.1.11`. Select **OK**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/18-add-listener-ip-subnet-1.png" alt-text="Screenshot of the Add IP address dialog box in the New Availability Group Wizard.":::
 
-1. Repeat this step again, but choose the other subnet from the dropdown (such as 10.38.2.0/24). Provide the secondary dedicated listener **IPv4 address** from the other SQL Server VM, such as `10.38.2.11`. Select **OK**.
+1. Repeat the previous step, but choose the other subnet from the dropdown list (such as 10.38.2.0/24). Provide the secondary dedicated listener **IPv4 address** from the other SQL Server VM, such as `10.38.2.11`. Select **OK**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/19-add-listener-ip-subnet-2.png" alt-text="Screenshot of Add IP Address for Listener.":::
 

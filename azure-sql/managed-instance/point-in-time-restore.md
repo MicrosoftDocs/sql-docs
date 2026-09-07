@@ -114,11 +114,11 @@ Alternatively to restore your database, you can follow these steps:
 
    :::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane in the Azure portal, with adding a new database selected. ":::
 
-1. On the **Basics** tab of the **Create Azure SQL Managed Database page**, provide subscription, and resource group details under **Project details**. Then, under **Database details** provide the new name of the database you plan to restore. Confirm the correct SQL managed instance is listed in the dropdown. Then select **Next: Data source >**
+1. On the **Basics** tab of the **Create Azure SQL Managed Database page**, provide subscription and resource group details under **Project details**. Then, under **Database details** provide the new name of the database you plan to restore. Confirm the correct SQL managed instance is listed in the dropdown list. Then select **Next: Data source >**
 
    :::image type="content" source="./media/point-in-time-restore/create-database-page.png" alt-text="Screenshot of the Azure portal that shows the Basics tab of the Create Azure SQL Managed Database page.":::
 
-1. On the **Data source** tab, choose **Point-in-time restore** under **Use existing data**. Provide the subscription, resource group, and SQL managed instance that contains the source database. From the **Managed database** dropdown, choose the database you want to restore, and then choose the point in time you want to restore the database from. The source and target instance can be the same, or two different instances. Select **Next : Additional settings >**
+1. On the **Data source** tab, choose **Point-in-time restore** under **Use existing data**. Provide the subscription, resource group, and SQL managed instance that contains the source database. From the **Managed database** dropdown list, choose the database you want to restore, and then choose the point in time you want to restore the database from. The source and target instance can be the same, or two different instances. Select **Next : Additional settings >**
 
    :::image type="content" source="./media/point-in-time-restore/database-data-source.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with point-in-time restore selected.":::
 

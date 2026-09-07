@@ -83,9 +83,9 @@ helpviewer_keywords:
   
      The **Precedence Constraint Editor** opens.  
   
-5.  In the **Evaluation operation** drop-down list, select an evaluation operation.  
+5.  In the **Evaluation operation** dropdown list, select an evaluation operation.  
   
-6.  In the **Value** drop-down list, select the execution result of the precedence executable.  
+6.  In the **Value** dropdown list, select the execution result of the precedence executable.  
   
 7.  If the evaluation operation uses an expression, in the **Expression** box, type an expression, and click **Test** to evaluate the expression.  
   
@@ -242,7 +242,7 @@ When you first use [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the def
   
 4.  Click **Control Flow Auto Connect** and select **Connect a new shape to the selected shape by default**.  
   
-5.  In the drop-down list, choose either **Use a Failure constraint for the new shape** or **Use a Completion constraint for the new shape**.  
+5.  In the dropdown list, choose either **Use a Failure constraint for the new shape** or **Use a Completion constraint for the new shape**.  
   
 6.  Click **OK**.  
   

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "rendering extensions [Reporting Services], IRenderingExtension interface"
 ---
 # Implement the IRenderingExtension interface
-  The rendering extension takes the results from a report definition that is combined with the actual data and renders the resulting data to a format that is useable. The transformation of the combined data and formatting is done by using a common language runtime (CLR) class that implements <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. This transforms the object model into an output format that is consumable by a viewer, printer, or other output target.  
+  The rendering extension takes the results from a report definition that is combined with the actual data and renders the resulting data to a format that is usable. The transformation of the combined data and formatting is done by using a common language runtime (CLR) class that implements <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. This transforms the object model into an output format that is consumable by a viewer, printer, or other output target.  
   
  The <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> has three methods that must be coded:  
   

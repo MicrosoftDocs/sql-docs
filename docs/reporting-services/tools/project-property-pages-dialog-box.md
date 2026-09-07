@@ -17,7 +17,7 @@ helpviewer_keywords:
 
   Use the project property pages to configure deployment properties for a Report Server project. To open this dialog box, from the **Project** menu, select _\<Report Project Name>_**Properties**.  
   
- After you define configuration properties, you can select a configuration from the **Solution Configurations** drop-down list on the toolbar.  
+ After you define configuration properties, you can select a configuration from the **Solution Configurations** dropdown list on the toolbar.  
 
 :::image type="content" source="../../reporting-services/reports/media/ssrs-project-properties.png" alt-text="Screenshot of the Property Pages properties.":::
 

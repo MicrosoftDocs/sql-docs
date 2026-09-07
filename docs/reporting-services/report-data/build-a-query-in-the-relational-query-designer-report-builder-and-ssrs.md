@@ -60,9 +60,9 @@ A query designer helps you specify which data to retrieve from an external data 
   
 2.  In the Applied filters pane toolbar, click **Add Filter**. A new filter row appears.  
   
-3.  In **Field name**, click to display the drop-down list of fields, and then click the name of the field that you want to filter by. For example, to filter by quantity, click the field that contains the number of items.  
+3.  In **Field name**, click to display the dropdown list of fields, and then click the name of the field that you want to filter by. For example, to filter by quantity, click the field that contains the number of items.  
   
-4.  In **Operator**, click to display the drop-down list of operators, and then select the comparison operator to use in the filter.  
+4.  In **Operator**, click to display the dropdown list of operators, and then select the comparison operator to use in the filter.  
   
 5.  In **Value**, type the value that you want to filter by. For example, to filter on quantity greater than 100, type 100.  
   

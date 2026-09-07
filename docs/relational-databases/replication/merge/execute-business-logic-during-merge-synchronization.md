@@ -19,7 +19,7 @@ helpviewer_keywords:
 ---
 # Execute Business Logic During Merge Synchronization
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  The business logic handler framework allows you to write a managed code assembly that is called during the merge synchronization process. The assembly includes business logic that can respond to a number of conditions during synchronization: data changes, conflicts, and errors. The business logic handler framework provides a simple programming model, and the data that the merge process provides to your assembly is in the form of an ADO.NET data set, so you can leverage knowledge of ADO.NET rather than learning a proprietary interface. For more information on programming business logic handlers, see:  
+  The business logic handler framework allows you to write a managed code assembly that is called during the merge synchronization process. The assembly includes business logic that can respond to a number of conditions during synchronization: data changes, conflicts, and errors. The business logic handler framework provides a simple programming model, and the data that the merge process provides to your assembly is in the form of an ADO.NET data set, so you can use knowledge of ADO.NET rather than learning a proprietary interface. For more information on programming business logic handlers, see:  
   
 -   The application programming interface (API) reference: <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
@@ -35,7 +35,7 @@ helpviewer_keywords:
 -   Custom error resolution  
   
 > [!NOTE]  
->  The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can impact performance.  
+>  The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can affect performance.  
   
 ### Custom Change Handling  
  The business logic handler can be invoked during the processing of non-conflicting data changes and can perform one of three actions:  

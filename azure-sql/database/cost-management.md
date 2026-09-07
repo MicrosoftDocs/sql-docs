@@ -49,6 +49,10 @@ In the provisioned compute tier of the vCore-based purchasing model, you can get
 
 For environments with multiple databases that have varying and unpredictable usage demands, elastic pools can provide cost savings compared to provisioning the same number of single databases. For details, see [Elastic pools](elastic-pool-overview.md).
 
+## Manage license types at scale
+
+[!INCLUDE [manage-sql-license-types-at-scale](../../docs/includes/manage-sql-license-types-at-scale.md)]
+
 ## Estimate Azure SQL Database costs
 
 Use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) to estimate costs for different Azure SQL Database configurations. For more information, see [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/azure-sql-database/). 

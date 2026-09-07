@@ -55,7 +55,7 @@ For information about client driver versions that support using secure enclaves 
 > [!NOTE]
 > This step should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
 
-To check if VBS is running, open the System Information tool by running `msinfo32.exe` and find the `Virtualization-based security` items towards the bottom of the System Summary.
+To check if VBS is running, open the System Information tool by running `msinfo32.exe` and find the `Virtualization-based security` items toward the bottom of the System Summary.
 
 ![Screenshot of System Information showing virtualization-based security status and configuration.](./media/always-encrypted-enclaves/msinfo32-vbs-status.png)
 

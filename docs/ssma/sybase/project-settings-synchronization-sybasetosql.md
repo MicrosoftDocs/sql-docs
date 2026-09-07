@@ -17,7 +17,7 @@ The Synchronization page of the **Project Settings** dialog box contains setting
   
 You can access two different Synchronization pages that contain the same settings:  
   
--   If you want to specify settings for all future SSMA projects, on the **Tools** menu, select **Default Project Settings**, select migration project type for which settings are required to be viewed or changed from **Migration Target Version** drop down and then select **Synchronization** at the bottom of the left pane.  
+-   If you want to specify settings for all future SSMA projects, on the **Tools** menu, select **Default Project Settings**, select migration project type for which settings are required to be viewed or changed from **Migration Target Version** dropdown list and then select **Synchronization** at the bottom of the left pane.  
   
 -   To specify settings for the current project, on the **Tools** menu, select **Project Settings**, and then select **Synchronization** at the bottom of the left pane.  
   

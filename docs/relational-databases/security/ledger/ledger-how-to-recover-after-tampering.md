@@ -25,7 +25,7 @@ Depending on the type of tampering, there are cases where you can repair the led
 
 ### Tampering didn't affect further transactions
 
-The tampering event modified some data stored in the ledger but didn't affect any further transactions. This might be because the attack was detected before any transactions would operate over the tampered data or because the attack only affected data in a way that doesn't affect new transactions. For example, if you use a ledger table to store banking transaction details, tampering with details of existing transactions doesn't impact new transactions, which will work over the current balances.
+The tampering event modified some data stored in the ledger but didn't affect any further transactions. This might be because the attack was detected before any transactions would operate over the tampered data or because the attack only affected data in a way that doesn't affect new transactions. For example, if you use a ledger table to store banking transaction details, tampering with details of existing transactions doesn't affect new transactions, which will work over the current balances.
 
 Since the tampering didn't affect any transactions that occurred after the tampering event, the new transaction execution and generated results are correct. Based on that, you should ideally bring the ledger to a consistent state without affecting these transactions.
 

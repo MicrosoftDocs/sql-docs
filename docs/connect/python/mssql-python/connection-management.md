@@ -3,7 +3,8 @@ title: Manage Connections with mssql-python
 description: Learn how to open, close, and manage database connections using context managers, autocommit, and connection attributes with mssql-python.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/31/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -145,20 +146,27 @@ print(cursor.fetchone().Name)
 
 ## Connection timeout
 
-Set the connection timeout to control how long the driver waits to establish a connection before raising an error. A reasonable connection timeout is important for applications deployed in environments with unreliable networks or for failing fast when a server is unreachable:
+The driver has two independent timeouts. Setting one doesn't affect the other.
+
+| Setting | What it bounds | Default |
+| --- | --- | --- |
+| `timeout` argument to `connect()` | The authentication attempt, including the network connection. Sets `SQL_ATTR_LOGIN_TIMEOUT`. | `0`, which uses the driver default |
+| `Connection.timeout` property | Each statement that the connection runs. | `0`, which disables the query timeout |
 
 ```python
-# At connection time (in seconds)
+# Bound the authentication attempt (in seconds)
 conn = mssql_python.connect(connection_string, timeout=30)
 
-# Or after connection
+# Bound each statement that this connection runs
 conn.timeout = 60
-print(conn.timeout)  # 60
 ```
 
-A timeout of `0` means no timeout (wait indefinitely). Define reasonable timeouts in production; a hung connection attempt with no timeout blocks the calling thread permanently.
+If you set `SQL_ATTR_LOGIN_TIMEOUT` in `attrs_before`, that value takes precedence over the `timeout` argument.
 
-If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, use at least `60`. An auto-paused database resumes on the first connect, and the resume can take 30 to 60 seconds or more. A shorter timeout expires before the resume completes and the connect attempt fails.
+> [!NOTE]
+> Microsoft Entra ID token acquisition happens before the driver connects, so the authentication timeout doesn't bound it.
+
+If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, use at least `60`. An auto-paused database resumes on the first connection attempt, and a shorter timeout expires before the resume completes. The attempt can also fail with error 40613 while the database resumes, so the application must retry. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
 
 ## Connection attributes
 
@@ -276,7 +284,7 @@ Default encodings:
 
 - **Use context managers** (`with` blocks) for all connections in application code. They guarantee cleanup even when exceptions occur.
 - **Use connection pooling** for better performance (enabled by default). See [Connection pooling](connection-pooling.md).
-- **Set appropriate timeouts** for your network environment. A 30-second timeout suits most cloud deployments; increase it for cross-region or VPN connections. Use at least `60` for [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, because an auto-paused database can take 30 to 60 seconds or more to resume on the first connect.
+- **Set appropriate timeouts** for your network environment. A 30-second timeout suits most cloud deployments; increase it for cross-region or VPN connections. Use at least `60` for [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, because an auto-paused database resumes on the first connection attempt.
 - **Set `MultiSubnetFailover=yes` in the connection string** when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. It's safe on single-IP targets, so leave it on for all Microsoft SQL family TCP endpoints.
 - **Use `autocommit=False`** (the default) for data modification scenarios where you need transactional atomicity.
 - **Use `autocommit=True`** for DDL operations, read-only queries, and admin scripts.

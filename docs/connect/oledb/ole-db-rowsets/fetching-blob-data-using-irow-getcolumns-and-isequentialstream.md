@@ -3,7 +3,7 @@ title: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream"
 description: "This function fetches BLOB data by using IRow::GetColumns and ISequentialStream in OLE DB Driver for SQL Server."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

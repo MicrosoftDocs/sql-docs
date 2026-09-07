@@ -19,7 +19,7 @@ ms.custom:
   
 1.  Go to the SharePoint document library where you saved the report.  
   
-2.  Click the icon for the expand drop-down menu on the report and then click **Manage Data Sources**.  
+2.  Click the icon for the expand dropdown list on the report and then click **Manage Data Sources**.  
   
      The Manage Data Sources page opens.  
   
@@ -51,7 +51,7 @@ ms.custom:
   
 1.  Go to the SharePoint document library where you saved the shared data source.  
   
-2.  Click the icon for the expand drop-down menu on shared data source, and then click **Edit Data Source Definition**.  
+2.  Click the icon for the expand dropdown list on shared data source, and then click **Edit Data Source Definition**.  
   
      The Data Source page opens.  
   

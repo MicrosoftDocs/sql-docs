@@ -127,10 +127,10 @@ To use Microsoft Entra authentication with the managed identity for your ADF to 
 
 You can then configure the OLEDB provider on your OLEDB connection manager. Here are the options to do this:
     
-- **Configure at design time.** In SSIS Designer, double-click on your OLEDB connection manager to open the **Connection Manager** window. In the **Provider** drop-down list, select [**Microsoft OLEDB Driver for SQL Server**](../../connect/oledb/download-oledb-driver-for-sql-server.md).
+- **Configure at design time.** In SSIS Designer, double-click on your OLEDB connection manager to open the **Connection Manager** window. In the **Provider** dropdown list, select [**Microsoft OLEDB Driver for SQL Server**](../../connect/oledb/download-oledb-driver-for-sql-server.md).
 
   > [!NOTE]
-  >  Other providers in the drop-down list might not support Microsoft Entra authentication with your ADF's managed identity.
+  >  Other providers in the dropdown list might not support Microsoft Entra authentication with your ADF's managed identity.
     
 - **Configure at run time.** When you run your package via [SSMS](../ssis-quickstart-run-ssms.md) or [Execute SSIS Package activity in ADF pipeline](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), find the connection manager property **ConnectionString** for OLEDB connection manager. Update the connection property `Provider` to `MSOLEDBSQL` (that is Microsoft OLEDB Driver for SQL Server).
 

@@ -69,7 +69,7 @@ The benefits of increasing batch size become evident on a large data set, and in
 
 ## Parallel processing
 
-To improve the performance of **rx** analytic functions, you can leverage the ability of SQL Server to execute tasks in parallel using available cores on the server computer.
+To improve the performance of **rx** analytic functions, you can use the ability of SQL Server to execute tasks in parallel using available cores on the server computer.
 
 There are two ways to achieve parallelization with R in SQL Server:
 

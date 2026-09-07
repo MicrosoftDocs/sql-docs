@@ -111,7 +111,7 @@ Be sure to account for all files associated with the database before you detach,
      Optionally, specifies a different name for the database to attach as.  
   
      **Owner**  
-     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
+     Provides a dropdown list of possible database owners from which you can optionally select a different owner.  
   
      **Status**  
      Displays the status of the database according to the following table:

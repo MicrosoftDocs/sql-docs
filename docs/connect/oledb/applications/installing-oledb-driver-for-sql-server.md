@@ -3,7 +3,7 @@ title: Installing OLE DB Driver for SQL Server
 description: Installing and uninstalling OLE DB Driver for SQL Server. To install the OLE DB Driver for SQL Server, you need the msoledbsql.msi installer.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: connectivity

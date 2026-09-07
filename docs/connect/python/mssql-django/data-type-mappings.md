@@ -3,7 +3,7 @@ title: Django Field to SQL Server Type Mappings
 description: Review how Django model field types map to SQL Server data types in the mssql-django backend.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity

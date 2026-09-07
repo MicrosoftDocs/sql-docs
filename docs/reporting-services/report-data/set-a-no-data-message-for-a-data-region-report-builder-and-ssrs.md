@@ -20,7 +20,7 @@ ms.custom:
   
 2.  In the Properties pane, type the text that you want to display as a message in **NoRowsMessage** property field.  
   
-     Alternatively, from the drop-down list, click **Expression** to open the **Expression** dialog box and create an expression.  
+     Alternatively, from the dropdown list, click **Expression** to open the **Expression** dialog box and create an expression.  
   
 ### To set the NoDataMessage property for a chart  
   
@@ -30,7 +30,7 @@ ms.custom:
   
 3.  In **Caption**, type the text that you want to display as a message in **NoDataMessage** property field.  
   
-     Alternatively, from the drop-down list, click **Expression** to open the **Expression** dialog box and create an expression.  
+     Alternatively, from the dropdown list, click **Expression** to open the **Expression** dialog box and create an expression.  
   
 ### To set the NoRowsMessage for a subreport  
   
@@ -38,7 +38,7 @@ ms.custom:
   
 2.  In the Properties pane, type the text that you want to display as a message in **NoRowsMessage** property field.  
   
-     Alternatively, from the drop-down list, click **Expression** to open the **Expression** dialog box and create an expression.  
+     Alternatively, from the dropdown list, click **Expression** to open the **Expression** dialog box and create an expression.  
   
 ### To set the NoDataText property for a color scale for a map  
   
@@ -46,7 +46,7 @@ ms.custom:
   
 2.  In the Properties pane, in **NoDataText**, type the text that you want to display as a label for colors with no data value.  
   
-     Alternatively, from the drop-down list, click **Expression** to open the **Expression** dialog box and create an expression.  
+     Alternatively, from the dropdown list, click **Expression** to open the **Expression** dialog box and create an expression.  
   
 ## Related content
 

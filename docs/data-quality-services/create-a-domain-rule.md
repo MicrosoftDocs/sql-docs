@@ -50,7 +50,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
 6.  Select **Active** to specify that the rule will be run (the default), or deselect to prevent the rule from running.  
   
-7.  In the **Build a Rule** pane, select a condition from the drop-down list in the rule's clause box.  
+7.  In the **Build a Rule** pane, select a condition from the dropdown list in the rule's clause box.  
   
 8.  If the condition requires a value, enter the value in the associated text box.  
   
@@ -58,7 +58,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
 10. Select **AND** or **OR** as the operator.  
   
-11. Select a condition from the drop-down list and then enter a value for the operand, if required.  
+11. Select a condition from the dropdown list and then enter a value for the operand, if required.  
   
 12. To change the order in which the clauses appear in the list, select a clause and then click the up or down arrow. This will change the order in which they are executed, which could affect the results.  
   

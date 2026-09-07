@@ -22,31 +22,31 @@ BACKUP DATABASE AdventureWorksPDW2012
 TO DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
-Prepare the new SQL Server PDW for TDE by creating a master key, enabling encryption, and creating a network credential.  
+Prepare the new SQL Server PDW for TDE by creating a master key, enabling encryption, and creating a network credential. Replace each `<password>` with a strong password.
   
 ```sql  
 USE master;  
 GO  
   
 -- Create a database master key in the master database  
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<UseStrongPasswordHere>';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 GO  
   
 -- Enable encryption for PDW  
 EXEC sp_pdw_database_encryption 1;  
 GO  
   
-EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
+EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';
 ```  
   
-The last two steps recreate the certificate by using the backups from the original SQL Server PDW. Use the password that you used when you created the backup of the certificate.  
+The last two steps recreate the certificate by using the backups from the original SQL Server PDW. Replace `<password>` with the strong password that you used when you created the backup of the certificate.
   
 ```sql  
 -- Create certificate in master  
 CREATE CERTIFICATE MyServerCert  
     FROM FILE = '\\SECURE_SERVER\cert\MyServerCert.cer'   
     WITH PRIVATE KEY (FILE = '\\SECURE_SERVER\cert\MyServerCert.key',   
-    DECRYPTION BY PASSWORD = '<password>');  
+    DECRYPTION BY PASSWORD = '<password>');
   
 RESTORE DATABASE AdventureWorksPDW2012   
     FROM DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  

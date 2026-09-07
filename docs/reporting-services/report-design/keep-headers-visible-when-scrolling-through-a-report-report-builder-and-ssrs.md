@@ -51,7 +51,7 @@ The following image shows a matrix:
 
     The **Row Groups** pane displays the hierarchical static and dynamic members for the row groups hierarchy, and the **Column Groups** pane shows a similar display for the column groups hierarchy.  
   
-1. On the right side of the **Grouping** pane, select the dropdown, and then select **Advanced Mode**.  
+1. On the right side of the **Grouping** pane, select the dropdown list, and then select **Advanced Mode**.  
   
 1. Select the row or column static member that you want to remain visible while scrolling. The **Properties** pane displays the **Tablix Member** properties.  
 

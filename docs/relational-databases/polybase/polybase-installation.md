@@ -136,15 +136,15 @@ After installation, you must [enable the PolyBase feature](#enable).
 
 **Example**
 
-This example shows a sample setup script.
+This example shows a sample setup script. Replace each `<password>` occurrence with a strong password.
 
 ```cmd
 Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,PolyBase
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="\<fabric-domain>\Administrator"
 /INSTANCEDIR="C:\Program Files\Microsoft SQL Server" /PBSCALEOUT=TRUE
-/PBPORTRANGE=16450-16460 /SECURITYMODE=SQL /SAPWD="<StrongPassword>"
-/PBENGSVCACCOUNT="<DomainName>\<UserName>" /PBENGSVCPASSWORD="<StrongPassword>"
-/PBDMSSVCACCOUNT="<DomainName>\<UserName>" /PBDMSSVCPASSWORD="<StrongPassword>"
+/PBPORTRANGE=16450-16460 /SECURITYMODE=SQL /SAPWD="<password>"
+/PBENGSVCACCOUNT="<DomainName>\<UserName>" /PBENGSVCPASSWORD="<password>"
+/PBDMSSVCACCOUNT="<DomainName>\<UserName>" /PBDMSSVCPASSWORD="<password>"
 ```
 
 [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]

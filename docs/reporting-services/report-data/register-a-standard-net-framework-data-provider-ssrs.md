@@ -51,7 +51,7 @@ helpviewer_keywords:
   
     |Attribute|Description|  
     |---------------|-----------------|  
-    |**Name**|Provide a unique name for the data provider, for example, **MyNETDataProvider**. The maximum length for the **Name** attribute is 255 characters. The name must be unique among all entries within the **Extension** element of a configuration file. The value you include here appears in the drop-down list of data source types when you create a new data source.|  
+    |**Name**|Provide a unique name for the data provider, for example, **MyNETDataProvider**. The maximum length for the **Name** attribute is 255 characters. The name must be unique among all entries within the **Extension** element of a configuration file. The value you include here appears in the dropdown list of data source types when you create a new data source.|  
     |**Type**|Enter a comma-separated list that includes the fully qualified namespace of the class that implements the <xref:System.Data.IDbConnection> interface, followed by the name of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider assembly (not including the .dll file name extension).|  
   
      For example, the entry might resemble the following for a DLL deployed to the report server bin directory:  
@@ -124,7 +124,7 @@ helpviewer_keywords:
   
     |Attribute|Description|  
     |---------------|-----------------|  
-    |**Name**|Provide a unique name for the data provider, for example, **MyNETDataProvider**. The maximum length for the **Name** attribute is 255 characters. The name must be unique among all entries within the **Extension** element of a configuration file. The value that you include here appears in the drop-down list of data source types when you create a new data source.|  
+    |**Name**|Provide a unique name for the data provider, for example, **MyNETDataProvider**. The maximum length for the **Name** attribute is 255 characters. The name must be unique among all entries within the **Extension** element of a configuration file. The value that you include here appears in the dropdown list of data source types when you create a new data source.|  
     |**Type**|Enter a comma-separated list that includes the fully qualified namespace of the class that implements the <xref:System.Data.IDbConnection> interface, followed by the name of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider assembly (not including the .dll file name extension).|  
   
      For example, the entry might resemble the following for a DLL deployed to the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] PrivateAssemblies directory:  

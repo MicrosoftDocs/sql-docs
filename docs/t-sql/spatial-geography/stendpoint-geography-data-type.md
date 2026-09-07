@@ -20,7 +20,7 @@ dev_langs:
 # STEndPoint (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
-  Returns the end point of a **geography** instance.  
+  Returns the endpoint of a **geography** instance.  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ dev_langs:
  This method returns null if called on an empty **geography** instance.  
   
 ## Examples  
- The following example creates a `LineString` instance with `STGeomFromText()` and uses `STEndPoint()` to retrieve the end point of the `LineString`.  
+ The following example creates a `LineString` instance with `STGeomFromText()` and uses `STEndPoint()` to retrieve the endpoint of the `LineString`.  
   
 ```sql
 DECLARE @g geography;  

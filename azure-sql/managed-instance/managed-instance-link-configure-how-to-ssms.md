@@ -110,7 +110,7 @@ After you create the link, your source database gets a read-only copy on your ta
 1. On the **Select Databases** page, choose the database you want to replicate to your secondary replica via the link. Selecting multiple databases creates multiple distributed availability groups, one for each link. Select **Next**. 
 1. On the **Specify Secondary Replica** page, select **Add secondary replica** to add your secondary replica. If your initial primary is SQL Server, this action opens the **Sign In** to Azure window. If your initial primary is SQL Managed Instance, this action opens the **Connect to server** dialog box.   
    
-   1. For a SQL Server initial primary, sign in to Azure, choose the subscription, resource group, and secondary SQL managed instance from the dropdown. Select **Login** to open the **Connect to Server** dialog box and then connect to the SQL Managed Instance you want to replicate your database to. When you see **Login successful** on the **Sign in** window, select **OK** to close window and go back to the **New Managed Instance link** wizard. 
+   1. For a SQL Server initial primary, sign in to Azure, choose the subscription, resource group, and secondary SQL managed instance from the dropdown list. Select **Login** to open the **Connect to Server** dialog box and then connect to the SQL Managed Instance you want to replicate your database to. When you see **Login successful** on the **Sign in** window, select **OK** to close window and go back to the **New Managed Instance link** wizard. 
    1. For a SQL Managed Instance initial primary, connect to the SQL Server instance you want to replicate your database to. 
    
    > [!NOTE]

@@ -34,7 +34,7 @@ ms.custom:
   
 3.  Click the static member that corresponds to the row header or footer that you want to keep with the group rows. The Properties pane displays the **Tablix Member** properties.  
   
-4.  In the Properties pane, click **KeepWithGroup**, and then choose one of the following values from the drop-down list:  
+4.  In the Properties pane, click **KeepWithGroup**, and then choose one of the following values from the dropdown list:  
   
     -   **None** Select this option to indicate no preference for keeping this member with the members of the selected row group.  
   
@@ -52,7 +52,7 @@ ms.custom:
   
 3.  Click the static member that corresponds to the static column that you want to keep with the group columns. The Properties pane displays the **Tablix Member** properties.  
   
-4.  In the Properties pane, click **KeepWithGroup**, and then choose one of the following values from the drop-down list:  
+4.  In the Properties pane, click **KeepWithGroup**, and then choose one of the following values from the dropdown list:  
   
     -   **None** Select this option to indicate no preference for keeping this member with the members of the selected column group.  
   

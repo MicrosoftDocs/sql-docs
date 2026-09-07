@@ -42,13 +42,13 @@ The following permissions are necessary to perform the steps below:
   
 ## Create database master key  
 
-To use the following examples, you must have a database master key. If your database does not already have a database master key, create one. To create one, connect to your database and run the following script. Be sure to use a complex password.
+To use the following examples, you must have a database master key. If your database does not already have a database master key, create one. To create one, connect to your database and run the following script. Replace `<password>` with a complex password.
 
 Copy and paste the following example into the query window that is connected to the `AdventureWorks` sample database. Select **Execute**.  
 
 ```sql  
 CREATE MASTER KEY ENCRYPTION BY   
-PASSWORD = '<complex password>';  
+PASSWORD = '<password>';
 ```  
 
 Always back up your database master key. For more information on database master keys, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).

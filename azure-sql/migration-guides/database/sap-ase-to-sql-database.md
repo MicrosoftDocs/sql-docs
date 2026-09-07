@@ -40,7 +40,7 @@ To create an assessment, do the following:
 
 1. Open SSMA for Sybase. 
 1. Select **File**, and then select **New Project**. 
-1. In the **New Project** pane, enter a name and location for your project and then, in the **Migrate To** drop-down list, select **Azure SQL Database**. 
+1. In the **New Project** pane, enter a name and location for your project and then, in the **Migrate To** dropdown list, select **Azure SQL Database**. 
 1. Select **OK**.
 1. On the **Connect to Sybase** pane, enter the SAP connection details. 
 1. Right-click the SAP database you want to migrate, and then select **Create report**. This generates an HTML report. Alternatively, you can select the **Create report** tab at the upper right.

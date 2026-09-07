@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
 ---
-# Vector datatype support in SqlClient
+# Vector data type support in SqlClient
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
@@ -32,7 +32,7 @@ The following code sample demonstrates the following scenarios for a vector colu
 - Insert non-null vectors using SqlParameter.
 - Insert null vectors for a given vector column.
 - Read a vector column.
-- Use a stored procedure with a vector datatype parameter.
+- Use a stored procedure with a vector data type parameter.
 - Perform a bulk copy operation with vector data.
 
 [!code-csharp[SqlVectorExample#1](~/../sqlclient/doc/samples/SqlVectorExample.cs#1)]

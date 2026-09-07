@@ -74,7 +74,7 @@ The following steps show you how to use Azure Site Recovery to copy data to the 
 1. Choose to **Create a resource** from the upper-left hand corner of the navigation pane. 
 1. Select **IT & Management tools** and then select **Backup and Site Recovery**. 
 1. On the **Basics** tab, under **Project details**, either create a new resource group in the target region, or select an existing resource group in the target region. 
-1. Under **Instance Details**, specify a name for your vault, and then select your target **Region** from the drop-down. 
+1. Under **Instance Details**, specify a name for your vault, and then select your target **Region** from the dropdown list. 
 1. Select **Review + Create** to create your Recovery Services vault. 
 1. Select **All services** from the upper-left hand corner of the navigation pane and in the search box type `recovery services`. 
 1. (Optionally) Select the star next to **Recovery Services vaults** to add it to your quick navigation bar. 
@@ -83,9 +83,9 @@ The following steps show you how to use Azure Site Recovery to copy data to the 
 
    ![Configure replication](./media/move-sql-vm-different-region/configure-replication.png)
 
-1. Select **Source** and then select **Azure** as the source. Select the appropriate values for the other drop-down fields, such as the location for your source VMs. Only resources groups located in the **Source location** region will be visible in the **Source resource group** field. 
+1. Select **Source** and then select **Azure** as the source. Select the appropriate values for the other dropdown lists, such as the location for your source VMs. Only resources groups located in the **Source location** region will be visible in the **Source resource group** field. 
 1. Select **Virtual machines** and then choose the virtual machines you want to migrate. Select **OK** to save your VM selection. 
-1. Select **Settings**, and then choose your **Target location** from the drop-down. This should be the resource group you prepared earlier. 
+1. Select **Settings**, and then choose your **Target location** from the dropdown list. This should be the resource group you prepared earlier. 
 1. Once you have customized replication, select **Create target resources** to create the resources in the new location. 
 1. Once resource creation is complete, select **Enable replication** to start replication of your SQL Server VM from the source to the target region.
 1. You can check the status of replication by navigating to your recovery vault, selecting **Replicated items** and viewing the **Status** of your SQL Server VM. A status of **Protected** indicates that replication has completed. 

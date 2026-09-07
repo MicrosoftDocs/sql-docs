@@ -3,7 +3,7 @@ title: Security Best Practices for mssql-django
 description: Secure Django applications that use the mssql-django backend with SQL Server, including credential management, TLS configuration, least privilege, and SQL injection prevention.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto, randolphwest
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity
@@ -122,7 +122,7 @@ Create dedicated SQL Server logins with only the permissions your application ne
 ```sql
 -- Create a login and user for the application
 CREATE LOGIN [django_app]
-WITH PASSWORD = '<strong-password>';
+WITH PASSWORD = '<password>';
 
 USE [<your-database>];
 

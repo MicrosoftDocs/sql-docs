@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 -   Manual. Used for snapshot and transactional replication without updates at the Subscriber, peer-to-peer transactional replication, or if your application must control identity ranges programmatically. If you specify manual management, you must ensure that ranges are assigned to the Publisher and each Subscriber and that new ranges are assigned if the initial ranges are used. Replication sets the NOT FOR REPLICATION option on the identity column at the Subscriber.  
   
--   None. This option is recommended only for backwards compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is available only from the stored procedure interface for transactional publications.  
+-   None. This option is recommended only for backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is available only from the stored procedure interface for transactional publications.  
   
  To specify an identity range management option, see [Manage Identity Columns](../../../relational-databases/replication/publish/manage-identity-columns.md).  
   

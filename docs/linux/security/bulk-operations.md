@@ -132,7 +132,7 @@ After you configure the Linux file system and allowed paths, set up the [!INCLUD
    GO
 
    CREATE LOGIN BulkLoadUser
-   WITH PASSWORD = '<strong_password>';
+   WITH PASSWORD = '<password>';
    GO
    ```
 

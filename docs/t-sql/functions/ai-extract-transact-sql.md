@@ -4,7 +4,7 @@ description: The AI_EXTRACT function extracts named values from text as JSON.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop
-ms.date: 06/10/2026
+ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -34,7 +34,7 @@ The `AI_EXTRACT` function extracts values from input text using the classes you 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ```syntaxsql
-AI_EXTRACT ( text, class1, class2 [ , ...n ] )
+AI_EXTRACT ( text, class1, class2 [ , ...n ] [ (NULL | ERROR | DEFAULT <value>) ON ERROR ] )
 ```
 
 ## Arguments
@@ -47,6 +47,16 @@ An [expression](../language-elements/expressions-transact-sql.md) of a character
 
 One or more property names to extract from the text.
 
+#### ON ERROR
+
+The `ON ERROR` clause controls how an AI function handles processing errors.
+
+- `NULL ON ERROR` returns `NULL` when the function can't process a value. This is the default behavior and doesn't need to be explicitly specified.
+- `ERROR ON ERROR` causes the entire query to fail if an error occurs while processing any input value.
+- `DEFAULT <value> ON ERROR` returns the specified default value instead of `NULL` when an error occurs.
+
+Errors can be caused by [Responsible AI](https://www.microsoft.com/ai/tools-practices) safety checks, input size limits, transient service issues, or other processing failures.
+
 ## Return types
 
 Returns `nvarchar(max)` containing JSON text.
@@ -54,7 +64,8 @@ Returns `nvarchar(max)` containing JSON text.
 ## Remarks
 
 AI functions return `NULL` if the AI model can't process the text. Common reasons include:
-- Responsible AI rules block inappropriate content in the input text.
+
+- [Responsible AI](https://www.microsoft.com/ai/tools-practices) rules block inappropriate content in the input text.
 - Input text exceeds token limits. The current model supports up to 15 KB of text.
 
 ## Examples

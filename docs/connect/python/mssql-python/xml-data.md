@@ -3,6 +3,7 @@ title: Use XML Data with mssql-python
 description: Learn how to work with XML data in Microsoft SQL using the mssql-python driver, including XQuery, XML methods, and schema collections.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/01/2026
 ms.service: sql
 ms.subservice: connectivity

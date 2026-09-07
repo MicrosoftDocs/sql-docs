@@ -68,7 +68,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
 -   It is recommended that you limit the number of rows that are captured during the data tap, to avoid generating large data files. If the machine on which the stored procedure is executed, runs out of storage space for the data files, the stored procedure stops running.  
   
--   Running the add_data_tap_by_guid stored procedure impacts the performance of the package. It is recommended that you run the stored procedure only to troubleshoot data issues.  
+-   Running the add_data_tap_by_guid stored procedure affects the performance of the package. It is recommended that you run the stored procedure only to troubleshoot data issues.  
   
 -   To access the file that stores the tapped data, you must have administrator permissions on the machine on which the stored procedure is run, or you must be the user that started the execution that contains the package with the data tap.  
   

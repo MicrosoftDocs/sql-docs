@@ -54,7 +54,7 @@ In SSMA, you can configure default settings for all projects. These settings are
 
    - Select migration project type for which settings are required to be viewed or changed from **Migration Target Version** dropdown list select **General** at the bottom of the left pane, and then select Conversion or Migration.
 
-   - To select a predefined mode, in the **Mode** dropdown list box, select **Default**, **Optimistic**, or **Full**.
+   - To select a predefined mode, in the **Mode** dropdown list, select **Default**, **Optimistic**, or **Full**.
 
    - To specify custom settings, select or enter the new settings or values.
 
@@ -66,7 +66,7 @@ You can also customize settings for the current project. These settings are save
 
 1. In the **Project Settings** dialog box, use one of the following procedures:
 
-   - To select a predefined mode, in the **Mode** dropdown list box, select **Default**, **Optimistic**, or **Full**.
+   - To select a predefined mode, in the **Mode** dropdown list, select **Default**, **Optimistic**, or **Full**.
 
    - To specify a custom mode, in the **Mode** box, select **Custom**, and then select the appropriate project settings.
 

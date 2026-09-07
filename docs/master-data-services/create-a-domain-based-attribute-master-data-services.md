@@ -88,7 +88,7 @@ helpviewer_keywords:
 
      The filter parent attribute must be another domain-based attribute for a leaf member, within the same entity. A derived hierarchy must exist with a level that defines the parent-child relationship between the domain entities of the two attributes.
 
-     For information about constraining the allowed values, see [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/), on the Master Data Services blog.
+     For information about constraining the allowed values, see [How to filter Domain Based Attribute dropdown lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/), on the Master Data Services blog.
 
 12. **Optional.** Select **Enable change tracking** to track changes to groups of attributes. For more information, see [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
 

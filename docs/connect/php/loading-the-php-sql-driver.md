@@ -4,10 +4,11 @@ description: "This page provides instructions for loading the Microsoft Drivers 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/23/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
+ai-usage: ai-assisted
 helpviewer_keywords:
   - "loading the driver"
 ---
@@ -20,7 +21,25 @@ This page provides instructions for loading the [!INCLUDE[ssDriverPHP](../../inc
   
 You can download the prebuilt drivers for your platform from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page. Each installation package contains SQLSRV and PDO_SQLSRV driver files in threaded and non threaded variants. On Windows, they're also available in 32-bit and 64-bit variants. See [System Requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md) for a list of the driver files that are contained in each package. The driver file must match the PHP version, architecture, and threadedness of your PHP environment.
 
-On Linux and macOS, the drivers can alternatively be installed using PECL, as found in the [installation tutorial](installation-tutorial-linux-mac.md).
+On Linux and macOS, you can alternatively install the drivers with PIE or PECL, as described in the [installation tutorial](installation-tutorial-linux-mac.md).
+
+On Windows, you can install the drivers with [PIE](https://github.com/php/pie), the PHP Installer for Extensions, in version 5.13.3 and later versions. PIE replaces the deprecated PECL package system, and it enables the extension for you, so you don't download a driver file or edit **php.ini** by hand. Windows needs no build toolchain, because the extensions are distributed as precompiled DLLs. PIE itself requires PHP 8.1 and later versions to run, though it can install an extension into any other PHP installation on the machine.
+
+```console
+pie install microsoft/sqlsrv
+pie install microsoft/pdo_sqlsrv
+```
+
+Install each driver with its own command. For instructions on installing PIE, see the [PIE documentation](https://github.com/php/pie).
+
+On Windows, PIE needs the `openssl` extension to reach the package repository. A PHP installation from the php.net **.zip** package uses the stock **php.ini-development** file, which doesn't enable it, and PIE stops with `The package "composer/ca-bundle" requires the extension "openssl"`. Set `extension_dir` and enable the extension in **php.ini** before you run PIE:
+
+```ini
+extension_dir = "ext"
+extension=openssl
+```
+
+Package-managed PHP installations on Linux and macOS enable `openssl` already, so this step applies only to Windows.
 
 You can also build the drivers from source either when building PHP or by using `phpize`. If you choose to build the drivers from source, you have the option of building them statically into PHP instead of building them as shared extensions by adding `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (on Linux and macOS) or `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (on Windows) to the `./configure` command when building PHP. For more information on the PHP build system and `phpize`, see the [PHP documentation](http://php.net/manual/install.php).
 
@@ -50,7 +69,7 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
     extension=php_sqlsrv_83_nts.so
     ```
 
-    If you compiled the SQLSRV binary from source or with PECL, its name is sqlsrv.so:
+    If you compiled the SQLSRV binary from source, or installed it with PIE or PECL, its name is sqlsrv.so:
 
     ```
     extension=sqlsrv.so
@@ -72,7 +91,7 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
     extension=php_pdo_sqlsrv_3_nts.so
     ```
 
-    As with SQLSRV, if you compiled the PDO_SQLSRV binary from source or with PECL, its name is pdo_sqlsrv.so:
+    As with SQLSRV, if you compiled the PDO_SQLSRV binary from source, or installed it with PIE or PECL, its name is pdo_sqlsrv.so:
 
     ```
     extension=pdo_sqlsrv.so

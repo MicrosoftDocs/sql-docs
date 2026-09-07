@@ -58,7 +58,7 @@ The **Database** field lets you connect to the server's default database or to a
 
 - If the database list can't be loaded - for example, when your login doesn't have permission to enumerate databases on the server - you can still type the database name directly into the field.
 
-:::image type="content" source="media/mssql-database-connections/connection-database-dropdown.png" alt-text="Screenshot of the Database dropdown in the Connection Dialog with a populated list of databases." lightbox="media/mssql-database-connections/connection-database-dropdown.png":::
+:::image type="content" source="media/mssql-database-connections/connection-database-dropdown.png" alt-text="Screenshot of the Database dropdown list in the Connection Dialog with a populated list of databases." lightbox="media/mssql-database-connections/connection-database-dropdown.png":::
 
 ### Advanced settings
 

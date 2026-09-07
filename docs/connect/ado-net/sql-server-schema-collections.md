@@ -19,7 +19,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
 ## Databases  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |database_name|String|Name of the database.|  
 |dbid|Int16|Database ID.|  
@@ -27,7 +27,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
 ## Foreign Keys  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |CONSTRAINT_CATALOG|String|Catalog the constraint belongs to.|  
 |CONSTRAINT_SCHEMA|String|Schema that contains the constraint.|  
@@ -41,7 +41,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
 ## Indexes  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |constraint_catalog|String|Catalog that index belongs to.|  
 |constraint_schema|String|Schema that contains the index.|  
@@ -54,7 +54,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
 ## IndexColumns  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |constraint_catalog|String|Catalog that index belongs to.|  
 |constraint_schema|String|Schema that contains the index.|  
@@ -69,7 +69,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
 ## Procedures  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|String|Specific name for the catalog.|  
 |SPECIFIC_SCHEMA|String|Specific name of the schema.|  
@@ -83,7 +83,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
 ## Procedure Parameters  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|String|Catalog name of the procedure for which this is a parameter.|  
 |SPECIFIC_SCHEMA|String|Schema that contains the procedure for which this parameter is part of.|  
@@ -111,7 +111,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
 ## Tables  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Catalog of the table.|  
 |TABLE_SCHEMA|String|Schema that contains the table.|  
@@ -120,7 +120,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
 ## Columns  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Catalog of the table.|  
 |TABLE_SCHEMA|String|Schema that contains the table.|  
@@ -148,7 +148,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
  The AllColumns schema collection is used to support sparse columns. AllColumns has the same restrictions and resulting DataTable schema as the Columns schema collection. The only difference is that AllColumns includes column set columns that are not included in the Columns schema collection. The following table describes these columns.  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Catalog of the table.|  
 |TABLE_SCHEMA|String|Schema that contains the table.|  
@@ -176,7 +176,7 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 
 The ColumnSetColumns schema collection is used to support sparse columns. The ColumnSetColumns schema collection returns the schema for all of the columns in a column set. The following table describes these columns.  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Catalog of the table.|  
 |TABLE_SCHEMA|String|Schema that contains the table.|  
@@ -202,7 +202,7 @@ The ColumnSetColumns schema collection is used to support sparse columns. The Co
 
 ## Users  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |uid|Int16|User ID, unique in this database. 1 is the database owner.|  
 |user_name|String|Username or group name, unique in this database.|  
@@ -211,7 +211,7 @@ The ColumnSetColumns schema collection is used to support sparse columns. The Co
 
 ## Views  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Catalog of the view.|  
 |TABLE_SCHEMA|String|Schema that contains the view.|  
@@ -221,7 +221,7 @@ The ColumnSetColumns schema collection is used to support sparse columns. The Co
 
 ## ViewColumns  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |VIEW_CATALOG|String|Catalog of the view.|  
 |VIEW_SCHEMA|String|Schema that contains the view.|  
@@ -233,7 +233,7 @@ The ColumnSetColumns schema collection is used to support sparse columns. The Co
 
 ## UserDefinedTypes  
   
-|ColumnName|DataType|Description|  
+|Column name|Data type|Description|  
 |----------------|--------------|-----------------|  
 |assembly_name|String|The name of the file for the assembly.|  
 |udt_name|String|The class name for the assembly.|  

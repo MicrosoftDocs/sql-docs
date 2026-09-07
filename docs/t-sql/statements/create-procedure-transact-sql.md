@@ -391,7 +391,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 
 Provide a database ID number when you call the procedure. For example, `EXEC What_DB_is_that 2;` returns `tempdb`.
 
-See [Examples](#examples) towards the end of this article for many more examples.
+See [Examples](#examples) toward the end of this article for many more examples.
 
 ## Best practices
 

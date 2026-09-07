@@ -3,7 +3,7 @@ title: "Information in Error Interfaces"
 description: "The OLE DB Driver for SQL Server reports some error and status information in the OLE DB-defined error interfaces IErrorInfo, IErrorRecords, and ISQLErrorInfo."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "05/06/2020"
 ms.service: sql
 ms.subservice: connectivity

@@ -33,8 +33,8 @@ Contains statistics for [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database *
 |**success_count**|**int**|Number of successful connections.|  
 |**total_failure_count**|**int**|Total number of failed connections. This is the sum of **connection_failure_count**, **terminated_connection_count**, and **throttled_connection_count**, and does not include deadlock events.|  
 |**connection_failure_count**|**int**|Number of login failures.|  
-|**terminated_connection_count**|**int**|This column is unused and is preserved for backwards compatibility.|  
-|**throttled_connection_count**|**int**|This column is unused and is preserved for backwards compatibility.|  
+|**terminated_connection_count**|**int**|This column is unused and is preserved for backward compatibility.|  
+|**throttled_connection_count**|**int**|This column is unused and is preserved for backward compatibility.|  
   
 ## Remarks  
   

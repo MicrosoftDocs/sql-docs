@@ -307,7 +307,7 @@ sections:
 
           Databases created in the Hyperscale service tier can't be moved to other service tiers.
           
-          Learn [how to reverse migrate from Hyperscale](reverse-migrate-from-hyperscale.md), including the [limitations for reverse migration](reverse-migrate-from-hyperscale.md#limitations-for-reverse-migration) and impacted [backup policies](reverse-migrate-from-hyperscale.md#backup-policies).
+          Learn [how to reverse migrate from Hyperscale](reverse-migrate-from-hyperscale.md), including the [limitations for reverse migration](reverse-migrate-from-hyperscale.md#limitations-for-reverse-migration) and affected [backup policies](reverse-migrate-from-hyperscale.md#backup-policies).
 
       - question: |
           Do I lose any functionality or capabilities after migration to the Hyperscale service tier?
@@ -398,7 +398,7 @@ sections:
       - question: |
           Does database backup affect compute performance on my primary or secondary replicas?
         answer: |
-          No. Backups are managed by the storage subsystem, and use storage snapshots. They do not impact user workloads.
+          No. Backups are managed by the storage subsystem, and use storage snapshots. They do not affect user workloads.
 
       - question: |
           Can I perform geo-restore with a Hyperscale database?
@@ -597,9 +597,9 @@ sections:
           No, as named replicas use the same page servers of the primary replica, they must be in the same region. However, if you created a geo-replica for the primary replica in a different region, you can create named replicas for the geo-replica.
 
       - question: |
-          Can a named replica impact availability or performance of the primary replica?
+          Can a named replica affect availability or performance of the primary replica?
         answer: |
-          A named replica cannot impact the availability of the primary replica. Named replicas, under normal circumstances, are unlikely to impact the primary's performance, but it can happen if there are intensive workloads running. Just like an HA replica, a named replica is kept in sync with the primary via the transaction log service. If a named replica, for any reason, is not able to consume transaction log fast enough, it starts asking the primary replica to reduce its log generation rate, so that it can catch up. While this behavior doesn't impact the primary's availability, it can impact performance of write workloads on the primary. To avoid this situation, make sure that your named replicas have enough resource headroom - mainly CPU - to process transaction log without delay. For example, if the primary is processing numerous data changes, it is recommended to have named replicas with at least the same compute size as the primary to avoid saturating CPU on the replicas and forcing the primary to slow down.
+          A named replica cannot affect the availability of the primary replica. Named replicas, under normal circumstances, are unlikely to affect the primary's performance, but it can happen if there are intensive workloads running. Just like an HA replica, a named replica is kept in sync with the primary via the transaction log service. If a named replica, for any reason, is not able to consume transaction log fast enough, it starts asking the primary replica to reduce its log generation rate, so that it can catch up. While this behavior doesn't affect the primary's availability, it can affect performance of write workloads on the primary. To avoid this situation, make sure that your named replicas have enough resource headroom - mainly CPU - to process transaction log without delay. For example, if the primary is processing numerous data changes, it is recommended to have named replicas with at least the same compute size as the primary to avoid saturating CPU on the replicas and forcing the primary to slow down.
 
       - question: |
           What happens to named replicas if the primary replica is unavailable, for example, because of planned maintenance?

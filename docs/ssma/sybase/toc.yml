@@ -1,6 +1,6 @@
 - name: Overview
   href: sql-server-migration-assistant-for-sybase-sybasetosql.md
-- name: Copilot in SSMA for SAP ASE (Preview)
+- name: Copilot in SSMA for SAP ASE
   href: copilot-in-ssma-overview.md
 - name: What's new
   items:

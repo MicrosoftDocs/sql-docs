@@ -37,7 +37,7 @@ This section describes optimal configuration defaults in Azure SQL Database that
 | DATA_FLUSH_INTERVAL_SECONDS |Specifies maximum period during which captured runtime statistics are kept in memory, before flushing to disk |900 |Enforced for new databases |
 
 > [!IMPORTANT]  
-> These defaults are automatically applied in the final stage of Query Store activation in an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. After it's enabled, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] won't change configuration values that are set by customers, unless they negatively impact primary workload or reliable operations of the Query Store.
+> These defaults are automatically applied in the final stage of Query Store activation in an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. After it's enabled, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] won't change configuration values that are set by customers, unless they negatively affect primary workload or reliable operations of the Query Store.
 
 > [!NOTE]  
 > Query Store cannot be disabled in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`

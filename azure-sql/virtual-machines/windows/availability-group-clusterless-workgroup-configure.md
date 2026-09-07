@@ -140,11 +140,11 @@ In this step, create certificates that a SQL login uses on the encrypted endpoin
 To configure the first node, follow these steps:
 
 1. Open **SQL Server Management Studio** and connect to your first node, such as `AGNode1`.
-1. Open a **New Query** window and run the following Transact-SQL (T-SQL) statement after updating to a complex and secure password:
+1. Open a **New Query** window and run the following Transact-SQL (T-SQL) statement. Replace `<password>` with a strong password:
 
    ```sql
    USE master;
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'PassWOrd123!';
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
    GO
 
    --create a cert from the master key
@@ -182,11 +182,11 @@ To configure the first node, follow these steps:
 To configure the second node, follow these steps:
 
 1. Connect to the second node with **SQL Server Management Studio**, such as `AGNode2`.
-1. In a **New Query** window, run the following Transact-SQL (T-SQL) statement after updating to a complex and secure password:
+1. In a **New Query** window, run the following Transact-SQL (T-SQL) statement. Replace `<password>` with a strong password:
 
    ```sql
    USE master;
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<complex password>';
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
    GO
 
    --create a cert from the master key
@@ -226,12 +226,12 @@ If there are any other nodes in the cluster, repeat these steps there also, modi
 
 Certificate authentication is used to synchronize data across nodes. To allow synchronization, create a login for the other node, create a user for the login, create a certificate for the login to use the backed-up certificate, and then grant connect on the mirroring endpoint.
 
-To do so, first run the following Transact-SQL (T-SQL) query on the first node, such as `AGNode1`:
+To do so, first run the following Transact-SQL (T-SQL) query on the first node, such as `AGNode1`. Replace `<password>` with a strong password:
 
 ```sql
 --create a login for the AGNode2
 USE master;
-CREATE LOGIN AGNode2_Login WITH PASSWORD = '<complex password>';
+CREATE LOGIN AGNode2_Login WITH PASSWORD = '<password>';
 GO
 
 --create a user from the login
@@ -249,12 +249,12 @@ GRANT CONNECT ON ENDPOINT::hadr_endpoint TO [AGNode2_login];
 GO
 ```
 
-Next, run the following Transact-SQL (T-SQL) query on the second node, such as `AGNode2`:
+Next, run the following Transact-SQL (T-SQL) query on the second node, such as `AGNode2`. Replace `<password>` with a strong password:
 
 ```sql
 --create a login for the AGNode1
 USE master;
-CREATE LOGIN AGNode1_Login WITH PASSWORD = '<complex password>';
+CREATE LOGIN AGNode1_Login WITH PASSWORD = '<password>';
 GO
 
 --create a user from the login

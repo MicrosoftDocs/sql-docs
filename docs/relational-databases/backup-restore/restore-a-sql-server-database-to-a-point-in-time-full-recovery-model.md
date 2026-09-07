@@ -51,7 +51,7 @@ If the database being restored does not exist, the user must have CREATE DATABAS
   
     -   **Database**  
   
-         Select the database to restore from the drop-down list. The list contains only databases that have been backed up according to the **msdb** backup history.  
+         Select the database to restore from the dropdown list. The list contains only databases that have been backed up according to the **msdb** backup history.  
   
     > [!NOTE]  
     >  If the backup is taken from a different server, the destination server will not have the backup history information for the specified database. In this case, select **Device** to manually specify the file or device to restore.  
@@ -110,7 +110,7 @@ If the database being restored does not exist, the user must have CREATE DATABAS
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **Before you begin**  
   
- A specified time is always restored from a log backup. In every RESTORE LOG statement of the restore sequence, you must specify your target time or transaction in an identical STOPAT clause. As a prerequisite to a point-in-time restore, you must first restore a full database backup whose end point is earlier than your target restore time. That full database backup can be older than the most recent full database backup as long as you then restore every subsequent log backup, up to and including the log backup that contains your target point in time.  
+ A specified time is always restored from a log backup. In every RESTORE LOG statement of the restore sequence, you must specify your target time or transaction in an identical STOPAT clause. As a prerequisite to a point-in-time restore, you must first restore a full database backup whose endpoint is earlier than your target restore time. That full database backup can be older than the most recent full database backup as long as you then restore every subsequent log backup, up to and including the log backup that contains your target point in time.  
   
  To help you identify which database backup to restore, you can optionally specify your WITH STOPAT clause in your RESTORE DATABASE statement to raise an error if a data backup is too recent for the specified target time. The complete data backup is always restored, even if it contains the target time.  
   

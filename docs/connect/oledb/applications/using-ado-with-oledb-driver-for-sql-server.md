@@ -3,7 +3,7 @@ title: Using ADO with OLE DB Driver
 description: Learn how to use ADO with OLE DB Driver, including new features like multiple active result sets, query notifications, user-defined types, or the xml data type.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: 03/30/2022
 ms.service: sql
 ms.subservice: connectivity

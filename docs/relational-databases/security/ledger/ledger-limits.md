@@ -69,7 +69,7 @@ Updatable ledger tables are based on the technology of [temporal tables](../../t
 - If the name of a history table is specified during history table creation, you must specify the schema and table name and also the name of the ledger view.
 - By default, the history table is PAGE compressed.
 - If the current table is partitioned, the history table is created on the default file group because partitioning configuration isn't replicated automatically from the current table to the history table.
-- Temporal and history tables can't be a FILETABLE and can contain columns of any supported datatype other than FILESTREAM. FILETABLE and FILESTREAM allow data manipulation outside of SQL Server, and thus system versioning can't be guaranteed.
+- Temporal and history tables can't be a FILETABLE and can contain columns of any supported data type other than FILESTREAM. FILETABLE and FILESTREAM allow data manipulation outside of SQL Server, and thus system versioning can't be guaranteed.
 - A node or edge table can't be created as or altered to a temporal table. Graph isn't supported with ledger.
 - While temporal tables support blob data types, such as `(n)varchar(max)`, `varbinary(max)`, `(n)text`, and `image`, they'll incur significant storage costs and have performance implications due to their size. As such, when designing your system, care should be taken when using these data types.
 - The history table must be created in the same database as the current table. Temporal querying over Linked Server isn't supported.
@@ -97,7 +97,7 @@ Updatable ledger tables are based on the technology of [temporal tables](../../t
 
 ### Adding columns
 
-Adding nullable columns is supported. Adding non-nullable columns isn't supported. Ledger is designed to ignore NULL values when computing the hash of a row version. Based on that, when a nullable column is added, ledger modifies the schema of the ledger and history tables to include the new column, however, this doesn't impact the hashes of existing rows. Adding columns in ledger tables is captured in [sys.ledger_column_history](../../system-catalog-views/sys-ledger-column-history-transact-sql.md).
+Adding nullable columns is supported. Adding non-nullable columns isn't supported. Ledger is designed to ignore NULL values when computing the hash of a row version. Based on that, when a nullable column is added, ledger modifies the schema of the ledger and history tables to include the new column, however, this doesn't affect the hashes of existing rows. Adding columns in ledger tables is captured in [sys.ledger_column_history](../../system-catalog-views/sys-ledger-column-history-transact-sql.md).
 
 ### Dropping columns and tables
 
@@ -114,7 +114,7 @@ When you drop a ledger column, it isn't included in the schema exposed to [SQL p
 
 ### Altering columns
 
-Any changes that don't impact the underlying data of a ledger table are supported without any special handling as they don't impact the hashes being captured in the ledger. These changes include:
+Any changes that don't affect the underlying data of a ledger table are supported without any special handling as they don't affect the hashes being captured in the ledger. These changes include:
 
 - Changing nullability
 - Collation for Unicode strings

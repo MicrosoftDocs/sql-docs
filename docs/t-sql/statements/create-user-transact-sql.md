@@ -497,7 +497,7 @@ GO
 USE AdventureWorks2022;  
 GO  
 CREATE USER Carlo  
-WITH PASSWORD='RN92piTCh%$!~3K9844 Bl*'  
+WITH PASSWORD='<password>'
     , DEFAULT_LANGUAGE=[Brazilian]  
     , DEFAULT_SCHEMA=[dbo]  
 GO   

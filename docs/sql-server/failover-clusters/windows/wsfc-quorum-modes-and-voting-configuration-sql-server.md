@@ -63,7 +63,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  The split-brain scenario is only possible when a system administrator manually performs a forced quorum operation, or in very rare circumstances, a forced failover; explicitly subdividing the quorum node set.  
   
- In order to simplify your quorum configuration and increase up-time, you may want to adjust each node's *NodeWeight* setting so that the node's vote is not counted towards the quorum.  
+ In order to simplify your quorum configuration and increase up-time, you may want to adjust each node's *NodeWeight* setting so that the node's vote is not counted toward the quorum.  
   
 > [!IMPORTANT]  
 >  In order to use NodeWeight settings, the following hotfix must be applied to all servers in the WSFC cluster:  

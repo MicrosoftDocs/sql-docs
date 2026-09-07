@@ -3,7 +3,7 @@ title: SQL Server error detail (OLE DB driver)
 description: Learn about the provider-specific error interface ISQLServerErrorInfo in OLE DB Driver for SQL Server, which returns details about a SQL Server error.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

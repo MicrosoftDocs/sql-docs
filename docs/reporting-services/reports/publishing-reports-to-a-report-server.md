@@ -47,9 +47,9 @@ By default, SSDT provides three project configurations:
 | **Debug**| Publish reports to a test server.|
 |**Release**| Publish reports to a production server.|
 
-**The Solution Configurations drop-down list** on the Standard toolbar shows the active configuration. To use a different configuration, select it from the list.
+**The Solution Configurations dropdown list** on the Standard toolbar shows the active configuration. To use a different configuration, select it from the list.
 
-:::image type="content" source="../../reporting-services/reports/media/ssrs-project-properties.png" alt-text="Screenshot of the tutorial Property Pages window, highlighting the Configuration drop-down list.":::
+:::image type="content" source="../../reporting-services/reports/media/ssrs-project-properties.png" alt-text="Screenshot of the tutorial Property Pages window, highlighting the Configuration dropdown list.":::
 
 For more information, see:
 

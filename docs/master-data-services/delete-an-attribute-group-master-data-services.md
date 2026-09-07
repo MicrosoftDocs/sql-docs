@@ -40,7 +40,7 @@ helpviewer_keywords:
   
 4.  Click **Attribute Groups**.  
   
-5.  On the **Manage Attribute Groups** page, select member type from the **Member Types** drop-down list to expand **Leaf**, **Consolidated**, or **Collection**, depending on the type of group you want to delete.  
+5.  On the **Manage Attribute Groups** page, select member type from the **Member Types** dropdown list to expand **Leaf**, **Consolidated**, or **Collection**, depending on the type of group you want to delete.  
   
 6.  Click the attribute group you want to delete.  
   

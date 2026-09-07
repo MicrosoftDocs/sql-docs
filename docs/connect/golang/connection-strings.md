@@ -3,7 +3,8 @@ title: "go-mssqldb Connection Strings"
 description: "Connection string formats for the go-mssqldb driver, including URL, ADO, and ODBC styles."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 08/12/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -103,6 +104,37 @@ server=<server>\myinstance;user id=<user>;password=<password>;database=Adventure
 
 > [!NOTE]
 > In the ADO format, the `server` and `port` fields are separate parameters. Don't include a colon-separated port in the `server` value.
+
+### ADO.NET keyword synonyms
+
+With v1.11.0 and later versions, the ADO format also accepts the alternate keyword spellings that [Microsoft.Data.SqlClient](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) uses, which lets you reuse a connection string written for a .NET application. Keywords are case-insensitive.
+
+| ADO.NET keyword | go-mssqldb parameter |
+| --- | --- |
+| `Addr`, `Address`, `Network Address`, `Data Source` | `server` |
+| `User`, `UID` | `user id` |
+| `PWD` | `password` |
+| `Initial Catalog` | `database` |
+| `App`, `Application Name` | `app name` |
+| `Connect Timeout`, `Timeout` | `connection timeout` |
+| `Application Intent` | `applicationintent` |
+| `Failover Partner` | `failoverpartner` |
+| `Failover Partner SPN` | `failoverpartnerspn` |
+| `Trust Server Certificate` | `trustservercertificate` |
+| `Multi Subnet Failover` | `multisubnetfailover` |
+| `Host Name In Certificate` | `hostnameincertificate` |
+| `Server SPN` | `serverspn` |
+| `Server Certificate` | `servercertificate` |
+| `WSID` | `workstation id` |
+| `Column Encryption Setting` | `columnencryption` |
+
+The following connection string uses only synonyms:
+
+```text
+Data Source=<server>;Initial Catalog=AdventureWorks2025;UID=<user>;PWD=<password>;Connect Timeout=30
+```
+
+These synonyms apply to the ADO format only. The URL and ODBC formats accept the driver parameter names in the right column.
 
 ## ODBC format
 

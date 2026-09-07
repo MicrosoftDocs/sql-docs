@@ -43,10 +43,10 @@ These statements create the metadata representation of your sharded data tier in
 
 ## 1.1 Create database scoped master key and credentials
 
-The credential is used by the elastic query to connect to your remote databases.  
+The credential is used by the elastic query to connect to your remote databases. Replace each `<password>` with a strong password.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 CREATE DATABASE SCOPED CREDENTIAL [<credential_name>]  WITH IDENTITY = '<username>',  
 SECRET = '<password>';
 ```

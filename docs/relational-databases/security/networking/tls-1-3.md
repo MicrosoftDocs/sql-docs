@@ -91,7 +91,7 @@ SQL Server 2025 introduces secure-by-default configurations for several features
 
 - **Linked servers**: Uses Microsoft OLE DB Driver for SQL Server version 19 with `Encrypt=Mandatory` by default. The encryption parameter must be specified in the connection string when targeting another SQL Server instance.
 
-- **Log shipping**: Uses Microsoft OLE DB Driver for SQL Server version 19 with `Encrypt=Mandatory` and requires valid server certificates. When performing an in-place upgrade from a lower version, which doesn't support the latest security configurations, if encryption settings aren't explicitly overridden with a more secure option, log shipping will use `TrustServerCertificate=Yes` to allow for backwards compatibility. To enforce TLS 1.3 and `Encrypt=Strict` with TDS 8.0 after upgrading, drop and recreate the topology with the updated parameters in the log shipping stored procedures.
+- **Log shipping**: Uses Microsoft OLE DB Driver for SQL Server version 19 with `Encrypt=Mandatory` and requires valid server certificates. When performing an in-place upgrade from a lower version, which doesn't support the latest security configurations, if encryption settings aren't explicitly overridden with a more secure option, log shipping will use `TrustServerCertificate=Yes` to allow for backward compatibility. To enforce TLS 1.3 and `Encrypt=Strict` with TDS 8.0 after upgrading, drop and recreate the topology with the updated parameters in the log shipping stored procedures.
 
 - **Replication**: (Transactional, Snapshot, Merge) Uses Microsoft OLE DB Driver for SQL Server version 19 with `Encrypt=Mandatory` and requires valid certificates with `TrustServerCertificate=False`.
 

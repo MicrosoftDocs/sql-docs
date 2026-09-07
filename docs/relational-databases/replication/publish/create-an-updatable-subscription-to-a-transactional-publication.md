@@ -29,7 +29,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 3. Right-click a transactional publication enabled for updating subscriptions, and then click **New Subscriptions**.
 4. Follow pages in the wizard to specify options for the subscription, such as where the Distribution Agent should run.
 5. On the **Updatable Subscriptions** page of the **New Subscription Wizard**, ensure **Replicate** is selected.
-6. Select an option from the **Commit at Publisher** drop-down list:
+6. Select an option from the **Commit at Publisher** dropdown list:
 
     * To use immediate updating subscriptions, select **Simultaneously commit changes**. If you select this option, and the publication allows queued updating subscriptions (the default for publications created with the New Publication Wizard), the subscription property **update_mode** is set to **failover**. This mode allows you to switch to queued updating later if necessary.
 
@@ -53,12 +53,12 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 1. Connect to the Subscriber in SQL Server Management Studio, and then expand the server node.
 2. Expand the **Replication** folder.
 3. Right-click the **Local Subscriptions** folder, and then click **New Subscriptions**.
-4. On the **Publication** page of the **New Subscription Wizard**, select **Find SQL Server Publisher** from the **Publisher** drop-down list.
+4. On the **Publication** page of the **New Subscription Wizard**, select **Find SQL Server Publisher** from the **Publisher** dropdown list.
 5. Connect to the Publisher in the **Connect to Server** dialog box.
 6. Select a transactional publication enabled for updating subscriptions on the **Publication** page.
 7. Follow pages in the wizard to specify options for the subscription, such as where the Distribution Agent should run.
 8. On the **Updatable Subscriptions** page of the New Subscription Wizard, ensure **Replicate** is selected.
-9. Select an option from the **Commit at Publisher** drop-down list:
+9. Select an option from the **Commit at Publisher** dropdown list:
 
     * To use immediate updating subscriptions, select **Simultaneously commit changes**. If you select this option, and the publication allows queued updating subscriptions (the default for publications created with the New Publication Wizard), the subscription property **update_mode** is set to **failover**. This mode allows you to switch to queued updating later if necessary.
 

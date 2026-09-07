@@ -104,7 +104,7 @@ Consider enabling [encrypted connections](/sql/database-engine/configure-windows
 Consider the following when **securing the network connectivity or perimeter**:
 
 - [Azure Firewall](/azure/firewall/features): A stateful and managed Firewall as a Service (FaaS) that grants/denies server access based on originating IP address to protect network resources.
-- [Azure Distributed Denial of Service (DDoS) protection](/azure/ddos-protection/ddos-protection-overview): DDoS attacks overwhelm and exhaust network resources, making apps slow or unresponsive. Azure DDoS protection sanitizes unwanted network traffic before it impacts service availability.
+- [Azure Distributed Denial of Service (DDoS) protection](/azure/ddos-protection/ddos-protection-overview): DDoS attacks overwhelm and exhaust network resources, making apps slow or unresponsive. Azure DDoS protection sanitizes unwanted network traffic before it affects service availability.
 - [Network Security Groups (NSGs)](/azure/virtual-network/network-security-groups-overview): Filters network traffic to and from Azure resources on Azure Virtual Networks.
 - [Application Security Groups](/azure/virtual-network/application-security-groups): Provides for the grouping of servers with similar port filtering requirements, and groups together servers with similar functions such as web servers.
 

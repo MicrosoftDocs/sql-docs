@@ -64,7 +64,7 @@ In this section, you add a map to your report from the map gallery. The map has 
   
 12. If the option is selected, clear the **Single color map** option.  
   
-13. From the **Data field** drop-down list, select **#COUNTYNAME**. The Map Preview pane in the wizard displays the following items:  
+13. From the **Data field** dropdown list, select **#COUNTYNAME**. The Map Preview pane in the wizard displays the following items:  
   
     -   A title with the text **Map Title**.  
   
@@ -284,9 +284,9 @@ In this section, you add a map layer that displays a Bing Maps tile background.
   
 2.  Double-click the map to display the **Map Layer** pane. On the toolbar, select **Add Layer** :::image type="icon" source="../reporting-services/media/rs-iconmapaddlayer.gif":::.  
   
-3.  From the drop-down list, select **Tile Layer**.  
+3.  From the dropdown list, select **Tile Layer**.  
   
-    The last layer in the **Map Layer** pane is TileLayer1. By default, the tile layer displays the road map style.  
+    The last layer in the **Map Layer** pane is TileLayer1. By default, the tile layer displays the roadmap style.  
   
     > [!NOTE]  
     > In the wizard, you can also add a tile layer on the **Choose spatial data and map view options** page. To do this, select **Add a Bing Maps background for this map view**. In a rendered report, the tile background displays Bing Maps tiles for the current map viewport center and zoom level.  
@@ -359,7 +359,7 @@ To create a rule that varies the color of each county based store sales, you mus
   
 3.  Select **Visualize data by using color ranges**. Start color, middle color, and end color options replace the palette option.  
   
-4.  Define range values for sales per county. In **Data field**, from the drop-down list, select `[Sum(Sales)]`.  
+4.  Define range values for sales per county. In **Data field**, from the dropdown list, select `[Sum(Sales)]`.  
   
 5.  To change the format to display currency in thousands, change the expression to the following example: `=Sum(Fields!Sales.Value)/1000`  
   
@@ -381,7 +381,7 @@ To create a rule that varies the color of each county based store sales, you mus
   
 12. In **Color scale options**, verify that **Show in color scale** is selected.  
   
-13. In **Show in this legend**, from the drop-down list, select the blank line. For now, you show the color ranges only in the color scale.  
+13. In **Show in this legend**, from the dropdown list, select the blank line. For now, you show the color ranges only in the color scale.  
   
 14. Select **OK**.
 

@@ -49,7 +49,7 @@ To create an assessment:
 
 ### Validate the type mappings
 
-Before you perform a schema conversion, validate the default datatype mappings or change them based on requirements. You can go to the **Tools** menu and select **Project Settings**, or you can change type mapping for each table by selecting the table in **SAP ASE Metadata Explorer**.
+Before you perform a schema conversion, validate the default data type mappings or change them based on requirements. You can go to the **Tools** menu and select **Project Settings**, or you can change type mapping for each table by selecting the table in **SAP ASE Metadata Explorer**.
 
 ### Convert the schema
 

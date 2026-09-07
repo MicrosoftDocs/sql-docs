@@ -41,7 +41,7 @@ Report Builder provides many right-click menus for quick access to frequently us
 | Move the division lines between areas. | Any arrow key. Use the Up and Down arrows to move the line between the Grouping pane and design surface. Use the Right and Left arrows to move the line between the Report Data pane and the design surface. |
 | Move within an area of Report Builder, such as moving within a Ribbon tab. | Tab, Shift + Tab |
 | Move between Ribbon tabs. | Right arrow, Left arrow |
-| Navigate the dropdown menus. | Any arrow key |
+| Navigate the dropdown lists. | Any arrow key |
 | Select items on the design surface. | Tab, Shift + Tab |
 | Move a selected item on the design surface. | Any arrow key |
 | Move a selected item on the design surface, in small increments. | CtrlL with an arrow key |

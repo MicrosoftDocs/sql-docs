@@ -28,7 +28,7 @@ For a single database at a specific compute size within a [service tier](single-
 
 The ratio among these resources is originally determined by an [online transaction processing (OLTP) benchmark workload](dtu-benchmark.md) designed to be typical of real-world OLTP workloads. When your workload exceeds the amount of any of these resources, your throughput is throttled, resulting in slower performance and time-outs.
 
-For single databases, the resources used by your workload don't impact the resources available to other databases in the Azure cloud. Likewise, the resources used by other workloads don't impact the resources available to your database.
+For single databases, the resources used by your workload don't affect the resources available to other databases in the Azure cloud. Likewise, the resources used by other workloads don't affect the resources available to your database.
 
 :::image type="content" source="media/service-tiers-dtu/bounding-box.png" alt-text="Diagram about the DTU purchasing model. The four sides of the box are Writes, CPU, Reads, and Memory, describing how DTU workloads are a blend of CPU, memory, and read-write rates." lightbox="media/service-tiers-dtu/bounding-box.png":::
 
@@ -51,7 +51,7 @@ The shared resources in an elastic pool are measured by elastic database transac
 
 A pool is given a set number of eDTUs for a set price. In the elastic pool, individual databases can autoscale within the configured boundaries. A database under a heavier load consumes more eDTUs to meet demand. Databases under lighter loads consume fewer eDTUs. Databases with no load consume no eDTUs. Because resources are provisioned for the entire pool, rather than per database, elastic pools simplify your management tasks and provide a predictable budget for the pool.
 
-You can add more eDTUs to an existing pool with minimal database downtime. Similarly, if you no longer need extra eDTUs, remove them from an existing pool at any time. You can also add databases to or remove databases from a pool at any time. To reserve eDTUs for other databases, limit the number of eDTUs databases can use under a heavy load. If a database has consistently high resource utilization that impacts other databases in the pool, move it out of the pool and configure it as a single database with a predictable amount of required resources.
+You can add more eDTUs to an existing pool with minimal database downtime. Similarly, if you no longer need extra eDTUs, remove them from an existing pool at any time. You can also add databases to or remove databases from a pool at any time. To reserve eDTUs for other databases, limit the number of eDTUs databases can use under a heavy load. If a database has consistently high resource utilization that affects other databases in the pool, move it out of the pool and configure it as a single database with a predictable amount of required resources.
 
 #### Workloads that benefit from an elastic pool of resources
 

@@ -99,7 +99,7 @@ For the **Decimal** data type, the precision and scale are determined by the sou
   
 #### Use collection or resource path = Collection  
  **Collection**  
- Select a collection from the drop-down list.  
+ Select a collection from the dropdown list.  
   
 #### Use collection or resource path = Resource Path  
  **Resource path**  

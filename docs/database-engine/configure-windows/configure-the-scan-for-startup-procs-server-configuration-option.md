@@ -34,7 +34,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 
 1. Select the **Advanced** node.
 
-1. Under **Miscellaneous**, change the **Scan for Startup Procs** option to True or False by selecting the value you want from the dropdown list box.
+1. Under **Miscellaneous**, change the **Scan for Startup Procs** option to True or False by selecting the value you want from the dropdown list.
 
 <a id="TsqlProcedure"></a>
 

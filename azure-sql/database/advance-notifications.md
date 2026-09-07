@@ -89,7 +89,9 @@ The following table shows additional notifications that might be sent while main
 
 While Advance Notifications can be sent to any email address, Azure subscription role-based access control (RBAC) policy determines who can access the links in the email. Querying resource graph is covered by [Azure RBAC](/azure/role-based-access-control/overview) access management.  To enable read access, each recipient should have resource group level read access. For more information, see [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps).
 
-## Retrieve the list of impacted resources
+<a id="retrieve-the-list-of-impacted-resources"></a>
+
+## Retrieve the list of affected resources
 
 [Azure Resource Graph](/azure/governance/resource-graph/overview) is an Azure service designed to extend Azure Resource Management. The Azure Resource Graph Explorer provides efficient and performant resource exploration. You can query at scale across a given set of subscriptions, so that you can effectively govern your environment.
 

@@ -309,7 +309,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Specifies the *\<weighted_term>* keyword.  
   
  WEIGHT(*weight_value*)  
- Specifies a weight value, which is a number from 0.0 through 1.0. Each component in *\<weighted_term>* may include a *weight_value*. *weight_value* is a way to change how various portions of a query affect the rank value assigned to each row matching the query. WEIGHT does not affect the results of CONTAINS queries, but WEIGHT impacts rank in [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) queries.  
+ Specifies a weight value, which is a number from 0.0 through 1.0. Each component in *\<weighted_term>* may include a *weight_value*. *weight_value* is a way to change how various portions of a query affect the rank value assigned to each row matching the query. WEIGHT does not affect the results of CONTAINS queries, but WEIGHT affects rank in [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) queries.  
   
 > [!NOTE]  
 > The decimal separator is always a period, regardless of the operating system locale.  

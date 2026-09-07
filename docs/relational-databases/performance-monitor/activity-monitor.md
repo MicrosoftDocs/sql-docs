@@ -24,7 +24,7 @@ For columns included in the **Processes**, **Resource Waits**, **Data File I/O**
   
 1. To sort a column, select the column name.  
   
-1. To filter on one or more columns, select the dropdown arrow in the column heading, and then select a value.  
+1. To filter on one or more columns, select the dropdown list arrow in the column heading, and then select a value.  
 
 ## Related content
 

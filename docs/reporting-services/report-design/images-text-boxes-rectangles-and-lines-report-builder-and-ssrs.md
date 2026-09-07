@@ -24,7 +24,7 @@ ms.custom:
  Every cell in a table or matrix is also a text box, which you can format in the same way that you format stand-alone text boxes.  
   
  [Rectangles and Lines &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
- **Lines** display horizontally, vertically, or diagonally. A line is defined with a start and end point and can have various styles (for example, weight and color) assigned to it. A line has no data associated with it.  
+ **Lines** display horizontally, vertically, or diagonally. A line is defined with a start and endpoint and can have various styles (for example, weight and color) assigned to it. A line has no data associated with it.  
   
  **Rectangles** can be used as a graphical element, or as a container for other report items. As a graphical element, a rectangle has the same properties as a line. As a container, a rectangle acts as a parent container for all report items inside it. Placing report items in a parent container helps control how they appear on each report page.  
   

@@ -299,7 +299,7 @@ Temporary object metadata contention has historically been a bottleneck to scala
 Enabling the Memory-optimized TempDB metadata feature removes this bottleneck for workloads previously limited by temporary object metadata contention inside `tempdb`. Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], the system tables involved in managing temporary object metadata can become latch-free, non-durable, memory-optimized tables.
 
 > [!WARNING]  
-> Because of current [limitations](#limitations-of-memory-optimized-tempdb-metadata), we recommend enabling Memory-optimized TempDB metadata only when object metadata contention occurs and significantly impacts your workloads.
+> Because of current [limitations](#limitations-of-memory-optimized-tempdb-metadata), we recommend enabling Memory-optimized TempDB metadata only when object metadata contention occurs and significantly affects your workloads.
 
 The following diagnostic query returns one or more rows if temporary object metadata contention is occurring. Each row represents a [system table](../system-tables/system-base-tables.md), and returns the number of sessions contending for access to that table at the time when this diagnostic query is executed.
 

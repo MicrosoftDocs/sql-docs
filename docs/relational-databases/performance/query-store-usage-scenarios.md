@@ -96,7 +96,7 @@ In any of these scenarios apply the following workflow:
   
 5.  Decide whether to keep the change or perform roll back in case when new performance is unacceptable.  
   
-The following illustration shows Query Store analysis (step 4) in case of missing index creation. Open **Top Resource Consuming Queries** / Plan summary pane to get this view for the query that should be impacted by the index creation:  
+The following illustration shows Query Store analysis (step 4) in case of missing index creation. Open **Top Resource Consuming Queries** / Plan summary pane to get this view for the query that should be affected by the index creation:  
   
 ![Screenshot showing the Query Store analysis (step 4) in case of missing index creation.](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   

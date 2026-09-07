@@ -109,7 +109,7 @@ helpviewer_keywords:
   
     -   Clear **Initialize** only if you have created all objects and added all required data in the subscription database.  
   
-    -   Select **Immediately** from the drop-down list in the **Initialize When** column to have the Distribution Agent transfer snapshot files to the Subscriber after this wizard is completed. Select **At first synchronization** to have the agent transfer the files the next time it is scheduled to run.  
+    -   Select **Immediately** from the dropdown list in the **Initialize When** column to have the Distribution Agent transfer snapshot files to the Subscriber after this wizard is completed. Select **At first synchronization** to have the agent transfer the files the next time it is scheduled to run.  
   
 12. On the **Wizard Actions** page, optionally script the subscription. For more information, see [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   

@@ -31,7 +31,7 @@ If your application relies on automatic database backups and uses [geo-restore](
 2. Create a new environment for your web app and call it 'Staging'. It will be registered in Azure DNS with the URL `contoso-staging.azurewebsites.net` (2).
 
 > [!NOTE]
-> These preparation steps won't impact the production environment, which can function in full-access mode.
+> These preparation steps won't affect the production environment, which can function in full-access mode.
 
 ![Diagram shows the SQL Database geo-replication configuration for cloud disaster recovery.](./media/manage-application-rolling-upgrade/option1-1.png)
 
@@ -89,7 +89,7 @@ To make it possible to roll back the upgrade, you must create a staging environm
 4. Deploy a staging environment of the web app instance in the backup region (9) and configure it to connect the geo-redundant secondary database created at (8).
 
 > [!NOTE]
-> These preparation steps won't impact the application in the production environment. It will remain fully functional in read-write mode.
+> These preparation steps won't affect the application in the production environment. It will remain fully functional in read-write mode.
 
 ![Diagram shows SQL Database geo-replication configuration for cloud disaster recovery with a fully synchronized copy of the application.](./media/manage-application-rolling-upgrade/option2-1.png)
 
@@ -140,7 +140,7 @@ The main tradeoff is that it requires double redundancy of each application comp
 
 ## Summary
 
-The two upgrade methods described in the article differ in complexity and dollar cost, but they both focus on minimizing how long the user is limited to read-only operations. That time is directly defined by the duration of the upgrade script. It doesn't depend on the database size, the service tier you chose, the website configuration, or other factors that you can't easily control. All preparation steps are decoupled from the upgrade steps and don't impact the production application. The efficiency of the upgrade script is a key factor that determines the user experience during upgrades. So, the best way to improve that experience is to focus your efforts on making the upgrade script as efficient as possible.
+The two upgrade methods described in the article differ in complexity and dollar cost, but they both focus on minimizing how long the user is limited to read-only operations. That time is directly defined by the duration of the upgrade script. It doesn't depend on the database size, the service tier you chose, the website configuration, or other factors that you can't easily control. All preparation steps are decoupled from the upgrade steps and don't affect the production application. The efficiency of the upgrade script is a key factor that determines the user experience during upgrades. So, the best way to improve that experience is to focus your efforts on making the upgrade script as efficient as possible.
 
 ## Related content
 

@@ -54,7 +54,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 -   Cleanup of merge replication metadata is dependent on the publication retention period:  
   
-    -   Replication cannot clean up metadata in the publication and subscription databases until the retention period is reached. Use caution in specifying a high value for the retention period, because it can negatively impact replication performance. It is recommended that you use a lower setting if you can reliably predict that all Subscribers will synchronize regularly within that time period.  
+    -   Replication cannot clean up metadata in the publication and subscription databases until the retention period is reached. Use caution in specifying a high value for the retention period, because it can negatively affect replication performance. It is recommended that you use a lower setting if you can reliably predict that all Subscribers will synchronize regularly within that time period.  
   
     -   It is possible to specify that subscriptions never expire (a value of 0 for `@retention`), but it is strongly recommended that you do not use this value, because metadata cannot be cleaned up.  
   

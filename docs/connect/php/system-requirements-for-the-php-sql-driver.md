@@ -4,7 +4,7 @@ description: The Microsoft Drivers for PHP for SQL Server support a wide range o
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 02/24/2026
+ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -61,7 +61,7 @@ See the [supported operating systems](microsoft-php-drivers-for-sql-server-suppo
 
 This section lists the driver files that are included with each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Each installation package contains SQLSRV and PDO_SQLSRV driver files in thread safe and non thread safe variants. On Windows, they're also available in 32-bit and 64-bit variants. To configure the driver for use with the PHP runtime, follow the installation instructions in [Loading the Microsoft Drivers for PHP for SQL Server](loading-the-php-sql-driver.md).
 
-On supported versions of Linux and macOS, the appropriate drivers can be installed using PHP's PECL package system, following the [Linux and macOS installation instructions](installation-tutorial-linux-mac.md). Instead, you can download prebuilt binaries for your platform from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page. The following tables list the files found in the prebuilt binary packages.
+On supported versions of Linux and macOS, install the appropriate drivers with PIE, the PHP Installer for Extensions, following the [Linux and macOS installation instructions](installation-tutorial-linux-mac.md). PIE replaces the deprecated PECL package system. Instead, you can download prebuilt binaries for your platform from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page. The following tables list the files found in the prebuilt binary packages.
 
 **Microsoft Drivers 5.13 for PHP for SQL Server:**
 

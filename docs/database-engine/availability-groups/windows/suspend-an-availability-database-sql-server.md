@@ -27,7 +27,7 @@ helpviewer_keywords:
 |Primary database|The primary database stops data movement to every connected secondary database. The primary database continues running, in an exposed mode. The primary database remains available to clients, and existing connections on a readable secondary remain usable and new connections can be made.|  
   
 > [!NOTE]  
->  Suspending an Always On secondary database does not directly affect the availability of the primary database. However, suspending a secondary database can impact redundancy and failover capabilities for the primary database. This is in contrast to database mirroring, where the mirroring state is suspended on both the mirror database and the principal database. Suspending an Always On primary database suspends data movement on all the corresponding secondary databases, and redundancy and failover capabilities cease for that database until the primary database is resumed.  
+>  Suspending an Always On secondary database does not directly affect the availability of the primary database. However, suspending a secondary database can affect redundancy and failover capabilities for the primary database. This is in contrast to database mirroring, where the mirroring state is suspended on both the mirror database and the principal database. Suspending an Always On primary database suspends data movement on all the corresponding secondary databases, and redundancy and failover capabilities cease for that database until the primary database is resumed.  
 
 <a id="BeforeYouBegin"></a>
 

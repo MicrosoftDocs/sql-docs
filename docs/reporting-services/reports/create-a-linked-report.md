@@ -21,7 +21,7 @@ helpviewer_keywords:
   
 ## To create a linked report  
   
-1. In the web portal, navigate to the desired report, right-click on it and  select **Manage** from the drop down menu.
+1. In the web portal, navigate to the desired report, right-click on it and  select **Manage** from the dropdown list.
 
 2. On the **Manage \<reportname\>** page, select **Create linked report**.  
   

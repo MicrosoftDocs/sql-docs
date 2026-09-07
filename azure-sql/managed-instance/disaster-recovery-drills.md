@@ -99,7 +99,7 @@ To simulate the outage, disable client connections to the primary replica of the
 For recovery, do the following:
 
 1. Initiate a [planned link failover](managed-instance-link-failover-how-to.md) to the secondary instance.
-1. Repoint the impacted applications to the new primary instance.
+1. Repoint the affected applications to the new primary instance.
 
 ### Validation
 

@@ -3,7 +3,7 @@ title: Obtain a FAST_FORWARD cursor (OLE DB driver)
 description: Learn how to set the rowset properties to obtain a FAST_FORWARD cursor using OLE DB Driver for SQL Server with this example.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

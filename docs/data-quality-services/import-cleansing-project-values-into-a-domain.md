@@ -49,7 +49,7 @@ You must have the dqs_kb_editor or the dqs_administrator role on the DQS_MAIN da
   
 5.  In the **Import Project Values** dialog box:  
   
-    -   Select **All** in the **Imported** drop-down list to display all projects, or **No** to display only projects whose values have not been imported yet.  
+    -   Select **All** in the **Imported** dropdown list to display all projects, or **No** to display only projects whose values have not been imported yet.  
   
     -   Select the project that you want to import values from.  
   

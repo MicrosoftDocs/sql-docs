@@ -132,7 +132,7 @@ For objects that failed conversion, you can view the syntax that resulted in the
   
 6.  In the right pane, select the **Report** tab.  
   
-7.  At the top of the **Report** tab is a drop-down list. If the list shows **Statistics**, change the selection to **Source**.  
+7.  At the top of the **Report** tab is a dropdown list. If the list shows **Statistics**, change the selection to **Source**.  
   
     SSMA will display the source code and several buttons immediately above the code.  
   

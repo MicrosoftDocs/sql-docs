@@ -39,7 +39,7 @@ To create an assessment, do the following:
 
 1. Open [SSMA for Access](https://www.microsoft.com/download/details.aspx?id=54255). 
 1. Select **File**, and then select **New Project**. 
-1. Provide a project name and a location for your project and then, in the drop-down list, select **Azure SQL Database** as the migration target. 
+1. Provide a project name and a location for your project and then, in the dropdown list, select **Azure SQL Database** as the migration target. 
 1. Select **OK**. 
 
    ![Screenshot of the "New Project" pane for entering your migration project name and location.](./media/access-to-sql-database-guide/new-project.png)
@@ -77,7 +77,7 @@ To convert database objects, do the following:
 1. Select the **Connect to Azure SQL Database** tab, and then do the following:
 
    a. Enter the details for connecting to your SQL database.  
-   b. In the drop-down list, select your target SQL database. Or you can enter a new name, in which case a database will be created on the target server.  
+   b. In the dropdown list, select your target SQL database. Or you can enter a new name, in which case a database will be created on the target server.  
    c. Provide authentication details.   
    d. Select **Connect**.
 

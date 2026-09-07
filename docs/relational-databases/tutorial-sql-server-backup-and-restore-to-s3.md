@@ -159,7 +159,7 @@ In this step, restore the database using either the GUI in SQL Server Management
 
    :::image type="content" source="media/tutorial-sql-server-backup-and-restore-to-s3/s3-restore-database.png" alt-text="Screenshot showing the Select restore device screen.":::
 
-1. Select **URL** from the **Backup media type** dropdown and select **Add** to add your device.
+1. Select **URL** from the **Backup media type** dropdown list and select **Add** to add your device.
 
    :::image type="content" source="media/tutorial-sql-server-backup-and-restore-to-s3/s3-backup-device.png" alt-text="Screenshot showing the Add backup device screen.":::
 

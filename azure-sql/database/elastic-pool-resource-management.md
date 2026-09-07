@@ -24,7 +24,7 @@ Resource sharing requires the system to carefully control resource usage to mini
 
 The primary design goal of elastic pools is to be cost-effective. For this reason, the system intentionally allows customers to create _dense_ pools, that is pools with the number of databases approaching or at the maximum allowed, but with a moderate allocation of compute resources. For the same reason, the system doesn't reserve all potentially needed resources for its internal processes, but allows resource sharing between internal processes and user workloads.
 
-This approach allows customers to use dense elastic pools to achieve adequate performance and major cost savings. However, if the workload against many databases in a dense pool is sufficiently intense, resource contention becomes significant. Resource contention reduces user workload performance, and can negatively impact internal processes.
+This approach allows customers to use dense elastic pools to achieve adequate performance and major cost savings. However, if the workload against many databases in a dense pool is sufficiently intense, resource contention becomes significant. Resource contention reduces user workload performance, and can negatively affect internal processes.
 
 > [!IMPORTANT]
 > In dense pools with many active databases, it might not be feasible to increase the number of databases in the pool up to the maximums documented for [Resource limits for elastic pools using the DTU purchasing model](resource-limits-dtu-elastic-pools.md) and [vCore](resource-limits-vcore-elastic-pools.md) elastic pools.

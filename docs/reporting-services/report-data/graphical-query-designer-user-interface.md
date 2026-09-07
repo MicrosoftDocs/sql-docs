@@ -88,7 +88,7 @@ EXEC uspGetEmployeeManagers '1';
 ```  
   
 ### Command Type TableDirect  
- In **TableDirect** type, the graphical query designer displays a drop-down list of the available tables from the data source and a Result pane. If you select a table and click the **Run** button, all the columns for that table are returned.  
+ In **TableDirect** type, the graphical query designer displays a dropdown list of the available tables from the data source and a Result pane. If you select a table and click the **Run** button, all the columns for that table are returned.  
   
 > [!NOTE]  
 >  the TableDirect feature is supported only by **OLE DB** and **ODBC** data source types.  
@@ -97,11 +97,11 @@ EXEC uspGetEmployeeManagers '1';
   
 |Pane|Function|  
 |----------|--------------|  
-|Table drop-down list|Lists all the available tables from the data source. Select one from the list to make it active.|  
+|Table dropdown list|Lists all the available tables from the data source. Select one from the list to make it active.|  
 |Result|Displays all columns from the selected table. To run the table query, click the **Run** button on the toolbar.|  
   
 #### Toolbar Buttons for the Command Type TableDirect  
- The graphical query designer toolbar provides a drop-down list of tables on the data source. The following table lists each button and its function.  
+ The graphical query designer toolbar provides a dropdown list of tables on the data source. The following table lists each button and its function.  
   
 |Button|Description|  
 |------------|-----------------|  
@@ -111,22 +111,22 @@ EXEC uspGetEmployeeManagers '1';
 |![Run the query](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")|Select all columns from the selected table.|  
   
 ### Command Type StoredProcedure  
- In **StoredProcedure** type, the graphical query designer displays a drop-down list of the available stored procedures from the data source and a Result pane. The following table describes the function of each pane.  
+ In **StoredProcedure** type, the graphical query designer displays a dropdown list of the available stored procedures from the data source and a Result pane. The following table describes the function of each pane.  
   
 |Pane|Function|  
 |----------|--------------|  
-|Stored procedure drop-down list|Lists all the available stored procedures from the data source. Select one from the list to make it active.|  
+|Stored procedure dropdown list|Lists all the available stored procedures from the data source. Select one from the list to make it active.|  
 |Result|Displays the result of running the stored procedure. To run the selected stored procedure, click the **Run** button on the toolbar.|  
   
 #### Toolbar Buttons for Command Type StoredProcedure  
- The graphical query designer toolbar provides a drop-down list of stored procedures on the data source. The following table lists each button and its function.  
+ The graphical query designer toolbar provides a dropdown list of stored procedures on the data source. The following table lists each button and its function.  
   
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer.|  
 |**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Run the query](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")|Run the selected stored procedure.|  
-|Stored procedure drop-down list|Click the down arrow to display a list of available stored procedures from the data source. Click any stored procedure from the list to select it.|  
+|Stored procedure dropdown list|Click the down arrow to display a list of available stored procedures from the data source. Click any stored procedure from the list to select it.|  
   
 #### Example  
  The following stored procedure calls a chain-of-command list of managers from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. This stored procedure accepts *BusinessEntityID* as parameter. You can enter any small integer.  

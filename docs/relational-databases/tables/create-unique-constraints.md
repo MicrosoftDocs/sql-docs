@@ -43,7 +43,7 @@ Requires ALTER permission on the table.
   
 1. In the **Indexes/Keys** dialog box, select **Add**.  
   
-1. In the grid under **General**, select **Type** and choose **Unique Key** from the dropdown list box to the right of the property, and then select **Close**.  
+1. In the grid under **General**, select **Type** and choose **Unique Key** from the dropdown list to the right of the property, and then select **Close**.  
   
 1. On the **File** menu, select **Save _table name_**.  
 

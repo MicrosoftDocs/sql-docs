@@ -31,7 +31,7 @@ Indexing failures can occur when:
 
 For each row-level failure, the crawl log contains details on the reason for the failure. The error counts are summarized at the end of a full or incremental population.
 
-Other failures can impact the indexing process and prevent the population from completing:
+Other failures can affect the indexing process and prevent the population from completing:
 
 - The full-text index exceeds the limit for the number of rows that a full-text catalog can contain.
 

@@ -38,23 +38,23 @@ helpviewer_keywords:
   
 2.  From the menu bar, point to **Manage** and click **Business Rules**.  
   
-3.  On the **Business Rules/** page, from the **Model** drop-down list, select a model.  
+3.  On the **Business Rules/** page, from the **Model** dropdown list, select a model.  
   
-4.  From the **Entity** drop-down list, select an entity.  
+4.  From the **Entity** dropdown list, select an entity.  
   
-5.  From the **Member Types** drop-down list, select a type of member.  
+5.  From the **Member Types** dropdown list, select a type of member.  
   
 6.  Click the row for the business rule you want to edit.  
   
 7.  Click **Edit**.  
   
-8.  Under the **If** block, on the left side from the logical operator drop-down list select **AND/OR/ NOT**.  
+8.  Under the **If** block, from the logical operator dropdown list on the left, select **AND/OR/NOT**.  
   
 9. Click **Add**. A panel will be displayed.  
   
-10. From the **Attribute** drop-down list, select an attribute.  
+10. From the **Attribute** dropdown list, select an attribute.  
   
-11. From the **Operator** drop-down list, select a condition.  
+11. From the **Operator** dropdown list, select a condition.  
   
 12. Complete any required fields.  
   

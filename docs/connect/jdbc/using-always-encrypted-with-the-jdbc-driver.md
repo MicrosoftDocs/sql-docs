@@ -255,7 +255,7 @@ If the keystore is of type PKCS12, the keytool utility doesn't prompt for a key 
 
 You can also export a certificate from the Windows Certificate store in .pfx format and use that with the **`SQLServerColumnEncryptionJavaKeyStoreProvider`**. The exported certificate can also be imported to the Java Key Store as a JKS keystore type.
 
-After you create the keytool entry, create the column master key metadata in the database, which needs the keystore provider name and the key path. For more information on how to create column master key meta data, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md). For `SQLServerColumnEncryptionJavaKeyStoreProvider`, the key path is just the alias of the key and the name of the `SQLServerColumnEncryptionJavaKeyStoreProvider` is `MSSQL_JAVA_KEYSTORE`. You can also query this name with the `getName()` public API of the `SQLServerColumnEncryptionJavaKeyStoreProvider` class.
+After you create the keytool entry, create the column master key metadata in the database, which needs the keystore provider name and the key path. For more information on how to create column master key metadata, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md). For `SQLServerColumnEncryptionJavaKeyStoreProvider`, the key path is just the alias of the key and the name of the `SQLServerColumnEncryptionJavaKeyStoreProvider` is `MSSQL_JAVA_KEYSTORE`. You can also query this name with the `getName()` public API of the `SQLServerColumnEncryptionJavaKeyStoreProvider` class.
 
 The T-SQL syntax to create the column master key is:
 

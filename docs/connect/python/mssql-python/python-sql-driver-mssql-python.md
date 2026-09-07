@@ -4,7 +4,7 @@ description: mssql-python is Microsoft's Python driver for SQL Server, Azure SQL
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 07/13/2026
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: get-started
@@ -119,7 +119,7 @@ def execute_with_retry(
 
 def main() -> None:
     # Read configuration from the environment; never hard-code secrets.
-    server = os.environ["SQL_SERVER"]      # for example, myserver.database.windows.net
+    server = os.environ["SQL_SERVER"]      # for example, <server>.database.windows.net
     database = os.environ["SQL_DATABASE"]  # for example, AdventureWorks
     client_id = os.getenv("AZURE_CLIENT_ID")  # set for a user-assigned managed identity
 

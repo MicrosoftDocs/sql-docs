@@ -95,6 +95,10 @@ To set or update the license type to the Azure Hybrid Benefit by using the REST 
 
 ---
 
+## Manage license types at scale
+
+[!INCLUDE [manage-sql-license-types-at-scale](../docs/includes/manage-sql-license-types-at-scale.md)]
+
 ## Frequently asked questions
 
 ### Is there a migration allowance with Azure Hybrid Benefit for SQL Server?

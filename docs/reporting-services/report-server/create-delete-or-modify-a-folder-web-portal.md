@@ -19,7 +19,7 @@ ms.custom:
   
 1. Navigate to folder or subfolder where you want to locate the new folder. Select the **Home** folder by selecting the **Browse** button on the toolbar at the top left of the page to create it at the top of the folder hierarchy.  
   
-1. Select the **New** button on the top right of the report server toolbar, and then select **Folder** from the drop-down menu.  
+1. Select the **New** button on the top right of the report server toolbar, and then select **Folder** from the dropdown list.  
   
 1. In the **Create a new folder in (current folder name)** dialog box, enter the name of the new folder to be created. A folder name can include spaces, but can't include reserved characters that are used for URL encoding: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. You also can't type a series of folder names to create several folders at once.  
   

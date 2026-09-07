@@ -42,11 +42,11 @@ helpviewer_keywords:
   
 5.  On the Manage Attribute Groups page, do one of the following and then click **Add**.  
   
-     If the attribute group is for leaf members, select **Leaf** from the **Member Types** drop-down list at the top of the page.  
+     If the attribute group is for leaf members, select **Leaf** from the **Member Types** dropdown list at the top of the page.  
   
-     If the attribute group is for consolidated members, select **Consolidated** from the **Member Types** drop-down list.  
+     If the attribute group is for consolidated members, select **Consolidated** from the **Member Types** dropdown list.  
   
-     If the attribute group is for collections, select **Collection** from the **Member Types** drop-down list.  
+     If the attribute group is for collections, select **Collection** from the **Member Types** dropdown list.  
   
 6.  Click **Leaf Groups**, **Consolidated Groups**, or **Collection Groups** to create an attribute group of leaf members, consolidated members, or collections respectively.  
   

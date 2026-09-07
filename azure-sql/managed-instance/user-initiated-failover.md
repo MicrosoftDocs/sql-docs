@@ -35,7 +35,7 @@ You might execute a manual failover to restart the engine process for the follow
 - Failed logins, or slowness due to performance issues.
 - Testing application for failover resiliency before deploying to production.
 - Testing end-to-end systems for fault resiliency on automatic failovers.
-- Testing how failover impacts existing database sessions.
+- Testing how failover affects existing database sessions.
 - Query performance degradation (restarting the instance can help mitigate the performance issue).
 
 Ensuring that your applications are failover resilient prior to deploying to production helps mitigate the risk of application faults in production and contributes to application availability for your customers. Learn more about testing your applications for cloud readiness with the following video: 
@@ -48,8 +48,8 @@ The following table describes the expected behavior of the SQL Managed Instance 
 | --- | --- | --- | --- |
 | General Purpose | [Local redundancy](high-availability-sla-local-zone-redundancy.md#general-purpose-service-tier)  <br /> (Single availability zone) | SQL process restarts on the same VM. | SQL process restarts on a different VM. | 
 | General Purpose | [Zone redundancy](high-availability-sla-local-zone-redundancy.md#general-purpose-service-tier-1) <br /> (Multiple availability zones) | SQL process restarts on the same VM. | SQL process restarts on a different VM. | 
-| Business Critical | [Local redundancy](high-availability-sla-local-zone-redundancy.md#business-critical-service-tier) <br /> (Single availability zone) | SQL proces restarts on the primary replica, or random secondary replica is promoted to primary. | N/A | 
-| Business Critical | [Zone redundancy](high-availability-sla-local-zone-redundancy.md#business-critical-service-tier-1) <br /> (Multiple availability zones) | SQL proces restarts on the primary replica, or random secondary replica is promoted to primary, either in the same or different availability zone. | N/A | 
+| Business Critical | [Local redundancy](high-availability-sla-local-zone-redundancy.md#business-critical-service-tier) <br /> (Single availability zone) | SQL process restarts on the primary replica, or random secondary replica is promoted to primary. | N/A | 
+| Business Critical | [Zone redundancy](high-availability-sla-local-zone-redundancy.md#business-critical-service-tier-1) <br /> (Multiple availability zones) | SQL process restarts on the primary replica, or random secondary replica is promoted to primary, either in the same or different availability zone. | N/A | 
 
 ## Permissions
 

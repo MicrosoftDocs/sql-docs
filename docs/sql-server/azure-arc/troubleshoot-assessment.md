@@ -38,9 +38,9 @@ The Azure monitor agent log is at:
 
 You might encounter the following issues when you enable best practices assessment.
 
-## No Log Analytics workspace is available in the dropdown list menu
+## No Log Analytics workspace is available in the dropdown list
 
-:::image type="content" source="media/assess/sql-best-practices-assessment-no-workspace.png" alt-text="Screenshot showing the error message when no value is visible in the Log Analytics workspace selector dropdown." lightbox="media/assess/sql-best-practices-assessment-no-workspace.png":::
+:::image type="content" source="media/assess/sql-best-practices-assessment-no-workspace.png" alt-text="Screenshot showing the error message when no value is visible in the Log Analytics workspace selector dropdown list." lightbox="media/assess/sql-best-practices-assessment-no-workspace.png":::
 
 Ensure that the user configuring SQL BPA must have Log Analytics Contributor role on the resource group or subscription of the Log Analytics workspace. The list of prerequisites can be found in the [best practices assessment](assess.md#prerequisites) article.
 

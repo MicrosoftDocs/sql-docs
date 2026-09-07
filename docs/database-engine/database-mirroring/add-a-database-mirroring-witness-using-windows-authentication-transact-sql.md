@@ -32,7 +32,7 @@ helpviewer_keywords:
  The witness is intended exclusively for high-safety mode with automatic failover. Before you set a witness, we strongly recommend that you ensure that the SAFETY property is currently set to FULL.  
   
 > [!IMPORTANT]  
->  We recommend that you configure database mirroring during off-peak hours because configuration can impact performance.  
+>  We recommend that you configure database mirroring during off-peak hours because configuration can affect performance.  
   
 ## Establish a witness  
   

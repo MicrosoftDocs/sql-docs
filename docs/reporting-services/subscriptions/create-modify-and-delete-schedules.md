@@ -120,7 +120,7 @@ Select **Cancel**.
 2.  Select **Site Settings**.
 3.  In the Reporting Services section, select **Manage Shared Schedules**.
 4.  Select **Add Schedule** to open the **Schedule Properties** page.
-5.  Enter a descriptive name for the schedule. On the application pages used to work with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports, this name appears in drop-down lists in schedule definition pages throughout the site. Avoid long names that are hard to read. Do follow a naming convention that puts the most description information at the beginning of the name.
+5.  Enter a descriptive name for the schedule. On the application pages used to work with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports, this name appears in dropdown lists in schedule definition pages throughout the site. Avoid long names that are hard to read. Do follow a naming convention that puts the most description information at the beginning of the name.
 6.  Choose a frequency. Depending on the frequency you choose, the schedule options that appear on the page might change to support that frequency (for example, if you choose **Month**, the name of each month appears on the page).
 7.  Define the schedule. Not all schedule combinations can be supported in a single schedule.
 8.  Set a start and end date.

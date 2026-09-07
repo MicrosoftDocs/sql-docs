@@ -19,7 +19,7 @@ The Migration page of the **Project Settings** dialog box contains settings that
   
 The Migration pane is available in both the **Project Settings** and **Default Project Settings** dialog boxes.  
   
--   To specify settings for all SSMA projects, on the **Tools** menu, select **Default Project Settings**, select migration project type for which settings are required to be viewed  or changed from **Migration Target Version** drop down click **General** at the bottom of the left pane, and then click **Migration**.  
+-   To specify settings for all SSMA projects, on the **Tools** menu, select **Default Project Settings**, select the migration project type whose settings you want to view or change from the **Migration Target Version** dropdown list, click **General** at the bottom of the left pane, and then click **Migration**.  
   
 -   To specify settings for the current project, on the **Tools** menu, select **Project Settings**, click **General** at the bottom of the left pane, and then click **Migration**.  
   

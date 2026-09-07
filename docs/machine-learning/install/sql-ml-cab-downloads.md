@@ -131,7 +131,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
 | | R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Minor fixes.|
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No change from previous versions. |
-| | Python Server    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| Python rx_data_step loses row order when duplicates are removed. <br/>SPEE fails datatype detection on clustered columnstore index. <br/>Returns an empty table when columns contain all null values. |
+| | Python Server    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| Python rx_data_step loses row order when duplicates are removed. <br/>SPEE fails data type detection on clustered columnstore index. <br/>Returns an empty table when columns contain all null values. |
 |**[SQL Server 2017 CU8](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate8)-[CU9](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate9)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
 | | R Server      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|

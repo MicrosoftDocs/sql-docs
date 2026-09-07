@@ -8,7 +8,7 @@ ms.topic: include
 
 1. After the Azure virtual machine is created and running, select **Virtual machine**, and then choose your new VM. 
 
-1. Select **Connect** and then choose **Connect via Bastion** from the drop-down to go to the **Bastion** page for your VM. 
+1. Select **Connect** and then choose **Connect via Bastion** from the dropdown list to go to the **Bastion** page for your VM. 
 
    ![Screenshot showing connect to VM in portal.](./media/virtual-machines-sql-server-remote-desktop-connect/azure-virtual-machine-connect.png)
 

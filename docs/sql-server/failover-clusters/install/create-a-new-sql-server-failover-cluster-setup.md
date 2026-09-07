@@ -140,7 +140,7 @@ helpviewer_keywords:
   
 12. Use the Cluster Resource Group page to specify the cluster resource group, or role, name where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtual server resources will be located. To specify the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster resource group name, you have two options:  
   
-    -   Use the drop-down box to specify an existing group to use.  
+    -   Use the dropdown list to specify an existing group to use.  
   
     -   Type the name of a new group to create. Be aware that the name "Available storage" is not a valid group name.  
   

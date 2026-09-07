@@ -70,7 +70,7 @@ Job configuration specifies U-SQL job submission properties.
   |True|The task result is based on the U-SQL job execution result. Job succeeds > task succeeds. Job fails > task fails. Task succeeds or fails > task completes.|
   |False|The task result is based on the U-SQL job submission and preparation result. Job submission succeeds and passes the preparation phase > task succeeds. Job submission fails or job fails at the preparation phase > task fails. Task succeeds or fails > task completes.|
 
-- **TimeOut:** Specifies a time-out time, in seconds, for job execution. If the job times out, it is cancelled and marked as failed. This property is not available if **Synchronous** is set to false.
+- **TimeOut:** Specifies a time-out time, in seconds, for job execution. If the job times out, it is canceled and marked as failed. This property is not available if **Synchronous** is set to false.
 
 ## Parameter Mapping page configuration
 

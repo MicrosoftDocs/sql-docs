@@ -3,7 +3,7 @@ title: "OLE DB Errors"
 description: "Learn about how errors are returned in the OLE DB Driver for SQL Server and how you can get information about them."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "05/06/2020"
 ms.service: sql
 ms.subservice: connectivity

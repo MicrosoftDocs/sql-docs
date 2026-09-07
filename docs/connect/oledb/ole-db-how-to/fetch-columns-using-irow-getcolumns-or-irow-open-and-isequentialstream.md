@@ -3,7 +3,7 @@ title: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStre
 description: Learn how large data can be bound or retrieved using the ISequentialStream interface in OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

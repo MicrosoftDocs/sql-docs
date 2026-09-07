@@ -41,7 +41,7 @@ To enable `mssql` commands and T-SQL IntelliSense, set the language mode to **SQ
 
 2. Click **Plain Text** in the lower right-hand corner of the status bar.
  
-3. In the **Select language mode** drop-down menu that opens, select or enter **SQL**, and then press **ENTER** to set the language mode to SQL. 
+3. In the **Select language mode** dropdown list that opens, select or enter **SQL**, and then press **ENTER** to set the language mode to SQL. 
 
 ## Supported authentication method
 

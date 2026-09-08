@@ -1,6 +1,6 @@
 ---
-title: "Non-SQL Server Subscribers"
-description: "Non-SQL Server Subscribers"
+title: Non-SQL Server Subscribers
+description: Non-SQL Server Subscribers can receive snapshot and transactional publications through push subscriptions. Learn about considerations for Oracle and IBM Db2.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -23,9 +23,9 @@ helpviewer_keywords:
 # Non-SQL Server Subscribers  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-The following non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers can subscribe to snapshot and transactional publications using push subscriptions. Subscriptions are supported for the two most recent versions of each database listed using the most recent version of the OLE DB provider listed.  
+The following non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers can subscribe to snapshot and transactional publications by using push subscriptions. The two most recent versions of each database listed support subscriptions by using the most recent version of the OLE DB provider listed.  
   
- Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ Heterogeneous replication to non-SQL Server Subscribers is deprecated. Oracle publishing is deprecated. To move data, create solutions by using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -48,62 +48,62 @@ Oracle version information:
   |Replication to Oracle |Up to Oracle 12c |Not supported |
 
 
- Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ Heterogeneous replication to non-SQL Server Subscribers is deprecated. Oracle publishing is deprecated. To move data, create solutions by using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
 
 For information about creating subscriptions to Oracle and IBM Db2, see [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM Db2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-## Considerations for Non-SQL Server Subscribers  
- Keep the following considerations in mind when replicating to non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
+## Considerations for non-SQL Server Subscribers  
+ Keep the following considerations in mind when replicating to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
   
-### General Considerations  
+### General considerations  
   
--   Replication supports publishing tables and indexed views as tables to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers (indexed views cannot be replicated as indexed views).  
+-   Replication supports publishing tables and indexed views as tables to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers (indexed views can't be replicated as indexed views).  
   
--   When creating a publication in the New Publication Wizard and then enabling it for non-SQL Server Subscribers using the Publication Properties dialog box, the owner of all objects in the subscription database is not specified for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, whereas for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, it is set to the owner of the corresponding object in the publication database.  
+-   When you create a publication in the New Publication Wizard and then enable it for non-SQL Server Subscribers by using the Publication Properties dialog box, you don't specify the owner of all objects in the subscription database for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers. For [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, the owner is the owner of the corresponding object in the publication database.  
   
--   If a publication has [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, the publication must be enabled for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers before any subscriptions to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers are created.  
+-   If a publication has both [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, you must enable the publication for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers before creating any subscriptions to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
   
--   By default, scripts generated by the Snapshot Agent for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers use non-quoted identifiers in the `CREATE TABLE` syntax. Therefore, a published table named 'test' is replicated as 'TEST'. To use the same case as the table in the publication database, use the **-QuotedIdentifier** parameter for the Distribution Agent. The **-QuotedIdentifier** parameter must also be used if published object names (such as tables, columns, and constraints) include spaces or words that are reserved words in the version of the database at the non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscriber. For more information about this parameter, see [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   By default, scripts that the Snapshot Agent generates for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers use non-quoted identifiers in the `CREATE TABLE` syntax. Therefore, a published table named `test` is replicated as `TEST`. To use the same case as the table in the publication database, use the **-QuotedIdentifier** parameter for the Distribution Agent. You must also use the **-QuotedIdentifier** parameter if published object names (such as tables, columns, and constraints) include spaces or reserved words in the version of the database at the non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscriber. For more information about this parameter, see [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   The account under which the Distribution Agent runs must have read access to the install directory of the OLE DB provider.  
   
--   By default for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, the Distribution Agent uses a value of [(default destination)] for the subscription database (the **-SubscriberDB** parameter for the Distribution Agent):  
+-   By default for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, the Distribution Agent uses a value of `[(default destination)]` for the subscription database (the **-SubscriberDB** parameter for the Distribution Agent):  
   
-    -   For Oracle, a server has at most one database, so it is not necessary to specify the database.  
+    -   For Oracle, a server has at most one database, so you don't need to specify the database.  
   
-    -   For IBM Db2, the database is specified in the DB2 connection string. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+    -   For IBM Db2, specify the database in the DB2 connection string. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 -   If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor is running on a 64-bit platform, you must use the 64-bit version of the appropriate OLE DB provider.  
   
--   Replication moves data in Unicode format regardless of the collation/code pages used on the Publisher and Subscriber. It is recommended that you choose a compatible collation/code page when replicating between Publishers and Subscribers.  
+-   Replication moves data in Unicode format regardless of the collation or code pages used on the Publisher and Subscriber. Choose a compatible collation or code page when replicating between Publishers and Subscribers.  
   
--   If an article is added to or deleted from a publication, subscriptions to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers must be reinitialized.  
+-   If you add or delete an article from a publication, you must reinitialize subscriptions to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
   
--   The only constraints supported for all non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers are: NULL, and NOT NULL. Primary key constraints are replicated as unique indexes.  
+-   The only constraints supported for all non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers are: `NULL` and `NOT NULL`. Primary key constraints are replicated as unique indexes.  
   
--   The value NULL is treated differently by different databases, which affects how a blank value, an empty string, and a NULL are represented. This in turn affects the behavior of values inserted into columns with unique constraints defined. For example, Oracle allows multiple NULL values in a column that is considered unique, whereas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] allows only a single NULL value in a unique column.  
+-   Different databases treat the value `NULL` differently. This difference affects how a blank value, an empty string, and a `NULL` are represented. This difference affects the behavior of values inserted into columns with unique constraints defined. For example, Oracle allows multiple `NULL` values in a column that is considered unique, whereas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] allows only a single `NULL` value in a unique column.  
   
-     An additional factor is how NULL values, empty strings, and blank values are treated when the column is defined as NOT NULL. For information about addressing this issue for Oracle Subscribers, see [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
+     Another factor is how `NULL` values, empty strings, and blank values are treated when the column is defined as `NOT NULL`. For information about addressing this issue for Oracle Subscribers, see [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
   
--   Replication-related metadata (transaction sequence table) is not deleted from non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] subscribers when the subscription is removed.  
+-   Replication doesn't delete replication-related metadata (transaction sequence table) from non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers when you remove the subscription.  
   
 ### Conforming to the Requirements of the Subscriber Database  
   
--   Published schema and data must conform to the requirements of the database at the Subscriber. For example, if a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database has a smaller maximum row size than [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you must ensure that the published schema and data do not exceed this size.  
+-   The published schema and data must conform to the requirements of the database at the Subscriber. For example, if a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database has a smaller maximum row size than [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ensure that the published schema and data don't exceed this size.  
   
--   Tables replicated to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers will adopt the table naming conventions of the database at the Subscriber.  
+-   Tables replicated to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers adopt the table naming conventions of the database at the Subscriber.  
   
--   DDL is not supported for non-SQL Server Subscribers. For more information about schema changes, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+-   DDL isn't supported for non-SQL Server Subscribers. For more information about schema changes, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-### Replication Feature Support  
+### Replication feature support  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offers two types of subscriptions: push and pull. Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers must use push subscriptions, in which the Distribution Agent runs at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offers two snapshot formats: native bcp-mode and character-mode. Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers require character mode snapshots.  
   
--   Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers cannot use immediate updating or queued updating subscriptions, or be nodes in a peer-to-peer topology.  
+-   Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers can't use immediate updating or queued updating subscriptions, or be nodes in a peer-to-peer topology.  
   
--   Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers cannot be automatically initialized from a backup.  
+-   Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers can't be automatically initialized from a backup.  
   
 ## Related content
 

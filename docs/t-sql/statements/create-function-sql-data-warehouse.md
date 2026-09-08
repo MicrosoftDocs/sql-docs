@@ -338,7 +338,7 @@ SELECT @utcdate as 'utc_date';
 
 - A scalar UDF can't be inlined via scalar UDF inlining, see [Inlining of scalar UDF](#inlining-of-scalar-udf), when:
     - The scalar UDF body contains `WHILE` loop, `BREAK` or `CONTINUE` statement. 
-    - The scalar UDF body contains multiple RETURN statements.
+    - The scalar UDF body contains multiple `RETURN` statements.
     - The scalar UDF body contains calls to following built-ins:
         - Time-dependent built-in function (such as `GETDATE()`), see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
         - [STRING_AGG function](../functions/string-agg-transact-sql.md).

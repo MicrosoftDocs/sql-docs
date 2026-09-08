@@ -165,7 +165,7 @@ The supported function options include:
 
 INLINE = AUTO
 
- Specifies whether a scalar user-defined function can be created or altered even when its definition doesn't meet the inlining requirements. The `INLINE` clause is optional. For an inlineable scalar UDF, specifying `INLINE = AUTO` doesn't change its inlineability, or execution behavior.
+ Specifies whether a scalar user-defined function can be created or altered irrespective of inlining requirements. The `INLINE` clause is optional. For an inlineable scalar UDF, specifying `INLINE = AUTO` doesn't change its inlineability, or execution behavior.
  
  > [!IMPORTANT]
  > Upcoming release: If the `INLINE`=`AUTO` clause isn't specified, only inlinable scalar user-defined functions can be created or altered. If the function isn't inlineable, the statement returns an error.

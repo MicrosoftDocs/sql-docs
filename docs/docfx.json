@@ -668,9 +668,6 @@
         "t-sql/**/*.md": "1825-days"
       },
       "exclude_monikers": {
-        "ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md": [
-          "sql-server-ver16"
-        ],
         "odbc/microsoft/**/*.md": [
           "sql-server-ver16"
         ],
@@ -680,19 +677,7 @@
         "relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md": [
           "sql-server-ver16"
         ],
-        "ssma/access/legal-notice-ssma-for-access.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/db2/legal-notice-db2tosql.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/mysql/legal-notice-mysqltosql.md": [
-          "sql-server-ver16"
-        ],
         "ssma/sql-server-migration-assistant.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/sybase/legal-notice-ssma-for-sybase.md": [
           "sql-server-ver16"
         ],
         "ado/**/*.md": [
@@ -752,7 +737,6 @@
       },
       "sensitive-language-wl": {
         "exclude": [
-          "big-data-cluster/reference-config-spark-hadoop.md",
           "relational-databases/errors-events/**/*.md"
         ]
       },

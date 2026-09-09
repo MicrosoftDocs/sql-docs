@@ -3,8 +3,8 @@ title: System Requirements, Installation, and Driver Files
 description: This article describes the system requirements for the Microsoft ODBC Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
-ms.date: 04/30/2026
+ms.reviewer: davidengel, sunilbs, mcimfl, vanto
+ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -22,30 +22,31 @@ This article discusses the ODBC drivers that connect to SQL Server.
 
 Compatibility indicates that a driver was tested for compatibility against existing releases of SQL at the time of the driver's release. SQL Server releases generally try to maintain backward compatibility with existing client drivers. But new features in SQL Server releases might not be available with older client drivers.
 
-| Database version&nbsp;&#8594;<br />&#8595; Driver Version | SQL database in Microsoft Fabric | Azure SQL Database | Azure Synapse Analytics | Azure SQL Managed Instance | SQL Server 2025 | SQL Server 2022 | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 | SQL Server 2008 R2 | SQL Server 2008 | SQL Server 2005 |
-| ---| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 18.6 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | | | | |
-| 18.5 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | | | | |
-| 18.4 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | | | | |
-| 18.3 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | | | | |
-| 18.2 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | | | | |
-| 18.1 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | | | | |
-| 18.0 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | | | |
-| 17.11 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | | | | |
-| 17.10 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | | | |
-| 17.9 | | Yes | Yes | Yes | | | Yes | Yes | Yes | Yes | Yes | | | |
-| 17.8 | | Yes | Yes | Yes | | | Yes | Yes | Yes | Yes | Yes | | | |
-| 17.7 | | Yes | Yes | Yes | | | Yes | Yes | Yes | Yes | Yes | | | |
-| 17.6 | | Yes | Yes | Yes | | | Yes | Yes | Yes | Yes | Yes | | | |
-| 17.5 | | Yes | Yes | Yes | | | Yes | Yes | Yes | Yes | Yes | | | |
-| 17.4 | | Yes | Yes | Yes | | | Yes | Yes | Yes | Yes | Yes | | | |
-| 17.3 | | Yes | Yes | Yes | | | Yes | Yes | Yes | Yes | Yes | Yes | Yes | |
-| 17.2 | | Yes | Yes | Yes | | | | Yes | Yes | Yes | Yes | Yes | Yes | |
-| 17.1 | | Yes | Yes | Yes | | | | Yes | Yes | Yes | Yes | Yes | Yes | |
-| 17.0 | | Yes | Yes | Yes | | | | Yes | Yes | Yes | Yes | Yes | Yes | |
-| 13.1 | | | | | | | | Yes | Yes | Yes | Yes | Yes | Yes | |
-| 13 | | | | | | | | | Yes | Yes | Yes | Yes | Yes | |
-| 11 | | | | | | | | | | Yes | Yes | Yes | Yes | Yes |
+| Database version&nbsp;&#8594;<br />&#8595; Driver Version | SQL database in Microsoft Fabric | Azure SQL Database | Azure Synapse Analytics | Azure SQL Managed Instance | SQL Server 2025 | SQL Server 2022 | SQL Server 2019 | SQL Server 2017 |
+| ---| --- | --- | --- | --- | --- | --- | --- | --- |
+| 18.7 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 18.6 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 18.5 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 18.4 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 18.3 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 18.2 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 18.1 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 18.0 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 17.11 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 17.10 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 17.9 | | Yes | Yes | Yes | | | Yes | Yes |
+| 17.8 | | Yes | Yes | Yes | | | Yes | Yes |
+| 17.7 | | Yes | Yes | Yes | | | Yes | Yes |
+| 17.6 | | Yes | Yes | Yes | | | Yes | Yes |
+| 17.5 | | Yes | Yes | Yes | | | Yes | Yes |
+| 17.4 | | Yes | Yes | Yes | | | Yes | Yes |
+| 17.3 | | Yes | Yes | Yes | | | Yes | Yes |
+| 17.2 | | Yes | Yes | Yes | | | | Yes |
+| 17.1 | | Yes | Yes | Yes | | | | Yes |
+| 17.0 | | Yes | Yes | Yes | | | | Yes |
+| 13.1 | | | | | | | | Yes |
+| 13 | | | | | | | | |
+| 11 | | | | | | | | |
 
 ### Connection string details
 
@@ -60,29 +61,30 @@ The driver name that you specify in a connection string is one of the following 
 
 The following matrix indicates driver version support for Windows operating system versions:
 
-| Operating system&nbsp;&#8594;<br />&#8595; Driver version | Windows Server 2025 | Windows Server 2022 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012 R2 | Windows Server 2012 | Windows Server 2008 R2 | Windows 11 | Windows 10 | Windows 8.1 | Windows 7 | Windows Vista SP2 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 18.6 | Yes | Yes | Yes | Yes | | | | Yes | Yes | | | |
-| 18.5 | Yes | Yes | Yes | Yes | | | | Yes | Yes | | | |
-| 18.4 | | Yes | Yes | Yes | | | | Yes | Yes | | | |
-| 18.3 | | Yes | Yes | Yes | Yes | | | Yes | Yes | | | |
-| 18.2 | | Yes | Yes | Yes | Yes | | | Yes | Yes | | | |
-| 18.1 | | Yes | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | | |
-| 18.0 | | Yes | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | | |
-| 17.10 | Yes | Yes | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | | |
-| 17.9 | | Yes | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | | |
-| 17.8 | | | Yes | Yes | Yes | Yes | | | Yes | Yes | | |
-| 17.7 | | | Yes | Yes | Yes | Yes | | | Yes | Yes | | |
-| 17.6 | | | Yes | Yes | Yes | Yes | | | Yes | Yes | | |
-| 17.5 | | | Yes | Yes | Yes | Yes | | | Yes | Yes | | |
-| 17.4 | | | Yes | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | |
-| 17.3 | | | Yes | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | |
-| 17.2 | | | | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | |
-| 17.1 | | | | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | |
-| 17.0 | | | | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | |
-| 13.1 | | | | Yes | Yes | Yes | Yes | | Yes | Yes | Yes | |
-| 13 | | | | | | Yes | Yes | | | Yes | Yes | |
-| 11 | | | | | | Yes | Yes | | | | Yes | Yes |
+| Operating system&nbsp;&#8594;<br />&#8595; Driver version | Windows Server 2025 | Windows Server 2022 | Windows Server 2019 | Windows Server 2016 | Windows 11 |
+| --- | --- | --- | --- | --- | --- |
+| 18.7 | Yes | Yes | Yes | Yes | Yes |
+| 18.6 | Yes | Yes | Yes | Yes | Yes |
+| 18.5 | Yes | Yes | Yes | Yes | Yes |
+| 18.4 | | Yes | Yes | Yes | Yes |
+| 18.3 | | Yes | Yes | Yes | Yes |
+| 18.2 | | Yes | Yes | Yes | Yes |
+| 18.1 | | Yes | Yes | Yes | Yes |
+| 18.0 | | Yes | Yes | Yes | Yes |
+| 17.10 | Yes | Yes | Yes | Yes | Yes |
+| 17.9 | | Yes | Yes | Yes | Yes |
+| 17.8 | | | Yes | Yes | |
+| 17.7 | | | Yes | Yes | |
+| 17.6 | | | Yes | Yes | |
+| 17.5 | | | Yes | Yes | |
+| 17.4 | | | Yes | Yes | |
+| 17.3 | | | Yes | Yes | |
+| 17.2 | | | | Yes | |
+| 17.1 | | | | Yes | |
+| 17.0 | | | | Yes | |
+| 13.1 | | | | Yes | |
+| 13 | | | | | |
+| 11 | | | | | |
 
 ## Installing Microsoft ODBC Driver for SQL Server
 

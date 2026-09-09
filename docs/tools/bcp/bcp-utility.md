@@ -4,7 +4,7 @@ description: The bulk copy program (bcp) utility bulk copies data between an ins
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mahyon
-ms.date: 08/11/2026
+ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: article
@@ -219,7 +219,7 @@ The following table lists the command-line options available in **`bcp`**, and w
 | [-n](#-n-native) | Yes | Yes | Yes |
 | [-N](#-n-unicode) | Yes | No | Yes |
 | [-w](#-w) | Yes | Yes | Yes |
-| [-z[0\|1]](#-z) | No | Yes <sup>2</sup> | No |
+| [-z[0\|1]](#-z) | Yes <sup>2</sup> | Yes <sup>2</sup> | No |
 | [**Format files**](#format-files) | | | |
 | [-f *format_file*](#-f-format_file) | Yes | Yes | Yes |
 | [-x](#-x) | Yes | No | Yes |
@@ -247,7 +247,7 @@ The following table lists the command-line options available in **`bcp`**, and w
 | [-v](#-v) | Yes | Yes | Yes |
 
 <sup>1</sup> Requires **`bcp`** version 18 or later, which ships with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].  
-<sup>2</sup> ODBC 18.6.1.1 and later versions.
+<sup>2</sup> Requires **`bcp`** version 18.6.1.1 or later for `-z` and `-z0`. The `-z1` option requires **`bcp`** version 18.7.1.1 or later.
 
 ### Object and transfer mode
 
@@ -453,11 +453,9 @@ For more information, see [Use Unicode character format to import or export data
 
 #### -z
 
-**Applies to**: **`bcp`** (ODBC), Linux and macOS only. Windows isn't supported.
-
 Enables **vector** data type support in the **`bcp`** utility. This feature is currently disabled by default. When disabled, vector data is imported or exported as JSON float array strings. When enabled, and when connecting to [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions, vector data is imported or exported in native **vector** binary.
 
-Use `-z0` for `float32` vector support and `-z1` for `float16` vector support. Currently, ODBC doesn't support `-z1`.
+Use `-z0` for `float32` vector support and `-z1` for `float16` vector support.
 ::: moniker-end
 
 ### Format files

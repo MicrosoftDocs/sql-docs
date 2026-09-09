@@ -1,13 +1,14 @@
 ---
 title: Latest Release of ODBC Driver for SQL Server
 description: Latest Release of ODBC Driver for SQL Server
-author: David-Engel
-ms.author: davidengel
-ms.date: 03/31/2026
+author: dlevy-msft-sql
+ms.author: dlevy
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl
+ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: include
 ---
 
-Version: 18.6.2.1  
-Date: March 31, 2026  
+Version: 18.7.1.1  
+Date: September 7, 2026  

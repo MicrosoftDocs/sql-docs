@@ -2,7 +2,7 @@
 title: Customer-managed transparent data encryption (TDE)
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for SQL Database and Azure Synapse Analytics. TDE with BYOK overview, benefits, how it works, considerations, and recommendations.
-sauthor: Pietervanhove
+author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
 ms.date: 09/07/2026
@@ -20,7 +20,7 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 [Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) in Azure SQL with customer-managed key (CMK) enables Bring Your Own Key (BYOK) scenario for data protection at rest, and allows organizations to implement separation of duties in the management of keys and data. With customer-managed TDE, the customer is responsible for and in a full control of a key lifecycle management (key creation, upload, rotation, deletion), key usage permissions, and auditing of operations on keys.
 
-In this scenario, the Transparent Data Encryption (TDE) protector—a customer-managed asymmetric key used to secure the Database Encryption Key (DEK)—is stored in either [Azure Key Vault](/azure/key-vault/general/security-features) or [Azure Key Vault Managed HSM](/azure/key-vault/managed-hsm/overview). These are secure, cloud-based key management services designed for high availability and scalability. Azure Key Vault and Azure Key Vault Managed HSM support cryptographic keys protected by FIPS 140‑2 validated hardware, with Azure Key Vault supporting FIPS 140‑2 Level 2 and Azure Key Vault Managed HSM supporting FIPS 140‑2 Level 3. Azure Key Vault and Azure Key Vault Managed HSM supports both asymmetric and symmetric key types, with supported algorithms and usage dependent on the TDE deployment model. The key can be generated in the service, imported, or [securely transferred from on-premises HSMs](/azure/key-vault/keys/hsm-protected-keys). Direct access to keys is restricted—authorized services perform cryptographic operations without exposing the key material.
+In this scenario, the Transparent Data Encryption (TDE) protector is a customer-managed asymmetric key that secures the Database Encryption Key (DEK). You store the TDE protector in either [Azure Key Vault](/azure/key-vault/general/security-features) or [Azure Key Vault Managed HSM](/azure/key-vault/managed-hsm/overview), which are secure cloud-based key management services designed for high availability and scalability. Both services support cryptographic keys protected by FIPS 140-2 validated hardware: Azure Key Vault supports FIPS 140-2 Level 2, and Azure Key Vault Managed HSM supports FIPS 140-2 Level 3. Both services also support asymmetric and symmetric key types, and the supported algorithms and usage depend on the TDE deployment model. You can generate the key in the service, import it, or [securely transfer it from on-premises HSMs](/azure/key-vault/keys/hsm-protected-keys). Direct access to keys is restricted, so authorized services perform cryptographic operations without exposing the key material.
 
 For Azure SQL Database and Azure Synapse Analytics, the TDE protector is set at the server level and is inherited by all encrypted databases associated with that server. For Azure SQL Managed Instance, the TDE protector is set at the instance level and is inherited by all encrypted databases on that instance. The term *server* refers both to a server in SQL Database and Azure Synapse and to a managed instance in SQL Managed Instance throughout this article, unless stated differently.
 
@@ -121,7 +121,7 @@ Auditors can use Azure Monitor to review managed HSM AuditEvent logs, if logging
 
 ### Key requirements for configuring TDE protector
 
-Transparent Data Encryption with customer‑managed keys uses an external key, referred to as the TDE protector, stored in Azure Key Vault or Azure Managed HSM to protect the database encryption key (DEK).
+Transparent Data Encryption with customer-managed keys uses an external key, referred to as the TDE protector, stored in Azure Key Vault or Azure Managed HSM to protect the database encryption key (DEK).
 
 The following requirements apply.
 
@@ -131,19 +131,20 @@ Depending on the Azure SQL offering and TDE configuration, the TDE protector can
 
 - Asymmetric keys (RSA or RSA HSM)
   - Supported in Azure Key Vault and Azure Key Vault Managed HSM
-  - Supported key sizes: 2048‑bit and 3072‑bit
+  - Supported key sizes: 2048-bit and 3072-bit
   - Supported for Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics
 
 - Symmetric keys (AES)
   - Supported in Azure Key Vault Premium (preview) and Azure Key Vault Managed HSM
-  - Supported key sizes: 128‑bit, 192‑bit, and 256‑bit
+  - Supported key sizes: 128-bit, 192-bit, and 256-bit
   - Supported only for Azure SQL Database, currently in public preview.
 
 > [!NOTE]
 > Transparent Data Encryption with symmetric keys (AES) are currently in preview. Preview features are released with limited capabilities, but are made available on a *preview* basis so customers can get early access and provide feedback. Preview features are subject to separate [supplemental preview terms](https://go.microsoft.com/fwlink/?linkid=2240967), and aren't subject to SLAs. Support is provided as best effort in certain cases. However, Microsoft Support is eager to get your feedback on the preview functionality, and might provide best effort support in certain cases. Preview features might have limited or restricted functionality, and might be available only in selected geographic areas.
 
 #### Limitations for symmetric (AES) keys
-When using symmetric (AES) keys as the TDE protector, only keys stored in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM are supported for ongoing key lifecycle operations. Customers can import a key from an on‑premises hardware security module (HSM) one time into Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM. After the initial import, all subsequent key lifecycle operations including point‑in‑time recovery, geo‑disaster recovery, and key revalidation must rely on the Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM infrastructure. Customers are responsible for maintaining local backups of imported keys to support recovery and revalidation scenarios. These limitations apply only to symmetric (AES) keys and do not apply to asymmetric (RSA) keys.
+
+When you use symmetric (AES) keys as the TDE protector, you can only use keys stored in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM for ongoing key lifecycle operations. You can import a key one time from an on-premises hardware security module (HSM) into Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM. After the initial import, all later key lifecycle operations must rely on the Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM infrastructure, including point-in-time recovery, geo-disaster recovery, and key revalidation. You need to maintain local backups of imported keys to support recovery and revalidation scenarios. These limitations apply only to symmetric (AES) keys and don't apply to asymmetric (RSA) keys.
 
 #### Key state and validity requirements
 
@@ -192,11 +193,11 @@ To import HSM-protected keys into Azure Managed HSM, see [Import HSM-protected k
 
   - **Monitor** and configure Azure Key Vault **alerts**. For more information on monitoring and alerting, see [Monitor Azure Key Vault](/azure/key-vault/general/monitor-key-vault) and [Configure Azure Key Vault alerts](/azure/key-vault/general/alert).
 
-- Consider using AES‑256 symmetric keys as the TDE protector to align with long‑term cryptographic resilience planning.
+- To align with long-term cryptographic resilience planning, consider using AES-256 symmetric keys as the TDE protector.
 
-  Public‑key cryptographic algorithms, such as RSA, are expected to be vulnerable to future large‑scale quantum computing advances. In contrast, symmetric cryptography, including AES, is considered quantum‑resilient when using sufficiently large key sizes.
+  Large-scale quantum computing is expected to break public-key cryptographic algorithms such as RSA. Symmetric cryptography, including AES, is considered quantum-resilient at sufficiently large key sizes.
 
-  As part of Microsoft’s broader quantum‑safe security strategy and emphasis on crypto‑agility, customers are encouraged to adopt stronger symmetric algorithms where supported and to plan for future cryptographic transitions as guidance and standards evolve.
+  Microsoft's broader quantum-safe security strategy emphasizes crypto-agility. Adopt stronger symmetric algorithms where they're supported, and plan for future cryptographic transitions as guidance and standards evolve.
 
   > [!IMPORTANT]  
   > Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview.
@@ -237,15 +238,15 @@ To import HSM-protected keys into Azure Managed HSM, see [Import HSM-protected k
 
   - **Monitor** and configure Azure Key Vault Managed HSM **alerts**. For more information on monitoring and alerting, see [Monitor Azure Key Vault](/azure/key-vault/general/monitor-key-vault) and [Configure Azure Key Vault alerts](/azure/key-vault/general/alert).
 
-- Consider using AES‑256 symmetric keys as the TDE protector to align with long‑term cryptographic resilience planning.
+- To align with long-term cryptographic resilience planning, consider using AES-256 symmetric keys as the TDE protector.
 
-  Public‑key cryptographic algorithms, such as RSA, are expected to be vulnerable to future large‑scale quantum computing advances. In contrast, symmetric cryptography, including AES, is considered quantum‑resilient when using sufficiently large key sizes.
+  Large-scale quantum computing is expected to break public-key cryptographic algorithms such as RSA. Symmetric cryptography, including AES, is considered quantum-resilient at sufficiently large key sizes.
 
-  As part of Microsoft’s broader quantum‑safe security strategy and emphasis on crypto‑agility, customers are encouraged to adopt stronger symmetric algorithms where supported and to plan for future cryptographic transitions as guidance and standards evolve.
+  Microsoft's broader quantum-safe security strategy emphasizes crypto-agility. Adopt stronger symmetric algorithms where they're supported, and plan for future cryptographic transitions as guidance and standards evolve.
 
   > [!IMPORTANT]  
   > Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview.
-  
+
 - Set a resource lock on the managed HSM to control who can delete this critical resource and prevent accidental or unauthorized deletion. Learn more about [resource locks](/azure/azure-resource-manager/management/lock-resources).
 
 - Enable auditing and reporting on all encryption keys: Azure Managed HSM provides logs that are easy to inject into other security information and event management tools. Operations Management Suite [Log Analytics](/azure/azure-monitor/insights/key-vault-insights-overview) is one example of a service that is already integrated.
@@ -315,7 +316,7 @@ You can rotate the TDE protector by switching the configuration to use a new key
 - Switching between supported key types, such as asymmetric (RSA) and symmetric (AES) keys
 
 > [!NOTE]  
-  > Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview.
+> Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview.
 
 [Rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md) can either be done manually or by using the automated rotation feature.
 
@@ -460,13 +461,13 @@ The following considerations apply when you configure active geo-replication or 
 
 - **TDE protector location:** The primary and secondary servers can use the same Azure Key Vault or Azure Managed HSM. Using the same key store reduces the risk that key material becomes out of sync. If you use separate key vaults in multiple regions, you must keep the required key material synchronized. For information about key-store resiliency, see [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance) and [Multi-region replication in Managed HSM](/azure/key-vault/managed-hsm/multi-region-replication).
 
-- **Zone redundancy:** Where available, zone redundancy for Azure SQL Database or Azure SQL Managed Instance provides additional resilience within a region. For more information, see [What are Azure availability zones?](/azure/reliability/availability-zones-overview).
+- **Zone redundancy:** Where available, zone redundancy for Azure SQL Database or Azure SQL Managed Instance provides extra resilience within a region. For more information, see [What are Azure availability zones?](/azure/reliability/availability-zones-overview).
 
 - **Key permissions:** Both the primary and secondary servers must have the [required permissions](#permissions-to-configure-customer-managed-tde) on every Azure Key Vault or Azure Managed HSM that contains a required TDE protector.
 
-- **Key availability:** Ensure that the required keys are available on both the primary and secondary servers. The servers don't need to use identical TDE protectors, but each server must have the same key material. Keys can be added to a server by using the Azure portal, PowerShell, Azure CLI, or the Azure SQL REST API. If the required keys aren't available at the time of failover, the database may become inaccessible.
+- **Key availability:** Ensure that the required keys are available on both the primary and secondary servers. The servers don't need to use identical TDE protectors, but each server must have the same key material. You can add keys to a server by using the Azure portal, PowerShell, Azure CLI, or the Azure SQL REST API. If the required keys aren't available at the time of failover, the database might become inaccessible.
 
-- **Private endpoints:** The configuration might require a more complex DNS zone if private endpoints are used in Azure SQL (for example, it can't create two private endpoints to the same resource in the same DNS zone).
+- **Private endpoints:** The configuration might require a more complex DNS zone if you use private endpoints in Azure SQL (for example, it can't create two private endpoints to the same resource in the same DNS zone).
 
 - **Application connectivity:** Applications should use retry logic to handle transient failures during failover.
 
@@ -479,6 +480,13 @@ For information about configuring the Azure SQL geo-disaster recovery resource, 
 The following diagram shows Azure SQL geo-replication with a failover group and Azure Key Vault cross-region failover in a paired-region configuration:
 
 :::image type="content" source="media/transparent-data-encryption-byok-overview/azure-key-vault-cross-region-failover-paired.png" alt-text="Diagram showing Azure Key Vault cross-region failover support for a paired region." lightbox="media/transparent-data-encryption-byok-overview/azure-key-vault-cross-region-failover-paired.png":::
+
+### Azure Key Vault behavior during failover
+
+- Azure Key Vault initiates the failover, not you.
+- While the key vault in the primary region is unavailable, the key vault is read-only.
+- You can create, import, and rotate keys only while the key vault in the primary region is available. After a failover, key rotation stays blocked until the primary region is reachable again.
+- You can't choose or check which region the key vault is currently in, and you can't connect to the secondary region manually.
 
 ### Recover from an inaccessible TDE protector
 

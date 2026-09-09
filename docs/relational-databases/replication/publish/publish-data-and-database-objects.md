@@ -1,6 +1,6 @@
 ---
-title: "Publish Data and Database Objects"
-description: This article summarizes the tables and other database objects you can publish for replication in SQL Server.
+title: Publish Data and Database Objects
+description: Publish data and database objects in SQL Server replication. Learn which tables, views, stored procedures, and types you can replicate, and how to publish them.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -42,7 +42,7 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server replication]"
 monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
-# Publish Data and Database Objects
+# Publish data and database objects
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  
   
@@ -61,8 +61,8 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 |Full text indexes|X|X|  
 |Schema Objects (constraints, indexes, user DML triggers, extended properties, and collation)|X|X|  
   
-## Creating Publications  
- To create a publication, you supply the following information:  
+## Creating publications  
+ To create a publication, provide the following information:  
   
 -   The Distributor.    
 -   The location of the snapshot files.    
@@ -71,10 +71,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 -   The data and database objects (articles) to include in the publication.   
 -   Static row filters and column filters for all types of publications, and parameterized row filters and join filters for merge publications.   
 -   The Snapshot Agent schedule.    
--   Accounts under which the following agents will run: the Snapshot Agent for all publications; the Log Reader Agent for all transactional publications; the Queue Reader Agent for transactional publications that allow updating subscriptions.    
+-   Accounts under which the following agents run: the Snapshot Agent for all publications; the Log Reader Agent for all transactional publications; the Queue Reader Agent for transactional publications that allow updating subscriptions.    
 -   A name and description for the publication.  
   
- For information about how to work with publications, see the following topics:    
+ For information about how to work with publications, see the following articles:    
 -   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
 -   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)    
 -   [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
@@ -83,46 +83,46 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 -   [Delete an Article](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
->  Deleting an article or publication does not remove objects from the Subscriber.  
+>  Deleting an article or publication doesn't remove objects from the Subscriber.  
   
-## Publishing Tables  
- The most commonly published object is a table. The following links provide additional information about areas related to publishing tables:  
+## Publishing tables  
+ The most commonly published object is a table. The following links provide more information about publishing tables:  
   
 -   [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)    
 -   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
 -   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
- When publishing a table for replication, you can specify which schema objects should be copied to the Subscriber, such as declared referential integrity (primary key constraints, reference constraints, unique constraints), indexes, user DML triggers (DDL triggers cannot be replicated), extended properties, and collation. Extended properties are replicated only in the initial synchronization between the Publisher and the Subscriber. If you add or modify an extended property after the initial synchronization, the change is not replicated.  
+ When you publish a table for replication, you can specify which schema objects to copy to the Subscriber, such as declared referential integrity (primary key constraints, reference constraints, unique constraints), indexes, user DML triggers (DDL triggers can't be replicated), extended properties, and collation. Extended properties are replicated only in the initial synchronization between the Publisher and the Subscriber. If you add or modify an extended property after the initial synchronization, the change isn't replicated.  
   
  To specify schema options, see [Specify Schema Options](../../../relational-databases/replication/publish/specify-schema-options.md) or <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
 ### Partitioned Tables and Indexes  
- Replication supports the publishing of partitioned tables and indexes. The level of support depends on the type of replication that is used, and the options that you specify for the publication and the articles associated with partitioned tables. For more information, see [Replicate Partitioned Tables and Indexes](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
+ Replication supports publishing partitioned tables and indexes. The level of support depends on the type of replication that you use, and the options that you specify for the publication and the articles associated with partitioned tables. For more information, see [Replicate Partitioned Tables and Indexes](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
-## Publishing Stored Procedures  
- All types of replication allow you to replicate stored procedure definitions: the CREATE PROCEDURE is copied to each Subscriber. In the case of common language runtime (CLR) stored procedures, the associated assembly is also copied. Changes to procedures are replicated to Subscribers; changes to associated assemblies are not.  
+## Publishing stored procedures  
+ All types of replication allow you to replicate stored procedure definitions: the CREATE PROCEDURE statement is copied to each Subscriber. In the case of common language runtime (CLR) stored procedures, the associated assembly is also copied. Changes to procedures are replicated to Subscribers; changes to associated assemblies aren't.  
   
- In addition to replicating the definition of a stored procedure, transactional replication allows you to replicate the execution of stored procedures. This is useful in replicating the results of maintenance-oriented stored procedures that affect large amounts of data. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ In addition to replicating the definition of a stored procedure, transactional replication allows you to replicate the execution of stored procedures. This feature is useful for replicating the results of maintenance-oriented stored procedures that affect large amounts of data. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-## Publishing Views  
- All types of replication allow you to replicate views. The view (and its accompanying index, if it is an indexed view) can be copied to the Subscriber, but the base table must also be replicated.  
+## Publishing views  
+ All types of replication allow you to replicate views. You can copy the view and its accompanying index (if it's an indexed view) to the Subscriber, but you must also replicate the base table.  
   
  For indexed views, transactional replication also allows you to replicate the indexed view as a table rather than a view, eliminating the need to also replicate the base table. To do this, specify one of the "indexed view logbased" options for the *\@type* parameter of [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). For more information about using **sp_addarticle**, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-## Publishing User-Defined Functions  
- The CREATE FUNCTION statements for CLR functions and [!INCLUDE[tsql](../../../includes/tsql-md.md)] functions are copied to each Subscriber. In the case of CLR functions, the associated assembly is also copied. Changes to functions are replicated to Subscribers; changes to associated assemblies are not.  
+## Publishing user-defined functions  
+ The CREATE FUNCTION statements for CLR functions and [!INCLUDE[tsql](../../../includes/tsql-md.md)] functions are copied to each Subscriber. In the case of CLR functions, the associated assembly is also copied. Changes to functions are replicated to Subscribers; changes to associated assemblies aren't.  
   
 ## Publishing User-Defined Types and Alias Data Types  
- Columns that use user-defined types or alias data types are replicated to Subscribers like other columns. The CREATE TYPEstatement for each replicated type is executed at the Subscriber before the table is created. In the case of user-defined types, the associated assembly is also copied to each Subscriber. Changes to user-defined types and alias data types are not replicated to Subscribers.  
+ Replication treats columns that use user-defined types or alias data types like other columns and replicates them to Subscribers. The process runs the `CREATE TYPE` statement for each replicated type at the Subscriber before it creates the table. For user-defined types, replication also copies the associated assembly to each Subscriber. Replication doesn't replicate changes to user-defined types and alias data types to Subscribers.  
   
- If a type is defined in a database, but it is not referenced in any columns when a publication is created, the type is not copied to Subscribers. If you subsequently create a column of that type in the database and want to replicate it, you must first manually copy the type (and the associated assembly for a user-defined type) to each Subscriber.  
+ If you define a type in a database but don't reference it in any columns when you create a publication, replication doesn't copy the type to Subscribers. If you later create a column of that type in the database and want to replicate it, you must first manually copy the type (and the associated assembly for a user-defined type) to each Subscriber.  
   
-## Publishing Full Text Indexes  
+## Publishing Full-Text Indexes  
  The CREATE FULLTEXT INDEX statement is copied to each Subscriber, and the full text index is created at the Subscriber. Changes made to full text indexes using ALTER FULLTEXT INDEX are not replicated.  
   
 ## Making Schema Changes to Published Objects  
- Replication supports a wide range of schema changes to published objects. When you make any of the following schema changes on the appropriate published object at a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, that change is propagated by default to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
+ Replication supports a wide range of schema changes to published objects. When you make any of the following schema changes on the appropriate published object at a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, replication by default propagates that change to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
   
 -   ALTER TABLE  
   
@@ -136,33 +136,33 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
  For more information, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-## Considerations for Publishing  
- Keep the following issues in mind when publishing database objects:  
+## Considerations for publishing  
+ Keep the following considerations in mind when publishing database objects:  
   
--   The database is accessible to users during the creation of the publication and the initial snapshot, but it is advisable to create publications during times of lower activity on the Publisher.  
+-   Users can access the database during the creation of the publication and the initial snapshot, but it's best to create publications during times of lower activity on the Publisher.  
   
--   A database cannot be renamed after a publication is created in it. To rename it, you must first remove replication from the database.  
+-   You can't rename a database after you create a publication in it. To rename the database, you must first remove replication from the database.  
   
--   If you are publishing a database object that depends on one or more other database objects, you must publish all referenced objects. For example, if you publish a view that depends on a table, you must publish the table also.  
+-   If you're publishing a database object that depends on one or more other database objects, you must publish all referenced objects. For example, if you publish a view that depends on a table, you must publish the table also.  
   
     > [!NOTE]  
-    >  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **\@processing_order** parameter of [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **\@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **\@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **\@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article as long as the number for the function is lower than the number for the table.  
+    >  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles by using the **\@processing_order** parameter of [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Consider the following scenario: you publish a table but you don't publish a function that the table references. If you don't publish the function, the table can't be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **\@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **\@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **\@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article as long as the number for the function is lower than the number for the table.  
   
--   Publication names cannot include the following characters: % * [ ] | : " ? \ / < >.  
+-   Publication names can't include the following characters: % * [ ] | : " ? \ / < >.  
   
-### Limitations on Publishing Objects  
+### Limitations on publishing objects  
   
--   The maximum number of articles and columns that can be published differs by publication type. For more information, see the "Replication Objects" section of [Maximum Capacity Specifications for SQL Server](../../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
+-   The maximum number of articles and columns that you can publish differs by publication type. For more information, see the "Replication Objects" section of [Maximum Capacity Specifications for SQL Server](../../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
--   Stored procedures, views, triggers, and user-defined functions that are defined as WITH ENCRYPTION cannot be published as part of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication.  
+-   You can't publish stored procedures, views, triggers, and user-defined functions that are defined as WITH ENCRYPTION as part of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication.  
   
--   XML schema collections can be replicated but changes are not replicated after the initial snapshot.  
+-   You can replicate XML schema collections but changes aren't replicated after the initial snapshot.  
   
--   Tables published for transactional replication must have a primary key. If a table is in a transactional replication publication, you cannot disable any indexes that are associated with primary key columns. These indexes are required by replication. To disable an index, you must first drop the table from the publication.  
+-   Tables published for transactional replication must have a primary key. If a table is in a transactional replication publication, you can't disable any indexes that are associated with primary key columns. Replication requires these indexes. To disable an index, you must first drop the table from the publication.  
   
--   Bound defaults created with [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) are not replicated (bound defaults are deprecated in favor of defaults created with the DEFAULT keyword of ALTER TABLE or CREATE TABLE).  
+-   Bound defaults created with [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) aren't replicated (bound defaults are deprecated in favor of defaults created with the DEFAULT keyword of ALTER TABLE or CREATE TABLE).  
   
--   Functions containing the **NOEXPAND** hint on indexed views cannot be published in the same publication as the referenced tables and indexed views, due to the order in which the distribution agent delivers them. To work around this problem, place the table and indexed view creation in a first publication, and add functions containing the **NOEXPAND** hint on the indexed views to a second publication which you publish after the first publication completes. Or, create scripts for these functions and deliver the script by using the *\@post_snapshot_script* parameter of **sp_addpublication**.  
+-   You can't publish functions containing the **NOEXPAND** hint on indexed views in the same publication as the referenced tables and indexed views, due to the order in which the distribution agent delivers them. To work around this problem, place the table and indexed view creation in a first publication, and add functions containing the **NOEXPAND** hint on the indexed views to a second publication which you publish after the first publication completes. Or, create scripts for these functions and deliver the script by using the *\@post_snapshot_script* parameter of **sp_addpublication**.  
   
 ### Schemas and Object Ownership  
  Replication has the following default behavior in the New Publication Wizard with respect to schemas and object ownership:  
@@ -175,26 +175,26 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 -   For articles in publications that use character mode snapshots (which are used for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers): by default, the owner is left blank. The owner defaults to the owner associated with the account used by the Distribution Agent or Merge Agent to connect to the Subscriber.  
   
- The object owner can be changed through the **Article Properties - \<**_Article_**>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ You can change the object owner through the **Article Properties - \<**_Article_**>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### Publishing Data to Subscribers Running Previous Versions of SQL Server  
   
--   If you are publishing to a Subscriber running a previous version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you are limited to the functionality of that version, both in terms of replication-specific functionality and the functionality of the product as a whole.  
+-   If you're publishing to a Subscriber running a previous version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you're limited to the functionality of that version. This limitation applies to both replication-specific functionality and the overall functionality of the product.  
   
--   Merge publications use a compatibility level, which determines what features can be used in a publication and allows you to support Subscribers running previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Merge publications use a compatibility level, which determines what features you can use in a publication and lets you support Subscribers running previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-### Publishing Tables in More Than One Publication  
- Replication supports publishing articles in multiple publications (including republishing data) with the following restrictions:  
+### Publishing tables in more than one publication  
+ Replication supports publishing articles in multiple publications, including republishing data, with the following restrictions:  
   
--   If an article is published in a transactional publication and a merge publication, ensure that the *\@published_in_tran_pub* property is set to TRUE for the merge article. For more information about setting properties, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+-   If you publish an article in both a transactional publication and a merge publication, set the *\@published_in_tran_pub* property to TRUE for the merge article. For more information about setting properties, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
-     You should also set the *\@published_in_tran_pub* property if an article is part of a transactional subscription and is included in a merge publication. If this is the case, be aware that by default transactional replication expects tables at the Subscriber to be treated as read-only; if merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this possibility, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     Set the *\@published_in_tran_pub* property if an article is part of a transactional subscription and is included in a merge publication. By default, transactional replication expects tables at the Subscriber to be read-only. If merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this problem, specify any such table as download-only in the merge publication. This setting prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
--   An article cannot be published in both a merge publication and a transactional publication with queued updating subscriptions.  
+-   You can't publish an article in both a merge publication and a transactional publication with queued updating subscriptions.  
   
--   Articles included in transactional publications that support updating subscriptions cannot be republished.  
+-   You can't republish articles included in transactional publications that support updating subscriptions.  
   
--   If an article is published in more than one transactional publication that supports queued updating subscriptions, the following properties must have the same value for the article across all publications:  
+-   If you publish an article in more than one transactional publication that supports queued updating subscriptions, the article must have the same value for the following properties across all publications:  
   
     |Property|Parameter in sp_addarticle|  
     |--------------|---------------------------------|  
@@ -205,7 +205,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
      For more information about these parameters, see [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
--   If an article is published in more than one merge publication, the following properties must have the same value for the article across all publications:  
+-   If you publish an article in more than one merge publication, the article must have the same value for the following properties across all publications:  
   
     |Property|Parameter in sp_addmergearticle|  
     |--------------|--------------------------------------|  
@@ -225,7 +225,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
      For more information about these parameters, see [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   
--   Transactional replication and unfiltered merge replication support publishing a table in multiple publications and then subscribing within a single table in the subscription database (commonly referred to as a roll up scenario). Roll up is often used for aggregating subsets of data from multiple locations in one table at a central Subscriber. Filtered merge publications do not support the central Subscriber scenario. For merge replication, roll up is typically implemented through a single publication with parameterized row filters. For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Transactional replication and unfiltered merge replication support publishing a table in multiple publications and then subscribing within a single table in the subscription database (commonly referred to as a rollup scenario). Rollup is often used for aggregating subsets of data from multiple locations in one table at a central Subscriber. Filtered merge publications don't support the central Subscriber scenario. For merge replication, rollup is typically implemented through a single publication with parameterized row filters. For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## Related content
 

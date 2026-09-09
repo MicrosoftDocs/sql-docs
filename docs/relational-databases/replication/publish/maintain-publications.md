@@ -1,6 +1,6 @@
 ---
-title: "Maintain Publications"
-description: "Maintain Publications"
+title: Maintain Publications
+description: Maintain publications after you create them in SQL Server replication. Discover which property changes require a new snapshot and subscription reinitialization.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -15,6 +15,6 @@ helpviewer_keywords:
   - "administering replication, publications"
 monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
-# Maintain Publications
+# Maintain publications
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  After you have created a publication, it might be necessary to add or drop articles, or change publication and article properties. Most changes are allowed after a publication is created, but in some cases, it is necessary to generate a new snapshot for a publication and/or reinitialize subscriptions to the publication.
+  After you create a publication, you might need to add or remove articles, or change publication and article properties. You can make most changes after you create a publication. However, some changes require you to generate a new snapshot for a publication and reinitialize subscriptions to the publication.

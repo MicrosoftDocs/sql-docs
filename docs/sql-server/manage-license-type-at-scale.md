@@ -21,7 +21,7 @@ This article describes how to:
 - Review and transition multiple SQL products to pay-as-you-go licensing with a single PowerShell script.
 - Continuously enforce pay-as-you-go licensing for one resource type with Azure Policy.
 
-The automation in this article applies to [SQL Server enabled by Azure Arc](azure-arc/overview.md), [SQL Server on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview), [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview), and [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview). The script can also process an Azure-SSIS Integration Runtime in Azure Data Factory (Azure-SSIS IR).
+The automation in this article applies to [SQL Server enabled by Azure Arc](azure-arc/overview.md), [SQL Server on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview), [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview), and [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview).
 
 Changing a licensing agreement doesn't change the license type configured for your SQL resources. The workflows in this article help you transition resources to pay-as-you-go billing after SQL licenses with Software Assurance, SQL subscription licenses, or Service Provider License Agreement (SPLA) licensing no longer apply.
 
@@ -29,12 +29,13 @@ Changing a licensing agreement doesn't change the license type configured for yo
 
 - An Azure account with access to the tenant and subscriptions that contain the SQL resources.
 - PowerShell 5 or later with the [Az PowerShell module](/powershell/azure/install-azure-powershell).
-- The [Azure CLI](/cli/azure/install-azure-cli) when you use the PowerShell script to update SQL resources.
 - The **Contributor** role in each subscription that you modify. For least-privilege alternatives, review [Permissions by resource type](#permissions-by-resource-type).
 - For scheduled mode, permission to create role assignments at the target subscription scope, or the required roles preassigned to the Automation account's managed identity.
 - The authority to change billing settings and attest to the licensing terms for the target resources.
 
-To avoid installing the tools locally, run the script in [Azure Cloud Shell](/azure/cloud-shell/overview). Cloud Shell includes Azure PowerShell and the Azure CLI and authenticates the session. Specify `-TenantId` when your account can access more than one tenant.
+The script uses `Az.Accounts`, `Az.Sql`, `Az.SqlVirtualMachine`, `Az.ConnectedMachine`, and `Az.ResourceGraph`. When a required module is missing, the script prompts before installing it from the PowerShell Gallery for the current user.
+
+You can run the script in the PowerShell environment in [Azure Cloud Shell](/azure/cloud-shell/overview). Specify `-TenantId` when your account can access more than one tenant.
 
 ## Choose an automation method
 
@@ -63,15 +64,19 @@ The procedures in this article set `-TargetLicenseType` to `PAYG`. The script tr
 | SQL Server on Azure Virtual Machines | `PAYG` | `AHUB` | Yes | [SQL Server on Azure VMs license type compliance](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-vm/sql-iaas-license-type-compliance) |
 | Azure SQL Database and elastic pools | `LicenseIncluded` | `BasePrice` | Yes | [Azure SQL Database license type compliance](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-sql-db/sql-paas-license-type-compliance) |
 | Azure SQL Managed Instance and instance pools | `LicenseIncluded` | `BasePrice`, `HybridFailoverRights` | Yes | [SQL Managed Instance license type compliance](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-sql-db-managed-instance/sql-mi-license-type-compliance) |
-| Azure-SSIS IR | `LicenseIncluded` | `BasePrice` | Yes | Not covered in this article |
 
 The policy samples can overwrite additional source values, such as `DR` for SQL Server on Azure VMs. Review the selected sample before you deploy a policy assignment.
 
 ## Understand how the PowerShell script works
 
-You can use the PowerShell script to modify all resources within a resource group, all resources within a subscription, and all resources across one or more subscriptions within an entire tenant.
+Use the PowerShell script to modify all resources within a resource group, all resources within a subscription, and all resources across one or more subscriptions within an entire tenant.
 
-The script is self-contained and works across the supported SQL resources. When `-TargetLicenseType` is set to the default `PAYG`, it translates that value to the pay-as-you-go value required by each resource type, as shown in [Review supported resources and license values](#review-supported-resources-and-license-values). 
+The script is self-contained and works across the supported SQL resources. When you set `-TargetLicenseType` to the default `PAYG`, it translates that value to the pay-as-you-go value required by each resource type, as shown in [Review supported resources and license values](#review-supported-resources-and-license-values). In a single run, it connects to the selected tenant once and reuses the session for subsequent resource operations. Subscription discovery is restricted to that tenant.
+
+When the script reuses an existing Azure session, it prompts you to confirm the account and tenant. Review these details before continuing. For unattended runs, specify `-Force` to skip account confirmation and missing-module installation prompts. Without `-Force`, the script stops if it needs confirmation in a noninteractive session. This switch doesn't grant permissions or replace authentication.
+
+The script retries transient Azure and authentication failures with increasing delays. If it can't resolve the selected subscriptions after retrying, it stops and reports the error instead of treating the scope as empty.
+
 By default, the generated working folder remains after the script finishes. To remove it after a run, specify `-cleanDownloads $true`.
 
 The script prints a summary by resource type and lists the cause for each failed or skipped resource. When the script finds matching resources, it also creates a `ModifiedResources_<timestamp>.csv` report with `UpdateResult` and `UpdateError` columns.
@@ -80,13 +85,14 @@ The following parameters control the script's scope and execution:
 
 | Parameter | Accepted value or default | Purpose |
 | --- | --- | --- |
-| `-Target` | `Arc`, `Azure`, or `Both` (default) | Selects SQL Server enabled by Azure Arc resources, Azure SQL resources and Azure-SSIS IR, or both groups. |
+| `-Target` | `Arc`, `Azure`, or `Both` (default) | Selects SQL Server enabled by Azure Arc resources, Azure SQL resources including SQL Server on Azure VMs, or both groups. |
 | `-RunMode` | `Single` (default) or `Scheduled` | Runs the transition once or configures daily Azure Automation runbooks. |
 | `-TargetLicenseType` | `PAYG` | Selects pay-as-you-go as the target license model for the procedures in this article. |
 | `-targetSubscription` | Subscription ID; all accessible subscriptions in the tenant by default | Limits the transition to one subscription. |
 | `-targetResourceGroup` | Resource group name; all resource groups by default | Limits the transition to one resource group. |
 | `-TenantId` | Tenant ID; current Az PowerShell context by default | Selects the Microsoft Entra tenant. |
 | `-ReportOnly` | Switch; disabled by default | Reports qualifying resources without changing them. |
+| `-Force` | Switch; disabled by default | Skips missing-module installation and account/tenant confirmation prompts. Required for unattended runs that need these confirmations. |
 | `-WaitForCompletion` | Switch; disabled by default | Waits for submitted changes to reach a terminal state when supported. |
 | `-UsePcoreLicense` | `No` (default) or `Yes` | Controls physical-core licensing for SQL Server enabled by Azure Arc. |
 | `-AutomationAccResourceGroupName` | Required with `-RunMode Scheduled` | Selects the resource group for the Automation account. |
@@ -98,10 +104,9 @@ The default execution behavior depends on the resource type:
 
 | Resource | Default behavior | With `-WaitForCompletion` |
 | --- | --- | --- |
-| Azure SQL Database, Azure SQL Managed Instance | Submits an asynchronous request and reports `RequestSubmitted` | Waits and reports `Updated` |
+| Azure SQL Database, elastic pools, Azure SQL Managed Instance, and instance pools | Starts an asynchronous PowerShell job with `-AsJob` and reports `RequestSubmitted` | Waits and reports `Updated` |
 | SQL Server enabled by Azure Arc | Submits an asynchronous extension update and reports `RequestSubmitted` | Polls the extension and reports `Succeeded`, `Failed`, or `TimedOut` |
-| SQL Server on Azure Virtual Machines | Submits a direct Azure Resource Manager request and reports `RequestSubmitted` | Runs [az sql vm update](/cli/azure/sql/vm#az-sql-vm-update), waits, and reports `Updated` |
-| Azure-SSIS IR | Waits and reports `Updated` | Same behavior |
+| SQL Server on Azure Virtual Machines | Waits and reports `Updated` | Same behavior |
 
 ## Preview the pay-as-you-go transition
 
@@ -109,14 +114,14 @@ The [`manage-payg-transition.ps1`](https://github.com/microsoft/sql-server-sampl
 
 With the PowerShell script, you can specify a single subscription to scan. If you don't specify a subscription, the script scans all subscriptions your role can access.
 
-1. Download the script:
+1. Download the script.
 
    ```powershell
    $scriptUri = "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/manage/manage-payg-transition/manage-payg-transition.ps1"
    Invoke-WebRequest -Uri $scriptUri -OutFile ".\manage-payg-transition.ps1"
    ```
 
-1. Sign in to the tenant that contains the resources:
+1. Sign in to the tenant that contains the resources.
 
    ```powershell
     Connect-AzAccount -TenantId "<tenant-id>"
@@ -143,7 +148,7 @@ With the PowerShell script, you can specify a single subscription to scan. If yo
    Import-Csv $report.FullName | Format-Table
    ```
 
-Resources that already use pay-as-you-go licensing don't appear in the report. If the script finds no matching resources, it doesn't create a CSV file. To reduce the scope, specify `-targetResourceGroup`. Set `-Target` to `Azure` to process Azure SQL resources and Azure-SSIS IR. Set it to `Arc` to process only SQL Server enabled by Azure Arc resources.
+Resources that already use pay-as-you-go licensing don't appear in the report. If the script finds no matching resources, it doesn't create a CSV file. To reduce the scope, specify `-targetResourceGroup`. Set `-Target` to `Azure` to process Azure SQL resources, including SQL Server on Azure VMs. Set it to `Arc` to process only SQL Server enabled by Azure Arc resources.
 
 ## Run a one-time pay-as-you-go transition with PowerShell
 
@@ -164,7 +169,7 @@ Run the pay-as-you-go transition only after you confirm the target scope and app
 
 The `PAYG` value sets pay-as-you-go as the target license model.
 
-If you omit `-WaitForCompletion`, most accepted changes have an `UpdateResult` of `RequestSubmitted`. This result means that Azure accepted the request, not that the license type finished changing. Azure-SSIS IR always waits because its update command doesn't support asynchronous execution.
+If you omit `-WaitForCompletion`, asynchronous changes have an `UpdateResult` of `RequestSubmitted`. This result doesn't confirm that the license type finished changing. SQL Server on Azure VM updates always wait and report `Updated` after a successful update.
 
 ## Schedule recurring pay-as-you-go transitions with PowerShell
 
@@ -206,7 +211,7 @@ The following table links the policy package and deployment script for each reso
 
 Use the values and roles for the selected resource type:
 
-| Resource | Pay-as-you-go target value | Source values that can be overwritten | Primary required role | Important limitation |
+| Resource | Pay-as-you-go target value | Source values that you can overwrite | Primary required role | Important limitation |
 | --- | --- | --- | --- | --- |
 | SQL Server enabled by Azure Arc | `PAYG` | `Paid`; the portal definition also supports `LicenseOnly` | **Azure Extension for SQL Server Deployment** | The assignment applies one target to all matching hosts and isn't edition-aware. Scope mixed estates separately. |
 | SQL Server on Azure Virtual Machines | `PAYG` | `AHUB`, `DR` | **Virtual Machine Contributor** | The target must meet Azure Hybrid Benefit or passive high-availability or disaster-recovery (HA/DR) licensing conditions. |
@@ -261,6 +266,7 @@ The CSV report includes an `UpdateResult` and an `UpdateError` for each selected
 | `Updated` or `Succeeded` | The script observed a successful terminal result. | Confirm the license type on the resource. |
 | `Failed` | The service rejected the update or returned a failed terminal state. | Review `UpdateError`, correct the problem, and rerun the preview. |
 | `TimedOut` | The Arc extension didn't reach a terminal state before the polling limit. | Check the extension state. The update might complete after the script stops waiting. |
+| `SkippedNotRunning` | The SQL Server VM isn't running, so the script didn't update it. | Start the VM when appropriate, and rerun the transition. |
 
 To confirm the current license type and provisioning state for SQL Server enabled by Azure Arc, run the following Azure Resource Graph query:
 
@@ -294,7 +300,7 @@ The script excludes resources that already use pay-as-you-go licensing. A fully 
 - The script excludes SQL Server on Azure VMs that use the `DR` license type, so it doesn't overwrite the license setting for a passive HA/DR replica.
 - The script doesn't expose the recurring billing consent option of its embedded Arc handler. For CSP-managed Arc resources that require recurring billing consent, use the [Arc-enabled SQL Server license type compliance](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/compliance/arc-sql-license-type-compliance) policy, which configures consent when it applies `PAYG`.
 - A default asynchronous run favors scale over immediate confirmation. Use `-WaitForCompletion` when you need the script to observe terminal results before it exits.
-- By default, SQL Server on Azure VM updates use an asynchronous Azure Resource Manager request. If that request fails, the script falls back to `az sql vm update`, which waits for the operation to finish.
+- SQL Server on Azure VM updates always wait for the operation to finish, regardless of whether you specify `-WaitForCompletion`.
 
 ## Troubleshoot automation failures
 
@@ -303,11 +309,12 @@ Use the generated report and Azure operation status to identify resources that w
 - If the report is empty, confirm the tenant, subscription, and resource group. An empty report is expected when all in-scope resources already use pay-as-you-go licensing.
 - If an Arc-enabled resource is skipped, restore connectivity for the Azure Connected Machine agent, confirm that the provisioning state for the Azure extension for SQL Server is `Succeeded`, and then rerun the preview.
 - If `UpdateResult` is `RequestSubmitted`, don't treat the request as complete. Check the resource state or rerun the preview after the Azure operation finishes.
-- If an Azure SQL or SQL Server on Azure VM operation fails, confirm that Azure CLI is installed, signed in to the same tenant, and authorized for the target subscription.
+- If an Azure SQL or SQL Server on Azure VM operation fails, review the reported error, confirm that the required Az PowerShell modules are available, and verify that your account is authorized for the target subscription.
+- If an unattended run stops at an installation or account confirmation, verify the tenant and account, then rerun with `-Force` after approving those actions.
 - If scheduled mode fails, confirm that the Automation account managed identity has the roles listed in the source sample.
 - If policy remediation returns `PolicyAuthorizationFailed`, confirm that the assignment identity has the product-specific role, **Reader**, and **Resource Policy Contributor** at the assignment scope. Rerun the deployment script, or rerun the remediation script with `-GrantMissingPermissions` after the signed-in identity can create role assignments.
 
-For the complete source, see [`manage-payg-transition.ps1`](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/manage-payg-transition/manage-payg-transition.ps1). For current limitations and test results, see the [`manage-payg-transition.ps1` test plan](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/manage-payg-transition/TESTPLAN.md).
+For the complete source, see [`manage-payg-transition.ps1`](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/manage-payg-transition/manage-payg-transition.ps1).
 
 ## Permissions by resource type
 
@@ -323,7 +330,6 @@ The **Contributor** role is a superset of the permissions required by the script
 | Azure SQL Database elastic pools | **SQL Server Contributor** |
 | Azure SQL Managed Instance pools | **Contributor**, or a custom role with `Microsoft.Sql/instancePools/read` and `Microsoft.Sql/instancePools/write` |
 | SQL Server enabled by Azure Arc | **Azure Connected Machine Resource Administrator** |
-| Azure-SSIS IR | **Data Factory Contributor** |
 | Reading and enumerating subscriptions and resources | **Reader**, unless another assigned role grants the required read permissions |
 
 ### Permissions for Azure Policy

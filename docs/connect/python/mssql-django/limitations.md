@@ -3,8 +3,8 @@ title: Limitations and Unsupported Features in mssql-django
 description: Limitations and unsupported features of the mssql-django Django backend for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 07/24/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -26,6 +26,8 @@ The following Django features aren't supported or have limited support with the 
 | `DISTINCT ON` | Not supported | SQL Server doesn't support `DISTINCT ON` clauses. Use `.values().distinct()` or subqueries. |
 | `Subquery` in `ORDER BY` | Not supported | Ordering by subquery expressions might not work. |
 | Database-level `CASCADE` | Limited | Some `SET NULL` and `SET DEFAULT` operations can require manual migration SQL. |
+| `DB_CASCADE`, `DB_SET_NULL`, `DB_SET_DEFAULT` | Not supported | Database-level referential actions added in Django 6.1. SQL Server rejects foreign key graphs with multiple cascade paths to the same table (error 1785), so there's no native path for this feature on any SQL Server version. Using one of these values raises the Django system check `fields.E324`. Use the standard Django-level `on_delete` instead. |
+| `BitAnd`, `BitOr`, `BitXor` | Not supported | Bitwise aggregates added in Django 6.1. SQL Server has no native bitwise aggregate function, and the backend doesn't emulate them, so these aggregates raise `NotSupportedError`. |
 | `is_dst` in `Trunc`/`Extract` | Not supported | `is_dst` parameter (used to resolve ambiguous times during daylight saving transitions) in `Extract()` and `Trunc()` isn't supported. Use `AT TIME ZONE` in raw SQL for DST-aware queries. |
 | Floating point annotate | Limited | Floating point `Avg` aggregates can lose precision compared to PostgreSQL due to SQL Server's **float** type behavior. For example, averaging 0.1 and 0.2 might yield 0.15000000000000000222 instead of exactly 0.15. Use `DecimalField` or `Cast(avg_expr, output_field=DecimalField())` for critical financial calculations. |
 | Annotate/exists in `ORDER BY` | Not supported | Using annotate or exists expressions in `order_by` might not work. |
@@ -88,6 +90,7 @@ For more information, see [Test Django apps with SQL Server](testing.md).
 
 | mssql-django version | Notes |
 | --- | --- |
+| 1.8.0 | Django 6.1 support. The query compiler uses `quote_name` on Django 6.1. Foreign key introspection returns the ON DELETE rule. Database-level referential actions and bitwise aggregates aren't supported. |
 | 1.7.4 | Fixed `IndexError` on `GROUP BY` queries that mix escaped `%%` literals with real params. Fixed `NotImplementedError` for `IntegerChoices` params in raw `GROUP BY` queries. |
 | 1.7.3 | Fixed `FA001` for `Authentication=` modes other than `ActiveDirectoryMsi`. Fixed `KeyError` on subclassed `DatabaseWrapper` (regression from 1.7.1). |
 | 1.7.2 | Fixed time zone handling for **datetimeoffset** and `Now()` with `USE_TZ=True`. Fixed `.explain()` compatibility for Django 4.0 and later. |
@@ -107,6 +110,7 @@ For more information, see [Test Django apps with SQL Server](testing.md).
 | 5.1 | `inspectdb` can inspect tables with composite primary keys, but it doesn't generate complete model definitions for them. |
 | 5.2 | `CompositePrimaryKey` support is partial. `inspectdb` still requires manual fixes, tuple comparison against subqueries requires Django 5.2.4 and later versions, and some migration plus JSONField bulk/CASE WHEN update paths still have test exclusions. For more information, see the [GitHub repository](https://github.com/microsoft/mssql-django). |
 | 6.0 | Requires Python 3.12 and later versions. All 5.2 limitations apply. The backend handles all 6.0 API changes transparently. |
+| 6.1 | Requires Python 3.12 and later versions. All 6.0 limitations apply. Requires `mssql-django` 1.8.0 and later versions. Database-level referential actions (`DB_CASCADE`, `DB_SET_NULL`, `DB_SET_DEFAULT`) and bitwise aggregates (`BitAnd`, `BitOr`, `BitXor`) aren't supported. |
 
 ## Set up regex lookups
 

@@ -1,6 +1,6 @@
 ---
-title: "Reinitialize Subscriptions"
-description: "Reinitialize Subscriptions"
+title: Reinitialize Subscriptions
+description: Reinitialize subscriptions in SQL Server replication to apply a fresh snapshot to Subscribers. Learn when reinitialization happens and how to upload pending changes.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "reinitializing subscriptions"
 monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
-# Reinitialize Subscriptions
+# Reinitialize subscriptions
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Reinitializing a subscription involves applying a new snapshot of one or more articles to one or more Subscribers: transactional and snapshot replication allow individual articles to be reinitialized; merge replication requires all articles to be reinitialized. Nodes in a peer-to-peer transactional replication topology cannot be reinitialized. If you need to ensure a node has a new copy of the data, restore a backup at the node. Reinitialization occurs for one of two reasons:  
+  Reinitializing a subscription involves applying a new snapshot of one or more articles to one or more Subscribers. Transactional and snapshot replication allow individual articles to be reinitialized. Merge replication requires all articles to be reinitialized. You can't reinitialize nodes in a peer-to-peer transactional replication topology. To ensure a node has a new copy of the data, restore a backup at the node. Reinitialization occurs for one of two reasons:  
   
 -   You explicitly mark a subscription for reinitialization.  
   
@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 > [!IMPORTANT]  
 >  If you add, drop, or change a parameterized filter in a merge publication, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.  
   
- If, you specified that no initial snapshot was to be applied to the Subscriber when you created the subscription, and you then mark the subscription for reinitialization, a snapshot is not applied. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+  If you specified that no initial snapshot was to be applied to the Subscriber when you created the subscription, and you then mark the subscription for reinitialization, a snapshot isn't applied. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).    
   
  **To reinitialize a subscription**  
   

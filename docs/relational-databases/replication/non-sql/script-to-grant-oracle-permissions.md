@@ -1,6 +1,6 @@
 ---
-title: "Script to Grant Oracle Permissions"
-description: "Script to Grant Oracle Permissions"
+title: Script to Grant Oracle Permissions
+description: Script to grant Oracle permissions creates a replication user with the privileges SQL Server publishing requires. See the full PL/SQL script and setup steps.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -12,12 +12,12 @@ ms.custom:
 helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], script to grant permissions"
 ---
-# Script to Grant Oracle Permissions
+# Script to grant Oracle permissions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  The script provided in this topic is used during the configuration of an Oracle database that will publish data using [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication. This script is also available in the following directory after installation: *\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. For more information about configuring the Oracle database, see [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+  Use the following script during the configuration of an Oracle database that publishes data by using [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication. You can also find this script in the following directory after installation: *\<drive>*:\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. For more information about configuring the Oracle database, see [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
->  This script includes the statement `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, which is required for the triggers used by transactional replication. If you will use only snapshot replication, remove this line from the script.  
+>  This script includes the statement `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, which is required for the triggers used by transactional replication. If you use only snapshot replication, remove this line from the script.  
   
  **To run the script from the Oracle SQL\*Plus utility**  
   

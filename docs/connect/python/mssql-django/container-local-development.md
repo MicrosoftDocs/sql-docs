@@ -3,8 +3,8 @@ title: Container and Local Development with mssql-django
 description: Set up local development environments, Docker containers, devcontainers, and CI pipelines for Django applications that use the mssql-django backend with SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,7 +17,7 @@ This guide covers environment setup for Django developers working with the `mssq
 
 ## Prerequisites
 
-- Python 3.8 or later (Django 6.0 requires Python 3.12 and later versions)
+- Python 3.8 and later versions (Django 6.0 and later versions require at least Python 3.12)
 - Docker Desktop (for container-based development)
 - Microsoft ODBC Driver 17 or 18 for SQL Server. See [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md).
 

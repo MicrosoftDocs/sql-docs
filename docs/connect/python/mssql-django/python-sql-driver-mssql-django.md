@@ -3,8 +3,8 @@ title: Django Backend for SQL Server - mssql-django
 description: Overview and task hub for installing, configuring, querying, authenticating, deploying, and troubleshooting Django applications with the mssql-django backend for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 # Django backend for SQL Server - mssql-django
 
-`mssql-django` is Microsoft's Django database backend for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Set `ENGINE` to `"mssql"` in your Django `DATABASES` configuration to connect. The backend builds on [pyodbc](https://pypi.org/project/pyodbc/) and the [Microsoft ODBC Driver for SQL Server](../../odbc/microsoft-odbc-driver-for-sql-server.md), and supports Django 3.2 through 6.0, Python 3.8 through 3.14, and SQL Server 2016 through 2025.
+`mssql-django` is Microsoft's Django database backend for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Set `ENGINE` to `"mssql"` in your Django `DATABASES` configuration to connect. The backend builds on [pyodbc](https://pypi.org/project/pyodbc/) and the [Microsoft ODBC Driver for SQL Server](../../odbc/microsoft-odbc-driver-for-sql-server.md), and supports Django 3.2 through 6.1, Python 3.8 through 3.14, and SQL Server 2016 through 2025.
 
 ## Choose your starting point
 
@@ -243,7 +243,7 @@ For more information about each part of this configuration, see [Configuration r
 
 - **Drop-in Django backend**: Set `ENGINE` to `"mssql"` and Django's ORM, migrations, admin, and management commands work against SQL Server.
 - **Built on pyodbc and ODBC Driver 18**: TLS-encrypted connections by default and broad platform support on Windows, Linux, and macOS.
-- **Wide version matrix**: Django 3.2 through 6.0, Python 3.8 through 3.14, and SQL Server 2016 through 2025.
+- **Wide version matrix**: Django 3.2 through 6.1, Python 3.8 through 3.14, and SQL Server 2016 through 2025.
 - **Microsoft Entra ID authentication**: Passwordless connections with managed identity, service principal, interactive, and integrated flows via `extra_params`.
 - **Django migrations**: Schema migrations against SQL Server, including SQL Server-specific column types.
 - **JSONField support**: Native `JSONField` backed by the **nvarchar(max)** storage and Django lookups.

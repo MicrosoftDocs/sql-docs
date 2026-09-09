@@ -1,5 +1,5 @@
 ---
-title: "Subscribe to Publications"
+title: Subscribe to Publications
 description: Learn about the types of subscriptions in SQL Server replication, how to choose the type you need, and how to create a subscription.
 author: "MashaMSFT"
 ms.author: "mathoma"
@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "transactional replication, subscribing"
 monikerRange: "=azuresqldb-current || >=sql-server-2017"
 ---
-# Subscribe to Publications
+# Subscribe to publications
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  A subscription is a request for a copy of the data and database objects in a publication. A subscription defines which publication will be received, and where and when it will be received. When planning for subscriptions, consider where you want agent processing to occur. The type of subscription you choose controls where the agent runs. With a push subscription, the Merge Agent or Distribution Agent runs at the Distributor, whereas with a pull subscription, agents run at the Subscribers. After a subscription is created, it cannot be changed from one type to another.  
+  A subscription is a request for a copy of the data and database objects in a publication. A subscription defines which publication you receive, and where and when you receive it. When planning for subscriptions, consider where you want agent processing to occur. The type of subscription you choose controls where the agent runs. With a push subscription, the Merge Agent or Distribution Agent runs at the Distributor, whereas with a pull subscription, agents run at the Subscribers. After you create a subscription, you can't change it from one type to another.  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
@@ -36,14 +36,14 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
 |Push Subscription|With a push subscription, the Publisher propagates changes to a Subscriber without a request from the Subscriber. Changes can be pushed to Subscribers on demand, continuously, or on a scheduled basis. The Distribution Agent or Merge Agent runs at the Distributor.|Data will typically be synchronized continuously or on a frequently recurring schedule.<br /><br /> Publications require near real-time movement of data.<br /><br /> The higher processor overhead at the Distributor does not affect performance.<br /><br /> Most often used with snapshot and transactional replication.|  
 |Pull Subscription|With a pull subscription, the Subscriber requests changes made at the Publisher. Pull subscriptions allow the user at the Subscriber to determine when the data changes are synchronized. The Distribution Agent or the Merge Agent runs at the Subscriber.|Data will typically be synchronized on demand or on a schedule rather than continuously.<br /><br /> The publication has a large number of Subscribers, and/or it would be too resource-intensive to run all the agents at the Distributor.<br /><br /> Subscribers are autonomous, disconnected, and/or mobile. Subscribers will determine when they will connect and synchronize changes.<br /><br /> Most often used with merge replication.|  
   
-## Merge Replication Subscription Types  
+## Merge replication subscription types  
  All replication types allow push and pull subscriptions. Merge replication uses two additional terms to distinguish subscriptions: client subscriptions and server subscriptions. Both client and server subscription types can be used with push and pull subscriptions. Client subscriptions are appropriate for most Subscribers, whereas server subscriptions are typically used for Subscribers that republish data to other Subscribers. Subscription choice also affects conflict resolution.  
   
 ## Non-SQL Server Subscribers  
- Oracle and IBM Db2 can subscribe to snapshot and transactional publications using push subscriptions. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Oracle and IBM Db2 can subscribe to snapshot and transactional publications by using push subscriptions. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-## Creating Subscriptions  
- To create a subscription, you supply the following information:  
+## Creating subscriptions  
+ To create a subscription, provide the following information:  
   
 -   The name of the publication.  
   
@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
   
 -   Whether the Snapshot Agent should create an initial snapshot for the subscription and whether the Distribution Agent or Merge Agent should apply that snapshot at the Subscriber.  
   
--   Accounts under which the Distribution Agent or Merge Agent will run.  
+-   Accounts under which the Distribution Agent or Merge Agent runs.  
   
 -   For merge replication, the type of subscription: server or client.  
   
@@ -72,7 +72,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017"
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
->  Deleting a subscription does not remove published objects from the Subscriber.  
+>  Deleting a subscription doesn't remove published objects from the Subscriber.  
   
  **To create a pull subscription**  
   

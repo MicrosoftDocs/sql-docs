@@ -3,8 +3,8 @@ title: Release notes for mssql-tools on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
-ms.date: 04/30/2026
+ms.reviewer: davidengel, sunilbs, mcimfl, vanto
+ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -15,6 +15,12 @@ ms.topic: release-notes
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server Tools on Linux and macOS.
+
+## 18.7.1.1, September 2026
+
+| New item | Details |
+| :------- | :------ |
+| BCP vector data type | Added support for vector data. |
 
 ## 17.11.1.1, April 2026
 

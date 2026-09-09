@@ -3,8 +3,8 @@ title: Release Notes ODBC Driver for SQL Server on Linux and macOS
 description: Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 08/17/2026
+ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
+ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -17,7 +17,17 @@ ms.custom:
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE [msCoName](../../../includes/msconame-md.md)] ODBC driver for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
 
-## 17.1.1, April 2026
+## 18.7.1, September 2026
+
+| Feature | Description |
+| --- | --- |
+| Vector data type | Added support for the `float16` vector data type. |
+| Connection string keywords | Added `MultipleActiveResultSets`, `FailoverPartner`, `WorkstationID`, and `ConnectTimeout` connection string keywords. |
+| Enhanced routing | Added load-balanced routing for Azure SQL Database Hyperscale named-replica reader endpoints. |
+| New distributions supported | Alpine Linux 3.23, SUSE Linux Enterprise Server 16, and Ubuntu Linux 26.04. |
+| Bug fixes | [List of bugs fixed](../bug-fixes.md). |
+
+## 17.11.1, April 2026
 
 | Feature | Description |
 | --- | --- |

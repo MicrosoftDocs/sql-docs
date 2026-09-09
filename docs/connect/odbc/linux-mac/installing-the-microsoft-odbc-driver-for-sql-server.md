@@ -3,8 +3,8 @@ title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 04/30/2026
+ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
+ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -32,7 +32,7 @@ The following sections explain how to install the Microsoft ODBC driver 18 from 
 ```bash
 case $(uname -m) in
     x86_64) architecture="amd64" ;;
-    arm64) architecture="arm64" ;;
+    aarch64|arm64) architecture="arm64" ;;
     *) architecture="unsupported" ;;
 esac
 if [[ "unsupported" == "$architecture" ]];
@@ -42,20 +42,20 @@ then
 fi
 
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/0b3d5518-b4a7-4a2b-afc7-7ee9e967f93c/msodbcsql18_18.6.2.1-1_$architecture.apk
-curl -O https://download.microsoft.com/download/cad0d30f-b9b1-4765-a011-81d8a66c8b8d/mssql-tools18_18.6.2.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/a5dcc5e7-6124-49d3-8df4-48d738a0e784/mssql-tools18_18.7.1.1-1_$architecture.apk
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/0b3d5518-b4a7-4a2b-afc7-7ee9e967f93c/msodbcsql18_18.6.2.1-1_$architecture.sig
-curl -O https://download.microsoft.com/download/cad0d30f-b9b1-4765-a011-81d8a66c8b8d/mssql-tools18_18.6.2.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/a5dcc5e7-6124-49d3-8df4-48d738a0e784/mssql-tools18_18.7.1.1-1_$architecture.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --import -
-gpg --verify msodbcsql18_18.6.2.1-1_$architecture.sig msodbcsql18_18.6.2.1-1_$architecture.apk
-gpg --verify mssql-tools18_18.6.2.1-1_$architecture.sig mssql-tools18_18.6.2.1-1_$architecture.apk
+gpg --verify msodbcsql18_18.7.1.1-1_$architecture.sig msodbcsql18_18.7.1.1-1_$architecture.apk
+gpg --verify mssql-tools18_18.7.1.1-1_$architecture.sig mssql-tools18_18.7.1.1-1_$architecture.apk
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.6.2.1-1_$architecture.apk
-sudo apk add --allow-untrusted mssql-tools18_18.6.2.1-1_$architecture.apk
+sudo apk add --allow-untrusted msodbcsql18_18.7.1.1-1_$architecture.apk
+sudo apk add --allow-untrusted mssql-tools18_18.7.1.1-1_$architecture.apk
 ```
 
 > [!NOTE]  
@@ -125,7 +125,7 @@ sudo yum install -y unixODBC-devel
 ### [SLES](#tab/suse18-install)
 
 ```bash
-if ! [[ "12 15" == *"$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | cut -d '.' -f 1)"* ]];
+if ! [[ "12 15 16" == *"$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | cut -d '.' -f 1)"* ]];
 then
     echo "SLES $(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | cut -d '.' -f 1) is not currently supported.";
     exit;
@@ -153,7 +153,7 @@ sudo zypper install -y unixODBC-devel
 ### [Ubuntu](#tab/ubuntu18-install)
 
 ```bash
-if ! [[ "18.04 20.04 22.04 24.04 25.10" == *"$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2)"* ]];
+if ! [[ "18.04 20.04 22.04 24.04 26.04" == *"$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2)"* ]];
 then
     echo "Ubuntu $(grep VERSION_ID /etc/os-release | cut -d '"' -f 2) is not currently supported.";
     exit;

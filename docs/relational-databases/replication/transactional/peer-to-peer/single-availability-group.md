@@ -1,5 +1,5 @@
 ---
-title: Configure peer-to-peer replication with one replica in an availability group
+title: Configure Peer-to-Peer Replication with One Replica in an Availability Group
 description: Describes how to configure a database in a SQL Server Always On availability group to participate in a peer-to-peer transactional replication topology.
 author: MashaMSFT
 ms.author: mathoma
@@ -13,7 +13,7 @@ ms.custom:
 
 # Configure one peer as part of availability group
 
-Beginning with [!INCLUDE [sssql19-md](../../../../includes/sssql19-md.md)] CU 13 a database that belongs to a SQL Server Always On availability group can participate as a peer in a peer-to-peer transactional replication topology. This article describes how to configure this scenario.
+Starting with [!INCLUDE [sssql19-md](../../../../includes/sssql19-md.md)] CU 13, a database that belongs to a SQL Server Always On availability group can participate as a peer in a peer-to-peer transactional replication topology. This article describes how to configure this scenario.
 
 The scripts in this example use T-SQL stored procedures.
 
@@ -25,7 +25,7 @@ This section describes the roles and names of the various elements participating
 
 - **Node1**: Replica 1 in the **MyAG** availability group.
 - **Node2**: Replica 2 in the **MyAG** availability group.
-- **MyAG**: The name of the availability group that you will create on *Node1* and *Node2*.
+- **MyAG**: The name of the availability group that you create on *Node1* and *Node2*.
 - **MyAGListenerName**: Name of availability group listener.
 - **Dist1**: The name of the remote distributor instance.
 - **MyDBName**: Name of the database.
@@ -33,14 +33,14 @@ This section describes the roles and names of the various elements participating
 
 ### *Peer2*
 
-- **Node3**: A stand alone server hosting a default instance of SQL Server.
+- **Node3**: A standalone server hosting a default instance of SQL Server.
 - **Dist2**: The name of the remote distributor instance.
 - **MyDBName**: Name of the database.
 - **P2P_MyDBName**: Publication name.
 
 ## Prerequisites
 
-- Two instances of SQL Server on separate physical or virtual servers to host the availability group. The availability group will contain a peer database.
+- Two instances of SQL Server on separate physical or virtual servers to host the availability group. The availability group contains a peer database.
 - One instance of SQL Server to host another peer database.
 - Two instances of SQL Server to host the distributor databases.
 - All server instances require a supported edition - Enterprise edition or Developer edition.
@@ -61,7 +61,7 @@ This section describes the roles and names of the various elements participating
   > [!NOTE]
   > To avoid a single point of failure for the distribution database, use a remote distributor for each peer.
   >
-  > For demonstration or test environment, you may configure the distribution databases on a single instance.
+  > For demonstration or test environment, you can configure the distribution databases on a single instance.
 
 ## Configure the distributor and remote publisher (*Peer1*)
 
@@ -93,7 +93,7 @@ This section describes the roles and names of the various elements participating
       - `0` = SQL Server authentication. Requires `@login` and `@password`. The login and password specified must be valid at each secondary replica.
       
    > [!NOTE]
-   > If any modified replication agents run on a computer other than the distributor, use of Windows authentication for the connection to the primary requires Kerberos authentication to  for the communication between the replica host computers. Use of a SQL Server login for the connection to the current primary doesn't require Kerberos authentication.
+   > If any modified replication agents run on a computer other than the distributor, use Windows authentication for the connection to the primary requires Kerberos authentication for the communication between the replica host computers. Use a SQL Server login for the connection to the current primary doesn't require Kerberos authentication.
 
    ```sql
    USE master;  
@@ -135,7 +135,7 @@ This section describes the roles and names of the various elements participating
 
 ## Configure the secondary replica host as replication publisher (*Node2*)
 
-At each secondary replica host, configure distribution. Specify the same value for `@password` as that used when `sp_adddistributor` was run at the distributor to set up distribution.
+At each secondary replica host, configure distribution. Specify the same value for `@password` as the value you use when you run `sp_adddistributor` at the distributor to set up distribution.
 
 ```sql
 EXEC sys.sp_adddistributor  
@@ -154,7 +154,7 @@ EXEC sys.sp_adddistributor
    ```
 
    > [!NOTE]
-   > In the script above, information in square brackets (`[ ... ]`) is optional. Use it to specify a non default value for TCP port. Do not include the brackets.
+   > In the preceding script, information in square brackets (`[ ... ]`) is optional. Use it to specify a non-default value for the TCP port. Don't include the brackets.
 
 ## Redirect the original publisher to the AG listener name (*Peer1*)
 
@@ -170,11 +170,11 @@ EXEC sys.sp_redirect_publisher
 ```
 
 > [!NOTE]
-> In the script above `,<port>` is optional. It is only required if you are using non-default ports. Do not include then angle brackets `<>`.
+> In the preceding script, `,<port>` is optional. It's only required if you're using non-default ports. Don't include the angle brackets `<>`.
 
 ## Create peer-to-peer publication (*Peer1*) on the original publisher - *Node1*
 
-The following script creates the publication for the Peer1.
+The following script creates the publication for *Peer1*.
 
 ```sql
 exec master..sp_replicationdboption  @dbname=  'MyDBName'    
@@ -228,7 +228,7 @@ EXEC [MyDBName].dbo.sp_addarticle @article = @article, @description = @descripti
 GO  
 ```
 
-## Make peer to peer publication compatible with availability group (*Peer1*)
+## Make peer-to-peer publication compatible with availability group (*Peer1*)
 
 On original publisher (Node1), run the following script to make the publication compatible with availability group:
 
@@ -243,9 +243,9 @@ GO
 ```
 
 > [!NOTE]
-> In the script above `,<port>` is optional. It is only required if you are using non-default ports. Do not include then angle brackets `<>`.
+> In the preceding script, `,<port>` is optional. It's only required if you're using non-default ports. Don't include the angle brackets `<>`.
 
-After you have completed the steps above, the availability group is prepared to participate in peer-to-peer topology. The next steps configure a standalone instance of SQL Server (*Peer2*) to participate.
+After you complete the preceding steps, the availability group is ready to participate in peer-to-peer topology. The next steps configure a standalone instance of SQL Server (*Peer2*) to participate.
 
 ## Configure the distributor and remote publisher (*Peer2*)
 
@@ -269,7 +269,7 @@ After you have completed the steps above, the availability group is prepared to 
     @security_mode = 1;     
    ```
 
-1. Configure *Node3* as remote publisher on distributor *Dist2*
+1. Configure *Node3* as remote publisher on distributor *Dist2*.
 
    ```sql
    USE master;   
@@ -304,7 +304,7 @@ EXEC sys.sp_replicationdboption
 
 ## Create peer-to-peer publication (*Peer2*)
 
-On *Node3* run the following command to create the peer-to-peer publication.
+On *Node3*, run the following command to create the peer-to-peer publication.
 
 ```sql
 exec master..sp_replicationdboption  @dbname=  'MyDBName'   
@@ -358,7 +358,7 @@ GO
 
 This step creates a push subscription from the availability group to the standalone instance of SQL Server.
 
-Execute the following script on *Node1*. This assumes *Node1* is running the primary replica.
+Execute the following script on *Node1*. This step assumes *Node1* is running the primary replica.
 
 ```sql
 EXEC [MyDBName].dbo.sp_addsubscription 
@@ -395,7 +395,7 @@ GO
 To create a push subscription from *Peer2* to the availability group listener, run the following command on *Node3*.
 
 > [!IMPORTANT]
-> The script below specifies the availability group listener name for the subscriber.
+> The following script specifies the availability group listener name for the subscriber.
 >
 > ```sql
 > @subscriber = N'MyAGListenerName,<port>'
@@ -433,7 +433,7 @@ GO
 
 ## Configure linked servers
 
-At each secondary replica host, make sure the push subscribers of publications appear as linked servers.
+At each secondary replica host, ensure the push subscribers of publications appear as linked servers.
 
 ```sql
 EXEC sys.sp_addlinkedserver   

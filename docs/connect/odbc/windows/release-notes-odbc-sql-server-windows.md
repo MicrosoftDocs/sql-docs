@@ -4,7 +4,7 @@ description: This release notes article describes the changes in each release of
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 04/30/2026
+ms.date: 09/09/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -12,6 +12,15 @@ ms.topic: release-notes
 # Release Notes for Microsoft ODBC Driver for SQL Server on Windows
 
 This release notes article describes what's new for the Microsoft ODBC driver for SQL Server on Windows.
+
+## 18.7
+
+Version number: 18.7.1.1  
+Released: September 9, 2026
+
+| Feature added | Details |
+| :------- | :------ |
+| Connection string keyword unification. | Reuse connection strings written for the `Microsoft.Data.SqlClient` data provider by using the `MultipleActiveResultSets`, `WorkstationID`, `FailoverPartner`, and `ConnectTimeout` keywords. For details, see [DSN and connection string keywords and attributes](../dsn-connection-string-attribute.md#connection-string-keyword-unification). |
 
 ## 18.6
 

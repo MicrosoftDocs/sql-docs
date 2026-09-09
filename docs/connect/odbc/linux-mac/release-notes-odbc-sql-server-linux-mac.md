@@ -4,7 +4,7 @@ description: Learn what's new and changed in released versions of the Microsoft 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 08/17/2026
+ms.date: 09/09/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -16,6 +16,12 @@ ms.custom:
 [!INCLUDE [Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE [msCoName](../../../includes/msconame-md.md)] ODBC driver for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
+
+## 18.7.1, September 2026
+
+| Feature | Description |
+| --- | --- |
+| Connection string keyword unification. | Reuse connection strings written for the `Microsoft.Data.SqlClient` data provider by using the `MultipleActiveResultSets`, `WorkstationID`, and `ConnectTimeout` keywords. For details, see [DSN and connection string keywords and attributes](../dsn-connection-string-attribute.md#connection-string-keyword-unification). |
 
 ## 17.1.1, April 2026
 

@@ -3,8 +3,8 @@ title: ODBC DSN and Connection String Keywords
 description: How to connect using the ODBC driver. Find keywords for connection strings and DSNs, and connection attributes for SQLSetConnectAttr and SQLGetConnectAttr.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl, randolphwest
-ms.date: 08/17/2026
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl, randolphwest
+ms.date: 08/26/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -30,7 +30,7 @@ The following table lists the available keywords and attributes for each platfor
 | [ClientCertificate](dsn-connection-string-attribute.md#clientcertificate) | | LMW |
 | [ClientKey](dsn-connection-string-attribute.md#clientkey) | | LMW |
 | [ColumnEncryption](dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | LMW |
-| [ConcatNullYieldsNull](#concatnullyieldsnull---sql_copt_ss_concat_null) (v18.6+) | [SQL_COPT_SS_CONCAT_NULL](#concatnullyieldsnull---sql_copt_ss_concat_null) | LMW |
+| [ConcatNullYieldsNull](#concatnullyieldsnull---sql_copt_ss_concat_null) (v18.6 and later versions) | [SQL_COPT_SS_CONCAT_NULL](#concatnullyieldsnull---sql_copt_ss_concat_null) | LMW |
 | [ConnectRetryCount](connection-resiliency.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](connection-resiliency.md) | LMW |
 | [ConnectRetryInterval](connection-resiliency.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](connection-resiliency.md) | LMW |
 | [Database](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
@@ -41,16 +41,16 @@ The following table lists the available keywords and attributes for each platfor
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [GetDataExtensions](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) (v18.0+) | [SQL_COPT_SS_GETDATA_EXTENSIONS](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) | LMW |
-| [HostnameInCertificate](dsn-connection-string-attribute.md#hostnameincertificate) (v18.0+) | | LMW |
-| [IpAddressPreference](dsn-connection-string-attribute.md#ipaddresspreference) (v18.1+) | | LMW |
-| [KeepAlive](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8) | | LMW |
-| [KeepAliveInterval](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8) | | LMW |
+| [GetDataExtensions](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) (v18.0 and later versions) | [SQL_COPT_SS_GETDATA_EXTENSIONS](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) | LMW |
+| [HostnameInCertificate](dsn-connection-string-attribute.md#hostnameincertificate) (v18.0 and later versions) | | LMW |
+| [IpAddressPreference](dsn-connection-string-attribute.md#ipaddresspreference) (v18.1 and later versions) | | LMW |
+| [KeepAlive](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4 and later versions; DSN only before 17.8) | | LMW |
+| [KeepAliveInterval](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4 and later versions; DSN only before 17.8) | | LMW |
 | [KeystoreAuthentication](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [Language](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [LongAsMax](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#longasmax) (v18.0+) | [SQL_COPT_SS_LONGASMAX](dsn-connection-string-attribute.md#sql_copt_ss_longasmax) | LMW |
+| [LongAsMax](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#longasmax) (v18.0 and later versions) | [SQL_COPT_SS_LONGASMAX](dsn-connection-string-attribute.md#sql_copt_ss_longasmax) | LMW |
 | [MARS_Connection](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_MARS_ENABLED](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmarsenabled) | LMW |
 | [MultiSubnetFailover](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_MULTISUBNET_FAILOVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmultisubnetfailover) | LMW |
 | [Net](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -62,10 +62,10 @@ The following table lists the available keywords and attributes for each platfor
 | [QuotedId](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_QUOTED_IDENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssquotedident) | LMW |
 | [Regional](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Replication](dsn-connection-string-attribute.md#replication) | | LMW |
-| [RetryExec](dsn-connection-string-attribute.md#retryexec) (18.1+) | | LMW |
+| [RetryExec](dsn-connection-string-attribute.md#retryexec) (18.1 and later versions) | | LMW |
 | [SaveFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Server](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [ServerCertificate](dsn-connection-string-attribute.md#servercertificate) (v18.1+) | | LMW |
+| [ServerCertificate](dsn-connection-string-attribute.md#servercertificate) (v18.1 and later versions) | | LMW |
 | [ServerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_SERVER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | [StatsLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdata) | W |
 | [StatsLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalog) | W |
@@ -108,7 +108,7 @@ The following table lists the available keywords and attributes for each platfor
 | | [SQL_COPT_SS_CEKEYSTOREPROVIDER](dsn-connection-string-attribute.md#sql_copt_ss_cekeystoreprovider) | LMW |
 | | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
-| | [SQL_COPT_SS_DATACLASSIFICATION_VERSION](data-classification.md) (v17.4.2+) | LMW |
+| | [SQL_COPT_SS_DATACLASSIFICATION_VERSION](data-classification.md) (v17.4.2 and later versions) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
 | | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | LMW |
 | | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sql_copt_ss_fallback_connect) | LMW |
@@ -117,7 +117,7 @@ The following table lists the available keywords and attributes for each platfor
 | | [SQL_COPT_SS_OLDPWD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssoldpwd) | LMW |
 | | [SQL_COPT_SS_PERF_DATA_LOG_NOW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalognow) | W |
 | | [SQL_COPT_SS_PRESERVE_CURSORS](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsspreservecursors) | LMW |
-| | [SQL_COPT_SS_SPID](dsn-connection-string-attribute.md#sql_copt_ss_spid) (v17.5+) | LMW |
+| | [SQL_COPT_SS_SPID](dsn-connection-string-attribute.md#sql_copt_ss_spid) (v17.5 and later versions) | LMW |
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
@@ -196,7 +196,7 @@ Controls the use of ISO handling of `NULL` when concatenating strings. For more 
 
 ### Encrypt
 
-Specifies whether connections use TLS encryption over the network. Possible values are `yes`/`mandatory`(18.0+), `no`/`optional`(18.0+), and `strict`(18.0+). The default value is `yes` in version 18.0+ and `no` in previous versions.
+Specifies whether connections use TLS encryption over the network. Version 17 accepts `yes` and `no`. Version 18.0 and later versions also accept `mandatory` as a synonym for `yes`, `optional` as a synonym for `no`, and `strict`, which selects TDS 8.0 encryption and has no version 17 equivalent. The default value is `yes` in version 18.0 and later versions, and `no` in earlier versions.
 
 Regardless of the setting for `Encrypt`, the server login credentials (user name and password) are always encrypted.
 
@@ -367,7 +367,7 @@ Loads a keystore provider library for Always Encrypted, or retrieves the names o
 
 ### SQL_COPT_SS_ENLIST_IN_XA
 
-To enable XA transactions with an XA-compliant Transaction Processor (TP), the application needs to call `SQLSetConnectAttr` with `SQL_COPT_SS_ENLIST_IN_XA` and a pointer to an `XACALLPARAM` object. This option is supported on Windows (17.3+), Linux, and macOS.
+To enable XA transactions with an XA-compliant Transaction Processor (TP), the application needs to call `SQLSetConnectAttr` with `SQL_COPT_SS_ENLIST_IN_XA` and a pointer to an `XACALLPARAM` object. This option is supported on Windows (17.3 and later versions), Linux, and macOS.
 
 ```cpp
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param

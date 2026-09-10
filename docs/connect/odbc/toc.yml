@@ -1,0 +1,92 @@
+- name: Microsoft ODBC Driver for SQL Server
+  href: microsoft-odbc-driver-for-sql-server.md
+- name: Get started
+  items:
+  - name: Download ODBC Driver for SQL Server
+    href: download-odbc-driver-for-sql-server.md
+  - name: Connect to and query a database with C++
+    href: cpp-code-example-app-connect-access-sql-db.md
+  - name: Support lifecycle
+    href: support-lifecycle.md
+  - name: Major version differences
+    href: major-version-differences.md
+- name: Install the driver
+  items:
+  - name: System requirements, installation, and driver files (Windows)
+    href: windows/system-requirements-installation-and-driver-files.md
+  - name: System requirements (Linux and macOS)
+    href: linux-mac/system-requirements.md
+  - name: Install the ODBC driver on Linux
+    href: linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+  - name: Install the ODBC driver on macOS
+    href: linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
+  - name: Install the unixODBC driver manager (Linux and macOS)
+    href: linux-mac/installing-the-driver-manager.md
+- name: Configure and connect
+  items:
+  - name: DSN and connection string keywords and attributes
+    href: dsn-connection-string-attribute.md
+  - name: Connection string keywords and data source names (Linux and macOS)
+    href: linux-mac/connection-string-keywords-and-data-source-names-dsns.md
+  - name: ODBC Data Source Administrator DSN (Windows)
+    href: windows/odbc-administrator-dsn-creation.md
+  - name: Driver-aware connection pooling (Windows)
+    href: windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
+  - name: SQL Server Login dialog (Windows)
+    href: windows/sql-server-login-dialog.md
+- name: Authenticate and secure
+  items:
+  - name: Use Microsoft Entra ID with the ODBC driver
+    href: using-azure-active-directory.md
+  - name: Use Always Encrypted with the ODBC driver
+    href: using-always-encrypted-with-the-odbc-driver.md
+  - name: Custom keystore providers
+    href: custom-keystore-providers.md
+  - name: Data classification
+    href: data-classification.md
+  - name: Use integrated authentication (Linux and macOS)
+    href: linux-mac/using-integrated-authentication.md
+- name: High availability and resiliency
+  items:
+  - name: Connection resiliency
+    href: connection-resiliency.md
+  - name: High availability and disaster recovery
+    href: odbc-driver-support-for-high-availability-disaster-recovery.md
+  - name: Use transparent network IP resolution
+    href: using-transparent-network-ip-resolution.md
+- name: Work with data
+  items:
+  - name: Vector data type
+    href: vector-data-type.md
+  - name: Use XA transactions with DTC
+    href: use-xa-with-dtc.md
+  - name: Programming guidelines (Linux and macOS)
+    href: linux-mac/programming-guidelines.md
+  - name: Asynchronous execution (notification method) sample (Windows)
+    href: windows/asynchronous-execution-notification-method-sample.md
+- name: Diagnose and troubleshoot
+  items:
+  - name: Connection encryption troubleshooting
+    href: connection-troubleshooting.md
+  - name: Data access tracing (Linux and macOS)
+    href: linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md
+  - name: Known issues (Linux and macOS)
+    href: linux-mac/known-issues-in-this-version-of-the-driver.md
+  - name: Frequently asked questions (Linux and macOS)
+    href: linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml
+- name: Release notes and bug fixes
+  items:
+  - name: Release notes for Windows
+    href: windows/release-notes-odbc-sql-server-windows.md
+  - name: Release notes for Linux and macOS
+    href: linux-mac/release-notes-odbc-sql-server-linux-mac.md
+  - name: Release notes for the SQL Server tools
+    href: linux-mac/release-notes-tools.md
+  - name: Bug fixes
+    href: bug-fixes.md
+- name: Reference
+  items:
+  - name: ODBC driver on Windows
+    href: windows/microsoft-odbc-driver-for-sql-server-on-windows.md
+  - name: Features of the ODBC driver on Windows
+    href: windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md

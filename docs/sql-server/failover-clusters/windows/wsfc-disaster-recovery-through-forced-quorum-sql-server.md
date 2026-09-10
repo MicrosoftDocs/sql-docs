@@ -58,13 +58,13 @@ The user must be a domain account that is member of the local Administrators gro
 1.  **Determine the scope of the failure.** Identify which availability groups or SQL Server instances are non-responsive, which cluster nodes are online and available for post-disaster use, and examine the Windows event logs and the SQL Server system logs.  Where practical, you should preserve forensic data and system logs for later analysis.  
   
     > [!TIP]  
-    >  On a responsive instance of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], you can obtain information about the health of availability groups that possess an availability replica on the local server instance by querying the [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) dynamic management view (DMV).  
+    >  On a responsive instance of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], you can obtain information about the health of availability groups that possess an availability replica on the local server instance by querying the [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-availability-group-states-transact-sql.md) dynamic management view (DMV).  
   
 2.  **Start the WSFC cluster by using forced quorum on a single node.** Identify a node with a minimal number of component failures, other than that the WSFC cluster service was shut down.  Verify that this node can communicate with a majority of the other nodes.  
   
      On this node, manually force the cluster to come online using the forced quorum procedure.  To minimize potential data loss, select a node that was last hosting an availability group primary replica.  
   
-     For more information, see:  [Force a WSFC Cluster to Start Without a Quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     For more information, see:  [Force a WSFC Cluster to Start Without a Quorum](https://msdn.microsoft.com/library/hh270275(v=SQL.110).aspx)  
   
     > [!NOTE]  
     >  The forced quorum setting has a cluster-wide affect to block quorum checks until the logical WSFC cluster achieves a majority of votes and automatically transitions to a regular quorum mode of operation.  
@@ -107,13 +107,13 @@ The user must be a domain account that is member of the local Administrators gro
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Force a WSFC Cluster to Start Without a Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Force a WSFC Cluster to Start Without a Quorum](force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
 -   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [View Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [View Cluster Quorum NodeWeight Settings](view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configure Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
@@ -121,6 +121,6 @@ The user must be a domain account that is member of the local Administrators gro
 
 ## Related content
 
-- [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)
+- [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342(WS.10).aspx)
 - [Get-ClusterLog Failover Cluster Cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))
 - [Windows Server Failover Clustering with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)

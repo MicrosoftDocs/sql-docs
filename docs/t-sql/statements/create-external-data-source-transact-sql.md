@@ -462,7 +462,7 @@ Additional notes and guidance when setting the location:
 - The `abfs` or `abfss` APIs are supported when accessing Azure Storage Accounts starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU11. For more information, see [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver).
 - The Hierarchical Namespace option for Azure Storage Accounts(V2) using `abfs[s]` is supported via Azure Data Lake Storage Gen2 starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU11+. The Hierarchical Namespace option is otherwise not supported, and this option should remain **disabled**.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute [ALTER EXTERNAL DATA SOURCE](alter-external-data-source-transact-sql.md) to point to the new location.
-- The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of a big data cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in SQL Server 2019 Big Data Cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
+- The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of a big data cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in SQL Server 2019 Big Data Cluster](/previous-versions/sql/big-data-cluster/tutorial-query-hdfs-storage-pool).
 - [!INCLUDE [polybase-java-connector-banner-retirement](../../includes/polybase-java-connector-banner-retirement.md)]
 
 #### CONNECTION_OPTIONS = *key_value_pair*
@@ -995,7 +995,7 @@ Additional notes and guidance when setting the location:
 - You can use the `sqlserver` connector to connect [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
 - The Hierarchical Namespace option for Azure Storage Accounts(V2) using the prefix `adls` is supported via Azure Data Lake Storage Gen2 in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
-<!--- - The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of SQL Server 2019 Big Data Cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in SQL Server 2019 Big Data Cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
+<!--- - The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of SQL Server 2019 Big Data Cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in SQL Server 2019 Big Data Cluster](/previous-versions/sql/big-data-cluster/tutorial-query-hdfs-storage-pool).
 - [!INCLUDE [polybase-java-connector-banner-retirement](../../includes/polybase-java-connector-banner-retirement.md)] -->
 - SQL Server support for HDFS Cloudera (CDP) and Hortonworks (HDP) external data sources are retired and not included in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. There's no need to use the TYPE argument in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 - For more information on S3-compatible object storage and PolyBase starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], see [Configure PolyBase to access external data in S3-compatible object storage](../../relational-databases/polybase/polybase-configure-s3-compatible.md). For an example of querying a parquet file within S3-compatible object storage, see [Virtualize parquet file in a S3-compatible object storage with PolyBase](../../relational-databases/polybase/polybase-virtualize-parquet-file.md).
@@ -2345,7 +2345,7 @@ WITH (
 );
 ```
 
-To see this example in use, see [BULK INSERT](./bulk-insert-transact-sql.md?view=azuresqldb-current&preserve-view=true#f-import-data-from-a-file-in-azure-blob-storage).
+To see this example in use, see [BULK INSERT](bulk-insert-transact-sql.md?view=azuresqldb-current&preserve-view=true#f-import-data-from-a-file-in-azure-blob-storage).
 
 ## Examples: Azure SQL Edge
 

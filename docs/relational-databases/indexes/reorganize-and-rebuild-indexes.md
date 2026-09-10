@@ -71,7 +71,7 @@ What is **page density** (also known as page fullness) and how it affects perfor
 
 Both fragmentation and page density are among the factors to consider when deciding whether to perform index maintenance, and which maintenance method to use.
 
-Fragmentation is defined differently for [rowstore](clustered-and-nonclustered-indexes-described.md) and [columnstore](columnstore-indexes-overview.md) indexes. For rowstore indexes, [sys.dm_db_index_physical_stats()](../system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) lets you determine fragmentation and page density in a specific index or in multiple indexes. For partitioned indexes, `sys.dm_db_index_physical_stats()` provides this information for each partition.
+Fragmentation is defined differently for [rowstore](clustered-and-nonclustered-indexes-described.md) and [columnstore](columnstore-indexes-overview.md) indexes. For rowstore indexes, [sys.dm_db_index_physical_stats()](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) lets you determine fragmentation and page density in a specific index or in multiple indexes. For partitioned indexes, `sys.dm_db_index_physical_stats()` provides this information for each partition.
 
 The result set returned by `sys.dm_db_index_physical_stats` includes the following columns:
 
@@ -80,7 +80,7 @@ The result set returned by `sys.dm_db_index_physical_stats` includes the followi
 | `avg_fragmentation_in_percent` | Logical fragmentation (out-of-order pages in the index). |
 | `avg_page_space_used_in_percent` | Average page density. |
 
-For compressed row groups in columnstore indexes, fragmentation is defined as the ratio of deleted rows to total rows, expressed as a percentage. [sys.dm_db_column_store_row_group_physical_stats](../system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) lets you determine the number of total and deleted rows per row group in a specific index, all indexes on a table, or all indexes in a database.
+For compressed row groups in columnstore indexes, fragmentation is defined as the ratio of deleted rows to total rows, expressed as a percentage. [sys.dm_db_column_store_row_group_physical_stats](../system-dynamic-management-objects/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) lets you determine the number of total and deleted rows per row group in a specific index, all indexes on a table, or all indexes in a database.
 
 The result set returned by `sys.dm_db_column_store_row_group_physical_stats` includes the following columns:
 
@@ -345,7 +345,7 @@ dbo          ProspectiveBuyer      PK_ProspectiveBuyer_ProspectiveBuyerKey  CLUS
 dbo          DimCustomer           IX_DimCustomer_CustomerAlternateKey      NONCLUSTERED  0                            99.5197553743514               78          IN_ROW_DATA
 ```
 
-For more information, see [sys.dm_db_index_physical_stats](../system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
+For more information, see [sys.dm_db_index_physical_stats](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md).
 
 ### Check the fragmentation of a columnstore index
 

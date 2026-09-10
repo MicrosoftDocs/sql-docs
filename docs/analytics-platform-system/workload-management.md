@@ -143,11 +143,11 @@ DMVs that contain information about resource classes and resource class members.
   
 DMVs that contain information about the state of requests and the resources they require:  
   
--   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-resource-waits-transact-sql.md)  
   
-Related system views exposed from the SQL Server DMVs on the Compute nodes. See [SQL Server Dynamic Management Views](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) for links to these DMVs on MSDN.  
+Related system views exposed from the SQL Server DMVs on the Compute nodes. See [SQL Server Dynamic Management Views](../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md) for links to these DMVs on MSDN.  
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
@@ -188,4 +188,3 @@ See the Workload Management section of [Common Metadata Query Examples &#40;SQL 
 ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-  

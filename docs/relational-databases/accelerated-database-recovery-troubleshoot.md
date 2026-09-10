@@ -24,7 +24,7 @@ This article helps you monitor, diagnose, and resolve issues with [accelerated d
 
 ## Examine the size of the PVS
 
-Use the [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md) DMV to identify if the persistent version store (PVS) size is larger than expected.
+Use the [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-objects/sys-dm-tran-persistent-version-store-stats.md) DMV to identify if the persistent version store (PVS) size is larger than expected.
 
 The following example diagnostic query shows the information about the current PVS size, the cleanup processes, and other details in all databases where PVS size is greater than zero:
 
@@ -212,7 +212,7 @@ To prevent PVS cleanup delays:
 
 If the database has secondary replicas, check if the secondary low watermark is advancing.
 
-A large value in the `pvs_off_row_page_skipped_low_water_mark` column might be an indication of a cleanup delay because of a long-running query on a secondary replica. In addition to holding up PVS cleanup, a long-running query on a secondary replica can also hold up [ghost cleanup](ghost-record-cleanup-process-guide.md).
+A large value in the `pvs_off_row_page_skipped_low_water_mark` column might be an indication of a cleanup delay because of a long-running query on a secondary replica. In addition to holding up PVS cleanup, a long-running query on a secondary replica can also hold up [ghost cleanup](ghost-row-cleanup-process-guide.md).
 
 You can use the following example queries on the primary replica to find if long-running queries on secondary replicas might be preventing PVS cleanup. If a write workload is running on the primary replica, but the value in the `low_water_mark_for_ghosts` column isn't increasing from one execution of the example query to the next, then PVS and ghost cleanup might be held up by a long-running query on a secondary replica.
 
@@ -233,7 +233,7 @@ WHERE is_local = 1
       is_primary_replica = 1;
 ```
 
-For more information, see the description of the `low_water_mark_for_ghosts` column in [sys.dm_hadr_database_replica_states](system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+For more information, see the description of the `low_water_mark_for_ghosts` column in [sys.dm_hadr_database_replica_states](system-dynamic-management-objects/sys-dm-hadr-database-replica-states-transact-sql.md).
 
 # [SQL Database and SQL database in Fabric](#tab/sqldb)
 
@@ -252,7 +252,7 @@ WHERE is_local = 1
       is_primary_replica = 1;
 ```
 
-For more information, see the description of the `low_water_mark_for_ghosts` column in [sys.dm_database_replica_states](system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md).
+For more information, see the description of the `low_water_mark_for_ghosts` column in [sys.dm_database_replica_states](system-dynamic-management-objects/sys-dm-database-replica-states-azure-sql-database.md).
 
 ---
 
@@ -286,7 +286,7 @@ For example:
 EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 ```
 
-An active transaction might prevent the PVS cleanup process from starting. If this occurs, the session running the `sys.sp_persistent_version_cleanup` stored procedure waits with the [PVS_CLEANUP_LOCK](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#pvs_cleanup_lock) wait type. You can wait for the transaction to complete, or you can consider killing the blocker session with an active transaction, if possible.
+An active transaction might prevent the PVS cleanup process from starting. If this occurs, the session running the `sys.sp_persistent_version_cleanup` stored procedure waits with the [PVS_CLEANUP_LOCK](system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md#pvs_cleanup_lock) wait type. You can wait for the transaction to complete, or you can consider killing the blocker session with an active transaction, if possible.
 
 ## Capture cleanup failures
 

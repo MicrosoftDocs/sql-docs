@@ -34,7 +34,7 @@ In [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 5 and later versions
 
 Setting the `max lock manager cache memory (%)` configuration to a value larger than 20 percent isn't recommended, but is supported for backward compatibility. You can set the value in the 20-60 percent range.
 
-You can monitor the total size of lock manager memory using [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), with `OBJECTSTORE_LOCK_MANAGER` as the memory clerk type. On an idle database engine instance, the reported value is the size of lock manager cache memory.
+You can monitor the total size of lock manager memory using [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-objects/sys-dm-os-memory-clerks-transact-sql.md), with `OBJECTSTORE_LOCK_MANAGER` as the memory clerk type. On an idle database engine instance, the reported value is the size of lock manager cache memory.
 
 ## Examples
 

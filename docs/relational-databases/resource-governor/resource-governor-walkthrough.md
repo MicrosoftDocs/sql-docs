@@ -122,7 +122,7 @@ For more information about configuring the maximum degree of parallelism, see [S
     dbo                         rg_classifier               1
     ```
 
-1. Validate that sessions with a specific application name are classified into the `limit_dop` workload group, while other sessions continue to be classified in the `default` workload group. We'll use a query that uses [sys.dm_exec_sessions](../system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) and [sys.resource_governor_workload_groups](../system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) system views to return the application name and workload group name for the current session.
+1. Validate that sessions with a specific application name are classified into the `limit_dop` workload group, while other sessions continue to be classified in the `default` workload group. We'll use a query that uses [sys.dm_exec_sessions](../system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md) and [sys.resource_governor_workload_groups](../system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) system views to return the application name and workload group name for the current session.
     1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), select **File** on the main menu, **New**, **Database Engine Query**.
     1. In the **Connect to Database Engine** dialog, specify the same [!INCLUDE[ssde-md](../../includes/ssde-md.md)] instance where you created the workload group and the classifier function. Select the **Additional Connection Parameters** tab, and enter `App=limited_dop_application`. This makes SSMS use `limited_dop_application` as the application name when connecting to the instance.
     1. Select **Connect** to open a new connection.
@@ -381,7 +381,7 @@ Resource governor statistics are cumulative since the last server restart. If yo
 
 ### Resource pool runtime statistics
 
-For each resource pool, resource governor tracks CPU and memory utilization, out-of-memory events, memory grants, I/O, and other statistics. For more information, see [sys.dm_resource_governor_resource_pools](../system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).
+For each resource pool, resource governor tracks CPU and memory utilization, out-of-memory events, memory grants, I/O, and other statistics. For more information, see [sys.dm_resource_governor_resource_pools](../system-dynamic-management-objects/sys-dm-resource-governor-resource-pools-transact-sql.md).
 
 The following query returns a subset of available statistics for all resource pools:
 

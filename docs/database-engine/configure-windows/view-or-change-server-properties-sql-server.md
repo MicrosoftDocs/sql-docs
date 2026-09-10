@@ -141,7 +141,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 
 ## SQL Server Configuration Manager
 
-Some server properties can be viewed or changed by using SQL Server Configuration Manager. For example, you can view the version and edition of the instance of SQL Server, or change the location where error log files are stored. These properties can also be viewed by querying the [Server dynamic management views and functions](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md).
+Some server properties can be viewed or changed by using SQL Server Configuration Manager. For example, you can view the version and edition of the instance of SQL Server, or change the location where error log files are stored. These properties can also be viewed by querying the [Server dynamic management views and functions](../../relational-databases/system-dynamic-management-objects/server-related-dynamic-management-views-and-functions-transact-sql.md).
 
 ### View or change server properties
 

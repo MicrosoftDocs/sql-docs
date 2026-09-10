@@ -521,7 +521,7 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-d
 
 - `OFF`
 
-  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. The default value is OFF.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-objects/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. The default value is OFF.
 
 #### \<change_tracking_option> ::=
 
@@ -613,11 +613,11 @@ You can determine this option's status by examining the `is_local_cursor_default
 
 #### TEMPORAL_HISTORY_RETENTION { ON | OFF }
 
-`ON` by default but also automatically set to `OFF` after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
+`ON` by default but also automatically set to `OFF` after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/temporal/manage-retention.md#how-to-configure-retention-policy).
 
 - `ON`
 
-  Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
+  Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/temporal/manage-retention.md).
 
 - `OFF`
 
@@ -695,7 +695,7 @@ For more information about database encryption, see [Transparent data encryption
 
 When encryption is enabled at the database level, all file groups are encrypted. Any new file groups inherit the encrypted property. If any file groups in the database are set to READ ONLY, the database encryption operation fails.
 
-You can see the encryption state of the database and the state of the encryption scan by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+You can see the encryption state of the database and the state of the encryption scan by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-objects/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
 #### \<db_state_option> ::=
 
@@ -757,7 +757,7 @@ Before you set the database to SINGLE_USER, verify the AUTO_UPDATE_STATISTICS_AS
 
 1. Set AUTO_UPDATE_STATISTICS_ASYNC to OFF.
 
-1. Check for active asynchronous statistics jobs by querying the [sys.dm_exec_background_job_queue](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md) dynamic management view.
+1. Check for active asynchronous statistics jobs by querying the [sys.dm_exec_background_job_queue](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-background-job-queue-transact-sql.md) dynamic management view.
 
 If there are active jobs, either allow the jobs to complete or manually terminate them by using [KILL STATS JOB](../language-elements/kill-stats-job-transact-sql.md).
 
@@ -1274,7 +1274,7 @@ Calculates the transaction isolation level.
 
   Turns off the Snapshot option at the database level. Transactions can't specify the SNAPSHOT transaction isolation level.
 
-When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OFF to ON), ALTER DATABASE doesn't return control to the caller until all existing transactions in the database are committed. If the database is already in the state specified in the `ALTER DATABASE` statement, control is returned to the caller immediately. If the `ALTER DATABASE` statement doesn't return quickly, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) to determine whether there are long-running transactions. If the `ALTER DATABASE` statement is canceled, the database remains in the state it was in when ALTER DATABASE was started. The [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view indicates the state of snapshot-isolation transactions in the database. If `snapshot_isolation_state_desc` = IN_TRANSITION_TO_ON, the command `ALTER DATABASE ... ALLOW_SNAPSHOT_ISOLATION OFF` pauses six seconds and retries the operation.
+When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OFF to ON), ALTER DATABASE doesn't return control to the caller until all existing transactions in the database are committed. If the database is already in the state specified in the `ALTER DATABASE` statement, control is returned to the caller immediately. If the `ALTER DATABASE` statement doesn't return quickly, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-objects/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) to determine whether there are long-running transactions. If the `ALTER DATABASE` statement is canceled, the database remains in the state it was in when ALTER DATABASE was started. The [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view indicates the state of snapshot-isolation transactions in the database. If `snapshot_isolation_state_desc` = IN_TRANSITION_TO_ON, the command `ALTER DATABASE ... ALLOW_SNAPSHOT_ISOLATION OFF` pauses six seconds and retries the operation.
 
 You can't change the state of ALLOW_SNAPSHOT_ISOLATION if the database is OFFLINE.
 
@@ -2168,7 +2168,7 @@ Enables or disables automatic plan correction `FORCE_LAST_GOOD_PLAN` option of [
 
 - `OFF`
 
-  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-objects/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
 
 #### \<change_tracking_option> ::=
 
@@ -2228,7 +2228,7 @@ Sets the database to be encrypted (ON) or not encrypted (OFF). For more informat
 
 When encryption is enabled at the database level, all file groups are encrypted. Any new file groups inherit the encrypted property. If any file groups in the database are set to READ ONLY, the database encryption operation fails.
 
-You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-objects/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
 #### \<db_update_option> ::=
 
@@ -2449,7 +2449,7 @@ Determines the transaction isolation level.
 
   Turns off the Snapshot option at the database level. Transactions can't specify the SNAPSHOT transaction isolation level.
 
-When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OFF to ON), `ALTER DATABASE` doesn't return control to the caller until all existing transactions in the database are committed. If the database is already in the state specified in the `ALTER DATABASE` statement, control is returned to the caller immediately. If the `ALTER DATABASE` statement doesn't return quickly, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) to determine whether there are long-running transactions. If the `ALTER DATABASE` statement is canceled, the database remains in the state it was in when ALTER DATABASE was started. The [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view indicates the state of snapshot-isolation transactions in the database. If `snapshot_isolation_state_desc = IN_TRANSITION_TO_ON`, the statement `ALTER DATABASE .... ALLOW_SNAPSHOT_ISOLATION OFF` pauses six seconds and retries the operation.
+When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OFF to ON), `ALTER DATABASE` doesn't return control to the caller until all existing transactions in the database are committed. If the database is already in the state specified in the `ALTER DATABASE` statement, control is returned to the caller immediately. If the `ALTER DATABASE` statement doesn't return quickly, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-objects/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) to determine whether there are long-running transactions. If the `ALTER DATABASE` statement is canceled, the database remains in the state it was in when ALTER DATABASE was started. The [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view indicates the state of snapshot-isolation transactions in the database. If `snapshot_isolation_state_desc = IN_TRANSITION_TO_ON`, the statement `ALTER DATABASE .... ALLOW_SNAPSHOT_ISOLATION OFF` pauses six seconds and retries the operation.
 
 You can't change the state of ALLOW_SNAPSHOT_ISOLATION if the database is OFFLINE.
 
@@ -2684,11 +2684,11 @@ Specifies when to roll back incomplete transactions when the database is transit
 
 - `TEMPORAL_HISTORY_RETENTION { ON | OFF }`
 
-  `ON` by default but also automatically set to `OFF` after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
+  `ON` by default but also automatically set to `OFF` after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/temporal/manage-retention.md#how-to-configure-retention-policy).
 
   - `ON`
 
-    Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
+    Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/temporal/manage-retention.md).
 
   - `OFF`
 
@@ -3240,7 +3240,7 @@ Enables or disables automatic plan correction `FORCE_LAST_GOOD_PLAN` option of [
 
 - `OFF`
 
-  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-objects/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
 
 #### \<change_tracking_option> ::=
 
@@ -3673,11 +3673,11 @@ Specifies when to roll back incomplete transactions when the database is transit
 
 - `TEMPORAL_HISTORY_RETENTION { ON | OFF }`
 
-  `ON` by default but also automatically set to `OFF` after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
+  `ON` by default but also automatically set to `OFF` after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/temporal/manage-retention.md#how-to-configure-retention-policy).
 
   - `ON`
 
-    Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
+    Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/temporal/manage-retention.md).
 
   - `OFF`
 
@@ -4122,7 +4122,7 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-d
 
 - `OFF`
 
-  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-objects/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
 
 #### \<change_tracking_option> ::=
 
@@ -4182,7 +4182,7 @@ Sets the database to be encrypted (ON) or not encrypted (OFF). For more informat
 
 When encryption is enabled at the database level, all file groups are encrypted. Any new file groups inherit the encrypted property. If any file groups in the database are set to READ ONLY, the database encryption operation fails.
 
-You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-objects/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
 #### \<delayed_durability_option> ::=
 
@@ -4359,7 +4359,7 @@ Determines the transaction isolation level.
 
   Turns off the Snapshot option at the database level. Transactions can't specify the SNAPSHOT transaction isolation level.
 
-When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OFF to ON), `ALTER DATABASE` doesn't return control to the caller until all existing transactions in the database are committed. If the database is already in the state specified in the `ALTER DATABASE` statement, control is returned to the caller immediately. If the `ALTER DATABASE` statement doesn't return quickly, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) to determine whether there are long-running transactions. If the `ALTER DATABASE` statement is canceled, the database remains in the state it was in when ALTER DATABASE was started. The [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view indicates the state of snapshot-isolation transactions in the database. If `snapshot_isolation_state_desc = IN_TRANSITION_TO_ON`, the statement `ALTER DATABASE ... ALLOW_SNAPSHOT_ISOLATION OFF` pauses six seconds and retries the operation.
+When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OFF to ON), `ALTER DATABASE` doesn't return control to the caller until all existing transactions in the database are committed. If the database is already in the state specified in the `ALTER DATABASE` statement, control is returned to the caller immediately. If the `ALTER DATABASE` statement doesn't return quickly, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-objects/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) to determine whether there are long-running transactions. If the `ALTER DATABASE` statement is canceled, the database remains in the state it was in when ALTER DATABASE was started. The [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view indicates the state of snapshot-isolation transactions in the database. If `snapshot_isolation_state_desc = IN_TRANSITION_TO_ON`, the statement `ALTER DATABASE ... ALLOW_SNAPSHOT_ISOLATION OFF` pauses six seconds and retries the operation.
 
 You can't change the state of ALLOW_SNAPSHOT_ISOLATION if the database is OFFLINE.
 
@@ -4591,11 +4591,11 @@ Specifies when to roll back incomplete transactions when the database is transit
 
 - `TEMPORAL_HISTORY_RETENTION { ON | OFF }`
 
-  `ON` by default but also automatically set to `OFF` after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
+  `ON` by default but also automatically set to `OFF` after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/temporal/manage-retention.md#how-to-configure-retention-policy).
 
   - `ON`
 
-    Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
+    Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/temporal/manage-retention.md).
 
   - `OFF`
 
@@ -4910,7 +4910,7 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Run this command to check if a query was executed using cached result. The `result_cache_hit` column returns 1 for cache hit, 0 for cache miss, and negative values for reasons why result set caching wasn't used. Check [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) for details.
+Run this command to check if a query was executed using cached result. The `result_cache_hit` column returns 1 for cache hit, 0 for cache miss, and negative values for reasons why result set caching wasn't used. Check [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-requests-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) for details.
 
 ```sql
 SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests

@@ -3,8 +3,8 @@ title: "SQL Server Login Dialog Box (OLE DB)"
 description: When you attempt to connect without specifying enough information, the OLE DB Driver for SQL Server prompts you with the SQL Server Login dialog box.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 01/16/2026
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
+ms.date: 08/26/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -13,8 +13,6 @@ ms.custom:
   - ignite-2025
 ---
 # SQL Server Login dialog box (OLE DB)
-
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
 
 [!INCLUDE [Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -119,11 +117,11 @@ When unchecked, the server's certificate will be validated. Server's certificate
 
 Specifies the path to a certificate file to match against the SQL Server TLS/SSL certificate. This option can only be used when **Strict** encryption is enabled.
 
-Type the full path to the certificate file in the text box labeled **Server certificate**, or select the **...** button to browse for the certificate file. This option is only available in versions 19.2+.
+Enter the full path to the certificate file in the text box labeled **Server certificate**, or select the **...** button to browse for the certificate file. This option is available only in versions 19.2 and later.
 
 ### Host name in certificate
 
-The host name to be used in validating the SQL Server TLS/SSL certificate. If not set, the driver uses the server name on the connection URL as the host name to validate the SQL Server TLS/SSL certificate. This option is only available in versions 19+.
+The host name to use when validating the SQL Server TLS/SSL certificate. If you don't set this option, the driver uses the server name on the connection URL as the host name to validate the SQL Server TLS/SSL certificate. This option is available only in versions 19 and later.
 
 > [!NOTE]  
 > When using **Windows Authentication** or **SQL Server Authentication** modes, **Trust server certificate** is considered only when the **Use strong encryption for data** option is enabled.

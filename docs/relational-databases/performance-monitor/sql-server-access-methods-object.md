@@ -18,21 +18,21 @@ helpviewer_keywords:
   
  For more detailed information about data volume, fragmentation and usage, use the following dynamic management views:  
   
--   [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
+-   [sys.dm_db_index_operational_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md)  
   
--   [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_index_physical_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md)  
   
--   [sys.dm_db_partition_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)  
+-   [sys.dm_db_partition_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-partition-stats-transact-sql.md)  
   
--   [sys.dm_db_index_usage_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)  
+-   [sys.dm_db_index_usage_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-index-usage-stats-transact-sql.md)  
   
  For space consumption in `tempdb` at the file, task and session level, use these dynamic management views:  
   
--   [sys.dm_db_file_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
+-   [sys.dm_db_file_space_usage (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-file-space-usage-transact-sql.md)  
   
--   [sys.dm_db_task_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)  
+-   [sys.dm_db_task_space_usage (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-task-space-usage-transact-sql.md)  
   
--   [sys.dm_db_session_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+-   [sys.dm_db_session_space_usage (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-session-space-usage-transact-sql.md)  
   
  This table describes the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** counters.  
   
@@ -66,11 +66,11 @@ helpviewer_keywords:
 |**LobSS Provider Destroy Count**|Count of LobSSP destroyed.|  
 |**LobSS Provider Truncation Count**|Count of LobSSP truncated.|  
 |**Mixed page allocations/sec**|Number of pages allocated per second from mixed extents. These could be used for storing the IAM pages and the first eight pages that are allocated to an allocation unit.|  
-|**Page compression attempts/sec**|Number of pages evaluated for page-level compression. Includes pages that were not compressed because significant savings could be achieved. Includes all objects in the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).|  
+|**Page compression attempts/sec**|Number of pages evaluated for page-level compression. Includes pages that were not compressed because significant savings could be achieved. Includes all objects in the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md).|  
 |**Page Deallocations/sec**|Number of pages deallocated per second in all databases in this instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. These include pages from mixed extents and uniform extents.|  
 |**Page Splits/sec**|Number of page splits per second that occur as the result of overflowing index pages.|  
 |**Pages Allocated/sec**|Number of pages allocated per second in all databases in this instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. These include pages allocations from both mixed extents and uniform extents.|  
-|**Pages compressed/sec**|Number of data pages that are compressed by using PAGE compression. Includes all objects in the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).|  
+|**Pages compressed/sec**|Number of data pages that are compressed by using PAGE compression. Includes all objects in the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md).|  
 |**Probe Scans/sec**|Number of probe scans per second that are used to find at most one single qualified row in an index or base table directly.|  
 |**Range Scans/sec**|Number of qualified range scans through indexes per second.|  
 |**Scan Point Revalidations/sec**|Number of times per second that the scan point had to be revalidated to continue the scan.|  
@@ -85,7 +85,7 @@ helpviewer_keywords:
   
 ## Examples
 
-You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters

@@ -49,7 +49,7 @@ The permissions required to manage sessions by using either method are the same,
 ## Manage Sessions by Using System Views and SQL Commands  
   
 ### To View Current Sessions by Using System Views  
-Use [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) to generate a list of current sessions.  
+Use [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-sessions-transact-sql.md) to generate a list of current sessions.  
   
 This example returns the session_id, login_name, and status for all sessions with a status of 'Active' or 'Idle'.  
   
@@ -58,7 +58,7 @@ SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions WHERE status
 ```  
   
 ### To View Active and Recent Queries for a Session by Using System Views  
-To see the active and recently completed queries associated with a session, you use the [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) and [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) views. This query returns a list of all active or idle sessions, plus any active or recent queries associated with each session ID.  
+To see the active and recently completed queries associated with a session, you use the [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-sessions-transact-sql.md) and [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-requests-transact-sql.md) views. This query returns a list of all active or idle sessions, plus any active or recent queries associated with each session ID.  
   
 ```sql  
 SELECT es.session_id, es.login_name, es.status AS sessionStatus,   
@@ -71,7 +71,7 @@ WHERE (es.status='Active' OR es.status='Idle') AND
 ```  
   
 ### To End Sessions by Using SQL Commands  
-Use the [KILL](../t-sql/language-elements/kill-transact-sql.md) command to end a current session. You will need the session ID for the process to terminate, which can be obtained using the [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) view.  
+Use the [KILL](../t-sql/language-elements/kill-transact-sql.md) command to end a current session. You will need the session ID for the process to terminate, which can be obtained using the [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-sessions-transact-sql.md) view.  
   
 In this example, select the login_name, session_id, and status values to find a session based on the login name.  
   

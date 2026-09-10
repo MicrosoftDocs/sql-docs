@@ -50,11 +50,11 @@ The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] can process [!IN
 
 *Batch mode execution* is a query processing method used to process multiple rows together (hence the term batch). Each column within a batch is stored as a vector in a separate area of memory, so batch mode processing is vector-based. Batch mode processing also uses algorithms that are optimized for the multi-core CPUs and increased memory throughput that are found on modern hardware.
 
-When it was first introduced, batch mode execution was closely integrated with, and optimized around, the columnstore storage format. However, starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], batch mode execution no longer requires columnstore indexes. For more information, see [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-on-rowstore).
+When it was first introduced, batch mode execution was closely integrated with, and optimized around, the columnstore storage format. However, starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], batch mode execution no longer requires columnstore indexes. For more information, see [Batch mode on rowstore](performance/intelligent-query-processing-details.md#batch-mode-on-rowstore).
 
-Batch mode processing operates on compressed data when possible, and eliminates the [exchange operator](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange) used by row mode execution. The result is better parallelism and faster performance.
+Batch mode processing operates on compressed data when possible, and eliminates the [exchange operator](showplan-logical-and-physical-operators-reference.md#exchange) used by row mode execution. The result is better parallelism and faster performance.
 
-When a query is executed in batch mode, and accesses data in columnstore indexes, the execution tree operators and child operators read multiple rows together in column segments. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] reads only the columns required for the result, as referenced by a SELECT statement, JOIN predicate, or filter predicate. For more information on columnstore indexes, see [Columnstore Index Architecture](../relational-databases/sql-server-index-design-guide.md#columnstore_index).
+When a query is executed in batch mode, and accesses data in columnstore indexes, the execution tree operators and child operators read multiple rows together in column segments. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] reads only the columns required for the result, as referenced by a SELECT statement, JOIN predicate, or filter predicate. For more information on columnstore indexes, see [Columnstore Index Architecture](sql-server-index-design-guide.md#columnstore_index).
 
 > [!NOTE]  
 > Batch mode execution is very efficient Data Warehousing scenarios, where large amounts of data are read and aggregated.
@@ -133,7 +133,7 @@ The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is a
 
 The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer doesn't choose only the execution plan with the lowest resource cost; it chooses the plan that returns results to the user with a reasonable cost in resources and that returns the results the fastest. For example, processing a query in parallel typically uses more resources than processing it serially, but completes the query faster. The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will use a parallel execution plan to return results if the load on the server won't be adversely affected.
 
-The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relies on distribution statistics when it estimates the resource costs of different methods for extracting information from a table or index. Distribution statistics are kept for columns and indexes, and hold information on the density<sup>1</sup> of the underlying data. This is used to indicate the selectivity of the values in a particular index or column. For example, in a table representing cars, many cars have the same manufacturer, but each car has a unique vehicle identification number (VIN). An index on the VIN is more selective than an index on the manufacturer, because VIN has lower density than manufacturer. If the index statistics aren't current, the Query Optimizer might not make the best choice for the current state of the table. For more information about densities, see [Statistics](../relational-databases/statistics/statistics.md#density).
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relies on distribution statistics when it estimates the resource costs of different methods for extracting information from a table or index. Distribution statistics are kept for columns and indexes, and hold information on the density<sup>1</sup> of the underlying data. This is used to indicate the selectivity of the values in a particular index or column. For example, in a table representing cars, many cars have the same manufacturer, but each car has a unique vehicle identification number (VIN). An index on the VIN is more selective than an index on the manufacturer, because VIN has lower density than manufacturer. If the index statistics aren't current, the Query Optimizer might not make the best choice for the current state of the table. For more information about densities, see [Statistics](statistics/statistics.md#density).
 
 <sup>1</sup> Density defines the distribution of unique values that exist in the data, or the average number of duplicate values for a given column. As density decreases, selectivity of a value increases.
 
@@ -142,9 +142,9 @@ The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is i
 > [!NOTE]  
 > [!INCLUDE [ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:
 >
-> - The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer.
-> - The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)], the elapsed and CPU time used during execution.
-> - The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.
+> - The ***[Estimated Execution Plan](performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer.
+> - The ***[Actual Execution Plan](performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)], the elapsed and CPU time used during execution.
+> - The ***[Live Query Statistics](performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.
 
 ### Process a SELECT statement
 
@@ -498,7 +498,7 @@ WHERE name LIKE '%plans%';
   - The number of estimated rows flowing through the operators.
 
      > [!NOTE]  
-     > In newer versions of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)], information about the statistics objects that were used for [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md) is also stored.
+     > In newer versions of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)], information about the statistics objects that were used for [Cardinality Estimation](performance/cardinality-estimation-sql-server.md) is also stored.
 
   - What support objects must be created, such as [worktables](#worktables) or workfiles in `tempdb`.
  No user context or runtime information is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism.
@@ -597,8 +597,8 @@ A compiled plan can be retrieved from the plan cache using a **Plan Handle**, wh
 
 > [!NOTE]  
 > If a plan was compiled for a batch instead of a single statement, the plan for individual statements in the batch can be retrieved using the plan handle and statement offsets.
-> The `sys.dm_exec_requests` DMV contains the `statement_start_offset` and `statement_end_offset` columns for each record, which refer to the currently executing statement of a currently executing batch or persisted object. For more information, see [sys.dm_exec_requests  (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
-> The `sys.dm_exec_query_stats` DMV also contains these columns for each record, which refer to the position of a statement within a batch or persisted object. For more information, see [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).
+> The `sys.dm_exec_requests` DMV contains the `statement_start_offset` and `statement_end_offset` columns for each record, which refer to the currently executing statement of a currently executing batch or persisted object. For more information, see [sys.dm_exec_requests  (Transact-SQL)](system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md).
+> The `sys.dm_exec_query_stats` DMV also contains these columns for each record, which refer to the position of a statement within a batch or persisted object. For more information, see [sys.dm_exec_query_stats (Transact-SQL)](system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md).
 
 The actual [!INCLUDE [tsql](../includes/tsql-md.md)] text of a batch is stored in a separate memory space from the plan cache, called the **SQL Manager** cache (SQLMGR). The [!INCLUDE [tsql](../includes/tsql-md.md)] text for a compiled plan can be retrieved from the sql manager cache using a **SQL Handle**, which is a transient identifier that remains constant only while at least one plan that references it remains in the plan cache. The sql handle is a hash value derived from the entire batch text and is guaranteed to be unique for every batch.
 
@@ -843,7 +843,7 @@ The `recompile_cause` column of `sql_statement_recompile` XEvent contains an int
 :::row-end:::
 
 > [!NOTE]  
-> In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] versions where XEvents aren't available, then the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.
+> In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] versions where XEvents aren't available, then the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.
 >
 > The trace event `SQL:StmtRecompile` also reports statement-level recompilations, and this trace event can also be used to track and debug recompilations.
 >
@@ -1027,7 +1027,7 @@ Consider the following when you set the `PARAMETERIZATION` option to FORCED:
 - Setting the `PARAMETERIZATION` option is an online operation that it requires no database-level exclusive locks.
 - The current setting of the `PARAMETERIZATION` option is preserved when reattaching or restoring a database.
 
-You can override the behavior of forced parameterization by specifying that simple parameterization be attempted on a single query, and any others that are syntactically equivalent but differ only in their parameter values. Conversely, you can specify that forced parameterization be attempted on only a set of syntactically equivalent queries, even if forced parameterization is disabled in the database. [Plan guides](../relational-databases/performance/plan-guides.md) are used for this purpose.
+You can override the behavior of forced parameterization by specifying that simple parameterization be attempted on a single query, and any others that are syntactically equivalent but differ only in their parameter values. Conversely, you can specify that forced parameterization be attempted on only a set of syntactically equivalent queries, even if forced parameterization is disabled in the database. [Plan guides](performance/plan-guides.md) are used for this purpose.
 
 > [!NOTE]  
 > When the `PARAMETERIZATION` option is set to `FORCED`, the reporting of error messages can differ from when the `PARAMETERIZATION` option is set to `SIMPLE`: multiple error messages might be reported under forced parameterization, where fewer messages would be reported under simple parameterization, and the line numbers in which errors occur can be reported incorrectly.
@@ -1086,7 +1086,7 @@ Parameter values are sniffed during compilation or recompilation for the followi
 For more information on troubleshooting parameter sniffing issues, see:
 - [Investigate and resolve parameter-sensitive issues](/troubleshoot/sql/performance/troubleshoot-high-cpu-usage-issues#step-5-investigate-and-resolve-parameter-sensitive-issues)
 - [Parameters and Execution Plan Reuse](#parameters-and-execution-plan-reuse)
-- [Parameter Sensitive Plan optimization](./performance/parameter-sensitive-plan-optimization.md)
+- [Parameter Sensitive Plan optimization](performance/parameter-sensitive-plan-optimization.md)
 - [Troubleshoot queries with parameter sensitive query execution plan issues in Azure SQL Database](/azure/azure-sql/database/identify-query-performance-issues#parameter-sensitivity)
 - [Troubleshoot queries with parameter sensitive query execution plan issues in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/identify-query-performance-issues#parameter-sensitivity)
 
@@ -1115,10 +1115,10 @@ During query optimization, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md
 Constructs that inhibit parallelism include:
 
 - **Scalar UDFs**  
-  For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)], the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing-details.md#scalar-udf-inlining).
+  For more information on scalar user-defined functions, see [Create User-defined Functions](user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)], the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](performance/intelligent-query-processing-details.md#scalar-udf-inlining).
 
 - **Remote Query**  
-  For more information on Remote Query, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+  For more information on Remote Query, see [Showplan Logical and Physical Operators Reference](showplan-logical-and-physical-operators-reference.md).
 
 - **Dynamic cursors**  
   For more information on cursors, see [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
@@ -1127,7 +1127,7 @@ Constructs that inhibit parallelism include:
   For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)).
 
 - **Multi-statement table-valued functions (MSTVFs)**  
-  For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+  For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 - **TOP keyword**  
   For more information, see [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
@@ -1158,7 +1158,7 @@ A query execution plan can contain the **NonParallelPlanReason** attribute in th
 
 After exchange operators are inserted, the result is a parallel-query execution plan. A parallel-query execution plan can use more than one worker thread. A serial execution plan, used by a non-parallel (serial) query, uses only one worker thread for its execution. The actual number of worker threads used by a parallel query is determined at query plan execution initialization and is determined by the complexity of the plan and the degree of parallelism.
 
-Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it doesn't mean the number of worker threads that are being used. The DOP limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It isn't a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks that are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). More processors than specified by the MAXDOP might be used concurrently at any given point of query execution, when different tasks are executed concurrently. For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).
+Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it doesn't mean the number of worker threads that are being used. The DOP limit is set per [task](system-dynamic-management-objects/sys-dm-os-tasks-transact-sql.md). It isn't a per [request](system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks that are assigned to a [scheduler](system-dynamic-management-objects/sys-dm-os-tasks-transact-sql.md). More processors than specified by the MAXDOP might be used concurrently at any given point of query execution, when different tasks are executed concurrently. For more information, see the [Thread and Task Architecture Guide](thread-and-task-architecture-guide.md).
 
 The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer doesn't use a parallel execution plan for a query if any one of the following conditions is true:
 
@@ -1179,7 +1179,7 @@ The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does
 
 1. Whether **sufficient worker threads are available**. Each query or index operation requires a certain number of worker threads to execute. Executing a parallel plan requires more worker threads than a serial plan, and the number of required worker threads increases with the degree of parallelism. When the worker thread requirement of the parallel plan for a specific degree of parallelism can't be satisfied, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] decreases the degree of parallelism automatically or completely abandons the parallel plan in the specified workload context. It then executes the serial plan (one worker thread).
 
-1. The **type of query or index operation executed**. Index operations that create or rebuild an index, or drop a clustered index and queries that use CPU cycles heavily are the best candidates for a parallel plan. For example, joins of large tables, large aggregations, and sorting of large result sets are good candidates. Simple queries, frequently found in transaction processing applications, find the additional coordination required to execute a query in parallel outweigh the potential performance boost. To distinguish between queries that benefit from parallelism and those that don't benefit, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] compares the estimated cost of executing the query or index operation with the [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) value. Users can change the default value of 5 using [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) if proper testing found that a different value is better suited for the running workload.
+1. The **type of query or index operation executed**. Index operations that create or rebuild an index, or drop a clustered index and queries that use CPU cycles heavily are the best candidates for a parallel plan. For example, joins of large tables, large aggregations, and sorting of large result sets are good candidates. Simple queries, frequently found in transaction processing applications, find the additional coordination required to execute a query in parallel outweigh the potential performance boost. To distinguish between queries that benefit from parallelism and those that don't benefit, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] compares the estimated cost of executing the query or index operation with the [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) value. Users can change the default value of 5 using [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) if proper testing found that a different value is better suited for the running workload.
 
 1. Whether there are a **sufficient number of rows to process**. If the Query Optimizer determines that the number of rows is too low, it doesn't introduce exchange operators to distribute the rows. Thus, the operators are executed serially. Executing the operators in a serial plan avoids scenarios when the startup, distribution, and coordination costs exceed the gains achieved by parallel operator execution.
 
@@ -1303,7 +1303,7 @@ The parallelism operator above the Index Seek operator is repartitioning its inp
 
 The topmost parallelism operator gathers results from several streams into a single stream. Partial aggregations performed by the Stream Aggregate operator below the parallelism operator are then accumulated into a single `SUM` value for each different value of the `O_ORDERPRIORITY` in the Stream Aggregate operator above the parallelism operator. Because this plan has two exchange segments, with degree of parallelism equal to 4, it uses eight worker threads.
 
-For more information on the operators used in this example, see the [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+For more information on the operators used in this example, see the [Showplan Logical and Physical Operators Reference](showplan-logical-and-physical-operators-reference.md).
 
 ### Parallel index operations
 

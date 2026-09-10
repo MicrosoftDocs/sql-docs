@@ -91,13 +91,13 @@ helpviewer_keywords:
   
 -   **Always On Availability Groups:**  
   
-     [sys.dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)  
+     [sys.dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-auto-page-repair-transact-sql.md)  
   
      Returns a row for every automatic page-repair attempt on any availability database on an availability replica that is hosted for any availability group by the server instance.  
   
 -   **Database mirroring:**  
   
-     [sys.dm_db_mirroring_auto_page_repair &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)  
+     [sys.dm_db_mirroring_auto_page_repair &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-objects/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)  
   
      Returns a row for every automatic page-repair attempt on any mirrored database on the server instance.  
   

@@ -88,7 +88,7 @@ Specifies a hard cap on the CPU bandwidth that all requests in the resource pool
 
 Attach the resource pool to specific schedulers. The default value is `AUTO`.
 
-Specifying `<scheduler_range_spec>` for `AFFINITY SCHEDULER` affinitizes the resource pool to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] schedulers identified by the given IDs. These IDs map to the values in the `scheduler_id` column in [sys.dm_os_schedulers](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).
+Specifying `<scheduler_range_spec>` for `AFFINITY SCHEDULER` affinitizes the resource pool to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] schedulers identified by the given IDs. These IDs map to the values in the `scheduler_id` column in [sys.dm_os_schedulers](../../relational-databases/system-dynamic-management-objects/sys-dm-os-schedulers-transact-sql.md).
 
 Specifying `<NUMA_node_range_spec>` for `AFFINITY NUMANODE` affinitizes the resource pool to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] schedulers that map to the logical CPUs that correspond to the given NUMA node or a range of nodes. You can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query to discover the mapping between the physical NUMA configuration and the [!INCLUDE[ssDE](../../includes/ssde-md.md)] scheduler IDs.
 

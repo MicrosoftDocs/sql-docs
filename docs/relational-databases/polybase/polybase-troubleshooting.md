@@ -30,50 +30,50 @@ Use the catalog views listed here to manage PolyBase operations.
 
 |View|Description|  
 |-|-|  
-|[sys.external_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifies external tables.|  
-|[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifies external data sources.|  
-|[sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifies external file formats.|  
+|[sys.external_tables (Transact-SQL)](../system-catalog-views/sys-external-tables-transact-sql.md)|Identifies external tables.|  
+|[sys.external_data_sources (Transact-SQL)](../system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifies external data sources.|  
+|[sys.external_file_formats (Transact-SQL)](../system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifies external file formats.|  
 
 ## Dynamic management views
 
 :::row:::
     :::column:::
-        [sys.dm_exec_compute_node_errors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)
+        [sys.dm_exec_compute_node_errors (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-compute-node-errors-transact-sql.md)
     :::column-end:::
     :::column:::
-        [sys.dm_exec_compute_node_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        [sys.dm_exec_compute_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)
-    :::column-end:::
-    :::column:::
-        [sys.dm_exec_distributed_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)
+        [sys.dm_exec_compute_node_status (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-compute-node-status-transact-sql.md)
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        [sys.dm_exec_distributed_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-requests-transact-sql.md)
+        [sys.dm_exec_compute_nodes (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-compute-nodes-transact-sql.md)
     :::column-end:::
     :::column:::
-        [sys.dm_exec_distributed_sql_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-sql-requests-transact-sql.md)
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        [sys.dm_exec_dms_services (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)
-    :::column-end:::
-    :::column:::
-        [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)
+        [sys.dm_exec_distributed_request_steps (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-distributed-request-steps-transact-sql.md)
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        [sys.dm_exec_external_operations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)
+        [sys.dm_exec_distributed_requests (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-distributed-requests-transact-sql.md)
     :::column-end:::
     :::column:::
-        [sys.dm_exec_external_work (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
+        [sys.dm_exec_distributed_sql_requests (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-distributed-sql-requests-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.dm_exec_dms_services (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-dms-services-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_exec_dms_workers (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-dms-workers-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.dm_exec_external_operations (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-external-operations-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_exec_external_work (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-external-work-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -245,13 +245,13 @@ The `sql_operation` tags indicate operations within SQL Server. The `dsql_operat
 
 ## <a id="to-monitor-nodes-in-a-polybase-group"></a> Monitor nodes in a PolyBase group
 
-After configuring a set of machines as part of a PolyBase scale out group, you can monitor the status of the machines. For details on creating a scale out group, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).
+After configuring a set of machines as part of a PolyBase scale out group, you can monitor the status of the machines. For details on creating a scale out group, see [PolyBase scale-out groups](polybase-scale-out-groups.md).
 
 1. Connect to SQL Server on the head node of a group.
 
-1. Run the DMV [sys.dm_exec_compute_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) to view all the nodes in the PolyBase Group.
+1. Run the DMV [sys.dm_exec_compute_nodes (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-compute-nodes-transact-sql.md) to view all the nodes in the PolyBase Group.
 
-1. Run the DMV [sys.dm_exec_compute_node_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) to view the status of all the nodes in the PolyBase Group.
+1. Run the DMV [sys.dm_exec_compute_node_status (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-compute-node-status-transact-sql.md) to view the status of all the nodes in the PolyBase Group.
 
 ## Hadoop name node high availability
 

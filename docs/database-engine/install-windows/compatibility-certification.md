@@ -78,9 +78,9 @@ There are several immediate benefits to database certification as a compatibilit
 
 - **Improve manageability and scalability** without requiring application changes, using enhancements that aren't gated by database compatibility level. In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] these include, for example:
 
-  - Rich monitoring and troubleshooting improvements, with new [System dynamic management views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md), [Extended Events](../../relational-databases/extended-events/extended-events.md), and [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
+  - Rich monitoring and troubleshooting improvements, with new [System dynamic management views](../../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md), [Extended Events](../../relational-databases/extended-events/extended-events.md), and [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
-  - Improved scalability, for example with [Automatic Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa), [Accelerated database recovery](../../relational-databases/accelerated-database-recovery-concepts.md), or [Memory-optimized tempdb metadata](../../relational-databases/in-memory-database.md#memory-optimized-tempdb-metadata).
+  - Improved scalability, for example with [Automatic Soft-NUMA](../configure-windows/soft-numa-sql-server.md#automatic-soft-numa), [Accelerated database recovery](../../relational-databases/accelerated-database-recovery-concepts.md), or [Memory-optimized tempdb metadata](../../relational-databases/in-memory-database.md#memory-optimized-tempdb-metadata).
 
 New databases are still set to the default compatibility level of the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] version. But when a database is restored or attached from any earlier version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to a new version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database retains its existing compatibility level.
 

@@ -49,7 +49,7 @@ Clustered indexes are implemented in the following ways:
 
   The preferred way to build indexes on large tables is to start with the clustered index and then build any nonclustered indexes. Consider setting the `ONLINE` option to `ON` when you create indexes on existing tables. When set to `ON`, long-term table locks aren't held. This enables queries or updates to the underlying table to continue. For more information, see [Perform index operations online](perform-index-operations-online.md).
 
-- The index key of a clustered index can't contain **varchar** columns that have existing data in the `ROW_OVERFLOW_DATA` allocation unit. If a clustered index is created on a **varchar** column and the existing data is in the `IN_ROW_DATA` allocation unit, subsequent insert or update actions on the column that would push the data off-row fail. To obtain information about tables that might contain row-overflow data, use the [sys.dm_db_index_physical_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management function.
+- The index key of a clustered index can't contain **varchar** columns that have existing data in the `ROW_OVERFLOW_DATA` allocation unit. If a clustered index is created on a **varchar** column and the existing data is in the `IN_ROW_DATA` allocation unit, subsequent insert or update actions on the column that would push the data off-row fail. To obtain information about tables that might contain row-overflow data, use the [sys.dm_db_index_physical_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management function.
 
 ## Permissions
 

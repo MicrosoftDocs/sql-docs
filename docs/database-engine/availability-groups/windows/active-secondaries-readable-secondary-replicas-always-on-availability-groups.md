@@ -25,7 +25,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  Though you cannot write data to secondary databases, you can write to read-write databases on the server instance that hosts the secondary replica, including user databases and system databases such as **tempdb**.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] also supports the re-routing of read-intent connection requests to a readable secondary replica (*read-only routing*). For information about read-only routing, see [Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] also supports the re-routing of read-intent connection requests to a readable secondary replica (*read-only routing*). For information about read-only routing, see [Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)](listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
   
 ##  <a name="bkmk_Benefits"></a> Benefits  
  Directing read-only connections to readable secondary replicas provides the following benefits:  
@@ -53,7 +53,7 @@ helpviewer_keywords:
     > [!NOTE]  
     >  Optionally, the database administrator can configure any of the availability replicas to exclude read-only connections when running under the primary role.
   
-     For more information, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+     For more information, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
     >[!WARNING]
     >  Only replicas that are on the same major build of SQL Server will be readable. See [Rolling upgrade basics](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags) for more information.
@@ -61,7 +61,7 @@ helpviewer_keywords:
   
 -   **Availability group listener**  
   
-     To support read-only routing, an availability group must possess an [availability group listener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). The read-only client must direct its connection requests to this listener, and the client's connection string must specify the application intent as "read-only." That is, they must be *read-intent connection requests*.  
+     To support read-only routing, an availability group must possess an [availability group listener](listeners-client-connectivity-application-failover.md). The read-only client must direct its connection requests to this listener, and the client's connection string must specify the application intent as "read-only." That is, they must be *read-intent connection requests*.  
   
 -   **Read only routing**  
   
@@ -72,12 +72,12 @@ helpviewer_keywords:
     -   Each availability replica that is to support read-only routing when it is the primary replica requires a read-only routing list. A given read-only routing list takes effect only when the local replica is running under the primary role. This list must be specified on a replica-by-replica basis, as needed. Typically, each read-only routing list would contain every read-only routing URL, with the URL of the local replica at the end of the list.  
   
         >[!NOTE]  
-        >Read-intent connection requests can be load-balanced across replicas. For more information, see [Configure load-balancing across read-only replicas](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#configure-load-balancing-across-read-only-replicas).  
+        >Read-intent connection requests can be load-balanced across replicas. For more information, see [Configure load-balancing across read-only replicas](configure-read-only-routing-for-an-availability-group-sql-server.md#configure-load-balancing-across-read-only-replicas).  
   
-     For more information, see [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
+     For more information, see [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  For information about availability group listeners and more information about read-only routing, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
+>  For information about availability group listeners and more information about read-only routing, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> Limitations and Restrictions  
  Some operations are not fully supported, as follows:  
@@ -95,14 +95,14 @@ helpviewer_keywords:
   
     -   Change Data Capture cannot be enabled only on a secondary replica database. Change Data Capture can be enabled on the primary replica database and the changes can be read from the CDC tables using the functions on the secondary replica database.  
   
--   Because read operations are mapped to snapshot isolation transaction level, the cleanup of ghost records on the primary replica can be blocked by transactions on one or more secondary replicas. The ghost record cleanup task will automatically clean up the ghost records for disk-based tables on the primary replica when they are no longer needed by any secondary replica.  This is similar to what is done when you run transaction(s) on the primary replica. In the extreme case on the secondary database, you will need to kill a long running read-query that is blocking the ghost cleanup. Note, the ghost clean can be blocked if the secondary replica gets disconnected or when data movement is suspended on the secondary database. Ghost records use physical space in a data file, this can cause space reuse issues, please see [ghost cleanup](../../../relational-databases/ghost-record-cleanup-process-guide.md) for more information. This state also prevents log truncation, so if this state persists, we recommend that you remove this secondary database from the availability group. There is no ghost record cleanup issue with memory-optimized tables because the row versions are kept in memory and are independent of the row versions on the primary replica.  
+-   Because read operations are mapped to snapshot isolation transaction level, the cleanup of ghost records on the primary replica can be blocked by transactions on one or more secondary replicas. The ghost record cleanup task will automatically clean up the ghost records for disk-based tables on the primary replica when they are no longer needed by any secondary replica.  This is similar to what is done when you run transaction(s) on the primary replica. In the extreme case on the secondary database, you will need to kill a long running read-query that is blocking the ghost cleanup. Note, the ghost clean can be blocked if the secondary replica gets disconnected or when data movement is suspended on the secondary database. Ghost records use physical space in a data file, this can cause space reuse issues, please see [ghost cleanup](../../../relational-databases/ghost-row-cleanup-process-guide.md) for more information. This state also prevents log truncation, so if this state persists, we recommend that you remove this secondary database from the availability group. There is no ghost record cleanup issue with memory-optimized tables because the row versions are kept in memory and are independent of the row versions on the primary replica.  
   
 -   The DBCC SHRINKFILE operation on files containing disk-based tables might fail on the primary replica if the file contains ghost records that are still needed on a secondary replica.  
   
 -   Beginning in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], readable secondary replicas can remain online even when the primary replica is offline due to user action or a failure, for example, synchronization was suspended due to a user command or a failure, or a replica is resolving status due to the WSFC being offline. However, read-only routing does not work in this situation because the availability group listener is offline as well. Clients must connect directly to the read-only secondary replicas for read-only workloads.  
   
 > [!NOTE]  
->  If you query the [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management view on a server instance that is hosting a readable secondary replica, you might encounter a REDO blocking issue. This is because this dynamic management view acquires an IS lock on the specified user table or view that can block requests by a REDO thread for an X lock on that user table or view.  
+>  If you query the [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management view on a server instance that is hosting a readable secondary replica, you might encounter a REDO blocking issue. This is because this dynamic management view acquires an IS lock on the specified user table or view that can block requests by a REDO thread for an X lock on that user table or view.  
   
 ##  <a name="bkmk_Performance"></a> Performance Considerations  
  This section discusses several performance considerations for readable secondary databases  
@@ -122,7 +122,7 @@ helpviewer_keywords:
   
  The primary replica sends log records of changes on primary database to the secondary replicas. On each secondary database, a dedicated redo thread applies the log records. On a read-access secondary database, a given data change does not appear in query results until the log record that contains the change has been applied to the secondary database and the transaction has been committed on primary database.  
   
- This means that there is some latency, usually only a matter of seconds, between the primary and secondary replicas. In unusual cases, however, for example if network issues reduce throughput, latency can become significant. Latency increases when I/O bottlenecks occur and when data movement is suspended. To monitor suspended data movement, you can use the [Always On Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) or the [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) dynamic management view.  
+ This means that there is some latency, usually only a matter of seconds, between the primary and secondary replicas. In unusual cases, however, for example if network issues reduce throughput, latency can become significant. Latency increases when I/O bottlenecks occur and when data movement is suspended. To monitor suspended data movement, you can use the [Always On Dashboard](use-the-always-on-dashboard-sql-server-management-studio.md) or the [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-database-replica-states-transact-sql.md) dynamic management view.  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Data Latency on databases with memory-optimized tables  
  In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] there were special considerations around data latency on active secondaries - see [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Active Secondaries: Readable Secondary Replicas](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Starting [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] there are no special considerations around data latency for memory-optimized tables. The expected data latency for memory-optimized tables is comparable to the latency for disk-based tables.  
@@ -144,7 +144,7 @@ helpviewer_keywords:
 ###  <a name="bkmk_Indexing"></a> Indexing  
  To optimize read-only workloads on the readable secondary replicas, you may want to create indexes on the tables in the secondary databases. Because you cannot make schema or data changes on the secondary databases, create indexes in the primary databases and allow the changes to transfer to the secondary database through the redo process.  
   
- To monitor index usage activity on a secondary replica, query the **user_seeks**, **user_scans**, and **user_lookups** columns of the [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) dynamic management view.  
+ To monitor index usage activity on a secondary replica, query the **user_seeks**, **user_scans**, and **user_lookups** columns of the [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-usage-stats-transact-sql.md) dynamic management view.  
   
 ###  <a name="Read-OnlyStats"></a> Statistics for Read-Only Access Databases  
  Statistics on columns of tables and indexed views are used to optimize query plans. For availability groups, statistics that are created and maintained on the primary databases are automatically persisted on the secondary databases as part of applying the transaction log records. However, the read-only workload on the secondary databases may need different statistics than those that are created on the primary databases. However, because secondary databases are restricted to read-only access, statistics cannot be created on the secondary databases.  
@@ -217,17 +217,17 @@ GO
   
 ##  <a name="bkmk_RelatedTasks"></a> Related Tasks  
   
--   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
--   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Monitor Availability Groups &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+-   [Monitor Availability Groups &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
--   [View Availability Replica Properties &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
+-   [View Availability Replica Properties &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 ## Related content
 

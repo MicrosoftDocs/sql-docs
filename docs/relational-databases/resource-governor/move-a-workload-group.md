@@ -28,7 +28,7 @@ You can't move a workload group if there's a pending resource governor configura
 
 ### Limitations
 
-- You can't move a workload group if there's a pending resource governor configuration operation. You can determine whether there's a configuration pending by querying the [sys.dm_resource_governor_configuration](../system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) dynamic management view to get the current value of the `is_configuration_pending` column.
+- You can't move a workload group if there's a pending resource governor configuration operation. You can determine whether there's a configuration pending by querying the [sys.dm_resource_governor_configuration](../system-dynamic-management-objects/sys-dm-resource-governor-configuration-transact-sql.md) dynamic management view to get the current value of the `is_configuration_pending` column.
 - If a workload group contains active sessions, moving it to a different resource pool fails when the `ALTER RESOURCE GOVERNOR RECONFIGURE` statement is executed to apply the change. To avoid this problem, you can take one of the following actions:
   - Wait until all sessions in the affected group disconnect, and then execute the `ALTER RESOURCE GOVERNOR RECONFIGURE` statement.
   - Explicitly stop sessions in the affected group by using the [KILL](../../t-sql/language-elements/kill-transact-sql.md) T-SQL command, and then execute the `ALTER RESOURCE GOVERNOR RECONFIGURE` statement. If you decide that you don't want to explicitly stop sessions, move the group to the original resource pool.

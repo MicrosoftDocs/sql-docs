@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=s
 Removes all elements from the plan cache, removes a specific plan from the plan cache by specifying a plan handle or SQL handle, or removes all cache entries associated with a specified resource pool.
 
 > [!NOTE]  
-> `DBCC FREEPROCCACHE` doesn't clear the execution statistics for natively compiled stored procedures. The procedure cache doesn't contain information about natively compiled stored procedures. Any execution statistics collected from procedure executions will appear in the execution statistics DMVs: [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) and [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).
+> `DBCC FREEPROCCACHE` doesn't clear the execution statistics for natively compiled stored procedures. The procedure cache doesn't contain information about natively compiled stored procedures. Any execution statistics collected from procedure executions will appear in the execution statistics DMVs: [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-procedure-stats-transact-sql.md) and [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-plan-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -58,22 +58,22 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 
 *plan_handle* uniquely identifies a query plan for a batch that has executed and whose plan resides in the plan cache. *plan_handle* is **varbinary(64)** and can be obtained from the following dynamic management objects:
 
-- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)
-- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-cached-plans-transact-sql.md)
+- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md)
 
 *sql_handle* is the SQL handle of the batch to be cleared. *sql_handle* is **varbinary(64)** and can be obtained from the following dynamic management objects:
 
-- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)
-- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
-- [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)
-- [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-cursors-transact-sql.md)
+- [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-xml-handles-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md)
 
-*pool_name* is the name of a Resource Governor resource pool. *pool_name* is **sysname** and can be obtained by querying the [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) dynamic management view.  
+*pool_name* is the name of a Resource Governor resource pool. *pool_name* is **sysname** and can be obtained by querying the [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-resource-pools-transact-sql.md) dynamic management view.  
 
-To associate a Resource Governor workload group with a resource pool, query the [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) dynamic management view. For information about the workload group for a session, query the [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) dynamic management view.
+To associate a Resource Governor workload group with a resource pool, query the [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) dynamic management view. For information about the workload group for a session, query the [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md) dynamic management view.
 
 #### WITH NO_INFOMSGS
 

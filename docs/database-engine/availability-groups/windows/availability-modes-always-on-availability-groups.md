@@ -51,7 +51,7 @@ For more information, see [Asynchronous-Commit Availability Mode](#AsyncCommitAv
 
 For more information, see [Synchronous-Commit Availability Mode](#SyncCommitAvMode), later in this article.
 
-*Configuration only mode* applies to availability groups that aren't on a Windows Server Failover Cluster. A replica in configuration only mode doesn't contain user data. In configuration only mode, the replica `master` database stores availability group configuration metadata. For more information, see [High availability and data protection for availability group configurations](../../../linux/sql-server-linux-availability-group-ha.md).
+*Configuration only mode* applies to availability groups that aren't on a Windows Server Failover Cluster. A replica in configuration only mode doesn't contain user data. In configuration only mode, the replica `master` database stores availability group configuration metadata. For more information, see [High availability and data protection for availability group configurations](../../../linux/business-continuity/availability-groups/high-availability.md).
 
 The following illustration shows an availability group with five availability replicas. The primary replica and one secondary replica are configured for synchronous-commit mode with automatic failover. Another secondary replica is configured for synchronous-commit mode with only planned manual failover, and two secondary replicas are configured for asynchronous-commit mode, which supports only forced manual failover (typically called *forced failover*).
 
@@ -111,7 +111,7 @@ Once all of its databases are synchronized, a secondary replica enters the `HEAL
 - You change any secondary replica to synchronous-commit availability mode. This causes that secondary replica to be marked as in the `PARTIALLY_HEALTHY` synchronization-health state until all of its databases are in the `SYNCHRONIZED` synchronization state.
 
 > [!TIP]  
-> To view the synchronization health of an availability group, availability replica, or availability database, query the `synchronization_health` or `synchronization_health_desc` column of [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md), [sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md), or [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md), respectively.
+> To view the synchronization health of an availability group, availability replica, or availability database, query the `synchronization_health` or `synchronization_health_desc` column of [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-availability-group-states-transact-sql.md), [sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-availability-replica-states-transact-sql.md), or [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-database-replica-states-transact-sql.md), respectively.
 
 <a id="HowSyncWorks"></a>
 
@@ -186,7 +186,7 @@ Implementing read-only access to secondary replicas is useful if your read-only 
 
 The primary replica sends log records of changes on primary database to the secondary replicas. On each secondary database, a dedicated redo thread applies the log records. On a read-access secondary database, a given data change doesn't appear in query results until the log record that contains the change has been applied to the secondary database and the transaction has been committed on primary database.
 
-This means that there's some latency, usually only a matter of seconds, between the primary and secondary replicas. In unusual cases, however, for example if network issues reduce throughput, latency can become significant. Latency increases when I/O bottlenecks occur and when data movement is suspended. To monitor suspended data movement, you can use the [Use the Always On Availability Group dashboard (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md) or the [sys.dm_hadr_database_replica_states dynamic management view](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+This means that there's some latency, usually only a matter of seconds, between the primary and secondary replicas. In unusual cases, however, for example if network issues reduce throughput, latency can become significant. Latency increases when I/O bottlenecks occur and when data movement is suspended. To monitor suspended data movement, you can use the [Use the Always On Availability Group dashboard (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md) or the [sys.dm_hadr_database_replica_states dynamic management view](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-database-replica-states-transact-sql.md).
 
 To reduce latency in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] and later versions, you can reduce the time (in milliseconds) that the primary replica takes to commit transactions to the secondary replica. For more information, see [Server configuration: availability group commit time (ms)](../../configure-windows/availability-group-commit-time-server-configuration-options.md).
 
@@ -209,9 +209,9 @@ To reduce latency in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] an
 
 **To view availability group, availability replica, and database states**
 
-- [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)
-- [sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)
-- [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)
+- [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-availability-group-states-transact-sql.md)
+- [sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-availability-replica-states-transact-sql.md)
+- [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-database-replica-states-transact-sql.md)
 
 ## Related content
 

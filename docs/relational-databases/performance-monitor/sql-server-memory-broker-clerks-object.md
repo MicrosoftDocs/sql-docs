@@ -29,7 +29,7 @@ There is an instance of the counter for the buffer pool, and the columnstore obj
 
 ## Example
 
-You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters

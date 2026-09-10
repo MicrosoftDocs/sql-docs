@@ -31,7 +31,7 @@ To retrieve component status by using the Admin Console:
   
 ## Monitor Component Status By Using System Views
 
-To retrieve component status by using system views, use [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). For example, the following query retrieves the status for all components.  
+To retrieve component status by using system views, use [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-status-transact-sql.md). For example, the following query retrieves the status for all components.  
   
 ```sql  
 SELECT   

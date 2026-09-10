@@ -44,13 +44,13 @@ helpviewer_keywords:
   
 -   Set warning thresholds on key performance metrics.  
   
-     If a new status row contains a value that exceeds a threshold, an informational event is sent to the Windows event log. A system administrator can then manually configure alerts based on these events. For more information, see [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+     If a new status row contains a value that exceeds a threshold, an informational event is sent to the Windows event log. A system administrator can then manually configure alerts based on these events. For more information, see [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ###  <a name="tools_for_monitoring_dbm_status"></a> Tools for Monitoring Database Mirroring Status  
  Mirroring status can be monitored using either Database Mirroring Monitor or the **sp_dbmmonitorresults** system stored procedure. These tools can be used to monitor database mirroring on any mirrored database on the local server instance by both System administrators, that is, members of the **sysadmin** fixed server role, and user who have been added to the **dbm_monitor** fixed database role in the **msdb** database by a system administrator. When using either tool, a system administrator can also manually refresh mirroring status.  
   
 > [!NOTE]  
->  System administrators can also configure and view warning thresholds for key performance metrics. For more information, see [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+>  System administrators can also configure and view warning thresholds for key performance metrics. For more information, see [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 -   Database Mirroring Monitor  
   
@@ -58,7 +58,7 @@ helpviewer_keywords:
   
      The monitor displays the status, including performance metrics, for a selected database on the **Status** tabbed page. The content of this page comes from both the principal and mirror server instances. The page is filled asynchronously as status is gathered through separate connections to the principal and mirror server instances. The monitor tries to update the status table at 30-second intervals. The update succeeds only if the table has not been updated within 15 seconds and the user is a member of the **sysadmin** fixed server role. For a summary of the information reported on the **Status** page, see [Status Displayed by the Database Mirroring Monitor](#perf_metrics_of_dbm_monitor), later in this topic.  
   
-     For an introduction to the Database Mirroring Monitor interface, see [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md). For information on launching Database Mirroring Monitor, see [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md).  
+     For an introduction to the Database Mirroring Monitor interface, see [Database Mirroring Monitor Overview](database-mirroring-monitor-overview.md). For information on launching Database Mirroring Monitor, see [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md).  
   
 -   System stored procedures  
   
@@ -219,7 +219,7 @@ helpviewer_keywords:
   
 -   Witness address  
   
-     Network address of the witness server instance. For information about the format of this address, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     Network address of the witness server instance. For information about the format of this address, see [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md).  
   
 -   Operating mode  
   
@@ -261,7 +261,7 @@ helpviewer_keywords:
   
      This dynamic management view returns a row for each database mirroring network connection.  
   
-     For more information, see [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md).  
+     For more information, see [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-objects/database-mirroring-sys-dm-db-mirroring-connections.md).  
   
 ###  <a name="DbmPerfCounters"></a> Database Mirroring Performance Counters  
  Performance counters let you monitor database mirroring performance. For example, you can examine the **Transaction Delay** counter to see if database mirroring is affecting performance on the principal server, you can examine the **Redo Queue** and **Log Send Queue** counters to see how well the mirror database is keeping up with the principal database. You can examine the **Log Bytes Sent/sec** counter to monitor the amount of log sent per second.  
@@ -287,11 +287,11 @@ helpviewer_keywords:
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
+-   [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
--   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
+-   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)  
   
--   [View the State of a Mirrored Database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
+-   [View the State of a Mirrored Database &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
  **Stored procedures**  
   

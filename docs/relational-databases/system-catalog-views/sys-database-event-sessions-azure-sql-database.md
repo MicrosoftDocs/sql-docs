@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 # sys.database_event_sessions
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/asdb-asmi-fabricsqldb.md)]
 
-The `sys.database_event_sessions` dynamic management view (DMV) lists all the database-scoped event session definitions that exist in the current database. For information about *active* database-scoped event sessions, see [sys.dm_xe_database_sessions](../system-dynamic-management-views/sys-dm-xe-database-sessions-azure-sql-database.md).
+The `sys.database_event_sessions` dynamic management view (DMV) lists all the database-scoped event session definitions that exist in the current database. For information about *active* database-scoped event sessions, see [sys.dm_xe_database_sessions](../system-dynamic-management-objects/sys-dm-xe-database-sessions-azure-sql-database.md).
 
 - Azure SQL Database and SQL database in Fabric support only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). 
 - Azure SQL Managed Instance supports both database-scoped sessions and [server-scoped sessions](../extended-events/extended-events.md). Server-scoped sessions are recommended for SQL managed instances. For more information, see [CREATE EVENT SESSION code examples](../../t-sql/statements/create-event-session-transact-sql.md#code-examples-can-differ-for-azure-sql-database-and-sql-managed-instance).

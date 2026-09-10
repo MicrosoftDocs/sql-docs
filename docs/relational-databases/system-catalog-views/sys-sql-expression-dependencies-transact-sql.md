@@ -34,7 +34,7 @@ You can use this catalog view to report dependency information for the following
 
 - Cross-database and cross-server entities. Entity names are reported; however, entity IDs aren't resolved.
 
-- Column-level dependencies on schema-bound entities. Column-level dependencies for non-schema-bound objects can be returned by using [sys.dm_sql_referenced_entities](../system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).
+- Column-level dependencies on schema-bound entities. Column-level dependencies for non-schema-bound objects can be returned by using [sys.dm_sql_referenced_entities](../system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md).
 
 - Server-level DDL triggers when in the context of the `master` database.
 

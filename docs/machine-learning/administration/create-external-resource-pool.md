@@ -184,7 +184,7 @@ Check the server memory configuration and CPU for each of the workload groups. V
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
     ```
   
-     No information will be displayed because the pools were created with an affinity of AUTO. For more information, see [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
+     No information will be displayed because the pools were created with an affinity of AUTO. For more information, see [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
 ## Related content
 

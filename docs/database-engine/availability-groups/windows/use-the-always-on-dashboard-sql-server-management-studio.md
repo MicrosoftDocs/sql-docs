@@ -71,7 +71,7 @@ helpviewer_keywords:
 -   **Manual**. Indicates that no replica is automatic-failover mode.  
   
  **Issues**  
- Click the **Issues** link to open troubleshooting documentation for a given issue. For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
+ Click the **Issues** link to open troubleshooting documentation for a given issue. For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Click the column headings to sort the availability group information by the name of the availability group, primary instance, failover mode, or Issue.  
@@ -105,7 +105,7 @@ The **Availability replica** pane displays the following columns:
  The name of the server instance that hosts the availability replica. This column is shown by default.  
   
  **Role**  
- Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] roles, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). This column is shown by default.  
+ Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] roles, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md). This column is shown by default.  
   
  **Failover Mode**  
  Displays the failover mode for which the replica is configured. The possible failover mode values are:  
@@ -129,7 +129,7 @@ The **Availability replica** pane displays the following columns:
 -   **NULL**. Unknown state. This value occurs when the local server instance cannot communicate with the WSFC failover cluster (that is the local node is not part of WSFC quorum).  
   
  **Issues**  
- Lists the issue name. This value is shown by default. For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
+ Lists the issue name. This value is shown by default. For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Availability Mode**  
  Indicates the replica property that you set separately for each availability replica. This value is hidden by default. The possible values are:  
@@ -240,7 +240,7 @@ The **Availability replica** pane displays the following columns:
 -   **Warnings**. Click to display the thresholds and warnings issues.   
 -   **Critical**. Click to display the critical issues.  
   
- For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
+ For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Suspended**  
  Indicates whether the database is **Suspended** or has been **Resumed**. This value is hidden by default.  
@@ -314,7 +314,7 @@ The **Availability replica** pane displays the following columns:
 
    > [!NOTE]  
    >  Most data is based on sys.dm_hadr_database_replica_states, so some restriction may apply. 
-   >  For more information, please see [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+   >  For more information, please see [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-database-replica-states-transact-sql.md).
 
 
 ## Always On Availability Group latency reports
@@ -326,7 +326,7 @@ For more information, please see [Always On Availability Group latency reports](
 
 ## Related Tasks  
   
--   [Use Always On Policies to View the Health of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Use Always On Policies to View the Health of an Availability Group &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## Related content
 

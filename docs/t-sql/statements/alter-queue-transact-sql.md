@@ -106,7 +106,7 @@ WITH
 Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as an offline operation because page level locks are explicitly disabled on queues.  
   
 > [!TIP]  
->  For general guidance  regarding index fragmentation, when fragmentation is between 5% and 30%, reorganize the index. When fragmentation is above 30%, rebuild the index. However, these numbers are only for general guidance as a starting point for your environment. To determine the amount of index  fragmentation, use [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) - see example G in that article for examples.  
+>  For general guidance  regarding index fragmentation, when fragmentation is between 5% and 30%, reorganize the index. When fragmentation is above 30%, rebuild the index. However, these numbers are only for general guidance as a starting point for your environment. To determine the amount of index  fragmentation, use [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) - see example G in that article for examples.  
   
  MOVE TO { *file_group* | "default" }  
  **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  

@@ -21,7 +21,7 @@ dev_langs:
 # sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contains one row for each index and table in the current database. XML indexes are not supported in this view. Partitioned tables and indexes are not fully supported in this view; use the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view instead.  
+  Contains one row for each index and table in the current database. XML indexes are not supported in this view. Partitioned tables and indexes are not fully supported in this view; use the [sys.indexes](../system-catalog-views/sys-indexes-transact-sql.md) catalog view instead.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -52,7 +52,7 @@ dev_langs:
 |**impid**|**smallint**|Index implementation flag.<br /><br /> Returns 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|Used to constrain the considered lock granularities for an index. For example, to minimize locking cost, a lookup table that is essentially read-only could be set up to do only table-level locking.|  
 |**pgmodctr**|**int**|Returns 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**keys**|**varbinary(816)**|List of the column IDs of the columns that make up the index key.<br /><br /> Returns NULL.<br /><br /> To display the index key columns, use [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**keys**|**varbinary(816)**|List of the column IDs of the columns that make up the index key.<br /><br /> Returns NULL.<br /><br /> To display the index key columns, use [sys.sysindexkeys](sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Name of the index or statistic. Returns NULL when **indid** = 0. Modify your application to look for a NULL heap name.|  
 |**statblob**|**image**|Statistics binary large object (BLOB).<br /><br /> Returns NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -61,7 +61,7 @@ dev_langs:
 ## Remarks  
  Columns defined as reserved should not be used.  
   
- The columns **dpages**, **reserved**, and **used** will not return accurate results if the table or index contains data in the ROW_OVERFLOW allocation unit. In addition, the page counts for each index are tracked separately and are not aggregated for the base table. To view page counts, use the [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) or [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) catalog views, or the [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) dynamic management view.  
+ The columns **dpages**, **reserved**, and **used** will not return accurate results if the table or index contains data in the ROW_OVERFLOW allocation unit. In addition, the page counts for each index are tracked separately and are not aggregated for the base table. To view page counts, use the [sys.allocation_units](../system-catalog-views/sys-allocation-units-transact-sql.md) or [sys.partitions](../system-catalog-views/sys-partitions-transact-sql.md) catalog views, or the [sys.dm_db_partition_stats](../system-dynamic-management-objects/sys-dm-db-partition-stats-transact-sql.md) dynamic management view.  
   
  In SQL Server 2000 and earlier, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] maintained row-level modification counters. Such counters are now maintained at the column level. Therefore, the **rowmodctr** column is calculated and produces results that are similar to the results in earlier versions, but are not exact.  
   
@@ -69,7 +69,7 @@ dev_langs:
   
 -   Do nothing. The new **rowmodctr** value will frequently help you determine when to update statistics because the behavior is reasonably close to the results of earlier versions.  
   
--   Use AUTO_UPDATE_STATISTICS. For more information see, [Statistics](../../relational-databases/statistics/statistics.md).  
+-   Use AUTO_UPDATE_STATISTICS. For more information see, [Statistics](../statistics/statistics.md).  
   
 -   Use a time limit to determine when to update statistics. For example, every hour, every day, or every week.  
   

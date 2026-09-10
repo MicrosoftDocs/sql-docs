@@ -56,7 +56,7 @@ A rowgroup is a group of rows that are compressed into columnstore format at the
 
 For high performance and high compression rates, the columnstore index slices the table into rowgroups, and then compresses each rowgroup in a column-wise manner. The number of rows in the rowgroup must be large enough to improve compression rates, and small enough to benefit from in-memory operations.
 
-A rowgroup from where all data has been deleted transitions from COMPRESSED into TOMBSTONE state, and is later removed by a background process named the tuple-mover. For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md).
+A rowgroup from where all data has been deleted transitions from COMPRESSED into TOMBSTONE state, and is later removed by a background process named the tuple-mover. For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md).
 
 > [!TIP]  
 > Having too many small rowgroups decreases the columnstore index quality. Until [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)], a reorganize operation is required to merge smaller COMPRESSED rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups.  
@@ -94,7 +94,7 @@ When a delta rowgroup reaches the maximum number of rows, it transitions from an
 
 When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later by the tuple-mover when there's no reference to it.
 
-For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md).
+For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md).
 
 > [!NOTE]  
 > Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.
@@ -218,28 +218,28 @@ All of the columns in a columnstore index are stored in the metadata as included
         [sys.column_store_row_groups (Transact-SQL)](../system-catalog-views/sys-column-store-row-groups-transact-sql.md)
     :::column-end:::
     :::column:::
-        [sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)
+        [sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)
+        [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)
     :::column-end:::
     :::column:::
-        [sys.dm_column_store_object_pool (Transact-SQL)](../system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        [sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)
-    :::column-end:::
-    :::column:::
-        [sys.dm_db_index_operational_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)
+        [sys.dm_column_store_object_pool (Transact-SQL)](../system-dynamic-management-objects/sys-dm-column-store-object-pool-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        [sys.dm_db_index_physical_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
+        [sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_db_index_operational_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.dm_db_index_physical_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -270,7 +270,7 @@ All of the columns in a columnstore index are stored in the metadata as included
 - [Columnstore indexes - query performance](columnstore-indexes-query-performance.md)
 - [Get started with columnstore indexes for real-time operational analytics](get-started-with-columnstore-for-real-time-operational-analytics.md)
 - [Columnstore indexes in data warehousing](columnstore-indexes-data-warehouse.md)
-- [Columnstore indexes defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)
+- [Columnstore indexes defragmentation](reorganize-and-rebuild-indexes.md)
 - [Index architecture and design guide](../sql-server-index-design-guide.md)
 - [Columnstore index architecture](../sql-server-index-design-guide.md#columnstore_index)
 - [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)

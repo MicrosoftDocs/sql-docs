@@ -411,9 +411,12 @@ For a columnstore index, the locking behavior is different because it's internal
 
 #### KEEPIDENTITY
 
-`KEEPIDENTITY` isn't supported in Fabric Data Warehouse. To bulk ingest source identity values into an identity column, use [COPY INTO with `IDENTITY_INSERT`](copy-into-transact-sql.md#k-load-data-into-identity-columns-with-identity_insert).
+`KEEPIDENTITY` isn't supported for `BULK INSERT` in Fabric Data Warehouse.
 
-When you use `BULK INSERT` to load a table that has an identity column, use a [format file](#formatfile) to explicitly map source fields to destination columns. Explicit mapping prevents ordinal shifts, especially when the source file doesn't contain the identity column or when the identity column appears in the middle of the table schema.
+> [!NOTE]  
+> `BULK INSERT` can't load values into an identity column. This limitation applies even when `SET IDENTITY_INSERT <tableName> ON` is enabled for the session. To preserve source identity values, use [COPY INTO with `IDENTITY_INSERT`](copy-into-transact-sql.md#k-load-data-into-identity-columns-with-identity_insert). 
+
+Using `BULK INSERT` to load data into a table that includes an identity column is supported, as long as Fabric Data Warehouse generates the identity values. In this case, use a [format file](#formatfile) to explicitly map source fields to destination columns. Explicit mapping prevents ordinal shifts, especially when the source file omits the identity column or when the identity column appears in the middle of the table schema.
 
 ::: moniker-end
 

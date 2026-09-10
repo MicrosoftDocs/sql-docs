@@ -43,7 +43,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ## Remarks  
  The KILL QUERY NOTIFICATION SUBSCRIPTION statement removes query notification subscriptions without producing a notification message.  
   
- *subscription_id* is the id for the subscription as shown in the dynamic management view [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ *subscription_id* is the id for the subscription as shown in the dynamic management view [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-objects/query-notifications-sys-dm-qn-subscriptions.md).  
   
  If the specified subscription id does not exist, the statement produces an error.  
   

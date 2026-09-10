@@ -146,7 +146,7 @@ The [!INCLUDE [ssDE](../../includes/ssde-md.md)] exposes security information in
 |---------------------------|---------|
 |[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] security catalog views, which return information about database-level and server-level permissions, principals, roles, and so on. In addition, there are catalog views that provide information about encryption keys, certificates, and credentials.|[Security Catalog Views (Transact-SQL)](../system-catalog-views/security-catalog-views-transact-sql.md)|
 |[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] security functions, which return information about the current user, permissions and schemas.|[Security Functions (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)|
-|[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] security dynamic management views.|[Security-Related Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|
+|[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] security dynamic management views.|[Security-Related Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-objects/security-related-dynamic-management-views-and-functions-transact-sql.md)|
 
 ## Related content
 

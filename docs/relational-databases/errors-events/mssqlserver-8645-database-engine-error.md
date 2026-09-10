@@ -28,9 +28,9 @@ helpviewer_keywords:
 
 ## Explanation
 
-This error is raised if a SQL Server request has waited for a query execution (QE) memory grant for an extended period of time and memory wasn't available. Query execution memory is primarily used for sort operations, hash operations, bulk copy operations, and index creation and population. A query that performs one of these operations requests a memory grant. If no memory is available, the query is set to wait on a [RESOURCE_SEMAPHORE](../system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md) until memory becomes available. 
+This error is raised if a SQL Server request has waited for a query execution (QE) memory grant for an extended period of time and memory wasn't available. Query execution memory is primarily used for sort operations, hash operations, bulk copy operations, and index creation and population. A query that performs one of these operations requests a memory grant. If no memory is available, the query is set to wait on a [RESOURCE_SEMAPHORE](../system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md) until memory becomes available. 
 
-If the memory isn't available after waiting for a timeout period dynamically determined by the query cost as estimated by the query optimizer, then SQL Server terminates the query with error 8645 `A timeout occurred while waiting for memory resources to execute the query in the resource pool 'default'.` The timeout value varies slightly between versions of SQL Server, but has a max wait timeout value of 24 hours. You can see the timeout value set at the server level by looking at `timeout_sec` in [sys.dm_exec_query_memory_grants](../system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).
+If the memory isn't available after waiting for a timeout period dynamically determined by the query cost as estimated by the query optimizer, then SQL Server terminates the query with error 8645 `A timeout occurred while waiting for memory resources to execute the query in the resource pool 'default'.` The timeout value varies slightly between versions of SQL Server, but has a max wait timeout value of 24 hours. You can see the timeout value set at the server level by looking at `timeout_sec` in [sys.dm_exec_query_memory_grants](../system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md).
 
 For a detailed explanation with troubleshooting steps, review [Slow performance or low memory issues caused by memory grants in SQL Server](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-grant-issues).
 
@@ -70,6 +70,6 @@ The following list summarizes the steps detailed in the aforementioned article. 
 
 ## Related content
 
-- [sys.dm_exec_query_memory_grants](../system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md)
 - [Troubleshoot slow performance or low memory issues caused by memory grants in SQL Server](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-grant-issues)
 - [Server memory configuration](../../database-engine/configure-windows/server-memory-server-configuration-options.md#recommendations)

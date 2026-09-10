@@ -27,7 +27,7 @@ dev_langs:
   Returns the text of the SQL statement for the specified SQL handle.  
   
 > [!IMPORTANT]  
->  This feature will be removed in a future version of Microsoft SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Use sys.dm_exec_sql_text instead. For more information, see [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  This feature will be removed in a future version of Microsoft SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Use sys.dm_exec_sql_text instead. For more information, see [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -55,13 +55,13 @@ sys.fn_get_sql ( SqlHandle )
 |text|**text**|Is the text of the SQL statement. Is NULL for encrypted objects.|  
   
 ## Remarks  
- You can obtain a valid SQL handle from the sql_handle column of the [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) dynamic management view.  
+ You can obtain a valid SQL handle from the sql_handle column of the [sys.dm_exec_requests &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md) dynamic management view.  
   
  If you pass a handle that no longer exists in cache, **fn_get_sql** returns an empty result set. If you pass a handle that is not valid, the batch stops, and an error message is returned.  
   
  The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] cannot cache some [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, such as bulk copy statements and statements with string literals that are larger than 8 KB. Handles to those statements cannot be retrieved by using fn_get_sql.  
   
- The **text** column of the result set is filtered for text that may contain passwords. For more information about security related stored procedures that are not monitored, see [Filter a Trace](../../relational-databases/sql-trace/filter-a-trace.md).  
+ The **text** column of the result set is filtered for text that may contain passwords. For more information about security related stored procedures that are not monitored, see [Filter a Trace](../sql-trace/filter-a-trace.md).  
   
  The fn_get_sql function returns information that is similar to the [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) command. The following are examples of when the fn_get_sql function can be used because DBCC INPUTBUFFER cannot be:  
   

@@ -136,7 +136,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 
 ## Metadata
 
- Use [sys.dm_pdw_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md) to view the progress of copying the selected data to the remote SMP server. Rows with type PARALLEL_COPY_READER contain this information.  
+ Use [sys.dm_pdw_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-pdw-dms-workers-transact-sql.md) to view the progress of copying the selected data to the remote SMP server. Rows with type PARALLEL_COPY_READER contain this information.  
 
 ## Security
 

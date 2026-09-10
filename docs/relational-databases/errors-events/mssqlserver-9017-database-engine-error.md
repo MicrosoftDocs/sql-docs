@@ -69,7 +69,7 @@ To resolve this problem, follow these steps:
    ORDER BY Total_VLF_count DESC;
    ```
 
-   For more information, see [sys.dm_db_log_info](../system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md).
+   For more information, see [sys.dm_db_log_info](../system-dynamic-management-objects/sys-dm-db-log-info-transact-sql.md).
 
 1. Reduce your transaction log by using `DBCC SHRINKDB`/`DBCC SHRINKFILE` or by using SQL Server Management Studio.
 

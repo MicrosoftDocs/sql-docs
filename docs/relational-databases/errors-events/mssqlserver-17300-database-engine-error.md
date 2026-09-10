@@ -42,6 +42,6 @@ Perform the following tasks as appropriate:
 
 - [sys.sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md)
 - [Server configuration options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md)
 - [Server configuration: user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)
 - [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)

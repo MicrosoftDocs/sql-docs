@@ -187,7 +187,7 @@ Numbered procedures can't use the **xml** or CLR user-defined types and can't be
 
 A parameter declared in the procedure. Specify a parameter name by using the at sign (`@`) as the first character. The parameter name must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Parameters are local to the procedure; the same parameter names can be used in other procedures.
 
-One or more parameters can be declared; the maximum is 2,100. The value of each declared parameter must be supplied by the user when the procedure is called unless a default value for the parameter is defined or the value is set to equal another parameter. If a procedure contains [table-valued parameters](../../relational-databases/tables/use-table-valued-parameters-database-engine.md), and the parameter is missing in the call, an empty table is passed in. Parameters can take the place only of constant expressions; they can't be used instead of table names, column names, or the names of other database objects. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).
+One or more parameters can be declared; the maximum is 2,100. The value of each declared parameter must be supplied by the user when the procedure is called unless a default value for the parameter is defined or the value is set to equal another parameter. If a procedure contains [table-valued parameters](../../relational-databases/tables/use-table-valued-parameters-database-engine.md), and the parameter is missing in the call, an empty table is passed in. Parameters can take the place only of constant expressions; they can't be used instead of table names, column names, or the names of other database objects. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../language-elements/execute-transact-sql.md).
 
 Parameters can't be declared if FOR REPLICATION is specified.
 
@@ -203,7 +203,7 @@ The data type of the parameter and the schema to which the data type belongs.
 
 **Guidelines for CLR procedures**:
 
-- All of the native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types that have an equivalent in managed code can be used as parameters. For more information about the correspondence between CLR types and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md). For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types and their syntax, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).
+- All of the native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types that have an equivalent in managed code can be used as parameters. For more information about the correspondence between CLR types and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md). For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types and their syntax, see [Data Types &#40;Transact-SQL&#41;](../data-types/data-types-transact-sql.md).
 
 - Table-valued or **cursor** data types can't be used as parameters.
 - If the data type of the parameter is a CLR user-defined type, you must have EXECUTE permission on the type.
@@ -230,7 +230,7 @@ Indicates that the parameter can't be updated or modified within the body of the
 
 Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't cache a query plan for this procedure, forcing it to be compiled each time it is executed. For more information regarding the reasons for forcing a recompile, see [Recompile a Stored Procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). This option can't be used when FOR REPLICATION is specified or for CLR procedures.
 
-To instruct the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to discard query plans for individual queries inside a procedure, use the RECOMPILE query hint in the definition of the query. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).
+To instruct the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to discard query plans for individual queries inside a procedure, use the RECOMPILE query hint in the definition of the query. For more information, see [Query Hints &#40;Transact-SQL&#41;](../queries/hints-transact-sql-query.md).
 
 #### ENCRYPTION
 
@@ -248,7 +248,7 @@ Specifies the security context under which to execute the procedure.
 
 For natively compiled stored procedures, there are no limitations on the `EXECUTE AS` clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier versions, the `SELF`, `OWNER`, and *'user_name'* clauses are supported with natively compiled stored procedures.
 
-For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).
+For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](execute-as-clause-transact-sql.md).
 
 #### FOR REPLICATION
 
@@ -311,13 +311,13 @@ Indicates that the procedure is natively compiled. NATIVE_COMPILATION, SCHEMABIN
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
 
-Ensures that tables that are referenced by a procedure can't be dropped or altered. SCHEMABINDING is required in natively compiled stored procedures. (For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).) The SCHEMABINDING restrictions are the same as they are for user-defined functions. For more information, see the SCHEMABINDING section in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).
+Ensures that tables that are referenced by a procedure can't be dropped or altered. SCHEMABINDING is required in natively compiled stored procedures. (For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).) The SCHEMABINDING restrictions are the same as they are for user-defined functions. For more information, see the SCHEMABINDING section in [CREATE FUNCTION &#40;Transact-SQL&#41;](create-function-transact-sql.md).
 
 #### LANGUAGE = [N] 'language'
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
 
-Equivalent to [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) session option. LANGUAGE = [N] 'language' is required.
+Equivalent to [SET LANGUAGE &#40;Transact-SQL&#41;](set-language-transact-sql.md) session option. LANGUAGE = [N] 'language' is required.
 
 #### TRANSACTION ISOLATION LEVEL
 
@@ -325,7 +325,7 @@ Equivalent to [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-l
 
 Required for natively compiled stored procedures. Specifies the transaction isolation level for the stored procedure. The options are as follows:
 
-For more information about these options, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).
+For more information about these options, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](set-transaction-isolation-level-transact-sql.md).
 
 #### REPEATABLE READ
 
@@ -349,7 +349,7 @@ Specifies that data read by any statement in a transaction is the transactionall
 
 Specifies the first day of the week to a number from 1 through 7. `DATEFIRST` is optional. If it isn't specified, the setting is inferred from the specified language.
 
-For more information, see [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).
+For more information, see [SET DATEFIRST &#40;Transact-SQL&#41;](set-datefirst-transact-sql.md).
 
 #### DATEFORMAT = *format*
 
@@ -357,7 +357,7 @@ For more information, see [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/sta
 
 Specifies the order of the month, day, and year date parts for interpreting **date**, **smalldatetime**, **datetime**, **datetime2**, and **datetimeoffset** character strings. DATEFORMAT is optional. If it isn't specified, the setting is inferred from the specified language.
 
-For more information, see [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).
+For more information, see [SET DATEFORMAT &#40;Transact-SQL&#41;](set-dateformat-transact-sql.md).
 
 #### DELAYED_DURABILITY = { OFF | ON }
 
@@ -397,7 +397,7 @@ See [Examples](#examples) toward the end of this article for many more examples.
 
 Although this isn't an exhaustive list of best practices, these suggestions may improve procedure performance.
 
-- Use the SET NOCOUNT ON statement as the first statement in the body of the procedure. That is, place it just after the AS keyword. This turns off messages that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sends back to the client after any SELECT, INSERT, UPDATE, MERGE, and DELETE statements are executed. This keeps the output generated to a minimum for clarity. There is no measurable performance benefit however on today's hardware. For information, see [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).
+- Use the SET NOCOUNT ON statement as the first statement in the body of the procedure. That is, place it just after the AS keyword. This turns off messages that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sends back to the client after any SELECT, INSERT, UPDATE, MERGE, and DELETE statements are executed. This keeps the output generated to a minimum for clarity. There is no measurable performance benefit however on today's hardware. For information, see [SET NOCOUNT &#40;Transact-SQL&#41;](set-nocount-transact-sql.md).
 - Use schema names when creating or referencing database objects in the procedure. It takes less processing time for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to resolve object names if it doesn't have to search multiple schemas. It also prevents permission and access problems caused by a user's default schema being assigned when objects are created without specifying the schema.
 - Avoid wrapping functions around columns specified in the WHERE and JOIN clauses. Doing so makes the columns non-deterministic and prevents the query processor from using indexes.
 - Avoid using scalar functions in SELECT statements that return many rows of data. Because the scalar function must be applied to every row, the resulting behavior is like row-based processing and degrades performance.
@@ -480,7 +480,7 @@ The following table lists the catalog views and dynamic management views that yo
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Returns the definition of a [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure. The text of a procedure created with the ENCRYPTION option can't be viewed by using the `sys.sql_modules` catalog view.|
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Returns information about a CLR procedure.|
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Returns information about the parameters that are defined in a procedure|
-|[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|Returns the objects that are referenced by a procedure.|
+|[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-objects/sys-dm-sql-referencing-entities-transact-sql.md)|Returns the objects that are referenced by a procedure.|
 
 To estimate the size of a compiled procedure, use the following Performance Monitor Counters.
 
@@ -993,7 +993,7 @@ Examples in this section use the EXECUTE AS clause to set the security context i
 
 #### M. Use the EXECUTE AS clause
 
-The following example shows using the [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) clause to specify the security context in which a procedure can be executed. In the example, the option `CALLER` specifies that the procedure can be executed in the context of the user that calls it.
+The following example shows using the [EXECUTE AS](execute-as-clause-transact-sql.md) clause to specify the security context in which a procedure can be executed. In the example, the option `CALLER` specifies that the procedure can be executed in the context of the user that calls it.
 
 ```sql
 CREATE PROCEDURE Purchasing.uspVendorAllInfo

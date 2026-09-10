@@ -296,7 +296,7 @@ This capability makes vector search suitable for live, transactional workloads w
 
 ### Monitoring vector index maintenance
 
-Vector indexes perform background maintenance to incorporate DML changes. Use the [sys.dm_db_vector_indexes](../../relational-databases/system-dynamic-management-views/sys-dm-db-vector-indexes-transact-sql.md) dynamic management view to monitor index health and maintenance task status.
+Vector indexes perform background maintenance to incorporate DML changes. Use the [sys.dm_db_vector_indexes](../../relational-databases/system-dynamic-management-objects/sys-dm-db-vector-indexes-transact-sql.md) dynamic management view to monitor index health and maintenance task status.
 
 ## Combining vector indexes with traditional indexes
 

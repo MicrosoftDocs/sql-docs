@@ -27,7 +27,7 @@ The `sp_execute_external_script` stored procedure executes a script provided as 
 
 For Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) and [R](../../machine-learning/concepts/extension-r.md) are supported languages. For Language Extensions, Java is supported but must be defined with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
-To execute `sp_execute_external_script`, you must first install Machine Learning Services or Language Extensions. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) and [Linux](../../linux/sql-server-linux-setup-machine-learning.md), or [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md) and [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
+To execute `sp_execute_external_script`, you must first install Machine Learning Services or Language Extensions. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) and [Linux](../../linux/install-upgrade/setup-machine-learning.md), or [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md) and [Linux](../../linux/install-upgrade/setup-language-extensions-java.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
@@ -171,12 +171,12 @@ By default, result sets returned by this stored procedure are output with unname
 In addition to returning a result set, you can return scalar values to using OUTPUT parameters.
 
 ::: moniker range=">=sql-server-2017 || >=sql-server-linux-ver15"
-You can control the resources used by external scripts by configuring an external resource pool. For more information, see [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Information about the workload can be obtained from the resource governor catalog views, DMVs, and counters. For more information, see [Resource governor catalog views](../system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource governor related dynamic management views](../system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), and [SQL Server, External Scripts object](../performance-monitor/sql-server-external-scripts-object.md).  
+You can control the resources used by external scripts by configuring an external resource pool. For more information, see [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Information about the workload can be obtained from the resource governor catalog views, DMVs, and counters. For more information, see [Resource governor catalog views](../system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource governor related dynamic management views](../system-dynamic-management-objects/resource-governor-related-dynamic-management-views-transact-sql.md), and [SQL Server, External Scripts object](../performance-monitor/sql-server-external-scripts-object.md).  
 ::: moniker-end
 
 ### Monitor script execution
 
-Monitor script execution using [sys.dm_external_script_requests](../system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
+Monitor script execution using [sys.dm_external_script_requests](../system-dynamic-management-objects/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../system-dynamic-management-objects/sys-dm-external-script-execution-stats.md).
 
 ::: moniker range=">=sql-server-ver15 || >=sql-server-linux-ver15"
 

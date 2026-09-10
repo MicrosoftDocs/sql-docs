@@ -11,7 +11,7 @@ ms.topic: reference
 # SQL Server, HTTP Storage object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **SQLServer:HTTP Storage** performance object consists of performance counters that monitor a Microsoft Azure Storage account. Using [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) feature, you can store database files in Azure Storage Blobs. This performance object treats each Azure Storage account as a different drive.  
+  The **SQLServer:HTTP Storage** performance object consists of performance counters that monitor a Microsoft Azure Storage account. Using [SQL Server Data Files in Microsoft Azure](../databases/sql-server-data-files-in-microsoft-azure.md) feature, you can store database files in Azure Storage Blobs. This performance object treats each Azure Storage account as a different drive.  
   
 |Counter Name|Description|  
 |------------------|-----------------|  
@@ -43,7 +43,7 @@ ms.topic: reference
 
 ## Example
 
-You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters

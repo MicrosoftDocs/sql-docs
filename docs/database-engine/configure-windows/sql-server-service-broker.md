@@ -110,7 +110,7 @@ For more information about [!INCLUDE [ssSB](../../includes/sssb-md.md)], see:
 - [Data Definition Language statements](../../t-sql/statements/statements.md) for `CREATE`, `ALTER`, and `DROP` statements
 - [Transact-SQL statements](../../t-sql/statements/statements.md)
 - [Service Broker Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)
-- [Service Broker Related Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)
+- [Service Broker Related Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/service-broker-related-dynamic-management-views-transact-sql.md)
 - [ssbdiagnose utility (Service Broker)](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)
 
 You can also refer to the [previously published documentation](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) for [!INCLUDE [ssSB](../../includes/sssb-md.md)] concepts and for development and management tasks.

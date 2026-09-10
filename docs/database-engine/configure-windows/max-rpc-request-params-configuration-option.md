@@ -33,7 +33,7 @@ This configuration option is available in the following SQL platforms and versio
 
 ## Remarks
 
-You can monitor the total server memory consumption by RPC parameters using [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), with `USERSTORE_SXC` as the memory clerk type, and using [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md), with `MEMOBJ_PROCESSRPC` as the memory object type.
+You can monitor the total server memory consumption by RPC parameters using [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-objects/sys-dm-os-memory-clerks-transact-sql.md), with `USERSTORE_SXC` as the memory clerk type, and using [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-objects/sys-dm-os-memory-objects-transact-sql.md), with `MEMOBJ_PROCESSRPC` as the memory object type.
 
 If you observe that the `USERSTORE_SXC` memory clerk or the `MEMOBJ_PROCESSRPC` memory objects consume disproportionately large amounts of memory, consider the following mitigations:
 

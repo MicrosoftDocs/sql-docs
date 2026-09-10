@@ -56,7 +56,7 @@ To find the system tables, views, functions, and procedures, see these links, wh
 
 - [System catalog views](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [System compatibility views](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
-- [System dynamic management views](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [System dynamic management views](../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md)
 - [System functions by category](../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [System information schema views](../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [System stored procedures](../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)

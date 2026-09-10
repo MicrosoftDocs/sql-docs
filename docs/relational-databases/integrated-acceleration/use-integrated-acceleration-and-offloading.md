@@ -102,7 +102,7 @@ After the drivers are installed, configure the server instance.
 
 The accelerator is enabled if the mode description is either SOFTWARE or HARDWARE. The `mode_reason_desc` explains why the result is either SOFTWARE or HARDWARE mode.
 
-If other results are found, refer to the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) for troubleshooting.
+If other results are found, refer to the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-objects/sys-dm-server-accelerator-status-transact-sql.md) for troubleshooting.
 
 ## Disable offloading and acceleration
 
@@ -159,7 +159,7 @@ The table below gives a summary of the BACKUP DATABASE with COMPRESSION options 
 
 The SQL Server backup compression default behavior can be adjusted. You can change the server default configuration and other options. You can enable or disable hardware acceleration, you can enable backup compression as a default, and you can also change the default compression algorithm as by using `sp_configure`.  
 
-The status of these options is reflected in the [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md). View the configuration of offload and acceleration configuration with the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) dynamic management view. 
+The status of these options is reflected in the [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md). View the configuration of offload and acceleration configuration with the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-objects/sys-dm-server-accelerator-status-transact-sql.md) dynamic management view. 
 
 The `backup compression algorithm` configuration changes the backup compression algorithm default for backup compression. Changing this option will change the default algorithm when the algorithm isn't specified on the `BACKUP ... WITH COMPRESSION` command. 
 

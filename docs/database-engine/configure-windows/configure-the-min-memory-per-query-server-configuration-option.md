@@ -34,7 +34,7 @@ The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] query processor t
 
 Don't set the min memory per query server configuration option too high, especially on very busy systems, because the query has to wait<sup>1</sup> until it can secure the minimum memory requested, or until the value specified in the query wait server configuration option is exceeded. If more memory is available than the specified minimum value required to execute the query, the query is allowed to make use of the extra memory, if the memory can be used effectively by the query.
 
-<sup>1</sup> In this scenario, the wait type is typically `RESOURCE_SEMAPHORE`. For more information, see [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).
+<sup>1</sup> In this scenario, the wait type is typically `RESOURCE_SEMAPHORE`. For more information, see [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md).
 
 ## Permissions
 

@@ -41,7 +41,7 @@ Contains information about the query and its associated overall aggregated runti
 | `initial_compile_start_time` | **datetimeoffset** | Initial compile start time. |
 | `last_compile_start_time` | **datetimeoffset** | Most recent compile start time. |
 | `last_execution_time` | **datetimeoffset** | Last execution time refers to the last end time of the query/plan. |
-| `last_compile_batch_sql_handle` | **varbinary(64)** | Handle of the last SQL batch in which query was used last time. It can be provided as input to [sys.dm_exec_sql_text](../system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) to get the full text of the batch. |
+| `last_compile_batch_sql_handle` | **varbinary(64)** | Handle of the last SQL batch in which query was used last time. It can be provided as input to [sys.dm_exec_sql_text](../system-dynamic-management-objects/sys-dm-exec-sql-text-transact-sql.md) to get the full text of the batch. |
 | `last_compile_batch_offset_start` <sup>2</sup> | **bigint** | Information that can be provided to `sys.dm_exec_sql_text` along with `last_compile_batch_sql_handle`. |
 | `last_compile_batch_offset_end` <sup>2</sup> | **bigint** | Information that can be provided to `sys.dm_exec_sql_text` along with `last_compile_batch_sql_handle`. |
 | `count_compiles` <sup>1</sup> | **bigint** | Compilation statistics. |

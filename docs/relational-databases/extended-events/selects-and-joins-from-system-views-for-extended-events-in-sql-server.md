@@ -308,7 +308,7 @@ This completes the section on catalog views.
 
 This section provides several Transact-SQL `SELECT` statements which each serve a specific useful business purpose. Further, the SELECTs demonstrate how you can `JOIN` the DMVs together for any new uses you want.
 
-Reference documentation of the DMVs is available at [Extended Events Dynamic Management Views](../system-dynamic-management-views/extended-events-dynamic-management-views.md)
+Reference documentation of the DMVs is available at [Extended Events Dynamic Management Views](../system-dynamic-management-objects/extended-events-dynamic-management-views.md)
 <a id="section_C_1_list_packages"></a>
 <a id="C_1_list_of_all_packages"></a>
 

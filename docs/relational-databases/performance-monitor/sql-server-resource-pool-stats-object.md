@@ -19,8 +19,8 @@ helpviewer_keywords:
   
 |Counter name|Description|  
 |------------------|-----------------|  
-|**Active memory grant amount (KB)**|The current total amount, in kilobytes (KB), of granted memory. This information is also available in [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md).| 
-|**Active memory grants count**|Current total count of memory grants. This information is also available in [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).|  
+|**Active memory grant amount (KB)**|The current total amount, in kilobytes (KB), of granted memory. This information is also available in [sys.dm_exec_query_resource_semaphores](../system-dynamic-management-objects/sys-dm-exec-query-resource-semaphores-transact-sql.md).| 
+|**Active memory grants count**|Current total count of memory grants. This information is also available in [sys.dm_exec_query_memory_grants](../system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md).|  
 |**Avg Disk Read IO (ms)**|Average time, in milliseconds, of a read operation from the disk.|  
 |**Avg Disk Read IO (ms) Base**|For internal use only.|
 |**Avg Disk Write IO (ms)**|Average time, in milliseconds, of a write operation to the disk.|  
@@ -45,8 +45,8 @@ helpviewer_keywords:
 |**Max memory (KB)**|The maximum amount, in kilobytes (KB), of memory that the resource pool can have based on the resource pool settings and server state.| 
 |**Memory grant timeouts/sec**|The number of memory grant time-outs per second.|
 |**Memory grants/sec**|The number of memory grants occurring in this resource pool per second.| 
-|**Pending memory grant count**|The number of requests for memory grants pending in the queues. This information is also available in [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md).|
-|**Query exec memory target (KB)**|The current memory broker target, in kilobytes (KB), for query execution memory grant. This information is also available in [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).|  
+|**Pending memory grant count**|The number of requests for memory grants pending in the queues. This information is also available in [sys.dm_exec_query_resource_semaphores](../system-dynamic-management-objects/sys-dm-exec-query-resource-semaphores-transact-sql.md).|
+|**Query exec memory target (KB)**|The current memory broker target, in kilobytes (KB), for query execution memory grant. This information is also available in [sys.dm_exec_query_memory_grants](../system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md).|  
 |**Target memory (KB)**|The target amount, in kilobytes (KB), of memory the resource pool is trying to obtain based on the resource pool settings and server state.|   
 |**Used memory (KB)**|The amount of memory used, in kilobytes (KB), for the resource pool.|  
 
@@ -60,7 +60,7 @@ helpviewer_keywords:
 
 ## Example
 
-You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters

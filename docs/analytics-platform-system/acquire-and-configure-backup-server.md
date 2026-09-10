@@ -134,7 +134,7 @@ To store the user name and password in PDW, use the [sp_pdw_add_network_credenti
 
 To remove network credentials from PDW, use the [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) stored procedure.
 
-To list all of the network credentials stored in SQL Server PDW, use the [sys.dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) dynamic management view.
+To list all of the network credentials stored in SQL Server PDW, use the [sys.dm_pdw_network_credentials](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-network-credentials-transact-sql.md) dynamic management view.
 
 ### Secure communications
 

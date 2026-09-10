@@ -325,10 +325,10 @@ Because of its length, the `ALTER DATABASE` syntax is separated into the multipl
 ALTER DATABASE   
 The current article provides the syntax and related information for changing the name and other settings of a database.
 
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)    
+[ALTER DATABASE SET Options](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)    
 Provides the syntax and related information for changing the attributes of a database by using the `SET` options of `ALTER DATABASE`.
 
-[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-current&preserve-view=true)   
+[ALTER DATABASE Compatibility Level](alter-database-transact-sql-compatibility-level.md?view=azuresqldb-current&preserve-view=true)   
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.
 
 ## Syntax
@@ -600,13 +600,13 @@ During a forced failover:
 
 Start the conversion of the database to the Hyperscale service tier with the option to manually initiate the cutover when ready. Only applicable when the service tier is converting to Hyperscale. To initiate the cutover, use [PERFORM_CUTOVER](#perform_cutover). For more information, see [Convert an existing database to Hyperscale](/azure/azure-sql/database/convert-to-hyperscale?view=azuresql-db&preserve-view=true).
 
-Monitor the progress of the conversion to Hyperscale with [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md?view=azuresqldb-current&preserve-view=true). 
+Monitor the progress of the conversion to Hyperscale with [sys.dm_operation_status](../../relational-databases/system-dynamic-management-objects/sys-dm-operation-status-azure-sql-database.md?view=azuresqldb-current&preserve-view=true). 
 
 #### PERFORM_CUTOVER
 
 Initiates the cutover when database conversion to Hyperscale tier is in WaitingForCutover state. Only applicable when the service tier is converting to Hyperscale that was started with the [MANUAL_CUTOVER](#manual_cutover) argument. 
 
-Monitor the progress of the conversion to Hyperscale with [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md?view=azuresqldb-current&preserve-view=true). For more information, see [Convert an existing database to Hyperscale](/azure/azure-sql/database/convert-to-hyperscale?view=azuresql-db&preserve-view=true).
+Monitor the progress of the conversion to Hyperscale with [sys.dm_operation_status](../../relational-databases/system-dynamic-management-objects/sys-dm-operation-status-azure-sql-database.md?view=azuresqldb-current&preserve-view=true). For more information, see [Convert an existing database to Hyperscale](/azure/azure-sql/database/convert-to-hyperscale?view=azuresql-db&preserve-view=true).
 
 ## Remarks
 
@@ -722,7 +722,7 @@ ALTER DATABASE [mySampleDatabase]
    WITH MANUAL_CUTOVER;
 ```
 
-To monitor operations for a Hyperscale database, connect to the `master` database and query [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)?view=azuresqldb-current&preserve-view=true) to review operations on your logical server.
+To monitor operations for a Hyperscale database, connect to the `master` database and query [sys.dm_operation_status](../../relational-databases/system-dynamic-management-objects/sys-dm-operation-status-azure-sql-database.md)?view=azuresqldb-current&preserve-view=true) to review operations on your logical server.
 
 ```sql
 SELECT *
@@ -795,11 +795,11 @@ Because of its length, the `ALTER DATABASE` syntax is separated into the multipl
 | --- | --- |
 | `ALTER DATABASE` |
 The current article provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatibility level.| 
-| [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)   |
+| [ALTER DATABASE File and Filegroup Options](alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)   |
 Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  |
-| [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)   |
+| [ALTER DATABASE SET Options](alter-database-transact-sql-set-options.md?&tabs=sqldbmi)   |
 Provides the syntax and related information for changing the attributes of a database by using the `SET` options of `ALTER DATABASE`.  |
-| [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   |
+| [ALTER DATABASE Compatibility Level](alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   |
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  |
 
 ## Syntax

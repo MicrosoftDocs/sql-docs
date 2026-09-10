@@ -39,7 +39,7 @@ Returns the stored resource pool configuration. Each row represents a resource p
 
 ## Remarks
 
-This catalog view displays the stored metadata. To see the currently effective resource governor configuration, use the corresponding dynamic management view, [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).
+This catalog view displays the stored metadata. To see the currently effective resource governor configuration, use the corresponding dynamic management view, [sys.dm_resource_governor_resource_pools (Transact-SQL)](../system-dynamic-management-objects/sys-dm-resource-governor-resource-pools-transact-sql.md).
 
 ## Permissions
 

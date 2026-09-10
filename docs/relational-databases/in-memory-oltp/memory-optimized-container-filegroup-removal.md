@@ -84,7 +84,7 @@ The removal of the memory-optimized containers and filegroup is successful, and 
 
 If the `ALTER DATABASE ... REMOVE FILE` statement to remove the last memory-optimized container doesn't complete immediately, additional steps are required.
 
-The [sys.dm_db_xtp_undeploy_status](../system-dynamic-management-views/sys-dm-db-xtp-undeploy-status.md) DMV provides the status of the In-Memory OLTP engine removal process. In the following steps, use this query to determine the current status and the required actions:
+The [sys.dm_db_xtp_undeploy_status](../system-dynamic-management-objects/sys-dm-db-xtp-undeploy-status.md) DMV provides the status of the In-Memory OLTP engine removal process. In the following steps, use this query to determine the current status and the required actions:
 
 ```sql
 SELECT deployment_state,

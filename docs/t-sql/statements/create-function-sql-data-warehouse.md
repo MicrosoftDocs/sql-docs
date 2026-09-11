@@ -4,7 +4,7 @@ description: User-defined functions accept parameters, perform an action, such a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop, srdjanmatin
-ms.date: 09/07/2026
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -27,9 +27,6 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
 
 > [!IMPORTANT]
 > In Fabric Data Warehouse, [scalar UDFs must be inlineable](#scalar-udf-inlining) for use with `SELECT ... FROM` queries on user tables, but you can still create functions that aren't inlineable by specifying INLINE=AUTO function option. Scalar UDFs that aren't inlineable work in a limited number of scenarios. You can check [whether a UDF can be inlined](#check-whether-a-scalar-udf-can-be-inlined).
-
- > [!IMPORTANT]
- > Upcoming release: Only inlinable scalar user-defined functions can be created or altered. 
 
 A user-defined function is a [!INCLUDE [tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action such as a complex calculation, and returns the result of that action as a value. Scalar functions return a scalar value, such as a number or string. User-defined table-valued functions (TVFs) return a table.
 
@@ -166,10 +163,6 @@ The supported function options include:
 INLINE = AUTO
 
  Specifies whether a scalar user-defined function can be created or altered irrespective of inlining requirements. The `INLINE` clause is optional. For an inlineable scalar UDF, specifying `INLINE = AUTO` doesn't change its inlineability, or execution behavior.
- 
- > [!IMPORTANT]
- > Upcoming release: If the `INLINE`=`AUTO` clause isn't specified, only inlinable scalar user-defined functions can be created or altered. If the function isn't inlineable, the statement returns an error.
-
 
 SCHEMABINDING
 
@@ -201,7 +194,7 @@ RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**
 
 - If you don't create a user-defined function with schemabinding, changes to underlying objects can affect the function's definition and cause unexpected results when you invoke the function. When you specify `WITH SCHEMABINDING` when you create the function, you ensure that later changes to underlying objects cannot change or break the function's behavior.
 
-- Write your user-defined functions to be inlineable. For more information, see [Inlining of scalar UDF](#inlining-of-scalar-udf).
+- Write your user-defined functions to be inlineable. For more information about inlining concept, see [Inlining of scalar UDF](#inlining-of-scalar-udf). For examples how to make scalar UDF inlineable, see [Create scalar UDF in Microsoft Fabric Data Warehouse ](/fabric/data-warehouse/how-to-inline-udf).
 
 ## Interoperability
 
@@ -213,8 +206,6 @@ An inline table-valued function accepts only a single `SELECT` statement.
 ### Scalar user-defined functions
 
 - Noninlineable function can't be used in a `SELECT ... FROM` query on a user table.
-    > [!IMPORTANT]
-    > Upcoming release: Only inlinable scalar user-defined functions can be created or altered. 
 
 - The following statements are valid in a scalar-valued function:  
     -   Assignment statements.
@@ -327,11 +318,12 @@ SELECT @utcdate as 'utc_date';
 
 - A scalar UDF can't be inlined via Expression block, see [Inlining of scalar UDF](#inlining-of-scalar-udf), when:
     - The scalar UDF body contains reference to tables/views/iTVFs.
-    - The scalar UDF body contains reference to other scalar UDFs.
+    - The scalar UDF body contains reference to same or other scalar UDFs.
     - The scalar UDF body contains calls to following built-ins:
         - Time-dependent built-in function (such as `GETDATE()`), see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
         - [AI Functions](/fabric/data-warehouse/ai-functions).
         - [Aggregate functions](../functions/aggregate-functions-transact-sql.md).
+        - [JSON_ARRAYAGG function](../functions/json-arrayagg-transact-sql.md).
         - [Metadata functions](../functions/metadata-functions-transact-sql.md).
         - [Security functions](../functions/security-functions-transact-sql.md).
         - [System functions](../functions/system-functions-transact-sql.md).

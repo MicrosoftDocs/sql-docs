@@ -62,9 +62,9 @@ A constant, column, or function, and any combination of arithmetic, bitwise, and
 
 *partition_by_clause* divides the result set produced by the `FROM` clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group.
 
-*order_by_clause* determines the logical order in which the operation is performed. If *row_or_range_clause* isn't specified, it assumes its default value.
+*order_by_clause* determines the logical order in which the operation is performed.
 
-*row_or_range_clause* defines the window frame in which the function is applied. The default value is `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`. It requires *order_by_clause* to be specified. 
+*row_or_range_clause* defines the window frame in which the function is applied. It requires *order_by_clause* to be specified. If *order_by_clause* is specified and *row_or_range_clause* isn't, *row_or_range_clause* assumes its default value `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`. 
 
 For more information, see [SELECT - OVER clause](../queries/select-over-clause-transact-sql.md).
 

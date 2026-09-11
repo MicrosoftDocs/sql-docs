@@ -5,7 +5,7 @@ description: A how-to guide for configuring geo replication for transparent data
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto, mathoma
-ms.date: 09/18/2025
+ms.date: 08/21/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -35,7 +35,7 @@ In this guide, we go through the steps to configure geo replication and backup r
 > The same guide can be applied to configure database level customer-managed keys in a different tenant by including the federated client ID parameter. For more information, see [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md).
 
 > [!IMPORTANT]
-> After the database is created or restored, the **Transparent data encryption** menu in the **Azure portal** will show the new database with the same settings as the source database, but might have keys missing. In all cases where a new database is created from a source database, the number of keys displayed for a target database in the Azure portal **Additional database keys** list could be less than the number of keys displayed for a source database. This is because the number of displayed keys depends on individual feature requirements used to create a target database. To list all keys available for a newly create database, use the available APIs in [View the database level customer-managed key settings on an Azure SQL Database](transparent-data-encryption-byok-database-level-basic-actions.md#view-the-database-level-customer-managed-key-settings-on-an-azure-sql-database).
+> After the database is created or restored, the new database has the same settings as the source database, but might have keys missing. In all cases where a new database is created from a source database, the number of keys reported for a target database could be less than the number of keys reported for a source database. The number of keys returned depends on the individual feature requirements used to create a target database. To list all keys available for a newly created database, use the available APIs in [View the database level customer-managed key settings on an Azure SQL Database](transparent-data-encryption-byok-database-level-basic-actions.md#view-the-database-level-customer-managed-key-settings-on-an-azure-sql-database).
 
 ## Create an Azure SQL Database with database level customer-managed keys as a secondary or copy
 
@@ -43,15 +43,11 @@ Use the following instructions or commands to create a secondary replica or copy
 
 # [Portal](#tab/azure-portal)
 
-## Create a database copy that has database level customer-managed keys
-
 To create a database in Azure SQL Database as a copy with database level customer-managed keys, follow these steps:
 
-1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent data encryption** tab of the **Data Encryption** menu and check the list of current keys in use by the database.
+1. Use the Azure CLI, PowerShell, or the REST API to check the list of current keys in use by the source database. For the commands, see [View the database level customer-managed key settings on an Azure SQL Database](transparent-data-encryption-byok-database-level-basic-actions.md#view-the-database-level-customer-managed-key-settings-on-an-azure-sql-database).
 
-   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database." lightbox="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png":::
-
-1. Create a copy of the database by selecting **Copy** from the **Overview** menu of the database.
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Create a copy of the database by selecting **Copy** from the **Overview** menu of the database.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-copy.png" alt-text="Screenshot of the Azure portal copy database menu.":::
 
@@ -63,13 +59,11 @@ To create a database in Azure SQL Database as a copy with database level custome
 
 1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the copy database.
 
-## Create a secondary replica that has database level customer-managed keys
+To create a secondary replica that has database level customer-managed keys, follow these steps:
 
-1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent data encryption** menu and check the list of current keys in use by the database.
+1. Use the Azure CLI, PowerShell, or the REST API to check the list of current keys in use by the source database. For the commands, see [View the database level customer-managed key settings on an Azure SQL Database](transparent-data-encryption-byok-database-level-basic-actions.md#view-the-database-level-customer-managed-key-settings-on-an-azure-sql-database).
 
-   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database." lightbox="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png":::
-
-1. Under **Data management** settings for the database, select **Replicas**. Select **Create replica** to create a secondary replica of the database.
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Under **Data management** settings for the database, select **Replicas**. Select **Create replica** to create a secondary replica of the database.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-create-replica.png" alt-text="Screenshot of the Azure portal database replica menu." lightbox="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-create-replica.png":::
 
@@ -79,7 +73,7 @@ To create a database in Azure SQL Database as a copy with database level custome
 
 1. When the **Transparent data encryption** menu appears, review the CMK settings for this database replica. The settings and keys should be populated with the same identity and keys used in the primary database.
 
-1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the copy database.
+1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the secondary replica.
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -514,7 +508,7 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 
 ## Automatic key rotation option for copied or restored databases
 
-Newly copied or restored databases can be configured to automatically rotate the customer-managed key used for transparent data encryption. For information on how to enable automatic key rotation in the Azure portal or using APIs, see [Automatic key rotation at the database level](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level).
+You can configure newly copied or restored databases to automatically rotate the customer-managed key used for transparent data encryption. For information on how to enable automatic key rotation, see [Automatic key rotation at the database level](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level).
 
 ## Related content
 

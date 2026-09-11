@@ -5,7 +5,7 @@ description: Overview of customer managed keys (CMK) support for transparent dat
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto, mathoma
-ms.date: 06/02/2026
+ms.date: 08/21/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: concept-article
@@ -43,7 +43,7 @@ The following functionality is available:
 
 As more service providers, also known as independent software vendors (ISVs), use Azure SQL Database to build their services, many are turning to elastic pools as a way to efficiently distribute compute resources across multiple databases. By having each of their customers' databases in a shared elastic pool, ISVs can take advantage of the pool's ability to optimize resource utilization while still ensuring that each database has adequate resources.
 
-However, there's one significant limitation to this approach. When multiple databases are hosted on the same Azure SQL logical server, they share the server-level TDE protector. ISVs are unable to offer true customer-managed keys (CMK) capabilities to their customers. Without the ability to manage their own encryption keys, customers may be hesitant to entrust sensitive data to the ISV's service, particularly if compliance regulations require them to maintain full control over their encryption keys.
+However, there's one significant limitation to this approach. When multiple databases are hosted on the same Azure SQL logical server, they share the server-level TDE protector. ISVs are unable to offer true customer-managed keys (CMK) capabilities to their customers. Without the ability to manage their own encryption keys, customers might be hesitant to entrust sensitive data to the ISV's service, particularly if compliance regulations require them to maintain full control over their encryption keys.
 
 With database level TDE CMK, ISVs can offer CMK capability to their customers and achieve security isolation, as each database's TDE protector can potentially be owned by the respective ISV customer in key vault or managed HSM that they own. The security isolation achieved for ISV's customers is both in terms of the *key* and the *identity* used to access the key.
 
@@ -113,7 +113,7 @@ Depending on the Azure SQL offering and TDE configuration, the TDE protector can
   - Supported only for Azure SQL Database, currently in public preview. You may see this capability appear over time depending on your region and service deployment status. 
 
 > [!NOTE]
-> Transparent Data Encryption with symmetric keys (AES) are currently in preview. Preview features are released with limited capabilities, but are made available on a *preview* basis so customers can get early access and provide feedback. Preview features are subject to separate [supplemental preview terms](https://go.microsoft.com/fwlink/?linkid=2240967), and aren't subject to SLAs. Support is provided as best effort in certain cases. However, Microsoft Support is eager to get your feedback on the preview functionality, and might provide best effort support in certain cases. Preview features might have limited or restricted functionality, and might be available only in selected geographic areas.
+> Transparent Data Encryption with symmetric keys (AES) is currently in preview. Preview features are released with limited capabilities, but Microsoft makes them available on a *preview* basis so customers can get early access and provide feedback. Preview features are subject to separate [supplemental preview terms](https://go.microsoft.com/fwlink/?linkid=2240967), and aren't subject to SLAs. Support is provided as best effort in certain cases. However, Microsoft Support is eager to get your feedback on the preview functionality, and might provide best effort support in certain cases. Preview features might have limited or restricted functionality, and might be available only in selected geographic areas.
 
 ### Limitations for symmetric (AES) keys
 When using symmetric (AES) keys as the TDE protector, only keys stored in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM are supported for ongoing key lifecycle operations. Customers can import a key from an on-premises hardware security module (HSM) one time into Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM. After the initial import, all subsequent key lifecycle operations including point-in-time recovery, geo-disaster recovery, and key revalidation must rely on the Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM infrastructure. Customers are responsible for maintaining local backups of imported keys to support recovery and revalidation scenarios. These limitations apply only to symmetric (AES) keys and do not apply to asymmetric (RSA) keys.
@@ -133,7 +133,7 @@ If you import an existing key into Azure Key Vault, the key must be provided in 
 
 To import HSM-protected keys into Azure Managed HSM, see [Import HSM-protected keys to Managed HSM (BYOK)](/azure/key-vault/managed-hsm/hsm-protected-keys-byok).
 
-## Azure Key vault and Azure Managed HSM - managed identity requirements
+## Azure Key Vault and Azure Managed HSM - managed identity requirements
 
 The same requirements for configuring Azure Key Vault or Azure Managed HSM keys and managed identities, including key settings and permissions granted to the identity that apply to the server-level customer-managed key (CMK) feature also apply to the database-level CMK. For more information, see [Transparent Data Encryption (TDE) with CMK](transparent-data-encryption-byok-overview.md) and [Managed Identities with CMK](transparent-data-encryption-byok-identity.md).
 
@@ -156,7 +156,7 @@ New keys can be added and existing keys can be removed from the database using s
 
 ### Automatic key rotation
 
-Automatic key rotation is available at the database level and can be used with Azure Key Vault or Azure Managed HSM keys. The rotation is triggered when a new version of the key is detected, and will automatically be rotated within **24 hours**. For information on how to configure automatic key rotation using the Azure portal, PowerShell, or the Azure CLI, see [Automatic key rotation at the database level](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level).
+Automatic key rotation is available at the database level and can be used with Azure Key Vault or Azure Managed HSM keys. Rotation is triggered when a new version of the key is detected, and the TDE protector automatically rotates within **24 hours**. For information on how to configure automatic key rotation by using PowerShell or the Azure CLI, see [Automatic key rotation at the database level](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level).
 
 ### Permission for key management
 Select the type of key vault you want to use.
@@ -224,24 +224,24 @@ New databases can be configured with database level CMK during creation and exis
 ### Database configured with a server level CMK without geo-replication
 
 1. Use the [sys.dm_db_log_info (Transact-SQL) - SQL Server](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql) for your database and look for virtual log files (VLFs) that are active.
-2. For all active VLFs, record the `vlf_encryptor_thumbprint` from the `sys.dm_db_log_info` result.
-3. Use the [sys.dm_database_encryption_keys (Transact-SQL) - SQL Server](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) view for your database to check for `encryptor_thumbprint`. Record the `encryptor_thumbprint`.
-4. Use the [Get-AzSqlServerKeyVaultKey](/powershell/module/az.sql/get-azsqlserverkeyvaultkey) cmdlet to get all the server level keys configured on the logical server. From the results, pick the ones that have the same thumbprint that matches your list from the above result.
-5. Make an update database API call to the database that you want to migrate, along with the identity and encryption protector. Pass the above keys as database level keys using [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) using the `-UserAssignedIdentityId`, `-AssignIdentity`, `-KeyList`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
+1. For all active VLFs, record the `vlf_encryptor_thumbprint` from the `sys.dm_db_log_info` result.
+1. Use the [sys.dm_database_encryption_keys (Transact-SQL) - SQL Server](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) view for your database to check for `encryptor_thumbprint`. Record the `encryptor_thumbprint`.
+1. Use the [Get-AzSqlServerKeyVaultKey](/powershell/module/az.sql/get-azsqlserverkeyvaultkey) cmdlet to get all the server level keys configured on the logical server. From the results, pick the ones that have the same thumbprint that matches your list from the preceding step.
+1. Make an update database API call to the database that you want to migrate, along with the identity and encryption protector. Pass the preceding keys as database level keys by using [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) with the `-UserAssignedIdentityId`, `-AssignIdentity`, `-KeyList`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
 
 > [!IMPORTANT]
 > The identity used in the update database request must have access to all the keys being passed as an input.
 
 ### Database configured with server level CMK with geo-replication
 
-1. Follow steps (1) through (4) mentioned in the previous section to retrieve the list of keys that will be needed for migration.
-2. Make an update database API call to the primary and secondary database that you want to migrate, along with the identity and the above keys as database level keys using [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) and the `-KeyList` parameter. Don't set the encryption protector yet.
-3. The database level key that you want to use as the primary protector on the databases must be first added to the secondary database. Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) with `-KeyList` to add this key on the secondary database.
-4. Once the encryption protector key is added to the secondary database, use the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to set it as the encryption protector on the primary database using the `-EncryptionProtector` parameter.
-5. Set the key as the encryption protector on the secondary database as described in (4) to complete the migration.
+1. Follow steps 1 through 4 mentioned in the previous section to retrieve the list of keys needed for migration.
+1. Make an update database API call to the primary and secondary database that you want to migrate, along with the identity and the preceding keys as database level keys by using [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) and the `-KeyList` parameter. Don't set the encryption protector yet.
+1. Add the database level key that you want to use as the primary protector on the databases to the secondary database. Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) with `-KeyList` to add this key on the secondary database.
+1. After you add the encryption protector key to the secondary database, use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to set it as the encryption protector on the primary database by using the `-EncryptionProtector` parameter.
+1. Set the key as the encryption protector on the secondary database as described in step 4 to complete the migration.
 
 > [!IMPORTANT]
-> To migrate databases which are configured with a server level service-managed key and geo-replication, follow steps (3), (4) and (5) from this section.
+> To migrate databases that are configured with a server level service-managed key and geo-replication, follow steps 3, 4, and 5 from this section.
 
 ## Geo-replication and high availability
 
@@ -282,13 +282,13 @@ The following steps are needed for a point in time restore of a database configu
 1. Use [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) with the `-FromPointInTimeBackup` parameter and provide the prepopulated list of keys obtained from the above steps, and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
 
 > [!NOTE]
-> Restoring a database without the `-EncryptionProtector` property with all the valid keys will reset it to use server level encryption. This can be useful to revert a database level customer-managed key configuration to the server level customer-managed key configuration.
+> If you restore a database without the `-EncryptionProtector` property but include all valid keys, the database resets to use server level encryption. This approach can be useful to revert a database level customer-managed key configuration to the server level customer-managed key configuration.
 
 ### Dropped database restore
 
 The following steps are needed for a dropped database restore of a database configured with database level customer-managed keys:
 
-1. Prepopulate the list of keys used by the primary database using [Get-AzSqlDeletedDatabaseBackup](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) and the `-ExpandKeyList` parameter. It's recommended to pass all the keys that the source database was using, but alternatively, restore may also be attempted with the keys provided by the deletion time as the `-KeysFilter`.
+1. Prepopulate the list of keys used by the primary database by running [Get-AzSqlDeletedDatabaseBackup](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) with the `-ExpandKeyList` parameter. Pass all the keys that the source database used. Alternatively, you can attempt a restore by using the keys provided at the deletion time as the `-KeysFilter`.
 1. Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 1. Use [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) with the `-FromDeletedDatabaseBackup` parameter and provide the prepopulated list of keys obtained from the above steps and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
 
@@ -332,10 +332,9 @@ If you believe that something is holding up your log for a longer than expected,
 - [sys.dm_db_log_stats (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql) for possible `log_truncation_holdup_reason` values.
 - [Troubleshoot full transaction log error 9002](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002).
 
-## Next steps
+## Related content
 
 Check the following documentation on various database level CMK operations:
 
 - [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md)
-
 - [Configure geo replication and backup restore for transparent data encryption with database level customer-managed keys](transparent-data-encryption-byok-database-level-geo-replication-restore.md)

@@ -5,7 +5,7 @@ description: Learn how to rotate the Transparent data encryption (TDE) protector
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 06/02/2026
+ms.date: 08/21/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
@@ -29,7 +29,7 @@ This article discusses both automated and manual methods to rotate the TDE prote
 - When the TDE protector is changed/rotated, old backups of the database, including backed-up log files, aren't updated to use the latest TDE protector. To restore a backup encrypted with a TDE protector from Azure Key Vault or Azure Managed HSM, make sure that the key material is available to the target server. Therefore, we recommend that you keep all the old versions of the TDE protector in Azure Key Vault or Azure Managed HSM, so database backups can be restored.
 - Even when switching from customer managed key (CMK) to service-managed key, keep all previously used keys in Azure Key Vault or Azure Managed HSM. This ensures database backups, including backed-up log files, can be restored with the TDE protectors stored in Azure Key Vault or Azure Managed HSM.
 - Apart from old backups, transaction log files might also require access to the older TDE protector. To determine if there are any remaining logs that still require the older key, after performing key rotation, use the [sys.dm_db_log_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql) dynamic management view (DMV). This DMV returns information on the virtual log file (VLF) of the transaction log along with its encryption key thumbprint of the VLF.
-- Older keys need to be kept in Azure Key Vault or Azure Managed HSM and available to the server based on the backup retention period configured as back of backup retention policies on the database. This helps ensure any Long Term Retention (LTR) backups on the server can still be restored using the older keys.
+- Keep older keys in Azure Key Vault or Azure Managed HSM and make them available to the server based on the backup retention period configured as part of backup retention policies on the database. This practice helps ensure any Long Term Retention (LTR) backups on the server can still be restored by using the older keys.
 - You can rotate the TDE protector by switching the configuration to use a new key stored in Azure Key Vault or Azure Key Vault Managed HSM. Depending on the Azure SQL offering and supported configuration, this can include:
 
    -  Switching to a new key version of the same key
@@ -146,13 +146,9 @@ az sql mi tde-key set --server-key-type AzureKeyVault
 
 ## Automatic key rotation at the database level
 
-Automatic key rotation can also be enabled at the database level for Azure SQL Database. This is useful when you want to enable automatic key rotation for only one or a subset of databases on a server. For more information, see [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md).
+You can also enable automatic key rotation at the database level for Azure SQL Database. This approach is useful when you want to enable automatic key rotation for only one or a subset of databases on a server. For more information, see [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md).
 
-# [Portal](#tab/azure-portal)
-
-For Azure portal information on setting up automatic key rotation at the database level, see [Update an existing Azure SQL Database with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md#update-an-existing-azure-sql-database-with-database-level-customer-managed-keys).
-
-# [PowerShell](#tab/azure-powershell)
+# [PowerShell](#tab/azure-powershell-db)
 
 To enable automatic rotation for the TDE protector at the database level using PowerShell, see the following command. Use the `-EncryptionProtectorAutoRotation` parameter and set to `$true` to enable automatic key rotation or `$false` to disable automatic key rotation.
 
@@ -160,7 +156,7 @@ To enable automatic rotation for the TDE protector at the database level using P
 Set-AzSqlDatabase -ResourceGroupName <resource_group_name> -ServerName <server_name> -DatabaseName <database_name> -EncryptionProtectorAutoRotation:$true
 ```
 
-# [Azure CLI](#tab/azure-cli)
+# [Azure CLI](#tab/azure-cli-db)
 
 To enable automatic rotation for the TDE protector at the database level using the Azure CLI, see the following command. Use the `--encryption-protector-auto-rotation` parameter and set to `True` to enable automatic key rotation or `False` to disable automatic key rotation.
 
@@ -195,7 +191,7 @@ Using the [Azure portal](https://portal.azure.com):
 When the key is rotated on the primary server, it's automatically transferred to the secondary server.
 
 > [!NOTE]
-> If the same key vault key on the primary server is used as the default TDE protector on the secondary server, ensure **Auto-rotate key** is enabled for **both** servers. Failure to do so may lead to the auto-rotation workflows entering an error state and prevent further manual key rotation operations.  
+> If you use the same key vault key on the primary server as the default TDE protector on the secondary server, ensure **Auto-rotate key** is enabled for **both** servers. If you don't enable this setting, the auto-rotation workflows might enter an error state and prevent further manual key rotation operations.  
 
 # [PowerShell](#tab/azure-powershell-geo)
 

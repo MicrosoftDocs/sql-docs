@@ -35,7 +35,7 @@ This function returns the average of the values in a group. It ignores null valu
 
 ```syntaxsql
 AVG ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] [order_by_clause] [row_or_range_clause] ) ]
+   [ OVER ( [ partition_by_clause ] [ order_by_clause ] [ row_or_range_clause ] ) ]
 ```
 
 ## Arguments

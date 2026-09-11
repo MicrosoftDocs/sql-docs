@@ -40,7 +40,7 @@ An activated stored procedure must receive messages from the queue that activate
 
 ## Monitor
 
-To check the user running the activation procedure, you can either use Extended Events (the `broker_activation` event, with `username` and `server_principal_name` actions), or the [sys.dm_broker_activated_tasks](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md) dynamic management view, which returns the database `principal_id` configured in the queue.
+To check the user running the activation procedure, you can either use Extended Events (the `broker_activation` event, with `username` and `server_principal_name` actions), or the [sys.dm_broker_activated_tasks](../../relational-databases/system-dynamic-management-objects/sys-dm-broker-activated-tasks-transact-sql.md) dynamic management view, which returns the database `principal_id` configured in the queue.
 
 ## Related content
 

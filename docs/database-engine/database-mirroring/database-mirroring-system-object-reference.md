@@ -21,8 +21,8 @@ ms.topic: reference
 
 | System dynamic management view | Description|
 | :------ | :----------------------------- |
-| [sys.dm_db_mirroring_auto_page_repair](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)   | Returns a row for every automatic page-repair attempt on any mirrored database on the server instance.  |
-| [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)    | Returns a row for each connection established for database mirroring. |
+| [sys.dm_db_mirroring_auto_page_repair](../../relational-databases/system-dynamic-management-objects/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)   | Returns a row for every automatic page-repair attempt on any mirrored database on the server instance.  |
+| [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-objects/database-mirroring-sys-dm-db-mirroring-connections.md)    | Returns a row for each connection established for database mirroring. |
 
 ## System tables
 

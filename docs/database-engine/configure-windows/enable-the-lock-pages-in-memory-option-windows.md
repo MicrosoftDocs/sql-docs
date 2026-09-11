@@ -37,7 +37,7 @@ A system administrator can enable this policy for the [!INCLUDE [ssNoVersion](..
 
 1. In the pane, scroll to and double-click the **Lock pages in memory** policy.
 
-1. In the **Local Security Policy Setting** dialog box, select **Add User or Group...**. Add the [!INCLUDE [ssDE](../../includes/ssde-md.md)] service account or its service security identifier (SID). To determine the service account or the service SID for an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], refer to the SQL Server Configuration Manager or use the `service_account` column in `sys.dm_server_services`. For more information, see [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md).
+1. In the **Local Security Policy Setting** dialog box, select **Add User or Group...**. Add the [!INCLUDE [ssDE](../../includes/ssde-md.md)] service account or its service security identifier (SID). To determine the service account or the service SID for an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], refer to the SQL Server Configuration Manager or use the `service_account` column in `sys.dm_server_services`. For more information, see [sys.dm_server_services](../../relational-databases/system-dynamic-management-objects/sys-dm-server-services-transact-sql.md).
 
 1. Select **OK**.
 

@@ -279,7 +279,7 @@ If there's I/O contention between `tempdb` and user databases, put `tempdb` file
 #### Introduced in SQL Server 2017 (14.x)
 
 - The SQL Setup experience improves guidance for initial `tempdb` file allocation. SQL Setup warns customers if the initial file size is set to a value greater than 1 GB and if [instant file initialization](database-instant-file-initialization.md) isn't enabled, preventing instance startup delays.
-- The [sys.dm_tran_version_store_space_usage](../system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) dynamic management view tracks version store usage per database. This DMV is useful for DBAs who want to proactively plan `tempdb` sizing based on the version store usage requirement per database.
+- The [sys.dm_tran_version_store_space_usage](../system-dynamic-management-objects/sys-dm-tran-version-store-space-usage.md) dynamic management view tracks version store usage per database. This DMV is useful for DBAs who want to proactively plan `tempdb` sizing based on the version store usage requirement per database.
 - [Intelligent query processing](../performance/intelligent-query-processing.md) features such as adaptive joins and memory grant feedback reduce memory spills on consecutive executions of a query, reducing `tempdb` utilization.
 
 #### Introduced in SQL Server 2016 (13.x)
@@ -483,7 +483,7 @@ We recommend that you analyze `tempdb` space consumption by performing the follo
 
 ## Monitor tempdb use
 
-Running out of disk space in `tempdb` can cause significant disruptions and application downtime. You can use the [sys.dm_db_file_space_usage](../system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) dynamic management view to monitor the space used in the `tempdb` files.
+Running out of disk space in `tempdb` can cause significant disruptions and application downtime. You can use the [sys.dm_db_file_space_usage](../system-dynamic-management-objects/sys-dm-db-file-space-usage-transact-sql.md) dynamic management view to monitor the space used in the `tempdb` files.
 
 For example, the following example script finds:
 
@@ -501,7 +501,7 @@ SELECT SUM(unallocated_extent_page_count) * 8.0 / 1024 AS tempdb_free_data_space
 FROM tempdb.sys.dm_db_file_space_usage;
 ```
 
-To monitor page allocation or deallocation activity in `tempdb` at the session or task level, you can use the [sys.dm_db_session_space_usage](../system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) and [sys.dm_db_task_space_usage](../system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md) dynamic management views. These views can help you identify queries, temporary tables, or table variables that are using large amounts of `tempdb` space.
+To monitor page allocation or deallocation activity in `tempdb` at the session or task level, you can use the [sys.dm_db_session_space_usage](../system-dynamic-management-objects/sys-dm-db-session-space-usage-transact-sql.md) and [sys.dm_db_task_space_usage](../system-dynamic-management-objects/sys-dm-db-task-space-usage-transact-sql.md) dynamic management views. These views can help you identify queries, temporary tables, or table variables that are using large amounts of `tempdb` space.
 
 For example, use the following example script to obtain the `tempdb` space allocated and deallocated by internal objects in all currently running tasks in each session:
 

@@ -45,7 +45,7 @@ You can pass `NULL` for the value of *@table_name* to close all open nontransact
 
 #### [ @handle_id = ] *handle_id*
 
-The optional ID of the individual handle to be closed. You can get the *@handle_id* from the [sys.dm_filestream_non_transacted_handles](../system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) dynamic management view. Each ID is unique in a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. If you specify *@handle_id*, then you also have to provide a value for *@table_name*.
+The optional ID of the individual handle to be closed. You can get the *@handle_id* from the [sys.dm_filestream_non_transacted_handles](../system-dynamic-management-objects/sys-dm-filestream-non-transacted-handles-transact-sql.md) dynamic management view. Each ID is unique in a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. If you specify *@handle_id*, then you also have to provide a value for *@table_name*.
 
 You can pass `NULL` for the value of *@handle_id* to close all open nontransactional handles for the FileTable specified by *@table_name*. `NULL` is the default value.
 
@@ -65,7 +65,7 @@ For more information, see [Manage FileTables](../blob/manage-filetables.md).
 
 ## Metadata
 
-For information about open nontransactional file handles, query the dynamic management view [sys.dm_filestream_non_transacted_handles](../system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).
+For information about open nontransactional file handles, query the dynamic management view [sys.dm_filestream_non_transacted_handles](../system-dynamic-management-objects/sys-dm-filestream-non-transacted-handles-transact-sql.md).
 
 ## Permissions
 

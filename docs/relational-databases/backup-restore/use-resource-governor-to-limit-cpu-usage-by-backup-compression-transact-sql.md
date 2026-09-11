@@ -17,10 +17,10 @@ helpviewer_keywords:
 # Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  By default, backing up using compression significantly increases CPU usage, and the additional CPU consumed by the compression process can adversely affect concurrent operations. Therefore, you might want to create a low-priority compressed backup in a session whose CPU usage is limited by [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) when CPU contention occurs. This topic presents a scenario that classifies the sessions of a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user by mapping them to a Resource Governor workload group that limits CPU usage in such cases.  
+  By default, backing up using compression significantly increases CPU usage, and the additional CPU consumed by the compression process can adversely affect concurrent operations. Therefore, you might want to create a low-priority compressed backup in a session whose CPU usage is limited by [Resource Governor](../resource-governor/resource-governor.md) when CPU contention occurs. This topic presents a scenario that classifies the sessions of a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user by mapping them to a Resource Governor workload group that limits CPU usage in such cases.  
   
 > [!IMPORTANT]  
->  In a given Resource Governor scenario, session classification might be based on a user name, an application name, or anything else that can differentiate a connection. For more information, see [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) and [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
+>  In a given Resource Governor scenario, session classification might be based on a user name, an application name, or anything else that can differentiate a connection. For more information, see [Resource Governor Classifier Function](../resource-governor/resource-governor-classifier-function.md) and [Resource Governor Workload Group](../resource-governor/resource-governor-workload-group.md).  
   
 <a name="Top"></a> This topic contains the following set of scenarios, which are presented in sequence:  
   
@@ -43,7 +43,7 @@ helpviewer_keywords:
   
      **To create a login**  
   
-    -   [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)  
+    -   [Create a Login](../security/authentication-access/create-a-login.md)  
   
     -   [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
@@ -57,7 +57,7 @@ helpviewer_keywords:
   
      **To create a user**  
   
-    -   [Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md)  
+    -   [Create a Database User](../security/authentication-access/create-a-database-user.md)  
   
     -   [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)  
   
@@ -65,7 +65,7 @@ helpviewer_keywords:
   
      **To add a user to a fixed database role**  
   
-    -   [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
+    -   [sp_addrolemember &#40;Transact-SQL&#41;](../system-stored-procedures/sp-addrolemember-transact-sql.md)  
   
      For more information, see [GRANT Database Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
@@ -95,7 +95,7 @@ GO
 ##  <a name="configure_RG"></a> Configuring Resource Governor to Limit CPU Usage  
   
 > [!NOTE]  
->  Ensure that Resource Governor is enabled. For more information, see [Enable Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md).  
+>  Ensure that Resource Governor is enabled. For more information, see [Enable Resource Governor](../resource-governor/enable-resource-governor.md).  
   
  In this Resource Governor scenario, configuration comprises the following basic steps:  
   
@@ -110,17 +110,17 @@ GO
 5.  Apply the changes to the Resource Governor in-memory configuration.  
   
 > [!NOTE]  
->  For information about Resource Governor resource pools, workload groups, and classification, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
+>  For information about Resource Governor resource pools, workload groups, and classification, see [Resource Governor](../resource-governor/resource-governor.md).  
   
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] statements for these steps are described in the procedure, "To configure Resource Governor for limiting CPU usage," which is followed by a [!INCLUDE[tsql](../../includes/tsql-md.md)] example of the procedure.  
   
  **To configure Resource Governor (SQL Server Management Studio)**  
   
--   [Configure Resource Governor Using a Template](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)  
+-   [Configure Resource Governor Using a Template](../resource-governor/configure-resource-governor-using-a-template.md)  
   
--   [Create a Resource Pool](../../relational-databases/resource-governor/create-a-resource-pool.md)  
+-   [Create a Resource Pool](../resource-governor/create-a-resource-pool.md)  
   
--   [Create a Workload Group](../../relational-databases/resource-governor/create-a-workload-group.md)  
+-   [Create a Workload Group](../resource-governor/create-a-workload-group.md)  
   
 ### To configure Resource Governor for limiting CPU usage (Transact-SQL)  
   
@@ -247,12 +247,12 @@ GO
  In the results pane, the **name** column should list one or more sessions for the workload-group name that you specified in your classifier function.  
   
 > [!NOTE]  
->  For information about the dynamic management views called by this SELECT statement, see [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) and [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
+>  For information about the dynamic management views called by this SELECT statement, see [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md) and [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md).  
   
  [&#91;Top&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> Compressing Backups Using a Session with Limited CPU  
- To create a compressed backup in a session with a limited maximum CPU, log in as the user specified in your classifier function. In your backup command, either specify WITH COMPRESSION ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) or select **Compress backup** ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). To create a compressed database backup, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+ To create a compressed backup in a session with a limited maximum CPU, log in as the user specified in your classifier function. In your backup command, either specify WITH COMPRESSION ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) or select **Compress backup** ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). To create a compressed database backup, see [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
 ### Example C: Creating a Compressed Backup (Transact-SQL)  
  The following [BACKUP](../../t-sql/statements/backup-transact-sql.md) example creates a compressed full backup of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in a newly formatted backup file, `Z:\SQLServerBackups\AdvWorksData.bak`.  

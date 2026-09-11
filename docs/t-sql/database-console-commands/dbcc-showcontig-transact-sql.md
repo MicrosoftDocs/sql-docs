@@ -30,7 +30,7 @@ dev_langs:
 Displays fragmentation information for the data and indexes of the specified table or view.
 
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) instead.
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) instead.
 
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions
 
@@ -59,7 +59,7 @@ DBCC SHOWCONTIG
 
 #### *table_name* | *table_id* | *view_name* | *view_id*
 
-The table or view to check for fragmentation information. If not specified, all tables and indexed views in the current database are checked. To obtain the table or view ID, use the [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) function.
+The table or view to check for fragmentation information. If not specified, all tables and indexed views in the current database are checked. To obtain the table or view ID, use the [OBJECT_ID](../functions/object-id-transact-sql.md) function.
 
 #### *index_name* | *index_id*
 
@@ -161,7 +161,7 @@ Also, `DBCC SHOWCONTIG` doesn't support some new features. For example:
 - `DBCC SHOWCONTIG` doesn't display row-overflow storage information and other new off-row data types, such as **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, and **xml**.
 - Spatial indexes aren't supported by `DBCC SHOWCONTIG`.
 
-All new features are fully supported by the [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management view.
+All new features are fully supported by the [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management view.
 
 ## Table fragmentation
 
@@ -179,7 +179,7 @@ When an index is heavily fragmented, the following choices are available for red
 
 - Rebuild the index.
 
-  Use `ALTER INDEX` with `REBUILD` to rebuild the index. For more information, see [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).
+  Use `ALTER INDEX` with `REBUILD` to rebuild the index. For more information, see [ALTER INDEX (Transact-SQL)](../statements/alter-index-transact-sql.md).
 
 The **Avg. Bytes free per page** and **Avg. Page density (full)** statistic in the result set indicate the fullness of index pages. The **Avg. Bytes free per page** number should be low and the **Avg. Page density (full)** number should be high for an index that won't have many random inserts. Dropping and re-creating an index with the `FILLFACTOR` option specified can improve the statistics. Also, `ALTER INDEX` with `REORGANIZE` will compact an index, taking into account its `FILLFACTOR`, and will improve the statistics.
 

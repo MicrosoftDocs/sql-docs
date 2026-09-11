@@ -147,7 +147,7 @@ The estimated execution plan from SSMS:
 
 ## Use DMV
 
-In [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, the `read_command` column of [sys.dm_exec_external_work](../system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md) DMV shows the query that you send to the external data source. You can determine if pushdown is happening, but it doesn't expose the execution plan. You don't need trace flag 6408 to view the remote query.
+In [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, the `read_command` column of [sys.dm_exec_external_work](../system-dynamic-management-objects/sys-dm-exec-external-work-transact-sql.md) DMV shows the query that you send to the external data source. You can determine if pushdown is happening, but it doesn't expose the execution plan. You don't need trace flag 6408 to view the remote query.
 
 > [!NOTE]  
 > For Hadoop and Azure storage, the `read_command` always returns `NULL`.
@@ -164,7 +164,7 @@ ORDER BY execution_id DESC;
 ```
 
 > [!NOTE]  
-> One limitation of the [sys.dm_exec_external_work](../system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md) method is that the `read_command` field in the DMV is limited to 4,000 characters. If the query is long enough, the `read_command` might be truncated before you see the `WHERE`, `JOIN`, or aggregation function in the `read_command`.
+> One limitation of the [sys.dm_exec_external_work](../system-dynamic-management-objects/sys-dm-exec-external-work-transact-sql.md) method is that the `read_command` field in the DMV is limited to 4,000 characters. If the query is long enough, the `read_command` might be truncated before you see the `WHERE`, `JOIN`, or aggregation function in the `read_command`.
 
 ### Pushdown of filter predicate (view with DMV)
 

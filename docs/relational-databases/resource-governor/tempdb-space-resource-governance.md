@@ -92,16 +92,16 @@ This section describes `tempdb` space resource governance in detail.
   would exceed the limit set for workload group 'workload-group-name'".
   ```
 
-    When a request is aborted with error 1138, the value in the `total_tempdb_data_limit_violation_count` column of the [sys.dm_resource_governor_workload_groups](../system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) dynamic management view (DMV) is incremented by one, and the `tempdb_data_workload_group_limit_reached` extended event fires.
+    When a request is aborted with error 1138, the value in the `total_tempdb_data_limit_violation_count` column of the [sys.dm_resource_governor_workload_groups](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) dynamic management view (DMV) is incremented by one, and the `tempdb_data_workload_group_limit_reached` extended event fires.
 - Resource governor keeps track of all `tempdb` usage that can be attributed to a workload group, including temporary tables, variables (including table variables), table-valued parameters, nontemporary tables, cursors, and `tempdb` usage during query processing, such as spools, spills, worktables, and workfiles.
 
     Space consumption for global temporary tables and nontemporary tables in `tempdb` is accounted under the workload group that inserts the first row into the table, even if sessions in other workload groups add, modify, or remove rows in the same table.
 - The configured `tempdb` consumption limits for each workload group are exposed in the [sys.resource_governor_workload_groups](../system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) catalog view, in the `group_max_tempdb_data_mb` and `group_max_tempdb_data_percent` columns.
 
-    The current consumption and the peak consumption of `tempdb` space by a workload group are exposed in the [sys.dm_resource_governor_workload_groups](../system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) DMV, in the `tempdb_data_space_kb` and `peak_tempdb_data_space_kb` columns respectively.
+    The current consumption and the peak consumption of `tempdb` space by a workload group are exposed in the [sys.dm_resource_governor_workload_groups](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) DMV, in the `tempdb_data_space_kb` and `peak_tempdb_data_space_kb` columns respectively.
 
     > [!TIP]
-    > `tempdb_data_space_kb` and `peak_tempdb_data_space_kb` columns in [sys.dm_resource_governor_workload_groups](../system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) are maintained even if no limits on `tempdb` space consumption are set.
+    > `tempdb_data_space_kb` and `peak_tempdb_data_space_kb` columns in [sys.dm_resource_governor_workload_groups](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) are maintained even if no limits on `tempdb` space consumption are set.
     >
     > You can create the classifier function and workload groups without setting any limits initially. Monitor `tempdb` usage by each group over time to establish representative usage patterns, and then set limits as required.
 
@@ -113,7 +113,7 @@ This section describes `tempdb` space resource governance in detail.
 
 ### Differences with session-level space tracking
 
-The [sys.dm_db_session_space_usage](../system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) DMV provides `tempdb` space allocation and deallocation statistics for each session. Even if there's only one session in a workload group, space usage statistics from this DMV might not match exactly the statistics from the [sys.dm_resource_governor_workload_groups](../system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) view, for the following reasons:
+The [sys.dm_db_session_space_usage](../system-dynamic-management-objects/sys-dm-db-session-space-usage-transact-sql.md) DMV provides `tempdb` space allocation and deallocation statistics for each session. Even if there's only one session in a workload group, space usage statistics from this DMV might not match exactly the statistics from the [sys.dm_resource_governor_workload_groups](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) view, for the following reasons:
 
 - Unlike `sys.dm_resource_governor_workload_groups`, `sys.dm_db_session_space_usage`:
     - Doesn't reflect `tempdb` space usage by the currently running tasks. Statistics in `sys.dm_db_session_space_usage` are updated when a task completes. Statistics in `sys.dm_resource_governor_workload_groups` are updated continuously.

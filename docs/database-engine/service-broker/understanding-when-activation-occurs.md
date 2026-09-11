@@ -18,7 +18,7 @@ The Service Broker activation process consists of two steps. First, Service Brok
 
 ## Determine whether activation is necessary
 
-Activation is necessary whenever a new queue reader would have useful work to perform. Queue monitors determine whether activation is necessary. Service Broker creates a queue monitor for each queue with activation `STATUS = ON` or for which a `QUEUE_ACTIVATION` event notification has been registered. The dynamic management view [sys.dm_broker_queue_monitors](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md) lists the queue monitors active in the instance.
+Activation is necessary whenever a new queue reader would have useful work to perform. Queue monitors determine whether activation is necessary. Service Broker creates a queue monitor for each queue with activation `STATUS = ON` or for which a `QUEUE_ACTIVATION` event notification has been registered. The dynamic management view [sys.dm_broker_queue_monitors](../../relational-databases/system-dynamic-management-objects/sys-dm-broker-queue-monitors-transact-sql.md) lists the queue monitors active in the instance.
 
 Each queue monitor tracks the following criteria:
 
@@ -48,7 +48,7 @@ For example, a queue might contain a large number of unprocessed messages on a s
 
 Once Service Broker determines that activation is necessary, Service Broker must decide whether activation occurs.
 
-For internal activation, the queue monitor activates a new instance of the activation stored procedure when the number of running programs is lower than the `MAX_QUEUE_READERS` value set for the queue. If the number of running programs is equal to or greater than the `MAX_QUEUE_READERS` value, the queue monitor doesn't start a new instance of the stored procedure. The management view [sys.dm_broker_activated_tasks](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md) contains information on stored procedures started by Service Broker.
+For internal activation, the queue monitor activates a new instance of the activation stored procedure when the number of running programs is lower than the `MAX_QUEUE_READERS` value set for the queue. If the number of running programs is equal to or greater than the `MAX_QUEUE_READERS` value, the queue monitor doesn't start a new instance of the stored procedure. The management view [sys.dm_broker_activated_tasks](../../relational-databases/system-dynamic-management-objects/sys-dm-broker-activated-tasks-transact-sql.md) contains information on stored procedures started by Service Broker.
 
 For external applications, Service Broker has no information on the number of distinct queue readers that might be working with the queue. Further, there might be some startup time required between the time that the activation event is raised and the time that a reader begins reading the queue. Therefore, Service Broker provides a timeout for an external application to respond. During the timeout, Service Broker doesn't produce another notification. Once an application calls `RECEIVE` on the queue or the timeout expires, Service Broker creates another event notification if activation is required. An external application monitors the event notifications while the program is running to determine whether more queue readers are required to read events.
 

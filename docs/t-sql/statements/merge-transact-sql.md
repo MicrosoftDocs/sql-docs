@@ -599,8 +599,8 @@ These guidelines ensure that the join keys are unique and the sort order of the 
 
 The following features are available to assist you in measuring and diagnosing the performance of `MERGE` statements.
 
-- Use the **merge stmt** counter in the [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) dynamic management view to return the number of query optimizations that are for `MERGE` statements.
-- Use the `merge_action_type` attribute in the [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) dynamic management view to return the type of trigger execution plan used as the result of a `MERGE` statement.
+- Use the **merge stmt** counter in the [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-optimizer-info-transact-sql.md) dynamic management view to return the number of query optimizations that are for `MERGE` statements.
+- Use the `merge_action_type` attribute in the [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-plan-attributes-transact-sql.md) dynamic management view to return the type of trigger execution plan used as the result of a `MERGE` statement.
 - Use an Extended Events Session to gather troubleshooting data for the `MERGE` statement in the same way you would for other data manipulation language (DML) statements. For more information on [Extended Events overview](../../relational-databases/extended-events/extended-events.md), see [Quickstart: Extended Events](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) and [Use the SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 ## Examples

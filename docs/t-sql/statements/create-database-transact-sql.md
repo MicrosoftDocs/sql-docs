@@ -1190,7 +1190,7 @@ Databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] have se
 
 `MAXSIZE` provides the ability to limit the size of the database. If the size of the database reaches its `MAXSIZE`, you receive error code 40544. When this occurs, you can't insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update `MAXSIZE` to a value larger than your current database size or delete some data to free storage space. There might be as much as a 15-minute delay before you can insert new data.
 
-To change the size, edition, or service objective values later, use [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true).
+To change the size, edition, or service objective values later, use [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true).
 
 ## Database copies
 
@@ -1421,7 +1421,7 @@ The following are `CREATE DATABASE` limitations:
 - `WITH` options aren't supported, except for `WITH LEDGER`.
 
   > [!TIP]  
-  > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). after `CREATE DATABASE` to set database options and to add files.
+  > As workaround, use [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). after `CREATE DATABASE` to set database options and to add files.
 
 ## Permissions
 
@@ -1555,7 +1555,7 @@ Specifies the compute size (service objective). The service levels for Gen2 are 
 
 Use [DATABASEPROPERTYEX](../functions/databasepropertyex-transact-sql.md) to see the database properties.
 
-Use [ALTER DATABASE - Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) to change the max size, or service objective values later.
+Use [ALTER DATABASE - Azure Synapse Analytics](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) to change the max size, or service objective values later.
 
 Azure Synapse is set to `COMPATIBILITY_LEVEL 130` and can't be changed. For more information, see [ALTER DATABASE compatibility level](alter-database-transact-sql-compatibility-level.md).
 

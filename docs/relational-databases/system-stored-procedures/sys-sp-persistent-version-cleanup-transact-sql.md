@@ -91,7 +91,7 @@ FROM sys.dm_exec_requests
 WHERE command LIKE '%PERSISTED_VERSION_CLEANER%';
 ```
 
-An active transaction might prevent the PVS cleanup process from starting. If this occurs, the session running the `sys.sp_persistent_version_cleanup` stored procedure waits with the [PVS_CLEANUP_LOCK](../system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#pvs_cleanup_lock) wait type. You can wait for the transaction to complete, or you can consider killing the blocker session with an active transaction, if possible.
+An active transaction might prevent the PVS cleanup process from starting. If this occurs, the session running the `sys.sp_persistent_version_cleanup` stored procedure waits with the [PVS_CLEANUP_LOCK](../system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md#pvs_cleanup_lock) wait type. You can wait for the transaction to complete, or you can consider killing the blocker session with an active transaction, if possible.
 
 PVS cleanup initiated using `sys.sp_persistent_version_cleanup` might take longer when [automatic index compaction](../indexes/automatic-index-compaction.md) is enabled. If you need to speed up PVS cleanup initiated by this stored procedure, consider temporarily [disabling](../indexes/automatic-index-compaction.md#enable-and-disable) automatic index compaction.
 

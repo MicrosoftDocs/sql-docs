@@ -109,7 +109,7 @@ Not all CFPs with available space qualify for merge. For example, if two adjacen
 
 ### Life cycle of a CFP
 
-CFPs transition through several states before they can be deallocated. Database checkpoints and log backups need to happen to transition the files through the phases, and ultimately clean up files that are no longer needed. For a description of these phases, see [sys.dm_db_xtp_checkpoint_files](../system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).
+CFPs transition through several states before they can be deallocated. Database checkpoints and log backups need to happen to transition the files through the phases, and ultimately clean up files that are no longer needed. For a description of these phases, see [sys.dm_db_xtp_checkpoint_files](../system-dynamic-management-objects/sys-dm-db-xtp-checkpoint-files-transact-sql.md).
 
 You can manually force the checkpoint followed by log backup to expedite the garbage collection. In production scenarios, the automatic checkpoints and log backups taken as part of backup strategy seamlessly transition CFPs through these phases without requiring any manual intervention. The effect of the garbage collection process is that databases with memory-optimized tables might have a larger storage size compared to its size in memory. If checkpoint and log backups don't happen, the on-disk footprint of checkpoint files continues to grow.
 

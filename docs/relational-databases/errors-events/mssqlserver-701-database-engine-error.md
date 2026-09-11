@@ -43,7 +43,7 @@ Internal memory pressure refers to low memory availability caused by factors ins
 
 ### Internal memory pressure, coming from SQL Server component(s)
 
-Internal memory pressure coming from components inside SQL Server Engine can also lead to error 701. There are hundreds of components, tracked via [sys.dm_os_memory_clerks](../system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), that allocate memory in SQL Server. You must identify which memory clerk(s) are responsible for the largest memory allocations to be able to resolve this further. For example, if you find that the OBJECTSTORE_LOCK_MANAGER memory clerk is showing the large memory allocation, you need to further understand why the Lock Manager is consuming so much memory. You might find there are queries that acquire a large number of locks and optimize them by using indexes, or shorten transactions that hold locks for long periods, or check if lock escalation is disabled. Each memory clerk or component has a unique way of accessing and using memory. For more information, see [sys.dm_os_memory_clerks](../system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) and their descriptions.
+Internal memory pressure coming from components inside SQL Server Engine can also lead to error 701. There are hundreds of components, tracked via [sys.dm_os_memory_clerks](../system-dynamic-management-objects/sys-dm-os-memory-clerks-transact-sql.md), that allocate memory in SQL Server. You must identify which memory clerk(s) are responsible for the largest memory allocations to be able to resolve this further. For example, if you find that the OBJECTSTORE_LOCK_MANAGER memory clerk is showing the large memory allocation, you need to further understand why the Lock Manager is consuming so much memory. You might find there are queries that acquire a large number of locks and optimize them by using indexes, or shorten transactions that hold locks for long periods, or check if lock escalation is disabled. Each memory clerk or component has a unique way of accessing and using memory. For more information, see [sys.dm_os_memory_clerks](../system-dynamic-management-objects/sys-dm-os-memory-clerks-transact-sql.md) and their descriptions.
 
 ## User action
 
@@ -53,7 +53,7 @@ The following list outlines general steps that will help in troubleshooting memo
 
 ### Diagnostic tools and capture
 
-The diagnostics tools that will allow you to collect troubleshooting data are **Performance Monitor**, **[sys.dm_os_memory_clerks](../system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**, and **[DBCC MEMORYSTATUS](/troubleshoot/sql/performance/dbcc-memorystatus-monitor-memory-usage)**.
+The diagnostics tools that will allow you to collect troubleshooting data are **Performance Monitor**, **[sys.dm_os_memory_clerks](../system-dynamic-management-objects/sys-dm-os-memory-clerks-transact-sql.md)**, and **[DBCC MEMORYSTATUS](/troubleshoot/sql/performance/dbcc-memorystatus-monitor-memory-usage)**.
 
 Configure and collect the following counters with Performance Monitor:
 

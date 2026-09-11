@@ -33,7 +33,7 @@ helpviewer_keywords:
  A hard disk or other disk storage media that contains one or more backup files. A backup file is a regular operating system file.  
   
  media set  
- An ordered collection of backup media, tapes or disk files, that uses a fixed type and number of backup devices. For more information about media sets, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+ An ordered collection of backup media, tapes or disk files, that uses a fixed type and number of backup devices. For more information about media sets, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
  physical backup device  
  Either a tape drive or a disk file that is provided by the operating system. A backup can be written to from 1 to 64 backup devices. If a backup requires multiple backup devices, the devices all must correspond to a single type of device (disk or tape).  
@@ -173,20 +173,20 @@ GO
 > For more information about the BACKUP syntax and arguments, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). For more information about the RESTORE syntax and arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md), respectively.  
   
 ###  <a name="OpenTapes"></a> Managing open tapes  
- To view a list of open tape devices and the status of mount requests, query the [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) dynamic management view. This view shows all the open tapes. These include in-use tapes that are temporarily idle while they wait for the next BACKUP or RESTORE operation.  
+ To view a list of open tape devices and the status of mount requests, query the [sys.dm_io_backup_tapes](../system-dynamic-management-objects/sys-dm-io-backup-tapes-transact-sql.md) dynamic management view. This view shows all the open tapes. These include in-use tapes that are temporarily idle while they wait for the next BACKUP or RESTORE operation.  
   
  If a tape has been accidentally left open, the fastest way to release the tape is by using the following command: RESTORE REWINDONLY FROM TAPE **=**_backup_device_name_. For more information, see [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## Using the Azure Blob Storage  
- SQL Server Backups can be written to Azure Blob Storage.  For more information on how to use Azure Blob Storage for your backups, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ SQL Server Backups can be written to Azure Blob Storage.  For more information on how to use Azure Blob Storage for your backups, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Use a logical backup device  
  A *logical backup device* is an optional, user-defined name that points to a specific physical backup device (a disk file or tape drive). A logical backup device lets you use indirection when referencing the corresponding physical backup device.  
   
  Defining a logical backup device involves assigning a logical name to a physical device. For example, a logical device, `AdventureWorksBackups`, could be defined to point to the `Z:\SQLServerBackups\AdventureWorks2022.bak` file or the `\\.\tape0` tape drive. Backup and restore commands can then specify `AdventureWorksBackups` as the backup device, instead of `DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'` or `TAPE = '\\.\tape0'`.  
   
- The logical device name must be unique among all the logical backup devices on the server instance. To view the existing logical device names, query the [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) catalog view. This view displays the name of each logical backup device and describes the type and physical file name or path of the corresponding physical backup device.  
+ The logical device name must be unique among all the logical backup devices on the server instance. To view the existing logical device names, query the [sys.backup_devices](../system-catalog-views/sys-backup-devices-transact-sql.md) catalog view. This view displays the name of each logical backup device and describes the type and physical file name or path of the corresponding physical backup device.  
   
  After a logical backup device is defined, in a BACKUP or RESTORE command, you can specify the logical backup device instead of the physical name of the device. For example, the following statement backs up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to the `AdventureWorksBackups` logical backup device.  
   
@@ -208,7 +208,7 @@ GO
 2.  Defining a new logical backup device that uses the original logical device name but maps to a different physical backup device. Logical backup devices are especially useful for identifying tape backup devices.  
 
 ##  <a name="MirroredMediaSets"></a> Mirrored backup media sets  
- Mirroring of backup media sets reduces the effect of backup-device malfunctions. These malfunctions are especially serious because backups are the last line of defense against data loss. As the sizes of databases grow, the probability increases that a failure of a backup device or media will make a backup nonrestorable. Mirroring backup media increases the reliability of backups by providing redundancy for the physical backup device. For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+ Mirroring of backup media sets reduces the effect of backup-device malfunctions. These malfunctions are especially serious because backups are the last line of defense against data loss. As the sizes of databases grow, the probability increases that a failure of a backup device or media will make a backup nonrestorable. Mirroring backup media increases the reliability of backups by providing redundancy for the physical backup device. For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
 > [!NOTE]  
 > Mirrored backup media sets are supported only in [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] and later versions.  
@@ -223,27 +223,27 @@ GO
 ##  <a name="RelatedTasks"></a> Related tasks  
  **To specify a disk device (SQL Server Management Studio)**  
   
--   [Specify a Disk or Tape As a Backup Destination &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Specify a Disk or Tape As a Backup Destination &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
  **To specify a tape device (SQL Server Management Studio)**  
   
--   [Specify a Disk or Tape As a Backup Destination &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Specify a Disk or Tape As a Backup Destination &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
  **To define a logical backup device**  
   
--   [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)  
+-   [sp_addumpdevice &#40;Transact-SQL&#41;](../system-stored-procedures/sp-addumpdevice-transact-sql.md)  
   
--   [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
+-   [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.BackupDevice> (SMO)  
   
  **To use a logical backup device**  
   
--   [Specify a Disk or Tape As a Backup Destination &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Specify a Disk or Tape As a Backup Destination &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [Restore a Backup from a Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
+-   [Restore a Backup from a Device &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
@@ -251,17 +251,17 @@ GO
   
  **To View Information About Backup Devices**  
   
--   [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
+-   [Backup History and Header Information &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)  
   
--   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
+-   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
  **To delete a logical backup device**  
   
--   [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)  
+-   [sp_dropdevice &#40;Transact-SQL&#41;](../system-stored-procedures/sp-dropdevice-transact-sql.md)  
   
--   [Delete a Backup Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
+-   [Delete a Backup Device &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
 ## Related content
 

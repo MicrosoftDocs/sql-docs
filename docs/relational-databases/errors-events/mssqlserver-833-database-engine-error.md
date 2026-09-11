@@ -87,7 +87,7 @@ Troubleshoot this error by performing the following steps:
     - **Average Disk Queue Length**
     - **Current Disk Queue Length**
 1. You can also use facilities like [Storport ETW logging](/archive/blogs/ntdebugging/storport-etw-logging-to-measure-requests-made-to-a-disk-unit) to measure the latency of requests that're made to a disk unit. Another similar disk I/O troubleshooting kit is available as a built-in profile of [Windows Performance Recorder](/windows-hardware/test/wpt/introduction-to-wpr).
-1. Monitor [sys.dm_io_virtual_file_stats](../system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) and choose the appropriate storage tier and IOPS for your storage throughput.
+1. Monitor [sys.dm_io_virtual_file_stats](../system-dynamic-management-objects/sys-dm-io-virtual-file-stats-transact-sql.md) and choose the appropriate storage tier and IOPS for your storage throughput.
 
 For a guided walk-through for diagnosing and troubleshooting SQL Server performance issues that occur because of I/O issues, see [Troubleshoot slow SQL Server performance caused by I/O issues](/troubleshoot/sql/performance/troubleshoot-sql-io-performance).
 
@@ -248,7 +248,7 @@ For more information, see [Support for databases on compressed volumes](/trouble
 PAGEIOLATCH_* and writelog waits in sys.dm_os_wait_stats dynamic management views (DMV) are key indicators to investigate I/O path performance. If you see significant PAGEIOLATCH waits, it means that SQL Server is waiting on the I/O subsystem. A certain amount of PAGEIOLATCH waits is typical and expected behavior. However, if the average PAGEIOLATCH wait times are consistently greater than 10 milliseconds, you should investigate why the I/O subsystem is under pressure. For more information, see the following documents:
 
 - [Troubleshoot slow SQL Server performance caused by I/O issues](/troubleshoot/sql/performance/troubleshoot-sql-io-performance)
-- [sys.dm_os_waiting_tasks (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)
+- [sys.dm_os_waiting_tasks (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-waiting-tasks-transact-sql.md)
 - [sys.dm_exec_requests](https://msdn.microsoft.com/library/ms177648.aspx)
 - [The SQL Server Wait Type Repository](https://blogs.msdn.com/b/psssql/archive/2009/11/03/the-sql-server-wait-type-repository.aspx)
 

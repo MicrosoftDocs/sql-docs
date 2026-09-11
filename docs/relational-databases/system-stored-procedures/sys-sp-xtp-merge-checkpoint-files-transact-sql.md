@@ -47,11 +47,11 @@ The name of the database on which to invoke the merge. *@database_name* is **sys
 
 #### [ @transaction_lower_bound = ] *transaction_lower_bound*
 
-The **bigint** lower bound of transactions for a data file as shown in [sys.dm_db_xtp_checkpoint_files](../system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) corresponding to the start checkpoint file of the merge. An error is generated for an invalid transaction ID.
+The **bigint** lower bound of transactions for a data file as shown in [sys.dm_db_xtp_checkpoint_files](../system-dynamic-management-objects/sys-dm-db-xtp-checkpoint-files-transact-sql.md) corresponding to the start checkpoint file of the merge. An error is generated for an invalid transaction ID.
 
 #### [ @transaction_upper_bound = ] *transaction_upper_bound*
 
-The **bigint** upper bound of transactions for a data file as shown in [sys.dm_db_xtp_checkpoint_files](../system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). An error is generated for an invalid transaction ID.
+The **bigint** upper bound of transactions for a data file as shown in [sys.dm_db_xtp_checkpoint_files](../system-dynamic-management-objects/sys-dm-db-xtp-checkpoint-files-transact-sql.md). An error is generated for an invalid transaction ID.
 
 ## Return code values
 

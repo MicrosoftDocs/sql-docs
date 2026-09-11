@@ -11,8 +11,8 @@ In earlier versions of [!INCLUDE [ssnoversion-md](../ssnoversion-md.md)], reorga
 
 Also, in earlier versions, the granularity of control was less refined. This caused the system to reorganize or rebuild some indexes even when the indexes weren't much fragmented, which was wasteful. Newer controls on the Maintenance Plan user interface (UI) enable you to exclude indexes that don't need to be refreshed, based on index statistics criteria. For this, the following dynamic management views (DMVs) of Transact-SQL are used internally:
 
-- [sys.dm_db_index_usage_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)
-- [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
+- [sys.dm_db_index_usage_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-usage-stats-transact-sql.md)
+- [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md)
 
 #### Scan type
 

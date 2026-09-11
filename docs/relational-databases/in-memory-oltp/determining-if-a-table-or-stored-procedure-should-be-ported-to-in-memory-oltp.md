@@ -64,7 +64,7 @@ The details report for a table consists of three sections:
 
   This section includes a table that shows the difficulty of converting this database table to a memory-optimized table. A higher difficulty rating indicates more difficulty to convert the table. To see details to convert this database table, use the Memory Optimization Advisor.
 
-The process gathers and aggregates scan and contention statistics on the table details report from [sys.dm_db_index_operational_stats](../system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).
+The process gathers and aggregates scan and contention statistics on the table details report from [sys.dm_db_index_operational_stats](../system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md).
 
 ### Stored procedures
 

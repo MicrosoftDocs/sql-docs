@@ -164,7 +164,7 @@ The Query Optimizer checks for out-of-date statistics before compiling a query a
 
 The `AUTO_UPDATE_STATISTICS` option applies to statistics objects created for indexes, single-columns in query predicates, and statistics created with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement. This option also applies to filtered statistics.
 
-You can use the [sys.dm_db_stats_properties](../system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) to accurately track the number of rows changed in a table and decide if you want to update statistics manually.
+You can use the [sys.dm_db_stats_properties](../system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md) to accurately track the number of rows changed in a table and decide if you want to update statistics manually.
 
 `AUTO_UPDATE_STATISTICS` is always `OFF` for memory-optimized tables.
 
@@ -211,7 +211,7 @@ In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE
 
 Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the auto drop option is enabled by default on all new and migrated databases. If you enable the `AUTO_DROP` property, the database creates statistics objects in a mode such that a subsequent schema change *isn't* blocked by the statistic object, but instead the statistics are dropped as necessary. In this way, manually created statistics with auto drop enabled behave like auto-created statistics.
 
-In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, automatically created statistics always behave as though the [AUTO_DROP](../../relational-databases/statistics/statistics.md#auto_drop-option) is enabled.
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, automatically created statistics always behave as though the [AUTO_DROP](statistics.md#auto_drop-option) is enabled.
 
 > [!NOTE]  
 > Trying to set or unset the auto drop property on auto-created statistics can raise errors. Auto-created statistics always uses auto drop. Some backups, when restored, can have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto-created statistics always behave like auto drop statistics. When restoring a database to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] from a previous version, it's recommended to execute `sp_updatestats` on the database, setting the proper metadata for the statistics auto drop feature.
@@ -249,7 +249,7 @@ For more information, see [AUTO_DROP](../../t-sql/statements/create-statistics-t
 When you set the `INCREMENTAL` option of `CREATE STATISTICS` to `ON`, you create per partition statistics. When you set it to `OFF`, the database drops the statistics tree and recomputes the statistics. The default is `OFF`. This setting overrides the database level `INCREMENTAL` property. 
 
 - For more information about creating incremental statistics, see [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md). 
-- For more information about creating per partition statistics automatically, see [Database Properties (Options Page)](../../relational-databases/databases/database-properties-options-page.md#automatic) and [ALTER DATABASE SET options](../../t-sql/statements/alter-database-transact-sql-set-options.md).
+- For more information about creating per partition statistics automatically, see [Database Properties (Options Page)](../databases/database-properties-options-page.md#automatic) and [ALTER DATABASE SET options](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 When you add new partitions to a large table, you should update statistics to include the new partitions. However, the time required to scan the entire table (`FULLSCAN` or `SAMPLE` options) can be long. Also, scanning the entire table isn't necessary because only the statistics on the new partitions might be needed. The incremental option creates and stores statistics on a per partition basis, and when updated, only refreshes statistics on those partitions that need new statistics.
 
@@ -390,7 +390,7 @@ When you set `AUTO_UPDATE_STATISTICS` to `OFF`, plan recompilation can still occ
 
 ### Detect out-of-date statistics
 
-To determine when statistics were last updated, use the [sys.dm_db_stats_properties](../system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) or [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) functions.
+To determine when statistics were last updated, use the [sys.dm_db_stats_properties](../system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md) or [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) functions.
 
 Consider updating statistics for the following conditions:
 
@@ -435,7 +435,7 @@ Use any of the following techniques to inspect the execution plan:
     - Right-click inside the graphical plan and select **Show Execution Plan XML**. Look for the `OptimizerStatsUsage` element and each child `StatisticsInfo` element.
     - Select the final (left-most) operator. (In the case of a `SELECT` query, this operator is a `SELECT` node.) In the **Properties** window, expand the **OptimizerStatsUsage** node, and view information about the statistics objects used in the query.
 - Run [SET STATISTICS XML ON](../../t-sql/statements/set-statistics-xml-transact-sql.md) before the query. Select the hyperlink that appears with the results to view the execution plan XML.
-- Query [sys.dm_exec_query_plan](../system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) or [sys.dm_exec_query_statistics_xml](../system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) for recent queries.
+- Query [sys.dm_exec_query_plan](../system-dynamic-management-objects/sys-dm-exec-query-plan-transact-sql.md) or [sys.dm_exec_query_statistics_xml](../system-dynamic-management-objects/sys-dm-exec-query-statistics-xml-transact-sql.md) for recent queries.
 - Read a previously captured plan from [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) using [sys.query_store_plan](../system-catalog-views/sys-query-store-plan-transact-sql.md).
 
 Each `StatisticsInfo` element looks like the following XML fragment from a query on the `AdventureWorks2022` sample database:
@@ -462,7 +462,7 @@ Each `StatisticsInfo` element looks like the following XML fragment from a query
 > [!NOTE]
 > `StatisticsInfo` reflects statistics that were available and considered during plan compilation. If a `StatisticsInfo` entry is missing for a column your query filters on, the query optimizer didn't identify relevant statistics, which is a potential source of poor performance.
 
-To check current freshness and modification counts for a statistic object, use [sys.dm_db_stats_properties](../system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md). For example, the following query provides the current metrics for a statistic object named `IX_SalesOrderDetail_ProductID` on the table `Sales.SalesOrderDetail`:
+To check current freshness and modification counts for a statistic object, use [sys.dm_db_stats_properties](../system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md). For example, the following query provides the current metrics for a statistic object named `IX_SalesOrderDetail_ProductID` on the table `Sales.SalesOrderDetail`:
 
 ```sql
 SELECT
@@ -496,7 +496,7 @@ WHERE [name] = DB_NAME();
 
 Certain query implementations, such as local variables and complex expressions in the query predicate, can lead to suboptimal query plans. To avoid these problems, follow query design guidelines for using statistics effectively. For more information about query predicates, see [Search condition](../../t-sql/queries/search-condition-transact-sql.md).
 
-You can improve query plans by applying query design guidelines that use statistics effectively to improve *cardinality estimates* for expressions, variables, and functions used in query predicates. When the Query Optimizer doesn't know the value of an expression, variable, or function, it doesn't know which value to look up in the histogram and therefore can't retrieve the best cardinality estimate from the histogram. Instead, the Query Optimizer bases the cardinality estimate on the average number of rows per distinct value for all of the sampled rows in the histogram. This situation leads to suboptimal cardinality estimates and can hurt query performance. For more information about histograms, see the [histogram](#histogram) section in this article or [sys.dm_db_stats_histogram](../system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md).
+You can improve query plans by applying query design guidelines that use statistics effectively to improve *cardinality estimates* for expressions, variables, and functions used in query predicates. When the Query Optimizer doesn't know the value of an expression, variable, or function, it doesn't know which value to look up in the histogram and therefore can't retrieve the best cardinality estimate from the histogram. Instead, the Query Optimizer bases the cardinality estimate on the average number of rows per distinct value for all of the sampled rows in the histogram. This situation leads to suboptimal cardinality estimates and can hurt query performance. For more information about histograms, see the [histogram](#histogram) section in this article or [sys.dm_db_stats_histogram](../system-dynamic-management-objects/sys-dm-db-stats-histogram-transact-sql.md).
 
 The following guidelines describe how to write queries to improve query plans by improving cardinality estimates.
 

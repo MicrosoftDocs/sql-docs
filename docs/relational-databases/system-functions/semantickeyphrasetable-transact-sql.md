@@ -66,14 +66,14 @@ SEMANTICKEYPHRASETABLE
 |**score**|**REAL**|A relative value for this key phrase in its relationship to all the other key phrases in the same document in the indexed column.<br /><br /> The value is a fractional decimal value in the range of [0.0, 1.0] where a higher score represents a higher weighting and 1.0 is the perfect score.|  
   
 ## General Remarks  
- For more information, see [Find Key Phrases in Documents with Semantic Search](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  
+ For more information, see [Find Key Phrases in Documents with Semantic Search](../search/find-key-phrases-in-documents-with-semantic-search.md).  
   
 ## Metadata  
  For information and status about semantic key phrase extraction and population, query the following dynamic management views:  
   
--   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
   
--   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
+-   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-fts-index-population-transact-sql.md)  
   
 ## Security  
   
@@ -112,6 +112,4 @@ ON DOC_TBL.DocumentID = KEYP_TBL.document_key
 WHERE KEYP_TBL.keyphrase = 'Bracket'  
 ORDER BY KEYP_TBL.Score DESC;  
   
-```  
-  
-  
+```

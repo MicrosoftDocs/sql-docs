@@ -17,15 +17,15 @@ helpviewer_keywords:
 ##  <a name="prepare"></a> Preparing to Migrate a Database  
  Review the following items when considering migrating a database to the partially contained database model.  
   
--   You should understand the partially contained database model. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  
+-   You should understand the partially contained database model. For more information, see [Contained Databases](contained-databases.md).  
   
--   You should understand risks that are unique to partially contained databases. For more information, see [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+-   You should understand risks that are unique to partially contained databases. For more information, see [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  
   
 -   Contained databases do not support replication, change data capture, or change tracking. Confirm the database does not use these features.  
   
--   Review the list of database features that are modified for partially contained databases. For more information, see [Modified Features &#40;Contained Database&#41;](../../relational-databases/databases/modified-features-contained-database.md).  
+-   Review the list of database features that are modified for partially contained databases. For more information, see [Modified Features &#40;Contained Database&#41;](modified-features-contained-database.md).  
   
--   Query [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) to find uncontained objects or features in the database. For more information, see.  
+-   Query [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-db-uncontained-entities-transact-sql.md) to find uncontained objects or features in the database. For more information, see.  
   
 -   Monitor the **database_uncontained_usage** XEvent to see when uncontained features are used.  
   

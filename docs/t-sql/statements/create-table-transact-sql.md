@@ -542,7 +542,7 @@ In the `CREATE TABLE` statement, the `NOT FOR REPLICATION` clause can be specifi
 
 **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]  and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
-Specifies a column used by the system to automatically record information about row versions in the table and its history table (if the table is system versioned and has a history table). Use this argument with the `WITH SYSTEM_VERSIONING = ON` parameter to create system-versioned tables: temporal or ledger tables. For more information, see [updateable ledger tables](/azure/azure-sql/database/ledger-updatable-ledger-tables#updateable-ledger-tables-vs-temporal-tables) and [temporal tables](../../relational-databases/tables/temporal-tables.md).
+Specifies a column used by the system to automatically record information about row versions in the table and its history table (if the table is system versioned and has a history table). Use this argument with the `WITH SYSTEM_VERSIONING = ON` parameter to create system-versioned tables: temporal or ledger tables. For more information, see [updateable ledger tables](../../relational-databases/security/ledger/ledger-updatable-ledger-tables.md) and [temporal tables](../../relational-databases/tables/temporal/overview.md).
 
 | Parameter | Required data type | Required nullability | Description |
 | --- | --- | --- | --- |
@@ -832,7 +832,7 @@ The name of the column set. A column set is an untyped XML representation that c
 
 **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]  and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
-Specifies the names of the columns that the system uses to record the period for which a record is valid. Use this argument with the `GENERATED ALWAYS AS ROW { START | END }` and `WITH SYSTEM_VERSIONING = ON` arguments to create a temporal table. For more information, see [Temporal tables](../../relational-databases/tables/temporal-tables.md).
+Specifies the names of the columns that the system uses to record the period for which a record is valid. Use this argument with the `GENERATED ALWAYS AS ROW { START | END }` and `WITH SYSTEM_VERSIONING = ON` arguments to create a temporal table. For more information, see [Temporal tables](../../relational-databases/tables/temporal/overview.md).
 
 #### COMPRESSION_DELAY
 
@@ -1024,11 +1024,11 @@ If the history table doesn't exist, the system generates a new history table mat
 
 If the `HISTORY_TABLE` argument is used to create a link to and use an existing history table, the link is created between the current table and the specified table. If current table is partitioned, the history table is created on default file group because partitioning configuration isn't replicated automatically from the current table to the history table. When creating a link to an existing history table, you can choose to perform a data consistency check. This data consistency check ensures that existing records don't overlap. Performing the data consistency check is the default.
 
-Use this argument with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW { START | END }` arguments to enable system versioning on a table. For more information, see [Temporal tables](../../relational-databases/tables/temporal-tables.md). Use this argument with the `WITH LEDGER = ON` argument to create an updatable ledger table. Using existing history tables with ledger tables isn't allowed.
+Use this argument with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW { START | END }` arguments to enable system versioning on a table. For more information, see [Temporal tables](../../relational-databases/tables/temporal/overview.md). Use this argument with the `WITH LEDGER = ON` argument to create an updatable ledger table. Using existing history tables with ledger tables isn't allowed.
 
 For more information about `HISTORY_RETENTION_PERIOD`, see [Manage historical data in Temporal tables with retention policy](../../relational-databases/tables/temporal/manage-retention.md).
 
-For more information about `DATA_CONSISTENCY_CHECK`, see [Temporal table system consistency checks](../../relational-databases/tables/temporal-table-system-consistency-checks.md).
+For more information about `DATA_CONSISTENCY_CHECK`, see [Temporal table system consistency checks](../../relational-databases/tables/temporal/consistency-checks.md).
 
 #### REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [ ,... *n* ] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }
 
@@ -1166,7 +1166,7 @@ If any of the required generated always columns isn't defined in the `CREATE TAB
 [ledger_end_sequence_number] BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER END HIDDEN NULL
 ```
 
-The *<ledger_view_option>* specifies the schema and the name of the [ledger view](/azure/azure-sql/database/ledger-updatable-ledger-tables#ledger-view) the system automatically creates and links to the table. If the option isn't specified, the system generates the ledger view name by appending `_Ledger` to the name of the table being created (`database_name.schema_name.table_name`). If a view with the specified or generated name exists, the system raises an error. If the table is an updatable ledger table, the ledger view is created as a union on the table and its history table.
+The *<ledger_view_option>* specifies the schema and the name of the [ledger view](../../relational-databases/security/ledger/ledger-updatable-ledger-tables.md#ledger-view) the system automatically creates and links to the table. If the option isn't specified, the system generates the ledger view name by appending `_Ledger` to the name of the table being created (`database_name.schema_name.table_name`). If a view with the specified or generated name exists, the system raises an error. If the table is an updatable ledger table, the ledger view is created as a union on the table and its history table.
 
 Each row in the ledger view represents either the creation or deletion of a row version in the ledger table. The ledger view contains all columns of the ledger table, except the generated always columns listed above. The ledger view also contains the following additional columns:
 
@@ -1421,7 +1421,7 @@ Before creating a partitioned table by using CREATE TABLE, you must first create
 - When `ALLOW_ROW_LOCKS = ON` and `ALLOW_PAGE_LOCK = ON`, row-, page-, and table-level locks are allowed when you access the index. The [!INCLUDE [ssDE](../../includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock. When `ALLOW_ROW_LOCKS = OFF` and `ALLOW_PAGE_LOCK = OFF`, only a table-level lock is allowed when you access the index.
 - If a table has FOREIGN KEY or CHECK CONSTRAINTS and triggers, the constraint conditions are evaluated before the trigger is executed.
 
-For a report on a table and its columns, use `sp_help` or `sp_helpconstraint`. To rename a table, use `sp_rename`. For a report on the views and stored procedures that depend on a table, use [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) and [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).
+For a report on a table and its columns, use `sp_help` or `sp_helpconstraint`. To rename a table, use `sp_rename`. For a report on the views and stored procedures that depend on a table, use [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md) and [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-objects/sys-dm-sql-referencing-entities-transact-sql.md).
 
 ## Nullability rules within a table definition
 
@@ -1745,7 +1745,7 @@ CREATE TABLE T1
 
 **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]  and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
-The following examples show how to create a temporal table linked to a new history table, and how to create a temporal table linked to an existing history table. The temporal table must have a primary key defined to be enabled for the table to be enabled for system versioning. For examples showing how to add or remove system versioning on an existing table, see System Versioning in [Examples](alter-table-transact-sql.md#Example_Top). For use cases, see [Temporal tables](../../relational-databases/tables/temporal-tables.md).
+The following examples show how to create a temporal table linked to a new history table, and how to create a temporal table linked to an existing history table. The temporal table must have a primary key defined to be enabled for the table to be enabled for system versioning. For examples showing how to add or remove system versioning on an existing table, see System Versioning in [Examples](alter-table-transact-sql.md#Example_Top). For use cases, see [Temporal tables](../../relational-databases/tables/temporal/overview.md).
 
 This example creates a new temporal table linked to a new history table.
 

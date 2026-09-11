@@ -331,7 +331,7 @@ The steps to troubleshoot `ACTIVE_TRANSACTION` reason include discovering the lo
 
 A long-running transaction can cause the transaction log to fill. To look for long-running transactions, use one of the following options:
 
-- **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)**:
+- **[sys.dm_tran_database_transactions](../system-dynamic-management-objects/sys-dm-tran-database-transactions-transact-sql.md)**:
 
   This dynamic management view returns information about transactions at the database level. For a long-running transaction, columns of particular interest include the time of the first log record (`database_transaction_begin_time`), the current state of the transaction (`database_transaction_state`), and the [log sequence number (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) of the `BEGIN` record in the transaction log (`database_transaction_begin_lsn`).
 

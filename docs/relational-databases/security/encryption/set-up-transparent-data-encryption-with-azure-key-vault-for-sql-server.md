@@ -682,6 +682,37 @@ Use the cleanup steps that match the authentication model you configured.
 
 ---
 
+## Renew an expiring or expired client secret
+
+If you use service principal authentication, renew the Microsoft Entra application's client secret before it expires. If the secret has already expired, create a replacement secret and update the existing SQL Server credentials as described in this section. This procedure doesn't apply to managed identity authentication, which doesn't use a client secret.
+
+Renewing a client secret updates the credentials that SQL Server uses to authenticate to Azure Key Vault. It doesn't rotate the asymmetric key or change the database encryption key.
+
+To update a SQL Server credential, you need the `ALTER ANY CREDENTIAL` permission. For more information, see [ALTER CREDENTIAL (Transact-SQL)](../../../t-sql/statements/alter-credential-transact-sql.md).
+
+1. In the [Azure portal](https://portal.azure.com/), open **Microsoft Entra ID** > **App registrations** and select the existing application that SQL Server uses to access Azure Key Vault. Select **Certificates & secrets** > **Client secrets** > **New client secret**. Enter a description and expiration, select **Add**, and copy the new secret's **Value**, not its **Secret ID**.
+
+1. Update the existing SQL Server credential with the same identity and the new authentication value. In the following example:
+
+   - Replace `sysadmin_ekm_cred` with the name of the existing credential.
+   - Replace `DocsSampleEKMKeyVault` with the credential's existing identity. Keep the same vault name or hostname that you used when you created the credential.
+   - Replace `<client_id_without_hyphens><new_client_secret>` with the application's client ID, with its hyphens removed, followed immediately by the new client-secret value. Don't insert a space or separator, and preserve any hyphens in the client-secret value. Don't use the client-secret value alone.
+
+   ```sql
+   USE master;
+   GO
+   ALTER CREDENTIAL sysadmin_ekm_cred
+      WITH IDENTITY = 'DocsSampleEKMKeyVault',
+      SECRET = '<client_id_without_hyphens><new_client_secret>';
+   GO
+   ```
+
+1. Repeat the credential update for each SQL Server credential that uses the replaced client secret, including the credential mapped to the login created from the asymmetric key for TDE. If you use EKM in an availability group, update the affected credentials on every replica.
+
+1. Restart the SQL Server service after updating the credentials. For an availability group, perform the restart on each replica as part of your planned maintenance. A service restart interrupts connections, so coordinate the restarts with your availability requirements.
+
+1. Reconnect to SQL Server and verify that the encrypted databases are accessible. If you use SQL Server Management Studio, restart it to clear its session's cached credential. Remove the old client secret from the app registration only after all SQL Server instances and other applications that use it have been updated and validated.
+
 ## Rotate asymmetric keys for TDE with Azure Key Vault
 
 Use a dedicated operational guide for key rotation steps, including authentication-specific scripts, verification, and safety checks:

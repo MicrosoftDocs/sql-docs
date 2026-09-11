@@ -7,7 +7,7 @@ metadata:
   description: Find resources for the platform of your choice to help you focus on building great applications, for SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, and SQL Server on Azure VMs.
   author: rwestMSFT
   ms.author: randolphwest
-  ms.date: 06/18/2025
+  ms.date: 08/27/2026
   ms.service: sql
   ms.subservice: connectivity
   ms.topic: hub-page
@@ -21,7 +21,7 @@ conceptualContent:
           url: ado-net/download-microsoft-sqlclient-data-provider.md
           itemType: download
         - text: "Get started"
-          url: ado-net/get-started-sqlclient-driver.md
+          url: ado-net/microsoft-ado-net-sql-server.md
           itemType: get-started
         - text: "Code samples"
           url: https://github.com/dotnet/SqlClient/tree/main/doc/samples
@@ -32,7 +32,7 @@ conceptualContent:
           url: jdbc/download-microsoft-jdbc-driver-for-sql-server.md
           itemType: download
         - text: "Get started"
-          url: jdbc/getting-started-with-the-jdbc-driver.md
+          url: jdbc/microsoft-jdbc-driver-for-sql-server.md
           itemType: get-started
         - text: "Code samples"
           url: jdbc/sample-jdbc-driver-applications.md
@@ -40,38 +40,46 @@ conceptualContent:
     - title: "Python"
       links:
         - text: "Download"
-          url: python/mssql-python/python-sql-driver-mssql-python.md
+          url: python/mssql-python/installation.md
           itemType: download
         - text: "Get started"
-          url: python/mssql-python/python-sql-driver-mssql-python-quickstart.md
+          url: python/mssql-python/python-sql-driver-mssql-python.md
           itemType: get-started
         - text: "Code samples"
-          url: /azure/app-service/containers/quickstart-python
+          url: python/mssql-python/executing-queries.md
           itemType: reference
-    - title: "C++"
+    - title: "C++ (ODBC)"
       links:
-        - text: "Download OLE DB"
-          url: oledb/download-oledb-driver-for-sql-server.md
-          itemType: download
-        - text: "Download ODBC"
+        - text: "Download"
           url: odbc/download-odbc-driver-for-sql-server.md
           itemType: download
         - text: "Get started"
           url: odbc/microsoft-odbc-driver-for-sql-server.md
           itemType: get-started
         - text: "Code samples"
-          url: ../odbc/reference/sample-odbc-program.md
+          url: odbc/cpp-code-example-app-connect-access-sql-db.md
+          itemType: reference
+    - title: "C++ (OLE DB)"
+      links:
+        - text: "Download"
+          url: oledb/download-oledb-driver-for-sql-server.md
+          itemType: download
+        - text: "Get started"
+          url: oledb/oledb-driver-for-sql-server.md
+          itemType: get-started
+        - text: "Code samples"
+          url: oledb/ole-db-how-to/ole-db-how-to-topics.md
           itemType: reference
     - title: "Go"
       links:
         - text: "Download"
-          url: sql-connection-libraries.md#anchor-20-drivers-relational-access
+          url: golang/installation.md
           itemType: download
         - text: "Get started"
-          url: /azure/azure-sql/database/connect-query-go
+          url: golang/microsoft-go-mssqldb-driver.md
           itemType: get-started
         - text: "Code samples"
-          url: https://github.com/microsoft/go-mssqldb
+          url: https://github.com/microsoft/go-mssqldb/tree/main/examples
           itemType: reference
     - title: "PHP"
       links:
@@ -79,7 +87,7 @@ conceptualContent:
           url: php/download-drivers-php-sql-server.md
           itemType: download
         - text: "Get started"
-          url: php/getting-started-with-the-php-sql-driver.md
+          url: php/microsoft-php-driver-for-sql-server.md
           itemType: get-started
         - text: "Code samples"
           url: php/code-samples-for-php-sql-driver.md

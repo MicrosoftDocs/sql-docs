@@ -32,7 +32,7 @@ The `MERGE` operation is now multithreaded.
 
 ## Dynamic management views
 
-The DMVs [sys.dm_db_xtp_checkpoint_stats](../system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md) and [sys.dm_db_xtp_checkpoint_files](../system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) have been changed significantly.
+The DMVs [sys.dm_db_xtp_checkpoint_stats](../system-dynamic-management-objects/sys-dm-db-xtp-checkpoint-stats-transact-sql.md) and [sys.dm_db_xtp_checkpoint_files](../system-dynamic-management-objects/sys-dm-db-xtp-checkpoint-files-transact-sql.md) have been changed significantly.
 
 ## Storage management
 

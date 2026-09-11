@@ -24,7 +24,7 @@ Columnstore indexes, in conjunction with partitioning, are essential for buildin
 
 - Always On availability groups support querying a columnstore index on a readable secondary replica.
 - Multiple Active Result Sets (MARS) supports columnstore indexes.
-- A new dynamic management view [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) provides performance troubleshooting information at the row group level.
+- A new dynamic management view [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) provides performance troubleshooting information at the row group level.
 - All queries on columnstore indexes can run in batch mode. Previously, only parallel queries could run in batch mode.
 - The **Sort**, **Distinct Sort**, and **Distinct** operators run in batch mode.
 - Window aggregates now runs in batch mode for database compatibility level 130 and higher.

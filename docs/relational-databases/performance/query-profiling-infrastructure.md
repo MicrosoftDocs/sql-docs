@@ -36,14 +36,14 @@ The *query execution statistics profile infrastructure*, or standard profiling, 
 - [Live Query Statistics](live-query-statistics.md)
 
 > [!NOTE]  
-> Selecting the button **Include Live Query Statistics** in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] uses the standard profiling infrastructure. In later versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], if the [lightweight profiling infrastructure](#lwp) is enabled, then it's used by live query statistics instead of standard profiling when viewed through [Activity Monitor](../performance-monitor/activity-monitor.md) or directly querying the [sys.dm_exec_query_profiles](../system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV.
+> Selecting the button **Include Live Query Statistics** in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] uses the standard profiling infrastructure. In later versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], if the [lightweight profiling infrastructure](#lwp) is enabled, then it's used by live query statistics instead of standard profiling when viewed through [Activity Monitor](../performance-monitor/activity-monitor.md) or directly querying the [sys.dm_exec_query_profiles](../system-dynamic-management-objects/sys-dm-exec-query-profiles-transact-sql.md) DMV.
 
 The following methods of collecting execution plan information globally for **all sessions** use the standard profiling infrastructure:
 
 - The `query_post_execution_showplan` extended event. To enable Extended Events, see [Monitor System Activity Using Extended Events](../extended-events/monitor-system-activity-using-extended-events.md).
 - The **Showplan XML** trace event in [SQL Trace](../sql-trace/sql-trace.md) and [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). For more information on this trace event, see [Showplan XML Event Class](../event-classes/showplan-xml-event-class.md).
 
-When running an extended event session that uses the `query_post_execution_showplan` event, then the [sys.dm_exec_query_profiles](../system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV is also populated, which enables live query statistics for all sessions, using [Activity Monitor](../performance-monitor/activity-monitor.md) or directly querying the DMV. For more information, see [Live Query Statistics](live-query-statistics.md).
+When running an extended event session that uses the `query_post_execution_showplan` event, then the [sys.dm_exec_query_profiles](../system-dynamic-management-objects/sys-dm-exec-query-profiles-transact-sql.md) DMV is also populated, which enables live query statistics for all sessions, using [Activity Monitor](../performance-monitor/activity-monitor.md) or directly querying the DMV. For more information, see [Live Query Statistics](live-query-statistics.md).
 
 <a id="lwp"></a>
 
@@ -93,13 +93,13 @@ WITH
 > [!NOTE]  
 > For more information on the performance overhead of query profiling, see the blog post [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere).
 
-When running an extended event session that uses the `query_thread_profile` event, then the [sys.dm_exec_query_profiles](../system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV is also populated using lightweight profiling, which enables live query statistics for all sessions, using [Activity Monitor](../performance-monitor/activity-monitor.md) or directly querying the DMV.
+When running an extended event session that uses the `query_thread_profile` event, then the [sys.dm_exec_query_profiles](../system-dynamic-management-objects/sys-dm-exec-query-profiles-transact-sql.md) DMV is also populated using lightweight profiling, which enables live query statistics for all sessions, using [Activity Monitor](../performance-monitor/activity-monitor.md) or directly querying the DMV.
 
 ### Lightweight query execution statistics profiling infrastructure v2
 
 **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1 through [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)].
 
-[!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1 includes a revised version of lightweight profiling with minimal overhead. Lightweight profiling can also be enabled globally using [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf7412) for the versions stated previously in *Applies to*. A new DMF [sys.dm_exec_query_statistics_xml](../system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) is introduced to return the query execution plan for in-flight requests.
+[!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1 includes a revised version of lightweight profiling with minimal overhead. Lightweight profiling can also be enabled globally using [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf7412) for the versions stated previously in *Applies to*. A new DMF [sys.dm_exec_query_statistics_xml](../system-dynamic-management-objects/sys-dm-exec-query-statistics-xml-transact-sql.md) is introduced to return the query execution plan for in-flight requests.
 
 Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 CU3 and [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] CU11, if lightweight profiling isn't enabled globally then the new [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) argument `QUERY_PLAN_PROFILE` can be used to enable lightweight profiling at the query level, for any session. When a query that contains this new hint finishes, a new `query_plan_profile` extended event is also output that provides an actual execution plan XML similar to the `query_post_execution_showplan` extended event.
 
@@ -142,7 +142,7 @@ WITH
 
 [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] include a newly revised version of lightweight profiling collecting row count information for all executions. Lightweight profiling is enabled by default on [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. In [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and later versions, trace flag 7412 has no effect. Lightweight profiling can be disabled at the database level using the `LIGHTWEIGHT_QUERY_PROFILING` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
-A new DMF [sys.dm_exec_query_plan_stats](../system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) is introduced to return the equivalent of the last known actual execution plan for most queries, and is called *last query plan statistics*. The last query plan statistics can be enabled at the database level using the `LAST_QUERY_PLAN_STATS` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
+A new DMF [sys.dm_exec_query_plan_stats](../system-dynamic-management-objects/sys-dm-exec-query-plan-stats-transact-sql.md) is introduced to return the equivalent of the last known actual execution plan for most queries, and is called *last query plan statistics*. The last query plan statistics can be enabled at the database level using the `LAST_QUERY_PLAN_STATS` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
 A new `query_post_execution_plan_profile` extended event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan`, which uses standard profiling. [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] also offers this event starting with CU14. A sample session using the `query_post_execution_plan_profile` extended event can be configured like the following example:
 
@@ -248,7 +248,7 @@ The following table summarizes the actions to enable either standard profiling o
 ## Remarks
 
 > [!IMPORTANT]  
-> Due to a possible random access violation while executing a monitoring stored procedure that references [sys.dm_exec_query_statistics_xml](../system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), ensure [KB 4078596](https://support.microsoft.com/help/4078596) is installed in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)].
+> Due to a possible random access violation while executing a monitoring stored procedure that references [sys.dm_exec_query_statistics_xml](../system-dynamic-management-objects/sys-dm-exec-query-statistics-xml-transact-sql.md), ensure [KB 4078596](https://support.microsoft.com/help/4078596) is installed in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)].
 
 Starting with lightweight profiling v2 and its low overhead, any server that isn't already CPU bound can run lightweight profiling **continuously**, and allow database professionals to tap into any running execution at any time, for example using Activity Monitor or directly querying `sys.dm_exec_query_profiles`, and get the query plan with runtime statistics.
 

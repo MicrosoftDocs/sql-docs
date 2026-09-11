@@ -156,7 +156,7 @@ In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], `RESAMPLE` isn't supporte
 
 When `ON`, the statistics will retain the set sampling percentage for subsequent updates that don't explicitly specify a sampling percentage. When `OFF`, statistics sampling percentage will get reset to default sampling in subsequent updates that don't explicitly specify a sampling percentage. The default is `OFF`.
 
-[DBCC SHOW_STATISTICS](../database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
+[DBCC SHOW_STATISTICS](../database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
 
 If `AUTO_UPDATE_STATISTICS` is executed, it uses the persisted sampling percentage if available, or use default sampling percentage if not. `RESAMPLE` behavior isn't affected by this option.
 

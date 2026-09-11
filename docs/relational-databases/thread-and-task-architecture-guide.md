@@ -37,7 +37,7 @@ Threads allow complex applications to make more effective use of a processor (CP
 
 ## SQL Server task scheduling
 
-In the scope of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a *request* is the logical representation of a query or batch. A request also represents operations required by system threads, such as checkpoint or log writer. Requests exist in various states throughout their lifetime and can accumulate waits when resources required to execute the request aren't available, such as [locks](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) or [latches](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches). For more information about request states, see [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
+In the scope of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a *request* is the logical representation of a query or batch. A request also represents operations required by system threads, such as checkpoint or log writer. Requests exist in various states throughout their lifetime and can accumulate waits when resources required to execute the request aren't available, such as [locks](system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md#locks) or [latches](system-dynamic-management-objects/sys-dm-os-latch-stats-transact-sql.md#latches). For more information about request states, see [sys.dm_exec_requests](system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md).
 
 ### Tasks
 
@@ -45,11 +45,11 @@ A *task* represents the unit of work that needs to be completed to fulfill the r
 
 - Parallel requests have several active tasks that are executed concurrently instead of serially, with one *parent task* (or coordinating task) and multiple *child tasks*. An execution plan for a parallel request may have serial branches - areas of the plan with operators that don't execute in parallel. The parent task is also responsible for executing those serial operators.
 - Serial requests only have one active task at any given point in time during execution.
-Tasks exist in various states throughout their lifetime. For more information about task states, see [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tasks in SUSPENDED state are waiting on resources required to execute the task to become available. For more information about waiting tasks, see [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
+Tasks exist in various states throughout their lifetime. For more information about task states, see [sys.dm_os_tasks](system-dynamic-management-objects/sys-dm-os-tasks-transact-sql.md). Tasks in SUSPENDED state are waiting on resources required to execute the task to become available. For more information about waiting tasks, see [sys.dm_os_waiting_tasks](system-dynamic-management-objects/sys-dm-os-waiting-tasks-transact-sql.md).
 
 ### Workers
 
-A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *worker thread*, also known as worker or thread, is a logical representation of an operating system thread. When executing *serial requests*, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] spawns a worker to execute the active task (1:1). When executing *parallel requests* in [row mode](../relational-databases/query-processing-architecture-guide.md#execution-modes), the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a worker to coordinate the child workers responsible for completing tasks assigned to them (also 1:1), called the *parent thread* (or coordinating thread). The parent thread has a parent task associated with it. The parent thread is the point of entry of the request and exists even before engine parses a query. The main responsibilities of the parent thread are:
+A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *worker thread*, also known as worker or thread, is a logical representation of an operating system thread. When executing *serial requests*, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] spawns a worker to execute the active task (1:1). When executing *parallel requests* in [row mode](query-processing-architecture-guide.md#execution-modes), the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a worker to coordinate the child workers responsible for completing tasks assigned to them (also 1:1), called the *parent thread* (or coordinating thread). The parent thread has a parent task associated with it. The parent thread is the point of entry of the request and exists even before engine parses a query. The main responsibilities of the parent thread are:
 
 - Coordinate a parallel scan.
 - Start parallel child workers.
@@ -63,14 +63,14 @@ The number of worker threads spawned for each task depends on:
 
 - Whether the request was eligible for parallelism as determined by the Query Optimizer.
 
-- What the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop) in the system is, based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance. Memory pressure and lack of workers are two conditions which reduce available DOP at runtime.
+- What the actual available [degree of parallelism (DOP)](query-processing-architecture-guide.md#degree-of-parallelism-dop) in the system is, based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance. Memory pressure and lack of workers are two conditions which reduce available DOP at runtime.
 
 > [!NOTE]  
 > The **max degree of parallelism (MAXDOP)** limit is set per task, not per request. This means that during a parallel query execution, a single request can spawn multiple tasks up to the MAXDOP limit, and each task will use one worker. For more information about MAXDOP, see [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### Schedulers
 
-A *scheduler*, also known as SOS scheduler, manages worker threads that require processing time to carry out work on behalf of tasks. Each scheduler is mapped to an individual processor (CPU). The time a worker can remain active in a scheduler is called the OS quantum, with a maximum of 4 ms. After its quantum time expires, a worker yields its time to other workers that need to access CPU resources, and changes its state. This cooperation between workers to maximize access to CPU resources is called *cooperative scheduling*, also known as non-preemptive scheduling. In turn, the change in worker state is propagated to the task associated with that worker, and to the request associated with the task. For more information about worker states, see [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). For more information about schedulers, see [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).
+A *scheduler*, also known as SOS scheduler, manages worker threads that require processing time to carry out work on behalf of tasks. Each scheduler is mapped to an individual processor (CPU). The time a worker can remain active in a scheduler is called the OS quantum, with a maximum of 4 ms. After its quantum time expires, a worker yields its time to other workers that need to access CPU resources, and changes its state. This cooperation between workers to maximize access to CPU resources is called *cooperative scheduling*, also known as non-preemptive scheduling. In turn, the change in worker state is propagated to the task associated with that worker, and to the request associated with the task. For more information about worker states, see [sys.dm_os_workers](system-dynamic-management-objects/sys-dm-os-workers-transact-sql.md). For more information about schedulers, see [sys.dm_os_schedulers](system-dynamic-management-objects/sys-dm-os-schedulers-transact-sql.md).
 
 In summary, a *request* may spawn one or more *tasks* to carry out units of work. Each task is assigned to a *worker thread* who is responsible for completing the task. Each worker thread must be scheduled (placed on a *scheduler*) for active execution of the task.
 
@@ -101,12 +101,12 @@ WHERE (h.OrderDate >= '2014-3-28 00:00:00');
 > [!TIP]  
 > The example query can be executed using the [AdventureWorks2016_EXT sample database](../samples/adventureworks-install-configure.md) database. The tables `Sales.SalesOrderHeader` and `Sales.SalesOrderDetail` were enlarged 50 times and renamed to `Sales.SalesOrderHeaderBulk` and `Sales.SalesOrderDetailBulk`.
 
-The execution plan shows a [Hash Join](../relational-databases/performance/joins.md#hash) between two tables, and each of the operators executed in parallel, as indicated by the yellow circle with two arrows. Each Parallelism operator is a different branch in the plan. Therefore, there are three branches in the following execution plan.
+The execution plan shows a [Hash Join](performance/joins.md#hash) between two tables, and each of the operators executed in parallel, as indicated by the yellow circle with two arrows. Each Parallelism operator is a different branch in the plan. Therefore, there are three branches in the following execution plan.
 
 :::image type="content" source="media/thread-and-task-architecture-guide/schedule-parallel-query-plan.png" alt-text="Diagram that shows a Parallel Query Plan.":::
 
 > [!NOTE]  
-> If you think of an execution plan as a tree, a *branch* is an area of the plan that groups one or more operators between Parallelism operators, also called Exchange Iterators. For more information about plan operators, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+> If you think of an execution plan as a tree, a *branch* is an area of the plan that groups one or more operators between Parallelism operators, also called Exchange Iterators. For more information about plan operators, see [Showplan Logical and Physical Operators Reference](showplan-logical-and-physical-operators-reference.md).
 
 While there are three branches in the execution plan, at any point during execution only two branches can execute concurrently in this execution plan:
 
@@ -123,11 +123,11 @@ The Showplan XML shows that 16 worker threads were reserved and used on NUMA nod
 
 Thread reservation ensures the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] has enough worker threads to carry out all the tasks that are needed for the request. Threads can be reserved across several NUMA nodes, or be reserved in just one NUMA node. Thread reservation is done at runtime before execution starts, and is dependent on scheduler load. The number of reserved worker threads is generically derived from the formula `concurrent branches * runtime DOP` and excludes the parent worker thread. Each branch is limited to a number of worker threads that's equal to MaxDOP. In this example there are two concurrent branches and MaxDOP is set to 8, therefore `2 * 8 = 16`.
 
-For reference, observe the live execution plan from [Live Query Statistics](../relational-databases/performance/live-query-statistics.md), where one branch has completed and two branches are executing concurrently.
+For reference, observe the live execution plan from [Live Query Statistics](performance/live-query-statistics.md), where one branch has completed and two branches are executing concurrently.
 
 :::image type="content" source="media/thread-and-task-architecture-guide/schedule-parallel-query-live-plan.png" alt-text="Diagram that shows a Live Parallel Query Plan.":::
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a worker thread to execute an active task (1:1), which can be observed during query execution by querying the [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) DMV, as seen in the following example:
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a worker thread to execute an active task (1:1), which can be observed during query execution by querying the [sys.dm_os_tasks](system-dynamic-management-objects/sys-dm-os-tasks-transact-sql.md) DMV, as seen in the following example:
 
 ```sql
 SELECT parent_task_address, task_address,
@@ -175,7 +175,7 @@ Observe that each of the 16 child tasks has a different worker thread assigned (
 A worker thread can only remain active in the scheduler during its quantum (4 ms) and must yield its scheduler after that quantum has elapsed, so that a worker thread assigned to another task may become active. When a worker's quantum expires and is no longer active, the respective task is placed in a FIFO queue in a RUNNABLE state, until it moves to a RUNNING state again, assuming the task doesn't require access to resources that aren't available at the moment, such as a latch or lock, in which case the task would be placed in a SUSPENDED state instead of RUNNABLE, until such time those resources are available.
 
 > [!TIP]  
-> For the output of the DMV seen above, all active tasks are in SUSPENDED state. More detail on waiting tasks is available by querying the [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV.
+> For the output of the DMV seen above, all active tasks are in SUSPENDED state. More detail on waiting tasks is available by querying the [sys.dm_os_waiting_tasks](system-dynamic-management-objects/sys-dm-os-waiting-tasks-transact-sql.md) DMV.
 
 In summary, a parallel request spawns multiple tasks. Each task must be assigned to a single worker thread. Each worker thread must be assigned to a single scheduler. Therefore, the number of schedulers in use can't exceed the number of parallel tasks per branch, which is set by the MaxDOP configuration or query hint. The coordinating thread doesn't contribute to the MaxDOP limit.
 
@@ -253,7 +253,7 @@ Don't rely on autogrow to increase the size of the transaction log file. Increas
 
 The performance of index operations such as creating or rebuilding indexes can be improved on computers that have many CPUs by temporarily setting the recovery model of the database to either the bulk-logged or simple recovery model. These index operations can generate significant log activity and log contention can affect the best degree of parallelism (DOP) choice made by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-In addition to adjusting the **max degree of parallelism (MAXDOP)** server configuration option, consider adjusting the parallelism for index operations using the [MAXDOP option](../t-sql/statements/alter-index-transact-sql.md). For more information, see [Configure Parallel Index Operations](../relational-databases/indexes/configure-parallel-index-operations.md). For more information and guidelines about adjusting the max degree of parallelism server configuration option, see [Configure the max degree of parallelism server configuration option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+In addition to adjusting the **max degree of parallelism (MAXDOP)** server configuration option, consider adjusting the parallelism for index operations using the [MAXDOP option](../t-sql/statements/alter-index-transact-sql.md). For more information, see [Configure Parallel Index Operations](indexes/configure-parallel-index-operations.md). For more information and guidelines about adjusting the max degree of parallelism server configuration option, see [Configure the max degree of parallelism server configuration option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### Maximum number of worker threads option
 
@@ -270,14 +270,14 @@ We recommend that you don't use SQL Trace and SQL Profiler in a production envir
 > [!IMPORTANT]  
 > SQL Trace and [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] are deprecated. The *Microsoft.SqlServer.Management.Trace* namespace that contains the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Trace and Replay objects are also deprecated.  
 > [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
-> Use Extended Events instead. For more information on [Extended Events](../relational-databases/extended-events/extended-events.md), see [Quick Start: Extended events in SQL Server](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) and [SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> Use Extended Events instead. For more information on [Extended Events](extended-events/extended-events.md), see [Quick Start: Extended events in SQL Server](extended-events/quick-start-extended-events-in-sql-server.md) and [SSMS XEvent Profiler](extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE]  
 > [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] for Analysis Services workloads is NOT deprecated, and will continue to be supported.
 
 ### Set the number of `tempdb` data files
 
-The number of files depends on the number of (logical) processors on the machine. As a general rule, if the number of logical processors is less than or equal to eight, use the same number of data files as logical processors. If the number of logical processors is greater than eight, use eight data files and then if contention continues, increase the number of data files by multiples of 4 until the contention is reduced to acceptable levels or make changes to the workload/code. Also keep in mind other recommendations for `tempdb`, available in [Optimizing tempdb performance in SQL Server](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server).
+The number of files depends on the number of (logical) processors on the machine. As a general rule, if the number of logical processors is less than or equal to eight, use the same number of data files as logical processors. If the number of logical processors is greater than eight, use eight data files and then if contention continues, increase the number of data files by multiples of 4 until the contention is reduced to acceptable levels or make changes to the workload/code. Also keep in mind other recommendations for `tempdb`, available in [Optimizing tempdb performance in SQL Server](databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server).
 
 However, by carefully considering the concurrency needs of `tempdb`, you can reduce database management overhead. For example, if a system has 64 CPUs and usually only 32 queries use `tempdb`, increasing the number of `tempdb` files to 64 will not improve performance.
 
@@ -296,4 +296,3 @@ The following table lists [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 | [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent | Sqlagent.exe | No |
 | [!INCLUDE [ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] | Ssms.exe | No |
 | [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Setup | Setup.exe | No |
-

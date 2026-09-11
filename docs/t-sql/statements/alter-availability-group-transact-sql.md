@@ -255,7 +255,7 @@ Introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Sets a mini
 - Minimum: 0.
 - Maximum: Number of replicas minus 1.
 
-`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on synchronous replicas commit to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as `NOT SYNCHRONIZED` and proceeds. When the unresponsive database comes back online it is in a "not synced" state and the replica is marked as unhealthy until the primary can synchronize it again. This setting guarantees that the primary replica doesn't proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas isn't available, then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on synchronous replicas commit to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as `NOT SYNCHRONIZED` and proceeds. When the unresponsive database comes back online it is in a "not synced" state and the replica is marked as unhealthy until the primary can synchronize it again. This setting guarantees that the primary replica doesn't proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas isn't available, then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/business-continuity/availability-groups/high-availability.md).
 
 Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can set `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` on a distributed availability group. This setting isn't supported for `CREATE AVAILABILITY GROUP`. You can use `ALTER AVAILABILITY GROUP` to set `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`. For example:
 
@@ -374,7 +374,7 @@ Specifies that the primary replica synchronously commit availability group confi
 - Can't be altered.
 - Isn't valid when `CLUSTER_TYPE = WSFC`.
 
-  For more information, see [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+  For more information, see [High availability and data protection for availability group configurations](../../linux/business-continuity/availability-groups/high-availability.md).
 
 `AVAILABILITY_MODE` is required in the `ADD REPLICA ON` clause and optional in the `MODIFY REPLICA ON` clause. For more information, see [Differences between availability modes for an Always On availability group](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).
 
@@ -454,7 +454,7 @@ Specifies the URL to use for routing read-intent connection requests to this ava
 
 Starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], you can specify `NONE` as the `READ_ONLY_ROUTING_URL` destination to revert the specified read-only routing for the availability replica, and route traffic based on the default behavior.
 
-For a named instance, query the `port` and `type_desc` columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view to get the port number. The server instance uses the Transact-SQL listener (`type_desc='TSQL'`).
+For a named instance, query the `port` and `type_desc` columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-objects/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view to get the port number. The server instance uses the Transact-SQL listener (`type_desc='TSQL'`).
 
 For more information about calculating the read-only routing URL for an availability replica, see [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).
 

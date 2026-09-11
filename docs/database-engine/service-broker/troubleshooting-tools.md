@@ -88,7 +88,7 @@ For a list of Service Broker catalog views, see [Service Broker Catalog Views](.
 
 The Service Broker dynamic management views return data for the current state of Service Broker components, such as activation tasks and Service Broker connections.
 
-For a list of Service Broker dynamic management views, see [Service Broker Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md).
+For a list of Service Broker dynamic management views, see [Service Broker Related Dynamic Management Views](../../relational-databases/system-dynamic-management-objects/service-broker-related-dynamic-management-views-transact-sql.md).
 
 ## Related content
 

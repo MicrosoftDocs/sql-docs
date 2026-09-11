@@ -126,7 +126,7 @@ The following table shows TDE catalog views and dynamic management views.
 |-------------------------------------------|-----------|  
 |[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Catalog view that displays database information.|  
 |[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Catalog view that shows the certificates in a database.|  
-|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Dynamic management view that provides information for each node, about the encryption keys used in a database, and the state of encryption of a database.|  
+|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Dynamic management view that provides information for each node, about the encryption keys used in a database, and the state of encryption of a database.|  
   
 ## Permissions  
 Each TDE feature and command has individual permission requirements, described in the tables shown earlier.  

@@ -186,7 +186,7 @@ The `min_percentage_resource` parameter must be greater than or equal to the eff
 
 The `cap_percentage_resource` parameter also has an effective value. If a workload group `wgAdhoc` is configured with a `cap_percentage_resource` of 100% and another workload group `wgDashboards` is created with 25% `min_percentage_resource`, the effective `cap_percentage_resource` for `wgAdhoc` becomes 75%.
 
-The easiest way to understand the run-time values for your workload groups is to query the system view [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md).
+The easiest way to understand the run-time values for your workload groups is to query the system view [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-workload-management-workload-group-stats-transact-sql.md).
 
 ## Permissions
 

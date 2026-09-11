@@ -66,9 +66,9 @@ Any user can set a session context for their session.
 
 Like other stored procedures, only literals and variables (not expressions or function calls) can be passed as parameters.
 
-The total size of the session context is limited to 1 MB. If you set a value that causes this limit to be exceeded, the statement fails. You can monitor overall memory usage in [sys.dm_os_memory_objects](../system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).
+The total size of the session context is limited to 1 MB. If you set a value that causes this limit to be exceeded, the statement fails. You can monitor overall memory usage in [sys.dm_os_memory_objects](../system-dynamic-management-objects/sys-dm-os-memory-objects-transact-sql.md).
 
-You can monitor overall memory usage by querying [sys.dm_os_memory_cache_counters](../system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) as follows:
+You can monitor overall memory usage by querying [sys.dm_os_memory_cache_counters](../system-dynamic-management-objects/sys-dm-os-memory-cache-counters-transact-sql.md) as follows:
 
 ```sql
 SELECT *

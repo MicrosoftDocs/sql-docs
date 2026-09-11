@@ -57,7 +57,7 @@ FROM sys.database_files;
 
 ## Monitor log space use
 
-Monitor log space use by using [sys.dm_db_log_space_usage](../system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). This DMV returns information about the amount of log space currently used, and indicates when the transaction log needs truncation.
+Monitor log space use by using [sys.dm_db_log_space_usage](../system-dynamic-management-objects/sys-dm-db-log-space-usage-transact-sql.md). This DMV returns information about the amount of log space currently used, and indicates when the transaction log needs truncation.
 
 For information about the current log file size, its maximum size, and the autogrowth option for the file, you can also use the `size`, `max_size`, and `growth` columns for that log file in [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).
 
@@ -77,13 +77,13 @@ If the log file is full, probably because of open transactions, investigate [wha
 
 Be aware of the potential negative performance impact of shrinking database files. See [Index maintenance after shrink](#rebuild-indexes).
 
-Before shrinking the transaction log, keep in mind [factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation). If storage space is required again after a log shrink, the transaction log will grow again, introducing performance overhead during log growth operations. For more information, see [Recommendations](#Recommendations).
+Before shrinking the transaction log, keep in mind [factors that can delay log truncation](the-transaction-log-sql-server.md#FactorsThatDelayTruncation). If storage space is required again after a log shrink, the transaction log will grow again, introducing performance overhead during log growth operations. For more information, see [Recommendations](#Recommendations).
 
-You can shrink a log file only while the database is online and at least one [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) is free. In some cases, shrinking the log might only be possible after the next log truncation.
+You can shrink a log file only while the database is online and at least one [virtual log file (VLF)](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) is free. In some cases, shrinking the log might only be possible after the next log truncation.
 
-Some factors, such as a long-running transaction, can keep [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) active for an extended period, can restrict log shrinkage, or can even prevent the log from shrinking at all. For more information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).
+Some factors, such as a long-running transaction, can keep [VLFs](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) active for an extended period, can restrict log shrinkage, or can even prevent the log from shrinking at all. For more information, see [Factors that can delay log truncation](the-transaction-log-sql-server.md#FactorsThatDelayTruncation).
 
-Shrinking a log file removes one or more [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) that hold no part of the logical log (that is, *inactive VLFs*). When you shrink a transaction log file, inactive VLFs are removed from the end of the log file to reduce the log to approximately the target size.
+Shrinking a log file removes one or more [VLFs](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) that hold no part of the logical log (that is, *inactive VLFs*). When you shrink a transaction log file, inactive VLFs are removed from the end of the log file to reduce the log to approximately the target size.
 
 For more information on shrink operations, review the following resources:
 
@@ -99,7 +99,7 @@ For more information on shrink operations, review the following resources:
 
 **Monitor log space**
 
-- [Sys.dm_db_log_space_usage (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)
+- [Sys.dm_db_log_space_usage (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-log-space-usage-transact-sql.md)
 
 - [Sys.database_files (Transact-SQL)](../system-catalog-views/sys-database-files-transact-sql.md) (See the `size`, `max_size`, and `growth` columns for the log file or files.)
 
@@ -164,15 +164,15 @@ Following are some general recommendations to consider when you're working with 
       | Starting with [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] | Data: 1 MB. Log files: 10%. |
       | Prior to [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] | Data: 10%. Log files: 10%. |
 
-- A small autogrowth increment can generate too many small [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance and the required growth increments to achieve the required size, see this [script for analyzing and fixing VLFs, provided by the SQL Tiger Team](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+- A small autogrowth increment can generate too many small [VLFs](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance and the required growth increments to achieve the required size, see this [script for analyzing and fixing VLFs, provided by the SQL Tiger Team](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
 - A large autogrowth increment can cause two problems:
   - It can cause the database to pause while the new space is allocated, potentially causing query timeouts.
-  - It can generate too few and large [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance and the required growth increments to achieve the required size, see this [script for analyzing and fixing VLFs, provided by the SQL Tiger Team](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+  - It can generate too few and large [VLFs](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance and the required growth increments to achieve the required size, see this [script for analyzing and fixing VLFs, provided by the SQL Tiger Team](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
 - Even with autogrowth enabled, you can receive a message that the transaction log is full if it can't grow fast enough to satisfy the needs of your query. For more information on changing the growth increment, see [ALTER DATABASE (Transact-SQL) file and filegroup options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-- Having multiple log files in a database doesn't enhance performance in any way, because the transaction log files don't use [proportional fill](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) like data files in a same filegroup.
+- Having multiple log files in a database doesn't enhance performance in any way, because the transaction log files don't use [proportional fill](../pages-and-extents-architecture-guide.md#ProportionalFill) like data files in a same filegroup.
 
 Log files can be set to shrink automatically. However, we don't recommend this configuration, and the `AUTO_SHRINK` database property is set to FALSE by default. If `AUTO_SHRINK` is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused.
 - The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger.

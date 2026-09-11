@@ -75,7 +75,7 @@ In the context of resource governor, the login process for a session consists of
 
 When classification starts, resource governor executes the classifier function and uses the scalar value returned by the function to send requests to the matching workload group.
 
-You can monitor the execution of logon triggers and the classifier function using [sys.dm_exec_sessions](../system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) and [sys.dm_exec_requests](../system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) system views.
+You can monitor the execution of logon triggers and the classifier function using [sys.dm_exec_sessions](../system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md) and [sys.dm_exec_requests](../system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md) system views.
 
 ## Examples
 

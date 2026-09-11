@@ -88,7 +88,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```
 
 > [!NOTE]  
-> Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) to return information about statements submitted to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-input-buffer-transact-sql.md) to return information about statements submitted to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Permissions
 

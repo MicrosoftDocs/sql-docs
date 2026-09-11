@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 Because you can access this data in real time without needing to wait for the query to complete, these execution statistics are extremely useful for debugging query performance problems. 
 
-Internally, live query statistics use the [sys.dm_exec_query_profiles](../system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV.
+Internally, live query statistics use the [sys.dm_exec_query_profiles](../system-dynamic-management-objects/sys-dm-exec-query-profiles-transact-sql.md) DMV.
 
 > [!WARNING]  
 > This feature is primarily intended for troubleshooting purposes. Using this feature can moderately slow the overall query performance, especially in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. For more information, see [Query Profiling Infrastructure](query-profiling-infrastructure.md).  

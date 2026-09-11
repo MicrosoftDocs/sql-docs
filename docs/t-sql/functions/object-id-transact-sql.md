@@ -109,7 +109,7 @@ GO
 
 ### C. Use OBJECT_ID to specify the value of a system function parameter
 
-The following example returns information for all indexes and partitions of the `Person.Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database by using the [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) function.
+The following example returns information for all indexes and partitions of the `Person.Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database by using the [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-db-index-operational-stats-transact-sql.md) function.
 
 > [!NOTE]  
 > [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]

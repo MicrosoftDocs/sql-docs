@@ -42,13 +42,13 @@ The name of the plan guide. *@name* is **sysname**, with no default. Plan guide 
 
 #### [ @plan_handle = ] *plan_handle*
 
-Identifies a batch in the plan cache. *@plan_handle* is **varbinary(64)**, with no default. *@plan_handle* can be obtained from the [sys.dm_exec_query_stats](../system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) dynamic management view.
+Identifies a batch in the plan cache. *@plan_handle* is **varbinary(64)**, with no default. *@plan_handle* can be obtained from the [sys.dm_exec_query_stats](../system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md) dynamic management view.
 
 #### [ @statement_start_offset = ] *statement_start_offset*
 
 Identifies the starting position of the statement within the batch of the specified *@plan_handle*. *@statement_start_offset* is **int**, with a default of `NULL`.
 
-The statement offset corresponds to the `statement_start_offset` column in the [sys.dm_exec_query_stats](../system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) dynamic management view.
+The statement offset corresponds to the `statement_start_offset` column in the [sys.dm_exec_query_stats](../system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md) dynamic management view.
 
 When `NULL` is specified or a statement offset isn't specified, a plan guide is created for each statement in the batch using the query plan for the specified plan handle. The resulting plan guides are equivalent to plan guides that use the `USE PLAN` query hint to force the use of a specific plan.
 

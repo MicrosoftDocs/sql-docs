@@ -21,7 +21,7 @@ The [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)] can native
 In-memory OLTP compiles memory-optimized tables when you create them, and natively compiles stored procedures into native DLLs when they're loaded. In addition, DLLs are recompiled after a database or server restart. The database stores the information necessary to recreate the DLLs in metadata. The DLLs aren't part of the database, though they're associated with the database. For example, the DLLs aren't included in database backups.
 
 > [!NOTE]  
-> Memory-optimized tables are recompiled after a server restarts. To speed up database recovery, the server doesn't recompile natively compiled stored procedures during the restart itself. Instead, it compiles them at the time of first execution. As a result of this deferred compilation, natively compiled stored procedures only appear when calling [sys.dm_os_loaded_modules](../system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql.md) after first execution.
+> Memory-optimized tables are recompiled after a server restarts. To speed up database recovery, the server doesn't recompile natively compiled stored procedures during the restart itself. Instead, it compiles them at the time of first execution. As a result of this deferred compilation, natively compiled stored procedures only appear when calling [sys.dm_os_loaded_modules](../system-dynamic-management-objects/sys-dm-os-loaded-modules-transact-sql.md) after first execution.
 
 ## Maintenance of in-memory OLTP DLLs
 

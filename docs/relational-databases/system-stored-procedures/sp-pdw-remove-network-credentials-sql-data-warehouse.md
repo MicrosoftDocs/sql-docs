@@ -55,7 +55,7 @@ This stored procedure removes network credentials from the NetworkService accoun
 
 ## Metadata
 
-To list all credentials and to verify the credentials have been removed, use [sys.dm_pdw_network_credentials](../system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
+To list all credentials and to verify the credentials have been removed, use [sys.dm_pdw_network_credentials](../system-dynamic-management-objects/sys-dm-pdw-network-credentials-transact-sql.md).
 
 To add credentials, use [sp_pdw_add_network_credentials (Azure Synapse Analytics)](sp-pdw-add-network-credentials-sql-data-warehouse.md).
 

@@ -32,11 +32,11 @@ The following steps summarize the process for creating a PolyBase scale-out grou
   
 1. Select one SQL Server instance as the head node. 
   
-1. Add remaining SQL Server instances as compute nodes using [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
+1. Add remaining SQL Server instances as compute nodes using [sp_polybase_join_group](../system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
 
-1. Monitor nodes in the group using [sys.dm_exec_compute_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).
+1. Monitor nodes in the group using [sys.dm_exec_compute_nodes (Transact-SQL)](../system-dynamic-management-objects/sys-dm-exec-compute-nodes-transact-sql.md).
 
-1. Optional. Remove a compute node from  using [sp_polybase_leave_group (Transact-SQL)](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
+1. Optional. Remove a compute node from  using [sp_polybase_leave_group (Transact-SQL)](../system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
 
 ## Example walk-through
 
@@ -72,7 +72,7 @@ After setup is complete, both machines can function as PolyBase Group head nodes
   
 1. Connect to SQL Server on PQTH4A-CMP02.
   
-1. Run the stored procedure [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
+1. Run the stored procedure [sp_polybase_join_group](../system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
 
    ```sql
    -- Enter head node details:

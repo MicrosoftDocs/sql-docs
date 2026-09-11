@@ -127,7 +127,7 @@ You can use the following DMVs to view the current state and configuration of so
 
 - [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): Displays the current value (`0` or `1`) for SOFTNUMA.
 
-- [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): The     `softnuma_configuration` and `softnuma_configuration_desc` columns display the current configuration values.
+- [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-os-sys-info-transact-sql.md): The     `softnuma_configuration` and `softnuma_configuration_desc` columns display the current configuration values.
 
 While you can view the running value for automatic soft-NUMA using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), you can't change its value using `sp_configure`. You must use the [ALTER SERVER CONFIGURATION](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the `SET SOFTNUMA` argument.
 

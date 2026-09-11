@@ -18,7 +18,7 @@ Memory-optimized tables require that sufficient memory exist to keep all of the 
 
 It's important to have a reasonable estimate of each memory-optimized table's memory needs so you can provision the server with sufficient memory. That applies to both new tables, and tables migrated from disk-based tables. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table. 
 
-If you're considering a migration from disk-based tables to memory-optimized tables, see [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md) provide guidance on migrating from disk-based to memory-optimized tables. 
+If you're considering a migration from disk-based tables to memory-optimized tables, see [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md) provide guidance on migrating from disk-based to memory-optimized tables. 
   
 ## Basic Guidance for Estimating Memory Requirements
 
@@ -35,17 +35,17 @@ For more information about potential memory overhead in the In-Memory OLTP engin
   
 ## Detailed Computation of Memory Requirements 
   
-- [Example memory-optimized table](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_ExampleTable)  
+- [Example memory-optimized table](estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_ExampleTable)  
   
-- [Memory for the table](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable)  
+- [Memory for the table](estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable)  
   
-- [Memory for indexes](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_IndexMemory)  
+- [Memory for indexes](estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_IndexMemory)  
   
-- [Memory for row versioning](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForRowVersions)  
+- [Memory for row versioning](estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForRowVersions)  
   
-- [Memory for table variables](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_TableVariables)  
+- [Memory for table variables](estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_TableVariables)  
   
-- [Memory for growth](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
+- [Memory for growth](estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
 ###  <a name="bkmk_ExampleTable"></a> Example memory-optimized table  
 
@@ -172,7 +172,7 @@ That value is then multiplied by the row size to get the number of bytes you nee
   
 `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
-Memory needs for stale rows is then estimated by multiplying the number of stale rows by the size of a memory-optimized table row. For more information, see [Memory for the table](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable).
+Memory needs for stale rows is then estimated by multiplying the number of stale rows by the size of a memory-optimized table row. For more information, see [Memory for the table](estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable).
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
@@ -195,13 +195,13 @@ Each superblock contains memory allocations only within a specific size range, r
 
 By default, superblocks are also partitioned by logical CPU. That means that for each logical CPU, there is a separate set of superblocks, further broken down by sizeclass. This reduces memory allocation contention among requests executing on different CPUs.
 
-When the In-Memory OLTP engine makes a new memory allocation, it first attempts to find free memory in an existing superblock for the requested sizeclass and for the CPU processing the request. If this attempt is successful, the value in the `used_bytes` column in [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md) for a specific memory consumer increases by the requested memory size, but the value in the `allocated_bytes` column remains the same.
+When the In-Memory OLTP engine makes a new memory allocation, it first attempts to find free memory in an existing superblock for the requested sizeclass and for the CPU processing the request. If this attempt is successful, the value in the `used_bytes` column in [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-objects/sys-dm-xtp-system-memory-consumers-transact-sql.md) for a specific memory consumer increases by the requested memory size, but the value in the `allocated_bytes` column remains the same.
 
 If there is no free memory in existing superblocks, a new superblock is allocated and value in the `used_bytes` increases by the requested memory size, while the value in the `allocated_bytes` column increases by 64 KB.
 
 Over time, as memory in superblocks is allocated and deallocated, the total amount of memory consumed by the In-Memory OLTP engine might become significantly larger than the amount of used memory. In other words, memory can become fragmented.
 
-[Garbage collection](in-memory-oltp-garbage-collection.md) might reduce the used memory, but it only reduces the allocated memory if one or more superblocks become empty and are deallocated. This applies to both automatic and forced garbage collection using the [sys.sp_xtp_force_gc](..//system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md) system stored procedure.
+[Garbage collection](in-memory-oltp-garbage-collection.md) might reduce the used memory, but it only reduces the allocated memory if one or more superblocks become empty and are deallocated. This applies to both automatic and forced garbage collection using the [sys.sp_xtp_force_gc](../system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md) system stored procedure.
 
 If the In-Memory OLTP engine memory fragmentation and allocated memory usage become higher than expected, you can enable [trace flag 9898](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf9898). This changes superblock partitioning scheme from per-CPU to per-NUMA node, reducing the total number of superblocks and the potential for high memory fragmentation.
 

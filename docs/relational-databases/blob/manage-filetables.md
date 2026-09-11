@@ -18,9 +18,9 @@ helpviewer_keywords:
 ##  <a name="HowToEnumerate"></a> How To: Get a List of FileTables and Related Objects  
  To get a list of FileTables, query one of the following catalog views:  
   
--   [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
+-   [sys.filetables &#40;Transact-SQL&#41;](../system-catalog-views/sys-filetables-transact-sql.md)  
   
--   [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) (Check the value of the **is_filetable** column.)  
+-   [sys.tables &#40;Transact-SQL&#41;](../system-catalog-views/sys-tables-transact-sql.md) (Check the value of the **is_filetable** column.)  
   
 ```sql  
 SELECT * FROM sys.filetables;  
@@ -30,7 +30,7 @@ SELECT * FROM sys.tables WHERE is_filetable = 1;
 GO  
 ```  
   
- To get a list of the system-defined objects that were created when the associated FileTables were created, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
+ To get a list of the system-defined objects that were created when the associated FileTables were created, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
 ```sql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
@@ -153,7 +153,7 @@ GO
 >  Killing open file handles may cause users to lose unsaved data. This behavior is consistent with the behavior of the file system itself.  
   
 ###  <a name="HowToListOpen"></a> How To: Get a List of Open File Handles Associated with a FileTable  
- Query the catalog view [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
+ Query the catalog view [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
 ```sql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
@@ -161,7 +161,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> How To: Kill Open File Handles Associated with a FileTable  
- Call the stored procedure [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) with the appropriate arguments to kill all open file handles in the database or in the FileTable, or to kill a specific handle.  
+ Call the stored procedure [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) with the appropriate arguments to kill all open file handles in the database or in the FileTable, or to kill a specific handle.  
   
 ```sql  
 USE database_name;  
@@ -183,7 +183,7 @@ GO
  Most locks taken by FileTables correspond to files opened by applications.  
   
  **To identify open files and the associated locks**  
- Join the **request_owner_id** field in the dynamic management view [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) with the **fcb_id** field in [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md). In some cases, the lock does not correspond to a single open file handle.  
+ Join the **request_owner_id** field in the dynamic management view [sys.dm_tran_locks &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md) with the **fcb_id** field in [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-filestream-non-transacted-handles-transact-sql.md). In some cases, the lock does not correspond to a single open file handle.  
   
 ```sql  
 SELECT opened_file_name  

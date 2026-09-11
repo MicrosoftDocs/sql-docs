@@ -82,7 +82,7 @@ This command enables you to perform the following restore scenarios:
 
 ## Syntax
 
-- For more information about descriptions of the arguments, see [RESTORE Arguments](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+- For more information about descriptions of the arguments, see [RESTORE Arguments](restore-statements-arguments-transact-sql.md).
 
 ```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
@@ -241,7 +241,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
 
 ## Arguments
 
-For descriptions of the arguments, see [RESTORE Arguments](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+For descriptions of the arguments, see [RESTORE Arguments](restore-statements-arguments-transact-sql.md).
 
 ## About Restore Scenarios
 
@@ -333,7 +333,7 @@ Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a
 
 After you restore an earlier version database to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the database is automatically upgraded. Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **upgrade_option** server property. If the upgrade option is set to import (**upgrade_option** = 2) or rebuild (**upgrade_option** = 0), the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to import, the associated full-text indexes are rebuilt if a full-text catalog is not available. To change the setting of the **upgrade_option** server property, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).
 
-When a database is first attached or restored to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key (encrypted by the service master key) is not yet stored in the server. You must use the **OPEN MASTER KEY** statement to decrypt the database master key (DMK). Once the DMK has been decrypted, you have the option of enabling automatic decryption in the future by using the **ALTER MASTER KEY REGENERATE** statement to provision the server with a copy of the DMK, encrypted with the service master key (SMK). When a database has been upgraded from an earlier version, the DMK should be regenerated to use the newer AES algorithm. For more information about regenerating the DMK, see [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). The time required to regenerate the DMK key to upgrade to AES depends upon the number of objects protected by the DMK. Regenerating the DMK key to upgrade to AES is only necessary once, and has no impact on future regenerations as part of a key rotation strategy.
+When a database is first attached or restored to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key (encrypted by the service master key) is not yet stored in the server. You must use the **OPEN MASTER KEY** statement to decrypt the database master key (DMK). Once the DMK has been decrypted, you have the option of enabling automatic decryption in the future by using the **ALTER MASTER KEY REGENERATE** statement to provision the server with a copy of the DMK, encrypted with the service master key (SMK). When a database has been upgraded from an earlier version, the DMK should be regenerated to use the newer AES algorithm. For more information about regenerating the DMK, see [ALTER MASTER KEY](alter-master-key-transact-sql.md). The time required to regenerate the DMK key to upgrade to AES depends upon the number of objects protected by the DMK. Regenerating the DMK key to upgrade to AES is only necessary once, and has no impact on future regenerations as part of a key rotation strategy.
 
 ## Remarks
 
@@ -550,7 +550,7 @@ RESTORE LOG AdventureWorks2022
 
 ### <a id="copying_db_using_bnr"></a> E. Copy a database using BACKUP and RESTORE
 
-The following example uses both the `BACKUP` and `RESTORE` statements to make a copy of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The `MOVE` statement causes the data and log file to be restored to the specified locations. The `RESTORE FILELISTONLY` statement is used to determine the number and names of the files in the database being restored. The new copy of the database is named `TestDB`. For more information, see [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).
+The following example uses both the `BACKUP` and `RESTORE` statements to make a copy of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The `MOVE` statement causes the data and log file to be restored to the specified locations. The `RESTORE FILELISTONLY` statement is used to determine the number and names of the files in the database being restored. The new copy of the database is named `TestDB`. For more information, see [RESTORE FILELISTONLY](restore-statements-filelistonly-transact-sql.md).
 
 ```sql
 BACKUP DATABASE AdventureWorks2022
@@ -812,10 +812,10 @@ This command enables you to restore an entire database from a full database back
 
 For other supported RESTORE commands, see:
 
-- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
-- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [RESTORE LABELONLY ONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)
-- [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
+- [RESTORE FILELISTONLY (Transact-SQL)](restore-statements-filelistonly-transact-sql.md)
+- [RESTORE HEADERONLY (Transact-SQL)](restore-statements-headeronly-transact-sql.md)
+- [RESTORE LABELONLY ONLY (Transact-SQL)](restore-statements-labelonly-transact-sql.md)
+- [RESTORE VERIFYONLY (Transact-SQL)](restore-statements-verifyonly-transact-sql.md)
 
 > [!IMPORTANT]  
 > To restore from SQL Managed Instance automatic backups, see [SQL Database Restore](/azure/sql-database/sql-database-recovery-using-backups).
@@ -849,7 +849,7 @@ Is a placeholder that indicates that up to 64 backup devices may be specified in
 
 As a prerequisite, you need to create a credential with the name that matches the blob storage account url, and Shared Access Signature placed as secret. RESTORE command will look up credentials using the blob storage url to find the information required to read the backup device.
 
-RESTORE operation is asynchronous - the restore continues even if client connection breaks. If your connection is dropped, you can check [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) view for the status of a restore operation (as well as for CREATE and DROP database).
+RESTORE operation is asynchronous - the restore continues even if client connection breaks. If your connection is dropped, you can check [sys.dm_operation_status](../../relational-databases/system-dynamic-management-objects/sys-dm-operation-status-azure-sql-database.md) view for the status of a restore operation (as well as for CREATE and DROP database).
 
 The following database options are set/overridden and cannot be changed later:
 
@@ -952,7 +952,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 ## Analytics Platform System
 
-Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.
+Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.
 
 > [!NOTE]  
 > Restoring the `master` system database includes restoring appliance login information. To restore the `master` database, use the [Restore the master Database](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation. For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
@@ -1010,7 +1010,7 @@ Specifies the name of the directory that contains the differential backup.
 
 Specifies to return only the header information for one user database backup. Among other fields, the header includes the text description of the backup, and the backup name. The backup name does not need to be the same as the name of the directory that stores the backup files.
 
-RESTORE HEADERONLY results are patterned after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY results. The result has over 50 columns, which are not all used by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. For a description of the columns in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY results, see [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).
+RESTORE HEADERONLY results are patterned after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY results. The result has over 50 columns, which are not all used by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. For a description of the columns in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY results, see [RESTORE HEADERONLY](restore-statements-headeronly-transact-sql.md).
 
 ## Permissions
 
@@ -1018,7 +1018,7 @@ Requires the `CREATE ANY DATABASE` permission.
 
 Requires a Windows account that has permission to access and read from the backup directory. You must also store the Windows account name and password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
-- To verify the credentials are already there, use [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
+- To verify the credentials are already there, use [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-objects/sys-dm-pdw-network-credentials-transact-sql.md).
 - To add or update the credentials, use [sp_pdw_add_network_credentials - [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
 - To remove credentials from [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_pdw_remove_network_credentials - [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
@@ -1043,13 +1043,13 @@ After a restore, the user database will have database compatibility level 120. T
 
 ## Restore to an appliance with a larger number of compute nodes
 
-Run [DBCC SHRINKLOG ([!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) after restoring a database from a smaller to larger appliance since redistribution will increase transaction log.
+Run [DBCC SHRINKLOG ([!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)])](../database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) after restoring a database from a smaller to larger appliance since redistribution will increase transaction log.
 
 Restoring a backup to an appliance with a larger number of Compute nodes grows the allocated database size in proportion to the number of Compute nodes.
 
 For example, when restoring a 60-GB database from a 2-node appliance (30 GB per node) to a 6-node appliance, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] creates a 180-GB database (6 nodes with 30 GB per node) on the 6-node appliance. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] initially restores the database to 2 nodes to match the source configuration, and then redistributes the data to all 6 nodes.
 
-After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) to shrink the database file sizes.
+After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE - PDW](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) to shrink the database file sizes.
 
 ## Limitations and restrictions
 

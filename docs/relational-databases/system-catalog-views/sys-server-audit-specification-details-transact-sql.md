@@ -20,7 +20,7 @@ dev_langs:
 # sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Contains information about the server audit specification details (actions) in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit on a server instance. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). For a list of all audit_action_id's and their names, query [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Contains information about the server audit specification details (actions) in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit on a server instance. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../security/auditing/sql-server-audit-database-engine.md). For a list of all audit_action_id's and their names, query [sys.dm_audit_actions &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-audit-actions-transact-sql.md).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ dev_langs:
 ## Permissions  
  Principals with the **ALTER ANY SERVER AUDIT** or **VIEW ANY DEFINITION** permission have access to this catalog view. In addition, the principal must not be denied **VIEW ANY DEFINITION** permission.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
   
 ## Related content
 

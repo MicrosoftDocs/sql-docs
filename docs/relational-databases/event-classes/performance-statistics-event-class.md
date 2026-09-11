@@ -151,4 +151,4 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 - [Extended Events overview](../extended-events/extended-events.md)
 - [sp_trace_setevent (Transact-SQL)](../system-stored-procedures/sp-trace-setevent-transact-sql.md)
 - [Showplan XML for Query Compile Event Class](showplan-xml-for-query-compile-event-class.md)
-- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../system-dynamic-management-objects/system-dynamic-management-objects.md)

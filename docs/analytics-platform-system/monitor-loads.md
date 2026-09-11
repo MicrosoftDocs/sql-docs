@@ -42,7 +42,7 @@ The following sections describe how to monitor loads.
   
 See these system views for information on the metadata about the load that is shown in the Admin Console:  
   
--   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
+-   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-requests-transact-sql.md)  
   
 -   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)  
   
@@ -53,7 +53,7 @@ See these system views for information on the metadata about the load that is sh
 ### <a id="to-monitor-loads-by-using-system-views"></a> Monitor loads by using system views
 To monitor active and recent loads by using SQL Server PDW views, follow the steps below. For each system view used, see the documentation for that view for information on the columns and potential values returned by the view.  
   
-1. Find the `request_id` for the load in the [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) view by finding the loader command line in the `command` column for this view.  
+1. Find the `request_id` for the load in the [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-requests-transact-sql.md) view by finding the loader command line in the `command` column for this view.  
   
     For example, the following command returns the command text and current status, plus the `request_id`.  
   

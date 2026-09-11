@@ -23,7 +23,7 @@ dev_langs:
 Contains one row for each currently open tape device. This view is stored in the `master` database.
 
 > [!IMPORTANT]
-> This system table appears as a view for backward compatibility. Instead, use the [sys.dm_io_backup_tapes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) dynamic management view.
+> This system table appears as a view for backward compatibility. Instead, use the [sys.dm_io_backup_tapes (Transact-SQL)](../system-dynamic-management-objects/sys-dm-io-backup-tapes-transact-sql.md) dynamic management view.
 
 > [!NOTE]
 > You can't drop the `sysopentapes` view.

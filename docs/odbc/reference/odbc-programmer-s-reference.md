@@ -1,10 +1,10 @@
 ---
 title: "ODBC Programmer's Reference"
-description: "ODBC Programmer's Reference"
+description: "Reference documentation for the ODBC API, covering connection strings, application and driver development, and the full ODBC function reference."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
-ms.date: 03/27/2026
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -22,19 +22,19 @@ If you need a basic ODBC connection string to connect to SQL Server, use one of 
 **Windows Authentication (trusted connection):**
 
 ```
-Driver={ODBC Driver 18 for SQL Server};Server=localhost;Database=myDB;Trusted_Connection=yes;Encrypt=optional;
+Driver={ODBC Driver 18 for SQL Server};Server=localhost;Database=<database>;Trusted_Connection=yes;Encrypt=optional;
 ```
 
 **SQL Server Authentication:**
 
 ```
-Driver={ODBC Driver 18 for SQL Server};Server=myserver.database.windows.net;Database=myDB;UID=myUser;PWD=<password>;Encrypt=yes;
+Driver={ODBC Driver 18 for SQL Server};Server=<server>.database.windows.net;Database=<database>;UID=<user>;PWD=<password>;Encrypt=yes;
 ```
 
 **Named instance on localhost:**
 
 ```
-Driver={ODBC Driver 18 for SQL Server};Server=localhost\SQLEXPRESS;Database=myDB;Trusted_Connection=yes;Encrypt=optional;
+Driver={ODBC Driver 18 for SQL Server};Server=localhost\SQLEXPRESS;Database=<database>;Trusted_Connection=yes;Encrypt=optional;
 ```
 
 For a complete list of connection string keywords, see [Data Source Name (DSN) and connection string keywords and attributes](../../connect/odbc/dsn-connection-string-attribute.md).
@@ -45,7 +45,7 @@ The *ODBC Programmer's Reference* contains the following sections.
 
 - [What's New in ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) lists the new ODBC features that were added in the Windows 8 SDK.
 - [Sample ODBC Program](../../odbc/reference/sample-odbc-program.md) presents a sample ODBC program.
-- [Introduction to ODBC](../../odbc/reference/introduction-to-odbc.md) provides a brief history of Structured Query Language and ODBC, and conceptual information about the ODBC interface.
+- [Introduction to ODBC](../../odbc/reference/odbc-overview.md) provides a brief history of Structured Query Language and ODBC, and conceptual information about the ODBC interface.
 - [Developing Applications](../../odbc/reference/develop-app/developing-applications.md) contains information about developing applications that use the ODBC interface and drivers that implement it.
 - [Installing and Configuring ODBC Software](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md) provides information about installation and a setup DLL function reference.
 - [Developing an ODBC Driver](../../odbc/reference/develop-driver/developing-an-odbc-driver.md) contains information on writing a driver.

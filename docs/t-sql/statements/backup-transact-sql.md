@@ -1647,7 +1647,7 @@ You need to store the user name and password in [!INCLUDE [ssPDW](../../includes
 
 To remove network credentials from [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], see [sp_pdw_remove_network_credentials - [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
-To list all of the network credentials stored in [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], use the [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) dynamic management view.
+To list all of the network credentials stored in [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], use the [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-objects/sys-dm-pdw-network-credentials-transact-sql.md) dynamic management view.
 
 ## Examples
 

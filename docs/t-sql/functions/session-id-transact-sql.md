@@ -33,7 +33,7 @@ SESSION_ID ( )
   
  The session ID begins with the alphabetical characters 'SID'. These are case-sensitive and must be capitalized when session ID is used in [!INCLUDE[DWsql](../../includes/dwsql-md.md)] commands.  
   
- You can query the view [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) to retrieve the same information as this function.  
+ You can query the view [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-sessions-transact-sql.md) to retrieve the same information as this function.  
   
 ## Examples  
  The following example returns the current session ID.  

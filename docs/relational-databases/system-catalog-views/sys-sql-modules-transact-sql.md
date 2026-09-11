@@ -49,7 +49,7 @@ For more information, see [Scalar User-Defined Functions for In-Memory OLTP](../
 
 The SQL expression for a `DEFAULT` constraint, object of type `D`, is found in the [sys.default_constraints](sys-default-constraints-transact-sql.md) catalog view. The SQL expression for a `CHECK` constraint, object of type `C`, is found in the [sys.check_constraints](sys-check-constraints-transact-sql.md) catalog view.
 
-This information is also described in [sys.dm_db_uncontained_entities](../system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).
+This information is also described in [sys.dm_db_uncontained_entities](../system-dynamic-management-objects/sys-dm-db-uncontained-entities-transact-sql.md).
 
 Renaming a stored procedure, function, view, or trigger doesn't change the name of the corresponding object in the definition column of the `sys.sql_modules` catalog view or the definition returned by the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function. For this reason, we recommend that you don't use `sp_rename` to rename these object types. Instead, drop and recreate the object with its new name. Learn more in [sp_rename](../system-stored-procedures/sp-rename-transact-sql.md).
 

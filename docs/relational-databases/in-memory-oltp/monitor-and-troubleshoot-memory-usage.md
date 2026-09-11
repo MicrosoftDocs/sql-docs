@@ -171,7 +171,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- For more information, see [sys.dm_db_xtp_table_memory_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ For more information, see [sys.dm_db_xtp_table_memory_stats](../system-dynamic-management-objects/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 #### Memory consumption by internal system structures
 
@@ -211,7 +211,7 @@ PGPOOL: 64K               0                    0                    0
 PGPOOL:  4K               0                    0                    0  
 ```  
   
- For more information, see [sys.dm_xtp_system_memory_consumers)](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md).  
+ For more information, see [sys.dm_xtp_system_memory_consumers)](../system-dynamic-management-objects/sys-dm-xtp-system-memory-consumers-transact-sql.md).  
   
 #### Memory consumption at run-time when accessing memory-optimized tables
 
@@ -245,7 +245,7 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- For more information, see [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ For more information, see [sys.dm_os_memory_objects (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-memory-objects-transact-sql.md).  
   
 #### Memory consumed by [!INCLUDE [inmemory](../../includes/inmemory-md.md)] engine across the instance
 
@@ -270,7 +270,7 @@ The following sample output shows that the memory allocated is 18 MB system-leve
    MEMORYCLERK_XTP      Default    64             0  
    ```  
   
- For more information, see [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
+ For more information, see [sys.dm_os_memory_clerks](../system-dynamic-management-objects/sys-dm-os-memory-clerks-transact-sql.md).  
   
 ## <a id="bkmk_MemOptObjects"></a> 3. Manage memory consumed by memory-optimized objects
  
@@ -284,7 +284,7 @@ Troubleshooting memory issues is a three-step process:
   
 1. Determine how memory consumption is growing and how much head room you have left. By monitoring the memory consumption periodically, you can know how the memory use is growing. For example, if you have mapped the database to a named resource pool, you can monitor the performance counter Used Memory (KB) to see how memory usage is growing.  
   
-1. Take action to mitigate the potential memory issues. For more information, see [Resolve Out Of Memory Issues](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
+1. Take action to mitigate the potential memory issues. For more information, see [Resolve Out Of Memory Issues](resolve-out-of-memory-issues.md).  
   
 ## Related content
 

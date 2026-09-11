@@ -57,7 +57,7 @@ To view a summary of all client connections to the SQL Server instance, follow t
 
 ## How is the data collected?
 
-By default, the SQL Server Connections view is available to all SQL Server instances enabled by Azure Arc. Data collection starts as soon as the instance is connected to Azure. Azure Connected Machine agent automatically polls [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) hourly. The portal displays the data collection time. The service maintains the data for 30 days.
+By default, the SQL Server Connections view is available to all SQL Server instances enabled by Azure Arc. Data collection starts as soon as the instance is connected to Azure. Azure Connected Machine agent automatically polls [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md) hourly. The portal displays the data collection time. The service maintains the data for 30 days.
 
 The connection data within the time range chosen on the portal dictates the client connection data summarized and presented as a table in the view.
 

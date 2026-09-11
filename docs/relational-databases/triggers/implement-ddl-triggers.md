@@ -39,11 +39,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  **To view the dependencies of a trigger**  
   
--   [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
+-   [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
--   [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  
+-   [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md)  
   
--   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
+-   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-sql-referencing-entities-transact-sql.md)  
   
 ## Disabling and Dropping DDL Triggers  
  When a DDL trigger is no longer needed, you can disable it or delete it.  
@@ -66,7 +66,4 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  **To delete a DDL trigger**  
   
--   [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)  
-  
-  
-
+-   [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)

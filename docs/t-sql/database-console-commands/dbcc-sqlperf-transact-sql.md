@@ -51,11 +51,11 @@ Returns the current size of the transaction log and the percentage of log space 
 
 #### "sys.dm_os_latch_stats", CLEAR
 
-Resets the latch statistics. For more information, see [sys.dm_os_latch_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md).
+Resets the latch statistics. For more information, see [sys.dm_os_latch_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-os-latch-stats-transact-sql.md).
 
 #### "sys.dm_os_wait_stats", CLEAR
 
-Resets the wait statistics. For more information, see [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).
+Resets the wait statistics. For more information, see [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md).
 
 #### WITH NO_INFOMSGS
 
@@ -74,7 +74,7 @@ The following table describes the columns in the result set.
 
 ## Remarks
 
-Starting with [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], use the [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV instead of `DBCC SQLPERF(LOGSPACE)`, to return space usage information for the transaction log per database.
+Starting with [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], use the [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-objects/sys-dm-db-log-space-usage-transact-sql.md) DMV instead of `DBCC SQLPERF(LOGSPACE)`, to return space usage information for the transaction log per database.
 
 The transaction log records each transaction made in a database. For more information, see [The transaction log](../../relational-databases/logs/the-transaction-log-sql-server.md) and [SQL Server transaction log architecture and management guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 

@@ -25,7 +25,7 @@ To view the space used, open the Admin Console, and select the **Storage** tab. 
 
 To understand if a node is running low on space, the SQL Server PDW health monitoring system already monitors the free space for all volumes within each node.  
   
-If the free space within a volume drops below 30 percent, SQL Server PDW generates a **warning** alert in [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  The alert remains until free space is made available.  
+If the free space within a volume drops below 30 percent, SQL Server PDW generates a **warning** alert in [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  The alert remains until free space is made available.  
   
 If the free space within a volume drops under 10 percent, SQL Server PDW generates a **critical** alert. This situation is considered critical because queries could fail if they cause the database to expand.  
   

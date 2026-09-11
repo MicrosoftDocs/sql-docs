@@ -61,7 +61,7 @@ Requires membership in the **db_owner** fixed database role.
 
 ## Remarks
 
-Memory-optimized garbage collection happens normally and automatically in response to memory pressure. You can manually trigger garbage collection with `sys.sp_xtp_force_gc`. You can observe the reduction in memory cleanup in [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md). In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the `sys.dm_xtp_system_memory_consumers` dynamic management view has improved insights specific to [Memory-optimized TempDB metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata).
+Memory-optimized garbage collection happens normally and automatically in response to memory pressure. You can manually trigger garbage collection with `sys.sp_xtp_force_gc`. You can observe the reduction in memory cleanup in [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-objects/sys-dm-xtp-system-memory-consumers-transact-sql.md). In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the `sys.dm_xtp_system_memory_consumers` dynamic management view has improved insights specific to [Memory-optimized TempDB metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata).
 
 Contrast with [sys.sp_xtp_checkpoint_force_garbage_collection](sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md), which marks checkpoint files used in the merge operation with the log sequence number (LSN) after which they aren't needed and can be garbage collected. Also, `sys.sp_xtp_checkpoint_force_garbage_collection` moves the files whose associated LSN is lower than the log truncation point to FILESTREAM garbage collection.
 

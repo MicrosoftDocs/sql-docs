@@ -36,8 +36,8 @@ A DML trigger can also be modified to encrypt its definition.
 To view the dependencies of a trigger, you can use [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the following function and catalog views:
 
 - [sys.sql_expression_dependencies](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
-- [sys.dm_sql_referenced_entities](../system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
-- [sys.dm_sql_referencing_entities](../system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
+- [sys.dm_sql_referenced_entities](../system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md)
+- [sys.dm_sql_referencing_entities](../system-dynamic-management-objects/sys-dm-sql-referencing-entities-transact-sql.md)
 
 ## Permissions
 

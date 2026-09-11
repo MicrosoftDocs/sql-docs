@@ -23,7 +23,7 @@ sections:
           answer: |
              1. **What Linux platforms are supported?**
 
-                SQL Server is currently supported on Red Hat Enterprise Server, SUSE Linux Enterprise Server, and Ubuntu. It also supported running in a container with Docker. For the latest information about the supported versions, see [Supported platforms](sql-server-linux-setup.md#supportedplatforms).
+                SQL Server is currently supported on Red Hat Enterprise Server, SUSE Linux Enterprise Server, and Ubuntu. It also supported running in a container with Docker. For the latest information about the supported versions, see [Supported platforms](install-upgrade/setup.md#supportedplatforms).
 
              1. **Will SQL Server on Linux work on other platforms**?
 
@@ -39,7 +39,7 @@ sections:
 
              1. **I am coming from a Windows SQL Server background. Are there resources to help learn how to use SQL Server on Linux?**
 
-                The [quickstarts](sql-server-linux-setup.md#platforms) provide step-by-step instructions on how to install SQL Server on Linux and run Transact-SQL queries. Other tutorials provide additional instructions on using SQL Server on Linux. For a third-party list of tips, see the [MSSQLTIPS list of SQL Server on Linux Tips](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/).
+                The [quickstarts](install-upgrade/setup.md#platforms) provide step-by-step instructions on how to install SQL Server on Linux and run Transact-SQL queries. Other tutorials provide additional instructions on using SQL Server on Linux. For a third-party list of tips, see the [MSSQLTIPS list of SQL Server on Linux Tips](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/).
 
         - question: Licensing
           answer: |
@@ -78,7 +78,7 @@ sections:
           answer: |
              1. **How do I get SQL Server installed on my Linux servers?**
 
-                Microsoft maintains package repositories for installing SQL Server and supports installation via native package managers such as yum, zypper, and apt. To quickly install, see one of the [quickstarts](sql-server-linux-setup.md#platforms).
+                Microsoft maintains package repositories for installing SQL Server and supports installation via native package managers such as yum, zypper, and apt. To quickly install, see one of the [quickstarts](install-upgrade/setup.md#platforms).
 
              1. **Can I install SQL Server on the Linux Subsystem for Windows 10 or Windows 11?**
 
@@ -90,11 +90,11 @@ sections:
 
              1. **Can I download the installation packages to install SQL Server offline?**
 
-                Yes. For more information, see the package download links in the [Release notes](sql-server-linux-release-notes-2022.md). Also, review the [instructions for offline installations](sql-server-linux-setup.md#offline).
+                Yes. For more information, see the package download links in the [Release notes](sql-server-linux-release-notes-2022.md). Also, review the [instructions for offline installations](install-upgrade/setup.md#offline).
 
              1. **Can I perform an unattended installation of SQL Server on Linux?**
 
-                Yes. For a discussion of unattended installation, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#unattended). See the sample scripts for [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), and [Ubuntu](sample-unattended-install-ubuntu.md). You can also review [this sample script](/archive/blogs/sqlcat/unattended-install-and-configuration-for-sql-server-2017-on-linux) created by the SQL Server Customer Advisory Team.
+                Yes. For a discussion of unattended installation, see [Installation guidance for SQL Server on Linux](install-upgrade/setup.md#unattended). See the sample scripts for [Red Hat](install-upgrade/unattended-install-redhat.md), [SUSE Linux Enterprise Server](install-upgrade/unattended-install-suse.md), and [Ubuntu](install-upgrade/unattended-install-ubuntu.md). You can also review [this sample script](/archive/blogs/sqlcat/unattended-install-and-configuration-for-sql-server-2017-on-linux) created by the SQL Server Customer Advisory Team.
 
         - question: Tools
           answer: |
@@ -108,7 +108,7 @@ sections:
 
              1. **Are commands like sqlcmd and bcp available on Linux?**
 
-                Yes, [sqlcmd and bcp](sql-server-linux-setup-tools.md) are natively available on Linux, macOS, and Windows. In addition, use the new [mssql-scripter](https://github.com/Microsoft/mssql-scripter) command-line tool on Linux, macOS, or Windows to generate T-SQL scripts for your SQL database running anywhere.
+                Yes, [sqlcmd and bcp](install-upgrade/setup-tools.md) are natively available on Linux, macOS, and Windows. In addition, use the new [mssql-scripter](https://github.com/Microsoft/mssql-scripter) command-line tool on Linux, macOS, or Windows to generate T-SQL scripts for your SQL database running anywhere.
 
              1. **Is it possible to view Activity Monitor when connected through SSMS on Windows for an instance running on Linux?**
 
@@ -116,7 +116,7 @@ sections:
 
              1. **What tools are available to monitor SQL Server performance on Linux?**
 
-                You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in), work remotely in SQL Server Management Studio (SSMS) from Windows.
+                You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in), work remotely in SQL Server Management Studio (SSMS) from Windows.
 
                 One way to improve performance is to properly configure your Linux operating system and the SQL Server instance. For more information, see:
                 
@@ -127,19 +127,19 @@ sections:
           answer: |
              1. **Has Microsoft created an app like the SQL Server Configuration Manager on Linux?**
 
-                Yes, there is a configuration tool for SQL Server on Linux: [mssql-conf](sql-server-linux-configure-mssql-conf.md).
+                Yes, there is a configuration tool for SQL Server on Linux: [mssql-conf](configure/mssql-conf.md).
 
              1. **Does SQL Server on Linux support multiple instances on the same host?**
 
-                No, we don't support multiple instances on the same host machine. If you need to run multiple instances on the same host, we recommend using multiple containers. Keep in mind that each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-docker-container-deployment.md#multiple).
+                No, we don't support multiple instances on the same host machine. If you need to run multiple instances on the same host, we recommend using multiple containers. Keep in mind that each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](containers/deploy.md#multiple).
 
              1. **Is Active Directory Authentication supported on Linux?**
 
-                Yes. For more information, see [Active Directory Authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+                Yes. For more information, see [Active Directory Authentication with SQL Server on Linux](security/authentication/active-directory-tutorial.md).
 
              1. **Are Always On availability groups and clustering supported in Linux?**
 
-                Failover clustering and high availability on Linux are achieved with Pacemaker on Linux. For more information, see [Business continuity and database recovery - SQL Server on Linux](sql-server-linux-business-continuity-dr.md).
+                Failover clustering and high availability on Linux are achieved with Pacemaker on Linux. For more information, see [Business continuity and database recovery - SQL Server on Linux](business-continuity/overview.md).
 
              1. **Is it possible to configure replication from Linux to Windows and vice versa?**
 
@@ -147,7 +147,7 @@ sections:
 
              1. **Is it possible to migrate existing databases in older versions of SQL Server from Windows to Linux?**
 
-                Yes, there are [several methods](sql-server-linux-migrate-overview.md) of achieving this.
+                Yes, there are [several methods](migrate/overview.md) of achieving this.
 
              1. **Can I migrate my data from Oracle and other database engines to SQL Server on Linux?**
 
@@ -167,7 +167,7 @@ sections:
                 
              1. **Is Symbolic links supported for SQL Server data and log directories?** 
                  
-                No, symbolic links aren't supported for SQL Server data and log directories. To change the default data and log directories, see [Change the default data or log directory location](sql-server-linux-configure-mssql-conf.md#datadir).
+                No, symbolic links aren't supported for SQL Server data and log directories. To change the default data and log directories, see [Change the default data or log directory location](configure/mssql-conf.md#datadir).
               
              1. **Can we remove the Builtin\Administrator account from SQL Server on Linux and containers instances?** 
                  

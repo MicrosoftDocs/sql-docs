@@ -56,7 +56,7 @@ The following settings are supported in [!INCLUDE [ssazure-sqldb](../../includes
 - Enable or disable the autodrop functionality of global temporary tables.
 - Enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 - Enable or disable the new `String or binary data would be truncated` error message.
-- Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
+- Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Specify the number of minutes a paused resumable index operation is paused before it's automatically aborted by the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)].
 - Enable or disable waiting for locks at low priority for asynchronous statistics update.
 - Enable or disable uploading ledger digests to Azure Blob Storage.
@@ -300,13 +300,13 @@ For more information, see [Guidelines for online index operations](../../relatio
 
 **Applies to**: [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Controls whether execution statistics for scalar user-defined functions (UDF) appear in the [sys.dm_exec_function_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) system view. For some intensive workloads that are scalar UDF-heavy, collecting function execution statistics might cause a noticeable performance overhead. You can avoid this overhead by setting the `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` database-scoped configuration to `OFF`. The default is `ON`.
+Controls whether execution statistics for scalar user-defined functions (UDF) appear in the [sys.dm_exec_function_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-function-stats-transact-sql.md) system view. For some intensive workloads that are scalar UDF-heavy, collecting function execution statistics might cause a noticeable performance overhead. You can avoid this overhead by setting the `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` database-scoped configuration to `OFF`. The default is `ON`.
 
 #### FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION = { ON | OFF }
 
 **Applies to**: [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-When you troubleshoot long running queries with lightweight query execution statistics profiling or the [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) DMV, `FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION` causes SQL Server generates a Showplan XML fragment that includes the `ParameterRuntimeValue`.
+When you troubleshoot long running queries with lightweight query execution statistics profiling or the [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-statistics-xml-transact-sql.md) DMV, `FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION` causes SQL Server generates a Showplan XML fragment that includes the `ParameterRuntimeValue`.
 
 > [!IMPORTANT]  
 > Don't enable the `FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION` database scoped configuration option continuously in a production environment. Enable it only for time-limited troubleshooting purposes. This database scoped configuration option adds extra and possibly significant CPU and memory overhead as SQL Server creates a Showplan XML fragment with runtime parameter information, whether the `sys.dm_exec_query_statistics_xml` DMV or lightweight query execution statistics profile infrastructure is enabled or not.
@@ -329,7 +329,7 @@ The `FULLTEXT_INDEX_VERSION` configuration also controls which full-text compone
 - [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)
 - [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)
 - [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)
-- [sys.dm_fts_parser](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)
+- [sys.dm_fts_parser](../../relational-databases/system-dynamic-management-objects/sys-dm-fts-parser-transact-sql.md)
 
 #### IDENTITY_CACHE = { ON | OFF }
 
@@ -368,7 +368,7 @@ Sets the autodrop functionality for [global temporary tables](create-table-trans
 
 **Applies to**: [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Allows you to enable or disable collection of the last query plan statistics (equivalent to an actual execution plan) in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md). The default is `OFF`.
+Allows you to enable or disable collection of the last query plan statistics (equivalent to an actual execution plan) in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-plan-stats-transact-sql.md). The default is `OFF`.
 
 #### LEDGER_DIGEST_STORAGE_ENDPOINT = { &lt;endpoint URL string&gt; | OFF }
 
@@ -405,7 +405,7 @@ Specifies the default **max degree of parallelism (MAXDOP)** setting that should
 
 Use the MAXDOP option to limit the number of processors to use in parallel plan execution. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel insert, online alter column, parallel stats collection, and static and keyset-driven cursor population.
 
-The **max degree of parallelism (MAXDOP)** limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It isn't a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks, which are assigned to a [scheduler](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and task architecture guide](../../relational-databases/thread-and-task-architecture-guide.md).
+The **max degree of parallelism (MAXDOP)** limit is set per [task](../../relational-databases/system-dynamic-management-objects/sys-dm-os-tasks-transact-sql.md). It isn't a per [request](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks, which are assigned to a [scheduler](../../relational-databases/system-dynamic-management-objects/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and task architecture guide](../../relational-databases/thread-and-task-architecture-guide.md).
 
 To set this option at the instance level, see [Server configuration: max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
@@ -589,7 +589,7 @@ For database compatibility level 140 or lower versions, error message 2628 remai
 
 **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Enables or disables collection of execution statistics at the module-level for natively compiled T-SQL modules in the current database. The default is `OFF`. The execution statistics are reflected in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md).
+Enables or disables collection of execution statistics at the module-level for natively compiled T-SQL modules in the current database. The default is `OFF`. The execution statistics are reflected in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-procedure-stats-transact-sql.md).
 
 Module-level execution statistics for natively compiled T-SQL modules are collected if either this option is ON, or if statistics collection is enabled through [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).
 
@@ -597,7 +597,7 @@ Module-level execution statistics for natively compiled T-SQL modules are collec
 
 **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Enables or disables collection of execution statistics at the statement-level for natively compiled T-SQL modules in the current database. The default is `OFF`. The execution statistics are reflected in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) and in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
+Enables or disables collection of execution statistics at the statement-level for natively compiled T-SQL modules in the current database. The default is `OFF`. The execution statistics are reflected in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md) and in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
 Statement-level execution statistics for natively compiled T-SQL modules are collected if either this option is `ON`, or if statistics collection is enabled through [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
 

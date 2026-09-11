@@ -64,7 +64,7 @@ GO
   
 ## <a id="monitoring-example"></a> Monitor example
 
-You begin to explore the counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+You begin to explore the counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters

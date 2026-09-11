@@ -218,7 +218,7 @@ Backups performed at different times from the same or different databases can be
 
 By default, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] always appends new backups to media. Appending can occur only at the end of the media. For example, if a media volume contains five backup sets, it isn't possible to skip the first three backup sets to overwrite the fourth backup set with a new backup set.
 
-If you use `BACKUP WITH NOREWIND` for a tape backup, the tape is left open at the end of the operation. This allows you to append further backups to the tape without rewinding the tape and then scanning forward again to find the last backup set. You can find the list of open tape drives in the `sys.dm_io_backup_tapes` dynamic management view; for more information, see [sys.dm_io_backup_tapes](../system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).
+If you use `BACKUP WITH NOREWIND` for a tape backup, the tape is left open at the end of the operation. This allows you to append further backups to the tape without rewinding the tape and then scanning forward again to find the last backup set. You can find the list of open tape drives in the `sys.dm_io_backup_tapes` dynamic management view; for more information, see [sys.dm_io_backup_tapes](../system-dynamic-management-objects/sys-dm-io-backup-tapes-transact-sql.md).
 
 Microsoft Windows backups and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backups can share the same media, but they aren't interoperable. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup can't back up Windows data.
 

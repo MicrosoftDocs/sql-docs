@@ -69,7 +69,7 @@ While you can add secondary replicas to a geo-secondary replica of the primary d
 
 ## Permissions
 
-This dynamic management function requires the VIEW DATABASE PERFORMANCE STATE permission. For more information, see [System dynamic management views](../system-dynamic-management-views/system-dynamic-management-views.md). To query a pooled database, the VIEW SERVER STATE permission is needed. If the caller has VIEW DATABASE PERFORMANCE STATE permission, rows for the databases where this permission is held are returned.
+This dynamic management function requires the VIEW DATABASE PERFORMANCE STATE permission. For more information, see [System dynamic management views](../system-dynamic-management-objects/system-dynamic-management-objects.md). To query a pooled database, the VIEW SERVER STATE permission is needed. If the caller has VIEW DATABASE PERFORMANCE STATE permission, rows for the databases where this permission is held are returned.
 
 ## Examples
 

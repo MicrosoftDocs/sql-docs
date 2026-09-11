@@ -25,7 +25,7 @@ dev_langs:
 Contains information about all granted, converting, and waiting lock requests.
 
 > [!IMPORTANT]  
-> This [!INCLUDE [ssversion2000-md](../../includes/ssversion2000-md.md)] system table is included as a view for backward compatibility. Use the [sys.dm_tran_locks](../system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) dynamic management view instead. 
+> This [!INCLUDE [ssversion2000-md](../../includes/ssversion2000-md.md)] system table is included as a view for backward compatibility. Use the [sys.dm_tran_locks](../system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md) dynamic management view instead. 
 >
 > This feature will be removed in a future version of Microsoft SQL Server.
 >

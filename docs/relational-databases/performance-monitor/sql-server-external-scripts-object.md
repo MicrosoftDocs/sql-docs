@@ -16,7 +16,7 @@ dev_langs:
 # SQL Server, External Scripts object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **SQLServer:External Scripts** object in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor the actions associated with executing external scripts. For information about executing external scripts, see [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
+  The **SQLServer:External Scripts** object in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor the actions associated with executing external scripts. For information about executing external scripts, see [sp_execute_external_script (Transact-SQL)](../system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
  This table describes the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **External Scripts** counters.  
   
@@ -34,7 +34,7 @@ dev_langs:
 
 ## Example
 
-You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters

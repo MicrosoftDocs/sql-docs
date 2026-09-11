@@ -23,7 +23,7 @@ dev_langs:
 Displays information about database object dependencies, such as the views and procedures that depend on a table or view, and the tables and views that are depended on by the view or procedure. References to objects outside the current database aren't reported.
 
 > [!IMPORTANT]  
-> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys.dm_sql_referencing_entities](../system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) and [sys.dm_sql_referenced_entities](../system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) instead.
+> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys.dm_sql_referencing_entities](../system-dynamic-management-objects/sys-dm-sql-referencing-entities-transact-sql.md) and [sys.dm_sql_referenced_entities](../system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md) instead.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

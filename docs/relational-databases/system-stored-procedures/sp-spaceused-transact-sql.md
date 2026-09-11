@@ -130,7 +130,7 @@ If *@objname* is specified, the following result set is returned for the specifi
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| `name` | **nvarchar(128)** | Name of the object for which space usage information was requested.<br /><br />The schema name of the object isn't returned. If the schema name is required, use the [sys.dm_db_partition_stats](../system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) or [sys.dm_db_index_physical_stats](../system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management views to obtain equivalent size information. |
+| `name` | **nvarchar(128)** | Name of the object for which space usage information was requested.<br /><br />The schema name of the object isn't returned. If the schema name is required, use the [sys.dm_db_partition_stats](../system-dynamic-management-objects/sys-dm-db-partition-stats-transact-sql.md) or [sys.dm_db_index_physical_stats](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management views to obtain equivalent size information. |
 | `rows` | **char(20)** | Number of rows existing in the table. If the object specified is a [!INCLUDE [ssSB](../../includes/sssb-md.md)] queue, this column indicates the number of messages in the queue. |
 | `reserved` | **varchar(18)** | Total amount of reserved space for *@objname*. |
 | `data` | **varchar(18)** | Total amount of space used by data in *@objname*. |

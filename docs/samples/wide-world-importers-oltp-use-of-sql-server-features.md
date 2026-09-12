@@ -19,7 +19,7 @@ WideWorldImporters is designed to showcase many of the key features of SQL Serve
 
 |SQL Server feature or capability|Use in WideWorldImporters|
 |:-------------------------------|:------------------------|
-|Temporal tables|There are many temporal tables, including all look-up style reference tables and main entities such as StockItems, Customers, and Suppliers. Using temporal tables allows to conveniently keep track of the history of these entities.|
+|Temporal tables|There are many temporal tables, including all look-up style reference tables and main entities such as StockItems, Customers, and Suppliers. Using temporal tables allows you to conveniently keep track of the history of these entities.|
 |AJAX calls for JSON|The application frequently uses AJAX calls to query these tables: Persons, Customers, Suppliers, and StockItems. The calls return the data in JSON format. For example, see the stored procedure `Website.SearchForCustomers`.|
 |JSON property/value bags|A number of tables have columns that hold JSON data to extend the relational data in the table. For example, `Application.SystemParameters` has a column for application settings and `Application.People` has a column to record user preferences. These tables use an `nvarchar(max)` column to record the JSON data, along with a CHECK constraint using the built-in function `ISJSON` to ensure the column values are valid JSON.|
 |Row-level security (RLS)|Row Level Security (RLS) is used to limit access to the Customers table, based on role membership. Each sales territory has a role and a user. To see an RLS access limit in action, use the corresponding script in sample-script.zip, which is part of the [release of the sample](https://go.microsoft.com/fwlink/?LinkID=800630).|

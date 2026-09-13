@@ -48,6 +48,9 @@ The bulk copy program utility (**`bcp`**) bulk copies data between an instance o
 
 [!INCLUDE [fabric-dw](../../includes/applies-to-version/fabric-dw.md)]
 
+> [!IMPORTANT]  
+> This feature is in [preview](/fabric/fundamentals/preview).
+
 The bulk copy program utility (**`bcp`**) bulk copies data between [!INCLUDE [fabric-dw-full](../../includes/fabric-dw-full.md)] and a data file in a user-specified format.
 
 > [!NOTE]  

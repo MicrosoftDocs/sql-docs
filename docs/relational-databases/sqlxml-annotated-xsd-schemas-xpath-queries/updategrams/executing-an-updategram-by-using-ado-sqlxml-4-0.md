@@ -1,6 +1,6 @@
 ---
 title: "Executing an Updategram by Using ADO (SQLXML)"
-description: Learn how to to establish a connection to an instance of Microsoft SQL Server and execute an updategram.by using ADO (SQLXML 4.0).
+description: Learn how to establish a connection to an instance of Microsoft SQL Server and execute an updategram.by using ADO (SQLXML 4.0).
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"

@@ -1,6 +1,734 @@
 {
   "redirections": [
     {
+      "source_path": "docs/analytics-platform-system/acquire-and-configure-backup-server.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/acquire-and-configure-backup-server",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/acquire-and-configure-loading-server.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/acquire-and-configure-loading-server",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/antivirus-software.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/antivirus-software",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/appliance-configuration.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/appliance-configuration",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/appliance-feature-switch.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/appliance-feature-switch",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/appliance-installation-and-configuration-overview.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/appliance-installation-and-configuration-overview",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/appliance-monitoring.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/appliance-monitoring",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/appliance-network-configuration.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/appliance-network-configuration",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/appliance-time-zone-configuration.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/appliance-time-zone-configuration",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/appliance-topology.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/appliance-topology",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/apply-analytics-platform-system-hotfixes.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/apply-analytics-platform-system-hotfixes",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/backup-and-loading-hardware.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/backup-and-loading-hardware",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/backup-and-restore-overview.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/backup-and-restore-overview",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/backup-capacity-planning-worksheet.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/backup-capacity-planning-worksheet",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/common-sub-expression-elimination.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/common-sub-expression-elimination",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-an-external-smp-sql-server-to-receive-remote-table-copies.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-an-external-smp-sql-server-to-receive-remote-table-copies",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-auto-statistics.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-auto-statistics",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-domain-trusts.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-domain-trusts",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-infiniband-network-adapters.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-infiniband-network-adapters",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-polybase-connectivity-to-external-data.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-polybase-connectivity-to-external-data",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-scom-to-monitor-analytics-platform-system.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-scom-to-monitor-analytics-platform-system",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-sql-server-pdw-for-remote-table-copies.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-sql-server-pdw-for-remote-table-copies",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-tls12-aps.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-tls12-aps",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/configure-windows-server-update-services-wsus.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/configure-windows-server-update-services-wsus",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/connect-to-appliance-nodes.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/connect-to-appliance-nodes",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/create-an-aps-domain-administrator-aps.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/create-an-aps-domain-administrator-aps",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/create-ssis-script-task-using-pdw-destination-adapter.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/create-ssis-script-task-using-pdw-destination-adapter",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/determine-polling-frequency.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/determine-polling-frequency",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/determine-which-cluster-node-failed.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/determine-which-cluster-node-failed",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/download-and-apply-microsoft-updates.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/download-and-apply-microsoft-updates",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/dwloader-data-type-conversion-rules.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/dwloader-data-type-conversion-rules",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/dwloader.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/dwloader",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/error-messages.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/error-messages",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/grant-permissions.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/grant-permissions",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/hardware-components.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/hardware-components",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/hardware-configurations.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/hardware-configurations",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/hardware-installation.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/hardware-installation",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/high-availability.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/high-availability",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/home-analytics-platform-system-aps-pdw.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/home-analytics-platform-system-aps-pdw",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/import-the-scom-management-pack-for-pdw.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/import-the-scom-management-pack-for-pdw",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/information-to-obtain-from-your-ihv.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/information-to-obtain-from-your-ihv",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/install-the-scom-management-packs.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/install-the-scom-management-packs",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/instant-file-initialization-configuration.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/instant-file-initialization-configuration",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/launch-the-configuration-manager.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/launch-the-configuration-manager",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/load-overview.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/load-overview",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/load-with-insert.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/load-with-insert",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/load-with-ssis.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/load-with-ssis",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/loading-server-capacity-planning-worksheet.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/loading-server-capacity-planning-worksheet",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/locking-behavior.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/locking-behavior",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/master-database.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/master-database",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/monitor-appliance-health-state.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/monitor-appliance-health-state",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/monitor-loads.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/monitor-loads",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/monitor-the-appliance-by-using-system-center-operations-manager.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/monitor-the-appliance-by-using-system-center-operations-manager",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/monitor-the-appliance-by-using-system-views.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/monitor-the-appliance-by-using-system-views",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/monitor-the-appliance-by-using-the-admin-console.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/monitor-the-appliance-by-using-the-admin-console",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/monitoring-active-queries.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/monitoring-active-queries",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/parallel-data-warehouse-overview.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/parallel-data-warehouse-overview",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/password-reset.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/password-reset",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/pdw-and-appliance-fabric-physical-components.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/pdw-and-appliance-fabric-physical-components",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/pdw-certificate-provisioning.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/pdw-certificate-provisioning",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/pdw-firewall-configuration.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/pdw-firewall-configuration",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/pdw-permissions.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/pdw-permissions",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/pdw-services-status.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/pdw-services-status",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/pdw-topology.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/pdw-topology",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/polybase-configure-azure-blob-storage.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/polybase-configure-azure-blob-storage",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/polybase-configure-hadoop-security.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/polybase-configure-hadoop-security",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/polybase-configure-hadoop.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/polybase-configure-hadoop",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/power-the-aps-appliance-on-or-off.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/power-the-aps-appliance-on-or-off",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/processing-and-storage-capacity-planning.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/processing-and-storage-capacity-planning",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/remote-table-copy.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/remote-table-copy",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/reserved-database-names.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/reserved-database-names",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/restore-database-protected-by-tde.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/restore-database-protected-by-tde",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/restore-the-master-database.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/restore-the-master-database",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/send-telemetry-feedback-to-microsoft-sql-server-pdw.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/send-telemetry-feedback-to-microsoft-sql-server-pdw",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/software-servicing.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/software-servicing",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/staging-database.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/staging-database",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/system-databases.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/system-databases",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/tempdb-database.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/tempdb-database",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/track-appliance-alerts.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/track-appliance-alerts",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/transparent-data-encryption.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/transparent-data-encryption",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/understanding-admin-console-alerts.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/understanding-admin-console-alerts",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/uninstall-analytics-platform-system-hotfixes.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/uninstall-analytics-platform-system-hotfixes",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/uninstall-microsoft-updates.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/uninstall-microsoft-updates",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/use-a-dns-forwarder-to-resolve-non-appliance-dns-names",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/user-sessions.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/user-sessions",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/view-capacity-utilization.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/view-capacity-utilization",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/whats-new-analytics-platform-system.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/whats-new-analytics-platform-system",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/workload-management-tasks.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/workload-management-tasks",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/analytics-platform-system/workload-management.md",
+      "redirect_url": "/previous-versions/sql/analytics-platform-system/workload-management",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
       "source_path": "docs/relational-databases/tables/temporal-tables.md",
       "redirect_url": "/sql/relational-databases/tables/temporal/overview",
       "redirect_document_id": false

@@ -467,7 +467,6 @@
         "integration-services/**/*.md": "None"
       },
       "feedback_product_url": {},
-      
       "titleSuffix": {
         "ado/**/*.md": "ActiveX Data Objects (ADO)",
         "analysis-services/**/*.md": "",
@@ -615,8 +614,7 @@
         "machine-learning/**/*.md": "vanto",
         "machine-learning/**/*.yml": "vanto"
       },
-      "ms.reviewer": {
-      },
+      "ms.reviewer": {},
       "ms.date": {
         "azdata/**/*.md": "02/13/2026"
       },
@@ -682,6 +680,9 @@
         ],
         "ado/**/*.md": [
           "sql-server-ver15"
+        ],
+        "analytics-platform-system/**/*.{md,yml,yaml}": [
+          "aps-pdw-2016-au7"
         ]
       }
     },

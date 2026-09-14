@@ -708,9 +708,9 @@
       },
       "sensitive-language-ma": {
         "exclude": [
-          "linux/sql-server-linux-availability-group-cluster-sles.md",
-          "linux/sql-server-linux-create-availability-group.md",
-          "linux/sql-server-linux-pacemaker-basics.md",
+          "linux/business-continuity/availability-groups/cluster-pacemaker.md",
+          "linux/business-continuity/availability-groups/create.md",
+          "linux/business-continuity/availability-groups/pacemaker-basics.md",
           "relational-databases/errors-events/**/*.md",
           "relational-databases/maintenance-plans/**/*.md",
           "relational-databases/system-stored-procedures/sp-help-job-transact-sql.md",

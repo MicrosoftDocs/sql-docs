@@ -53090,6 +53090,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-configure.md",
+      "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-configure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate.md",
+      "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-operate",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/lp/sql-server/install-sql-and-services.md",
       "redirect_url": "/sql/sql-server/",
       "redirect_document_id": false
@@ -71199,6 +71209,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/linux/business-continuity/failover-cluster-instance/shared-disk-cluster-red-hat-7-configure.md",
+      "redirect_url": "/sql/linux/business-continuity/failover-cluster-instance/shared-disk-cluster-configure",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-configure-iscsi.md",
       "redirect_url": "/sql/linux/business-continuity/failover-cluster-instance/shared-disk-cluster-configure-iscsi",
       "redirect_document_id": false
@@ -71219,13 +71234,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-configure.md",
-      "redirect_url": "/sql/linux/business-continuity/failover-cluster-instance/shared-disk-cluster-red-hat-7-configure",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate.md",
-      "redirect_url": "/sql/linux/business-continuity/failover-cluster-instance/shared-disk-cluster-red-hat-7-operate",
+      "source_path": "docs/linux/business-continuity/failover-cluster-instance/shared-disk-cluster-red-hat-7-operate.md",
+      "redirect_url": "/sql/linux/business-continuity/failover-cluster-instance/shared-disk-cluster-operate",
       "redirect_document_id": false
     },
     {

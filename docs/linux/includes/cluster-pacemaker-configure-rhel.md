@@ -1,7 +1,8 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/20/2025
+ms.reviewer: amitkh, atsingh
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
@@ -40,20 +41,7 @@ ms.custom:
    sudo systemctl enable pacemaker
    ```
 
-1. Create the Cluster. To create the cluster, run the following command on a single node:
-
-   **RHEL 7**
-
-   ```bash
-   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2> <node3>
-   sudo pcs cluster start --all
-   sudo pcs cluster enable --all
-   ```
-
-   **RHEL 8 and later versions**
-
-   For RHEL 8 and later versions, you need to authenticate the nodes separately. Manually enter in the username and password for `hacluster` when prompted.
+1. Create the cluster. Starting with Red Hat 8, you must authenticate the nodes separately. Run the following commands on a single node. Manually enter the username and password for `hacluster` when prompted.
 
    ```bash
    sudo pcs host auth <node1> <node2> <node3>

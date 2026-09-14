@@ -1,16 +1,18 @@
 ---
-title: Configure a Pacemaker Cluster for SQL Server Availability Groups
+title: Configure a Pacemaker Cluster for Availability Groups
+titleSuffix: SQL Server on Linux
 description: Learn to create a three-node cluster on Red Hat, SUSE, or Ubuntu, and add a previously created availability group resource to the cluster.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 01/02/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: how-to
 ms.custom:
   - linux-related-content
   - ignite-2023
+ai-usage: ai-assisted
 ---
 # Configure a Pacemaker cluster for SQL Server availability groups
 
@@ -59,62 +61,7 @@ To configure high availability for RHEL, enable the high availability subscripti
 
 #### Enable the high availability subscription for RHEL
 
-Each node in the cluster must have an appropriate subscription for RHEL and the High Availability Add on. Review the requirements at [How to install High Availability cluster packages in Red Hat Enterprise Linux](https://access.redhat.com/solutions/45930). Follow these steps to configure the subscription and repos:
-
-1. Register the system.
-
-   ```bash
-   sudo subscription-manager register
-   ```
-
-   Provide your user name and password.
-
-1. List the available pools for registration.
-
-   ```bash
-   sudo subscription-manager list --available
-   ```
-
-   > [!NOTE]  
-   > For **RHEL 10**, the list command is as follows:
-   >
-   > ```bash
-   > sudo subscription-manager repos --list
-   > ```
-
-   From the list of available pools, note the pool ID for the high availability subscription.
-
-1. Update the following script. Replace `<pool id>` with the pool ID for high availability from the preceding step. Run the script to attach the subscription.
-
-   ```bash
-   sudo subscription-manager attach --pool=<pool id>
-   ```
-
-1. Enable the repository.
-
-   **RHEL 7**
-
-   ```bash
-   sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
-   ```
-
-   **RHEL 8**
-
-   ```bash
-   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
-   ```
-
-   **RHEL 9**
-
-   ```bash
-   sudo subscription-manager repos --enable=rhel-9-for-x86_64-highavailability-rpms
-   ```
-
-   **RHEL 10**
-
-   ```bash
-   sudo subscription-manager repos --enable=rhel-10-for-x86_64-highavailability-rpms
-   ```
+[!INCLUDE [ss-linux-cluster-pacemaker-rhel-ha-subscription](../../includes/cluster-pacemaker-rhel-ha-subscription.md)]
 
 For more information, see [Pacemaker - The Open Source, High Availability Cluster](https://clusterlabs.org/pacemaker/).
 
@@ -175,7 +122,7 @@ To update the property value to `true` run:
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-To update the `ag_cluster` resource property `failure-timeout` to `60s`, run:
+To update the `ag_cluster` resource property `failure-timeout` to `60s` (replace `ag_cluster` with the name of your availability group resource), run:
 
 ```bash
 pcs resource update ag_cluster meta failure-timeout=60s
@@ -193,53 +140,33 @@ After you create an AG in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversi
 
 #### Pacemaker HA agent v2 (preview)
 
-In [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] with Cumulative Update (CU) 3 and later versions, a new Pacemaker HA agent v2 is available in the `mssql-server-ha` package.
+[!INCLUDE [ss-linux-cluster-pacemaker-ha-agent-v2](../../includes/cluster-pacemaker-ha-agent-v2.md)]
 
-Pacemaker HA agent v2 introduces reliability and performance improvements over the previous agent, including:
-
-- Improved failover performance to reduce both planned and unplanned failover times.
-
-- Support for flexible automatic failover policies, including configuration of [health-check timeout](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#HCtimeout) and [failure-condition level](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#failure-condition-level).
-
-- Support for TLS 1.3 for communication between the Pacemaker cluster and SQL Server.
-
-Pacemaker HA agent v2 is currently in preview. The existing Pacemaker HA agent (v1) remains fully supported for production deployments.
+For more information, including `mssql-pcsag` service management and configuration examples, see [Pacemaker HA agent v2 (preview)](create.md#pacemaker-ha-agent-v2-preview).
 
 [!INCLUDE [ss-linux-cluster-required-synchronized-secondaries-default](../../includes/cluster-required-synchronized-secondaries-default.md)]
 
-Create the AG resource in Pacemaker using the existing Pacemaker HA agent (v1):
- 
-#### RHEL 7
-
-Use the following `create` command:
+Create the AG resource in Pacemaker using the existing Pacemaker HA agent (v1). In this example, `NameForAGResource` is the unique name you give to this cluster resource, and `AGName` is the name of the AG that you created.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-```
-
-#### RHEL 8 and later versions
-
-Use the following `create` command:
-
-```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
+sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failure-timeout=30s promotable notify=true
 ```
 
 To use Pacemaker HA agent v2, create the AG resource using the `agv2` resource agent:
 
-   ```bash
-   sudo pcs resource create <NameForAGResource> ocf:mssql:agv2 ag_name=<AGName> meta failure-timeout=30s promotable notify=true
-   ```
+```bash
+sudo pcs resource create <NameForAGResource> ocf:mssql:agv2 ag_name=<AGName> meta failure-timeout=30s promotable notify=true
+```
 
-   New deployments on [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] can evaluate Pacemaker HA agent v2. Existing production deployments should upgrade when appropriate.
+New deployments on [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] can evaluate Pacemaker HA agent v2. Existing production deployments should upgrade when appropriate.
 
-   When upgrading to or deploying Pacemaker HA agent v2, create the new AG resource using the `agv2` agent instead of the previous `ag` agent. If you already configured an existing AG resource, remove it and create a new resource using `agv2`:
+When upgrading to or deploying Pacemaker HA agent v2, create the new AG resource using the `agv2` agent instead of the previous `ag` agent. If you already configured an existing AG resource, remove it and create a new resource using `agv2`:
 
-   ```bash
-   sudo pcs resource delete <NameForAGResource>
-   ```
+```bash
+sudo pcs resource delete <NameForAGResource>
+```
 
-   This operation temporarily stops AG synchronization while the resource is being recreated. Deleting and recreating the Pacemaker AG resource doesn't delete the AG. After the resource is recreated, Pacemaker resumes management and AG synchronization automatically.
+This operation temporarily stops AG synchronization while the resource is being recreated. Deleting and recreating the Pacemaker AG resource doesn't delete the AG. After the resource is recreated, Pacemaker resumes management and AG synchronization automatically.
 
 <a id="createIP"></a>
 
@@ -257,32 +184,12 @@ There's no virtual server name equivalent in Pacemaker. To use a connection stri
 
 Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource. The cluster resource manager chooses the node with the highest score for a particular resource. If a node has a negative score for a resource, the resource can't run on that node.
 
-On a pacemaker cluster, you can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than `INFINITY`, Pacemaker regards it as recommendation. A score of `INFINITY` is mandatory.
+On a Pacemaker cluster, you can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than `INFINITY`, Pacemaker regards it as recommendation. A score of `INFINITY` is mandatory.
 
-To ensure that primary replica and the virtual ip resources run on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node.
-
-#### RHEL 7
-
-When you create the `ag_cluster` resource in RHEL 7, it creates the resource as `ag_cluster-master`. Use the following command for RHEL 7:
+To ensure that primary replica and the virtual IP resources run on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node. The AG resource creates a clone resource named `<NameForAGResource>-clone`.
 
 ```bash
-sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
-```
-
-#### RHEL 8
-
-When you create the `ag_cluster` resource in RHEL 8, it creates the resource as `ag_cluster-clone`. Use the following command:
-
-```bash
-sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
-```
-
-#### RHEL 9 and later versions
-
-When you create the `ag_cluster` resource in RHEL 9 and later versions, it creates the resource as `ag_cluster-clone`. Use the following command:
-
-```bash
-sudo pcs constraint colocation add virtualip with promoted ag_cluster-clone INFINITY with-rsc-role=Promoted
+sudo pcs constraint colocation add virtualip with promoted <NameForAGResource>-clone INFINITY with-rsc-role=Promoted
 ```
 
 ### Add ordering constraint
@@ -303,16 +210,8 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 
 To add an ordering constraint, run the following command on one node:
 
-#### RHEL 7
-
 ```bash
-sudo pcs constraint order promote ag_cluster-master then start virtualip
-```
-
-#### RHEL 8 and later versions
-
-```bash
-sudo pcs constraint order promote ag_cluster-clone then start virtualip
+sudo pcs constraint order promote <NameForAGResource>-clone then start virtualip
 ```
 
 > [!IMPORTANT]  
@@ -328,10 +227,9 @@ Manually fail over the availability group with `pcs`. Don't initiate failover wi
 
 The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](https://clusterlabs.org/).
 
-For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP5/).
+For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/15-SP6/).
 
-> [!NOTE]  
-> Starting in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
+[!INCLUDE [sles-deprecated](../../includes/sles-deprecated.md)]
 
 ### Roadmap
 
@@ -348,7 +246,7 @@ The procedure for creating an availability group for high availability differs b
    > [!IMPORTANT]  
    > Production environments require a fencing agent for high availability. The examples in this article don't use fencing agents. They are for testing and validation only.
    >
-   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP5/html/SLE-HA-all/cha-ha-fencing.html).
+   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/cha-ha-fencing.html).
 
 1. [Add the availability group as a resource in the cluster](#configure-an-availability-group)
 
@@ -358,7 +256,7 @@ To complete the following end-to-end scenario, you need three machines to deploy
 
 ### Set up and configure the operating system on each cluster node
 
-The first step is to configure the operating system on the cluster nodes. For this walk-through, use SLES 12 SP3 with a valid subscription for the HA add-on.
+The first step is to configure the operating system on the cluster nodes. For this walkthrough, use SLES 15 with a valid subscription for the HA add-on.
 
 #### Install and configure SQL Server service on each cluster node
 
@@ -383,7 +281,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   For more information, see the [SLES Administration Guide - Miscellaneous section](https://documentation.suse.com/sles/12-SP5/html/SLES-all/part-trouble.html).
+   For more information, see the [SLES Administration Guide - Miscellaneous section](https://documentation.suse.com/sles/15-SP6/html/SLES-all/part-trouble.html).
 
 ### Create a SQL Server login for Pacemaker
 
@@ -397,7 +295,7 @@ On Linux servers, configure the availability group and then configure the cluste
 
 1. Install the High Availability extension
 
-   For reference, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://documentation.suse.com/sle-ha/12-SP5/html/SLE-HA-all/art-ha-install-quick.html).
+   For reference, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html#sec-ha-inst-quick-installation).
 
 1. Install [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] resource agent package on both nodes.
 
@@ -407,7 +305,7 @@ On Linux servers, configure the availability group and then configure the cluste
 
 ### Set up the first node
 
-Refer to [SLES installation instructions](https://documentation.suse.com/sle-ha/12-SP5/).
+Refer to [SLES installation instructions](https://documentation.suse.com/sle-ha/15-SP6/).
 
 1. Sign in as `root` to the physical or virtual machine you want to use as cluster node.
 1. Start the bootstrap script by executing:
@@ -454,7 +352,7 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
 
 - The root user on the existing nodes has SSH keys in place for passwordless login.
 
-- `Csync2` is configured on the existing nodes. For more information, see [Configuring Csync2 with YaST](https://documentation.suse.com/sle-ha/12-SP5/html/SLE-HA-all/cha-ha-setup.html#pro-ha-installation-setup-csync2-yast).
+- `Csync2` is configured on the existing nodes. For more information, see [Configuring Csync2 with YaST](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/cha-ha-ycluster.html#pro-ha-installation-setup-csync2-yast).
 
 1. Sign in as `root` to the physical or virtual machine supposed to join the cluster.
 
@@ -554,7 +452,7 @@ sudo crm configure property stonith-enabled=true
 
 ### Configure the cluster resources for SQL Server
 
-Refer to the [SLES Administration Guide](https://documentation.suse.com/sle-ha/12-SP5/).
+Refer to the [SLES Administration Guide](https://documentation.suse.com/sle-ha/15-SP6/).
 
 ### Enable Pacemaker
 
@@ -632,8 +530,8 @@ The colocation constraint has an implicit ordering constraint. It moves the virt
 1. User issues `resource migrate` to the availability group primary from node1 to node2.
 1. The virtual IP resource stops on node 1.
 1. The virtual IP resource starts on node 2. At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary.
-1. The availability group master on node 1 is demoted.
-1. The availability group on node 2 is promoted to master.
+1. The availability group primary on node 1 is demoted.
+1. The availability group on node 2 is promoted to primary.
 
 To prevent the IP address from temporarily pointing to the node with the pre-failover secondary, add an ordering constraint with the following command on one node:
 
@@ -649,7 +547,7 @@ Manually fail over the availability group with `crm`. Don't initiate failover wi
 
 For more information, see:
 
-- [SUSE Linux Enterprise High Availability Extension 12 SP4](https://documentation.suse.com/sle-ha/12-SP5/)
+- [SUSE Linux Enterprise High Availability Extension 15 SP6](https://documentation.suse.com/sle-ha/15-SP6/)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/sphinx/Pacemaker_Administration/pcs-crmsh.rst)
 
 ## Related content
@@ -701,7 +599,7 @@ The steps to create an availability group on Linux servers for high availability
    sudo ufw disable
    ```
 
-1. Install Pacemaker packages. On all nodes, run the following commands for Ubuntu 20.04. For more information about installing on previous versions, see [Ubuntu HA - MS SQL Server on Azure](https://discourse.ubuntu.com/t/ubuntu-ha-ms-sql-server-on-azure/27673).
+1. Install Pacemaker packages on all nodes.
 
    ```bash
    sudo apt-get install -y pacemaker pacemaker-cli-utils crmsh resource-agents fence-agents corosync python3-azure
@@ -865,17 +763,9 @@ The AG resource you create is a type of resource called a *clone*. The AG resour
 
 #### Pacemaker HA agent v2 (preview)
 
-In [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] with Cumulative Update (CU) 3 and later versions, a new Pacemaker HA agent v2 (`mssql-server-ha`) is available.
+[!INCLUDE [ss-linux-cluster-pacemaker-ha-agent-v2](../../includes/cluster-pacemaker-ha-agent-v2.md)]
 
-Pacemaker HA agent v2 introduces reliability and performance improvements over the previous agent, including:
-
-- Improved failover performance to reduce both planned and unplanned failover times.
-
-- Support for flexible automatic failover policies, including configuration of [health-check timeout](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#HCtimeout) and [failure-condition level](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#failure-condition-level).
-
-- Support for TLS 1.3 for communication between the Pacemaker cluster and SQL Server.
-
-Pacemaker HA agent v2 is currently in preview. The existing Pacemaker HA agent (v1) remains fully supported for production deployments.
+For more information, including `mssql-pcsag` service management and configuration examples, see [Pacemaker HA agent v2 (preview)](create.md#pacemaker-ha-agent-v2-preview).
 
 1. Create the AG resource in Pacemaker using the existing Pacemaker HA agent (v1):
 
@@ -900,7 +790,7 @@ Pacemaker HA agent v2 is currently in preview. The existing Pacemaker HA agent (
    ```
 
    This operation temporarily stops AG synchronization while the resource is being recreated. Deleting and recreating the Pacemaker AG resource doesn't delete the AG. After the resource is recreated, Pacemaker resumes management and AG synchronization automatically.
-   
+
 [!INCLUDE [required-synchronized-secondaries-default](../../includes/cluster-required-synchronized-secondaries-default.md)]
 
 ### Create virtual IP resource
@@ -919,15 +809,10 @@ Almost every decision in a Pacemaker cluster, like choosing where a resource sho
 
 Use constraints to configure the decisions of the cluster. Constraints have a score. If a constraint has a score lower than INFINITY, it's only a recommendation. A score of INFINITY means it's mandatory.
 
-To ensure that primary replica and the virtual ip resource are on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node.
-#### Ubuntu 20.04
+To ensure that primary replica and the virtual IP resource are on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node.
 
 ```bash
-sudo pcs constraint colocation add virtualip with master AGResource INFINITY
-```
-#### Ubuntu 22.04 and later versions
-```bash
-sudo pcs constraint colocation add virtualip with promoted <NameForAGResource> INFINITY
+sudo pcs constraint colocation add virtualip with promoted <NameForAGResource>-clone INFINITY
 ```
 
 ### Add ordering constraint
@@ -950,15 +835,8 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 
 To add an ordering constraint, run the following command on one node:
 
-#### Ubuntu 20.04
-
 ```bash
-sudo crm configure order ag-before-listener Mandatory: ms-ag1:promote virtualip-group:start
-```
-#### Ubuntu 22.04 and later versions
-
-```bash
-sudo pcs constraint order promote <NameForAGResource> then start virtualip kind=Mandatory
+sudo pcs constraint order promote <NameForAGResource>-clone then start virtualip kind=Mandatory
 ```
 
 After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). The [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools.

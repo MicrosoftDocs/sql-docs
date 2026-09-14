@@ -4,7 +4,7 @@ description: Learn about new features and changes in each version of the mssql-p
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -16,6 +16,68 @@ ai-usage: ai-assisted
 This article lists what changed in each release of the mssql-python driver, newest first. Each section covers new features, behavior changes, and bug fixes for one version.
 
 For the versions that Microsoft currently supports, see [Support lifecycle](support-lifecycle.md).
+
+## mssql-python 1.15.0
+
+**Release date**: September 2026
+
+### Enhancements
+
+#### `setinputsizes()` parameter handling runs in native code
+
+Parameter handling for `setinputsizes()` now runs through the native C++ execution pipeline instead of per-parameter Python calls. Wide, batched, and frequently executed parameterized statements spend less time in Python-side parameter processing. No application change is needed.
+
+For more information, see [Data type mappings](data-type-mappings.md#use-setinputsizes).
+
+#### `Binary()` accepts `memoryview` objects
+
+`Binary()` now accepts a `memoryview` as a binary input, so you can pass a zero-copy view of a buffer without converting it to `bytes` first.
+
+For more information, see [Binary data](binary-data.md).
+
+#### SQL Server type constants are available from the `mssql_python` module
+
+The SQL Server type constants are now exposed directly from the `mssql_python` module, which makes them easier to find when you declare parameter types or read type metadata.
+
+For more information, see [Data type mappings](data-type-mappings.md).
+
+### Bug fixes
+
+#### Concurrent logging could hang the process
+
+The native logging paths acquired the GIL and internal mutexes in an inconsistent order, so a multithreaded application with driver logging enabled could deadlock. The lock ordering is corrected.
+
+#### Windows ARM64 wheels didn't include an ARM64 native core
+
+The Windows ARM64 wheel didn't vendor a matching ARM64 `mssql_py_core` binary, which affected bulk copy on that platform. The wheel now ships the ARM64 build.
+
+For more information, see [Bulk copy](bulk-copy.md).
+
+#### Bundled Windows DLLs relied on the process search path
+
+The driver and authentication DLLs that ship in the package are now loaded from package-local directories. Native dependencies resolve without depending on process-wide search-path configuration, which was unreliable in some deployment environments.
+
+#### `Decimal` parameters were bound differently depending on their value
+
+A `Decimal` parameter is now bound as `SQL_NUMERIC` regardless of its runtime value, so decimal parameter typing stays the same across values and execution paths.
+
+For more information, see [Decimal and money data](decimal-money.md).
+
+#### Parameter binding used obsolete ODBC 2.x type identifiers
+
+Typed parameters now use ODBC 3.x type identifiers in place of their ODBC 2.x equivalents, which avoids mismatches against current driver configurations.
+
+#### `Connection.getinfo(SQL_DATABASE_NAME)` returned an undecoded value
+
+The value returned for `SQL_DATABASE_NAME` is now decoded, so the database name comes back as Python text.
+
+For more information, see [Connection management](connection-management.md).
+
+#### Cursor cleanup crashed at interpreter shutdown
+
+A connection holding cursors in mixed lifecycle states cleaned them up in an order that could crash the process when some of that cleanup ran during interpreter shutdown. Shutdown now completes normally.
+
+For more information, see [Cursor management](cursor-management.md).
 
 ## mssql-python 1.14.0
 

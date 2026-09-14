@@ -4,7 +4,7 @@ description: Learn how to execute stored procedures and work with output paramet
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -405,7 +405,7 @@ The `mssql-python` driver raises `NotSupportedError` if you call `cursor.callpro
 
 ### Table-valued parameters (TVPs)
 
-Table-valued parameters aren't supported in the current version (1.14.0) of `mssql-python`. If you need to pass a set of rows to a stored procedure, use these alternatives:
+Table-valued parameters aren't supported in the current version (1.15.0) of `mssql-python`. If you need to pass a set of rows to a stored procedure, use these alternatives:
 
 - Insert into a temp table first, then have the stored procedure read from it.
 - Use `bulkcopy()` to load data into a staging table.

@@ -467,7 +467,6 @@
         "integration-services/**/*.md": "None"
       },
       "feedback_product_url": {},
-      
       "titleSuffix": {
         "ado/**/*.md": "ActiveX Data Objects (ADO)",
         "analysis-services/**/*.md": "",
@@ -615,8 +614,7 @@
         "machine-learning/**/*.md": "vanto",
         "machine-learning/**/*.yml": "vanto"
       },
-      "ms.reviewer": {
-      },
+      "ms.reviewer": {},
       "ms.date": {
         "azdata/**/*.md": "02/13/2026"
       },
@@ -682,6 +680,9 @@
         ],
         "ado/**/*.md": [
           "sql-server-ver15"
+        ],
+        "analytics-platform-system/**/*.{md,yml,yaml}": [
+          "aps-pdw-2016-au7"
         ]
       }
     },
@@ -708,9 +709,9 @@
       },
       "sensitive-language-ma": {
         "exclude": [
-          "linux/sql-server-linux-availability-group-cluster-sles.md",
-          "linux/sql-server-linux-create-availability-group.md",
-          "linux/sql-server-linux-pacemaker-basics.md",
+          "linux/business-continuity/availability-groups/cluster-pacemaker.md",
+          "linux/business-continuity/availability-groups/create.md",
+          "linux/business-continuity/availability-groups/pacemaker-basics.md",
           "relational-databases/errors-events/**/*.md",
           "relational-databases/maintenance-plans/**/*.md",
           "relational-databases/system-stored-procedures/sp-help-job-transact-sql.md",

@@ -1,9 +1,11 @@
 ---
-title: SQL Server High Availability for Linux Deployments
+title: High Availability Basics
+titleSuffix: SQL Server on Linux
 description: Learn about the high availability options for SQL Server on Linux, such as availability groups, failover cluster instances (FCI), and log shipping.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/02/2026
+ms.reviewer: amitkh, atsingh
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: concept-article
@@ -23,7 +25,7 @@ This article covers the technical aspects of planning and deploying highly avail
 Besides backup and restore, the same three availability features are available on Linux as for Windows-based deployments:
 
 - [Availability groups for SQL Server on Linux](availability-groups/overview.md)
-- [Failover Cluster Instances - SQL Server on Linux](failover-cluster-instance/shared-disk-cluster-concepts.md)
+- [Failover cluster instances on Linux](failover-cluster-instance/shared-disk-cluster-concepts.md)
 - [Get started with log shipping on Linux](use-log-shipping.md)
 
 On Windows, FCIs always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. A WSFC doesn't exist in Linux. Clustering implementation in Linux is discussed in [Pacemaker for availability groups and failover cluster instances on Linux](availability-groups/pacemaker-basics.md).
@@ -46,7 +48,7 @@ Here are some common commands. Each command has various switches and options tha
 - `ls` - show the contents of a directory
 - `mkdir` - create a folder (directory) on a drive
 - `mv` - move a file from one location to another
-- `ps` - show all of the working processes
+- `ps` - show all working processes
 - `rm` - delete a file locally on a server
 - `rmdir` - delete a folder (directory)
 - `systemctl` - start, stop, or enable services
@@ -64,12 +66,11 @@ Permission problems can exist on both Linux and Windows-based installations. How
 
 For more information on configuring OpenSSH for your Linux distribution, see:
 
-- [Red Hat Enterprise Linux (RHEL)](https://docs.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+- [Red Hat Enterprise Linux (RHEL)](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/assembly_using-secure-communications-between-two-systems-with-openssh_configuring-basic-system-settings)
 - [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 - [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
-> [!NOTE]  
-> Starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
+[!INCLUDE [sles-deprecated](../includes/sles-deprecated.md)]
 
 When you use `scp`, you must provide the credentials of the server if it isn't the source or destination. For example, the following command copies the file `MyAGCert.cer` to the folder specified on the other server:
 
@@ -85,8 +86,7 @@ Samba, which is the Linux variant of server message block (SMB), can also be use
 - [SLES](https://documentation.suse.com/sles/15-SP5/html/SLES-all/cha-samba.html)
 - [Ubuntu](https://help.ubuntu.com/community/Samba)
 
-> [!NOTE]  
-> Starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
+[!INCLUDE [sles-deprecated](../includes/sles-deprecated.md)]
 
 You can also use Windows-based SMB shares. SMB shares don't need to be Linux-based, as long as the client portion of Samba is configured properly on the Linux server hosting [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and the share has the right access. For customers in a mixed environment, this approach lets you use existing infrastructure for Linux-based [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] deployments.
 
@@ -136,8 +136,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 - [SLES](https://documentation.suse.com/sles/15-SP5/html/SLES-all/cha-security-firewall.html)
 - [Ubuntu](https://help.ubuntu.com/community/Firewall)
 
-> [!NOTE]  
-> Starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
+[!INCLUDE [sles-deprecated](../includes/sles-deprecated.md)]
 
 ### Install SQL Server packages for availability
 
@@ -156,6 +155,8 @@ On [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] with CU 4 and later ver
 When you configure AGs or FCIs on a Windows-based configuration, they're cluster-aware. Cluster awareness means that [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] has specific resource DLLs that a WSFC knows about (`sqagtres.dll` and `sqsrvres.dll` for FCIs, `hadrres.dll` for AGs) and are used by the WSFC to ensure that the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] clustered functionality is up, running, and functioning properly.
 
 Because clustering is external not only to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] but Linux itself, Microsoft had to code the equivalent of a resource DLL for Linux-based AG and FCI deployments. This resource is the `mssql-server-ha` package, also known as the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] resource agent for Pacemaker. To install the `mssql-server-ha` package, see [Deploy a Pacemaker cluster for SQL Server on Linux](failover-cluster-instance/deploy-pacemaker-cluster.md).
+
+[!INCLUDE [ss-linux-cluster-pacemaker-ha-agent-v2](../includes/cluster-pacemaker-ha-agent-v2.md)]
 
 On Linux, Full-Text Search (`mssql-server-fts`) and Integration Services (`mssql-server-is`) are optional [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] packages, and aren't required for an FCI or AG.
 

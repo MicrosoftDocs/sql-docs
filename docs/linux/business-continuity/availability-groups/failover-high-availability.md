@@ -1,10 +1,11 @@
 ---
-title: Manage Availability Group Failover - SQL Server on Linux
+title: Manage Availability Group Failover
+titleSuffix: SQL Server on Linux
 description: "This article describes types of failover: automatic, planned manual failover, and forced manual failover. Automatic and planned manual preserve all your data."
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: amitkh
-ms.date: 01/02/2026
+ms.reviewer: amitkh, atsingh
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: how-to
@@ -18,6 +19,8 @@ ms.custom:
 Within the context of an availability group (AG), the primary role and secondary role of availability replicas are typically interchangeable, in a process known as failover. Three forms of failover exist: automatic failover (without data loss), planned manual failover (without data loss), and forced manual failover (with possible data loss), typically called *forced failover*. Automatic and planned manual failovers preserve all your data. An AG fails over at the availability-replica level. That is, an AG fails over to one of its secondary replicas (the current failover target).
 
 For background information about failover, see [Failover and Failover Modes (Always On Availability Groups)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
+
+[!INCLUDE [ss-linux-cluster-pacemaker-ha-agent-v2](../../includes/cluster-pacemaker-ha-agent-v2.md)]
 
 <a id="failover"></a>
 
@@ -153,7 +156,7 @@ This process for forcing failover is specific to SQL Server on Linux.
      ```
 
      > [!NOTE]  
-     > When you delete a resource, it also deletes all of the associated constraints.
+     > When you delete a resource, it also deletes all associated constraints.
 
 1. On the instance of SQL Server that hosts the secondary replica, set the session context variable `external_cluster`.
 
@@ -185,7 +188,7 @@ This process for forcing failover is specific to SQL Server on Linux.
 > [!IMPORTANT]  
 > Don't use the preceding steps for disaster recovery drills because they risk data loss. Instead change the asynchronous replica to synchronous, and the instructions for [normal manual failover](#manualFailover).
 
-## Database level monitoring and failover trigger
+## Database-level monitoring and failover trigger
 
 For `CLUSTER_TYPE=EXTERNAL`, the failover trigger semantics are different compared to WSFC. When the AG is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the AG health to report a fault. In response, the cluster manager triggers a failover action. On Linux, the SQL Server instance can't communicate with the cluster. Monitoring for database health is done *outside-in*. If user opted in for database level failover monitoring and failover (by setting the option `DB_FAILOVER=ON` when creating the AG), the cluster checks if the database state is `ONLINE` every time it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different to `ONLINE`, it triggers a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action, and the database state being updated in `sys.databases.`
 
@@ -193,8 +196,8 @@ Automatic failover requires at least one synchronous replica.
 
 ## Related content
 
-- [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](cluster-pacemaker.md?tabs=rhel)
-- [Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](cluster-pacemaker.md?tabs=sles)
-- [Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](cluster-pacemaker.md?tabs=ubuntu)
+- [Configure a Red Hat Enterprise Linux Pacemaker cluster for SQL Server availability groups](cluster-pacemaker.md?tabs=rhel)
+- [Configure a SUSE Linux Enterprise Server Pacemaker cluster for SQL Server availability groups](cluster-pacemaker.md?tabs=sles)
+- [Configure an Ubuntu Pacemaker cluster for SQL Server availability groups](cluster-pacemaker.md?tabs=ubuntu)
 
 [!INCLUDE [contribute-to-content](../../../includes/paragraph-content/contribute-to-content.md)]

@@ -1,10 +1,11 @@
 ---
-title: Failover Cluster Instances - SQL Server on Linux
+title: Failover Cluster Instances
+titleSuffix: SQL Server on Linux
 description: Concepts for SQL Server failover cluster instances on Linux include the clustering layer, number of instances, IP address and name, and shared storage.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 05/07/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: concept-article
@@ -12,17 +13,17 @@ ms.custom:
   - linux-related-content
   - build-2025
 ---
-# Failover Cluster Instances - SQL Server on Linux
+# Failover cluster instances on Linux
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
 This article explains the concepts related to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] failover cluster instances (FCI) on Linux.
 
-To create a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] FCI on Linux, see [Configure failover cluster instance - SQL Server on Linux (RHEL)](shared-disk-cluster-configure.md)
+To create a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] FCI on Linux, see [Configure failover cluster instance on Linux (RHEL)](shared-disk-cluster-configure.md).
 
 ## The clustering layer
 
-- In Red Hat Enterprise Linux (RHEL), the clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf).
+- In Red Hat Enterprise Linux (RHEL), the clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index).
 
   > [!NOTE]  
   > Access to Red Hat HA add-on and documentation requires a subscription.
@@ -35,9 +36,11 @@ Both the RHEL HA add-on and the SUSE HAE are built on [Pacemaker](https://cluste
 
 As the following diagram shows, storage is presented to two servers. Clustering components - Corosync and Pacemaker - coordinate communications and resource management. One of the servers has the active connection to the storage resources and the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. When Pacemaker detects a failure, the clustering components are responsible for moving the resources to the other node.
 
-:::image type="content" source="media/shared-disk-cluster-concepts/linux-cluster.png" alt-text="Diagram of Red Hat Enterprise Linux 7 shared disk SQL Server cluster":::
+:::image type="content" source="media/shared-disk-cluster-concepts/linux-cluster.png" alt-text="Diagram of a shared disk SQL Server failover cluster on Linux.":::
 
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] integration with Pacemaker on Linux isn't as coupled as with WSFC on Windows. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] has no knowledge about the presence of the cluster. All orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, which has no equivalent in Pacemaker. It's expected that `@@SERVERNAME` and `sys.servers` return the node name, while the cluster DMVs `sys.dm_os_cluster_nodes` and `sys.dm_os_cluster_properties` return no records. To use a connection string that points to a string server name and not use the IP, they have to register in their DNS server the IP used to create the virtual IP resource (as explained in the following sections) with the chosen server name.
+
+[!INCLUDE [ss-linux-cluster-pacemaker-ha-agent-v2](../../includes/cluster-pacemaker-ha-agent-v2.md)]
 
 ## Number of instances and nodes
 
@@ -82,6 +85,6 @@ The default paths for non-system databases can be changed using the `mssql-conf`
 
 ## Related content
 
-- [Configure failover cluster instance - iSCSI - SQL Server on Linux](shared-disk-cluster-configure-iscsi.md)
-- [Configure failover cluster instance - NFS - SQL Server on Linux](shared-disk-cluster-configure-network-file-system.md)
-- [Configure SMB storage failover cluster instance for SQL Server on Linux](shared-disk-cluster-configure-server-message-block.md)
+- [Configure failover cluster instance on Linux (iSCSI)](shared-disk-cluster-configure-iscsi.md)
+- [Configure failover cluster instance on Linux (NFS)](shared-disk-cluster-configure-network-file-system.md)
+- [Configure failover cluster instance on Linux (SMB)](shared-disk-cluster-configure-server-message-block.md)

@@ -13,7 +13,7 @@ dev_langs:
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_column_distribution_properties (Transact-SQL)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
 Returns distribution information for columns.  
   

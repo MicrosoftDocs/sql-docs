@@ -9315,9 +9315,9 @@ items:
       - name: Red Hat Enterprise Linux (RHEL)
         items:
         - name: Configure (HA add-on)
-          href: linux/business-continuity/failover-cluster-instance/shared-disk-cluster-red-hat-7-configure.md
+          href: linux/business-continuity/failover-cluster-instance/shared-disk-cluster-configure.md
         - name: Operate (HA add-on)
-          href: linux/business-continuity/failover-cluster-instance/shared-disk-cluster-red-hat-7-operate.md
+          href: linux/business-continuity/failover-cluster-instance/shared-disk-cluster-operate.md
       - name: SUSE Linux Enterprise Server (SLES)
         items:
         - name: Configure (HA add-on)

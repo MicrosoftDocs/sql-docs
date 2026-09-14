@@ -1,9 +1,11 @@
 ---
-title: Availability Groups for SQL Server on Linux
+title: Availability Groups Overview
+titleSuffix: SQL Server on Linux
 description: Learn about the characteristics of availability groups for SQL Server on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/02/2026
+ms.reviewer: amitkh, atsingh
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: concept-article
@@ -17,7 +19,7 @@ ms.custom:
 This article describes the characteristics of availability groups (AGs) under Linux-based [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] installations. It also covers differences between Linux- and Windows Server failover cluster (WSFC)-based AGs. See [What is an Always On availability group?](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) for the basics of AGs, as they work the same on Windows and Linux except for the WSFC.
 
 > [!NOTE]  
-> In availability groups that don't utilize Windows Server Failover Clustering (WSFC), such as [read-scale availability groups](../../../database-engine/availability-groups/windows/read-scale-availability-groups.md), or availability groups on Linux, columns in the [availability groups DMVs](../../../relational-databases/system-dynamic-management-objects/always-on-availability-groups-dynamic-management-views-functions.md) related to the cluster might display data about an internal default cluster. These columns are for internal use only and can be disregarded.
+> In availability groups that don't use Windows Server Failover Clustering (WSFC), such as [read-scale availability groups](../../../database-engine/availability-groups/windows/read-scale-availability-groups.md), or availability groups on Linux, columns in the [availability groups DMVs](../../../relational-databases/system-dynamic-management-objects/always-on-availability-groups-dynamic-management-views-functions.md) related to the cluster might display data about an internal default cluster. These columns are for internal use only and can be disregarded.
 
 From a high-level standpoint, availability groups under [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux are the same as they are on WSFC-based implementations. That means that all the limitations and features are the same, with some exceptions. The main differences include:
 
@@ -74,12 +76,11 @@ sudo pcs resource update <AGResourceName> required_synchronized_secondaries_to_c
 
 **SUSE Linux Enterprise Server (SLES)**
 
+[!INCLUDE [sles-deprecated](../../includes/sles-deprecated.md)]
+
 ```bash
 sudo crm resource param ms-<AGResourceName> set required_synchronized_secondaries_to_commit <value>
 ```
-
-> [!NOTE]  
-> Starting in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
 
 In this example, `<AGResourceName>` is the name of the resource configured for the AG, and `<value>` is 0, 1, or 2. To set it back to the default of Pacemaker managing the parameter, execute the same statement with no value.
 
@@ -101,7 +102,7 @@ Without anything else, a third node and at least one synchronized replica would 
 For an AG to maintain quorum and enable automatic failovers with a cluster type of External, it either must:
 
 - Have three synchronous replicas ([!INCLUDE [ssenterprise-md](../../../includes/ssenterprise-md.md)] only); or
-- Have two replicas (primary and secondary) and a configuration only replica.
+- Have two replicas (primary and secondary) and a configuration-only replica.
 
 Manual failovers can happen whether using External or None cluster types for AG configurations. While a configuration-only replica can be configured with an AG that has a cluster type of None, it isn't recommended, since it complicates the deployment. For those configurations, manually modify `required_synchronized_secondaries_to_commit` to have a value of at least 1, so that there's at least one synchronized replica.
 
@@ -146,7 +147,7 @@ The instance associated with the provided IP address then becomes the coordinato
 
 An AG that has a cluster type of External or one that is WSFC can't have its replicas cross platforms. This is true whether the AG is [!INCLUDE [ssstandard-md](../../../includes/ssstandard-md.md)] or [!INCLUDE [ssenterprise-md](../../../includes/ssenterprise-md.md)]. That means in a traditional AG configuration with an underlying cluster, one replica can't be on a WSFC and the other on Linux with Pacemaker.
 
-An AG with a cluster type of NONE can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown here where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
+An AG with a cluster type of `NONE` can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown in the following diagram where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
 
 :::image type="content" source="media/overview/cross-platform-availability-group-diagram.png" alt-text="Diagram of a cross-platform availability group with cluster type None, showing a Windows Server primary replica replicating to a Linux secondary replica.":::
 

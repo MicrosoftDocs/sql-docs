@@ -1,10 +1,11 @@
 ---
-title: Operate Availability Group SQL Server on Linux
+title: Operate an Always On Availability Group
+titleSuffix: SQL Server on Linux
 description: This article describes how to perform a rolling upgrade with SQL Server instances on Linux with availability groups. Before you upgrade, review best practices.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 07/03/2025
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: how-to
@@ -14,6 +15,8 @@ ms.custom:
 # Operate Always On Availability Groups on Linux
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
+
+[!INCLUDE [ss-linux-cluster-pacemaker-ha-agent-v2](../../includes/cluster-pacemaker-ha-agent-v2.md)]
 
 ## Upgrade availability group
 
@@ -108,7 +111,7 @@ Before you begin, back up each database.
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. For an availability groups with an external cluster manager - where cluster type is EXTERNAL, clean up the location constraint that was caused by the manual failover.
+1. For an availability groups with an external cluster manager - where cluster type is `EXTERNAL`, clean up the location constraint that was caused by the manual failover.
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master
@@ -132,6 +135,6 @@ To delete an availability group, run [DROP AVAILABILITY GROUP](../../../t-sql/st
 
 ## Related content
 
-- [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](cluster-pacemaker.md?tabs=rhel)
-- [Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](cluster-pacemaker.md?tabs=sles)
-- [Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](cluster-pacemaker.md?tabs=ubuntu)
+- [Configure a Red Hat Enterprise Linux Pacemaker cluster for SQL Server availability groups](cluster-pacemaker.md?tabs=rhel)
+- [Configure a SUSE Linux Enterprise Server Pacemaker cluster for SQL Server availability groups](cluster-pacemaker.md?tabs=sles)
+- [Configure an Ubuntu Pacemaker cluster for SQL Server availability groups](cluster-pacemaker.md?tabs=ubuntu)

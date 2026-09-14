@@ -91,7 +91,7 @@ Some project properties are associated with database options that apply to only 
 | AcceleratedDatabaseRecovery | `ACCELERATED_DATABASE_RECOVERY` | Database settings, Operational, Accelerated database recovery | False | {True&#124;False}<sup>5</sup> |
 | AllowSnapshotIsolation | `ALLOW_SNAPSHOT_ISOLATION` | Database settings, Operational, Allow snapshot isolation | False | {True&#124;False} |
 | AnsiNullDefault | `ANSI_NULL_DEFAULT` | Database settings, SET ANSI_NULL_DEFAULT | True | {True&#124;False} |
-| AnsiNulls| `ANSI_NULLS` | Database settings, SET ANSI_NULLS | True | {True&#124;False} |
+| AnsiNulls| `ANSI_NULLS` | Database settings, SET ANSI_NULLS | True | {True&#124;False}<sup>6</sup> |
 | AnsiPadding | `ANSI_PADDING` | Database settings, SET ANSI_PADDING | True | {True&#124;False} |
 | AnsiWarnings | `ANSI_WARNINGS` | Database settings, SET ANSI_WARNINGS | True | {True&#124;False} |
 | ArithAbort | `ARITHABORT` | Database settings, SET ARITHABORT | True | {True&#124;False} |
@@ -180,6 +180,7 @@ Some project properties are associated with database options that apply to only 
 1. `AUTO` is set with the 0 value.
 1. Applies as a `CREATE DATABASE` [option](../../../t-sql/statements/create-database-transact-sql.md) only.
 1. Not applicable to Azure SQL Database, where the option is always enabled.
+1. `SET ANSI_NULLS OFF` and the `ANSI_NULLS OFF` database option are deprecated. Starting with [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)], `ANSI_NULLS` is always set to ON. This option shouldn't be used in new applications. For more information, see [SET ANSI_NULLS](../../../t-sql/statements/set-ansi-nulls-transact-sql.md).
 
 ## Related content
 

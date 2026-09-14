@@ -4,7 +4,7 @@ description: SQL Server provides server-level roles. These security principals g
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 09/09/2026
+ms.date: 09/14/2026
 ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: security
@@ -66,11 +66,7 @@ The following table shows the fixed server-level roles and their capabilities.
 The following table shows fixed server-level roles introduced in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], and their capabilities.
 
 > [!NOTE]  
-> Availability differs by platform:
->
-> - **Azure SQL Database** supports a subset of these roles. `##MS_PerformanceDefinitionReader##`, `##MS_ServerPerformanceStateReader##`, and `##MS_ServerSecurityStateReader##` aren't part of that subset. Use `##MS_DefinitionReader##` or `##MS_ServerStateReader##` instead, which hold the same permissions over a wider scope. For the supported set, see [Azure SQL Database server roles for permission management](/azure/azure-sql/database/security-server-roles).
-> - **Azure SQL Managed Instance** supports `##MS_ServerPerformanceStateReader##` and `##MS_ServerSecurityStateReader##`.
-> - **Azure Synapse Analytics** doesn't support these roles.
+> Azure SQL Database and Azure SQL Managed Instance support these roles. Azure Synapse Analytics doesn't.
 >
 > To see which roles a server has, query `sys.server_principals` for rows where `type_desc` is `SERVER_ROLE`.
 

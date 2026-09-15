@@ -5,7 +5,8 @@ description: Learn how Azure SQL Database & Azure SQL Managed Instance support s
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dinethi, mathoma, randolphwest, strrodic
-ms.date: 03/06/2026
+ms.date: 09/10/2026
+ai-usage: ai-assisted
 ms.service: azure-sql
 ms.subservice: backup-restore
 ms.topic: concept-article
@@ -110,6 +111,51 @@ If you're using active geo-replication or failover groups as your business conti
 
 When the original primary database recovers from an outage that caused the failover, it becomes the new secondary. Therefore, the backup creation won't resume on the new secondary, and the existing LTR policy doesn't take effect until it becomes the primary again.
 
+## Network security perimeter and LTR restore (preview)
+
+> [!NOTE]  
+> A [network security perimeter](network-security-perimeter.md) (preview) applies to Azure SQL Database only. Azure SQL Managed Instance isn't an onboarded resource, so this section doesn't apply to it. For the current list, see [Onboarded private link resources](/azure/private-link/network-security-perimeter-concepts#onboarded-private-link-resources).
+
+LTR restore is a platform-managed operation that restores a database from a long-term backup to a target logical server. When either logical server belongs to a perimeter, the restore is subject to the perimeter's access rules.
+
+The service checks outbound access on the source server, when that server still exists, and inbound access on the target server. If the source logical server was dropped, only the target-side inbound check can run.
+
+### Supported configurations
+
+LTR restore works in both transition and enforced mode. In transition mode, restores succeed without access rules. Configure the rules before you switch to enforced mode.
+
+In enforced mode, these configurations are supported:
+
+| Source server | Target server | Access rules required |
+| --- | --- | --- |
+| In a perimeter | In the same perimeter | None. Access between resources in the same perimeter is always allowed. |
+| In a perimeter | In a different perimeter | Outbound on the source, inbound on the target. |
+| In a perimeter | Not in a perimeter | Outbound on the source. |
+| Not in a perimeter | In a perimeter | Inbound on the target. |
+| Dropped | In a perimeter | Inbound on the target. Source-side validation isn't possible. |
+| Not in a perimeter | Not in a perimeter | None. |
+
+LTR restore doesn't require a managed identity.
+
+### Configure access rules for an LTR restore
+
+1. [Associate the logical servers that take part in the restore with the perimeter](network-security-perimeter.md#get-started).
+1. If the servers are in different perimeters, or only one of them is in a perimeter, add an outbound rule on the source profile with **Destination type** set to **FQDN** and the target server's fully qualified domain name. Then add an inbound rule on the target profile using the source subscription, the source IP range, or the `Sql` service tag.
+1. With the servers still in transition mode, run a restore and check the [network security perimeter diagnostic logs](/azure/private-link/network-security-perimeter-diagnostic-logs) for unexpected denials.
+1. Switch to enforced mode only after the restore succeeds.
+
+### Limitations and behavior differences
+
+- After you delete a source logical server, the service can no longer read that server's perimeter metadata, so it can only validate the target side of a restore. Account for this gap if you rely on source-side validation as a control.
+- In transition mode a restore succeeds even when the required rules are missing. In enforced mode the same restore is blocked.
+
+### Errors when a perimeter blocks a restore
+
+The customer-facing error text for LTR restore isn't final yet, so this article doesn't list error numbers. A blocked restore fails because a required rule is missing.
+
+- If the source server still exists, check the outbound rule on the source and the inbound rule on the target.
+- If the source server was dropped, check the inbound rule on the target.
+
 ## Configure long-term backup retention
 
 > [!IMPORTANT]
@@ -150,3 +196,4 @@ Because database backups protect data from accidental corruption or deletion, th
 - [Automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true)
 - [Automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)
+- [Network security perimeter for Azure SQL Database (preview)](network-security-perimeter.md)

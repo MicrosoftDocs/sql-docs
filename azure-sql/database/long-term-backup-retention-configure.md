@@ -366,5 +366,6 @@ If you use LTR backups to meet compliance or other mission-critical requirements
 
 ## Related content
 
-- To learn about service-generated automatic backups, see [automatic backups](automated-backups-overview.md)
-- To learn about long-term backup retention, see [long-term backup retention](long-term-retention-overview.md)
+- To learn about service-generated automatic backups, see [automatic backups](automated-backups-overview.md).
+- To learn about long-term backup retention, see [long-term backup retention](long-term-retention-overview.md).
+- To learn how a network security perimeter affects an LTR restore, see [Network security perimeter and LTR restore (preview)](long-term-retention-overview.md#network-security-perimeter-and-ltr-restore-preview).

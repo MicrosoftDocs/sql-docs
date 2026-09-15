@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 08/13/2026
+ms.date: 09/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -303,6 +303,7 @@ ms.topic: include
 | 41992 | 16 | No | Unable to make database %s on SQL Managed Instance %s accessible due to ongoing geodr operation. Please wait until the conflicting operation completes and try again. |
 | 41993 | 16 | No | Cannot execute failover of Managed Instance link '%s' because the replica of database '%s' on the managed instance is in an inaccessible state. |
 | 41998 | 16 | No | Managed Instance link creation failed because encryption is not enabled on the on-premises SQL Server endpoint. Enable encryption on the database mirroring endpoint and try again. |
+| 41999 | 16 | No | Source database on SQL Server must not contain full-text catalog files for data replication to Azure SQL Managed Instance. Consider removing full-text catalogs on the source database on SQL Server and try again. |
 | 42001 | 16 | No | Failed to parse XML configuration. The operating system returned error %ls. |
 | 42002 | 16 | No | Failed to parse XML configuration. The parser returned error %.\*ls |
 | 42003 | 16 | No | Failed to parse XML configuration. A required attribute '%ls' is missing. |

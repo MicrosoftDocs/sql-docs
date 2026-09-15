@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 07/16/2026
+ms.date: 09/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -276,6 +276,7 @@ ms.topic: include
 | 41968 | 16 | No | Changing the server role cannot be executed at this time as there exist a previous role change in progress on Azure SQL Managed Instance. Only when the previous role change completes, a new request could be submitted. Please wait for the previous role change to complete and retry again. |
 | 41969 | 16 | No | Setting the role has failed due to an unknown reason. Please check the error log file. If the issue persists, contact Azure support. |
 | 41970 | 16 | No | Switching to Primary role in planned fashion is not supported. |
+| 41972 | 16 | No | Azure SQL Managed Instance link creation failed because of a link type mismatch between multi-database and single-database link configurations. A multi-database link and a single-database link cannot be connected to each other. Ensure both sides are configured with the same link type and retry the operation. |
 | [41973](../mssqlserver-41973-database-engine-error.md) | 16 | No | The link cannot be established because the endpoint certificate from SQL Server has not been imported to Azure SQL Managed Instance. Please import the endpoint certificate from SQL Server to Managed Instance, and retry the link creation again. Please see online documentation for Managed Instance link for more information. |
 | [41974](../mssqlserver-41974-database-engine-error.md) | 16 | No | The link cannot be established because the endpoint certificate from SQL Azure SQL Managed Instance has not been imported to SQL Server. Please download the endpoint certificate from Managed Instance and import it to SQL Server, and retry the link creation again. Please see online documentation for Managed Instance link for more information. |
 | 41975 | 16 | No | Unsupported storage type. Azure SQL Managed Instance does not support database backup to the provided storage type. |
@@ -287,6 +288,7 @@ ms.topic: include
 | 41989 | 16 | No | The parameters (%ls) can only be set/updated on SQL Database Managed Instance. Review the documentation for supported parameters. |
 | 41990 | 16 | No | %s cannot be null or empty when %s is set to 0 (SQL Server Authentication). |
 | 41998 | 16 | No | Managed Instance link creation failed because encryption is not enabled on the on-premises SQL Server endpoint. Enable encryption on the database mirroring endpoint and try again. |
+| 41999 | 16 | No | Source database on SQL Server must not contain full-text catalog files for data replication to Azure SQL Managed Instance. Consider removing full-text catalogs on the source database on SQL Server and try again. |
 | 42001 | 16 | No | Failed to parse XML configuration. The operating system returned error %ls. |
 | 42002 | 16 | No | Failed to parse XML configuration. The parser returned error %.\*ls |
 | 42003 | 16 | No | Failed to parse XML configuration. A required attribute '%ls' is missing. |
@@ -888,6 +890,9 @@ ms.topic: include
 | 45769 | 16 | No | %ls |
 | 45770 | 16 | No | Failed to move the database into elastic pool due to internal resource constraints. This may be a transient condition, please retry. |
 | 45939 | 16 | No | One or more databases on SQL Managed Instance '{0}' cannot be made accessible because the corresponding inaccessibility root causes have not been mitigated. Please mitigate the inaccessibility root causes for all currently inaccessible databases and retry the operation. |
+| 45949 | 10 | No | Database can not be added/removed to full disaster recovery failover group '%.\*ls'. |
+| 45950 | 10 | No | Unable to update '%.\*ls' on managed instance in the secondary role. |
+| 45955 | 10 | No | Creating and updating multi-database capable Managed Instance link is temporarily disabled. |
 | 46501 | 15 | No | External table references '%S_MSG' that does not exist. |
 | 46502 | 15 | No | Type with name '%.\*ls' already exists. |
 | 46503 | 15 | No | Invalid format for option '%S_MSG'. |
@@ -1314,7 +1319,11 @@ ms.topic: include
 | 47520 | 16 | No | Database cannot be removed from availability group which participates in distributed availability group in which secondary participant is Azure SQL Managed Instance. |
 | [47521](../mssqlserver-47521-database-engine-error.md) | 16 | No | Secondary replica could not be built as the replica request was not received from the primary, or not processed correctly. Check the state of the primary server and ensure that Availability Group on this server is not empty, and that it contains healthy databases. |
 | 47522 | 16 | No | Database '%.\*ls' has been removed from availability group which participates in Azure SQL Managed Instance link. |
+| 47523 | 16 | No | 'ALTER AVAILABILITY GROUP MODIFY AVAILABILITY GROUP' command failed. Specified option is not supported for altering distributed availability group in which secondary participant is Azure SQL Managed Instance. |
+| 47524 | 16 | No | A planned failover of Azure SQL Managed Instance link cannot be initiated from the secondary instance. Initiate failover from the primary instance for this link. |
 | 47525 | 16 | No | Cannot create the distributed availability group '%.\*ls' for the link because the database(s) '%.\*ls' in the availability group '%.\*ls' use a custom PVS filegroup for ADR. Change the PVS filegroup to PRIMARY or remove the affected databases from the availability group, and try again. |
+| 47526 | 16 | No | Setting a custom persistent version store (PVS) filegroup is not supported for databases participating in Azure SQL Managed Instance link. |
+| 47527 | 16 | No | Cannot create distributed availability group '%.\*ls' when local AG '%.\*ls' is a contained availability group in cases when secondary participant is Azure SQL Managed Instance. |
 | 47600 | 10 | No | Reason: Windows Authentication for Azure AD Principals is not enabled on this instance. |
 | 47601 | 10 | No | Reason: There was an internal error while attempting Windows Authentication for Azure AD Principals. |
 | 47602 | 16 | No | When auto-rotation of TDE Protector is enabled, both primary and secondary servers must be connected to the same key vault. Add key '%ls' from the key vault connected to primary server to the secondary server '%ls'. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323439](https://go.microsoft.com/fwlink/?linkid=2323439). |
@@ -1419,6 +1428,7 @@ ms.topic: include
 | 49822 | 10 | No | Move Cost Calculation and Reporting Timer task encountered an error (SQL Error Code: %d). |
 | 49823 | 10 | No | Database cannot be paused due to missing first full backup: Server '%.\*ls', Database '%.\*ls'. |
 | 49824 | 10 | No | (De)activation workflow for database '%.\*ls' in server '%.\*ls' failed because another (de)activation workflow is in progress. Please wait for the current workflow to complete before starting a new one. |
+| 49826 | 10 | No | Managed Server Resource Stats Timer task encountered an error while trying to update server_resource_stats (SQL Error Code: %d). |
 | 49901 | 10 | No | The number of max worker threads that is configured %u is less than the minimum allowed on this computer. The default number of %u will be used instead. To change the number of max worker threads, use sp_configure 'max worker threads'. |
 | 49902 | 10 | No | There are not enough worker threads available for the number of CPUs. This is because one or more CPUs were added. To increase the number of worker threads, use sp_configure 'max worker threads'. |
 | 49903 | 10 | Yes | Detected %I64d MB of RAM, %I64d MB of available memory, %I64d MB of available page file. This is an informational message; no user action is required. |

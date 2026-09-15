@@ -4,7 +4,8 @@ description: Use active geo-replication to create readable secondary databases o
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer:  mathoma
-ms.date: 08/07/2025
+ms.date: 09/10/2026
+ai-usage: ai-assisted
 ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: overview
@@ -142,6 +143,45 @@ If a private endpoint is configured but public network access is allowed, adding
 
 Once a geo-secondary is added, [public network access can be denied](connectivity-settings.md#deny-public-network-access).
 
+## Network security perimeter (preview)
+
+A [network security perimeter](network-security-perimeter.md) (preview) controls inbound and outbound network traffic for a logical server. Active geo-replication continuously moves data between logical servers over internal, platform-managed connectivity, so a perimeter evaluates that traffic.
+
+### Supported configurations
+
+Active geo-replication works in both transition and enforced mode. In transition mode, the perimeter logs replication traffic without blocking it. Configure the access rules before you switch to enforced mode.
+
+In enforced mode, every logical server in the geo-replication set needs **both** an inbound and an outbound rule to **every other** server in the set. Rules run in both directions because a geo-failover reverses the direction of data movement, and any geo-secondary can become the new primary. A primary with four geo-secondaries therefore needs rules covering each pair.
+
+Active geo-replication doesn't require a managed identity.
+
+### Configure access rules for geo-replication
+
+1. [Associate every logical server in the geo-replication set with the perimeter](network-security-perimeter.md#get-started). A newly associated server starts in transition mode.
+1. On each server's profile, add an outbound access rule for every partner server. Set **Destination type** to **FQDN** and use the partner's fully qualified domain name, such as `partnerserver.database.windows.net`.
+1. On each server's profile, add an inbound access rule for every partner server. Set **Source type** to **Subscription** and use the partner's subscription ID, to **IP address ranges** and use the partner's IP range, or to **Service tags** and use `Sql` or `Sql.<region>`, where `<region>` is the partner's Azure region.
+1. With the servers still in transition mode, create the geo-replication links and run a geo-failover. Review the [network security perimeter diagnostic logs](/azure/private-link/network-security-perimeter-diagnostic-logs) after each step to confirm there are no unexpected denials.
+1. Switch the perimeter to enforced mode only after the logs are clean.
+
+### Limitations and behavior differences
+
+- Chaining, which means creating a geo-secondary from another geo-secondary, isn't supported with a network security perimeter. Configuring it can produce unexpected results.
+- The perimeter checks access rules when you create a geo-replication link, and again when you associate a server that's already in a geo-replication relationship. In enforced mode, either action is blocked if the required rules are missing.
+- **Replication on an established link continues even if you later change the rules to disallow it.** Stopping replication would leave the databases unhealthy and put your recovery objectives at risk, so data movement and geo-failover keep working. Perimeter association changes and new geo-secondaries are blocked until you correct the rules.
+
+### Errors when a perimeter blocks geo-replication
+
+| Error code | Message |
+| ---: | :--- |
+| 48001 | The operation could not be completed because the associated Network Security Perimeter denied inbound access from '*source*' to the '*target*' server. |
+| 48002 | The operation could not be completed because the associated Network Security Perimeter denied outbound access from the '*source*' server to '*target*'. |
+| 48003 | Unable to create the Network Security Perimeter association for server '*server*' because existing geo-replication relationships would become noncompliant. |
+| 48004 | Unable to update the Network Security Perimeter association for server '*server*' to Enforced mode because existing geo-replication relationships would become noncompliant. |
+| 48005 | Unable to drop the Network Security Perimeter association for server '*server*' because geo-replication partner servers within the same Network Security Perimeter would become noncompliant. |
+| 48006 | The operation could not be completed because not all Network Security Perimeter configurations between geo-replication partner servers are compliant. |
+
+The placeholders in these messages are replaced with logical server names. For any of these errors, confirm that every server in the geo-replication set has both inbound and outbound rules for every other server.
+
 <a id="keeping-credentials-and-firewall-rules-in-sync"></a>
 
 ## Keep credentials and firewall rules in sync
@@ -263,5 +303,6 @@ Other business continuity content:
   - [Free standby replica](standby-replica-how-to-configure.md)
 - [Hyperscale Geo-replica](service-tier-hyperscale-replicas.md#geo-replica)
 - [Automated backups in Azure SQL Database](automated-backups-overview.md)
+- [Network security perimeter for Azure SQL Database (preview)](network-security-perimeter.md)
 - [Restore a database from a backup in Azure SQL Database](recovery-using-backups.md)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

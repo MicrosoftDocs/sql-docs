@@ -2,14 +2,14 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 05/15/2025
+ms.date: 09/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | [9001](../mssqlserver-9001-database-engine-error.md) | 21 | Yes | The log for database '%.\*ls' is not available. Check the operating system error log for related error messages. Resolve any errors and restart the database. |
 | [9002](../mssqlserver-9002-database-engine-error.md) | 17 | Yes | The transaction log for database '%ls' is full due to '%ls' and the holdup lsn is %S_LSN. |
-| [9003](../mssqlserver-9003-database-engine-error.md) | 20 | Yes | The log scan number %S_LSN passed to log scan in database '%.\*ls' is not valid. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication. Otherwise, restore from backup if the problem results in a failure during startup. |
+| [9003](../mssqlserver-9003-database-engine-error.md) | 20 | Yes | The log scan number %S_LSN passed to log scan in database '%.\*ls' is not valid. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication (for more information, see [https://go.microsoft.com/fwlink/?linkid=2371323](https://go.microsoft.com/fwlink/?linkid=2371323)). Otherwise, restore from backup if the problem results in a failure during startup. |
 | [9004](../mssqlserver-9004-database-engine-error.md) | 21 | Yes | An error occurred while processing the log for database '%.\*ls'. If possible, restore from backup. If a backup is not available, it might be necessary to rebuild the log. |
 | 9005 | 16 | No | Invalid parameter passed to OpenRowset(DBLog, ...). |
 | 9006 | 10 | No | Cannot shrink log file %d (%s) because total number of logical log files cannot be fewer than %d. |
@@ -524,6 +524,8 @@ ms.topic: include
 | 9842 | 16 | No | Invalid Unicode escape character was provided. The \<UESCAPE character\> cannot be \<plus sign\> \<single quote\> \<double quotes\> \<space\> \<hexit\>. |
 | 9843 | 16 | No | Unicode escape character '%.\*ls' is invalid. Unicode escape character should be of 1 character length and a code point ranging from U+0020 up to U+007E. |
 | 9844 | 16 | No | The char/varchar input type uses an unsupported collation. Only a UTF8 collation is supported with char/varchar input type in UNISTR function. |
+| 9845 | 16 | No | The fuzzy string matching function failed to convert string to sort weights for collation-aware comparison. |
+| 9847 | 16 | No | The fuzzy string matching function does not support SQL_\* collations. Use a Windows collation instead. |
 | 9901 | 16 | Yes | Full-text catalog '%ls' ('%d') in database '%ls' ('%d') is low on disk space. Pausing all populations in progress until more space becomes available. Reason code: %d. Error: %ls. To resume populations, free up disk space. |
 | 9902 | 10 | No | Full-text catalog '%ls' ('%d') in database '%ls' ('%d') is low on system resources. Any population in progress will be paused until more resources become available. Reason code: %d. Error: %ls. If this message occurs frequently, try to serialize full-text indexing for multiple catalogs. |
 | 9903 | 10 | No | The full-text catalog health monitor reported a failure for full-text catalog '%ls' (%d) in database '%ls' (%d). Reason code: %d. Error: %ls. The system will restart any in-progress population from the previous checkpoint. If this message occurs frequently, consult SQL Server Books Online for troubleshooting assistance. This is an informational message only. No user action is required. |

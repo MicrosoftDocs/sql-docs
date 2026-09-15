@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 01/15/2026
+ms.date: 09/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -615,6 +615,7 @@ ms.topic: include
 | 21711 | 16 | No | Microsoft SQL Server Upload Only Conflict Resolver |
 | 21712 | 16 | No | Microsoft SQLServer Stored Procedure Resolver |
 | 21715 | 16 | No | Cannot register the article resolver %s. This can occur if the account under which SQL Server is running does not have access to the distribution database. Add the class ID and the custom resolver name manually to the MSmerge_articleresolver table in the distribution database. |
+| 21716 | 16 | No | The parameter %s contains invalid characters or patterns. For security reasons, parameters cannot contain command terminators, system procedure invocations, directory traversal sequences, or other disallowed patterns. |
 | 21717 | 16 | No | The article resolver name cannot be an empty string or NULL. Specify a valid value for the @article_resolver parameter. |
 | 21718 | 16 | No | For a COM resolver, the @resolver_clsid cannot be an empty string or NULL. Specify a valid value for @resolver_clsid. |
 | 21719 | 10 | No | The Subscriber '%s':'%s' was not marked for reinitialization at the Publisher because the subscription is either anonymous or not valid. Verify that valid values were specified for the @subscriber and @subscriber_db parameters of sp_reinitmergesubscription. |

@@ -4,7 +4,7 @@ description: This article contains the release notes for all supported versions 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 09/08/2026
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: release-notes
@@ -89,8 +89,8 @@ The following table shows the most recent release for each supported version of 
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
-| SQL Server 2025 | CU 8 GDR | 2026-09-08 | 17.0.4085.5 | [KB5122769](https://support.microsoft.com/help/5122769) |
-| SQL Server 2022 | CU 26 GDR | 2026-09-08 | 16.0.4275.2 | [KB5122768](https://support.microsoft.com/help/5122768) |
+| SQL Server 2025 | CU 9 | 2026-09-15 | 17.0.5005.3 | [KB5122048](https://support.microsoft.com/help/5122048) |
+| SQL Server 2022 | CU 27 | 2026-09-15 | 16.0.4295.3 | [KB5104824](https://support.microsoft.com/help/5104824) |
 | SQL Server 2019 | CU 32 GDR | 2026-09-08 | 15.0.4490.9 | [KB5122772](https://support.microsoft.com/help/5122772) |
 | SQL Server 2017 | CU 31 GDR | 2026-09-08 | 14.0.3550.4 | [KB5122774](https://support.microsoft.com/help/5122774) |
 

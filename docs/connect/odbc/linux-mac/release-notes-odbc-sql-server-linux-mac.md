@@ -22,7 +22,7 @@ This article lists and describes what's new in the versioned releases of the [!I
 | Feature | Description |
 | --- | --- |
 | Vector data type | Added support for the `float16` vector data type. |
-| Connection string keywords | Added `MultipleActiveResultSets`, `FailoverPartner`, `WorkstationID`, and `ConnectTimeout` connection string keywords. |
+| Connection string keywords | Added `MultipleActiveResultSets`, `WorkstationID`, and `ConnectTimeout` connection string keywords. |
 | Enhanced routing | Added load-balanced routing for Azure SQL Database Hyperscale named-replica reader endpoints. |
 | New distributions supported | Alpine Linux 3.23, SUSE Linux Enterprise Server 16, and Ubuntu Linux 26.04. |
 | Bug fixes | [List of bugs fixed](../bug-fixes.md). |

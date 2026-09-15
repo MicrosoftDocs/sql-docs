@@ -4,11 +4,11 @@ description: "Consult this SQL Server error code list (between 2000 and 2999) to
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 07/16/2026
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=aps-pdw-2016-au7 || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
 ---
 # Database Engine events and errors (2000 to 2999)
 
@@ -59,7 +59,7 @@ This article shows events and errors (between the range 2,000 and 2,999) for [!I
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || >=aps-pdw-2016-au7 || =fabric-sqldb"
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb"
 This article shows events and errors (between the range 2,000 and 2,999) for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
@@ -81,7 +81,7 @@ This article shows events and errors (between the range 2,000 and 2,999) for [!I
 [!INCLUDE [sql-server-2022-database-engine-events-and-errors-2000-2999](includes/sql-server-2022-database-engine-events-and-errors-2000-2999.md)]
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || >=aps-pdw-2016-au7 || =fabric-sqldb"
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb"
 [!INCLUDE [sql-server-2025-database-engine-events-and-errors-2000-2999](includes/sql-server-2025-database-engine-events-and-errors-2000-2999.md)]
 ::: moniker-end
 

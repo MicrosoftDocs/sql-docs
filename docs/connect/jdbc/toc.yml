@@ -1,0 +1,310 @@
+- name: Microsoft JDBC Driver for SQL Server
+  href: microsoft-jdbc-driver-for-sql-server.md
+- name: Getting started
+  href: getting-started-with-the-jdbc-driver.md
+  items:
+  - name: 'Step 1: Configure development environment'
+    href: step-1-configure-development-environment-for-java-development.md
+  - name: 'Step 2: Create a SQL database'
+    href: step-2-create-a-sql-database-for-java-development.md
+  - name: 'Step 3: Proof of concept connecting to SQL'
+    href: step-3-proof-of-concept-connecting-to-sql-using-java.md
+- name: Overview
+  href: overview-of-the-jdbc-driver.md
+  items:
+  - name: Download
+    href: download-microsoft-jdbc-driver-for-sql-server.md
+  - name: System requirements
+    href: system-requirements-for-the-jdbc-driver.md
+  - name: Support matrix
+    href: microsoft-jdbc-driver-for-sql-server-support-matrix.md
+  - name: Release notes
+    href: release-notes-for-the-jdbc-driver.md
+  - name: Using the driver
+    href: using-the-jdbc-driver.md
+  - name: Parsing results
+    href: parsing-the-results.md
+  - name: Using useFMTOnly
+    href: using-usefmtonly.md
+  - name: Understanding Java EE support
+    href: understanding-java-ee-support.md
+  - name: Deploying the driver
+    href: deploying-the-jdbc-driver.md
+  - name: Feature dependencies
+    href: feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
+  - name: Frequently asked questions (FAQ)
+    href: frequently-asked-questions-faq-for-jdbc-driver.yml
+  - name: Finding additional information
+    href: finding-additional-jdbc-driver-information.md
+- name: Connections
+  href: connecting-to-sql-server-with-the-jdbc-driver.md
+  items:
+  - name: Building the connection URL
+    href: building-the-connection-url.md
+  - name: Setting the data source properties
+    href: setting-the-data-source-properties.md
+  - name: Setting the connection properties
+    href: setting-the-connection-properties.md
+  - name: Working with a connection
+    href: working-with-a-connection.md
+  - name: Connecting to an Azure SQL database
+    href: connecting-to-an-azure-sql-database.md
+  - name: Using connection pooling
+    href: using-connection-pooling.md
+  - name: Wrappers and interfaces
+    href: wrappers-and-interfaces.md
+- name: Data types
+  href: understanding-the-jdbc-driver-data-types.md
+  items:
+  - name: Basic data types
+    href: using-basic-data-types.md
+  - name: Understanding data type differences
+    href: understanding-data-type-differences.md
+  - name: Understanding data type conversions
+    href: understanding-data-type-conversions.md
+  - name: Advanced data types
+    href: using-advanced-data-types.md
+  - name: JSON data type
+    href: use-json-data-type.md
+  - name: SQL_variant data type
+    href: using-sql-variant-datatype.md
+  - name: Spatial data types
+    href: use-spatial-datatypes.md
+  - name: User defined types
+    href: user-defined-types.md
+  - name: Vector data type
+    href: use-vector-data-type.md
+  - name: Configuring how java.sql.Time values are sent
+    href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
+  - name: XML data
+    items:
+    - name: Supporting XML data
+      href: supporting-xml-data.md
+    - name: Programming with SQLXML
+      href: programming-with-sqlxml.md
+    - name: SQLXML interface
+      href: sqlxml-interface.md
+- name: Statements
+  href: using-statements-with-the-jdbc-driver.md
+  items:
+  - name: Using statements with SQL
+    href: using-statements-with-sql.md
+    items:
+    - name: Using a SQL statement with no parameters
+      href: using-an-sql-statement-with-no-parameters.md
+    - name: Using a SQL statement with parameters
+      href: using-an-sql-statement-with-parameters.md
+    - name: Using a SQL statement to modify database objects
+      href: using-an-sql-statement-to-modify-database-objects.md
+    - name: Using a SQL statement to modify data
+      href: using-an-sql-statement-to-modify-data.md
+  - name: Statements with stored procedures
+    items:
+    - name: Using statements with stored procedures
+      href: using-statements-with-stored-procedures.md
+    - name: Using a stored procedure with no parameters
+      href: using-a-stored-procedure-with-no-parameters.md
+    - name: Using a stored procedure with input parameters
+      href: using-a-stored-procedure-with-input-parameters.md
+    - name: Using a stored procedure with output parameters
+      href: using-a-stored-procedure-with-output-parameters.md
+    - name: Using a stored procedure with a return status
+      href: using-a-stored-procedure-with-a-return-status.md
+    - name: Using a stored procedure with an update count
+      href: using-a-stored-procedure-with-an-update-count.md
+  - name: Using table-valued parameters
+    href: using-table-valued-parameters.md
+  - name: Handling complex statements
+    href: handling-complex-statements.md
+  - name: Using SQL escape sequences
+    href: using-sql-escape-sequences.md
+  - name: Using auto generated keys
+    href: using-auto-generated-keys.md
+  - name: Performing batch operations
+    href: performing-batch-operations.md
+  - name: Using bulk copy
+    href: using-bulk-copy-with-the-jdbc-driver.md
+  - name: Using bulk copy API for batch insert operation
+    href: use-bulk-copy-api-batch-insert-operation.md
+- name: Result sets
+  href: managing-result-sets-with-the-jdbc-driver.md
+  items:
+  - name: Using multiple result sets
+    href: using-multiple-result-sets.md
+  - name: Understanding cursor types
+    href: understanding-cursor-types.md
+- name: Transactions
+  href: performing-transactions-with-the-jdbc-driver.md
+  items:
+  - name: Understanding transactions
+    href: understanding-transactions.md
+  - name: Understanding XA transactions
+    href: understanding-xa-transactions.md
+  - name: Using holdability
+    href: using-holdability.md
+  - name: Using savepoints
+    href: using-savepoints.md
+  - name: Understanding isolation levels
+    href: understanding-isolation-levels.md
+  - name: Understanding concurrency control
+    href: understanding-concurrency-control.md
+  - name: Understanding row locking
+    href: understanding-row-locking.md
+- name: Metadata
+  href: handling-metadata-with-the-jdbc-driver.md
+  items:
+  - name: Using parameter metadata
+    href: using-parameter-metadata.md
+  - name: Using result set metadata
+    href: using-result-set-metadata.md
+  - name: Using database metadata
+    href: using-database-metadata.md
+- name: Security
+  items:
+  - name: Securing applications
+    href: securing-jdbc-driver-applications.md
+    items:
+    - name: Securing connection strings
+      href: securing-connection-strings.md
+    - name: Validating user input
+      href: validating-user-input.md
+    - name: Application security
+      href: application-security.md
+    - name: Using encryption
+      href: using-ssl-encryption.md
+      items:
+      - name: Understanding encryption support
+        href: understanding-ssl-support.md
+      - name: Connecting with encryption
+        href: connecting-with-ssl-encryption.md
+      - name: Configuring the client for encryption
+        href: configuring-the-client-for-ssl-encryption.md
+    - name: FIPS mode
+      href: fips-mode.md
+  - name: Authentication
+    items:
+    - name: Using Kerberos integrated authentication
+      href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
+    - name: Using Microsoft Entra authentication
+      href: connecting-using-azure-active-directory-authentication.md
+    - name: Using NTLM authentication
+      href: using-ntlm-authentication-to-connect-to-sql-server.md
+    - name: Client certificate authentication for loopback
+      href: client-certification-authentication-for-loopback-scenarios.md
+  - name: Always Encrypted
+    href: using-always-encrypted-with-the-jdbc-driver.md
+    items:
+    - name: Using Always Encrypted with secure enclaves
+      href: using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
+    - name: Always Encrypted API reference
+      href: always-encrypted-api-reference-for-the-jdbc-driver.md
+    - name: Azure Key Vault samples
+      items:
+      - name: Azure Key Vault sample (version 9.2)
+        href: azure-key-vault-sample-version-9.2.md
+      - name: Azure Key Vault sample (version 7.0, 8.0)
+        href: azure-key-vault-sample-version-7.0.md
+      - name: Azure Key Vault sample (version 6.2.2)
+        href: azure-key-vault-sample-version-6.2.2.md
+      - name: Azure Key Vault sample (version 6.0.0)
+        href: azure-key-vault-sample-version-6.0.0.md
+- name: Performance
+  href: improving-performance-and-reliability-with-the-jdbc-driver.md
+  items:
+  - name: Understanding timeout properties
+    href: understand-timeouts.md
+  - name: Closing objects when not in use
+    href: closing-objects-when-not-in-use.md
+  - name: Managing transaction size
+    href: managing-transaction-size.md
+  - name: Working with statements and result sets
+    href: working-with-statements-and-result-sets.md
+  - name: Using adaptive buffering
+    href: using-adaptive-buffering.md
+  - name: Sparse columns
+    href: sparse-columns.md
+  - name: Prepared statement metadata caching
+    href: prepared-statement-metadata-caching-for-the-jdbc-driver.md
+  - name: Prepared statement parameter performance
+    href: prepared-statement-parameter-performance.md
+  - name: Performance logger and callback
+    href: performance-logger-callback.md
+- name: High availability and reliability
+  items:
+  - name: Connection resiliency
+    href: connection-resiliency.md
+  - name: Configurable retry logic
+    href: configurable-retry-logic.md
+  - name: Support for high availability, disaster recovery
+    href: jdbc-driver-support-for-high-availability-disaster-recovery.md
+  - name: Using database mirroring
+    href: using-database-mirroring-jdbc.md
+- name: Globalization
+  items:
+  - name: International features
+    href: international-features-of-the-jdbc-driver.md
+  - name: National character set support
+    href: national-character-set-support.md
+- name: Diagnosing problems
+  href: diagnosing-problems-with-the-jdbc-driver.md
+  items:
+  - name: Handling errors
+    href: handling-errors.md
+  - name: Getting the driver version
+    href: getting-the-driver-version.md
+  - name: Tracing driver operation
+    href: tracing-driver-operation.md
+  - name: Troubleshooting connectivity
+    href: troubleshooting-connectivity.md
+  - name: Accessing diagnostic information in the extended events log
+    href: accessing-diagnostic-information-in-the-extended-events-log.md
+- name: Application code samples
+  href: sample-jdbc-driver-applications.md
+  items:
+  - name: Connecting and retrieving data
+    href: connecting-and-retrieving-data.md
+    items:
+    - name: Connection URL sample
+      href: connection-url-sample.md
+    - name: Data source sample
+      href: data-source-sample.md
+  - name: Working with data types (JDBC)
+    href: working-with-data-types-jdbc.md
+    items:
+    - name: Basic data types sample
+      href: basic-data-types-sample.md
+    - name: SQLXML data type sample
+      href: sqlxml-data-type-sample.md
+    - name: Spatial data types sample
+      href: spatial-data-types-sample.md
+  - name: Working with result sets
+    href: working-with-result-sets.md
+    items:
+    - name: Retrieving result set data sample
+      href: retrieving-result-set-data-sample.md
+    - name: Modifying result set data sample
+      href: modifying-result-set-data-sample.md
+    - name: Caching result set data sample
+      href: caching-result-set-data-sample.md
+  - name: Working with large data
+    href: working-with-large-data.md
+    items:
+    - name: Reading large data sample
+      href: reading-large-data-sample.md
+    - name: Reading large data with stored procedures sample
+      href: reading-large-data-with-stored-procedures-sample.md
+    - name: Updating large data sample
+      href: updating-large-data-sample.md
+  - name: Data discovery and classification sample
+    href: data-discovery-classification-sample.md
+- name: Specification compliance
+  href: compliance-and-legal-for-the-jdbc-sql-driver.md
+  items:
+  - name: JDBC 4.1 compliance
+    href: jdbc-4-1-compliance-for-the-jdbc-driver.md
+  - name: JDBC 4.2 compliance
+    href: jdbc-4-2-compliance-for-the-jdbc-driver.md
+  - name: JDBC 4.3 compliance
+    href: jdbc-4-3-compliance-for-the-jdbc-driver.md
+- name: API reference
+  href: reference/toc.yml

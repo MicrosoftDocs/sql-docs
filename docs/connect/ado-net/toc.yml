@@ -1,0 +1,301 @@
+- name: Microsoft.Data.SqlClient for SQL Server
+  href: microsoft-ado-net-sql-server.md
+- name: Get started
+  items:
+  - name: Getting started
+    href: get-started-sqlclient-driver.md
+    items:
+    - name: 'Step 1: Configure development environment'
+      href: step-1-configure-development-environment-ado-net-development.md
+    - name: 'Step 2: Create a SQL database'
+      href: step-2-create-sql-database-ado-net-development.md
+    - name: 'Step 3: Proof of concept connecting to SQL'
+      href: step-3-connect-sql-ado-net.md
+    - name: 'Step 4: Connect resiliently to SQL'
+      href: step-4-connect-resiliently-sql-ado-net.md
+  - name: Overview
+    href: overview-sqlclient-driver.md
+    items:
+    - name: Microsoft.Data.SqlClient namespace
+      href: introduction-microsoft-data-sqlclient-namespace.md
+    - name: Download
+      href: download-microsoft-sqlclient-data-provider.md
+    - name: Support lifecycle
+      href: sqlclient-driver-support-lifecycle.md
+- name: Configure and connect
+  items:
+  - name: Connecting To Data Source
+    href: connecting-to-data-source.md
+    items:
+    - name: Establishing Connection
+      href: establishing-connection.md
+    - name: Connection Events
+      href: connection-events.md
+  - name: Connection Strings
+    href: connection-strings.md
+    items:
+    - name: Connection String Builders
+      href: connection-string-builders.md
+    - name: Connection Strings And Configuration Files
+      href: connection-strings-and-configuration-files.md
+    - name: Connection String Syntax
+      href: connection-string-syntax.md
+    - name: Encryption and certificate validation
+      href: encryption-and-certificate-validation.md
+  - name: Connection Pooling
+    href: connection-pooling.md
+    items:
+    - name: SQL Server Connection Pooling (ADO.NET)
+      href: sql-server-connection-pooling.md
+  - name: DbProviderFactories
+    href: dbproviderfactories.md
+    items:
+    - name: Obtain a SqlClientFactory
+      href: obtain-sqlclientfactory.md
+- name: Authenticate and secure
+  items:
+  - name: Protecting connection information
+    href: protecting-connection-information.md
+  - name: SQL Server security
+    href: sql/sql-server-security.md
+    items:
+    - name: Authentication
+      href: sql/authentication-sql-server.md
+    - name: Microsoft Entra authentication
+      href: sql/azure-active-directory-authentication.md
+    - name: Application security scenarios
+      href: sql/application-security-scenarios-sql-server.md
+      items:
+      - name: Writing secure dynamic SQL
+        href: sql/writing-secure-dynamic-sql.md
+    - name: SQL Server Express security
+      href: sql/sql-server-express-security.md
+  - name: SqlClient support for Always Encrypted
+    href: sql/sqlclient-support-always-encrypted.md
+    items:
+    - name: Develop a .NET application using Always Encrypted with secure enclaves
+      href: sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+    - name: Using Azure Key Vault with Always Encrypted
+      href: sql/azure-key-vault-example.md
+    - name: Using Azure Key Vault with Always Encrypted with secure enclaves
+      href: sql/azure-key-vault-enclave-example.md
+- name: Retrieve and update data
+  items:
+  - name: Retrieving and Modifying Data In ADO.NET
+    href: retrieving-modifying-data.md
+    items:
+    - name: Commands and Parameters
+      href: commands-parameters.md
+      items:
+      - name: Executing a Command
+        href: execute-command.md
+      - name: Configuring Parameters
+        href: configure-parameters.md
+      - name: Generating Commands with CommandBuilders
+        href: generate-commands-with-commandbuilders.md
+      - name: Obtaining a Single Value from a Database
+        href: obtain-single-value-from-database.md
+      - name: Using Commands to Modify Data
+        href: use-commands-to-modify-data.md
+        items:
+        - name: Updating Data in a Data Source
+          href: update-data-inside-data-source.md
+        - name: Performing Catalog Operations
+          href: perform-catalog-operations.md
+    - name: DataAdapters and DataReaders
+      href: dataadapters-datareaders.md
+      items:
+      - name: Retrieve data by a DataReader
+        href: retrieve-data-by-datareader.md
+      - name: Populate a DataSet from a DataAdapter
+        href: populate-dataset-from-dataadapter.md
+      - name: DataAdapter parameters
+        href: dataadapter-parameters.md
+      - name: Add existing constraints to a DataSet
+        href: add-existing-constraints-to-dataset.md
+      - name: DataAdapter, DataTable, and DataColumn mappings
+        href: dataadapter-datatable-datacolumn-mappings.md
+      - name: Paging through a query result
+        href: paging-through-query-result.md
+      - name: Update data sources with DataAdapters
+        href: update-data-sources-with-dataadapters.md
+      - name: Handle DataAdapter events
+        href: handle-dataadapter-events.md
+      - name: Batch operations using DataAdapters
+        href: batch-operations-using-dataadapters.md
+    - name: Transactions and concurrency
+      href: transactions-and-concurrency.md
+      items:
+      - name: Local transactions
+        href: local-transactions.md
+      - name: Distributed transactions
+        href: distributed-transactions.md
+      - name: System.Transactions integration with SQL Server
+        href: system-transactions-integration-with-sql-server.md
+      - name: Optimistic concurrency
+        href: optimistic-concurrency.md
+    - name: Retrieving database schema information
+      href: retrieving-database-schema-information.md
+      items:
+      - name: GetSchema and schema collections
+        href: getschema-and-schema-collections.md
+      - name: Schema restrictions
+        href: schema-restrictions.md
+      - name: Common schema collections
+        href: common-schema-collections.md
+      - name: SQL Server schema collections
+        href: sql-server-schema-collections.md
+    - name: Retrieve identity or autonumber values
+      href: retrieve-identity-or-autonumber-values.md
+    - name: Retrieve binary data
+      href: retrieve-binary-data.md
+    - name: Modify data with stored procedures
+      href: modify-data-with-stored-procedures.md
+    - name: Asynchronous programming
+      href: asynchronous-programming.md
+    - name: SqlClient streaming support
+      href: sqlclient-streaming-support.md
+    - name: SQL Server data operations in ADO.NET
+      href: sql/sql-server-data-operations.md
+      items:
+      - name: Bulk copy operations in SQL Server
+        href: sql/bulk-copy-operations-sql-server.md
+        items:
+        - name: Bulk copy example setup
+          href: sql/bulk-copy-example-setup.md
+        - name: Single bulk copy operations
+          href: sql/single-bulk-copy-operations.md
+        - name: Multiple bulk copy operations
+          href: sql/multiple-bulk-copy-operations.md
+        - name: Transaction and bulk copy operations
+          href: sql/transaction-bulk-copy-operations.md
+        - name: Order hints for bulk copy operations
+          href: sql/bulk-copy-order-hints.md
+      - name: Multiple Active Result Sets (MARS)
+        href: sql/multiple-active-result-sets-mars.md
+        items:
+        - name: Enabling Multiple Active Result Sets
+          href: sql/enable-multiple-active-result-sets.md
+        - name: Manipulating data
+          href: sql/manipulate-data.md
+      - name: Asynchronous operations
+        href: sql/asynchronous-operations.md
+        items:
+        - name: Windows applications using callbacks
+          href: sql/windows-applications-callbacks.md
+        - name: ASP.NET applications using wait handles
+          href: sql/aspnet-apps-use-wait-handles.md
+        - name: Polling in console applications
+          href: sql/poll-console-applications.md
+      - name: Table-valued parameters
+        href: sql/table-valued-parameters.md
+- name: Data types
+  items:
+  - name: Data Type Mappings In ADO.NET
+    href: data-type-mappings-ado-net.md
+    items:
+    - name: SQL Server Data Type Mappings
+      href: sql-server-data-type-mappings.md
+    - name: Floating-Point Numbers
+      href: floating-point-numbers.md
+  - name: SQL Server data types and ADO.NET
+    href: sql/sql-server-data-types.md
+    items:
+    - name: SqlTypes and the DataSet
+      href: sql/sqltypes-dataset.md
+    - name: Handling null values
+      href: sql/handle-null-values.md
+    - name: Comparing GUID and uniqueidentifier values
+      href: sql/compare-guid-uniqueidentifier-values.md
+    - name: Date and time data
+      href: sql/date-time-data.md
+    - name: Large UDTs
+      href: sql/large-udts.md
+    - name: XML data in SQL Server
+      href: sql/xml-data-sql-server.md
+      items:
+      - name: SQL XML column values
+        href: sql/sql-xml-column-values.md
+      - name: Specifying XML values as parameters
+        href: sql/specify-xml-values-parameters.md
+    - name: JSON data type support in SqlClient
+      href: sql/json-data-sql-server.md
+    - name: Vector data type support in SqlClient
+      href: sql/vector-data-sql-server.md
+  - name: SQL Server binary and large-value data
+    href: sql/sql-server-binary-large-value-data.md
+    items:
+    - name: Modifying large-value (max) data in ADO.NET
+      href: sql/modify-large-value-max-data.md
+    - name: FILESTREAM data
+      href: sql/filestream-data.md
+    - name: Inserting an image from a file
+      href: sql/insert-image-file.md
+- name: Reliability and diagnostics
+  items:
+  - name: Configurable retry logic
+    href: configurable-retry-logic.md
+    items:
+    - name: Get started
+      href: configurable-retry-logic-sqlclient-introduction.md
+    - name: Built-in providers
+      href: internal-retry-logic-providers-sqlclient.md
+    - name: Custom provider
+      href: configurable-retry-logic-core-apis-sqlclient.md
+    - name: Configuration file
+      href: configurable-retry-logic-config-file-sqlclient.md
+  - name: Enable event tracing
+    href: enable-eventsource-tracing.md
+  - name: Data tracing in SqlClient
+    href: data-tracing.md
+  - name: Diagnostic counters
+    href: diagnostic-counters.md
+    items:
+    - name: Event counters
+      href: event-counters.md
+    - name: Performance counters
+      href: performance-counters.md
+  - name: Troubleshooting guide
+    href: sqlclient-troubleshooting-guide.md
+  - name: Provider statistics for SQL Server
+    href: sql/provider-statistics-sql-server.md
+  - name: Database mirroring in SQL Server
+    href: sql/database-mirroring-sql-server.md
+  - name: Query notifications in SQL Server
+    href: sql/query-notifications-sql-server.md
+    items:
+    - name: Enabling query notifications
+      href: sql/enable-query-notifications.md
+    - name: SqlDependency in an ASP.NET application
+      href: sql/sqldependency-aspnet-app.md
+    - name: Detecting changes with SqlDependency
+      href: sql/detect-changes-sqldependency.md
+    - name: SqlCommand execution with a SqlNotificationRequest
+      href: sql/sqlcommand-execution-sqlnotificationrequest.md
+  - name: SqlClient support for high availability, disaster recovery
+    href: sql/sqlclient-support-high-availability-disaster-recovery.md
+- name: SQL Server features
+  items:
+  - name: SQL Server and ADO.NET
+    href: sql/index.md
+  - name: SQL Server features and ADO.NET
+    href: sql/sql-server-features-adonet.md
+    items:
+    - name: Enumerating instances of SQL Server (ADO.NET)
+      href: sql/enumerate-instances-sql-server.md
+    - name: SQL Server Express user instances
+      href: sql/sql-server-express-user-instances.md
+    - name: The context connection
+      href: sql/context-connection.md
+    - name: Snapshot isolation in SQL Server
+      href: sql/snapshot-isolation-sql-server.md
+    - name: SqlClient support for LocalDB
+      href: sql/sqlclient-support-localdb.md
+    - name: Data Discovery and Classification in SqlClient
+      href: sql/data-classification.md
+- name: Reference and resources
+  items:
+  - name: AppContext switches
+    href: appcontext-switches.md
+  - name: Finding additional information
+    href: find-additional-sqlclient-driver-information.md

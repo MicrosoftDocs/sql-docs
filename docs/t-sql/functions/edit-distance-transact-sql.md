@@ -1,10 +1,10 @@
 ---
-title: "EDIT_DISTANCE (Transact-SQL)"
+title: EDIT_DISTANCE (Transact-SQL)
 description: EDIT_DISTANCE calculates the number of insertions, deletions, substitutions, and transpositions needed to transform one string to another.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: abhtiwar, wiassaf, randolphwest
-ms.date: 11/18/2025
+ms.reviewer: abhtiwar, wiassaf
+ms.date: 09/04/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -21,14 +21,12 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb ||
 
 [!INCLUDE [preview](../../includes/preview.md)]
 
-Calculates the number of insertions, deletions, substitutions, and transpositions needed to transform one string to another.
+Calculates the *edit distance* between two strings, which is the minimum number of insertions, deletions, substitutions, and transpositions needed to transform one string into the other.
 
 > [!NOTE]  
->
 > - `EDIT_DISTANCE` is in preview.
-> - `EDIT_DISTANCE` currently doesn't support transpositions.
-> - SQL Server support for `EDIT_DISTANCE` introduced in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
-> - `EDIT_DISTANCE` is available in Azure SQL Managed Instance with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
+> - `EDIT_DISTANCE` is available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
+> - `EDIT_DISTANCE` is available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 ## Syntax
 
@@ -47,17 +45,27 @@ An alphanumeric expression of character data. *character_expression* can be a co
 
 #### *maximum_distance*
 
-The maximum distance that should be computed. *maximum_distance* is an integer. If greater than or equal to zero, then the function returns the actual distance value or a distance value that is greater than *maxiumum_distance* value. If the actual distance is greater than *maximum_distance*, then the function might return a value greater than or equal to *maximum_distance*. If the parameter isn't specified or if *maximum_distance* is negative, then the function returns the actual number of transformations needed. If the value is NULL, then the function returns NULL.
+An optional value that specifies the maximum edit distance to calculate. *maximum_distance* is an integer. When *maximum_distance* is greater than or equal to `0`, the function might stop processing once it determines that the edit distance exceeds the specified value.
+
+If the actual edit distance is less than or equal to *maximum_distance*, the function returns the actual distance. Otherwise, the function returns *maximum_distance* + `1`.
+
+If *maximum_distance* isn't specified, or if it's negative, the function returns the actual edit distance. If *maximum_distance* is `NULL`, the function returns `NULL`.
 
 ## Return value
 
 **int**
 
+This function implements the Damerau-Levenshtein (Optimal String Alignment) algorithm to return the distance between the two *character_expressions*, or *maximum_distance* value if that is smaller.
+
+If any of the inputs is `NULL` then the function returns a `NULL` value.
+
 ## Remarks
 
-This function implements the Damerau-Levenshtein algorithm. If any of the inputs is `NULL` then the function returns a `NULL` value. Otherwise, the function returns an integer value from 0 to the number of transformations or *maximum_distance* value.
+If the actual distance is greater than *maximum_distance*, then the function returns *maximum_distance* + `1`.
 
 ## Examples
+
+### A. Calculate edit distance between two words
 
 The following example compares two words and returns the `EDIT_DISTANCE()` value as a column, named `Distance`.
 
@@ -75,7 +83,27 @@ WordUK WordUS Distance
 Colour Color  1
 ```
 
-For additional examples, see [Example *EDIT_DISTANCE()*](../../relational-databases/fuzzy-string-match/overview.md#example-edit_distance).
+### B. Calculate edit distance between two words limited by a maximum value
+
+The following example compares two words and returns the `EDIT_DISTANCE()` limited to a maximum value.
+
+```sql
+SELECT Source,
+       Target,
+       EDIT_DISTANCE(Source, Target) AS ActualDistance,
+       EDIT_DISTANCE(Source, Target, 2) AS LimitedDistance
+FROM (VALUES ('Chocolate', 'Sweets')) AS compare(Source, Target);
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+Source    Target    ActualDistance LimitedDistance
+--------- --------- -------------- ---------------
+Chocolate Sweets    8              3
+```
+
+For more examples, see the [EDIT_DISTANCE example](../../relational-databases/fuzzy-string-match/overview.md#example-edit_distance) in the [Fuzzy string matching overview](../../relational-databases/fuzzy-string-match/overview.md).
 
 ## Related content
 

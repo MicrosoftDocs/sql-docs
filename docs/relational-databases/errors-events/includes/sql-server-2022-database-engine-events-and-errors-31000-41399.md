@@ -2,10 +2,10 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 09/11/2025
+ms.date: 09/15/2026
 ms.topic: include
 ---
-> [!NOTE]
+> [!NOTE]  
 > This article contains the term *whitelist*, a term Microsoft considers insensitive in this context. The term appears in this article because it currently appears in the software. When the term is removed from the software, we will remove it from the article.
 
 | Error | Severity | Event logged | Description |
@@ -964,6 +964,12 @@ ms.topic: include
 | 35528 | 10 | No | unable to read page due to invalid FCB |
 | 35529 | 10 | No | certificate id |
 | 35532 | 10 | No | certificate name |
+| 35542 | 10 | No | Drop and re-create the distributed availability group with SQL Managed Instance. |
+| 35543 | 10 | No | Stored procedure called on invalid distributed availability group type or on non-existing distributed availability group. |
+| 35544 | 10 | No | Empty internal distributed availability group. |
+| 35545 | 10 | No | Internal distributed availability group naming inconsistency. |
+| 35546 | 10 | No | An internal distributed availability group detected with more than one associated availability database. |
+| 35547 | 10 | No | Use sys.sp_mi_dag_repair on the distributed availability group. |
 | 36001 | 16 | No | %s '%s' already exists in the database. |
 | 36002 | 16 | No | instance_id already exists in the database. |
 | 36003 | 16 | No | %s '%s' already exists for the given DAC instance. |

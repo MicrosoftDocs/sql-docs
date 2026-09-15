@@ -78,7 +78,7 @@ After the optional path mode declaration, specify the path itself.
 
 ## Array wildcard and range support
 
-ANSI SQL/JSON path expressions support an array wildcard. The array wildcard allows you to specify all elements, a range of elements, a list of elements, or the special token `last` to indicate the last value in a JSON array. SQL/JSON arrays use zero-based indexes. SQL/JSON paths with wildcards can be used in [JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md), [JSON_PATH_EXISTS](../../t-sql/functions/json-path-exists-transact-sql.md), and [JSON_CONTAINS](../../t-sql/functions/json-contains-transact-sql.md).
+ANSI SQL/JSON path expressions support an array wildcard. The array wildcard allows you to specify all elements, a range of elements, a list of elements, or the special token `last` to indicate the last value in a JSON array. SQL/JSON arrays use zero-based indexes. You can use SQL/JSON paths with wildcards in [JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md), [JSON_PATH_EXISTS](../../t-sql/functions/json-path-exists-transact-sql.md), and [JSON_CONTAINS](../../t-sql/functions/json-contains-transact-sql.md).
 
 While `JSON_VALUE` function supports the SQL/JSON path expression, the return value of a `JSON_VALUE` function is a SQL scalar and hence the function always returns `NULL` for any SQL/JSON path that points to a JSON object or array. Array wildcards are supported only if the input is a **json** type.
 

@@ -68,6 +68,8 @@ The `JSON_CONTAINS` function follows these rules for searching if a value is con
 
 - A JSON object search value is contained in a target object if and only if each key/value in the search object is found in the target object.
 
+The `JSON_CONTAINS` function is not supported in Fabric Data Warehouse.
+
 ## Limitations
 
 Using the `JSON_CONTAINS` function has the following limitations:

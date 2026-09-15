@@ -17,17 +17,17 @@ helpviewer_keywords:
   - "JSON_OBJECTAGG function"
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb ||=fabric"
 ---
 # JSON_OBJECTAGG (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
 
 The `JSON_OBJECTAGG` syntax constructs a JSON object from an aggregation of SQL data or columns. `JSON_OBJECTAGG` can also be used in a `SELECT` statement with `GROUP BY GROUPING SETS` clause.
 
 The key/value pairs can be specified as input values, column, variable references.
 
-> [!NOTE]  
+> [!NOTE]
 > To create a JSON array from an aggregate instead, use [JSON_ARRAYAGG](json-arrayagg-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)

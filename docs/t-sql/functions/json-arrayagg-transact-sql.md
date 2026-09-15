@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "JSON_ARRAYAGG function"
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb || =fabric"
 ---
 # JSON_ARRAYAGG (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
 
 Constructs a JSON array from an aggregation of SQL data or columns. `JSON_ARRAYAGG` can also be used in a `SELECT` statement with `GROUP BY GROUPING SETS` clause.
 

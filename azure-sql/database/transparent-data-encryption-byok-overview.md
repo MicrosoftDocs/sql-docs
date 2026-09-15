@@ -144,7 +144,7 @@ Depending on the Azure SQL offering and TDE configuration, the TDE protector can
 
 #### Key management behavior for symmetric (AES) keys
 
-You can use symmetric (AES) keys stored in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM as the TDE protector. To get started with a key from an on-premises hardware security module (HSM), import the key into either service. After the initial import, Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM supports all ongoing key lifecycle operations, including point-in-time recovery, geo-disaster recovery, and key revalidation. Maintain local backups of imported keys to support recovery and revalidation scenarios. This key management behavior applies only to symmetric (AES) keys and doesn't apply to asymmetric (RSA) keys.
+You can use symmetric (AES) keys stored in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM as the TDE protector. To get started with a key from an on-premises hardware security module (HSM), import the key into either service. After the initial import, all ongoing key lifecycle operations take place in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM. Point-in-time recovery, geo-disaster recovery, and key revalidation all depend on the key remaining available there. Maintain local backups of imported keys to support recovery and revalidation scenarios. This behavior applies only to symmetric (AES) keys, not to asymmetric (RSA) keys.
 
 #### Key state and validity requirements
 

@@ -4,7 +4,7 @@ description: "Learn how to optimize your queries over JSON documents using index
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, jovanpop, randolphwest
-ms.date: 07/23/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.topic: how-to
 ms.custom:
@@ -19,9 +19,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
 
 You can optimize your queries over JSON documents using standard indexes.
-
-> [!NOTE]  
-> In [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], you can use the [CREATE JSON INDEX (Transact-SQL)](../../t-sql/statements/create-json-index-transact-sql.md) feature.
 
 Indexes work the same way on JSON data in **varchar**/**nvarchar** or the [native **json** data type](../../t-sql/data-types/json-data-type.md).
 

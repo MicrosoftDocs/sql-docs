@@ -4,22 +4,19 @@ description: The JSON_CONTAINS function searches for a SQL value in a path in a 
 author: uc-msft
 ms.author: umajay
 ms.reviewer: randolphwest
-ms.date: 10/27/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: language-reference
 ms.custom:
   - build-2025
-monikerRange: ">=sql-server-2017"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # JSON_CONTAINS (Transact-SQL)
 
-[!INCLUDE [sqlserver2025](../../includes/applies-to-version/sqlserver2025.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
 Searches for a SQL value in a path in a JSON document.
-
-> [!NOTE]  
-> The `JSON_CONTAINS` function is currently in preview and only available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

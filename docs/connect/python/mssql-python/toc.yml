@@ -1,0 +1,138 @@
+- name: Overview
+  href: python-sql-driver-mssql-python.md
+- name: What's new
+  href: whats-new.md
+- name: Installation
+  href: installation.md
+- name: Support lifecycle
+  href: support-lifecycle.md
+- name: Getting started
+  items:
+  - name: 'Quickstart: mssql-python driver for Python'
+    href: python-sql-driver-mssql-python-quickstart.md
+  - name: 'Quickstart: Connect to a SQL database from a Jupyter Notebook'
+    href: python-sql-driver-mssql-python-connect-jupyter-notebook.md
+  - name: 'Quickstart: Repeatable deployments with the Python driver for SQL Server'
+    href: python-sql-driver-mssql-python-repeatable-deployments-quickstart.md
+  - name: 'Quickstart: Rapid prototyping with the Python driver for SQL Server'
+    href: python-sql-driver-mssql-python-rapid-prototyping-quickstart.md
+  - name: 'Quickstart: Bulk copy with the Python driver for SQL Server'
+    href: python-sql-driver-mssql-python-bulk-copy-quickstart.md
+  - name: 'Quickstart: Apache Arrow with the Python driver for SQL Server'
+    href: python-sql-driver-mssql-python-arrow-quickstart.md
+- name: Connecting to SQL Server
+  items:
+  - name: Connection strings
+    href: connection-strings.md
+  - name: Build connection strings programmatically
+    href: build-connection-strings.md
+  - name: Connection management
+    href: connection-management.md
+  - name: Connection pooling
+    href: connection-pooling.md
+  - name: Encryption and certificates
+    href: encryption-certificates.md
+- name: Executing queries
+  items:
+  - name: Executing queries
+    href: executing-queries.md
+  - name: Retrieving data
+    href: retrieving-data.md
+  - name: Parameterized queries
+    href: parameterized-queries.md
+  - name: Stored procedures
+    href: stored-procedures.md
+  - name: Cursor management
+    href: cursor-management.md
+  - name: Transaction management
+    href: transaction-management.md
+  - name: Pagination
+    href: pagination.md
+- name: Working with data types
+  items:
+  - name: Data type mappings
+    href: data-type-mappings.md
+  - name: NULL handling
+    href: null-handling.md
+  - name: String and Unicode handling
+    href: string-unicode.md
+  - name: DateTime handling
+    href: datetime-handling.md
+  - name: Decimal and money types
+    href: decimal-money.md
+  - name: Binary data
+    href: binary-data.md
+  - name: Custom type converters
+    href: custom-type-converters.md
+  - name: Row objects
+    href: row-objects.md
+- name: Authentication and security
+  items:
+  - name: Entra authentication
+    href: entra-authentication.md
+  - name: Security best practices
+    href: security-best-practices.md
+- name: SQL Server features
+  items:
+  - name: Bulk copy operations
+    href: bulk-copy.md
+  - name: Availability group connections
+    href: availability-groups.md
+  - name: JSON data
+    href: json-data.md
+  - name: XML data
+    href: xml-data.md
+  - name: Spatial data
+    href: spatial-data.md
+  - name: Sparse columns
+    href: sparse-columns.md
+  - name: Schema discovery
+    href: schema-discovery.md
+  - name: Data loading and movement patterns
+    href: data-loading-movement-patterns.md
+- name: Framework integration
+  items:
+  - name: Apache Arrow integration
+    href: arrow-integration.md
+  - name: pandas integration
+    href: pandas-integration.md
+  - name: Polars integration
+    href: polars-integration.md
+  - name: DuckDB integration
+    href: duckdb-integration.md
+  - name: FastAPI integration
+    href: fastapi-integration.md
+  - name: Flask integration
+    href: flask-integration.md
+  - name: SQLAlchemy integration
+    href: sqlalchemy-integration.md
+  - name: Async patterns
+    href: asynchronous-patterns.md
+  - name: Data access and analytics patterns
+    href: data-access-analytics-patterns.md
+- name: Development environments
+  items:
+  - name: Container and local development
+    href: container-local-development.md
+- name: Performance and troubleshooting
+  items:
+  - name: Performance tuning
+    href: performance-tuning.md
+  - name: Retry logic
+    href: retry-logic.md
+  - name: Error handling
+    href: error-handling.md
+  - name: Troubleshooting
+    href: troubleshooting.md
+- name: Migration and reference
+  items:
+  - name: Migrate from pyodbc
+    href: migrate-from-pyodbc.md
+  - name: Migrate from pymssql
+    href: migrate-from-pymssql.md
+  - name: Migrate from SQLite
+    href: migrate-from-sqlite.md
+  - name: Migrate from PostgreSQL
+    href: migrate-from-postgresql.md
+  - name: Module configuration
+    href: module-configuration.md

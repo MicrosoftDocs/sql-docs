@@ -1,0 +1,76 @@
+- name: Overview
+  href: python-sql-driver-mssql-django.md
+- name: Getting started
+  items:
+  - name: Installation
+    href: installation.md
+  - name: 'Quickstart: mssql-django backend for Django'
+    href: quickstart.md
+  - name: What's new in mssql-django
+    href: whats-new.md
+  - name: Support lifecycle
+    href: support-lifecycle.md
+- name: Configuration and connections
+  items:
+  - name: Configuration reference
+    href: configuration-reference.md
+  - name: Connection options
+    href: connection-options.md
+  - name: Microsoft Entra authentication
+    href: microsoft-entra-authentication.md
+  - name: Connection pooling
+    href: connection-pooling.md
+  - name: Retry logic and connection resilience
+    href: retry-logic.md
+- name: Models and data access
+  items:
+  - name: Data type mappings
+    href: data-type-mappings.md
+  - name: JSONField support
+    href: json-field.md
+  - name: Database migrations
+    href: migrations.md
+  - name: Inspect existing databases
+    href: inspectdb.md
+  - name: Stored procedures
+    href: stored-procedures.md
+- name: Operations and features
+  items:
+  - name: Bulk operations
+    href: bulk-operations.md
+  - name: Transaction management
+    href: transactions.md
+  - name: Timezone support
+    href: timezone-support.md
+  - name: Always Encrypted
+    href: always-encrypted.md
+  - name: Raw SQL queries
+    href: raw-sql.md
+  - name: Security best practices
+    href: security-best-practices.md
+- name: Deployment and operations
+  items:
+  - name: Deploy to Azure App Service
+    href: deploy-azure-app-service.md
+  - name: Testing
+    href: testing.md
+  - name: Performance tuning
+    href: performance-tuning.md
+  - name: Troubleshooting
+    href: troubleshooting.md
+  - name: Container and local development
+    href: container-local-development.md
+- name: Migration guides
+  items:
+  - name: Migrate from django-mssql-backend
+    href: migrate-from-django-mssql-backend.md
+  - name: Migrate from other databases
+    href: migrate-from-other-databases.md
+  - name: Migrate from PostgreSQL
+    href: migrate-from-postgresql.md
+- name: Reference
+  items:
+  - name: Limitations
+    href: limitations.md
+  - name: FAQ
+    href: faq.yml

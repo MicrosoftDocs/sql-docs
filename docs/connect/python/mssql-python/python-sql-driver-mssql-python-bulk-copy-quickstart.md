@@ -17,7 +17,7 @@ content_well_notification:
 
 # Quickstart: Bulk copy with the mssql-python driver for Python
 
-In this quickstart, you use the `mssql-python` driver to bulk copy data between databases. The application downloads tables from a source database schema to local Parquet files using Apache Arrow, then uploads them to a destination database using the high-performance `bulkcopy` method. You can use this pattern to migrate, replicate, or transform data between SQL Server, Azure SQL Database, and SQL database in Fabric.
+In this quickstart, you use the `mssql-python` driver to bulk copy data between databases. The application downloads tables from a source database schema to local Parquet files using Apache Arrow, then uploads them to a destination database using the high-performance `bulkcopy_arrow` method. You can use this pattern to migrate, replicate, or transform data between SQL Server, Azure SQL Database, and SQL database in Fabric.
 
 The `mssql-python` driver doesn't require any external dependencies on Windows machines. The driver installs everything that it needs with a single `pip` install, allowing you to use the latest version of the driver for new scripts without breaking other scripts that you don't have time to upgrade and test.
 
@@ -309,7 +309,7 @@ code .
        return parquet_file
    ```
 
-1. Add the upload function. `upload_parquet` reads the Arrow schema from the Parquet file, generates and executes `DROP`/`CREATE TABLE` DDL to prepare the destination, then reads the file in batches and calls `cursor.bulkcopy_arrow()` for high-performance bulk insert. Because the Parquet batches are already Apache Arrow record batches, this method loads them without converting every value into a Python object first. The `table_lock=True` option improves throughput by minimizing lock contention. After the upload completes, the function runs a `SELECT COUNT(*)` and raises an error if the destination row count doesn't match the uploaded row count.
+1. Add the upload function. `upload_parquet` reads the Arrow schema from the Parquet file, generates and executes `DROP`/`CREATE TABLE` DDL to prepare the destination, then streams the file's record batches into a single `cursor.bulkcopy_arrow()` call for high-performance bulk insert. Because the Parquet batches are already Apache Arrow record batches, this method loads them without converting every value into a Python object first. The `table_lock=True` option improves throughput by minimizing lock contention. The method returns the copied row count and timing, and the function then runs a `SELECT COUNT(*)` and raises an error if the destination row count doesn't match the uploaded row count.
 
    ```python
    def upload_parquet(conn, parquet_file: str, target: str) -> int:
@@ -321,17 +321,13 @@ code .
        conn.commit()
 
        # ── Bulk insert ──
-       uploaded = 0
-       t0 = time.perf_counter()
        with pq.ParquetFile(parquet_file) as pf:
            with conn.cursor() as cursor:
-               for batch in pf.iter_batches(batch_size=BATCH_SIZE):
-                   cursor.bulkcopy_arrow(
-                       target, batch, batch_size=BATCH_SIZE,
-                       table_lock=True, timeout=3600,
-                   )
-                   uploaded += batch.num_rows
-       elapsed = time.perf_counter() - t0
+               result = cursor.bulkcopy_arrow(
+                   target, pf.iter_batches(batch_size=BATCH_SIZE),
+                   batch_size=BATCH_SIZE, table_lock=True, timeout=3600,
+               )
+       uploaded = result["rows_copied"]
 
        # ── Verify ──
        with conn.cursor() as cursor:
@@ -342,14 +338,17 @@ code .
                f"Row count mismatch for {target}: uploaded {uploaded:,}, destination has {count:,}"
            )
 
-       rate = f"{int(uploaded / elapsed):,} rows/sec" if elapsed > 0 else "n/a"
        print(
            f"{parquet_file} -> {target}: {uploaded:,} rows uploaded "
-           f"in {elapsed:.2f}s ({rate}) "
+           f"in {result['elapsed_time']:.2f}s "
+           f"({result['rows_per_second']:,.0f} rows/sec, {result['batch_count']} batches) "
            f"| destination rows: {count:,}"
        )
        return uploaded
    ```
+
+   > [!TIP]  
+   > Pass the batch iterator to a single `bulkcopy_arrow` call instead of calling the method once per batch. The method opens its own connection and closes it when the call returns, so a per-batch loop logs in and acquires the table lock once for every batch.
 
 1. Add the orchestration function. `transfer_tables` ties the three phases together. It connects to the source database, discovers all base tables in the given schema through `INFORMATION_SCHEMA.TABLES`, downloads each one to a local Parquet file, runs the enrichment hook, then connects to the destination database and uploads each file.
 

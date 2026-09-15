@@ -228,6 +228,8 @@ items:
       items:
       - name: Get Python package information
         href: ../machine-learning/package-management/python-package-information.md
+      - name: Install with sqlmlutils
+        href: ../machine-learning/package-management/install-additional-python-packages-on-sql-server.md
       - name: Install with Python tools
         href: ../machine-learning/package-management/install-python-packages-standard-tools.md
     - name: Install new R packages

@@ -31,16 +31,16 @@ The following table lists the available keywords and attributes for each platfor
 | [ClientKey](dsn-connection-string-attribute.md#clientkey) | | LMW |
 | [ColumnEncryption](dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | LMW |
 | [ConcatNullYieldsNull](#concatnullyieldsnull---sql_copt_ss_concat_null) (v18.6 and later versions) | [SQL_COPT_SS_CONCAT_NULL](#concatnullyieldsnull---sql_copt_ss_concat_null) | LMW |
-| [ConnectTimeout](#connection-string-keyword-unification) (v18.7+) | [SQL_ATTR_LOGIN_TIMEOUT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | [ConnectRetryCount](connection-resiliency.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](connection-resiliency.md) | LMW |
 | [ConnectRetryInterval](connection-resiliency.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](connection-resiliency.md) | LMW |
+| [ConnectTimeout](#connecttimeout-keyword) (v18.7 and later versions) | [SQL_ATTR_LOGIN_TIMEOUT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | [Database](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | [Description](dsn-connection-string-attribute.md#description) | | LMW |
 | [Driver](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Encrypt](#encrypt) | [SQL_COPT_SS_ENCRYPT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssencrypt) | LMW |
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
-| [FailoverPartner](#connection-string-keyword-unification) (v18.7+) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
+| [FailoverPartner](#connection-string-keyword-unification) (v18.7 and later versions) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [GetDataExtensions](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) (v18.0 and later versions) | [SQL_COPT_SS_GETDATA_EXTENSIONS](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) | LMW |
@@ -54,7 +54,7 @@ The following table lists the available keywords and attributes for each platfor
 | [Language](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [LongAsMax](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#longasmax) (v18.0 and later versions) | [SQL_COPT_SS_LONGASMAX](dsn-connection-string-attribute.md#sql_copt_ss_longasmax) | LMW |
 | [MARS_Connection](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_MARS_ENABLED](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmarsenabled) | LMW |
-| [MultipleActiveResultSets](#connection-string-keyword-unification) (v18.7+) | [SQL_COPT_SS_MARS_ENABLED](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmarsenabled) | LMW |
+| [MultipleActiveResultSets](#connection-string-keyword-unification) (v18.7 and later versions) | [SQL_COPT_SS_MARS_ENABLED](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmarsenabled) | LMW |
 | [MultiSubnetFailover](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_MULTISUBNET_FAILOVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmultisubnetfailover) | LMW |
 | [Net](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Network](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -203,13 +203,13 @@ The following connection string uses the unified keyword spellings:
 Driver={ODBC Driver 18 for SQL Server};Server=tcp:myserver.database.windows.net;Database=mydb;UID=myuser;PWD=mypassword;MultipleActiveResultSets=Yes;WorkstationID=app-node-01;ConnectTimeout=30;
 ```
 
-It sets the same options as the following connection string, which uses the original ODBC keywords:
+The aliases in the preceding connection string configure the same options as the original ODBC keywords in the following connection string:
 
 ```ini
-Driver={ODBC Driver 18 for SQL Server};Server=tcp:myserver.database.windows.net;Database=mydb;UID=myuser;PWD=mypassword;MARS_Connection=Yes;WSID=app-node-01;ConnectTimeout=30;
+Driver={ODBC Driver 18 for SQL Server};Server=tcp:myserver.database.windows.net;Database=mydb;UID=myuser;PWD=mypassword;MARS_Connection=Yes;WSID=app-node-01;
 ```
 
-In both strings, the driver enables MARS, sets the workstation ID to `app-node-01`, and waits up to 30 seconds for the login to complete.
+Both strings enable MARS and set the workstation ID to `app-node-01`. The first string also waits up to 30 seconds for the login to complete. `ConnectTimeout` has no equivalent in earlier versions. To set the login timeout in an earlier version, call [`SQLSetConnectAttr`](../../odbc/reference/syntax/sqlsetconnectattr-function.md) with `SQL_ATTR_LOGIN_TIMEOUT`.
 
 ### Authentication - SQL_COPT_SS_AUTHENTICATION
 

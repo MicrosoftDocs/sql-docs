@@ -40,7 +40,7 @@ sys.sp_db_selective_xml_index
 
 #### [ @dbname = ] N'*dbname*'
 
-The name of the database on which to to enable or disable selective XML index. *@dbname* is **sysname**, with a default of `NULL`.
+The name of the database on which to enable or disable selective XML index. *@dbname* is **sysname**, with a default of `NULL`.
 
 If *@dbname* is `NULL`, the current database is assumed.
 

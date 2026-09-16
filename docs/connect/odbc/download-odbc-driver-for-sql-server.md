@@ -4,7 +4,7 @@ description: Download the Microsoft ODBC Driver for SQL Server to develop native
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, vanto
-ms.date: 09/07/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -169,6 +169,7 @@ Packages are signed using Pretty Good Privacy (PGP) signatures to verify integri
 
 ### Ubuntu
 
+- Ubuntu 26.04 .deb packages: [v18](https://packages.microsoft.com/ubuntu/26.04/prod/pool/main/m/msodbcsql18/)
 - Ubuntu 25.10 .deb packages: [v17](https://packages.microsoft.com/ubuntu/25.10/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/25.10/prod/pool/main/m/msodbcsql18/)
 - Ubuntu 24.04 .deb packages: [v17](https://packages.microsoft.com/ubuntu/24.04/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/24.04/prod/pool/main/m/msodbcsql18/)
 - Ubuntu 22.04 .deb packages: [v17](https://packages.microsoft.com/ubuntu/22.04/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/22.04/prod/pool/main/m/msodbcsql18/)

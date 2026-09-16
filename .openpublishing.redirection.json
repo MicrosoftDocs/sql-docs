@@ -52193,11 +52193,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/machine-learning/package-management/install-additional-python-packages-on-sql-server.md",
-      "redirect_url": "/sql/machine-learning/concepts/extension-python",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/advanced-analytics/connect/loopback-connection.md",
       "redirect_url": "/sql/machine-learning/connect/loopback-connection",
       "redirect_document_id": true

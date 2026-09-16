@@ -187,7 +187,7 @@ The following table is for databases that are not [zone-redundant](high-availabi
 
 | Azure Region | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers |
 |:---|:---|:---|:---|
-| East Asia | | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] |
+| East Asia | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] |
 | Southeast Asia | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] |
 | Australia East | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] |
 | Australia Southeast | | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] |
@@ -239,6 +239,7 @@ The following table is for [zone-redundant](high-availability-sla-local-zone-red
 
 | Azure Region | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) |
 |:---|:---|:---|:---|
+| East Asia | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] |
 | Southeast Asia | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] |
 | Australia East | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] |
 | Central India | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] | [!INCLUDE [yes](../includes/yes.md)] |

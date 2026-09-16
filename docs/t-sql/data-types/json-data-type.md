@@ -4,7 +4,7 @@ description: The native JSON data type provides advantages for storing JSON data
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, jovanpop, umajay
-ms.date: 01/14/2026
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -71,9 +71,6 @@ The **json** data type is available under all database compatibility levels.
 <a id="modify-method"></a>
 
 ## The modify method
-
-> [!NOTE]  
-> The `modify` method is currently in preview and only available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
 
 The **json** data type supports the `modify` method. Use `modify` to modify JSON documents stored in a column. The `modify` method has optimizations to perform in-place modifications to the data where possible, and is the preferred way to modify a JSON document in a **json** column.
 

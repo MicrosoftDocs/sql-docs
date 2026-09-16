@@ -5,7 +5,7 @@ description: Learn about the features and documentation improvements for Azure S
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, maghan
-ms.date: 03/02/2026
+ms.date: 09/15/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -94,8 +94,8 @@ Return to [What's new in Azure SQL Database?](doc-changes-updates-release-notes-
 | **\| \| and \| \| = string concatenation support** | June | Azure SQL Database now supports \| \| and \| \| = compound assignment T-SQL syntax. This syntax is currently in preview. For more information, see [&#124;&#124; (String concatenation)](/sql/t-sql/language-elements/string-concatenation-pipes-transact-sql) and [&#124;&#124;= (Compound assignment)](/sql/t-sql/language-elements/compound-assignment-pipes-transact-sql). |
 | **TLS 1.3 support** | June | Azure SQL Database now supports connections encrypted with TLS 1.3. Review [TLS 1.3](/sql/relational-databases/security/networking/tls-1-3) and [Minimum TLS settings](connectivity-settings.md#minimum-tls-version) to learn more. |
 | **Availability metric preview** | May | Availability is now a metric in the Azure Monitor metrics. Driven by various user connection failures, you can [monitor and configure alerts on Azure SQL Database Availability](monitoring-metrics-alerts.md#availability-metric). This feature is currently in preview. |
-| **JSON native data type** | May | The new [native **json** data type](/sql/t-sql/data-types/json-data-type?view=azuresqldb-current&preserve-view=true) and new JSON aggregate functions are currently in preview. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
-| **JSON aggregate functions** | May | Two new **json** aggregate functions [JSON_OBJECTAGG and JSON_ARRAYAGG](/sql/relational-databases/json/json-data-sql-server?view=azuresqldb-current&preserve-view=true#json-data-from-aggregates) enable construction of JSON objects or arrays based on an aggregate from SQL data. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
+| **JSON native data type introduced** | May | The [native **json** data type](/sql/t-sql/data-types/json-data-type?view=azuresqldb-current&preserve-view=true) was introduced in Azure SQL Database. The data type became generally available in May 2025. |
+| **JSON aggregate functions introduced** | May | The [JSON_OBJECTAGG and JSON_ARRAYAGG](/sql/relational-databases/json/json-data-sql-server?view=azuresqldb-current&preserve-view=true#json-data-from-aggregates) aggregate functions were introduced in Azure SQL Database. The functions became generally available in May 2025. |
 | **License-free standby replica GA** | May | Save on licensing costs by configuring your secondary database replica for disaster recovery standby. This feature is now generally available. Review [License-free standby replica](standby-replica-how-to-configure.md) to learn more. |
 | **Elastic jobs GA** | April | [Elastic jobs](elastic-jobs-overview.md), [now generally available](https://techcommunity.microsoft.com/t5/azure-sql-blog/general-availability-elastic-jobs-in-azure-sql-database/ba-p/4087140), are the SQL Server Agent replacement for Azure SQL Database. Elastic jobs support Microsoft Entra ID authentication, private endpoints, management via REST APIs, Azure Alerts, and more new features since public preview began. |
 | **Convert existing replica to standby** | April | It's now possible to convert an existing geo-replica to standby or an existing standby replica back to a regular geo-replica by using the Azure portal and REST API. Review [Standby replica](standby-replica-how-to-configure.md) to learn more. |

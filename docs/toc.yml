@@ -11897,7 +11897,7 @@ items:
       - name: sys.spatial_reference_systems
         href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
     - name: Azure Synapse Analytics
-      href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
+      href: relational-databases/system-catalog-views/azure-synapse-analytics-catalog-views.md
       items:
       - name: sys.pdw_column_distribution_properties
         href: relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md
@@ -12588,8 +12588,8 @@ items:
         href: relational-databases/system-dynamic-management-objects/sys-dm-change-feed-errors.md
       - name: sys.dm_change_feed_log_scan_sessions
         href: relational-databases/system-dynamic-management-objects/sys-dm-change-feed-log-scan-sessions.md
-    - name: Azure Synapse Analytics & Parallel Data Warehouse
-      href: relational-databases/system-dynamic-management-objects/sql-and-parallel-data-warehouse-dynamic-management-views.md
+    - name: Azure Synapse Analytics
+      href: relational-databases/system-dynamic-management-objects/azure-synapse-analytics-dynamic-management-objects.md
       items:
       - name: sys.dm_pdw_component_health_active_alerts
         href: relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-active-alerts-transact-sql.md

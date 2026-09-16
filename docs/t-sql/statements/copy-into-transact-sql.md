@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: procha, fresantos, jovanpop
-ms.date: 08/28/2026
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -693,11 +693,11 @@ To access files on Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage lo
 
 `CREDENTIAL` specifies the credential that `COPY INTO` uses when authorizing access to the external storage account or OneLake source. It doesn't change the current SQL security context or the identity that executes the statement.
 
-In Fabric Data Warehouse: 
-- `COPY INTO` isn't supported where public access is disabled.
-- For public storage accounts, the supported authentication mechanisms are Microsoft Entra ID, Shared Access Signature (SAS), or Storage Account Key (SAK). 
-- For public storage accounts behind a firewall, Microsoft Entra ID and Workspace Identity are supported.
-- `COPY INTO` using OneLake as the source supports Microsoft Entra ID and Workspace Identity.
+In Fabric Data Warehouse:
+
+- For public Azure Blob Storage and ADLS Gen2 accounts, the supported authentication mechanisms are Microsoft Entra ID, Shared Access Signature (SAS), and Storage Account Key (SAK).
+- For Azure Blob Storage and ADLS Gen2 accounts protected by a firewall, Microsoft Entra ID and Workspace Identity are supported.
+- For OneLake sources, Microsoft Entra ID and Workspace Identity are supported.
 
 The executing user's Microsoft Entra identity is the default credential for source access. No credential needs to be specified.
 
@@ -918,18 +918,23 @@ To ensure reliable execution, don't change the source files and folders during t
 If the source data has greater precision than the destination column definition, the value is truncated, not rounded, for numeric, date, and time types.
 
 <a id="limitations-for-onelake-as-source-public-preview"></a>
+<a id="limitations-for-onelake-as-source-for-copy-into"></a>
 
-## Limitations for OneLake as source for COPY INTO
+## COPY INTO source limitations
 
-- **When using COPY INTO, only Microsoft Entra ID and Fabric Workspace Identity are supported as the CREDENTIAL.** Other credential types, such as SAS tokens, shared keys, or connection strings, aren't permitted.
+- When OneLake is the source, on Fabric Workspace Identity or Microsoft Entra ID are supported. SAS tokens, shared keys, and connection strings aren't supported.
 
-- **Warehouse items** aren't supported as source locations. Files must originate from other Fabric items that expose files through OneLake storage.
+- When OneLake is the source, Warehouse items aren't supported as source locations. Files must come from other Fabric items that expose files through OneLake storage.
 
-- **OneLake paths must use workspace and warehouse IDs.** Friendly names for workspaces or Lakehouses aren't supported at this time.
+- When OneLake is the source, paths must use workspace and item IDs. Friendly workspace and item names aren't supported.
 
-- **Contributor permissions are required on both workspaces when you use the executing user's Microsoft Entra identity.** The executing user must have at least the Contributor role on the source Lakehouse workspace and the target Warehouse workspace.
+- When OneLake is the source and `COPY INTO` uses the executing user's Microsoft Entra identity, Contributor permissions are required on both workspaces. The executing user must have at least the Contributor role on
+  the source workspace and the target Warehouse workspace.
+  
+- When OneLake is the source and `COPY INTO` uses Fabric Workspace Identity, separate permissions apply. The workspace identity must have at least the Contributor role on the source workspace. The executing user doesn't need direct access to the source workspace, but must have at least the Viewer role on the target workspace and `INSERT` permission on the target table.
 
-- **Workspace Identity has separate permission requirements.** When you specify `CREDENTIAL = (IDENTITY = 'Workspace Identity')`, the workspace identity must have at least the Contributor role on the workspace that contains the source data. The executing user doesn't need direct access to the source workspace, but must have at least the Viewer role on the target workspace and `INSERT` permission on the target table.
+- When Azure Blob Storage or ADLS Gen2 is the source, `COPY INTO` supports only public storage accounts and storage accounts protected by a firewall. Private storage accounts (storage accounts with public network access
+  disabled) aren't supported, even when Fabric private links are enabled.
 
 ## Examples
 

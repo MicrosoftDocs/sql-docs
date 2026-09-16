@@ -3,8 +3,8 @@ title: "Columnstore indexes: Overview"
 description: "An overview on columnstore indexes. Columnstore indexes are the standard for storing and querying large data warehousing fact tables."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: dfurman
-ms.date: 04/14/2025
+ms.reviewer: dfurman, derekw, randolphwest
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: concept-article
@@ -45,7 +45,7 @@ A columnstore is data that's logically organized as a table with rows and column
 
 #### Rowstore
 
-A rowstore is data that's logically organized as a table with rows and columns, and physically stored in a row-wise data format. This format is the traditional way to store relational table data. In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], rowstore refers to a table where the underlying data storage format is a heap, a clustered index, or a memory-optimized table.
+A rowstore is data that's logically organized as a table with rows and columns, and physically stored in a row-wise data format. This format is the traditional way to store relational table data. In the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)], rowstore refers to a table where the underlying data storage format is a heap, a clustered index, or a memory-optimized table.
 
 > [!NOTE]  
 > In discussions about columnstore indexes, the terms rowstore and columnstore are used to emphasize the format for the data storage.
@@ -101,7 +101,9 @@ For more information about rowgroup statuses, see [sys.dm_db_column_store_row_gr
 
 #### Deltastore
 
-A columnstore index can have more than one delta rowgroup. All of the delta rowgroups are collectively called the deltastore.
+Writing to the highly compressed columnstore is an expensive operation. To avoid this cost for small writes, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] stages rows that arrive in batches too small to compress efficiently in a set of clustered B-tree indexes called the deltastore. A columnstore index can have more than one delta rowgroup, and all of the delta rowgroups are collectively called the deltastore. Rows accumulate in the deltastore until there are enough to compress into a columnstore rowgroup.
+
+Because the deltastore is a B-tree structure rather than compressed columnstore, a query that reads rows from the deltastore traverses the B-tree in addition to scanning the columnstore. This method is slower than reading from the columnstore alone. To return the correct results, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] combines the rows from the columnstore and the deltastore.
 
 During a large bulk load, most of the rows go directly to the columnstore without passing through the deltastore. Some rows at the end of the bulk load might be too few in number to meet the minimum size of a rowgroup, which is 102,400 rows. As a result, the final rows go to the deltastore instead of the columnstore. For small bulk loads with less than 102,400 rows, all of the rows go directly to the deltastore.
 
@@ -127,7 +129,7 @@ Reasons why columnstore indexes are so fast:
 
 - Columns store values from the same domain and commonly have similar values, which result in high compression rates. I/O bottlenecks in your system are minimized or eliminated, and memory footprint is reduced significantly.
 
-- High compression rates improve query performance by using a smaller in-memory footprint. In turn, query performance can improve because [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can perform more query and data operations in memory.
+- High compression rates improve query performance by using a smaller memory and disk footprint. In turn, query performance can improve because the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] can perform more query and data operations in memory.
 
 - Batch execution improves query performance, typically by two to four times, by processing multiple rows together.
 
@@ -155,7 +157,7 @@ Ordered clustered columnstore indexes improve performance for queries based on o
 
 Yes. Beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], you can create an updatable nonclustered columnstore index on a rowstore table. The columnstore index stores a copy of the selected columns, so you need extra space for this data, but the selected data is compressed on average 10 times. You can run analytics on the columnstore index and transactions on the rowstore index at the same time. The columnstore is updated when data changes in the rowstore table, so both indexes work against the same data.
 
-Beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index and perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Because a nonunique value fails to insert into the rowstore table, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can't insert the value into the columnstore.
+Beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index and perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce uniqueness by using a `UNIQUE` constraint on the rowstore table. Because a nonunique value fails to insert into the rowstore table, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] can't insert the value into the columnstore.
 
 ## Ordered columnstore indexes
 
@@ -259,8 +261,8 @@ All of the columns in a columnstore index are stored in the metadata as included
 | Create a memory-optimized table with a columnstore index. | [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) | Beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], you can create a memory-optimized table with a columnstore index. The columnstore index can also be added after the table is created by using the `ALTER TABLE ADD INDEX` syntax. |
 | Load data into a columnstore index. | [Columnstore indexes data loading](columnstore-indexes-data-loading-guidance.md) |  |
 | Drop a columnstore index. | [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md) | Dropping a columnstore index uses the standard `DROP INDEX` syntax that B-tree indexes use. Dropping a clustered columnstore index converts the columnstore table to a heap. |
-| Delete a row from a columnstore index. | [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) | Use [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) to delete a row.<br /><br />**columnstore row**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted, but doesn't reclaim the physical storage for the row until the index is rebuilt.<br />**deltastore row**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] logically and physically deletes the row. |
-| Update a row in the columnstore index. | [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) | Use [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) to update a row.<br /><br />**columnstore row**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted and then inserts the updated row into the deltastore.<br />**deltastore row**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] updates the row in the deltastore. |
+| Delete a row from a columnstore index. | [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) | Use [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) to delete a row.<br /><br />**columnstore row**: the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] marks the row as logically deleted, but doesn't reclaim the physical storage for the row until the index is rebuilt.<br />**deltastore row**: the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] logically and physically deletes the row. |
+| Update a row in the columnstore index. | [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) | Use [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) to update a row.<br /><br />**columnstore row**: the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] marks the row as logically deleted and then inserts the updated row into the deltastore.<br />**deltastore row**: the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] updates the row in the deltastore. |
 | Maintain a columnstore index. | [ALTER INDEX ... REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuild--with--rebuild_index_option---n---)<br /><br />[REORGANIZE a columnstore index](../../t-sql/statements/alter-index-transact-sql.md#reorganize-a-columnstore-index)<br /><br />[Index maintenance methods: reorganize and rebuild](reorganize-and-rebuild-indexes.md#index-maintenance-methods-reorganize-and-rebuild) | In most cases, `ALTER INDEX ... REORGANIZE` provides results similar to `ALTER INDEX ... REBUILD` but with lower resource consumption. `ALTER INDEX ... REORGANIZE` always runs online. Both options defragment a columnstore index and force rows in the deltastore to go into the columnstore.<br /><br />Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and in [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)], columnstore index quality is maintained automatically, removing the need for periodic index maintenance in most cases. |
 
 ## Related content

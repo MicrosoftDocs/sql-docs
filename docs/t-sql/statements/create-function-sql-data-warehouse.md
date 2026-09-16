@@ -4,7 +4,7 @@ description: User-defined functions accept parameters, perform an action, such a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop, srdjanmatin
-ms.date: 09/10/2026
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -20,23 +20,20 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
 
 [!INCLUDE [applies-to-version/fabricse-fabricdw](../../includes/applies-to-version/fabric-se-dw.md)]
 
- `CREATE FUNCTION` creates inline table-valued functions and scalar functions. 
+`CREATE FUNCTION` creates inline table-valued functions and scalar functions. 
  
 > [!NOTE]
 > Scalar UDFs are a preview feature in Fabric Data Warehouse.
-
-> [!IMPORTANT]
-> In Fabric Data Warehouse, [scalar UDFs must be inlineable](#scalar-udf-inlining) for use with `SELECT ... FROM` queries on user tables, but you can still create functions that aren't inlineable by specifying INLINE=AUTO function option. Scalar UDFs that aren't inlineable work in a limited number of scenarios. You can check [whether a UDF can be inlined](#check-whether-a-scalar-udf-can-be-inlined).
 
 A user-defined function is a [!INCLUDE [tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action such as a complex calculation, and returns the result of that action as a value. Scalar functions return a scalar value, such as a number or string. User-defined table-valued functions (TVFs) return a table.
 
 Use `CREATE FUNCTION` to create a reusable T-SQL routine that you can use in these ways:
 
- - In [!INCLUDE [tsql](../../includes/tsql-md.md)] statements such as `SELECT` 
- - In [!INCLUDE [tsql](../../includes/tsql-md.md)] data manipulation statements (DML) such as `UPDATE`, `INSERT`, and `DELETE`
- - In applications calling the function
- - In the definition of another user-defined function
- - To replace a stored procedure
+ - In [!INCLUDE [tsql](../../includes/tsql-md.md)] statements such as `SELECT`.
+ - In [!INCLUDE [tsql](../../includes/tsql-md.md)] data manipulation statements (DML) such as `UPDATE`, `INSERT`, and `DELETE`.
+ - In applications calling the function.
+ - In the definition of another user-defined function.
+ - To replace a stored procedure.
 
 Specify `CREATE OR ALTER FUNCTION` to create a new function if one doesn't exist by that name, or alter an existing function, in a single statement.
 
@@ -96,8 +93,7 @@ The name of the schema to which the user-defined function belongs.
 
 The name of the user-defined function. Function names must follow the rules for identifiers and be unique within the database and its schema.
 
-> [!NOTE]  
-> You must include parentheses after the function name even if you don't specify a parameter.  
+You must include parentheses after the function name even if you don't specify a parameter.  
 
 #### @*parameter_name*
 
@@ -107,8 +103,7 @@ A function can have up to 2,100 parameters. When a user or application calls a f
 
 Specify a parameter name by using an at sign (`@`) as the first character. The parameter name must follow the rules for identifiers. Parameters are local to the function; you can use the same parameter names in other functions. Parameters can only replace constants; they can't be used instead of table names, column names, or the names of other database objects.
 
-> [!NOTE]  
-> `ANSI_WARNINGS` isn't honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if you define a variable as **char(3)**, and then set it to a value larger than three characters, the data is truncated to the defined size and SQL statement succeeds.    
+`ANSI_WARNINGS` isn't honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if you define a variable as **char(3)**, and then set it to a value larger than three characters, the data is truncated to the defined size and SQL statement succeeds.    
 
 #### *parameter_data_type*
 
@@ -192,12 +187,14 @@ RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**
 
 ## Best practices
 
+> [!IMPORTANT]
+> In Fabric Data Warehouse, [scalar UDFs must be inlineable](#scalar-udf-inlining) for use with `SELECT ... FROM` queries on user tables, but you can still create functions that aren't inlineable by specifying `INLINE=AUTO` function option. Scalar UDFs that aren't inlineable work in a limited number of scenarios. You can check [whether a UDF can be inlined](#check-whether-a-scalar-udf-can-be-inlined).
+
 - If you don't create a user-defined function with schemabinding, changes to underlying objects can affect the function's definition and cause unexpected results when you invoke the function. When you specify `WITH SCHEMABINDING` when you create the function, you ensure that later changes to underlying objects cannot change or break the function's behavior.
 
 - Write your user-defined functions to be inlineable. For more information about inlining concept, see [Inlining of scalar UDF](#inlining-of-scalar-udf). For examples how to make scalar UDF inlineable, see [Create scalar UDF in Microsoft Fabric Data Warehouse ](/fabric/data-warehouse/how-to-inline-udf).
 
 ## Interoperability
-
 
 ### Inline table-valued user-defined functions
 
@@ -228,12 +225,11 @@ An inline table-valued function accepts only a single `SELECT` statement.
     - [HAS_PERMS_BY_NAME](../functions/has-perms-by-name-transact-sql.md)
     - [HAS_DBACCESS](../functions/has-dbaccess-transact-sql.md)
 
-
 ## Metadata
 
- This section lists the system catalog views that you can use to return metadata about user-defined functions.  
+This section lists the system catalog views that you can use to return metadata about user-defined functions.  
 
- - [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Displays the definition of [!INCLUDE [tsql](../../includes/tsql-md.md)] user-defined functions, as well as inlineability information. For example:  
+- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Displays the definition of [!INCLUDE [tsql](../../includes/tsql-md.md)] user-defined functions, as well as inlineability information. For example:  
 
    ```sql
     SELECT 
@@ -247,9 +243,9 @@ An inline table-valued function accepts only a single `SELECT` statement.
     WHERE o.type = 'FN';
    ```  
 
- - [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Displays information about the parameters defined in user-defined functions.  
+- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Displays information about the parameters defined in user-defined functions.  
 
- - [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Displays the underlying objects referenced by a function.  
+- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Displays the underlying objects referenced by a function.  
  
 ## Permissions
 
@@ -276,7 +272,7 @@ The `inline_eligibility_mask` property explains which type of inlining is applic
 - A value of `2` means that the UDF is eligible for inlining via Expression block. 
 - A value of `3` means that UDF is eligible for either inlining technique.
 
- > [!IMPORTANT]
+> [!IMPORTANT]
 > If a scalar UDF is inlineable via scalar UDF inlining only, it doesn't guarantee it is always inlined when the query is compiled.
 
 Use the following sample query to check whether a scalar UDF is inlineable:
@@ -314,44 +310,36 @@ SELECT @utcdate as 'utc_date';
 ## Limitations
 
 > [!NOTE]
-> During the current preview, limitations are subject to change.
+> Scalar UDFs are a preview feature in Fabric Data Warehouse. During the current preview, limitations are subject to change.
 
-- A scalar UDF can't be inlined via Expression block, see [Inlining of scalar UDF](#inlining-of-scalar-udf), when:
-    - The scalar UDF body contains reference to tables/views/iTVFs.
-    - The scalar UDF body contains reference to same or other scalar UDFs.
-    - The scalar UDF body contains calls to following built-ins:
-        - Time-dependent built-in function (such as `GETDATE()`), see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
-        - [AI Functions](/fabric/data-warehouse/ai-functions).
-        - [Aggregate functions](../functions/aggregate-functions-transact-sql.md).
-        - [JSON_ARRAYAGG function](../functions/json-arrayagg-transact-sql.md).
-        - [Metadata functions](../functions/metadata-functions-transact-sql.md).
-        - [Security functions](../functions/security-functions-transact-sql.md).
-        - [System functions](../functions/system-functions-transact-sql.md).
+- When a scalar UDF is used in any unsupported scenario, you see an error message `Scalar UDF execution is currently unavailable in this context.` at query execution time.
 
-- A scalar UDF can't be inlined via scalar UDF inlining, see [Inlining of scalar UDF](#inlining-of-scalar-udf), when:
-    - The scalar UDF body contains `WHILE` loop, `BREAK` or `CONTINUE` statement. 
-    - The scalar UDF body contains multiple `RETURN` statements.
-    - The scalar UDF body contains calls to following built-ins:
-        - Time-dependent built-in function (such as `GETDATE()`), see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
-        - [STRING_AGG function](../functions/string-agg-transact-sql.md).
-        - [JSON_ARRAYAGG function](../functions/json-arrayagg-transact-sql.md).
-        - [System functions](../functions/system-functions-transact-sql.md).
-     - You can nest user-defined functions. That is, one user-defined function can call another. The nesting level increments when the called function starts execution, and decrements when the called function finishes execution. In Fabric Data Warehouse, you can nest user-defined functions up to four levels when a UDF body references a table, view, or inline table-valued function, or up to 32 levels otherwise. If you exceed the maximum levels of nesting, the calling function chain fails.
-    - See [Scalar UDF inlining requirements](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=fabric&preserve-view=true#inlineable-scalar-udf-requirements) for complete list.
+- A scalar UDF can't be inlined via [Expression block](#check-whether-a-scalar-udf-can-be-inlined) when:
+    - A scalar UDF can't be inlined via expression block when the scalar UDF body contains reference to tables/views/iTVFs.
+    - A scalar UDF can't be inlined via expression block when the scalar UDF body contains reference to same or other scalar UDFs.
+    - A scalar UDF can't be inlined via expression block when the scalar UDF body contains a time-dependent built-in function such as `GETDATE()`. For more information, see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+    - A scalar UDF can't be inlined via expression block when the scalar UDF body contains [AI Functions](/fabric/data-warehouse/ai-functions), [Aggregate functions](../functions/aggregate-functions-transact-sql.md), the [JSON_ARRAYAGG function](../functions/json-arrayagg-transact-sql.md), [Metadata functions](../functions/metadata-functions-transact-sql.md), [Security functions](../functions/security-functions-transact-sql.md), or other [system functions](../functions/system-functions-transact-sql.md).
 
- - A scalar UDF can't be used in all query shapes, depending on which inlining technique is applicable.
-    - Irrespective of inlining techniques
-        - A scalar UDF can't be used in ROLLUP, CUBE, or GROUPING SETS.
-    - Scalar UDF inlining only
-        - A scalar UDF can't be used in GROUP BY and ORDER BY.
-        - A scalar UDF can't be used in combination with CTE.
-        - See [Scalar UDF inlining requirements](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=fabric&preserve-view=true#inlineable-scalar-udf-requirements) for complete list.
-        - A user query can fail if more than 10 UDF calls are made in a single query.
-    > [!WARNING]
-    > If a query contains multiple scalar UDFs and at least one relies on scalar UDF inlining, the entire query must meet the scalar UDF inlining requirements.
-    
-    > [!NOTE]
-    > When a scalar UDF is used in any unsupported scenario, you see an error message "`Scalar UDF execution is currently unavailable in this context.`" at query execution time.
+- A scalar UDF can't be inlined via scalar UDF inlining in the following conditions. For more information, see [Inlining of scalar UDF](#inlining-of-scalar-udf).
+    - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains `WHILE` loop, `BREAK` or `CONTINUE` statement. 
+    - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains multiple `RETURN` statements.
+    - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains a time-dependent built-in function such as `GETDATE()`. Fore more information, see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+    - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains the [STRING_AGG function](../functions/string-agg-transact-sql.md), [JSON_ARRAYAGG function](../functions/json-arrayagg-transact-sql.md), or other [system functions](../functions/system-functions-transact-sql.md).
+
+- You can nest user-defined functions. That is, one user-defined function can call another. The nesting level increments when the called function starts execution, and decrements when the called function finishes execution. In Fabric Data Warehouse, you can nest user-defined functions up to four levels when a UDF body references a table, view, or inline table-valued function, or up to 32 levels otherwise. If you exceed the maximum levels of nesting, the calling function chain fails.
+
+- For more information, see [Scalar UDF inlining requirements](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=fabric&preserve-view=true#inlineable-scalar-udf-requirements).
+
+- A scalar UDF can't be used in all query shapes, depending on which inlining technique is applicable.
+   - For scalar UDF inlining:
+      - A scalar UDF can't be used in `GROUP BY` and `ORDER BY`.
+      - A scalar UDF can't be used in combination with CTE.
+      - A user query can fail if more than 10 UDF calls are made in a single query.
+ 
+- In Fabric Data Warehouse, a scalar UDF can't be used in `ROLLUP`, `CUBE`, or `GROUPING SETS`.
+ 
+> [!WARNING]
+> If a query contains multiple scalar UDFs and at least one relies on scalar UDF inlining, the entire query must meet the scalar UDF inlining requirements.
 
 ## Examples 
 
@@ -394,7 +382,7 @@ SELECT * FROM dbo.ModulesByType('FN'); -- SQL_SCALAR_FUNCTION
 
 ### B. Combine results of an inline table-valued function
 
- This simple example uses the previously created inline TVF to demonstrate how you can combine its results with other tables by using `CROSS APPLY`. Here, you select all columns from both `sys.objects` and the results of `ModulesByType` for all rows that match on the `type` column. For more information about using `APPLY`, see [FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)](../queries/from-transact-sql.md?view=fabric&preserve-view=true).
+This simple example uses the previously created inline TVF to demonstrate how you can combine its results with other tables by using `CROSS APPLY`. Here, you select all columns from both `sys.objects` and the results of `ModulesByType` for all rows that match on the `type` column. For more information about using `APPLY`, see [FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)](../queries/from-transact-sql.md?view=fabric&preserve-view=true).
 
 ```sql
 SELECT * 
@@ -412,21 +400,21 @@ CREATE OR ALTER FUNCTION [dbo].[cleanInput] (@InputString VARCHAR(100))
     RETURNS VARCHAR(50)
     AS
     BEGIN
-        DECLARE @Result VARCHAR(50)
-        DECLARE @CleanedInput VARCHAR(50)
+        DECLARE @Result VARCHAR(50);
+        DECLARE @CleanedInput VARCHAR(50);
 
         -- Trim whitespace
-        SET @CleanedInput = LTRIM(RTRIM(@InputString))
+        SET @CleanedInput = LTRIM(RTRIM(@InputString));
 
         -- Handle empty or null input
         IF @CleanedInput = '' OR @CleanedInput IS NULL
         BEGIN
-            SET @Result = ''
+            SET @Result = '';
         END
         ELSE IF LEN(@CleanedInput) <= 2
         BEGIN
             -- If string length is 1 or 2, just return the cleaned string
-            SET @Result = @CleanedInput
+            SET @Result = @CleanedInput;
         END
         ELSE
         BEGIN
@@ -434,7 +422,7 @@ CREATE OR ALTER FUNCTION [dbo].[cleanInput] (@InputString VARCHAR(100))
             SET @Result = 
                 LEFT(@CleanedInput, 1) +
                 REPLICATE('*', LEN(@CleanedInput) - 2) +
-                RIGHT(@CleanedInput, 1)
+                RIGHT(@CleanedInput, 1);
         END
 
         RETURN @Result
@@ -444,7 +432,7 @@ CREATE OR ALTER FUNCTION [dbo].[cleanInput] (@InputString VARCHAR(100))
 You can call the function like this:
 
 ```sql
-DECLARE @input varchar(100) = '123456789'
+DECLARE @input varchar(100) = '123456789';
 
 SELECT dbo.cleanInput (@input) AS function_output;
 ```
@@ -465,7 +453,7 @@ In a `WHERE` clause:
 ```sql
  SELECT t.id, t.name, dbo.cleanInput(t.name) AS function_output
 FROM dbo.MyTable AS t
-WHERE dbo.cleanInput(t.name)='myvalue'
+WHERE dbo.cleanInput(t.name)='myvalue';
 ```
 
 In a `JOIN` clause:
@@ -505,6 +493,7 @@ WHERE dbo.cleanInput (t.name) ='myvalue';
 
 ## Related content
 
+- [Create a scalar UDF (preview) in Fabric Data Warehouse](/fabric/data-warehouse/how-to-inline-udf)
 - [Scalar UDF inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)
 - [Fabric Data Warehouse Migration Assistant](/fabric/data-warehouse/migration-assistant/)
 

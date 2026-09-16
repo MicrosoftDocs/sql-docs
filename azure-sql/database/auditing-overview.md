@@ -62,6 +62,24 @@ For environments with many databases running heavy OLTP workloads, using server-
    - **Switch to database-level auditing**. Each database writes to its own audit log folder, reducing the total volume scanned and making retrieval faster.
    - **Review the audit configuration**. Determine whether capturing all batch-completed events is necessary, or if a custom filtered configuration can meet your security and compliance requirements.
 
+### Protect sensitive information in audit logs
+
+When dynamic SQL is constructed by concatenating input values directly into the SQL statement, those values become part of the statement text. If the statement is audited, sensitive information included in the statement text may therefore be captured in the audit log.
+
+To reduce the risk of exposing sensitive information, Microsoft recommends the following practices:
+
+- **Avoid dynamic SQL for operations that contain sensitive values**
+
+For security-sensitive administrative operations, avoid constructing statements by concatenating sensitive values into dynamic SQL. Where possible, use native SQL statements or other approaches that prevent sensitive values from being embedded directly in the statement text.
+
+Examples of security-sensitive operations include CREATE LOGIN and CREATE CREDENTIAL.
+
+- **Restrict access to audit logs**
+
+Limit access to audit logs to authorized users and administrators. Audit access is governed by SQL permissions and can vary depending on the platform and audit scope. Follow the principle of least privilege and grant only the permissions required to manage or review audit information. Microsoft documents separate server-level and database-level audit permission models, and Azure SQL Database differs from SQL Server in the availability of server-level permissions.
+
+Restricting access to audit data helps reduce the risk of unauthorized disclosure when sensitive information is present in recorded audit events.
+
 ## Auditing limitations
 
 - Enabling auditing on a paused **Azure Synapse SQL pool** isn't supported. To enable auditing, resume the **Synapse SQL pool**.

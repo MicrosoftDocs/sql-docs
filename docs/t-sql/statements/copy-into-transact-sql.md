@@ -921,6 +921,7 @@ To ensure reliable execution, don't change the source files and folders during t
 If the source data has greater precision than the destination column definition, the value is truncated, not rounded, for numeric, date, and time types.
 
 <a id="limitations-for-onelake-as-source-public-preview"></a>
+<a id="limitations-for-onelake-as-source-for-copy-into"></a>
 
 ## COPY INTO source limitations
 

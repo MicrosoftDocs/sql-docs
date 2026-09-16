@@ -17,7 +17,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 ---
 # SQL injection
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
 
 SQL injection is an attack in which malicious code is inserted into strings that are later passed to an instance of the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)] for parsing and execution. Any procedure that constructs SQL statements should be reviewed for injection vulnerabilities, because the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] executes all syntactically valid queries that it receives. Even parameterized data can be manipulated by a skilled and determined attacker.
 

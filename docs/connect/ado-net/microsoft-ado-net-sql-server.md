@@ -1,10 +1,10 @@
 ---
 title: Microsoft.Data.SqlClient for SQL Server
-description: Microsoft.Data.SqlClient is the .NET data provider for connecting applications to SQL Server, Azure SQL, and SQL database in Microsoft Fabric.
+description: Microsoft.Data.SqlClient connects .NET applications to SQL Server, Azure SQL, SQL database in Microsoft Fabric, and Warehouse in Microsoft Fabric.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 08/11/2026
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -14,17 +14,28 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-Microsoft.Data.SqlClient is the supported .NET data provider for SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, and SQL database in Microsoft Fabric. It's distributed as a NuGet package, evolves independently of the .NET runtime, and replaces <xref:System.Data.SqlClient> for new development. Use it to open connections, execute commands, process results, manage transactions, bulk load data, and use SQL Server-specific features from .NET applications.
+Microsoft.Data.SqlClient is the supported .NET data provider for SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, SQL database in Microsoft Fabric, and Warehouse in Microsoft Fabric. It's distributed as a NuGet package, evolves independently of the .NET runtime, and replaces <xref:System.Data.SqlClient> for new development. Use it to open connections, execute commands, process results, manage transactions, bulk load data, and use SQL Server-specific features from .NET applications.
 
 ## Choose your starting point
 
-- To set up a project and run your first query, start with [Getting started with the SqlClient driver](get-started-sqlclient-driver.md).
-- To add the driver to a .NET project, go to [Download Microsoft.Data.SqlClient](download-microsoft-sqlclient-data-provider.md).
+- To set up a project and run your first query, start with [Get started with the SqlClient driver](get-started-sqlclient-driver.md).
+- To add or update the driver in a .NET project, go to [Install, update, and deploy Microsoft.Data.SqlClient](download-microsoft-sqlclient-data-provider.md).
 - To connect to Azure SQL with passwordless authentication, start with [Microsoft Entra authentication](sql/azure-active-directory-authentication.md) and [Connection strings](connection-strings.md).
 - To make an existing application resilient to transient failures, go to [Configurable retry logic](configurable-retry-logic.md) and [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md).
 - To move large data sets efficiently, go to [Bulk copy operations](sql/bulk-copy-operations-sql-server.md).
-- To migrate from `System.Data.SqlClient`, start with [Introduction to the Microsoft.Data.SqlClient namespace](introduction-microsoft-data-sqlclient-namespace.md).
+- To migrate from `System.Data.SqlClient`, start with [Migrate from System.Data.SqlClient to Microsoft.Data.SqlClient](migrate-system-data-sql-client-to-microsoft-data-sql-client.md).
 - To diagnose a connection or query problem, go to [SqlClient troubleshooting guide](sqlclient-troubleshooting-guide.md) and [Enable event source tracing](enable-eventsource-tracing.md).
+
+## Choose a database
+
+Create a database or connect to an existing database on one of the following platforms:
+
+| Platform | Setup |
+| --- | --- |
+| Azure SQL Database | [Create a database by using the Azure portal](/azure/azure-sql/database/single-database-create-quickstart). |
+| SQL database in Microsoft Fabric | [Load the AdventureWorks sample data](/fabric/database/sql/load-AdventureWorks-sample-data). |
+| SQL Server | [Install SQL Server](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md), or use an existing instance available through TCP. |
+| SQL Server container | Create a container with [Docker](../../linux/install-upgrade/quickstart-install-docker.md), [sqlcmd](../../tools/sqlcmd/quickstart-sqlcmd-create-container.md), or the [MSSQL extension for Visual Studio Code](../../tools/visual-studio-code-extensions/mssql/mssql-local-container.md). |
 
 ## Production baseline for Azure SQL
 
@@ -49,15 +60,15 @@ public static void QuerySalesWithResilience(IConfiguration config, ILogger logge
         Authentication = SqlAuthenticationMethod.ActiveDirectoryManagedIdentity,
         Encrypt = SqlConnectionEncryptOption.Strict, // TDS 8.0 encryption (SqlClient 5.0 and later versions; server must support it)
         ConnectTimeout = 30,                         // per-attempt connect timeout in seconds
-        // Idle connection resiliency: reconnect a dropped idle connection after Open() succeeded.
-        // This is separate from the initial-connect retry provider defined next.
+        // Retry transient failures during Open() and reconnect a dropped idle connection.
+        // The configurable provider below adds another policy around Open().
         ConnectRetryCount = 3,
         ConnectRetryInterval = 10,
         MultiSubnetFailover = true,                  // recommended for TCP endpoints; enables parallel connect
         // ApplicationIntent = ApplicationIntent.ReadOnly, // uncomment to route to a readable secondary
     };
 
-    // Retry the initial Open() on transient failures with exponential backoff and jitter.
+    // Add exponential backoff and jitter around Open().
     // TransientErrors is null, so the provider uses the driver's built-in transient error list.
     var openRetry = SqlConfigurableRetryFactory.CreateExponentialRetryProvider(
         new SqlRetryLogicOption
@@ -135,7 +146,7 @@ This snippet targets any [SQL Database Engine](/sql/database-engine/sql-database
 
 `Encrypt = SqlConnectionEncryptOption.Strict` selects TDS 8.0 encryption. It requires Microsoft.Data.SqlClient 5.0 and later versions and a server that supports TDS 8.0 (SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric). Fall back to `SqlConnectionEncryptOption.Mandatory` when you connect to older servers.
 
-`ConnectRetryCount` and `ConnectRetryInterval` enable *idle connection resiliency*: after `Open()` succeeds, the driver transparently reconnects a dropped idle connection on the next command. They don't retry the initial `Open()`. Initial-connect retries come from the `openRetry` provider assigned to <xref:Microsoft.Data.SqlClient.SqlConnection.RetryLogicProvider%2A?displayProperty=nameWithType>. The two features are complementary.
+`ConnectRetryCount` and `ConnectRetryInterval` apply during initial connection establishment and idle connection recovery. When `ConnectRetryCount` is greater than zero, the driver retries qualifying transient failures during `Open()`. After `Open()` succeeds, the driver also uses these settings to reconnect a dropped idle connection on the next command. The `openRetry` provider assigned to <xref:Microsoft.Data.SqlClient.SqlConnection.RetryLogicProvider%2A?displayProperty=nameWithType> adds a configurable exponential-backoff policy around `Open()`. Account for both retry layers when you set the retry counts and connection timeout.
 
 The <xref:Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider.Retrying> event on each provider fires before each retry attempt and carries the retry count, the delay before the next attempt, and the exceptions observed so far. Route it to <xref:Microsoft.Extensions.Logging.ILogger> or your telemetry pipeline to keep the retry loop visible in production.
 
@@ -169,11 +180,13 @@ For more information about each part of this configuration, see:
 
 | Article | Description |
 | --- | --- |
-| [Getting started with the SqlClient driver](get-started-sqlclient-driver.md) | Set up a project, create a database, connect, query, and add connection resiliency. |
-| [Overview of the SqlClient driver](overview-sqlclient-driver.md) | Learn how Microsoft.Data.SqlClient fits into ADO.NET. |
-| [Download Microsoft.Data.SqlClient](download-microsoft-sqlclient-data-provider.md) | Install the NuGet package and find source releases. |
+| [Get started with the SqlClient driver](get-started-sqlclient-driver.md) | Set up a project, create a database, connect, query, and add connection resiliency. |
+| [ADO.NET architecture with Microsoft.Data.SqlClient](overview-sqlclient-driver.md) | Learn how Microsoft.Data.SqlClient implements connected, disconnected, and provider-independent ADO.NET access. |
+| [Install, update, and deploy Microsoft.Data.SqlClient](download-microsoft-sqlclient-data-provider.md) | Install NuGet packages, choose a release, update the driver, and prepare deployment output. |
 | [Support lifecycle](sqlclient-driver-support-lifecycle.md) | Review supported driver versions and support dates. |
-| [Microsoft.Data.SqlClient namespace](introduction-microsoft-data-sqlclient-namespace.md) | Migrate from System.Data.SqlClient and review namespace differences. |
+| [Migrate from System.Data.SqlClient to Microsoft.Data.SqlClient](migrate-system-data-sql-client-to-microsoft-data-sql-client.md) | Update package references, namespaces, configuration, and changed driver behavior. |
+| [Microsoft.Data.SqlClient namespace and compatibility](introduction-microsoft-data-sqlclient-namespace.md) | Understand the driver's relationship to ADO.NET, System.Data.SqlClient, .NET, and SQL Server. |
+| [What's new in Microsoft.Data.SqlClient](microsoft-data-sql-client-release-notes.md) | Find current releases, major upgrade changes, and upstream release notes. |
 
 ## Configure and connect
 

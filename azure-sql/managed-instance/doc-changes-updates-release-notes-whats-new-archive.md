@@ -5,7 +5,7 @@ description: Learn about the features and documentation improvements for Azure S
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, randolphwest
-ms.date: 02/19/2026
+ms.date: 09/15/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -78,8 +78,8 @@ Return to [What's new in Azure SQL Managed Instance?](doc-changes-updates-releas
 |**Link from SQL MI to SQL Server GA** |  October | Configure a link *from* Azure SQL Managed Instance to SQL Server 2022. This feature is now generally available. Review [Link from SQL MI to SQL Server](managed-instance-link-feature-overview.md)  to learn more.  |
 |**Two-way DR with SQL Server 2022 GA** | October | In the event of a disaster, you can fail your SQL Server 2022 workloads to Azure SQL Managed Instance using the link, and then, once the disaster is mitigated, you can fail back to SQL Server. This feature is now generally available. Review [Two-way DR with SQL Server 2022](managed-instance-link-disaster-recovery.md) to learn more.|
 | **CURRENT_DATE Transact-SQL GA** | August | The `CURRENT_DATE` Transact-SQL (T-SQL) function returns the current database system date as a date value, without the database time and time zone offset. This function is now generally available. For more information, see [CURRENT_DATE (Transact-SQL)](/sql/t-sql/functions/current-date-transact-sql). |
-| **JSON native data type preview** |  August | The new [**JSON** native data type](/sql/t-sql/data-types/json-data-type) and is currently in preview. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
-| **JSON aggregate functions preview** |  August | Two new **JSON** aggregate functions [JSON_OBJECTAGG and JSON_ARRAYAGG](/sql/relational-databases/json/json-data-sql-server#json-data-from-aggregates) enable construction of JSON objects or arrays based on an aggregate from SQL data. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
+| **JSON native data type introduced** | August | The [native **json** data type](/sql/t-sql/data-types/json-data-type?view=azuresqlmi-current&preserve-view=true) was introduced in Azure SQL Managed Instance. The data type became generally available in May 2025. |
+| **JSON aggregate functions introduced** | August | The [JSON_OBJECTAGG and JSON_ARRAYAGG](/sql/relational-databases/json/json-data-sql-server?view=azuresqlmi-current&preserve-view=true#json-data-from-aggregates) aggregate functions were introduced in Azure SQL Managed Instance. The functions became generally available in May 2025. |
 | **Fail over link with T-SQL preview** |  August | You can now fail over a [Managed Instance link](managed-instance-link-feature-overview.md) by using Transact-SQL (T-SQL) commands. This capability is currently in preview starting with [SQL Server 2022 CU13 (KB5036432)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate13). To learn more, review [fail over a database](managed-instance-link-failover-how-to.md?tabs=tsql#fail-over-a-database). |
 |**Native Windows principals**| July | [Native Windows principals](native-windows-principals.md) in SQL Managed Instance is in preview. |
 |**Advance notifications GA**| June | [Advance notifications](advance-notifications.md) for upcoming SQL managed instance [maintenance windows](maintenance-window.md) are now generally available. |

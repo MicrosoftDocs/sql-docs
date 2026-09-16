@@ -2,6 +2,8 @@
   href: microsoft-ado-net-sql-server.md
 - name: Get started
   items:
+  - name: Install, update, and deploy
+    href: download-microsoft-sqlclient-data-provider.md
   - name: Getting started
     href: get-started-sqlclient-driver.md
     items:
@@ -13,15 +15,16 @@
       href: step-3-connect-sql-ado-net.md
     - name: 'Step 4: Connect resiliently to SQL'
       href: step-4-connect-resiliently-sql-ado-net.md
-  - name: Overview
+  - name: ADO.NET architecture with Microsoft.Data.SqlClient
     href: overview-sqlclient-driver.md
-    items:
-    - name: Microsoft.Data.SqlClient namespace
-      href: introduction-microsoft-data-sqlclient-namespace.md
-    - name: Download
-      href: download-microsoft-sqlclient-data-provider.md
-    - name: Support lifecycle
-      href: sqlclient-driver-support-lifecycle.md
+  - name: Namespace and compatibility
+    href: introduction-microsoft-data-sqlclient-namespace.md
+  - name: Migrate from System.Data.SqlClient to Microsoft.Data.SqlClient
+    href: migrate-system-data-sql-client-to-microsoft-data-sql-client.md
+  - name: What's new
+    href: microsoft-data-sql-client-release-notes.md
+  - name: Support lifecycle
+    href: sqlclient-driver-support-lifecycle.md
 - name: Configure and connect
   items:
   - name: Connecting To Data Source

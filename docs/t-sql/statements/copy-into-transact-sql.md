@@ -922,7 +922,7 @@ If the source data has greater precision than the destination column definition,
 
 ## COPY INTO source limitations
 
-- When OneLake is the source, only Microsoft Entra ID and Fabric Workspace Identity are supported for `CREDENTIAL`. SAS tokens, shared keys, and connection strings aren't supported.
+- When OneLake is the source, on Fabric Workspace Identity or Microsoft Entra ID are supported. SAS tokens, shared keys, and connection strings aren't supported.
 
 - When OneLake is the source, Warehouse items aren't supported as source locations. Files must come from other Fabric items that expose files through OneLake storage.
 

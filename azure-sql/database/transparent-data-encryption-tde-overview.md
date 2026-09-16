@@ -5,7 +5,7 @@ description: An overview of transparent data encryption for Azure SQL Database, 
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 11/24/2025
+ms.date: 09/16/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: concept-article
@@ -75,8 +75,6 @@ Manage TDE in the Azure portal.
 To configure TDE through the Azure portal, you must be connected as the Azure Owner, Contributor, or SQL Security Manager.
 
 Enable and disable TDE on the database level. For Azure SQL Managed Instance use Transact-SQL (T-SQL) to turn TDE on and off on a database. For Azure SQL Database and Azure Synapse, you can manage TDE for the database in the [Azure portal](https://portal.azure.com) after you've signed in with the Azure Administrator or Contributor account. Find the TDE settings under your user database. By default, server level encryption key is used. A TDE certificate is automatically generated for the server that contains the database.
-
-:::image type="content" source="media/transparent-data-encryption-tde-overview/service-managed-transparent-data-encryption.png" alt-text="Screenshot of the data encryption menu in the Azure portal for a database." lightbox="media/transparent-data-encryption-tde-overview/service-managed-transparent-data-encryption.png":::
 
 You set the TDE master key, known as the TDE protector, at the server or instance level. To use TDE with BYOK support and protect your databases with a key from Azure Key Vault or Azure Managed HSM, open the TDE settings under your server or managed instance.
 

@@ -72,6 +72,7 @@ The driver supports the x64 architecture on all listed operating systems. The Ar
 | Ubuntu Linux 20.04 | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
 | Ubuntu Linux 22.04 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No |
 | Ubuntu Linux 24.04 | Yes | Yes | Yes | Yes | Yes | No | No | No |
+| Ubuntu Linux 25.10 | No | Yes | No | No | No | No | No | No |
 | Ubuntu Linux 26.04 | Yes | No | No | No | No | No | No | No |
 
 ## Previous ODBC Driver versions (17 and 13)

@@ -18,7 +18,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
 
-You can optimize your queries over JSON documents using standard indexes.
+You can optimize your queries over JSON documents by using standard b-tree indexes. 
+
+> [!TIP]
+> Instead of older b-tree indexes, create native JSON indexes by using [CREATE JSON INDEX (Transact-SQL)](../../t-sql/statements/create-json-index-transact-sql.md) in SQL Server 2025 and later versions, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric.
 
 Indexes work the same way on JSON data in **varchar**/**nvarchar** or the [native **json** data type](../../t-sql/data-types/json-data-type.md).
 
